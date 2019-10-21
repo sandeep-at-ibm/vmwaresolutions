@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-29"
+lastupdated: "2019-10-09"
 
 subcollection: vmware-solutions
 
@@ -55,13 +55,13 @@ The following diagram shows the deployment pattern of the single VSI domain cont
 
 If you order the single VSI, it is recommended that you manually order a second VSI of the same type and configure this VSI as a second domain controller to enable AD DS as a highly available service. The following table describes the VSI configuration.
 
-| Parameter | Specification |
-|:----------|:--------------|
-| Operating System | Windows Server 2016 Standard Edition (64 bit) |
-| CPU | 2 x 2.0 GHz or higher Cores |
-| RAM | 8 GB |
-| Disk | 100 GB (SAN) |
-| Uplink Port Speeds | 1 Gbps Private Network Uplink |
+| Parameter          | Specification                                 |
+|:-------------------|:----------------------------------------------|
+| Operating System   | Windows Server 2016 Standard Edition (64 bit) |
+| CPU                | 2 x 2.0 GHz or higher Cores                   |
+| RAM                | 8 GB                                          |
+| Disk               | 100 GB (SAN)                                  |
+| Uplink Port Speeds | 1 Gbps Private Network Uplink                 |
 {: caption="Table 1. VSI specifications" caption-side="top"}
 
 The domain controller is provisioned with a name of `ADNS<subdomain_label>.<root_domain>`, for example, `ADNSoncloud.myroot.local`. This server is the Global Catalog instance for the domain.
@@ -74,12 +74,12 @@ The following diagram shows the deployment pattern of the two highly available V
 
 If you order the two high availability Microsoft Windows VMs, you must provide two Microsoft Windows Server 2016 licenses. For more information, see [DNS Configuration](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-dns-config). After the provisioning of the vCenter Server instance, you have 30 days to activate the VMs. The cluster is configured with a VM-VM anti-affinity rule, therefore, Distributed Resource Scheduler (DRS) tries to keep the VMs apart by placing them on different physical vSphere ESXi hosts. The following table describes the VM configuration.
 
-| Parameter | Specification |
-|:----------|:--------------|
+| Parameter        | Specification                                 |
+|:-----------------|:----------------------------------------------|
 | Operating System | Windows Server 2016 Standard Edition (64 bit) |
-| CPU | 2 |
-| RAM | 8 GB |
-| Disk | 100 GB |
+| CPU              | 2                                             |
+| RAM              | 8 GB                                          |
+| Disk             | 100 GB                                        |
 {: caption="Table 2. HA VM specifications" caption-side="top"}
 
 ## Domain configuration
@@ -111,7 +111,9 @@ You can have a maximum of one primary and seven secondary instances in a multi-s
 * Primary instance - To deploy the first instance, you define that instance as primary during the instance order process.
 * Secondary instances - The instances that are attached to the primary instance are defined as secondary instances during the order process.
 
-AD and DNS replication is automatically set up between the domain controllers on the primary and secondary instances. If you are using a single AD domain controller at each site, then you should manually configure secondary instance components to use the primary instance DNS as secondary and the primary instance components to use the secondary instance DNS as secondary.
+AD and DNS replication is automatically set up between the domain controllers on the primary and secondary instances. If you are using a single AD domain controller at each site, configure the DNS settings manually, as follows:
+* Primary instance components - use the secondary instance DNS as the secondary DNS server.
+* Secondary instance components - use the primary instance DNS as the secondary DNS server.
 
 They key aspects of a multi-site configuration are:
 * Enhanced Linked Mode
@@ -198,6 +200,8 @@ The forwarder section is configured with:
 Forwarders are DNS servers that the AD DNS server can use to resolve DNS queries for records that the AD server cannot resolve. 10.0.80.12 and 10.0.80.11 are the two addresses for IBM Cloud Resolving Name Servers. Resolving name servers are located on the private network and act as DNS resolvers. The private resolvers query the internet's root name servers for domain lookups and resolve this information over the private network to keep your bandwidth usage down, reduce the load on the authoritative servers, and offer quick resolution. Private network resolvers are a convenience service for our customers.
 
 All deployed appliances: VCSA, NSX Manager and Controllers, and vSphere ESXi hosts have their DNS settings configured to point to the AD DNS server as their default DNS. You can customize the DNS zone configuration if it does not interfere with the configuration of the deployed components.
+
+Next topic: [vCenter Single Sign On](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-sso)
 
 ## Related links
 {: #adds-infra-domain-related}

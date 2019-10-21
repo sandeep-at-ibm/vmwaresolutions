@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-09"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Preparing the installation environment
 {: #hcxclient-planning-prep-install}
 
-The installation of VMware HCX on IBM Cloud has the following software requirements:
+The installation of VMware HCX on {{site.data.keyword.cloud}} has the following software requirements:
 * vSphere 5.5 U3, or vSphere 6.0u2 or higher.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
 * To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764).
@@ -157,11 +157,12 @@ HCX Cloud side is provisioned by {{site.data.keyword.cloud_notm}} automation.
 
 As deployed by the {{site.data.keyword.vmwaresolutions_short}} automation, HCX cloud side installation is configured to connect to across the public internet by default.
 
+**Next topic:** [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+
 ## Related links
 {: #hcxclient-planning-related}
 
 * [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [HCX Client deployment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
 * [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
 * [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
 * [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)

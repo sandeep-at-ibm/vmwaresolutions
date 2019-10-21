@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-07"
 
 keywords: vCenter Server NSX-T networking, networking components, networking NSX-T
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 # Networking considerations for vCenter Server with NSX-T instances
 {: #vc_nsx-t_networkingonvcenterserver}
 
-Review the following information for details about networking considerations and requirements for your vCenter Server on {{site.data.keyword.cloud}} with NSX-T instances. Ensure that you meet the requirements so that your instance functions properly.
+Review the following information for details about networking considerations and requirements for your vCenter Server with NSX-T instances. Ensure that you meet the requirements so that your instance functions properly.
 
 ## Networking components for vCenter Server with NSX-T instances
 {: #vc_nsx-t_networkingonvcenterserver-networking-components}

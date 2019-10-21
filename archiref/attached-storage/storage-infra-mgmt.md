@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -54,6 +54,8 @@ In addition to the creation of the vDS port group for NFS storage traffic, a VMk
 {: #storage-infra-mgmt-vsphere-routing}
 
 Although the vDS is configured with a new port group and a VMkernel port is assigned to the port group, the solution creates a static route on each vSphere ESXi host in the deployment so that all NFS traffic traverses the VLAN and subnet for NFS. The static route is created in `/etc/rc.local.d/local.sh` so that it persists across host restarts.
+
+Next topic: [Configuration and settings for attached storage](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-settings)
 
 ## Related links
 {: #storage-infra-mgmt-related}

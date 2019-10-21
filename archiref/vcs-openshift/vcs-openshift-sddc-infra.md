@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-22"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 
 The physical infrastructure required to deploy an
 Red Hat OpenShift production instance onto a VMware
-vCenter Server on {{site.data.keyword.cloud}} cluster requires the
+vCenter Server cluster requires the
 following minimum specification.
 
 | Item | NFS deployment | vSAN deployment
@@ -44,7 +44,7 @@ In addition to the Red Hat OpenShift hardware requirements, you must create pers
 
 Within the vCenter Server instance, the Red Hat OpenShift instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR). The Red Hat OpenShift installation is loaded into the VXLAN subnet that is defined in the previous components.
 
-The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the Red Hat OpenShift prerequisites and to connect to GitHub and Red Hat. Alternatively, you can use a web-proxy for internet connectivity. The ESG is also configured to provide access to DNS and NTP services within the IBM Cloud environment.
+The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the Red Hat OpenShift prerequisites and to connect to GitHub and Red Hat. Alternatively, you can use a web-proxy for internet connectivity. The ESG is also configured to provide access to DNS and NTP services within the {{site.data.keyword.cloud}} environment.
 
 The ESG is also configured to use the load balancer capability, thus reducing the need for HAProxy nodes. The load balancers are configured for the apps wildcard DNS URL and the API / API-INT DNS Records. The apps DNS record load balancers to the worker nodes provisioned, while the api and api-int DNS records are load balanced against the control-plane nodes.
 
@@ -111,6 +111,8 @@ Within the OpenShift environment, two load balancers for accessing the master no
 | Worker2 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
 {: caption="Table 7. Worker node specifications" caption-side="top"}
 
+**Next topic:** [Storage options on IBM Cloud and Red Hat OpenShift](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)
+
 ## Related links
 {: #vcs-openshift-sddc-infra-related}
 
@@ -118,4 +120,3 @@ Within the OpenShift environment, two load balancers for accessing the master no
 * [System context for vCenter Server and Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-syscontext)
 * [Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch)
 * [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
-* [Storage Options on IBM Cloud and Red Hat OpenShift](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)

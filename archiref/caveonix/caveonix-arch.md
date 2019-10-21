@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-17"
 
 subcollection: vmware-solutions
 
@@ -37,21 +37,17 @@ Caveonix RiskForesight architecture has four layers:
 ## Zones
 {: #caveonix-arch-zones}
 
-Caveonix RiskForesight has the concept of zones:
+Caveonix RiskForesight has the concept of zones.
 
 ![Zones diagram](../../images/caveonix-zones.svg "Zones diagram"){: caption="Figure 2. Caveonix RiskForesight zones" caption-side="bottom"}
 
--	Management or Service Provider Zone - The management or service provider zone includes the following components:
+- Management or Service Provider Zone - The management or service provider zone includes the following components:
     - RiskForesight Application - This contains multiple components and is described in detail in the Application Components section.
     - Central Collector – Collects information from the cloud providers and tenant zones.
 - Cloud Providers - This zone provides the infrastructure on which applications are hosted:
     - Private – VMware on {{site.data.keyword.cloud}}, and on-premises, VMware infrastructure platforms. These platforms are integrated into RiskForesight through: vCenter, NSX Manager, VMware Cloud Director (vCD), or vRealize Automation (vRA).
     - Public – Currently the only public cloud provider that is supported is AWS. {{site.data.keyword.cloud_notm}} is available soon.
     - Containers - Currently only AWS Elastic Kubernetes Service (EKS) is supported. {{site.data.keyword.cloud_notm}} Private and {{site.data.keyword.cloud_notm}} Kubernetes Services is available soon.
--	Tenant or Customer Environment Zone – These zones are used to segregate tenants, customer, or business units. Workloads exist in these zones, and therefore a remote collector is required. For a minimum deployment, you need one remote collector, but for a general deployment, you need one Remote Collector per tenant/customer/business unit.
+- Tenant or Customer Environment Zone – These zones are used to segregate tenants, customer, or business units. Workloads exist in these zones, and therefore a remote collector is required. For a minimum deployment, you need one remote collector, but for a general deployment, you need one Remote Collector per tenant/customer/business unit.
 
-
-## Related links
-{: #caveonix-arch-related}
-
-* [Caveonix Detailed Design](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-detailed)
+**Next topic**: [Detailed design](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-detailed)

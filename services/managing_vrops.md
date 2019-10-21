@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-09"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -18,16 +18,17 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Managing VMware vRealize Operations and vRealize Log Insight on IBM Cloud
+# Managing vRealize Operations and Log Insight
 {: #managing_vrops}
 
 ## Accessing the vRealize Operations Manager console
 {: #managing_vrops-access-vrops-console}
 
-To access the vRealize Operations Manager console, click **vRealize Operations Manager Console** on the service details page for VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud}}, and then log in by using the credentials listed on the same service details page.
+To access the vRealize Operations Manager console, complete the following steps:
 
-When you log into the vRealize Operations Manager console for the first time after installation, the vRealize Operations Manager Configuration wizard prompts you to enter your license (product key). Ensure that you select the **Product evaluation (no key required)** option to proceed.
-{: note}
+1. On the service details page for vRealize Operations and Log Insight, click **vRealize Operations Manager Console**.
+2. Log in by using the credentials listed on the same service details page.
+3. When you log in to the vRealize Operations Manager console for the first time after installation, the vRealize Operations Manager Configuration wizard prompts you to enter your license (product key). Ensure that you select the **Product evaluation (no key required)** option to proceed.
 
 ## Starting the adapter instance for vSAN
 {: #managing_vrops-start-adapter}
@@ -42,10 +43,13 @@ The Management Pack adapter instance for vSAN must be manually started. Complete
 ## Accessing the vRealize Log Insight console
 {: #managing_vrops-access-vlog-console}
 
-To access the vRealize Log Insight console, click **vRealize Log Insight Console** on the service details page for VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}}, and then log in by using the credentials listed on the same service details page.
+To access the vRealize Log Insight console, complete the following steps:
+
+1. On the service details page for vRealize Operations and Log Insight, click **vRealize Log Insight Console**.
+2. Log in by using the credentials listed on the same service details page.
 
 ## Related links
 {: #managing_vrops-related}
 
-* [VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview)
-* [Ordering VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_ordering)
+* [vRealize Operations and Log Insight overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview)
+* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_ordering)

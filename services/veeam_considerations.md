@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-13"
+lastupdated: "2019-10-08"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -18,18 +18,18 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Veeam on IBM Cloud overview
+# Veeam overview
 {: #veeam_considerations}
 
-The Veeam on {{site.data.keyword.cloud}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
+The Veeam service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 
 This service is available only to instances that are deployed in V1.8 or later. The current Veeam version that is installed is 9.5u4b.
 {:note}
 
-## Technical specifications for Veeam on IBM Cloud
+## Technical specifications for Veeam
 {: #veeam_considerations-specs}
 
-The following components are ordered and included in the Veeam on {{site.data.keyword.cloud_notm}} service:
+The following components are ordered and included in the Veeam service:
 
 ### VSIs
 {: #veeam_considerations-specs-vsi}
@@ -62,7 +62,7 @@ One primary private IP address.
 
 * Veeam Availability Suite 9.5 (10, 25, 50, 100, or 200 VM license)
 
-## Considerations when you install Veeam on IBM Cloud
+## Considerations when you install Veeam
 {: #veeam_considerations-install}
 
 The storage repository and the Veeam server are in the original pod and data center. Therefore, the performance of the backup operations for remote clusters might deteriorate.
@@ -73,17 +73,17 @@ The storage repository and the Veeam server are in the original pod and data cen
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
 * To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
-## Considerations when you remove Veeam on IBM Cloud
+## Considerations when you remove Veeam
 {: #veeam_considerations-remove}
 
-Removal of the Veeam on {{site.data.keyword.cloud_notm}} service stops all backups and deletes all the previous backups. The backup of the management VMs stops and the deletion of previous backups is irreversible. If the management VMs are corrupted, they can't be restored.
+Removal of the Veeam service stops all backups and deletes all the previous backups. The backup of the management VMs stops and the deletion of previous backups is irreversible. If the management VMs are corrupted, they can't be restored.
 
 ## Related links
 {: #veeam_considerations-related}
 
-* [Ordering Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Managed Services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Ordering Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [Managing Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
+* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

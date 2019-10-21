@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-21"
+lastupdated: "2019-10-11"
 
 subcollection: vmware-solutions
 
@@ -260,6 +260,8 @@ Virtualized gateway with proxy|Deploy a virtualized gateway as above. Behind thi
 Hardware gateway|Deploy a [hardware gateway appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) to your management VLAN. Configure the gateway to NAT outbound to the public network according to your needs.|Applicable to all instances, with or without public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
 Hardware gateway with proxy|Deploy a gateway appliance as above. Behind this gateway, [deploy a proxy server](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable to all instances, with or without public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed by the gateway.
 Load balancer|IBM Cloud offers several [load balancer services](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) that you can use to provide inbound network access to your applications.|Applicable to all instances, but limited to inbound traffic patterns.
+
+Next topic: [VMware NSX-T design](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-t-design)
 
 ## Related links
 {: #design_virtualinfrastructure-related}

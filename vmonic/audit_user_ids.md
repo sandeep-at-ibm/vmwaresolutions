@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-07"
 
 keywords: user IDs vCenter, PSC user, user ID service
 
@@ -75,18 +75,18 @@ HTTP is used for vCenter set up and configuration, as well as VMware operations 
 | User ID                                    | Description |
 |:-------------------------------------------|:----------- |
 | prod-BigIP-``dynamicID``-@``domainName`` | Used for installation and configuration of the F5 on  {{site.data.keyword.cloud_notm}} service. |
-| prod-Caveonix-``dynamicID``-@``domainName`` | Used for installation and configuration of the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service. |
-| prod-Fortigate-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service. |
-| prod-FortigateVM-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service. |
-| prod-HyTrustCC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service. |
-| prod-HyTrustDC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service. |
-| prod-HyTrustKC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service. |
-| prod-KMIPAdapter-``dynamicID``-@``domainName`` | Used for installation and configuration of the KMIP for VMware on {{site.data.keyword.cloud_notm}} service. |
+| prod-Caveonix-``dynamicID``-@``domainName`` | Used for installation and configuration of the Caveonix RiskForesight service. |
+| prod-Fortigate-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Security Appliance service. |
+| prod-FortigateVM-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Virtual Appliance service. |
+| prod-HyTrustCC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust CloudControl service. |
+| prod-HyTrustDC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust DataControl service. |
+| prod-HyTrustKC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust KeyControl service. |
+| prod-KMIPAdapter-``dynamicID``-@``domainName`` | Used for installation and configuration of the KMIP for VMware service. |
 | prod-ICP-``dynamicID``-@``domainName`` | Used for installation and configuration of the {{site.data.keyword.cloud_notm}} Private Hosted service. |
-| prod-SPPlus-``dynamicID``-@``domainName`` | Used for installation and configuration of the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service. |
-| prod-Veeam-``dynamicID``-@``domainName`` | Used for installation and configuration of the Veeam on {{site.data.keyword.cloud_notm}} service. |
-| prod-HCX-``dynamicID``-@``domainName`` | Used for installation and configuration of the VMware HCX on {{site.data.keyword.cloud_notm}} service. |
-| prod-Zerto-``dynamicID``-@``domainName`` | Used for installation and configuration of the Zerto on {{site.data.keyword.cloud_notm}} service. |
+| prod-SPPlus-``dynamicID``-@``domainName`` | Used for installation and configuration of the IBM Spectrum Protect Plus service. |
+| prod-Veeam-``dynamicID``-@``domainName`` | Used for installation and configuration of the Veeam service. |
+| prod-HCX-``dynamicID``-@``domainName`` | Used for installation and configuration of the VMware HCX service. |
+| prod-Zerto-``dynamicID``-@``domainName`` | Used for installation and configuration of the Zerto service. |
 {: caption="Table 5. Service user IDs" caption-side="top"}
 
 where:

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-13"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -126,6 +126,8 @@ How the route tables in the ESG and vRouters are populated depends on the method
 5.	The on-premises route looks in its routing table and discerns that the IP address for the remote L2 Concentrator needs to be sent to the WAN interface and it forwards across the WAN, through the {{site.data.keyword.cloud_notm}} XCR router, via the BCR.
 6.	The L2 Concentrator receives the request and places it on the VXLAN that hosts the stretched network.
 7.	The VM receives the request.
+
+**Next topic:** [Operational considerations for vCenter Server networking](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-operations)
 
 ## Related links
 {: #vcsnsxt-overview-integration-related}

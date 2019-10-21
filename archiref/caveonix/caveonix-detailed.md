@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -85,3 +85,5 @@ Table 2. VLAN and subnets
 |Private B 	|Portable 	|Assigned for vSAN, if in use.|
 |Private B 	|Portable 	|Assigned for NAS, if in use.|
 |Private B 	|Portable 	|Assigned for vMotion.|
+
+Next topic: [Deployment models for Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-deploy)

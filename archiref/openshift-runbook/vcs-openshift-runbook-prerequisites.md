@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-09-11"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -19,18 +19,18 @@ subcollection: vmware-solutions
 # Prerequisites for installation
 {: #openshift-runbook-runbook-prereq-intro}
 
-Before you can start the build process to install the Red Hat Open Shift cluster the following steps are required.
+Before you can start the build process to install the Red Hat OpenShift cluster the following steps are required.
 
 * Ordering new subnets for the OpenShift environment:
   * A private portable subnet for the Red Hat OpenShift cluster NSX ESG.
   * A public portable subnet for the Red Hat OpenShift cluster NSX ESG.
 * Downloading Red Hat OpenShift 4.1 - Access to a Red Hat subscription to download the installer, pull secret and Red Hat Enterprise CoreOS OVA.
 * Downloading RHEL 7.6 ISO - Access to a Red Hat subscription to download the Red Hat Enterprise Linux 7.x ISO for the bastion host.
-* IBM Cloud environment details - Collect the following details for {{site.data.keyword.cloud}} for VMware Solutions environment:
+* {{site.data.keyword.cloud}} environment details - Collect the following details for {{site.data.keyword.cloud_notm}} for VMware Solutions environment:
   * vCenter Server instance details and passwords
   * The additional private portable subnet information
   * The additional public portable subnet information
-* Downloading and installing govc - govc is a vSphere CLI and is a user-friendly CLI alternative to the GUI and suited for automation tasks.
+* Downloading and installing govc - govc is a vSphere CLI, an alternative to the GUI, and suited for automation tasks.
 
 ## Ordering new subnets for the OpenShift environment
 {: #openshift-runbook-runbook-prereq-cloud-subnets}
@@ -73,7 +73,7 @@ Access the {{site.data.keyword.cloud_notm}} environment details:
 1. Log in to the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console).
 2. Click the {{site.data.keyword.vmwaresolutions_short}} instance under **Deployed Instances**.
 3. From the **Summary** page, collect the vCenter and Active Directory information.
-4. From the Infrastructure Menu,** select the cluster.
+4. From the Infrastructure Menu, select the cluster.
 5. Under **Network Interfaces**, collect the Public and Private VLANs.
 
 ## Download and install govc
@@ -87,7 +87,7 @@ If your remote device uses macOS, then use the following terminal command; `brew
 
 If you need to install Homebrew, then review [Installing Homebrew on a Mac](https://treehouse.github.io/installation-guides/mac/homebrew){:external}.
 
-If your jump-host or remote device uses Linux then:
+If your jump-host or remote device uses Linux, complete the following steps:
 
 1. Download govc and make it executable:
   `curl -L https://github.com/vmware/govmomi/releases/download/v0.20.0/govc_linux_amd64.gz | gunzip > /usr/local/bin/govc`.
@@ -112,6 +112,7 @@ vi rhcos.json
   - replace  "Network": "SDDC-DPortGroup-Mgmt"
   - leave name as "VM network"
 govc import.ova -options=./rhcos.json -name=rhcos-latest ./rhcos-4.1.0-x86_64-vmware.ova
+govc vm.markastemplate vm/rhcos-latest
 ```
 
 ## Uploading the ISO image to vCenter storage
@@ -129,8 +130,10 @@ govc datastore.mkdir isos
 govc datastore.upload rhel-server-7.6-x86_64-dvd.iso isos/rhel-server-7.6-x86_64-dvd.iso
 ```
 
+**Next topic:** [OpenShift NSX logical switches configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxls-intro)
+
 ## Related links
-{: #openshift-runbook-runbook-prereq-related}
+{: #vcs-openshift-runbook-prerequisites-related}
 
 * [OpenShift NSX DLR configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro)
 * [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)

@@ -4,12 +4,15 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-10-18"
 
 ---
 
+{:external: target="_blank" .external}
+
 # Operations management architecture overview
 {: #opsmgmt-arch}
+
 The architecture of the products in the operations management layer provides centralized monitoring with logging data from {{site.data.keyword.vmwaresolutions_full}}. The operations management layer monitors in real time, the physical infrastructure, virtual infrastructure, and optionally the client’s compute workloads.
 
 At a high level, the following information is collected:
@@ -101,9 +104,9 @@ vROps uses the management pack to poll VMware NSX for configuration, performance
 
 The NSX components need to be configured to send syslog to vRLI.
 
-* NSX Manager - [Specify Syslog Server](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-EA70974C-07F8-469D-8A9D-0ED54F0C8F34.html){:new_window}.
-* NSX Controllers - [Configure NSX Controllers](https://kb.vmware.com/s/article/2092228){:new_window}.
-* NSX Edge - [Configure Remote Syslog Servers](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-9C25E097-E2CC-461A-9DA6-E8118D16EE62.html){:new_window}.
+* NSX Manager - [Specify a Syslog Server](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-EA70974C-07F8-469D-8A9D-0ED54F0C8F34.html){:external}.
+* NSX Controllers - [Configuring syslog server for VMware NSX for vSphere 6.x controllers](https://kb.vmware.com/s/article/2092228){:external}.
+* NSX Edge - [Configure Remote Syslog Servers](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-9C25E097-E2CC-461A-9DA6-E8118D16EE62.html){:external}.
 * Firewall - You must configure the remote syslog server for each cluster that has firewall enabled. The remote syslog server is specified in the `Syslog.global.logHost` attribute.
 
 NSX Flow Monitoring can be used in NSX manager to determine which flows are approved and which flows are blocked. If required, then port mirroring can be configured for a vSphere Distributed Switch.
@@ -154,7 +157,6 @@ Table 1. Operation tooling summary system requirements
 |RAM GB|32|16|12 + 32|0.5|
 |Disk GB|254|1042|158 + 1000|80|
 
-
 ## Software versions
 {: #opsmgmt-arch-versions}
 
@@ -168,3 +170,5 @@ Table 2. Operational tooling software versions
 |vRealize Operations Management Pack for Site Recovery Manager|8.1.1|
 |VMware vRealize Log Insight|4.7|
 |vRealize Log Insight Content Pack for NSX for vSphere|3.8|
+
+**Next topic**: [vRealize Operations Manager design](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrops)

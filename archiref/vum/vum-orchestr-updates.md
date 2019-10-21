@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -64,8 +64,10 @@ The following workflow describes the process to perform an orchestrated upgrade:
 
 You can now use these baseline groups in the scan, review, staging, and remediation processes.
 
+**Next topic:** [Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-zerto)
+
 ## Related links
 {: #vum-orchestr-updates-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [VMware HCX on {{site.data.keyword.cloud}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

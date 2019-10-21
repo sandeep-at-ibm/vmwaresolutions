@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-12"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -23,21 +23,21 @@ Review the architecture of each HCX component that is deployed in the source env
 ## Introducing HCX
 {: #hcx-archi-source-intro-hcx}
 
-HCX technology seamlessly integrates vSphere vCenter networks into IBM Cloud VCS platform. Hybrid networking extends on-premises vSphere vCenter networks into IBM Cloud, supporting bidirectional virtual machine (VM) mobility.
+HCX technology seamlessly integrates vSphere vCenter networks into vCenter Server platform. Hybrid networking extends on-premises vSphere vCenter networks into {{site.data.keyword.cloud}}, supporting bidirectional virtual machine (VM) mobility.
 
 This introduction summarizes the tasks that can be accomplished and the features that support and enhance migration and network extension.
 
 * HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as virtual machine migration and network extension.
 * HCX creates an optimized, software-defined WAN to increase stretched network performance, enabling performance that approaches LAN speed.
-* HCX also enables bidirectional workload and VMware NSX security policy migration to IBM Cloud Networking services.
+* HCX also enables bidirectional workload and VMware NSX security policy migration to {{site.data.keyword.cloud_notm}} Networking services.
 * HCX integrates with vSphere vCenter and is managed from the vSphere Web Client.
 
 ## Layer 2 Network Extension
 {: #hcx-archi-source-layer-2-ext}
 
-* Securely stretch a network from a vCenter to IBM Cloud.
+* Securely stretch a network from a vCenter to {{site.data.keyword.cloud_notm}}.
 * HCX provides the High Throughput Layer 2 Concentrator (HT L2C).
-* Extended networks link to IBM Cloud NSX edge appliances
+* Extended networks link to {{site.data.keyword.cloud_notm}} NSX edge appliances
 * Multiple standard Layer 2 concentrators can be deployed to achieve scalability and increase throughput.
 * Virtual machines that are migrated through the Cloud Gateway and over stretched Layer 2 can retain their IP and MAC addresses.
 
@@ -47,19 +47,19 @@ This introduction summarizes the tasks that can be accomplished and the features
 ### Low downtime migration
 {: #hcx-archi-source-low-downtime-mig}
 
-Low downtime migration relies on vSphere Replication - a distributed technology that is implemented in the VMware ESX/ESXi hypervisor. HCX creates a replica of a live virtual machine, moves it to IBM Cloud, and performs a switchover to power off the source virtual machine and power on the migrated virtual machine.
+Low downtime migration relies on vSphere Replication - a distributed technology that is implemented in the VMware ESX/ESXi hypervisor. HCX creates a replica of a live virtual machine, moves it to {{site.data.keyword.cloud_notm}}, and performs a switchover to power off the source virtual machine and power on the migrated virtual machine.
 * The migration path is always through the Cloud Gateway. The transport can be the internet, a Layer 2 stretched network, or a Direct Connect line.
 * A virtual machine can be migrated multiple times in either direction.
 
 ### vMotion migration
 {: #hcx-archi-source-vmotion-mig}
 
-vMotion migration uses vMotion to transfer a live virtual machine across a network stretched to IBM Cloud. vMotion migration is also called zero downtime migration, or cross-cloud vMotion.
+vMotion migration uses vMotion to transfer a live virtual machine across a network stretched to {{site.data.keyword.cloud_notm}}. vMotion migration is also called zero downtime migration, or cross-cloud vMotion.
 
 ### Cold migration
 {: #hcx-archi-source-cold-mig}
 
-Transfer a powered-off virtual machine to IBM Cloud over a stretched network.
+Transfer a powered-off virtual machine to {{site.data.keyword.cloud_notm}} over a stretched network.
 
 ### Common features
 {: #hcx-archi-source-common-feat}
@@ -81,9 +81,9 @@ The following networking features are built into the Cloud Gateway and the Layer
 ## Understanding HCX
 {: #hcx-archi-source-understand-hcx}
 
-HCX supports a many-to-many relationship between on-premises vCenters and IBM Cloud. vCenter Server in Linked Mode is supported.
+HCX supports a many-to-many relationship between on-premises vCenters and {{site.data.keyword.cloud_notm}}. vCenter Server in Linked Mode is supported.
 
-During the installation, the HCX Manager virtual appliance is imported and configured as a plug-in for the on-premises vCenter. This plug-in is then used to configure the software-defined WAN service deployment. The automated configuration provisions each hybrid service appliance as a virtual machine in the on-premises vCenter, and deploys a corresponding virtual machine in IBM Cloud.
+During the installation, the HCX Manager virtual appliance is imported and configured as a plug-in for the on-premises vCenter. This plug-in is then used to configure the software-defined WAN service deployment. The automated configuration provisions each hybrid service appliance as a virtual machine in the on-premises vCenter, and deploys a corresponding virtual machine in {{site.data.keyword.cloud_notm}}.
 
 A successful deployment requires:
 * Sufficient resources for the virtual appliances
@@ -96,16 +96,16 @@ The HCX Manager virtual machine is installed first, and it manages the installat
 
 The following steps are basic installation tasks:
 1. Obtain Hybrid Cloud Enterprise virtual appliance OVA file.
-2. From the vSphere Web Client, install the HCX Manager service virtual appliance in the on-premises vCenter that connects to IBM Cloud.
-3. From the vSphere Web Client, register an IBM Cloud endpoint with the HCX plug-in. Registration establishes the one-to-one relationship between the on-premises HCX and the HCX instance on IBM Cloud.
+2. From the vSphere Web Client, install the HCX Manager service virtual appliance in the on-premises vCenter that connects to {{site.data.keyword.cloud_notm}}.
+3. From the vSphere Web Client, register an {{site.data.keyword.cloud_notm}} endpoint with the HCX plug-in. Registration establishes the one-to-one relationship between the on-premises HCX and the HCX instance on {{site.data.keyword.cloud_notm}}.
 4. Install and configure the service virtual appliances.
-5. For each appliance installed on premises, the installer provisions a corresponding service virtual appliance in the target IBM Cloud.
-6. After the installation, HCX Manager controls both local and remote service virtual appliances. In the IBM Cloud, HCX manages the provisioned Software-Defined WAN components as a service.
+5. For each appliance installed on premises, the installer provisions a corresponding service virtual appliance in the target {{site.data.keyword.cloud_notm}}.
+6. After the installation, HCX Manager controls both local and remote service virtual appliances. In the {{site.data.keyword.cloud_notm}}, HCX manages the provisioned Software-Defined WAN components as a service.
 
 ### Deployment component performance considerations
 {: #hcx-archi-source-perf-consid}
 
-Architecture planning includes the VMs to be migrated, the networks that are used for virtual machine traffic, and the networks to be extended. 
+Architecture planning includes the VMs to be migrated, the networks that are used for virtual machine traffic, and the networks to be extended.
 
 The maximum and minimum values for the deployment components are:
 * vSphere vCenter. The HCX manager appliance must be installed on the vCenter that requires hybrid services. There can be only one HCX deployment per vCenter. This restriction applies to linked mode. The HCX management appliance is only installed in the primary vCenter. HCX supports up to five registered vCenters in linked mode.
@@ -151,9 +151,9 @@ After the service, virtual appliance configuration and deployment is done, log i
 ### HCX Cloud Gateway
 {: #hcx-archi-source-hcg}
 
-The HCX Cloud Gateway establishes and maintains a secure channel between vSphere and the IBM Cloud.
+The HCX Cloud Gateway establishes and maintains a secure channel between vSphere and the {{site.data.keyword.cloud_notm}}.
 
-HCX uses strong encryption to bootstrap a site-to-site connection to IBM Cloud. The secure channel between vSphere and IBM Cloud achieves multi-tenancy for vSphere protocols that are not tenant aware, and to prevent networking "middle mile" security problems.
+HCX uses strong encryption to bootstrap a site-to-site connection to {{site.data.keyword.cloud_notm}}. The secure channel between vSphere and {{site.data.keyword.cloud_notm}} achieves multi-tenancy for vSphere protocols that are not tenant aware, and to prevent networking "middle mile" security problems.
 
 The Cloud Gateway also incorporates vSphere replication technology to perform bidirectional migration.
 
@@ -162,20 +162,20 @@ The Cloud Gateway also incorporates vSphere replication technology to perform bi
 ### WAN Optimizer
 {: #hcx-archi-source-wan-opt}
 
-HCX also provides software-defined WAN Optimization. The WAN Optimization appliance is a highly recommended component that performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns. Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from IBM Cloud.
+HCX also provides software-defined WAN Optimization. The WAN Optimization appliance is a highly recommended component that performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns. Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from {{site.data.keyword.cloud_notm}}.
 
-Virtual machine migration relies on the combination of Cloud Gateway and WAN Optimization appliance to achieve unparalleled mobility between vSphere on-premises and IBM Cloud.
+Virtual machine migration relies on the combination of Cloud Gateway and WAN Optimization appliance to achieve unparalleled mobility between vSphere on-premises and {{site.data.keyword.cloud_notm}}.
 
 ![Source WAN Optimizer](../../images/source_wan_optimizer.svg "Source WAN Optimizer"){: caption="Figure 3. Source WAN Optimizer" caption-side="bottom"}
 
 ### Layer 2 Concentrator
 {: #hcx-archi-source-layer-2-conc}
 
-The Network Extension Service is provided by the Layer 2 Concentrator (L2C). It extends a Layer 2 network from the on-premises vSphere data center to IBM Cloud and enables seamless migration between the data center and the cloud. The Layer 2 concentrator is required to stretch the on-premises network to IBM.
+The Network Extension Service is provided by the Layer 2 Concentrator (L2C). It extends a Layer 2 network from the on-premises vSphere data center to {{site.data.keyword.cloud_notm}} and enables seamless migration between the data center and the cloud. The Layer 2 concentrator is required to stretch the on-premises network to IBM.
 
 The Layer 2 Concentrator appliance has two interfaces:
-* Internal trunk interface: Handles virtual machine traffic on-premises for the extended networks by using a translational bridge mapping to a corresponding stretched network in IBM Cloud.
-* Uplink interface: HCX uses this interface to send encapsulated overlay traffic to and from IBM Cloud. Application data travels through this interface.
+* Internal trunk interface: Handles virtual machine traffic on-premises for the extended networks by using a translational bridge mapping to a corresponding stretched network in {{site.data.keyword.cloud_notm}}.
+* Uplink interface: HCX uses this interface to send encapsulated overlay traffic to and from {{site.data.keyword.cloud_notm}}. Application data travels through this interface.
 
 ![Source L2 Concentrator](../../images/source_l2_concentrator.svg "Source L2 Concentrator"){: caption="Figure 4. Source L2 Concentrator" caption-side="bottom"}
 
@@ -188,12 +188,12 @@ To stretch a network and maintain the original IP address, a distributed virtual
 
 WAN Optimization can improve speed in the situations described. Configuring the Cloud Gateway to use a high-speed line (such as a Direct Connect) improves speed by providing a higher bandwidth link for WAN optimized traffic.
 
-Migrating virtual machines on extended networks into IBM Cloud is advantageous because it reduces downtime and the configuration does not change on the virtual machine. The virtual machine can retain the IP addresses, MAC addresses, computer names, and virtual machine names. Retaining these properties greatly simplifies the migration to IBM Cloud and enables easy return trips to the on-premises data center. The Network Extension feature requires a vSphere Distributed Switch, which is available with vSphere Enterprise Plus Edition.
+Migrating virtual machines on extended networks into {{site.data.keyword.cloud_notm}} is advantageous because it reduces downtime and the configuration does not change on the virtual machine. The virtual machine can retain the IP addresses, MAC addresses, computer names, and virtual machine names. Retaining these properties greatly simplifies the migration to {{site.data.keyword.cloud_notm}} and enables easy return trips to the on-premises data center. The Network Extension feature requires a vSphere Distributed Switch, which is available with vSphere Enterprise Plus Edition.
 
 ### IP address requirements
 {: #hcx-archi-source-ip-req}
 
-To deploy the HCX, the proper number of IP addresses must be available both on-premises and in the target IBM Cloud.
+To deploy the HCX, the proper number of IP addresses must be available both on-premises and in the target {{site.data.keyword.cloud_notm}}.
 
 * vMotion address
   Maintaining a separate network for vMotion is a common practice in the on-premises data center. The Cloud Gateway must have access to the vMotion network. If it does not, an extra IP address is needed to communicate with the vMotion network.
@@ -203,8 +203,8 @@ To deploy the HCX, the proper number of IP addresses must be available both on-p
   * One for each Cloud Gateway, add one if there is a separate vMotion network.
   * One for each standard Layer 2 Concentrator
 
-* IBM Cloud
-  * Two IP addresses per HCX Manager appliance connected to IBM Cloud. The addresses can be used to connect to the internet or one or more Direct Connect lines.
+* {{site.data.keyword.cloud_notm}}
+  * Two IP addresses per HCX Manager appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more Direct Connect lines.
   * Add one if there is a separate vMotion network connection.
 
 ### Proximity Routing feature
@@ -214,9 +214,9 @@ Proximity Routing is a networking feature, which can be enabled when the Cloud G
 
 Proximity Routing ensures forwarding between virtual machines that are connected to stretched and routed networks, both on-premises and in the cloud, is symmetrical. This feature requires Dynamic Routing to be configured between the customer premises and the cloud.
 
-When users extend their networks to the cloud, Layer 2 connectivity is stretched onto IBM Cloud. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called "tromboning" or "hairpinning."
+When users extend their networks to the cloud, Layer 2 connectivity is stretched onto {{site.data.keyword.cloud_notm}}. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called "tromboning" or "hairpinning."
 
-Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both source and destination virtual machines reside in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. Virtual machine communication (without route optimization) failure occurs when the egress path exiting the cloud can be either the stretched Layer 2 network or through the VCS NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from IBM Cloud.
+Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both source and destination virtual machines reside in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. Virtual machine communication (without route optimization) failure occurs when the egress path exiting the cloud can be either the stretched Layer 2 network or through the VCS NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from {{site.data.keyword.cloud_notm}}.
 
 To prevent tromboning, HCX uses intelligent route management to choose routes appropriate to the virtual machine state. The Cloud Gateway maintains an inventory of virtual machines in the cloud. It also understands the virtual machine state, which can be:
 * Transferred to the cloud with vMotion (zero-downtime migration).
@@ -229,7 +229,7 @@ To prevent tromboning, HCX uses intelligent route management to choose routes ap
 In the diagram, the `N*a` components on the left reside in the on-premises data center, and the `N*b`
 component on the right reside in the cloud.
 
-R1 is the default gateway for N1-b. Therefore, N1-b must return to R1 to route traffic through R2. To prevent asymmetric routing, HCX injects host routes into within the NSX overlay of the IBM Cloud VCS deployment. If the virtual machine was newly created in the cloud, or it was moved with low downtime migration, the host route is injected immediately.
+R1 is the default gateway for N1-b. Therefore, N1-b must return to R1 to route traffic through R2. To prevent asymmetric routing, HCX injects host routes into within the NSX overlay of the vCenter Server deployment. If the virtual machine was newly created in the cloud, or it was moved with low downtime migration, the host route is injected immediately.
 
 If the virtual machine was transferred by using vMotion, the route is not injected until the virtual machine restarts. Waiting until after the restart ensures that the on-premises stateful devices continue to service the existing session until the virtual machine restarts. After the restart, the routing information is consistent both on-premises and in the cloud.
 
@@ -262,6 +262,8 @@ Rules that specify security groups or application groups for the source or desti
 {:note}
 
 Any change to the migrated policy is propagated to all VMs that use the policy.
+
+**Next topic:** [VMware HCX on IBM Cloud component-level target architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-target)
 
 ## Related links
 {: #hcx-archi-source-related}

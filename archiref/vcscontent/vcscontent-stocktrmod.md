@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 The next step in the Stock Trader modernization journey is to transform the workload from running in virtual machines (VMs) to running in containers.
 
-To continue, Todd and Jane run Transformation Advisor to analyze the Stock Trader workload, identify any migration complexity, and recommend changes. When ready, they use Transformation Advisor to deploy Stock Trader into Liberty containers that run in {{site.data.keyword.icpfull_notm}}.
+To continue, Todd and Jane run Transformation Advisor to analyze the Stock Trader workload, identify any migration complexity, and recommend changes. When ready, they use Transformation Advisor to deploy Stock Trader into Liberty containers that run in {{site.data.keyword.icpfull}}.
 
 ## Prepare IBM Cloud Private
 {: #vcscontent-stocktrmod-prep-icp}
@@ -106,3 +106,5 @@ In the end, the resulting Stock Trader layout options are:
 
 Todd didn't alter the data source during the transformation step. Transformation Advisor takes the WebSphere Application Server Network Deployment data source configuration and adds it to the Liberty container’s server.xml.
 {:important}
+
+**Next topic:** [Refactor and add middleware into IBM Cloud Private](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscontent-addmidware)

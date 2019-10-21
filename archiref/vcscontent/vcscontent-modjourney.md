@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Modernization journey
 {: #vcscontent-modjourney}
 
-This is a reference use case on how a classic WebSphere Application Server application is modernized by using {{site.data.keyword.cloud}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+This is a reference use case on how a classic WebSphere Application Server application is modernized by using {{site.data.keyword.cloud}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and VMware vCenter Server.
 
 ## Modernization is more than applications
 {: #vcscontent-modjourney-modernization}
@@ -84,7 +84,7 @@ Todd and Jane know from experience that a good journey to modernize solutions st
 For Todd and Jane, their steps in the Stock Trader journey are:
 1. Lift Stock Trader VMs into {{site.data.keyword.cloud_notm}}. This step allows Todd to reduce the need for managing his own hardware and VMware content in the local data center.
 
-2. Transform Stock Trader in WebSphere Application Server into Stock Trader in containers. This step increases resiliency because running containers in Kubernetes brings orchestration and other cloud behaviors. This does require Todd to prepare an {{site.data.keyword.cloud_notm}} Private instance in his VMware vCenter Server on {{site.data.keyword.cloud_notm}} environment, and then work with Jane and Transformation Advisor to containerize Stock Trader.
+2. Transform Stock Trader in WebSphere Application Server into Stock Trader in containers. This step increases resiliency because running containers in Kubernetes brings orchestration and other cloud behaviors. This does require Todd to prepare an {{site.data.keyword.cloud_notm}} Private instance in his VMware vCenter Server environment, and then work with Jane and Transformation Advisor to containerize Stock Trader.
 
 3. Refactor and add middleware into {{site.data.keyword.cloud_notm}} Private. This step brings their existing middleware into a cloud environment and optimizes cloud behaviors. This also streamlines licensing and prepares the solution to
 be entirely portable for use in other Kubernetes environments.
@@ -96,3 +96,5 @@ be entirely portable for use in other Kubernetes environments.
 6. Modernize DevOps. Throughout this journey, Jane improves how she delivers Stock Trader.
 
 7. Modernize Management. Todd and Jane worked to improve how they manage Stock Trader, and the platform it runs on, even across more than one cluster and cloud environment.
+
+**Next topic:** [Lift and shift Stock Trader VMs into IBM Cloud](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscontent-hcx)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-14"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -62,7 +62,7 @@ You can expand or contract the capacity of your VMware vCenter Server instance a
    * Select a configuration from the existing hosts in the cluster.
    * Select a new {{site.data.keyword.baremetal_short_sing}} configuration.
       * For instances with vSphere Enterprise Plus 6.7u1, specify the Vmware vSphere version for the new host.
-      * For **Skylake**, **Cascade**, or **Broadwell** specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.     
+      * For **Skylake**, **Cascade Lake**, or **Broadwell** specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.     
       * For **SAP-certified**, specify the **CPU Model and RAM** and the **Number of {{site.data.keyword.baremetal_short}}**.
 9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
 10. Review the estimated cost and click **Add**.
@@ -90,11 +90,11 @@ If you are adding ESXi servers during maintenance mode, VMs are not migrated to 
 
 * Whenever possible, remove ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, remove ESXi servers from vCenter Server only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * A vCenter Server instance with NFS storage must have at least 2 ESXi servers and a vCenter Server instance with vSAN storage must have at least four ESXi servers.
-* Before you remove ESXi servers with the F5 on {{site.data.keyword.cloud_notm}} or FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service installed, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
-* Before you remove ESXi servers with the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service installed, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi servers to be removed.
+* Before you remove ESXi servers with the F5 BIG-IP service or the FortiGate Virtual Appliance service installed, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
+* Before you remove ESXi servers with the IBM Spectrum Protect&trade; Plus service installed, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi servers to be removed.
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the VMs running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
 
-A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service. Your account continues to be charged for the HCX components if you delete a server before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX on {{site.data.keyword.cloud_notm}} details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a server before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:important}
 
 ### Procedure to remove ESXi servers

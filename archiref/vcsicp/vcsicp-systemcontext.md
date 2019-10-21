@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -59,3 +59,5 @@ Containerized applications | Applications that completed the application moderni
 Watson | For this reference architecture and Acme Skateboards, Watson represents the AI service that is used in the “Concept Car” architecture.
 
 Application migration, networking, and security often are the most challenging aspects of application modernization. vCenter Server, VMware Hybridity, VMware NSX, {{site.data.keyword.icpfull_notm}}, and the {{site.data.keyword.containerlong_notm}} address these challenges and enable you to build resilient, secure, and robust modern applications.
+
+**Next topic:** [Application modernization overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-appmod)

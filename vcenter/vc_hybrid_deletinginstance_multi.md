@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-10-03"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration
 {: #vc_hybrid_deletinginstance_multi}
 
-There are special considerations to be aware of before you plan to delete VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instances that are part of a multi-site configuration.
+There are special considerations to be aware of before you plan to delete vCenter Server with Hybridity Bundle instances that are part of a multi-site configuration.
 
 When you delete a vCenter Server with Hybridity Bundle instance, the following components are released sequentially:
 1. All deployed services

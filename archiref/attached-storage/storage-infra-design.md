@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -77,6 +77,8 @@ After an NFS share is ordered, it can be resized or reconfigured to allow for mo
 For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
 
 In addition to the tiers of storage, {{site.data.keyword.cloud_notm}} Endurance storage supports a wide selection of application needs, including snapshots and replication, and encryption at rest in the {{site.data.keyword.CloudDataCent_notm}} locations.
+
+Next topic: [Attached storage infrastructure management](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-infra-mgmt)
 
 ## Related links
 {: #storage-infra-design-related}

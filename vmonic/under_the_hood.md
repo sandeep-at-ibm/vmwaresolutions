@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-10-03"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 ## Deploy and manage VMware virtualized environments
 {: #under_the_hood-deploy}
 
-Take an in-depth look at the architecture of {{site.data.keyword.vmwaresolutions_full}}, an {{site.data.keyword.cloud_notm}} offering that provides deployment and management of VMware virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
+Take an in-depth look at the architecture of {{site.data.keyword.vmwaresolutions_full}}, an {{site.data.keyword.cloud}} offering that provides deployment and management of VMware virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
 
 ## Two companies, one streamlined solution
 {: #under_the_hood-two-companies}
@@ -38,7 +38,7 @@ Now let's take a look under the hood of the {{site.data.keyword.vmwaresolutions_
 
 Your software-defined data centers are provisioned and managed by using the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console){:external}. You log in to the console by using your IBMid account.
 
-From the VMware Solutions catalog, you can provision one of several kinds of virtualization environment. The featured virtualization solution is *VMware vCenter Server on {{site.data.keyword.cloud_notm}}*, which offers VMware's vSphere hypervisor, VMware vCenter Server, VMware NSX, and optionally VMware vSAN. You can also provision this environment with more add–on services that provide backup, disaster recovery, migration, security, compliance, and networking services.
+From the VMware Solutions catalog, you can provision one of several kinds of virtualization environment. The featured virtualization solution is vCenter Server, which offers VMware's vSphere hypervisor, VMware vCenter Server, VMware NSX, and optionally VMware vSAN. You can also provision this environment with more add–on services that provide backup, disaster recovery, migration, security, compliance, and networking services.
 
 Before ordering a vCenter Server instance, you must configure your {{site.data.keyword.cloud_notm}} infrastructure API key in the VMware Solutions catalog. To do this, click the [Settings](https://cloud.ibm.com/infrastructure/vmware-solutions/console/settings){:external} link in the left menu of the console, and enter your user name and API key where prompted for {{site.data.keyword.cloud_notm}} infrastructure credentials. The system verifies that your API key and account have appropriate permissions and settings to deploy your instance.
 

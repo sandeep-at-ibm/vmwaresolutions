@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -13,7 +13,7 @@ subcollection: vmware-solutions
 # Preparing the installation environment
 {: #hcx-archi-prep-install}
 
-The installation of VMware HCX on IBM Cloud has the following software requirements:
+The installation of VMware HCX on {{site.data.keyword.cloud}} has the following software requirements:
 * vSphere 5.5 U3, or vSphere 6.0u2 or higher.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
 * To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764).
@@ -52,8 +52,9 @@ Layer 2 network stretching has the following requirements:
   * If the network is to be stretched over the public internet or a VPN (on an alternative path) the L2C virtual machine in VCS requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
   * If multiple Layer 2 concentrators are wanted, each must have an IP address on-premises and in the cloud.
 
+**Next topic:** [Installing and configuring HCX on the source](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)
+
 ## Related links
 {: #hcx-archi-prep-install-related}
 
-* [Installing and configuring HCX on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
 * [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764)

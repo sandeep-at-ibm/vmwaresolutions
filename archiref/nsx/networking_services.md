@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -252,8 +252,9 @@ Table 13. Workload ESG internal interfaces
 
 By default, logging is enabled on all new NSX Edge appliances. The default logging level is NOTICE.
 
+Next topic: [Multi-site architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-multi_site)
+
 ## Related links
 {: #nsx-networking_services-related}
 
 * [NSX Edge Services Gateway design](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx_design)
-* [Multi-site architecture](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-multi_site)

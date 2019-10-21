@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-07"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -23,15 +23,15 @@ subcollection: vmware-solutions
 
 Review the following information for details about compliance for VMware vCenter Server instances.
 
-The VMware vCenter Server on {{site.data.keyword.cloud}} with NSX-T offering is not supported for HIPAA customers.
+The VMware vCenter Server with NSX-T offering is not supported for HIPAA customers.
 {:important}
 
-## Customer versus IBM responsibility for vCenter Server on IBM Cloud
+## Customer versus IBM responsibility for vCenter Server
 {: #vc_compl_info-responsibility}
 
 The following diagram provides details about the customer (you) and IBM responsibilities for compliance activities.
 
-![Customer versus IBM responsibility matrix](../images/customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix"){: caption="Figure 1. Customer versus IBM responsibility matrix for vCenter Server on {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
+![Customer versus IBM responsibility matrix](../images/customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix"){: caption="Figure 1. Customer versus IBM responsibility matrix for VMware vCenter Server" caption-side="bottom"}
 
 ## Health data restrictions
 {: #vc_compl_info-health-data-restrictions}

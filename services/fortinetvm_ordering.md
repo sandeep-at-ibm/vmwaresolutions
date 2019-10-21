@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-22"
+lastupdated: "2019-10-08"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -18,33 +18,33 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Ordering FortiGate Virtual Appliance on IBM Cloud
+# Ordering FortiGate Virtual Appliance
 {: #fortinetvm_ordering}
 
-You can order the FortiGate Virtual Appliance on {{site.data.keyword.cloud}} service when you order a new instance with the service included or by adding the service to your existing instance.
+You can order the FortiGate Virtual Appliance service when you order a new instance with the service included or by adding the service to your existing instance.
 
-## Ordering FortiGate Virtual Appliance on IBM Cloud for a new instance
+## Ordering FortiGate Virtual Appliance for a new instance
 {: #fortinetvm_ordering-new}
 
-You can order a new instance with FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **FortiGate Virtual Appliance on IBM Cloud** in the **Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **FortiGate Virtual Appliance on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to New Instance**.
+You can order a new instance with FortiGate Virtual Appliance by using one of the following methods:
+* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, click **FortiGate Virtual Appliance** under the **Security and Compliance** category in the **Optional Services** section.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **FortiGate Virtual Appliance** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to New Instance**.
 
-## Ordering FortiGate Virtual Appliance on IBM Cloud for an existing instance
+## Ordering FortiGate Virtual Appliance for an existing instance
 {: #fortinetvm_ordering-existing}
 
-You can add the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
+You can add the FortiGate Virtual Appliance service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **FortiGate Virtual Appliance on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to Existing Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **FortiGate Virtual Appliance** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to Existing Instance**.
 
-## Ordering FortiGate Virtual Appliance on IBM Cloud for private instances
+## Ordering FortiGate Virtual Appliance for private instances
 {: #fortinetvm_ordering-private}
 
-When you order FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available via Virtual Routing and Forwarding (VRF) before the Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}} installation can start.
+When you order FortiGate Virtual Appliance for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available via Virtual Routing and Forwarding (VRF) before the Fortigate Virtual Appliance installation can start.
 
-To ensure continued operation, FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} must have persistent access to the Fortigate license server via the internet.
+To ensure continued operation, FortiGate Virtual Appliance must have persistent access to the Fortigate license server via the internet.
 
-## FortiGate Virtual Appliance on IBM Cloud service configuration
+## FortiGate Virtual Appliance service configuration
 {: #fortinetvm_ordering-config}
 
 When you order the service, provide the following settings.
@@ -76,7 +76,7 @@ Enter the service name.
 ### License model
 {: #fortinetvm_ordering-config-license}
 
-The license model for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} offers the following options:
+The license model for FortiGate Virtual Appliance offers the following options:
 <dl class="dl">
         <dt class="dt dlterm">Standard FW</dt>
         <dd class="dd">This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination, and 24 x 7 support.</dd>
@@ -95,8 +95,8 @@ You can't change the license model after service installation. To change the lic
 ## Related links
 {: #fortinetvm_ordering-related}
 
-* [FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
-* [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
+* [FortiGate Virtual Appliance overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations)
+* [Managing FortiGate Virtual Appliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

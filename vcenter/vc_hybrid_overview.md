@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-14"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -20,10 +20,10 @@ subcollection: vmware-solutions
 # vCenter Server with Hybridity Bundle overview
 {: #vc_hybrid_overview}
 
-The VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle is not supported for new installations. Instead, deploy the standard VMware vCenter Server instance with the HCX on {{site.data.keyword.cloud_notm}} service.
+The vCenter Server with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the HCX service.
 {:note}
 
-The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service.
+The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the HCX service.
 
 In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
@@ -62,7 +62,7 @@ The base offering is deployed with a vCenter Server appliance that is sized to s
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-For additional management resource requirements when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [VMware HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+For additional management resource requirements when deploying the HCX service, see [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Infrastructure hybridity
 {: #vc_hybrid_overview-infras-hybrid}
@@ -84,7 +84,7 @@ The availability and pricing of standardized hardware configurations might vary 
 
 You can order four or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
   * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
-  * **Cascade**: 2-CPU Intel Cascade generation servers (Intel Xeon 5200/6200 series) with your selected CPU model and RAM size.
+  * **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 5200/6200 series) with your selected CPU model and RAM size.
   * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
 ### Networking
@@ -101,7 +101,7 @@ The following networking components are ordered:
     {:important}
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx).
 
-For more information on networking components ordered when deploying the HCX on {{site.data.keyword.cloud_notm}} service, see [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+For more information on networking components ordered when deploying the HCX service, see [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Virtual Server Instances
 {: #vc_hybrid_overview-vsi}
@@ -165,7 +165,5 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 {: #vc_hybrid_overview-related}
 
 * [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
-* [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
+* [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

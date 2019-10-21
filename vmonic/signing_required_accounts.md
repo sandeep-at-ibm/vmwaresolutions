@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-09-06"
 
 keywords: user account, ibm cloud account, ibm cloud infrastructure
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -26,7 +26,7 @@ This hybrid architecture allows Acme Skateboards to:
 The reference architecture has the following key components:
 - **On-premises virtualization** – On-premises virtualization is a VMware cluster that currently hosts the Acme Skateboards VMs. These VMs are currently hosting the applications to be modernized. This cluster is required to meet the prerequisites of the [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) architecture so that it can run HCX.
 
-HCX extends the on-premises networks into the {{site.data.keyword.cloud_notm}} allowing customers to migrate VMs into the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance that runs on {{site.data.keyword.cloud_notm}}, and back if required.
+HCX extends the on-premises networks into the {{site.data.keyword.cloud_notm}} allowing customers to migrate VMs into the VMware vCenter Server instance that runs on {{site.data.keyword.cloud_notm}}, and back if required.
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** – The vCenter Server instance provides the fundamental VMware building blocks, such as vSphere, vCenter Server, NSX-V, and storage options that include vSAN or {{site.data.keyword.cloud_notm}} Endurance storage, needed to automatically deploy a VMware Software Defined Data Center (SDDC) solution. The VMware cluster is the target for the migrated VMs and some of the modernized applications in containers hosted in {{site.data.keyword.icpfull_notm}}. The key components in vCenter Server are as follows:
   - **NSX-V** - NSX-V provides the network virtualization layer in vCenter Server that provides a network overlay for Acme Skateboards VMs. NSX-V enables BYOIP and isolates the workload networks from the {{site.data.keyword.cloud_notm}} networks. NSX-V is programmed by HCX to create the networks that Acme Skateboards extend from on-premises.
   - **NSX-T** - NSX-T provides a common set of tools for network and security management across both containers and VMs. NSX-T is fully compatible with Kubernetes Container Networking Interface (CNI) and integrates with CNI to provide container networking. NSX-T provides the overlay network that the modernized applications use and is replacing Calico, which is used natively by {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}}.
@@ -65,4 +65,6 @@ In summary, the {{site.data.keyword.cloud_notm}} for VMware offerings:
 
 Customers moving toward cloud native application platforms such as {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} are focused on speed and innovation and don’t always have security and networking in mind. Application time to value decreases if they need to wait until networking or security teams can order services like load balancers, firewalls, switches, and routers.
 
-This reference architecture shows how VCS, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} move Acme Skateboards securely along the application modernization journey.
+This reference architecture shows how vCenter Server, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} move Acme Skateboards securely along the application modernization journey.
+
+**Next topic:** [Use cases](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-usecases)

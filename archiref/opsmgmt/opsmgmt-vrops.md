@@ -4,9 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-18"
 
 ---
+
+{:external: target="_blank" .external}
 
 # vRealize Operations Manager design
 {: #opsmgmt-vrops}
@@ -22,7 +24,7 @@ Additionally, the design uses Remote Collector Nodes, which act as a proxy/relay
 
 ![Operations Manager network diagram](../../images/opsmgmt-vropsnw.svg "Operations Manager network diagram"){: caption="Figure 1. Operations Manager networking" caption-side="bottom"}
 
-* Master Node, Master Node Replica, and Data Nodes are deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses to facilitate communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space including; vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. An NSX Load Balancer is used along with a VIP for HA.
+* Master Node, Master Node Replica, and Data Nodes are deployed on the tooling subnet by using {{site.data.keyword.cloud}} Portable IP addresses to facilitate communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space including; vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. An NSX Load Balancer is used along with a VIP for HA.
 * As customer workloads use IP addressing from the BYOIP address space then this design uses Remote Collectors that are hosted in a VXLAN. These remote collectors are not configured as part of the {{site.data.keyword.vmwaresolutions_full}} automation and must be manually implemented by the client.
 
 ![Operations Manager components diagram](../../images/opsmgmt-vropscomponent.svg "Operations Manager components diagram"){: caption="Figure 2. Operations Manager components" caption-side="bottom"}
@@ -80,8 +82,7 @@ Table 3. Operations Manager Load Balancer settings
 | Algorithm | ROUND-ROBIN | LEASTCONN |
 | Pool | Four nodes of vROPs | Four nodes of vROPs |
 
-For more information, see [vRealize Automation
-Load Balancing (PDF)](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:new_window}.
+<!-- For more information, see [vRealize Automation Load Balancing](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:external}. -->
 
 ## Networking
 {: #opsmgmt-vrops-network}
@@ -138,7 +139,7 @@ The following components are installed by {{site.data.keyword.vmwaresolutions_sh
 * vRealize Operations Federation Management pack
 * Management Pack for Hybrid Cloud Extension (HCX)
 
-Other management packs can be installed by the client. For more information, see [Management Packs at the VMware Exchange](https://marketplace.vmware.com/vsx/?contentType=1&listingStyle=table){:new_window}.
+Other management packs can be installed by the client. For more information, see [VMware Solution Exchange](https://marketplace.vmware.com/vsx/?contentType=1&listingStyle=table){:external}.
 
 ### Management Pack for VMware vCenter Server
 {: #opsmgmt-vrops-management-vCenter}
@@ -217,14 +218,15 @@ vRealize Operations Federation Management Pack enables a multi-site vROps deploy
 
 vRealize Operations Management Pack for HCX extends the Operations Management capabilities of vROps to hybrid capabilities presented by HCX. With the management pack, you can collect metrics, change events, and resource topology information from HCX. It enables the monitoring, isolation, and resolution of performance bottlenecks in the HCX Interconnects, Migrations, or Protected workloads.
 
-## Related links
-{: #opsmgmt-vrops-management-links}
+**Next topic**: [vRealize Log Insights](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrli)
 
-* [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:new_window}
-* [vRealize Operations Manager documentation](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:new_window}
-* [Management Pack for vSAN](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [Review Updating vSAN Cluster instructions at](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
-* [Management-Pack-for-vSAN-Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:new_window}
-* [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:new_window}
-* [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:new_window}
-* [NSX Operations Guide](https://communities.vmware.com/servlet/JiveServlet/previewBody/30079-102-2-40474/NSX-Operations-Guide-v6.1.pdf){:new_window}
+## Related links
+{: #opsmgmt-vrops-links}
+
+* [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:external}
+* [vRealize Operations Manager documentation](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:external}
+* [vRealize Operations Management Pack for vSAN 1.0 Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:external}
+* [Updating vSAN clusters](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
+* [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:external}
+* [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:external}
+* [NSX Operations Guide](https://communities.vmware.com/servlet/JiveServlet/previewBody/30079-102-2-40474/NSX-Operations-Guide-v6.1.pdf){:external}

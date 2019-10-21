@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-08"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Ordering and configuring IBM Cloud Object Storage with Veeam
 {: #icos_ordering}
 
-With the release of Veeam Availability Suite 9.5 Update 4, Veeam is compatible with {{site.data.keyword.cloud}} Object Storage (ICOS). The ordering of {{site.data.keyword.cloud_notm}} Object Storage is not automated when you order Veeam on IBM Cloud, but it can be added after deployment.
+With the release of Veeam Availability Suite 9.5 Update 4, Veeam is compatible with {{site.data.keyword.cloud}} Object Storage (ICOS). The ordering of {{site.data.keyword.cloud_notm}} Object Storage is not automated when you order Veeam, but it can be added after deployment.
 
 To order {{site.data.keyword.cloud_notm}} Object Storage, complete the following tasks in the specified order.
 
@@ -55,9 +55,9 @@ For more information, see [Managing capacity tier data](https://helpcenter.veeam
 ## Related links
 {: #icos_ordering-related}
 
-* [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
-* [Ordering Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Managed Services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Veeam overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [Ordering Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
+* [Managing Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
+* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [Veeam on {{site.data.keyword.cloud_notm}} - Demos](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud/){:external}

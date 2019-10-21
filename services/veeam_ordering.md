@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-22"
+lastupdated: "2019-10-08"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -18,26 +18,26 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Ordering Veeam on IBM Cloud
+# Ordering Veeam
 {: #veeam_ordering}
 
-You can order the Veeam on {{site.data.keyword.cloud}} service when you order a new instance with the service included or by adding the service to your existing instance.
+You can order the Veeam service when you order a new instance with the service included or by adding the service to your existing instance.
 
-## Ordering Veeam on IBM Cloud for a new instance
+## Ordering Veeam for a new instance
 {: #veeam_ordering-new}
 
-You can order a new instance with Veeam on {{site.data.keyword.cloud_notm}} by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **Veeam on IBM Cloud** in the **Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **Veeam on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to New Instance**.
+You can order a new instance with Veeam by using one of the following methods:
+* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, click **Veeam** under the **Business Continuity and Migration** category in the **Optional Services** section.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **Veeam** on the **Business Continuity and Migration** card in the **Services** section. Specify the service settings and select **Add to New Instance**.
 
-## Ordering Veeam on IBM Cloud for an existing instance
+## Ordering Veeam for an existing instance
 {: #veeam_ordering-existing}
 
-You can add the Veeam on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
+You can add the Veeam service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **Veeam on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to Existing Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **Veeam** on the **Business Continuity and Migration** card in the **Services** section. Specify the service settings and select **Add to Existing Instance**.
 
-## Veeam on IBM Cloud service configuration
+## Veeam service configuration
 {: #veeam_ordering-config}
 
 When you order the service, provide the following settings.
@@ -60,8 +60,8 @@ The IOPS (input/output operations per second) per GB based on your workload requ
 ## Related links
 {: #veeam_ordering-related}
 
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
+* [Managing Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Managed Services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

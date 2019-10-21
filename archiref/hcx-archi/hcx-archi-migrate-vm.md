@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -110,7 +110,4 @@ After the migration, view the vCenter and note the folders that are labeled **VM
 * Unwanted VMs within these folders can be deleted.
 * Deletion is final, unless a backup solution is in place.
 
-## Related links
-{: #hcx-archi-migrate-vm-related}
-
-* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)
+**Next topic:** [Modifying or uninstalling HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-mod-uninstall)

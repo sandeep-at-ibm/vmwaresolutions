@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -123,3 +123,5 @@ The following are some key NSX components:
 The following diagram shows a high-level diagram of how you can implement some of the micro-segmentation features of NSX-V by creating security groups. In this example, production and development are the security groups and security rules are assigned based on those groups.
 
 ![NSX-V security](../../images/vcsnsxt-vsecurity.svg "NSX-V security"){: caption="Figure 3. NSX-V security" caption-side="bottom"}
+
+**Next topic:** [IBM Cloud Kubernetes Service](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview-iks)

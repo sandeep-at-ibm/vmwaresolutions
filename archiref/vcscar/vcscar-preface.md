@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -67,3 +67,5 @@ For example, a skater can ask Watson Assistant to list all possible variations o
 {: #vcscar-preface-cloud-platform}
 
 The creative layering of IT systems to generate new combinations speaks to the heart of skateboarding. It has the power to ripple into the lives of creatives to inspire innovation, across the globe, wherever we go. None of this would be achieved without the {{site.data.keyword.cloud}}.
+
+**Next topic:** [VMware and Skate Advisor Concept Car introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscar-intro)

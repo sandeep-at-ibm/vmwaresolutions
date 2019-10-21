@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -25,3 +25,5 @@ Todd then adds the strongSwan VPN to connect between the private
 networks of each cluster.
 
 ![Stock Trader as a true hybrid application](../../images/vcscontent-truehybrid.svg "Stock Trader as a true hybrid application"){: caption="Figure 1. Stock Trader as a true hybrid application" caption-side="bottom"}
+
+**Next topic:** [Stock Trader summary](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscontent-summary)

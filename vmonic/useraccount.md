@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-14"
+lastupdated: "2019-10-09"
 
 keywords: set credentials, user credentials, set notifications
 
@@ -52,6 +52,8 @@ You can also specify whether you want to receive email and console notifications
 6. If you don't have an {{site.data.keyword.cloud_notm}} infrastructure account, and you have a billable {{site.data.keyword.cloud_notm}} account, you must [create a classic infrastructure API key](/docs/iam?topic=iam-classic_keys).
 7. Click **Save Credentials**.
 
+After you click **Save Credentials**, if you receive a message that administrator access is required, you can locate an account administrator using the steps in [Locating an IAM account administrator](/docs/services/vmwaresolutions?topic=vmware-solutions-iam_verify_permissions).
+
 ## Results
 {: #useraccount-results}
 
@@ -68,3 +70,4 @@ If email or console notifications are enabled for certain instance events, you'r
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
 * [Notifications](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
 * [SoftLayer API](/docs/customer-portal?topic=customer-portal-customerportal_api)
+* [Locating an IAM account administrator](/docs/services/vmwaresolutions?topic=vmware-solutions-iam_verify_permissions)

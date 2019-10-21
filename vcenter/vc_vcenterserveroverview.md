@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-18"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -20,11 +20,11 @@ subcollection: vmware-solutions
 # vCenter Server overview
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
+VMware vCenter Server is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX.
 
 In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
-Post-deployment, you can increase shared storage by ordering more Network File System (NFS) file shares from the {{site.data.keyword.slportal}} and by manually attaching them to all ESXi servers in a cluster. If you require dedicated storage, [NetApp ONTAP Select on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview) is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+Post-deployment, you can increase shared storage by ordering more Network File System (NFS) file shares from the {{site.data.keyword.slportal}} and by manually attaching them to all ESXi servers in a cluster. For dedicated storage, see [NetApp ONTAP Select](/docs/services/vmwaresolutions?topic=vmware-solutions-netapp).
 
 VMware vSAN is also available as a dedicated storage option. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
 
@@ -75,7 +75,7 @@ The availability and pricing of standardized hardware configurations might vary 
 
 You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
-* **Cascade**: 2-CPU Intel Cascade generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
+* **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
 * **SAP-certified**: Intel Skylake or Intel Broadwell generation servers (Intel Xeon 6140/E5-2690/E7-8890 series) with your selected CPU model.
 * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
@@ -94,7 +94,7 @@ The following networking components are ordered:
 
     This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic. This gateway is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx).
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic. This gateway is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx)
 
 ### Virtual Server Instances
 {: #vc_vcenterserveroverview-vsi}
@@ -179,6 +179,14 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
 *  Restarting services
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
    {:important}
+
+## Support and Services fee
+{: #vc_vcenterserveroverview-support-services-fee}
+
+VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short_sing}}. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} DevOps and Level 2 Support teams for any issues pertaining to:
+
+* Automation in the platform
+* VMware products included in the solution
 
 ## Related links
 {: #vc_vcenterserveroverview-related}

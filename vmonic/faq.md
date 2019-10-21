@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-01"
+lastupdated: "2019-10-07"
 
 keywords: FAQ, user account, patch management
 
@@ -64,7 +64,7 @@ For more information, see [Technical specifications for vCenter Server instances
 {: #faq-vss}
 {: faq}
 
-For more information, see [Components of VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview).
+For more information, see [Components of VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview).
 
 ## Is a two-node vCenter Server instance highly available?
 {: #is-a-two-node-vcenter-server-instance-highly-available}
@@ -94,7 +94,7 @@ For a new vCenter Server instance, you can set the name of the initial cluster t
 {: #faq-patches}
 {: faq}
 
-IBM provides ongoing updates to the IBM code by deploying the IBM CloudDriver virtual server instance (VSI) on demand. IBM does not provide ongoing updates to add-on services such as Zerto on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}}. Obtaining and installing these updates is your responsibility.
+IBM provides ongoing updates to the IBM code by deploying the IBM CloudDriver virtual server instance (VSI) on demand. IBM does not provide ongoing updates to add-on services such as Zerto or Veeam. Obtaining and installing these updates is your responsibility.
 
 For VMware vCenter Server instances deployed in or upgraded to V2.1 or higher, newly deployed ESXi servers and clusters are patched with recent, but not necessarily the latest, ESXi updates from VMware.
 
@@ -135,8 +135,7 @@ The instance deployments have strict physical infrastructure requirements, which
 
 For more information, see the _IBM Cloud Data Center availability_ sections in:
 * [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Requirements and planning for VMware vSphere on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
-* [Requirements and planning for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_planning)
+* [Requirements and planning for VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
 
 ## How long does it take for my instance to be deployed?
 {: #faq-deploy}
@@ -144,13 +143,13 @@ For more information, see the _IBM Cloud Data Center availability_ sections in:
 
 You can check the status of the instance deployment by viewing the deployment history on the instance details page from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-## Does VMware vSphere on IBM Cloud use automation to install, configure, and bring up the VMware stack?
+## Does VMware vSphere use automation to install, configure, and bring up the VMware stack?
 {: #faq-vss-automation}
 {: faq}
 
-No. VMware vSphere on {{site.data.keyword.cloud_notm}} does not use the advanced automation from the vCenter Server platform. Based on what you order, the platform delivers optional VMware licenses, ESXi servers, and, optionally, an HA-pair of FortiGate physical firewalls. If a new cluster is created, three new VLANs are also provisioned: a public VLAN and two private VLANs.
+No. VMware vSphere does not use the advanced automation from the vCenter Server platform. Based on what you order, the platform delivers optional VMware licenses, ESXi servers, and, optionally, an HA-pair of FortiGate physical firewalls. If a new cluster is created, three new VLANs are also provisioned: a public VLAN and two private VLANs.
 
-VMware ESXi is automatically installed on each bare metal server, but you are responsible for installing any additional VMware components like vCenter Server or NSX. While vSphere on {{site.data.keyword.cloud_notm}} ensures that VMware-compatible hardware is ordered based on the VMware components selected, no automation exists to configure and bring up the VMware environment. You are responsible for designing and architecting the IBM-hosted environment.
+VMware ESXi is automatically installed on each bare metal server, but you are responsible for installing any additional VMware components like vCenter Server or NSX. While VMware vSphere ensures that VMware-compatible hardware is ordered based on the VMware components selected, no automation exists to configure and bring up the VMware environment. You are responsible for designing and architecting the IBM-hosted environment.
 
 ## How can I view a list of all notifications?
 {: #faq-notification}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -107,3 +107,5 @@ Application deployments into {{site.data.keyword.containerlong_notm}} are possib
 -	{{site.data.keyword.containerlong_notm}} connection and services are developed in CAM and published to {{site.data.keyword.icpfull_notm}} catalog.
 - Multi Cloud Manager, a future enhancement to manage {{site.data.keyword.containerlong_notm}} instances.
 - Helm command line.
+
+**Next topic:** [Technology preview of VMware NSX-T on VMware vCenter Server on IBM Cloud](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-techpreview)

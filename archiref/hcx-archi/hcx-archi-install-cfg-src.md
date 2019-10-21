@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -57,6 +57,8 @@ Table 1. Sample values for network properties
   * To check the status, go to the vSphere Web Client home page, and on the **Home** tab, go to **Inventories** and click **Hosts and Clusters**. Expand the data center hierarchy, and click the Hybrid Cloud Services service virtual machine to display a summary in the center pane.
   * View the **Summary** tab, the console reads **Powered On** and the **Play** button is green.
 10. The HCX Manager is powered on and ready to be registered with the vCenter.
+
+**Next topic:** [Registering HCX Manager with vCenter](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-reg-vcenter)
 
 ## Related links
 {: #hcx-archi-install-cfg-src-related}

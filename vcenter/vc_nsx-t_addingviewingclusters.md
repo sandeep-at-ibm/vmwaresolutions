@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-18"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -57,7 +57,7 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 ### Bare Metal Server settings
 {: #vc_nsx-t_addingviewingclusters-bare-metal-settings}
 
-You can choose **Skylake**, **Cascade**, or **Broadwell**.
+You can choose **Skylake**, **Cascade Lake**, or **Broadwell**.
 
 #### Skylake
 {: #vc_nsx-t_addingviewingclusters-adding-skylake}
@@ -71,12 +71,12 @@ For the **Skylake** setting, you have options for the **CPU Model** and **RAM**.
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
-#### Cascade
+#### Cascade Lake
 {: #vc_nsx-t_addingviewingclusters-adding-cascade}
 
-For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
 {:note}
 
 | CPU model options        | RAM options       |
@@ -84,7 +84,7 @@ Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSph
 | Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-{: caption="Table 2. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 2. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Broadwell
 {: #vc_nsx-t_addingviewingclusters-adding-broadwell}
@@ -102,7 +102,7 @@ For the **Broadwell** setting, you have a number of options for the **CPU Model*
 
 * All servers that you order have the same configuration.
 * For vSAN storage, you can order between 4 and 59 servers.
-* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Storage settings
 {: #vc_nsx-t_addingviewingclusters-adding-storage-settings}
@@ -117,7 +117,7 @@ Specify the following vSAN options:
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade CPU models.
+  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -159,6 +159,20 @@ Specify the licensing option for the VMware vSphere component in the cluster:
 ### Network interface settings
 {: #vc_nsx-t_addingviewingclusters-adding-network-interface-settings}
 
+When you add a cluster for a vCenter Server with NSX-T, you must specify the following network interface settings.
+
+#### Host name prefix
+{: #vc_nsx-t_addingviewingclusters-host-name}
+
+You can use the default host name prefix or specify a new one. When you specify a new host name prefix, the host name prefix must meet the following requirements:
+- Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+- The host name prefix must start with a lowercase alphabetic character.
+- The host name prefix must end with a lowercase alphabetic or numeric character.
+- The maximum length of the host name prefix is 10 characters.
+
+#### Public or private network
+{: #vc_nsx-t_addingviewingclusters-network}
+
 Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.
 
 ### Order summary
@@ -185,13 +199,13 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then click the **+** icon next to the **Add Shared Storage** label and select the  **Performance** and **Size (GB)** for each  file share. You must select at least one file share.
 8. Complete the network interface settings.
-8. Specify how the vSphere license key is provided:
+9. Specify how the vSphere license key is provided:
   * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
   * For users who aren't Business Partners, you can select one of the following options:
       * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the component.
       * If you want to use your own VMware license for the component, select **I will provide** and enter your license key.
-9. Select the network setting of either **Public and Private Network** or **Private Network Only**.
-10. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
+10. Select the network setting of either **Public and Private Network** or **Private Network Only**.
+11. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
    1. Review the settings for the cluster.
    2. Review the estimated cost of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-10-09"
 
 subcollection: vmware-solutions
 
@@ -31,6 +31,8 @@ Table 1. Functions description for attached storage for vCenter Server
 | vSphere High Availability | This feature provides HA for VMs (by pooling them) and for the hosts that reside in a cluster. The hosts in the cluster are monitored. If a failure occurs, the VMs on a failed host are restarted on alternative hosts. |
 | vSphere Datastore Clusters | This feature provides a collection of datastores with shared resources and a shared management interface. |
 | vSphere Fault Tolerance | This feature provides continuous availability to VMs, by eliminating downtime and disruption, even if a complete host failure occurs. |
+
+Next topic: [Attached storage infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-infra-design)
 
 ## Related links
 {: #storage-benefits-related}

@@ -4,9 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-18"
 
 ---
+
+{:external: target="_blank" .external}
 
 # vRealize Log Insights
 {: #opsmgmt-vrli}
@@ -136,10 +138,12 @@ This design also installs:
 * VMware NSX for vSphere
 * vRealize Network Insight
 
-Other Content Packs can be obtained from [vRealize Log Insight Content Pack](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:new_window}.
+Other Content Packs can be obtained from [VMware Solution Exchange](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:external}.
+
+**Next topic**: [vRealize Network Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrni)
 
 ## Related links
 {: #opsmgmt-vrli-related}
 
-* [Sizing the vRealize Log Insight Virtual Appliance](https://docs.vmware.com/en/vRealize-Log-Insight/4.6/com.vmware.log-insight.getting-started.doc/GUID-284FC5F4-B832-47A7-912E-D407A760CAE4.html){:new_window}
-* [vRealize Log Insight](https://docs.vmware.com/en/vRealize-Log-Insight/index.html){:new_window}
+* [Sizing the vRealize Log Insight Virtual Appliance](https://docs.vmware.com/en/vRealize-Log-Insight/4.6/com.vmware.log-insight.getting-started.doc/GUID-284FC5F4-B832-47A7-912E-D407A760CAE4.html){:external}
+* [vRealize Log Insight Documentation](https://docs.vmware.com/en/vRealize-Log-Insight/index.html){:external}

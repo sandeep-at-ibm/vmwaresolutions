@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-09"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -108,7 +108,7 @@ The original vCenter Server cluster contains all the management components for N
 
 The following information highlights the major difference between the VMware SDN products, NSX-V, and NSX-T. Both solutions provide micro-segmentation within a VMware environment, however NSX-T takes it a bit further as outlined in the following sections.
 
-For detailed architectural differences, see [VMware NSX-T Reference Design Guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf) (PDF download).
+For detailed architectural differences, see [VMware NSX-T Reference Design Guide](https://nsx.techzone.vmware.com/resource/vmware-nsx-t-reference-design-guide).
 
 #### NSX for vSphere
 {: #vcsnsxt-techpreview-nsx-vsphere}
@@ -125,7 +125,7 @@ NSX-V highlights:
 #### NSX Transformers
 {: #vcsnsxt-techpreview-nsx-transformers}
 
-NSX-T is a stand-alone solution for vCenter and vSphere environments, but it also supports KVM, public cloud, containers, and can be integrated into frameworks like {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal, and others. NSX-T gives you the ability to manage your SDN across multiple hypervisors, containers, and clouds.
+NSX-T is a stand-alone solution for vCenter and vSphere environments, but it also supports KVM, public cloud, containers, and can be integrated into frameworks like {{site.data.keyword.containerlong}} and {{site.data.keyword.icpfull_notm}}, Redhat OpenShift, Pivotal, and others. NSX-T gives you the ability to manage your SDN across multiple hypervisors, containers, and clouds.
 
 NSX-T highlights
 -	Stand-alone product. vCenter isn't required.
@@ -252,6 +252,6 @@ NSX-T distributed firewall allows creation of network policies, which are implem
 ## Related links
 {: #vcsnsxt-techpreview-related}
 
-* [VMware NSX-T reference design guide](https://communities.vmware.com/servlet/JiveServlet/download/37591-3-195840/VMware%20NSX-T%20Reference%20Design%20Guide.pdf) (PDF download)
+* [VMware NSX-T reference design guide](https://nsx.techzone.vmware.com/resource/vmware-nsx-t-reference-design-guide)
 * [Route to Cloud NSX-T](https://www.routetocloud.com/category/nsx-t/)
 * [VMware containers and container networking for network engineers](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-containers-and-container-networking-whitepaper.pdf)

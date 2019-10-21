@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-09-04"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 # OpenShift NSX logical switches configuration
 {: #openshift-runbook-runbook-nsxls-intro}
 
-This section details the NSX logical switches that are utilized to support the OpenShift 4.1 environment. To use this information, you must understand how to create these components and add the configuration.
+This section details the NSX logical switches that are used to support the OpenShift 4.1 environment. To use this information, you must understand how to create these components and add the configuration.
 
 Review [Add a logical switch](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-295720D5-DD75-4523-9095-1D694D99717A.html){:external}. PowerNSX commands are provided if you would want to use this method.
 
@@ -35,7 +35,9 @@ The design requires two NSX Logical Switches:
 ## PowerNSX commands
 {: #openshift-runbook-runbook-nsxls-powernsx}
 
-This section provides example PowerNSX commands to script the provisioning and configuration of the NSX logical switches. Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described previously.
+This section provides example PowerNSX commands that you can use to automate the provisioning and configuration of the NSX logical switches.
+
+Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described previously.
 
 | Parameters | Example | Your Deployment |
 | --- | --- | --- |
@@ -47,10 +49,13 @@ This section provides example PowerNSX commands to script the provisioning and c
 {: caption="Table 1. PowerNSX LS Parameters" caption-side="top"}
 
 ```powernsx
+# Allow self-signed certificates on PowerCLI
+Set-PowerCLIConfiguration -InvalidCertificateAction:Ignore
+
 # Connect to NSX Manager
 Connect-NsxServer -vCenterServer <IP_Address> -User <UserName> -Password '<Password>'
 
-# Create Logical switches
+# Create logical switches
 Get-NsxTransportZone transport-1 | new-nsxlogicalswitch -Name OpenShift-LS -Description "OpenShift network"
 Get-NsxTransportZone transport-1 | new-nsxlogicalswitch -Name OpenShift-Transit -Description "OpenShift transit network"
 Get-NsxTransportZone transport-1 | new-nsxlogicalswitch -Name OpenShift-HA -Description "OpenShift DLR HA network"
@@ -59,8 +64,11 @@ Get-NsxTransportZone transport-1 | new-nsxlogicalswitch -Name OpenShift-HA -Desc
 Disconnect-NsxServer
 ```
 
+
+**Next topic:** [Red Hat OpenShift NSX Edge configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxedge-intro)
+
 ## Related links
-{: #openshift-runbook-runbook-nsxdls-related}
+{: #vcs-openshift-runbook-nsxdls-related}
 
 * [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
 * [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)

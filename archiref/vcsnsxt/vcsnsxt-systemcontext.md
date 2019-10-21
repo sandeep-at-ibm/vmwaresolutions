@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -56,3 +56,5 @@ NSX-V | NSX-V on vCenter Server provides the software defined overlay network th
 CAM | {{site.data.keyword.cloud_notm}} Automation Manager (CAM) runs on {{site.data.keyword.icpfull_notm}} and provides a single pane of glass to provision VM-based workloads alongside Kubernetes based workloads by using templates. CAM allows the Developer to: <br> - Provision workloads on vCenter Server, {{site.data.keyword.icpfull_notm}}, or {{site.data.keyword.containerlong_notm}}.<br> - Compose and orchestrate services that are made out of both VMs and containers. <br> - Integrate their DevOps toolchains and day-2 ITSM solution.
 Containerized Applications | The apps that went through the application modernization journey and are now running as containers. For this reference architecture and in this example for Acme Skateboards, one of the containerized apps is a web server, which is part of the online presence workload.
 Watson | For this reference architecture and in this example for Acme Skateboards, Watson represents the AI service that is used in the _Concept Car architecture_.
+
+**Next topic:** [Application modernization overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-appmod)

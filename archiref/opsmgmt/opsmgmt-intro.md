@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-18"
 
 ---
 
-# Introduction
+{:external: target="_blank" .external}
+
+# Operations management introduction
 {: #opsmgmt-intro}
 
 This reference architecture is to guide and constrain the instantiations of {{site.data.keyword.vmwaresolutions_full}} architectures.
@@ -61,8 +63,10 @@ The Operations Management Layer consist of the following tools:
 
 For a full enterprise architecture, the following layers might be required but are outside of the {{site.data.keyword.vmwaresolutions_short}} architecture:
 
-* Cloud Management Layer - The cloud management layer is the top layer of the cloud architecture. This layer requests resources and orchestrates the lower layers from a user interface or application programming interface (API). vRealize Automation enables cloud automation on the {{site.data.keyword.cloud_notm}}. For more information, see [vRealize Automation (vRA) reference architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Architecture_v1.pdf){:new_window}.
+* Cloud Management Layer - The cloud management layer is the top layer of the cloud architecture. This layer requests resources and orchestrates the lower layers from a user interface or application programming interface (API). vRealize Automation enables cloud automation on the {{site.data.keyword.cloud_notm}}. For more information, see [IBM Cloud for VMware Solutions vRealize Automation 7.2 Solution Architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Architecture_v1.pdf){:external}.
 
-For more information about how this architecture can be extended with Chef integration, see [vRA with Chef integration reference Architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:new_window}.
+For more information about how this architecture can be extended with Chef integration, see [IBM Cloud	for VMware Solutions vRealize Automation 7.2 Chef Integration](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_VRA_Chef_Integration_Architecture.pdf){:external}.
 
 * Service Management Layer – This layer focuses on the full lifecycle of the IT environment and is typically implemented at the enterprise level combining inputs from all the silos of IT Operations and technologies. This layer has traditionally been, architected on IT Service Management (ITSM) frameworks such as; the IT Infrastructure Library (ITIL) and ISO/IEC 20000, which are a framework of best practices for delivering IT services through the processes and stages of the IT service lifecycle. At a product level, ITSM is typified by a centralized workflow management system for handling incidents, service requests, problems, changes, and knowledge connected to a configuration management database.
+
+**Next topic**: [Operations management architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch)

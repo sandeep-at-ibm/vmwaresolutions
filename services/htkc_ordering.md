@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-10-08"
 
 keywords: Hytrust KeyControl, Hytrust configuration, order Hytrust
 
@@ -15,26 +15,26 @@ subcollection: vmware-solutions
 
 {:external: target="_blank" .external}
 
-# Ordering HyTrust KeyControl on IBM Cloud
+# Ordering HyTrust KeyControl
 {: #htkc_ordering}
 
-You can order the HyTrust KeyControl on {{site.data.keyword.cloud}} service while you order a new instance with an HA-pair of HyTrust KeyControl appliances included or by adding the HyTrust KeyControl appliances to your existing instance.
+You can order the HyTrust KeyControl service while you order a new instance with an HA-pair of HyTrust KeyControl appliances included or by adding the HyTrust KeyControl appliances to your existing instance.
 
-## Ordering HyTrust KeyControl on IBM Cloud for a new instance
+## Ordering HyTrust KeyControl for a new instance
 {: #htkc_ordering-new}
 
-You can order a new instance with HyTrust KeyControl on {{site.data.keyword.cloud_notm}} by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **HyTrust KeyControl on IBM Cloud** in the **Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **HyTrust KeyControl on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to New Instance**.
+You can order a new instance with HyTrust KeyControl by using one of the following methods:
+* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, click **HyTrust KeyControl** under the **Security and Compliance** category in the **Optional Services** section.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **HyTrust KeyControl** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to New Instance**.
 
-## Ordering HyTrust KeyControl on IBM Cloud for an existing instance
+## Ordering HyTrust KeyControl for an existing instance
 {: #htkc_ordering-existing}
 
-You can add the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
+You can add the HyTrust KeyControl service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **HyTrust KeyControl on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to Existing Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **HyTrust KeyControl** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to Existing Instance**.
 
-## HyTrust KeyControl on IBM Cloud service configuration
+## HyTrust KeyControl service configuration
 {: #htkc_ordering-config}
 
 When you order the service, provide the following settings.
@@ -46,8 +46,8 @@ Specify whether you want to create a two-node Highly Available KeyControl cluste
 ## Related links
 {: #htkc_ordering-related}
 
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
-* [Managing HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc)
+* [HyTrust KeyControl overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
+* [Managing HyTrust KeyControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

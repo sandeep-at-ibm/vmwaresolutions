@@ -4,9 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-18"
 
 ---
+
+{:external: target="_blank" .external}
 
 # vRealize Network Insight
 {: #opsmgmt-vrni}
@@ -76,7 +78,4 @@ Table 3. Network Insight ports
 
 vRNI user authentication is directly with an Active Directory Server.
 
-## Related links
-{: #opsmgmt-vrni-links}
-
-* [vRealize Network Insights](https://docs.vmware.com/en/VMware-vRealize-Network-Insight/index.html){:new_window}
+**Next topic:** [VMware Update Manager](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-vum)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-09-03"
+lastupdated: "2019-10-03"
 
 keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 
@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 
 {:external: target="_blank" .external}
 
-# More resources
+# More learning resources
 {: #additional_resources}
 
 Review the following resources to get started faster or gain more in-depth technical information for {{site.data.keyword.vmwaresolutions_full}}.
@@ -39,7 +39,7 @@ Review the following resources to get started faster or gain more in-depth techn
 
 Review the architecture of all the [Virtualization Platform Extensions](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/allvirtualizationextensions){:external} such as:
 * FortiGate Security Appliance
-* {{site.data.keyword.cloud_notm}} file and block storage
+* {{site.data.keyword.cloud}} file and block storage
 * NSX Edge Services Gateway
 * Secure virtualization
 * Veeam backup and replication
@@ -52,8 +52,8 @@ Review the architecture of all the [Virtualization Platform Extensions](https://
 ### Digital Technical Engagement
 {: #additional_resources-dte}
 
-* [Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Caveonix-RiskForesight-on-IBM-Cloud/){:external}
-* [VMware on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
+* [Caveonix RiskForesight](https://www.ibm.com/demos/collection/Caveonix-RiskForesight-on-IBM-Cloud/){:external}
+* [VMware Solutions on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/){:external}
 * [Veeam on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud){:external}
 * [Zerto on {{site.data.keyword.cloud_notm}}](https://www.ibm.com/demos/collection/Zerto-on-IBM-Cloud){:external}
 

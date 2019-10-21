@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-23"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -57,11 +57,12 @@ The Red Hat OpenShift deployment uses the following components of the {{site.dat
 
 For more information, see [IBM Cloud for VMware Solutions SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch).
 
+**Next topic:** [IBM Cloud for VMware Solutions SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
+
 ## Related links
 {: #vcs-openshift-redhat-arch-related}
 
 * [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
 * [System context for vCenter Server and Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-syscontext)
-* [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
 * [{{site.data.keyword.cloud_notm}} networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
 * [Storage options on {{site.data.keyword.cloud_notm}} and Red Hat OpenShift](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)

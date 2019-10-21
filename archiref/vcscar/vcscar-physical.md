@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -27,7 +27,7 @@ The {{site.data.keyword.icpfull_notm}} and Cloud Automation Manager (CAM) produc
 can be manually deployed into your on-premises virtualization platform,
 enabling cloud management from on-premises locations. Alternatively, {{site.data.keyword.icpfull_notm}}
 and CAM are offered as service extensions to an existing or new VMware
-vCenter Server on {{site.data.keyword.cloud_notm}} deployment, through automation, enabling
+vCenter Server deployment, through automation, enabling
 cloud management from {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing on-premises,
@@ -193,3 +193,5 @@ In the diagram, CAM logically creates cloud connections to the vCenters,
 cloud providers, and {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} Clusters are
 deployed to each datacenter or cloud environment, with MCM providing the
 mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
+
+**Next topic:** [Solution components](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscar-arch-overview-solution)

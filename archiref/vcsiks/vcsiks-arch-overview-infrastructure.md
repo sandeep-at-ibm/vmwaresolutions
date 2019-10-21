@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -37,7 +37,7 @@ The strongSwan IPSec VPN service provides a secure end-to-end communication chan
 ### Hybridity (HCX)
 {: #vcsiks-arch-overview-infrastructure-hcx}
 
-The VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+The VMware vCenter Server with Hybridity Bundle seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
 ## Physical structure
 {: #vcsiks-arch-overview-infrastructure-physical-structure}
@@ -140,3 +140,5 @@ The Kubernetes master is tasked with managing all compute, network, and storage 
 {: #vcsiks-arch-overview-infrastructure-worker-node}
 
 Each worker node is a physical machine (bare metal) or a VM that runs on physical hardware in the cloud environment. When you provision a worker node, you determine the resources that are available to the containers that are hosted on that worker node. Out of the box, your worker nodes are set up with an IBM-managed Docker Engine, separate compute resources, networking, and a volume service. The built-in security features provide isolation, resource management capabilities, and worker node security compliance.
+
+**Next topic:** [Networking, backup, disaster recovery, and scalability](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-overview-network)

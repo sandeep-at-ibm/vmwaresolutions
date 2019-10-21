@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-22"
+lastupdated: "2019-10-03"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -22,11 +22,11 @@ subcollection: vmware-solutions
 {: #dr_backup_bundle_overview}
 
 The Single-node Trial for Data Protection and Disaster Recovery allows you to test drive
- {{site.data.keyword.cloud}} to migrate and recover VMware workloads to the {{site.data.keyword.cloud_notm}}. In addition, Single-node Trial for Data Protection and Disaster Recovery includes the Veeam on {{site.data.keyword.cloud_notm}}, VMware HCX on {{site.data.keyword.cloud_notm}}, and Zerto on {{site.data.keyword.cloud_notm}} services.
+ {{site.data.keyword.cloud}} to migrate and recover VMware workloads to the {{site.data.keyword.cloud_notm}}. In addition, Single-node Trial for Data Protection and Disaster Recovery includes the Veeam, HCX, and Zerto services.
 
-The Single-node Trial is a trial version of VMware vCenter Server on {{site.data.keyword.cloud_notm}} that provides the single-tenant VMware platform that can be managed using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while maintaining the same level of control and visibility that is provided on-premises.
+The Single-node Trial is a trial version of vCenter Server that provides the single-tenant VMware platform that can be managed using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while maintaining the same level of control and visibility that is provided on-premises.
 
-The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server. Automation will install and configure VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install Veeam on {{site.data.keyword.cloud_notm}} and Zerto on {{site.data.keyword.cloud_notm}} in a matter of hours. You can back up and replicate 20 virtual machines (VMs) with Veeam on {{site.data.keyword.cloud_notm}} and Zerto on {{site.data.keyword.cloud_notm}}. 
+The trial is designed for migration of up to 20 simple development or test workloads using vCenter Server. Automation will install and configure VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install Veeam and Zerto in a matter of hours. You can back up and replicate 20 virtual machines (VMs) with Veeam and Zerto. 
 
 The Single-node Trial for Data Protection and Disaster Recovery is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering additional add-on services, and applying updates are not supported.
 {:important}
@@ -89,7 +89,7 @@ The following virtual server instances (VSIs) are ordered:
 
 * A VSI for IBM CloudBuilder, which is cancelled after the instance deployment is completed.
 * A Microsoft Windows Server VSI for Microsoft Active Directory (AD) is deployed and can be looked up. The VSI functions as the DNS for the instance where the hosts and VMs are registered.
-* A VSI for Zerto on {{site.data.keyword.cloud_notm}} - Zerto Virtual Manager.
+* A VSI for Zerto - Zerto Virtual Manager.
 * A VSI with Veeam Backup and Replication 9.5 OS Add-on and Veeam Availability Suite 9.5.
 
 ### IBM-provided licenses and fees
@@ -106,10 +106,10 @@ The following licenses are included with your Single-node Trial for Data Protect
 Single-node Trial for Data Protection and Disaster Recovery instances do not support Bring Your Own License.
 {:note}
 
-## Technical specifications for VMware HCX on IBM Cloud
+## Technical specifications for HCX
 {: #dr_backup_bundle_overview-hcx-tech-specs}
 
-The Single-node Trial for Data Protection and Disaster Recovery includes HCX on {{site.data.keyword.cloud_notm}}. The following components are ordered and included in the HCX on {{site.data.keyword.cloud_notm}} service.
+The Single-node Trial for Data Protection and Disaster Recovery includes HCX. The following components are ordered and included in the HCX service.
 
 On-premises HCX instances include only licensing and activation.
 {:note}
@@ -130,17 +130,17 @@ On-premises HCX instances include only licensing and activation.
 
 Additional HCX appliances are deployed during configuration as necessary for L2 connectivity, WAN optimization, and gateway connections.
 
-### Networking specifications for HCX on IBM Cloud
+### Networking specifications for HCX
 {: #dr_backup_bundle_overview-hcx-networking-specs}
 
 * One public portable subnet with 16 IP addresses
 * Two private portable subnets with 64 IP addresses
 * Eight IP addresses from private portable vMotion subnet
 
-## Technical specifications for Veeam on {{site.data.keyword.cloud_notm}}
+## Technical specifications for Veeam
 {: #dr_backup_bundle_overview-veeam-tech-specs}
 
-The Single-node Trial for Data Protection and  Disaster Recovery includes Veeam on {{site.data.keyword.cloud_notm}}. The following components are ordered and included in the Veeam on {{site.data.keyword.cloud_notm}} service.
+The Single-node Trial for Data Protection and  Disaster Recovery includes Veeam. The following components are ordered and included in the Veeam service.
 
 * 25-package license of the Veeam Availability Suite
 * 4000 GB storage
@@ -151,10 +151,10 @@ The Single-node Trial for Data Protection and  Disaster Recovery includes Veeam 
 * 1 Gbps private network uplink
 * 100 GB disk (SAN)
 
-## Technical specifications for Zerto on {{site.data.keyword.cloud_notm}}
+## Technical specifications for Zerto
 {: #dr_backup_bundle_overview-zerto-tech-specs}
 
-The Single-node Trial for Data Protection and Disaster Recovery includes Zerto on {{site.data.keyword.cloud_notm}}. The following components are ordered and included in the Zerto on {{site.data.keyword.cloud_notm}} service.
+The Single-node Trial for Data Protection and Disaster Recovery includes Zerto. The following components are ordered and included in the Zerto service.
 
 * Zerto Virtual Replication V6.5u3 License
 * One Virtual Service Instance (VSI) - Zerto Virtual Manager
@@ -173,5 +173,5 @@ The Single-node Trial for Data Protection and Disaster Recovery includes Zerto o
 
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managing Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managing Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -17,15 +17,15 @@ subcollection: vmware-solutions
 ## VMware workload migration to IBM Cloud
 {: #vcsnsxt-usecases-wkld-mig}
 
-Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC instance into a VMware vCenter Server on {{site.data.keyword.cloud}} instance. They must keep their business up and running and minimize their downtime. Reconfiguring their applications to run in the cloud isn't an optimal solution.
+Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC instance into a VMware vCenter Server instance. They must keep their business up and running and minimize their downtime. Reconfiguring their applications to run in the cloud isn't an optimal solution.
 
-The VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle enables the creation of a seamless connection between vCenter Server instances and an on-premises VMware virtualized datacenter.
+The VMware vCenter Server with Hybridity Bundle enables the creation of a seamless connection between vCenter Server instances and an on-premises VMware virtualized datacenter.
 
 The VMware HCX components, which are deployed as virtual machines (VMs) in the vCenter Server target site enable the establishment of a connection with the VMware HCX components that are installed in the peer on-premises source site.
 
 ![VMware Hybrid Cloud Extension service](../../images/vcsnsxt-hcx-1.svg "VMware Hybrid Cloud Extension service"){: caption="Figure 1. VMware Hybrid Cloud Extension service" caption-side="bottom"}
 
-The loosely coupled interconnectivity between on-premises and {{site.data.keyword.cloud_notm}} enables capabilities such as:
+The loosely coupled interconnectivity between on-premises and {{site.data.keyword.cloud}} enables capabilities such as:
 - **Simple interconnectivity** – logical network connections are established easily over any physical connection that includes public internet, private VPN, or direct link.
 - **Layer 2 extension** – on-premises networks are extended into the cloud that includes on-premises subnets and IP addressing.
 - **Encryption** – network traffic is securely encrypted between the two sides.
@@ -65,3 +65,5 @@ This creates a loosely coupled interconnectivity between on-premises and {{site.
 -	**Migration of security policies** – if NSX is used on-premises any security policies, firewalls, and so on, are moved along with the workload.
 
 Using this solution Acme Skateboards was successfully able to migrate their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration. For more information about vCenter Server with Hybridity Bundle, see [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
+
+**Next topic:** [Overall architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview)

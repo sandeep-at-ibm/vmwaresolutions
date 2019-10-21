@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-21"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -66,8 +66,10 @@ The [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/
 
 This facility enables the automated updating for the management components of the vCenter Server instances only. VMware product updates must be applied by using the procedures that are detailed in this document.
 
+**Next topic:** [VMware Update Manager overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-overview)
+
 ## Related links
 {: #vum-intro-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

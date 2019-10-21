@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -41,6 +41,8 @@ To change the virtual machine (VM) Settings, access the vSphere Web Client, navi
 {: #vum-metadata-host-settings}
 
 To change the Host/Cluster Settings, access the vSphere Web Client, navigate to **Home** > **Update Manager** > **Manage** > **Settings** and **Host/Cluster Settings** and then clicking **Edit**.
+
+**Next topic:** [Creating baselines and attaching to inventory objects](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-baselines)
 
 ## Related links
 {: #vum-metadata-related}

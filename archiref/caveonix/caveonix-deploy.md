@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -109,3 +109,5 @@ When you remove the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} s
 * If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed.
 * If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function.
 * If you delete vCenter Server instance A with the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service installed, and you used the IP addresses of the dedicated private subnet ordered for the service in vCenter Server instance B, the dedicated private subnet is canceled upon deletion of vCenter Server instance A.
+
+Next topic: [All-in-one deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-allinone)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-07"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -76,7 +76,7 @@ By default, the **VM restart priority** option is set to medium and the **Host i
 ### Enhanced vMotion compatibility
 {: #design_infrastructuremgmt-evc}
 
-To simplify vMotion compatibility across cluster nodes with potentially differing CPU capabilities, Enhanced vMotion Compatibility (EVC) mode is enabled at a Skylake level to ensure vMotion compatibility across cluster nodes when newer processors arrive within {{site.data.keyword.cloud_notm}} inventory and allows for cluster expansion in the future if Skylake processor servers aren't in inventory.
+To simplify vMotion compatibility across cluster nodes with potentially differing CPU capabilities, Enhanced vMotion Compatibility (EVC) mode is enabled at a Skylake level to ensure vMotion compatibility across cluster nodes when newer processors arrive within {{site.data.keyword.cloud}} inventory and allows for cluster expansion in the future if Skylake processor servers aren't in inventory.
 
 ## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
@@ -113,9 +113,11 @@ The following describes the order of events when you use the {{site.data.keyword
 ## IDs and passwords
 {: #design_infrastructuremgmt-ids-pwd}
 
-IC4V management infrastructure stores all vCenter Server contained IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Any change to these passwords by the user can disrupt the automation capabilities within vCenter Server.
+{{site.data.keyword.vmwaresolutions_short}} automation retains a set of user IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Automation user IDs are separate from the user IDs displayed in the {{site.data.keyword.vmwaresolutions_short}} console and which are reserved for your use. 
 
-You can provide changed passwords in the IC4V solutions portal so that the automation can process functions uninterrupted. The solutions portal optionally allows for verification of the entered passwords.
+You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
+
+Next topic: [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling)
 
 ## Related links
 {: #design_infrastructuremgmt-related}

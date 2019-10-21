@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -18,7 +18,7 @@ After the virtual machines (VMs) are deployed and the application components are
 
 The Service Provider is the top-level organization and there are one or more Tenant/Organization serviced by the Service Provider. The Service Provider assigns Assets that are collected from vCenter to the Tenant or Organizations, who then assign them to Applications or Sub-applications. These Applications are then subject to a compliance regime.
 
-This step is initially completed by the IBM Cloud for VMware Solutions automation that uses information that is supplied by the client during the ordering process and default information. The setup process can be started by the client, post deployment, to modify the Service Provider or Tenant Organization as required post installation.
+This step is initially completed by the {{site.data.keyword.vmwaresolutions_full}} automation that uses information that is supplied by the client during the ordering process and default information. The setup process can be started by the client, post deployment, to modify the Service Provider or Tenant Organization as required post installation.
 
 The Service Provider setup has eight substeps:
 -	Step 1: Organization Detail - Add the details for the parent organization for your cloud service provider. This organization can have multiple physical locations and multiple data centers. Organizations for your tenants and sub-organizations for your service provider are added later.
@@ -71,3 +71,5 @@ Table 2. Default information used in application setup
 |Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. ScanName is set to DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. Type is set to vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Task |Schedule is set to Hourly for DC1AssetScan and Daily for the others |
+
+Next topic: [Glossary of Caveonix terms](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-terminology)

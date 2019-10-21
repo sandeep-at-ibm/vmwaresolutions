@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-14"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
-You can add clusters to your VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
+You can add clusters to your vCenter Server with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
 
 ## Adding clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding}
@@ -59,7 +59,7 @@ If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}
 ### Bare Metal Server settings
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-You can choose **Skylake**, **Cascade**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+You can choose **Skylake**, **Cascade Lake**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
@@ -73,19 +73,19 @@ When you select **Skylake**, you can choose the CPU and RAM combination accordin
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake Bare Metal Servers" caption-side="top"}
 
-#### Cascade
+#### Cascade Lake
 {: #vc_hybrid_addingviewingclusters-adding-cascade}
 
-For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
 {:note}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 32 GB, 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 32 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-{: caption="Table 2. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 2. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
@@ -131,9 +131,9 @@ IBM-provided licenses for the following VMware components:
 
 Network interface card (NIC) settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and aren't available with the private option:
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* F5 BIG-IP
+* Fortigate Security Appliance
+* Fortigate Virtual Appliance
 
 ### Order summary
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}

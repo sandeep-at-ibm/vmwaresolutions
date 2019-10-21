@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-11"
 
 subcollection: vmware-solutions
 
@@ -73,7 +73,7 @@ With NSX-T on vSphere, the N-VDS must be assigned the physical adapters within t
 
 For this reason, during the installation of NSX-T and its configuration, one physical NIC port on one adapter must remain assigned to a local vSphere vSwitch or a virtual distributed switch (vDS). Post NSX-T deployment, any ESX kernel ports need to be migrated to an N-VDS and off any local vSwitch or VDS. After the kernel ports are removed, the remaining physical NIC ports can be assigned as an N-VDS uplink achieving redundancy the N-VDS.
 
-After initial deployment, the {{site.data.keyword.cloud_notm}} automation deploys three NSX-T Manager/Controller virtual appliances within the initial cluster. The controllers are assigned a VLAN–backed IP address from the Private A portable subnet that is designated for management components. Additionally, VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster.
+After initial deployment, the {{site.data.keyword.cloud}} automation deploys three NSX-T Manager/Controller virtual appliances within the initial cluster. The controllers are assigned a VLAN–backed IP address from the Private A portable subnet that is designated for management components. Additionally, VM–VM anti–affinity rules are created such that controllers are separated among the hosts in the cluster.
 
 You must deploy the initial cluster with a minimum of three nodes to ensure high availability for the Manager / Controllers. In addition to the manager / controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts as NSX-T transport nodes. The ESXi transport nodes are assigned a VLAN–backed IP address from the Private A portable IP address range that is specified by an NSX IP pool ranged derived from the VLAN and Subnet Summary. Transport node traffic resides on the untagged VLAN and is assigned to the private NSX-T virtual distributed switch (N-VDS).
 
@@ -222,3 +222,5 @@ The deployed Topology 3 contains Topology 1 with the addition of an ICP deployme
 For a complete understanding of how ICP functions on vCenter Server, see the ICP on vCenter Server architecture documentation. A customer designated {{site.data.keyword.cloud_notm}} private and public portable IP space is assigned to each T0 for customer use.
 
 As of this design, you have the option not to delete these IP ranges if the vCenter Server instance is decommissioned and deleted.
+
+Next topic: [Common services design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_commonservice)

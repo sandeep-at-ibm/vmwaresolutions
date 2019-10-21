@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-04"
 
 subcollection: vmware-solutions
 
@@ -16,12 +16,12 @@ subcollection: vmware-solutions
 
 Common services provide the services that are used by other services in the cloud management platform. Common services include identity and access services, domain name services, and NTP (Network Time Protocol) services.
 
-![{{site.data.keyword.icpfull_notm}} common services](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull_notm}} common services"){: caption="Figure 1. {{site.data.keyword.icpfull_notm}} common services" caption-side="bottom"}
+![{{site.data.keyword.icpfull_notm}} common services](../../images/vcscar-common-services.svg "{{site.data.keyword.icpfull}} common services"){: caption="Figure 1. {{site.data.keyword.icpfull}} common services" caption-side="bottom"}
 
 ## Identity and access services
 {: #vcscar-commonservices-identity}
 
-As part of the VMware vCenter Server on {{site.data.keyword.cloud_notm}} automation, a Microsoft Active Directory (AD) is employed for Identity  Management. A single AD virtual server instance
+As part of the VMware vCenter Server automation, a Microsoft Active Directory (AD) is employed for Identity  Management. A single AD virtual server instance
 (VSI) is deployed. The vCenter is configured to use AD authentication and you can configure {{site.data.keyword.icpfull_notm}} as well for LDAP authentication.
 
 ## Domain Name Services

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-29"
+lastupdated: "2019-10-03"
 
 keywords: user account, user permissions, VRF account
 
@@ -38,7 +38,7 @@ Authorized users can verify and update the permissions for an {{site.data.keywor
 | View Virtual Server Details | This permission is required to retrieve the server provisioning details, which are required for order validation and automated configuration. |
 | Add Storage | This permission is required to order backup storage and shared storage for the instance. |
 | Manage Storage | This permission is required to manage backup storage and shared storage for the instance. |
-| Hardware Firewall | This permission is required to edit or view firewall log files and settings for the Fortinet on {{site.data.keyword.cloud_notm}} service, if it is installed on your instance. |
+| Hardware Firewall | This permission is required to edit or view firewall log files and settings for the Fortinet service, if it is installed on your instance. |
 | Add Compute with Public Network Port | This permission is required to order hardware and VSIs (Virtual Server Instances) with public network ports. |
 | Add IP Addresses | This permission is required to order portable private subnet ranges on your behalf, which is needed to manage the virtual machines that run in a vSphere cluster. When more services are added to your instance, the portable private IP addresses are assigned to VMware ESXi servers to isolate and allocate bandwidth. |
 | Add Tickets | This permission is required to open service tickets on your behalf. Tickets might be created for the following operations: to initiate restore operations and to initiate problem resolution processes automatically when issues are found. |

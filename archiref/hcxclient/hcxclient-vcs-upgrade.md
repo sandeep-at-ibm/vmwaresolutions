@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-17"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -20,6 +20,8 @@ You must upgrade both sides as any fleet component updates cause both to redeplo
 
 If VMware Support asks for the System ID, provide both the client and cloud side. Use SSH into the HCX manager (client or cloud) and run `cat /common/location` to locate the System ID.
 
+**Next topic:** [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)
+
 ## Related links
 {: #hcxclient-vcs-upgrade-related}
 
@@ -29,4 +31,3 @@ If VMware Support asks for the System ID, provide both the client and cloud side
 * [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
 * [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
 * [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)

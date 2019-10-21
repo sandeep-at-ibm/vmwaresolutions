@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-23"
+lastupdated: "2019-10-07"
 
 keywords: FAQ, license, BYOL
 
@@ -38,11 +38,11 @@ If you choose to use your own license for a VMware component and provide a valid
 The BYOL feature is not available to Business Partner users.
 {:note}
 
-## Where do I manage the licenses and components that are ordered through VMware vSphere on IBM Cloud?
+## Where do I manage the licenses and components that are ordered through VMware vSphere?
 {: #faq_byol-license-mgmt}
 {: faq}
 
-After an order to create a new cluster for VMware vSphere on {{site.data.keyword.cloud_notm}} is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
+After an order to create a new cluster for VMware vSphere is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
 After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).
 

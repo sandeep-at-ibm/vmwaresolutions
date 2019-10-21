@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-20"
+lastupdated: "2019-10-03"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -33,8 +33,8 @@ Ensure that you completed the following tasks:
 ## Procedure to scale existing clusters
 {: #vs_scalingexistingclusters-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **VMware vSphere on IBM Cloud** card in the **VMware Virtual Data Centers** section.
-2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **VMware vSphere** card in the **Start Provisioning** section.
+2. On the **VMware vSphere** page, click **Continue**.  
 3. Click the **Scale Existing** tab and select the cluster that you want to scale from the **Cluster Configurations** list.
 4. Review the cluster settings that are automatically completed.
 5. In the **{{site.data.keyword.baremetal_short}}** section, specify the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.

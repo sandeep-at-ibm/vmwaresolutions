@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-23"
+lastupdated: "2019-10-07"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -18,15 +18,15 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Managing HyTrust DataControl on IBM Cloud
+# Managing HyTrust DataControl
 {: #managinghtdc}
 
-To manage the HyTrust DataControl on {{site.data.keyword.cloud}} service (HTDC), access the HTDC WebGUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTDC console from the vSphere Web Client.
+To manage the HyTrust DataControl service (HTDC), access the HTDC WebGUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTDC console from the vSphere Web Client.
 
 ## Accessing the HyTrust DataControl WebGUI from the IBM Cloud for VMware Solutions console
 {: #managinghtdc-accessing-webgui}
 
-To log in to the WebGUI of the primary or secondary HTDC appliance, use the WebGUI credentials found on the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service details page.
+To log in to the WebGUI of the primary or secondary HTDC appliance, use the WebGUI credentials found on the HyTrust DataControl service details page.
 
 ## Accessing the HyTrust DataControl console from the vSphere Web Client
 {: #managinghtdc-accessing-console}
@@ -34,7 +34,7 @@ To log in to the WebGUI of the primary or secondary HTDC appliance, use the WebG
 To access the HTDC console from the vSphere Web Client, use the following procedure:
 1. In the vSphere Web Client, find the virtual machines that are named **KC1** and **KC2**.
 2. Right-click **KC1** or **KC2**, and then click **Open Console**.
-3. Log in to the console by using the console credentials that you can find on the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service details page.
+3. Log in to the console by using the console credentials that you can find on the HyTrust DataControl service details page.
 
 For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
@@ -63,7 +63,7 @@ For private-only vCenter Server environments, the VMware NSX Edge Services Gatew
 1. Complete steps 1 - 3 in the previous procedure.
 2. Click **Settings** and then **Interfaces**. Note the IP address for the private uplink. This address becomes the new default gateway.
 3. Click **Home > Hosts and Clusters** and find the HyTrust VMs. Right-click one of the VMs and click **Open Console**.
-4. Log in to the console by using the console credentials that you can find on the HyTrust DataControl on {{site.data.keyword.cloud_notm}} service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
+4. Log in to the console by using the console credentials that you can find on the HyTrust DataControl service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
 5. To get the current default gateway IP address from the VM, click **Manage Network Settings > Show Current Network Configuration**. Note the IP address that is listed for **Gateway**. This address becomes the gateway that is used for the static route.
 6. To set a static route for the VM, click **Manage Network Settings > Manage Static Routes > Add Static Route**. Set **Network address** to `10.0.0.0/8` and **Gateway** to the IP address noted in the previous step.
 7. To set the default gateway IP for the VM, click **Manage Network Settings > Change Current Network Configuration**. If you get a warning message, click **OK**, then click **Custom Configuration**. Set the **Gateway** field to the private uplink IP address noted in step 2 and click **OK**. Wait until the new network configuration is installed and the network services are restarted.
@@ -75,7 +75,7 @@ For private-only vCenter Server environments, the VMware NSX Edge Services Gatew
 ## Related links
 {: #managinghtdc-related}
 
-* [HyTrust DataControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
+* [HyTrust DataControl overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

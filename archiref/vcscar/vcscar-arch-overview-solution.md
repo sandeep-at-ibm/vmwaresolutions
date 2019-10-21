@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Solution components
 {: #vcscar-arch-overview-solution}
 
-## VMware vCenter Server on IBM Cloud components
+## VMware vCenter Server components
 {: #vcscar-arch-overview-solution-vcs-comp}
 
 ![vCenter Server environment](../../images/vcscar-vcs.svg "vCenter Server environment"){: caption="Figure 1. vCenter Server environment diagram" caption-side="bottom"}
@@ -197,3 +197,5 @@ A graphical user interface to create Terraform templates, with a feature to drag
 {: #vcscar-arch-overview-solution-maria-db}
 
 The database for the template designer application.
+
+**Next topic:** [IBM Cloud networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscar-arch-overview-infrastructure)

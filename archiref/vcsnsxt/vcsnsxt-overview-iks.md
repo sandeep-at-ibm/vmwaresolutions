@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -17,10 +17,10 @@ subcollection: vmware-solutions
 ## IBM Cloud Kubernetes Service overview
 {: #vcsnsxt-overview-iks-ovw}
 
-The {{site.data.keyword.containerlong_notm}} provides an isolated and secure platform for managing containers. This platform is portable, extensible, and self-healing if a failover occurs.
+The {{site.data.keyword.containerlong}} provides an isolated and secure platform for managing containers. This platform is portable, extensible, and self-healing if a failover occurs.
 
 The architecture consists of the following key components:
--	**{{site.data.keyword.cloud}} account** – Worker nodes are deployed into an {{site.data.keyword.cloud_notm}} account. The master node is deployed in a central Cloud Account that is managed by IBM.
+-	**{{site.data.keyword.cloud_notm}} account** – Worker nodes are deployed into an {{site.data.keyword.cloud_notm}} account. The master node is deployed in a central Cloud Account that is managed by IBM.
 -	**Cluster** - A Kubernetes cluster consists of one or more worker nodes.
 -	**Worker nodes** – A worker node is a bare metal, or a virtual server instance hosted in an IBM account. When you provision a worker node, you determine the resources that are available to the containers that are hosted on that worker node. The worker nodes include an IBM-managed Docker Engine, separate compute resources, networking, and a storage volume service.
 -	**Master node** - Worker nodes are managed by a Kubernetes master node that centrally controls and monitors all Kubernetes resources in the cluster. This master node is managed by IBM.
@@ -162,3 +162,5 @@ IP subnets for worker nodes and pods, are also automatically provisioned onto VL
 -	**Private VLAN subnets:**
     - The primary private subnet determines the private IP addresses that are assigned to worker nodes during cluster creation. Multiple clusters in on the same VLAN can share one primary private subnet.
     - The portable private subnet is bound to one cluster only and provides the cluster with 8 private IP addresses. 3 IPs are reserved for network functions. 1 IP is used by the default private Ingress ALB and 4 IPs can be used to create private load balancer networking services. Portable private IPs are permanent, fixed IP addresses that can be used to access load balancer services over the internet.
+
+**Next topic:** [IBM Cloud Private](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview-icp)

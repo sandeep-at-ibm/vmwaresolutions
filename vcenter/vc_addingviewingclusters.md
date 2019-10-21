@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-18"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -55,14 +55,14 @@ The cluster name must meet the following requirements:
 #### Data center location
 {: #vc_addingviewingclusters-adding-dc-location}
 
-The {{site.data.keyword.CloudDataCent}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
+The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
 ### Bare Metal Server settings
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-You can choose **Skylake**, **Cascade**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+You can choose **Skylake**, **Cascade Lake**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -76,12 +76,12 @@ For the **Skylake** setting, you have options for the **CPU Model** and **RAM**.
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
-#### Cascade
+#### Cascade Lake
 {: #vc_addingviewingclusters-adding-cascade}
 
-For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
 {:note}
 
 | CPU model options        | RAM options       |
@@ -89,7 +89,7 @@ Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSph
 | Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-{: caption="Table 2. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 2. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 #### SAP-certified
 {: #vc_addingviewingclusters-adding-sap}
@@ -121,7 +121,7 @@ For the **Broadwell** setting, you have a number of options for the **CPU Model*
 
 * All servers that you order have the same configuration.
 * For vSAN storage, you can order between 4 and 59 servers.
-* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Storage settings
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -136,7 +136,7 @@ Specify the following vSAN options:
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade CPU models.
+  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -172,8 +172,8 @@ Performance level details:
 {: #vc_addingviewingclusters-adding-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
-* **Disk Count**: Select the number of disks that you want to add.
-* **Disk type**: Select an option for the disk type that you need.
+* **Local Disk Count**: Select the number of disks that you want to add.
+* **Local Disk Type**: Select an option for the disk type that you need.
 
 ### Licensing settings
 {: #vc_addingviewingclusters-adding-licensing-settings}
@@ -187,13 +187,23 @@ Specify the licensing option for the VMware vSphere component in the cluster:
 
 When you add a cluster for a vCenter Server instance, you must specify the following network interface settings.
 
+#### Host name prefix
+{: #vc_orderinginstance-host-name}
+
+You can use the default host name prefix or specify a new one. When you specify a new host name prefix, the host name prefix must meet the following requirements:
+- Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
+- The host name prefix must start with a lowercase alphabetic character.
+- The host name prefix must end with a lowercase alphabetic or numeric character.
+- The maximum length of the host name prefix is 10 characters.
+
 #### Public or private network
+{: #vc_orderinginstance-network}
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
 
-* F5 on {{site.data.keyword.cloud_notm}}
-* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* F5 BIG-IP
+* Fortigate Security Appliance
+* Fortigate Virtual Appliance
 
 #### VLANs
 {: #vc_orderinginstance-vlans}
@@ -241,21 +251,21 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 4. On the **Add Cluster** page, enter the cluster name.
 5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Complete the Bare Metal configuration.
-   * If you selected **Skylake**, **Cascade**, or **Broadwell**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+   * If you selected **Skylake**, **Cascade Lake**, or **Broadwell**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
    * If you selected **SAP-certified**, specify the CPU model.
 7. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then click the **+** icon next to the **Add Shared Storage** label and select the  **Performance** and **Size (GB)** for each  file share. You must select at least one file share.
-  * If you select **Local Disks**, specify the disk count and disk type.
+  * If you select **Local Disks**, specify the local disk count and local disk type.
 8. Complete the network interface settings.
-8. Specify how the vSphere license key is provided:
+9. Specify how the vSphere license key is provided:
   * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
   * For users who aren't Business Partners, you can select one of the following options:
       * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the component.
       * If you want to use your own VMware license for the component, select **I will provide** and enter your license key.
-9. Select the network setting of either **Public and Private Network** or **Private Network Only**.
-10. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
+10. Select the network setting of either **Public and Private Network** or **Private Network Only**.
+11. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
    1. Review the settings for the cluster.
    2. Review the estimated cost of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
@@ -375,7 +385,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 * When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
 * The default cluster can't be deleted.
 
-A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX on {{site.data.keyword.cloud_notm}} details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:important}
 
 ### Procedure to delete clusters from vCenter Server instances

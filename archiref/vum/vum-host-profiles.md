@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-15"
+lastupdated: "2019-10-04"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 vCenter has a feature that is called Host Profiles. This feature creates a profile that captures a pre-configured and validated reference host configuration and helps a system administrator manage the host configurations in a cluster. Host Profiles provide an automated and centrally managed mechanism for host configuration and configuration compliance. Host Profiles enable the configuration to be treated as a managed object, which has a catalog of parameters to configure; networking, storage, security, and other host-level parameters. These Host Profiles can be applied to individual hosts, a cluster, or all the hosts and clusters associated to a host profile.
 
-As more VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi hosts are deployed by the IBM Cloud for VMware Solutions automation that deployed the original cluster, there are less configuration drift than with manual methods of adding hosts. However, system administrator actions, besides the automation can make the hosts configuration different. For example, more NFS storage is added or extra VLANs are added. The use of Host Profiles to validate the configuration of a new host by checking compliance of this host against an existing host is a valid use case of this tool within {{site.data.keyword.cloud_notm}}.
+As more VMware vCenter Server vSphere ESXi hosts are deployed by the {{site.data.keyword.vmwaresolutions_full}} automation that deployed the original cluster, there are less configuration drift than with manual methods of adding hosts. However, system administrator actions, besides the automation can make the hosts configuration different. For example, more NFS storage is added or extra VLANs are added. The use of Host Profiles to validate the configuration of a new host by checking compliance of this host against an existing host is a valid use case of this tool within {{site.data.keyword.cloud_notm}}.
 
 To add more hosts to your vCenter Server cluster, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers).
 
@@ -72,4 +72,4 @@ The following sequence is required to check compliance:
 {: #vum-host-profiles-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

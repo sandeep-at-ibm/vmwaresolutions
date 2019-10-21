@@ -46,7 +46,6 @@ Some add-on services require public NICs and are not available if you select to 
 For more information, see the _Network interface settings_ section in the following topics:
 
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#network-interface-settings)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#network-interface-settings)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#network-interface-settings)
 
 ## Deleting ESXi servers
@@ -84,10 +83,7 @@ For more information, see [Removing the Hybridity Bundle from a vCenter Server i
 
 Business Partners can now order a vCenter Server with Hybridity Bundle instance. Business Partners cannot upgrade an existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance and cannot remove the Hybridity Bundle from a vCenter Server with Hybridity Bundle instance.
 
-For more information, see the following topics:
-
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+For more information, see [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
 
 ## Updates for VMware Cloud Foundation instances
 {: #relnotes_v26-vcf}

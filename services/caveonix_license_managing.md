@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-18"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -27,15 +27,16 @@ You can view, edit notes, or delete the Caveonix RiskForesight licenses that you
 {: #caveonix_license_managing_procedure-view}
 
 1. Click **Resources** from the left navigation pane and scroll down to the **Caveonix RiskForesight Licenses** table.
-
-   | Item | Description |
-   |:-----|:------------|
-   | Name | The name of the license. |
-   | Creation time | The date and time when the license was created. |
-   | Status | The status of the license: <br>Modifying: The license is being created.<br>Installed: The license is ready to use.<br>Removing: The license is being deleted. |
-   {: caption="Table 1. Description of Caveonix RiskForesight license items" caption-side="top"}
-
 2. To view the details of a specific license, click the license.
+
+Caveonix RiskForesight license details include:
+
+| Item | Description |
+|:-----|:------------|
+| Name | The name of the license. |
+| Creation time | The date and time when the license was created. |
+| Status | The status of the license:<br>Modifying: The license is being created.<br>Installed: The license is ready to use.<br>Removing: The license is being deleted. |
+{: caption="Table 1. Description of Caveonix RiskForesight license items" caption-side="top"}
 
 ## Procedure to edit notes for Caveonix RiskForesight licenses
 {: #caveonix_license_managing_procedure-edit}
@@ -55,7 +56,7 @@ If you are experiencing this problem and the only browser you can use is Firefox
 ## Procedure to delete Caveonix RiskForesight licenses
 {: #caveonix_license_managing_procedure-delete}
 
-Deleting a Caveonix RiskForesight license does not remove the Caveonix RiskForesight on {{site.data.keyword.cloud}} service that is installed on a vCenter Server instance. To remove the service, you must do so in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Procedure to remove services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
+Deleting a Caveonix RiskForesight license does not remove the Caveonix RiskForesight service that is installed on a vCenter Server instance. To remove the service, you must do so in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Procedure to remove services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
 {:note:}
 
 1. Click **Resources** from the left navigation pane.

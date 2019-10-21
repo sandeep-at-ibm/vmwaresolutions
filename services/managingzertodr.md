@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-10-08"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -18,15 +18,15 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Managing Zerto on IBM Cloud
+# Managing Zerto
 {: #managingzertodr}
 
-After the Zerto on {{site.data.keyword.cloud}} service is deployed into your instance, you can configure or update Zerto Virtual Replication, and deploy more Virtual Replication Appliances to newly added ESXi servers.
+After the Zerto service is deployed into your instance, you can configure or update Zerto Virtual Replication, and deploy more Virtual Replication Appliances to newly added ESXi servers.
 
 ## Using your own certificate for Zerto
 {: #managingzertodr-ssl-cert}
 
-As a best practice, use your own SSL certificate for Zerto Virtual Manager. After you deployed Zerto on {{site.data.keyword.cloud_notm}}, replace the SSL certificate for Zerto Virtual Manager with your own certificate. For more information, see the article [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for Zerto Virtual Manager, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external}
+As a best practice, use your own SSL certificate for Zerto Virtual Manager. After you deployed Zerto, replace the SSL certificate for Zerto Virtual Manager with your own certificate. For more information, see the article [How to use a CER SSL Certificate to Replace the Self-Signed Certificate for Zerto Virtual Manager, ZSSP, or ZCM](https://www.zerto.com/myzerto/knowledge-base/how-to-use-a-cer-ssl-certificate-to-replace-the-self-signed-certificate-for-the-zvm-zssp-or-zcm/){:external}
 
 ## Managing the configuration of Zerto replications
 {: #managingzertodr-manage}
@@ -53,8 +53,8 @@ When you add or remove ESXi servers for the primary cluster of your instance, VR
 ## Related links
 {: #managingzertodr-related}
 
-* [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [Managed Services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Zerto overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
+* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com website](https://www.zerto.com){:external}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:external}
 * [Zerto disaster recovery](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:external}

@@ -24,7 +24,7 @@ This release includes new features, component updates, usability enhancements, a
 ## VMware vCenter Server on IBM Cloud with NSX-T
 {: #relnotes_v29-vcs-nsx-t}
 
-This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T offering as a proof of concept or sandbox testing offering. vCenter Server with NSX-T is a privately hosted cloud that allows you to test drive the VMware next generation networking platform, NSX-T.
+This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T offering as a proof of concept or sandbox testing offering. vCenter Server with NSX-T is a privately hosted cloud that you can use to test drive the VMware next generation networking platform, NSX-T.
 
 For more information, see the following topics:
 
@@ -34,7 +34,7 @@ For more information, see the following topics:
 ## End of Support for VMware Cloud Foundation on IBM Cloud
 {: #relnotes_v29-vcf-eos}
 
-To consolidate our offerings for better customer experience, {{site.data.keyword.cloud_notm}} will no longer provide support for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} effective May 13, 2019.  
+To consolidate the current offerings for better customer experience, {{site.data.keyword.cloud_notm}} will no longer support VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} effective May 13, 2019.  
  
 Moving forward, all customers will be directed to VMware vCenter Server on {{site.data.keyword.cloud_notm}}, which offers more flexibility around storage and licensing options. 
  
@@ -58,7 +58,6 @@ vSphere Enterprise Plus 6.7u1 is available for Broadwell and Skylake {{site.data
 For more information, see the _License settings_ sections in:
 
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
 
 ## Support for Application Programming Interfaces

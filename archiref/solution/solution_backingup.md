@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-10-04"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 You’re responsible for the configuration, management, and monitoring of all software components, including the backup and availability of your management infrastructure and workloads.
 
-As part of the solution, you can optionally deploy the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
+As part of the solution, you can optionally deploy the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
 
 These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} and [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services) for your Veeam deployment.
 
@@ -94,6 +94,8 @@ There are several special considerations when you restore your management backup
 {: #solution_backingup-summary}
 
 With proper planning, you can ensure that your VMware instance can suffer the loss of its management components and recover successfully. Ensure to regularly monitor the success of your backup jobs and availability of your backup data and ensure to test your backup and restore plan regularly, for both your management infrastructure and your workloads.
+
+Next topic: [Post-deployment considerations for your VMware instance](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_considerations)
 
 ## Related links
 {: #solution_backingup-related}

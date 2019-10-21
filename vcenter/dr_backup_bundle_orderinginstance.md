@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-03"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -57,7 +57,7 @@ The instance name must meet the following requirements:
 ## Procedure to order Single-node Trial for Data Protection and Disaster Recovery instances
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **Single-node Trial for Data Protection and Disaster Recovery** card in the **VMware Virtual Data Centers** section.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **Single-node Trial for Data Protection and Disaster Recovery** card in the **Single Node Trials** section.
 2. On the **Single-node Trial for Data Protection and Disaster Recovery** page, click **Continue**.
 3. Complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User Name** and **API Key** and click **Retrieve**.
 
@@ -77,20 +77,20 @@ The instance name must meet the following requirements:
 ### Results after you order Single-node Trial for Data Protection and Disaster Recovery instances
 {: #dr_backup_bundle_orderinginstance-results}
 
-* The deployment of the instance starts automatically and the on-premises HCX on {{site.data.keyword.cloud_notm}} service activation key is ordered.
+* The deployment of the instance starts automatically and the on-premises HCX service activation key is ordered.
 * You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
 * When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs) are installed.
 * When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
-#### Deployment process for HCX on IBM Cloud
+#### Deployment process for HCX
 {: #dr_backup_bundle_orderinginstance-hcx-deploy-process}
 
-The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
+The deployment of HCX is automated. The following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 1. Three subnets are ordered for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
    * Two private portable subnets for HCX management.
    * One public portable subnet for activation and maintenance with VMware. This subnet is also used for HCX interconnects.
 
-   The IP addresses in the subnets that are ordered for HCX are intended to be managed by the VMware on {{site.data.keyword.cloud_notm}} automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need more IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
+   The IP addresses in the subnets that are ordered for HCX are intended to be managed by the VMware automation. These IP addresses cannot be assigned to VMware resources, such as VMs and NSX Edges, that are created by you. If you need more IP addresses for your VMware artifacts, you must order your own subnets from {{site.data.keyword.cloud_notm}}.
    {:important}
 3. Three resource pools and VM folders for HCX are created, which are needed for the HCX interconnects, local HCX components, and remote HCX components.
 4. A pair of VMware NSX Edge Services Gateways (ESGs) for the HCX management traffic is deployed and configured:
@@ -103,39 +103,39 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. The foll
    The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, by using a firewall or disabling the HCX management edge communications to the private IBM management components or public internet might adversely impact the HCX functionality.
    {:important}
 
-5. The HCX Manager on {{site.data.keyword.cloud_notm}} is deployed, activated, and configured:
+5. The HCX Manager is deployed, activated, and configured:
    * The HCX Manager is registered with vCenter Server.
    * The HCX Manager, vCenter Server (with embedded Platform Services Controller), and NSX Manager are configured.
    * The HCX fleet is configured.
    * Local and remote HCX deployment containers are configured.
-6. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+6. The host name and IP address of the HCX Manager is registered with the DNS server of vCenter Server.
 
 #### Viewing instance details
 {: #dr_backup_bundle_orderinginstance-view-inst-details}
 
 You can check the status of the deployment by viewing the instance details. Click **Resources** from the left navigation pane and locate the **vCenter Server Instances** or **On-premises HCX Instances** table to view information about the instances that you ordered.
 
-When the instance is successfully deployed, the components that are described in the *Technical specifications* sections of this topic are installed on your VMware virtual platform and the on-premises HCX on {{site.data.keyword.cloud_notm}} service activation key is listed in the **On-premises HCX Instances** table.
+When the instance is successfully deployed, the components that are described in the *Technical specifications* sections of this topic are installed on your VMware virtual platform and the on-premises HCX service activation key is listed in the **On-premises HCX Instances** table.
 
 The status of the instance changes to **Ready to Use** and you receive a notification by email.
 
 ### What to do next
 {: #dr_backup_bundle_orderinginstance-next}
 
-Install the on-premises HCX Enterprise Manager and configure the connection to your HCX on {{site.data.keyword.cloud_notm}} instance.
+Install the on-premises HCX Enterprise Manager and configure the connection to your HCX instance.
 
 1. Locate the on-premises activation key on the **Resources** page.
   1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
   2. In the **vCenter Server Instances** table, review the **Type** column to locate the Single-node Trial for Migration and App Modernization instance and make note of the instance name.
   3. Scroll to the **On-premises HCX Instances** table and review the **Name** column to locate the instance that has the same name as the single-node instance that you ordered with the *-OnPrem* suffix.
   4. Make note of the key in the **Activation key** field.
-2. Obtain the on-premises HCX Enterprise Manager Open Virtual Appliance (OVA) from the HCX on {{site.data.keyword.cloud_notm}} HCX Manager console.
+2. Obtain the on-premises HCX Enterprise Manager Open Virtual Appliance (OVA) from the HCX Manager console.
   1. Connect to the HCX Cloud Console.
     1. In the **vCenter Server Instances** table, click the Single-node Trial for Migration and App Modernization instance to view the instance details.
     2. Under **Access Information**, locate and make note of the vCenter credentials.
     3. Click **Services** from the left navigation pane.
-    4. On the **Services** page, click **HCX on IBM Cloud**.
-    5. On the **HCX on IBM Cloud** details page, locate and make note of the **HCX Cloud IP**.
+    4. On the **Services** page, click **HCX**.
+    5. On the **HCX** details page, locate and make note of the **HCX Cloud IP**.
     6. Ensure that you are connected to the VPN to access your {{site.data.keyword.cloud_notm}} private network.
     7. Click **View HCX Cloud Console**.
   2. In the **HCX Cloud Console**, complete the following steps:
@@ -152,10 +152,10 @@ Install the on-premises HCX Enterprise Manager and configure the connection to y
 
   Follow the instructions in the [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
-5. A self-signed SSL certificate was generated by the HCX on {{site.data.keyword.cloud_notm}} service. You must import the certificate into the on-premises HCX Manager by completing the following steps:
+5. A self-signed SSL certificate was generated by the HCX service. You must import the certificate into the on-premises HCX Manager by completing the following steps:
     1. In the on-premises **HCX Manager Admin Console**, click the **Administration** tab.
     2. From the left navigation pane, click **Trusted CA Certificate**, and then click **IMPORT** on the right.
-    3. Click **URL** and then enter the URL of the certificate you want to apply. This is the **HCX Cloud IP** (``https://<cloud-side public IP>``) that you can find on the HCX on {{site.data.keyword.cloud_notm}} service details page in the {{site.data.keyword.vmwaresolutions_short}} console.
+    3. Click **URL** and then enter the URL of the certificate you want to apply. This is the **HCX Cloud IP** (``https://<cloud-side public IP>``) that you can find on the HCX service details page in the {{site.data.keyword.vmwaresolutions_short}} console.
     4. Click **APPLY**.
 6. Continue the initial configuration and build the interconnect. Follow the instructions in the [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 7. Extend networks in VMware HCX from on-premises to {{site.data.keyword.cloud_notm}}. Follow the instructions in the [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
@@ -199,5 +199,5 @@ Complete the following steps to delete a Single-node Trial for Data Protection a
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managing Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managing Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -48,3 +48,5 @@ The following diagram in an example of an {{site.data.keyword.icpfull_notm}} and
 The strongSwan VPN is used to established connectivity with the deployed {{site.data.keyword.containerlong_notm}} containers. The strongSwan VPM might be replaced with Direct link connectivity.
 
 In the diagram, CAM logically creates cloud connections to the vCenters, cloud providers, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} clusters must be deployed to each data center cloud environment, with MCM providing the mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
+
+**Next topic:** [IBM Cloud networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-arch-overview-infrastructure)

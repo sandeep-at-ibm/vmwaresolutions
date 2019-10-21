@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2019
 
-lastupdated: "2019-07-09"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -25,7 +25,7 @@ Review the following steps to configure the HCX Client instance.
   1. Set the Site URL to the HCX Cloud Manager URL, for example, `https://x.x.x.x.x`.
   2. Set the UserName and Password to the HCX Manager Admin Details: admin / password.
 
-    The previous details can be obtained from the IBM Cloud from VMware Solutions console, under **Services**, **HCX on IBM Cloud** for the vCenter Server instance.
+    The previous details can be obtained from the {{site.data.keyword.vmwaresolutions_full}} console, under **Services**, **HCX on {{site.data.keyword.cloud_notm}}** for the vCenter Server instance.
 
 4. Click **Connect**.
 
@@ -149,12 +149,13 @@ Bandwidth of a single network extension is theoretically 4 Gbps. However, this v
 
 Without any type of route optimization, extended networks route back to the client side for any L3 access. This trombone-ing introduces an inefficient traffic pattern as packets need to travel back and forth between client (source) and cloud. This is true even for cases where both the source and destination VMs are in the cloud. The Proximity Routing feature of HCX was designed to address this and local egress of traffic.
 
+**Next topic:** [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
+
 ## Related links
 {: #hcxclient-vcs-mesh-deployment-deployment-related}
 
 * [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
 * [Preparing the installation environment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
 * [HCX Client deployment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
 * [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
 * [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)

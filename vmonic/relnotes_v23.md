@@ -36,11 +36,7 @@ This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_n
 
 The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
 
-For more information about the vCenter Server with Hybridity Bundle, see the following topics:
-
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview)
-* [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_planning)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
+For more information about the vCenter Server with Hybridity Bundle, see [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
 
 ## Delete cluster support for vCenter Server and Cloud Foundation instances
 {: #relnotes_v23-delete-cluster}

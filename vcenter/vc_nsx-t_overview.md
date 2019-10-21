@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-14"
 
 keywords: vCenter Server NSX-T, NSX-T, tech specs vCenter Server NSX-T
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # vCenter Server with NSX-T overview
 {: #vc_nsx-t_overview}
 
-VMware vCenter Server with NSX-T on {{site.data.keyword.cloud}} is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX-T.
+VMware vCenter Server with NSX-T is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offers shared network-attached storage and dedicated software-defined storage options, and it includes the automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX-T.
 
 In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
@@ -74,7 +74,7 @@ The availability and pricing of standardized hardware configurations might vary 
 
 You can order three or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.  
-*  **Cascade**: 2-CPU Intel Cascade generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
+*  **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
 * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
 If you plan to use vSAN storage, the configuration requires a minimum of four {{site.data.keyword.baremetal_short}}.

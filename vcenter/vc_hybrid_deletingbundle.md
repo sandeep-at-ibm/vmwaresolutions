@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-10"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, remove vCenter Server Hybridity
 
@@ -43,7 +43,7 @@ While removing the Hybridity Bundle from a multi-site environment, BYOL licenses
 Verify the following requirements before you remove the Hybridity Bundle:
 
 * You have a V2.4 or later vCenter Server instance with the Hybridity Bundle enabled.
-* You do not have the VMware HCX on {{site.data.keyword.cloud}} service installed on your vCenter Server instance.
+* You do not have the VMware HCX service installed on your vCenter Server instance.
 * You have access to the VMware vSphere Web Client as Administrator.
 * If not already applied, you have BYOL keys available to apply for VMware NSX and each VMware vSAN cluster.
 * Optionally and if not already applied, you have BYOL keys available to apply for the VMware vCenter Server and VMware vSphere Enterprise Plus licenses.
@@ -118,6 +118,5 @@ Verify the following requirements before you remove the Hybridity Bundle:
 ## Related links
 {: #vc_hybrid_deletingbundle-related}
 
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance)
 * [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

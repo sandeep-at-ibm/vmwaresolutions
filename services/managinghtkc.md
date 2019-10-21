@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-23"
+lastupdated: "2019-10-07"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -18,23 +18,23 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Managing HyTrust KeyControl on IBM Cloud
+# Managing HyTrust KeyControl
 {: #managinghtkc}
 
-To manage the HyTrust KeyControl on {{site.data.keyword.cloud}} service (HTKC), access the HTKC Web GUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTKC console from the vSphere Web Client.
+To manage the HyTrust KeyControl service (HTKC), access the HTKC Web GUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTKC console from the vSphere Web Client.
 
 ## Accessing the HyTrust KeyControl Web GUI from the IBM Cloud for VMware Solutions console
 {: #managinghtkc-accessing-webgui}
 
-To log in to the Web GUI of the primary or secondary HTKC appliance, use the WebGUI credentials found on the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service details page.
+To log in to the Web GUI of the primary or secondary HTKC appliance, use the WebGUI credentials found on the HyTrust KeyControl service details page.
 
 ## Accessing the HyTrust KeyControl console from the vSphere Web Client
 {: #managinghtkc-accessing-console}
 
 To access the HTKC console from the vSphere Web Client, use the following procedure:
-1. In the vSphere Web Client, find the virtual machines starting with the names **KC1** and **KC2** that have the matching IP address found on the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service details page.
+1. In the vSphere Web Client, find the virtual machines starting with the names **KC1** and **KC2** that have the matching IP address found on the HyTrust KeyControl service details page.
 2. Right-click **KC1** or **KC2**, and then click **Open Console**.
-3. Log in to the console by using the console credentials that you can find on the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service details page.
+3. Log in to the console by using the console credentials that you can find on the HyTrust KeyControl service details page.
 
 For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
@@ -63,7 +63,7 @@ For private-only vCenter Server environments, the VMware NSX Edge Services Gatew
 1. Complete steps 1 - 3 in the previous procedure.
 2. Click **Settings** and then **Interfaces**. Note the IP address for the private uplink. This address will be the new default gateway.
 3. Click **Home > Hosts and Clusters** and find the HyTrust VMs. Right-click one of the VMs and click **Open Console**.
-4. Log in to the console by using the console credentials that you can find on the HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
+4. Log in to the console by using the console credentials that you can find on the HyTrust KeyControl service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
 5. To get the current default gateway IP address from the VM, click **Manage Network Settings > Show Current Network Configuration**. Note the IP address that is listed for **Gateway**. This address becomes the gateway used for the static route.
 6. To set a static route for the VM, click **Manage Network Settings > Manage Static Routes > Add Static Route**. Set **Network address** to `10.0.0.0/8` and **Gateway** to the IP address noted in the previous step.
 7. To set the default gateway IP for the VM, click **Manage Network Settings > Change Current Network Configuration**. If you get a warning message, click **OK**, then click **Custom Configuration**. Set the **Gateway** field to the private uplink IP address noted in step 2 and click **OK**. Wait until the new network configuration is installed and the network services are restarted.
@@ -74,7 +74,7 @@ For private-only vCenter Server environments, the VMware NSX Edge Services Gatew
 ## Related links
 {: #managinghtkc-related}
 
-* [HyTrust KeyControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
+* [HyTrust KeyControl overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

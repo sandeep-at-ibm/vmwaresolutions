@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-29"
+lastupdated: "2019-10-09"
 
 keywords: vRealize, vRealize info, tech specs vRealize
 
@@ -18,10 +18,10 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# VMware vRealize Operations and vRealize Log Insight on IBM Cloud overview
+# vRealize Operations and Log Insight overview
 {: #vrops_overview}
 
-The VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud}} service deploys the VMware vRealize Operations (vROps) and VMware vRealize Log Insight (vRLI) tools, which help you operate and monitor the performance, health, and capacity of your IBM-hosted, dedicated VMware environment.
+The vRealize Operations and Log Insight service deploys the VMware vRealize Operations (vROps) and VMware vRealize Log Insight (vRLI) tools, which help you operate and monitor the performance, health, and capacity of your IBM-hosted, dedicated VMware environment.
 
 These tools are deployed by using the IBM advanced automation and are based on a consistent highly available design. vROps includes preinstalled and configured Management Packs to provide deeper visibility into the core VMware Software Defined Data Center components like VMware NSX, vSAN, and HCX. The automation provides optimized dashboards out of the box so that you can monitor the full VMware stack  more easily.
 
@@ -29,33 +29,33 @@ It also includes vRLI so that you can more quickly troubleshoot issues using log
 
 Like the other VMware components in the stack, you have the flexibility to bring your enterprise licenses to the cloud (per CPU or OSI) or to rent VMware licenses from {{site.data.keyword.cloud_notm}}.
 
-This service is available only to VMware vCenter Server on {{site.data.keyword.cloud_notm}} instances that are deployed in V3.2 and later releases. The current versions that are installed are vROps 7.5 and vRLI 4.8.
+This service is available only to VMware vCenter Server instances that are deployed in V3.2 and later releases. The current versions that are installed are vROps 7.5 and vRLI 4.8.
 {:note}
 
-## Technical specifications for VMware vRealize Operations and vRealize Log Insight on IBM Cloud
+## Technical specifications for vRealize Operations and Log Insight
 {: #vrops_overview-specs}
 
-The following components are ordered and included in the VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} service:
+The following components are ordered and included in the vRealize Operations and Log Insight service:
 * VMware vRealize Operations (vROps) 7.5
 * VMware vRealize Log Insight (vRLI) 4.8
 
 For information about the design, requirements and preconfigured management packs, see [Operations management architecture overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-arch).
 
-### Resource requirements for VMware vRealize Operations and vRealize Log Insight on IBM Cloud
+### Resource requirements for vRealize Operations and Log Insight
 {: #vrops_overview-resource-req}
 
-The following table lists the minimum requirements to order VMware vRealize Operations and vRealize Log Insight on IBM Cloud.
+The following table lists the minimum requirements to order vRealize Operations and Log Insight.
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | Cores | 18 |
 | Memory (GB) | 208 |
-{: caption="Table 1. Minimum requirements for VMware vRealize Operations and vRealize Log Insight" caption-side="top"}
+{: caption="Table 1. Minimum requirements for vRealize Operations and Log Insight" caption-side="top"}
 
-### Formulas for calculating vRealize Operations and vRealize Log Insight on IBM Cloud space requirements
+### Formulas for calculating vRealize Operations and Log Insight space requirements
 {: #vrops_overview-formulas}
 
-The following formulas are used to calculate the space requirements for vRealize Operations and Log Insight on IBM Cloud and the management overheads.
+The following formulas are used to calculate the space requirements for vRealize Operations and Log Insight and the management overheads.
 
 #### Formula to calculate the number of available cores
 {: #vrops_overview-formulas-1}
@@ -95,20 +95,20 @@ The following table lists the variables that are used in the previous formula.
 | HostVsanOverheadMemory | The number of GB of memory reserved by vSAN management regardless of disk size | GB |  7 | 0 |
 {: caption="Table 5. Description of variables in Formula 2" caption-side="top"}
 
-## Considerations when you install VMware vRealize Operations and vRealize Log Insight on IBM Cloud
+## Considerations when you install vRealize Operations and Log Insight
 {: #vrops_overview-install}
 
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
 * To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
-## Considerations when you remove VMware vRealize Operations and vRealize Log Insight on IBM Cloud
+## Considerations when you remove vRealize Operations and Log Insight
 {: #vrops_overview-remove}
 
 Review the following considerations before you remove the service:
-* Only the virtual machines (VMs) that were deployed during the initial installation of vRealize Operations and vRealize Log Insight on IBM Cloud are deleted. Any node that is deployed after the installation will not be cleaned up.
-* The VXLAN, DLR, and the Edge Gateway that were created during the initial deployment of vRealize Operations and vRealize Log Insight on IBM Cloud will be deleted. The VMs that you deployed on VXLAN will lose connectivity after starting the removal of vRealize Operations and vRealize Log Insight on IBM Cloud.
-* If you remove VMware vRealize Operations and vRealize Log Insight on IBM Cloud, you need to remove the Syslog Server from the NSX Manager and the NSX Controller manually.
+* Only the virtual machines (VMs) that were deployed during the initial installation of vRealize Operations and Log Insight are deleted. Any node that is deployed after the installation will not be cleaned up.
+* The VXLAN, DLR, and the Edge Gateway that were created during the initial deployment of vRealize Operations and Log Insight will be deleted. The VMs that you deployed on VXLAN will lose connectivity after starting the removal of vRealize Operations and Log Insight.
+* If you remove vRealize Operations and Log Insight, you need to remove the Syslog Server from the NSX Manager and the NSX Controller manually.
 
 ### Removing the Syslog Server from the NSX Manager
 {: #vrops_overview-remove-nsx-manager}
@@ -129,5 +129,5 @@ Review the following considerations before you remove the service:
 ## Related links
 {: #vrops_overview-related}
 
-* [Ordering VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_ordering)
-* [Managing VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_vrops)
+* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_ordering)
+* [Managing vRealize Operations and Log Insight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_vrops)

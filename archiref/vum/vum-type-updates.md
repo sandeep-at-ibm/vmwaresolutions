@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -31,8 +31,10 @@ Table 1. VMware software update terms and definitions
 | VA upgrade |	Updates for a virtual appliance, which the vendor considers an upgrade. |
 | VIB |	A VIB is a single software package. |
 
+**Next topic:** [Virtual machine vSAN redundancy](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-vsan-redundancy)
+
 ## Related links
 {: #vum-type-updates-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [VMware HCX on {{site.data.keyword.cloud}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

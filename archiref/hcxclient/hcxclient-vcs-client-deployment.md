@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-08"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -48,7 +48,7 @@ HCX is a service. HCX is licensed per site and per virtual machine (VM) managed 
 {: #hcxclient-vcs-client-deployment-client-ip-reqs}
 
 To deploy the HCX, the proper number of IP addresses must be available both on-premises and in the
-target IBM Cloud.
+target {{site.data.keyword.cloud_notm}}.
 
 * vMotion address
   Maintaining a separate network for vMotion is a common practice in the on-premises data center. The Cloud Gateway must have access to the vMotion network. If it does not, an extra IP address is needed to communicate with the vMotion network.
@@ -58,8 +58,8 @@ target IBM Cloud.
   * One for each InterConnect Appliance, add one if there is a separate vMotion network.
   * One for each standard Network Extension
 
-* IBM Cloud
-  * Two IP addresses per HCX Manager appliance connected to IBM Cloud. The addresses can be used to connect to the internet or one or more Direct Connect lines.
+* {{site.data.keyword.cloud_notm}}
+  * Two IP addresses per HCX Manager appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more Direct Connect lines.
   * Add one if there is a separate vMotion network connection.
 
 ## Client-Side OVA Download
@@ -164,12 +164,13 @@ Table 1. Sample values for network properties
 
 Notice the existing **Hybrid Cloud** icon and the **Hybrid Cloud Services** menu item on the left. The Hybrid Cloud Services registration updates these labels. In the inventory, the icon label becomes **Hybrid Cloud Services**.
 
+**Next topic:** [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+
 ## Related links
 {: #hcxclient-vcs-client-deployment-related}
 
 * [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
 * [Preparing the installation environment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
 * [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
 * [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
 * [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)

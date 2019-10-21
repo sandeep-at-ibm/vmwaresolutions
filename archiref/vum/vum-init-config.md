@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-06"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Initial configuration
 {: #vum-init-config}
 
-The {{site.data.keyword.vmwaresolutions_full}} automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud}} Backend Customer Router (BCR). However, there's no route to the internet via the BCR. The standard route to the internet from the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance is via the Management ESG. As it isn't advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
+The {{site.data.keyword.vmwaresolutions_full}} automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud_notm}} Backend Customer Router (BCR). However, there's no route to the internet via the BCR. The standard route to the internet from the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance is via the Management ESG. As it isn't advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
 
 This approach means that you don't have to reconfigure the VCSA or the Management ESG, however, a small virtual machine (VM) or appliance must be installed. A proxy server is a system, which sits between two endpoint devices and acts as an intermediate device. In this case, it sits between VUM and the update servers at VMware.
 
@@ -217,8 +217,10 @@ Configure VUM to use the proxy server to access the repositories on the internet
   2. Click **Summary** and click **Reboot**.
   3. In the confirmation box, click **Yes** to confirm the operation.
 
+**Next topic:** [Collecting the metadata ](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-metadata)
+
 ## Related links
 {: #vum-init-config-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

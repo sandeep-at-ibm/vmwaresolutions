@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-26"
+lastupdated: "2019-10-07"
 
 keywords: FAQ, host, ESXi server
 
@@ -65,7 +65,7 @@ It is recommended to keep root access enabled on ESXi servers, otherwise failure
 
 If necessary, you can disable root access after the ESXi servers have a status of **Ready to Use** on the {{site.data.keyword.vmwaresolutions_short}} console.
 
-You must re-enable root access for subsequent automation operations, for example, when you add or remove file shares or when you install add-on services, such as Zerto on {{site.data.keyword.cloud_notm}}.
+You must re-enable root access for subsequent automation operations, for example, when you add or remove file shares or when you install add-on services, such as Zerto.
 
 ## Can I add static routes on my ESXi servers to mount storage from other locations?
 {: #faq_esxi-static-routes}

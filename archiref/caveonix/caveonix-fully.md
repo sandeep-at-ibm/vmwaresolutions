@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -126,3 +126,5 @@ Table 9. Remote collector
 |Disk	|1 TB |
 |OS	|CentOS 7 |
 |Installed Application Components	|Remote Collector |
+
+Next topic: [Step 1 - Initial planning and prerequisites](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step1)

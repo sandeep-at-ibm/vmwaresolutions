@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -31,7 +31,7 @@ Nodeports are a simple way of exposing external access to a workload for initial
 ### LoadBalancer - IBM Cloud Private
 {: #vcsicp-detail-design-network-loadbalancer-icp}
 
-Currently, the {{site.data.keyword.icpfull_notm}} Platform supports an external Load Balancer for application workload.
+Currently, the {{site.data.keyword.icpfull}} Platform supports an external Load Balancer for application workload.
 
 ### Ingress - IBM Cloud Private
 {: #vcsicp-detail-design-network-ingress-icp}
@@ -128,3 +128,5 @@ The {{site.data.keyword.icpfull_notm}} NSX NAT, is configured with the following
 *	SNAT for VXLAN networks access to public access.
 *	SNAT for VXLAN networks access to private {{site.data.keyword.cloud_notm}} network access.
 *	DNAT for {{site.data.keyword.icpfull_notm}} Cluster vIPs.
+
+**Next topic:** [Backup, disaster recovery, and scalability](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-detail-design-resiliency)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-22"
+lastupdated: "2019-10-14"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Ordering vCenter Server instances
 {: #vc_orderinginstance}
 
-To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance. During the initial order, you can also add services, such as [Zerto on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) for disaster recovery.
+To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance. During the initial order, you can also add services, such as [Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) for disaster recovery.
 
 ## Requirements
 {: #vc_orderinginstance-req}
@@ -73,7 +73,7 @@ The initial cluster name must meet the following requirements:
 
 Select whether to order vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.5u2.
 
-vSphere Enterprise Plus 6.7u2 is available for only Skylake, Cascade, and Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+vSphere Enterprise Plus 6.7u2 is available for only Skylake, Cascade Lake, and Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
 {:note}
 
 ### Primary or secondary
@@ -89,7 +89,7 @@ Specify the licensing options for the following VMware components in the instanc
 * vSphere Enterprise Plus 6.5 or 6.7
 * NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition)
 
-The VMware HCX on {{site.data.keyword.cloud_notm}} service requires either the NSX Advanced or NSX Enterprise edition license.
+The VMware HCX service requires either the NSX Advanced or NSX Enterprise edition license.
 {:note}
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), and the NSX license are included and purchased on your behalf. However, you must specify the edition for the NSX license.
@@ -127,12 +127,12 @@ When you select **Skylake**, you can choose the CPU and RAM combination for the 
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
-### Cascade
+### Cascade Lake
 {: #vc_orderinginstance-cascade}
 
-For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
 {:note}
 
 | CPU model options        | RAM options       |
@@ -140,7 +140,7 @@ Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSph
 | Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-{: caption="Table 3. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 3. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### SAP-certified
 {: #vc_orderinginstance-sap}
@@ -185,12 +185,12 @@ For instances V2.8 and later, you can add NFS storage shares to an existing NFS 
 ### vSAN storage
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN is available for the **Skylake**, **Cascade**, and **Broadwell** Bare Metal configuration only. Specify the following vSAN options:
+vSAN is available for the **Skylake**, **Cascade Lake**, and **Broadwell** Bare Metal configuration only. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity over the limit of 10 disks, select the **High-Performance with Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance with Intel Optane** option is available only for the Skylake and Cascade CPU models.
+  The **High-Performance with Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance with Intel Optane** box.
@@ -224,8 +224,8 @@ Choose performance level options according to your needs.
 {: #vc_orderinginstance-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
-* **Disk Count**: Select the number of disks that you want to add.
-* **Disk type**: Select an option for the disk type that you need.
+* **Local Disk Count**: Select the number of disks that you want to add.
+* **Local Disk type**: Select an option for the disk type that you need.
 
 ## Network interface settings
 {: #vc_orderinginstance-network-interface-settings}
@@ -273,9 +273,9 @@ Network interface card (NIC) enablement settings are based on your selection of 
 If you select the **Private Network Only** option:
 * VMware NSX Edge Services Gateways (ESG) are not provisioned (neither the management services ESG nor the customer-managed ESG).
 * The following add-on services, which require public NICs, are not available:
-  * F5 on {{site.data.keyword.cloud_notm}}
-  * Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
-  * Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+  * F5 BIG-IP
+  * Fortigate Security Appliance
+  * Fortigate Virtual Appliance
 
 ### VLANs
 {: #vc_orderinginstance-vlans}
@@ -326,7 +326,7 @@ For more information on ordering Windows Server 2016 licenses, see [Get started 
 
 When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
 
-A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service.
+A 12-month commitment is required when you order the VMware HCX service.
 {:note}
 
 ## Order summary
@@ -339,8 +339,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server instances
 {: #vc_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server on IBM Cloud** card in the **VMware Virtual Data Centers** section.
-2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server** card in the **Start Provisioning** section.
+2. On the **VMware vCenter Server** page, click the **vCenter Server** card and click **Continue**.
 3. On the **vCenter Server** page, enter the instance name.
 4. Select the vSphere version.
 5. Select the instance type:
@@ -356,14 +356,14 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 7. Complete the Bare Metal Server settings.
     1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
     2. Select the Bare Metal Server configuration.
-       * When you select **Skylake**, **Cascade**, or **Broadwell**, specify the CPU model and the RAM size.
+       * When you select **Skylake**, **Cascade Lake**, or **Broadwell**, specify the CPU model and the RAM size.
        * When you select **SAP-certified**, choose one of the preset configurations.
     3. Specify the number of {{site.data.keyword.baremetal_short}}. If you're planning to use vSAN storage, a minimum of four {{site.data.keyword.baremetal_short}} are needed.  
 8. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
-  * If you select **Local Disks**, specify the disk count and disk type.
+  * If you select **Local Disks**, specify the local disk count and local disk type.
 9. Complete the network interface settings.
    1. Enter the host name prefix for the instance being provisioned, the subdomain label, and the root domain name. For a secondary instance, the domain name is automatically completed.
    2. Select the network setting of either **Public and Private Network** or **Private Network Only**.

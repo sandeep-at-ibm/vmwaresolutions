@@ -4,19 +4,19 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
 
 ---
 
-# VMware vCenter Server on IBM Cloud and IBM Cloud Private introduction
+# VMware vCenter Server and IBM Cloud Private introduction
 {: #vcsicp-intro}
 
 This document provides a view of the application modernization journey to {{site.data.keyword.cloud}}, focusing on the cloud management components to allow an integrated multi cloud to be used for application modernization:
 
-- **vCenter Server on {{site.data.keyword.cloud_notm}}** - vCenter Server is an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
+- **VMware vCenter Server** - vCenter Server is an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
 - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing containerized applications, which are deployed on to virtualized infrastructure platforms, such as VMware.
 - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}} is a managed service on {{site.data.keyword.cloud_notm}} that uses Kubernetes as the orchestration engine for automating deployment, scaling, and operations of application containers across a single tenant cluster
 - **IBM Multi-Cluster Manager** – MCM provides user visibility, application-centric management (policy, deployments, health, operations), and policy-based compliance across clouds and clusters. With MCM, you have control of your Kubernetes clusters.
@@ -51,12 +51,14 @@ Because your IT infrastructure and business needs are unique, you need an approa
 This document is one of five documents that provides different views on the technologies that are used in the application modernization journey to {{site.data.keyword.cloud_notm}}:
 
 * _vCenter Server and {{site.data.keyword.icpfull_notm}}_ - the current guide, which is a reference architecture for deploying the following platforms:
-  - **VMware vCenter Server on {{site.data.keyword.cloud_notm}}** - an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
+  - **VMware vCenter Server** - an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
   - **{{site.data.keyword.icpfull_notm}}** – an application platform for developing and managing containerized applications. {{site.data.keyword.icpfull_notm}} is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
   - **{{site.data.keyword.cloud_notm}} Automation Manager** – an enterprise-ready Infrastructure as Code (IaC) platform that provides a single pane of glass to provision VM-based workloads alongside Kubernetes based workloads by using templates that are stored and versioned in a repository.
 * [vCenter Server and {{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) - A reference architecture for deploying the following platforms:
-  - **VMware vCenter Server on {{site.data.keyword.cloud_notm}}** - an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
+  - **VMware vCenter Server** - an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
   - **{{site.data.keyword.containerlong_notm}}** – managed service on {{site.data.keyword.cloud_notm}} that uses Kubernetes as the orchestration engine for automating deployment, scaling, and operations of application containers across a single-tenant cluster.
 * [vCenter Server networking](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - This guide focuses on the network technologies that are used within vCenter Server, {{site.data.keyword.icpfull_notm}} and {{site.data.keyword.containerlong_notm}} such as NSX-V, NSX-T and Calico.
 * [VMware and Skate Advisor Concept Car](/docs/services/vmwaresolutions/archiref/vcscar?topic=vmware-solutions-vcscar-intro) - This reference architecture is a “concept car”, that is, a mechanism to highlight and show technologies that solve real world problems. We wanted to demonstrate an interaction between Watson AI and machine learning in a real way. Through the culture of skateboarding, we demonstrate cloud services in a unique way. The implementation of the “concept car” is an extension to the Acme Skateboard application called Skate Advisor. Skate Advisor is a tool, which allows users to have skateboarding trick conversations with a Watson driven engine.
 * [VMware: The modernization journey of Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - Our reference use case describes a classic WebSphere Application Server application that is modernized by using {{site.data.keyword.icpfull_notm}}, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and vCenter Server. We're all on a cloud journey and at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing app called Stock Trader. It shows examples that help you take each step in your journey, and the value that is realized to your business, regardless of how large, or small each step is. We focus on four themes: applications, DevOps, integration, and management. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
+
+**Next topic:** [System context](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-systemcontext)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 The core components are as follows:
 
 - **On-premises virtualization** – This component is a VMware environment that is hosted on the client’s premises or a third-party location and currently hosts the virtual machines (VMs) running the applications to be modernized. On-premises virtualization is the source environment for VM migrations and is loosely coupled to an {{site.data.keyword.cloud}} instance via VMware Hybridity (HCX).
-- **vCenter Server** – VMware vCenter Server on {{site.data.keyword.cloud_notm}} is an {{site.data.keyword.cloud_notm}} for VMware Services instance that is the target for migrated VMs from the on-premises environment. Together with the on-premises virtualized environment it forms a hybrid environment that enables VMs to move from one site to the other.
+- **vCenter Server** – VMware vCenter Server is an {{site.data.keyword.cloud_notm}} for VMware Services instance that is the target for migrated VMs from the on-premises environment. Together with the on-premises virtualized environment it forms a hybrid environment that enables VMs to move from one site to the other.
 - **{{site.data.keyword.containerlong_notm}}** - {{site.data.keyword.containerlong_notm}} uses Kubernetes as the container orchestration solution. IBM operates and manages the Kubernetes master node while the worker nodes are deployed to customer-managed infrastructure. IBM provides management tools for operating system patch deployment, Docker engine upgrades, and new Kubernetes versions. {{site.data.keyword.containerlong_notm}} provides an isolated and secure platform for managing containers that is portable, extensible, and self-healing in case of failovers.
 - **{{site.data.keyword.icpfull_notm}}** - {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing containerized applications. {{site.data.keyword.icpfull_notm}} is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks and a graphical user interface, which provides a centralized location from where you can deploy, manage, monitor, and scale applications.
 - **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM is an enterprise ready infrastructure as code (IaC) platform that provides a single pane of glass to provision VMware based workloads alongside Kubernetes based workloads. Automation of workload provisioning for virtual machines, containers, and their infrastructure prerequisites is enabled via CAM.
@@ -58,4 +58,6 @@ Services | Represents the Service Composer, which is where administrators author
 Containerized applications | Applications that completed the application modernization journey and are now running as containers. For this reference architecture and Acme Skateboards, one of the containerized applications is a web server, which is part of the online presence workload.
 Watson | For this reference architecture and Acme Skateboards, Watson represents the AI service that is used in the “Concept Car” architecture.
 
-Application migration, networking, and security often are the most challenging aspects of application modernization. VMware vCenter Server on {{site.data.keyword.cloud_notm}}, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private, and the {{site.data.keyword.containerlong_notm}} address these challenges and enable you to build resilient, secure, and robust modern applications.
+Application migration, networking, and security often are the most challenging aspects of application modernization. VMware vCenter Server, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private, and the {{site.data.keyword.containerlong_notm}} address these challenges and enable you to build resilient, secure, and robust modern applications.
+
+**Next topic:** [Application modernization overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-appmod)

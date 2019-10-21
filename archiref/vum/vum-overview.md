@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -69,8 +69,10 @@ The compliance view of a selected inventory object is accessed by navigating to 
 *	Stage patches or extensions to hosts
 *	Remediate a selected inventory object
 
+**Next topic:** [Initial configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-init-config)
+
 ## Related links
 {: #vum-overview-related}
 
 * [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

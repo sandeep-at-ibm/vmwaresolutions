@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-02"
+lastupdated: "2019-10-04"
 
 subcollection: vmware-solutions
 
@@ -182,6 +182,8 @@ You can allocate and mount more file shares across all hosts for your workloads 
 The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. {{site.data.keyword.CloudDataCents_notm}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
+
+Next topic: [Virtual infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
 
 ## Related links
 {: #design_physicalinfrastructure-related}

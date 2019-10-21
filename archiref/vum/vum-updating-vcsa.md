@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 
 This section relates to both the vCentre Server Appliance (VCSA) and the Platform Services Controller (PSC). Both appliances are VCSA appliances but with different roles. When upgrading vSphere with an external PSC, upgrade the PSC first, then the VCSA, then the ESXi hosts, and finally the hardware versions and VMware Tools in the virtual machines.
 
-VUM does not update the PSC/VCSA. The following information describes the process of updating these appliances. The PSC/VCSA deployed in a VMware vCenter Server on {{site.data.keyword.cloud}} instance has no internet access, so the update bundle must be downloaded to a jump-server first.
+VUM does not update the PSC/VCSA. The following information describes the process of updating these appliances. The PSC/VCSA deployed in a VMware vCenter Server instance has no internet access, so the update bundle must be downloaded to a jump-server first.
 
 The PSC/VCSA is updated via appliance management console, not the vSphere Web Client. The PSC/VCSA appliance management console is accessed by using a browser, the PSC/VCSA IP address, and port 5480.
 
@@ -44,8 +44,10 @@ If you have primary and secondary vCenter Server instances, then your VCSAs are 
 
 You can specify a VUM instance by selecting the name of the VCSA with which the VUM instance is registered from the navigation bar. You can also manage baselines, baseline groups, scan, and remediate only the inventory objects that are managed by the VCSA with which the VUM instance is registered.
 
+**Next topic:** [Applying native NIC drivers](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-applying-nic)
+
 ## Related links
 {: #vum-updating-vcsa-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [VMware HCX on {{site.data.keyword.cloud}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

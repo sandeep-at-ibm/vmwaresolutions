@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-08"
+lastupdated: "2019-10-14"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -42,7 +42,7 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer  | Component                      | Version    |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) or <br/>6.5 Update 2 (build 6.5.0-13635690) |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) or <br/>6.5 EP 14 (build 6.5.0-13635690) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
 | VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 2g (build 6.5.0-13638625) |
@@ -79,7 +79,7 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 ### Notes
 {: #vc_bom-notes}
 
-* The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service because the service might use more than the default number of NFS mounts on the ESXi server.
+* The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus service because the service might use more than the default number of NFS mounts on the ESXi server.
 * A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
 
   It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
@@ -147,7 +147,7 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 |:------------- |:------------- |:------------- |
 | Broadwell | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Broadwell** Generation |
 | Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
-| Cascade | Not supported | EVC is set to Intel **Skylake** Generation |
+| Cascade Lake | Not supported | EVC is set to Intel **Skylake** Generation |
 {: caption="Table 6. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
 
 ## Related links

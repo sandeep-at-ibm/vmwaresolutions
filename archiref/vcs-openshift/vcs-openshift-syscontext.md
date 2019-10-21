@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-23"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -49,11 +49,12 @@ The system context diagram identifies the following systems:
 * **Public internet** - Provide access to the VMware and OpenShift environment to communicate with the public internet.
 * **{{site.data.keyword.cloud_notm}} private network** - Provide access to the VMware and OpenShift environment to communicate with the {{site.data.keyword.cloud_notm}} private network and services.
 
+**Next topic:** [Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch)
+
 ## Related links
 {: #vcs-openshift-syscontext-related}
 
 * [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
-* [Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch)
 * [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
 * [{{site.data.keyword.cloud_notm}} networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
 * [Storage options on {{site.data.keyword.cloud_notm}} and Red Hat OpenShift](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)

@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-07-23"
+lastupdated: "2019-10-07"
 
 keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
 
@@ -51,12 +51,12 @@ The following table provides the actions that generate and send management event
 | `vmware-solutions.service.delete` | A service is deleted. |
 {: caption="Table 1. Description of actions that generate management events" caption-side="top"}
 
-## Tracking events for the KMIP for VMware on IBM Cloud service
+## Tracking events for the KMIP for VMware service
 {: #at-events-kmip}
 
-When you manage keys for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service, an event is generated and sent to a global domain or to an instance of the service in the location where the service is provisioned. For more information, see [Monitoring global and location-based events](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type).
+When you manage keys for the KMIP for VMware service, an event is generated and sent to a global domain or to an instance of the service in the location where the service is provisioned. For more information, see [Monitoring global and location-based events](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type).
 
-The following table provides the actions that generate and send events for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service.
+The following table provides the actions that generate and send events for the KMIP for VMware service.
 
 | Action                                      | Description                               |
 |:--------------------------------------------|:------------------------------------------|
@@ -66,7 +66,7 @@ The following table provides the actions that generate and send events for the K
 | `vmware-solutions.kmip-key.activate` | A KMIP key is activated. |
 | `vmware-solutions.kmip-key.revoke` | A KMIP key is revoked. |
 | `vmware-solutions.kmip-key.destroy` | A KMIP key is destroyed. |
-{: caption="Table 2. Description of actions that generate events for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service" caption-side="top"}
+{: caption="Table 2. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
 ## Where to view the events
 {: #at-events-viewing}
@@ -80,4 +80,4 @@ There is only 1 {{site.data.keyword.at_full_notm}} instance per location. To vie
 
 * [Provisioning an instance](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-provision)
 * [Navigating to the web UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch)
-* [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)
+* [KMIP for VMware overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)

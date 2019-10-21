@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-18"
 
 keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
@@ -46,7 +46,7 @@ Don't modify any values that are set during instance order or deployment. Doing 
 ## System settings
 {: #vc_nsx-t_orderinginstance-sys-settings}
 
-You must specify the following system settings when you order a vCenter Server instance.
+You must specify the following system settings when you order a vCenter Server with NSX-T instance.
 
 ### Instance name
 {: #vc_nsx-t_orderinginstance-inst-name}
@@ -66,7 +66,7 @@ The initial cluster name must meet the following requirements:
 * The cluster name must start with a lowercase alphabetic character.
 * The cluster name must end with a lowercase alphabetic or numeric character.
 * The maximum length of the cluster name is 30 characters.
-* The cluster name must be unique within the vCenter Server instance.
+* The cluster name must be unique within the vCenter Server with NSX-T instance.
 
 ### VMware vSphere version
 {: ##vc_nsx-t_orderinginstance-vsphere-license}
@@ -121,12 +121,12 @@ When you select **Skylake**, you can choose the CPU and RAM combination for the 
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
-### Cascade
+### Cascade Lake
 {: #vc_nsx-t_orderinginstance-cascade}
 
-For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
 {:note}
 
 | CPU model options        | RAM options       |
@@ -134,7 +134,7 @@ Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSph
 | Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-{: caption="Table 3. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 3. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Broadwell
 {: #vc_nsx-t_orderinginstance-broadwell}
@@ -152,25 +152,25 @@ When you select **Broadwell**, you can choose the CPU and RAM combination for th
 
 * All servers that you order have the same configuration.
 * If you're planning to use vSAN storage, you can order between 4 and 20 servers.
-* If you're planning to use NFS storage, you can order between 2 and 20 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-).
+* If you're planning to use NFS storage, you can order between 2 and 20 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Storage settings
 {: #vc_nsx-t_orderinginstance-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
-For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see the *Adding NFS storage to vCenter Server instances* section in [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances).
+For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see the [Adding NFS storage to vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
 {:note}
 
 ### vSAN storage
 {: #vc_nsx-t_orderinginstance-vsan-storage}
 
-vSAN is available for the **Skylake**, **Cascade**, and **Broadwell** Bare Metal configurations only. Specify the following vSAN options:
+vSAN is available for the **Skylake**, **Cascade Lake **, and **Broadwell** Bare Metal configurations only. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade CPU models.
+  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -203,7 +203,7 @@ Performance level details:
 ## Network interface settings
 {: #vc_nsx-t_orderinginstance-network-interface-settings}
 
-You must specify the following network interface settings when you order a vCenter Server instance.
+You must specify the following network interface settings when you order a vCenter Server with NSX-T instance.
 
 ### Host name prefix
 {: #vc_nsx-t_orderinginstance-host-name-prefix}
@@ -296,9 +296,9 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server with NSX-T instances
 {: #vc_nsx-t_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server on IBM Cloud** card in the **VMware Virtual Data Centers** section.
-2. On the **VMware vCenter Server on IBM Cloud** page, click the **vCenter Server** card and click **Create**.
-3. On the **vCenter Server** page, enter the instance name.
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server** card in the **Start Provisioning** section.
+2. On the **VMware vCenter Server** page, click the **vCenter Server with NSX-T** card and click **Continue**.
+3. On the **vCenter Server with NSX-T** page, enter the instance name.
 4. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:

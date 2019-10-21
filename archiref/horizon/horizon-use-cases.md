@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-25"
+lastupdated: "2019-10-04"
 
 subcollection: vmware-solutions
 
@@ -30,31 +30,31 @@ A desktop assessment requires a tool like Liquidware Stratusphere or Lakeside Sy
 ## Estimating data egress cost
 {: #horizon-use-cases-estimate-egress}
 
-Unlike on-premises, deploying Horizon 7 on IBM Cloud incurs data egress cost based on the amount of data egress traffic your environment will generate. It is important to understand and estimate the data egress traffic.
+Unlike on-premises, deploying Horizon 7 on {{site.data.keyword.cloud}} incurs data egress cost based on the amount of data egress traffic your environment will generate. It is important to understand and estimate the data egress traffic.
 
 ### Understanding different types of data egress traffic
 {: #horizon-use-cases-understand-egress-traffic}
 
 Depending on your deployment use case, you might be incurring cost for some or all of the following types of data egress traffic:
-* End-user traffic via internet - You have configured your environment where your users will connect to their virtual desktops on IBM Cloud remotely via the internet. Any data leaving the IBM Cloud data center will incur egress charge. Egress data consists of the following components: outbound data from Horizon 7 protocols and outbound data from remote experience features (for example, remote printing). While the former is typically predicable, the latter has more variance and depends on the exact activity of the user
-* End-user traffic via on-premises - You have configured your environment where your users will connect to their virtual desktops on IBM Cloud via your on-premises data center. In this case, you must link your data center with the IBM Cloud data center using VPN. Any data traffic leaving the IBM Cloud data center back to your data center will incur egress charge. And if you have Cloud Pod Architecture (CPA) configured between the on-premises environment and the IBM Cloud environment, you will incur egress charge for any CPA traffic between the two pods (although CPA traffic is typically fairly light)
-* External application traffic - You have configured your environment where your virtual desktops on IBM Cloud has to access applications hosted either in your on-premises environment or in another cloud. Any data traffic leaving the IBM Cloud data center to these other data centers will incur egress charge
+* End-user traffic via internet - You have configured your environment where your users will connect to their virtual desktops on {{site.data.keyword.cloud_notm}} remotely via the internet. Any data leaving the {{site.data.keyword.CloudDataCent_notm}} will incur egress charge. Egress data consists of the following components: outbound data from Horizon 7 protocols and outbound data from remote experience features (for example, remote printing). While the former is typically predicable, the latter has more variance and depends on the exact activity of the user
+* End-user traffic via on-premises - You have configured your environment where your users will connect to their virtual desktops on {{site.data.keyword.cloud_notm}} via your on-premises data center. In this case, you must link your data center with the {{site.data.keyword.CloudDataCent_notm}} using VPN. Any data traffic leaving the {{site.data.keyword.CloudDataCent_notm}} back to your data center will incur egress charge. And if you have Cloud Pod Architecture (CPA) configured between the on-premises environment and the {{site.data.keyword.cloud_notm}} environment, you will incur egress charge for any CPA traffic between the two pods (although CPA traffic is typically fairly light)
+* External application traffic - You have configured your environment where your virtual desktops on {{site.data.keyword.cloud_notm}} has to access applications hosted either in your on-premises environment or in another cloud. Any data traffic leaving the {{site.data.keyword.CloudDataCent_notm}} to these other data centers will incur egress charge
 
-Data ingress (that is, data flowing into IBM Cloud data center), and data between IBM Cloud datacenters, is free of charge.
+Data ingress (that is, data flowing into {{site.data.keyword.CloudDataCent_notm}}), and data between {{site.data.keyword.CloudDataCents_notm}}, is free of charge.
 
 ### Estimating Data Egress Traffic with SysTrack from Lakeside
 {: #horizon-use-cases-estimate-data-egress}
 
 Since the data egress cost is priced per GB, the best way to estimate your data egress cost is to estimate your likely data egress traffic by using a monitoring tool in your existing on-premises environment (whether it’s already virtualized or not). Make sure that you estimate the different types of data egress traffic listed above separately as applicable. One such monitoring tool is SysTrack from Lakeside Software.
 
-[Lakeside’s SysTrack](https://www.lakesidesoftware.com/product){:external} workplace analytics solution contains an extensive set of tools to provide relevant planning information for [desktop transformation](https://www.lakesidesoftware.com/solutions/desktop-transformation){:external}. Best of all, this is available at no cost to VMware customers via the [SysTrack Desktop Assessment (SDA)](https://assessment.vmware.com/){:external}. Through the SDA, customers can collect detailed environmental information, including recommendations for deployment options and resource requirements, with only the need to deploy the SysTrack agent to systems being considered for transformation. For advanced cases, the on-premises version of SysTrack can be used as well. This guide will make the assumption that such a deployment is already in place. For more setup details or questions about the SDA, the [Quick Start Guide](https://assessment.vmware.com/SDA/ViewDocument?document=Quick_Start_Guide){:external} is a good resource.
+[Lakeside’s SysTrack](https://www.lakesidesoftware.com/product){:external} workplace analytics solution contains an extensive set of tools to provide relevant planning information for [desktop transformation](https://www.lakesidesoftware.com/solutions/desktop-transformation){:external}. Best of all, this is available at no cost to VMware customers via the [SysTrack Desktop Assessment (SDA)](https://www.vmware.com/files/microsites/latitude/index.html){:external}. Through the SDA, customers can collect detailed environmental information, including recommendations for deployment options and resource requirements, with only the need to deploy the SysTrack agent to systems being considered for transformation. For advanced cases, the on-premises version of SysTrack can be used as well. This guide will make the assumption that such a deployment is already in place. For more setup details or questions about the SDA, the [Quick Start Guide](https://assessment.vmware.com/SDA/ViewDocument?document=Quick_Start_Guide){:external} is a good resource.
 
 After SysTrack is deployed in the environment, it will immediately begin collecting relevant information from devices on which it’s installed. For this guide we’ll focus on the most interesting facets of data collection for the network:
 * Per Device Network Usage
 * Per Session Protocol Bandwidth Usage
 * Per Application (and Destination) Bandwidth Usage
 
-The key is thinking about how best to combine these pieces of information into something that’s useful for planning costs. Because the ingress data is free for IBM Cloud, we’ll focus on the egress data as observed from the devices in the collection. That will take the form of “transmitted” data from that device to other destinations, and you’ll see more details about this as we go into methodology we suggest.
+The key is thinking about how best to combine these pieces of information into something that’s useful for planning costs. Because the ingress data is free for {{site.data.keyword.cloud_notm}}, we’ll focus on the egress data as observed from the devices in the collection. That will take the form of “transmitted” data from that device to other destinations, and you’ll see more details about this as we go into methodology we suggest.
 
 With SysTrack, you can make use of two different styles of calculation depending on the level of detail you’d like to see. We’ve created several dashboards that customers can use to easily visualize this information in SysTrack.
 
@@ -71,7 +71,7 @@ The resource consumption metrics can be fed into some of VMware’s sizing tools
 ### Advanced network egress bandwidth calculation
 {: #horizon-use-cases-advanced-egress}
 
-The Advanced Horizon Sizing Tool offers advanced sizing calculations, which can be used to estimate costs around migrating to the IBM Cloud. IBM Cloud pricing is based around the level of data that is transmitted from the cloud back to the client (that is, egress bandwidth consumption).
+The Advanced Horizon Sizing Tool offers advanced sizing calculations, which can be used to estimate costs around migrating to the {{site.data.keyword.cloud_notm}}. {{site.data.keyword.cloud_notm}} pricing is based around the level of data that is transmitted from the cloud back to the client (that is, egress bandwidth consumption).
 
 Within the dashboard, each user is put into a category based on egress bandwidth consumption. This can be based on actual SysTrack data if you are migrating from an existing virtual environment or estimated if migrating from a physical environment.
 

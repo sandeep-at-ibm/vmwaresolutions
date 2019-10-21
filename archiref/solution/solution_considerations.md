@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-10-04"
 
 subcollection: vmware-solutions
 
@@ -136,6 +136,8 @@ In addition to capacity planning, complete the following to ensure that your sto
 - If you mount additional {{site.data.keyword.cloud_notm}} Endurance NFS storage to your cluster, ensure that you follow the architecture guidance and configure host routes to the storage using the `SDDC-DPortGroup-NFS` port group addresses. You must authorize these addresses, rather than the hosts themselves, to the storage. For more information, see [Attached storage infrastructure management](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-infra-mgmt#vsphere-host-static-routing).
 
 In addition, see the IBM Developer recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
+
+Next topic: [Comparison chart for VMware component editions](/docs/services/vmwaresolutions?topic=vmware-solutions-solution-appendix)
 
 ## Related links
 {: #solution_considerations-related}

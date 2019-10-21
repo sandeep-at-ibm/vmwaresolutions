@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -120,3 +120,5 @@ nollie-heelflip to frontside-boardslide
 {: #vcscar-concepts-relevance}
 
 The Trick Language is the key construct that is used to train Watson to recognize and ingest skating documents and media and also forms the basis of conversations with the user.
+
+**Next topic:** [Skate Advisor logical design](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscar-logical)

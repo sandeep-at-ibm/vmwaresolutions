@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-22"
+lastupdated: "2019-10-07"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -15,19 +15,19 @@ subcollection: vmware-solutions
 
 {:external: target="_blank" .external}
 
-# Ordering on-premises VMware HCX on IBM Cloud instances
+# Ordering on-premises VMware HCX instances
 {: #standalone_orderingserviceinstances}
 
-You can order an on-premises HCX on {{site.data.keyword.cloud}} instance without associating it to any vCenter Server instance for licensing and activation of your on-premises HCX on {{site.data.keyword.cloud_notm}} installation.
+You can order an on-premises HCX instance without associating it to any vCenter Server instance for licensing and activation of your on-premises HCX installation.
 
 ## Before you begin
 {: #standalone_orderingserviceinstances-reqs}
 
 Ensure that you completed the following tasks:
 *  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-*  You reviewed all the considerations in [Considerations when installing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations).
+*  You reviewed all the considerations in [Considerations when installing on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations).
 
-## Procedure to order on-premises VMware HCX on IBM Cloud instances
+## Procedure to order on-premises VMware HCX instances
 {: #standalone_orderingserviceinstances-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
@@ -46,12 +46,12 @@ When the activation key is ready to use, the status of the instance is changed t
 ## What to do next
 {: #standalone_orderingserviceinstances-next}
 
-View and manage the on-premises HCX on {{site.data.keyword.cloud_notm}} instance that you ordered.
+View and manage the on-premises HCX instance that you ordered.
 
 ## Related links
 {: #standalone_orderingserviceinstances-related}
 
-* [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
-* [Deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
+* [Viewing on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_viewingserviceinstances)
+* [Deleting on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_deletingserviceinstances)
 * [Glossary of HCX terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

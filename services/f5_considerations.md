@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-13"
+lastupdated: "2019-10-08"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -18,20 +18,20 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# F5 on IBM Cloud overview
+# F5 BIG-IP overview
 {: #f5_considerations}
 
-The F5 on {{site.data.keyword.cloud}} service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access.
+The F5 BIG-IP service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access.
 
 You can install more than one instance of this service as needed.
 
 This service is available only to instances that are deployed in V1.9 or later. The current BIG-IP VE version that is installed is v15.0.0.
 {:note}
 
-## Technical specifications for F5 on IBM Cloud
+## Technical specifications for F5 BIG-IP
 {: #f5_considerations-specs}
 
-The following components are included with the F5 on {{site.data.keyword.cloud_notm}} service:
+The following components are included with the F5 BIG-IP service:
 
 ### Virtual machines
 {: #f5_considerations-specs-vms}
@@ -54,10 +54,10 @@ License fees for each VM are applied to each billing cycle depending on the lice
 You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
 {:important}
 
-## Considerations when you install F5 on IBM Cloud
+## Considerations when you install F5 BIG-IP
 {: #f5_considerations-install}
 
-Before you install the F5 on {{site.data.keyword.cloud_notm}} service, review the following considerations.
+Before you install the F5 BIG-IP service, review the following considerations.
 
 Based on the license model and bandwidth that you select, two BIG-IP VE VMs (virtual machines) are deployed with the following configuration:
 
@@ -75,7 +75,7 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs (vir
 {: #f5_considerations-additional}
 
 * F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies may be able to achieve your chosen maximum bandwidth.
-* The HA (High Availability) pair of BIG-IP VE VMs will be deployed only into the default cluster.
+* The pair of BIG-IP VE virtual machines (VMs) suitable for high availability (HA) configuration will be deployed only into the default cluster.
 
   In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications and it is critical that resources are still available for them.
 
@@ -85,15 +85,18 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs (vir
 
   `RAM reservation = RAM size` (from Table 1)
 
+* {{site.data.keyword.vmwaresolutions_short}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-implementations-11-5-0/2.html){:external}.
+* For information about the activities you should perform after you deploy F5 networks, see [Working with F5 Networks BigIP in IBM Cloud for VMware](https://developer.ibm.com/recipes/tutorials/working-with-f5-networks-bigip-in-ibm-cloud-for-vmware/){:external}.
+
 ### Planning considerations
 {: #f5_considerations-planning}
 
-You must meet the following requirements to avoid failures with F5 on {{site.data.keyword.cloud_notm}}:
+You must meet the following requirements to avoid failures with F5 BIG-IP:
 * At least two active ESXi servers are available for the two BIG-IP VE VMs to be deployed with the anti-affinity rule of keeping the VMs on separate servers.
 * The two active ESXi servers have enough resources available so that one BIG-IP VE VM can be hosted on each ESXi server with 100% CPU and RAM reservation.
 * VMware vSphere HA has enough resources to host two BIG-IP VMs with 100% CPU and RAM.
 
-Due to these requirements, you must plan for the space that is needed for F5 on {{site.data.keyword.cloud_notm}}. If needed, before you order F5 on {{site.data.keyword.cloud_notm}}, add 1-2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, or both.
+Due to these requirements, you must plan for the space that is needed for F5 BIG-IP. If needed, before you order F5 BIG-IP, add 1-2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, or both.
 
 **Notes**:
 
@@ -101,10 +104,10 @@ Due to these requirements, you must plan for the space that is needed for F5 on 
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
 * To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
-## F5 on IBM Cloud order example
+## F5 BIG-IP order example
 {: #f5_considerations-example}
 
-You order a VMware vCenter Server **Small** instance with 2 ESXI servers with the following configuration: sixteen cores at 2.10 GHz each with 128 GB RAM. For F5 on {{site.data.keyword.cloud_notm}}, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
+You order a VMware vCenter Server **Small** instance with 2 ESXI servers with the following configuration: sixteen cores at 2.10 GHz each with 128 GB RAM. For F5 BIG-IP, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
 
 In this case, a single BIG-IP VM requires, on each server:
 * 2.1 GHz * 8 vCPU = 16.8 GHz of CPU, and
@@ -120,18 +123,18 @@ However, by default, vSphere HA reserves 50 percent of CPU and RAM for failover 
 
 Since there will be other workloads present on the ESXi servers, for example, VMware vCenter Server, VMware NSX Controller, VMware NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
 
-In this case, the F5 on {{site.data.keyword.cloud_notm}} installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 on {{site.data.keyword.cloud_notm}} service, you can add more ESXi servers before installing F5 on {{site.data.keyword.cloud_notm}}.
+In this case, the F5 BIG-IP installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 BIG-IP service, you can add more ESXi servers before installing F5 BIG-IP.
 
-## Considerations when you remove F5 on IBM Cloud
+## Considerations when you remove F5 BIG-IP
 {: #f5_considerations-remove}
 
-Before you remove the F5 on {{site.data.keyword.cloud_notm}} service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
+Before you remove the F5 BIG-IP service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
 
 ## Related links
 {: #f5_considerations-related}
 
-* [Ordering F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering)
-* [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
+* [Ordering F5 BIG-IP](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_ordering)
+* [Managing F5 BIG-IP](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [F5 website](https://www.f5.com/){:external}

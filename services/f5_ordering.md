@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-22"
+lastupdated: "2019-10-08"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -18,36 +18,36 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Ordering F5 on IBM Cloud
+# Ordering F5 BIG-IP
 {: #f5_ordering}
 
-You can order the F5 on {{site.data.keyword.cloud}} service when you order a new instance with the service included or by adding the service to your existing instance.
+You can order the F5 BIG-IP service when you order a new instance with the service included or by adding the service to your existing instance.
 
-## Ordering F5 on IBM Cloud for a new instance
+## Ordering F5 BIG-IP for a new instance
 {: #f5_ordering-new}
 
-You can order a new instance with F5 on {{site.data.keyword.cloud_notm}} by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, select **F5 on IBM Cloud** in the **Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **F5 on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to New Instance**.
+You can order a new instance with F5 BIG-IP by using one of the following methods:
+* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, click **F5 BIG-IP** under the **Security and Compliance** category in the **Optional Services** section.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **F5 BIG-IP** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to New Instance**.
 
-## Ordering F5 on IBM Cloud for an existing instance
+## Ordering F5 BIG-IP for an existing instance
 {: #f5_ordering-existing}
 
-You can add the F5 on {{site.data.keyword.cloud_notm}} service into an existing instance by using one the following methods:
+You can add the F5 BIG-IP service into an existing instance by using one the following methods:
 * From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **F5 on IBM Cloud** card in the **VMware Services** section. Specify the service settings and select **Add to Existing Instance**.
+* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **F5 BIG-IP** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to Existing Instance**.
 
-## Ordering F5 on IBM Cloud for private instances
+## Ordering F5 BIG-IP for private instances
 {: #f5_ordering-private}
 
-When you order F5 on {{site.data.keyword.cloud_notm}} for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available via Virtual Routing and Forwarding (VRF) before the F5 on {{site.data.keyword.cloud_notm}} installation can begin.
+When you order F5 BIG-IP for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available via Virtual Routing and Forwarding (VRF) before the F5 BIG-IP installation can begin.
 
 The BigIP Virtual Edition (VE) endpoints must be able to activate their license before becoming operational. After the BigIP VE endpoints are installed, they no longer require the use of the proxy server.
 
-The F5 on {{site.data.keyword.cloud_notm}} service cannot be added without a working proxy server at the time of service installation.
+The F5 BIG-IP service cannot be added without a working proxy server at the time of service installation.
 {:note}
 
-## F5 on IBM Cloud service configuration
+## F5 BIG-IP service configuration
 {: #f5_ordering-config}
 
 When you order the service, provide the following settings.
@@ -77,7 +77,7 @@ Specify the maximum throughput of the F5 BIG–IP appliance.
 ### License model
 {: #f5_ordering-config-license-model}
 
-The license model for F5 on {{site.data.keyword.cloud_notm}} service offers the following options:
+The license model for F5 BIG-IP offers the following options:
 <dl class="dl">
         <dt class="dt dlterm">Good</dt>
         <dd class="dd">This offer uses the BIG-IP Local Traffic Manager™ (LTM) VE, operating as a full-proxy architecture, to provide intelligent local traffic management, complete SSL traffic visibility, and analytics and health monitoring to ensure that application servers are always available to your users.</dd>
@@ -91,10 +91,10 @@ You cannot change the license model after service installation. To change the li
 {:important}
 
 ## Related links
-{: #f5_ordering-releated}
+{: #f5_ordering-related}
 
-* [F5 on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
-* [Managing F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
+* [F5 BIG-IP overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
+* [Managing F5 BIG-IP](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)

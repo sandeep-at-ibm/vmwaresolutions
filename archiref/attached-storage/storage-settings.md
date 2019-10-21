@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-13"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 This design supports the attachment of shared storage via NFS v3 only. NFS v4 and v4.1 aren't supported.
 
-The attached storage for this design is limited to the {{site.data.keyword.cloud_notm}} storage available in the same {{site.data.keyword.CloudDataCent_notm}} as the vCenter Server solution. Additionally, all virtual disks that are stored to the datastore are thin-provisioned by default.
+The attached storage for this design is limited to the {{site.data.keyword.cloud}} storage available in the same {{site.data.keyword.CloudDataCent_notm}} as the vCenter Server solution. Additionally, all virtual disks that are stored to the datastore are thin-provisioned by default.
 {:note}
 
 The architecture specifies that NFS v3 datastores are attached by using the DNS name from {{site.data.keyword.cloud_notm}} storage to connect to the share. The NFS share is attached to all hosts in the vCenter Server cluster and placed into a datastore cluster with storage DRS enabled.
@@ -95,6 +95,8 @@ Table 2. NFS advanced configuration parameters
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
+
+Next topic: [Cluster settings](/docs/services/vmwaresolutions?topic=vmware-solutions-cluster-settings)
 
 ## Related links
 {: #storage-settings-related}

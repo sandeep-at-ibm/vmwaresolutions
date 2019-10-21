@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-08-29"
+lastupdated: "2019-10-17"
 
 subcollection: vmware-solutions
 
@@ -64,43 +64,45 @@ Users can log in to vCenter only if they are in a domain that has been added as 
 ## vSphere SSO configuration
 {: #adds-sso-config}
 
-The following sections provide the settings configured in vSphere SSO:
+The following sections provide the settings configured in vSphere SSO.
 
-* Token trustworthiness.
-* Lockout policy.
-* Password policy.
+### Token trustworthiness
+{: #adds-sso-config-token}
 
-As the customer, you have full access to tailor these settings as needed to apply your enterprise security policies. For changing these policies, see [Managing vCenter Single Sign-On Policies](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-43527B09-63BB-44A6-91D3-E3A470904698.html){:external}.
-
-| Parameter | Value |
-|:----------|:------|
-| Clock tolerance | 600000 milliseconds |
-| Maximum token renewal count | 10 |
-| Maximum token delegation count | 10 |
-| Maximum bearer token lifetime | 300 seconds |
-| Maximum holder-of-key token lifetime | 2592000 seconds |
+| Parameter                            | Value               |
+| :----------------------------------- | :------------------ |
+| Clock tolerance                      | 600000 milliseconds |
+| Maximum token renewal count          | 10                  |
+| Maximum token delegation count       | 10                  |
+| Maximum bearer token lifetime        | 300 seconds         |
+| Maximum holder-of-key token lifetime | 2592000 seconds     |
 {: caption="Table 1. Token trustworthiness" caption-side="top"}
 
-| Parameter | Value |
-|:----------|:------|
-| Maximum number of failed login attempts | 5 |
-| Time interval between failures | 180 seconds |
-| Unlock time | 300 seconds |
-{: caption="Table 2. Lockout policy" caption-side="top"}
+### Lockout policy
+{: #adds-sso-config-lockout}
 
-| Parameter | Value |
-|:----------|:------|
-| Maximum lifetime | Password must be changed every 365 days |
-| Restrict reuse | Users cannot reuse any previous 5 passwords |
-| Maximum length | 20 characters |
-| Minimum length | 8 characters |
+For information about the lockout policy, see [Policy Configurations](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_compl_info#vc_compl_info-default-policy-config).
+
+### Password policy
+{: #adds-sso-config-pwd-policy}
+
+| Parameter              | Value                                                                                                                                                                                                    |
+| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Maximum lifetime       | Password must be changed every 90 days                                                                                                                                                                   |
+| Restrict reuse         | Users cannot reuse any previous 5 passwords                                                                                                                                                              |
+| Maximum length         | 20 characters                                                                                                                                                                                            |
+| Minimum length         | 15 characters                                                                                                                                                                                            |
 | Character requirements | At least 2 alphabetic characters<br>At least 1 special character<br>At least 1 uppercase character<br>At least 1 lowercase character<br>At least 1 numeric character<br>Identical adjacent characters: 3 |
-{: caption="Table 3. Password policy" caption-side="top"}
+{: caption="Table 2. Password policy" caption-side="top"}
+
+As the customer, you have full access to tailor these settings as needed to apply your enterprise security policies. For changing these policies, see [Managing vCenter Single Sign-On Policies](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-43527B09-63BB-44A6-91D3-E3A470904698.html){:external}.
 
 ## vSphere ESXi hosts
 {: #adds-sso-esxi}
 
 Each vSphere ESXi host has its own root account along with its own password. To identify this password, you will need to navigate to the IBM Cloud portal and then navigate to; VMware,  Infrastructure, Resources, <instance_name>, Infrastructure, <cluster_name>. It is also possible to have the vSphere ESXi hosts join AD, so that each system administrator can log in with their own account.
+
+Next topic: [IBM Cloud for VMware Solutions workload domain](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-wkld-domain)
 
 ## Related links
 {: #adds-sso-related}

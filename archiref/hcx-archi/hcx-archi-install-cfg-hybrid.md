@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -143,6 +143,8 @@ Extend a Layer 2 network from the on-premises data center to VCS HCX enabled clo
 6. On the **Ready to complete** page, review all values provided. Click **Finish**.
 7. To track the progress of the network extension, go to the **Recent Tasks** window, click the **All** tab, and view **All Users’ Tasks**.
 8. To open the Task console, click **More Tasks**. The network extension is done when the **Extend Network** task status is **Completed**.
+
+**Next topic:** [Migrating a virtual machine](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-migrate-vm)
 
 ## Related links
 {: #hcx-archi-install-cfg-hybrid-related}

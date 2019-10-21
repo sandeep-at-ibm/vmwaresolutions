@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-22"
+lastupdated: "2019-10-14"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Ordering new vSphere clusters
 {: #vs_orderinginstances}
 
-To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster on {{site.data.keyword.cloud}}. Use this procedure to define a new vSphere cluster.
+To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster. Use this procedure to define a new vSphere cluster.
 
 This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud_notm}} Bare Metal Server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware cluster based on your requirements.
 
@@ -41,11 +41,8 @@ You must specify the following system settings when you order a new vSphere clus
 {: #vs_orderinginstances-cluster-name}
 
 The cluster name must meet the following requirements:
-* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
-* The cluster name must start with a lowercase alphabetic character.
-* The cluster name must end with a lowercase alphabetic or numeric character.
-* The maximum length of the cluster name is 10 characters.
-* The cluster name must be unique within your account.
+* Only alphanumeric characters are allowed.
+* The maximum length of the cluster name is 128 characters.
 
 ## Licensing settings
 {: #vs_orderinginstances-licensing-settings}
@@ -130,12 +127,12 @@ When you select **Skylake**, you can choose the CPU and RAM combination for the 
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
-### Cascade
+### Cascade Lake
 {: #vs_orderinginstance-cascade}
 
-For the **Cascade** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
 {:note}
 
 | CPU model options        | RAM options       |
@@ -143,7 +140,7 @@ Cascade {{site.data.keyword.baremetal_short}} are available only for VMware vSph
 | Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-{: caption="Table 3. Options for Cascade {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 3. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### SAP-certified
 {: #vs_orderinginstances-sap}
@@ -189,7 +186,7 @@ If you select the VMware vSAN component for the cluster, specify the following s
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
 * If you want to add capacity disks over the limit of eight, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 10 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade CPU models.
+  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
   {:note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
@@ -269,7 +266,7 @@ Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, exi
 #### FortiGate Physical Appliance 300 Series HA Pair
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
-You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
+You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
 
 This option is only available for an order with both a public and private network.
 {:note}
@@ -284,8 +281,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vSphere clusters
 {: #vs_orderinginstances-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **VMware vSphere on IBM Cloud** card in the **VMware Virtual Data Centers** section.
-2. On the **VMware vSphere on IBM Cloud** page, click **Create**.  
+1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **VMware vSphere** card in the **Start Provisioning** section.
+2. On the **VMware vSphere** page, click **Continue**.  
    Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
 3. Enter the cluster name.
 4. Select the VMware components:
@@ -297,7 +294,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 5. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
    2. Select the Bare Metal Server configuration.
-      * When you select **Skylake**, **Cascade**, or **Broadwell**, specify the CPU model and the RAM size.
+      * When you select **Skylake**, **Cascade Lake**, or **Broadwell**, specify the CPU model and the RAM size.
       * When you select **SAP-certified**, choose one of the preset configurations.
    3. Specify the number of Bare Metal Servers.
 6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.

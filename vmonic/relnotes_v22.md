@@ -37,7 +37,7 @@ During the V2.2 upgrade process, the IBM CloudDriver virtual machine is redeploy
 **Important:**
 
 * If you are using a backup solution that references the IBM CloudDriver virtual machine, after you upgrade to V2.2, ensure that the backup solution is referencing the new IBM CloudDriver virtual machine.
-* Before you upgrade to V2.2, ensure that you replace the Legacy Veeam VSI with the Veeam on {{site.data.keyword.cloud_notm}} service. Legacy Veeam is no longer supported in V2.2 and future releases, therefore the management component backups that are associated with Legacy Veeam are not available for a restore.
+* Before you upgrade to V2.2, ensure that you replace the old Veeam VSI with the Veeam on {{site.data.keyword.cloud_notm}} service. The old Veeam is no longer supported in V2.2 and later. Therefore, the management component backups that are associated with the old Veeam are not available for a restore.
 
 For more information about using the Veeam on {{site.data.keyword.cloud_notm}} service, see:
 * [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
@@ -56,9 +56,9 @@ For more information, see _Advanced configuration settings for ESXi servers_ in 
 ## Support for up to 51 ESXi servers for an initial cluster and up to 59 ESXi servers for additional clusters
 {: #relnotes_v22-esxi-cluster}
 
-For V2.2 and later releases, you can now increase the number of ESXi servers to a maximum of 51 for an initial cluster and up to 59 for additional clusters.
+For V2.2 and later releases, you can now increase the number of ESXi servers to a maximum of 51 for an initial cluster and up to 59 for extra clusters.
 
-For instances deployed in V2.1 or earlier releases, you must enable necessary vSAN support to increase the cluster size beyond 32. For more information about steps to increase the number of ESXi servers, see _How many ESXi servers can I add to a cluster?_ in [FAQ about ESXi servers](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi#how-many-esxi-servers-can-i-add-to-a-cluster-).
+For instances deployed in V2.1 or earlier releases, you must enable necessary vSAN support to increase the cluster size beyond 32. For more information about steps to increase the number of ESXi servers, see [How many ESXi servers can I add to a cluster?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_esxi#how-many-esxi-servers-can-i-add-to-a-cluster-)
 {:important}
 
 ## More network configuration options for vCenter Server and Cloud Foundation instances
@@ -81,9 +81,9 @@ For VMware vCenter Server instances that are deployed in V2.2 or later releases,
 ### New option for DNS configuration
 {: #relnotes_v22-dns}
 
-You can now select the deployment of a single Microsoft Windows Server Virtual Server Instance (VSI) for Microsoft Active Directory (AD) or two high availability Microsoft Windows virtual machines in the management cluster. For releases before V2.2, the single Microsoft Windows VSI for Microsoft AD was automatically deployed by default. The new option to select two Microsoft Windows virtual machines provides more privacy and the option to backup and restore the virtual machines that use the Veeam service.
+You can now select the deployment of a single Microsoft Windows Server Virtual Server Instance (VSI) for Microsoft Active Directory (AD) or two high availability Microsoft Windows virtual machines in the management cluster. For releases before V2.2, the single Microsoft Windows VSI for Microsoft AD was automatically deployed by default. The new option to select two Microsoft Windows virtual machines provides more privacy and the option to back up and restore the virtual machines that use the Veeam service.
 
-You must provide 2 Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
+You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
 {:note}
 
 For more information, see the *System settings* section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#system-settings)​.
@@ -99,7 +99,7 @@ You can now add up to 10 clusters to VMware vCenter Server instances that are de
 ### Component license bundles available to Business Partner customers
 {: #relnotes_v22-license-bundles}
 
-Business Partner users can now select from four component license bundles when ordering a new vSphere cluster. Choose from Standard with Management, Advanced, Advanced with Networking, or Advanced with Networking and Management. You can also include additional VMware components to your order. However, the option to Bring Your Own License is not available.
+As a Business Partner user, you can now select from four component license bundles when you order a new vSphere cluster. Choose from Standard with Management, Advanced, Advanced with Networking, or Advanced with Networking and Management. You can also include additional VMware components to your order. However, the option to Bring Your Own License is not available.
 
 For more information, see the *Licensing settings* section in [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).
 
@@ -144,9 +144,9 @@ For more information, see [Managing IBM Spectrum Protect Plus on {{site.data.key
 
 Managed services for Veeam on {{site.data.keyword.cloud_notm}} and for Zerto on {{site.data.keyword.cloud_notm}} are now available to VMware vCenter Server and VMware Cloud Foundation instances. Request these managed services if you do not want to manage the complexity of your own solution and environment.
 
-The Veeam on {{site.data.keyword.cloud_notm}} service seamlessly integrates with your VMware hypervisors to help your enterprise achieve high availability (HA). A fully managed backup environment can be deployed using both Veeam backup software and IBM Resiliency Backup as a Service.
+The Veeam on {{site.data.keyword.cloud_notm}} service seamlessly integrates with your VMware hypervisors to help your enterprise achieve high availability (HA). A fully managed backup environment can be deployed by using both Veeam backup software and IBM Resiliency Backup as a Service.
 
-The Zerto on {{site.data.keyword.cloud_notm}} service provides replication and disaster recovery capabilities, which can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}. A fully managed disaster recovery (DR) environment can be deployed using both Zerto DR software and IBM Resiliency Services.
+The Zerto on {{site.data.keyword.cloud_notm}} service provides replication and disaster recovery capabilities, which can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}. A fully managed disaster recovery (DR) environment can be deployed by using both Zerto DR software and IBM Resiliency Services.
 
 You can request managed services for your instances from the **Getting Started** page, either by placing a new instance order, or by adding the service to an existing instance.
 
@@ -157,7 +157,7 @@ For more information, see the following topics:
 ## New and updated documentation
 {: #relnotes_v22-new-docs}
 
-* A comparison table with the supported functions for Cloud Foundation and vCenter Server instances, as well as VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart).
+* A comparison table with the supported functions for Cloud Foundation instances, vCenter Server instances, and VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart).
 
 * The VLANs and software Bill of Materials (BOM) is now provided in the documentation for Cloud Foundation, vCenter Server, and VMware vSphere clusters.
 

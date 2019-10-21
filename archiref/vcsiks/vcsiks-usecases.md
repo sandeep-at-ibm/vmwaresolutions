@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -17,9 +17,9 @@ subcollection: vmware-solutions
 ## Workload migration to IBM Cloud
 {: #vcsiks-usecases-workload-mig}
 
-Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC into a VMware vCenter Server on {{site.data.keyword.cloud}} instance. They need to keep their business up and running and keep their downtime to a minimum. Reconfiguring their applications to run in the cloud isn't an optimal solution.
+Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC into a VMware vCenter Server instance. They need to keep their business up and running and keep their downtime to a minimum. Reconfiguring their applications to run in the cloud isn't an optimal solution.
 
-The VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle enables the creation of seamless connections between {{site.data.keyword.cloud_notm}} and an on-premises VMware virtualized datacenter.
+The VMware vCenter Server with Hybridity Bundle enables the creation of seamless connections between {{site.data.keyword.cloud}} and an on-premises VMware virtualized datacenter.
 
 The vCenter Server with Hybridity Bundle offering from {{site.data.keyword.cloud_notm}} enables secure connections between the peer on-premises source site and the {{site.data.keyword.cloud_notm}} target site.
 
@@ -52,3 +52,5 @@ The {{site.data.keyword.icpfull_notm}} and Cloud Automation Manager (CAM) produc
 The following diagram represents {{site.data.keyword.icpfull_notm}} running on top of a vCenter Server instance. NSX-V is configured with a dedicated switch/VXLAN, a DLR, and an ESG specifically for the {{site.data.keyword.icpfull_notm}} overlay network, routing is set up through the ESG for access to the underlaying network.
 
 Using the {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provision a hybrid solution that encompasses VMware on {{site.data.keyword.cloud_notm}} to run their database VMs and {{site.data.keyword.icpfull_notm}} on VMware on {{site.data.keyword.cloud_notm}} to run their apps and front-end web services in containers. NSX gives them a common set of management tools for network and security in the overlay network.
+
+**Next topic:** [Architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-arch-overview)

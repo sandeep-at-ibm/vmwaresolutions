@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-30"
+lastupdated: "2019-10-04"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -19,7 +19,8 @@ subcollection: vmware-solutions
 # Networking considerations for vCenter Server instances
 {: #vc_networkingonvcenterserver}
 
-Review the following information for details about networking considerations and requirements for your vCenter Server on {{site.data.keyword.cloud}} instances. Ensure that you meet the requirements so that your instance functions properly.
+Review the following information for details about networking considerations and requirements for your 
+VMware vCenter Server instances. Ensure that you meet the requirements so that your instance functions properly.
 
 ## Networking components for vCenter Server instances
 {: #vc_networkingonvcenterserver-networking-components}
@@ -31,7 +32,7 @@ To review the networking components that are included in your vCenter Server ins
 {: #vc_networkingonvcenterserver-firewall-considerations}
 {: faq}
 
-If you're using firewalls, you must configure rules for all communications from the {{site.data.keyword.IBM}} CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
+If you're using firewalls, you must configure rules for all communications from the IBM CloudDriver virtual server instance (VSI) and the SDDC Manager virtual machines (VMs). These rules must allow all protocols to communicate on the IP addresses `10.0.0.0/8` and `161.26.0.0/16`. Examples of such firewalls are NSX Distributed Firewalls (DFW) or Vyatta firewalls.
 
 ## Using NSX with your virtual machines
 {: #vc_networkingonvcenterserver-using-nsx-with-vm}
@@ -48,7 +49,7 @@ An NSX Edge Services Gateway is also deployed to be used by your workload virtua
 Review the following considerations before you attempt to change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
 * You can change the NSX Manager password. This password is displayed on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can change passwords for NSX Controllers. For instructions about how to change these passwords, see [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
-* You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG). 
+* You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG).
 * Do not change the passwords for the Management VMware NSX Edge Services Gateway (ESG) and the related Distributed Logical Router.
 
 ## Related links

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-09-03"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -19,16 +19,16 @@ subcollection: vmware-solutions
 # OpenShift NSX DLR configuration
 {: #openshift-runbook-runbook-nsxdlr-intro}
 
-This section details the NSX distributed logical router used to support the OpenShift 4.1 environment. To use this information, you must understand how to create these components and add the configuration.
+This section details the NSX distributed logical router that is used to support the OpenShift 4.1 environment. To use this information, you must understand how to create these components and add the configuration.
 
 Review [Distributed Logical Router](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-A20103B0-ABA1-4884-8EC3-287874E23181.html){:external}. PowerNSX commands are provided if you would want to use this method.
 
 ## NSX DLR
 {: #openshift-runbook-runbook-nsxdlr-config}
 
-The NSX distributed logical router runs as a kernel module in the hypervisor of each host and is optimized for East-West routing. Optionally, a DLR Control VM can be installed. The DLR Control VM is needed to peer with NSX Edges and NSX Controllers for dynamic routing (OSPF or BGP) updates. In this deployment static routing is used, however, we deploy DLR Control VMs in case you require to use a routing protocol.
+The NSX distributed logical router runs as a kernel module in the hypervisor of each host and is optimized for East-West routing. Optionally, a DLR Control VM can be installed. The DLR Control VM is needed to peer with NSX Edges and NSX Controllers for dynamic routing (OSPF or BGP) updates. In this deployment, static routing is used. However, DLR Control VMs are deployed, in case you require to use a routing protocol.
 
-The NSX DLR Control VMs are configured as an active/passive pair of appliances. The size of a DLR Control VM is always "compact" of the configuration process and the NSX DLR is connected to the OpenShift Edge.
+The NSX DLR Control VMs are configured as an active/passive pair of appliances. During the configuration process, the DLR control VM is deployed in the compact size and the NSX DLR is connected to the OpenShift Edge.
 
 | Component | Configuration |
 |-----------|---------------|
@@ -49,7 +49,7 @@ Since the NSX DLR Control VMs are configured as active/passive, you must create 
 ## NSX DLR interfaces
 {: #openshift-runbook-runbook-nsxdlr-interfaces}
 
-The NSX DLR is deployed with an interface uplink that is connected to the Transit network that connects to the OpenShift NSX Edge and an internal interface to the OpenShift Logical Switch.
+The NSX DLR is deployed with a transit network between the OpenShift NSX Edge and the OpenShift Logical switch. The Edge is defined as an uplink interface and the Logical switch is defined as an internal interface.
 
 | Interface name| Interface type | IP addresses | Port group / Logical switch |
 | --- | ---| --- | --- |
@@ -99,7 +99,9 @@ For the OpenShift 4.1 environment, the connection to the DHCP Service runs on th
 ## PowerNSX commands
 {: #openshift-runbook-runbook-nsxdlr-powernsx}
 
-This section provides example PowerNSX commands to script the provisioning and configuration of the NSX DLR. Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described previously.
+This section provides example PowerNSX commands that you can use to automate the provisioning and configuration of the NSX DLR.
+
+Use the following table to document the parameters that you need for your deployment. Examples are shown that match the deployment described previously.
 
 | Parameters | Example | Your Deployment |
 | --- | --- | --- |
@@ -107,13 +109,12 @@ This section provides example PowerNSX commands to script the provisioning and c
 | vCenter User | | |
 | vCenter Password | | |
 | Transit Logical Switch| OpenShift-Transit | |
-| OpenShift Logical Switch | OpenShift-LS| |
+| OpenShift Logical Switch | OpenShift-LS | |
 | Uplink IP address | 192.168.100.2 | |
 | Internal IP address | 192.168.133.1 | |
 | DLR Name | OpenShift-DLR | |
 | vCenter Server instance Cluster | cluster1 | |
 | vCenter Server instance Datastore | vsanDatastore | |
-
 {: caption="Table 8. PowerNSX DLR Parameters" caption-side="top"}
 
 ```powernsx
@@ -129,19 +130,41 @@ New-NsxLogicalRouter -Name OpenShift-DLR -ManagementPortGroup (Get-NsxLogicalSwi
 # Configure the default gateway on the DLR to be the ESG
 $uplinkVnic = Get-NsxLogicalRouter OpenShift-DLR | Get-NsxLogicalRouterInterface "ToESG"
 $uplinkVnicId = $uplinkVnic.index
-Get-NsxLogicalRouter OpenShift-DLR | Get-NsxLogicalRouterRouting | Set-NsxLogicalRouterRouting -DefaultGatewayVnic $uplinkVnicId -DefaultGatewayAddress 192.168.133.1 -Confirm:$false
+Get-NsxLogicalRouter OpenShift-DLR | Get-NsxLogicalRouterRouting | Set-NsxLogicalRouterRouting -DefaultGatewayVnic $uplinkVnicId -DefaultGatewayAddress 192.168.100.1 -Confirm:$false
 
 # Configure the default firewall rule on the DLR to "allow"
 $dlr = Get-NsxLogicalRouter OpenShift-DLR
 $dlr.features.firewall.defaultpolicy.action = "Accept"
 $dlr | Set-NsxLogicalRouter -Confirm:$false
 
+# Configure DHCP relay on DLR
+$dlrID = (Get-NsxLogicalRouter -Name "OpenShift-DLR").Id
+$internalLifVnicId = (Get-NsxLogicalRouter OpenShift-DLR | Get-NsxLogicalRouterInterface "ToLS").index
+$uri = "/api/4.0/edges/$($dlrID)/dhcp/config/relay"
+$xmlPayload = "
+  <relay>
+  <relayServer>
+    <ipAddress>192.168.100.1</ipAddress>
+  </relayServer>
+  <relayAgents>
+    <relayAgent>
+      <vnicIndex>$($internalLifVnicId)</vnicIndex>
+      <giAddress>192.168.133.1</giAddress>
+    </relayAgent>
+  </relayAgents>
+ </relay>"
+
+$null = invoke-nsxwebrequest -method "put" -uri $uri -body $xmlPayload -connection $nsxConnection
+
 # Disconnect
 Disconnect-NsxServer
 ```
 
+
+**Next topic:** [IBM Cloud for VMware Solutions DNS configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-dns-intro)
+
 ## Related links
-{: #openshift-runbook-runbook-nsxdlr-related}
+{: #vcs-openshift-runbook-nsxdlr-related}
 
 * [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
 * [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)

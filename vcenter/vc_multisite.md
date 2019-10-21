@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-16"
+lastupdated: "2019-10-07"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Multi-site configuration for vCenter Server on IBM Cloud instances
+# Multi-site configuration for VMware vCenter Server instances
 {: #vc_multisite}
 
 {{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-02"
+lastupdated: "2019-10-10"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # About NSX Edge Services Gateway
 {: #nsx_overview}
 
-The VMware NSX Edge Services Gateway (ESG) solution is an extension of the vCenter Server on {{site.data.keyword.cloud_notm}} offering that is currently available on the {{site.data.keyword.cloud_notm}}. The solution architecture for vCenter Server details the components of the solution and the high-level configuration of each component in the design.
+The VMware NSX Edge Services Gateway (ESG) solution is an extension of the VMware vCenter Server offering that is currently available on the {{site.data.keyword.cloud}}. The solution architecture for vCenter Server details the components of the solution and the high-level configuration of each component in the design.
 
 For more information about the vCenter Server design, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
 
@@ -36,6 +36,8 @@ Table 1. Features available with the NSX Edge Service Gateway
 | SSL VPN-Plus |  SSL VPN-Plus enables remote users to connect securely to private networks behind an NSX Edge gateway. |
 | Load Balancing | Provides simple and dynamically configurable virtual IP addresses and server groups. |
 | High Availability | Ensures an active NSX Edge on the network in case the primary NSX Edge virtual machine is unavailable. |
+
+Next topic: [NSX Edge Services Gateway design](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx_design)
 
 ## Related links
 {: #nsx_overview-related}

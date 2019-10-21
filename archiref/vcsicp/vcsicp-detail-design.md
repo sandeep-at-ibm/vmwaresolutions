@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ Common services provide the services that are used by other services in the clou
 ### Identity and access services
 {: #vcsicp-detail-design-identity}
 
-As part of the VMware vCenter Server on {{site.data.keyword.cloud}} automation, a Microsoft Active Directory (AD) is employed for Identity  Management. A single AD virtual server instance (VSI) is deployed. The vCenter is configured to use AD authentication and you can configure {{site.data.keyword.icpfull_notm}} for LDAP Authentication.
+As part of the VMware vCenter Server automation, a Microsoft Active Directory (AD) is employed for Identity  Management. A single AD virtual server instance (VSI) is deployed. The vCenter is configured to use AD authentication and you can configure {{site.data.keyword.icpfull}} for LDAP Authentication.
 
 ###	Domain Name Services
 {: #vcsicp-detail-design-dns}
@@ -60,3 +60,5 @@ NSX-T is designed so that a single networking platform that can connect to any t
 {{site.data.keyword.icpfull_notm}} provides an option to replace the Calico networking with an NSX-T instance, providing a single location for managing networking and security.
 
 ![{{site.data.keyword.icpfull_notm}} with NSX-T Networking](../../images/vcsicp-icp-nsxt-networking.svg "{{site.data.keyword.icpfull_notm}} with NSX-T Networking"){: caption="Figure 3. {{site.data.keyword.icpfull_notm}} with NSX-T networking" caption-side="bottom"}
+
+**Next topic:** [Network access and flows](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-detail-design-network)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -36,7 +36,7 @@ In the future, Jane can provide predictive stock recommendations based on the va
 
 Originally, Jane had logic in her code to determine what monetary amount that is likely to result in a bump in loyalty. However, after repeated requests to change the range from the Stock Trader marketing director, Jane decided to offload that decision into a business rule that the marketing director might alter without Jane’s involvement.
 
-Jane talked to Todd, who added the [service](https://cloud.ibm.com/catalog/services/decision-optimization), then created the decision.
+Jane talked to Todd, who added the [service](https://cloud.ibm.com/catalog), then created the decision.
 
 Now, Margaret, the marketing director, can log in and change the loyalty level ranges whenever a campaign is going on without changing any code.
 
@@ -50,3 +50,5 @@ Originally, she used API Connect to simplify the response from the original stoc
 Now, Jane is delighted because when she changed the stock service, she just changed how it maps to the simplified API she created, and her code didn’t even have to restart. The Stock Trader solution just kept requesting the data from the same API as if it hadn't changed. All API changes were masked behind the scenes.
 
 Further, with the monitoring and metering in API Connect, Jane is able to track who is using her simplified API.
+
+**Next topic:** [True hybrid with IBM Cloud Kubernetes Service](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscontent-iks)

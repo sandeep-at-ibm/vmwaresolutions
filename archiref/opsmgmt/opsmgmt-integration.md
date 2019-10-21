@@ -4,9 +4,11 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-18"
 
 ---
+
+{:external: target="_blank" .external}
 
 # Integration
 {: #opsmgmt-integration}
@@ -62,8 +64,8 @@ The client wants to use their existing OS, middleware, and application monitorin
 ## Related links
 {: #opsmgmt-integration-related}
 
-* [vRealize Operations RESTful API](https://docs.vmware.com/en/vRealize-Operations-Manager/7.0/vrealize-operations-manager-70-api-guide.pdf){:new_window}
-* [VMware Code API Explorer](https://code.vmware.com/apis?socv=1&numPerPage=164&sorter=pv){:new_window}
-* [Postman Client Collection Tool for vRealize Operations](https://code.vmware.com/samples/4663/postman-client-collection-for-vrealize-operations-rest-apis){:new_window}
-* [VMware PowerCLI blog](https://blogs.vmware.com/PowerCLI/2016/05/getting-started-with-powercli-for-vrealize-operations-vr-ops.html){:new_window}
-* [Webhook Shims](https://blogs.vmware.com/management/2017/01/vrealize-webhooks-infinite-integrations.html){:new_window}
+<!-- * [vRealize Operations RESTful API](https://docs.vmware.com/en/vRealize-Operations-Manager/7.0/vrealize-operations-manager-70-api-guide.pdf){:external} -->
+* [VMware API Explorer](https://code.vmware.com/apis?socv=1&numPerPage=164&sorter=pv){:external}
+* [Postman Client Collection for vRealize Operations REST APIs](https://code.vmware.com/samples/4663/postman-client-collection-for-vrealize-operations-rest-apis){:external}
+* [VMware PowerCLI blog](https://blogs.vmware.com/PowerCLI/2016/05/getting-started-with-powercli-for-vrealize-operations-vr-ops.html){:external}
+* [vRealize and Webhooks - Infinite Integrations](https://blogs.vmware.com/management/2017/01/vrealize-webhooks-infinite-integrations.html){:external}

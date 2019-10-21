@@ -59,7 +59,6 @@ Starting with the V2.8 release, the following new {{site.data.keyword.cloud_notm
 
 For more information, see the *{{site.data.keyword.baremetal_short_sing}} settings* section in:
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#bare-metal-server-settings)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Embedded Platform Services Controller

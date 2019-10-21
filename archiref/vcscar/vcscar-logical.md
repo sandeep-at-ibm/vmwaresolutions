@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-16"
 
 subcollection: vmware-solutions
 
@@ -141,3 +141,5 @@ After trained, the Discovery Service can respond to queries such as:
 - Show me all tricks with base trick of heelflip.
 - Show me all tricks.
 - Show me all tricks with multiple combos.
+
+**Next topic:** [Skate Advisor components](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscar-physical)

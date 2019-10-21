@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-16"
+lastupdated: "2019-10-03"
 
 keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
@@ -34,18 +34,17 @@ To access the console from the {{site.data.keyword.cloud_notm}} catalog, complet
 2. Log in to {{site.data.keyword.cloud_notm}} with your **IBMid** account.
 3. At the left side of the banner, click **Catalog**.
 4. On the search box at the top of the **Catalog** page, enter **VMware Solutions**.
-5. Click the **VMware Solutions** card.
+5. Click the appropriate card for the offering you need.
 
 ## Accessing from the ibm.com website
 {: #loginmethod-ibm-website}
 
 To access the console from the ibm.com website, complete the following steps:
 1. Go to http://www.ibm.com.
-2. Click **Marketplace > Cloud > IBM Cloud**.
-2. On the **IBM Cloud** page, click **Products**.
-3. On the **IBM Cloud products** page, click **Compute**.
-4. Scroll down on the page and click **VMware Cloud Solutions**.
-5. On the **IBM Cloud for VMware Solutions** page, scroll down to the **VMware solutions versions** section and click **Get Started**.
+2. Click **Products > Cloud > IBM Cloud**.
+3. On the **IBM Cloud** page, click **Compute**.
+4. Scroll down on the page and click **IBM Cloud for VMware Solutions**.
+5. To start with a trial, click **Get Started**.
 
 ## Related links
 {: #loginmethod-related}

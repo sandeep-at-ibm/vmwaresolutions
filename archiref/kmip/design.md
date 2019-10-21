@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-16"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -109,6 +109,8 @@ KMIP for VMware also connects to {{site.data.keyword.cloud_notm}} Key Protect by
 ![Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}](../../images/kmip-key-protect.svg "The solution enables VMware vSphere encryption and vSAN encryption by using root keys that are stored in IBM Key Protect."){: caption="Figure 1. Components of KMIP for VMware on {{site.data.keyword.cloud_notm}} when using IBM Key Protect" caption-side="bottom"}
 
 When using IBM Cloud Hyper Protect Crypto Services, your keys are stored in an IBM zSeries HSM instead of CloudHSM. Additionally, the connection between KMIP for VMware and {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services flows over the public network but is protected by TLS encryption and authentication.
+
+**Next topic:** [KMIP for VMware implementation and management](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip-implementation)
 
 ## Related links
 {: #kmip-design-related}

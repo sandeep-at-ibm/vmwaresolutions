@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -37,7 +37,7 @@ In the diagram, CAM logically creates cloud connections to the vCenters, cloud p
 
 {{site.data.keyword.icpfull_notm}} can be deployed with NSX-V or NSX-T components. {{site.data.keyword.icpfull_notm}} with NSX-V, enables the {{site.data.keyword.icpfull_notm}} VMs to run on the VXLAN network and use Kubernetes Calico internal networking.
 
-{{site.data.keyword.icpfull_notm}} with NSX-T, allowing users to control and configure networking, subnet, policies from central UI (NSX-T Manager). For information about the differences between NSX-V and NSX-T, see the [{{site.data.keyword.cloud_notm}} VCS Networking reference architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro).
+{{site.data.keyword.icpfull_notm}} with NSX-T, allowing users to control and configure networking, subnet, policies from central UI (NSX-T Manager). For information about the differences between NSX-V and NSX-T, see the [{{site.data.keyword.cloud_notm}} vCenter Server networking introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro#vcsnsxt-intro).
 
 ## On-premises cloud management platform
 {: #vcsiks-arch-overview-on-premises}
@@ -50,7 +50,9 @@ The strongSwan VPN is used to established connectivity with the deployed {{site.
 
 In the diagram, CAM logically creates cloud connections to the vCenters, cloud providers, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} environments. {{site.data.keyword.icpfull_notm}} clusters must be deployed to each data center or cloud environment, with MCM providing the mechanism to connect the {{site.data.keyword.icpfull_notm}} clusters into a single management view.
 
+**Next topic:** [IBM Cloud networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-arch-overview-infrastructure)
+
 ## Related links
 {: #vcsiks-arch-overview-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)
+* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro#vcs-hybridity-intro)

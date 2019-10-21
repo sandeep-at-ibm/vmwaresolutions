@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-09-11"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -21,17 +21,17 @@ subcollection: vmware-solutions
 
 Red Hat OpenShift 4 introduced the following concepts:
 
-* Installer Provisioned Infrastructure (IPI) - For use on supported platforms, only AWS currently. The installer provisions the underlying infrastructure for the cluster as well as configuring the cluster.
+* Installer Provisioned Infrastructure (IPI) - For use on supported platforms, only AWS currently. The installer provisions the underlying infrastructure for the cluster and it configures the cluster.
 * User Provisioned Infrastructure (UPI)  -  For use on bare metal, vSphere, and other clouds that do not support IPI. The user is required to provision the infrastructure; compute, network, storage that the OpenStack cluster is hosted on. The installer configures only the cluster.
 
-These instructions use the OpenShift installer in the UPI mode. Terraform is used to provision the 7 VMs for the bootstrap, control-plane, and compute nodes. The process is as follows:
+These instructions use the OpenShift installer in the UPI mode. Terraform is used to provision the seven VMs for the bootstrap, control-plane, and compute nodes. The following process is completed:
 
-* A yaml file is created that is ingested by the OpenShift installer.
-* The installer is run and creates a number of files including the Ignition files. Ignition files are used to configure the bootstrap, control-plane, and compute nodes at first boot.
-* The Ignition file for the bootstrap node is copied to the NGINX default directory on the bastion node so that the bootstrap node can fetch it on first boot.
-* The Ignition Terraform file is updated with the DNS server.
-* The terraform.tfvars file is created to hold the variables for the Terrafrom installation
-8 Terraform is run, which provisions the VMs, they are started, configured and the OpenShift cluster created.
+1. A `yaml` file is created that is ingested by the OpenShift installer.
+2. The installer is run and creates a number of files, including the Ignition files. The Ignition files are used to configure the bootstrap, control-plane, and compute nodes at first boot.
+3. The Ignition file for the bootstrap node is copied to the NGINX default directory on the bastion node, so that the bootstrap node can fetch it on first boot.
+4. The Ignition Terraform file is updated with the DNS server.
+5. The `terraform.tfvars` file is created to hold the variables for the Terrafrom installation.
+6. Terraform is run, which provisions the VMs. The VMs are started, configured, and the OpenShift cluster is created.
 
 For more information about installing the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.1/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
 
@@ -117,8 +117,10 @@ Now that the install-config.yaml is created and populated run the OpenStack Inst
 
 ```bash
 cd /opt/ocp41install/
-./openshift-install create ignition-configs --dir=/opt/ocp41install/
+openshift-install create ignition-configs --dir=/opt/ocp41install/
 ```
+  The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-runbook-trbl).
+   {:note}
 
 The following files are produced by the OpenStack Installer:
 
@@ -136,7 +138,7 @@ The following files are produced by the OpenStack Installer:
 ## Copying the bootstrap Ignition file to the web server
 {: #openshift-runbook-runbook-install-ignition-nginx}
 
-The bootstrap.ign file needs to be copied to the document root of NGINX. The bootstrap ignition file must be hosted on the web server so the bootsrtap node can reach it on first boot. The Ignition file because is too large to fit in a vApp property.
+The bootstrap.ign file needs to be copied to the document root of NGINX. The bootstrap ignition file must be hosted on the web server so the bootstrap node can reach it on first boot. The Ignition file is too large to fit in a vApp property.
 
 Copy the *bootstrap.ign* file to the document root of NGINX.
 
@@ -163,7 +165,8 @@ The DNS IP details are hardcoded within the Terraform template. You must change 
 | DNS1 | 10.187.214.66 | |
 {: caption="Table 2. ignition.tf file parameters" caption-side="top"}
 
-1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocpInstall/installer/upi/vsphere/machine/ignition.tf `.
+1. In the SSH session to the bastion node, with root privileges, use the following command to open the file:
+   `vi /opt/ocp41install/installer/upi/vsphere/machine/ignition.tf`
 2. Type `i` to enter insert mode, and then scroll down to the DNS1 entry.
 3. Update the IP address from 8.8.8.8 to match the deployment.
 4. Press Esc, then type `:wq` to save the file and exit the vi editor.
@@ -247,16 +250,17 @@ data "ignition_config" "ign" {
 }
 ```
 
-### terraform.tfvars - Updating the DNS entry in the template
+### terraform.tfvars - Editing Terraform input variables
 {: #openshift-runbook-runbook-install-terraform-tfars}
 
-In Terraform, the main.tf file takes the input variables from terraform.tfvars and for variables that are not described in that file, it will take the default value from the variable.tf file.
+In Terraform, the `main.tf` file takes the input variables from `terraform.tfvars`. For variables that are not described in that file, it takes the default value from the `variable.tf` file.
 
-Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described in this document.
+Use the following table to document the parameters needed for your deployment, examples are shown that match the deployment described in this document.
 
 The ignition files can be copied after using the following commands to display the files:
 
 `cat /opt/ocp41install/master.ign`
+
 `cat /opt/ocp41install/worker.ign`
 
 | Parameter | Example | Your Deployment |
@@ -333,23 +337,23 @@ File 3: Section to be removed
 
 ```bash
 module "dns" {
-source = "./route53"
+  source = "./route53"
 
-base_domain = "${var.base_domain}"
-cluster_domain = "${var.cluster_domain}"
-bootstrap_count = "${var.bootstrap_complete ? 0 : 1}"
-bootstrap_ips = ["${module.bootstrap.ip_addresses}"]
-control_plane_count = "${var.control_plane_count}"
-control_plane_ips = ["${module.control_plane.ip_addresses}"]
-compute_count = "${var.compute_count}"
-compute_ips = ["${module.compute.ip_addresses}"]
+  base_domain         = "${var.base_domain}"
+  cluster_domain      = "${var.cluster_domain}"
+  bootstrap_count     = "${var.bootstrap_complete ? 0 : 1}"
+  bootstrap_ips       = ["${module.bootstrap.ip_addresses}"]
+  control_plane_count = "${var.control_plane_count}"
+  control_plane_ips   = ["${module.control_plane.ip_addresses}"]
+  compute_count       = "${var.compute_count}"
+  compute_ips         = ["${module.compute.ip_addresses}"]
 }
 ```
 
 ## Run Terraform
 {: #openshift-runbook-runbook-install-terraform-run}
 
-Terraform is used to deploy the VMs for bootstrap, compute-plane, and compute nodes. Terraform operates as follows:
+Terraform is used to deploy the VMs for bootstrap, control-plane, and compute nodes. Terraform operates as follows:
 
 * terraform init - initializes the terraform plug-ins and modules.
 * terraform plan - performs a dry run on the templates, ensuring it can connect to the vCenter.
@@ -382,51 +386,87 @@ terraform apply -auto-approve
 
 1. After the virtual machines have bootstrapped, run the following command to monitor the installation:
 
-```bash
-cd /opt/ocp41install
-openshift-install --dir=. wait-for bootstrap-complete --log-level debug
-```
+    ```bash
+    cd /opt/ocp41install
+    openshift-install --dir=. wait-for bootstrap-complete --log-level debug
+    ```
 
 2. Wait until you see the following information:
 
-```bash
-INFO It is now safe to remove the bootstrap resources
-```
+    ```bash
+    INFO It is now safe to remove the bootstrap resources
+    ```
 
-3. The Cluster Image Registry does not select a storage backend in UPI mode. Therefore, the cluster operator will continually wait for an administrator to configure a storage backend. A workaround is to point the image-registry to an empty directory to allow the installation to complete by issuing the following command:
+3. The Cluster Image Registry does not select a storage backend in UPI mode. Therefore, the cluster operator will continually wait for an administrator to configure a storage backend. A workaround is to point the image-registry to an empty directory to allow the installation to complete by running the following commands:
 
-```bash
-oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"storage":{"emptyDir":{}}}}'
-```
+    ```bash
+    mkdir /root/.kube/
+    cp /opt/ocp41install/auth/kubeconfig ~/.kube/config
+    oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"storage":{"emptyDir":{}}}}'
+    ```
 
-After the installation is complete, change the image-registry to a suitable location.
+    After the installation is complete, change the image-registry to a suitable location.
 
 4. Run the following command to monitor the installation:
 
-```bash
-openshift-install --dir ~/vsphere wait-for install-complete
-```
+    ```bash
+    openshift-install --dir=. wait-for install-complete
+    ```
 
 5. Wait until you see the following message. The system provides the URL and credentials to log in to the OpenShift Console after the installation is complete. Your URL and password will be different:
 
-```bash
-INFO Install complete!
-INFO To access the cluster as the system:admin user when using 'oc', run 'export KUBECONFIG=/root/go/src/github.com/openshift/installer/bin/auth/kubeconfig'
-INFO Access the OpenShift web-console here: https://console-openshift-console.opc.dallas.ibm.local
-INFO Login to the console with user: kubeadmin, password: my-kube-password
-```
+    ```bash
+    INFO Install complete!
+    INFO To access the cluster as the system:admin user when using 'oc', run 'export KUBECONFIG=/root/go/src/github.com/openshift/installer/bin/auth/kubeconfig'
+    INFO Access the OpenShift web-console here: https://console-openshift-console.opc.dallas.ibm.local
+    INFO Login to the console with user: kubeadmin, password: my-kube-password
+    ```
 
 The password for the user that was created during installation can also be found in the auth subdirectory in the install-dir. It lets you log in through oc login and also gives you access to the web console. The URL for the console is `https://console-openshift-console.<cluster>.<base_domain>`.
 
-6. Run the following command from the */opt/ocp41install* directory:
+1. Run the following command from the */opt/ocp41install* directory:
 
-```bash
-watch -n5 oc get clusteroperators or
-```
+    ```bash
+    watch -n5 oc get clusteroperators
+    ```
 
-Monitor for cluster completion:
+2. Monitor for cluster completion. An output is provided in the following example:
+
+    ```bash
+    Every 5.0s: oc get clusteroperators
+
+    NAME                                 VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
+    authentication                       4.1.16    True        False         False      20m
+    cloud-credential                     4.1.16    True        False         False      38m
+    cluster-autoscaler                   4.1.16    True        False         False      38m
+    console                              4.1.16    True        False         False      27m
+    dns                                  4.1.16    True        False         False      35m
+    image-registry                       4.1.16    True        False         False      14m
+    ingress                              4.1.16    True        False         False      30m
+    kube-apiserver                       4.1.16    True        False         False      33m
+    kube-controller-manager              4.1.16    True        False         False      33m
+    kube-scheduler                       4.1.16    True        False         False      32m
+    machine-api                          4.1.16    True        False         False      38m
+    machine-config                       4.1.16    True        False         False      33m
+    marketplace                          4.1.16    True        False         False      30m
+    monitoring                           4.1.16    True        False         False      28m
+    network                              4.1.16    True        False         False      37m
+    node-tuning                          4.1.16    True        False         False      32m
+    openshift-apiserver                  4.1.16    True        False         False      31m
+    openshift-controller-manager         4.1.16    True        False         False      33m
+    openshift-samples                    4.1.16    True        False         False      24m
+    operator-lifecycle-manager           4.1.16    True        False         False      35m
+    operator-lifecycle-manager-catalog   4.1.16    True        False         False      35m
+    service-ca                           4.1.16    True        False         False      38m
+    service-catalog-apiserver            4.1.16    True        False         False      32m
+    service-catalog-controller-manager   4.1.16    True        False         False      32m
+    storage                              4.1.16    True        False         False      30m
+    ```
+
+
+**Next topic:** [Red Hat OpenShift 4.1 additional configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
 
 ## Related links
-{: #openshift-runbook-runbook-install-related}
+{: #vcs-openshift-runbook-install-related}
 
-* [VMware Solutions on IBM Cloud and Red Hat OpenShift overview](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
+* [VMware Solutions on {{site.data.keyword.cloud}} and Red Hat OpenShift overview](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)

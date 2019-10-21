@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-10-07"
 
 keywords: troubleshooting, Zerto VRA, Zerto uninstall
 
@@ -13,13 +13,13 @@ subcollection: vmware-solutions
 
 ---
 
-# Zerto VRA visible on ESXi host in the vCenter console after Zerto on IBM Cloud is uninstalled
+# Zerto VRA visible on ESXi host in the vCenter console after Zerto is uninstalled
 {: #trbl_zerto_vra}
 
 ## Problem
 {: #trbl_zerto_vra-problem}
 
-Zerto Virtual Replication Appliances (VRAs) are not removed after using the {{site.data.keyword.slportal_full}} to successfully uninstall the Zerto on {{site.data.keyword.cloud_notm}} service.
+Zerto Virtual Replication Appliances (VRAs) are not removed after using the {{site.data.keyword.slportal_full}} to successfully uninstall the Zerto service.
 
 ## Resolution
 {: #trbl_zerto_vra-resolution}

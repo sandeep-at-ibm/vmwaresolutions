@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-14"
+lastupdated: "2019-10-07"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -18,31 +18,34 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Ordering VMware HCX on IBM Cloud
+# Ordering VMware HCX
 {: #hcx_ordering}
 
-You can order the VMware HCX on {{site.data.keyword.cloud}} service while ordering a new VMware vCenter Server with the service included or by adding the service to your existing instance.
+You can order the VMware HCX service while ordering a new VMware vCenter Server with the service included or by adding the service to your existing instance.
 
-A 12-month commitment is required when you order the VMware HCX on {{site.data.keyword.cloud_notm}} service. Your account continues to be charged for the HCX components if you delete a host or cluster before the end of the 12-month commitment period.
+A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a host or cluster before the end of the 12-month commitment period.
 {:important}
 
-To order a new VMware vCenter Server instance with VMware HCX on {{site.data.keyword.cloud_notm}}, select **HCX on IBM Cloud 3.5** in the **Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_short}} console.
+## Ordering VMware HCX for a new instance
+{: #hcx_ordering-new}
+
+To order a new VMware vCenter Server instance with VMware HCX , click **HCX 3.5** under the **Hybridity/Migration** category in the **Optional Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 
 
-## Ordering VMware HCX on IBM Cloud for an existing instance
+## Ordering VMware HCX for an existing instance
 {: #hcx_ordering-existing}
 
-To add the VMware HCX on {{site.data.keyword.cloud_notm}} service into an existing VMware vCenter Server instance, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
+To add the VMware HCX service into an existing VMware vCenter Server instance, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
 
-## VMware HCX on IBM Cloud configuration
+## VMware HCX configuration
 {: #hcx_ordering-config}
 
-To install HCX on {{site.data.keyword.cloud_notm}}, complete the following settings:
+To install HCX, complete the following settings:
 
-Steps 1 and 2 do not apply to HCX on {{site.data.keyword.cloud_notm}} installations on existing vCenter Server with Hybridity Bundle instances.
+Steps 1 and 2 do not apply to HCX installations on vCenter Server with Hybridity Bundle instances.
 {:note}
 
-1. Select the check box to confirm that you agree with the 12-month agreement associated with ordering the HCX on {{site.data.keyword.cloud_notm}} service.
+1. Select the check box to confirm that you agree with the 12-month agreement associated with ordering the HCX service.
 2. If using BYOL for your NSX license, select the check box to confirm that your NSX license is either Advanced or Enterprise edition.
 3. Specify the **HCX Network Connection** by selecting one of the following options:
   * **Public Network:** HCX creates an encrypted connection between sites over the public network. License registration and metering are performed over the public network.
@@ -59,13 +62,13 @@ Steps 1 and 2 do not apply to HCX on {{site.data.keyword.cloud_notm}} installati
   * **Private Key:** Enter the private key of the CA certificate.
   * (Optional) **Password:** Enter the password for the private key if it is encrypted.
   * (Optional) **Reenter Password:** Enter the password for the private key again.
-  * (Optional) **Hostname:** The host name to be mapped to the common name (CN) of the CA certificate. HCX on {{site.data.keyword.cloud_notm}} requires that the format of the CA certificate must be accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
+  * (Optional) **Hostname:** The host name to be mapped to the common name (CN) of the CA certificate. HCX requires that the format of the CA certificate must be accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
   <!--Need enhancement, it is still not clear what the key pair is used for, is it for connecting to NSX? This is not in architecture doc either. -->
 
-## Deployment process for HCX on IBM Cloud
+## Deployment process for HCX
 {: #hcx_ordering-deploy}
 
-The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether you order a vCenter Server instance with the service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
+The deployment of HCX is automated. Whether you order a vCenter Server instance with the service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
 1. Three subnets are ordered for HCX from the {{site.data.keyword.cloud_notm}} infrastructure:
    * One private portable subnet for HCX management.
    * One private portable subnet for HCX interconnects. This subnet is used when the **Private network** option is selected for **HCX interconnect type**.
@@ -86,18 +89,18 @@ The deployment of HCX on {{site.data.keyword.cloud_notm}} is automated. Whether 
    The HCX management edge is dedicated to the HCX management traffic between the on-premises HCX components and the cloud-side HCX components. Do not modify the HCX management edge or use it for HCX network extensions. Instead, create separate edges for network extensions. In addition, using a firewall or disabling the HCX management edge communications to the private IBM management components or public internet might adversely impact the HCX functionality.
    {:important}
 
-6. The HCX Manager on {{site.data.keyword.cloud_notm}} is deployed, activated, and configured:
+6. The HCX Manager is deployed, activated, and configured:
    * The HCX Manager is registered with vCenter Server.
    * The HCX Manager, vCenter Server (with embedded Platform Services Controller), and NSX Manager are configured.
    * The HCX fleet is configured.
    * Local and remote HCX deployment containers are configured.
-7. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+7. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server.
 
 ## Related links
 {: #hcx_ordering-related}
 
-* [HCX on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
-* [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
+* [HCX overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations)
+* [Managing HCX ](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
 * [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
 * [Glossary of HCX terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_glossary)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)

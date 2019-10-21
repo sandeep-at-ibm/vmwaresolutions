@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Solution components
 {: #vcsicp-arch-overview-solution}
 
-## VMware vCenter Server on IBM Cloud components
+## VMware vCenter Server components
 {: #vcsicp-arch-overview-solution-vcs-comp}
 
 ![vCenter Server environment](../../images/vcsicp-vcsenv.svg "Physical structure of vCenter Server and {{site.data.keyword.icpfull_notm}} deployment"){: caption="Figure 1. vCenter Server environment diagram" caption-side="bottom"}
@@ -176,3 +176,5 @@ A graphical user interface to create Terraform templates, with a drag feature of
 {: #vcsicp-arch-overview-solution-maria-db}
 
 The database for the template designer application.
+
+**Next topic:** [Detailed design](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-detail-design)

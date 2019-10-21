@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-29"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -78,6 +78,8 @@ There is no requirement in a vCenter Server instance to select the check box und
 * **Migrate powered off and suspended virtual machines to other hosts in the cluster**, if a host must enter maintenance mode. Update Manager migrates the suspended and powered off VMs from hosts that must enter maintenance mode to other hosts in the cluster. You can choose to power off or suspend VMs before remediation in the **Maintenance Mode Settings** pane.
 12. On the Ready to complete page, you can optionally click **Pre-check Remediation** to generate a cluster remediation options report and click **OK**. A Cluster Remediation Options Report dialog box opens. You can export this report or copy the entries for your own record and click **Next**.
 13. Review the **Ready to Complete** page and click **Finish**.
+
+**Next topic:** [Updating NSX](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx)
 
 ## Related links
 {: #vum-staging-related}

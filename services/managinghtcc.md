@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-03-23"
+lastupdated: "2019-10-07"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -18,15 +18,15 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Managing HyTrust CloudControl on IBM Cloud
+# Managing HyTrust CloudControl
 {: #managinghtcc}
 
-To manage the HyTrust CloudControl on {{site.data.keyword.cloud}} service (HTCC), access the HTCC WebGUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTCC console from the vSphere Web Client.
+To manage the HyTrust CloudControl service (HTCC), access the HTCC WebGUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTCC console from the vSphere Web Client.
 
 ## Accessing the HyTrust CloudControl WebGUI from the IBM Cloud for VMware Solutions console
 {: #managinghtcc-accessing-webgui}
 
-To log in to the WebGUI of the primary or secondary HTCC appliance, use the WebGUI credentials found on the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service details page.
+To log in to the WebGUI of the primary or secondary HTCC appliance, use the WebGUI credentials found on the HyTrust CloudControl service details page.
 
 ## Accessing the HyTrust CloudControl console from the vSphere Web Client
 {: #managinghtcc-accessing-console}
@@ -34,7 +34,7 @@ To log in to the WebGUI of the primary or secondary HTCC appliance, use the WebG
 To access the HTCC console from the vSphere Web Client, use the following procedure:
 1. In the vSphere Web Client, find the virtual machines that are named **CC1** and **CC2**.
 2. Right-click **CC1** or **CC2**, and then click **Open Console**.
-3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service details page.
+3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl service details page.
 
 For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
 
@@ -65,7 +65,7 @@ These following steps apply for updating the HTCC network settings on the primar
 
 1. Complete steps 1-3 in the previous procedure.
 2. Click **Settings** and then click **Interfaces**. Note the IP address for the private uplink, which becomes the new default gateway. 
-3. Go to the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service details page, click **View HTCC Web UI** and log in with the credentials from the service details page.
+3. Go to the HyTrust CloudControl service details page, click **View HTCC Web UI** and log in with the credentials from the service details page.
 4. Note the existing default gateway. For example, for HTCC 5.5.1, click **Configuration > Network**. Note the gateway IP address that is listed, which becomes the gateway for the static route.
 5. Add a static route. For example, for HTCC 5.5.1, click **Configuration > Static Routes**. Click **Add**, enter the following information, and click **OK**.
 
@@ -83,12 +83,12 @@ These following steps apply for updating the HTCC network settings on the primar
 
   The primary VM will now have access to the internet.
 
-7. To confirm that the primary VM has internet access, run a `wget` command to a public IP address or website. To do so, go back to vCenter and right-click **CC1 > Open Console**. Log in to the console by using the console credentials from the HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service details page. Run a `wget` command such as `wget www.ibm.com`, and you should get an immediate response. Confirm that the request was sent and a `200` response was received.
+7. To confirm that the primary VM has internet access, run a `wget` command to a public IP address or website. To do so, go back to vCenter and right-click **CC1 > Open Console**. Log in to the console by using the console credentials from the HyTrust CloudControl service details page. Run a `wget` command such as `wget www.ibm.com`, and you should get an immediate response. Confirm that the request was sent and a `200` response was received.
 
 ## Related links
 {: #managinghtcc-related}
 
-* [HyTrust CloudControl on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
+* [HyTrust CloudControl overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
 * [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
 * [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

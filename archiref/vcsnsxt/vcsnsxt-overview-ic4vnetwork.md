@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-15"
 
 subcollection: vmware-solutions
 
@@ -87,3 +87,5 @@ Private B 	|Portable 	|Assigned for vMotion.
 This design is implemented with physical hosts and virtual system instances (VSI) on VLANs and configured to point to the {{site.data.keyword.cloud_notm}} BCR (backend “private network” customer router) as the default route. While vCenter Server instances enable the use of software-defined networking, any network overlays created by NSX that include routing to VLAN subnets aren't known by the {{site.data.keyword.cloud_notm}}-managed routers. You might need to create static routes, firewall rules, and NAT rules to properly manage the network flows.
 
 The private network connections are configured to use jumbo frames with MTU size of 9000, which improves performance for large data transfers such as storage and vMotion. This is the maximum MTU allowed within VMware and by {{site.data.keyword.cloud_notm}}. The public network connections use a standard Ethernet MTU of 1500. This must be maintained as any changes might cause packet fragmentation over the internet.
+
+**Next topic:** [NSX-V overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)

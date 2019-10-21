@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-10-03"
 
 keywords: notifications console, filter notifications, system notification
 
@@ -21,8 +21,7 @@ You can check notifications for the status of system or user operations. You can
 ## Viewing notifications
 {: #notifications-view}
 
-1. From the {{site.data.keyword.vmwaresolutions_full}} console, click **Notifications** from the left navigation pane.
-2. View the summary about all notifications.
+From the {{site.data.keyword.vmwaresolutions_full}} console, click **Notifications** from the left navigation pane to view a summary about all notifications. To view the details of a notification, click the notification row.
 
 | Column | Description |
 |:------ |:----------- |
@@ -32,8 +31,6 @@ You can check notifications for the status of system or user operations. You can
 | Description | A short description of the notification. |
 | Date | The date and time when the notification is sent. |
 {: caption="Table 1. Notification history" caption-side="top"}
-
-3. Click a notification row to view the details of the notification.
 
 ## Filtering notifications
 {: #notifications-filter}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-04-25"
+lastupdated: "2019-10-18"
 
 subcollection: vmware-solutions
 
@@ -25,8 +25,10 @@ This section creates a new VM storage policy that allows the **ensure accessibil
 
 2. Wait until vSAN has completed syncing before you initiate any remediation actions. The completion status can be checked by navigating to the **vSAN Virtual Objects monitoring page** for the cluster and reviewing the **Completion Status**.
 
+**Next topic:** [Orchestrated upgrades](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-orchestr-updates)
+
 ## Related links
 {: #vum-vsan-redundancy-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [{{site.data.keyword.vmwaresolutions_full}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
+* [VMware HCX on {{site.data.keyword.cloud}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)
