@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-17"
+lastupdated: "2019-10-21"
 
 keywords: release notes, what's new, version 3.3
 
@@ -80,7 +80,7 @@ This release installs the Zerto 7.0 Update 2 service version on newly deployed i
 
 * New parameters are added to the following APIs:
     * Two new parameters `check_price` and `disk_groups` are added to the **Order a new VMware vCenter Server instance or verify the order** API.
-    * A new parameter `disk_groups` is added to the **Add a cluster for a specified VMware vCenter Server instance or verify the order** API and the **Add new hosts to a specified cluster** API. 
+    * A new parameter `disk_groups` is added to the **Add a cluster for a specified VMware vCenter Server instance or verify the order** API and the **Add new hosts to a specified cluster** API.
 
   For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions).
 
