@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-10-24"
 
 subcollection: vmware-solutions
 
@@ -27,12 +27,12 @@ Red Hat OpenShift production instance onto a VMware
 vCenter Server cluster requires the
 following minimum specification.
 
-| Item | NFS deployment | vSAN deployment
---|----|----
-Number of servers | 3 | 4
-CPU | 28 Cores 2.2 GHz | 28 Cores 2.2 GHz
-Memory | 384 GB | 384 GB
-Storage|2000 GB 2 IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4 IOPS/GB | Min 960-GB SSD x2
+| Item | NFS deployment | vSAN deployment |
+|:-- |:---- |:---- |
+| Number of servers | 3 | 4
+| CPU | 28 Cores 2.2 GHz | 28 Cores 2.2 GHz |
+| Memory | 384 GB | 384 GB |
+| Storage |2,000 GB 2 IOPS/GB Management, 2,000 GB 4IOPS/GB Workload, 4,000 GB 4 IOPS/GB | Min 960-GB SSD x2
 {: caption="Table 1. vCenter Server specification for Red Hat OpenShift" caption-side="top"}
 
 In addition to the Red Hat OpenShift hardware requirements, you must create persistent volumes in the Red Hat OpenShift environment to store images from the container register or customer workloads.
