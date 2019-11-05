@@ -143,7 +143,7 @@ IBM Cloud for VMware Solutions
         services/managingfortinetvm.md
 
     {: .topicgroup}
-    HCX
+    VMware HCX
         services/hcx_considerations.md
         services/hcx_ordering.md
         services/managinghcx.md
@@ -429,6 +429,16 @@ IBM Cloud for VMware Solutions
         archiref/horizon/horizon-deploy-arch.md
         archiref/horizon/horizon-deploy-config.md
         archiref/horizon/horizon-use-cases.md
+
+    {: .topicgroup}
+    vCenter Server and vSRX guide
+        archiref/vcsvsrx/vcsvsrx-intro.md
+        archiref/vcsvsrx/vcsvsrx-planning.md
+        archiref/vcsvsrx/vcsvsrx-default-config.md
+        archiref/vcsvsrx/vcsvsrx-iaas-def-config.md
+        archiref/vcsvsrx/vcsvsrx-deployment.md
+        archiref/vcsvsrx/vcsvsrx-licensing.md
+        archiref/vcsvsrx/vcsvsrx-components.md
 
     {: .topicgroup}
     VMware and Skate Advisor Concept Car guide
