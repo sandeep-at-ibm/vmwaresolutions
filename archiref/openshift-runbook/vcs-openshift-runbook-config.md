@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-10-30"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Red Hat OpenShift 4.1 additional configuration
+# Red Hat OpenShift 4.2 additional configuration
 {: #openshift-runbook-runbook-config-intro}
 
 ## vSphere Storage for Kubernetes
@@ -52,11 +52,11 @@ Complete the following steps to create a new volume.
 4. Use the CLI to log in to your Kubernetes environment:
 
     ```bash
-    export KUBECONFIG=/opt/ocp41install/auth/kubeconfig
+    export KUBECONFIG=/opt/ocp42install/auth/kubeconfig
     oc login
     ```
 
-5. Create a persistent volume in Kubernetes for the recently created *.vmdk*. Replace volumePath with your *.vmdk*. The following example uses *vsphere-volume-pvc.yaml*.
+5. Create a persistent volume in Kubernetes for the recently created *.vmdk*. Replace volumePath with your *.vmdk*. The following example uses *vsphere-volume-pv.yaml*.
 
     ```yaml
     apiVersion: v1
@@ -76,8 +76,8 @@ Complete the following steps to create a new volume.
     ```
 
     ```bash
-    export KUBECONFIG=/opt/ocp41install/auth/kubeconfig
-    kubectl create -f  vsphere-volume-pvc.yaml
+    export KUBECONFIG=/opt/ocp42install/auth/kubeconfig
+    kubectl create -f  vsphere-volume-pv.yaml
     ```
 
 6. Create a Persistent Volume Claim in Kubernetes.
@@ -101,7 +101,7 @@ Complete the following steps to create a new volume.
     ```
 
     ```bash
-    kubectl create -f vsphere-volume-pv.yaml
+    kubectl create -f vsphere-volume-pvc.yaml
     ```
 
     The persistent volume claim can now be mapped to the container application.  

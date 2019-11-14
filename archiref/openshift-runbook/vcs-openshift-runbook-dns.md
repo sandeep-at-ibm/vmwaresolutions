@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-06"
 
 subcollection: vmware-solutions
 
@@ -40,7 +40,7 @@ subcollection: vmware-solutions
    - Create DNS Service record for etcd.
    - Create DNS SRV record for etcd.
 
-**Note:** The *Add-DnsServerPrimaryZone -networkid* cmdlet creates only classful reverse lookup zones. Therefore, if you specify a prefix longer than /24, say a /26, then the cmdlet creates a /32 reverse lookup zone. Therefore, as a workaround in the script use /24 instead of a /26.
+**Note:** The *Add-DnsServerPrimaryZone -networkid* cmdlet creates only classful reverse lookup zones. Therefore, if you specify a prefix longer than /24, say a /26, then the cmdlet creates a /32 reverse lookup zone. Therefore, as a workaround in the script use /24 instead of a /26. You also need to modify the private portable subnet to match classful /24 network in the commands.
 
 Do not create CNAME entries as OpenShift's certificates are keyed to the DNS returning the IP address only and not a referral to the base hostname.
 {:note}
@@ -59,8 +59,8 @@ The following table is for an example deployment. Use your own values.
 | --- | --- | --- |
 | DNS Reverse Lookup for OpenShift VXLAN  | 192.168.133.0/24 | |
 | DNS Reverse Lookup for OpenShift {{site.data.keyword.cloud_notm}} Subnet  | 10.208.242.128/26 | |
-| Bastion Host | bastion.ocp.dallas.ibm.local | 192.168.133.51 |
-| Bootstrap0 Host | bootstrap0.ocp.dallas.ibm.local | 192.168.133.51 |
+| Bastion Host | bastion.ocp.dallas.ibm.local | 192.168.133.8 |
+| bootstrap-0 Host | bootstrap-0.ocp.dallas.ibm.local | 192.168.133.9 |
 | control-plane-0 Host | control-plane-0.ocp.dallas.ibm.local | 192.168.133.10 |
 | control-plane-1 Host | control-plane-1.ocp.dallas.ibm.local | 192.168.133.11 |
 | control-plane-2 Host | control-plane-2.ocp.dallas.ibm.local | 192.168.133.12 |
@@ -84,10 +84,10 @@ The following table is for an example deployment. Use your own values.
 ```powershell
 # Create Reverse Lookup Zones
 Add-DnsServerPrimaryZone -networkid "192.168.133.0/24" -replicationscope forest
-Add-DnsServerPrimaryZone -networkid "10.208.242.128/24" -replicationscope forest
+Add-DnsServerPrimaryZone -networkid "10.208.242.0/24" -replicationscope forest
 
 # Create DNS A Records, with PTR
-Add-DnsServerResourceRecordA -Name "bastion.ocp.dallas" -ZoneName "ibm.local" -AllowUpdateAny -IPv4Address "192.168.133.51" -CreatePtr -TimeToLive 00:00:10
+Add-DnsServerResourceRecordA -Name "bastion.ocp.dallas" -ZoneName "ibm.local" -AllowUpdateAny -IPv4Address "192.168.133.8" -CreatePtr -TimeToLive 00:00:10
 Add-DnsServerResourceRecordA -Name "bootstrap-0.ocp.dallas" -ZoneName "ibm.local" -AllowUpdateAny -IPv4Address "192.168.133.9" -CreatePtr -TimeToLive 00:00:10
 Add-DnsServerResourceRecordA -Name "control-plane-0.ocp.dallas" -ZoneName "ibm.local" -AllowUpdateAny -IPv4Address "192.168.133.10" -CreatePtr -TimeToLive 00:00:10
 Add-DnsServerResourceRecordA -Name "etcd-0.ocp.dallas" -ZoneName "ibm.local" -AllowUpdateAny -IPv4Address "192.168.133.10" -TimeToLive 00:00:10
@@ -102,9 +102,6 @@ Add-DnsServerResourceRecordA -Name "*.apps.ocp.dallas" -ZoneName "ibm.local" -Al
 Add-DnsServerResourceRecordA -Name "api.ocp.dallas" -ZoneName "ibm.local" -AllowUpdateAny -IPv4Address "10.208.242.132" -CreatePtr -TimeToLive 00:00:10
 Add-DnsServerResourceRecordA -Name "api-int.ocp.dallas" -ZoneName "ibm.local" -AllowUpdateAny -IPv4Address "10.208.242.132" -CreatePtr -TimeToLive 00:00:10
 
-# Create DNS Service record for etcd
-Add-DnsServerResourceRecord -Service "_tcp" –ZoneName "ibm.local" –Name "_etcd-server-ssl" –DomainName "ocp.dallas.ibm.local" –Priority 10 –Weight 0 –Port 2380
-
 # Create DNS SRV record for etcd
 Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._tcp.ocp.dallas" -DomainName "etcd-0.ocp.dallas.ibm.local"  -Priority 10 -Weight 0 -Port 2380
 Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._tcp.ocp.dallas" -DomainName "etcd-1.ocp.dallas.ibm.local"  -Priority 10 -Weight 0 -Port 2380
@@ -117,9 +114,9 @@ Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._
 ## Related links
 {: #vcs-openshift-runbook-dns-related}
 
-* [VMware Solutions on IBM Cloud and Red Hat OpenShift overview](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
+* [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
 * [Prerequisites for installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro)
 * [OpenShift NSX configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxedge-intro)
 * [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
-* [Red Hat OpenShift 4.1 additional configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
+* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
+* [Red Hat OpenShift 4.2 additional configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)

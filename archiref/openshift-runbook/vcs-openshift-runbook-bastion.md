@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-06"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 # OpenShift Bastion node setup
 {: #openshift-runbook-runbook-bastion-intro}
 
-To enable the deployment, a virtual machine has been provisioned to run the OpenShift 4.1 installation steps and host an HTTP Server. This virtual machine is know as the bastion node. The bastion node is connected to the OpenShift logical switch and the ESG firewall and NAT rules have been configured to allow SSH access from the jump-server or remote device.
+To enable the deployment, a virtual machine has been provisioned to run the OpenShift  installation steps and host an HTTP Server. This virtual machine is know as the bastion node. The bastion node is connected to the OpenShift logical switch and the ESG firewall and NAT rules have been configured to allow SSH access from the jump-server or remote device.
 
 The bastion node runs Red Hat Enterprise Linux, and it is used to host the scripts, files, and tools to provision the bootstrap, control-plane, and compute nodes. After the deployment, it's recommended to keep the bastion node as an administrative node for the cluster.
 
@@ -51,9 +51,9 @@ Use the following table to record your deployment details:
 | vCenter Server instance data store | vsanDatastore | |
 | VM Name | bastion | | |
 | ISO file name | rhel-server-7.6-x86_64-dvd.iso | |
-| IP address | 192.168.100.8 | |
+| IP address | 192.168.133.8 | |
 | Netmask |255.255.255.0  | |
-| Default gateway | 192.168.100.1 | |
+| Default gateway | 192.168.133.1 | |
 {: caption="Table 2. Red Hat virtual machine deployment" caption-side="top"}
 
 Before you begin, create the VM by using the vCenter CLI or the following PowerCLI script.
@@ -199,9 +199,9 @@ The private key is: /root/.ssh/id_rsa. The public key is: /root/.ssh/id_rsa.pub.
 ## Downloading the installation tools
 {: #openshift-runbook-runbook-bastion-install-red-hat}
 
-For more information about installing Red Hat OpenShift 4.1, see [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.1/installing/installing_vsphere/installing-vsphere.html?extIdCarryOver=true&sc_cid=701f2000001Css5AAC){:external}.
+For more information about installing Red Hat OpenShift 4.2, see [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html?extIdCarryOver=true&sc_cid=701f2000001Css5AAC){:external}.
 
-For more information about how to access the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.1/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
+For more information about how to access the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
 
 Before you install the OpenShift Container Platform, you need to download a number of files onto the bastion node and then extract them. The following actions are completed:
 * Download `unzip` to extract the downloaded files.
@@ -224,12 +224,12 @@ mkdir -p /opt/ocp41install
 cd /opt/ocp41install
 
 # Download the OpenShift installer and client tools
-wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux-4.1.11.tar.gz
-wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux-4.1.11.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux-4.2.0.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux-4.2.0.tar.gz
 
 # Extract the downloaded bundles
-tar -xvf openshift-install-linux-4.1.11.tar.gz
-tar -xvf openshift-client-linux-4.1.11.tar.gz
+tar -xvf openshift-client-linux-4.2.0.tar.gz
+tar -xvf openshift-install-linux-4.2.0.tar.gz
 
 # Move commands to /usr/local/bin for ease of use
 mv kubectl oc openshift-install /usr/local/bin
@@ -237,7 +237,7 @@ mv openshift-install /usr/local/bin
 
 # Install git and clone the OpenShift installer
 yum install -y git
-git clone https://github.com/openshift/installer
+git clone -b release-4.2 https://github.com/openshift/installer
 
 # Download and extract terraform
 wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
@@ -245,12 +245,12 @@ unzip terraform_0.11.13_linux_amd64.zip
 mv terraform /usr/local/bin
 ```
 
-The Bastion node is now ready for the steps to install OpenShift 4.1, which are described in [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=openshift-runbook-runbook-install-intro).
+The Bastion node is now ready for the steps to install OpenShift 4.2, which are described in [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=openshift-runbook-runbook-install-intro).
 
-**Next topic:** [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
+**Next topic:** [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-bastion-related}
 
-* [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.1/installing/installing_vsphere/installing-vsphere.html?extIdCarryOver=true&sc_cid=701f2000001Css5AAC){:external}
+* [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html?extIdCarryOver=true&sc_cid=701f2000001Css5AAC){:external}
 * [Using the vi text editor](http://etutorials.org/Linux+systems/red+hat+linux+bible+fedora+enterprise+edition/Part+II+Using+Red+Hat+Linux/Chapter+4+Using+Linux+Commands/Using+the+vi+Text+Editor/){:external}

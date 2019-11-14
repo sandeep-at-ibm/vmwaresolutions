@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-06"
 
 subcollection: vmware-solutions
 
@@ -19,9 +19,9 @@ subcollection: vmware-solutions
 # Red Hat OpenShift NSX Edge configuration
 {: #openshift-runbook-runbook-nsxedge-intro}
 
-This section details the NSX components that are used to support the OpenShift 4.1 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){:external}. PowerNSX commands are provided if you would want to use this method.
+This section details the NSX components that are used to support the OpenShift 4.2 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){:external}. PowerNSX commands are provided if you would want to use this method.
 
-![OpenShift 4.1 networking](../../images/openshift-networking41.svg "OpenShift 4.1 networking"){: caption="Figure 1. OpenShift 4.1 networking" caption-side="bottom"}
+![OpenShift 4.2 networking](../../images/openshift-networking41.svg "OpenShift 4.2 networking"){: caption="Figure 1. OpenShift 4.2 networking" caption-side="bottom"}
 
 ## NSX ESG
 {: #openshift-runbook-runbook-nsxedge-config}
@@ -74,7 +74,7 @@ Configure rules to allow communication to the internet, to the IBM Cloud network
 ## NSX ESG DHCP
 {: #openshift-runbook-runbook-nsxedge-dhcp}
 
-For the OpenShift 4.1 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network, which provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using terraform.
+For the OpenShift 4.2 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network, which provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using terraform.
 
 | DCHP pool | Value |
 | --- | --- |
@@ -102,7 +102,7 @@ Define NAT to provide a mechanism to allow the OpenShift network access to the p
 | Interface | Public | Private | Private |
 | Protocol | any | any |  any |
 | Original Source IP/Range | 192.168.133.0/24 | 192.168.133.0/24 | 10.208.242.133 |
-| Destination IP/Range | any | any | 192.168.100.8 |
+| Destination IP/Range | any | any | 192.168.133.8 |
 | Translated Source IP/Range | 169.48.73.43 | 10.208.242.140 | 10.208.242.133 |
 | Status | Enabled | Enabled | Enabled |
 | Logging | Disable | Disabled | Disabled |
@@ -130,7 +130,7 @@ On the edge, configure the default route to be to the public internet, then add 
 | Static route 1  | 10.0.0.0/8 | 10.208.242.129 | Private |
 | Static route 2  | 100.0.0.0/8 | 10.208.242.129 | Private |
 | Static route 3  | 161.26.0.0/16 | 10.208.242.129 | Private |
-| Static route 4  | 192.168.133.0/24 | 192.168.100.1 | Private |
+| Static route 4  | 192.168.133.0/24 | 192.168.100.2 | Private |
 {: caption="Table 8. Configuration for NSX Edge - static routes" caption-side="top"}
 
 ## NSX load balancers
@@ -221,7 +221,7 @@ Get-NsxEdge OpenShift-ESG | Get-NsxEdgeRouting | Set-NsxEdgeRouting -DefaultGate
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeRouting | New-NsxEdgeStaticRoute -Network 10.0.0.0/8 -NextHop 10.208.242.129 -Vnic 0 -Description "Private traffic" -confirm:$false
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeRouting | New-NsxEdgeStaticRoute -Network 100.0.0.0/8 -NextHop 10.208.242.129 -Vnic 0 -Description "Private traffic" -confirm:$false
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeRouting | New-NsxEdgeStaticRoute -Network 161.26.0.0/16 -NextHop 10.208.242.129 -Vnic 0 -Description "Private traffic" -confirm:$false
-Get-NsxEdge OpenShift-ESG | Get-NsxEdgeRouting | New-NsxEdgeStaticRoute -Network 192.168.100.0/24 -NextHop 192.168.133.2 -Vnic 2 -Description "OpenShift Traffic" -confirm:$false
+Get-NsxEdge OpenShift-ESG | Get-NsxEdgeRouting | New-NsxEdgeStaticRoute -Network 192.168.133.0/24 -NextHop 192.168.100.2 -Vnic 2 -Description "OpenShift Traffic" -confirm:$false
 
 # Configure ESG firewall rules
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeFirewall | New-NsxEdgeFirewallRule -Name "Private Outbound" -Source 10.208.242.128/26 -Service any -Action accept
@@ -229,7 +229,7 @@ Get-NsxEdge OpenShift-ESG | Get-NsxEdgeFirewall | New-NsxEdgeFirewallRule -Name 
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeFirewall | New-NsxEdgeFirewallRule -Name "OpenShift Network" -Source 192.168.133.0/24 -Service any -Action accept
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeFirewall | New-NsxEdgeFirewallRule -Name "Transit Network" -Source 192.168.100.0/24 -Service any -Action accept
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeFirewall | New-NsxEdgeFirewallRule -Name "Private inbound to OpenShift" -Source 10.0.0.0/8 -Destination 10.208.242.131 -Service tcp/80,tcp/443 -Action accept
-Get-NsxEdge OpenShift-ESG | Get-NsxEdgeFirewall | New-NsxEdgeFirewallRule -Name "SSH inbound to Bastion" -Source 10.0.0.0/8 -Destination 10.208.242.132 -Service tcp/22 -Action accept
+Get-NsxEdge OpenShift-ESG | Get-NsxEdgeFirewall | New-NsxEdgeFirewallRule -Name "SSH inbound to Bastion" -Source 10.0.0.0/8 -Destination 10.208.242.133 -Service tcp/22 -Action accept
 
 # Configure ESG NAT rules
 Get-NsxEdge OpenShift-ESG | Get-NsxEdgeNat | Set-NsxEdgeNat -enabled -confirm:$false
@@ -304,4 +304,4 @@ Disconnect-NsxServer
 {: #vcs-openshift-runbook-nsxedge-related}
 
 * [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
+* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)

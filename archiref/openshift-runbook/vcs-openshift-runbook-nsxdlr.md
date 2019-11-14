@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-10-30"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 # OpenShift NSX DLR configuration
 {: #openshift-runbook-runbook-nsxdlr-intro}
 
-This section details the NSX distributed logical router that is used to support the OpenShift 4.1 environment. To use this information, you must understand how to create these components and add the configuration.
+This section details the NSX distributed logical router that is used to support the OpenShift 4.2 environment. To use this information, you must understand how to create these components and add the configuration.
 
 Review [Distributed Logical Router](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-A20103B0-ABA1-4884-8EC3-287874E23181.html){:external}. PowerNSX commands are provided if you would want to use this method.
 
@@ -83,7 +83,7 @@ On the Edge, the default route is configured to be to the transit network connec
 ## NSX DHCP relay
 {: #openshift-runbook-runbook-nsxdlr-dhcprelay}
 
-For the OpenShift 4.1 environment, the connection to the DHCP Service runs on the OpenShift Edge.
+For the OpenShift 4.2 environment, the connection to the DHCP Service runs on the OpenShift Edge.
 
 | DCHP relay | Value |
 | :--- | --- |
@@ -167,4 +167,4 @@ Disconnect-NsxServer
 {: #vcs-openshift-runbook-nsxdlr-related}
 
 * [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
+* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)

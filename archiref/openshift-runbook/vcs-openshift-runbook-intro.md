@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-10-30"
 
 subcollection: vmware-solutions
 
@@ -16,15 +16,15 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# VMware Solutions on IBM Cloud and Red Hat OpenShift overview
+# IBM Cloud for VMware Solutions and Red Hat OpenShift overview
 {: #openshift-runbook-runbook-intro}
 
 The {{site.data.keyword.vmwaresolutions_full}} offering includes fully automated, rapid deployments of VMware vCenter Server in the IBM Cloud. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the IBM Cloud without conversion by using the same tools, skills, and processes they use on-premises. For more information, see [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture){:external}.
 
-Red Hat OpenShift on IBM Cloud for VMware Solutions is a reference architecture and a manual build process to deploy a Red Hat OpenShift Cluster 4.1 on to an existing vCenter Server instance. The components of Red Hat OpenShift Cluster on IBM Cloud are deployed as virtual machines and appliances by using NSX software defined networking.
+Red Hat OpenShift for VMware Solutions is a reference architecture and a manual build process to deploy a Red Hat OpenShift Cluster 4.2 on to an existing vCenter Server instance. The components of Red Hat OpenShift Cluster are deployed as virtual machines and appliances by using NSX software defined networking.
 
 * Reference Architecture - [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
-* Build Process - This document. The process and steps that are needed to install Red Hat OpenShift 4.1 on to an existing vCenter Server instance.
+* Build Process - This document. The process and steps that are needed to install Red Hat OpenShift 4.2 on to an existing vCenter Server instance.
 
 ![IBM Cloud for VMware Solutions and Red Hat OpenShift](../../images/openshift-sddc.svg "IBM Cloud for VMware Solutions and Red Hat OpenShift"){: caption="Figure 1. IBM Cloud for VMware Solutions and OpenShift" caption-side="bottom"}
 
@@ -33,7 +33,7 @@ Red Hat OpenShift on IBM Cloud for VMware Solutions is a reference architecture 
 
 The Red Hat Open Shift platform is a platform that is designed to orchestrate containerized workloads across a cluster of nodes. The platform uses Kubernetes as the core container orchestration engine, which manages the Docker container images and their lifecycle.
 
-The nodes operating system is Red Hat Enterprise Linux CoreOS, which is the container host version of Red Hat Enterprise Linux (RHEL) and features a RHEL kernel with SELinux enabled by default. RHEL CoreOS includes; kubelet, which is the Kubernetes node agent, and the CRI-O container runtime, which is optimized for Kubernetes. In v4.1, you must use RHEL CoreOS for all control plane machines, but you can use Red Hat Enterprise Linux (RHEL) as the operating system for compute, or worker machines. If you choose to use RHEL workers, you must perform more system maintenance than if you use RHEL CoreOS for all of the cluster machines. The reference architecture and this build process use RHEL CoreOS. The nodes must have direct internet access to:
+The nodes operating system is Red Hat Enterprise Linux CoreOS, which is the container host version of Red Hat Enterprise Linux (RHEL) and features a RHEL kernel with SELinux enabled by default. RHEL CoreOS includes; kubelet, which is the Kubernetes node agent, and the CRI-O container runtime, which is optimized for Kubernetes. In v4.2, you must use RHEL CoreOS for all control plane machines, but you can use Red Hat Enterprise Linux (RHEL) as the operating system for compute, or worker machines. If you choose to use RHEL workers, you must perform more system maintenance than if you use RHEL CoreOS for all of the cluster machines. The reference architecture and this build process use RHEL CoreOS. The nodes must have direct internet access to:
 
 * Access the OpenShift Infrastructure Providers page to download the installation program.
 * Access quay.io to obtain the packages that are required to install the cluster.
@@ -73,7 +73,7 @@ This build process uses the following scripting tools and scripts:
 ## Build process overview
 {: #openshift-runbook-runbook-intro-build-process-overview}
 
-This documentation describes the process to install Red Hat OpenShift v4.1 on to an existing vCenter Server instance. The process installs and configures:
+This documentation describes the process to install Red Hat OpenShift v4.2 on to an existing vCenter Server instance. The process installs and configures:
 
 * One bastion node.
 * One bootstrap node.
@@ -87,16 +87,16 @@ The deployment approach is best described in the following phases:
   * Using the IBM Cloud portal, order more Private and Public subnets for the use by the OpenShift cluster. Review the steps for [Ordering subnets](https://cloud.ibm.com/docs/infrastructure/subnets?topic=subnets-getting-started#ordering-subnets).
   * Download RHEL 7.6 ISO for the OS of the bastion/deployment node and the Red Hat Enterprise Linux CoreOS (RHCOS) OVA image. This step is described in [Prerequisites for installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro).
   * Using govc, the OVA and ISO are uploaded to a datastore on the vCenter Server instance. This step is described in [Prerequisites for installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro).
-  * Add logical switches - Two logical switches are created; OpenShift-LS the network the OpenShift VMs are deployed onto and OpenShift-DLR-Transit, the uplink between the DLR and the Edge. WHERE IS THIS DESCRIBED
+  * Add logical switches - Two logical switches are created; OpenShift-LS the network the OpenShift VMs are deployed onto and OpenShift-DLR-Transit, the uplink between the DLR and the Edge.
   * Add an ESG - An external services gateway (ESG) is a virtual appliance that provides North-South routing, and other network functions. In this architecture, the ESG is used for; routing, NAT, firewall, and load-balancing. As the ESGs are configured as active/passive pair, DRS anti-affinity rules are used to ensure that NSX Edges do not run on the same host. Static routes are used to direct traffic to either the internet or the IBM private Network. This step is described in [OpenShift NSX Edge configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxedge-intro).
   * Add a DLR - A distributed logical router (DLR) is a virtual appliance that contains the routing control plane, while distributing the data plane in kernel modules to each hypervisor host. The DLR provides East-West distributed routing and is the default gateway for the OpenShift VMs that will be installed on the OpenShift logical switch. The NSX DLR virtual machines are configured as an Active/Passive pair, and vSphere Distributed Resource Scheduler (DRS) anti-affinity rules are created to ensure that the DLR VMs do not run on the same host. This step is described in [OpenShift NSX DLR configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro).
   * Update DNS - The infrastructure DNS, provisioned with the vCS instance is updated with the names and IP addresses for the OpenShift components by using a PowerShell script. This step is described in [IBM Cloud for VMware Solutions DNS configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-dns-intro).
-* Phase 2 - Red Hat OpenShift installation. These steps are described in [Red Hat OpenShift 4.1 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro).
+* Phase 2 - Red Hat OpenShift installation. These steps are described in [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro).
   * A Red Hat virtual machine, the bastion node, is provisioned to run the OpenShift installer and to host an HTTP Server. It is registered with Red Hat by using your subscription, and the OpenShift installer is downloaded.
   * On the bastion node, the install-config.yaml is populated with the required OpenShift parameters and OpenShift Ignition is used to generate a number of files used for the installation of the bootstrap, master, and worker machines.
   * Terraform, on the bastion node, uses the files that are created by Ignition to create the OpenShift VMs.
 * Phase 3 - Post deployment activities:
-  * Configure a persistent volume for use by the OpenShift cluster. This step is described in [Red Hat OpenShift 4.1 additional configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro).
+  * Configure a persistent volume for use by the OpenShift cluster. This step is described in [Red Hat OpenShift 4.2 additional configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro).
 
 **Next topic:** [Prerequisites for installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro)
 
@@ -106,6 +106,6 @@ The deployment approach is best described in the following phases:
 * [An overview of the basics of Red Hat OpenShift](https://www.ibm.com/cloud/blog/new-builders/what-is-openshift){:external}
 * [OpenShift 4 User Provisioned Infrastructure with VMware vSphere](https://www.youtube.com/watch?v=TsAJEEDv-gg){:external}
 * [OpenShift 4 Release Update](https://www.youtube.com/watch?v=YJvTu8jC6CU){:external}
-* [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.1/installing/installing_vsphere/installing-vsphere.html#installation-dns-user-infra_installing-vsphere){:external}
+* [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html#installation-dns-user-infra_installing-vsphere){:external}
 * [IBM Cloud VPN getting started](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started)
 * [OpenStack cheat sheet](https://cheatsheet.dennyzhang.com/cheatsheet-openshift-a4){:external}
