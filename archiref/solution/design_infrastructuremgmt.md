@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-27"
 
 subcollection: vmware-solutions
 
@@ -33,8 +33,6 @@ The PSC located in the primary instance is assigned the default SSO domain of `v
 
 The vCenter Server with an embedded PSC is installed on a portable subnet on the private VLAN that is associated with management VMs. Its default gateway is set to the IP address assigned on the BCR for that particular subnet. The virtual appliance is configured with the specifications in the following table.
 
-Table 1. vCenter Server Appliance specifications
-
 | Attribute                    | Specification                       |
 |------------------------------|-------------------------------------|
 | vCenter Server               | Virtual appliance                   |
@@ -44,6 +42,7 @@ Table 1. vCenter Server Appliance specifications
 | Memory                       | 32 GB                               |
 | Disk                         | 990 GB on local datastore (Large disk deployment) |
 | Disk type                    | Thin provisioned                    |
+{: caption="Table 1. vCenter Server Appliance specifications" caption-side="bottom"}
 
 ### vCenter Server database
 {: #design_infrastructuremgmt-vcenter-db}
@@ -113,15 +112,15 @@ The following describes the order of events when you use the {{site.data.keyword
 ## IDs and passwords
 {: #design_infrastructuremgmt-ids-pwd}
 
-{{site.data.keyword.vmwaresolutions_short}} automation retains a set of user IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Automation user IDs are separate from the user IDs displayed in the {{site.data.keyword.vmwaresolutions_short}} console and which are reserved for your use. 
+{{site.data.keyword.vmwaresolutions_short}} automation retains a set of user IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Automation user IDs are separate from the user IDs displayed in the {{site.data.keyword.vmwaresolutions_short}} console and which are reserved for your use.
 
 You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
 
-Next topic: [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling)
+**Next topic:** [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling)
 
 ## Related links
 {: #design_infrastructuremgmt-related}
 
-* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
-* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
-* [Common services design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_commonservice)
+* [Physical infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure)
+* [Virtual infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
+* [Common services design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_commonservice)

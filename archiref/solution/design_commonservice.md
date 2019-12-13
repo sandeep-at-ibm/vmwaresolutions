@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -85,10 +85,10 @@ By default, VMware vSphere uses TLS certificates that are signed by the VMware c
 
 You can use the Windows AD servers within this design to create certificates that are signed by the local instance. However, you can also choose to configure CA services if needed.
 
-Next topic: [Infrastructure management design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_infrastructuremgmt)
+**Next topic:** [Infrastructure management design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_infrastructuremgmt)
 
 ## Related links
 {: #design_commonservice-related}
 
-* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_physicalinfrastructure)
-* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_virtualinfrastructure)
+* [Physical infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure)
+* [Virtual infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)

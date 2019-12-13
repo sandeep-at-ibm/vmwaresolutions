@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-04"
+lastupdated: "2019-11-27"
 
 subcollection: vmware-solutions
 
@@ -19,26 +19,20 @@ subcollection: vmware-solutions
 {: #design_physicalinfrastructure}
 
 The physical infrastructure consists of the following components:
+* **Physical compute**: The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.baremetal_long}} and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).
+* **Physical storage**: The physical storage provides the raw storage capacity that is used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array that uses NFS v3.
+* **Physical network**: The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.
 
-<dl class="dl">
-  <dt class="dt dlterm">Physical compute</dt>
-  <dd class="dd">The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.baremetal_long}} and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
-  <dt class="dt dlterm">Physical storage</dt>
-  <dd class="dd">The physical storage provides the raw storage capacity that is used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array that uses NFS v3.</dd>
-  <dt class="dt dlterm">Physical network</dt>
-  <dd class="dd">The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.</dd>
-</dl>
+For more information about the physical components, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
 
-For more information about the physical components, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
-
-For more information about storage, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
+For more information about storage, see [Shared storage architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-benefits#storage-benefits).
 
 ![Physical infrastructure](../../images/vcsv4radiagrams-ra-physinfra.svg "Physical infrastructure"){: caption="Figure 1. Physical infrastructure" caption-side="bottom"}
 
 ## Physical compute design
 {: #design_physicalinfrastructure-host-design}
 
-The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [vCenter Server instance](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [vCenter Server instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
 
 The {{site.data.keyword.baremetal_short}} reside in the {{site.data.keyword.cloud_notm}}.
 {:note}
@@ -62,6 +56,19 @@ Physical networking is handled by {{site.data.keyword.cloud_notm}}. Review the f
 {: #design_physicalinfrastructure-ibm-cloud-network}
 
 The physical network of {{site.data.keyword.cloud_notm}} is separated into two distinct networks: public and private. The private network also contains the management Intelligent Platform Management Interface (IPMI) traffic to the physical servers.
+
+The following figure uses these acronyms:
+
+* BBR - Backbone Router
+* BCR - Backend Customer Router
+* CBS - Core Backbone Switch
+* DAR - Distribution Aggregation Router
+* FCR - Frontend Customer Router
+* LBR - Load Balancer Router
+* MSR - Master Services Router
+* POPs - Points of Presence
+* PPR - Pod to Pod Router
+* SLR - Service Layer Router
 
 ![{{site.data.keyword.cloud_notm}} high–level network](../../images/vcsv4radiagrams-ra-ibmcloudnetwork.svg "{{site.data.keyword.cloud_notm}} high–level network"){: caption="Figure 2. {{site.data.keyword.cloud_notm}} high–level network" caption-side="bottom"}
 
@@ -133,8 +140,6 @@ All subnets that are configured as part of a vCenter Server automated deployment
 
 Review the following table for a summary.
 
-Table 1. VLAN and subnet summary
-
 | VLAN | Type | Description |
 |:---- |:---- |:----------- |
 | Public| Primary  | Assigned to physical hosts for public network access. The hosts are assigned a public IP address but this IP address is not configured on the hosts, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as NSX Edge Services Gateways (ESGs). |
@@ -144,6 +149,7 @@ Table 1. VLAN and subnet summary
 | Private B | Portable | Single subnet that is assigned for vSAN, if in use |
 | Private B | Portable | Single subnet assigned for NAS, if in use |
 | Private B | Portable | Single subnet assigned for vMotion |
+{: caption="Table 1. VLAN and subnet summary" caption-side="bottom"}
 
 In this design, all VLAN-backed hosts and virtual machines are configured to point to the {{site.data.keyword.cloud_notm}} back-end “private network” customer router (BCR) as the default route. While the vCenter Server instances enable the use of Software-Defined Networking (SDN), network overlays created within a VMware instance that include routing to internal subnets are not known by the {{site.data.keyword.cloud_notm}} managed routers.
 
@@ -166,7 +172,7 @@ The vSphere ESXi hypervisor is installed in a persistent location. As a result, 
 
 This design allows for the option of using either VMware vSAN or shared network-attached storage as the primary datastore for virtual machines. For VMware vSAN, it is configured by using an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
 
-For more information about the supported configurations, see the [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+For more information about the supported configurations, see the [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
 
 ### Shared File-level storage across hosts
 {: #design_physicalinfrastructure-shared-storage}
@@ -179,15 +185,15 @@ The storage is attached by using the NFS v3 protocol at a 2 IOPS/GB level from I
 
 You can allocate and mount more file shares across all hosts for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent_notm}}. All shares are attached by using the NFS v3 protocol. Additionally, it is possible to attach NFS v3 file shares by applying the NetApp ONTAP Select offering.
 
-The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. {{site.data.keyword.CloudDataCents_notm}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
+The availability of the 10 IOPS/GB depends on the IBM Cloud Data Center. {{site.data.keyword.CloudDataCents_notm}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits).
+For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-benefits#storage-benefits).
 
-Next topic: [Virtual infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
+**Next topic:** [Virtual infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
 
 ## Related links
 {: #design_physicalinfrastructure-related}
 
-* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Shared storage architecture](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits#storage-benefits)
+* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
+* [Shared storage architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-benefits#storage-benefits)
 * [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

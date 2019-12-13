@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-04"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -27,7 +27,7 @@ This design serves as a baseline architecture that provides the foundation for o
 ## Key benefits of IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}
 
-VMware vCenter Server on {{site.data.keyword.cloud_notm}} provides the fundamental building blocks, which include VMware vSphere, vCenter Server, NSX, and shared storage options, such as vSAN. These components are needed to flexibly design a VMware software-defined data center solution that best fits your workloads.
+VMware vCenter Server provides the fundamental building blocks, which include VMware vSphere, vCenter Server, NSX, and shared storage options, such as vSAN. These components are needed to flexibly design a VMware software-defined data center solution that best fits your workloads.
 
 By applying advanced automation and single-tenant bare metal infrastructure, you can quickly deploy the entire VMware environment to the {{site.data.keyword.cloud_notm}} in hours. Then you can access and manage the IBM­-hosted environment via the native VMware clients, Command Line Interface (CLI), existing scripts, or other familiar vSphere API-compatible tools.
 
@@ -46,11 +46,11 @@ The VMware on {{site.data.keyword.cloud_notm}} offerings bring the following ben
 * **Enabling consistent management and governance** of the deployed hybrid cloud by providing full administrative access to virtualization management, thus preserving your existing VMware tools, scripts, and investments in training.
 * **Using VMware expertise at global scale** with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide.
 
-Next topic: [IBM Cloud for VMware Solutions components](/docs/services/vmwaresolutions?topic=vmware-solutions-design_overview)
+**Next topic:** [IBM Cloud for VMware Solutions components](/docs/services/vmwaresolutions?topic=vmware-solutions-design_overview)
 
 ## Related links
 {: #solution_overview-related}
 
-* [Design overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design_overview)
-* [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling)
-* [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup)
+* [Design overview](/docs/services/vmwaresolutions?topic=vmware-solutions-design_overview)
+* [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling)
+* [Backing up components](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup)
