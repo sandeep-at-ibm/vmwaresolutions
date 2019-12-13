@@ -269,7 +269,9 @@ IBM Cloud for VMware Solutions
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
         archiref/solution/design_virtualinfrastructure.md
+        archiref/solution/nsx-v-design.md
         archiref/solution/nsx-t-design.md
+        archiref/solution/nsx-t-idm.md
         archiref/solution/design_commonservice.md
         archiref/solution/design_infrastructuremgmt.md
         archiref/solution/solution_scaling.md
