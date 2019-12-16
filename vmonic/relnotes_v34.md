@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-16"
 
 keywords: release notes, what's new, version 3.4
 
