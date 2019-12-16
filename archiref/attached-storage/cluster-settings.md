@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-28"
+lastupdated: "2019-11-29"
 
 subcollection: vmware-solutions
 
@@ -32,14 +32,13 @@ In this design, the DRS Automation level is set to fully automated so when VMs a
 
 The following table shows the settings for the vSphere DRS cluster in the VMware vSphere Web Client.
 
-Table 1. DRS Automation settings for the vSphere DRS cluster
-
 | Setting             | Value  |
 |:------------------- |:------ |
 | Turn ON vSphere DRS | Selected |
 | Automation Level | Fully Automated |
 | Migration Threshold | Apply priority 1, priority 2, and priority 3 recommendations |
 | Enable individual machine automation levels | Selected, set to 15 ms |
+{: caption="Table 1. DRS Automation settings for the vSphere DRS cluster" caption-side="bottom"}
 
 For more information about configuring these settings in the vSphere Web Client, see [Set a Custom Automation Level for a Virtual Machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
 
@@ -74,8 +73,6 @@ The failure conditions define how the VMs fail and the response that is given to
 
 The following table shows the settings for the vSphere HA cluster in the VMware vSphere Web Client.
 
-Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster
-
 | Setting             | Value  |
 |:------------------- |:------ |
 | VM restart priority | Medium |
@@ -88,6 +85,7 @@ Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster
 | Minimum uptime | 90 s |
 | Maximum per-VM resets | 10 |
 | Maximum resets time window | Within 1 hrs |
+{: caption="Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster" caption-side="bottom"}
 
 For more information about configuring these settings in the vSphere Web Client, see [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
 
@@ -104,4 +102,4 @@ vSphere HA uses datastore heart beating to identify hosts that have failed and h
 ## Related links
 {: #cluster-settings-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)

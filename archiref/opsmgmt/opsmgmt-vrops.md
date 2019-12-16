@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-28"
 
 ---
 
@@ -49,25 +49,21 @@ The client can configure vROps manually to collect data from vRealize Automation
 
 The analytics cluster consists of one master node, one master replica node, and two data nodes to enable scaling out and high availability. Additional data nodes are added to scale up. The analytics cluster can scale to a maximum of eight medium-sized nodes.
 
-Table 1. Operations Manager Master/Replica Node system settings
+| Attribute | Specification |
+|---|---|
+| vCPU | 8 |
+| Memory | 32 GB |
+| Disk (thick provisioned) | 254 GB |
+{: caption="Table 1. Operations Manager Master/Replica Node system settings" caption-side="bottom"}
 
 | Attribute | Specification |
 |---|---|
 | vCPU | 8 |
 | Memory | 32 GB |
 | Disk (thick provisioned) | 254 GB |
-
-Table 2. Operations Manager Data Node system settings
-
-| Attribute | Specification |
-|---|---|
-| vCPU | 8 |
-| Memory | 32 GB |
-| Disk (thick provisioned) | 254 GB |
+{: caption="Table 2. Operations Manager Data Node system settings" caption-side="bottom"}
 
 If monitoring of the compute VMs is required, the client should install two remote collector nodes on a VXLAN. The size of a Standard Remote Collector Virtual Appliance is 2 vCPU with 4 GB of RAM and the default appliance VMDK size is sufficient. The remote collector nodes are deployed with thin-provisioned disks as the remote collectors do not perform analytics operations or store data.
-
-Table 3. Operations Manager Load Balancer settings
 
 | Setting | Load Balancer 1 | Load Balancer 2|
 |---|---|---|
@@ -81,6 +77,7 @@ Table 3. Operations Manager Load Balancer settings
 | Receive | ONLINE | -- |
 | Algorithm | ROUND-ROBIN | LEASTCONN |
 | Pool | Four nodes of vROPs | Four nodes of vROPs |
+{: caption="Table 3. Operations Manager Load Balancer settings" caption-side="bottom"}
 
 <!-- For more information, see [vRealize Automation Load Balancing](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:external}. -->
 
@@ -100,8 +97,6 @@ Deployment of the vROps appliance requires six IP addresses from the Tooling pri
 ## Ports
 {: #opsmgmt-vrops-ports}
 
-Table 4. Operation Manager ports
-
 | Component | Protocol | Port |
 |---|---|---|
 | vCenter | TCP | 443 |
@@ -111,6 +106,7 @@ Table 4. Operation Manager ports
 | NTP | UDP | 123 |
 | SMTP | TCP | 25 |
 | SNMP | UDP | 161 |
+{: caption="Table 4. Operation Manager ports" caption-side="bottom"}
 
 ### Authentication
 {: #opsmgmt-vrops-auth}
@@ -226,7 +222,7 @@ vRealize Operations Management Pack for HCX extends the Operations Management ca
 * [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:external}
 * [vRealize Operations Manager documentation](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:external}
 * [vRealize Operations Management Pack for vSAN 1.0 Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:external}
-* [Updating vSAN clusters](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-updating-vsan)
+* [Updating vSAN clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan)
 * [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:external}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:external}
 * [NSX Operations Guide](https://communities.vmware.com/servlet/JiveServlet/previewBody/30079-102-2-40474/NSX-Operations-Guide-v6.1.pdf){:external}

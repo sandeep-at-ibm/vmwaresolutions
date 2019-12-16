@@ -11,14 +11,16 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 
 # Release notes for V1.7
 {: #relnotes_v17}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## Updates for VMware Cloud Foundation instances
 {: #relnotes_v17-vcf}
@@ -34,7 +36,7 @@ This update applies the following upgrades and improvements:
   EVC mode is not enabled for any existing or new deployments on V4 servers.
   {:note}
 
-* VMware Cloud Foundation deployments that were deployed before 22 May and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+* VMware Cloud Foundation deployments that were deployed before 22 May and are therefore using V3 servers, will now order V4 servers when a new node is added to the instance. These servers have 256 GB of memory. If you require 512 GB of memory, after you add the servers, open a support ticket to request a server upgrade to 512 GB of memory. For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support).
 
 ### Update process requirements
 {: #relnotes_v17-update-process}
@@ -52,12 +54,12 @@ Starting with the V1.7 release, you can use clusters to manage ESXi servers in v
 ### Enhancements to the deployment of Zerto disaster recovery
 {: #relnotes_v17-zerto}
 
-The deployment of Zerto disaster recovery is now automated rather than handled through a support ticket. All Zerto components, such as a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license charges are listed on the estimated cost, so you can review before you place your order. For more information, see [Deployment process of Zerto disaster recovery](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
+The deployment of Zerto disaster recovery is now automated rather than handled through a support ticket. All Zerto components are listed on the estimated cost, so you can review before you place your order. Component examples include a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license charges. For more information, see [Deployment process of Zerto disaster recovery](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr).
 
 ### NSX license upgrade capabilities
 {: #relnotes_v17-nsx}
 
-You can upgrade your NSX license edition from the **Summary** tab of your vCenter Server instance. The license upgrade replaces all existing NSX SoftLayer licenses in your account with the new license. For more information, see [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances).
+You can upgrade your NSX license edition from the **Summary** tab of your vCenter Server instance. The license upgrade replaces all existing NSX SoftLayer licenses in your account with the new license. For more information, see [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances).
 
 ## Usability enhancements
 {: #relnotes_v17-ui}

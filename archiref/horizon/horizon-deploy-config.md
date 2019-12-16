@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -21,19 +21,19 @@ subcollection: vmware-solutions
 
 The recommendation for a production environment is to use a minimum of four hosts for the desktop cluster with VSAN and three hosts for the management cluster.
 
-To deploy Horizon 7 on {{site.data.keyword.cloud}}:
+To deploy VMware Horizon 7:
 
-1. Create a vCenter Server on {{site.data.keyword.cloud_notm}} instance with three hosts and two NFS datastores for the Horizon Management Components. See [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
+1. Create a vCenter Server instance with three hosts and two NFS datastores for the Horizon Management Components. See [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 2. Configure supporting infrastructure for VMware Horizon in {{site.data.keyword.cloud_notm}}. This includes an Active Directory Domain and Microsoft SQL Server.
 3. Deploy Horizon 7.8 or later in the Management Cluster. See the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external}.
 4. Deploy App Volumes 2.17 or later in the Management Cluster. See the [VMware App Volumes documentation](https://docs.vmware.com/en/VMware-App-Volumes/index.html){:external}.
 5. Deploy VDI workload cluster with the required number of hosts to support the desktop workloads and with VMware VSAN for storage.
 6. Create Desktop Template and deploy desktops.
 
-## Horizon 7 Environment on IBM Cloud
+## Horizon 7 Environment
 {: #horizon-deploy-config-envir}
 
-When you set up the Horizon 7 environment on {{site.data.keyword.cloud_notm}}, you must install and configure the following components:
+When you set up the Horizon 7 environment, you must install and configure the following components:
 * Configure Active Directory services, DNS, and DHCP. If necessary, install and configure KMS servers.
 * Install SQL Server for App Volumes Manager and the Horizon Events database
 * Optionally, install RDS license servers.
@@ -65,7 +65,7 @@ For hybrid cloud deployment, follow these steps:
 4. Use Cloud Pod Architecture to connect the Horizon 7 pod on-premises with the Horizon 7 pod on {{site.data.keyword.cloud_notm}}.
 5. For easy sharing of images and ISO images, you can use the vCenter Content Library on each vCenter Server.
 
-## Connection and firewall configuration for deploying Horizon 7 on IBM Cloud
+## Connection and firewall configuration for deploying Horizon 7
 {: #horizon-deploy-config-connect-firewall}
 
 To set up a successful hybrid cloud deployment, you must configure connectivity between your on-premises and {{site.data.keyword.cloud_notm}} environments and allow traffic between these environments and the internet.
@@ -122,7 +122,7 @@ For more information, see [Using Content Libraries](https://docs.vmware.com/en/V
 
 Enabling Horizon 7 to run on {{site.data.keyword.cloud_notm}} requires two separate items.  The first is the monthly infrastructure expense that is purchased through {{site.data.keyword.cloud_notm}}.  The second is the Horizon Universal License that entitles customers to VMware Horizon 7.
 
-For POC or pilot deployment of Horizon 7 on {{site.data.keyword.cloud_notm}}, you may use a temporary eval license or your existing perpetual license. However, to enable Horizon 7 for production deployment on {{site.data.keyword.cloud_notm}}, you must purchase the new Horizon Universal License. To obtain the new Horizon Universal License or for more information on how to upgrade your existing perpetual license to subscription license and associated discounts, contact your VMware representative.
+For POC or pilot deployment of Horizon 7, you may use a temporary evaluation license or your existing perpetual license. However, to enable Horizon 7 for production deployment on {{site.data.keyword.cloud_notm}}, you must purchase the new Horizon Universal License. To obtain the new Horizon Universal License or for more information on how to upgrade your existing perpetual license to subscription license and associated discounts, contact your VMware representative.
 
 ### Different types of Horizon universal licenses
 {: #horizon-deploy-config-license-types}
@@ -135,7 +135,7 @@ Licenses are available for both Named and Concurrent Users.
 
 You can use different licenses (including perpetual licenses) on different Horizon pods whether the pods are connected by CPA or not. You cannot mix different licenses within a pod since each pod only takes 1 type of license. For example, you cannot use both perpetual license and subscription license for a single pod. You also cannot use both the Horizon Apps Universal license and the Horizon Universal license for a single pod.  Suppose you have two pods deployed, pod A on-premises and pod B on {{site.data.keyword.cloud_notm}} and the two pods are connected by CPA, you can use a different license type on each pod. For example, you can use the Horizon Enterprise perpetual license for pod A, and the new Horizon Universal license for pod B.
 
-The best subscription license you need for your Horizon 7 on {{site.data.keyword.cloud_notm}} deployment will depend on your use case.
+The best subscription license you need for your Horizon 7 deployment will depend on your use case.
 
 Here are some examples:
 * You are setting up a new H7 deployment for 2,000 VDI users on {{site.data.keyword.cloud_notm}}. There are no on-premises components. Purchase 2,000-user Horizon Universal license in this case.

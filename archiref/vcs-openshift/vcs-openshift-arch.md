@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -55,7 +55,7 @@ Red Hat OpenShift is deployed with the default Calico networking stack for Kuber
 
 ![OpenShift with NSX networking](../../images/openshift-nsxv-networking.svg){: caption="Figure 2. OpenShift with NSX networking" caption-side="bottom"}
 
-For more information, see [vCenter Server networking introduction](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
+For more information, see [vCenter Server networking introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro).
 
 **Next topic:** [IBM Cloud networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
 

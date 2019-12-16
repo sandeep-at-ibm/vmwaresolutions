@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
@@ -37,9 +37,7 @@ Install the HCX Manager appliance in the on-premises vCenter.
   * For the passwords, the default user name for both the command-line interface (CLI) and the web user interface is **admin**. The **admin** user and password to log in to the web user interface is required as is also a **root** user account that has a password that can be set.
   * Enter and reenter the CLI **admin** user password.
   * Enter and reenter the **root** user password. In the future, if help is needed from VMware Global Support Services (GSS), this password might have to be shared so they can troubleshoot the system.
-  * For the network properties, enter the host name for the HCX Manager VM. Enter the network IPv4 address, the IPv4 prefix (the CIDR), and the default gateway. The following table shows sample values:
-
-Table 1. Sample values for network properties
+  * For the network properties, enter the host name for the HCX Manager VM. Enter the network IPv4 address, the IPv4 prefix (the CIDR), and the default gateway. The following table shows sample values.
 
 | Field                    | Value           |
 |--------------------------|-----------------|
@@ -49,6 +47,7 @@ Table 1. Sample values for network properties
 | Default IPv4 Gateway     | 192.168.200.1   |
 | Network 1 IPv6 Address   |                 |
 | Network 1 IPv6 Prefix    |                 |
+{: caption="Table 1. Sample values for network properties" caption-side="bottom"}
 
 8. Review the vService bindings page. Click **Next** to continue.
 9. On the **Ready to complete** page, follow these steps:
@@ -63,4 +62,4 @@ Table 1. Sample values for network properties
 ## Related links
 {: #hcx-archi-install-cfg-src-related}
 
-* [Preparing the installation environment](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-prep-install)
+* [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-prep-install)

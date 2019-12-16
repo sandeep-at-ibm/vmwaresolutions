@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-10-21"
 
 subcollection: vmware-solutions
 
@@ -28,4 +28,4 @@ For scaling, the client needs to call the script to provision the partially or f
 
 At the end of this step, the application components are installed on the required virtual machines (VMs).
 
-Next topic: [Step 4 - Application setup](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step4)
+**Next topic:** [Step 4 - Application setup](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step4)

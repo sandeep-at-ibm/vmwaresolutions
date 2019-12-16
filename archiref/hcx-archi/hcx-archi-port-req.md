@@ -4,20 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
 
 ---
-# Port access requirements for VMware HCX on IBM Cloud
+# Port access requirements for VMware HCX
 {: #hcx-archi-port-req}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
 
 The following table lists ports that must be opened so that Hybrid Cloud Services virtual appliances can install successfully. Both the vSphere environment and the {{site.data.keyword.cloud}} environment must permit Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the {{site.data.keyword.cloud_notm}} devices. UDP port 123 must be accessible to Hybrid Cloud Services virtual appliances and networks. Installed NTP Servers can be specified when the Hybrid Cloud Services Appliance is installed.
-
-Table 1. Port access requirements
 
 | Source | Target       | Port | Protocol | Purpose         | Services |
 |--------|--------------|------|----------|-----------------|----------|
@@ -42,10 +40,11 @@ Table 1. Port access requirements
 | Cloud Gateway | ESXi hosts | 8000  | TCP | vMotion (zero downtime migration) |  |
 | Cloud Gateway (local) | Cloud Gateway</br>(remote) | 4500  | UDP | Internet Key Exchange (IKEv2) to encapsulate workloads for the bidirectional tunnel | IPSEC |
 | Cloud Gateway (local) | Cloud Gateway</br>(remote) | 500  | UDP | Internet Key Exchange (ISAKMP) for the bidirectional tunnel | IPSEC |
+{: caption="Table 1. Port access requirements" caption-side="bottom"}
 
 **Next topic:** [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-prep-install)
 
 ## Related links
 {: #hcx-archi-port-req-related}
 
-* [Installing and configuring HCX on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
+* [Installing and configuring HCX on the source](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)

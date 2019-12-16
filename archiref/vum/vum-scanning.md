@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -66,5 +66,5 @@ You can configure the vSphere Web Client to scan VMs, virtual appliances, and vS
 ## Related links
 {: #vum-scanning-related}
 
-* [VMware HCX on {{site.data.keyword.cloud}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

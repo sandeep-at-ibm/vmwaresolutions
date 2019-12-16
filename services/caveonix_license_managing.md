@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-12"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Managing Caveonix RiskForesight licenses
 {: #caveonix_license_managing}
 
-You can view, edit notes, or delete the Caveonix RiskForesight licenses that you ordered for standalone use.
+You can view, edit notes, or delete the Caveonix RiskForesight licenses that you ordered for stand-alone use.
 
 ## Procedure to view Caveonix RiskForesight licenses
 {: #caveonix_license_managing_procedure-view}
@@ -56,7 +56,7 @@ If you are experiencing this problem and the only browser you can use is Firefox
 ## Procedure to delete Caveonix RiskForesight licenses
 {: #caveonix_license_managing_procedure-delete}
 
-Deleting a Caveonix RiskForesight license does not remove the Caveonix RiskForesight service that is installed on a vCenter Server instance. To remove the service, you must do so in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Procedure to remove services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
+Deleting a Caveonix RiskForesight license does not remove the Caveonix RiskForesight service that is installed on a vCenter Server instance. To remove the service, you must do so in the {{site.data.keyword.vmwaresolutions_full}} console. For more information, see [Procedure to remove services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
 {:note:}
 
 1. Click **Resources** from the left navigation pane.
@@ -69,4 +69,4 @@ Deleting a Caveonix RiskForesight license does not remove the Caveonix RiskFores
 {: #caveonix_license_managing-related}
 
 * [Caveonix RiskForesight overview]()
-* [Ordering Caveonix RiskForesight licenses](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_license_ordering)
+* [Ordering Caveonix RiskForesight licenses](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_ordering)

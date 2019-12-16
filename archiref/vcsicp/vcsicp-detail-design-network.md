@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-10-25"
 
 subcollection: vmware-solutions
 
@@ -68,7 +68,7 @@ An Ingress is a collection of rules that allow inbound connections to reach the 
 The following traffic flows are described:
 
 - External user on the internet to a web tier hosted in a container in {{site.data.keyword.icpfull_notm}}.
-- Web tier hosted in a container in {{site.data.keyword.icpfull_notm}} to database tier hosted in a virtual machine (VM) in VMware vCenter Server on {{site.data.keyword.cloud_notm}}.
+- Web tier hosted in a container in {{site.data.keyword.icpfull_notm}} to database tier hosted in a virtual machine (VM) in VMware vCenter Server.
 - Enterprise user on the corporate network access to a VM in vCenter Server.
 
 ### External user on the internet to a web tier hosted in a container in IBM Cloud Private

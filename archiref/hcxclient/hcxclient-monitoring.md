@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -110,9 +110,9 @@ Monitor the traffic across all interfaces that use the Monitoring tab of the L2C
 ## Related links
 {: #hcxclient-monitoring-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX Client deployment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
+* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

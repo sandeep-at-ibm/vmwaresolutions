@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-09"
+lastupdated: "2019-12-13"
 
 keywords: vRealize, vRealize info, tech specs vRealize
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -21,15 +22,14 @@ subcollection: vmware-solutions
 # vRealize Operations and Log Insight overview
 {: #vrops_overview}
 
-The vRealize Operations and Log Insight service deploys the VMware vRealize Operations (vROps) and VMware vRealize Log Insight (vRLI) tools, which help you operate and monitor the performance, health, and capacity of your IBM-hosted, dedicated VMware environment.
+The vRealize Operations and Log Insight service deploys the VMware vRealize Operations (vROps) and VMware vRealize Log Insight (vRLI) tools. These tools help you operate and monitor the performance, health, and capacity of your IBM-hosted, dedicated VMware environment. The service also includes vRLI to help you troubleshoot issues by using log files more quickly.
+{: shortdesc}
 
-These tools are deployed by using the IBM advanced automation and are based on a consistent highly available design. vROps includes preinstalled and configured Management Packs to provide deeper visibility into the core VMware Software Defined Data Center components like VMware NSX, vSAN, and HCX. The automation provides optimized dashboards out of the box so that you can monitor the full VMware stack  more easily.
-
-It also includes vRLI so that you can more quickly troubleshoot issues using log files.
+These tools are deployed by using the IBM advanced automation and are based on a consistent highly available design. vROps includes preinstalled and configured Management Packs to provide deeper visibility into the core VMware Software Defined Data Center components like VMware NSX, vSAN, and HCX. The automation provides optimized dashboards out of the box so that you can monitor the full VMware stack more easily.
 
 Like the other VMware components in the stack, you have the flexibility to bring your enterprise licenses to the cloud (per CPU or OSI) or to rent VMware licenses from {{site.data.keyword.cloud_notm}}.
 
-This service is available only to VMware vCenter Server instances that are deployed in V3.2 and later releases. The current versions that are installed are vROps 7.5 and vRLI 4.8.
+The current versions that are installed are vROps 7.5 and vRLI 4.8.
 {:note}
 
 ## Technical specifications for vRealize Operations and Log Insight
@@ -39,7 +39,7 @@ The following components are ordered and included in the vRealize Operations and
 * VMware vRealize Operations (vROps) 7.5
 * VMware vRealize Log Insight (vRLI) 4.8
 
-For information about the design, requirements and preconfigured management packs, see [Operations management architecture overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-arch).
+For information about the design, requirements, and preconfigured management packs, see [Operations management architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch).
 
 ### Resource requirements for vRealize Operations and Log Insight
 {: #vrops_overview-resource-req}
@@ -73,7 +73,7 @@ The following table lists the variables that are used in the previous formula.
 | MgmtOverheadCores | The number of cores reserved by the vCenter Server management components (vCenter Server, PSC, AD/DNS, Edges) | Cores | 5 | 5 |
 | vSphereHAHostTolerance | The number of hosts to tolerate in the vSphere HA configuration | Hosts | 1 | 1 |
 | HostVsanOverheadCorePercentage | The percentage of a host cores used by vSAN | % | 10 | 0 |
-{: caption="Table 4. Description of variables in Formula 1" caption-side="top"}
+{: caption="Table 2. Description of variables in Formula 1" caption-side="top"}
 
 #### Formula to calculate the available memory
 {: #vrops_overview-formulas-2}
@@ -93,7 +93,7 @@ The following table lists the variables that are used in the previous formula.
 | vSphereHAHostTolerance | The number of hosts to tolerate in the vSphere HA configuration | Hosts	| 1 | 1 |
 | HostVsanOverheadMemoryDiskPercentage | The number of GB of memory reserved by vSAN management (represented as percentage of one of the capacity vSAN disks) | % | 2.75% | 2.75% |
 | HostVsanOverheadMemory | The number of GB of memory reserved by vSAN management regardless of disk size | GB |  7 | 0 |
-{: caption="Table 5. Description of variables in Formula 2" caption-side="top"}
+{: caption="Table 3. Description of variables in Formula 2" caption-side="top"}
 
 ## Considerations when you install vRealize Operations and Log Insight
 {: #vrops_overview-install}
@@ -129,5 +129,5 @@ Review the following considerations before you remove the service:
 ## Related links
 {: #vrops_overview-related}
 
-* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_ordering)
-* [Managing vRealize Operations and Log Insight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_vrops)
+* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_ordering)
+* [Managing vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_vrops)

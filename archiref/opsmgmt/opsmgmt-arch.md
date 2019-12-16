@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-13"
 
 ---
 
@@ -148,19 +148,16 @@ vRLI supports alerts that trigger notifications about its health and generates n
 
 The design uses the following quantity and size of appliances:
 
-Table 1. Operation tooling summary system requirements
-
 ||vROps|vRLI|vRNI|Proxy|
 |---|---|---|---|---|---|
 |VM Qty|4|4|1+1|1|
 |vCPU|8|8|4 + 8|4|
 |RAM GB|32|16|12 + 32|0.5|
 |Disk GB|254|1042|158 + 1000|80|
+{: caption="Table 1. Operation tooling summary system requirements" caption-side="bottom"}
 
 ## Software versions
 {: #opsmgmt-arch-versions}
-
-Table 2. Operational tooling software versions
 
 |Product Name|Version|
 |---|---|
@@ -170,5 +167,7 @@ Table 2. Operational tooling software versions
 |vRealize Operations Management Pack for Site Recovery Manager|8.1.1|
 |VMware vRealize Log Insight|4.7|
 |vRealize Log Insight Content Pack for NSX for vSphere|3.8|
+{: caption="Table 2. Operational tooling software versions" caption-side="bottom"}
+
 
 **Next topic**: [vRealize Operations Manager design](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrops)

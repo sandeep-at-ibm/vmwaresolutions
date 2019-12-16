@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-11-25"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -41,16 +41,12 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you are prompted to 
 ## Ordering Zerto for a new instance
 {: #zerto_ordering-new}
 
-You can order a new instance with Zerto by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, click **Zerto** under the **Business Continuity** category in the **Optional Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **Zerto** on the **Business Continuity and Migration** card in the **Services** section. Specify the service settings and select **Add to New Instance**.
+When you [order the instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Zerto** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering Zertofor an existing instance
 {: #zerto_ordering-existing}
 
-You can add the Zerto service to an existing instance by using one the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service to, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **Zerto** on the **Business Continuity and Migration** card in the **Services** section. Specify the service settings and select **Add to Existing Instance**.
+On the [instance details page](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Zerto** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 If you add Zerto to a vCenter Server instance that has an ESXi server that is in maintenance mode, you must use the Zerto Virtual Manager (ZVM) console and the pre-populated Zerto Virtual Replication Appliance (VRA) IP address to manually deploy the VRA virtual machine (VM).
 {:note}
@@ -59,14 +55,14 @@ If you add Zerto to a vCenter Server instance that has an ESXi server that is in
 {: #zerto_ordering-private-only}
 
 If you want to add Zerto to a private-only instance, ensure that the following requirements are met:
-* You are responsible for setting up your own proxy server to connect to the internet. For more information, see [Public network connectivity](/docs/services/vmwaresolutions/services?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity).
+* You are responsible for setting up your own proxy server to connect to the internet. For more information, see [Public network connectivity](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure#public-network-connectivity).
 * You must also configure the Call Home feature for Zerto. For more information about Zerto Call Home, see [Zerto Reporting for Enterprise environments (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:external}.
 
 ## Related links
 {: #zerto_ordering-related}
 
-* [Zerto overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr)
-* [Managing Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Zerto overview](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr)
+* [Managing Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com website](https://www.zerto.com){:external}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:external}

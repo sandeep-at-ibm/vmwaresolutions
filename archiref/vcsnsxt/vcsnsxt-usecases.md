@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -49,7 +49,7 @@ The following diagram represents {{site.data.keyword.icpfull_notm}} running on a
 
 Using {{site.data.keyword.cloud_notm}} automation, Acme Skateboards can provision a hybrid solution that encompasses vCenter Server to run their database VMs and {{site.data.keyword.icpfull_notm}} on vCenter Server to run their applications and front end web services in containers. NSX gives them a common set of management tools for networking and security in the overlay network.
 
-For more information about NSX-V, see [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). For more information about the vCenter Server and {{site.data.keyword.icpfull_notm}} offering, see [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro).
+For more information about NSX-V, see [NSX-V overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). For more information about the vCenter Server and {{site.data.keyword.icpfull_notm}} offering, see [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-intro).
 
 ![vCenter Server with {{site.data.keyword.icpfull_notm}}](../../images/vcsnsxt-nsxvhl.svg "vCenter Server with {{site.data.keyword.icpfull_notm}}"){: caption="Figure 2. vCenter Server with {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
 
@@ -64,6 +64,6 @@ This creates a loosely coupled interconnectivity between on-premises and {{site.
 -	**Scheduled migration** – any number of VMs can be replicated to the destination site and then activated on that site at a designated time replacing the systems running on the originating site.
 -	**Migration of security policies** – if NSX is used on-premises any security policies, firewalls, and so on, are moved along with the workload.
 
-Using this solution Acme Skateboards was successfully able to migrate their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration. For more information about vCenter Server with Hybridity Bundle, see [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
+Using this solution Acme Skateboards was successfully able to migrate their on-premises VMware workloads to the {{site.data.keyword.cloud_notm}} meeting their requirements of little to no downtime and no application reconfiguration. For more information about vCenter Server with Hybridity Bundle, see [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro).
 
 **Next topic:** [Overall architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview)

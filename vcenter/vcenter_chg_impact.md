@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 keywords: change vCenter Server artifacts, automation ID, VMware resource
 
@@ -102,5 +102,5 @@ In addition, the following management subnets are also reserved for {{site.data.
 *  A public portable subnet of 16 IP addresses on the public VLAN
 
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways:
-*  **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config).
+*  **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
 *  **Option 2**: Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.

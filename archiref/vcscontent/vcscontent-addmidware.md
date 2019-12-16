@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-12"
 
 subcollection: vmware-solutions
 
@@ -130,7 +130,7 @@ For Stock Trader, based on Jane’s solution architecture, Todd is going to star
 ## Adding middleware
 {: #vcscontent-addmidware-add-middleware}
 
-To add middleware into {{site.data.keyword.cloud_notm}} Private, find the [helm chart](https://github.com/IBM/charts/blob/master/stable/ibm-microclimate/README.md) in the catalog, read the readme file, then continue to install.
+To add middleware into {{site.data.keyword.cloud_notm}} Private, find the helm chart in the catalog, read the readme file, then continue to install.
 
 For Stock Trader, Todd decided to add all of the middleware. The following information summarizes what Todd had to perform for each middleware he wanted Jane to use.
 

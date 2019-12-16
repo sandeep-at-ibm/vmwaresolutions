@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-14"
+lastupdated: "2019-12-13"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -31,7 +31,7 @@ You can add clusters to your vCenter Server with Hybridity Bundle instance to ex
 ### Before you add clusters
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
@@ -96,7 +96,7 @@ When you select **Broadwell**, you can choose the CPU and RAM combination accord
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 2. Options for Broadwell Bare Metal Servers" caption-side="top"}
+{: caption="Table 3. Options for Broadwell Bare Metal Servers" caption-side="top"}
 
 #### Number of Bare Metal Servers
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
@@ -187,18 +187,11 @@ You can't change the cluster name. Changing the cluster name might cause the add
   * **Data Center Location**: The {{site.data.keyword.CloudDataCent_notm}} where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Status**: The status of the cluster. The status can have one of the following values:
-    <dl class="dl">
-        <dt class="dt dlterm">Initializing</dt>
-        <dd class="dd">The cluster is being created and configured.</dd>
-        <dt class="dt dlterm">Modifying</dt>
-        <dd class="dd">The cluster is being modified.</dd>
-        <dt class="dt dlterm">Ready to Use</dt>
-        <dd class="dd">The cluster is ready to use.</dd>
-        <dt class="dt dlterm">Deleting</dt>
-        <dd class="dd">The cluster is being deleted.</dd>
-        <dt class="dt dlterm">Deleted</dt>
-        <dd class="dd">The cluster is deleted.</dd>
-    </dl>
+    * Initializing: The cluster is being created and configured.
+    * Modifying: The cluster is being modified.
+    * Ready to Use: The cluster is ready to use.
+    * Deleting: The cluster is being deleted.
+    * Deleted: The cluster is deleted.
 4. Click a cluster name to view the ESXi servers, storage, and network interface details:
 
   * ESXi servers details:
@@ -216,14 +209,10 @@ You can't change the cluster name. Changing the cluster name might cause the add
      * **Credentials**: The user name and password to access the ESXi server.
      * **Private IP**: The private IP address of the ESXi server.
      * **Status**: The status of the ESXi server, which can be one of the following values:
-        <dl class="dl">
-        <dt class="dt dlterm">Added</dt>
-        <dd class="dd">The ESXi server is added and is ready for use. </dd>
-        <dt class="dt dlterm">Adding</dt>
-        <dd class="dd">The ESXi server is being added. </dd>
-        <dt class="dt dlterm">Deleting</dt>
-        <dd class="dd">The ESXi server is being deleted.</dd>
-        </dl>
+       * Added: The ESXi server is added and is ready for use.
+       * Adding: The ESXi server is being added.
+       * Deleting: The ESXi server is being deleted.
+
   * Storage details:
     * **Name**: The data store name.
     * **Size**: The capacity of the storage.
@@ -272,5 +261,5 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ## Related links
 {: #vc_hybrid_addingviewingclusters-related}
 
-* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)

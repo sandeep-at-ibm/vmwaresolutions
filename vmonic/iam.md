@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-02"
+lastupdated: "2019-11-07"
 
 keywords: IAM user, user role, user permission
 
@@ -60,7 +60,7 @@ For {{site.data.keyword.vmwaresolutions_short}}, the following actions exist:
 ## Managing access for users
 {: #iam-users}
 
-You can add new users to the {{site.data.keyword.cloud_notm}} account so that these users can share the services and resources that are provisioned for the account. For more information, see [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite).
+You can add new users to the {{site.data.keyword.cloud_notm}} account so that these users can share the services and resources that are provisioned for the account. For more information, see [Inviting users to access services and resources](/docs/services/vmwaresolutions?topic=vmware-solutions-iamuserinvite).
 
 You can also manage the access for existing users, including modifying existing access, assigning new access, and reviewing assigned access. To manage access for users, you must be the account owner or you must have the **Administrator** platform management role. For more information, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
 
@@ -69,7 +69,7 @@ You can also manage the access for existing users, including modifying existing 
 
 Because of the integration of {{site.data.keyword.vmwaresolutions_short}} with IAM, instances that are deployed in V2.5 and later releases in your {{site.data.keyword.cloud_notm}} account are automatically added to your account and are managed by IAM.
 
-For your existing instances that were deployed in V2.4 and earlier releases, you can migrate them to specified {{site.data.keyword.cloud_notm}} accounts for IAM-enabled management. For more information, see [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount).
+For your existing instances that were deployed in V2.4 and earlier releases, you can migrate them to specified {{site.data.keyword.cloud_notm}} accounts for IAM-enabled management. For more information, see [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addinstancetousraccount).
 
 ## Related links
 {: #iam-related}

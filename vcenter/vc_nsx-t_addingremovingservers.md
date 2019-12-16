@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server NSX-T add hosts, add servers to vCenter Server NSX-T, remove hosts from vCenter Server NSX-T
 
@@ -37,7 +37,7 @@ You can expand or contract the capacity of your VMware vCenter Server with NSX-T
 ### Before you add ESXi servers
 {: #vc_nsx-t_addingremovingservers-adding-prereq}
 
-* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * A vCenter Server with NSX-T instance with NFS storage must have at least 3 ESXi servers. You can expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers.
 * A vCenter Server with NSX-T instance with vSAN storage must have at least 4 ESXi servers.
 
@@ -166,9 +166,9 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 ## Related links
 {: #vc_nsx-t_addingremovingservers-related}
 
-* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
+* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
+* [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning)
+* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance)
+* [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
 * [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}

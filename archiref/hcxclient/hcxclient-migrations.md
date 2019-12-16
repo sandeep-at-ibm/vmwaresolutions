@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -155,8 +155,8 @@ The following are considerations and implications:
 ## Related links
 {: #hcxclient-migrations-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX Client deployment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

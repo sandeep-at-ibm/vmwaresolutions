@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server network config, network configuration NSX-T, manage NSX-T ESG
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Configuring your network to use the customer-managed NSX-T ESG with your VMs
 {: #vc_nsx-t_esg_config}
 
-Configure the network for your virtual machines so you can take advantage of the VMware NSX-T Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configure the network for your virtual machines so you can take advantage of the VMware NSX-T Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX-T is a network virtualization platform that allows the virtualization of isolated networks and provides several networking
 services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
@@ -89,6 +89,6 @@ Additionally, you can find more details about the customer subnets by completing
 ## Related links
 {: #vc_nsx-t_esg_config-related}
 
-* [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
-* [FAQs](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
+* [FAQs](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

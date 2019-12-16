@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-30"
 
 subcollection: vmware-solutions
 
@@ -15,8 +15,6 @@ subcollection: vmware-solutions
 {: #vum-type-updates}
 
 VMware uses the following terms to describe software updates.
-
-Table 1. VMware software update terms and definitions
 
 | Term | Definition |
 |:------- |:----------- |
@@ -30,11 +28,12 @@ Table 1. VMware software update terms and definitions
 | Roll-up |	A collection of patches that is grouped for ease of download and deployment. |
 | VA upgrade |	Updates for a virtual appliance, which the vendor considers an upgrade. |
 | VIB |	A VIB is a single software package. |
+{: caption="Table 1. VMware software update terms and definitions" caption-side="bottom"}
 
 **Next topic:** [Virtual machine vSAN redundancy](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-vsan-redundancy)
 
 ## Related links
 {: #vum-type-updates-related}
 
-* [VMware HCX on {{site.data.keyword.cloud}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

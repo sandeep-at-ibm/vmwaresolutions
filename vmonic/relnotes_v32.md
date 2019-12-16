@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-15"
+lastupdated: "2019-11-05"
 
 keywords: release notes, what's new, version 3.2
 
@@ -27,9 +27,9 @@ This release includes new features, component updates, usability enhancements, a
 ## VMware HCX for IBM Cloud availability
 {: #relnotes_v32-HCX}
 
-Starting with the 3.2 release, you now have the option to order the VMware HCX on {{site.data.keyword.cloud_notm}} service with VMware vCenter Server instances. Previously, you could only order the HCX on {{site.data.keyword.cloud_notm}} service through the VMware vCenter Server with Hybridity Bundle instance. The vCenter Server with Hybridity Bundle instance is not supported for new installations. However, functionalities of existing vCenter Server with Hybridity Bundle instances are preserved and you can install the HCX on {{site.data.keyword.cloud_notm}} service on these instances.
+Starting with the 3.2 release, you can order the VMware HCX on {{site.data.keyword.cloud_notm}} service with VMware vCenter Server instances. Previously, you might order the HCX on {{site.data.keyword.cloud_notm}} service only through the VMware vCenter Server with Hybridity Bundle instance. The vCenter Server with Hybridity Bundle instance is not supported for new installations. However, functions of existing vCenter Server with Hybridity Bundle instances are preserved and you can install the HCX on {{site.data.keyword.cloud_notm}} service on these instances.
 
-A 12-month commitment is required when you order the HCX on {{site.data.keyword.cloud_notm}} service. After the 12-month commitment expires, you can install and uninstall the HCX on {{site.data.keyword.cloud_notm}} service and you can add and remove hosts and clusters without restrictions. Your account is then charged on a monthly basis and you can cancel at anytime.
+A 12-month commitment is required when you order the HCX on {{site.data.keyword.cloud_notm}} service. After the 12-month commitment expires, you can install and uninstall the HCX on {{site.data.keyword.cloud_notm}} service and you can add and remove hosts and clusters without restrictions. Your account is then charged monthly and you can cancel at any time.
 
 The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
 {:note}
@@ -39,25 +39,24 @@ For more information, see [VMware HCX on IBM Cloud overview](/docs/services/vmwa
 ## VMware vSphere 6.7 Update 2 support
 {: #relnotes_v32-vsphere-v67}
 
-You now have the option to order VMware vSphere version 6.7 Update 2 with your VMware vCenter Server, VMware vCenter Server with NSX-T, and VMware vSphere on IBM Cloud instances. vSphere Enterprise Plus 6.7u2 replaces the option to order vSphere Enterprise Plus 6.7u1 with new instances. Additionally, Single-node Trial for Migration and App Modernization and Single-node Trial for Data Protection and Disaster Recovery instances are now ordered with vSphere Enterprise Plus 6.7u2.
+You can order VMware vSphere version 6.7 Update 2 with your VMware vCenter Server, VMware vCenter Server with NSX-T, and VMware vSphere on IBM Cloud instances. vSphere Enterprise Plus 6.7u2 replaces the option to order vSphere Enterprise Plus 6.7u1 with new instances. Additionally, Single-node Trial for Migration and App Modernization and Single-node Trial for Data Protection and Disaster Recovery instances are now ordered with vSphere Enterprise Plus 6.7u2.
 
 vSphere Enterprise Plus 6.7u2 is available for Skylake, Cascade Lake, and Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
 
-If you have an existing instance with vSphere Enterprise Plus 6.7u1, you have the option to add new hosts with either vSphere Enterprise Plus 6.7u1 or vSphere Enterprise Plus 6.7u2. However, adding a new 6.7u1 host is unsecure. It is recommended that you update your hosts to the latest ESXi server version as soon as possible.
+If you have an existing instance with vSphere Enterprise Plus 6.7u1, you can add new hosts with either vSphere Enterprise Plus 6.7u1 or vSphere Enterprise Plus 6.7u2. However, adding a 6.7u1 host is unsecure. It is recommended that you update your hosts to the latest ESXi server version as soon as possible.
 {:note}
 
 ## Cascade Lake support
 {: #relnotes_v32-cascade}
 
-Starting with the V3.2 release, the following new {{site.data.keyword.baremetal_short_sing}} CPU models are available for deployment with instances and clusters with VMware vSphere 6.7 Update 2. This applies to vCenter Server, vCenter Server with NSX-T, and VMware vSphere.
+Starting with the V3.2 release, the following new {{site.data.keyword.baremetal_short_sing}} CPU models are available for deployment with instances and clusters with VMware vSphere 6.7 Update 2. These new models apply to vCenter Server, vCenter Server with NSX-T, and VMware vSphere.
 
-* Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz
-* Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz
-* Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz
+* Dual Intel Xeon Gold 4210 processor / 20 cores total, 2.3 GHz
+* Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz
+* Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz
 
 Cascade Lake {{site.data.keyword.baremetal_short}} are available on Multi-Zone Region
-{{site.data.keyword.CloudDataCents_notm}}. For more information, see [Multi-Zone Region (MZR) Overview
-](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
+{{site.data.keyword.CloudDataCents_notm}}. For more information, see [Multi-Zone Region (MZR) Overview](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 For more information about {{site.data.keyword.baremetal_short_sing}} settings, see:
 
@@ -75,23 +74,24 @@ This release applies the following upgrades and improvements for newly deployed 
 * vCenter Server Appliance 6.7 Update 2b (6.7.0.-13843469)
 * Platform Services Controller 6.7 Update 2b (6.7.0.-13843469)
 
-For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
 
-### Initial cluster naming
+### Cluster updates
 {: #relnotes_v32-vcs-initial-cluster}
 
-You can now specify the name of your initial cluster to be created at the same time you place your instance order. For more information, see:
+* You can now specify the name of your initial cluster to be created at the same time you place your instance order. For more information, see:
 
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance)
+   * [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
+   * [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance)
+
+* (Updated on 05 November 2019) As a VMware recommended best practice, new clusters are now deployed with a public and private pair of distributed virtual switches. Private-only clusters deploy a new private distributed switch. All networking for the cluster is configured to use these switches.
 
 ## Updates for VMware vSphere instances
 {: #relnotes_v32-vss}
 
 A public VLAN is no longer required when you order a new vSphere cluster with a private network only.
 
-For more information, see the *Network interface settings* section in [Ordering new vSphere clusters
-](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-network-interface-settings).
+For more information, see the *Network interface settings* section in [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-network-interface-settings).
 
 ## Updates for add-on services
 {: #relnotes_v32-services}
@@ -108,13 +108,13 @@ This release installs the following service versions on newly deployed instances
 
 The vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} service is now available to VMware vCenter Server instances that are deployed in or upgraded to V3.2 or later releases.
 
-This service provides VMware vRealize Log Insight (vRLI) integrated with vRealize Operations Manager (vROps), to help you monitor and proactively manage the health and performance of your virtualized environment, as well as to perform root cause analysis of an issue by filtering and searching through logs.
+This service provides VMware vRealize Log Insight (vRLI) integrated with vRealize Operations Manager (vROps), to help you monitor and proactively manage the health and performance of your virtualized environment, and to perform root cause analysis of an issue by filtering and searching through logs.
 
 You can order vCenter Server instances with vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} included, or add this service to your existing instances later from the Services tab on the instance details page.
 
 You can also bring your enterprise vRealize Operations and vRealize Log Insight licenses to the cloud (per CPU or OSI) or you can rent licenses from IBM Cloud.
 
-For more information, see [VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vrops_overview).
+For more information, see [VMware vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_overview).
 
 ## New and updated documentation
 {: #relnotes_v32-updated-doc}
@@ -127,5 +127,5 @@ For more information, see [VMware vRealize Operations and vRealize Log Insight o
 The user interface is updated and provides the following enhancements:
 
 * The instance name requirements have changed. For more information, see the appropriate topic for the instance type that you are ordering.
-* Leading zeros have been added to host names to allow for proper sorting.
+* Leading zeros have been added to hostnames to allow for proper sorting.
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

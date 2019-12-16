@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -51,10 +51,10 @@ HCX Service Mesh components are responsible for creating the data and control pl
 ## Related links
 {: #hcxclient-components-related}
 
-* [Port access requirements for VMware HCX on {{site.data.keyword.cloud}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req)
-* [Preparing the installation environment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX Client deployment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
-* [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Port access requirements for VMware HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req)
+* [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

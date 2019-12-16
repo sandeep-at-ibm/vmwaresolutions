@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-11-04"
+lastupdated: "2019-11-06"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2019-11-04"
 
 [Interface naming overview](https://www.juniper.net/documentation/en_US/junos/topics/concept/interfaces-interface-naming-overview.html){:external}
 
-**ae**: Aggregated Ethernet interface. This is a virtual aggregated link and has a different naming format from most PICs. For more information, see [Aggregated Ethernet interfaces overview](https://www.juniper.net/documentation/en_US/junos/topics/concept/802-3ad-link-aggregation.html){:external}.
+**ae**: Aggregated Ethernet interface. This is a virtual aggregated link and has a different naming format from most PICs. For more information, see [Aggregated Ethernet interfaces overview](https://www.juniper.net/documentation/en_US/junos/topics/topic-map/aggregated-ethernet-interfaces-lacp-configuring.html#id-aggregated-ethernet-interfaces-overview){:external}.
 
 **fxp**: Management and internal Ethernet interfaces. You can use the `show chassis hardware` command to display hardware information about the router, including its Routing Engine model. To determine which management interface is supported on your router and Routing Engine combination, see [Understanding management Ethernet interfaces](https://www.juniper.net/documentation/en_US/junos/topics/concept/interfaces-understanding-management-ethernet-interfaces.html){:external}.
 

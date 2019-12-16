@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Technology preview of VMware NSX-T on VMware vCenter Server on IBM Cloud
+# Technology preview of VMware NSX-T on VMware vCenter Server
 {: #vcsnsxt-techpreview}
 
 ## Overview of NSX–T
@@ -23,9 +23,7 @@ In this design, the NSX-T management infrastructure is deployed on the initial v
 
 NSX-T Manager is assigned an IP address from the private portable address block that is designated for management components and configured to use the common DNS and NTP servers.
 
-An extra cluster is deployed and used as Hypervisor Transport nodes, along with either vSAN or NFS storage used as the workload data store. Table 1 summarizes the requirements for a medium size environment.
-
-Table 1. NSX-T component specifications
+An extra cluster is deployed and used as Hypervisor Transport nodes, along with either vSAN or NFS storage used as the workload data store. The following table summarizes the requirements for a medium size environment.
 
 Resources	|NSX-T Manager	|Controller x 3	|Edge x 2	|Bare Metal Edge*
 ---|---|---|---|---
@@ -35,6 +33,7 @@ Memory	|16 GB	|16 GB	|8 GB	|32 GB
 Disk	|140-GB vSAN or the management NFS share.	|120-GB vSAN or the management NFS share.	|120-GB vSAN or the management NFS share.	|200 GB
 Disk type	|Thin provisioned	|Thin provisioned	|Thin provisioned	|Physical
 Network	|Private A portable designated for management components.	|Private A portable designated for management components.	|Private A portable designated for management components.	|Private A portable designated for management components.
+{: caption="Table 1. NSX-T component specifications" caption-side="bottom"}
 
 \* **Note**: Check the hardware compatibility list for specific requirements.
 
@@ -55,7 +54,7 @@ At the time, two extra VLANs are required to accommodate the teaming, failover, 
 
 NSX-T creates vmk10, which is used for the encapsulation interface and vmk50, which is used for intra Tier0 transit and intra Tier0-Tier1 transit subnets on the ESXi hosts. By default, the 169.254.0.0/28 subnet is used for intra Tier0 transit and 100.64.0.0/16 subnet for Tier0-Tier1 transit.
 
-Table 2. Uplink profile definition
+The following table shows the uplink profile definition.
 
 Uplink profile	|Specification
 ---|---
@@ -63,20 +62,22 @@ LAGs	|None defined currently.
 Teaming	|Failover: Active = Uplink1 = vmnic0, Standby= Uplink2 = vmnic2
 Transport VLAN	|0
 MTU	|9000
+{: caption="Table 2. Uplink profile definition" caption-side="bottom"}
 
-Table 3. NIOC profile definition
+The following table shows the NIOC profile definition.
 
-Traffic Type/Traffic name	|Limit (%)	|Shares	|Reservation (%)
+Traffic Type/Traffic name |Limit (%) |Shares	|Reservation (%)
 ---|---|---|---
-Management traffic	|Unlimited	|20	|0
-Virtual machine traffic	|Unlimited	|30	|0
-Fault tolerant traffic	|Unlimited	|50	|0
-vSphere replication traffic	|Unlimited	|50	|0
-iSCSI traffic	|Unlimited	|50	|0
-vSphere Data Protection backup traffic	|Unlimited	|50	|0
-vMotion traffic	|Unlimited	|50	|0
-NFS traffic	|Unlimited	|100	|0
-vSAN traffic	|Unlimited	|100	|0
+Management traffic | Unlimited |20 |0
+Virtual machine traffic | Unlimited | 30 |0
+Fault tolerant traffic | Unlimited | 50 |0
+vSphere replication traffic | Unlimited | 50 |0
+iSCSI traffic | Unlimited | 50 |0
+vSphere Data Protection backup traffic |Unlimited | 50 |0
+vMotion traffic | Unlimited | 50 |0
+NFS traffic | Unlimited |100 |0
+vSAN traffic | Unlimited |100 |0
+{: caption="Table 3. NIOC profile definition" caption-side="bottom"}
 
 ![Logical VLAN switch to vmkernel interface](../../images/vcsnsxt-tnkernel.svg "Logical VLAN switch to vmkernel interface"){: caption="Figure 2. Logical VLAN switch to vmkernel interface" caption-side="bottom"}
 
@@ -86,12 +87,12 @@ vSAN traffic	|Unlimited	|100	|0
 This design specifies the configuration of NSX-T components, the VLAN, and overlay transport zones but does not apply any overlay network component configuration. It's up to you to design the network overlay based on your needs.
 
 The following is configured:
--	Management servers and controllers are installed.
--	ESXi agents are installed and a Tunnel Endpoint IP address pool is configured for transport nodes.
--	Transport nodes are configured for both VLAN and overlay transport zones.
--	N-VDS is created on the ESXi transport nodes.
--	VMkernel ports are migrated from VSS/VDS to N-VDS.
--	Tier 0 router for use by management components.
+- Management servers and controllers are installed.
+- ESXi agents are installed and a Tunnel Endpoint IP address pool is configured for transport nodes.
+- Transport nodes are configured for both VLAN and overlay transport zones.
+- N-VDS is created on the ESXi transport nodes.
+- VMkernel ports are migrated from VSS/VDS to N-VDS.
+- Tier 0 router for use by management components.
 
 What is NOT configured:
 -	Overlay Logical Switches.
@@ -101,7 +102,7 @@ What is NOT configured:
 ### vCenter Server with NSX-V and NSX-T
 {: #vcsnsxt-techpreview-vcs-nsx-v-nsx-t}
 
-The original vCenter Server cluster contains all the management components for NSX-V and NSX-T along with the vCenter Server appliances. The hosts in this cluster are prepared for NSX-V as described in [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). The hosts in the second cluster are prepared for NSX-T and configured as transport nodes. This configuration gives customers the ability to migrate from NSX-V to NSX-T if they choose to do so.
+The original vCenter Server cluster contains all the management components for NSX-V and NSX-T along with the vCenter Server appliances. The hosts in this cluster are prepared for NSX-V as described in [NSX-V overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv). The hosts in the second cluster are prepared for NSX-T and configured as transport nodes. This configuration gives customers the ability to migrate from NSX-V to NSX-T if they choose to do so.
 
 ### NSX-T versus NSX-V
 {: #vcsnsxt-techpreview-nsx-t-vs-nsx-v}

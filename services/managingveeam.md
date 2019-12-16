@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-11-07"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 After the service is deployed into your instance, you can access the Veeam console by using Remote Desktop Protocol. With Remote Desktop Protocol, you can manage the backup and restore of all the virtual machines in your environment, including the management components. You can also upgrade the service by downloading and installing the Veeam updates from the Veeam website.
 
-For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam service, you must replace the existing Veeam VSI in the instances. For more information, see the [Replacing the Veeam VSI of pre-V1.8 instances with Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi).
+For instances that were deployed in releases earlier than V1.8, if you want to use the Veeam service, you must replace the existing Veeam VSI in the instances. For more information, see the [Replacing the Veeam VSI of pre-V1.8 instances with Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam#managingveeam-replace-vsi).
 
 ## Accessing the Veeam console by using Remote Desktop Protocol
 {: #managingveeam-accessing}
@@ -32,12 +32,12 @@ To manage the Veeam service, access the Veeam console by completing the followin
 
 You can find the Windows IP address and the Administrator credentials on the Veeam service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Backing up and restoring management components for instances with Veeam installations
 {: #managing-veeam-backup-and-replication}
 
-The Veeam service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
+The Veeam service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup).
 
 For instances deployed in (or upgraded to) V1.8 or later releases, the configuration changes to your environment are not automatically backed up. Therefore, before you change the configuration of your environment, it is recommended that you back up the management components manually by running the management backup job in the Veeam console. For more information about backing up manually, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}.
 
@@ -69,7 +69,7 @@ If the Veeam service is installed on an instance with public and private network
 ### Updating Veeam licenses for instances deployed with private network only
 {: #managingveeam-update-license-private}
 
-If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) to get assistance with updating the license key when the renewal is needed.
+If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and [contact IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support) to get assistance with updating the license key when the renewal is needed.
 
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam
 {: #managingveeam-replace-vsi}
@@ -91,9 +91,9 @@ After the new Veeam service is deployed and a successful backup of your manageme
 ## Related links
 {: #managingveeam-related}
 
-* [Veeam overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations)
-* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Veeam overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [Veeam.com website](https://www.veeam.com/){:external}
 * [Veeam technical documentation](https://www.veeam.com/documentation-guides-datasheets.html){:external}

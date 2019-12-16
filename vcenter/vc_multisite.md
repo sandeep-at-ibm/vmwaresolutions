@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -48,7 +48,7 @@ A multi-site deployment consists of the following components.
 
 The multi-site configuration feature uses a hub and spoke topology with a primary site and a maximum of seven secondary sites. A single layer of sites is supported, that is, you cannot configure subsequent sites that are linked to other secondary sites. You can have a total of 128 ESXi servers in a multi-site configuration across all instances.
 
-If your configuration requires a multi-site deployment with more than 128 ESXi servers, contact IBM Support for assistance. For more information, see [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+If your configuration requires a multi-site deployment with more than 128 ESXi servers, contact IBM Support for assistance. For more information, see [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support).
 {:note}
 
 The following graphic depicts the overall view of the vCenter Server multi-site deployment.
@@ -64,7 +64,7 @@ You can assign only one secondary instance to a primary instance at a time. You 
 
 You can have a maximum of 8 (1 primary and 7 secondary) instances that are deployed in a multi-site configuration.
 
-Deleting vCenter Server instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server instances in a multi-site configuration](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi).
+Deleting vCenter Server instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server instances in a multi-site configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance_multi).
 {:note}
 
 ## Related links

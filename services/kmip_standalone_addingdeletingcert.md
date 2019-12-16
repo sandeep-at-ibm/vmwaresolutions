@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-12"
 
 keywords: KMIP certificate, add certificate KMIP, delete certificate KMIP
 
@@ -25,7 +25,7 @@ After your KMIP for VMware instance is ready, you must add certificates to it. W
 ## Procedure to add certificates to KMIP for VMware instances
 {: #kmip_standalone_addingdeletingcert-add}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Resources** from the left navigation pane.
 2. Scroll down to the **KMIP for VMware Instances** table, click the instance that you want to add certificates for.
 3. Click **Add**.
 4. In the **Add Client SSL Certificate** window, enter the certificate name and content.
@@ -55,7 +55,7 @@ After your KMIP for VMware instance is ready, you must add certificates to it. W
 ## Related links
 {: #kmip_standalone_addingdeletingcert-related}
 
-* [Viewing KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
-* [Ordering KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
-* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
+* [Viewing KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
+* [Ordering KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering)
+* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)

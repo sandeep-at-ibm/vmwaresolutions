@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-13"
+lastupdated: "2019-11-07"
 
 keywords: troubleshooting, Zerto Virtual Replication, Zerto ESXi server
 
@@ -24,7 +24,7 @@ Virtual Replication Appliances (VRA) are not displayed on the Zerto Virtual Repl
 ## Resolution
 {: #trbl_no_zerto_vra-resolution}
 
-The Zerto disaster recovery service is installed only on the ESXi server from the default cluster (**cluster1** for instances that are deployed in V3.1 or earlier). 
+The Zerto disaster recovery service is installed only on the ESXi server from the default cluster (**cluster1** for instances that are deployed in V3.1 or earlier).
 
 If new clusters are created in the same vCenter Server environment or if ESXi servers are added to new clusters, Zerto disaster recovery is not installed on them.
 
@@ -34,4 +34,4 @@ Open an {{site.data.keyword.cloud}} Support ticket and work with IBM Support to 
 
 To access the Zerto console, click the Zerto card from the **Services** tab of the instance and click **View Details** then, **View Zerto Console**.
 
-For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-trbl_support#trbl_support).
+For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support#trbl_support).

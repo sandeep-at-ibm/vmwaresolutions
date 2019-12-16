@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-11-04"
+lastupdated: "2019-12-13"
 
 ---
 
@@ -96,6 +96,8 @@ hours.
 If you deployed the IaaS KVM-based Juniper vSRX HA Cluster, you can continue with configuration of the vSRX cluster as described in [IBM Cloud Performing vSRX Basics](/docs/infrastructure/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics).
 
 If you opted to deploy the No-OS gateway offering, then follow the guidance in [Installing an Operating System on the Gateway](/docs/infrastructure/gateway-appliance?topic=gateway-appliance-order-byoa#installing-an-operating-system-on-the-gateway) to prepare the hosts for your appliance.
+
+**Next topic:** [vSRX base and advanced licensing](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-licensing).
 
 ## Related links
 {: #vcsvsrx-deployment-related}

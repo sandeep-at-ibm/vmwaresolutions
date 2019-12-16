@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-11-07"
 
 keywords: FAQ, user account, patch management
 
@@ -30,7 +30,7 @@ Find answers to frequently asked questions about {{site.data.keyword.vmwaresolut
 
 * **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal}}. For more information, see [Getting started](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started).
 * **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by using an existing **IBMid** or by creating a new **IBMid**.
-* **{{site.data.keyword.cloud_notm}} infrastructure account**. This account is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. You can get an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **{{site.data.keyword.cloud_notm}} account** to a billable account, or by linking your existing {{site.data.keyword.cloud_notm}} infrastructure account with your {{site.data.keyword.cloud_notm}} account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for required accounts](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts) and [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
+* **{{site.data.keyword.cloud_notm}} infrastructure account**. This account is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. You can get an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **{{site.data.keyword.cloud_notm}} account** to a billable account, or by linking your existing {{site.data.keyword.cloud_notm}} infrastructure account with your {{site.data.keyword.cloud_notm}} account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for required accounts](/docs/services/vmwaresolutions?topic=vmware-solutions-signing_required_accounts) and [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## How do I associate my IBM Cloud infrastructure credentials with the IBM Cloud for VMware Solutions console?
 {: #faq-associate-credentials}
@@ -50,21 +50,21 @@ All costs for the physical and virtual infrastructure and the licenses that resu
 
 All instance types provide deployment choices for VMware virtual environments. However, the difference is the extent of customizability and automation.
 
-* When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
+* When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 * When you order a VMware vSphere cluster, you obtain the maximum of flexibility to design and build your hosted VMware environment while you incorporate VMware-compatible hardware. However, {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components for the VMware vSphere cluster.
-* The functions that are supported by vCenter Server instances and vSphere clusters are different. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inst_comp_chart).
+* The functions that are supported by vCenter Server instances and vSphere clusters are different. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions?topic=vmware-solutions-inst_comp_chart).
 
 ## What is included in a vCenter Server instance?
 {: #faq-vcs}
 {: faq}
 
-For more information, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
+For more information, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ## What is included in a vSphere cluster?
 {: #faq-vss}
 {: faq}
 
-For more information, see [Components of VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview).
+For more information, see [Components of VMware vSphere](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview).
 
 ## Is a two-node vCenter Server instance highly available?
 {: #is-a-two-node-vcenter-server-instance-highly-available}
@@ -105,7 +105,7 @@ For instances that were deployed at V2.0 or higher, VMware Update Manager (VUM) 
 
 For more information, see the following resources:
 * [VMware Support](https://www.vmware.com/support.html){:external}
-* [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates)
+* [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_applyingupdates)
 
 ## Does the management services NSX Edge pose a security risk?
 {: #faq-mgmt-nsx}
@@ -134,8 +134,8 @@ Although the customer-managed NSX Edge is connected to the public VLAN, security
 The instance deployments have strict physical infrastructure requirements, which vary among {{site.data.keyword.CloudDataCents_notm}}. When you place your instance order, the available data centers are listed within regions and you can select the one that you want from the list.
 
 For more information, see the _IBM Cloud Data Center availability_ sections in:
-* [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [Requirements and planning for VMware vSphere](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
+* [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning)
+* [Requirements and planning for VMware vSphere](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_planning)
 
 ## How long does it take for my instance to be deployed?
 {: #faq-deploy}
@@ -161,12 +161,12 @@ To view the complete notification history, click **Notifications** from the left
 {: #faq-support}
 {: faq}
 
-If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, contact IBM Support through one of the support channels. For more information, see [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, contact IBM Support through one of the support channels. For more information, see [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support).
 
 ## Related links
 {: #faq-related}
 
-* [Notifications](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
-* [vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Accessing the console](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-loginmethod)
-* [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
+* [Notifications](/docs/services/vmwaresolutions?topic=vmware-solutions-notifications)
+* [vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Accessing the console](/docs/services/vmwaresolutions?topic=vmware-solutions-loginmethod)
+* [User accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-11"
 
 ---
 
@@ -71,7 +71,7 @@ In an aid to isolating the affected components, this documentation on troublesho
 ### Virtual machines
 {: #opsprocs-trouble-common-vm}
 
-Table 1. Virtual machine troubleshooting
+The following table provides VM troubleshooting information.
 
 | Title | Description |
 |---|---|
@@ -89,11 +89,12 @@ Table 1. Virtual machine troubleshooting
 | Determining whether multiple virtual CPUs are causing performance issues  | For information about troubleshooting VMs experiencing performance issues when they are configured with multiple CPUs, see [Determining if multiple virtual CPUs are causing performance issues (1005362)](https://kb.vmware.com/s/article/1005362?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:external}. These issues can include poor transfer speeds when copying data to or from a VM, backup jobs timeout or very slow, or a VM performs poorly.  |
 | A VM was powered off or restarted  | For information about resolving the issue, see [Determining why a virtual machine was powered off or restarted (1019064)](https://kb.vmware.com/s/article/1019064?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:external}. |
 | One or more of your VMs has a poor response time |  For information about isolating a performance issue on a vSphere ESXi host, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003?lang=en_US){:external}. Performance issues can be caused by CPU constraints, memory over commitment, storage latency, or network latency. |
+{: caption="Table 1. Virtual machine troubleshooting" caption-side="bottom"}
 
 ### vSphere ESXi hosts
 {: #opsprocs-trouble-common-host}
 
-Table 2. Typical vSphere ESXi hosts troubleshooting
+The following table provides vSphere ESXi hosts troubleshooting information.
 
 | Title | Description |
 |---|---|
@@ -105,11 +106,12 @@ Table 2. Typical vSphere ESXi hosts troubleshooting
 | Bare Metal Server is down | If the Bare Metal Server running vSphere ESXi is unresponsive or down then log on to the {{site.data.keyword.cloud_notm}} management UI or console and check the status. If required, open a case to get assistance with your Bare Metal Server. For more information, see [Working with support cases](/docs/get-support?topic=get-support-open-case#open-case){:external}. |
 | vSphere ESXi host is in disconnected or a not responding state  | For more information, see [Troubleshooting an ESXi/ESX host in non responding state (1003409)](https://kb.vmware.com/s/article/1003409?lang=en_US){:external}. |
 | Purple screen of death  | The Purple Screen of Death (PSOD) is a kernel panic and the vSphere ESXi kernel (vmkernel) triggers this safety measure in response to an event or error that is unrecoverable and would mean that continuing to run would pose a high risk for the services and VMs. When the panic occurs and the vSphere ESXi host crashes, it ends all the services running on it together with all the VMs hosted. The VMs are not gracefully shut down, but rather abruptly powered off. If the host is part of a cluster and you configured HA, these VMs are restarted on the other hosts in the cluster. For more information, see [Knowledge - KB0012864 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=dd5d2330db11f300c4fa302f9d96198d){:external}. |
+{: caption="Table 2. Typical vSphere ESXi hosts troubleshooting" caption-side="bottom"}
 
 ### Storage
 {: #opsprocs-trouble-common-storage}
 
-Table 3. Typical storage troubleshooting
+The following table provides storage troubleshooting information.
 
 | Title | Description |
 |---|---|
@@ -121,25 +123,27 @@ Table 3. Typical storage troubleshooting
 | Initiate vSAN health test | If you suspect there is an issue with vSAN, you can initiate a health test to verify that the cluster components are working as expected. Running the VM creation test creates a VM on each host in the cluster and then deletes it. If these tasks are successful, then the cluster components are working as expected and the cluster is functional. Then, network performance test is used to detect and diagnose connectivity issues, and to ensure that the network bandwidth between the hosts is adequate. For more information, see [Proactive Tests](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-monitoring.doc/GUID-B88B5900-33A4-4821-9659-59861EF70FB8.html){:external}. |
 | Monitoring vSAN performance | For more information, see [Monitoring vSAN Performance](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-monitoring.doc/GUID-3D2D1382-9DDC-44D4-AF3B-ACA4F1DDBDCC.html){:external}. Performance charts are available for clusters, hosts, physical disks, VMs, and virtual disks. |
 | vSAN troubleshooting | For more information, see [Handling Failures and Troubleshooting vSAN](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-monitoring.doc/GUID-0F3C4D3F-9B86-4879-9C60-D6A977523112.html){:external}. |
+{: caption="Table 3. Typical storage troubleshooting" caption-side="bottom"}
 
 
 ### Network
 {: #opsprocs-trouble-common-network}
 
-Table 4. Typical network troubleshooting
+The following table provides network troubleshooting information.
 
 | Title | Description |
 |---|---|
 |  NSX Edge /var/log is getting full on active Edge | For information about a workaround if you are alerted that the Edge disk is filling up and discover that the /var/log partition is getting full, see [NSX Edge /var/log is getting full on active Edge (50108355)](https://kb.vmware.com/s/article/50108355){:external}.  |
 | Testing HCX bandwidth  | For information about using `perftest` to find the available bandwidth within the HCX tunnels if you believe that you have a network bandwidth issue with HCX, see [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:external}. Bidirectional tests are carried out for each `perftest`. For the pair of gateways, one is inside the source data center, which we call OnPrem and the other one is in {{site.data.keyword.cloud_notm}}. The way `perftest` throughput works is to have the sender try to send as fast as the link can sustain. Therefore, for each test, you see a higher "sender" rate than the "receiver" rate. You can consider the "receiver" rate value as a one-way throughput result. |
-| HCX troubleshooting | For more information, see [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting). |
+| HCX troubleshooting | For more information, see [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting). |
 | HCX Syncing state with 0% progress and 0 bytes with status Error | For more information, see [HCX replication are in Syncing state with 0% progress and 0 bytes with status Error (56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:external}. |
 | Poor VM network performance | Review the VM virtual NIC settings. VMware recommends VMXNET 3 virtual NICs for VMs as it is the latest generation of paravirtualized NICs designed for performance. Check for compatibility of VMXNET 3 using the VMware compatibility list, and if supported change the virtual NIC for additional network performance. For more information, see [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external}. |
+{: caption="Table 4. Typical network troubleshooting" caption-side="bottom"}
 
 ### vCenter
 {: #opsprocs-trouble-common-vcenter}
 
-Table 5. Typical vCenter troubleshooting
+The following table provides vCenter Server troubleshooting information.
 
 | Title | Description |
 |---|---|
@@ -147,27 +151,29 @@ Table 5. Typical vCenter troubleshooting
 | New vCenter Server Certificate Does Not Appear to Load | After the replacement of the default vCenter Server certificates, the new certificates might not appear to load. For more information, see [New vCenter Server Certificate Does Not Appear to Load](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-415CF843-42E8-4AD7-98EC-7265227337B6.html){:external}. |
 | vCenter Server Cannot Connect to Managed Hosts | After the replacement of the default vCenter Server certificates and restarting the system, vCenter Server cannot connect to managed hosts. For more information, see [vCenter Server Cannot Connect to Managed Hosts](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-8D3DCEC4-50B6-4523-BF24-0DE6C65600E9.html){:external}. |
 | Cannot Configure vSphere HA When Using Custom SSL Certificates | After the installation of custom SSL certificates, attempts to enable vSphere High Availability (HA) fail. For more information, see [Cannot Configure vSphere HA When Using Custom SSL Certificates](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-3FC16DC8-7157-4340-AB8A-B8DC87D7DC0F.html){:external}. |
+{: caption="Table 5. Typical vCenter troubleshooting" caption-side="bottom"}
 
 ### Licenses
 {: #opsprocs-trouble-common-licenses}
 
-Table 6. Typical license troubleshooting
+The following table provides license troubleshooting information.
 
 | Title | Description |
 |---|---|
 |  Incompatible or incorrect license configuration | For more information, see [Troubleshooting Host Licensing](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-B9DAAF47-94EC-47F5-8523-9C8C019412E1.html){:external}. |
 |  VM does not power on | There might be a license issue if you can't power on a VM on a vSphere ESXi host and you receive the ``The 60-day evaluation period of the host is expired or the license of the host is expired`` message. For more information, see [Unable to Power On a Virtual Machine](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-D4770546-9F9A-4F1E-AC1C-CF313E6130F4.html){:external}. |
 | A feature is unavailable or inability to change a configuration  | For more information, see [Unable to Configure or Use a Feature](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-26C0E2F0-A581-4A5A-B1F7-2BA4F151E27A.html){:external}.  |
+{: caption="Table 6. Typical license troubleshooting" caption-side="bottom"}
 
 **Next topic**: [Compliance](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-compliance)
 
 ## Related links
 {: #opsprocs-trouble-links}
 
-* [Contacting IBM Support](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-trbl_support#trbl_support)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support#trbl_support)
 * [vSphere troubleshooting overview](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-C70D5A5E-7D84-446C-B8CE-0766AA7351A4.html){:external}
 * [vSphere troubleshooting with logs](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-552CC9E8-441C-434A-88FC-3F50881245D7.html){:external}
-* [Operations management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-intro)
+* [Operations management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
 * [Support log gathering](https://kb.vmware.com/s/article/1010705){:external}
 * [Monitoring events, alarms, and automated actions](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.monitoring.doc/GUID-9272E3B2-6A7F-427B-994C-B15FF8CADC25.html){:external}
 * [vSphere System Log files](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.monitoring.doc/GUID-DABCB024-E083-4A4D-8AE0-D1AF4CB3800C.html){:external}

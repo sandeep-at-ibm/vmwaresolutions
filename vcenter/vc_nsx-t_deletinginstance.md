@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server NSX-T delete instance, delete vCenter Server NSX-T, remove vCenter Server NSX-T
 
@@ -59,9 +59,9 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_nsx-t_deletinginstance-related}
 
-* [Deleting vCenter Server instances in a multi-site configuration](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance_multi)
-* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
+* [Deleting vCenter Server instances in a multi-site configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance_multi)
+* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)

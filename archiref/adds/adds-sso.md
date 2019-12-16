@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-17"
+lastupdated: "2019-12-06"
 
 subcollection: vmware-solutions
 
@@ -86,12 +86,12 @@ For information about the lockout policy, see [Policy Configurations](/docs/serv
 ### Password policy
 {: #adds-sso-config-pwd-policy}
 
-| Parameter              | Value                                                                                                                                                                                                    |
-| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Maximum lifetime       | Password must be changed every 90 days                                                                                                                                                                   |
-| Restrict reuse         | Users cannot reuse any previous 5 passwords                                                                                                                                                              |
-| Maximum length         | 20 characters                                                                                                                                                                                            |
-| Minimum length         | 15 characters                                                                                                                                                                                            |
+| Parameter | Value  |
+| :-------- | :----- |
+| Maximum lifetime | Password must be changed every 90 days |
+| Restrict reuse | Users cannot reuse any previous 5 passwords |
+| Maximum length | 20 characters |
+| Minimum length | 15 characters |
 | Character requirements | At least 2 alphabetic characters<br>At least 1 special character<br>At least 1 uppercase character<br>At least 1 lowercase character<br>At least 1 numeric character<br>Identical adjacent characters: 3 |
 {: caption="Table 2. Password policy" caption-side="top"}
 
@@ -100,9 +100,9 @@ As the customer, you have full access to tailor these settings as needed to appl
 ## vSphere ESXi hosts
 {: #adds-sso-esxi}
 
-Each vSphere ESXi host has its own root account along with its own password. To identify this password, you will need to navigate to the IBM Cloud portal and then navigate to; VMware,  Infrastructure, Resources, <instance_name>, Infrastructure, <cluster_name>. It is also possible to have the vSphere ESXi hosts join AD, so that each system administrator can log in with their own account.
+Each vSphere ESXi host has its own root account along with its own password. To identify this password, go to the IBM Cloud portal and then go to  VMware, Infrastructure, Resources, _instance-name_, Infrastructure, _cluster-name_. It is also possible to have the vSphere ESXi hosts join AD, so that each system administrator can log in with their own account.
 
-Next topic: [IBM Cloud for VMware Solutions workload domain](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-wkld-domain)
+**Next topic:** [IBM Cloud for VMware Solutions workload domain](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-wkld-domain)
 
 ## Related links
 {: #adds-sso-related}

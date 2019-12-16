@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-10-24"
 
 subcollection: vmware-solutions
 
@@ -16,13 +16,13 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Deployment architecture for Horizon 7 on IBM Cloud
+# Deployment architecture for Horizon 7
 {: #horizon-deploy-arch}
 
 ## Horizon 7 pod and building block architecture
 {: #horizon-deploy-arch-build-block}
 
-A typical Horizon 7 architecture design uses a pod strategy. A pod is a unit of organization that is determined by Horizon 7 scalability limits. Each pod has a separate management UI and the typical design is to minimize the number of pods.
+A typical VMware Horizon 7 architecture design uses a pod strategy. A pod is a unit of organization that is determined by Horizon 7 scalability limits. Each pod has a separate management UI and the typical design is to minimize the number of pods.
 
 Customers usually include multiple building blocks in a Horizon 7 pod on-premises. A building block is a logical construct and should not be sized for more than the maximum number of desktops tested. See the VMware Knowledge Base article VMware Horizon 7 sizing limits and recommendations (2150348).
 
@@ -33,19 +33,19 @@ A building block consists of:
 * Shared storage
 * Virtual desktops or RDS hosts for users
 
-![Horizon 7 on {{site.data.keyword.cloud_notm}} pod](../../images/horizon-cloud-pod.svg){: caption="Figure 1. Horizon 7 on IBM Cloud pod" caption-side="bottom"}
+![Horizon 7 pod](../../images/horizon-cloud-pod.svg){: caption="Figure 1. Horizon 7 pod" caption-side="bottom"}
 
-When you deploy Horizon 7 on {{site.data.keyword.cloud}}, a two-cluster approach is recommended. This approach provides a small management cluster for running the server workloads that are used to support the Horizon environment and a larger workload cluster for the VDI or Published Apps workload. The management cluster consists of a three-node cluster that uses NFS storage, and the workload cluster will consider of at least four-nodes utilizing VMware VSAN.
+When you deploy Horizon 7, a two-cluster approach is recommended. This approach provides a small management cluster for running the server workloads that are used to support the Horizon environment and a larger workload cluster for the VDI or Published Apps workload. The management cluster consists of a three-node cluster that uses NFS storage, and the workload cluster will consider of at least four-nodes utilizing VMware VSAN.
 
-## Sizing Horizon 7 on IBM Cloud
+## Sizing Horizon 7
 {: #horizon-deploy-arch-sizing}
 
-Planning a deployment of Horizon 7 on {{site.data.keyword.cloud_notm}} is like planning an on-premises deployment. You will need to size your Horizon 7 on {{site.data.keyword.cloud_notm}} deployment based on your requirements to determine the number of hosts you will need. Hosts are needed for the following purposes:
+Planning a deployment of Horizon 7 is like planning an on-premises deployment. You will need to size your Horizon 7 deployment based on your requirements to determine the number of hosts you will need. Hosts are needed for the following purposes:
 * Your Virtual Desktop or RDS workloads
 * Your Horizon 7 infrastructure components such as connection servers, Unified Access Gateways, and App Volumes managers.
 * SDDC infrastructure components on {{site.data.keyword.cloud_notm}}. These components are deployed and managed automatically for you by {{site.data.keyword.cloud_notm}}, but you will need capacity in your SDDC for running them.
 
-The methodology for sizing Horizon 7 on {{site.data.keyword.cloud_notm}} is the same as on-premises. {{site.data.keyword.cloud_notm}} provides the ability to customize the hosts deployed through the vCenter Server service, including various processor and RAM options. {{site.data.keyword.cloud_notm}} also provides multiple storage options including VMware VSAN and NFS-based IP storage.
+The methodology for sizing Horizon 7 is the same as on-premises. {{site.data.keyword.cloud_notm}} provides the ability to customize the hosts deployed through the vCenter Server service, including various processor and RAM options. {{site.data.keyword.cloud_notm}} also provides multiple storage options including VMware VSAN and NFS-based IP storage.
 
 ### Minimum SDDC size
 {: #horizon-deploy-arch-min-sddc}
@@ -113,7 +113,7 @@ These options are:
 
 These options enable customers to stand up an entire environment without having to have connectivity to the datacenter in place. After the connectivity is in place, the {{site.data.keyword.cloud_notm}} environment can be connected to the enterprise Active Directory via a trust.
 
-When deploying Horizon 7 on {{site.data.keyword.cloud_notm}}, the highly available option is recommended over the single Windows Server VSI.  Horizon 7 relies heavily on Active Directory, and this option ensures that the service will be available. Since the VMs are running in the management infrastructure, they can also be connected back to on-premises Active Directory environments through trust relationships more easily.
+When deploying Horizon 7, the highly available option is recommended over the single Windows Server VSI.  Horizon 7 relies heavily on Active Directory, and this option ensures that the service will be available. Since the VMs are running in the management infrastructure, they can also be connected back to on-premises Active Directory environments through trust relationships more easily.
 
 ## Architecting Horizon 7 Cloud Pod Architecture (CPA) for IBM Cloud
 {: #horizon-deploy-arch-cpa}

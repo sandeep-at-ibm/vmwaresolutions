@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# VMware HCX on IBM Cloud source-side architecture
+# VMware HCX source-side architecture
 {: #hcx-archi-source}
 
 Review the architecture of each HCX component that is deployed in the source environment.
@@ -263,9 +263,9 @@ Rules that specify security groups or application groups for the source or desti
 
 Any change to the migrated policy is propagated to all VMs that use the policy.
 
-**Next topic:** [VMware HCX on IBM Cloud component-level target architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-target)
+**Next topic:** [VMware HCX component-level target architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-target)
 
 ## Related links
 {: #hcx-archi-source-related}
 
-* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-install-cfg-src)
+* [Installing and configuring on the source](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)

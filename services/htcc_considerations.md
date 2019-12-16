@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-12"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -21,9 +22,10 @@ subcollection: vmware-solutions
 # HyTrust CloudControl overview
 {: #htcc_considerations}
 
-The HyTrust CloudControl service enforces and controls compliance against security standards that includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or ESXi server within the {{site.data.keyword.CloudDataCent_notm}}.
+The HyTrust CloudControl service enforces and controls compliance against security standards, which includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or ESXi server within the {{site.data.keyword.CloudDataCent}}.
+{: shortdesc}
 
-This service is available only to instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.3 or later. The current HyTrust CloudControl version that is installed is 5.5.1.
+This service is available only to instances that are running vSphere 6.5. The current HyTrust CloudControl version that is installed is 5.6.
 {:note}
 
 ## Technical specifications for HyTrust CloudControl
@@ -64,8 +66,8 @@ Before you remove the HyTrust CloudControl service, ensure that you disable **Ro
 ## Related links
 {: #htcc_considerations-related}
 
-* [Ordering HyTrust CloudControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_ordering)
-* [Managing HyTrust CloudControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Ordering HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_ordering)
+* [Managing HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtcc)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

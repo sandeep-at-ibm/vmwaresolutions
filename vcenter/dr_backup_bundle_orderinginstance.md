@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-03"
+lastupdated: "2019-11-26"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -57,18 +57,19 @@ The instance name must meet the following requirements:
 ## Procedure to order Single-node Trial for Data Protection and Disaster Recovery instances
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **Single-node Trial for Data Protection and Disaster Recovery** card in the **Single Node Trials** section.
-2. On the **Single-node Trial for Data Protection and Disaster Recovery** page, click **Continue**.
-3. Complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User Name** and **API Key** and click **Retrieve**.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane. 
+2. In the **Featured Services** section, click the **Single-node Trial for Data Protection and Disaster Recovery** card.
+3. On the **Single-node Trial for Data Protection and Disaster Recovery** page, click **Continue**.
+4. Complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User Name** and **API Key** and click **Retrieve**.
 
  This section is hidden if the API key exists.
  {:note}
-4. Enter the instance name.
-5. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.  
+5. Enter the instance name.
+6. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.  
 
  By default, the DAL09 {{site.data.keyword.CloudDataCent_notm}} is preselected. Select a different {{site.data.keyword.CloudDataCent_notm}} location, if needed.
  {:note}
-6. On the **Order Summary** pane, verify the instance configuration before you place the order.
+7. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
@@ -79,7 +80,7 @@ The instance name must meet the following requirements:
 
 * The deployment of the instance starts automatically and the on-premises HCX service activation key is ordered.
 * You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
-* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs) are installed.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances](/docs/services/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs) are installed.
 * When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
 #### Deployment process for HCX
@@ -194,8 +195,6 @@ Complete the following steps to delete a Single-node Trial for Data Protection a
 ## Related links
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [vCenter Server and {{site.data.keyword.cloud_notm}} Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro)
-* [Open a Ticket for I{{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

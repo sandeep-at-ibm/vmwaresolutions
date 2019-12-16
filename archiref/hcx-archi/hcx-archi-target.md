@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-12"
 
 subcollection: vmware-solutions
 
 
 ---
-# VMware HCX on IBM Cloud component-level target architecture
+# VMware HCX component-level target architecture
 {: #hcx-archi-target}
 
 This section describes the architecture of each HCX component that is deployed within the {{site.data.keyword.cloud}} environment. The spoke (target) deployment model within the {{site.data.keyword.cloud_notm}} is discussed.
@@ -22,17 +22,14 @@ The first component that is configured within the {{site.data.keyword.cloud_notm
 
 The NSX Edge virtual machines are configured as an Active/Passive pair of X-Large NSX Edge devices. These devices are used to connect into the {{site.data.keyword.cloud_notm}} VMware environment by using a public internet connection. The X-Large NSX Edge was chosen for the internal environment since it is suited for environments that have load balancer with millions of concurrent sessions that do not necessarily require high-throughput. As part of the configuration process, the NSX Edge is connected to the {{site.data.keyword.cloud_notm}} public VLAN and the {{site.data.keyword.cloud_notm}} Private VLAN designated for management infrastructure.
 
-Table 1. NSX Edge deployment
-
 | Component | Configuration |
 |-----------|---------------|
 | CPU       | 6 vCPU        |
 | RAM       | 8 GB          |
 | Disk      | 4.5 GB VMDK resident on shared storage with 4 GB swap |
+{: caption="Table 1. NSX Edge deployment" caption-side="bottom"}
 
 Since the NSX Edges are configured as active/passive in either the internal or dedicated deployment, vSphere Distributed Resource Scheduler (DRS) anti-affinity rules must be created by the user to ensure that NSX Edges do not run on the same host as their respective peer appliance.
-
-Table 2. NSX Edge anti-affinity rules
 
 | Field     | Value         |
 |-----------|---------------|
@@ -40,10 +37,11 @@ Table 2. NSX Edge anti-affinity rules
 | Type      | Separate virtual machines |
 | Members   | NSX Edge 1 |
 |           | NSX Edge 2 |
+{: caption="Table 2. NSX Edge anti-affinity rules" caption-side="bottom"}
 
-In addition to the NSX Edge appliances deployed within the {{site.data.keyword.cloud_notm}}, the HCX Manager virtual appliance is deployed if the VMware HCX on {{site.data.keyword.cloud_notm}} service is ordered. After the deployment of this appliance, the NSX Edge is enabled to use load balancing and is configured with application profiles that use a certificate for inbound connection from the source. The NSX Edge is also configured with load-balancing pools to point to the HCX Manager, vCenter, and PSC appliances. Additionally, a virtual server is created with a virtual IP address (VIP) on the public interface with rules that connect the pools with VIP. A sample of the virtual server configuration and pool configuration on the NSX Edge is shown in the following tables.
+In addition to the NSX Edge appliances deployed within the {{site.data.keyword.cloud_notm}}, the HCX Manager virtual appliance is deployed if the VMware HCX service is ordered. After the deployment of this appliance, the NSX Edge is enabled to use load balancing and is configured with application profiles that use a certificate for inbound connection from the source. The NSX Edge is also configured with load-balancing pools to point to the HCX Manager, vCenter, and PSC appliances. Additionally, a virtual server is created with a virtual IP address (VIP) on the public interface with rules that connect the pools with VIP. A sample of the virtual server configuration and pool configuration on the NSX Edge is shown in the following tables.
 
-Table 3. VIP configuration for NSX Edge - Virtual Servers
+The following table shows virtual servers information.
 
 | Field     | Value         |
 |-----------|---------------|
@@ -54,8 +52,9 @@ Table 3. VIP configuration for NSX Edge - Virtual Servers
 | IP Address | 254 |
 | Protocol | https |
 | Port | 443 |
+{: caption="Table 3. VIP configuration for NSX Edge - virtual servers" caption-side="bottom"}
 
-Table 4. VIP configuration for NSX Edge - Virtual Server Details
+The following table shows virtual server details.
 
 | Field     | Value         |
 |-----------|---------------|
@@ -66,24 +65,27 @@ Table 4. VIP configuration for NSX Edge - Virtual Server Details
 | Connection Rate Limit | 0 |
 | Acceleration Status | Disabled |
 | Service Profile Status |  |
+{: caption="Table 4. VIP configuration for NSX Edge - virtual server details" caption-side="bottom"}
 
-Table 5. VIP configuration for NSX Edge - Rule
+The following table shows rule information.
 
 | Field     | Value         |
 |-----------|---------------|
 | Rule Id | applicationRule-1 |
 | Name | appRule1 |
 | Script | acl isHibridity url_beg /hibridity</br>    acl isWebSso url_beg /websso</br>    acl isVCenter url_beg /vsphere-client</br>    use_backend nspPool001 if isHybridity</br>    use_backend vcPool001 if isVCenter</br>    use_backend ssoPool001 if isWebSso |
+{: caption="Table 5. VIP configuration for NSX Edge - rule" caption-side="bottom"}
 
-Table 6. Pool configuration for NSX Edge - Pool summary
+The following table shows pool summary information.
 
 | Pool ID | Name       | Algorithm   | Monitor ID |
 |---------|------------|-------------|------------|
 | pool-1  | nspPool001 | ROUND-ROBIN |            |
 | pool-3  | ssoPool001 | ROUND-ROBIN |            |
 | pool-2  | vcPool001  | ROUND-ROBIN |            |
+{: caption="Table 6. Pool configuration for NSX Edge - pool summary" caption-side="bottom"}
 
-Table 7. Pool configuration for NSX Edge - Pool Details
+The following table shows pool details information.
 
 | Field           | Value     |
 |-----------------|-----------|
@@ -94,6 +96,7 @@ Table 7. Pool configuration for NSX Edge - Pool Details
 | Monitor Port    | 8443      |
 | Max Connections | 0         |
 | Min Connections | 0         |
+{: caption="Table 7. Pool configuration for NSX Edge - pool details" caption-side="bottom"}
 
 ## HCX Manager
 {: #hcx-archi-target-hcxm}
@@ -109,15 +112,14 @@ After the HCX Manager cloud component is deployed and configured, the source com
 ## Cloud Gateway
 {: #hcx-archi-target-cloud-gateway}
 
-A virtual appliance is deployed after a connection is established from the source to the target cloud. This appliance is the Cloud Gateway (CGW) and is used to maintain a secure channel between vSphere environment that is designated as the source and the {{site.data.keyword.cloud_notm}}. The sizing specification of the CGW appliance that is deployed within the {{site.data.keyword.cloud_notm}} is listed in Table 3 Cloud Gateway Deployment.
-
-Table 8. Cloud Gateway deployment
+A virtual appliance is deployed after a connection is established from the source to the target cloud. This appliance is the Cloud Gateway (CGW) and is used to maintain a secure channel between vSphere environment that is designated as the source and the {{site.data.keyword.cloud_notm}}. The following table shows the sizing specification of the CGW appliance that is deployed within the {{site.data.keyword.cloud_notm}}.
 
 | Component | Configuration |
 |-----------|---------------|
 | CPU       | 8 vCPU        |
 | RAM       | 3 GB          |
 | Disk      | 2.0 GB VMDK resident on shared storage |
+{: caption="Table 8. Cloud Gateway deployment" caption-side="bottom"}
 
 This Cloud Gateway is deployed configured to reside on the management VLAN (Private Portable Subnet) as well as the vMotion VLAN (Private Portable Subnet) of the {{site.data.keyword.vmwaresolutions_short}} deployment. Additionally, another interface is configured on the Public VLAN (Public Portable) for connections that are made over the public internet. Public access is not required if there is a direct connection (private connection in place). The last connection that is associated with the Cloud Gateway is a logical switch that is created and configured upon site pairing.
 
@@ -132,15 +134,15 @@ The following figure depicts a high-level component diagram of the cloud gateway
 
 The second component that is deployed is the WAN Optimization appliance. While the WAN Optimization appliance is optional, it performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns.
 
-Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the {{site.data.keyword.cloud_notm}}. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer resides on vSAN storage if present, or on Endurance storage with 2,000 IOPS. The sizing specification for the WAN Optimization appliance is the following table.
-
-Table 9. WAN Optimizer appliance sizing
+Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the {{site.data.keyword.cloud_notm}}. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer resides on vSAN storage if present, or on Endurance storage 
+with 2,000 IOPS. The following table shows the sizing specification for the WAN Optimization appliance.
 
 | Component | Configuration |
 |-----------|---------------|
 | CPU       | 8 vCPU        |
 | RAM       | 14 GB          |
 | Disk      | 30 GB VMDK + 70 GB VMDK resident on shared storage |
+{: caption="Table 9. WAN Optimizer appliance sizing" caption-side="bottom"}
 
 Unlike the Cloud Gateway, the WAN Optimization appliance is only attached to a logical switch to enable communication between itself and the Cloud Gateway. This appliance is required if WAN optimization is in use within the source environment. See the following figure for a view of the network layout.
 
@@ -153,21 +155,20 @@ The third component is known as the Layer 2 Concentrator (L2C) and is part of th
 
 As part of this design, the L2C appliance is deployed such that a customer can stretch multiple VLANs and VLXANs into the {{site.data.keyword.cloud_notm}} over the public internet or via the private network via Direct Link. The sizing specification of the L2C appliance on the {{site.data.keyword.cloud_notm}} is listed in the following table.
 
-Table 10. HT L2C appliance sizing
-
 | Component | Configuration |
 |-----------|---------------|
 | CPU       | 8 vCPU        |
 | RAM       | 38 GB          |
 | Disk      | 2 GB VMDK on shared storage |
+{: caption="Table 10. HT L2C appliance sizing" caption-side="bottom"}
 
 The L2C appliance is deployed on the management VLAN as well as the public VLAN. The public interface is used for application traffic that bound for the source of the extended network. More connections such as the extended networks, are created and attached to the L2C appliance after the source administrator initiates the network extension into the {{site.data.keyword.cloud_notm}}. Examples of these networks and connections are depicted in the following figure.
 
 ![L2 Concentrator deployment](../../images/l2_concentrator_deployment.svg "L2 Concentrator deployment"){: caption="Figure 4. L2 Concentrator deployment" caption-side="bottom"}
 
-**Next topic:** [Port access requirements for VMware HCX on IBM Cloud](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req)
+**Next topic:** [Port access requirements for VMware HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req)
 
 ## Related links
 {: #hcx-archi-target-related}
 
-* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-source)
+* [Installing and configuring on the source](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)

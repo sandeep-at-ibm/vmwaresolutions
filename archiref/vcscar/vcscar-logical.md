@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-02"
 
 subcollection: vmware-solutions
 
@@ -58,13 +58,12 @@ The chatbot has a pre-defined and limited number of possible conversations. The 
 - Location Finding: Find a nearby location for a trick.
 - Media Display: Display a media item, such as an online video from which a trick has been classified and found.
 
-Table 1. Conversation
-
 Conversation | Structure | Result
 ---|---|---
 Trick Finding | Describe a trick |A list of tricks
 Location Finding | Where should I perform this trick? | List of locations for a specific trick
 Media Display | Display a trick video |A list of media results
+{: caption="Table 1. Conversation" caption-side="bottom"}
 
 ## User interface components
 {: #vcscar-logical-ui-comp}
@@ -77,8 +76,6 @@ The chatbot is a web component that converses with the user. The chatbot can eit
 Chatbots interact with the system in the following manner:
 
 ![Typical Chatbot Query](../../images/vcscar-query.svg "Typical Chatbot Query"){: caption="Figure 2. Typical chatbot query" caption-side="bottom"}
-
-Table 2. Chatbot interactions
 
 Step | Description
 ---|---
@@ -93,6 +90,7 @@ Step | Description
 9 |Skate Advisor forms a response and sends to the Chatbot in text.
 10 | Chatbot sends the text reply to the Text to Speech Service.
 11 | Result is sent to the user through the Chatbot.
+{: caption="Table 2. Chatbot interactions" caption-side="bottom"}
 
 ### Video rendering
 {: #vcscar-logical-video-render}

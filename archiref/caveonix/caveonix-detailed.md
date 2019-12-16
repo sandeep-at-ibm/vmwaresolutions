@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-29"
 
 subcollection: vmware-solutions
 
@@ -46,8 +46,6 @@ The following diagram and descriptions provide information about the RiskForesig
 
 The following table shows the ports and protocols that are required for each component.
 
-Table 1. Ports and protocols
-
 |Component	|Protocol / Ports|
 |---|---|
 |UI|443|
@@ -58,14 +56,13 @@ Table 1. Ports and protocols
 |Relational Datastore Primary or Secondary|5432|
 |Messaging Datastore Cluster|9092|
 |Index Datastore Master Nodes|9200, 9300, 5601, 443|
+{: caption="Table 1. Ports and protocols" caption-side="bottom"}
 
 The following diagram shows the network topology with the Caveonix portable private subnet that is associated with Private VLAN A. You are responsible for managing the IP address space for this subnet so that you can manually scale out from the “all-in-one” to the fully distributed deployment model, through the partially distributed model as needed.
 
 ![Network diagram](../../images/caveonix-network.svg "Network diagram"){: caption="Figure 2. Network diagram" caption-side="bottom"}
 
 The IP Subnet, VLAN assignments are described in the following table.
-
-Table 2. VLAN and subnets
 
 |VLAN 	|Subnet type 	|Description|
 |---|---|---|
@@ -85,5 +82,6 @@ Table 2. VLAN and subnets
 |Private B 	|Portable 	|Assigned for vSAN, if in use.|
 |Private B 	|Portable 	|Assigned for NAS, if in use.|
 |Private B 	|Portable 	|Assigned for vMotion.|
+{: caption="Table 2. VLAN and subnets" caption-side="bottom"}
 
-Next topic: [Deployment models for Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-deploy)
+**Next topic:** [Deployment models for Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-deploy)

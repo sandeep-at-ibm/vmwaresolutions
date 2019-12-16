@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-07"
 
 keywords: view vCenter Server Hybridity, view instance, view instance details
 
@@ -111,7 +111,7 @@ Click **Deployment History** from the left navigation pane to view the deploymen
 ## What to do if errors occur
 {: #vc_hybrid_viewinginstances-if-errors-occur}
 
-If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support).
+If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support).
 
 ## What to do next
 {: #vc_hybrid_viewinginstances-next}
@@ -122,13 +122,13 @@ Before you click **vCenter console** on the instance summary page to go to the v
 {:important}
 
 Review the following topics for information to help you complete the login instructions:
-*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_timeout_vc_console).
+*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_timeout_vc_console).
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](https://www.ibm.com/cloud/vpn-access){:external}.
-*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_deploy_ovf).
+*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Related links
 {: #vc_hybrid_viewinginstances-related}
 
-* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservers)
-* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_deletinginstance)

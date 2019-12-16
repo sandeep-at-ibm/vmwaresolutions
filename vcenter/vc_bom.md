@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-14"
+lastupdated: "2019-12-04"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -40,20 +40,20 @@ The following table details the BOM information for the vCenter Server VLANs.
 
 The following table details the BOM information for vCenter Server software components.
 
-| Manufacturer  | Component                      | Version    |
-|:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) or <br/>6.5 EP 14 (build 6.5.0-13635690) |
+| Manufacturer | Component                       | Version       |
+|:------------ |:------------------------------- |:------------- |
+| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) or <br/>6.5 EP 15 (build 6.5.0-14320405) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 2g (build 6.5.0-13638625) |
-| VMware       | Platform Services Controller    | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 2g (build 6.5.0-13638625) |
-| VMware       | vSAN                            | 6.7 Update 1 or <br/>6.6.1       |
-| VMware       | NSX for vSphere                 | 6.4.5 (build 13282012)    |
-| VMware       | NSX-T for vSphere               | 2.4                       |
-| Microsoft    | Windows Server Standard edition | 2016       |
+| VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
+| VMware       | Platform Services Controller    | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
+| VMware       | vSAN                            | 6.7 Update 1 or <br/>6.6.1 |
+| VMware       | NSX for vSphere                 | 6.4.5 (build 13282012) |
+| VMware       | NSX-T for vSphere               | 2.4 |
+| Microsoft    | Windows Server Standard edition | 2016 |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
 
-VMware vSAN is an optional component.
+VMware vSAN is an optional component. The vSphere ESXi 6.5 EP 15 (build 6.5.0-14320405) update is applicable only to 6.5u3 hosts, and not to 6.5u2 hosts.
 {:note}
 
 ## Advanced configuration settings for ESXi servers
@@ -157,5 +157,5 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){:external}
 * [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Planning vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
+* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Planning vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning)

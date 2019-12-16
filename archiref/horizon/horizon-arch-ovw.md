@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-10-22"
 
 keywords: horizon, horizon 7, horizon 7 architecture
 
@@ -23,14 +23,14 @@ subcollection: vmware-solutions
 
 VMware Horizon® 7 for {{site.data.keyword.cloud}} delivers a seamlessly integrated hybrid cloud for virtual desktops and applications. It combines the enterprise capabilities of the VMware Software-Defined Data Center (SDDC), delivered as a service on {{site.data.keyword.cloud_notm}}, with the market-leading capabilities of VMware Horizon 7 for a simple, secure, and scalable solution. You can easily address use cases such as on-demand capacity, disaster recovery, and cloud colocation without buying more data center resources.
 
-For customers who are already familiar with Horizon 7 or have Horizon 7 deployed on-premises, Horizon 7 on {{site.data.keyword.cloud_notm}} helps you leverage a unified architecture and familiar tools. You use the same expertise that you know from VMware vSphere® and Horizon 7 for operational consistency and you leverage the same rich feature set and flexibility you expect. By outsourcing the management of the vSphere platform to IBM, you can simplify management of Horizon 7 deployments.
+For customers who are already familiar with Horizon 7 or have Horizon 7 deployed on-premises, Horizon 7 helps you leverage a unified architecture and familiar tools. You use the same expertise that you know from VMware vSphere® and Horizon 7 for operational consistency and you leverage the same rich feature set and flexibility you expect. By outsourcing the management of the vSphere platform to IBM, you can simplify management of Horizon 7 deployments.
 
-IT administrators can use this information to deploy Horizon 7 on {{site.data.keyword.cloud_notm}}. Use this information together with [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external} and the [VMware Workspace ONE and VMware Horizon Reference Architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){:external}.
+IT administrators can use this information to deploy Horizon 7. Use this information together with [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external} and the [VMware Workspace ONE and VMware Horizon Reference Architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){:external}.
 
-## Overview of Horizon 7 on IBM Cloud
+## Overview of Horizon 7
 {: #horizon-arch-ovw-horizon7}
 
-You can deploy Horizon 7 on {{site.data.keyword.cloud_notm}} to scale Horizon 7 desktops and applications on an elastic cloud platform.
+You can deploy Horizon 7 to scale Horizon 7 desktops and applications on an elastic cloud platform.
 
 With {{site.data.keyword.cloud_notm}}, you can create vSphere Software-Defined Data Centers (SDDCs) by using the VMware vCenter Server offering. The vCenter Server offering provides VMware vCenter Server® for VM management with options for VMware vSAN™ or NFS for storage, and VMware NSX® for networking. You can connect an on-premises SDDC to your cloud SDDC or connect to applications hosted by using other {{site.data.keyword.cloud_notm}} services.
 
@@ -48,18 +48,18 @@ You can also stretch CPA across two or more {{site.data.keyword.CloudDataCents_n
 ## Differences Between Horizon 7 and Horizon Cloud
 {: #horizon-arch-ovw-diffs}
 
-{{site.data.keyword.cloud_notm}} offers two solutions based on VMware Horizon – Horizon Cloud and Horizon 7 on {{site.data.keyword.cloud_notm}}. These two solutions share many features but are intended for different use cases. Horizon 7 on {{site.data.keyword.cloud_notm}} provides some key advantages over Horizon Cloud, including:
+{{site.data.keyword.cloud_notm}} offers two solutions based on VMware Horizon – Horizon Cloud and Horizon 7. These two solutions share many features but are intended for different use cases. Horizon 7 provides some key advantages over Horizon Cloud, including:
 * Connectivity to other services that are running in {{site.data.keyword.cloud_notm}}
 * Support for Cloud Pod Architecture to connect on-premises Horizon 7 environments with Horizon 7 environments deployed on {{site.data.keyword.cloud_notm}}
 * Support for smart card Authentication, Linux desktops, and application delivery through VMware App Volumes
 * Vendor ISV certification for applications in key verticals like health care and AEC
 
-If you have questions about which Horizon solution on {{site.data.keyword.cloud_notm}} is right for your use cases, talk to your VMware and {{site.data.keyword.cloud_notm}} account teams.
+If you have questions about which Horizon solution is right for your use cases, talk to your VMware and {{site.data.keyword.cloud_notm}} account teams.
 
 ## Horizon 7 Deployment Scenarios on IBM Cloud
 {: #horizon-arch-ovw-scenarios}
 
-You can deploy Horizon 7 on {{site.data.keyword.cloud_notm}} for the following scenarios.
+You can deploy Horizon 7 for the following scenarios.
 
 ### Data center expansion
 {: #horizon-arch-ovw-dc-expansion}
@@ -82,9 +82,9 @@ You can also have other published applications that are still on-premises. When 
 
 The cost of building an on-premises BCDR infrastructure can be high. When you use {{site.data.keyword.cloud_notm}}, you pay for the use of BCDR infrastructure during those times when the primary infrastructure is down or when you require a small pilot during normal operations for a quick Recovery Time Objective (RTO) during a disaster event.
 
-Having a unified Horizon 7 architecture across the primary site on-premises and the BCDR site on {{site.data.keyword.cloud_notm}} makes the failover process simple. You can also deploy Cloud Pod Architecture across multiple {{site.data.keyword.CloudDataCents_notm}}} for BCDR Deployment Architecture for Horizon 7 on {{site.data.keyword.cloud_notm}}.
+Having a unified Horizon 7 architecture across the primary site on-premises and the BCDR site on {{site.data.keyword.cloud_notm}} makes the failover process simple. You can also deploy Cloud Pod Architecture across multiple {{site.data.keyword.CloudDataCents_notm}}} for BCDR Deployment Architecture for Horizon 7.
 
-## Understanding key components of Horizon 7 on IBM Cloud
+## Understanding key components of Horizon 7
 {: #horizon-arch-ovw-key-comp}
 
 To set up a successful deployment, you must configure the logical network that can support a Horizon 7 deployment on {{site.data.keyword.cloud_notm}}.
@@ -120,4 +120,4 @@ The compute components are:
 
 The Horizon Cloud Connector is a new component in the Horizon 7 architecture. It is a virtual appliance that connects to a Horizon pod and bridges it with the Horizon Cloud Service. The Horizon 7 Cloud Connector is required when using the Horizon Universal License for license management and for using Horizon Cloud Control Plane features like Cloud Monitoring Service and the health status dashboard.
 
-**Next topic:** [Deployment architecture for Horizon 7 on IBM Cloud](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-deploy-arch)
+**Next topic:** [Deployment architecture for Horizon 7](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-deploy-arch)

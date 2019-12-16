@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-07-16"
+lastupdated: "2019-11-07"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -30,5 +30,5 @@ The following table details the Bill of Materials (BOM) information for VMware v
 
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832){:external}
 * [VMware ESXi 6.0 Update 2 Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-esxi-60u2-release-notes.html){:external}
-* [VMware vSphere overview](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview)
-* [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
+* [VMware vSphere overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview)
+* [Planning vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_planning)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-30"
+lastupdated: "2019-12-02"
 
 subcollection: vmware-solutions
 
@@ -56,7 +56,7 @@ Use the following table to document the parameters you will need for your deploy
 | Public SSH Key| | |
 {: caption="Table 1. install-config.yaml file parameters" caption-side="top"}
 
-Using the following install-config.yaml file, update it using your deployment details from the previous table:
+Using the following install-config.yaml file shown in the figure, update it using your deployment details from the previous table:
 
 1. Update the base domain name.
 2. Update the metadata name with the OpenShift cluster name.
@@ -67,9 +67,7 @@ Using the following install-config.yaml file, update it using your deployment de
    * DataStore name.
 4. Paste the Pull Secret.
 5. Paste the SSH key.
-6. Copy the file to the clipboard.
-
-File 1: *install-config.yaml* file contents:
+6. The following figure shows the install-config.yaml file. Copy the file to the clipboard. 
 
 ```bash
 apiVersion: v1
@@ -94,6 +92,7 @@ platform:
 pullSecret: 'COPY PULL SECRET HERE'
 sshKey: 'COPY PUBLIC SSH KEY HERE'
 ```
+{: caption="Figure 1. install-config.yaml file contents" caption-side="bottom"}
 
 In the SSH session to the bastion node with root privileges, use the following commands to create the install-config.yaml file:
 
@@ -284,11 +283,9 @@ The ignition files can be copied after using the following commands to display t
 | control_plane_ignition | |
 | compute_ignition | |
 
-{: caption="Table 2. ignition.tf file parameters" caption-side="top"}
+{: caption="Table 2. ignition.tf file parameters" caption-side="bottom"}
 
-Using the following terraform-tvars example file, update it using your deployment details from the previous table. Copy the file to the clipboard.
-
-File 2: *terraform.tfvars*
+Using the following terraform-tvars example file shown in the figure, update the file using your deployment details from the previous table. Copy the file to the clipboard.
 
 ```bash
 bootstrap_ip = "192.168.133.9"
@@ -317,6 +314,7 @@ compute_ignition = <<END_OF_WORKER_IGNITION
 COPY IN CONTENTS OF WORKER.IGN HERE
 END_OF_WORKER_IGNITION
 ```
+{: caption="Figure 2. terraform.tfvars example file" caption-side="bottom"}
 
 The terraform.tfvars file is created as follows:
 1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocp42install/installer/upi/vsphere/terraform.tfvars`.
@@ -333,8 +331,6 @@ Remove the dns module section as the file expects to use AWS route 53 for DNS. T
 4. Delete the entire section shown in "File 3: Section to be removed".
 5. Press Esc, then type `:wq` to save the file and exit the vi editor.
 
-File 3: Section to be removed
-
 ```bash
 module "dns" {
   source = "./route53"
@@ -349,6 +345,7 @@ module "dns" {
   compute_ips         = ["${module.compute.ip_addresses}"]
 }
 ```
+{: caption="Figure 3. DNS module section to be removed" caption-side="bottom"}
 
 ## Run Terraform
 {: #openshift-runbook-runbook-install-terraform-run}

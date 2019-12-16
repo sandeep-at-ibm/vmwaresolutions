@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-25"
 
 subcollection: vmware-solutions
 
@@ -33,7 +33,7 @@ By default, {{site.data.keyword.containerlong_notm}} sets up the cluster with ac
 ### IBM Cloud Kubernetes Service and vCenter Server integration
 {: #vcsiks-overview-network-iks-vcs-integration}
 
-Currently, the following scenarios integrate {{site.data.keyword.containerlong_notm}} and VMware vCenter Server on {{site.data.keyword.cloud_notm}} networking:
+Currently, the following scenarios integrate {{site.data.keyword.containerlong_notm}} and VMware vCenter Server networking:
 - **VRA Routing** - This scenario requires that the {{site.data.keyword.containerlong_notm}} worker nodes are deployed onto the same VLAN as the vCenter Server instance. This allows an ESG to be BGP peered with VRA and enable routing from the overlay to the underlay network between vCenter Server and {{site.data.keyword.containerlong_notm}}. A static route is needed on the {{site.data.keyword.containerlong_notm}} worker nodes for each VXLAN network to route these requests back to the BCR/VRA to correctly route.
 - **strongSwan VPN** – This scenario uses the standard {{site.data.keyword.containerlong_notm}}-to-enterprise connectivity solution. A strongSwan container provides a VPN gateway for the cluster that forwards packets to remote networks across an IPSec
 tunnel to the remote gateway. This remote gateway is an ESG on the vCenter Server instance. On the gateways, routes are configure sending all cluster and service IP ranges to the StrongSwan container and all vCenter Server BYOIP addresses to the ESG. The target IP addresses for the gateways are the private portable IP address of the load balancer service that is assigned to the strongSwan container and the private portable IP address of the ESG.

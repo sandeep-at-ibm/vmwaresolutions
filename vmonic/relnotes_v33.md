@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-21"
+lastupdated: "2019-10-17"
 
 keywords: release notes, what's new, version 3.3
 
@@ -25,6 +25,7 @@ subcollection: vmware-solutions
 This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## VMware Horizon 7
+{: #relnotes_v33-horizon}
 
 VMware Horizon 7 is now available to vCenter Server instances that are deployed in or upgraded to V3.3 or later releases.
 
@@ -35,10 +36,10 @@ For more information, see [vCenter Server and Horizon 7 architecture overview](/
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v33-vcs}
 
-### Customizable host name prefix in additional clusters
+### Customizable hostname prefix in additional clusters
 {: #relnotes_v33-cluster}
 
-When you add a new cluster to an instance, you can choose to continue using the default host name prefix or to specify a new one for easy identification and management.
+When you add a cluster to an instance, you can choose to continue to use the default hostname prefix or to specify a new one for easy identification and management.
 
 For more information, see:
 - [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-network-interface-settings)
@@ -54,7 +55,7 @@ HCX now uses Multi-Site Services Mesh to provide its services. Multi-Site Servic
 
 * Increased flexibility in the configuration and scalability of HCX.
 * Numerous usability improvements, such as deployment diagrams and diagnostic tools.
-* Compute and Network profiles that are shareable across multiple sites connected to the HCX cloud instance.
+* Compute and Network profiles that are shareable across multiple sites that are connected to the HCX cloud instance.
 
 The {{site.data.keyword.vmwaresolutions_short}} automation configures the Compute profile and Network profiles on the cloud side HCX instance when it is installed, so the instance is ready for pairings with on-premises data centers.
 
@@ -63,7 +64,7 @@ For more information, see [About the HCX Multi-Site Services Mesh](https://docs.
 ### Updates for Mission Critical VMware on IBM Cloud
 {: #relnotes_v33-mission-critical}
 
-The Mission Critical VMware on {{site.data.keyword.cloud_notm}} product name has been changed to {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_overview).
+The Mission Critical VMware on {{site.data.keyword.cloud_notm}} product name is changed to {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_overview).
 
 ### Updates for NetApp ONTAP Select on IBM Cloud
 {: #relnotes_v33-ontap}
@@ -86,7 +87,7 @@ This release installs the Zerto 7.0 Update 2 service version on newly deployed i
 
 * The following architecture reference documentation is available in the *Reference* section of the user documentation:
   * [Active Directory Domain Services guide](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-intro)
-  * [vCenter Server and RedHat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
+  * [vCenter Server and Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
   * [vCenter Server and Red Hat OpenShift guide](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
   * [vCenter Server and VMware Horizon 7 architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-arch-ovw)
 

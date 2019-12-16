@@ -10,10 +10,11 @@ IBM Cloud for VMware Solutions
     [Why IBM Cloud for VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
-    vmonic/relnotes_v33.md
+    vmonic/relnotes_v34.md
 
     {: .topicgroup}
     Previous release notes
+        vmonic/relnotes_v33.md
         vmonic/relnotes_v32.md
         vmonic/relnotes_v31.md
         vmonic/relnotes_v30.md
@@ -172,9 +173,20 @@ IBM Cloud for VMware Solutions
         services/managinghtkc.md
 
     {: .topicgroup}
-    IBM Cloud Private Hosted
+    IBM Cloud for VMware Mission Critical Workloads
+        services/mcv_overview.md
+        services/mcv_ordering-multi-zone.md
+        services/mcv_ordering-managed.md
+        services/mcv_viewingclusters.md
+        services/mcv_addingremovingservers.md
+
+    {: .topicgroup}
+    (Deprecated) IBM Cloud Private Hosted
         services/icp_overview.md
-        services/icp_ordering.md
+
+    {: .topicgroup}
+    IBM Security Services for SAP
+        services/managing-ss-sap.md
 
     {: .topicgroup}
     IBM Spectrum Protect Plus
@@ -189,6 +201,18 @@ IBM Cloud for VMware Solutions
         services/kmip_standalone_viewing.md
         services/kmip_standalone_addingdeletingcert.md
         services/kmip_standalone_deleting.md
+
+    {: .topicgroup}
+    PrimaryIO HDM
+        services/managing_pio.md
+        services/pio_ordering.md
+        services/pio_installing.md
+
+    {: .topicgroup}
+    Red Hat OpenShift for VMware
+        services/ocp_overview.md
+        services/ocp_ordering.md
+        services/ocp_managing.md
 
     {: .topicgroup}
     Veeam
@@ -210,22 +234,22 @@ IBM Cloud for VMware Solutions
         services/managingzertodr.md
 
     {: .topicgroup}
-    Partner Services
-        services/managing_ices.md
-        services/mcv_overview.md
+    Professional Services
+        services/managing_imi.md
         services/managing_veeam_services.md
         services/managing_zerto_services.md
-        services/managing_imi.md
+        services/managing_ices.md
         services/netapp_overview.md
 
     {: .topicgroup}
-    (Experimental) VMware Solutions Shared
+    (Beta) VMware Solutions Shared
         shared/shared_overview.md
         shared/shared_ordering_ondemand.md
         shared/shared_ordering_reserved.md
         shared/shared_managing.md
-        shared/shared_private_network.md
-        shared/vcd-ops-guide.md
+        shared/shared_vcd-ops-guide.md
+        shared/shared_veeam.md
+        shared/shared_pricing.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -315,6 +339,13 @@ IBM Cloud for VMware Solutions
         archiref/attached-storage/storage-infra-mgmt.md
         archiref/attached-storage/storage-settings.md
         archiref/attached-storage/cluster-settings.md
+
+    {: .topicgroup}
+    IBM Cloud for VMware Mission Critical Workloads architecture
+        archiref/mission-critical/mcv-archi-overview.md
+        archiref/mission-critical/mcv-archi-design.md
+        archiref/mission-critical/mcv-archi-bom.md
+        archiref/mission-critical/mcv-archi-comps.md
 
     {: .topicgroup}
     Caveonix RiskForesight reference architecture

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-28"
 
 ---
 
@@ -102,8 +102,6 @@ The following table describes these items:
 * Alarm Name - The name of the alarm visible in vCenter.
 * Guidance - IC4V guidance on the use of this alarm.
 * More Information - Additional information available from IBM or VMware to help with the resolution of these alarms once triggered.
-
-Table 1. Preconfigured alarms
 
 | Alarm Name | Guidance | More Information |
 |---|---|---|
@@ -207,6 +205,7 @@ Table 1. Preconfigured alarms
 | Cannot connect to storage * | Configure to send email once when the following critical events occur: Lost Storage Connectivity, Lost Storage Path Redundancy, Degraded Storage Path Redundancy or Lost connection to NFS server.| [Identifying Fibre Channel, iSCSI, and NFS storage issues on ESX/ESXi hosts (1003659)g](https://kb.vmware.com/s/article/1003659){:external} |
 | Migration error * | Configure to send email once when the following critical events occur: Cannot migrate VM, Migration error, Migration host error, Cannot relocate VM or VM orphaned. | [vMotion or Storage vMotion of a VM fails with the error: The migration has exceeded the maximum switchover time of 100 seconds (2141355)](https://kb.vmware.com/s/article/2141355){:external} |
 | Exit standby error | Not configured in vCenter Server instances as the use of DPM is not recommended. | vSphere Distributed Power Management (DPM) provides power savings in on-premises deployments by dynamically consolidating workloads during periods of low resource utilization as VMs are migrated onto fewer hosts and the needed ESX hosts that are not needed are powered off. No power consumption savings can be realized by powering off IBM Cloud Bare Metal Servers. |
+{: caption="Table 1. Preconfigured alarms" caption-side="bottom"}
 
 \* Denotes a stateless alarm. vCenter does not keep data on stateless alarms, does not compute, or display their status. Stateless alarms cannot be acknowledged or reset.
 {:note}
@@ -219,8 +218,6 @@ If you have a vSAN cluster, the additional preconfigured alarms in the following
 * Alarm Name - The name of the alarm visible in vCenter.
 * Guidance - IC4V guidance on the use of this alarm.
 * More Information - Additional information available from {{site.data.keyword.IBM}} or VMware to help with the resolution of these alarms once triggered.
-
-Table 2. Preconfigured alarms - vSAN
 
 | Alarm Name | Guidance | More Information |
 |---|---|---|
@@ -320,29 +317,26 @@ Table 2. Preconfigured alarms - vSAN
 | vSAN health alarm for vMotion `MTU check (ping with large packet size)` | Configure to send email once for a critical event. | [vSAN Health Service - Network Health - Hosts small ping test (connectivity check) and Hosts large ping test (MTU check) (2108285)](https://kb.vmware.com/s/article/2108285){:external} |
 | VSAN Health Service Alarm | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |
 | vSAN health service alarm for Overall Health Summary | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |
-
+{: caption="Table 2. Preconfigured alarms - vSAN" caption-side="bottom"}
 
 ## Preconfigured alarms - Hybridity bundle
 {: #opsprocs-alarms-preconfigured-hcx}
 
 The hybridity bundle installs HCX and this creates the following additional preconfigured alarms:
 
-Table 3. Preconfigured alarms - HCX
-
 | Alarm Name | Guidance | More Information |
 |---|---|---|
-| Bulk Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| Cold Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| HCX Cloud Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| HCX Enterprise Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| HCX Interconnect tunnel status | Configure to send email once for a critical tunnel status is down event. | See [Network (WAN) connectivity](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting#hcxclient-troubleshooting-wan-connect). |
+| Bulk Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| Cold Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| HCX Cloud Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| HCX Enterprise Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| HCX Interconnect tunnel status | Configure to send email once for a critical tunnel status is down event. | See [Network (WAN) connectivity](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting#hcxclient-troubleshooting-wan-connect). |
+{: caption="Table 3. Preconfigured alarms - HCX" caption-side="bottom"}
 
 ## Events and alarms procedures
 {: #opsprocs-alarms-procedures}
 
 The following table describes a number of procedures for events and alarms.
-
-Table 4. Events and alarms procedures
 
 | Title | Description |
 |---|---|
@@ -350,6 +344,7 @@ Table 4. Events and alarms procedures
 |  Export events  | You might need to export events to use tools in MS Excel to assist. Select the required inventory object. Click the **Monitor** tab, **Events**, and the **Export** icon. In the **Export Events** window, specify what types of event information you want to export. Select **Generate CSV Report** and click **Save**. Specify a file name and location and save the file. |
 | Event retention  |  By default, the event retention is set to 30 days. You need to change this setting in the VMware vSphere Web Client. Click the **Configure** tab, **Settings**, and **General**. Click **Edit**, change the Event Retention to the required number of days, and click **OK**. |
 | View Triggered Alarms  | To view the triggered alarms, navigate to vCenter and select either **All** or **New** in the **Alarms** pane. This list refreshes every 120 seconds. To view alarms triggered on a selected inventory object, select the object. Click the **Monitor** tab, **Issues**, and select **Triggered Alarms**. |
+{: caption="Table 4. Events and alarms procedures" caption-side="bottom"}
 
 **Next topic**: [Proactive tasks](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-proactive)
 

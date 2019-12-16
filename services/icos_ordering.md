@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-11-07"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -56,8 +56,8 @@ For more information, see [Managing capacity tier data](https://helpcenter.veeam
 {: #icos_ordering-related}
 
 * [Veeam overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
-* [Ordering Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
-* [Managing Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Ordering Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_ordering)
+* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
 * [Veeam on {{site.data.keyword.cloud_notm}} - Demos](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud/){:external}

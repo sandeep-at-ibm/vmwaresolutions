@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-04"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -19,14 +19,14 @@ subcollection: vmware-solutions
 # Networking considerations for vCenter Server instances
 {: #vc_networkingonvcenterserver}
 
-Review the following information for details about networking considerations and requirements for your 
+Review the following information for details about networking considerations and requirements for your
 VMware vCenter Server instances. Ensure that you meet the requirements so that your instance functions properly.
 
 ## Networking components for vCenter Server instances
 {: #vc_networkingonvcenterserver-networking-components}
 {: faq}
 
-To review the networking components that are included in your vCenter Server instance, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs).
+To review the networking components that are included in your vCenter Server instance, see [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#specs).
 
 ## Firewall considerations
 {: #vc_networkingonvcenterserver-firewall-considerations}
@@ -40,7 +40,7 @@ If you're using firewalls, you must configure rules for all communications from 
 
 During vCenter Server instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
-An NSX Edge Services Gateway is also deployed to be used by your workload virtual machines (VMs). For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+An NSX Edge Services Gateway is also deployed to be used by your workload virtual machines (VMs). For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerations when changing passwords for NSX components
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}

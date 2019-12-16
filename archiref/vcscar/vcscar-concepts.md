@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-02"
 
 subcollection: vmware-solutions
 
@@ -32,26 +32,24 @@ The Skater Language is the core of the system and is used in the following manne
 
 The following are the core language elements for constructing a Trick.
 
-Table 1. Core language elements
-
 Element Type | Language text
 ---|---|---
 Direction | fakie<br>nollie<br>switch
 Rotation | halfcab<br>cab<br>180<br>360<br>540
 Base | kickflip<br>heelflip<br>hardflip<br>bigspin<br>shuvit<br>impossible
 landing | manual (back two wheels)<br>nosemanual (front two wheels)<br>5-0 (grind)<br>nosegrind<br>tailslide<br>noseslide<br>crooked grind<br>smithgrind<br>boardslide<br>lipslide<br>
+{: caption="Table 1. Core language elements" caption-side="bottom"}
 
 ### Element modifiers
 {: #vcscar-concepts-elem-modifiers}
 
 Element modifiers are special language elements that give context to certain aspects of the language.
 
-Table 2. Language modifiers
-
 Element Type | Language Text |Notices
 ---|---|---
 Turn Prefix | Frontside<br>backside | The Turn Prefix relates to the direction of a turn
 Varial | Inward<br>outward |
+{: caption="Table 2. Language modifiers" caption-side="bottom"}
 
 ## Language rules
 {: #vcscar-concepts-lang-rules}

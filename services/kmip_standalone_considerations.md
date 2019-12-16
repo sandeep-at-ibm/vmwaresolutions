@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-12"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -21,7 +22,8 @@ subcollection: vmware-solutions
 # KMIP for VMware overview
 {: #kmip_standalone_considerations}
 
-The KMIP for VMware service provides a 24x7 highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.
+The KMIP for VMware service provides a 24x7 highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.
+{: shortdesc}
 
 The KMIP for VMware service is available as a stand-alone service without being associated to a VMware instance. Each instance of the service can serve one or more vCenter Server instances or vSphere clusters.
 
@@ -31,7 +33,7 @@ The KMIP for VMware service is available as a stand-alone service without being 
 The following specifications are included with the KMIP for VMware service:
 
 * A VMware-compatible Key Management Interoperability Protocol (KMIP)
-* Two managed services: [Key Protect](https://cloud.ibm.com/catalog/services/key-protect){:external} and [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services){:external}
+* Two managed services: [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) and [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
 * Available in multiple geographic regions worldwide
 * Two KMIP network service endpoints provided in each region for high availability
 
@@ -59,7 +61,7 @@ Review the following considerations before you install a KMIP for VMware instanc
    * [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 * Because only private connection is supported, you do not need to configure any firewall or SNAT rules in vCenter Server for the network connectivity from the vCenter Server to the endpoint of the KMIP for VMware instance.
 
-For more information, see [KMIP for VMware solution architecture](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview).
+For more information, see [KMIP for VMware solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip-overview).
 
 **Notes:**
 
@@ -75,9 +77,9 @@ All data protected by the KMIP for VMware service, including encrypted backups, 
 ## Related links
 {: #kmip_standalone_considerations-related}
 
-* [Ordering KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering)
-* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
-* [Viewing KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
-* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Ordering KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering)
+* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
+* [Viewing KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
+* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)

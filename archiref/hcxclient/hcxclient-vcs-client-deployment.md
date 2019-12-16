@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
@@ -27,6 +27,7 @@ The HCX client side can install on any version of vSphere supported by HCX assum
 | HCX Interconnect (HCX-IX) | 4 | 3G |  2G |
 | HCX Network Extension (HCX-NE) | 4 | 3G |  2G |
 | HCX WAN Optimizer (HCX-WAN) | 8 | 14G |  100G |
+{: caption="Table 1. Requirements" caption-side="bottom"}
 
 ## Client Licensing
 {: #hcxclient-vcs-client-deployment-licensing}
@@ -103,8 +104,6 @@ Install the HCX Manager appliance in the on-premises vCenter.
   * Enter and reenter the **root** user password. In the future, if help is needed from VMware Global Support Services (GSS), this password might have to be shared so they can troubleshoot the system.
   * For the network properties, enter the host name for the HCX Manager VM. Enter the network IPv4 address, the IPv4 prefix (the CIDR), and the default gateway. The following table shows sample values:
 
-Table 1. Sample values for network properties
-
 | Field                    | Value           |
 |--------------------------|-----------------|
 | Hostname                 | HCM_1           |
@@ -113,6 +112,7 @@ Table 1. Sample values for network properties
 | Default IPv4 Gateway     | 192.168.200.1   |
 | Network 1 IPv6 Address   |                 |
 | Network 1 IPv6 Prefix    |                 |
+{: caption="Table 2. Sample values for network properties" caption-side="bottom"}
 
 8. Review the vService bindings page. Click **Next** to continue.
 9. On the **Ready to complete** page, follow these steps:
@@ -169,8 +169,8 @@ Notice the existing **Hybrid Cloud** icon and the **Hybrid Cloud Services** menu
 ## Related links
 {: #hcxclient-vcs-client-deployment-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
-* [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

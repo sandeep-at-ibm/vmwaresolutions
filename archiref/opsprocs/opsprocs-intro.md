@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 ---
 
@@ -22,14 +22,14 @@ This document provides a view of day 2 operations that need to carried out by th
 * Day 1:
   * Installation
   * Setup
-  * Configuration. For more information, see [Configuration tasks](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsprocs-configure).
+  * Configuration. For more information, see [Configuration tasks](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-configure).
 
 Day 2 operations typically consist of the following high level tasks:
 
-* Compliance. For more information, see [Compliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsprocs-compliance).
-* Proactive and reactive maintenance. For more information, see [Proactive tasks](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsprocs-proactive) and [Troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-trouble).
+* Compliance. For more information, see [Compliance](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-compliance).
+* Proactive and reactive maintenance. For more information, see [Proactive tasks](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-proactive) and [Troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-trouble).
 
-For more information on day 2 responsibilities, see [Responsibilities for Day 2 operations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsprocs-responsibilities).
+For more information on day 2 responsibilities, see [Responsibilities for Day 2 operations](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-responsibilities).
 
 ## Operational procedures introduction
 {: #opsprocs-intro-proc}
@@ -94,5 +94,5 @@ In addition to monitoring, Operations Management on {{site.data.keyword.cloud_no
 
 * [About vSphere Monitoring and Performance](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.monitoring.doc/GUID-A8B06BE0-E5FC-435C-B12F-A31618B21E2C.html){:external}
 * [VMware security hardening guides](https://www.vmware.com/uk/security/hardening-guides.html){:external}
-* [Operations management introduction](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-intro)
+* [Operations management introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
 * [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)

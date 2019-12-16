@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-09-20"
+lastupdated: "2019-11-07"
 
 keywords: IAM user, invite user, service access
 
@@ -47,4 +47,4 @@ After the added users accept your invitation, they can log in to the {{site.data
 * [Inviting users to an account](/docs/iam?topic=iam-iamuserinv)
 * [Getting started with IAM tutorial](/docs/iam?topic=iam-getstarted)
 * [What is IBM Cloud Identity and Access Management?](/docs/iam?topic=iam-iamoverview)
-* [Migrating pre-V2.5 vCenter Server instances to {{site.data.keyword.cloud_notm}} accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addinstancetousraccount)
+* [Migrating pre-V2.5 vCenter Server instances to {{site.data.keyword.cloud_notm}} accounts](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addinstancetousraccount)

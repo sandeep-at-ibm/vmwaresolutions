@@ -1,3 +1,134 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="830px" height="400px" viewBox="-0.5 -0.5 830 400" style="background-color: rgb(255, 255, 255);"><defs><linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-f5f5f5-1-b3b3b3-1-s-0"><stop offset="0%" style="stop-color:#f5f5f5"/><stop offset="100%" style="stop-color:#b3b3b3"/></linearGradient></defs><g><rect x="354" y="120" width="114" height="110" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/><rect x="128" y="95" width="170" height="165" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-dasharray="6 6" pointer-events="none"/><path d="M 404.09 154.93 C 403.83 154.94 403.59 155.05 403.42 155.25 L 398.69 160.74 L 400.09 161.94 L 403.2 158.33 L 403.2 191.76 L 400.07 188.65 L 398.77 189.96 L 403.47 194.64 C 403.83 195 404.41 195 404.77 194.64 L 409.49 189.93 L 408.19 188.62 L 405.04 191.76 L 405.04 158.33 L 408.17 161.97 L 409.57 160.76 L 404.82 155.25 C 404.63 155.03 404.37 154.92 404.09 154.93 Z M 396.84 169.51 L 395.53 170.81 L 398.7 174 L 383.55 174 L 383.55 175.84 L 398.7 175.84 L 395.55 179 L 396.86 180.3 L 401.57 175.57 C 401.93 175.21 401.93 174.63 401.57 174.27 Z M 411.35 169.52 L 406.68 174.27 C 406.32 174.63 406.32 175.21 406.68 175.57 L 411.35 180.3 L 412.66 179.01 L 409.54 175.84 L 424.69 175.84 L 424.69 174 L 409.53 174 L 412.66 170.81 Z M 404 151 C 390.76 151 380 161.76 380 175 C 380 188.25 390.76 199 404 199 C 417.25 199 428 188.25 428 175 C 428 161.76 417.25 151 404 151 Z M 404 152.84 C 416.25 152.84 426.16 162.75 426.16 175 C 426.16 187.25 416.25 197.16 404 197.16 C 391.75 197.16 381.84 187.25 381.84 175 C 381.84 162.75 391.75 152.84 404 152.84 Z" fill="#006eaf" stroke="none" pointer-events="none"/><g transform="translate(391.5,128.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="24" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"><div>DLR</div></div></div></foreignObject><text x="12" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text></switch></g><g transform="translate(362.5,101.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="85" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; font-weight: bold; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">OpenShift DLR</div></div></foreignObject><text x="43" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">OpenShift DLR</text></switch></g><g transform="translate(149.5,56.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="131" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; font-weight: bold; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">OpenShift Edge <br />Services Gateway (HA)</div></div></foreignObject><text x="66" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">OpenShift Edge &lt;br&gt;Services Gateway (HA)</text></switch></g><path d="M 322 280 L 322 186.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 322 181.12 L 325.5 188.12 L 322 186.37 L 318.5 188.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(289.5,286.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="83" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; font-weight: bold; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Transit VXLAN</div></div></foreignObject><text x="42" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Transit VXLAN</text></switch></g><path d="M 248.09 154.93 C 247.83 154.94 247.59 155.05 247.42 155.25 L 242.69 160.74 L 244.09 161.94 L 247.2 158.33 L 247.2 191.76 L 244.07 188.65 L 242.77 189.96 L 247.47 194.64 C 247.83 195 248.41 195 248.77 194.64 L 253.49 189.93 L 252.19 188.62 L 249.04 191.76 L 249.04 158.33 L 252.17 161.97 L 253.57 160.76 L 248.82 155.25 C 248.63 155.03 248.37 154.92 248.09 154.93 Z M 240.84 169.51 L 239.53 170.81 L 242.7 174 L 227.55 174 L 227.55 175.84 L 242.7 175.84 L 239.55 179 L 240.86 180.3 L 245.57 175.57 C 245.93 175.21 245.93 174.63 245.57 174.27 Z M 255.35 169.52 L 250.68 174.27 C 250.32 174.63 250.32 175.21 250.68 175.57 L 255.35 180.3 L 256.66 179.01 L 253.54 175.84 L 268.69 175.84 L 268.69 174 L 253.53 174 L 256.66 170.81 Z M 248 151 C 234.76 151 224 161.76 224 175 C 224 188.25 234.76 199 248 199 C 261.25 199 272 188.25 272 175 C 272 161.76 261.25 151 248 151 Z M 248 152.84 C 260.25 152.84 270.16 162.75 270.16 175 C 270.16 187.25 260.25 197.16 248 197.16 C 235.75 197.16 225.84 187.25 225.84 175 C 225.84 162.75 235.75 152.84 248 152.84 Z" fill="#006eaf" stroke="none" pointer-events="none"/><g transform="translate(133.5,168.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="81" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: right;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">NSX Interfaces</div></div></foreignObject><text x="41" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">NSX Interfaces</text></switch></g><path d="M 58 130 L 58 70.1" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/><path d="M 58 63.35 L 62.5 72.35 L 58 70.1 L 53.5 72.35 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(40.5,95.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="36" height="10" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">PUBLIC</div></div></foreignObject><text x="18" y="10" fill="#000000" text-anchor="middle" font-size="10px" font-family="Helvetica">PUBLIC</text></switch></g><path d="M 58 130 L 58 120 L 248 120 L 248 145" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/><path d="M 58.09 139.93 C 57.83 139.94 57.59 140.05 57.42 140.25 L 52.69 145.74 L 54.09 146.94 L 57.2 143.33 L 57.2 176.76 L 54.07 173.65 L 52.77 174.96 L 57.47 179.64 C 57.83 180 58.41 180 58.77 179.64 L 63.49 174.93 L 62.19 173.62 L 59.04 176.76 L 59.04 143.33 L 62.17 146.97 L 63.57 145.76 L 58.82 140.25 C 58.63 140.03 58.37 139.92 58.09 139.93 Z M 50.84 154.51 L 49.53 155.81 L 52.7 159 L 37.55 159 L 37.55 160.84 L 52.7 160.84 L 49.55 164 L 50.86 165.3 L 55.57 160.57 C 55.93 160.21 55.93 159.63 55.57 159.27 Z M 65.35 154.52 L 60.68 159.27 C 60.32 159.63 60.32 160.21 60.68 160.57 L 65.35 165.3 L 66.66 164.01 L 63.54 160.84 L 78.69 160.84 L 78.69 159 L 63.53 159 L 66.66 155.81 Z M 58 136 C 44.76 136 34 146.76 34 160 C 34 173.25 44.76 184 58 184 C 71.25 184 82 173.25 82 160 C 82 146.76 71.25 136 58 136 Z M 58 137.84 C 70.25 137.84 80.16 147.75 80.16 160 C 80.16 172.25 70.25 182.16 58 182.16 C 45.75 182.16 35.84 172.25 35.84 160 C 35.84 147.75 45.75 137.84 58 137.84 Z" fill="#000000" stroke="none" pointer-events="none"/><g transform="translate(-0.5,153.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="25" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: right;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">FCR</div></div></foreignObject><text x="13" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">FCR</text></switch></g><path d="M 58.09 214.93 C 57.83 214.94 57.59 215.05 57.42 215.25 L 52.69 220.74 L 54.09 221.94 L 57.2 218.33 L 57.2 251.76 L 54.07 248.65 L 52.77 249.96 L 57.47 254.64 C 57.83 255 58.41 255 58.77 254.64 L 63.49 249.93 L 62.19 248.62 L 59.04 251.76 L 59.04 218.33 L 62.17 221.97 L 63.57 220.76 L 58.82 215.25 C 58.63 215.03 58.37 214.92 58.09 214.93 Z M 50.84 229.51 L 49.53 230.81 L 52.7 234 L 37.55 234 L 37.55 235.84 L 52.7 235.84 L 49.55 239 L 50.86 240.3 L 55.57 235.57 C 55.93 235.21 55.93 234.63 55.57 234.27 Z M 65.35 229.52 L 60.68 234.27 C 60.32 234.63 60.32 235.21 60.68 235.57 L 65.35 240.3 L 66.66 239.01 L 63.54 235.84 L 78.69 235.84 L 78.69 234 L 63.53 234 L 66.66 230.81 Z M 58 211 C 44.76 211 34 221.76 34 235 C 34 248.25 44.76 259 58 259 C 71.25 259 82 248.25 82 235 C 82 221.76 71.25 211 58 211 Z M 58 212.84 C 70.25 212.84 80.16 222.75 80.16 235 C 80.16 247.25 70.25 257.16 58 257.16 C 45.75 257.16 35.84 247.25 35.84 235 C 35.84 222.75 45.75 212.84 58 212.84 Z" fill="#000000" stroke="none" pointer-events="none"/><g transform="translate(-0.5,228.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="25" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: right;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">BCR</div></div></foreignObject><text x="13" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">BCR</text></switch></g><image x="11" y="-0.5" width="93" height="60" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL8AAAB/CAIAAAAxYITlAAAF8klEQVR4nO2dK3IkORRF1RXDGhgWKdDRoJgXMr0Uo1nKIC9leiFmBToaFDE0aOwBqpDTWfl5+jzpPuke5HD4k3IeX/2lL+/v745k8/zy5px7enxo/SBV+UJ7EvCuyOnVKtojJdaYNXoyifbsU8qbKX04RHu20PBminWHaM8y2t5MsesQ7ZlT05spFh2iPZ/YVufb1/lnfv8p+dvNCUR7bqx5c2+MhGSrbAlEe5z7rE6aLot07xDt0VJnilyjy/XVOXc+HU0IdGj9AI0J6nz7qqWO/Id7daYfgDN09nh19KRZZC2H7o359++z+tPkMa49TdQJzBxaCxtwgcatuVSrKslvD2zUU//8vNR4mlRGzJ7/frUZD7zn9x9REwc2gYbLHih1hLQa/t5lLHsA1TmfjrtfDNsFG8geQHU8EoEwG0Cj2AOrjkciEGD9NYQ94Op4dgUCrL+GsAeE3WbyrkBo9Vf/9oAET9m1HCD81foBtpDX9GtziubUOZ+OgDXUGoijhZnNw2CSOXUC2wLhDB5iZU+RbsV02rw5XVZYAZTsKd4dta7ORvzgrP5pnD2AYxil0Eudy/XVYdjTss+lp07z4MlXRzJ+2Jxm2RO1e8FW68HW0+bQpt0zU6fsvoW2wVNWnY3WD0LPq0H2lOoThW/H+V/HeZI61G73hPWgBROi7SpBVcBbP1Wz5/nlTXXfQltGCx5XOXuav2A9BlTH1bQHZN5AA1V1kCuvGn2ujr1xVVJHOG9afwxa3R6qk0/yrLu2T7r2UJ0i5K/ZUNKI9iRSs5lccMVPWY0U7aE6BSm+ZKzIULWWPVSnLBoLDvNzSKXHTnVMcLm+Zi6zV8meXu1BU6dgIKVVZLRHCpo6i+T4lFCRlbeH6jSn2vgQ7dnHljpT0jSS12K0Zwe76kyJ1UgoUP97SXPoQx0XP9Uq7IsVzp6egqcbdaZEhdBuAjF7lulSHRcZQrsJRHsW6FUdz/l0lDu0LRDtmdO3OgG5QBt7p2jPJwZRxyMU6HJ9XROI9nwwlDoeuUCLn6c9NwZUxyNsBi02gGiPcwOrE0g7dpP2UJ0bCcdujm4P1YliFj9D20N1ZsTGz9D2kHt2BZrGz7j2MHjW2BZoGj/F7Hl+eTN0jBzVySG86AJz7EWOcqoJ1ZEgOfU36wQWQ2EToDoFScyeDW+Qs4fqRLF76m909ljMGw/VKYg/9TfOnjV1kPPGQ3US2L00I8Iec63jANVRQtrumapjyBtHdbJZi5/z6SjKHqh7Q6KgOqrs2xPOyDUH1dFmp+ZSPSNXFapTkMS1hVSHbLBlj9GtfVSnGqv2UB2yy7I9VIdMWVuzsWAP1SFC5vZQHSLnkz1Uh0RhfmUq1WnIhz0Wg4fqNOR8Ot7soTokAas1F9VBwKQ9VAeEg7NWbVEdEJ4eH0xmDwHBmD0MHhD83MXBULVFddAwkz1UB4dwnYUNe6hOWwyfW0h10Aj36KDbQ3XQmK71gbaH6oCDaw/VAWR2/RuoPVQHh42t7AfA9wT4SMQt3Tt5yLyRuzhUB5PFK0uxai6qg8b2CSwHB/POQB6D3LN2V/JtH3vz2S6qA4gPno1rtiFqLqoDy/bZzTd7fnxv1namOphcrq9enY1+1Uf2NBGI6mAiUcfNaq7K75LqwCJRx83seXp8qPZGqQ44koHAhbPDKvS/qA44wjHkhT6XdgOI6oAjn35Y7rHrCUR1wImauVod79EQiOqAEzvpuTVa+ON7yUY01QEnYb5cdFZ8fjua6oCTttRCNFORGUJUB5zkVTpx93MlhBDVASdngVf07W5Rp8dTHWTyFwam30squb8izZ5QKrs3yeFTZE1pgVtt3UogxaqzVp4OHHp6fMApRcG1yGXsmeJNEqojLAnOnz6WWQHbFqT4Gvby9ihhUSCoNNXY/mDGHo8VhySvqlpZ9LbNGLPHWRAo6m3pFafCXit79ngwHcp8YUUKVXODnlV7PDgOabwzeelabem0bY+ns46MIXqwJ1BZo5G98XRlT0BVI0oT6NOeQCmNaMwi/wPScj+KLxIrNAAAAABJRU5ErkJggg==" pointer-events="none"/><path d="M 88 235 L 248 235 L 248 205" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/><path d="M 58 265 L 58 350 L 58 379.9" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/><path d="M 58 386.65 L 53.5 377.65 L 58 379.9 L 62.5 377.65 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(21.5,318.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="41" height="10" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">PRIVATE</div></div></foreignObject><text x="21" y="10" fill="#000000" text-anchor="middle" font-size="10px" font-family="Helvetica">PRIVATE</text></switch></g><rect x="563" y="109.5" width="30" height="28" rx="4.2" ry="4.2" fill="url(#mx-gradient-f5f5f5-1-b3b3b3-1-s-0)" stroke="#666666" stroke-width="2" pointer-events="none"/><g transform="translate(568.5,116.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="18" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 19px; white-space: nowrap; overflow-wrap: normal; text-align: center;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">VM</div></div></foreignObject><text x="9" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">VM</text></switch></g><path d="M 578 138 L 578 170" fill="none" stroke="#009900" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(629.5,159.5)"><switch><foreignObject style="overflow:visible;" pointer-events="all" width="157" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;"> OpenShift: 192.168.133.0/24</div></div></foreignObject><text x="79" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica"> OpenShift: 192.168.133.0/24</text></switch></g><path d="M 278 175 L 368 175 L 374 175" fill="none" stroke="#0000cc" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/><path d="M 434 175 L 828 175 L 828 168" fill="none" stroke="#009900" stroke-width="2" stroke-miterlimit="10" pointer-events="none"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 832.3 400" style="enable-background:new 0 0 832.3 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-dasharray:6,6;}
+	.st2{fill:#006EAF;}
+	.st3{font-family:'Arial-BoldMT';}
+	.st4{font-size:12px;}
+	.st5{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st6{stroke:#000000;stroke-miterlimit:10;}
+	.st7{font-family:'ArialMT';}
+	.st8{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st9{stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st10{font-size:10px;}
+	.st11{fill:url(#SVGID_1_);stroke:#666666;stroke-width:2;}
+	.st12{fill:none;stroke:#009900;stroke-width:2;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#0000CC;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g id="Layer_1_1_">
+	<path class="st0" d="M0,0"/>
+	<rect x="356.8" y="120.5" pointer-events="none" class="st1" width="114" height="110"/>
+	<rect x="130.8" y="95.5" pointer-events="none" class="st1" width="170" height="165"/>
+	<path pointer-events="none" class="st2" d="M406.9,155.4c-0.3,0-0.5,0.1-0.7,0.3l-4.7,5.5l1.4,1.2l3.1-3.6v33.4l-3.1-3.1l-1.3,1.3
+		l4.7,4.7c0.4,0.4,0.9,0.4,1.3,0l4.7-4.7l-1.3-1.3l-3.1,3.1v-33.4l3.1,3.6l1.4-1.2l-4.8-5.5C407.5,155.5,407.2,155.4,406.9,155.4z
+		 M399.7,170l-1.3,1.3l3.2,3.2h-15.2v1.8h15.2l-3.2,3.2l1.3,1.3l4.7-4.7c0.4-0.4,0.4-0.9,0-1.3L399.7,170z M414.2,170l-4.7,4.8
+		c-0.4,0.4-0.4,0.9,0,1.3l4.7,4.7l1.3-1.3l-3.1-3.2h15.1v-1.8h-15.2l3.1-3.2L414.2,170z M406.8,151.5c-13.2,0-24,10.8-24,24
+		c0,13.3,10.8,24,24,24c13.3,0,24-10.8,24-24S420.1,151.5,406.8,151.5z M406.8,153.3c12.3,0,22.2,9.9,22.2,22.2s-9.9,22.2-22.2,22.2
+		s-22.2-9.9-22.2-22.2S394.6,153.3,406.8,153.3z"/>
+	<g transform="translate(362.5,101.5)">
+		<text transform="matrix(1 0 0 1 3.1712 12.5)" class="st3 st4">OpenShift DLR</text>
+	</g>
+	<g transform="translate(149.5,56.5)">
+		<text transform="matrix(1 0 0 1 -47.2057 27.5)" class="st3 st4">OpenShift Edge Services Gateway (HA)</text>
+	</g>
+	<path pointer-events="none" class="st5" d="M324.8,280.5v-93.6"/>
+	<path pointer-events="none" class="st6" d="M324.8,181.6l3.5,7l-3.5-1.8l-3.5,1.8L324.8,181.6z"/>
+	<g transform="translate(289.5,286.5)">
+		<text transform="matrix(1 0 0 1 3.1585 12.5)" class="st3 st4">Transit VXLAN</text>
+	</g>
+	<path pointer-events="none" class="st2" d="M250.9,155.4c-0.3,0-0.5,0.1-0.7,0.3l-4.7,5.5l1.4,1.2l3.1-3.6v33.4l-3.1-3.1l-1.3,1.3
+		l4.7,4.7c0.4,0.4,0.9,0.4,1.3,0l4.7-4.7l-1.3-1.3l-3.2,3.1v-33.4l3.1,3.6l1.4-1.2l-4.8-5.5C251.5,155.5,251.2,155.4,250.9,155.4z
+		 M243.7,170l-1.3,1.3l3.2,3.2h-15.1v1.8h15.1l-3.1,3.2l1.3,1.3l4.7-4.7c0.4-0.4,0.4-0.9,0-1.3L243.7,170z M258.2,170l-4.7,4.8
+		c-0.4,0.4-0.4,0.9,0,1.3l4.7,4.7l1.3-1.3l-3.1-3.2h15.2v-1.8h-15.2l3.1-3.2L258.2,170z M250.8,151.5c-13.2,0-24,10.8-24,24
+		c0,13.3,10.8,24,24,24c13.3,0,24-10.8,24-24S264.1,151.5,250.8,151.5z M250.8,153.3c12.3,0,22.2,9.9,22.2,22.2s-9.9,22.2-22.2,22.2
+		s-22.2-9.9-22.2-22.2S238.6,153.3,250.8,153.3z"/>
+	<g transform="translate(133.5,168.5)">
+		<text transform="matrix(1 0 0 1 3.4827 12.5)" class="st7 st4">NSX Interfaces</text>
+	</g>
+	<path pointer-events="none" class="st8" d="M60.8,130.5V70.6"/>
+	<path pointer-events="none" class="st9" d="M60.8,63.8l4.5,9l-4.5-2.3l-4.5,2.3L60.8,63.8z"/>
+	<g transform="translate(40.5,95.5)">
+		<text transform="matrix(1 0 0 1 -19.2282 10.5)" class="st7 st10">PUBLIC</text>
+	</g>
+	<path pointer-events="none" class="st8" d="M60.8,130.5v-10h190v25"/>
+	<path pointer-events="none" d="M60.9,140.4c-0.3,0-0.5,0.1-0.7,0.3l-4.7,5.5l1.4,1.2l3.1-3.6v33.4l-3.1-3.1l-1.3,1.3l4.7,4.7
+		c0.4,0.4,0.9,0.4,1.3,0l4.7-4.7l-1.3-1.3l-3.1,3.1v-33.4l3.1,3.6l1.4-1.2l-4.8-5.5C61.5,140.5,61.2,140.4,60.9,140.4z M53.7,155
+		l-1.3,1.3l3.2,3.2H40.4v1.8h15.2l-3.2,3.2l1.3,1.3l4.7-4.7c0.4-0.4,0.4-0.9,0-1.3L53.7,155z M68.2,155l-4.7,4.8
+		c-0.4,0.4-0.4,0.9,0,1.3l4.7,4.7l1.3-1.3l-3.1-3.2h15.2v-1.8H66.4l3.1-3.2L68.2,155z M60.8,136.5c-13.2,0-24,10.8-24,24
+		c0,13.3,10.8,24,24,24c13.3,0,24-10.8,24-24S74.1,136.5,60.8,136.5z M60.8,138.3c12.3,0,22.2,9.9,22.2,22.2s-9.9,22.2-22.2,22.2
+		s-22.2-9.9-22.2-22.2S48.6,138.3,60.8,138.3z"/>
+	<g transform="translate(-0.5,153.5)">
+		<text transform="matrix(1 0 0 1 3.5023 12.5)" class="st7 st4">FCR</text>
+	</g>
+	<path pointer-events="none" d="M60.9,215.4c-0.3,0-0.5,0.1-0.7,0.3l-4.7,5.5l1.4,1.2l3.1-3.6v33.4l-3.1-3.1l-1.3,1.3l4.7,4.7
+		c0.4,0.4,0.9,0.4,1.3,0l4.7-4.7l-1.3-1.3l-3.1,3.1v-33.4l3.1,3.6l1.4-1.2l-4.8-5.5C61.5,215.5,61.2,215.4,60.9,215.4z M53.7,230
+		l-1.3,1.3l3.2,3.2H40.4v1.8h15.2l-3.2,3.2l1.3,1.3l4.7-4.7c0.4-0.4,0.4-0.9,0-1.3L53.7,230z M68.2,230l-4.7,4.8
+		c-0.4,0.4-0.4,0.9,0,1.3l4.7,4.7l1.3-1.3l-3.1-3.2h15.2v-1.8H66.4l3.1-3.2L68.2,230z M60.8,211.5c-13.2,0-24,10.8-24,24
+		c0,13.3,10.8,24,24,24c13.3,0,24-10.8,24-24S74.1,211.5,60.8,211.5z M60.8,213.3c12.3,0,22.2,9.9,22.2,22.2s-9.9,22.2-22.2,22.2
+		s-22.2-9.9-22.2-22.2S48.6,213.3,60.8,213.3z"/>
+	<g transform="translate(-0.5,228.5)">
+		<text transform="matrix(1 0 0 1 3.1654 12.5)" class="st7 st4">BCR</text>
+	</g>
+	
+		<image style="overflow:visible;enable-background:new    ;" width="191" height="127" xlink:href="data:image/png;base64,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" pointer-events="none" transform="matrix(0.4724 0 0 0.4724 15.2152 0)">
+	</image>
+	<path pointer-events="none" class="st8" d="M90.8,235.5h160v-30"/>
+	<path pointer-events="none" class="st8" d="M60.8,265.5v85v29.9"/>
+	<path pointer-events="none" class="st9" d="M60.8,387.1l-4.5-9l4.5,2.3l4.5-2.3L60.8,387.1z"/>
+	<g transform="translate(21.5,318.5)">
+		<text transform="matrix(1 0 0 1 -3.8185 10.5)" class="st7 st10">PRIVATE</text>
+	</g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="280.2822" y1="436.8036" x2="280.2822" y2="435.8036" gradientTransform="matrix(30 0 0 -28 -7827.667 12340.5)">
+		<stop  offset="0" style="stop-color:#F5F5F5"/>
+		<stop  offset="1" style="stop-color:#B3B3B3"/>
+	</linearGradient>
+	<path pointer-events="none" class="st11" d="M570,110h21.6c2.3,0,4.2,1.9,4.2,4.2v19.6c0,2.3-1.9,4.2-4.2,4.2H570
+		c-2.3,0-4.2-1.9-4.2-4.2v-19.6C565.8,111.9,567.7,110,570,110z"/>
+	<g transform="translate(568.5,116.5)">
+		<text transform="matrix(1 0 0 1 2.8333 12.5)" class="st7 st4">VM</text>
+	</g>
+	<path pointer-events="none" class="st12" d="M580.8,138.5v32"/>
+	<g transform="translate(629.5,159.5)">
+		<text transform="matrix(1 0 0 1 3.4378 12.5)" class="st7 st4"> OpenShift: 192.168.133.0/24</text>
+	</g>
+	<path pointer-events="none" class="st13" d="M280.8,175.5h90h6"/>
+	<path pointer-events="none" class="st12" d="M436.8,175.5h394v-7"/>
+	<path class="st12" d="M0,0"/>
+</g>
+<g id="Layer_2_1_">
+	<g transform="translate(133.5,168.5)">
+		<text transform="matrix(1 0 0 1 262.0285 -21.4912)" class="st7 st4">DLR</text>
+	</g>
+</g>
+</svg>

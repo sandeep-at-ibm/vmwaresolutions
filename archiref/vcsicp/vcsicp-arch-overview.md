@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -36,7 +36,7 @@ In the diagram, CAM logically creates cloud connections to the vCenters, cloud p
 
 You can deploy {{site.data.keyword.icpfull_notm}} with NSX-V or NSX-T components. {{site.data.keyword.icpfull_notm}} with NSX-V, enables the {{site.data.keyword.icpfull_notm}} VMs to run on the VXLAN network and use Kubernetes Calico internal networking.
 
-{{site.data.keyword.icpfull_notm}} with NSX-T, allowing users to control and configure networking, subnet, policies from central UI (NSX-T Manager). See [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) for the differences between NSX-V and NSX-T.
+{{site.data.keyword.icpfull_notm}} with NSX-T, allowing users to control and configure networking, subnet, policies from central UI (NSX-T Manager). See [vCenter Server networking guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro) for the differences between NSX-V and NSX-T.
 
 ## On-premises cloud management platform
 {: #vcsicp-arch-overview-on-premises-platform}

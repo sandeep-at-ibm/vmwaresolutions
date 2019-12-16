@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-12"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -13,16 +13,18 @@ subcollection: vmware-solutions
 
 ---
 
-# IBM Cloud for VMware Mission Critical Workloads
+# IBM Cloud for VMware Mission Critical Workloads overview
 {: #mcv_overview}
 
 {{site.data.keyword.cloud}} for VMware Mission Critical Workloads delivers a multi-zone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region.
 
-With this cloud architecture, customers can achieve a higher availability and failover success rate than most VMware clients can achieve with on-premises environments or competing cloud platforms.
+You can deploy VMware’s stretched vSAN clusters in an automated and self-managed infrastructure allowing you the flexibility to control and manage all aspects of your solution set.  This option is available in on-demand ordering within the current vCenter server workflow.
 
-This architecture supports existing mission-critical, legacy workloads, including non-cloud native applications, at a targeted aggregate availability of 99.99%. {{site.data.keyword.cloud_notm}} multi-zone regions are designed to keep mission-critical workloads online if a site outage occurs. Workloads in a failed site are automatically restarted in near real time, while workloads in adjoining sites remain online and available.
+In addition, you can deploy a fully managed solution delivered by IBM Services. {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads delivers greater availability, resiliency, and support than many enterprises currently maintain on premises. This option is available as a coordinated engagement with IBM Services teams.
 
-The architecture covers various enterprise services, including networks, storage, resiliency, and other tools built for monitoring and troubleshooting cloud-based applications. In addition, this architecture can be integrated with the IBM Services Platform with Watson, built on the {{site.data.keyword.cloud_notm}}, to allow for a broader consumption of services. Using the platform’s cognitive capabilities, clients can mine data more effectively for new business insights to help maintain continuous operations.
+The fully managed capability provides near-continuous availability of virtual machines up to an aggregate 99.99 percent SLA, without the need for modification. This design consists of a full stack of VMware software-defined virtualization technology and associated tooling to enable the consumption of services. The stack includes performance and capacity management (vRealize Suite), Active Directory, resiliency, integration with Netcool/Bluecare, and integration with the IBM Services Platform with Watson.
+
+Mission critical applications are those legacy applications that require near continuous availability. These applications are essential to the survival of the business and cannot be impacted. This capability enables you to deploy in {{site.data.keyword.cloud_notm}} a more robust high availability solution than you can implement in a traditional data center.
 
 ## Technical specifications for IBM Cloud for VMware Mission Critical Workloads
 {: #mcv_overview-specs}
@@ -40,9 +42,9 @@ The {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads archi
   * Resiliency patterns (backup and recovery)
 
 {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads is available in the following regions:
-* America: NA South - all {{site.data.keyword.cloud_notm}} Data Centers in Dallas and NA East: all {{site.data.keyword.cloud_notm}} Data Centers in Washington, DC
-* Europe: all {{site.data.keyword.cloud_notm}} Data Centers in Frankfurt and London
-* Asia-Pacific: all {{site.data.keyword.cloud_notm}} Data Centers in Sydney and Tokyo
+* America: US South (Dallas) and US East (Washington, DC)
+* Europe: Frankfurt and London
+* Asia-Pacific: Sydney and Tokyo
 
 ### Base infrastructure architecture specifications
 {: #mcv_overview-base-specs}
@@ -50,7 +52,7 @@ The {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads archi
 The base infrastructure has the following specifications:
 * Each site has its own dedicated edge and management cluster
 * The resource cluster is a vSphere + vSAN stretched cluster
-* The witness site contains a witness ESXi host
+* The witness site contains two ESXi hosts providing quorum for both vSAN and vCenter
 * Single vCenter and NSX Manager architecture
 * vCenter Server Appliance with embedded Platform Services Controller (PSC) that uses vCenter High Availability (HA) over an L3 network architecture
 * NSX Manager recovery is using a Hot/Standby methodology that syncs up backup files
@@ -84,19 +86,12 @@ The network architecture has the following specifications:
 * During a vMotion activity for VM-A, traffic will still ingress and egress via {{site.data.keyword.cloud_notm}} availability zone #1.
 * During a site or edge failure, traffic will route out of the remaining available site.
 
-## Procedure to request IBM Cloud for VMware Mission Critical Workloads
-{: #mcv_overview-proc}
-
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. Scroll down to the **Services** section, and then click **IBM Cloud for VMware Mission Critical Workloads** on the **Partner Services** card.
-3. On the IBM Cloud for VMware Mission Critical Workloads page, in the **Contact us for Mission Critical Workloads** box, click **Request a consultation**.
-4. On the IBM Services Experts page, click **Book a consultation** to book 30 minutes with a services expert.
-
-  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
-
 ## Related links
 {: #mcv_overview-related}
 
-* [Managed VMware Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_imi)
-* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Ordering multi-zone stretch clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
+* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
+* [Managed VMware Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_imi)
+* [Managed VMware Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_imi)
+* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)

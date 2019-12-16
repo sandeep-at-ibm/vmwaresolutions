@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-12-02"
 
 subcollection: vmware-solutions
 
@@ -29,19 +29,16 @@ The core components are as follows:
 ## Actors
 {: #vcsiks-systemcontext-actors}
 
-Table 1. Actors
-
 Actor | Description
 --|--
 System Administrator | VMware vSphere skilled resource who uses vCenter Server to manage the on-premises virtualization and the vCenter Server instance.
 Developer | Container skilled resource who uses the {{site.data.keyword.containerlong_notm}} (CLI / Kubectl) console to create and manage containers. They create the new services as part of application modernization.
 Customer | External actor who consumes services from the enterprise. For Acme Skateboards, the customer is a skater who wants to purchase skateboarding products. The customer requires secure internet access to the catalog.
 {{site.data.keyword.containerlong_notm}} | IBM resource that manages the {{site.data.keyword.containerlong_notm}} Master Node for the service.
+{: caption="Table 1. Actors" caption-side="bottom"}
 
 ## Systems
 {: #vcsiks-systemcontext-systems}
-
-Table 2. Systems
 
 Actor | Description
 --|--
@@ -57,6 +54,7 @@ Chef | Responsible for configuration management and compliance automation. Chef 
 Services | Represents the Service Composer, which is where administrators author, compose and design services that are constructed from Kubernetes resources and one or more VMs.
 Containerized applications | Applications that completed the application modernization journey and are now running as containers. For this reference architecture and Acme Skateboards, one of the containerized applications is a web server, which is part of the online presence workload.
 Watson | For this reference architecture and Acme Skateboards, Watson represents the AI service that is used in the “Concept Car” architecture.
+{: caption="Table 2. Systems" caption-side="bottom"}
 
 Application migration, networking, and security often are the most challenging aspects of application modernization. VMware vCenter Server, VMware Hybridity, VMware NSX, {{site.data.keyword.cloud_notm}} Private, and the {{site.data.keyword.containerlong_notm}} address these challenges and enable you to build resilient, secure, and robust modern applications.
 

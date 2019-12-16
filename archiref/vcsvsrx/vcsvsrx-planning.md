@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-11-04"
+lastupdated: "2019-12-13"
 
 ---
 
@@ -98,7 +98,7 @@ In cluster mode:
 - em0 is the cluster control link for both nodes.
 - Any of the traffic interfaces can be specified as the fabric links, such as ge-0/0/0 for fab0 on node 0 and ge-7/0/0 for fab1 on node 1.
 
-Table 1. Interface names and mappings for a standalone vSRX VM.
+The following table shows information for a standalone vSRX VM.
 
 Network Adapter|Interface Name in Junos OS
 ---|---
@@ -110,8 +110,9 @@ Network Adapter|Interface Name in Junos OS
 6|ge-0/0/4
 7|ge-0/0/5
 8|ge-0/0/6
+{: caption="Table 1. Interface names and mappings for a standalone vSRX VM" caption-side="bottom"}
 
-Table 2. Interface names and mappings for a pair of vSRX VMs in a cluster (node 0 and node 1).
+The following table shows information for a pair of vSRX VMs in a cluster (node 0 and node 1).
 
 Network Adapter|Interface Name in Junos OS
 ---|---
@@ -123,17 +124,19 @@ Network Adapter|Interface Name in Junos OS
 6|ge-0/0/3 (node 0) & ge-7/0/3 (node 1)
 7|ge-0/0/4 (node 0) & ge-7/0/4 (node 1)
 8|ge-0/0/5 (node 0) & ge-7/0/5 (node 1)
+{: caption="Table 2. Interface names and mappings for a pair of vSRX VMs in a cluster (node 0 and node 1)" caption-side="bottom"}
 
 #### Default security zone configuration
 {: #vcsvsrx-planning-default-sec-zone}
 
-Table 3. Factory default settings for security policies.
+The following table shows the factory default settings for security policies.
 
 Source Zone|Destination Zone|Policy Action
 ---|---|---
 trust|untrust|permit
 trust|trust|permit
 untrust|trust|deny
+{: caption="Table 3. Factory default settings for security policies" caption-side="bottom"}
 
 As noted previously the default configuration merely represents a point from which to build the required configuration to meet your requirements. The creation of additional security zones is often necessary to support the various traffic flow patterns present in the account.
 
@@ -151,6 +154,8 @@ Where the client is using Direct Link then BGP using private ASNs is possible.
 The diagram illustrates one of many potential implementations of BGP from the on-premises data center to the IBM Cloud.
 
 The traffic originating from the client facility flows through AT&T NetBond or other provider into the GNPP router. The GNPP router is peered via BGP to the vSRX gateway deployed into the client's IBM Cloud account and all traffic is encapsulated in a GRE tunnel over BGP. The packets exiting the tunnel into the vSRX are then routed to the NSX overlay network via an edge services gateway.
+
+**Next topic:** [vSRX example configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-default-config).
 
 ## Related links
 {: #vcsvsrx-planning-related}

@@ -4,12 +4,18 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-12-13"
 
 subcollection: vmware-solutions
 
 
 ---
+
+{:shortdesc: .shortdesc}
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # IBM Cloud networking and infrastructure
 {: #vcsiks-arch-overview-infrastructure}
@@ -45,25 +51,23 @@ The VMware vCenter Server with Hybridity Bundle seamlessly extends the networks 
 The physical infrastructure required to deploy a vCenter Server cluster, requires
 the following minimum specification.
 
-Table 1. vCenter Server specifications
-
-  | NFS Deployment | VSAN Deployment
----|---|---
-Number of Servers | 3 | 4
-CPU | 28 Cores 2.2GHZ | 28 Cores 2.2GHZ
-Memory | 384 GB | 384 GB
-Storage|Mgmt: 2 TB 2 IOPS, Workload: 2 TB 4 IOPS|Min SSD: 960 GB(x2)   
+| Item | NFS Deployment | vSAN Deployment |
+|:---- |:-------------- |:--------------- |
+| Number of Servers | 3 | 4 |
+| CPU | 28 Cores 2.2GHZ | 28 Cores 2.2GHZ |
+| Memory | 384 GB | 384 GB |
+| Storage | Management: 2 TB 2 IOPS, Workload: 2 TB 4 IOPS | Min SSD: 960 GB(x2) |
+{: caption="Table 1. vCenter Server specifications" caption-side="bottom"}
 
 The {{site.data.keyword.containerlong_notm}} deployment options vary based on your worker node requirements.
 
-Table 2. {{site.data.keyword.containerlong_notm}} specifications
-
-  | virtual machine | Bare Metal
---|---|--
-Number of Servers | 3 | 3
-CPU | 2 – 56 Core | 4 – 28 Core
-Memory | 4 GB - 242 GB | 32 GB - 512 GB
-Storage | 100 GB |  SATA: 2 TB / SSD: 960 GB
+| Item | Virtual Machine | Bare Metal |
+|:---- |:--------------- |:---------- |
+| Number of Servers | 3 | 3 |
+| CPU | 2 – 56 Core | 4 – 28 Core |
+| Memory | 4 GB - 242 GB | 32 GB - 512 GB |
+| Storage | 100 GB |  SATA: 2 TB / SSD: 960 GB |
+{: caption="Table 2. {{site.data.keyword.containerlong_notm}} specifications" caption-side="bottom"}
 
 ## Virtual structure
 {: #vcsiks-arch-overview-infrastructure-virtual-structure}
@@ -104,27 +108,27 @@ The {{site.data.keyword.cloud_notm}} automation deploys three NSX Controllers wi
 
 NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.icpfull_notm}}, a second gateway, which is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network.
 
-Any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls can be configured by the administrator. For more information about the NSX Edges that are deployed as part of the solution, see [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
+Any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls can be configured by the administrator. For more information about the NSX Edges that are deployed as part of the solution, see [vCenter Server networking guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro).
 
-The following tables summarize the {{site.data.keyword.icpfull_notm}} ESG / DLR specifications.
-
-Table 3. {{site.data.keyword.icpfull_notm}} ESG specifications
+The following table summarizes the {{site.data.keyword.icpfull_notm}} ESG specifications.
 
 Attribute |  Specification
 --|--
 Edge Service Gateway | Virtual appliance
-Edge size	Large | Number of vCPUs	2
-Memory	| 1 GB
-Disk	| 1000 GB on local datastore
+Edge size Large | Number of vCPUs 2
+Memory | 1 GB
+Disk | 1000 GB on local datastore
+{: caption="Table 3. {{site.data.keyword.icpfull_notm}} ESG specifications" caption-side="bottom"}
 
-Table 4. {{site.data.keyword.icpfull_notm}} DLR specifications
+The following table summarizes the {{site.data.keyword.icpfull_notm}} DLR specifications.
 
-Attribute  |  Specification
+Attribute | Specification
 --|--|
-Distributed Logical Router |	Virtual appliance
-Edge size	Compact | Number of vCPUs	1
-Memory	| 512 MB
-Disk	| 1000 GB on local datastore
+Distributed Logical Router | Virtual appliance
+Edge size Compact | Number of vCPUs 1
+Memory | 512 MB
+Disk | 1000 GB on local datastore
+{: caption="Table 4. {{site.data.keyword.icpfull_notm}} DLR specifications" caption-side="bottom"}
 
 ## IBM Cloud Kubernetes Service components
 {: #vcsiks-arch-overview-infrastructure-iks-comp}

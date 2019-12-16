@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server NSX-T networking, networking components, networking NSX-T
 
@@ -39,7 +39,7 @@ If you're using firewalls, you must configure rules for all communications from 
 
 During vCenter Server instance with NSX-T deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
-An NSX Edge Services Gateway is also deployed to be used by your workload VM. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+An NSX Edge Services Gateway is also deployed to be used by your workload VM. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
 ## Considerations when changing passwords for NSX components
 {: #vc_nsx-t_networkingonvcenterserver-change-nsx-component-password-considerations}

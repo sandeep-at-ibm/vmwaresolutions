@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-29"
 
 subcollection: vmware-solutions
 
@@ -22,8 +22,6 @@ Select the next available IP addresses from the {{site.data.keyword.cloud}} priv
 
 The sizing of the VMs are as follows:
 
-Table 1. Base parameters
-
 |Parameter	|Value|
 |---|---|
 |Type	|Base|
@@ -33,10 +31,9 @@ Table 1. Base parameters
 |Disk	|1000 GB|
 |OS	|CentOS 7|
 |Installed Application Components	|UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Remote Collector|
+{: caption="Table 1. Base parameters" caption-side="bottom"}
 
 The scale-out VM details are as follows:
-
-Table 2. Scale-out parameters
 
 | Parameter	| Value |
 |---|---|
@@ -47,10 +44,9 @@ Table 2. Scale-out parameters
 | Disk	| 4 TB |
 | OS	| CentOS 7 |
 | Installed Application Components	| Data Nodes (scale-out) |
+{: caption="Table 2. Scale-out parameters" caption-side="bottom"}
 
 The Remote Collector VM details are shown in the following table.
-
-Table 3. Remote collector parameters
 
 |Parameter	|Value|
 |---|---|
@@ -60,5 +56,6 @@ Table 3. Remote collector parameters
 |Disk	|1 TB|
 |OS	|CentOS 7|
 |Installed Application Components	|Remote Collector|
+{: caption="Table 3. Remote collector parameters" caption-side="bottom"}
 
-Next topic: [Fully distributed](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-fully)
+**Next topic:** [Fully distributed](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-fully)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-14"
+lastupdated: "2019-11-07"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -22,6 +23,7 @@ subcollection: vmware-solutions
 {: #vs_vsphereclusteroverview}
 
 VMware vSphere is a streamlined and optimized ordering platform for VMware. With this platform, you can build your own IBM-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components.
+{: shortdesc}
 
 The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented. Also, a minimum of four ESXi servers is required.
 
@@ -41,7 +43,7 @@ The availability and pricing of standardized hardware configurations might vary 
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Select licenses (IBM-provided or BYOL) for the following VMware components:
-* VMware vSphere Enterprise Plus 6.7 U2 or 6.5 U2
+* VMware vSphere Enterprise Plus 6.7u2 or 6.5u3
 * The following VMware components are optional:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced, or Enterprise)
@@ -93,26 +95,26 @@ Each vSphere cluster expansion node deploys and incurs charges for the following
 ### Hardware for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### Networking for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
 ### VMware components for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.7u2 or 6.5u2.  
-* Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
+* One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.7u2 or 6.5u3.  
+* Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview#specs).
 
-You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters).
+You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters).
 {:important}
 
 ## Related links
 {: #vs_vsphereclusteroverview-related}
 
-* [VMware vSphere Software Bill of Materials](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_bom)
-* [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning)
-* [Ordering vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
-* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
+* [VMware vSphere Software Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_bom)
+* [Planning vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_planning)
+* [Ordering vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
+* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)

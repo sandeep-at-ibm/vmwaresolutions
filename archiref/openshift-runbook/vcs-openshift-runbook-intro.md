@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-30"
+lastupdated: "2019-11-15"
 
 subcollection: vmware-solutions
 
@@ -83,8 +83,8 @@ This documentation describes the process to install Red Hat OpenShift v4.2 on to
 The deployment approach is best described in the following phases:
 
 * Phase 1 - vCenter Server instance preparation:
-  * Using the IC4VS Console order a vCS cluster, [Ordering a vCenter Server instance](https://cloud.ibm.com/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance) this can include NFS storage or vSAN. If you have an existing instance with enough capacity, this can be used. This step is not described in this document.
-  * Using the IBM Cloud portal, order more Private and Public subnets for the use by the OpenShift cluster. Review the steps for [Ordering subnets](https://cloud.ibm.com/docs/infrastructure/subnets?topic=subnets-getting-started#ordering-subnets).
+  * Using the IBM Cloud for VMware Solutions console, [order a vCenter Server instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance), which can include NFS storage or vSAN. If you have an existing instance with enough capacity, this can be used. This step is not described in this document.
+  * Using the IBM Cloud console, [order more private and public subnets](/docs/infrastructure/subnets?topic=subnets-getting-started#ordering-subnets) to be used by the OpenShift cluster
   * Download RHEL 7.6 ISO for the OS of the bastion/deployment node and the Red Hat Enterprise Linux CoreOS (RHCOS) OVA image. This step is described in [Prerequisites for installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro).
   * Using govc, the OVA and ISO are uploaded to a datastore on the vCenter Server instance. This step is described in [Prerequisites for installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro).
   * Add logical switches - Two logical switches are created; OpenShift-LS the network the OpenShift VMs are deployed onto and OpenShift-DLR-Transit, the uplink between the DLR and the Edge.

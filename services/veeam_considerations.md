@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-12-04"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -22,8 +23,9 @@ subcollection: vmware-solutions
 {: #veeam_considerations}
 
 The Veeam service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
+{: shortdesc}
 
-This service is available only to instances that are deployed in V1.8 or later. The current Veeam version that is installed is 9.5u4b.
+The current Veeam version that is installed is 9.5u4b.
 {:note}
 
 ## Technical specifications for Veeam
@@ -49,7 +51,7 @@ The following components are ordered and included in the Veeam service:
 
 As part of the Veeam service installation and configuration, the following repositories are created:
 * For the Veeam configuration backup files: a repository named `IC4V Default Config Backup Repository`. The path to the folder where the Veeam backups are stored is `<Drive>:\ConfigBackup\`.
-* For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
+* For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/services/vmwaresolutions?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
 * For the Virtual Machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository`.
 
 ### Networking
@@ -81,9 +83,9 @@ Removal of the Veeam service stops all backups and deletes all the previous back
 ## Related links
 {: #veeam_considerations-related}
 
-* [Ordering Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_ordering)
-* [Managing Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Ordering Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_ordering)
+* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-10-21"
 
 subcollection: vmware-solutions
 
@@ -46,4 +46,4 @@ There are three Caveonix RiskForesight deployment models:
 
 All components must have an FQDN and registered in DNS before any VM deployment. This step is completed by the {{site.data.keyword.vmwaresolutions_full}} automation for the initial "all-in-one" deployment, but is your responsibility when scaling the deployment.
 
-Next topic: [Step 2 - Virtual machine deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step2)
+**Next topic:** [Step 2 - Virtual machine deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step2)

@@ -4,23 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
 
 ---
 
-# VMware HCX on IBM Cloud introduction
+# VMware HCX introduction
 {: #hcxclient-vcs-intro}
 
-The VMware HCX on {{site.data.keyword.cloud}} service enables creating a seamless connection between {{site.data.keyword.vmwaresolutions_short}} and an on-premises VMware virtualized datacenter.
+The VMware HCX service enables creating a seamless connection between {{site.data.keyword.vmwaresolutions_short}} and an on-premises VMware virtualized datacenter.
 
 The {{site.data.keyword.vmwaresolutions_short}} includes fully automated, rapid deployments of VMware vCenter Server (VCS) in the {{site.data.keyword.cloud_notm}}. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes they use on-premises. For more information, see the [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
 
-The VMware HCX on {{site.data.keyword.cloud_notm}} service takes this hybridity to the next step, blending instances of vCenter Server with existing on-premises virtualized datacenters by enabling the creation of seamless network extensions and bidirectional migration of workloads.
+The VMware HCX service takes this hybridity to the next step, blending instances of vCenter Server with existing on-premises virtualized datacenters by enabling the creation of seamless network extensions and bidirectional migration of workloads.
 
-The VMware HCX on {{site.data.keyword.cloud_notm}} components that are deployed as virtual machines in the {{site.data.keyword.cloud_notm}} VMware target site enable the establishment of a connection with the VMware HCX on {{site.data.keyword.cloud_notm}} components installed in the peer on-premises source site.
+The VMware HCX components that are deployed as virtual machines in the {{site.data.keyword.cloud_notm}} VMware target site enable the establishment of a connection with the VMware HCX components installed in the peer on-premises source site.
 
 ![VMware vCenter Server – Hybrid Cloud Services](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – Hybrid Cloud Services"){: caption="Figure 1. VMware vCenter Server – Hybrid Cloud Services" caption-side="bottom"}
 
@@ -40,9 +40,9 @@ moved along with the workload.
 ## Related links
 {: #hcxclient-vcs-intro-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [HCX Client deployment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
-* [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

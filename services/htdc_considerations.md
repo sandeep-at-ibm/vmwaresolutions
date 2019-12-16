@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-12"
 
 keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -22,8 +23,9 @@ subcollection: vmware-solutions
 {: #htdc_considerations}
 
 The HyTrust DataControl service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service provides encryption at both the operating system level and at the data level. This enables any directory, folder, or file within a workload to be encrypted and decrypted.
+{: shortdesc}
 
-This service is available only to instances that are running vSphere 6.5 and are deployed in or upgraded to V2.3 or later. The current HyTrust DataControl version that is installed is 4.3.2.
+The current HyTrust DataControl version that is installed is 5.0.1.
 {:note}
 
 ## Technical specifications for HyTrust DataControl
@@ -59,13 +61,13 @@ Per-host license: A HyTrust DataControl license is ordered for each host in the 
 ## Considerations when you remove HyTrust DataControl
 {: #htdc_considerations-remove}
 
-Before you remove the HyTrust DataControl service, decouple all clients from using DataControl. After you remove the service, the keys might be deleted and you might be locked out of your VMs.
+Before you remove the HyTrust DataControl service, decouple all clients from using DataControl. After you remove the service, the keys might be deleted and you might be locked out of your virtual machines.
 
 ## Related links
 {: #htdc_considerations-related}
 
-* [Ordering HyTrust DataControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_ordering)
-* [Managing HyTrust DataControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Ordering HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_ordering)
+* [Managing HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtdc)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

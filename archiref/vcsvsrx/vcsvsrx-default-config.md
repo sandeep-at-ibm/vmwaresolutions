@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-11-04"
+lastupdated: "2019-12-13"
 
 ---
 
@@ -282,6 +282,8 @@ set interfaces fxp0 unit 0
 set routing-options static route 10.0.0.0/8 next-hop 10.135.70.1
 
 set routing-options static route 0.0.0.0/0 next-hop 169.50.51.89
+
+**Next topic:** [The IBM Cloud IaaS vSRX default configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-iaas-def-config).
 
 ## Related links
 {: #vcsvsrx-default-config-related}

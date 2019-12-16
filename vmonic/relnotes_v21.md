@@ -11,14 +11,17 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
+
 
 # Release notes for V2.1
 {: #relnotes_v21}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## Spectre and Meltdown remediation
 {: #relnotes_v21-spectre}
@@ -40,9 +43,9 @@ You can also order an on-premises HCX instance for licensing and activation of y
 
 For more information, see the following topics:
 * [Considerations for HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
-* [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghcx)
-* [Considerations for on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_considerations)
-* [Ordering on-premises HCX instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-standalone_orderingserviceinstances)
+* [Managing HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghcx)
+* [Considerations for on-premises HCX instances](/docs/services/vmwaresolutions?topic=vmware-solutions-standalone_considerations)
+* [Ordering on-premises HCX instances](/docs/services/vmwaresolutions?topic=vmware-solutions-standalone_orderingserviceinstances)
 
 ## More flexible Bring Your Own License model for VMware Cloud Foundation and vCenter Server
 {: #relnotes_v21-byol}
@@ -54,14 +57,14 @@ Additionally, when you add nodes to a cluster that is licensed with your key, th
 For more information, see the following topics:
 
 * [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [FAQ about BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq_byol)
+* [FAQ about BYOL](/docs/services/vmwaresolutions?topic=vmware-solutions-faq_byol)
 
 ## Zerto on IBM Cloud service component updates
 {: #relnotes_v21-zerto}
 
 For Zerto on {{site.data.keyword.cloud_notm}} service that is deployed in V2.1 and later Cloud Foundation instances and vCenter Server instances, Zerto Virtual Replication 5.5u2 is provisioned. Zerto virtual replication appliances (VRAs) are now deployed to the management data store (either vSAN or Endurance) rather than to the local data store for performance reasons. If you have existing VRAs, consider migrating their storage to the management data store for better performance.
 
-For more information, see [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
+For more information, see [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr).
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v21-vcs}
@@ -69,7 +72,7 @@ For more information, see [Zerto on {{site.data.keyword.cloud_notm}} overview](/
 ### Network MTU configuration settings
 {: #relnotes_v21-mtu}
 
-For V2.1 or later releases, new vCenter Server instances are ordered with the setting Public Distributed Virtual Switch (DVS) as MTU 1500 (default). For more information, see _Network MTU configuration settings_ in [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+For V2.1 or later releases, new vCenter Server instances are ordered with the setting Public Distributed Virtual Switch (DVS) as MTU 1500 (default). For more information, see _Network MTU configuration settings_ in [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
 
 ### Automatic application of VMware ESXi patches and updates to hosts
 {: #relnotes_v21-esxi-patches}
@@ -79,14 +82,14 @@ In V2.0 and earlier VMware vCenter Server instances, patches were not automatica
 In V2.1 and later instances, the automation applies patches to new ESXi hosts so that the patch level matches the patch level at the time that the initial instance was provisioned. You are responsible for manually applying any future patches and updates.
 When VMware patches and updates become available in future releases, the automation scans the ESXi hosts of your existing instances and email you a reminder to apply the most recent patches and updates manually.
 
-For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
+For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_applyingupdates).
 
 ### Price estimates for VMware NSX license upgrades
 {: #relnotes_v21-nsx-license}
 
 You can now see a price estimate before you submit an order to upgrade to the VMware NSX Advanced or Enterprise edition. The pricing is based on the number of ESXi hosts in the vCenter Server instance. This purchase changes only the NSX license key and upgrades your VMware NSX Base edition to the Advanced or Enterprise edition. The purchase does not upgrade the NSX software version.
 
-For more information, see [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview).
+For more information, see [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview).
 
 ### Maximum servers per cluster increases from 32
 {: #relnotes_v21-max-clusters}
@@ -102,8 +105,8 @@ This capability is available only to instances that are deployed in V2.1 and lat
 User customized Bare Metal Servers configuration now offers the Dual Intel Xeon Gold 6140 with 36 cores total, 2.3 GHz.
 
 For more information, see the following topics:
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
 
 ### Individual NFS file share configurations
 {: #relnotes_v21-nfs}
@@ -111,8 +114,8 @@ For more information, see the following topics:
 You can now configure NFS file shares on an individual basis. Select the file size and performance level for each individual file share or select the same file size and performance level for all of the file shares that you order.
 
 For more information, see the following topics:
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## User interface updates and enhancements

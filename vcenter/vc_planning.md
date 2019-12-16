@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-07"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -25,7 +25,7 @@ Review the following requirements before you order your VMware vCenter Server in
 ## IBM Cloud account requirements
 {: #vc_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req).
 
 ## IBM Cloud Data Center availability
 {: #vc_planning-dc-availability}
@@ -38,41 +38,41 @@ Cascade Lake {{site.data.keyword.baremetal_short}} are available on Multi-Zone R
 
 | {{site.data.keyword.CloudDataCent_notm}} | Location | Region | Server options |
 |:----------------------|:---------|:-------|:---------------|
-| AMS03 | Amsterdam | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| CHE01 | Chennai | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| DAL09 | Dallas | NA South | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| DAL10 | Dallas | NA South | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| DAL12 | Dallas | NA South | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| DAL13 | Dallas | NA South | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| FRA02 | Frankfurt | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| FRA04 | Frankfurt | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| FRA05 | Frankfurt | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| HKG02 | Hong Kong | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| LON02 | London | Europe | <ul><li>For vSphere 6.5u2: Skylake, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| LON04 | London | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| LON05 | London | Europe | <ul><li>For vSphere 6.5u2: Skylake, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| LON06 | London | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| MEL01 | Melbourne | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| MEX01 | Queretaro | NA South | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| MIL01 | Milan | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| MON01 | Montreal | NA East | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| OSL01 | Oslo | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| PAR01 | Paris | Europe | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| SAO01 | Sao Paulo | South America | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| SEO01 | Seoul | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| SJC03 | San Jose | NA West | <ul><li>For vSphere 6.5u2: Skylake, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| SJC04 | San Jose | NA West | <ul><li>For vSphere 6.5u2: Skylake, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| SNG01 | Singapore | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| SYD01 | Sydney | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| SYD04 | Sydney | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| SYD05 | Sydney | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified</li><li>For vSphere 6.7u2: Skylake, Cascade Lake</li></ul> |
-| TOK02 | Tokyo | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| TOK04 | Tokyo | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| TOK05 | Tokyo | Asia-Pacific | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| TOR01 | Toronto | NA East | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Broadwell</li></ul> |
-| WDC04 | Washington, DC | NA East | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| WDC06 | Washington, DC | NA East | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
-| WDC07 | Washington, DC | NA East | <ul><li>For vSphere 6.5u2: Skylake, SAP-certified, Broadwell</li><li>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell</li></ul> |
+| AMS03 | Amsterdam | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br>For vSphere 6.7u2: Skylake, Broadwell</li> |
+| CHE01 | Chennai | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| DAL09 | Dallas | NA South | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| DAL10 | Dallas | NA South | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| DAL12 | Dallas | NA South | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| DAL13 | Dallas | NA South | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| FRA02 | Frankfurt | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| FRA04 | Frankfurt | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| FRA05 | Frankfurt | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| HKG02 | Hong Kong | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| LON02 | London | Europe | For vSphere 6.5u3: Skylake, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| LON04 | London | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| LON05 | London | Europe | For vSphere 6.5u3: Skylake, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| LON06 | London | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| MEL01 | Melbourne | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| MEX01 | Queretaro | NA South | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| MIL01 | Milan | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| MON01 | Montreal | NA East | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| OSL01 | Oslo | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| PAR01 | Paris | Europe | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| SAO01 | Sao Paulo | South America | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| SEO01 | Seoul | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| SJC03 | San Jose | NA West | For vSphere 6.5u3: Skylake, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| SJC04 | San Jose | NA West | For vSphere 6.5u3: Skylake, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| SNG01 | Singapore | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| SYD01 | Sydney | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| SYD04 | Sydney | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| SYD05 | Sydney | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified<br><br>For vSphere 6.7u2: Skylake, Cascade Lake |
+| TOK02 | Tokyo | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| TOK04 | Tokyo | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| TOK05 | Tokyo | Asia-Pacific | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| TOR01 | Toronto | NA East | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Broadwell |
+| WDC04 | Washington, DC | NA East | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| WDC06 | Washington, DC | NA East | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
+| WDC07 | Washington, DC | NA East | For vSphere 6.5u3: Skylake, SAP-certified, Broadwell<br><br>For vSphere 6.7u2: Skylake, Cascade Lake, Broadwell |
 {: caption="Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vCenter Server instances" caption-side="top"}
 
 Depending on availability and inventory supply, {{site.data.keyword.CloudDataCents_notm}} might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
@@ -87,12 +87,12 @@ Depending on availability and inventory supply, {{site.data.keyword.CloudDataCen
 ## Backup of management components
 {: #vc_planning-backup-mgmt-components}
 
-You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup).
+You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup).
 
 ## Services for vCenter Server instances
 {: #vc_planning-addon-services}
 
-You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
 
 Services are supported for vCenter Server with NSX-T instances.
 {:note}
@@ -116,12 +116,12 @@ When you deploy this service, complete the following settings:
 ## Capacity considerations
 {: #vc_planning-capacity-considerations}
 
-For more information about capacity considerations, see [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_scaling).
+For more information about capacity considerations, see [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling).
 
 ## Related links
 {: #vc_planning-related}
 
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
+* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)

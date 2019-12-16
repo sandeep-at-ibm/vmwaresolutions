@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-12-12"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -26,16 +26,12 @@ You can order the F5 BIG-IP service when you order a new instance with the servi
 ## Ordering F5 BIG-IP for a new instance
 {: #f5_ordering-new}
 
-You can order a new instance with F5 BIG-IP by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, click **F5 BIG-IP** under the **Security and Compliance** category in the **Optional Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **F5 BIG-IP** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to New Instance**.
+When you [order the instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **F5 BIG-IP** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering F5 BIG-IP for an existing instance
 {: #f5_ordering-existing}
 
-You can add the F5 BIG-IP service into an existing instance by using one the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **F5 BIG-IP** on the **Security and Compliance** card in the **Services** section. Specify the service settings and select **Add to Existing Instance**.
+On the [instance details page](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **F5 BIG-IP** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Ordering F5 BIG-IP for private instances
 {: #f5_ordering-private}
@@ -78,14 +74,9 @@ Specify the maximum throughput of the F5 BIG–IP appliance.
 {: #f5_ordering-config-license-model}
 
 The license model for F5 BIG-IP offers the following options:
-<dl class="dl">
-        <dt class="dt dlterm">Good</dt>
-        <dd class="dd">This offer uses the BIG-IP Local Traffic Manager™ (LTM) VE, operating as a full-proxy architecture, to provide intelligent local traffic management, complete SSL traffic visibility, and analytics and health monitoring to ensure that application servers are always available to your users.</dd>
-        <dt class="dt dlterm">Better</dt>
-        <dd class="dd">This offer is built on the benefits of the **Good** option, with the addition of BIG-IP DNS™, BIG-IP Advanced Firewall Manager™ (AFM), and BIG-IP Application Acceleration Manager™ (AAM) modules. It delivers global traffic management services, application performance optimization, and advanced network firewall and Distributed Denial of Service (DDoS) mitigation capabilities.</dd>
-        <dt class="dt dlterm">Best</dt>
-        <dd class="dd">In addition to the **Good** and **Better** offers, BIG-IP Application Security Manager™ (ASM) provides comprehensive application protection against L7 DDoS, Open Web Application Security Project (OWASP) top 10 threats, and common application vulnerabilities. BIG-IP Access Policy Manager™ (APM) offers users secure, simplified access to applications located anywhere within a multi-cloud environment, incorporating features such as SSO (Single Sign-On) and MFA (Multi-Factor Authentication).</dd>
-</dl>
+* **Good**: This offer uses the BIG-IP Local Traffic Manager™ (LTM) VE, operating as a full-proxy architecture, to provide intelligent local traffic management, complete SSL traffic visibility, and analytics and health monitoring to ensure that application servers are always available to your users.
+* **Better**: This offer is built on the benefits of the **Good** option, with the addition of BIG-IP DNS™, BIG-IP Advanced Firewall Manager™ (AFM), and BIG-IP Application Acceleration Manager™ (AAM) modules. It delivers global traffic management services, application performance optimization, and advanced network firewall and Distributed Denial of Service (DDoS) mitigation capabilities.
+* **Best**: In addition to the **Good** and **Better** offers, BIG-IP Application Security Manager™ (ASM) provides comprehensive application protection against L7 DDoS, Open Web Application Security Project (OWASP) top 10 threats, and common application vulnerabilities. BIG-IP Access Policy Manager™ (APM) offers users secure, simplified access to applications located anywhere within a multi-cloud environment, incorporating features such as SSO (Single Sign-On) and MFA (Multi-Factor Authentication).
 
 You cannot change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by choosing a different license model.
 {:important}
@@ -93,9 +84,9 @@ You cannot change the license model after service installation. To change the li
 ## Related links
 {: #f5_ordering-related}
 
-* [F5 BIG-IP overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations)
-* [Managing F5 BIG-IP](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_f5)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [F5 BIG-IP overview](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations)
+* [Managing F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_f5)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:external}

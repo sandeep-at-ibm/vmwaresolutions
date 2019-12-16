@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-28"
 
 ---
 
@@ -53,8 +53,6 @@ shares, not reservation, to allocate resources fairly across VMs. Shares take ef
 ## List of tasks
 {: #opsprocs-proactive-tasks}
 
-Table 1. Proactive tasks
-
 | Title | Description |
 |---|---|
 | Health  |  Using vCenter, check the health of all hosts and VM objects. Methodically step through; clusters, hosts, datastores, VMs, and networks looking for Alarms.  |
@@ -80,10 +78,11 @@ Table 1. Proactive tasks
 | Right-size over-sized VMs | Use a simple approach to right-size oversized VMs: identify, profile and tune, and monitor demand trends. Using vCenter identify large VMs that have the potential for right-sizing. Navigate to Monitor, Performance, and profile the average CPU and RAM demand profile of the workload over time and adjust the virtual resources. Finally, continue to monitor the workloads to see that the performance is acceptable. Ideally, consumed memory for the VM should be close to the memory used by the guest OS, plus overhead for running the VM.|
 | Right-size under-sized VMs | Use a simple approach to right-size under-sized VMs; a. identify, b. profile and tune, and c. monitor demand trends. Identify small VMs that need right-sizing. Profile the average CPU and RAM demand profile of the workload over time and adjust the virtual resources. Finally, continue to monitor the workloads to see that the performance is acceptable. Ideally, consumed memory for the VM should be close to the memory used by the guest OS, plus overhead for running the VM.|
 | Check VM hardware device compatibility | Using the VMware hardware compatibility online resource, check that your VMs' hardware resources; network, storage devices etc. are supported for that OS. If they are not supported change to a supported device to improve reliability and performance.  |
+{: caption="Table 1. Proactive tasks" caption-side="bottom"}
 
 **Next topic**: [Troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-trouble)
 
 ## Related links
 {: #opsprocs-proactive-links}
 
-* [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-opsmgmt-intro)
+* [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)

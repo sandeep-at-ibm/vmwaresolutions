@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-10-25"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ This hybrid architecture allows Acme Skateboards to:
 - Use Cloud Automation Manager (CAM) to script infrastructure as code (IaC) to compose and orchestrate services that are made from both VMs and containers to integrate with their DevOps toolchains and their ITSM solution.
 
 The reference architecture has the following key components:
-- **On-premises virtualization** – On-premises virtualization is a VMware cluster that currently hosts the Acme Skateboards VMs. These VMs are currently hosting the applications to be modernized. This cluster is required to meet the prerequisites of the [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) architecture so that it can run HCX.
+- **On-premises virtualization** – On-premises virtualization is a VMware cluster that currently hosts the Acme Skateboards VMs. These VMs are currently hosting the applications to be modernized. This cluster is required to meet the prerequisites of the [VMware HCX  solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro) architecture so that it can run HCX.
 
 HCX extends the on-premises networks into the {{site.data.keyword.cloud_notm}} allowing customers to migrate VMs into the VMware vCenter Server instance that runs on {{site.data.keyword.cloud_notm}}, and back if required.
 - **{{site.data.keyword.cloud_notm}} for VMware Solutions** – The vCenter Server instance provides the fundamental VMware building blocks, such as vSphere, vCenter Server, NSX-V, and storage options that include vSAN or {{site.data.keyword.cloud_notm}} Endurance storage, needed to automatically deploy a VMware Software Defined Data Center (SDDC) solution. The VMware cluster is the target for the migrated VMs and some of the modernized applications in containers hosted in {{site.data.keyword.icpfull_notm}}. The key components in vCenter Server are as follows:

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-07"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -22,6 +23,7 @@ subcollection: vmware-solutions
 {: #addingzertodr}
 
 The Zerto service integrates replication and disaster recovery capabilities into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.
+{: shortdesc}
 
 The current Zerto version that is installed is 7.0 Update 2.
 {:note}
@@ -29,7 +31,7 @@ The current Zerto version that is installed is 7.0 Update 2.
 ## Before you begin
 {: #addingzertodr-req}
 
-* Ensure that your {{site.data.keyword.cloud_notm}} account is a billable account, and that it is linked to the {{site.data.keyword.cloud_notm}} infrastructure account where your instance is deployed. For more information, see [Billing for Zerto replication](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing).
+* Ensure that your {{site.data.keyword.cloud_notm}} account is a billable account, and that it is linked to the {{site.data.keyword.cloud_notm}} infrastructure account where your instance is deployed. For more information, see [Billing for Zerto replication](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing).
 * This service is available only to instances that are deployed in V1.2 or later.
 
 ## Technical specifications for Zerto
@@ -70,8 +72,8 @@ Zerto Replication V6.5 update 3 license
 ## Related links
 {: #addingzertodr-related}
 
-* [Ordering Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering)
-* [Managing Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingzertodr)
-* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_zerto_services)
+* [Ordering Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering)
+* [Managing Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
 * [zerto.com website](https://www.zerto.com){: external}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}

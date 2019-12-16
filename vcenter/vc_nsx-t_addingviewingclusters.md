@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-26"
 
 keywords: vCenter Server NSX-T add cluster, view cluster vCenter Server NSX-T, delete cluster vCenter Server NSX-T
 
@@ -29,7 +29,7 @@ You can add your own clusters to VMware vCenter Server with NSX-T instances to e
 ### Before you add clusters
 {: #vc_nsx-t_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 
 ### System settings
@@ -102,7 +102,7 @@ For the **Broadwell** setting, you have a number of options for the **CPU Model*
 
 * All servers that you order have the same configuration.
 * For vSAN storage, you can order between 4 and 59 servers.
-* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Storage settings
 {: #vc_nsx-t_addingviewingclusters-adding-storage-settings}
@@ -173,7 +173,38 @@ You can use the default host name prefix or specify a new one. When you specify 
 #### Public or private network
 {: #vc_nsx-t_addingviewingclusters-network}
 
-Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.
+Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.  The following add-on services require public NICs and are not available if you select the private option:
+
+* F5 BIG-IP
+* Fortigate Security Appliance
+* Fortigate Virtual Appliance
+
+#### VLANs
+{: #vc_nsx-t_addingviewingclusters-vlans}
+
+Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
+
+One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
+
+##### Order New VLANs
+{: #vc_nsx-t_addingviewingclusters-new-vlans}
+
+Select to order one new public VLAN and two new private VLANs.
+
+##### Select Existing VLANs
+{: #vc_nsx-t_addingviewingclusters-existing-vlans}
+
+Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
+
+When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
+* **Public VLAN** is for public network access. If you select the **Allocate a new one** option for this field, a new public VLAN is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Public Primary Subnet** is assigned to physical hosts for public network access. If you select the **Allocate a new one** option for this field, a new public primary subnet is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}. If you select the **Allocate a new one** option for this field, a new private VLAN is allocated automatically.
+* **Private Primary Subnet** is assigned to physical hosts for management traffic. If you select the **Allocate a new one** option for this field, a new private primary subnet is allocated automatically.
+* **Secondary Private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
+
+Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
+{:important}
 
 ### Order summary
 {: #vc_nsx-t_addingviewingclusters-adding-order-summary}
@@ -234,18 +265,11 @@ You can't change the cluster name. Changing the cluster name might cause the add
   * **Data Center Location**: The {{site.data.keyword.CloudDataCent_notm}} where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Status**: The status of the cluster. The status can have one of the following values:
-    <dl class="dl">
-        <dt class="dt dlterm">Initializing</dt>
-        <dd class="dd">The cluster is being created and configured.</dd>
-        <dt class="dt dlterm">Modifying</dt>
-        <dd class="dd">The cluster is being modified.</dd>
-        <dt class="dt dlterm">Ready to Use</dt>
-        <dd class="dd">The cluster is ready to use.</dd>
-        <dt class="dt dlterm">Deleting</dt>
-        <dd class="dd">The cluster is being deleted.</dd>
-        <dt class="dt dlterm">Deleted</dt>
-        <dd class="dd">The cluster is deleted.</dd>
-    </dl>
+    * Initializing: The cluster is being created and configured.
+    * Modifying: The cluster is being modified.
+    * Ready to Use: The cluster is ready to use.
+    * Deleting: The cluster is being deleted.
+    * Deleted: The cluster is deleted.
   * **Actions**: Click the **Delete** icon to delete the cluster.
 4. Click a cluster name to view the ESXi server, storage, and network interface details:
 
@@ -327,5 +351,5 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ## Related links
 {: #vc_nsx-t_addingviewingclusters-related}
 
-* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_addingremovingservers)

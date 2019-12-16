@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-12"
 
 keywords: disaster recovery, request DR services, DR managed service
 
@@ -46,15 +46,15 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 {: #managing_zerto_services-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. Scroll down to the **Services** section, and then click **Managed Disaster Recovery Services** on the **Partner Services** card.
-3. On the **Zerto** page, review the description and technical specifications for Zerto as a managed service, and then click **Create**.
+2. Scroll down to the **Services** section, and then click **Managed Disaster Recovery Services** on the **Professional Services** card.
+3. On the **Zerto** page, review the description and technical specifications for Zerto as a managed service, and then click **Continue**.
 4. Specify the configuration settings according to your requirements or accept the default values.
 5. Click **vCenter Server** to add the service to one of your instances.
-6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance) instance.
+6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance) instance.
 7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
 
 ## Related links
 {: #managing_zerto_services-related}
 
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)

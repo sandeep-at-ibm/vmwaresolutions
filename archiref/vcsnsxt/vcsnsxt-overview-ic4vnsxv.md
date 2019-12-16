@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
@@ -18,8 +18,6 @@ Network virtualization provides a network overlay that exists within the virtual
 
 In this design, the NSX Manager is deployed on the initial cluster. The NSX Manager is assigned a VLAN backed IP address from the private portable address block that's designated for management components and it's also configured with the DNS and NTP servers previously documented.
 
-Table 1. NSX-V Manager virtual appliance specifications
-
 Attribute | Specification
 ---|---
 NSX Manager | Virtual appliance
@@ -28,6 +26,7 @@ Memory | 16 GB
 Disk | 60 GB on the management NFS share
 Disk type | Thin provisioned
 Network | **Private A** portable designated for management components
+{: caption="Table 1. NSX-V Manager virtual appliance specifications" caption-side="bottom"}
 
 The NSX-V Manager following network overview shows the placement of the NSX Manager in relation to the other components in this architecture.
 
@@ -37,7 +36,7 @@ After initial deployment, the {{site.data.keyword.cloud}} automation deploys thr
 
 Along with to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS that enable the use of a virtualized network (VXLAN) via the use of VXLAN Tunnel Endpoints (VTEP). The VTEPs are assigned IP addresses from the IP address range of the **Private A** portable subnet that is specified for VTEPs. The VXLAN traffic resides on the untagged VLAN and is assigned to the private virtual distributed switch (vDS). Later, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Only unicast is used in the transport zone since IGMP snooping isn't configured within the {{site.data.keyword.cloud_notm}}.
 
-NSX Edge Services Gateway (ESG) pairs are then deployed. For all deployments one gateway pair is used for outbound traffic from automation components that reside on the private network. VMware vCenter Server on {{site.data.keyword.cloud_notm}} instances include a second gateway, which is known as the customer–managed edge, that is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Routers (DLR), logical switches, and firewalls can be configured by the administrator.
+NSX Edge Services Gateway (ESG) pairs are then deployed. For all deployments one gateway pair is used for outbound traffic from automation components that reside on the private network. VMware vCenter Server instances include a second gateway, which is known as the customer–managed edge, that is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Routers (DLR), logical switches, and firewalls can be configured by the administrator.
 
 ## Distributed switch design
 {: #vcsnsxt-overview-ic4vnsxv-distributed-switch}
@@ -47,24 +46,24 @@ The design uses a minimum number of virtual distributed switches (vDS). The host
 A total of two distributed switches are configured. The first is for public network connectivity (SDDC-Dswitch-Public) and the second is for private network connectivity (SDDC-Dswitch-Private).
 Separating different types of traffic is required to reduce contention and latency. Separate networks are also required for access security. VLANs are used to segment physical network functions. This design uses three VLANs. Two for private network traffic and one for public network traffic.
 
-Table 2. VLAN traffic mapping
-
 VLAN |Designation |Traffic Type
 ---|---|---
 VLAN1 | Public | Available for internet access
 VLAN2 | Private A | ESXi Management, Management, VXLAN (VTEP)
 VLAN3 | Private B | vSAN, NFS, vMotion
+{: caption="Table 2. VLAN traffic mapping" caption-side="bottom"}
 
 Traffic from workloads travels on NSX logical switches. The vSphere cluster uses two vSphere Distributed Switches (vDS) for the converged cluster.
 
-Table 3. Converged cluster distributed switches
+The following table shows the converged cluster distributed switches.
 
 vSphere Distributed Switch Name |Function |Network I/O Control |Load Balancing Mode |Physical NIC Ports |MTU
 ---|---|---|---|---|---
 SDDC-Dswitch-Private | ESXi management<br>Virtual SAN<br>vSphere vMotion<br>VXLAN Tunnel Endpoint (VTEP)<br>NFS | Enabled | Route Based on Explicit Failover (vSAN, vMotion).<br>Originating Virtual Port (all else) | 2 | 9,000 (Jumbo Frames)
 SDDC-Dswitch-Public | External management traffic (North–South) | Enabled |Route Based on Originating Virtual Port | 2 | 1,500 (default)
+{: caption="Table 3. Converged cluster distributed switches" caption-side="bottom"}
 
-Table 4. Distributed switch port group teaming and failover setting
+The following table shows the distributed switch port group teaming and failover setting.
 
 Parameter | Setting
 ---|---
@@ -73,13 +72,14 @@ Failover detection | Link status only
 Notify switches | Enabled
 Failback | Enabled
 Failover order | Active uplinks: Uplink1, Uplink2 \*
+{: caption="Table 4. Distributed switch port group teaming and failover setting" caption-side="bottom"}
 
 \* The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
 {:note}
 
 ![Cluster VM kernel interface port group mapping](../../images/vcsnsxt-vds-kernel-Int.svg "Cluster VM kernel interface port group mapping"){: caption="Figure 2. Cluster VM kernel interface port group-mapping" caption-side="bottom"}
 
-Table 5. Cluster virtual switch port groups, VLANs, and teaming policy
+The following table shows the cluster virtual switch port groups, VLANs, and teaming policy.
 
 vSphere Distributed Switch	|Port Group Name	|Teaming	|Uplinks	|VLAN ID
 ---|---|---|---|---
@@ -89,6 +89,7 @@ SDDC-Dswitch-Private	|SDDC-DPortGroup-VSAN	|Explicit failover	|Active: 0<br>Stan
 SDDC-Dswitch-Private	|SDDC-DPortGroup-NFS	|Originating virtual port	|Active: 0, 1	|VLAN2
 SDDC-Dswitch-Private	|Automatically generated by NSX	|Originating virtual port	|Active: 0, 1	|VLAN1
 SDDC-Dswitch-Public	  |SDDC-DPortGroup-External	|Originating virtual port	|Active: 0, 1	|VLAN3
+{: caption="Table 5. Cluster virtual switch port groups, VLANs, and teaming policy" caption-side="bottom"}
 
 ## NSX-V
 {: #vcsnsxt-overview-ic4vnsxv-nsx-v}

@@ -11,14 +11,17 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
+
 
 # Release notes for V2.3
 {: #relnotes_v23}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## Spectre and Meltdown remediation
 {: #relnotes_v23-spectre}
@@ -34,9 +37,9 @@ This release includes new features, component updates, usability enhancements, a
 
 This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle offering. The vCenter Server with Hybridity Bundle is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service that easily and securely connects a vSphere 5.0+ environment on-premises with {{site.data.keyword.cloud_notm}} sites for seamless infrastructure hybridity and true application mobility.
 
-The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
+The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_applyingupdates).
 
-For more information about the vCenter Server with Hybridity Bundle, see [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview).
+For more information about the vCenter Server with Hybridity Bundle, see [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview).
 
 ## Delete cluster support for vCenter Server and Cloud Foundation instances
 {: #relnotes_v23-delete-cluster}
@@ -58,7 +61,7 @@ Starting with the V2.3 release, the following new CPU models are available for d
 
 For more information, see the following topics:
 
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
 
 ## Updates for VMware Cloud Foundation instances
@@ -80,8 +83,8 @@ The HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service is now avai
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
 For more information, see the following topics:
-* [Components and considerations for HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
-* [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc)
+* [Components and considerations for HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
+* [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtcc)
 
 ### HyTrust DataControl on IBM Cloud
 {: #relnotes_v23-htdc}
@@ -91,13 +94,13 @@ The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service is now avail
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
 For more information, see the following topics:
-* [Components and considerations for HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)
-* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc)
+* [Components and considerations for HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtdc)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 {: #relnotes_v23-spp}
 
-The current release installs IBM Spectrum Protect&trade; Plus V10.1.1, as the default backup service, on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+The current release installs IBM Spectrum Protect&trade; Plus V10.1.1, as the default backup service, on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:external}.
 
 ## New and updated documentation
 {: #relnotes_v23-new-docs}

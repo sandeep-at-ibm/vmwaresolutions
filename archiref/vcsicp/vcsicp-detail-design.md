@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -50,7 +50,7 @@ Using the NSX-V networking included in the VCS deployment, we can deploy {{site.
 
 ![{{site.data.keyword.icpfull_notm}} with NSX-V Networking](../../images/vcsicp-nsxv-networking.svg "{{site.data.keyword.icpfull_notm}} with NSX-V Networking"){: caption="Figure 2. {{site.data.keyword.icpfull_notm}} with NSX-V networking" caption-side="bottom"}
 
-For more information, see [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro).
+For more information, see [vCenter Server networking guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro).
 
 ### NSX-T networking
 {: #vcsicp-detail-design-nst-t}

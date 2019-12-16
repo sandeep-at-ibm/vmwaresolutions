@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-09"
+lastupdated: "2019-12-11"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -48,8 +48,17 @@ To access the vRealize Log Insight console, complete the following steps:
 1. On the service details page for vRealize Operations and Log Insight, click **vRealize Log Insight Console**.
 2. Log in by using the credentials listed on the same service details page.
 
+## Known issues
+{: #managing_vrops-issues}
+
+Some of the following warnings might appear. You can ignore these warning messages:
+* NSX Logical Router is violating NSX Hardening guide (targeting workload-nsx-dlr)
+* NSX Routing Edge Service is violating the NSX Hardening guide (targeting customer-nsx-edge)
+* NSX Manager is violating NSX Hardening guide
+* No backup of the environment has been recorded
+
 ## Related links
 {: #managing_vrops-related}
 
-* [vRealize Operations and Log Insight overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview)
-* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_ordering)
+* [vRealize Operations and Log Insight overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_overview)
+* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_ordering)

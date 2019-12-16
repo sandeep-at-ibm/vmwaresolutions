@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-28"
 
 ---
 
@@ -26,21 +26,19 @@ The vRNI Platform appliance provides the analytics, user interface, and data man
 
 This architecture supports 3000 VMs by using a Medium brick size.
 
-Table 1. Network Insight Platform system requirements
-
 | Attribute | Specification |
 |---|---|
 | vCPU | 8 |
 | Memory | 32 GB |
 | Disk (thin provisioned) | 1 TB |
-
-Table 2. Network Insight Collector system requirements
+{: caption="Table 1. Network Insight Platform system requirements" caption-side="bottom"}
 
 | Attribute | Specification |
 |---|---|
 | vCPU | 4 |
 | Memory | 12 GB |
 | Disk (thin provisioned) | 200 GB |
+{: caption="Table 2. Network Insight Collector system requirements" caption-side="bottom"}
 
 ## Networking
 {: #opsmgmt-vrni-network}
@@ -57,8 +55,6 @@ Deployment of the vRNI appliance requires two IP addresses from the Tooling priv
 ## Ports
 {: #opsmgmt-vrni-ports}
 
-Table 3. Network Insight ports
-
 | Description |Port | Protocol |
 |---|---|---|
 | Communication between the VMs of vRealize Network Insight | 443 | HTTPS |
@@ -72,6 +68,7 @@ Table 3. Network Insight ports
 | LDAP/LDAPS | 389, 636 | TCP |
 | ESXi | 2055 | TCP |
 | VMware vSphere / NSX | 443 | TCP |
+{: caption="Table 3. Network Insight ports" caption-side="bottom"}
 
 ## Authentication
 {: #opsmgmt-vrni-auth}

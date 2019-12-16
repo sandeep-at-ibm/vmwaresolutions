@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -40,7 +40,7 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
 ### Before you add ESXi servers
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * vSAN storage requires at least 4 ESXi servers.
 
 ## Procedure to add ESXi servers
@@ -109,7 +109,7 @@ If you are adding ESXi servers during maintenance mode, virtual machines (VMs) a
 ## Related links
 {: #vc_hybrid_addingremovingservers-related}
 
-* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
-* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
+* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
 * [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}

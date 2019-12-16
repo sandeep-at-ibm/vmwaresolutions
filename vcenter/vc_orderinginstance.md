@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-14"
+lastupdated: "2019-12-10"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -21,14 +21,14 @@ subcollection: vmware-solutions
 # Ordering vCenter Server instances
 {: #vc_orderinginstance}
 
-To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance. During the initial order, you can also add services, such as [Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) for disaster recovery.
+To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance. During the initial order, you can also add services, such as [Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr) for disaster recovery.
 
 ## Requirements
 {: #vc_orderinginstance-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
+* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 | Name        | Value Format      |
@@ -47,6 +47,13 @@ Don't modify any values that are set during instance order or deployment. Doing 
 {: #vc_orderinginstance-sys-settings}
 
 You must specify the following system settings when you order a vCenter Server instance.
+
+### Instance configurations
+{: #vc_orderinginstance-inst-config}
+
+You can select **New Configuration** to specify settings for an instance and finally place the order or save the settings as a configuration template without placing an order.
+
+You can also select a saved configuration template to further edit it, or to update it and then save it as a new configuration template.
 
 ### Instance name
 {: #vc_orderinginstance-inst-name}
@@ -71,7 +78,7 @@ The initial cluster name must meet the following requirements:
 ### VMware vSphere version
 {: #vc_orderinginstance-vsphere-license}
 
-Select whether to order vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.5u2.
+Select whether to order vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.5u3.
 
 vSphere Enterprise Plus 6.7u2 is available for only Skylake, Cascade Lake, and Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
 {:note}
@@ -99,7 +106,7 @@ For users who are not Business Partners, you can use the IBM-provided VMware lic
 ### Licensing notes
 {: #vc_orderinginstance-licensing-notes}
 
-* A license with a minimum of eight CPUs is required, which is for four servers with two CPUs per server. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Ensure that your license supports future capacity expansion in your infrastructure.
+* The minimum number of licenses for BYOL that are required depends on the number of CPUs per server and the number of servers in the order. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Ensure that your license supports future capacity expansion in your infrastructure.
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
 * For vSphere, a license charge is incurred at the time of order, but the license charge is then credited to your account.
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
@@ -108,7 +115,7 @@ For users who are not Business Partners, you can use the IBM-provided VMware lic
 ## Bare Metal Server settings
 {: #vc_orderinginstance-bare-metal-settings}
 
-Bare Metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vmware-inventory-export).
+Bare Metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/services/vmwaresolutions?topic=vmware-solutions-vmware-inventory-export).
 
 ### Data center location
 {: #vc_orderinginstance-dc-location}
@@ -172,14 +179,14 @@ When you select **Broadwell**, you can choose the CPU and RAM combination for th
 
 * All servers that you order have the same configuration.
 * If you're planning to use vSAN storage, you can order 4 - 20 servers.
-* If you're planning to use NFS storage, you can order 2 - 20 servers. However, for production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* If you're planning to use NFS storage, you can order 2 - 20 servers. However, for production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Storage settings
 {: #vc_orderinginstance-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
-For instances V2.8 and later, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see the *Adding NFS storage to vCenter Server instances* section in [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances).
+For instances V2.8 and later, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see the *Adding NFS storage to vCenter Server instances* section in [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances).
 {:note}
 
 ### vSAN storage
@@ -220,7 +227,7 @@ Choose performance level options according to your needs.
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 {: caption="Table 5. NFS performance level options" caption-side="top"}
 
-### Local Disks
+### Local disks
 {: #vc_orderinginstance-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
@@ -295,11 +302,11 @@ Select to order one new public VLAN and two new private VLANs.
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
 When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
-* **Public VLAN** is for public network access.
-* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}.
-* **Secondary private VLAN** is for VMware features such as vSAN.
-* **Primary Subnet** is assigned to physical hosts for public network access.
-* **Primary Private Subnet** is assigned to physical hosts for management traffic.
+* **Public VLAN** is for public network access. If you select the **Allocate a new one** option for this field, a new public VLAN is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Public Primary Subnet** is assigned to physical hosts for public network access. If you select the **Allocate a new one** option for this field, a new public primary subnet is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}. If you select the **Allocate a new one** option for this field, a new private VLAN is allocated automatically.
+* **Private Primary Subnet** is assigned to physical hosts for management traffic. If you select the **Allocate a new one** option for this field, a new private primary subnet is allocated automatically.
+* **Secondary Private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 {:important}
@@ -324,7 +331,7 @@ For more information on ordering Windows Server 2016 licenses, see [Get started 
 ## Services settings
 {: #vc_orderinginstance-addon-services}
 
-When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
+When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
 
 A 12-month commitment is required when you order the VMware HCX service.
 {:note}
@@ -339,32 +346,38 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server instances
 {: #vc_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server** card in the **Start Provisioning** section.
-2. On the **VMware vCenter Server** page, click the **vCenter Server** card and click **Continue**.
-3. On the **vCenter Server** page, enter the instance name.
-4. Select the vSphere version.
-5. Select the instance type:
+For information about deploying VMware stretched vSAN clusters, see [Ordering multi-zone stretched clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering).
+
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
+2. In the **Start Provisioning** section, click the **VMware vCenter Server** card.
+3. On the **VMware vCenter Server** page, click the **vCenter Server** card and click **Continue**.
+4. Select to create a new configuration, or select a saved configuration:
+   * If you want to create a new configuration, select **New Configuration**.
+   * If you want to update a saved configuration, or if you want to create a new configuration based on a saved configuration, select a saved configuration.
+5. On the **vCenter Server** page, enter the instance name.
+6. Select the vSphere version.
+7. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
      2. For primary instances V2.8 or later, enter the vCenter Server Administrator password for the primary instance.
      3. For primary instances V2.5, 2.6, or 2.7, enter the PSC administrator password for the primary instance.
      4. For primary instances V2.4 or earlier, verify that the prefilled value for the PSC administrator password for the primary instance is correct.
-6. Complete the license settings for the instance components.
-   *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
-   *  To use your own license, select **I will provide** and enter the license key.
-7. Complete the Bare Metal Server settings.
+8. Complete the license settings for the instance components.
+    * To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
+    * To use your own license, select **I will provide** and enter the license key.
+9. Complete the Bare Metal Server settings.
     1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
     2. Select the Bare Metal Server configuration.
        * When you select **Skylake**, **Cascade Lake**, or **Broadwell**, specify the CPU model and the RAM size.
        * When you select **SAP-certified**, choose one of the preset configurations.
     3. Specify the number of {{site.data.keyword.baremetal_short}}. If you're planning to use vSAN storage, a minimum of four {{site.data.keyword.baremetal_short}} are needed.  
-8. Complete the storage configuration.
+10. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
   * If you select **Local Disks**, specify the local disk count and local disk type.
-9. Complete the network interface settings.
+11. Complete the network interface settings.
    1. Enter the host name prefix for the instance being provisioned, the subdomain label, and the root domain name. For a secondary instance, the domain name is automatically completed.
    2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
    3. Select the VLAN settings:
@@ -372,29 +385,48 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
       * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and the subnets.
    4. Specify the DNS configuration.
 
-10. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.
+12. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.
 For more information about how to provide settings for a service, see the corresponding service ordering topic.
 
-11. On the **Order Summary** pane, verify the instance configuration before you place the order.
-   1. Review the settings for the instance.
-   2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
-   4. Click **Provision**.
+13. On the **Order Summary** pane, review the instance settings and the estimated cost.
+   * To save the settings as a new configuration template without placing an order, click **Save Configuration**, enter a name for the configuration, and then click **Continue**.
+   * To save the updates to a saved configuration, click **Save Configuration**, select **Modify current configuration**, and then click **Continue**.
+   * To save the updates to a saved configuration as another configuration, click **Save Configuration**, select **Create new configuration**, enter a new name for the configuration, and then click **Continue**.
+   * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
-## Results after you order vCenter Server instances
+## Results
 {: #vc_orderinginstance-results}
 
-* The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
-* When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
-* When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
-* When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
+### If you saved a configuration
+{: #vc_orderinginstance-results-config}
+
+You get a console notification that the configuration is saved successfully, and then you can find the template in the **Instance Configurations** drop-down list.
+
+### If you placed an order
+{: #vc_orderinginstance-results-order}
+
+The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
+
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
+
+When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
+
+When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 
 ## What to do next
 {: #vc_orderinginstance-next}
 
+### If you saved a configuration
+{: #vc_orderinginstance-next-config}
+
+Manage the configuration template by viewing or deleting it in the **Instance Configurations** drop-down list.
+
+### If you placed an order
+{: #vc_orderinginstance-next-order}
+
 View and manage the vCenter Server instance that you ordered.
 
-You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account	 only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}}, or any other means outside of the console.
+You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the	{{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 {:important}
 
@@ -409,10 +441,10 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 ## Related links
 {: #vc_orderinginstance-related}
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
-* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
-* [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions?topic=vmware-solutions-signing_required_accounts)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
+* [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_multisite)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Deleting vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_deletinginstance)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Deleting vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)

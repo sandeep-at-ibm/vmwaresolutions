@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-12-04"
 
 subcollection: vmware-solutions
 
@@ -42,25 +42,25 @@ The {{site.data.keyword.cloud}} automation deploys three NSX Controllers within 
 ### NSX Edge and Distributed Logical Router (DLR)
 {: #vcsicp-arch-overview-solution-nsx-edge}
 
-NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.icpfull_notm}}, a second gateway, which is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls can be configured by the administrator. The [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) provides greater detail on the network design.
+NSX Edge Services Gateway (ESG) pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside on the private network. For vCenter Server and {{site.data.keyword.icpfull_notm}}, a second gateway, which is known as the icp–managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. Any required NSX component such as Distributed Logical Router (DLR), logical switches, and firewalls can be configured by the administrator. The [vCenter Server networking guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro) provides greater detail on the network design.
 
-The following table summarizes the {{site.data.keyword.icpfull_notm}} ESG / DLR specifications.
-
-Table 1. {{site.data.keyword.icpfull_notm}} ESG specifications
+The following table summarizes the {{site.data.keyword.icpfull_notm}} ESG specifications.
 
 | Attribute | Specification |
 |:--------- |:------------- |
 | Edge Service Gateway | Virtual appliance |
 | Edge size	Large | Number of vCPUs	2 |
 | Memory | 1-GB Disk<br>1000 GB on local datastore |
+{: caption="Table 1. {{site.data.keyword.icpfull_notm}} ESG specifications" caption-side="bottom"}
 
-Table 2. {{site.data.keyword.icpfull_notm}} DLR specifications
+The following table summarizes the {{site.data.keyword.icpfull_notm}} DLR specifications.
 
 | Attribute | Specification |
 |:--------- |:------------- |
 | Distributed Logical Router | Virtual appliance |
 | Edge size	Compact | Number of vCPUs	1 |
 | Memory	| 512-MB Disk<br>1000 GB on local datastore |
+{: caption="Table 2. {{site.data.keyword.icpfull_notm}} DLR specifications" caption-side="bottom"}
 
 ## IBM Cloud Private components
 {: #vcsicp-arch-overview-solution-icp-comp}
@@ -99,9 +99,7 @@ A management node is an optional node that hosts only management services such a
 
 A Vulnerability Advisor node is an optional node that is used for running the Vulnerability Advisor services. Vulnerability Advisor services are resource-intensive. If you use the Vulnerability Advisor service, specify a dedicated VA node.
 
-The following VMs specifications are required for a Highly Available {{site.data.keyword.icpfull_notm}} instance:
-
-Table 3. {{site.data.keyword.icpfull_notm}} virtual machine specifications
+The following VMs specifications are required for a Highly Available {{site.data.keyword.icpfull_notm}} instance.
 
 | Node | Instances | IP	| CPU	| RAM (GB)	| DISK (GB) |
 |:---- |:--------- |:-- |:--- |:--------- |:--------- |
@@ -111,14 +109,14 @@ Table 3. {{site.data.keyword.icpfull_notm}} virtual machine specifications
 | Vulnerability Advisor	| 3	| IP (x3)	| 4	| 16	| 500 |
 | GlusterFS	| 3	| IP (x3)	| 8	| 16	| 150 |
 | Worker	| 3-6	| IP (x3)	| 4-8	| 4	| 150 |
+{: caption="Table 3. {{site.data.keyword.icpfull_notm}} virtual machine specifications" caption-side="bottom"}
 
 CAM requires worker nodes to have a higher vCPU and memory configuration.
-
-Table 4. {{site.data.keyword.icpfull_notm}} virtual machine specifications
 
 | Node | Instances	| IP | CPU	| RAM (GB)	| DISK (GB) |
 |:---- |:---------- |:-- |:---- |:--------- |:--------- |
 | worker | 3 | IP (x3) | 4-8 | 16-20 | 150 |
+{: caption="Table 4. CAM requirements for IBM Cloud Private worker virtual machines" caption-side="bottom"}
 
 ## CAM components
 {: #vcsicp-arch-overview-solution-cam-comp}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -17,14 +17,14 @@ subcollection: vmware-solutions
 ## Backup
 {: #vcsnsxt-operations-backup}
 
-### VMware vCenter Server on IBM Cloud backup
+### VMware vCenter Server backup
 {: #vcsnsxt-operations-vcs-backup}
 
-As part of {{site.data.keyword.vmwaresolutions_full}}, Veeam backup software is optionally deployed on an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) by using {{site.data.keyword.cloud_notm}} Endurance storage outside the VMware cluster. The purpose of this software is to back up the management components in the solution. [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) provides details about offering.
+As part of {{site.data.keyword.vmwaresolutions_full}}, Veeam backup software is optionally deployed on an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) by using {{site.data.keyword.cloud_notm}} Endurance storage outside the VMware cluster. The purpose of this software is to back up the management components in the solution. [Veeam overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations) provides details about offering.
 
 The backup of all NSX components is crucial to restore the system to its working state if a failure occurs. It is not sufficient to back up the NSX virtual appliances, the NSX backup function within the NSX manager must be employed for an effective backup. This operation requires that an FTP or SFTP server is specified for the repository of NSX backup data.
 
-The NSX Manager backup contains all of the NSX configuration, including controllers, logical switching and routing entities, security, firewall rules, and everything else that you configure within the NSX Manager user interface or API. The vCenter database and related elements like the virtual switches need to be backed up separately. See [NSX file-based backup](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#nsx-file-based-backup) for details. The NSX configuration should be backed up along with a [vCenter file-based  backup](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#vcenter-file-based-backup).
+The NSX Manager backup contains all of the NSX configuration, including controllers, logical switching and routing entities, security, firewall rules, and everything else that you configure within the NSX Manager user interface or API. The vCenter database and related elements like the virtual switches need to be backed up separately. See [NSX file-based backup](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#nsx-file-based-backup) for details. The NSX configuration should be backed up along with a [vCenter file-based  backup](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#vcenter-file-based-backup).
 
 ### Backup and disaster recovery for IBM Cloud Private
 {: #vcsnsxt-operations-backup-dr-icp}
@@ -71,17 +71,17 @@ Scale out of the environment follows one of these paths:
 #### Multi-site deployments
 {: #vcsnsxt-operations-multi-site}
 
-VMware on {{site.data.keyword.cloud_notm}} can use the {{site.data.keyword.cloud_notm}} worldwide data center presence and integrated network backbone to allow for various cross geography use cases to be deployed and functioning within a fraction of the time it would take to build such an infrastructure from scratch. Further information can be found at [Multi-site configuration for vCenter Server on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite).
+VMware on {{site.data.keyword.cloud_notm}} can use the {{site.data.keyword.cloud_notm}} worldwide data center presence and integrated network backbone to allow for various cross geography use cases to be deployed and functioning within a fraction of the time it would take to build such an infrastructure from scratch. Further information can be found at [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_multisite).
 
 #### Scale out with new cluster
 {: #vcsnsxt-operations-scale-out-new-cluster}
 
-Users can also scale out the compute capacity by creating a new cluster from within the console by ordering the hosts and the new hosts are automatically added to the new cluster. This option creates a separate cluster in the environment and gives users the ability to physically and logically segregate management workloads from application workloads, the ability to segregate workloads based on other characteristics (for example, Microsoft SQL database cluster) and the ability to deploy applications in highly available topologies. For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
+Users can also scale out the compute capacity by creating a new cluster from within the console by ordering the hosts and the new hosts are automatically added to the new cluster. This option creates a separate cluster in the environment and gives users the ability to physically and logically segregate management workloads from application workloads, the ability to segregate workloads based on other characteristics (for example, Microsoft SQL database cluster) and the ability to deploy applications in highly available topologies. For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 
 #### Scale out existing cluster
 {: #vcsnsxt-operations-scale-out-existing-cluster}
 
-The user can scale out an existing cluster by ordering hosts from within the console and the new hosts are automatically added to the cluster. For more information, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers) for details. You might need to adjust the HA reservation policy for the cluster based on their reservation requirements.
+The user can scale out an existing cluster by ordering hosts from within the console and the new hosts are automatically added to the cluster. For more information, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers) for details. You might need to adjust the HA reservation policy for the cluster based on their reservation requirements.
 
 ### IBM Cloud Private and IBM Cloud Kubernetes Service scalability
 {: #vcsnsxt-operations-icp-iks-scalability}
@@ -108,4 +108,4 @@ Application deployments into {{site.data.keyword.containerlong_notm}} are possib
 - Multi Cloud Manager, a future enhancement to manage {{site.data.keyword.containerlong_notm}} instances.
 - Helm command line.
 
-**Next topic:** [Technology preview of VMware NSX-T on VMware vCenter Server on IBM Cloud](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-techpreview)
+**Next topic:** [Technology preview of VMware NSX-T on VMware vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-techpreview)

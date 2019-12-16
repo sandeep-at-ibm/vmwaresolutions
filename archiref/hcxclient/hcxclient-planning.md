@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Preparing the installation environment
 {: #hcxclient-planning-prep-install}
 
-The installation of VMware HCX on {{site.data.keyword.cloud}} has the following software requirements:
+The installation of VMware HCX has the following software requirements:
 * vSphere 5.5 U3, or vSphere 6.0u2 or higher.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
 * To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764).
@@ -23,7 +23,7 @@ The installation of VMware HCX on {{site.data.keyword.cloud}} has the following 
 {: #hcxclient-planning-config-net}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
-* For information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-port-req).
+* For information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req).
 * Both the on-premises vSphere environment and the VCS HCX Cloud environment must allow Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
@@ -162,8 +162,8 @@ As deployed by the {{site.data.keyword.vmwaresolutions_short}} automation, HCX c
 ## Related links
 {: #hcxclient-planning-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-migrations)
-* [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

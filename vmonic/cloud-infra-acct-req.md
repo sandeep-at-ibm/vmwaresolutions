@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-03"
+lastupdated: "2019-11-07"
 
 keywords: user account, user permissions, VRF account
 
@@ -29,7 +29,7 @@ To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must h
 
 The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must have certain permissions to be able to order the components in your instances and perform operations on your behalf. The permission requirements are applicable to all types of instances and services you are ordering from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} infrastructure account in the {{site.data.keyword.slportal}}. For more information, see [Editing a user's customer portal permissions](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
+Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} infrastructure account in the {{site.data.keyword.slportal}}. For more information, see [Editing a user's customer portal permissions](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:external}.
 
 | Permission         | Details                                 |
 |:------------------ |:--------------------------------------- |
@@ -64,5 +64,5 @@ For more information, see:
 ## Related links
 {: #cloud-infra-acct-req-related}
 
-* [Requirements for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
-* [User account and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
+* [Requirements for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning)
+* [User account and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount)

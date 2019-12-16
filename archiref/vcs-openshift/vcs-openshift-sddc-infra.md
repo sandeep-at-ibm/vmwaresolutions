@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-24"
+lastupdated: "2019-12-02"
 
 subcollection: vmware-solutions
 
@@ -92,17 +92,23 @@ Within the OpenShift environment, two load balancers for accessing the master no
 ## Red Hat OpenShift specifications
 {: #vcs-openshift-sddc-infra-redhat-spec}
 
+The following table shows management node specifications.
+
 | Host description | vCPU  | Memory GB | Disk GB | OS |
 |:-----------------|:-----------------|:-----------------|:-----------------| :---|
 | Management0 | 2 | 8 | 50 | Red Hat Enterprise Linux 7.6 |
 {: caption="Table 5. Management node specifications" caption-side="top"}
+
+The following table shows control plane node specifications.
 
 | Host description | vCPU  | Memory GB | Disk GB | OS | Host name |
 |:-----------------|:-----------------|:-----------------|:-----------------| :---|
 | Control-plane0 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
 | Control-plane1 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
 | Control-plane2 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
-{: caption="Table 6. Control Plane node specifications" caption-side="top"}
+{: caption="Table 6. Control plane node specifications" caption-side="top"}
+
+The following table shows worker node specifications.
 
 | Host description | vCPU  | Memory GB | Disk GB | OS | Host name |
 |:-----------------|:-----------------|:-----------------|:-----------------| :---|

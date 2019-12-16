@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-29"
 
 subcollection: vmware-solutions
 
@@ -53,13 +53,12 @@ In this design, the Storage DRS Runtime Settings are enabled and thresholds are 
 
 The following table shows the settings in the VMware vSphere Web Client.
 
-Table 1. Storage DRS runtime settings
-
 | Setting       | Value  |
 |:--------------- |:------ |
 | Enable I/O metric for SDRS recommendations | Selected |
 | Utilized space | Selected, set to 80% |
 | I/O latency threshold | 15 ms |
+{: caption="Table 1. Storage DRS runtime settings" caption-side="bottom"}
 
 For more information about configuring these settings in the vSphere Web Client, see [Set Storage DRS Runtime Rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html).
 
@@ -84,8 +83,6 @@ When the need arises to add more storage to the environment due to insufficient 
 
 This design adds advanced configuration parameters that are recommended by {{site.data.keyword.cloud_notm}}. As a result, the following parameters are set on each vSphere ESXi host that is attached to the {{site.data.keyword.cloud_notm}} NFS share.
 
-Table 2. NFS advanced configuration parameters
-
 | Parameter       | Value  |
 |:--------------- |:------ |
 | Net.TcpipHeapSize | 32 |
@@ -95,10 +92,11 @@ Table 2. NFS advanced configuration parameters
 | NFS.HeartbeatFrequency  | 12 |
 | NFS.HeartbeatTimeout | 5 |
 | NFS.MaxQueueDepth | 64 |
+{: caption="Table 2. NFS advanced configuration parameters" caption-side="bottom"}
 
-Next topic: [Cluster settings](/docs/services/vmwaresolutions?topic=vmware-solutions-cluster-settings)
+**Next topic:** [Cluster settings](/docs/services/vmwaresolutions?topic=vmware-solutions-cluster-settings)
 
 ## Related links
 {: #storage-settings-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)

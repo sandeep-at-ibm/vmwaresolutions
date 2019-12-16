@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-06-28"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server Hybridity migrate instance, add account vCenter Server Hybridity, migrate cloud account Hybridity
 
@@ -48,5 +48,5 @@ For more information about how to link your Iaas-only account to your PaaS accou
 {: #vc_hybrid_addinstancetousraccount-related}
 
 * [Managing user access with IAM](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)
-* [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
+* [Inviting users to access services and resources](/docs/services/vmwaresolutions?topic=vmware-solutions-iamuserinvite)
 * [What is IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

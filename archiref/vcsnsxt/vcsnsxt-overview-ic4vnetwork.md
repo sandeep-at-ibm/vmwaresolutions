@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-30"
 
 subcollection: vmware-solutions
 
@@ -65,8 +65,6 @@ As stated previously, the private network consists of two VLANs within this desi
 
 Along with Private VLAN A, a second private VLAN (here designated Private VLAN B) exists to support VMware features such as vSAN and vMotion, and for connectivity to network-attached storage (NAS). As such, the VLAN is divided into two or three portable subnets. The first subnet is assigned to a kernel port group for vMotion traffic. The remaining subnet or subnets are used for storage traffic and when using vSAN one is assigned to kernel port groups used for vSAN traffic. When using NAS one is assigned to a port group dedicated to NFS traffic. All subnets configured as part of a vCenter Server automated deployment use {{site.data.keyword.cloud_notm}}-managed ranges. This is to ensure that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account that is used if required currently or in the future.
 
-Table 1. VLAN and subnet summary
-
 VLAN 	|Subnet Type 	|Description
 ---|---|---
 Public 	|Primary 	|Assigned to physical hosts for public network access. Not used upon initial deployment.
@@ -83,6 +81,7 @@ Private B	  |Primary	  |Not used upon initial deployment.
 Private B 	|Portable 	|Assigned for vSAN if in use.
 Private B 	|Portable 	|Assigned for NAS if in use.
 Private B 	|Portable 	|Assigned for vMotion.
+{: caption="Table 1. VLAN and subnet summary" caption-side="bottom"}
 
 This design is implemented with physical hosts and virtual system instances (VSI) on VLANs and configured to point to the {{site.data.keyword.cloud_notm}} BCR (backend “private network” customer router) as the default route. While vCenter Server instances enable the use of software-defined networking, any network overlays created by NSX that include routing to VLAN subnets aren't known by the {{site.data.keyword.cloud_notm}}-managed routers. You might need to create static routes, firewall rules, and NAT rules to properly manage the network flows.
 

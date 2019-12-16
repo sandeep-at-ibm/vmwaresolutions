@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-11-25"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -26,16 +26,12 @@ You can order the Veeam service when you order a new instance with the service i
 ## Ordering Veeam for a new instance
 {: #veeam_ordering-new}
 
-You can order a new instance with Veeam by using one of the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, when you order a new instance, click **Veeam** under the **Business Continuity and Migration** category in the **Optional Services** section.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **Veeam** on the **Business Continuity and Migration** card in the **Services** section. Specify the service settings and select **Add to New Instance**.
+When you [order the instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Veeam** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering Veeam for an existing instance
 {: #veeam_ordering-existing}
 
-You can add the Veeam service into an existing instance by using one the following methods:
-* From the {{site.data.keyword.vmwaresolutions_short}} console, view the instance that you want to add the service for, click **Services** on the left navigation pane, and click **Add**.
-* From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click **Veeam** on the **Business Continuity and Migration** card in the **Services** section. Specify the service settings and select **Add to Existing Instance**.
+On the [instance details page](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Veeam** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Veeam service configuration
 {: #veeam_ordering-config}
@@ -60,8 +56,8 @@ The IOPS (input/output operations per second) per GB based on your workload requ
 ## Related links
 {: #veeam_ordering-related}
 
-* [Managing Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingveeam)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices)
-* [Managed Backup Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_veeam_services)
+* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

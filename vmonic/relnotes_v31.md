@@ -36,7 +36,7 @@ For more information, see [Single-node Trial for Disaster Recovery overview](/do
 
 You can now engage IBM Expert Services to work together with your internal team to deploy, migrate, and maintain your own {{site.data.keyword.cloud_notm}} solution from planning to modernization, or any stage in between.
 
-You can add {{site.data.keyword.cloud_notm}} Expert Services to your instance order at any time by requesting a consultation from the **Getting Started** page. For more information, see [Requesting {{site.data.keyword.cloud_notm}} Expert Services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing_ices).
+You can add {{site.data.keyword.cloud_notm}} Expert Services to your instance order at any time by requesting a consultation from the **Getting Started** page. For more information, see [Requesting {{site.data.keyword.cloud_notm}} Expert Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_ices).
 
 ## Integration with the IBM Cloud Cost Estimator
 
@@ -52,7 +52,7 @@ This release applies the following upgrades and improvements for newly deployed 
 * vSphere ESXi 6.5 Update 2 (build 6.5.0-13635690)
 * vCenter Server Appliance 6.5 Update 2g (build 6.5.0-13638625)
 
-For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
 
 ### Alternative ESXi server configuration for clusters
 {: #relnotes_v31-esxi-config}
@@ -98,9 +98,9 @@ You must complete the procedure to enable internet access for your HyTrust virtu
 
 For more information, see:
 
-* [Enabling internet access for the HyTrust CloudControl VMs](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtcc#managinghtcc-internet-access)
-* [Enabling internet access for the HyTrust DataControl VMs](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtdc#managinghtdc-internet-access)
-* [Enabling internet access for the HyTrust KeyControl VMs](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc#managinghtkc-internet-access)
+* [Enabling internet access for the HyTrust CloudControl VMs](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtcc#managinghtcc-internet-access)
+* [Enabling internet access for the HyTrust DataControl VMs](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtdc#managinghtdc-internet-access)
+* [Enabling internet access for the HyTrust KeyControl VMs](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtkc#managinghtkc-internet-access)
 
 ### Veeam on IBM Cloud
 {: #relnotes_v31-services-veeam}
@@ -119,7 +119,7 @@ To order Zerto on {{site.data.keyword.cloud_notm}}, your {{site.data.keyword.clo
 
 * The Activity Tracker instance management events and events for the KMIP for VMware on IBM Cloud service are updated. For more information, see [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events).
 * User ID reference documentation is updated with user IDs used for installation and configuration of services by {{site.data.keyword.cloud_notm}} services automation. For more information, see the *Service user ID* section in [IBM user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
-* Reference documentation is available for the new ``Retrieve the detailed network interface of a cluster`` API. For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions){:external}.
+* Reference documentation is available for the new ``Retrieve the detailed network interface of a cluster`` API. For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions).
 * The following technical documents are new in the *Reference* section of the user documentation:
   * [Operations management](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
   * [Day 2 operational procedures](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-intro)

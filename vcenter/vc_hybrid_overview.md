@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-14"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -95,11 +95,11 @@ The following networking components are ordered:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs.
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching additional VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
-  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#faq-customer-nsx).
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx).
 
 For more information on networking components ordered when deploying the HCX service, see [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
@@ -125,7 +125,7 @@ vSAN storage offers customized configurations, with various options for disk typ
 
 The following licenses are included with your vCenter Server with Hybridity Bundle instance order.
 
-* VMware vSphere Enterprise Plus 6.5u2 or 6.7u2
+* VMware vSphere Enterprise Plus 6.5u3 or 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
@@ -140,12 +140,12 @@ Each vCenter Server with Hybridity Bundle expansion node will deploy and incur c
 ### Hardware for expansion nodes
 {: #vc_hybrid_overview-expansion-node-hardware}
 
-One Bare Metal Server with the configuration presented in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs).
+One Bare Metal Server with the configuration presented in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs).
 
 ### Licenses and fees for expansion nodes
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.5u2 or 6.7u2
+* One VMware vSphere Enterprise Plus 6.5u3 or 6.7u2
 * One VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * One Support and Services fee
 * VMware vSAN (Advanced or Enterprise) 6.6
@@ -164,6 +164,6 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 ## Related links
 {: #vc_hybrid_overview-related}
 
-* [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom)
+* [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
 * [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)

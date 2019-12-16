@@ -4,21 +4,23 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 
 # KMIP for VMware design
 {: #kmip-design}
 
-KMIP for VMware on {{site.data.keyword.cloud}} provides a key management service compatible with VMware vSAN encryption and VMware vSphere encryption, by using [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) or [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) to provide root key and data key storage. Key Protect and Hyper Protect Crypto Services function as the key management service in this solution.
+KMIP for VMware provides a key management service compatible with VMware vSAN encryption and VMware vSphere encryption, by using [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) or [IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started) to provide root key and data key storage. Key Protect and Hyper Protect Crypto Services function as the key management service in this solution.
 
 ## Storage encryption options
 {: #kmip-design-storage-options}
@@ -36,7 +38,7 @@ Because vSAN encryption operates at the datastore level, its primary goal is to 
 * vSAN encryption does not encrypt the host to host vSAN replication communications within your cluster.
 * vSAN encryption is not applicable to other storage solutions such as {{site.data.keyword.cloud_notm}} Endurance file and block storage.
 * vSAN encryption requires the vSAN Enterprise license.
-* The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:new_window}.
+* The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:external}.
 
 ### vSphere encryption
 {: #kmip-design-vsphere-encrypt}
@@ -98,15 +100,15 @@ Your KMIP for VMware instance is authorized to your Key Protect or Hyper Protect
 ### Topology
 {: #kmip-design-topology}
 
-KMIP for VMware is available in a number of {{site.data.keyword.cloud_notm}} multi-zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
+KMIP for VMware is available in a number of {{site.data.keyword.cloud_notm}} multi-zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering).
 
-Within each MZR, KMIP for VMware provides two network service endpoints on the {{site.data.keyword.cloud_notm}} private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering).
+Within each MZR, KMIP for VMware provides two network service endpoints on the {{site.data.keyword.cloud_notm}} private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering).
 
 To access KMIP for VMware over the private network, your {{site.data.keyword.cloud_notm}} infrastructure account must be enabled for virtual routing and forwarding (VRF) and the {{site.data.keyword.cloud_notm}} network service endpoint routes must be added to the VRF routes of your account. For more information, see [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 
 KMIP for VMware also connects to {{site.data.keyword.cloud_notm}} Key Protect by using the {{site.data.keyword.cloud_notm}} private network rather than the public internet.
 
-![Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}](../../images/kmip-key-protect.svg "The solution enables VMware vSphere encryption and vSAN encryption by using root keys that are stored in IBM Key Protect."){: caption="Figure 1. Components of KMIP for VMware on {{site.data.keyword.cloud_notm}} when using IBM Key Protect" caption-side="bottom"}
+![Components of KMIP for VMware](../../images/kmip-key-protect.svg "The solution enables VMware vSphere encryption and vSAN encryption by using root keys that are stored in IBM Key Protect."){: caption="Figure 1. Components of KMIP for VMware when using IBM Key Protect" caption-side="bottom"}
 
 When using IBM Cloud Hyper Protect Crypto Services, your keys are stored in an IBM zSeries HSM instead of CloudHSM. Additionally, the connection between KMIP for VMware and {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services flows over the public network but is protected by TLS encryption and authentication.
 
@@ -115,6 +117,6 @@ When using IBM Cloud Hyper Protect Crypto Services, your keys are stored in an I
 ## Related links
 {: #kmip-design-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-overview)
-* [Implementation and management](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-implementation)
+* [Solution overview](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip-overview)
+* [Implementation and management](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip-implementation)
 * [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial)

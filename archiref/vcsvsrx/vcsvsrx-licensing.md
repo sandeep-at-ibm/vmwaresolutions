@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-11-04"
+lastupdated: "2019-12-13"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2019-11-04"
 # vSRX base and advanced licensing
 {: #vcsvsrx-licensing}
 
-The vSRX is ordered and deployed with the necessary license keys to operate. Advanced licensing is only available directly from Juniper Networks. Licenses can be procured from the [Juniper Networks License Management System (LMS)](https://www.juniper.net/generate_license/){:external}.
+The vSRX is ordered and deployed with the necessary license keys to operate. Advanced licensing is only available directly from Juniper Networks. Licenses can be procured from the Juniper Networks License Management System (LMS). For more information, see [Licensing Guide](https://www.juniper.net/documentation/en_US/release-independent/licensing/information-products/pathway-pages/licensing.html){:external}.
 
 ### Adding a new license key from the CLI
 {: #vcsvsrx-licensing-add-new}
@@ -47,6 +47,8 @@ Optionally, use the `show system license` command to view details of the license
     root@host> `show system license`
 
 The license key is installed and activated on the vSRX instance.
+
+**Next topic:** [Glossary of vSRX terminology](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-components).
 
 ## Related links
 {: #vcsvsrx-licensing-related}

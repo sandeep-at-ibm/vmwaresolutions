@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
@@ -38,14 +38,12 @@ The strongSwan IPSec VPN service provides a secure end-to-end communication chan
 ### Hybridity (HCX)
 {: #vcscar-arch-overview-infrastructure-hcx}
 
-The VMware vCenter Server on {{site.data.keyword.cloud_notm}} Hybridity Bundle service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+The VMware vCenter Server Hybridity Bundle service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
 ## Physical structure
 {: #vcscar-arch-overview-infrastructure-phys-structure}
 
-The physical infrastructure required to deploy an {{site.data.keyword.icpfull_notm}} production instance onto a VMware vCenter Server on {{site.data.keyword.cloud_notm}} cluster, requires the following minimum specification.
-
-Table 1. vCenter Server specification for {{site.data.keyword.icpfull_notm}}
+The physical infrastructure required to deploy an {{site.data.keyword.icpfull_notm}} production instance onto a VMware vCenter Server cluster, requires the following minimum specification.
 
 | | NFS Deployment | vSAN Deployment |
 |:---------- |:---------- |:---------- |
@@ -53,6 +51,7 @@ Table 1. vCenter Server specification for {{site.data.keyword.icpfull_notm}}
 | CPU | 28 Cores 2.2 GHz | 28 Cores 2.2 GHz |
 | Memory | 384 GB | 384 GB |
 | Storage | 2000 GB 2IOPS/GB Management, 2000 GB 4IOPS/GB Workload, 4000 GB 4IOPS/GB {{site.data.keyword.icpfull_notm}} | Min 960-GB SSD x 2 |
+{: caption="Table 1. vCenter Server specification for {{site.data.keyword.icpfull_notm}}" caption-side="bottom"}
 
 In addition to the {{site.data.keyword.cloud_notm}} Private hardware requirements, you must create persistent volumes in the {{site.data.keyword.icpfull_notm}} environment to store Cloud Automation Manager (CAM) database and log data. While CAM supports all of the persistent volume types that {{site.data.keyword.icpfull_notm}} supports, the two recommended storage configurations for CAM are NFS and GlusterFS.
 

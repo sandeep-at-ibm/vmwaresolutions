@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-30"
 
 subcollection: vmware-solutions
 
@@ -41,8 +41,6 @@ The Tenant or Organization Setup has seven substeps:
 
 The following information is collected from the user at time of order and is used in the application setup.
 
-Table 1. Information collected from the user
-
 |Setup stage |Parameter |
 |---|---|
 |Organization / Asset Repositories  |Organization Name |
@@ -55,10 +53,9 @@ Table 1. Information collected from the user
 |Cloud Provider |Type|
 |Cloud Provider |POC Name |
 |Cloud Provider |POC Phone |
+{: caption="Table 1. Information collected from the user" caption-side="bottom"}
 
 The following default information is used in the application setup.
-
-Table 2. Default information used in application setup
 
 |Setup stage |Parameter |
 |---|---|
@@ -71,5 +68,6 @@ Table 2. Default information used in application setup
 |Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. ScanName is set to DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
 |Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. Type is set to vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
 |Task |Schedule is set to Hourly for DC1AssetScan and Daily for the others |
+{: caption="Table 2. Default information used in application setup" caption-side="bottom"}
 
-Next topic: [Glossary of Caveonix terms](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-terminology)
+**Next topic:** [Glossary of Caveonix terms](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-terminology)

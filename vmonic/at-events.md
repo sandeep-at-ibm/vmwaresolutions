@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-11-07"
 
 keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
 
@@ -29,7 +29,7 @@ The following table provides the actions that generate and send management event
 
 | Action                                   | Description |
 |:-----------------------------------------|:------------|
-| `vmware-solutions.account-apikey.update` | The infastructure API key for an account is updated. |
+| `vmware-solutions.account-apikey.update` | The infrastructure API key for an account is updated. |
 | `vmware-solutions.account-notification.update` | The notification setting for an account is updated. |
 | `vmware-solutions.instance-secure-data.wipe` | The instance secure data is wiped. |
 | `vmware-solutions.instance-bss-account.migrate` |	An instance is migrated to a BSS account. |
@@ -54,7 +54,7 @@ The following table provides the actions that generate and send management event
 ## Tracking events for the KMIP for VMware service
 {: #at-events-kmip}
 
-When you manage keys for the KMIP for VMware service, an event is generated and sent to a global domain or to an instance of the service in the location where the service is provisioned. For more information, see [Monitoring global and location-based events](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type).
+When you manage keys for the KMIP for VMware service, an event is generated. The event is sent to a global domain or to an instance of the service in the location where the service is provisioned. For more information, see [Monitoring global and location-based events](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type).
 
 The following table provides the actions that generate and send events for the KMIP for VMware service.
 
@@ -73,11 +73,11 @@ The following table provides the actions that generate and send events for the K
 
 Events are available in the **Frankfurt** location.
 
-There is only 1 {{site.data.keyword.at_full_notm}} instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the **EU-DE** location. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
+There is only one {{site.data.keyword.at_full_notm}} instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the **EU-DE** location. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
 
 ## Related links
 {: #at-events-related}
 
 * [Provisioning an instance](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-provision)
 * [Navigating to the web UI](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-launch)
-* [KMIP for VMware overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations)
+* [KMIP for VMware overview](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations)

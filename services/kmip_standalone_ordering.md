@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-08"
+lastupdated: "2019-12-12"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -22,14 +22,14 @@ You can order a KMIP for VMware instance without associating it to any VMware in
 {: #kmip_standalone_ordering-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
+* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
 * You reviewed all the considerations in [Considerations when installing KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
 
 ## Procedure to order KMIP for VMware instances
 {: #kmip_standalone_ordering-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. In the **Services** section, click **KMIP for VMware** on the **Security and Compliance** card.
+2. Scroll down to the **Services** section, and then click **KMIP for VMware** on the **Security and Compliance** card.
 3. On the **KMIP for VMware** page, configure the service settings as required.
 4. Click **Provision**.
 
@@ -85,11 +85,11 @@ When the instance is ready to use, the status of the instance is changed to **In
 ## What to do next
 {: #kmip_standalone_ordering-next}
 
-Add client certificates for the KMIP for VMware instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_addingdeletingcert).
+Add client certificates for the KMIP for VMware instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert).
 
 ## Related links
 {: #kmip_standalone_ordering-related}
 
-* [Viewing KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_viewing)
-* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-at-events)
+* [Viewing KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
+* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)

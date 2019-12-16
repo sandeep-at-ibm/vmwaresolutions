@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -38,7 +38,7 @@ Remediation is the process in which VUM applies patches, extensions, and upgrade
 * Powered on, suspended, or powered off VMs and templates for VMware Tools and VM hardware upgrade.
 * Powered on virtual appliances that are created with VMware Studio 2.0 and later, for virtual appliance upgrade.
 
-If the update requires it, hosts are put into maintenance mode before remediation. The VCSA migrates the VMs to other hosts within VMware vCenter Server on {{site.data.keyword.cloud}} instance before the host is put in maintenance mode.
+If the update requires it, hosts are put into maintenance mode before remediation. The VCSA migrates the VMs to other hosts within VMware vCenter Server instance before the host is put in maintenance mode.
 
 ## For hosts in a vSAN cluster
 {: #vum-staging-hosts-vsan}
@@ -48,7 +48,7 @@ Be aware of the following behavior for hosts that are part of a vSAN cluster:
 * By design, only one host from a VSAN cluster can be in a maintenance mode at any time.
 * VUM remediates hosts that are part of a VSAN cluster sequentially even if you set the option to remediate the hosts in parallel.
 * Any VM on the host that uses a VM storage policy with a setting of 0 for **Number of failures to tolerate**, the host might experience unusual delays when it enters maintenance mode. The delay occurs because vSAN must migrate the VM data from one disk to another in the vSAN datastore cluster and this can take many hours. You can work around this by setting **Number of failures to tolerate** to 1 for the VM storage policy, which results in creating two copies of the VM files in the vSAN datastore.
-* Any VM on the host that uses a VM storage policy with a setting of 1 for **Number of failures to tolerate**, then the VM becomes non-redundant when the host enters maintenance mode. If this is not acceptable, see [Virtual machine vSAN redundancy](/docs/services/vmwaresolutions/archiref/vum?topic=vmware-solutions-vum-vsan-redundancy).
+* Any VM on the host that uses a VM storage policy with a setting of 1 for **Number of failures to tolerate**, then the VM becomes non-redundant when the host enters maintenance mode. If this is not acceptable, see [Virtual machine vSAN redundancy](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-vsan-redundancy).
 
 To remediate hosts and clusters, follow these steps:
 1. Use the vSphere Web Client, select **Home** > **Hosts and Clusters**.
@@ -84,5 +84,5 @@ There is no requirement in a vCenter Server instance to select the check box und
 ## Related links
 {: #vum-staging-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
@@ -25,7 +25,7 @@ Review the following steps to configure the HCX Client instance.
   1. Set the Site URL to the HCX Cloud Manager URL, for example, `https://x.x.x.x.x`.
   2. Set the UserName and Password to the HCX Manager Admin Details: admin / password.
 
-    The previous details can be obtained from the {{site.data.keyword.vmwaresolutions_full}} console, under **Services**, **HCX on {{site.data.keyword.cloud_notm}}** for the vCenter Server instance.
+    The previous details can be obtained from the {{site.data.keyword.vmwaresolutions_full}} console, under **Services**, **HCX** for the vCenter Server instance.
 
 4. Click **Connect**.
 
@@ -60,6 +60,7 @@ The Site Pairing is registered and displayed on the UI.
 | External | 1500|
 | Management | 9000|
 | vMotion | 9000|
+{: caption="Table 1. Results" caption-side="bottom"}
 
 ### Creating on-premises Service Mesh compute profiles
 {: #hcxclient-vcs-mesh-deployment-profiles-compute}
@@ -154,8 +155,8 @@ Without any type of route optimization, extended networks route back to the clie
 ## Related links
 {: #hcxclient-vcs-mesh-deployment-deployment-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX Client deployment](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [Monitoring parameters and components](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+* [Monitoring parameters and components](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

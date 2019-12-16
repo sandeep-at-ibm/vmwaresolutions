@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-11-27"
+lastupdated: "2019-12-13"
 
 subcollection: vmware-solutions
 
@@ -52,8 +52,8 @@ NSX Base for Service Providers edition is only available for service providers t
 | Multi-site NSX optimizations                  |      |          | •          |
 | Remote Gateway                                |      |          | •          |
 | Integration with HW VTEPs                     |      |          | •          |
-\*L2, L3 & NSX Edge integration only. No consumption of Security Groups
 {: caption="Table 2. VMware NSX edition comparison chart" caption-side="bottom"}
+\*L2, L3 & NSX Edge integration only. No consumption of Security Groups
 
 ## VMware vSAN edition comparison
 {: #solution-appendix-vsan-editions}

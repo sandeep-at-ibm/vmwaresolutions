@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
@@ -14,7 +14,7 @@ subcollection: vmware-solutions
 # Initial configuration
 {: #vum-init-config}
 
-The {{site.data.keyword.vmwaresolutions_full}} automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud_notm}} Backend Customer Router (BCR). However, there's no route to the internet via the BCR. The standard route to the internet from the VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance is via the Management ESG. As it isn't advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
+The {{site.data.keyword.vmwaresolutions_full}} automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud_notm}} Backend Customer Router (BCR). However, there's no route to the internet via the BCR. The standard route to the internet from the VMware vCenter Server instance is via the Management ESG. As it isn't advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
 
 This approach means that you don't have to reconfigure the VCSA or the Management ESG, however, a small virtual machine (VM) or appliance must be installed. A proxy server is a system, which sits between two endpoint devices and acts as an intermediate device. In this case, it sits between VUM and the update servers at VMware.
 
@@ -40,8 +40,6 @@ To find the customer's private portable subnet:
 4. Select the **subnet** and you will be redirected to the subnet details page that displays the IP addresses and their allocations.
 5. Using the information, select a non-allocated IP address and update the **Note** with appropriate comments. Use this IP address for the `proxy ip` parameter in the following table.
 
-Table 1. Deployment values
-
 | Parameter | Suggested Values | Notes |
 |:--------- |:-------------- |:------ |
 | Proxy CPU | 1 vCPU | Squid has no minimum requirements |
@@ -54,6 +52,7 @@ Table 1. Deployment values
 | DNS Server | AD/DNS ip | This IP address can be found on the instance page in the {{site.data.keyword.vmwaresolutions_short}} console, the **Resources** page. |
 | BCR IP | bcr ip | On the same page where you selected the proxy IP above, note the address labeled Gateway. This address is the IP address of the {{site.data.keyword.cloud_notm}} Backend Customer Router and is the gateway for 10.0.0.0/8 and 161.26.0.0/16. You will use this address below in a static route in the proxy server so that it can reach the VCSA and the AD/DNS server. |
 | NAT IP | customer-nsx-edge public uplink ip | The public address of the customer NSX ESG will serve as the public NAT address for the proxy. This IP address can be found by reviewing the **Settings** tab for **customer-nsx-edge**. |
+{: caption="Table 1. Deployment values" caption-side="bottom"}
 
 ## Configuring NSX
 {: #vum-init-config-config-nsx}
@@ -68,8 +67,6 @@ NSX Customer ESG firewall and NAT settings are required to enable proxy server t
 3. Click the **+** symbol and add a firewall rule.
 4. Supply the required parameters as noted in the following table. The new firewall rule must come before the last rule, the Default Deny rule.
 
-Table 2. Firewall rule
-
 | Parameter | Suggested Values |
 |:--------- |:-------------- |
 | Name | Outbound Proxy01 |
@@ -78,6 +75,7 @@ Table 2. Firewall rule
 | Destination | any |
 | Service | HTTP/HTTPS/ICMP Echo |
 | Action | Accept |
+{: caption="Table 2. Firewall rule" caption-side="bottom"}
 
 After parameters are supplied, click **Publish Changes**.
 
@@ -87,8 +85,6 @@ After parameters are supplied, click **Publish Changes**.
 1. Select **NAT**.
 2. Click on the **+** symbol and add a SNAT rule.
 3. Supply the required parameters as noted in the following table and click **OK**. Then click **Publish Changes**.
-
-Table 3. NAT rule
 
 | Parameter | Suggested Values |
 |:--------- |:-------------- |
@@ -105,6 +101,7 @@ Table 3. NAT rule
 | Status | Enable |
 | Logging | Enable |
 | Description | Proxy01 SNAT |
+{: caption="Table 3. NAT rule" caption-side="bottom"}
 
 ### Installing and configuring a proxy server
 {: #vum-init-config-inst-cfg-proxy}
@@ -222,5 +219,5 @@ Configure VUM to use the proxy server to access the repositories on the internet
 ## Related links
 {: #vum-init-config-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

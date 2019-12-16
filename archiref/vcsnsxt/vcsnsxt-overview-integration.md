@@ -4,17 +4,22 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-12-13"
 
 subcollection: vmware-solutions
 
-
 ---
+
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 
 # Integration, IP addressing, and network flows
 {: #vcsnsxt-overview-integration}
 
-## IBM Cloud Private and VMware vCenter Server on IBM Cloud integration
+## IBM Cloud Private and VMware vCenter Server integration
 {: #vcsnsxt-overview-integration-icp-vcs-integration}
 
 {{site.data.keyword.cloud}} Private is installed on several virtual machines (VMs) on a vCenter Server instance. Within the vCenter Server instance, the {{site.data.keyword.icpfull_notm}} instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR) and uses a VXLAN.
@@ -90,7 +95,7 @@ The following traffic flows are described:
 ### Web tier hosted in a container in IBM Cloud Kubernetes Service to database tier hosted in a VM in vCenter Server
 {: #vcsnsxt-overview-integration-iks-db-tier-vcs}
 
-How the route tables in the ESG and vRouters are populated depends on the method of integration. See {{site.data.keyword.containerlong_notm}} and vCenter Server integration.
+How the route tables in the ESG and vRouters are populated depends on the method of integration. For more information, see [{{site.data.keyword.containerlong_notm}} and vCenter Server integration](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-overview-network#vcsiks-overview-network-iks-vcs-integration).
 1.	The web tier that is running in a container in {{site.data.keyword.containerlong_notm}} makes a request to a database that is running on a VM in the vCenter Server instance.
 2.	DNS is used to resolve the request to the IP address of the database.
 3.	The container sends the request to the Calico vRouter.
@@ -132,16 +137,16 @@ How the route tables in the ESG and vRouters are populated depends on the method
 ## Related links
 {: #vcsnsxt-overview-integration-related}
 
-* [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:new_window}
-* [Container white paper](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf){:new_window} (PDF download)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} blog](https://www.ibm.com/cloud/blog/announcements/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available){:new_window}
-* [VMware HCX on {{site.data.keyword.cloud_notm}} data sheet](https://www.ibm.com/downloads/cas/MPVXKWNM){:new_window}
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
-* [NSX for vSphere 6.4.3 configuration maximums](https://configmax.vmware.com/guest){:new_window}
-* [{{site.data.keyword.cloud_notm}} platform documentation](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html){:new_window}
+* [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:external}
+* [Container white paper](https://communities.vmware.com/servlet/JiveServlet/download/2741654-198902/Containers%20and%20Container%20Networking%20for%20Network%20Engineers.pdf){:external} (PDF download)
+* [VMware HCX blog](https://www.ibm.com/cloud/blog/announcements/vmware-hcx-ibm-cloud-aka-really-cool-space-age-kind-now-available){:external}
+* [VMware HCX data sheet](https://www.ibm.com/downloads/cas/MPVXKWNM){:external}
+* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [NSX for vSphere 6.4.3 configuration maximums](https://configmax.vmware.com/guest){:external}
+* [{{site.data.keyword.cloud_notm}} platform documentation](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.0/kc_welcome_containers.html){:external}
 * [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started#getting-started)
-* [Project Calico](https://www.projectcalico.org/){:new_window}
-* [GitHub-Calico](https://github.com/projectcalico/calico){:new_window}
-* [Kubernetes](https://kubernetes.io/){:new_window}
-* [GitHub-Flannel](https://github.com/coreos/flannel/){:new_window}
-* [GitHub-Canal](https://github.com/projectcalico/canal){:new_window}
+* [Project Calico](https://www.projectcalico.org/){:external}
+* [GitHub-Calico](https://github.com/projectcalico/calico){:external}
+* [Kubernetes](https://kubernetes.io/){:external}
+* [GitHub-Flannel](https://github.com/coreos/flannel/){:external}
+* [GitHub-Canal](https://github.com/projectcalico/canal){:external}

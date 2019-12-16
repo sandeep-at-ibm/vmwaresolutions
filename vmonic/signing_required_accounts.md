@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-09-06"
+lastupdated: "2019-11-07"
 
 keywords: user account, ibm cloud account, ibm cloud infrastructure
 
@@ -36,8 +36,8 @@ To sign up for an {{site.data.keyword.cloud_notm}} infrastructure account, upgra
 ## Related links
 {: #signing_required_accounts￼-related}
 
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
-* [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-cloud-infra-acct-req)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req)
 * [Video - How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E){:external}
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
 * [Switching to IBMid and linking accounts](/docs/account?topic=account-unifyingaccounts#unifyingaccounts)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-12-03"
 
 subcollection: vmware-solutions
 
@@ -92,13 +92,12 @@ and failover in a seamless manner.
 Application proxying is provided by the nginx container which load
 balances in the following manner.
 
-Table 1. Skate Advisor reverse proxy rules
-
 URL	|EndPoint
 ---|---
 /acme	|Acme Web Container Service
 /acme/api	|Skate Advisor Service
 /acme/api/explorer	|Skate Advisor Service
+{: caption="Table 1. Skate Advisor reverse proxy rules" caption-side="bottom"}
 
 Containers have unpredictable IP addresses that might scale in and out as
 the system demands. To overcome this issue, the {{site.data.keyword.icpfull_notm}} services are used to

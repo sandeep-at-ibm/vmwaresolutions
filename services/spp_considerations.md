@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-06"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -22,8 +23,9 @@ subcollection: vmware-solutions
 {: #spp_considerations}
 
 The {{site.data.keyword.IBM}} Spectrum Protect Plus service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.
+{: shortdesc}
 
-This service is available only to instances that are running vSphere 6.5 and that are deployed in or upgraded to  V2.2 or later. The current IBM Spectrum Protect Plus version that is installed is V10.1.3.
+This service is available only to instances that are running VMware vSphere 6.5. The current IBM Spectrum Protect Plus version that is installed is V10.1.5.
 {:note}
 
 ## Technical specifications for IBM Spectrum Protect Plus
@@ -35,14 +37,14 @@ The following components are ordered and included in the IBM Spectrum Protect Pl
 {: #spp_considerations-vcenter}
 
 * Server VM running IBM Spectrum Protect Plus server
-   * Linux 3.10.0-693.11.1.el7.x86_64 operating system
-   * 4 x 2.0 GHz cores
-   * 32 GB RAM
-   * 370 GB disk
+   * Linux 4.19.65-1c.el7.x86_64 operating system
+   * 8 x 2.0 GHz cores
+   * 48 GB RAM
+   * 528 GB disk
 * Secondary VM running IBM Spectrum Protect Plus vSnap server and VADP proxy
-   * Linux 3.10.0-693.11.1.el7.x86_64 operating system
-   * CPU and RAM configured based on the selected storage size and the [IBM Spectrum Protect Plus Blueprint](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external} sizing guidance
-   * 150 GB disk
+   * Linux 4.19.65-1c.el7.x86_64 operating system
+   * CPU and RAM configured based on the selected storage size and the sizing guidance in [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/support/pages/node/1119489){:external}
+   * 278 GB disk
 
 ### Storage for backups
 {: #spp_considerations-backup-storage}
@@ -52,7 +54,7 @@ Customizable storage for backups with the following options:
 * Each endurance file storage: 500, 1000, 2000, 4000, 8000, or 12000 GB
 * Storage performance: 0.25, 2, or 4 IOPS/GB
 
-See the [IBM Spectrum Protect Plus blueprint and sizing tool](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints){:external} for planning and sizing.
+For planning and sizing information, see [IBM Spectrum Protect Plus Blueprints and Sizing Spreadsheet](https://www.ibm.com/support/pages/node/1119489){:external}.
 
 ### Storage for management
 {: #spp_considerations-mgmt-storage}
@@ -100,7 +102,7 @@ Review the following considerations before you remove the IBM Spectrum Protect P
 {: #spp_considerations-related}
 
 * [IBM Spectrum Protect Plus Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
-* [Managing IBM Spectrum Protect Plus](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingspp)
-* [Ordering IBM Spectrum Protect Plus](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_ordering)
+* [Managing IBM Spectrum Protect Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-managingspp)
+* [Ordering IBM Spectrum Protect Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_ordering)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)

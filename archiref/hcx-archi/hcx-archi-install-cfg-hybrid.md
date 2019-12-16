@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -149,4 +149,4 @@ Extend a Layer 2 network from the on-premises data center to VCS HCX enabled clo
 ## Related links
 {: #hcx-archi-install-cfg-hybrid-related}
 
-* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-mod-uninstall)
+* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-mod-uninstall)

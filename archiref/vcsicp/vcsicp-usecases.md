@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-15"
+lastupdated: "2019-10-25"
 
 subcollection: vmware-solutions
 
@@ -17,9 +17,9 @@ subcollection: vmware-solutions
 ## Workload migration to IBM Cloud
 {: #vcsicp-usecases-wkld-mig}
 
-Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC into a VMware vCenter Server on {{site.data.keyword.cloud}} instance. They need to keep their business up and running and keep their downtime to a minimum. Reconfiguring their applications to run in the cloud isn't an optimal solution.
+Acme Skateboards wants to seamlessly extend their on-premises VMware SDDC into a VMware vCenter Server instance. They need to keep their business up and running and keep their downtime to a minimum. Reconfiguring their applications to run in the cloud isn't an optimal solution.
 
-VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle enables the creation of seamless connections between {{site.data.keyword.cloud_notm}} and an on-premises VMware virtualized datacenter.
+VMware vCenter Server with Hybridity Bundle enables the creation of seamless connections between {{site.data.keyword.cloud_notm}} and an on-premises VMware virtualized datacenter.
 
 The vCenter Server with Hybridity Bundle offering from {{site.data.keyword.cloud_notm}} enables secure connections between the peer on-premises source site and the {{site.data.keyword.cloud_notm}} target site.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-16"
+lastupdated: "2019-11-07"
 
 keywords: vCenter Server update, patch vCenter Server, IBM component update
 
@@ -85,12 +85,12 @@ Expand the update entry by clicking the down arrow and verify the following info
 | Unknown | The status of the update job cannot be obtained. Contact IBM Support for assistance. |
 {: caption="Table 2. Details of update statuses" caption-side="top"}
 
-3. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support) for assistance. You will be advised how to resolve the problem and guided to apply the updates and patches from the step that failed.
+3. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support) for assistance. You will be advised how to resolve the problem and guided to apply the updates and patches from the step that failed.
 
 ## Related links
 {: #vc_applyingupdates-related}
 
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Upgrading licenses for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_upgrade-lic)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQs](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Upgrading licenses for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_upgrade-lic)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQs](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)

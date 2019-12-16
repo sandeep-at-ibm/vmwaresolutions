@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-12"
 
 keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -21,9 +22,10 @@ subcollection: vmware-solutions
 # HyTrust KeyControl overview
 {: #htkc_considerations}
 
-The HyTrust KeyControl service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, includes key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
+The HyTrust KeyControl service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, including key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
+{: shortdesc}
 
-This service is available only to instances that are running vSphere 6.5 and that are deployed in or upgraded to  V2.5 and later. The current HyTrust KeyControl version that is installed is 4.3.2.
+This service is available only to instances that are running VMware vSphere 6.5. The current HyTrust KeyControl version that is installed is 5.0.1.
 {:note}
 
 ## Technical specifications for HyTrust KeyControl
@@ -66,8 +68,8 @@ Before you remove the HyTrust KeyControl service, ensure that you decouple all c
 ## Related links
 {: #htkc_considerations-related}
 
-* [Ordering HyTrust KeyControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_ordering)
-* [Managing HyTrust KeyControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managinghtkc)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Ordering HyTrust KeyControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htkc_ordering)
+* [Managing HyTrust KeyControl](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtkc)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

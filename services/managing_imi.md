@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-09"
+lastupdated: "2019-11-07"
 
 keywords: vmware services, request vmware service, tech specs vmware
 
@@ -36,7 +36,7 @@ The following specifications are included in the Managed VMware Services:
 {: #managing_imi-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. Scroll down to the **Services** section, and then click **Managed VMware Services** on the **Partner Services** card.
+2. Scroll down to the **Services** section, and then click **Managed VMware Services** on the **Professional Services** card.
 3. On the **Managed VMware Services** page, in the **Engage Managed VMware Services Pre-Sales** box, enter a description of your requirements for Managed VMware Services and click **Request a consultation**.
 
   An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
@@ -44,5 +44,5 @@ The following specifications are included in the Managed VMware Services:
 ## Related links
 {: #managing_imi-related}
 
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)

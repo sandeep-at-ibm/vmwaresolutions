@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-12-13"
 
 subcollection: vmware-solutions
 
 
 ---
 
-# Caveonix RiskForesight
+# Caveonix RiskForesight introduction
 {: #caveonix-intro}
 
 Enterprises undergoing a digital transformation are adopting a hybrid cloud strategy that includes workloads in both the private cloud and multiple external cloud environments, namely the public cloud or a cloud managed by a service provider. Most enterprises are also faced with the challenge of protecting an ever-increasing attack surface while simultaneously maintaining compliance with industry and regulatory compliance requirements.
@@ -58,7 +58,7 @@ The three key services available through the RiskForesight GUI are: Risk Managem
 - Full drill-down capability for events and log-based analysis
 - Alerts and notifications
 
-Next topic: [Caveonix RiskForesight on IBM Cloud for VMware Solutions](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-on-vcs)
+**Next topic:** [Caveonix RiskForesight use cases and benefits](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-on-vcs)
 
 ## Related links
 {: #caveonix-intro-related}

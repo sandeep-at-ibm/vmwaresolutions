@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 subcollection: vmware-solutions
 
@@ -42,7 +42,7 @@ The downloading of upgrades, host patches, extensions, and related metadata is a
 * Notifications, alerts, and patch recalls for ESXi 5.5 and ESXi 6.x hosts.
 * Metadata about upgrades for virtual appliances.
 
-VUM supports the recall of patches for hosts that are running ESXi 5.0 or later. A patch is recalled if the released patch has problems or potential issues. After you scan the hosts in your VMware vCenter Server on {{site.data.keyword.cloud}} instance, VUM alerts you if the recalled patch is installed on a certain host. Recalled patches cannot be installed on hosts with VUM. VUM also deletes all the recalled patches from the patch repository. After a patch fix the problem is released, VUM downloads the new patch to its patch repository. If you have installed the problematic patch, VUM notifies you that a fix was released and prompts you to apply the new patch.
+VUM supports the recall of patches for hosts that are running ESXi 5.0 or later. A patch is recalled if the released patch has problems or potential issues. After you scan the hosts in your VMware vCenter Server instance, VUM alerts you if the recalled patch is installed on a certain host. Recalled patches cannot be installed on hosts with VUM. VUM also deletes all the recalled patches from the patch repository. After a patch fix the problem is released, VUM downloads the new patch to its patch repository. If you have installed the problematic patch, VUM notifies you that a fix was released and prompts you to apply the new patch.
 
 The VUM client interface provides two main views:
 *	Administration View
@@ -74,5 +74,5 @@ The compliance view of a selected inventory object is accessed by navigating to 
 ## Related links
 {: #vum-overview-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} solution architecture](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

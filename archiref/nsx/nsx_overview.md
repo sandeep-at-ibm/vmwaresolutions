@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-30"
 
 subcollection: vmware-solutions
 
@@ -16,14 +16,12 @@ subcollection: vmware-solutions
 
 The VMware NSX Edge Services Gateway (ESG) solution is an extension of the VMware vCenter Server offering that is currently available on the {{site.data.keyword.cloud}}. The solution architecture for vCenter Server details the components of the solution and the high-level configuration of each component in the design.
 
-For more information about the vCenter Server design, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview).
+For more information about the vCenter Server design, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview).
 
 ## Overview of NSX Edge Services Gateway
 {: #nsx_overview-nsx-esg}
 
 The NSX Edge Services Gateway connects isolated, stub networks to shared (uplink) networks by providing common gateway services such as Dynamic Host Configuration Protocol (DHCP), Virtual Private Network (VPN), Network Address Translation (NAT), dynamic routing, and load balancing. Common deployments of NSX Edge include demilitarized zone (DMZ), VPN Extranets, and multi-tenant Cloud environments where the NSX Edge creates virtual boundaries for each tenant, workload, or management component. The following features are available within the NSX Edge Service Gateway.
-
-Table 1. Features available with the NSX Edge Service Gateway
 
 | Feature | Description |
 |:------- |:----------- |
@@ -36,10 +34,11 @@ Table 1. Features available with the NSX Edge Service Gateway
 | SSL VPN-Plus |  SSL VPN-Plus enables remote users to connect securely to private networks behind an NSX Edge gateway. |
 | Load Balancing | Provides simple and dynamically configurable virtual IP addresses and server groups. |
 | High Availability | Ensures an active NSX Edge on the network in case the primary NSX Edge virtual machine is unavailable. |
+{: caption="Table 1. Features available with the NSX Edge Service Gateway" caption-side="bottom"}
 
-Next topic: [NSX Edge Services Gateway design](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx_design)
+**Next topic:** [NSX Edge Services Gateway design](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx_design)
 
 ## Related links
 {: #nsx_overview-related}
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)

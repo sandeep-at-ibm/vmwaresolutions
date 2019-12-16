@@ -11,14 +11,17 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
+
 
 # Release notes for V2.5
 {: #relnotes_v25}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## Spectre and Meltdown remediation
 {: #relnotes_v25-spectre}
@@ -41,7 +44,7 @@ This release installs VMware NSX for vSphere 6.4.1 for new deployments of VMware
 
 Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}} services, when deployed, no longer preconfigure the backup of any VMs. With this change, you can ensure proper configuration of all aspects of your backup jobs, including schedule, retention period, use of deduplication, monitoring and alerts, and management of encryption keys. Additionally, the IBM CloudDriver VM is no longer configured as a persistent file server for NSX backups.
 
-You are responsible for the configuration, management, and monitoring of all software components, including the backup and availability of the management infrastructure and workloads. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-solution_backingup#backing-up-components).
+You are responsible for the configuration, management, and monitoring of all software components, including the backup and availability of the management infrastructure and workloads. For more information, see [Backing up components](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#backing-up-components).
 
 This change does not affect instances that are deployed before V2.5 that have the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} service installed.
 {:note}
@@ -62,8 +65,8 @@ Starting with the V2.5 release, {{site.data.keyword.vmwaresolutions_short}} is i
 * For instances that were deployed in V2.4 and previous releases, you can migrate them to a specified {{site.data.keyword.cloud_notm}} account and then manage them by using IAM as well.
 
 For more information, see the following topics:
-* [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-iamuserinvite)
-* [Managing user access with IAM](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-iam#iam)
+* [Inviting users to access services and resources](/docs/services/vmwaresolutions?topic=vmware-solutions-iamuserinvite)
+* [Managing user access with IAM](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)
 
 ## Changes to user accounts and groups for VMware vCenter Server and VMware Cloud Foundation instances
 {: #relnotes_v25-user-acct}
@@ -76,7 +79,7 @@ For Cloud Foundation instances, use the **customerroot** host user ID in place o
 
 For vCenter Server instances, continue to use the **root** host user ID. The **ic4vroot** host user ID has been created for IBM use only.
 
-For more information about user accounts, see [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter_chg_impact).
+For more information about user accounts, see [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact).
 
 ## Updates for add-on services
 {: #relnotes_v25-services}
@@ -95,7 +98,7 @@ You can request this service after you ordered your vCenter Server instance.
 
 Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service is deployed as two separate VMs based on best practices, with one VM running the IBM Spectrum Protect Plus server and the other VM running the vSnap server and VADP proxy.
 
-You can now order up to 10 backup data stores, allowing up to 120 TB of backup storage. The vSnap and VADP VM are sized depending on your selected backup storage size and according to the information in the [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Storage%20Manager/page/IBM%20Spectrum%20Protect%20Plus%20Blueprints).
+You can now order up to 10 backup data stores, allowing up to 120 TB of backup storage. The vSnap and VADP VM are sized depending on your selected backup storage size and according to the information in the [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/support/pages/node/1119489){:external}.
 
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v25-kmip}
@@ -108,7 +111,7 @@ A new endpoint is now available in Germany for the KMIP for VMware on {{site.dat
 ### Attached storage documentation
 {: #relnotes_v25-docs-storage}
 
-The Attached storage for vCenter Server on IBM Cloud technical document is now available in the *Reference* section of the user documentation. For more information, see [Attached storage for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/archiref/attached-storage?topic=vmware-solutions-storage-benefits).
+The Attached storage for vCenter Server on IBM Cloud technical document is now available in the *Reference* section of the user documentation. For more information, see [Attached storage for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-benefits).
 
 ### Technical specifications
 {: #relnotes_v25-docs-tech-specs}
@@ -122,8 +125,8 @@ The services information is improved to easily identify the service support base
 
 For more information, see the following topics:
 
-* [Available services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
-* [Available services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Available services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
+* [Available services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
 
 ## User interface updates and enhancements
 {: #relnotes_v25-ui}

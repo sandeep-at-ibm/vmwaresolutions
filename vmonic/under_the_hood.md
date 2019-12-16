@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-03"
+lastupdated: "2019-11-28"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -36,11 +36,11 @@ Now let's take a look under the hood of the {{site.data.keyword.vmwaresolutions_
 
 ## IBM Cloud for VMware Solutions basics
 
-Your software-defined data centers are provisioned and managed by using the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console){:external}. You log in to the console by using your IBMid account.
+Your software-defined data centers are provisioned and managed by using the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console). You log in to the console by using your IBMid account.
 
 From the VMware Solutions catalog, you can provision one of several kinds of virtualization environment. The featured virtualization solution is vCenter Server, which offers VMware's vSphere hypervisor, VMware vCenter Server, VMware NSX, and optionally VMware vSAN. You can also provision this environment with more add–on services that provide backup, disaster recovery, migration, security, compliance, and networking services.
 
-Before ordering a vCenter Server instance, you must configure your {{site.data.keyword.cloud_notm}} infrastructure API key in the VMware Solutions catalog. To do this, click the [Settings](https://cloud.ibm.com/infrastructure/vmware-solutions/console/settings){:external} link in the left menu of the console, and enter your user name and API key where prompted for {{site.data.keyword.cloud_notm}} infrastructure credentials. The system verifies that your API key and account have appropriate permissions and settings to deploy your instance.
+Before ordering a vCenter Server instance, you must configure your {{site.data.keyword.cloud_notm}} infrastructure API key in the VMware Solutions catalog. To do this, click [Settings](https://cloud.ibm.com/infrastructure/vmware-solutions/console/settings) in the left menu of the console, and enter your user name and API key where prompted for {{site.data.keyword.cloud_notm}} infrastructure credentials. The system verifies that your API key and account have appropriate permissions and settings to deploy your instance.
 
 When ordering your vCenter Server instance, you first choose its name and the VMware vSphere version. All VMware instances are deployed together with Microsoft Active Directory domain controllers, and for single sign-on purposes, you must designate your instance as either a primary or secondary site. A primary instance is the first or the only instance in your single sign-on domain. You can deploy more secondary instances and associate them with the same single sign-on domain of an existing primary instance. Next, you choose whether to bring your own VMware licenses, or which edition of license you want to rent from {{site.data.keyword.cloud_notm}}. Finally, you choose the {{site.data.keyword.cloud_notm}} region and data center for your instance, as well as the CPU and memory characteristics for the hosts in your cluster.
 
@@ -78,14 +78,13 @@ Once your instance has been provisioned, if you are connected to your {{site.dat
 
 Your instance components are typically accessed by their host names rather than their IP addresses. In order to connect to and authenticate with vCenter, you should ensure that the vCenter and Platform Services Controller (PSC) hostname can be resolved by your workstation by adding it to your workstation's hosts file as shown in Listing 1. You can find the hostname and IP address in the {{site.data.keyword.vmwaresolutions_short}} console, on the **Summary** tab for your instance. You might also want to add the hostnames and IP addresses for your vSphere hosts to your hosts file.
 
-*Listing 1. Hosts file*
-
 <pre># Dallas site vCenter and Platform Services Controller (PSC)
 10.208.85.196  vcenter-dallas.dallas.example.com
 # Dallas site hosts
 10.208.85.171  host0.dallas.example.com
 10.208.85.153  host1.dallas.example.com
 10.208.85.137  host2.dallas.example.com</pre>
+{: caption="Figure 1. hosts file" caption-side="bottom"}
 
 After your instance has been deployed, you can manage it from the console. The management capabilities include the ability to do each of the following:
 
@@ -106,7 +105,7 @@ While this is an integrated virtualization environment, the cost of various virt
 ### The IBM Cloud for VMware Solutions console
 {: #under_the_hood-console}
 
-You log in to the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console){:external} to create and manage your instances. This portion of the solution is responsible for the initial ordering and provisioning of your environment, and also for the ongoing management of your environment. Your deployed instances communicate with the console by  using the {{site.data.keyword.cloud_notm}} Private network.
+You log in to the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console) to create and manage your instances. This portion of the solution is responsible for the initial ordering and provisioning of your environment, and also for the ongoing management of your environment. Your deployed instances communicate with the console by  using the {{site.data.keyword.cloud_notm}} Private network.
 
 ### The IBM CloudBuilder component
 {: #under_the_hood-ibm-cb}

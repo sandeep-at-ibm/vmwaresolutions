@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
@@ -48,7 +48,7 @@ The Acme Skate Advisor application takes advantage of both the Watson platform a
 ### Application modernization demonstration
 {: #vcscar-intro-app-mod-demo}
 
-Demonstrate an application that is deployed to the application modernization platform. The platform includes {{site.data.keyword.icpfull_notm}}, CAM, and NSX components deployed on the {{site.data.keyword.cloud_notm}} for the VMware vCenter Server on {{site.data.keyword.cloud_notm}} offering.
+Demonstrate an application that is deployed to the application modernization platform. The platform includes {{site.data.keyword.icpfull_notm}}, CAM, and NSX components deployed on the {{site.data.keyword.cloud_notm}} for the VMware vCenter Server offering.
 
 ### Watson speech recognition With Watson Assistant
 {: #vcscar-intro-speech}
@@ -103,15 +103,15 @@ IBM provides just such an approach to application modernization that is customiz
 
 The following documents provide different views on the technologies that are used in the application modernization journey to {{site.data.keyword.cloud_notm}}:
 
-* [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vcsicp-intro) - A reference architecture for deploying the following platforms.
+* [vCenter Server and {{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-intro) - A reference architecture for deploying the following platforms.
    - **VMware vCenter Server** - vCenter Server is an offering from {{site.data.keyword.vmwaresolutions_short}} that is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
    - **{{site.data.keyword.icpfull_notm}}** – {{site.data.keyword.icpfull_notm}} is an application platform for developing and managing containerized applications. {{site.data.keyword.icpfull_notm}} is an integrated environment that includes the container orchestrator Kubernetes, a private image repository, a management console, monitoring frameworks, and a graphical user interface. The user interface provides a centralized location from where you can deploy, manage, monitor, and scale your applications.
    - **{{site.data.keyword.cloud_notm}} Automation Manager** – CAM is an enterprise-ready infrastructure as code platform that provides a single pane of glass to provision VM-based workloads alongside Kubernetes based workloads by using templates that are stored and versioned in a repository.
-* [vCenter Server and {{site.data.keyword.containerlong_notm}} service](/docs/services/vmwaresolutions/archiref/vcsiks?topic=vmware-solutions-vcsiks-intro) - A reference architecture for deploying the following platforms.
+* [vCenter Server and {{site.data.keyword.containerlong_notm}} service](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-intro) - A reference architecture for deploying the following platforms.
    - **VMware vCenter Server** - vCenter Server is an offering from {{site.data.keyword.vmwaresolutions_short}} that is a VMware based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
    - **{{site.data.keyword.containerlong_notm}}** – {{site.data.keyword.containerlong_notm}} is a managed service on {{site.data.keyword.cloud_notm}} that uses Kubernetes as the orchestration engine for automating deployment, scaling, and operations of application containers across a single-tenant cluster.
-* [vCenter Server networking](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcsnsxt-intro) - Focuses on the network technologies that are used for integration between vCenter Server, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} such as NSX-V and Calico along with a technology preview of NSX-T.
+* [vCenter Server networking](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro) - Focuses on the network technologies that are used for integration between vCenter Server, {{site.data.keyword.icpfull_notm}}, and {{site.data.keyword.containerlong_notm}} such as NSX-V and Calico along with a technology preview of NSX-T.
 * _VMware and Skate Advisor Concept Car guide_ - A reference architecture that is a “concept car”, that is, a mechanism to highlight and show technologies that solve real world problems. We wanted to demonstrate an interaction between Watson AI and machine learning in a real way. Through the culture of skateboarding, we demonstrate cloud services in a unique way. The implementation of the “concept car” is an extension to the Acme Skateboard application called Skate Advisor. Skate Advisor is a tool, which allows users to have skateboarding trick conversations with a Watson driven engine.
-* [VMware: The modernization journey of Stock Trader](/docs/services/vmwaresolutions/archiref/vcscontent?topic=vmware-solutions-vcscontent-modjourney) - A reference use case that describes a classic WebSphere Application Server application that is modernized by using {{site.data.keyword.cloud_notm}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and vCenter Server on {{site.data.keyword.cloud_notm}}. We're all on a cloud journey, and we're all at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing application called Stock Trader. Review examples that help you take each step in your journey, and the value that is realized to your business, no matter how large, or small each step is. We focus on four themes: applications, DevOps, integration, and management. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
+* [VMware: The modernization journey of Stock Trader](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscontent-modjourney) - A reference use case that describes a classic WebSphere Application Server application that is modernized by using {{site.data.keyword.cloud_notm}} Private, IBM Middleware content, {{site.data.keyword.containerlong_notm}}, and vCenter Server. We're all on a cloud journey, and we're all at different points on that journey. Through incremental steps by the application architect, Jane, and the cloud infrastructure architect, Todd, we modernize an existing application called Stock Trader. Review examples that help you take each step in your journey, and the value that is realized to your business, no matter how large, or small each step is. We focus on four themes: applications, DevOps, integration, and management. All themes work together to help you achieve your goals. Modernizing one theme without the others might result in problems.
 
 **Next topic:** [System context](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscar-syscontext)

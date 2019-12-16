@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-30"
+lastupdated: "2019-12-02"
 
 subcollection: vmware-solutions
 
@@ -46,7 +46,7 @@ Use the following table to document the parameters you will need for your deploy
 | vCenter Password | | |
 | NSX Transport Zone| transport-1 | |
 
-{: caption="Table 1. PowerNSX LS Parameters" caption-side="top"}
+{: caption="Table 1. PowerNSX LS Parameters" caption-side="bottom"}
 
 ```powernsx
 # Allow self-signed certificates on PowerCLI

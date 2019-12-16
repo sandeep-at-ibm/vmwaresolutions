@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-03"
+lastupdated: "2019-11-26"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
@@ -26,19 +26,20 @@ You can order a VMware vSphere cluster based on a configuration template that yo
 {: #vs_orderingbasedonexistingconfig-req}
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
+*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
+*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_planning).
 *  You created a configuration template to be reused.
 
 ## Procedure to order vSphere clusters based on existing configurations
 {: #vs_orderingbasedonexistingconfig-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **VMware vSphere** card in the **Start Provisioning** section.
-2. On the **VMware vSphere** page, click **Continue**.  
-3. Click the **Create New** tab and select a configuration template from the **Cluster Configurations** list.
-4. Enter a new cluster name.
-5. Review the cluster settings that are automatically completed and update the settings according to your needs. For more information about the settings, see [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances).
-6. In the **Order Summary** pane, verify the instance configuration and the estimated cost.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
+2. In the **Start Provisioning** section, click the **VMware vSphere** card.
+3. On the **VMware vSphere** page, click **Continue**.  
+4. Click the **Create New** tab and select a configuration template from the **Cluster Configurations** list.
+5. Enter a new cluster name.
+6. Review the cluster settings that are automatically completed and update the settings according to your needs. For more information about the settings, see [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances).
+7. In the **Order Summary** pane, verify the instance configuration and the estimated cost.
    * To save the configuration as a template without placing an order, click **Save Configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
@@ -58,6 +59,6 @@ The vSphere clusters, unlike the vCenter Server instances, are not displayed on 
 ## Related links
 {: #vs_orderingbasedonexistingconfig-related}
 
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances)
-* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
-* [Scaling clusters created outside of the console](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
+* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Scaling clusters created outside of the console](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderingforclustersoutside)

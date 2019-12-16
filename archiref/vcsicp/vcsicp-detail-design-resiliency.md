@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-08-05"
+lastupdated: "2019-10-23"
 
 subcollection: vmware-solutions
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 ## Backup and DR
 {: #vcsicp-detail-design-resiliency-backup-dr}
 
-### VMware vCenter Server on IBM Cloud backup
+### VMware vCenter Server backup
 {: #vcsicp-detail-design-resiliency-vcs-backup}
 
 As part of {{site.data.keyword.vmwaresolutions_full}}, Veeam backup software is optionally deployed on an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) that uses {{site.data.keyword.cloud_notm}} Endurance Storage outside the VMware cluster. The purpose of this software is to back up the management components in this solution.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-11"
+lastupdated: "2019-12-12"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -22,10 +23,11 @@ subcollection: vmware-solutions
 {: #fortinetvm_considerations}
 
 The FortiGate Virtual Appliance service deploys a pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure.
+{: shortdesc}
 
-You can install multiple instances of this service as needed. You can manage this service by using the FortiOS Web Client or the CLI through SSH.
+You can install multiple instances of this service as needed. You can manage this service by using the FortiOS web Client or the CLI through SSH.
 
-This service is available only to instances that are deployed in V2.0 or later releases. The current service version that is installed is 6.0.3.
+The current FortiGate Virtual Appliance version that is installed is 6.0.3.
 {:note}
 
 ## Technical specifications for FortiGate Virtual Appliance
@@ -103,7 +105,7 @@ However, by default, vSphere HA reserves 50% of CPU and RAM for failover on vCen
 
 Since other workloads exist on the ESXi servers, for example, VMware vCenter Server, VMware NSX Controller, or VMware NSX Edge, by using these resources, the third requirement is not met. The reason is because 33.6 GHz of CPU and 24 GB RAM for the two FortiGate VMs are needed.
 
-In this case, the FortiGate Virtual Appliance installation might fail, unless at least one ESXi server is added to the environment and vSphere HA failover reservations are updated to ensure that there are enough resources for two FortiGate VMs.
+In this case, the FortiGate Virtual Appliance installation might fail, unless at least one ESXi server is added to the environment. Also, the vSphere HA failover reservations must be updated to ensure that there are enough resources for two FortiGate VMs.
 
 If more resources are needed to run the FortiGate Virtual Appliance service, you can add more ESXi servers before you install the service.
 
@@ -115,9 +117,9 @@ Before you remove the FortiGate Virtual Appliance service, ensure that the confi
 ## Related links
 {: #fortinetvm_considerations-related}
 
-* [Ordering FortiGate Virtual Appliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_ordering)
-* [Managing FortiGate Virtual Appliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfortinetvm)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Ordering FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_ordering)
+* [Managing FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-managingfortinetvm)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [Fortinet website](https://www.fortinet.com/){:external}
 * [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

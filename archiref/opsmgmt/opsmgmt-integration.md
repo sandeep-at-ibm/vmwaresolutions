@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-25"
 
 ---
 
@@ -65,7 +65,7 @@ The client wants to use their existing OS, middleware, and application monitorin
 {: #opsmgmt-integration-related}
 
 <!-- * [vRealize Operations RESTful API](https://docs.vmware.com/en/vRealize-Operations-Manager/7.0/vrealize-operations-manager-70-api-guide.pdf){:external} -->
-* [VMware API Explorer](https://code.vmware.com/apis?socv=1&numPerPage=164&sorter=pv){:external}
+* [VMware API Explorer](https://code.vmware.com/apis){:external}
 * [Postman Client Collection for vRealize Operations REST APIs](https://code.vmware.com/samples/4663/postman-client-collection-for-vrealize-operations-rest-apis){:external}
 * [VMware PowerCLI blog](https://blogs.vmware.com/PowerCLI/2016/05/getting-started-with-powercli-for-vrealize-operations-vr-ops.html){:external}
 * [vRealize and Webhooks - Infinite Integrations](https://blogs.vmware.com/management/2017/01/vrealize-webhooks-infinite-integrations.html){:external}

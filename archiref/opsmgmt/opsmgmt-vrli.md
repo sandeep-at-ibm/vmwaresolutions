@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-28"
 
 ---
 
@@ -67,13 +67,12 @@ The following logging clients are supported but not integrated in this design:
 
 To accommodate all log data from the log sources in the environment, the vRLI nodes need to be sized correctly. This design is based on the Medium size appliance:
 
-Table 1. Log Insight Master and Replica Node system settings
-
 | Attribute                | Specification                     |
 | ------------------------ | --------------------------------- |
 | vCPU                     | 8                                 |
 | Memory                   | 18 GB                             |
 | Disk (thick provisioned) | 530 GB (490 GB for event storage) |
+{: caption="Table 1. Log Insight Master and Replica Node system settings" caption-side="bottom"}
 
 Each vRLI virtual appliance has three default virtual disks and can use more virtual disks for storage.
 * Hard disk 1 - 20 GB for the root file system
@@ -97,8 +96,6 @@ Deployment of the vRLI appliance requires three IP addresses from the tooling pr
 ## Ports
 {: #opsmgmt-vrli-ports}
 
-Table 2. Log Insight ports
-
 | Description                                                   | Port       | Protocol |
 | ------------------------------------------------------------- | ---------- | -------- |
 | Outbound syslog traffic that is configured as a Forwarder destination | 514        | TCP, UDP |
@@ -114,6 +111,7 @@ Table 2. Log Insight ports
 | LDAP GC                                                       | 3268/3269  | TCP      |
 | vCenter                                                       | 443        | TCP      |
 | vRealize Operations Manager appliance                         | 443        | TCP      |
+{: caption="Table 2. Log Insight ports" caption-side="bottom"}
 
 ## Authentication
 {: #opsmgmt-vrli-auth}

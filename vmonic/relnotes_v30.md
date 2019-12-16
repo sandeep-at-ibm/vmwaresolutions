@@ -13,15 +13,17 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
 
+
 # Release notes for V3.0
 {: #relnotes_v30}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## End of Support for VMware Cloud Foundation on IBM Cloud
 {: #relnotes_v30-vcf-eos}
@@ -54,9 +56,9 @@ This release applies the following upgrades and improvements:
 * vCenter Server Appliance 6.7 Update 1b (build 6.7.0-11727113)
 * Platform Services Controller 6.7 Update 1b (build 6.7.0-11727113) 
 
-For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_bom).
+For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
 
-The Windows software that is ordered for Microsoft Active Directory (AD) and DNS (Domain Name System) services is upgraded to Windows Server 2016 for both configuration options: the VSIs (Virtual Server Instances) and the two highly-available Windows VMs. For more information about selecting your VMware components, see [Software BOM for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_bom#vc_bom-software).
+The Windows software that is ordered for Microsoft Active Directory (AD) and DNS (Domain Name System) services is upgraded to Windows Server 2016 for both configuration options: the VSIs (Virtual Server Instances) and the two highly-available Windows VMs. For more information about selecting your VMware components, see [Software BOM for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom#vc_bom-software).
 
 ### vSAN storage enhancements
 {: #relnotes_v30-vcs-vsan}
@@ -65,9 +67,8 @@ The Windows software that is ordered for Microsoft Active Directory (AD) and DNS
 * Starting with the V3.0 release, an M.2 solid-state drive is ordered with your vSAN storage instance. You can order up to 10 capacity disks or a total of 12 capacity disks if you select the **High Performance with Intel Optaine** option.
 
 For more information, see the *Storage settings* section in:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-storage-settings)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_hybrid_orderinginstance#vc_hybrid_orderinginstance-storage-settings)
-* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_orderinginstance#vc_nsx-t_orderinginstance-storage-settings)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-storage-settings)
+* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance#vc_nsx-t_orderinginstance-storage-settings)
 
 ## Updates for add-on services
 {: #relnotes_v30-services}
@@ -75,47 +76,47 @@ For more information, see the *Storage settings* section in:
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v30-services-htcc}
 
-In the current release, HyTrust CloudControl 5.5 is installed on all newly deployed instances. For more information about the new features in HyTrust CloudControl 5.5, see [What's New in HyTrust CloudControl Version 5.5](https://docs.hytrust.com/CloudControl/5.5.0/Online/Content/HTCC_Admin_Guide/_FrontMatter/Whats-New.html){:new_window}.
+In the current release, HyTrust CloudControl 5.5 is installed on all newly deployed instances. For more information about the new features in HyTrust CloudControl 5.5, see [What's New in HyTrust CloudControl Version 5.5](https://docs.hytrust.com/CloudControl/5.5.0/Online/Content/HTCC_Admin_Guide/_FrontMatter/Whats-New.html){:external}.
 
 ### HyTrust DataControl on IBM Cloud
 {: #relnotes_v30-services-htdc}
 
-The current release installs HyTrust DataControl 4.3 on all newly deployed instances. For more information about the new features in HyTrust DataControl 4.3, see [What's New in KeyControl and DataControl Version 4.3](https://docs.hytrust.com/DataControl/4.3/Online/Content/Books/aaCommon/New-Changed-4x.html){:new_window}.
+The current release installs HyTrust DataControl 4.3 on all newly deployed instances. For more information about the new features in HyTrust DataControl 4.3, see [What's New in KeyControl and DataControl Version 4.3](https://docs.hytrust.com/DataControl/4.3/Online/Content/Books/aaCommon/New-Changed-4x.html){:external}.
 
 ### HyTrust KeyControl on IBM Cloud
 {: #relnotes_v30-services-htkc}
 
-The current release installs HyTrust KeyControl 4.3 on all newly deployed instances. For more information about the new features in HyTrust KeyControl 4.3, see [What's New in KeyControl and DataControl Version 4.3](https://docs.hytrust.com/DataControl/4.3/Online/Content/Books/aaCommon/New-Changed-4x.html){:new_window}.
+The current release installs HyTrust KeyControl 4.3 on all newly deployed instances. For more information about the new features in HyTrust KeyControl 4.3, see [What's New in KeyControl and DataControl Version 4.3](https://docs.hytrust.com/DataControl/4.3/Online/Content/Books/aaCommon/New-Changed-4x.html){:external}.
 
 ### IBM Cloud Private Hosted
 {: #relnotes_v30-services-icp}
 
 The current release installs {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2, together with {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, on all newly deployed instances.
 
-For more information about the new features in {{site.data.keyword.cloud_notm}} Private v3.1.2, see [What's new in {{site.data.keyword.cloud_notm}} Private v3.1.2](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/getting_started/whats_new.html){:new_window}.
-For more information about the new features in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, see [What's new in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_whatisnew.html){:new_window}.
+For more information about the new features in {{site.data.keyword.cloud_notm}} Private v3.1.2, see [What's new in {{site.data.keyword.cloud_notm}} Private v3.1.2](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/getting_started/whats_new.html){:external}.
+For more information about the new features in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, see [What's new in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_whatisnew.html){:external}.
 
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v30-services-kmip}
 
-Two new endpoints are now available in London and US East for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service. For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} service configuration](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_ordering-config#kmip_standalone_ordering-config).
+Two new endpoints are now available in London and US East for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service. For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} service configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering-config#kmip_standalone_ordering-config).
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 {: #relnotes_v30-services-spp}
 
-The current release installs IBM Spectrum Protect™ Plus V10.1.3 on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.3, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.3/spp/r_techchg_spp.html){:new_window}.
+The current release installs IBM Spectrum Protect™ Plus V10.1.3 on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.3, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.3/spp/r_techchg_spp.html){:external}.
 
 ### Zerto on IBM Cloud
 {: #relnotes_v30-services-zerto}
 
-You are now able to add Zerto on {{site.data.keyword.cloud_notm}} on instances that are private-only. If you choose to install Zerto on private-only instances, you must set up your own proxy server and also configure the Call Home feature for Zerto. For more information, see [Ordering Zerto on {{site.data.keyword.cloud_notm}} for instances that are private network only](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto_ordering#zerto_ordering-private-only).
+You are now able to add Zerto on {{site.data.keyword.cloud_notm}} on instances that are private-only. If you choose to install Zerto on private-only instances, you must set up your own proxy server and also configure the Call Home feature for Zerto. For more information, see [Ordering Zerto on {{site.data.keyword.cloud_notm}} for instances that are private network only](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering#zerto_ordering-private-only).
 
 ## New and updated documentation
 
-* Documentation is now available to assist you in upgrading {{site.data.keyword.vmwaresolutions_short}} components to VMware vSphere 6.7. This upgrade is required if you want to continue to benefit from {{site.data.keyword.vmwaresolutions_short}} automation. For more information, see [Upgrading vCenter Server vSphere software from VMware vSphere 6.5 to 6.7](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
+* Documentation is now available to assist you in upgrading {{site.data.keyword.vmwaresolutions_short}} components to VMware vSphere 6.7. This upgrade is required if you want to continue to benefit from {{site.data.keyword.vmwaresolutions_short}} automation. For more information, see [Upgrading vCenter Server vSphere software from VMware vSphere 6.5 to 6.7](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
 * Reference documentation is now available to provide you with user IDs that {{site.data.keyword.vmwaresolutions_short}} maintains for use by {{site.data.keyword.cloud_notm}} automation. Possible messages that display in your instance history logs are also available for your review. For more information, see [IBM user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) and [Instance history messages](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* The **Reboot/Control** permission has been added to the table describing required permissions for the IBM Cloud infrastructure account. For more information, see [Permissions for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/services?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
-* New reference documentation is available for the following APIs. For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions){:new_window}.
+* The **Reboot/Control** permission has been added to the table describing required permissions for the IBM Cloud infrastructure account. For more information, see [Permissions for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
+* New reference documentation is available for the following APIs. For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions).
   * List all history messages for a specified VMware vCenter Server instance
   * Add shared storages to a specified cluster
   * Delete NFS storages from a specified cluster

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-14"
+lastupdated: "2019-11-26"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -29,8 +29,8 @@ This procedure guides you through the selection of VMware components, {{site.dat
 {: #vs_orderinginstances-req}
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_planning).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
+*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_planning).
 
 ## System settings
 {: #vs_orderinginstances-sys-settings}
@@ -52,7 +52,7 @@ Select the VMware components to be ordered with your cluster and specify the lic
 ### Component bundles for IBM Business Partner users
 {: #vs_orderinginstances-component-bundles-for-bp-users}
 
-If you're an IBM Business Partner user, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
+If you are an IBM Business Partner user, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
 
 | Bundle | Components                   |
 |:------------------------- |:----------------------- |
@@ -101,7 +101,7 @@ Using individual license keys together with the combined license keys does not m
 ## Bare Metal Server settings
 {: #vs_orderinginstances-bare-metal-settings}
 
-When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vmware-inventory-export).
+When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/services/vmwaresolutions?topic=vmware-solutions-vmware-inventory-export).
 
 ### Data center location
 {: #vs_orderinginstances-dc-location}
@@ -250,12 +250,12 @@ If you are ordering for a private network, two private VLANs are only required f
 
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
-  When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
-  * **Public VLAN** is for public network access.
-  * **Primary Subnet** is assigned to physical hosts for public network access.
-  * **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}.
-  * **Secondary Private VLAN** is for VMware features such as vSAN.
-  * **Private Primary Subnet** is assigned to physical hosts for management traffic.
+When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
+* **Public VLAN** is for public network access. If you select the **Allocate a new one** option for **Public VLAN**, a new primary public subnet is allocated automatically and cannot be modified.
+* **Public Primary Subnet** is assigned to physical hosts for public network access.
+* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}. If you select the **Allocate a new one** option for **Private VLAN**, a new private primary subnet is allocated automatically and cannot be modified.
+* **Private Primary Subnet** is assigned to physical hosts for management traffic.
+* **Secondary Private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 ##### Important
 {: #vs_orderinginstances-important}
@@ -266,7 +266,7 @@ Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, exi
 #### FortiGate Physical Appliance 300 Series HA Pair
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
-You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations).
+You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance overview](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations).
 
 This option is only available for an order with both a public and private network.
 {:note}
@@ -281,31 +281,32 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vSphere clusters
 {: #vs_orderinginstances-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon on the left navigation pane, and then click the **VMware vSphere** card in the **Start Provisioning** section.
-2. On the **VMware vSphere** page, click **Continue**.  
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
+2. In the **Start Provisioning** section, click the **VMware vSphere** card.
+3. On the **VMware vSphere** page, click **Continue**.  
    Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
-3. Enter the cluster name.
-4. Select the VMware components:
-  * If you're an IBM Business Partner, select a license bundle and any additional available VMware components.
+4. Enter the cluster name.
+5. Select the VMware components:
+  * If you are an IBM Business Partner, select a license bundle and any additional available VMware components.
   * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
   When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.   
 
     **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
-5. Complete the Bare Metal Server settings:
+6. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
    2. Select the Bare Metal Server configuration.
       * When you select **Skylake**, **Cascade Lake**, or **Broadwell**, specify the CPU model and the RAM size.
       * When you select **SAP-certified**, choose one of the preset configurations.
    3. Specify the number of Bare Metal Servers.
-6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
-7. Complete the network interface settings:
+7. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+8. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and domain name.
    2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
    3. Select the network interface that you want to use.
     * If you want to order new public and private VLANs, click **Order New VLANs**.
     * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and optionally the subnets.
     4. If you are ordering public VLANS, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
-8. In the **Order Summary** pane, verify the cluster configuration and the estimated cost.
+9. In the **Order Summary** pane, verify the cluster configuration and the estimated cost.
    * To save the configuration as a template without placing an order, click **Save Configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
@@ -325,6 +326,6 @@ The vSphere clusters, unlike the vCenter Server instances, are not displayed on 
 ## Related links
 {: #vs_orderinginstances-related}
 
-* [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
-* [Scaling existing clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_scalingexistingclusters)
-* [Scaling clusters created outside of the console](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Scaling existing clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Scaling clusters created outside of the console](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderingforclustersoutside)

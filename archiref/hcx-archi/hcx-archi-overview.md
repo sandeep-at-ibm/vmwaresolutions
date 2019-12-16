@@ -4,16 +4,16 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-16"
+lastupdated: "2019-11-04"
 
 subcollection: vmware-solutions
 
 
 ---
-# VMware HCX on IBM Cloud overview
+# VMware HCX overview
 {: #hcx-archi-overview}
 
-VMware HCX on {{site.data.keyword.cloud}} seamlessly integrates on-premises vSphere® vCenter™ networks into {{site.data.keyword.vmwaresolutions_short}} deployments. Hybrid networking extends on-premises vSphere vCenter networks into the {{site.data.keyword.cloud_notm}}, supporting bidirectional virtual machine (VM) mobility.
+VMware HCX seamlessly integrates on-premises vSphere® vCenter™ networks into {{site.data.keyword.vmwaresolutions_short}} deployments. Hybrid networking extends on-premises vSphere vCenter networks into the {{site.data.keyword.cloud_notm}}, supporting bidirectional virtual machine (VM) mobility.
 
 HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as virtual machine migration and network extension.
 
@@ -97,7 +97,7 @@ Policy migration is only available under the following conditions:
 ## Components of HCX
 {: #hcx-archi-overview-comp-hcx}
 
-The VMware HCX on {{site.data.keyword.cloud_notm}} service deploys four virtual appliances that are installed and configured on both the on-premises datacenter and the {{site.data.keyword.cloud_notm}} target. This section describes each of the four required virtual appliances. Optionally, edge devices might be required depending upon the implementation design.
+The VMware HCX service deploys four virtual appliances that are installed and configured on both the on-premises datacenter and the {{site.data.keyword.cloud_notm}} target. This section describes each of the four required virtual appliances. Optionally, edge devices might be required depending upon the implementation design.
 
 ### HCX Manager
 {: #hcx-archi-overview-hcx-man}
@@ -162,9 +162,9 @@ Before the components are described in more detail, it is imperative to understa
 * Sufficient IP addresses for the on-premises VMs provisioned during the installation.
 * If the SSO server is remote, the URL of the vCenter, external SSO Server, or Platform Services Controller (PSC) that runs the external lookup service must be identified. When the HCX service is registered with the vCenter, this URL must be supplied.
 
-**Next topic:** [VMware HCX on IBM Cloud source-side architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)
+**Next topic:** [VMware HCX source-side architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)
 
 ## Related links
 {: #hcx-archi-overview-related}
 
-* [VMware HCX on {{site.data.keyword.cloud_notm}} introduction](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-hcx-archi-intro)
+* [VMware HCX introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro)

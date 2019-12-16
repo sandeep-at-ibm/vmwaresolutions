@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-09"
+lastupdated: "2019-12-04"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -22,31 +22,33 @@ subcollection: vmware-solutions
 
 You can order services for your VMware vCenter Server instances, such as a disaster recovery solution. When you no longer need these services, you can remove them from your instances.
 
-A 12-month commitment is required when you order the VMware HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
-{:note}
-
 ## Available services for vCenter Server instances
 {: #vc_addingremovingservices-available-services}
 
 The following table shows the services that are available to vCenter Server instances, together with the installed service versions.
 
-| Service name | Current service version | Instance version |
-|----------------------------------------------------------------------------------------|------------------|
-| [Caveonix RiskForesight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-caveonix_considerations) | 2.2.1 | V2.9 and later |
-| [F5 BIG-IP](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.0.0 | V1.9 and later |
-| [FortiGate Security Appliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_considerations) | 300 series | V2.0 and later |
-| [FortiGate Virtual Appliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 | V2.0 and later |
-| [HyTrust CloudControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations) | 5.5.1 | V2.3 and later |
-| [HyTrust DataControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htdc_considerations)  | 4.3.2 | V2.3 and later |
-| [HyTrust KeyControl](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htkc_considerations) | 4.3.2 | V2.5 and later |
-| [{{site.data.keyword.cloud_notm}} Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-icp_overview) | 3.1.2 | V2.5 and later |
-| [IBM Spectrum Protect&trade; Plus](/docs/services/vmwaresolutions/services?topic=vmware-solutions-spp_considerations) | 10.1.3 | V2.2 and later |
-| [KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  | N/A  |
-| [Veeam](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam_considerations) | 9.5u4b | V1.8 and later |
-| [VMware HCX](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.2 | V2.1 and later |
-| [vRealize Operations and Log Insight](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vrops_overview) | vROps 7.5 and vRLI 4.8 | V3.2 and later |
-| [Zerto](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr) | 7.0 Update 2 | V1.2 and later |
+| Service name | Current version |
+|--------------|-----------------|
+| [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | 2.2.1 |
+| [F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.0.1 |
+| [FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations) | 300 series |
+| [FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 |
+| [HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations) | 5.6 |
+| [HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)  | 5.0.1 |
+| [HyTrust KeyControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htkc_considerations) | 5.0.1 |
+| [IBM Security Services for SAP](/docs/services/vmwaresolutions?topic=vmware-solutions-managing-ss-sap) | N/A |
+| [IBM Spectrum Protect&trade; Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_considerations) | V10.1.5 |
+| [KMIP for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) | 2.0 |
+| [PrimaryIO HDM](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_pio) | N/A |
+| [Red Hat OpenShift for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview) | 4.2 |
+| [Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations) | 9.5u4b |
+| [VMware HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations) (See **Note**) | 3.5.2 |
+| [vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
+| [Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr) | 7.0 Update 2 |
 {: caption="Table 1. Available services for vCenter Server instances" caption-side="top"}
+
+A 12-month commitment is required when you order the VMware HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+{:note}
 
 ## Procedure to add services to vCenter Server instances
 {: #vc_addingremovingservices-adding-procedure}
@@ -92,4 +94,4 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_addingremovingservices-related}
 
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)

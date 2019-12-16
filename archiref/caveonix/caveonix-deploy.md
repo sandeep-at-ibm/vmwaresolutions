@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-29"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ When you select the {{site.data.keyword.vmwaresolutions_full}} RiskForesight opt
 
 The RiskForesight installation consists of the following high-level steps:
 
-1. [Initial planning and prerequisites](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step1) – Understanding and selecting a deployment option, configuring DNS to provide FQDN/IP resolution for the application components.
-2. [Virtual machine deployment](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step2) – Deploying the VMs from an OVF template. The VM has installed on it all the application components.
-3. [Application configuration](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step3) – Running the Caveonix configuration script that configures the application component on each of the VMs.
-4. [Application setup](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-step4) – Setting up the Service Provider and a Tenant or Organization so that the application becomes accessible for the users.
+1. [Initial planning and prerequisites](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step1) – Understanding and selecting a deployment option, configuring DNS to provide FQDN/IP resolution for the application components.
+2. [Virtual machine deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step2) – Deploying the VMs from an OVF template. The VM has installed on it all the application components.
+3. [Application configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step3) – Running the Caveonix configuration script that configures the application component on each of the VMs.
+4. [Application setup](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step4) – Setting up the Service Provider and a Tenant or Organization so that the application becomes accessible for the users.
 
 The automated install, provisions one VM and configures all the application components on that VM.
 {:note}
@@ -36,8 +36,6 @@ The automated install, provisions one VM and configures all the application comp
 {: #caveonix-deploy-sizing}
 
 The deployment sizing is calculated by using the following volumes.
-
-Table 1. Volumes
 
 |Data type	|Volume |
 |---|---|
@@ -49,13 +47,12 @@ Table 1. Volumes
 |Total Storage per Asset per Day (MB)	|766 |
 |Data Replication Multiplier	|2 |
 |Total Index Storage / Asset / Day (MB)	|1532 |
+{: caption="Table 1. Volumes" caption-side="bottom"}
 
 The Data Replication Multiplier is set to 2 as the Index store (Elastic Search) uses by default n+1 replication of the indexes.
 {:note}
 
 The number of Scaling VMs is calculated from the number of Assets and the number of days of data to index.
-
-Table 2. Scaling VM parameters
 
 |Number of assets	|100	|500	|5000 |
 |---|---|---|---|
@@ -64,10 +61,9 @@ Table 2. Scaling VM parameters
 |Total Index Storage / Asset / 30 Days (TB)	|4	|22	|219 |
 |Data Supported per Scaling Node (TB)	|0	|8	|8 |
 |Scaling VMs Required	|0	|3	|27 |
+{: caption="Table 2. Scaling VM parameters" caption-side="bottom"}
 
 The amount of storage that is required is calculated as follows:
-
-Table 3. Storage parameters
 
 |Number of assets	|100	|500	|5000 |
 |---|---|---|---|
@@ -76,6 +72,7 @@ Table 3. Storage parameters
 |Days of Data	|30	|30	|30 |
 |Near Term Data Retention (TB)	|7	|33	|329 |
 |Long Term Data Retention (TB)	|18	|88	|877 |
+{: caption="Table 3. Storage parameters" caption-side="bottom"}
 
 From a data perspective, data is used as follows:
 
@@ -91,8 +88,6 @@ Data Storage has three tiers:
 
 The following table provides a summary of the deployments:
 
-Table 4. Summary
-
 |Deployment model	|“all-in-one”	|Partial distributed	|Fully distributed |
 |---|---|---|---|
 |Number of Assets	|100	|500	|5000 |
@@ -103,11 +98,12 @@ Table 4. Summary
 |Base VMs	|1	|1	|20 |
 |Scaling VMs	|0	|3	|28 |
 |Total VMs	|1	|4	|48 |
+{: caption="Table 4. Summary" caption-side="bottom"}
 
 **Notes:**
-When you remove the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single "all-in-one" Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
+When you remove the Caveonix RiskForesight service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single "all-in-one" Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
 * If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed.
 * If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function.
-* If you delete vCenter Server instance A with the Caveonix RiskForesight on {{site.data.keyword.cloud_notm}} service installed, and you used the IP addresses of the dedicated private subnet ordered for the service in vCenter Server instance B, the dedicated private subnet is canceled upon deletion of vCenter Server instance A.
+* If you delete vCenter Server instance A with the Caveonix RiskForesight service installed, and you used the IP addresses of the dedicated private subnet ordered for the service in vCenter Server instance B, the dedicated private subnet is canceled upon deletion of vCenter Server instance A.
 
-Next topic: [All-in-one deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-allinone)
+**Next topic:** [All-in-one deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-allinone)

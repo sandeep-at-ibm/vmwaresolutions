@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-07"
 
 keywords: IBM Cloud Expert Services, request IBM Cloud Expert, tech specs Cloud Expert
 
@@ -60,7 +60,7 @@ This offering speeds adoption of VMware on IBM Cloud by taking the client throug
 {: #managing_ices-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. Scroll down to the **Services** section, and then click **IBM Cloud Expert Services** on the **Partner Services** card.
+2. Scroll down to the **Services** section, and then click **IBM Cloud Expert Services** on the **Professional Services** card.
 3. On the {{site.data.keyword.cloud_notm}} Expert Services page, in the **Engage Cloud Expert Services Pre-Sales** box, click **Request a consultation**.
 
   An IBM Cloud Expert Services representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
@@ -68,5 +68,5 @@ This offering speeds adoption of VMware on IBM Cloud by taking the client throug
 ## Related links
 {: #managing_ices-related}
 
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)

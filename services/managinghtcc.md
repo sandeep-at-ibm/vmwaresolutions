@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-12"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Managing HyTrust CloudControl
 {: #managinghtcc}
 
-To manage the HyTrust CloudControl service (HTCC), access the HTCC WebGUI from the {{site.data.keyword.vmwaresolutions_short}} console, or access the HTCC console from the vSphere Web Client.
+To manage the HyTrust CloudControl service (HTCC), access the HTCC WebGUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTCC console from the vSphere Web Client.
 
 ## Accessing the HyTrust CloudControl WebGUI from the IBM Cloud for VMware Solutions console
 {: #managinghtcc-accessing-webgui}
@@ -36,7 +36,7 @@ To access the HTCC console from the vSphere Web Client, use the following proced
 2. Right-click **CC1** or **CC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Enabling internet access for the HyTrust CloudControl VMs
 {: #managinghtcc-internet-access}
@@ -66,8 +66,8 @@ These following steps apply for updating the HTCC network settings on the primar
 1. Complete steps 1-3 in the previous procedure.
 2. Click **Settings** and then click **Interfaces**. Note the IP address for the private uplink, which becomes the new default gateway. 
 3. Go to the HyTrust CloudControl service details page, click **View HTCC Web UI** and log in with the credentials from the service details page.
-4. Note the existing default gateway. For example, for HTCC 5.5.1, click **Configuration > Network**. Note the gateway IP address that is listed, which becomes the gateway for the static route.
-5. Add a static route. For example, for HTCC 5.5.1, click **Configuration > Static Routes**. Click **Add**, enter the following information, and click **OK**.
+4. Note the existing default gateway. For example, for HTCC 5.6, click **Configuration > Network**. Note the gateway IP address that is listed, which becomes the gateway for the static route.
+5. Add a static route. For example, for HTCC 5.6, click **Configuration > Static Routes**. Click **Add**, enter the following information, and click **OK**.
 
   ```
   Network Address: 10.0.0.0
@@ -76,7 +76,7 @@ These following steps apply for updating the HTCC network settings on the primar
   Device: Network 1
   ```
 
-6. Change the default gateway. For example, for HTCC 5.5.1, click **Configuration > Network** and replace the IP address in the **Gateway** field with the one you noted in Step 3 and click **Save**. 
+6. Change the default gateway. For example, for HTCC 5.6, click **Configuration > Network** and replace the IP address in the **Gateway** field with the one you noted in Step 3 and click **Save**. 
 
   Ensure that you set the static route before you change the default gateway, otherwise the web console might become unreachable.
   {:important}
@@ -88,7 +88,7 @@ These following steps apply for updating the HTCC network settings on the primar
 ## Related links
 {: #managinghtcc-related}
 
-* [HyTrust CloudControl overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-htcc_considerations)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [HyTrust CloudControl overview](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [HyTrust website](https://www.hytrust.com/){:external}

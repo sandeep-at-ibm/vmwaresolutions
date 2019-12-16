@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-07"
+lastupdated: "2019-12-12"
 
 keywords: FortiGate security, FortiGate Sirtual Appliance, tech specs FortiGate
 
@@ -13,6 +13,7 @@ subcollection: vmware-solutions
 
 ---
 
+{:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
@@ -22,11 +23,9 @@ subcollection: vmware-solutions
 {: #fsa_considerations}
 
 The FortiGate Security Appliance service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances.
+{: shortdesc}
 
 You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
-
-This service is available only to instances that are deployed in V1.8 or later releases.
-{:note}
 
 ## Technical specifications for FortiGate Security Appliance
 {: #fsa_considerations-specs}
@@ -47,7 +46,7 @@ Two appliances are deployed in active-passive configuration.
 {: #fsa_considerations-networking}
 
 * Dual 1 GbE bonded on both upstream and downstream networks
-* One new upstream {{site.data.keyword.cloud_notm}} public VLAN
+* One new upstream {{site.data.keyword.cloud}} public VLAN
 * One existing downstream {{site.data.keyword.cloud_notm}} public VLAN
 
 ## Considerations when you install FortiGate Security Appliance
@@ -79,9 +78,9 @@ Review the following considerations before you remove the FortiGate Security App
 ## Related links
 {: #fsa_considerations-related}
 
-* [Ordering FortiGate Security Appliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fsa_ordering)
-* [Managing FortiGate Security Appliance](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managingfsa)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq)
+* [Ordering FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_ordering)
+* [Managing FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-managingfsa)
+* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
 * [Fortinet website](https://www.fortinet.com/){:external}
 * [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

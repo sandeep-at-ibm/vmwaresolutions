@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-29"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,6 @@ subcollection: vmware-solutions
 
 Additional base virtual machines (VMs) and scale-out VMs are added according to the number of assets and data retention requirements.
 
-Table 1. Base - user interface
-
 |Parameter	|Value|
 |---|---|
 |Type	|Base|
@@ -27,8 +25,7 @@ Table 1. Base - user interface
 |Disk	|60 GB|
 |OS	|CentOS 7|
 |Installed Application Components	|UI|
-
-Table 2. Base - applications and plug-ins
+{: caption="Table 1. Base - user interface" caption-side="bottom"}
 
 |Parameter	|Value|
 |---|---|
@@ -39,8 +36,7 @@ Table 2. Base - applications and plug-ins
 |Disk	|500 GB|
 |OS	|CentOS 7|
 |Installed Application Components	|App, Plugins|
-
-Table 3. Base - central collector
+{: caption="Table 2. Base - applications and plug-ins" caption-side="bottom"}
 
 |Parameter	|Value |
 |---|---|
@@ -51,8 +47,7 @@ Table 3. Base - central collector
 |Disk	|500 GB |
 |OS	|CentOS 7 |
 |Installed Application Components	|Central Collector (Cluster) |
-
-Table 4. Base - relational database
+{: caption="Table 3. Base - central collector" caption-side="bottom"}
 
 |Parameter	|Value |
 |---|---|
@@ -63,8 +58,7 @@ Table 4. Base - relational database
 |Disk	|1 TB |
 |OS	C|entOS 7 |
 |Installed Application Components	|Relational Datastore (Primary / Secondary) |
-
-Table 5. Base - messaging datastore
+{: caption="Table 4. Base - relational database" caption-side="bottom"}
 
 |Parameter	|Value |
 |---|---|
@@ -75,8 +69,7 @@ Table 5. Base - messaging datastore
 |Disk	|1 TB |
 |OS	|CentOS 7 |
 |Installed Application Components	|Messaging Datastore (Cluster) |
-
-Table 6. Base - index datastore (master nodes)
+{: caption="Table 5. Base - messaging datastore" caption-side="bottom"}
 
 |Parameter	|Value |
 |---|---|
@@ -87,8 +80,7 @@ Table 6. Base - index datastore (master nodes)
 |Disk	|1 TB |
 |OS	|CentOS 7 |
 |Installed Application Components	|Index Datastore (Master Nodes) |
-
-Table 7. Database - index datastore (data nodes)
+{: caption="Table 6. Base - index datastore (master nodes)" caption-side="bottom"}
 
 |Parameter	|Value |
 |---|---|
@@ -99,10 +91,9 @@ Table 7. Database - index datastore (data nodes)
 |Disk	|4 TB |
 |OS	|CentOS 7 |
 |Installed Application Components	|Index Datastore (Data Nodes) |
+{: caption="Table 7. Database - index datastore (data nodes)" caption-side="bottom"}
 
 The scale-out VM details are described in the following table.
-
-Table 8. Scale-out - data nodes
 
 |Parameter	|Value |
 |---|---|
@@ -113,10 +104,9 @@ Table 8. Scale-out - data nodes
 |Disk	|4 TB |
 |OS	|CentOS 7 |
 |Installed Application Components	|Data Nodes (scale-out) |
+{: caption="Table 8. Scale-out - data nodes" caption-side="bottom"}
 
 The Remote Collector VM details are shown in the following table.
-
-Table 9. Remote collector
 
 |Parameter	|Value |
 |---|---|
@@ -126,5 +116,6 @@ Table 9. Remote collector
 |Disk	|1 TB |
 |OS	|CentOS 7 |
 |Installed Application Components	|Remote Collector |
+{: caption="Table 9. Remote collector" caption-side="bottom"}
 
-Next topic: [Step 1 - Initial planning and prerequisites](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step1)
+**Next topic:** [Step 1 - Initial planning and prerequisites](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step1)

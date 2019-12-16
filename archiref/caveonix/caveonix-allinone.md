@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-10"
+lastupdated: "2019-11-29"
 
 subcollection: vmware-solutions
 
@@ -16,8 +16,6 @@ subcollection: vmware-solutions
 
 An automated deployment and configuration of a single virtual machine (VM) that hosts all the RiskForesight application components. This deployment model is suitable for small deployments, up to 100 assets with 7 - 30 days of indexing. The “all-in-one” VM details are shown in the following table:
 
-Table 1. All-in-one parameters
-
 |Parameter	|Value|
 |---|---|
 |Type	|Base|
@@ -27,10 +25,9 @@ Table 1. All-in-one parameters
 |Disk	|80 GB|
 |OS	|CentOS 7|
 |Installed Application Components|	UI, App, Plug-ins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Index Datastore, Remote Collector|
+{: caption="Table 1. All-in-one parameters" caption-side="bottom"}
 
 The additional Remote Collector VM details are shown in the following table.
-
-Table 2. Remote collector
 
 |Parameter	|Value|
 |---|---|
@@ -40,5 +37,6 @@ Table 2. Remote collector
 |Disk	|1 TB|
 |OS	|CentOS 7|
 |Installed Application Components	|Remote Collector|
+{: caption="Table 2. Remote collector" caption-side="bottom"}
 
-Next topic: [Partially distributed](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-partially)
+**Next topic:** [Partially distributed](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-partially)

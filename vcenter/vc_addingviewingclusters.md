@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-12-12"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -23,8 +23,10 @@ subcollection: vmware-solutions
 
 You can add your own clusters to VMware vCenter Server instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
 
-The delete cluster feature is available only to instances that are deployed in (or upgraded to) V2.3 and later.
-{:note}
+**Notes**:
+
+* Starting with the V3.4 release, you can simultaneously add or remove a cluster while another cluster is being created or removed.
+* The delete cluster feature is available only to instances that are deployed in (or upgraded to) V2.3 and later.
 
 ## Adding clusters to vCenter Server instances
 {: #vc_addingviewingclusters-adding}
@@ -32,7 +34,7 @@ The delete cluster feature is available only to instances that are deployed in (
 ### Before you add clusters
 {: #vc_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.2, 2.3, or 2.4, you can add up to 10 clusters.
 * For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
@@ -52,17 +54,24 @@ The cluster name must meet the following requirements:
 * The maximum length of the cluster name is 30 characters.
 * The cluster name must be unique within the vCenter Server instance.
 
+### Licensing settings
+{: #vc_addingviewingclusters-adding-licensing-settings}
+
+Specify the licensing option for the VMware vSphere component in the cluster:
+* For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
+* For non-Business Partner users, you can use the IBM-provided VMware licenses for this component by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
+
+### Bare Metal Server settings
+{: #vc_addingviewingclusters-bare-metal-settings}
+
+You can choose **Skylake**, **Cascade Lake**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+
 #### Data center location
 {: #vc_addingviewingclusters-adding-dc-location}
 
 The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
-
-### Bare Metal Server settings
-{: #vc_addingviewingclusters-bare-metal-settings}
-
-You can choose **Skylake**, **Cascade Lake**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
@@ -121,7 +130,7 @@ For the **Broadwell** setting, you have a number of options for the **CPU Model*
 
 * All servers that you order have the same configuration.
 * For vSAN storage, you can order between 4 and 59 servers.
-* For NFS storage, you can order between 2 and 59 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* For NFS storage, you can order between 1 and 59 servers. However, for production workloads, a minimum of two servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Storage settings
 {: #vc_addingviewingclusters-adding-storage-settings}
@@ -168,19 +177,12 @@ Performance level details:
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 {: caption="Table 4. NFS performance level options" caption-side="top"}
 
-### Local Disks
+#### Local disks
 {: #vc_addingviewingclusters-adding-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
 * **Local Disk Count**: Select the number of disks that you want to add.
 * **Local Disk Type**: Select an option for the disk type that you need.
-
-### Licensing settings
-{: #vc_addingviewingclusters-adding-licensing-settings}
-
-Specify the licensing option for the VMware vSphere component in the cluster:
-* For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
-* For non-Business Partner users, you can use the IBM-provided VMware licenses for this component by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
 ### Network interface settings
 {: #vc_addingviewingclusters-adding-network-interface-settings}
@@ -223,11 +225,11 @@ Select to order one new public VLAN and two new private VLANs.
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
 When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
-* **Public VLAN** is for public network access.
-* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}.
-* **Secondary private VLAN** is for VMware features such as vSAN.
-* **Primary Subnet** is assigned to physical hosts for public network access.
-* **Primary Private Subnet** is assigned to physical hosts for management traffic.
+* **Public VLAN** is for public network access. If you select the **Allocate a new one** option for this field, a new public VLAN is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Public Primary Subnet** is assigned to physical hosts for public network access. If you select the **Allocate a new one** option for this field, a new public primary subnet is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}. If you select the **Allocate a new one** option for this field, a new private VLAN is allocated automatically.
+* **Private Primary Subnet** is assigned to physical hosts for management traffic. If you select the **Allocate a new one** option for this field, a new private primary subnet is allocated automatically.
+* **Secondary Private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 {:important}
@@ -256,12 +258,12 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 7. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
-  * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then click the **+** icon next to the **Add Shared Storage** label and select the  **Performance** and **Size (GB)** for each  file share. You must select at least one file share.
+  * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then click the **+** icon next to the **Add Shared Storage** label and select the  **Performance** and **Size (GB)** for each file share. You must select at least one file share.
   * If you select **Local Disks**, specify the local disk count and local disk type.
 8. Complete the network interface settings.
 9. Specify how the vSphere license key is provided:
   * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
-  * For users who aren't Business Partners, you can select one of the following options:
+  * For users who are not Business Partners, you can select one of the following options:
       * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the component.
       * If you want to use your own VMware license for the component, select **I will provide** and enter your license key.
 10. Select the network setting of either **Public and Private Network** or **Private Network Only**.
@@ -277,7 +279,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** page of the instance.
 2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
-You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
+You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
 {:important}
 
 ## Procedure to view clusters in vCenter Server instances
@@ -292,18 +294,11 @@ You can't change the cluster name. Changing the cluster name might cause the add
   * **Data Center Location**: The {{site.data.keyword.CloudDataCent_notm}} where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Status**: The status of the cluster. The status can have one of the following values:
-    <dl class="dl">
-        <dt class="dt dlterm">Initializing</dt>
-        <dd class="dd">The cluster is being created and configured.</dd>
-        <dt class="dt dlterm">Modifying</dt>
-        <dd class="dd">The cluster is being modified.</dd>
-        <dt class="dt dlterm">Ready to Use</dt>
-        <dd class="dd">The cluster is ready to use.</dd>
-        <dt class="dt dlterm">Deleting</dt>
-        <dd class="dd">The cluster is being deleted.</dd>
-        <dt class="dt dlterm">Deleted</dt>
-        <dd class="dd">The cluster is deleted.</dd>
-    </dl>
+     * Initializing: The cluster is being created and configured.
+     * Modifying: The cluster is being modified.
+     * Ready to Use: The cluster is ready to use.
+     * Deleting: The cluster is being deleted.
+     * Deleted: The cluster is deleted.
   * **Actions**: Click the **Delete** icon to delete the cluster.
 4. Click a cluster name to view the ESXi server, storage, and network interface details.
 
@@ -385,7 +380,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 * When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
 * The default cluster can't be deleted.
 
-A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:important}
 
 ### Procedure to delete clusters from vCenter Server instances
@@ -403,5 +398,5 @@ A 12-month commitment is required when you order the VMware HCX service. Your ac
 ## Related links
 {: #vc_addingviewingclusters-related}
 
-* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_addingremovingservers)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)

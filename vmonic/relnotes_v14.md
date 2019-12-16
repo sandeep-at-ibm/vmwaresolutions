@@ -11,14 +11,16 @@ subcollection: vmware-solutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 
 # Release notes for V1.4
 {: #relnotes_v14}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
 ## Component updates for Cloud Foundation instances
 {: #relnotes_v14-vcf-comp}
@@ -46,7 +48,7 @@ As part of the NSX installation, the NSX Manager is installed and licensed on al
 The NSX Controller is not installed on vCenter Server instances (the way it is installed on Cloud Foundation instances). If you are using VXLAN or distributed logical routers for your vCenter Server instances, then you must install the NSX Controller yourself.
 {:note}
 
-For more information about the enhancements that are introduced in VMware NSX for vSphere 6.2.4, its requirements, and known issues, see [NSX for vSphere 6.2.4 release notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:new_window}.
+For more information about the enhancements that are introduced in VMware NSX for vSphere 6.2.4, its requirements, and known issues, see [NSX for vSphere 6.2.4 release notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/rn/releasenotes_nsx_vsphere_624.html){:external}.
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}
@@ -57,9 +59,9 @@ During instance deployment, a Management VMware NSX Edge Services Gateway (ESG) 
 
 To ensure security, firewall rules are in place to allow only outbound HTTPS communications that are initiated by the management virtual machines. This ESG is deployed in a Large configuration, and only IBM Support can modify the configuration. For more information, see the following topics:
 
-* [vCenter Server technical specifications](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview#specs)
-* [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
-* [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
+* [vCenter Server technical specifications](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#specs)
+* [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
+* [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:external}
 
 ### NSX license
 {: #relnotes_v14-nsx-license}
@@ -103,7 +105,7 @@ You can now deploy either a single Cloud Foundation instance, just like in previ
 * For Cloud Foundation instances, the deployment of Zerto disaster recovery is automated rather than handled through a support ticket. All Zerto components, such as a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license charges are listed on the estimated cost, so you can review before you place your order.
 * For vCenter Server instances, the deployment of Zerto disaster recovery is done through a support ticket, as in the previous release. However, NSX Edge and the public portable subnet are no longer needed, since they are now included in the base deployment. The charges for a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license still apply.
 
-For more information, see [Zerto disaster recovery](/docs/services/vmwaresolutions/services?topic=vmware-solutions-addingzertodr).
+For more information, see [Zerto disaster recovery](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr).
 
 ## Instance order process
 {: #relnotes_v14-inst-order}
@@ -113,7 +115,7 @@ The instance order process is greatly simplified:
 * For both Cloud Foundation instances and vCenter Server instances, the SoftLayer Credentials page is no longer displayed during the order process. The SoftLayer credentials that are defined on the Settings page are used by default and you are prompted to update them only if they do not meet the requirements.
 * In addition, for vCenter Server instances, only the **Large** option for the **Hardware** type and the **10 Gbps Dual** setting for the **Uplink Port Speed** are now available, which reduces the number of settings to specify when ordering.
 
-For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance).
+For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 
 ## Instance management
 {: #relnotes_v14-inst-mgmt}
@@ -121,7 +123,7 @@ For more information, see [Ordering vCenter Server instances](/docs/services/vmw
 New features and improvements are made to the instance management process:
 
 * For Cloud Foundation instances, you can view the user name and passwords for various instance components on the instance details page.
-* For vCenter Server instances, you can now install software updates and patches for IBM components directly from the console. For more information, see [Applying updates and patches to vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_applyingupdates).
+* For vCenter Server instances, you can now install software updates and patches for IBM components directly from the console. For more information, see [Applying updates and patches to vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_applyingupdates).
 
 ## Console notifications
 {: #relnotes_v14-console-notif}
@@ -130,5 +132,5 @@ You can now configure console notifications on the **Settings** page. By default
 
 For more information, see the following topics:
 
-* [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount)
-* [Notifications](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-notifications)
+* [User accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount)
+* [Notifications](/docs/services/vmwaresolutions?topic=vmware-solutions-notifications)

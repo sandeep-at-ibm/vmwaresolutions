@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-10-18"
+lastupdated: "2019-11-26"
 
 keywords: vCenter Server NSX-T order instance, order vCenter Server NSX-T, order NSX-T
 
@@ -27,8 +27,8 @@ To deploy a flexible and customizable VMware virtualized platform that best fits
 {: #vc_nsx-t_orderinginstance-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-useraccount).
-* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning).
+* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
+* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 | Name        | Value Format      |
@@ -93,7 +93,7 @@ For non-Business Partner users, you can use the IBM-provided VMware licenses for
 ### Licensing notes
 {: #vc_nsx-t_orderinginstance-licensing-notes}
 
-* A license with a minimum of eight CPUs is required, which is for four servers with two CPUs per server. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Ensure that your license supports future capacity expansion in your infrastructure.
+* The minimum number of licenses for BYOL that are required depends on the number of CPUs per server and the number of servers in the order. The license choice for each VMware component applies to the base instance and to any ESXi servers that you add to the instance later. Ensure that your license supports future capacity expansion in your infrastructure.
 * The minimum license editions are indicated on the user interface. If different component editions are supported, you can select the edition that you want. You are responsible to ensure that the license key provided is correct for each VMware component selected.
 * For vSphere, a license charge is incurred at the time of order, but the license charge is then credited to your account.
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
@@ -152,7 +152,7 @@ When you select **Broadwell**, you can choose the CPU and RAM combination for th
 
 * All servers that you order have the same configuration.
 * If you're planning to use vSAN storage, you can order between 4 and 20 servers.
-* If you're planning to use NFS storage, you can order between 2 and 20 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* If you're planning to use NFS storage, you can order between 2 and 20 servers. However, for production workloads, a minimum of 3 servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ## Storage settings
 {: #vc_nsx-t_orderinginstance-storage-settings}
@@ -260,11 +260,11 @@ Select to order one new public VLAN and two new private VLANs.
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
 When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
-* **Public VLAN** is for public network access.
-* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}.
-* **Secondary private VLAN** is for VMware features such as vSAN.
-* **Primary Subnet** is assigned to physical hosts for public network access.
-* **Primary Private Subnet** is assigned to physical hosts for management traffic.
+* **Public VLAN** is for public network access. If you select the **Allocate a new one** option for this field, a new public VLAN is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Public Primary Subnet** is assigned to physical hosts for public network access. If you select the **Allocate a new one** option for this field, a new public primary subnet is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}. If you select the **Allocate a new one** option for this field, a new private VLAN is allocated automatically.
+* **Private Primary Subnet** is assigned to physical hosts for management traffic. If you select the **Allocate a new one** option for this field, a new private primary subnet is allocated automatically.
+* **Secondary Private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 {:important}
@@ -296,10 +296,11 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server with NSX-T instances
 {: #vc_nsx-t_orderinginstance-procedure}
 
-1. From the {{site.data.keyword.cloud_notm}} catalog, click the **VMware** icon from the left navigation pane and then click the **VMware vCenter Server** card in the **Start Provisioning** section.
-2. On the **VMware vCenter Server** page, click the **vCenter Server with NSX-T** card and click **Continue**.
-3. On the **vCenter Server with NSX-T** page, enter the instance name.
-4. Select the instance type:
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane. 
+2. In the **Start Provisioning** section, click the **VMware vCenter Server** card.
+3. On the **VMware vCenter Server** page, click the **vCenter Server with NSX-T** card and click **Continue**.
+4. On the **vCenter Server with NSX-T** page, enter the instance name.
+5. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability and complete the following steps:
      1. Select the primary instance that you want the secondary instance to be connected with.
@@ -325,7 +326,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
       * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and the subnets.
    4. Specify the DNS configuration.
 
-11. On the **Order Summary** pane, verify the instance configuration before you place the order.
+10. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
@@ -342,7 +343,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## What to do next
 {: #vc_nsx-t_orderinginstance-next}
 
-View and manage the vCenter Server with NSX-T instance that you ordered. For more information on viewing the instance, see [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances).
+View and manage the vCenter Server with NSX-T instance that you ordered. For more information on viewing the instance, see [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances).
 
 You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the 	{{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
@@ -359,9 +360,9 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 ## Related links
 {: #vc_nsx-t_orderinginstance-related}
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing_required_accounts)
-* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_viewinginstances)
-* [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_multisite)
-* [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
-* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
-* [Deleting vCenter Server with NSX-T instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_nsx-t_deletinginstance)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions?topic=vmware-solutions-signing_required_accounts)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
+* [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_multisite)
+* [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingcluster)
+* [Expanding and contracting capacity for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_addingremovingservers)
+* [Deleting vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_deletinginstance)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-10-04"
+lastupdated: "2019-11-25"
 
 subcollection: vmware-solutions
 
@@ -19,18 +19,18 @@ subcollection: vmware-solutions
 # Use case definitions and desktop assessments
 {: #horizon-use-cases}
 
-A successful VMware Horizon deployment requires a thorough understanding of the users and applications that will be onboarded into the service. Without a good understanding of these items, the resources that are provided to the users will not be sized correctly, leading to a bad user experience that hurts adoption of the service.
+A successful VMware Horizon 7 deployment requires a thorough understanding of the users and applications that will be onboarded into the service. Without a good understanding of these items, the resources that are provided to the users will not be sized correctly, leading to a bad user experience that hurts adoption of the service.
 
 Use case definition creates a detailed definition of the users that will be onboarded into the service. This definition contains details about the users and their expected work patterns. It can include information like which business unit they are a part of, which applications they use, the hours they are primarily expected to use the service, where they will access the service from, and any other requirements they might have.  Use Case Definitions will help drive the service design and ensure that all business and user requirements are met.
 
-Desktop assessments provide two functions when designing a VMware Horizon service. A desktop assessment will validate the use case definitions and complete any gaps that might exist in those definitions. They also provide performance metrics around the desktops, and these metrics will be utilized for sizing the environment to ensure that there is enough CPU, RAM, and storage resources.
+Desktop assessments provide two functions when designing a Horizon 7 service. A desktop assessment will validate the use case definitions and complete any gaps that might exist in those definitions. They also provide performance metrics around the desktops, and these metrics will be utilized for sizing the environment to ensure that there is enough CPU, RAM, and storage resources.
 
 A desktop assessment requires a tool like Liquidware Stratusphere or Lakeside Systrack to collect data from endpoints. The tool should run for at least 30 days to gather enough information to understand the performance trends for the environment.  
 
 ## Estimating data egress cost
 {: #horizon-use-cases-estimate-egress}
 
-Unlike on-premises, deploying Horizon 7 on {{site.data.keyword.cloud}} incurs data egress cost based on the amount of data egress traffic your environment will generate. It is important to understand and estimate the data egress traffic.
+Unlike on-premises, deploying Horizon 7 incurs data egress cost based on the amount of data egress traffic your environment will generate. It is important to understand and estimate the data egress traffic.
 
 ### Understanding different types of data egress traffic
 {: #horizon-use-cases-understand-egress-traffic}
@@ -66,7 +66,7 @@ All numbers in the dashboards are measured in bits, not bytes.
 
 The Horizon Sizing Tool dashboard provides some basic numbers to help you plan your migration to the VMware cloud. The following table breaks users down into categories based on egress bandwidth consumption. Resource consumption metrics are supplied for each category as well as egress bandwidth consumption for applications and three remote display protocols: ICA, Blast, and PCoIP.
 
-The resource consumption metrics can be fed into some of VMware’s sizing tools such as the [Horizon Sizing Estimator](https://developercenter.vmware.com/group/dp/horizon-sizing-tool){:external} (Requires VMware Partner Central account). These tools provide guidance on how to plan for the number and size of systems you will be deploying.
+The resource consumption metrics can be fed into some of VMware’s sizing tools such as the [Horizon Sizing Tool](https://code.vmware.com/article-detail/-/asset_publisher/8n011DnrSCHt/content/horizon-sizing-tool-intro){:external} (Requires VMware Partner Central account). These tools provide guidance on how to plan for the number and size of systems you will be deploying.
 
 ### Advanced network egress bandwidth calculation
 {: #horizon-use-cases-advanced-egress}
