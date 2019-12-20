@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-11-22"
+lastupdated: "2019-12-18"
 
 keywords: FAQ, license, BYOL
 
@@ -133,12 +133,6 @@ IBM Support continues to be your point of contact for any instance configuration
 {: faq}
 
 With the introduction of the BYOL feature, continued use of the manual process is not recommended. If you want to use BYOL, provide your own licenses when you are ordering the instance.
-
-## Is BYOL supported for other VMware products such as VMware vRealize Automation, VMware vRealize Operations, or VMware vRealize Log Insight?
-{: #faq_byol-other-support}
-{: faq}
-
-No, because these VMware products are not part of the instance deployment. These VMware products might be installed in addition to the initial deployment, which requires the clients or their agents to install and license these products.
 
 ## Related links
 {: #faq_byol-related}

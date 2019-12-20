@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-11-25"
+lastupdated: "2019-12-16"
 
 subcollection: vmware-solutions
 
@@ -20,13 +20,22 @@ subcollection: vmware-solutions
 # KMIP for VMware implementation and management
 {: #kmip-implementation}
 
+## Planning
+{: #kmip-implementation-planning}
+
+There is no charge for the KMIP for VMware service. To review the Key Protect and Hyper Protect Crypto Services pricing plans, see the [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) and [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services) catalog pages.
+
+If you are using vSAN encryption, plan to consume one root key in Key Protect or Hyper Protect Crypto Services, plus two standard keys for each vSAN cluster that you encrypt.
+
+If you are using vSphere encryption, plan to consume one root key, plus one standard key per vSphere cluster, plus one standard key per encrypted virtual machine.
+
 ## Connecting the key management server
 {: #kmip-implementation-connecting-kms}
 
 To enable vSphere encryption or vSAN encryption by using KMIP for VMware, you need to complete the following tasks:
 
 1. [Enable service endpoints in your account](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
-2. Create a key manager instance, using either [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) or [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). If you are using Hyper Protect Crypto Services, be sure to [initialize your crypto instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) so that Hyper Protect Crypto Services can provide key related functions.
+2. Create a key manager instance, by using either [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) or [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started#get-started). If you are using Hyper Protect Crypto Services, be sure to [initialize your crypto instance](/docs/services/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) so that Hyper Protect Crypto Services can provide key related functions.
 3. Create a customer root key (CRK) within your key manager instance.
 4. Create an Identity and Access Management (IAM) [service ID and API key](/docs/iam?topic=iam-serviceidapikeys) for use with KMIP for VMware. Grant this service ID platform viewer access and service write access to your key manager instance.
 5. [Create a KMIP for VMware instance](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering) from the {{site.data.keyword.vmwaresolutions_short}} console.
@@ -37,9 +46,9 @@ To enable vSphere encryption or vSAN encryption by using KMIP for VMware, you ne
 ## Enabling encryption
 {: #kmip-implementation-enable-encrypt}
 
-To use vSAN encryption, edit the vSAN general settings in your vCenter cluster and select the encryption check box.
+To use vSAN encryption, edit the vSAN general settings in your vCenter cluster and select the encryption checkbox.
 
-The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:external}.
+The vSAN health check might send periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:external}.
 {:note}
 
 To use vSphere encryption, edit your virtual machine storage policies to require disk encryption.
@@ -63,7 +72,7 @@ When keys are revoked, all data that is protected by these keys and by your KMIP
 
 KMIP for VMware stores individual wrapped KEKs in your Key Protect or Hyper Protect Crypto Services instance by using names that are associated with the key IDs that are known to VMware. You can delete individual keys to revoke the encryption of individual disks or drives.
 
-VMware does not delete keys from the KMS when a VM having encrypted disks is removed from inventory. This is to allow recovery of that VM from backup or if it is restored to inventory. If you wish to reclaim these keys and cryptographically invalidate all backups, you need to delete the keys from your key manager instance after deleting your VMs.
+VMware does not delete keys from the KMS when a VM having encrypted disks is removed from inventory. This is to allow recovery of that VM from backup or if it is restored to inventory. If you want to reclaim these keys and cryptographically invalidate all backups, you need to delete the keys from your key manager instance after you delete your VMs.
 {:note}
 
 ## Related links

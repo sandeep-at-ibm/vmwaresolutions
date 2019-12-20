@@ -397,6 +397,17 @@ IBM Cloud for VMware Solutions
         archiref/kmip/implementation.md
 
     {: .topicgroup}
+    HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
+        archiref/htdc-hpcs/htdc-hpcs-encryption-overview.md
+        archiref/htdc-hpcs/htdc-hpcs-encryption-options.md
+        archiref/htdc-hpcs/htdc-hpcs-hytrust-overview.md
+        archiref/htdc-hpcs/htdc-hpcs-hpcs-overview.md
+        archiref/htdc-hpcs/htdc-hpcs-system-context.md
+        archiref/htdc-hpcs/htdc-hpcs-reference-architecture.md
+        archiref/htdc-hpcs/htdc-hpcs-detail.md
+        archiref/htdc-hpcs/htdc-hpcs-deployment.md
+
+    {: .topicgroup}
     vCenter Server networking guide
         archiref/vcsnsxt/vcsnsxt-intro.md
         archiref/vcsnsxt/vcsnsxt-systemcontext.md

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-13"
+lastupdated: "2019-12-19"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
@@ -38,39 +38,17 @@ It is important not to restart any of the Red Hat OpenShift cluster virtual mach
 
 After the initial certificate rotation, certificates are renewed every 30 days. You must establish a process to approve the CSRs for every certificate rotation. According to Red Hat, you can approve CSRs when they reach 80% of their expiration period, which is approximately 25 days into the lifespan of the CSRs.
 
-If you do not approve CSRs in time and the certificates expire, you can recover from expired control plane certificates and get the OpenShift cluster operational again. For more information, see [Recovering from expired control plane certificates](https://docs.openshift.com/container-platform/4.1/backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){:external}.
+If you do not approve CSRs in time and the certificates expire, you can recover from expired control plane certificates and get the OpenShift cluster operational again. For more information, see [Recovering from expired control 
+plane certificates](https://docs.openshift.com/container-platform/4.2/backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){:external}.
 
 ## Changing the SSH key on the OpenShift bastion
 {: #ocp_managing-change-ssh-key}
 
-The SSH key pair that is generated during installation is on the OpenShift bastion VM. This SSH key was installed on all cluster virtual machines (VMs) to allow SSH logins from the bastion without requiring a password.
+The SSH key pair that is generated during installation is on the OpenShift bastion VM. The location of the SSH key pair is shown in the OpenShift Service Details page. This SSH key was installed on all cluster virtual machines (VMs) to allow SSH logins from the bastion without requiring a password.
 
-It is recommended that a new SSH key pair is generated and used to replace the existing key. While logged in as the `root` user, use the following commands to generate a new SSH key pair.
-
-The commands that are used in the following example assume that the SSH file name is `/root/.ssh/id_rsa`. If your SSH file is in a different location, update the commands as needed. The exact location is displayed on the Red Hat OpenShift for VMware service details page. 
-{:note}
-
-1. Run the following command: `ssh-keygen -t ed25519 -N '' -f /root/.ssh/id_ed25519`
-
-2. Replace the existing key on all cluster VMs with the new key. After this operation is complete, the old SSH key can no longer be used to log in to the cluster VMs.
-
-  ```
-  scp /root/.ssh/id_ed25519.pub core@master0:.ssh/authorized_keys
-  scp /root/.ssh/id_ed25519.pub core@master1:.ssh/authorized_keys
-  scp /root/.ssh/id_ed25519.pub core@master2:.ssh/authorized_keys
-  scp /root/.ssh/id_ed25519.pub core@worker0:.ssh/authorized_keys
-  scp /root/.ssh/id_ed25519.pub core@worker1:.ssh/authorized_keys
-  scp /root/.ssh/id_ed25519.pub core@worker2:.ssh/authorized_keys
-  ```
-
-3. Rename the old SSH key by appending `.old` to the file name:
-
-  ```
-  mv /root/.ssh/id_rsa /root/.ssh/id_rsa.old
-  mv /root/.ssh/id_rsa.pub /root/.ssh/id_rsa.pub.old
-  ```
-
-Alternately, you can delete the old key files from the bastion.
+It is recommended that a new SSH key pair is generated and used to replace the existing key. To generate a new 
+SSH key pair, use the instructions in the Red Hat article about [updating a SSH key](https://access.redhat.com/solutions/4510281){:external}. You must run the commands from the bastion VM. For information 
+about logging in to the bastion, see [Bastion details](https://cloud.ibm.com/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview#ocp_overview-bastion).
 
 ## Expanding an OpenShift cluster with more workers
 {: #ocp_managing-expand-cluster}

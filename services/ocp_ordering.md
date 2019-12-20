@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-13"
+lastupdated: "2019-12-19"
 
 keywords: Red Hat OpenShift for VMware, OpenShift configuration, order OpenShift
 
@@ -34,9 +34,6 @@ You can order the Red Hat OpenShift for VMware service when you order a new VMwa
 {: #ocp_ordering-config}
 
 When you order the service, you must provide a Red Hat Pull Secret. This Pull Secret is used to associate the new OpenShift cluster with your existing Red Hat account. You can obtain a copy of your Pull Secret by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external} and clicking **Copy Pull Secret**.
-
-Because OpenShift clusters are associated with a Red Hat account during installation, the Pull Secret cannot be changed after OpenShift is installed.
-{: important}
 
 ## Setting up DNS to access your OpenShift console
 {: #ocp_ordering-dns-setup}

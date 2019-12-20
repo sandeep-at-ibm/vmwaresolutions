@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-18"
 
 subcollection: vmware-solutions
 
@@ -79,7 +79,7 @@ Day 2 scale-up and scale-down operations for adding and removing hosts to the ma
 
 The following configuration with separate management and edge clusters is an IBM GTS Large style Mission Critical Workloads configuration. The edge clusters must be deployed separately as day 2 operations in the user experience described below.
 
-![A typical large Mission Critical Workloads deployment](../../images/mcv-lg-config.png "A typical large Mission Critical Workloads deployment"){: caption="Figure 1. A typical large Mission Critical Workloads deployment" caption-side="bottom"}
+![A typical large Mission Critical Workloads deployment](../../images/mcv-lg-config.svg "A typical large Mission Critical Workloads deployment"){: caption="Figure 1. A typical large Mission Critical Workloads deployment" caption-side="bottom"}
 
 ### Differences between management and resource usage of the two sites
 {: #mcv-archi-design-distibution-mgmt-diff}

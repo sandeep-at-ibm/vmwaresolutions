@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-11"
+lastupdated: "2019-12-18"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -49,8 +49,8 @@ The virtual data center name must be under 125 characters.
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 2. In the **Start Provisioning** section, click the **VMware Solutions Shared** card.
-3. On the **VMware Solutions Shared** page, click the **On-Demand** card and click **Continue**.
-4. On the **IBM Cloud for VMware Solutions Shared - On-Demand** page, enter the virtual data center name. The {{site.data.keyword.CloudDataCent_notm}} where the offering is available is preselected.
+3. On the **VMware Solutions Shared** page, click the **On-demand** card and click **Continue**.
+4. On the **IBM Cloud for VMware Solutions Shared - On-demand** page, enter the virtual data center name. The {{site.data.keyword.CloudDataCent_notm}} where the offering is available is preselected.
 5. Select the vCPU and RAM limits according to your requirements. The Veeam service is enabled by default.
 6. On the **Order Summary** pane, verify the configuration and estimated cost before you place the order.
 7. Click **Provision**.

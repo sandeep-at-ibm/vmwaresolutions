@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-18"
 
 subcollection: vmware-solutions
 
@@ -69,7 +69,7 @@ A new Distributed Virtual Switch (DVS) is created for the VCHA with a new port g
 
 The following figure shows vmk1 added for VCHA network traffic with IP from the new subnet range.
 
-![Network design](../../images/mcv-network-design.png "Network design"){: caption="Figure 1. Network design" caption-side="bottom"}
+![Network design](../../images/mcv-network-design.svg "Network design"){: caption="Figure 1. Network design" caption-side="bottom"}
 
 vCenter access is through a fully qualified domain name (FQDN) which has an A record to the IP address of the vCenter in Site A. During a Site A failure, that DNS A record is modified. This will is done using automation running in the witness site.
 
