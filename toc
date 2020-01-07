@@ -280,7 +280,7 @@ IBM Cloud for VMware Solutions
     {: .navgroup id="reference"}
     vmonic/at-events.md
     [IBM Cloud for VMware Solutions API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
-    [VMware Solutions Shared API reference](https://cloud.ibm.com/apidocs/vmware-solutions-shared)
+    [IBM Cloud for VMware Solutions Shared API reference](https://cloud.ibm.com/apidocs/vmware-solutions-shared)
 
     {: .topicgroup}
     Auditing
