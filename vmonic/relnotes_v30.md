@@ -28,13 +28,13 @@ This release includes new features, component updates, usability enhancements, a
 ## End of Support for VMware Cloud Foundation on IBM Cloud
 {: #relnotes_v30-vcf-eos}
 
-In an effort to consolidate our offerings for a better customer experience, the {{site.data.keyword.vmwaresolutions_short}} platform will no longer offer  VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} effective May 13, 2019.
+In an effort to consolidate our offerings for a better customer experience, the {{site.data.keyword.vmwaresolutions_short}} platform will no longer offer VMware Cloud Foundation effective May 13, 2020.
 
 Moving forward, all customers will be directed to VMware vCenter Server on {{site.data.keyword.cloud_notm}}, our flagship VMware Software-Defined Data Center solution on {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
 
-Existing customers who use VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} will be assisted to convert to VMware vCenter Server on {{site.data.keyword.cloud_notm}} by the end-of-support date of May 13, 2019.
+Existing customers who use VMware Cloud Foundation will be assisted to convert to VMware vCenter Server by the end-of-support date of May 13, 2020.
 
-After May 13, management abilities for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} will be frozen from the {{site.data.keyword.vmwaresolutions_short}} console until they have been converted to VMware vCenter Server on {{site.data.keyword.cloud_notm}}. Customers who chose not to have their VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} instance migrated or converted to VMware vCenter Server on {{site.data.keyword.cloud_notm}} can access their instances from the {{site.data.keyword.cloud_notm}} infrastructure console.
+After May 13, management abilities for VMware Cloud Foundation will no longer be available from the {{site.data.keyword.vmwaresolutions_short}} console until they have been converted to VMware vCenter Server. Customers who choose not to have their VMware Cloud Foundation instances migrated or converted to VMware vCenter Server can access their instances from the {{site.data.keyword.cloud_notm}} infrastructure console.
 
 ## Removed support for Broadwell 2-CPU servers
 {: #relnotes_v30-broadwell}
