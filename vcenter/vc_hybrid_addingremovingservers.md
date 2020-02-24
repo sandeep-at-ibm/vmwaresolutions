@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-21"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservers}
 
-You can expand or contract the capacity of your vCenter Server with Hybridity Bundle instance according to your business needs, by adding or removing ESXi servers.
+You can expand or contract the capacity of your VMware vCenter Server with Hybridity Bundle instance according to your business needs, by adding or removing ESXi servers.
 
 Starting with the V3.1 release, you can add new ESXi servers to an existing cluster by either selecting an existing configuration or an alternative configuration than the existing hosts in the cluster. Existing configurations are available for instant selection when you order your new server. To avoid performance or stability issues, it is recommended that clusters use the same or similar configuration with regards to CPU, RAM, and storage. This functionality is useful for hardware updates within the same cluster. A cluster can have only one type of storage.
 
@@ -40,7 +40,7 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
 ### Before you add ESXi servers
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * vSAN storage requires at least 4 ESXi servers.
 
 ## Procedure to add ESXi servers

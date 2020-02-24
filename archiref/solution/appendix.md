@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-01-17"
 
 subcollection: vmware-solutions
 
@@ -32,28 +32,32 @@ NSX Base for Service Providers edition is only available for service providers t
 
 | NSX Feature                                   | Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|
-| Distributed switching and routing             | •    | •        | •          |
-| NSX Edge firewall                             | •    | •        | •          |
-| NAT                                           | •    | •        | •          |
-| NSX Edge load balancing                       | •    | •        | •          |
-| VPN (IPsec)                                   | •    | •        | •          |
-| VPN (SSL)                                     | •    | •        | •          |
-| API-driven automation                         | •    | •        | •          |
-| Integration with vRealize and OpenStack\*     | •    | •        | •          |
-| Automation of security policies with vRealize |      | •        | •          |
-| SW L2 bridging to physical environment        |      | •        | •          |
-| Dynamic routing with ECMP (active-active)     |      | •        | •          |
-| Distributed firewalling                       |      | •        | •          |
-| Integration with Active Directory             |      | •        | •          |
-| Server activity monitoring                    |      | •        | •          |
-| Service insertion (3rd party integration)     |      | •        | •          |
-| Distributed load balancing                    |      |          | •          |
-| Cross vCenter NSX                             |      |          | •          |
-| Multi-site NSX optimizations                  |      |          | •          |
-| Remote Gateway                                |      |          | •          |
-| Integration with HW VTEPs                     |      |          | •          |
+| Distributed switching and routing             | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| NSX Edge firewall                             | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| NAT                                           | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| NSX Edge load balancing                       | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| VPN (IPsec)                                   | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| VPN (SSL)                                     | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| API-driven automation                         | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Integration with vRealize and OpenStack[^OpenStack]  | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Automation of security policies with vRealize |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| SW L2 bridging to physical environment        |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Dynamic routing with ECMP (active-active)     |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Distributed firewalling                       |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Integration with Active Directory             |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Server activity monitoring                    |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Service insertion (3rd party integration)     |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Distributed load balancing                    |      |          | ![Available](../../../icons/checkmark-icon.svg) |
+| Cross vCenter NSX                             |      |          | ![Available](../../../icons/checkmark-icon.svg) |
+| Multi-site NSX optimizations                  |      |          | ![Available](../../../icons/checkmark-icon.svg) |
+| Remote Gateway                                |      |          | ![Available](../../../icons/checkmark-icon.svg) |
+| Integration with HW VTEPs                     |      |          | ![Available](../../../icons/checkmark-icon.svg) |
+{: row-headers}
+{: class="comparison-table"}
 {: caption="Table 2. VMware NSX edition comparison chart" caption-side="bottom"}
-\*L2, L3 & NSX Edge integration only. No consumption of Security Groups
+{: summary="This table has row and column headers. The row headers identify the NSX features. The column headers indentify the NSX editions. To check an NSX feature is supported in which NSX edition, navigate to the row, and then find the checkmark icon in the edition column."}
+
+[^OpenStack]: L2, L3 & NSX Edge integration only. No consumption of Security Groups.
 
 ## VMware vSAN edition comparison
 {: #solution-appendix-vsan-editions}
@@ -62,21 +66,24 @@ The following table lists the available features for the **Advanced** and **Ente
 
 | vSAN Feature                                    | Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|
-| Storage policy-based management                 | •        | •          |
-| Flash read/write caching                        | •        | •          |
-| Distributed RAID                                | •        | •          |
-| Virtual Distributed Switch                      | •        | •          |
-| Rack awareness                                  | •        | •          |
-| vSphere replication                             | •        | •          |
-| Software checksum                               | •        | •          |
-| All-Flash hardware                              | •        | •          |
-| iSCSI target service                            | •        | •          |
-| IOPS limit                                      | •        | •          |
-| Deduplication and compression                   | •        | •          |
-| RAID-5/6 erasure coding                         | •        | •          |
-| Data at rest encryption                         |          | •          |
-| Stretched cluster with local failure protection |          | •          |
+| Storage policy-based management                 | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Flash read/write caching                        | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Distributed RAID                                | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Virtual Distributed Switch                      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Rack awareness                                  | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| vSphere replication                             | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Software checksum                               | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| All-Flash hardware                              | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| iSCSI target service                            | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| IOPS limit                                      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Deduplication and compression                   | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| RAID-5/6 erasure coding                         | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Data at rest encryption                         |          | ![Available](../../../icons/checkmark-icon.svg) |
+| Stretched cluster with local failure protection |          | ![Available](../../../icons/checkmark-icon.svg) |
 {: caption="Table 3. VMware vSAN edition comparison chart" caption-side="bottom"}
+{: row-headers}
+{: class="comparison-table"}
+{: summary="This table has row and column headers. The row headers identify the vSAN features. The column headers indentify the vSAN editions. To check a feature is available in which vSAN edition, navigate to the row, and then find the checkmark icon in the edition column."}
 
 ## Related links
 {: #solution-appendix-related}

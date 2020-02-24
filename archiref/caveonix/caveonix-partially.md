@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-29"
+lastupdated: "2020-01-14"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ This deployment model is expected to service up to 500 Assets with up to 30 days
 
 Select the next available IP addresses from the {{site.data.keyword.cloud}} private portable subnet. Configure FQDN names in ADDNS.
 
-The sizing of the VMs are as follows:
+Find the details of the base VM, scale-out VM, and Remote Collector VM in the following tables.
 
 |Parameter	|Value|
 |---|---|
@@ -31,9 +31,13 @@ The sizing of the VMs are as follows:
 |Disk	|1000 GB|
 |OS	|CentOS 7|
 |Installed Application Components	|UI, App, Plugins, Central Collector, Index Datastore, Messaging Datastore, Relational Datastore, Remote Collector|
-{: caption="Table 1. Base parameters" caption-side="bottom"}
-
-The scale-out VM details are as follows:
+{: caption="Table 1. Base VM parameters" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the parameter of the initial VM. The column headers indentify the value of the parameter. To find the value of a parameter, navigate to the row, and then find the value in the parameter column."}
+{: #table1}
+{: tab-title="Base VM"}
+{: tab-group="Partially distributed - VM details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Parameter	| Value |
 |---|---|
@@ -44,9 +48,13 @@ The scale-out VM details are as follows:
 | Disk	| 4 TB |
 | OS	| CentOS 7 |
 | Installed Application Components	| Data Nodes (scale-out) |
-{: caption="Table 2. Scale-out parameters" caption-side="bottom"}
-
-The Remote Collector VM details are shown in the following table.
+{: caption="Table 2. Scale-out VM parameters" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the parameter of the scale-out VM. The column headers indentify the value of the parameter. To find the value of a parameter, navigate to the row, and then find the value in the parameter column."}
+{: #table2}
+{: tab-title="Scale-out VM"}
+{: tab-group="Partially distributed - VM details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 |Parameter	|Value|
 |---|---|
@@ -56,6 +64,12 @@ The Remote Collector VM details are shown in the following table.
 |Disk	|1 TB|
 |OS	|CentOS 7|
 |Installed Application Components	|Remote Collector|
-{: caption="Table 3. Remote collector parameters" caption-side="bottom"}
+{: caption="Table 3. Remote Collector VM parameters" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the parameter of the Remote Collector VM. The column headers indentify the value of the parameter. To find the value of a parameter, navigate to the row, and then find the value in the parameter column."}
+{: #table3}
+{: tab-title="Remote Collector VM"}
+{: tab-group="Partially distributed - VM details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 **Next topic:** [Fully distributed](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-fully)

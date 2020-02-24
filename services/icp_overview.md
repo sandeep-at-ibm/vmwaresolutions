@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-01-10"
 
 keywords: IBM Cloud Private
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# IBM Cloud Private Hosted - Deprecated
+# (Deprecated) IBM Cloud Private Hosted
 {: #icp_overview}
 
 The {{site.data.keyword.cloud}} Private Hosted service is deprecated. Use the [Red Hat OpenShift for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview) service instead.
@@ -28,41 +28,6 @@ The {{site.data.keyword.cloud}} Private Hosted service is deprecated. Use the [R
 
 The {{site.data.keyword.cloud_notm}} Private Hosted service automatically deploys {{site.data.keyword.cloud_notm}} Private Hosted and {{site.data.keyword.cloud_notm}} Automation Manager on your VMware vCenter Server instances. This service brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
-
-## Resource requirements for IBM Cloud Private Hosted
-{: #icp_overview-resource-req}
-
-The following table lists the resource requirements of the {{site.data.keyword.cloud_notm}} Private Hosted service in Production-Ready environment.
-
-| Node type  | CPU cores   |  Memory (GB) | Disk 1 (GB) | Disk 2 (GB) | Number of VMs |
-|:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
-| Boot       | 12 | 24 | 100 | 1 | 1 |   
-| Management | 8 | 64 | 500 | 3 | 3 |
-| Master     | 8 | 64 | 200 | 3 | 3 |  
-| Proxy      | 2 | 4  | 150 | 3 | 3 |
-| Worker     | 4 | 16 | 200 | 300 | 6 |
-| Vulnerability advisor | 8 | 16 | 500 | 1 | 1 |
-| GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| NFS server | 8 | 4  | 350 | 1 | 1 |
-| NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
-| Documented constraints | 52 | 640 |  | 8,000 |   |
-{: caption="Table 1. Production-Ready environment" caption-side="top"}
-
-The following table lists the resource requirements of the {{site.data.keyword.cloud_notm}} Private Hosted service in the Development and Test environments.
-
-| Node type  | CPU cores   |  Memory (GB) | Disk 1 (GB) | Disk 2 (GB) | Number of VMs |
-|:---------- |:----------- |:------------ |:----------- |:----------- |:------------- |
-| Boot       | 12 | 24 | 100 | 1 | 1 |   
-| Management | 8 | 16 | 150 | 1 | 1 |
-| Master     | 8 | 16 | 200 | 1 | 1 |  
-| Proxy      | 2 | 4  | 150 | 1 | 1 |
-| Worker     | 4 | 16 | 200 | 300 | 3 |
-| Vulnerability advisor | 8 | 16 | 150 | 1 | 1 |
-| GlusterFS  | 8 | 16 | 150 | 50 | 3 |
-| NFS server | 8 | 4  | 350 | 1 | 1 |
-| NSX Edge Services Gateway | 2 | 1 | 0.5 | 0.5 | 2 |
-| Documented constraints | 30 | 200 |  | 4,000 |  |
-{: caption="Table 2. {{site.data.keyword.cloud_notm}} Development and Test environments" caption-side="top"}
 
 ## Deploying additional nodes
 {: #icp_overview-deploy-nodes}

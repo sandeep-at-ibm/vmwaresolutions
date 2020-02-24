@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-21"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -20,18 +20,16 @@ subcollection: vmware-solutions
 # vCenter Server with Hybridity Bundle overview
 {: #vc_hybrid_overview}
 
-The vCenter Server with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the HCX service.
+The VMware vCenter Server with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the HCX service.
 {:note}
 
-The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the HCX service.
+The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud}} {{site.data.keyword.baremetal_short}}, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the HCX service.
 
-In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
-
-To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
+The bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers to your instance.
 
 You can upgrade the VMware NSX Advanced edition to the Enterprise edition, and you can purchase more VMware components, such as VMware vRealize Operations.
 
-You can add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
+You can add IBM-managed services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## vCenter Server with Hybridity Bundle architecture
 {: #vc_hybrid_overview-archi}
@@ -82,15 +80,12 @@ The availability and pricing of standardized hardware configurations might vary 
 ### Bare Metal Server
 {: #vc_hybrid_overview-bare-metal}
 
-You can order four or more {{site.data.keyword.baremetal_short}} with one of the following configurations:
-  * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
-  * **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 5200/6200 series) with your selected CPU model and RAM size.
-  * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
+Your instance contains four or more {{site.data.keyword.baremetal_short}} with the server configuration selected at initial deployment.
 
 ### Networking
 {: #vc_hybrid_overview-networking}
 
-The following networking components are ordered:
+Your instance contains the following networking components:
 *  10 Gbps dual public and private network uplinks.
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs.
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching additional VXLANs to new logical interfaces on the DLR.
@@ -106,7 +101,7 @@ For more information on networking components ordered when deploying the HCX ser
 ### Virtual Server Instances
 {: #vc_hybrid_overview-vsi}
 
-The following virtual server instances (VSIs) are ordered:
+Your instance contains the following virtual server instances (VSIs):
 * A VSI for IBM CloudBuilder, which is cancelled after the instance deployment is completed.
 * You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
 
@@ -117,20 +112,20 @@ vSAN storage offers customized configurations, with various options for disk typ
 * Disk quantity: 2, 4, 6, or 8.
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
 
-  In addition, two cache disks of 960 GB are ordered per host.
-* High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 12 capacity disks. This option depends on the CPU model.
+  In addition, two cache disks of 960 GB are included per host.
+* High Performance Intel Optane option, which provides two extra capacity disk bays for a total of 12 capacity disks. This option depends on the CPU model.
 
 ### IBM-provided licenses and fees
 {: #vc_hybrid_overview-license-and-fee}
 
-The following licenses are included with your vCenter Server with Hybridity Bundle instance order.
+The following licenses are included in your instance.
 
 * VMware vSphere Enterprise Plus 6.5u3 or 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
 
-Additional support and services fees can apply.
+Additional support and services fees might apply.
 
 ## Technical specifications for vCenter Server with Hybridity Bundle expansion nodes
 {: #vc_hybrid_overview-expansion-node-specs}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-01-15"
 
 subcollection: vmware-solutions
 
@@ -41,8 +41,6 @@ Since the NSX Edges are configured as active/passive in either the internal or d
 
 In addition to the NSX Edge appliances deployed within the {{site.data.keyword.cloud_notm}}, the HCX Manager virtual appliance is deployed if the VMware HCX service is ordered. After the deployment of this appliance, the NSX Edge is enabled to use load balancing and is configured with application profiles that use a certificate for inbound connection from the source. The NSX Edge is also configured with load-balancing pools to point to the HCX Manager, vCenter, and PSC appliances. Additionally, a virtual server is created with a virtual IP address (VIP) on the public interface with rules that connect the pools with VIP. A sample of the virtual server configuration and pool configuration on the NSX Edge is shown in the following tables.
 
-The following table shows virtual servers information.
-
 | Field     | Value         |
 |-----------|---------------|
 | Virtual Server ID | virtualServer-1 |
@@ -53,8 +51,10 @@ The following table shows virtual servers information.
 | Protocol | https |
 | Port | 443 |
 {: caption="Table 3. VIP configuration for NSX Edge - virtual servers" caption-side="bottom"}
-
-The following table shows virtual server details.
+{: class="simple-tab-table"}
+{: #simpletabtable1}
+{: tab-title="Virtual servers summary"}
+{: tab-group="A sample of virtual server config and pool config on NSX Edge"}
 
 | Field     | Value         |
 |-----------|---------------|
@@ -66,8 +66,10 @@ The following table shows virtual server details.
 | Acceleration Status | Disabled |
 | Service Profile Status |  |
 {: caption="Table 4. VIP configuration for NSX Edge - virtual server details" caption-side="bottom"}
-
-The following table shows rule information.
+{: #simpletabtable2}
+{: tab-title="Virtual servers details"}
+{: tab-group="A sample of virtual server config and pool config on NSX Edge"}
+{: class="simple-tab-table"}
 
 | Field     | Value         |
 |-----------|---------------|
@@ -75,8 +77,10 @@ The following table shows rule information.
 | Name | appRule1 |
 | Script | acl isHibridity url_beg /hibridity</br>    acl isWebSso url_beg /websso</br>    acl isVCenter url_beg /vsphere-client</br>    use_backend nspPool001 if isHybridity</br>    use_backend vcPool001 if isVCenter</br>    use_backend ssoPool001 if isWebSso |
 {: caption="Table 5. VIP configuration for NSX Edge - rule" caption-side="bottom"}
-
-The following table shows pool summary information.
+{: #simpletabtable3}
+{: tab-title="Rule information"}
+{: tab-group="A sample of virtual server config and pool config on NSX Edge"}
+{: class="simple-tab-table"}
 
 | Pool ID | Name       | Algorithm   | Monitor ID |
 |---------|------------|-------------|------------|
@@ -84,8 +88,10 @@ The following table shows pool summary information.
 | pool-3  | ssoPool001 | ROUND-ROBIN |            |
 | pool-2  | vcPool001  | ROUND-ROBIN |            |
 {: caption="Table 6. Pool configuration for NSX Edge - pool summary" caption-side="bottom"}
-
-The following table shows pool details information.
+{: #simpletabtable4}
+{: tab-title="Pool summary"}
+{: tab-group="A sample of virtual server config and pool config on NSX Edge"}
+{: class="simple-tab-table"}
 
 | Field           | Value     |
 |-----------------|-----------|
@@ -97,6 +103,10 @@ The following table shows pool details information.
 | Max Connections | 0         |
 | Min Connections | 0         |
 {: caption="Table 7. Pool configuration for NSX Edge - pool details" caption-side="bottom"}
+{: #simpletabtable5}
+{: tab-title="Pool details"}
+{: tab-group="A sample of virtual server config and pool config on NSX Edge"}
+{: class="simple-tab-table"}
 
 ## HCX Manager
 {: #hcx-archi-target-hcxm}

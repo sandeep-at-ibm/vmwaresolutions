@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-28"
+lastupdated: "2020-01-14"
 
 ---
 
@@ -32,6 +32,12 @@ This architecture supports 3000 VMs by using a Medium brick size.
 | Memory | 32 GB |
 | Disk (thin provisioned) | 1 TB |
 {: caption="Table 1. Network Insight Platform system requirements" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the attribute of the Network Insight Platform. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: #table1}
+{: tab-title="Platform system requirements"}
+{: tab-group="System requirements"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Attribute | Specification |
 |---|---|
@@ -39,6 +45,12 @@ This architecture supports 3000 VMs by using a Medium brick size.
 | Memory | 12 GB |
 | Disk (thin provisioned) | 200 GB |
 {: caption="Table 2. Network Insight Collector system requirements" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the attribute of the Network Insight Collector. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: #table2}
+{: tab-title="Collector system requirements"}
+{: tab-group="System requirements"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 ## Networking
 {: #opsmgmt-vrni-network}

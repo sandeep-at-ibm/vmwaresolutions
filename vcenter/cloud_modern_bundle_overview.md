@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-05"
+lastupdated: "2020-02-21"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -30,7 +30,10 @@ The trial is designed for migration of up to 20 simple development or test workl
 The Single-node Trial for Migration and App Modernization is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering add-on services, and applying updates are not supported.
 {:important}
 
-To get the most out of the Single-node Trial instance, you can use [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} from [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}, who can help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}.
+To get the most out of the Single-node Trial instance, you can use on demand consulting and expert services to help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. For more information, see:
+
+* [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external}
+* [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}
 
 Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
 
@@ -48,7 +51,7 @@ The availability and pricing of standardized hardware configurations might vary 
 ### Bare Metal Server
 {: #cloud_modern_bundle_overview-bare-metal}
 
-Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz with 384 GB RAM) for up to about 20 VMs.
+Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz with 384 GB RAM) for up to about 20 virtual machines (VMs).
 
 #### CPU over-commits
 {: #cloud_modern_bundle_overview-cpu}

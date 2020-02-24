@@ -93,11 +93,6 @@ The following technical documents are now available in the *Reference* section o
 
 * [NSX Edge Services Gateway solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx_overview)
 * [VMware Update Manager guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-intro)
-* [vCenter Server networking guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro)
-* [vCenter Server and {{site.data.keyword.cloud_notm}} Private guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-intro)
-* [vCenter Server and IBM Kubernetes Service guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-intro)
-* [VMware and Skate Advisor Concept Car guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscar-intro)
-* [VMware - The modernization journey of Stock Trader](/docs/services/vmwaresolutions?topic=vmware-solutions-vcscontent-modjourney)
 
 ## User interface updates and enhancements
 {: #relnotes_v27-ui}

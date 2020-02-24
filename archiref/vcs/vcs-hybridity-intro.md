@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-01-07"
 
 subcollection: vmware-solutions
 
@@ -29,7 +29,7 @@ Back up and disaster recovery offerings from IBM, Veeam, and Zerto deliver peace
 
 vCenter Server Hybridity Bundle isn't a managed service, though you can add IBM-Managed Services to offload the day-to-day operations and maintenance of the virtualization, guest OS or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
-Platform integration options of the vCenter Server Hybridity Bundle aren't limited to options available from VMware such as vRealize Suite or vSphere with Operations Management, but span multiple {{site.data.keyword.cloud_notm}} service offerings such as the [{{site.data.keyword.containerlong_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsiks-intro) and [{{site.data.keyword.cloud_notm}} Private](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsicp-intro), which use open source Terraform to manage and deliver infrastructure as code.
+Platform integration options of the vCenter Server Hybridity Bundle aren't limited to options available from VMware such as vRealize Suite or vSphere with Operations Management, but span multiple {{site.data.keyword.cloud_notm}} service offerings such as the {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.cloud_notm}} Private, which use open source Terraform to manage and deliver infrastructure as code.
 
 The extensive portfolio of services and multi-offering integration options available for the vCenter Server Hybridity Bundle deliver a truly hybrid platform making Hybridity as a service possible.
 

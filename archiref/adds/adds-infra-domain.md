@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-04"
 
 subcollection: vmware-solutions
 
@@ -45,7 +45,9 @@ During the ordering process, you can deploy:
 * A single Microsoft Windows Server VSI for AD DS
 * Two highly available Microsoft Windows VMs in the cluster
 
-For more information, see [Forest and Domain Functional Levels](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels){:external}, for further details on the forest and domain functional levels. Currently, Microsoft Windows Server 2016 Standard is deployed.
+Currently, Microsoft Windows Server 2016 Standard is deployed for the operating system. The domain functional level 2008 is set to allow for backward compatibility with any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
+
+For more information, see [Forest and Domain Functional Levels](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels){:external}.
 
 ### Single VSI domain controller
 {: #adds-infra-domain-controllers-vsi}

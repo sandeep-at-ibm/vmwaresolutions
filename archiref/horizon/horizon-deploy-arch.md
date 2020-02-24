@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years: 2016, 2020
 
-lastupdated: "2019-10-24"
+lastupdated: "2020-01-14"
 
 subcollection: vmware-solutions
 
@@ -33,7 +33,7 @@ A building block consists of:
 * Shared storage
 * Virtual desktops or RDS hosts for users
 
-![Horizon 7 pod](../../images/horizon-cloud-pod.svg){: caption="Figure 1. Horizon 7 pod" caption-side="bottom"}
+<img src="../../images/horizon-cloud-pod.svg" alt="Building block architecture" style="width: 400px;"/>
 
 When you deploy Horizon 7, a two-cluster approach is recommended. This approach provides a small management cluster for running the server workloads that are used to support the Horizon environment and a larger workload cluster for the VDI or Published Apps workload. The management cluster consists of a three-node cluster that uses NFS storage, and the workload cluster will consider of at least four-nodes utilizing VMware VSAN.
 

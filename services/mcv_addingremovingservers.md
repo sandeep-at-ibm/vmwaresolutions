@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-02-05"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -54,8 +54,8 @@ ESXi servers for stretched vSAN clusters are added in pairs.
 2. You are notified by email that your request to add ESXi servers is being processed. On the console, the status of the cluster that is associated with the ESXi servers is changed to **Modifying**.
 3. If you do not see the new ESXi servers added to the list in the cluster, check the email or console notifications to find more details about the failure.
 
-If you are adding ESXi servers during maintenance mode, VMs are not migrated to the new servers until you remove maintenance mode.   
-{:important}
+   If you are adding ESXi servers during maintenance mode, VMs are not migrated to the new servers until you remove maintenance mode.
+   {:important}
 
 ## Removing ESXi servers from multi-zone stretched clusters
 {: #mcv_addingremovingservers-removing}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-01-13"
 
 ---
 
@@ -143,7 +143,7 @@ As noted previously the default configuration merely represents a point from whi
 ## vSRX to client on-premises connections
 {: #vcsvsrx-planning-client-config}
 
-The preferred method of linking the IBM Cloud vCenter Server instance to a client's existing on premise data center is BGP.  
+The preferred method of linking the IBM Cloud vCenter Server instance to a client's existing on-premises data center is BGP.  
 
 If the client intends to connect over the internet using eBGP they either must obtain a public autonomous system number (ASN) or use BGP over an IPsec VPN to permit the use of private ASNs.
 

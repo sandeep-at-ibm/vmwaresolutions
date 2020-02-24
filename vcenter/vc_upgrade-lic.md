@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-01-31"
 
 keywords: NSX license upgrade, upgrade license hybridity, hybridity license
 
@@ -17,7 +17,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Upgrading licenses for vCenter Server instances
+# Upgrading licenses for vCenter Server with NSX-V instances
 {: #vc_upgrade-lic}
 
 You can upgrade your NSX license for V2.1 or later instances.

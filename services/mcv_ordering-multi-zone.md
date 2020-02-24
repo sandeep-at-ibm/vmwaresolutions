@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-05"
+lastupdated: "2020-02-17"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -43,14 +43,14 @@ Don't modify any values that are set during instance order or deployment. Doing 
 
 You must specify the following system settings when you order a vCenter Server instance.
 
-### Saved configuration
+### Instance configurations
 {: #mcv_ordering-sys-config}
 
-Select a predefined configuration to populate the form or create a new configuration that you can also save to use later.
+You can select **New Configuration** to specify settings for an instance and place the order or save the settings as a configuration template without placing an order.
 
-For a predefined configuration, click **Topology diagram** to see an example of the configuration.
+You can also select a sample configuration template to further edit it, or to update it and then save it as a new configuration template.
 
-You have the option to edit a saved configuration and then save the changes made to the configuration or enter a new name to save the updates as a new configuration.
+For a sample configuration, click **Topology diagram** to see an example of the configuration.
 
 ### Instance name
 {: #mcv_ordering-sys-inst-name}
@@ -126,7 +126,7 @@ For the host settings, you have options for the CPU Model, RAM, and number of ho
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Host CPU and RAM options" caption-side="top"}
@@ -223,23 +223,30 @@ The root domain name must meet the following requirements:
 The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
 {:note}
 
-## Procedure to order a Multi-Zone Stretched Cluster
+## Summary
+{: #mcv_ordering-summary}
+
+Based on your selected configuration for the instance, the estimated cost is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+
+## Procedure to order Multi-Zone Stretched Clusters
 {: #mcv_ordering-proc-multi}
 
-You can order a Multi-Zone Stretched Cluster by using one of the following methods:
+You can order Multi-Zone Stretched Clusters by using one of the following methods:
 
-* From the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from left navigation pane, and then click the **VMware vCenter Server** card in the **Start Provisioning** section. Click the **vCenter Server** card, click **Continue**, and then click **Multi Zone Stretched Clusters** on the **vCenter Server** page.
+* From the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from left navigation pane, and then click the **VMware Solutions - Dedicated** card in the **Start Provisioning** section. On the **VMware Solutions - Dedicated** page, ensure that the **vCenter Server** card is selected and click the **Multi Zone Stretched Clusters** tab.
 
 * From the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane, scroll to the **Services** section, and then click **IBM Cloud for VMware Mission Critical Workloads** on the **Business Continuity and Migration** card. Click **Order Stretched Cluster**.
 
 Proceed with the following steps to order a Multi-Zone Stretched Cluster:
 
-1. Select to create a new configuration or select a saved configuration.
-   * If you make edits to a saved configuration and want to save them to the saved configuration, click **Save**.
-   * If you want to create a new configuration with the changes you made to the saved configuration, enter a different name and click **Save**.
+1. For the instance configuration, select to create a new configuration or select a saved configuration.
+   * If you want to create a new configuration, select **New Configuration**.
+   * If you want to update a saved configuration or create a new configuration based on a saved one, select a saved configuration.
 2. Enter the instance name.
 3. Complete the location settings.
-    1. Select the **Multi Zone Location**.
+    1. Select the **Multi Zone Region**.
     2. Click the arrow on the **Witness Location** tile and select the availability zone for the witness site. The remaining availability zones are used for the **Management and Resource Location**.
 4. Complete the license settings for the instance components.
    *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
@@ -254,12 +261,11 @@ Proceed with the following steps to order a Multi-Zone Stretched Cluster:
 6. Complete the network interface settings.
    1. Specify the DNS configuration.
    2. Enter the host name prefix, the subdomain label, and the domain name. The price calculation begins after all fields are complete.
-7. On the **Order Summary** pane, verify the instance configuration before you place the order.
-   1. Review the settings for the instance.
-   2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   3. Click **Save Configuration**.
-   4. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
-   5. Click **Provision**.
+7. On the **Summary** pane, review the instance settings and the estimated cost.
+   * To save the settings as a new configuration template without placing an order, click **Save Configuration**, enter a name for the configuration, and then click **Continue**.
+   * To save the updates to a saved configuration, click **Save Configuration**, select **Modify current configuration**, and then click **Continue**.
+   * To save the updates to a saved configuration as another configuration, click **Save Configuration**, select **Create new configuration**, enter a new name for the configuration, and then click **Continue**.
+   * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 
 ## Related links
 {: #mcv_ordering-related}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-28"
+lastupdated: "2019-02-20"
 
 ---
 
@@ -291,8 +291,7 @@ If you have a vSAN cluster, the additional preconfigured alarms in the following
 | vSAN health alarm `Unexpected number of fault domains` | Consider alarm only if vSAN has been stretched.| [vSAN Health Service - Unexpected number of fault domains (2130581)](https://kb.vmware.com/s/article/2130581){:external} |
 | vSAN health alarm `Unicast agent configuration inconsistent` | Consider alarm only if vSAN has been stretched. | [vSAN Health Service - Unicast agent configuration inconsistent (2130580)](https://kb.vmware.com/s/article/2130580){:external} |
 | vSAN health alarm `Unicast agent not configured` | Consider alarm only if vSAN has been stretched. | [vSAN Health Service - Unicast agent not configured (2130582)](https://kb.vmware.com/s/article/2130582){:external} |
-| vSAN health alarm `Unsupported host version` | Consider alarm only if vSAN has been stretched. | [VMware KB article](https://kb.vmware.com/s/article/2130583){:external} |
-| vSAN health alarm `vCenter or hosts are not connected to Key Management Servers` | Consider alarm only if vSAN encryption is enabled. | [vSAN Health Service - Unsupported host version (2130583)](https://kb.vmware.com/s/article/2149497){:external} |
+| vSAN health alarm `vCenter or hosts are not connected to Key Management Servers` | Consider alarm only if vSAN encryption is enabled. | [vSAN Health Service - Encryption - Key Management Servers Connection Check (2149497)](https://kb.vmware.com/s/article/2149497){:external} |
 | vSAN health alarm `vCenter state is authoritative` | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [vSAN Health Service - Cluster health – vCenter state is authoritative (2150916)](https://kb.vmware.com/s/article/2150916){:external} |
 | vSAN health alarm `Verbose mode` | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Performance Service - Verbose Mode in the vSAN health service (51527)](https://kb.vmware.com/s/article/51527){:external} |
 | vSAN health alarm `vSAN Build Recommendation Engine build recommendation` | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [vSAN Health Service - vSphere Update Manager - vSAN build recommendation engine health (2150914)](https://kb.vmware.com/s/article/2150914){:external} |

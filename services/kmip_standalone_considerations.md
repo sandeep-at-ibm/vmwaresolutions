@@ -70,7 +70,7 @@ For more information, see [KMIP for VMware solution architecture](/docs/services
 * To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Considerations when you delete KMIP for VMware instances
-{: #considerations-when-deleting-kmip-for-vmware-on-ibm-cloud-instances}
+{: #kmip_standalone_considerations-delete}
 
 All data protected by the KMIP for VMware service, including encrypted backups, cannot be decrypted after you remove the service.
 

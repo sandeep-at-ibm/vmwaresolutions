@@ -50,7 +50,7 @@ For more information, see [PrimaryIO Hybrid Cloud Data Management](/docs/service
 ## IBM Cloud Private Hosted - Deprecated
 {: #relnotes_v34-icpdeprecated}
 
-The {{site.data.keyword.cloud_notm}} Private Hosted service is being deprecated and replaced by Red Hat OpenShift for VMware. For more information, see [Red Hat OpenShift for VMware overview](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview).
+The {{site.data.keyword.cloud_notm}} Private Hosted service has been deprecated and replaced by Red Hat OpenShift for VMware. For more information, see [Red Hat OpenShift for VMware overview](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview).
 {:deprecated}
 
 ## Updates for VMware vCenter Server instances
@@ -108,7 +108,9 @@ For more information, see:
 * Technical documentation is available in the *Reference* section for {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads and ordering multi-zone stretch clusters. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview).
 * The [Upgrading VMware NSX](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade-procedure-nsx) section of **Upgrading vCenter Server vSphere software from VMware vSphere 6.5 to 6.7** has additional information to help you determine whether you must upgrade your current version of NSX. You might have to upgrade NSX so it’s compatible with VMware vCenter Server 6.7.
 * The [Technical specifications for IBM Spectrum Protect Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_considerations#spp_considerations-specs) are updated.
-* The [vCenter Server and vSRX guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-intro) architecture documentation is now available in the *Reference* section of the user documentation.
+* The [vCenter Server and vSRX guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-intro) is now available in the *Reference* section of the user documentation.
+* (Updated on Dec 20, 2019) The [HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
+](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-encryption-overview) is now available in the *Reference* section of the user documentation.
 * Various [REST API documentation](https://cloud.ibm.com/apidocs/vmware-solutions) updates are made.
 
 ## User interface updates and enhancements

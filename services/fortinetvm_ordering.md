@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-02-06"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -80,7 +80,7 @@ The license model for FortiGate Virtual Appliance offers the following options:
     * Industrial Security: This service provides signatures for common ICS/SCADA protocols.
     * Security Rating: This service provides audit capabilities to identify critical vulnerabilities and configuration weaknesses and implement best practice recommendations.
 
-In 3Q 2018, Fortinet added three new services (CASB, Industrial Security, and Security Rating) to their Enterprise bundle. These services are available on FortiGate 6.0 only.
+In 3Q 2018, Fortinet added three new services (CASB, Industrial Security, and Security Rating) to their Enterprise bundle. These services are available for FortiGate V6.0 and later only.
 {:note}
 
 You can't change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.

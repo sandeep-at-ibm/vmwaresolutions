@@ -34,7 +34,7 @@ Moving forward, all customers will be directed to VMware vCenter Server on {{sit
 
 Existing customers who use VMware Cloud Foundation will be assisted to convert to VMware vCenter Server by the end-of-support date of May 13, 2020.
 
-After May 13, management abilities for VMware Cloud Foundation will no longer be available from the {{site.data.keyword.vmwaresolutions_short}} console until they have been converted to VMware vCenter Server. Customers who choose not to have their VMware Cloud Foundation instances migrated or converted to VMware vCenter Server can access their instances from the {{site.data.keyword.cloud_notm}} infrastructure console.
+After May 13 2020, management functions for VMware Cloud Foundation instances will no longer be available from the {{site.data.keyword.vmwaresolutions_short}} console until the instances have been converted to VMware vCenter Server. Customers who choose not to have their VMware Cloud Foundation instances migrated or converted to VMware vCenter Server can access their instances from the {{site.data.keyword.cloud_notm}} infrastructure console.
 
 ## Removed support for Broadwell 2-CPU servers
 {: #relnotes_v30-broadwell}
@@ -54,11 +54,13 @@ This release applies the following upgrades and improvements:
 * vSphere ESXi 6.7 Update 1 (build 6.7.0-13004448)
 * vSphere ESXi 6.5 Update 2 (build 6.5.0-13004031)
 * vCenter Server Appliance 6.7 Update 1b (build 6.7.0-11727113)
-* Platform Services Controller 6.7 Update 1b (build 6.7.0-11727113) 
+* Platform Services Controller 6.7 Update 1b (build 6.7.0-11727113)
+
+The Windows software that is ordered for Microsoft Active Directory (AD) and DNS (Domain Name System) services is upgraded to Windows Server 2016 for both configuration options: the VSIs (Virtual Server Instances) and the two highly-available Windows VMs.
+
+The AD domain functional level remains at 2008 to allow for backward compatibility with any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
 
 For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
-
-The Windows software that is ordered for Microsoft Active Directory (AD) and DNS (Domain Name System) services is upgraded to Windows Server 2016 for both configuration options: the VSIs (Virtual Server Instances) and the two highly-available Windows VMs. For more information about selecting your VMware components, see [Software BOM for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom#vc_bom-software).
 
 ### vSAN storage enhancements
 {: #relnotes_v30-vcs-vsan}
@@ -66,9 +68,7 @@ The Windows software that is ordered for Microsoft Active Directory (AD) and DNS
 * When using vSAN storage, the number of Bare Metal Servers that you can order can now be greater than four. This applies to all vCenter Server, vCenter Server with Hybridity, and vCenter Server with NSX-T instances.
 * Starting with the V3.0 release, an M.2 solid-state drive is ordered with your vSAN storage instance. You can order up to 10 capacity disks or a total of 12 capacity disks if you select the **High Performance with Intel Optaine** option.
 
-For more information, see the *Storage settings* section in:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-storage-settings)
-* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance#vc_nsx-t_orderinginstance-storage-settings)
+For more information, see the *Storage settings* section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-storage-settings).
 
 ## Updates for add-on services
 {: #relnotes_v30-services}

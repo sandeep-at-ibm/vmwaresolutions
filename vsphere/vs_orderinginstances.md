@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-26"
+lastupdated: "2020-02-21"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -21,9 +21,9 @@ subcollection: vmware-solutions
 # Ordering new vSphere clusters
 {: #vs_orderinginstances}
 
-To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster. Use this procedure to define a new vSphere cluster.
+To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster.
 
-This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud_notm}} Bare Metal Server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware cluster based on your requirements.
+This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud}} Bare Metal Server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware vSphere cluster based on your requirements.
 
 ## Requirements
 {: #vs_orderinginstances-req}
@@ -132,15 +132,14 @@ When you select **Skylake**, you can choose the CPU and RAM combination for the 
 
 For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
-{:note}
-
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 Processor[^vsphere] / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 3. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+[^vsphere]: If you use vSAN storage, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 does not currently support the High Performance Intel Optane option.
 
 ### SAP-certified
 {: #vs_orderinginstances-sap}
@@ -148,13 +147,15 @@ Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware
 The **SAP-certified** tab is not available if you selected VMware vSAN previously. When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
 Based on your requirements, select a Bare Metal Server configuration:
-  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
-  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 384 GB RAM
-  * Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
-  * Dual Intel Xeon E5-2690 v4 processor / 28 cores total, 2.6 GHz / 512 GB RAM
-  * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 1024 GB RAM
-  * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 2048 GB RAM
-  * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
+
+| CPU model options        | RAM options       |
+|:------------- |:------------- |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 768 GB |
+| Dual Intel Xeon Platinum 8280M Processor / 56 cores total, 2.7 GHz | 1.5 TB, 3 TB |
+| Quad Intel Xeon E7-8890 v4 Processor / 96 cores total, 2.2 GHz | 1 TB, 2 TB, 4 TB |
+{: caption="Table 4. Options for SAP-certified {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Broadwell
 {: #vs_orderinginstances-broadwell}
@@ -165,7 +166,7 @@ When you select **Broadwell**, you can choose the CPU and RAM combination for th
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 4. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 5. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
 ### Number of Bare Metal Servers
 {: #vs_orderinginstances-bare-metal-number}
@@ -266,7 +267,7 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 #### FortiGate Physical Appliance 300 Series HA Pair
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
-You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Security Appliance overview](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations).
+You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Virtual Appliance overview](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations).
 
 This option is only available for an order with both a public and private network.
 {:note}
@@ -282,31 +283,30 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 {: #vs_orderinginstances-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. In the **Start Provisioning** section, click the **VMware vSphere** card.
-3. On the **VMware vSphere** page, click **Continue**.  
-   Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
-4. Enter the cluster name.
-5. Select the VMware components:
+1. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
+1. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
+1. Enter the cluster name.
+1. Select the VMware components:
   * If you are an IBM Business Partner, select a license bundle and any additional available VMware components.
   * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
   When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered {{site.data.keyword.baremetal_short}} to be replaced with your provided licenses.   
 
     **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
-6. Complete the Bare Metal Server settings:
+1. Complete the Bare Metal Server settings:
    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the cluster.
-   2. Select the Bare Metal Server configuration.
+   1. Select the Bare Metal Server configuration.
       * When you select **Skylake**, **Cascade Lake**, or **Broadwell**, specify the CPU model and the RAM size.
       * When you select **SAP-certified**, choose one of the preset configurations.
-   3. Specify the number of Bare Metal Servers.
-7. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
-8. Complete the network interface settings:
+   1. Specify the number of Bare Metal Servers.
+1. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+1. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and domain name.
-   2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
-   3. Select the network interface that you want to use.
+   1. Select the network setting of either **Public and Private Network** or **Private Network Only**.
+   1. Select the network interface that you want to use.
     * If you want to order new public and private VLANs, click **Order New VLANs**.
     * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and optionally the subnets.
-    4. If you are ordering public VLANS, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
-9. In the **Order Summary** pane, verify the cluster configuration and the estimated cost.
+    1. If you are ordering public VLANS, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
+1. In the **Order Summary** pane, verify the cluster configuration and the estimated cost.
    * To save the configuration as a template without placing an order, click **Save Configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 

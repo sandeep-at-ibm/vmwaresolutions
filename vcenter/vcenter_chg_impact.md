@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-01-24"
 
 keywords: change vCenter Server artifacts, automation ID, VMware resource
 
@@ -53,9 +53,13 @@ The `<service_name>` together with the `<service_uuid>` truncates to 20 characte
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 {: faq}
 
-For instances deployed in V1.9 and later, if the vCenter Server instance is in a **Ready to Use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer datastore names from the VMware vSphere Web Client.
+If the vCenter Server instance is in a **Ready to Use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer datastore names from the VMware vSphere Web Client.
 
-However, you must not change the name of the management datastore from its default value, which is  **vsanDatastore** for vSAN instances and **management-share** for Network File System (NFS) instances. In addition, you must not change the name of the network uplinks that are created during provisioning.
+Review the following restrictions:
+
+* Do not change the name of the management datastore from its default value, which is  **vsanDatastore** for vSAN instances and **management-share** for Network File System (NFS) instances.
+* Do not change the name of the network uplinks that are created during provisioning.
+* Do not change the ESXi server names and the IP addresses because they are registered for Windows DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 
 ## VMware resources for vCenter Server instances (V1.8 and earlier)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
@@ -63,7 +67,7 @@ However, you must not change the name of the management datastore from its defau
 
 The following table lists the operations that might be impacted if the SSO administrator changes VMware vCenter Server resources outside of the {{site.data.keyword.vmwaresolutions_short}} console. If a solution to recover is available, it is provided as well.
 
-The following table is applicable to instances deployed at V1.8 and earlier, in addition to instances deployed at V1.8 and earlier and then upgraded to V1.9 or later.
+The following table is applicable to instances deployed in V1.8 and earlier, in addition to instances deployed in V1.8 and earlier and then upgraded to V1.9 or later.
 
 | Attempted change  | Impacted operations  | Severity  | Recovery method  |
 |:------------- |:------------- |:--------------|:--------------|
@@ -104,3 +108,9 @@ In addition, the following management subnets are also reserved for {{site.data.
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways:
 *  **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
 *  **Option 2**: Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.
+
+## Related links
+{: #vcenter_chg_impact-related}
+
+* [Can I change the ESXi server names and IP addresses?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-change-name-ip)
+* [Can I disable root access on my ESXi servers?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-disable-root)

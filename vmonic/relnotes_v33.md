@@ -41,9 +41,7 @@ For more information, see [vCenter Server and Horizon 7 architecture overview](/
 
 When you add a cluster to an instance, you can choose to continue to use the default hostname prefix or to specify a new one for easy identification and management.
 
-For more information, see:
-- [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-network-interface-settings)
-- [Adding, viewing, and deleting clusters for vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_addingviewingcluster#vc_nsx-t_addingviewingclusters-adding-network-interface-settings)
+For more information, see [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-network-interface-settings).
 
 ## Updates for add-on services
 {: #relnotes_v33-services}

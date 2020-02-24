@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-02-21"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -23,28 +23,21 @@ subcollection: vmware-solutions
 
 You can add your own clusters to VMware vCenter Server instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
 
-**Notes**:
+Starting with the V3.4 release, you can simultaneously add or remove a cluster while another cluster is being created or removed.
+{:note}
 
-* Starting with the V3.4 release, you can simultaneously add or remove a cluster while another cluster is being created or removed.
-* The delete cluster feature is available only to instances that are deployed in (or upgraded to) V2.3 and later.
-
-## Adding clusters to vCenter Server instances
-{: #vc_addingviewingclusters-adding}
-
-### Before you add clusters
+## Before you add clusters
 {: #vc_addingviewingclusters-before-add}
 
 * Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
-* For instances that were deployed in (or upgraded to) V2.2, 2.3, or 2.4, you can add up to 10 clusters.
-* For instances that were deployed in V2.1 or earlier, you can add up to five clusters.
+* The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 
-### System settings
+## System settings
 {: #vc_addingviewingclusters-adding-sys-settings}
 
 When you add a cluster for a vCenter Server instance, you must specify the following settings.
 
-#### Cluster name
+### Cluster name
 {: #vc_addingviewingclusters-adding-cluster-name}
 
 The cluster name must meet the following requirements:
@@ -54,113 +47,147 @@ The cluster name must meet the following requirements:
 * The maximum length of the cluster name is 30 characters.
 * The cluster name must be unique within the vCenter Server instance.
 
-### Licensing settings
+## Licensing settings
 {: #vc_addingviewingclusters-adding-licensing-settings}
 
-Specify the licensing option for the VMware vSphere component in the cluster:
+Review the following information and specify the licensing setting for the VMware vSphere component in the cluster:
 * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
 * For non-Business Partner users, you can use the IBM-provided VMware licenses for this component by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
-### Bare Metal Server settings
+## Bare Metal Server settings
 {: #vc_addingviewingclusters-bare-metal-settings}
 
-You can choose **Skylake**, **Cascade Lake**, **SAP-certified**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+Options might differ depending on the version that your instance was initially deployed in. You can choose between the following server types: **Skylake**, **Cascade Lake**, **SAP-certified**, or **Broadwell** (NSX-V only).
 
-#### Data center location
+### Data center location
 {: #vc_addingviewingclusters-adding-dc-location}
 
 The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
 If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
 
-#### Skylake
+### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
 
 For the **Skylake** setting, you have options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-| CPU model options        | RAM options       |
-|:------------- |:------------- |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| CPU model options | RAM options for NSX-V | RAM options for NSX-T |
+|:----------------- |:--------------------- |:--------------------- |
+| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
-#### Cascade Lake
+### Cascade Lake
 {: #vc_addingviewingclusters-adding-cascade}
 
 For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
-{:note}
-
-| CPU model options        | RAM options       |
-|:------------- |:------------- |
-| Dual Intel Xeon Gold 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| CPU model options | RAM options |
+|:----------------- |:----------- |
+| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 Processor[^vsphere] / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 2. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+[^vsphere]: If you use vSAN storage, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 does not currently support the High Performance Intel Optane option.
 
-#### SAP-certified
+### SAP-certified
 {: #vc_addingviewingclusters-adding-sap}
 
 When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
 Based on your requirements, select a Bare Metal Server configuration:
-* Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 192 GB RAM
-* Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 384 GB RAM
-* Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz / 768 GB RAM
-* Dual Intel Xeon E5-2690 v4 processor / 28 cores total, 2.6 GHz / 512 GB RAM
-* Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 1024 GB RAM
-* Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 2048 GB RAM
-* Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz / 4096 GB RAM
 
-#### Broadwell
+| CPU model options | RAM options |
+|:----------------- |:----------- |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB |
+| Quad Intel Xeon E7-8890 v4 Processor / 96 cores total, 2.2 GHz | 1 TB, 2 TB, 4 TB |
+{: caption="Table 3. Options for SAP-certified {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+### Broadwell (NSX-V only)
 {: #vc_addingviewingclusters-adding-broadwell}
 
 For the **Broadwell** setting, you have a number of options for the **CPU Model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
-| CPU model options        | RAM options       |
-|:------------- |:------------- |
-| Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 3. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+| CPU model options | RAM options |
+|:----------------- |:----------- |
+| Quad Intel Xeon E7-4820 v4 Processor / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 Processor / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+{: caption="Table 4. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
 
-#### Number of Bare Metal Servers
+### Number of Bare Metal Servers
 {: #vc_addingviewingclusters-adding-bare-metal-number}
 
 * All servers that you order have the same configuration.
 * For vSAN storage, you can order between 4 and 59 servers.
-* For NFS storage, you can order between 1 and 59 servers. However, for production workloads, a minimum of two servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* For NFS storage, you can order between 1 (for NSX-V) or 2 (for NSX-T) and 59 servers. However, for production workloads, a minimum of two (for NSX-V) and three (for NSX-T) servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available)
 
-### Storage settings
+## Storage settings
 {: #vc_addingviewingclusters-adding-storage-settings}
 
 Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
 
-#### vSAN storage
+You can add NFS storage shares to an existing vSAN or NFS cluster. For more information, see the *Adding NFS storage to vCenter Server instances* section in [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances).
+{:note}
+
+### vSAN storage
 {: #vc_addingviewingclusters-adding-vsan-storage}
 
 Specify the following vSAN options:
-* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
-* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
-  {:note}
+#### Disk Type and Size for vSAN Capacity Disks
+{: #vc_addingviewingclusters-adding-vsan-storage-typesize-capdisks}
 
-* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
-* **vSAN License**: Use the IBM-provided VMware license for the vSAN component by selecting **Include with purchase**, or Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
+Select an option for the capacity disks that you need.
+
+#### Number of vSAN Capacity Disks
+{: #vc_addingviewingclusters-adding-vsan-storage-number-capdisks}
+
+Specify the number of capacity disks that you want to add.
+
+If you want to add capacity disks over the limit of 10, check the **High Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+
+The **High Performance Intel Optane** option is available only for the Skylake and Cascade Lake CPU models. Currently, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 is not supported for this option.
+{:note}
+
+#### Disk Size for vSAN Cache Disks
+{: #vc_addingviewingclusters-adding-vsan-storage-size-cachedisks}
+
+Review the **Disk Size for vSAN Cache Disks** value. The value depends on whether you checked the **High Performance Intel Optane** box.
+
+#### Number of vSAN Cache Disks
+{: #vc_addingviewingclusters-adding-vsan-storage-number-cachedisks}
+
+Review the **Number of vSAN Cache Disks** value. The value depends on whether you checked the **High Performance Intel Optane** box.
+
+#### Enable vSAN compression and deduplication
+{: #vc_addingviewingclusters-adding-vsan-storage-enable-comp}
+
+vSAN storage depends on the number of servers and your total disk capacity.
+
+If vSAN compression and deduplication is enabled (the default setting), a ratio of 3.5 is assumed. For example, 1 TB of data uses only 1/3.5 TB. Therefore, the **Total Estimated Usable Storage** is greater than the **Total Raw Storage**.
+
+The following table shows the values for **Total Raw Storage** and **Total Estimated Usable Storage** when you enable vSAN compression and deduplication and when you do not enable it.
+
+| Selected values      | If compression is enabled | If compression is not enabled |
+|:-------------------- |:------------------------- |:----------------------------- |
+| Number of Bare Metal Servers: 4</br>Disk Type and Size for vSAN Capacity Disks: 1.9 TB SSD SED</br>Number of vSAN Cache Disks: 4 | Total Raw Storage: 30.40 TB</br>Total Estimated Usable Storage: 55.52 TB | Total Raw Storage: 30.40 TB</br>Total Estimated Usable Storage: 15.52 TB |
+{: caption="Table 5. vSAN Storage values when vSAN compression and deduplication is enabled and not enabled" caption-side="top"}
+
+#### vSAN License
+{: #vc_addingviewingclusters-adding-vsan-storage-license}
+
+Use the IBM-provided VMware license for the vSAN component by selecting **Include with purchase**, or Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
 If your initial cluster was a vSAN cluster, any additional vSAN clusters use the same vSAN license and have the same configuration as the initial one. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you're prompted for the vSAN license (BYOL or purchased) and the edition. The next time that you select vSAN for a new cluster, the license that is chosen initially is reused.
 
-#### NFS storage
+### NFS storage
 {: #vc_addingviewingclusters-adding-nfs-storage}
 
-When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
+When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. The number of file shares must be in the range of 1 to 32.
 
-The number of file shares must be in the range of 1 to 32.
-{:note}
-
+Specify the following NFS options:
 * **Configure shares individually**: Select to specify different configuration settings for each file share.
 * **Number of Shares**: When want to use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
 * **Size**: Select the capacity that meets your shared storage needs.
@@ -172,25 +199,25 @@ Performance level details:
 | Option        | Details       |
 |:------------- |:------------- |
 | 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
-| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine (VM) disk images for a hypervisor. |
+| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or VM disk images for a hypervisor. |
 | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
-{: caption="Table 4. NFS performance level options" caption-side="top"}
+{: caption="Table 6. NFS performance level options" caption-side="top"}
 
-#### Local disks
+### Local Disks (NSX-V only)
 {: #vc_addingviewingclusters-adding-local-disks}
 
 The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only. Specify the following options:
 * **Local Disk Count**: Select the number of disks that you want to add.
 * **Local Disk Type**: Select an option for the disk type that you need.
 
-### Network interface settings
+## Network interface settings
 {: #vc_addingviewingclusters-adding-network-interface-settings}
 
 When you add a cluster for a vCenter Server instance, you must specify the following network interface settings.
 
-#### Host name prefix
-{: #vc_orderinginstance-host-name}
+### Host name prefix
+{: #vc_addingviewingclusters-host-name}
 
 You can use the default host name prefix or specify a new one. When you specify a new host name prefix, the host name prefix must meet the following requirements:
 - Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
@@ -198,29 +225,29 @@ You can use the default host name prefix or specify a new one. When you specify 
 - The host name prefix must end with a lowercase alphabetic or numeric character.
 - The maximum length of the host name prefix is 10 characters.
 
-#### Public or private network
-{: #vc_orderinginstance-network}
+### Public or private network
+{: #vc_addingviewingclusters-network}
 
-Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and are not available if you select the private option:
+Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.
 
+For NSX-V, the following add-on services require public NICs and are not available if you select the private option:
 * F5 BIG-IP
-* Fortigate Security Appliance
 * Fortigate Virtual Appliance
 
-#### VLANs
-{: #vc_orderinginstance-vlans}
+### VLANs
+{: #vc_addingviewingclusters-vlans}
 
 Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
 
 One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
 
-##### Order New VLANs
-{: #vc_orderinginstance-new-vlans}
+#### Order New VLANs
+{: #vc_addingviewingclusters-new-vlans}
 
 Select to order one new public VLAN and two new private VLANs.
 
-##### Select Existing VLANs
-{: #vc_orderinginstance-existing-vlans}
+#### Select Existing VLANs
+{: #vc_addingviewingclusters-existing-vlans}
 
 Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
 
@@ -234,7 +261,7 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
 {:important}
 
-### Order summary
+## Order summary
 {: #vc_addingviewingclusters-adding-order-summary}
 
 Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
@@ -253,13 +280,23 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 4. On the **Add Cluster** page, enter the cluster name.
 5. If you want to host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
 6. Complete the Bare Metal configuration.
-   * If you selected **Skylake**, **Cascade Lake**, or **Broadwell**, specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+   * If you selected **Skylake**, **Cascade Lake**, or **Broadwell** (NSX-V only), specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
    * If you selected **SAP-certified**, specify the CPU model.
 7. Complete the storage configuration.
-  * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
+  * If you select **vSAN Storage**, specify the following values:
+    * Disk type and size for the vSAN capacity disks
+    * Number of vSAN capacity disks
+    * Disk size for vSAN cache disks
+    * Number of vSAN cache disks
+    * vSAN license edition
+
+    If you want more storage, check the **High Performance Intel Optane** box.
+
+    By default, the **Enable vSAN compression and deduplication** box is checked. If you don't want to enable vSAN compression and deduplication, clear the check box.
+
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then click the **+** icon next to the **Add Shared Storage** label and select the  **Performance** and **Size (GB)** for each file share. You must select at least one file share.
-  * If you select **Local Disks**, specify the local disk count and local disk type.
+  * (NSX-V only) If you select **Local Disks**, specify the local disk count and local disk type.
 8. Complete the network interface settings.
 9. Specify how the vSphere license key is provided:
   * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
@@ -302,8 +339,6 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
   * **Actions**: Click the **Delete** icon to delete the cluster.
 4. Click a cluster name to view the ESXi server, storage, and network interface details.
 
-View ESXi server details:
-
 | Item        | Description       |  
 |:------------- |:------------- |
 | Name | The name of the ESXi server is in the following format: `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. |
@@ -311,9 +346,13 @@ View ESXi server details:
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
 | Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
-{: caption="Table 5. ESXi server details" caption-side="top"}
-
-Expand the ESXi server for additional details:
+{: caption="Table 7. ESXi server details" caption-side="top"}
+{: summary="This table has row and column headers. The row headers identify the properties of the ESXi server. The column headers indentify the description of the properties. To find the explanation of an ESXi server property, navigate to the row, and find the information that you need in the description column."}
+{: #table1}
+{: tab-title="ESXi server details"}
+{: tab-group="Cluster details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -322,9 +361,13 @@ Expand the ESXi server for additional details:
 | Customized vSAN Disks | The number of vSAN disks in the cluster, including the disk type and capacity. |
 | vSAN Cache Disks | The type and number of vSAN cache disks. |
 | Networking |The network interface card (NIC) enablement settings of either Public and Private Network or Private Network Only. |
-{: caption="Table 6. Additional ESXi server details" caption-side="top"}
-
-View storage details:
+{: caption="Table 8. Additional ESXi server details" caption-side="top"}
+{: summary="This table has row and column headers. The row headers identify the additional properties of the ESXi server. The column headers indentify the description of the properties. To find the explanation of a property, navigate to the row, and find the information that you need in the description column."}
+{: #table2}
+{: tab-title="Additional ESXi server details"}
+{: tab-group="Cluster details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -332,9 +375,13 @@ View storage details:
 | Size | The capacity of the storage. |
 | IOPS/GB | The performance level of the storage. |
 | NFS Protocol | The NFS version of the storage. |
-{: caption="Table 7. Storage details" caption-side="top"}
-
-View network interface details:
+{: caption="Table 9. Storage details" caption-side="top"}
+{: summary="This table has row and column headers. The row headers identify the storage properties. The column headers indentify the description of the properties. To find the explanation of a storage property, navigate to the row, and find the information that you need in the description column."}
+{: #table3}
+{: tab-title="Storage details"}
+{: tab-group="Cluster details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -342,27 +389,41 @@ View network interface details:
 | Description | The description of the VLAN.  |
 | Location | The data center location. |
 | Primary Route | The primary route of the VLAN. |
-{: caption="Table 8. Network Interface - VLAN details" caption-side="top"}
+{: caption="Table 10. Network interface - VLAN details" caption-side="top"}
+{: summary="This table has row and column headers. The row headers identify the network interface properties. The column headers indentify the description of the properties. To find the explanation of a network interface property, navigate to the row, and find the information that you need in the description column."}
+{: #table4}
+{: tab-title="Network interface details"}
+{: tab-group="Cluster details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
-Click **View Resource** to access the VLAN details.
-
-View subnet details:
+Click **View Resource** to access the VLAN details, including the subnet details and IP details.
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | Name | The subnet name. Click the name to access the subnet details. |
 | Type | The type of subnet: primary or portable. |
 | Description | The description of the subnet. |
-{: caption="Table 9. Network Interface - Subnet details" caption-side="top"}
-
-View IP details:
+{: caption="Table 11. Network interface - Subnet details" caption-side="top"}
+{: summary="This table has row and column headers. The row headers identify the subnet properties. The column headers indentify the description of the properties. To find the explanation of a subnet property, navigate to the row, and find the information that you need in the description column."}
+{: #vlan-table1}
+{: tab-title="Subnet details"}
+{: tab-group="Network interface VLAN details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | IP | The IP address. |
 | Status | The status of the IP address. |
 | Description |The description of the IP address.  |
-{: caption="Table 10. Network Interface - IP details" caption-side="top"}
+{: caption="Table 12. Network interface - IP details" caption-side="top"}
+{: summary="This table has row and column headers. The row headers identify the IP properties. The column headers indentify the description of the properties. To find the explanation of an IP property, navigate to the row, and find the information that you need in the description column."}
+{: #vlan-table2}
+{: tab-title="IP details"}
+{: tab-group="Network interface VLAN details"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 ## Deleting clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting}
@@ -372,8 +433,6 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ### Before you delete clusters
 {: #vc_addingviewingclusters-deleting-prereq}
 
-* Use this procedure to delete clusters from instances that are deployed in V2.3 or later.
-* For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 if you want to delete the clusters that you added to the instance.
 * Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can delete a single cluster at a time. To delete more than one cluster, you must do it in sequence. Wait for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.

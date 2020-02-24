@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years: 2016, 2020
 
-lastupdated: "2019-12-02"
+lastupdated: "2020-01-14"
 
 subcollection: vmware-solutions
 
@@ -92,14 +92,18 @@ Within the OpenShift environment, two load balancers for accessing the master no
 ## Red Hat OpenShift specifications
 {: #vcs-openshift-sddc-infra-redhat-spec}
 
-The following table shows management node specifications.
+The following tables show the specifications of the management node, control plane node, and worker node.
 
 | Host description | vCPU  | Memory GB | Disk GB | OS |
 |:-----------------|:-----------------|:-----------------|:-----------------| :---|
 | Management0 | 2 | 8 | 50 | Red Hat Enterprise Linux 7.6 |
 {: caption="Table 5. Management node specifications" caption-side="top"}
-
-The following table shows control plane node specifications.
+{: summary="This table has row and column headers. The row headers identify the hosts. The column headers indentify the parameters of the hosts. To find the value of a parameter for a certain host, navigate to the row, and then find the value in the corresponding parameter column."}
+{: #table1}
+{: tab-title="Management node"}
+{: tab-group="Red Hat OpenShift specifications"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Host description | vCPU  | Memory GB | Disk GB | OS | Host name |
 |:-----------------|:-----------------|:-----------------|:-----------------| :---|
@@ -107,8 +111,12 @@ The following table shows control plane node specifications.
 | Control-plane1 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
 | Control-plane2 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
 {: caption="Table 6. Control plane node specifications" caption-side="top"}
-
-The following table shows worker node specifications.
+{: summary="This table has row and column headers. The row headers identify the hosts. The column headers indentify the parameters of the hosts. To find the value of a parameter for a certain host, navigate to the row, and then find the value in the corresponding parameter column."}
+{: #table2}
+{: tab-title="Control plane node"}
+{: tab-group="Red Hat OpenShift specifications"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Host description | vCPU  | Memory GB | Disk GB | OS | Host name |
 |:-----------------|:-----------------|:-----------------|:-----------------| :---|
@@ -116,6 +124,12 @@ The following table shows worker node specifications.
 | Worker1 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
 | Worker2 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
 {: caption="Table 7. Worker node specifications" caption-side="top"}
+{: summary="This table has row and column headers. The row headers identify the hosts. The column headers indentify the parameters of the hosts. To find the value of a parameter for a certain host, navigate to the row, and then find the value in the corresponding parameter column."}
+{: #table3}
+{: tab-title="Worker node"}
+{: tab-group="Red Hat OpenShift specifications"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 **Next topic:** [Storage options on IBM Cloud and Red Hat OpenShift](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-16"
+lastupdated: "2020-02-20"
 
 subcollection: vmware-solutions
 
@@ -56,12 +56,12 @@ For users managed by vIDM, the applicable authentication policy is the one confi
 NSX-T roles are built in and you cannot add any new roles.
 {:note}
 
-{{site.data.keyword.vmwaresolutions_short}} does not currently provide an automated vIDM deployment. For more information, see [VMware Identity Manager Documentation](https://docs.vmware.com/en/VMware-Identity-Manager/index.html){:external}.
+{{site.data.keyword.vmwaresolutions_short}} does not currently provide an automated vIDM deployment. For more information, see [VMware Workspace ONE Access Documentation](https://docs.vmware.com/en/VMware-Workspace-ONE-Access/index.html){:external}.
 
 **Next topic:** [Common services design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_commonservice)
 
 ## Related links
 {: #nsx-t-idm-related}
 
-* [VMware Identity Manager Documentation](https://docs.vmware.com/en/VMware-Identity-Manager/index.html){:external}
+* [VMware Workspace ONE Access Documentation](https://docs.vmware.com/en/VMware-Workspace-ONE-Access/index.html){:external}
 * [RBAC Configuration in NSX-T](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.3/com.vmware.nsxt.admin.doc/GUID-26C44DE8-1854-4B06-B6DA-A2FD426CDF44.html){:external}

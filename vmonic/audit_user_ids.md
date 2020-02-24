@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2019
+  years: 2016, 2020
 
-lastupdated: "2019-11-05"
+lastupdated: "2020-01-27"
 
 keywords: user IDs vCenter, PSC user, user ID service
 
@@ -76,7 +76,7 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 |:-------------------------------------------|:----------- |
 | prod-BigIP-``dynamicID``-@``domainName`` | Used for installation and configuration of the F5 on {{site.data.keyword.cloud_notm}} service. |
 | prod-Caveonix-``dynamicID``-@``domainName`` | Used for installation and configuration of the Caveonix RiskForesight service. |
-| prod-Fortigate-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Security Appliance service. |
+| prod-Fortigate-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Security Appliance (Deprecated) service. |
 | prod-FortigateVM-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Virtual Appliance service. |
 | prod-HyTrustCC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust CloudControl service. |
 | prod-HyTrustDC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust DataControl service. |

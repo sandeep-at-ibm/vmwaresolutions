@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-02-21"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
-You can add clusters to your vCenter Server with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
+You can add clusters to your VMware vCenter Server with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
 
 ## Adding clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding}
@@ -31,7 +31,7 @@ You can add clusters to your vCenter Server with Hybridity Bundle instance to ex
 ### Before you add clusters
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
@@ -83,9 +83,14 @@ Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 32 GB, 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 32 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 2. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+
+The Quad Intel Xeon Gold 6248 Processor is available if you add new clusters or new ESXi servers for existing hybridity instances. If you use vSAN storage, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 does not currently support the High Performance Intel Optane option.
+{:note}
 
 #### Broadwell
 {: #vc_hybrid_addingviewingclusters-adding-broadwell}
@@ -94,8 +99,8 @@ When you select **Broadwell**, you can choose the CPU and RAM combination accord
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Quad Intel Xeon E7-4820 v4 / 40 cores total, 1.9 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.2 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
+| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 {: caption="Table 3. Options for Broadwell Bare Metal Servers" caption-side="top"}
 
 #### Number of Bare Metal Servers
@@ -122,7 +127,7 @@ VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle insta
 {: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 IBM-provided licenses for the following VMware components:
-  * vSphere Enterprise Plus 6.5u1
+  * vSphere Enterprise Plus 6.5u3 or 6.7u3, depending on the cluster ordered, which is 6.5 or 6.7 respectively
   * vCenter Server 6.5
   * NSX Service Providers 6.4 (Advanced or Enterprise edition)
 
@@ -132,7 +137,6 @@ IBM-provided licenses for the following VMware components:
 Network interface card (NIC) settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and aren't available with the private option:
 
 * F5 BIG-IP
-* Fortigate Security Appliance
 * Fortigate Virtual Appliance
 
 ### Order summary

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-15"
+lastupdated: "2020-02-10"
 
 subcollection: vmware-solutions
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 # IBM Cloud for VMware Solutions and Red Hat OpenShift overview
 {: #openshift-runbook-runbook-intro}
 
-The {{site.data.keyword.vmwaresolutions_full}} offering includes fully automated, rapid deployments of VMware vCenter Server in the IBM Cloud. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the IBM Cloud without conversion by using the same tools, skills, and processes they use on-premises. For more information, see [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture){:external}.
+The {{site.data.keyword.vmwaresolutions_full}} offering includes fully automated, rapid deployments of VMware vCenter Server in the IBM Cloud. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the IBM Cloud without conversion by using the same tools, skills, and processes they use on-premises. For more information, see [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture){:external}.
 
 Red Hat OpenShift for VMware Solutions is a reference architecture and a manual build process to deploy a Red Hat OpenShift Cluster 4.2 on to an existing vCenter Server instance. The components of Red Hat OpenShift Cluster are deployed as virtual machines and appliances by using NSX software defined networking.
 

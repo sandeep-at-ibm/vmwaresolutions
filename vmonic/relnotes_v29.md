@@ -27,23 +27,18 @@ This release includes new features, component updates, usability enhancements, a
 
 This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T offering as a proof of concept or sandbox testing offering. vCenter Server with NSX-T is a privately hosted cloud that you can use to test drive the VMware next generation networking platform, NSX-T.
 
-For more information, see the following topics:
-
-* [vCenter Server with NSX-T overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview)
-* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-
 ## End of Support for VMware Cloud Foundation on IBM Cloud
 {: #relnotes_v29-vcf-eos}
 
-To consolidate the current offerings for better customer experience, {{site.data.keyword.cloud_notm}} will no longer support VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} effective 13 May 2019.  
+To consolidate the current offerings for better customer experience, {{site.data.keyword.cloud_notm}} will no longer support VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} effective May 13 2020.  
  
 Moving forward, all customers are directed to VMware vCenter Server on {{site.data.keyword.cloud_notm}}, which offers more flexibility around storage and licensing options. 
  
-Existing customers who use VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} will be assisted to migrate to VMware vCenter Server on {{site.data.keyword.cloud_notm}} by the end-of-support date of 13 May 2019.
+Existing customers who use VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} will be assisted to migrate to VMware vCenter Server on {{site.data.keyword.cloud_notm}} by the end-of-support date of May 13, 2020.
 
-After 13 May, management abilities for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} will be removed from the {{site.data.keyword.vmwaresolutions_short}} console. Instances that have not been migrated to VMware vCenter Server on {{site.data.keyword.cloud_notm}} can be accessed by using the IBM Cloud infrastructure console.
+After May 13 2020, management functions for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} instances will be removed from the {{site.data.keyword.vmwaresolutions_short}} console. Instances that have not been migrated to VMware vCenter Server on {{site.data.keyword.cloud_notm}} can be accessed by using the IBM Cloud infrastructure console.
 
-Customers will be contacted by {{site.data.keyword.cloud_notm}} Support before 25 March 2019 to begin migration from VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}. For more information about migration options for existing customers, see the [{{site.data.keyword.vmwaresolutions_short}} wiki page](https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wf58c4c538dbf_45b4_b7a7_5003d0ceb79b/page/IBM%20Cloud%20for%20VMware%20Solutions){:external}.
+Customers will be contacted by {{site.data.keyword.cloud_notm}} Support before March 25, 2020 to begin migration from VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}. For more information about migration options for existing customers, see the [{{site.data.keyword.vmwaresolutions_short}} wiki page](https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wf58c4c538dbf_45b4_b7a7_5003d0ceb79b/page/IBM%20Cloud%20for%20VMware%20Solutions){:external}.
  
 Customers can view their existing VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} instance on the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted).
 

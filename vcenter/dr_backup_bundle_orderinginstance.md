@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-26"
+lastupdated: "2020-02-21"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
@@ -35,7 +35,7 @@ Ensure that you confirm the following requirements and complete the following ta
 {: #dr_backup_bundle_orderinginstance-hcx-req}
 
 * Requires VMware vSphere and vCenter 5.5 or higher.
-* The vSphere environment must have distributed switches for the VMs that will be migrated to the {{site.data.keyword.cloud}}.
+* The vSphere environment must have distributed switches for the virtual machines (VMs) that will be migrated to the {{site.data.keyword.cloud}}.
 * The HCX Manager Virtual Appliance must be able to be deployed on a private network in the on-premises environment and must be allowed to access the public internet.
 
 ### IBM Cloud infrastructure account
@@ -57,7 +57,7 @@ The instance name must meet the following requirements:
 ## Procedure to order Single-node Trial for Data Protection and Disaster Recovery instances
 {: #dr_backup_bundle_orderinginstance-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane. 
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 2. In the **Featured Services** section, click the **Single-node Trial for Data Protection and Disaster Recovery** card.
 3. On the **Single-node Trial for Data Protection and Disaster Recovery** page, click **Continue**.
 4. Complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User Name** and **API Key** and click **Retrieve**.

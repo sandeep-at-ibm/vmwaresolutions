@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-25"
+lastupdated: "2020-02-19"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -30,6 +30,17 @@ VMs that are replicated by using Zerto are metered by Zerto and {{site.data.keyw
 
 Before you order Zerto, ensure that your {{site.data.keyword.cloud_notm}} account is a billable account, and that it is linked to the same {{site.data.keyword.cloud_notm}} infrastructure account where your instance is deployed.
 
+### Viewing Zerto charges
+{: #zerto_ordering-view-charge}
+
+To view your Zerto usage charges, follow these steps:
+
+1. Go to the [IBM Cloud Billing and Usage](https://cloud.ibm.com/billing/usage) page.
+2. From the **Filter by group** list, select **VMware Solutions**.
+
+### Zerto installations from V3.0 or earlier
+{: #zerto_ordering-30-install}
+
 If you have a Zerto installation from V3.0 or earlier, your VM replication costs are still being billed by using {{site.data.keyword.cloud_notm}} infrastructure billing. If your accounts and billing settings meet the requirements that are listed previously, you can convert your Zerto billing method to billable.
 
 On the {{site.data.keyword.vmwaresolutions_short}} console, you are prompted to convert from the {{site.data.keyword.cloud_notm}} infrastructure plan to a billable plan and to upgrade your {{site.data.keyword.cloud_notm}} account to a billable account, if needed.
@@ -43,7 +54,7 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you are prompted to 
 
 When you [order the instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Zerto** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
 
-## Ordering Zertofor an existing instance
+## Ordering Zerto for an existing instance
 {: #zerto_ordering-existing}
 
 On the [instance details page](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Zerto** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.

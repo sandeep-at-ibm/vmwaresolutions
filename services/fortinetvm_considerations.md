@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-02-03"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -27,7 +27,7 @@ The FortiGate Virtual Appliance service deploys a pair of FortiGate Virtual Appl
 
 You can install multiple instances of this service as needed. You can manage this service by using the FortiOS web Client or the CLI through SSH.
 
-The current FortiGate Virtual Appliance version that is installed is 6.0.3.
+The current FortiGate Virtual Appliance version that is installed is 6.2.3.
 {:note}
 
 ## Technical specifications for FortiGate Virtual Appliance

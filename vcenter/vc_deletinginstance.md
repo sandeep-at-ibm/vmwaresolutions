@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-11"
 
 keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server
 
@@ -23,8 +23,8 @@ subcollection: vmware-solutions
 To release the components that you ordered in a VMware vCenter Server instance, delete the instance.
 
 When you delete a vCenter Server instance, the following components are released sequentially:
-1. All deployed services
-2. Support and Services fee
+1. (NSX-V only) All deployed services
+2. The Support and Services fee for NSX-V instances or the Support fee for NSX-V instances.
 3. VMware product licenses
 4. ESXi servers
 5. Subnets

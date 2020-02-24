@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-18"
+lastupdated: "2020-02-14"
 
 subcollection: vmware-solutions
 
@@ -77,7 +77,7 @@ For both the management clusters and the single stretch cluster, the two sites a
 
 Day 2 scale-up and scale-down operations for adding and removing hosts to the management clusters and the stretch cluster are automatically selected to take place simultaneously in each of the two resource sites. This automatic maintenance of consistency across the management and stretch clusters is enforced and cannot be overridden.
 
-The following configuration with separate management and edge clusters is an IBM GTS Large style Mission Critical Workloads configuration. The edge clusters must be deployed separately as day 2 operations in the user experience described below.
+The following configuration with separate management and edge clusters is an IBM Global Technology Services (GTS) Large style Mission Critical Workloads configuration. The edge clusters must be deployed separately as day 2 operations in the user experience described below.
 
 ![A typical large Mission Critical Workloads deployment](../../images/mcv-lg-config.svg "A typical large Mission Critical Workloads deployment"){: caption="Figure 1. A typical large Mission Critical Workloads deployment" caption-side="bottom"}
 
@@ -89,7 +89,7 @@ vCenter functions in an active-passive availability model with a witness applian
 
 Your workloads are deployed onto active–active storage mirrored between the workload sites. You must plan for sufficient host capacity to run the entire workload in one site. VMware admission control should be used to ensure that neither side is over-committed and that complete loss of a site can be accommodated by moving all workloads to the remaining site. Additional planning is also required to design a workload network topology, such as that used by the IBM GTS Mission Critical Workloads architecture, that is highly available.
 
-**Site A**
+#### Site A
 
 Management and resource Site A contains the following:
 
@@ -102,7 +102,7 @@ Management and resource Site A contains the following:
 *	Half of a stretch cluster
   * Customer workload
 
-**Site B**
+#### Site B
 
 Management and resource Site B contains the following:
 

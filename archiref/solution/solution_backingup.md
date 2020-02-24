@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-20"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ You’re responsible for the configuration, management, and monitoring of all so
 
 As part of the solution, you can optionally deploy the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus or Veeam add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
 
-These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:external} and [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:external} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services) for your Veeam deployment.
+These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_spplus){:external} and [Veeam architecture overview](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){:external} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services) for your Veeam deployment.
 
 Different solution components require different strategies for backup. Some components are protected by using image-level backup, and other components are protected by using file-based backup for their configuration and data.
 

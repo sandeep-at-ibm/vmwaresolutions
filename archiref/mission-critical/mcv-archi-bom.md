@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-30"
 
 subcollection: vmware-solutions
 
@@ -70,7 +70,7 @@ The following table provides the Redundant Array of Independent Disks (RAID) and
 | RAID–6 | PFTT=1  SFTT=2 | Yes | 6+6+2+2+2 |
 {: caption="Table 2. RAID and FTM levels" caption-side="top"}
 
-If you choose to use a GTS large style design with separate edge clusters, you must deploy those clusters after their instance has been provisioned. This is not an automated operation.
+If you choose to use an IBM Global Technology Services (GTS) large style design with separate edge clusters, you must deploy those clusters after their instance has been provisioned. This is not an automated operation.
 
 ## New order flow details
 {: #mcv-archi-bom-ordering}

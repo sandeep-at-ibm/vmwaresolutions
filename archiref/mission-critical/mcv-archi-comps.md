@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-18"
+lastupdated: "2019-12-30"
 
 subcollection: vmware-solutions
 
@@ -58,7 +58,7 @@ This section describes the overall configuration design for enabling {{site.data
 
 The Mission Critical Workloads instance is configured with vCenter High Availability (HA) enabled during provisioning. Automated failover is managed and performed by vCenter.
 
-Investigation is underway for automation of the reassignment of the vCenter IP address in DNS. Otherwise you must manually reassign the IP address upon vCenter failover or contact GTS assistance.
+Investigation is underway for automation of the reassignment of the vCenter IP address in DNS. Otherwise you must manually reassign the IP address upon vCenter failover or contact IBM Global Technology Services (GTS) for assistance.
 
 ### Network design
 {: #mcv-archi-comp-HA-network}
@@ -149,7 +149,7 @@ No additional NSX configuration is performed other than allowing outbound traffi
 
 As with vCenter Server instance orders, the {{site.data.keyword.vmwaresolutions_short}} Devops team provides provisioning support for multi-zone stretched cluster orders.
 
-Patching and ongoing maintenance of multi-zone stretched clusters is your responsibility to perform or to secure services from IBM GTS.
+It is your responsibility to perform patching and ongoing maintenance of multi-zone stretched clusters or to contact IBM GTS for assistance.
 
 ## Related links
 {: #mcv-archi-comps-related}

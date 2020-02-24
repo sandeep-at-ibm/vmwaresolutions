@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-18"
+lastupdated: "2020-02-10"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -31,7 +31,7 @@ The following table details the BOM information for the vCenter Server VLANs.
 | VLAN       | Type       | Details       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Public, Primary | Assigned to physical ESXi servers for public network access. The servers are assigned a public IP address but this IP address is not configured on the servers, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as NSX Edge Services Gateways (ESGs). |
-| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>Assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
 | VLAN3     | Private B, Portable | Assigned to VMware vSAN, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).|
 {: caption="Table 1. BOM for the VLANs in vCenter Server instances" caption-side="top"}
 
@@ -47,14 +47,20 @@ The following table details the BOM information for vCenter Server software comp
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
 | VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
 | VMware       | Platform Services Controller    | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
-| VMware       | vSAN                            | 6.7 Update 1 or <br/>6.6.1 |
-| VMware       | NSX for vSphere                 | 6.4.5 (build 13282012) |
-| VMware       | NSX-T for vSphere               | 2.4 |
+| VMware       | vSAN[^vsan]                     | 6.7 Update 1 or <br/>6.6.1 |
+| VMware       | NSX for vSphere[^nsxv]          | 6.4.5 (build 13282012) |
+| VMware       | NSX-T for vSphere[^nsxt]        | 2.4 |
 | Microsoft    | Windows Server Standard edition | 2016 |
+| Microsoft    | Active Directory domain functional level | 2008[^domain] |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
 
-VMware vSAN is an optional component. The vSphere ESXi 6.5 EP 15 (build 6.5.0-14320405) update is applicable only to 6.5u3 hosts, and not to 6.5u2 hosts.
-{:note}
+[^vsan]: VMware vSAN is an optional component. The vSphere ESXi 6.5 EP 15 (build 6.5.0-14320405) update is applicable only to 6.5u3 hosts, and not to 6.5u2 hosts.
+
+[^nsxv]: NSX-V only
+
+[^nsxt]: NSX-T only
+
+[^domain]: The domain functional level 2008 is set to allow for backward compatibility. For more information, see [Domain controllers](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-infra-domain#adds-infra-domain-controllers).
 
 ## Advanced configuration settings for ESXi servers
 {: #vc_bom-esxi-server-advance-config}
@@ -138,6 +144,15 @@ To update the MTU setting for the Public Switch, complete the following steps in
    When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
    {:note}
 
+## Distributed switch allocation
+{: #vc_bom-network-dswitch-allocation}
+
+The allocation of distributed switches varies if you have existing instances and clusters. Review the following considerations for switch creation when you create a new cluster:
+
+* If there is one or more existing cluster in the same pod using distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
+* If there is one or more existing cluster in the same pod using distributed switches named after the pod (rather than named after the cluster), your new cluster uses the same switches as the existing cluster.
+* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches named after the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
+
 ## Enhanced VMware vMotion Compatibility (EVC) mode settings
 {: #vc_bom-evc-mode-settings}
 
@@ -147,8 +162,10 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 |:------------- |:------------- |:------------- |
 | Broadwell | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Broadwell** Generation |
 | Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
-| Cascade Lake | Not supported | EVC is set to Intel **Skylake** Generation |
+| Cascade Lake[^vsphere] | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
 {: caption="Table 6. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
+
+[^vsphere]: For instances with vSphere 6.5, Cascade Lake supports 6.5u3 only.
 
 ## Related links
 {: #vc_bom-related}

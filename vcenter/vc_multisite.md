@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-07"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -23,9 +23,6 @@ subcollection: vmware-solutions
 
 {{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.
 
-Multi-site configuration for vCenter Server instances is supported only for V2.0 and later instances.
-{:note}
-
 ## Multi-site deployment components
 {: #vc_multisite-deployment-components}
 
@@ -36,7 +33,7 @@ A multi-site deployment consists of the following components.
   * vCenter Server subdomain
   * SSO (Single Sign-On) domain
   * SSO site name
-  * For primary instances that are deployed in V2.8 or later: vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
+  * vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
 * **Secondary instance or instances**: One or more secondary vCenter Server instances, linked to the primary instance, with the following configuration:
   * SSO site name
   * DNS subdomain that is linked to the root domain on the primary instance

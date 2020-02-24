@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-01-23"
 
 subcollection: vmware-solutions
 
@@ -91,10 +91,10 @@ Copy the API key or click download to save it. You will not be able to view this
 
 | Parameter | Example |
 | --------- | ------- |
-| HPCS URL - The URL for the IBM HPCS server to be used by the Cloud VM Set. | Available from the Manage Instance web page on the IBM Cloud portal. https://api.private.eu-de.hs-crypto.cloud.ibm.com:9133 |
-| HPCS API Key - The API key to be used to connect to the IBM HPCS server. | The Service ID API Key. rsC_SawDQ0GEOGSjsTXruArwQ9fC73WKv-87dVVTdf_i |
-| HPCS Instance ID - The instance ID for your IBM HPCS server. | Available from the Manage Instance web page on the IBM Cloud portal. 5e03d770-558d-4699-a7c6-8c98a17f5f5a |
-| HPCS Root Key - The Key ID in the IBM HPCS server to be used for generating a KEK. | This value is optional. If you do not include the root key, then KeyControl will create one in HPCS. 121b4f6c-8147-4194-b9c4-367f33fd8555 |
+| HPCS URL - The URL for the IBM HPCS server to be used by the Cloud VM Set. Available from the Manage Instance web page on the IBM Cloud portal. |  `https://api.private.eu-de.hs-crypto.cloud.ibm.com:9133` |
+| HPCS API Key - The API key to be used to connect to the IBM HPCS server. The Service ID API Key.  | `rsC_SawDQ0GEOGSjsTXruArwQ9fC73WKv-87dVVTdf_i` |
+| HPCS Instance ID - The instance ID for your IBM HPCS server. Available from the Manage Instance web page on the IBM Cloud portal. | `5e03d770-558d-4699-a7c6-8c98a17f5f5a` |
+| HPCS Root Key - The Key ID in the IBM HPCS server to be used for generating a KEK. This value is optional. If you do not include the root key, then KeyControl will create one in HPCS. | `121b4f6c-8147-4194-b9c4-367f33fd8555` |
 {: caption="Table 2. Cloud VM Set example" caption-side="bottom"}
 
   * Install the Policy Agent - The HyTrust DataControl Policy Agent is a software module that runs on Windows and Linux operating systems, and which provides encryption of virtual disks and individual files. When a user attempts to access an encrypted disk, the Policy Agent queries HTKC to validate the request, and returns the information to the user if HTKC authorizes the request. A Policy Agent must be installed in each VM, and on each disk, to be encrypted with HTDC.
@@ -102,5 +102,5 @@ Copy the API key or click download to save it. You will not be able to view this
 ## Related links
 {: #htdc-hpcs-deployment-related}
 
-*  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=vmware-solutions-hs-crypto-get-started)
+*  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started)
 *  [HyTrust DataControl overview](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)

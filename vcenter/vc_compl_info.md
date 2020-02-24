@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-18"
+lastupdated: "2020-02-21"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -18,18 +18,18 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Compliance information for vCenter Server instances
+# Compliance information for vCenter Server with NSX-V instances
 {: #vc_compl_info}
 
 Review the following information for details about compliance for VMware vCenter Server instances.
 
-The VMware vCenter Server with NSX-T offering is not supported for HIPAA customers.
+The vCenter Server with NSX-T offering is not supported for HIPAA customers.
 {:important}
 
 ## Customer versus IBM responsibility for vCenter Server
 {: #vc_compl_info-responsibility}
 
-The following diagram provides details about the customer (you) and IBM responsibilities for compliance activities.
+The following diagram provides details about the customer (you) and {{site.data.keyword.IBM}} responsibilities for compliance activities.
 
 ![Customer versus IBM responsibility matrix](../images/customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix"){: caption="Figure 1. Customer versus IBM responsibility matrix for VMware vCenter Server" caption-side="bottom"}
 

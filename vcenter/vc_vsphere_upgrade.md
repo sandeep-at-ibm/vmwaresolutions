@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-12"
+lastupdated: "2020-02-21"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 The VMware vCenter Server offering is a fully automated deployment solution for the VMware vSphere SDDC stack. It includes vSphere, NSX, and optionally vSAN products. While vCenter Server automates the most challenging parts of deploying, expanding, and contracting a VMware SDDC-based infrastructure, it is not a managed service.
 
-vCenter Server has a policy of supporting the automation of VMware SDDC software versions within the range of N-1. If you want to continue to benefit from the {{site.data.keyword.vmwaresolutions_short}} automation, you must upgrade existing instances of vCenter Server.
+vCenter Server has a policy of supporting the automation of VMware SDDC software versions within the range of N-1. If you want to continue to benefit from the {{site.data.keyword.vmwaresolutions_full}} automation, you must upgrade existing instances of vCenter Server.
 
 vCenter Server versions outside of the levels that are needed for automation support continue to be supported as required by the VMware support policy, but no longer function with the {{site.data.keyword.vmwaresolutions_short}} automation. You must apply patches and upgrade the VMware software periodically, over the lifecycle of a vCenter Server instance. This maintenance includes upgrading the VMware SDDC software to a version that is supported by the {{site.data.keyword.vmwaresolutions_short}} automation.
 
@@ -139,9 +139,9 @@ Upgrading VMware NSX can take some time as the upgrade process updates the vSphe
 * If you have Zerto on {{site.data.keyword.cloud_notm}} installed on your environment:
 
   * Check the Interoperability Matrix for Zerto Environments document that is available in the [Zerto Technical Documentation](https://www.zerto.com/myzerto/technical-documentation/){:external} to ensure that the Zerto version you have is compatible with the 6.7 version you are selecting for your upgrade.
-  
+
   * Use the Zerto user interface to shut down the zVRA VMs on each host. Select **Allow Zerto to always enter hosts into maintenance mode during remediation** within the Zerto site settings, policies section in the Zerto user interface. Otherwise, Zerto starts the zVRA and keeps the upgrade from proceeding by not allowing the ESXi host that is being upgraded to go into maintenance mode.
-  
+
 * For VMs that don't have VMware tools installed, manually shut down or forcefully power off before the NSX ESXi host module installation. These VMs keep the target ESXi host from going into maintenance mode.
 
 #### Procedure to upgrade VMware NSX
@@ -222,7 +222,7 @@ For vCenter Server linked instances, although it is recommended to upgrade all v
    1. Type **Y** to confirm that the PSC has been backed up to proceed.
    2. When the process completes, type **Y** to confirm the restart of vCenter.
 
-   If the converge process fails with the ``ERROR converge Failed to get vecs users and permissions`` message, see [Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:external} for steps to resolve the error.
+   For steps to resolve the converge process fails ``ERROR converge Failed to get vecs users and permissions`` error message, see [vCenter 6.7 Update 1 – Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:external}.
    {:note}
 
 10. After vCenter has been rebooted, verify normal operation by logging in to the vCenter user interface.

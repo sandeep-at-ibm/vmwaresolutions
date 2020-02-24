@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-04"
+lastupdated: "2020-02-21"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -17,10 +17,13 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Ordering, viewing, and removing services for vCenter Server instances
+# Ordering, viewing, and removing services for vCenter Server with NSX-V instances
 {: #vc_addingremovingservices}
 
 You can order services for your VMware vCenter Server instances, such as a disaster recovery solution. When you no longer need these services, you can remove them from your instances.
+
+Add-on services are not supported for vCenter Server with NSX-T instances.
+{:important}
 
 ## Available services for vCenter Server instances
 {: #vc_addingremovingservices-available-services}
@@ -29,18 +32,18 @@ The following table shows the services that are available to vCenter Server inst
 
 | Service name | Current version |
 |--------------|-----------------|
-| [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | 2.2.1 |
-| [F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.0.1 |
-| [FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations) | 300 series |
-| [FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 |
+| [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | 2.2.2 |
+| [F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.1 |
+| [FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | 6.2.3 |
 | [HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations) | 5.6 |
 | [HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)  | 5.0.1 |
 | [HyTrust KeyControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htkc_considerations) | 5.0.1 |
-| [IBM Security Services for SAP](/docs/services/vmwaresolutions?topic=vmware-solutions-managing-ss-sap) | N/A |
+| [{{site.data.keyword.IBM}} Security Services for SAP](/docs/services/vmwaresolutions?topic=vmware-solutions-managing-ss-sap) | N/A |
 | [IBM Spectrum Protect&trade; Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_considerations) | V10.1.5 |
+| [Juniper vSRX](/docs/services/vmwaresolutions?topic=vmware-solutions-vsrx_overview) | 18.4 |
 | [KMIP for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) | 2.0 |
 | [PrimaryIO HDM](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_pio) | N/A |
-| [Red Hat OpenShift for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview) | 4.2 |
+| [Red Hat OpenShift for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview) | 4.2.16 |
 | [Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations) | 9.5u4b |
 | [VMware HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations) (See **Note**) | 3.5.2 |
 | [vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |

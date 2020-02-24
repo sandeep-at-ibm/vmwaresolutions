@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-13"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -22,10 +22,10 @@ subcollection: vmware-solutions
 # VMware vSphere overview
 {: #vs_vsphereclusteroverview}
 
-VMware vSphere is a streamlined and optimized ordering platform for VMware. With this platform, you can build your own IBM-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components.
+VMware vSphere is a streamlined and optimized ordering platform for VMware. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components. A minimum of four ESXi servers is required.
 {: shortdesc}
 
-The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented. Also, a minimum of four ESXi servers is required.
+The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented.
 
 VMware vSphere does not automate the installation, configuration, and bring-up of the optional VMware components. The platform allows maximum of flexibility to design and build your hosted VMware environment while incorporating VMware-compatible hardware.
 
@@ -58,8 +58,8 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
 
 You can order one or more {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with one of the following configurations:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
-* **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
-* **SAP-certified**: Intel Skylake or Intel Broadwell generation servers (Intel Xeon 6140/E5-2690/E7-8890 series) with your selected CPU model.
+* **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) and 4-CPU Intel Cascade Lake generation servers (Quad Intel Xeon Gold 6248) with your selected CPU model and RAM size.
+* **SAP-certified**: 2-CPU Intel Skylake or Intel Broadwell generation servers (Intel Xeon 6140/E7-8890 series) and Intel Cascade Lake generation servers (Intel Xeon Gold 5200/6200 series and Intel Xeon Platinum 8200 series) with your selected CPU model.
 * **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
 The options available depend on whether you selected the VMware vSAN component.
@@ -72,7 +72,7 @@ Additionally, the following disk and networking specifications:
 {: #vs_vsphereclusteroverview-specs-network}
 
 * One VLAN (Virtual LAN) public VLAN and two private VLANs
-* (Optional) An HA-pair of FortiGate Security Appliance devices
+* (Optional) An HA-pair of FortiGate Physical Appliance devices
 
 ### Storage
 {: #vs_vsphereclusteroverview-specs-storage}

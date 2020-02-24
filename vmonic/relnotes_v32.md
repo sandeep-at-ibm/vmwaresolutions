@@ -51,7 +51,7 @@ If you have an existing instance with vSphere Enterprise Plus 6.7u1, you can add
 
 Starting with the V3.2 release, the following new {{site.data.keyword.baremetal_short_sing}} CPU models are available for deployment with instances and clusters with VMware vSphere 6.7 Update 2. These new models apply to vCenter Server, vCenter Server with NSX-T, and VMware vSphere.
 
-* Dual Intel Xeon Gold 4210 processor / 20 cores total, 2.3 GHz
+* Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.3 GHz
 * Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz
 * Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz
 
@@ -61,7 +61,6 @@ Cascade Lake {{site.data.keyword.baremetal_short}} are available on Multi-Zone R
 For more information about {{site.data.keyword.baremetal_short_sing}} settings, see:
 
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-cascade)
-* [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance#vc_nsx-t_orderinginstance-cascade)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstance-cascade)
 
 ## Updates for VMware vCenter Server instances
@@ -79,11 +78,7 @@ For more information, see [vCenter Server Bill of Materials](/docs/services/vmwa
 ### Cluster updates
 {: #relnotes_v32-vcs-initial-cluster}
 
-* You can now specify the name of your initial cluster to be created at the same time you place your instance order. For more information, see:
-
-   * [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-   * [Ordering vCenter Server with NSX-T instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_orderinginstance)
-
+* You can now specify the name of your initial cluster to be created at the same time you place your instance order. For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
 * (Updated on 05 November 2019) As a VMware recommended best practice, new clusters are now deployed with a public and private pair of distributed virtual switches. Private-only clusters deploy a new private distributed switch. All networking for the cluster is configured to use these switches.
 
 ## Updates for VMware vSphere instances

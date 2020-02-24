@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-01-27"
 
 subcollection: vmware-solutions
 
@@ -54,8 +54,6 @@ The NSX-V networking included in the vCenter Server deployment is used to deploy
 Red Hat OpenShift is deployed with the default Calico networking stack for Kubernetes, which provides network isolation within your cluster.
 
 ![OpenShift with NSX networking](../../images/openshift-nsxv-networking.svg){: caption="Figure 2. OpenShift with NSX networking" caption-side="bottom"}
-
-For more information, see [vCenter Server networking introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro).
 
 **Next topic:** [IBM Cloud networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
 

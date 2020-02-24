@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-02-10"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 The VMware HCX service enables creating a seamless connection between {{site.data.keyword.vmwaresolutions_short}} and an on-premises VMware virtualized datacenter.
 
-The {{site.data.keyword.vmwaresolutions_short}} includes fully automated, rapid deployments of VMware vCenter Server (VCS) in the {{site.data.keyword.cloud_notm}}. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes they use on-premises. For more information, see the [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture).
+The {{site.data.keyword.vmwaresolutions_short}} includes fully automated, rapid deployments of VMware vCenter Server (VCS) in the {{site.data.keyword.cloud_notm}}. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes they use on-premises. For more information, see the [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture).
 
 The VMware HCX service takes this hybridity to the next step, blending instances of vCenter Server with existing on-premises virtualized datacenters by enabling the creation of seamless network extensions and bidirectional migration of workloads.
 

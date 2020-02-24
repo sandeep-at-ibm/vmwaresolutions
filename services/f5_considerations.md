@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-02-03"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,7 +25,7 @@ subcollection: vmware-solutions
 The F5 BIG-IP service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
 {: shortdesc}
 
-The current BIG-IP VE version that is installed is v15.0.1.
+The current BIG-IP VE version that is installed is v15.1.
 {:note}
 
 ## Technical specifications for F5 BIG-IP

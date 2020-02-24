@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-01-22"
 
 subcollection: vmware-solutions
 
@@ -30,7 +30,7 @@ KMIP for VMware is compatible with both VMware vSAN encryption and vSphere encry
 ### VMware vSAN encryption
 {: #kmip-design-vsan-encrypt}
 
-VMware vSAN encryption is only applicable to vSAN datastores. With this solution, VMware vCenter and your VMware ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual disk drives used for your vSAN datastore, including both cache and capacity disks. vSAN encryption is implemented in a way that preserves the benefits of vSAN compression and deduplication.
+VMware vSAN encryption is only applicable to vSAN datastores. With this solution, VMware vCenter and your VMware ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual disk drives used for your vSAN datastore, including both cache and capacity disks. vSAN encryption is implemented in a way that preserves the benefits of vSAN compression and deduplication, if you choose this option when you order a new instance or add a cluster.
 
 Because vSAN encryption operates at the datastore level, its primary goal is to prevent data exposure if loss of physical disk drives occurs. Also, vSAN encryption is fully compatible with all virtual machine backup and replication technologies, such as vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, Veeam, and IBM Spectrum Protect Plus.
 

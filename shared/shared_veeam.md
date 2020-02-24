@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2020
 
-lastupdated: "2019-12-11"
+lastupdated: "2020-02-21"
 
 keywords: veeam, veeam install, tech specs veeam
 
@@ -18,71 +18,101 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Veeam for VMware Solutions Shared
-{: #shared_veeam_considerations}
+# Managing Veeam for VMware Solutions Shared instances
+{: #shared_veeam}
 
-The Veeam service is available and ready-to-use in all vCloud Director virtual data center instances. It seamlessly integrates as a managed solution to help your enterprise achieve high availability. This service provides recovery points for your applications and data. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
-{: shortdesc}
+The Veeam Availability Suite and Veeam Cloud Connect Replication services are available and ready-to-use in all Virtual Data Center instances. These services seamlessly integrate as a managed solution to help your enterprise achieve high availability. They provide recovery points for your applications and data. By using these services, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 
-## Managing Veeam
-{: #shared_veeam-managing}
-
-Veeam is available at the VMware vCloud Director organization level and has visibility to back up VMs from any virtual data center in the organization.
-
-You can access the Veeam self-service portal on the Virtual Data Center details page when the instance is in the **Ready to Use** state. For information about accessing the details page, see [Procedure to view the Virtual Data Center details](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-procedure-view-vdc-details).
-
-### Procedure to access Veeam from the Virtual Data Center instance
-{: #shared_veeam-proc-access}
-
-1. On the Virtual Data Center details page, under **Recommended Services**, click **Veeam Portal**.
-2. Log in to the Veeam Portal by using the vCloud Director **admin** credentials that you use to log in to the vCloud Director Management Console. To obtain the vCloud Director credentials, use the **Get Location Password** link.
-
-Any vCloud Director user with the **Organization Administrator** role can log in to the **Veeam Portal**.
-
-When creating backup jobs in the **Veeam Portal**, you can choose vApp and VM instances from any virtual data center in the organization.
-
-Alternatively, click the **admin** drop down in the vCloud Director Management Console to log in to the Veeam Portal.
+Service charges are incurred only if you choose to use the service.
 {:note}
 
-## Licenses and fees
-{: #shared_veeam_fees}
+## Veeam Availability Suite
+{: #shared_veeam-portal}
 
-Veeam usage incurs the following On-demand charges. You can view the charges on the **{{site.data.keyword.cloud}} billing and usage** view along with the usage and charges from all other {{site.data.keyword.cloud_notm}} services.
+The Veeam Availability Suite has visibility to back up VMs from any Virtual Data Center in the organization. It is available at the VMware vCloud Director organization level for any vCloud Director user with the **Organization Administrator** role.
 
-In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solutions** service type. Locate the **Organization** plan to find the Veeam usage across all virtual data centers in that organization. The virtual data center usage is located in a separate plan, depending on the type of virtual data center (**On-Demand** or **Reserved**).
+When you use the Veeam self-service portal to create backup jobs, you can choose vApp and VM instances from any Virtual Data Center in the organization.
 
-| Metric                                   | Frequency   | Description |
-|:-----------------------------------------|:------------|:------------|
-| Veeam_Instances_License | Monthly | Veeam license charge for every VM under backup. The monthly charge is for the highest number of VMs under backup at any time period in the month. |
-| Veeam_Backup_Block_Storage_GB_Hour | Hourly | Charge per GB of block storage used for all backups. |
-| Veeam_Backup_Object_Storage_GB_Hour | Hourly | Charge per GB of object storage used for all backups. |
-{: caption="Table 1. Licenses and fees" caption-side="top"}
+You can access the Veeam portal on the Virtual Data Center details page when the instance is in the **Ready to Use** state. For information about accessing the details page, see [Procedure to view Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-viewing).
 
-There are no additional Veeam usage charges for VMware Solutions Shared.
+### Procedure to access the Veeam self-service portal from the Virtual Data Center instance
+{: #shared_veeam-portal-proc-access}
+
+1. Under **Recommended services** on the Virtual Data Center instance details page, click **Veeam Backups**.
+2. Use the vCloud Director console **admin** username and password to log in to the Veeam self-service portal.
+
+For more information about generating the vCloud Director console credentials, see [Procedure to launch the vCloud Director Management console](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-accessing).
+
+Alternatively, click the **admin** drop-down in the vCloud Director console to log in to the Veeam portal.
 {:note}
 
-Initially, all backups go to the block storage that is closest to their VM workloads. Backups that are older than 14 days are automatically moved to longer term Cloud Object Storage in the region, which are at a lower price point. The restore speed for these older than 14 days backups might be impacted.
+### Limitations for Veeam Availability Suite
+{: #shared_veeam-portal-limitations}
 
-You can change the default 14 days time period by opening a VMware Solutions service ticket.
+- For the Veeam **application aware image processing** and **guest file system indexing** options to work for Windows VMs, the most recent VMware Tools must be installed on the VMs. Linux VMs are not supported.
+- If you are using **application aware image processing** for MS SQL or Oracle DB backups, the options **application aware** and **Item** restore are not supported. The restore operation needs to complete a full VM restore, which requires a downtime window for any consumers of the database.
 
-## Considerations when you remove vCloud Director virtual data centers
-{: #shared_veeam_considerations-remove}
+### Licenses and fees for Veeam Availability Suite
+{: #shared_veeam-portal-fees}
 
-If you remove all vCloud Director virtual data centers in your account, backup operations will be stopped. All previous backups will also be deleted and cannot be recovered.
+Veeam usage incurs On-Demand charges. For more information, see [VMware Solutions Shared pricing](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_pricing).
 
-## Limitations
-{: #shared_veeam_limitations}
+## Veeam Cloud Connect Replication
+{: #shared_veeam-cloud-connect}
 
-- For Veeam **application aware image processing** and **guest file system indexing** options to work for Windows VMs, the latest VMware Tools must be installed on the VMs. Linux VMs are not supported.
-- If you are using **application aware image processing** for MS SQL or Oracle DB backups, note that the options **application aware** and **Item** restore are not supported. The restore operation needs to complete a full VM restore, which requires a downtime window for any consumers of the database.
+Veeam Cloud Connect Replication provides to seamless replication of your workloads from on-premises to {{site.data.keyword.cloud}}. Use Veeam Cloud Connect as disaster recovery for failover during on-premises outages or to permanently move workloads directly to {{site.data.keyword.cloud_notm}}.
+
+When you access Veeam Cloud Connect, **DNS name** and **Port** details are specific to the region where your Virtual Data Center exists.
+
+| IBM Cloud Data Center location | DNS name   | Port |
+|:-------------------------------|:----------|:------|
+| Dallas | ``dalvccgw.vmware-solutions.cloud.ibm.com`` | ``6180``|
+{: caption="Table 2. Virtual Data Center region details" caption-side="top"}
+
+### Procedure to connect to Veeam Cloud Connect for replication
+{: #shared_veeam-cloud-connect-proc-access}
+
+It is recommended that you use a separate vCloud Director user with the **Organization Admin** role when you add the service provider in your Veeam Backup and Replication Server. For more information about managing users in vCloud Director, see [Managing Users](https://docs.vmware.com/en/vCloud-Director/9.5/com.vmware.vcloud.tenantportal.doc/GUID-FE38C285-7605-4473-870C-6AD44D8BF42E.html){:external}.
+{:important}
+
+1. Add your service provider to your Veeam Backup and Replication Server: [Connecting to Service Providers](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_sp.html?ver=95u4){:external}
+  * For **Step 2: Specify Cloud Gateway Settings**, use the **DNS name** and **Port** details that are specific to your Virtual Data Center region. You can  locate your **DNS name** and **Port** details on the Virtual Data Center instance details page. Scroll down to the **Recommended services** pane and locate **Connection Details** for Veeam Cloud Connect.  
+  * For **Step 3: Verify TLS Certificate and Specify User Account Settings**, use the following credentials:  
+    *Organization\Username* or *Username@Organization*  
+    For example: `OrganizationName\admin` or `admin@OrganizationName`  
+    An on-premises Veeam Backup and Replication Server connecting to {{site.data.keyword.cloud_notm}} must validate the revocation status of the {{site.data.keyword.vmwaresolutions_short}} SSL certificate that is provided by DigiCert. You must have **admin** privileges.  
+2. From your on-premises Veeam Backup and Replication Server, view Veeam Cloud Connect failover plans, perform failovers, or undo failovers from {{site.data.keyword.cloud_notm}}.
+
+### Procedure to access the Veeam Cloud Connect self-service portal from the Virtual Data Center instance
+{: #shared_veeam-cloud-connect-self-service-proc-access}
+
+If you don't have access to your on-premises Veeam Backup and Replication Server, connect to the Veeam Cloud Connect self-service portal to view failover plans, perform failovers, or undo failovers from {{site.data.keyword.cloud_notm}}.
+
+1. Under **Recommended services** on the Virtual Data Center details page, click **Veeam Cloud Connect**. The Veeam Cloud Connect self-service portal login is displayed.
+2. Log in to the Veeam Cloud Connect portal.
+
+You must add a prefix to your **User** credentials with your organization name. You can locate your organization name under the self-service portal access information under **Veeam Cloud Connect Replication**. For example, `8823e1828b208ef9380b3\admin`
+{:important}
+
+For more information about using Veeam Cloud Connect, see the [Veeam Cloud Connect User Guide](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_user_guide.html?ver=95u4){:external}.
+
+## Deleting Veeam Backups
+{: #shared_veeam-delete}
+
+Restore points are automatically removed from the Veeam self-service portal when you delete a Virtual Data Center instance. For more information, see [Deleting Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_deletinginstance).
+
+If you remove all vCloud Director Virtual Data Centers in your account, backup operations are stopped. All previous backups and restore points that are associated with the Virtual Data Center are deleted and cannot be recovered. This is true even if you still have Virtual Data Centers in your account.
+{:important}
 
 ## Related links
-{: #shared_veeam_considerations-related}
+{: #shared_veeam-related}
 
-* [Ordering Shared On-demand](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_ordering_ondemand)
-* [Ordering Shared Reserved](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_ordering_reserved)
-* [Managing Shared resources](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing)
-* [VMware Solutions Shared operations](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
+* [VMware Solutions Shared overview](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_overview)
+* [Requirements and planning for VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_planning)
+* [Ordering Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_ordering)
+* [Viewing and managing Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing)
+* [Operating VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
 * [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Using Veeam Cloud Connect Portal](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_portal_use.html?ver=95u4){:external}
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

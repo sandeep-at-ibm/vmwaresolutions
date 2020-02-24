@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2019
+  years: 2016, 2020
 
-lastupdated: "2019-11-29"
+lastupdated: "2020-02-07"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -66,8 +66,9 @@ Review and choose your deployment offering.
 
 | Deployment offering | Description |
 |:------------------- |:----------- |
-| [vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview) and [vCenter Server with NSX-T](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_nsx-t_overview) | These offerings allow you to deploy a VMware virtual environment by using custom compute, storage, and network resources to best fit your business needs. |
-| [VMware vSphere](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview) | This offering provides a customizable virtualization service that combines VMware-compatible {{site.data.keyword.baremetal_short}}, hardware components, and licenses, to build your own IBM-hosted VMware environment. |
+| [VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_overview) | This offering provides standardized and customizable deployment choices of VMware Virtual Data Center environments. |
+| [VMware Solutions Dedicated - vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview) | This offering allows you to deploy a VMware virtual environment by using custom compute, storage, and network resources to best fit your business needs. |
+| [VMware Solutions Dedicated - VMware vSphere](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview) | This offering provides a customizable virtualization service that combines VMware-compatible {{site.data.keyword.baremetal_short}}, hardware components, and licenses, to build your own IBM-hosted VMware environment. |
 | [Single-node Trial for Migration and App Modernization](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview) | This offering allows you to test drive {{site.data.keyword.cloud_notm}} to migrate VMware workloads to the {{site.data.keyword.cloud_notm}} and then modernize simple workloads using containers. |
 | [Single-node Trial for Data Protection and Disaster Recovery](/docs/services/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_overview) | This offering allows you to test drive {{site.data.keyword.cloud_notm}} to migrate and recover VMware workloads to the {{site.data.keyword.cloud_notm}}. |
 {: caption="Table 2. Deployment offerings" caption-side="top"}
@@ -80,7 +81,7 @@ Review and choose add-on services for your deployment offering.
 | Service category | Service name | Description |
 |:------------ |:------------ |:----------- |
 | Security and Compliance | [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | This service manages cyber and compliance risk with proactive monitoring and automated defense controls to protect against threats and to meet industry or government regulations. |
-| Security and Compliance | [FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations) | This service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances. |
+| Security and Compliance | [FortiGate Security Appliance (Deprecated)](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations) | This service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances. |
 | Security and Compliance | [FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | This service deploys a pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure. |
 | Security and Compliance | [F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations) | This service provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. |
 | Business Continuity and Migration | [HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations) | This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. |
@@ -91,6 +92,7 @@ Review and choose add-on services for your deployment offering.
 | Business Continuity and Migration | [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_overview) | This service delivers a multi-zone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region. |
 | Featured Workload Solutions | [IBM Security Services for SAP](/docs/services/vmwaresolutions?topic=vmware-solutions-managing-ss-sap) | This service offers a cybersecurity solution to automate the monitoring and protection of SAP applications on IBM Cloud, and to keep workloads compliant and secure from inside and outside threats. |
 | Business Continuity and Migration | [IBM Spectrum Protect Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_considerations) | This service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance. |
+| Security and Compliance | [Juniper vSRX](/docs/services/vmwaresolutions?topic=vmware-solutions-vsrx_overview) | This  service provides security and networking services at the perimeter or edge in virtualized private or public cloud environments. Within a VMware infrastructure, vSRX runs as a virtual machine (VM) within the vSphere environment. The vSRX provides a complete Next-Generation Firewall (NGFW) solution. |
 | Security and Compliance | [KMIP for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) | This  service provides a highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys. |
 | Professional Services | [Managed VMware Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_imi) | This service can simplify VMware virtual infrastructure management with modular services. It uses advanced automation and analytics to manage critical infrastructure components worldwide and to deliver dynamic remote management services for a broad range of traditional and cloud virtual infrastructures. |
 | Professional Services | [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services) | This service seamlessly integrates with your VMware hypervisors to help your enterprise achieve high availability (HA) and it provides recovery points and time objectives for your applications and data.  |
@@ -126,8 +128,11 @@ For information about how to configure your user account and settings, see [Mana
 After you decide upon a deployment offering, which is managed as an instance in the console, begin the ordering process.
 
 For information about how to order an instance, see the following topics based on your selection of deployment offering:
+* [Ordering Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_ordering)
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
 * [Ordering vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
+* [Ordering Single-node Trial for Migration and App Modernization instances](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_orderinginstance)
+* [Ordering Single-node Trial for Data Protection and Disaster Recovery instances](/docs/services/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_orderinginstance)
 
 ## Step 4: Viewing the instance
 {: #getting-started-step4}

@@ -10,10 +10,12 @@ IBM Cloud for VMware Solutions
     [Why IBM Cloud for VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
-    vmonic/relnotes_v34.md
+    vmonic/vmware-comp-guide.md
+    vmonic/relnotes_v35.md
 
     {: .topicgroup}
     Previous release notes
+        vmonic/relnotes_v34.md
         vmonic/relnotes_v33.md
         vmonic/relnotes_v32.md
         vmonic/relnotes_v31.md
@@ -53,7 +55,20 @@ IBM Cloud for VMware Solutions
         vmonic/notifications.md
 
     {: .topicgroup}
-    vCenter Server
+    VMware Solutions Shared
+        shared/shared_overview.md
+        shared/shared_planning.md
+        shared/shared_data_security.md
+        shared/shared_ordering.md
+        shared/shared_managing.md
+        shared/shared_vcd-ops-guide.md
+        shared/shared_resizeinstance.md
+        shared/shared_veeam.md
+        shared/shared_deletinginstance.md
+        shared/shared_pricing.md
+
+    {: .topicgroup}
+    VMware Solutions Dedicated - vCenter Server
         vcenter/vc_vcenterserveroverview.md
         vcenter/vc_bom.md
         vcenter/vc_vsphere_upgrade.md
@@ -74,17 +89,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_deletinginstance_multi.md
 
     {: .topicgroup}
-    vCenter Server with NSX-T
-        vcenter/vc_nsx-t_overview.md
-        vcenter/vc_nsx-t_networkingonvcenterserver.md
-        vcenter/vc_nsx-t_esg_config.md
-        vcenter/vc_nsx-t_orderinginstance.md
-        vcenter/vc_nsx-t_addingviewingclusters.md
-        vcenter/vc_nsx-t_addingremovingservers.md
-        vcenter/vc_nsx-t_deletinginstance.md
-
-    {: .topicgroup}
-    VMware vSphere
+    VMware Solutions Dedicated - VMware vSphere
         vsphere/vs_vsphereclusteroverview.md
         vsphere/vs_bom.md
         vsphere/vs_planning.md
@@ -131,11 +136,7 @@ IBM Cloud for VMware Solutions
         services/f5_ordering.md
         services/managing_f5.md
 
-    {: .topicgroup}
-    FortiGate Security Appliance
-        services/fsa_considerations.md
-        services/fsa_ordering.md
-        services/managingfsa.md
+    services/fsa_considerations.md
 
     {: .topicgroup}
     FortiGate Virtual Appliance
@@ -180,19 +181,19 @@ IBM Cloud for VMware Solutions
         services/mcv_viewingclusters.md
         services/mcv_addingremovingservers.md
 
-    {: .topicgroup}
-    (Deprecated) IBM Cloud Private Hosted
-        services/icp_overview.md
-
-    {: .topicgroup}
-    IBM Security Services for SAP
-        services/managing-ss-sap.md
+    services/managing-ss-sap.md
 
     {: .topicgroup}
     IBM Spectrum Protect Plus
         services/spp_considerations.md
         services/spp_ordering.md
         services/managingspp.md
+
+    {: .topicgroup}
+    Juniper vSRX
+        services/juniper_overview.md
+        services/juniper_ordering.md
+        services/juniper_managing.md
 
     {: .topicgroup}
     KMIP for VMware
@@ -213,6 +214,8 @@ IBM Cloud for VMware Solutions
         services/ocp_overview.md
         services/ocp_ordering.md
         services/ocp_managing.md
+
+    services/icp_overview.md
 
     {: .topicgroup}
     Veeam
@@ -240,16 +243,6 @@ IBM Cloud for VMware Solutions
         services/managing_zerto_services.md
         services/managing_ices.md
         services/netapp_overview.md
-
-    {: .topicgroup}
-    (Beta) VMware Solutions Shared
-        shared/shared_overview.md
-        shared/shared_ordering_ondemand.md
-        shared/shared_ordering_reserved.md
-        shared/shared_managing.md
-        shared/shared_vcd-ops-guide.md
-        shared/shared_veeam.md
-        shared/shared_pricing.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -408,44 +401,6 @@ IBM Cloud for VMware Solutions
         archiref/htdc-hpcs/htdc-hpcs-deployment.md
 
     {: .topicgroup}
-    vCenter Server networking guide
-        archiref/vcsnsxt/vcsnsxt-intro.md
-        archiref/vcsnsxt/vcsnsxt-systemcontext.md
-        archiref/vcsnsxt/vcsnsxt-appmod.md
-        archiref/vcsnsxt/vcsnsxt-usecases.md
-        archiref/vcsnsxt/vcsnsxt-overview.md
-        archiref/vcsnsxt/vcsnsxt-overview-ic4vnetwork.md
-        archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.md
-        archiref/vcsnsxt/vcsnsxt-overview-iks.md
-        archiref/vcsnsxt/vcsnsxt-overview-icp.md
-        archiref/vcsnsxt/vcsnsxt-overview-integration.md
-        archiref/vcsnsxt/vcsnsxt-operations.md
-        archiref/vcsnsxt/vcsnsxt-techpreview.md
-
-    {: .topicgroup}
-    vCenter Server and IBM Cloud Private guide
-        archiref/vcsicp/vcsicp-intro.md
-        archiref/vcsicp/vcsicp-systemcontext.md
-        archiref/vcsicp/vcsicp-appmod.md
-        archiref/vcsicp/vcsicp-usecases.md
-        archiref/vcsicp/vcsicp-arch-overview.md
-        archiref/vcsicp/vcsicp-arch-overview-infrastructure.md
-        archiref/vcsicp/vcsicp-arch-overview-solution.md
-        archiref/vcsicp/vcsicp-detail-design.md
-        archiref/vcsicp/vcsicp-detail-design-network.md
-        archiref/vcsicp/vcsicp-detail-design-resiliency.md
-
-    {: .topicgroup}
-    vCenter Server and IBM Kubernetes service guide
-        archiref/vcsiks/vcsiks-intro.md
-        archiref/vcsiks/vcsiks-systemcontext.md
-        archiref/vcsiks/vcsiks-appmod.md
-        archiref/vcsiks/vcsiks-usecases.md
-        archiref/vcsiks/vcsiks-arch-overview.md
-        archiref/vcsiks/vcsiks-arch-overview-infrastructure.md
-        archiref/vcsiks/vcsiks-overview-network.md
-
-    {: .topicgroup}
     vCenter Server and Red Hat OpenShift architecture
         archiref/vcs-openshift/vcs-openshift-intro.md
         archiref/vcs-openshift/vcs-openshift-syscontext.md
@@ -483,28 +438,6 @@ IBM Cloud for VMware Solutions
         archiref/vcsvsrx/vcsvsrx-deployment.md
         archiref/vcsvsrx/vcsvsrx-licensing.md
         archiref/vcsvsrx/vcsvsrx-components.md
-
-    {: .topicgroup}
-    VMware and Skate Advisor Concept Car guide
-        archiref/vcscar/vcscar-preface.md
-        archiref/vcscar/vcscar-intro.md
-        archiref/vcscar/vcscar-syscontext.md
-        archiref/vcscar/vcscar-concepts.md
-        archiref/vcscar/vcscar-logical.md
-        archiref/vcscar/vcscar-physical.md
-        archiref/vcscar/vcscar-arch-overview-solution.md
-        archiref/vcscar/vcscar-arch-overview-infrastructure.md
-        archiref/vcscar/vcscar-commonservices.md
-
-    {: .topicgroup}
-    VMware: The modernization journey of Stock Trader
-        archiref/vcscontent/vcscontent-modjourney.md
-        archiref/vcscontent/vcscontent-hcx.md
-        archiref/vcscontent/vcscontent-stocktrmod.md
-        archiref/vcscontent/vcscontent-addmidware.md
-        archiref/vcscontent/vcscontent-aianalytics.md
-        archiref/vcscontent/vcscontent-iks.md
-        archiref/vcscontent/vcscontent-summary.md
 
     {: .topicgroup}
     VMware HCX solution architecture

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-10-01"
+lastupdated: "2020-01-27"
 
 subcollection: vmware-solutions
 
@@ -64,6 +64,5 @@ Due to the use of the two-way trust between the {{site.data.keyword.vmwaresoluti
 ## Related links
 {: #adds-integration-related}
 
-* [vCenter Server networking introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-intro)
-* [IBM Cloud networking overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview-ic4vnetwork)
-* [NSX-V overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsnsxt-overview-ic4vnsxv)
+* [Description of support boundaries for Active Directory over NAT](https://support.microsoft.com/en-us/help/978772/description-of-support-boundaries-for-active-directory-over-nat){:external}
+* [Steps to avoid registering unwanted NICs in DNS on a multi-homed Domain Controller](https://support.microsoft.com/en-us/help/2023004/steps-to-avoid-registering-unwanted-nic-s-in-dns-on-a-mulithomed-domai){:external}

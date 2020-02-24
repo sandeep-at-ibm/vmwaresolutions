@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-18"
+lastupdated: "2020-01-09"
 
 keywords: security services, request security sap, tech specs sap
 
@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 
 These services, developed between IBM Security and Onapsis (an IBM Business Partner), are designed to implement and configure Onapsis specifically to your environment requirements for continuous workload visibility and protection.
 
-Through continuous monitoring, the Onapsis Security Platform delivers a near real-time preventive, detective, and corrective solution for securing SAP systems and applications. The Onapsis Security Platform provides unmatched coverage and protection with context-aware insight across SAP NetWeaver ABAP, J2EE, and HANA platforms. The platform integrates with network security, security management, and associated workflows.
+Through continuous monitoring, the Onapsis Security Platform delivers a near real-time preventive, detective, and corrective solution for securing SAP systems and applications. The Onapsis Security Platform provides unmatched coverage and protection with context-aware insight across SAP NetWeaver ABAP, Java Platform, Enterprise Edition, and HANA platforms. The platform integrates with network security, security management, and associated workflows.
 
 ## Technical specifications for IBM Security Services for SAP
 {: #managing-ss-sap-specs}
@@ -39,9 +39,9 @@ IBM Security Services for SAP offers the following features:
 {: #managing-ss-sap-benefits}
 
 You can expect the following benefits when you request IBM Security Services for SAP:
-* Consultative engagement methodology centered on your business objectives
+* Consultative engagement methods centered on your business objectives
 * Experienced end-to-end architectural experts that work jointly with the {{site.data.keyword.cloud_notm}} team
-* Accelerated cloud adoption through proven paths for successful implementation of SAP workloads on the cloud
+* Accelerated cloud adoption for successful implementation of SAP workloads on the cloud
 * Prescriptive best practices for solution implementation by using {{site.data.keyword.cloud_notm}} Services products and features
 * Rapid learning and risk mitigation through access to {{site.data.keyword.cloud_notm}} experts
 

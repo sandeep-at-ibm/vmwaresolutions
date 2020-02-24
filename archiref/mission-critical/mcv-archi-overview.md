@@ -4,7 +4,7 @@ copyright:
 
   years:  2019
 
-lastupdated: "2019-12-12"
+lastupdated: "2019-12-30"
 
 subcollection: vmware-solutions
 
@@ -70,13 +70,13 @@ Mission Critical Workloads are offered in the standard {{site.data.keyword.vmwar
 ## Ordering and management
 {: #mcv-archi-overview-order}
 
-Mission Critical Workloads instances are intended to be primarily ordered and managed by IBM GTS or by specific customer personnel as part of a GTS managed Services Engagement.
+Mission Critical Workloads instances are intended to be primarily ordered and managed by IBM GTS or by specific customer personnel as part of an IBM GTS managed Services Engagement.
 
-Support is provided by GTS and the {{site.data.keyword.vmwaresolutions_short}} Devops team.
+Support is provided by an IBM GTS and the {{site.data.keyword.vmwaresolutions_short}} Devops team.
 
 Initial provision and configuration are provided by {{site.data.keyword.vmwaresolutions_short}} automation, along with the ability to scale-up and scale-down capacity.
 
-Day 2 operation and management activities are not part of the automation process and are the responsibility of GTS or customer personnel. Day 2 operation and management activities include:
+Day 2 operation and management activities are not part of the automation process and are the responsibility of IBM GTS or customer personnel. Day 2 operation and management activities include:
 
 * Monitoring
 * Management and operation
@@ -86,7 +86,7 @@ Day 2 operation and management activities are not part of the automation process
 * Backup and restore
 * Network failure recovery
 
-Although this offering is intended to be ordered and used in conjunction with a GTS support contract, it can be ordered by anyone by using the {{site.data.keyword.vmwaresolutions_short}} portal.
+Although this offering is intended to be ordered and used in conjunction with an IBM GTS support contract, it can be ordered by anyone by using the {{site.data.keyword.vmwaresolutions_short}} portal.
 
 ## Related links
 {: #mcv-archi-overview-related}

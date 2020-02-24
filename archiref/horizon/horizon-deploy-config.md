@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-01-13"
 
 subcollection: vmware-solutions
 
@@ -139,8 +139,8 @@ The best subscription license you need for your Horizon 7 deployment will depend
 
 Here are some examples:
 * You are setting up a new H7 deployment for 2,000 VDI users on {{site.data.keyword.cloud_notm}}. There are no on-premises components. Purchase 2,000-user Horizon Universal license in this case.
-* You have an existing Horizon 7 pod on-premises for 2,000 users, and you want to deploy a pod on {{site.data.keyword.cloud_notm}} for an addition 1,000 users for full time VDI use.  The best license type is the Horizon Universal license for your Horizon 7 pod on {{site.data.keyword.cloud_notm}}. You would keep your perpetual license for on-premise pod until renewal and then decided whether to move to Horizon Universal license for your on-prem pod.
-* You have an existing Horizon 7 pod on-premises for 2,000 users, and you want to deploy a pod on {{site.data.keyword.cloud_notm}} as BCDR capacity for the 2,000 users on-premise. The best license type is to upgrade your existing 2,000-user perpetual license to 2,000-user Horizon Universal license.
+* You have an existing Horizon 7 pod on-premises for 2,000 users, and you want to deploy a pod on {{site.data.keyword.cloud_notm}} for an addition 1,000 users for full time VDI use.  The best license type is the Horizon Universal license for your Horizon 7 pod on {{site.data.keyword.cloud_notm}}. You would keep your perpetual license for the on-premises pod until renewal and then decided whether to move to Horizon Universal license for your on-premises pod.
+* You have an existing Horizon 7 pod on-premises for 2,000 users, and you want to deploy a pod on {{site.data.keyword.cloud_notm}} as BCDR capacity for the 2,000 users on premises. The best license type is to upgrade your existing 2,000-user perpetual license to 2,000-user Horizon Universal license.
 
 ### License enablement
 {: #horizon-deploy-config-lic-enable}
@@ -171,7 +171,7 @@ In addition to using Full Clones, you can also leverage Instant Clone Technology
 ### App Volumes
 {: #horizon-deploy-config-app-volume}
 
-App Volumes provides real-time application delivery and management, now for on-premise and on VMC:
+App Volumes provides real-time application delivery and management, now for on premises and on VMC:
 * Quickly provision applications at scale.
 * Dynamically attach applications to users, groups, or devices, even when users are already logged in to their desktop.
 * Provision, deliver, update, and retire applications in real time.

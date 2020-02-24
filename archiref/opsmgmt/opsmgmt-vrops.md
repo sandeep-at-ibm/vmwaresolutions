@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-28"
+lastupdated: "2020-01-14"
 
 ---
 
@@ -55,6 +55,12 @@ The analytics cluster consists of one master node, one master replica node, and 
 | Memory | 32 GB |
 | Disk (thick provisioned) | 254 GB |
 {: caption="Table 1. Operations Manager Master/Replica Node system settings" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the attribute of the master ro replica node. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: #table1}
+{: tab-title="Master/Replica Node system settings"}
+{: tab-group="System settings"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 | Attribute | Specification |
 |---|---|
@@ -62,6 +68,12 @@ The analytics cluster consists of one master node, one master replica node, and 
 | Memory | 32 GB |
 | Disk (thick provisioned) | 254 GB |
 {: caption="Table 2. Operations Manager Data Node system settings" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the attribute of the data node. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: #table2}
+{: tab-title="Data Node system settings"}
+{: tab-group="System settings"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
 If monitoring of the compute VMs is required, the client should install two remote collector nodes on a VXLAN. The size of a Standard Remote Collector Virtual Appliance is 2 vCPU with 4 GB of RAM and the default appliance VMDK size is sufficient. The remote collector nodes are deployed with thin-provisioned disks as the remote collectors do not perform analytics operations or store data.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-04"
+lastupdated: "2020-02-21"
 
 keywords: vCenter Server Hybridity add service, view service vCenter Server Hybridity, remove service vCenter Server Hybridity
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservices}
 
-You can order services for your vCenter Server with Hybridity Bundle instance, such as a disaster recovery solution. When you no longer need these services, you can remove them from your instance.
+You can order services for your VMware vCenter Server with Hybridity Bundle instance, such as a disaster recovery solution. When you no longer need these services, you can remove them from your instance.
 
 ## Available services for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservices-available-services}
@@ -29,14 +29,14 @@ The following services are available to vCenter Server with Hybridity Bundle ins
 
 | Service name | Current version |
 |--------------|-----------------|
-| [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | 2.2.1 |
-| [F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.0.0 |
-| [FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations) | 300 series |
-| [FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | 6.0.3 |
+| [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | 2.2.2 |
+| [F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.1 |
+| [FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | 6.2.3 |
 | [HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations) | 5.5.1 |
 | [HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations) | 4.3.2 |
 | [HyTrust KeyControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htkc_considerations) | 4.3.2 |
-| [IBM Spectrum Protect&trade; Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_considerations) | 10.1.3 |
+| [{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_considerations) | 10.1.3 |
+| [Juniper vSRX](/docs/services/vmwaresolutions?topic=vmware-solutions-vsrx_overview) | 18.4  |
 | [KMIP for VMware](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  |
 | [Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations) | 9.5u4b |
 | [HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.2 |

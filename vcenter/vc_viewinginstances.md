@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-26"
+lastupdated: "2020-02-06"
 
 keywords: view vCenter Server, view instance, view instance details
 

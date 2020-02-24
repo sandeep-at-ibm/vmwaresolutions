@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-02-03"
 
 keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 The Caveonix RiskForesight service can help to manage cyberrisk and compliance risk with proactive monitoring and automated defense controls to protect against threats and to meet industry or government regulations.
 {: shortdesc}
 
-The current Caveonix RiskForesight version that is installed is 2.2.1.
+The current Caveonix RiskForesight version that is installed is 2.2.2.
 {:note}
 
 ## Technical specifications for Caveonix RiskForesight

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-02-06"
 
 keywords: red hat openshift, request openshift for vmware, tech specs openshift vmware
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 
 The Red Hat OpenShift for VMware service deploys a Red Hat OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift components are deployed as virtual machines (VM) or appliances by using VMware NSX software-defined networking.
 
-The current Red Hat OpenShift version that is installed is 4.2.
+The current Red Hat OpenShift version that is installed is 4.2.16.
 {: note}
 
 The cluster consists of three master nodes and three worker nodes, all running Red Hat CoreOS. In addition, there are also two VMware NSX VMs, a Red Hat CoreOS template, and a bastion VM running CentOS. 

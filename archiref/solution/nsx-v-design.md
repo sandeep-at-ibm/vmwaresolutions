@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-06"
+lastupdated: "2020-01-28"
 
 subcollection: vmware-solutions
 
@@ -94,12 +94,12 @@ The names, number, and ordering of the host NICs might vary depending on the {{s
 Port Group|Teaming|Uplinks|VLAN ID
 ---|---|---|--
 SDDC-DPortGroup-Mgmt|Originating virtual port|Active: 0, 1|VLAN 1
-SDDC-DPortGroup-vMotion|Originating virtual port|Active: 0, 1|VLAN 2
-SDDC-DPortGroup-VSAN|Explicit failover|Active: 0, Standby: 1|VLAN 2
+SDDC-DPortGroup-vMotion|Use explicit failover order|Active: 0, 1|VLAN 2
+SDDC-DPortGroup-VSAN|Route based on originating virtual port|Active: 0, Standby: 1|VLAN 2
 SDDC-DPortGroup-NFS|Originating virtual port|Active: 0, 1|VLAN 2
 NSX generated|Originating virtual port|Active: 0, 1|VLAN 1
 SDDC-DPortGroup-External|Originating virtual port|Active: 0, 1|VLAN 3
-{: caption="Table 5. Converged cluster virtual switch port groups and VLANs, Distributed switch **SDDC-Dswitch-Private**" caption-side="bottom"}
+{: caption="Table 5. Converged cluster virtual switch port groups and VLANs, Distributed switch SDDC-Dswitch-Private" caption-side="bottom"}
 
 Purpose|Connected port group|Enabled services|MTU
 --|---|---|---
@@ -108,7 +108,7 @@ vMotion|SDDC-DPortGroup-vMotion|vMotion Traffic|9000
 VTEP|NSX generated|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-{: caption="Table 6. Converged cluster VMkernel adapters, Distributed switch **SDDC-Dswitch-Private**" caption-side="bottom"}
+{: caption="Table 6. Converged cluster VMkernel adapters, Distributed switch SDDC-Dswitch-Private" caption-side="bottom"}
 
 ## NSX configuration
 {: #nsx-v-design-nsx-config}

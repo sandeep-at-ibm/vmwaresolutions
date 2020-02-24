@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-05"
+lastupdated: "2020-02-21"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -31,7 +31,12 @@ The trial is designed for migration of up to 20 simple development or test workl
 The Single-node Trial for Data Protection and Disaster Recovery is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering more add-on services, and applying updates are not supported.
 {:important}
 
-After your Single-node Trial instance is deployed, you can use [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external} from [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external} for assistance with your instance. Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
+After your Single-node Trial instance is deployed, you can use on demand consulting and expert services to help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. For more information, see:
+
+* [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external}
+* [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}
+
+Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
 
 This trial is intended for use up to 90 days. Monthly recurring charges are billed based on your billing schedule, and not when the instance is ordered. If the instance is not cancelled on or before the last day of your billing cycle, you are charged for the next month. A 90-day trial might result in four months of charges, unless the cancellation is completed before the fourth month begins.
 {:note}

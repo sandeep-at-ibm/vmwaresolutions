@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2019
+  years: 2016, 2019
 
 lastupdated: "2019-11-04"
 
@@ -22,11 +22,8 @@ You can export the contents of an inventory list into a CSV file.
 {: #export-procedure}
 
 1. From the VMware vSphere Web Client, open a list view for an object type, for example, Virtual Machines or Hosts.
-
-    You can access list views of objects from the Global Inventory Lists and the search results.
-
+   You can access list views of objects from the Global Inventory Lists and the search results.
 2. Click the Export icon at the lower right corner of a Global Inventory or Resources list view. To open the navigator view, press `CTRL+ALT+7`.
-
 3. Select each row to be listed in the CSV file for each of the following sections:
     - Global Inventory Lists -> Virtual Machines
     - Resources -> vCenter Servers
@@ -39,7 +36,6 @@ You can export the contents of an inventory list into a CSV file.
     - Resources -> Networks
     - Resources -> Distributed Port Groups
     - Resources -> Distributed Switches
-
 4. For each of the previous items, click **Export** and save to a file name that is labeled with the contents, as such:
     - Global Inventory Lists -> Virtual Machines
     - Resources -> vCenter Servers -> exportlist-vcenters.csv
@@ -52,9 +48,7 @@ You can export the contents of an inventory list into a CSV file.
     - Resources -> Networks -> exportlist-networks.csv
     - Resources -> Distributed Port Groups -> exportlist-dpgs.csv
     - Resources -> Distributed Switches -> exportlist-dswitches.csv
-
-5. Package all CSV files into a single compressed file, for example, vCenterName-Inventory.zip
-
+5. Package all CSV files into a single compressed file, for example, vCenterName-Inventory.zip.
 6. Use the contents to size the target environment.
 
 ## Related links
