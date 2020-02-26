@@ -24,6 +24,13 @@ subcollection: vmware-solutions
 
 This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
 
+## VMware Solutions Shared
+{: #relnotes_v35-shared}
+
+(Updated on Feb 26, 2020) {{site.data.keyword.vmwaresolutions_short}} Shared, a managed public Infrastructure as a Service (IaaS) solution, offers either a standardized or customizable deployment option of VMware vCloud Director Virtual Data Center environments. Use Virtual Data Center instances to quickly and seamlessly migrate or deploy VMware workloads to the cloud on top of IBM hosted VMware infrastructure. The Veeam Availability Suite and Veeam Cloud Connect Replication services are available and ready-to-use in all Virtual Data Center instances. Charges are incurred only if you choose to use the service.
+
+For more information, see [VMware Solutions Shared overview](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_overview).
+
 ## VMware Solutions Dedicated
 {: #relnotes_v35-dedicated}
 
@@ -94,8 +101,8 @@ The following SAP-certified Bare Metal Server models are now available for deplo
 The allocation of distributed switches for vCenter Server with NSX-V instances is changed in this release. This behavior varies if you have existing instances and clusters. Review the following considerations for switch creation when you create a new cluster:
 
 * If there is one or more existing cluster in the same pod using distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
-* If there is one or more existing cluster in the same pod using distributed switches named after the pod (rather than named after the cluster), your new cluster uses the same switches as the existing cluster.
-* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches named after the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
+* If there is one or more existing cluster in the same pod using distributed switches that have been named using the same name as the pod (rather than named using the same name as the cluster), your new cluster uses the same switches as the existing cluster.
+* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches that have been named using the same name as the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
 
 For vCenter Server with NSX-T instances, clusters in the same pod reuse NSX-T segments and ESXi TEP IP pools. New clusters in new pods create new segments and IP pools.
 

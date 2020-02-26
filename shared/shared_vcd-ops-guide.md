@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-20"
+lastupdated: "2020-02-25"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -130,7 +130,7 @@ Complete the following steps to register the Red Hat VM with your RHEL activatio
   Where:  
   ``${activation_key}`` is the Red Hat activation key that is located on the instance details page.  
 
-You can still use another RHEL Capsule Server or a satellite server if you already have an RHEL subscription outside of IBM. Charges are incurred for RHEL VMs running in a Virtual Data Center instance for the RHEL license.
+You can still use another RHEL Capsule Server or a satellite server if you already have an RHEL subscription outside of IBM. Charges for the RHEL license are incurred against RHEL VMs that are running in a Virtual Data Center instance.
 {:note}
 
 ### Defining catalogs and policies

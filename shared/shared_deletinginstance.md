@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-02-25"
 
 keywords: VMware Solutions Shared delete instance, delete VMware Solutions Shared, remove VMware Solutions Shared
 
@@ -28,6 +28,9 @@ Before you delete your Virtual Data Center instance, ensure that any items that 
 * Organization networks that are removed or unshared from the instance
 * Organization catalogs
 * DHCP pools created within the Organization Virtual Data Center edge gateway
+* Custom routes defined on the Organization Virtual Data Center edge gateway distributed router
+* Load balancer custom configurations defined on the Organization Virtual Data Center edge gateway
+* VPN custom configurations defined on the Organization Virtual Data Center edge gateway
 
 ## Considerations when deleting Virtual Data Center instances
 {: #shared_deletinginstance-considerations}

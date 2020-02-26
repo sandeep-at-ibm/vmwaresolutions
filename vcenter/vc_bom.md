@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-10"
+lastupdated: "2020-02-25"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -150,8 +150,8 @@ To update the MTU setting for the Public Switch, complete the following steps in
 The allocation of distributed switches varies if you have existing instances and clusters. Review the following considerations for switch creation when you create a new cluster:
 
 * If there is one or more existing cluster in the same pod using distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
-* If there is one or more existing cluster in the same pod using distributed switches named after the pod (rather than named after the cluster), your new cluster uses the same switches as the existing cluster.
-* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches named after the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
+* If there is one or more existing cluster in the same pod using distributed switches that have been named using the same name as the pod (rather than named using the same name as the cluster), your new cluster uses the same switches as the existing cluster.
+* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches that have been named using the same name as the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
 
 ## Enhanced VMware vMotion Compatibility (EVC) mode settings
 {: #vc_bom-evc-mode-settings}
