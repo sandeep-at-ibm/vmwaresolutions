@@ -138,6 +138,7 @@ A direct link to order Gateway appliances is now available on the **Security and
 ## New and updated documentation
 {: #relnotes_v35-updated-doc}
 
+* (Updated on Mar 6, 2020) The [Financial Services Sector Cloud reference architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-overview) is now available in the *Reference* section of the user documentation.
 * Documentation is now provided about the products and versions that are supported in the current release of {{site.data.keyword.vmwaresolutions_short}}. For more information, see [Product compatibility guide](/docs/services/vmwaresolutions?topic=vmware-solutions-vmware-comp-guide).
 * Various updates are made for the [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions) and the  [{{site.data.keyword.vmwaresolutions_short}} Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
 
