@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 {:important: .important}
 
 # Signing up for required accounts
-{: #signing_required_accounts￼}
+{: #signing_required_accounts}
 
 ## Signing up for an IBM Cloud account
 {: #signing_required_accounts￼-cloud}

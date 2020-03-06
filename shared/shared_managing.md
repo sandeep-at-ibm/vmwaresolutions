@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-20"
+lastupdated: "2020-03-02"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -56,7 +56,7 @@ The instance can have a range of statuses.
 ## Procedure to view Virtual Data Center instance details
 {: #shared_managing-procedure-view-vdc-details}
 
-The instance details include property details, recommended services that are enabled or available for the instance, operating system details, and the total reserved vCPU and RAM.
+The instance details include property details, recommended services that are enabled or available for the instance, operating system details, and the total reserved virtual CPU (vCPU) and RAM.
 
 To view the details of an instance:
 
@@ -77,7 +77,7 @@ To view the details of an instance:
 
 | Resource        | Description       |
 |:------------- |:------------- |
-| vCPU reserved | The limit or reserved amount of CPU that can be used at any time by the Virtual Data Center.  |
+| vCPU reserved | The limit or reserved amount of vCPU that can be used at any time by the Virtual Data Center.  |
 | RAM | The limit or reserved amount of memory that can be used at any time by the Virtual Data Center.  |
 {: caption="Table 4. Virtual Data Center instance resource reservations" caption-side="top"}
 

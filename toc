@@ -1,8 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" category="compute" audience="infrastructure" arm="3662801" href="/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started" path="services/vmwaresolutions"}
-IBM Cloud for VMware Solutions
+{: .toc subcollection="vmware-solutions" category="compute" audience="infrastructure" href="/docs/vmwaresolutions?topic=vmware-solutions-getting-started" path="vmwaresolutions"}
+VMware Solutions
 
     {: .navgroup id="learn"}
     index.md
@@ -272,8 +272,8 @@ IBM Cloud for VMware Solutions
 
     {: .navgroup id="reference"}
     vmonic/at-events.md
-    [IBM Cloud for VMware Solutions API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
-    [IBM Cloud for VMware Solutions Shared API reference](https://cloud.ibm.com/apidocs/vmware-solutions-shared)
+    [VMware Solutions API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
+    [VMware Solutions Shared API reference](https://cloud.ibm.com/apidocs/vmware-solutions-shared)
 
     {: .topicgroup}
     Auditing
@@ -355,6 +355,24 @@ IBM Cloud for VMware Solutions
         archiref/caveonix/caveonix-step3.md
         archiref/caveonix/caveonix-step4.md
         archiref/caveonix/caveonix-terminology.md
+
+    {: .topicgroup}
+    Financial Services Sector Cloud reference architecture
+        archiref/fss/fss-overview.md
+        archiref/fss/fss-context.md
+        archiref/fss/fss-separation-of-duties.md
+        archiref/fss/fss-baremetal.md
+        archiref/fss/fss-storage.md
+        archiref/fss/fss-underlay-network.md
+        archiref/fss/fss-compute-clusters.md
+        archiref/fss/fss-overlay-network.md
+        archiref/fss/fss-vsphere-platform.md
+        archiref/fss/fss-operations.md
+        archiref/fss/fss-caveonix.md
+        archiref/fss/fss-budr.md
+        archiref/fss/fss-hytrust.md
+        archiref/fss/fss-use-case-1.md
+        archiref/fss/fss-use-case-2.md
 
     {: .topicgroup}
     NSX Edge Services Gateway solution architecture

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-17"
+lastupdated: "2020-03-02"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -39,7 +39,7 @@ The VMware Solutions Shared offerings come standard with five public IP addresse
 Virtual Data Centers incur charges for the following components:
 
 * Storage allocations with tiered pricing based on storage performance
-* Virtual CPU usage
+* vCPU usage
 * Virtual memory usage
 * Egress on public networking
 * Commercial operating system licenses used

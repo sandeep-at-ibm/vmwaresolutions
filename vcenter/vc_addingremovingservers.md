@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-09"
+lastupdated: "2020-03-04"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -23,9 +23,10 @@ subcollection: vmware-solutions
 
 You can expand or contract the capacity of your VMware vCenter Server instance according to your business needs, by adding or removing ESXi servers or network file system (NFS) storage.
 
-* Starting with the V3.2 release, existing instances with vSphere Enterprise Plus 6.7u1 have the option to add new ESXi servers with either vSphere Enterprise Plus 6.7u1 or vSphere Enterprise Plus 6.7u2.
-* If your initial cluster has vSAN as its storage, adding one or more ESXi server after deployment can increase the cluster storage capacity.
-* You can add or remove NFS storage shares to or from an existing NFS or vSAN vCenter Server cluster.
+* For existing instances with VMware vSphere 6.7u1, you can add new ESXi servers with either vSphere 6.7u1 or vSphere 6.7u2.
+* For existing instances with vSphere 6.5, when you add ESXi servers, the vSphere version matches the vSphere version of the existing ESXi servers in the instance. If you updated the vSphere version for the vCenter Server instance or for the existing ESXi servers, you might want to use the newer vSphere version for future additions of ESXi servers. To do so, open a VMware Solutions Support ticket to request that the VMware Solutions database is updated to reflect the correct (newer) version to be applied.
+* If your initial cluster has vSAN storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
+* You can add or remove NFS storage shares to or from an existing NFS or vSAN cluster.
 
 ## Adding ESXi servers to vCenter Server instances
 {: #vc_addingremovingservers-adding}
@@ -33,7 +34,7 @@ You can expand or contract the capacity of your VMware vCenter Server instance a
 ### Before you add ESXi servers
 {: #vc_addingremovingservers-adding-prereq}
 
-* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * A vCenter Server instance with NFS storage must have at least two (for NSX-V) and three (for NSX-T) ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers.
 * A vCenter Server instance with vSAN storage must have at least four ESXi servers.
 * You can add 1 - 20 ESXi servers at a time. For more information about the minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
@@ -47,7 +48,7 @@ You can expand or contract the capacity of your VMware vCenter Server instance a
 4. In the **CLUSTERS** table, click the cluster to which you want to add ESXi servers.
 5. In the **ESXi Servers** section, click **Add**.
 6. In the **Add Server** window, select the number of servers that you want to add.
-7. Optionally, select the check box to add servers during maintenance mode. The check box is selected by default.
+7. Optionally, select the checkbox to add servers during maintenance mode. The checkbox is selected by default.
 
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
    {:important}
@@ -56,9 +57,9 @@ You can expand or contract the capacity of your VMware vCenter Server instance a
    * Select a configuration from the existing hosts in the cluster.
    * Select a new {{site.data.keyword.baremetal_short_sing}} configuration.
       * (NSX-V only) For instances with vSphere Enterprise Plus 6.7u1, specify the VMware vSphere version for the new ESXi server.
-      * For **Skylake**, **Cascade Lake**, or **Broadwell** (NSX-V only),specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
+      * For **Skylake**, **Cascade Lake**, or **Broadwell** (NSX-V only), specify the **CPU Model**, the amount of **RAM**, and the **Number of {{site.data.keyword.baremetal_short}}**.
       * For **SAP-certified**, specify the **CPU Model and RAM** and the **Number of {{site.data.keyword.baremetal_short}}**.
-9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High Performance Intel Optane** box.
+9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High Performance Intel Optane** box.
 10. Review the estimated cost and click **Add**.
 
   You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
@@ -87,7 +88,7 @@ If you are adding ESXi servers during maintenance mode, VMs are not migrated to 
 * If using vSAN storage, at least for ESXi servers are required.
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the VMs running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
 * (NSX-V only) If F5 BIG-IP or FortiGate Virtual Appliance is installed on your ESXi server, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
-* (NSX-V only) If IBM Spectrum Protect&trade; Plus is installedon your ESXi server, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi server to be removed.
+* (NSX-V only) If IBM Spectrum Protect&trade; Plus is installed on your ESXi server, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi server to be removed.
 
 A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a server before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:important}

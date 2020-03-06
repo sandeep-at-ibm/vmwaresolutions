@@ -4,7 +4,7 @@ copyright:
 
   years: 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-02"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -24,7 +24,7 @@ subcollection: vmware-solutions
 {{site.data.keyword.vmwaresolutions_full}} Shared offers two pricing plans for creating VMware Virtual Data Centers. Virtual Data Centers incur charges for the following Virtual Data Center resource usages:
 
 * Storage allocations with tiered pricing based on storage performance
-* Virtual CPU usage
+* Virtual CPU (vCPU) usage
 * Virtual memory usage
 * Egress on public networking
 * Commercial operating system licenses used

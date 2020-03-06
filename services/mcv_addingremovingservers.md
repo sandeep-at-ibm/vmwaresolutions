@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-05"
+lastupdated: "2020-03-04"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Expanding and contracting capacity for multi-zone stretched clusters
 {: #mcv_addingremovingservers}
 
-You can expand or contract the capacity of your mult-zone stretched mcv_viewingclusters according to your business needs. You can add or remove ESXi servers to witness, management, and stretched vSAN clusters. You can add or remove network file system (NFS) storage to witness and management clusters.
+You can expand or contract the capacity of your mult-zone stretched clusters according to your business needs. You can add or remove ESXi servers to witness, management, and stretched vSAN clusters. You can add or remove network file system (NFS) storage to witness and management clusters.
 
 ## Adding ESXi servers to multi-zone stretched clusters
 {: #mcv_addingremovingservers-adding}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-14"
+lastupdated: "2020-03-02"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -27,7 +27,7 @@ You can change the amount of resources that are assigned to a Virtual Data Cente
 {: #shared_resize-procedure}
 
 1. From the Virtual Data Center instance details page, click the pencil icon next to **Resource reservation**.
-2. Update the values of the vCPU or RAM properties.
+2. Update the values of the virtual CPU (vCPU) or RAM properties.
 2. Verify the configuration and estimated cost and place the order.
 
 The configuration change might fail if the vCPU and RAM resources are in use while they are reduced. This happens because the Virtual Data Center resources cannot be reduced to a level lower than the currently active resource usage.

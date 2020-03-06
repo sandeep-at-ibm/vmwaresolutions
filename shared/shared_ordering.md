@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-17"
+lastupdated: "2020-03-02"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -36,7 +36,7 @@ The pricing plan is based on your selection of **On-Demand** or **Reserved**.
 #### On-Demand
 {: #shared_ordering-pricing-on-demand}
 
-For the On-Demand offering, Virtual Data Center vCPU and RAM are allocated as needed. The amount of time that the allocation takes depends on global usage of the Virtual Data Center vCPU and RAM.
+For the On-Demand offering, Virtual Data Center virtual CPU (vCPU) and RAM are allocated as needed. The amount of time that the allocation takes depends on global usage of the Virtual Data Center vCPU and RAM.
 
 * The limits that are established for the amount of vCPU and RAM are maximum values that can be used at any time.
 * vCPU and RAM resources can be increased and decreased later as required.
@@ -59,21 +59,24 @@ For more information, see [VMware Solutions Shared pricing](/docs/services/vmwar
 ### Virtual Data Center Name
 {: #shared_ordering-inst-name}
 
-The Virtual Data Center name must be under 125 characters.
+The Virtual Data Center name must meet the following requirements:
+
+* Maximum length is 128 characters.
+* Only alphanumeric, dash (-), and underscore (_) characters are allowed.
 
 ## Location settings
 {: #shared_ordering-dc}
 
 Select the IBM Cloud Data Center where the instance is to be hosted.
 
-## CPU Model settings
+## vCPU Model settings
 {: #shared_ordering-cpu}
 
-CPU model settings are based on your selection of a **On-Demand** or **Reserved** pricing plan.
+vCPU model settings are based on your selection of a **On-Demand** or **Reserved** pricing plan.
 
-If you selected **On-Demand**, select the CPU and RAM limits.
+If you selected **On-Demand**, select the vCPU and RAM limits.
 
-If you selected **Reserved**, your CPU model settings are based on your selection of **Preconfigured** or **Custom**.
+If you selected **Reserved**, your vCPU model settings are based on your selection of **Preconfigured** or **Custom**.
 * If you selected **Preconfigured**, you have the following options for allocated vCPU and RAM limits.
 
 | Size    | vCPU      | RAM      |

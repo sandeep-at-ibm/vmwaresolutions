@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-04"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -23,16 +23,15 @@ subcollection: vmware-solutions
 
 You can expand or contract the capacity of your VMware vCenter Server with Hybridity Bundle instance according to your business needs, by adding or removing ESXi servers.
 
-Starting with the V3.1 release, you can add new ESXi servers to an existing cluster by either selecting an existing configuration or an alternative configuration than the existing hosts in the cluster. Existing configurations are available for instant selection when you order your new server. To avoid performance or stability issues, it is recommended that clusters use the same or similar configuration with regards to CPU, RAM, and storage. This functionality is useful for hardware updates within the same cluster. A cluster can have only one type of storage.
+You can add new ESXi servers to an existing cluster by either selecting an existing configuration or a different configuration than the existing ESXi servers in the cluster. Existing configurations are available when you order your new server. To avoid performance or stability issues, it is recommended that clusters use the same or similar configuration with regards to CPU, RAM, and storage. This functionality is useful for hardware updates within the same cluster. A cluster can have only one type of storage.
 
-Starting with the V2.9 release, you can add new ESXi servers to a cluster while the cluster is in maintenance mode. Additionally, you can simultaneously add or remove ESXi servers across multiple clusters. The following simultaneous operations are available:
+You can add new ESXi servers to a cluster while the cluster is in maintenance mode. Additionally, you can simultaneously complete the following operations across multiple clusters:
+* Add ESXi servers to a cluster and add ESXi servers to additional clusters.
+* Remove ESXi servers from a cluster and remove ESXi servers from additional clusters.
+* Add ESXi servers to a cluster and remove ESXi servers from additional clusters.
+* Remove ESXi servers from a cluster and add ESXi servers to additional clusters.
 
-* Add hosts to a cluster and add hosts to additional clusters.
-* Remove hosts from a cluster and remove hosts from additional clusters.
-* Add hosts to a cluster and remove hosts from additional clusters.
-* Remove hosts from a cluster and add hosts to additional clusters.
-
-Because your initial cluster has vSAN as its storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
+Because your initial cluster has vSAN storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
 
 ## Adding ESXi servers to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservers-adding}
@@ -60,7 +59,7 @@ Because your initial cluster has vSAN as its storage, adding one or more ESXi se
 8. Complete the Bare Metal configuration.
    * Select a configuration from the existing hosts in the cluster.
    * Select a new {{site.data.keyword.baremetal_short_sing}} configuration and specify the CPU model and the RAM size.
-9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN License edition. If you want more storage, check the **High-Performance Intel Optane** box.
+9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High-Performance Intel Optane** box.
 10. Review the estimated cost and click **Add**.
 
   You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
@@ -85,7 +84,7 @@ If you are adding ESXi servers during maintenance mode, virtual machines (VMs) a
 * vSAN storage requires at least 4 ESXi servers.
 * Before you remove ESXi servers with the F5 or FortiGate Virtual Appliance service installed, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
 * Before you remove ESXi servers with the IBM Spectrum Protect&trade; Plus service installed, ensure that there are no active (failed or in progress) backup or restore operations because these active operations might prevent the ESXi servers to be removed.
-* When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers using the {{site.data.keyword.vmwaresolutions_short}} console.
+* When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## Procedure to remove ESXi servers
 {: #vc_hybrid_addingremovingservers-removing-procedure}
@@ -96,10 +95,10 @@ If you are adding ESXi servers during maintenance mode, virtual machines (VMs) a
 4. In the **CLUSTERS** table, click the cluster from which you want to remove ESXi servers.
 5. In the **ESXi Servers** table, select the servers that you want to remove and click **Remove**.
 
-### Results after removing ESXi servers
+### Results after you remove ESXi servers
 {: #vc_hybrid_addingremovingservers-removing-results}
 
-1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before making additional changes to the instance.
+1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
 2. You are notified by email that your request to remove ESXi servers is being processed. On the console, the status of the cluster associated with the ESXi servers is changed to **Modifying**.
 3. The ESXi servers are fully reclaimed by {{site.data.keyword.cloud_notm}} infrastructure at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days.
 

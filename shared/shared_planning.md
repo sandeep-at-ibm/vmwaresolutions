@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-14"
+lastupdated: "2020-03-05"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -22,12 +22,12 @@ subcollection: vmware-solutions
 
 Review the following requirements before you order your {{site.data.keyword.vmwaresolutions_full}} Shared Virtual Data Center instances. Plan your instance based on the {{site.data.keyword.CloudDataCent_notm}} location, your workload capacity requirements, and add-on service requirements.
 
-### IBM Cloud account requirements
+## IBM Cloud account requirements
 {: #shared_ordering-account-req}
 
 To order VMware Solutions Shared, you must have a **Pay As You Go** or **Subscription** {{site.data.keyword.cloud_notm}} account. The cost of the resources that are ordered is billed to that {{site.data.keyword.cloud_notm}} account.
 
-### Virtual Data Center name requirements
+## Virtual Data Center name requirements
 {: #shared_ordering-vdc-name-req}
 
 The Virtual Data Center name must be under 125 characters.
