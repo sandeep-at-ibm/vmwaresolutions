@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-12"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 
 To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance.
 
-For NSX-T, you can also add services, such as [Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr) for disaster recovery.
+For NSX-V, you can also add services, such as [Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr) for disaster recovery.
 
 ## Requirements for vCenter Server
 {: #vc_orderinginstance-req}
