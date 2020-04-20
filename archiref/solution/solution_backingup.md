@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-20"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ You’re responsible for the configuration, management, and monitoring of all so
 
 As part of the solution, you can optionally deploy the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus or Veeam add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
 
-These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_spplus){:external} and [Veeam architecture overview](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){:external} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services) for your Veeam deployment.
+These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_spplus){:external} and [Veeam architecture overview](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){:external} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services) for your Veeam deployment.
 
 Different solution components require different strategies for backup. Some components are protected by using image-level backup, and other components are protected by using file-based backup for their configuration and data.
 
@@ -101,11 +101,11 @@ There are several special considerations when you restore your management backup
 
 With proper planning, you can ensure that your VMware instance can suffer the loss of its management components and recover successfully. Ensure to regularly monitor the success of your backup jobs and availability of your backup data and ensure to test your backup and restore plan regularly, for both your management infrastructure and your workloads.
 
-**Next topic:** [Post-deployment considerations for your VMware instance](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_considerations)
+**Next topic:** [Post-deployment considerations for your VMware instance](/docs/vmwaresolutions?topic=vmware-solutions-solution_considerations)
 
 ## Related links
 {: #solution_backingup-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
-* [Design overview](/docs/services/vmwaresolutions?topic=vmware-solutions-design_overview)
-* [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Design overview](/docs/vmwaresolutions?topic=vmware-solutions-design_overview)
+* [Scaling capacity](/docs/vmwaresolutions?topic=vmware-solutions-solution_scaling)

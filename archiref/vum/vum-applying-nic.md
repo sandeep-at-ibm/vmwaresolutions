@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-03"
 
 subcollection: vmware-solutions
 
@@ -38,7 +38,7 @@ For each host, successively:
 
 If you need to revert, and you can't SSH to the vSphere ESXi host, then you need to log in to the KVM console for the host that needs the revert via the {{site.data.keyword.cloud_notm}} control window.
 
-Use the ID and password that are listed in the {{site.data.keyword.cloud_notm}} control window with the IPMI IP address to log in to the IPMI web interface. You need to be connected to the data center where the host is located through VPN. For more information, see [Getting started with VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started).
+Use the ID and password that are listed in the {{site.data.keyword.cloud_notm}} control window with the IPMI IP address to log in to the IPMI web interface. You need to be connected to the data center where the host is located through VPN. For more information, see [Getting started with IBM Cloud SSL Virtual Private Networking](/docs/iaas-vpn?topic=iaas-vpn-getting-started).
 
 1. Go to the Device Details, Remote Mgmt page for the vSphere ESXi host and select **Actions** > **KVM Console**. Another window opens for you to enter the IPMI User and Password.
 2. Select **Remote Control** > **iKVM/HTML5** and click **iKVM/HTML5** to relaunch. You can now be able to access the vSphere ESXi host’s console.
@@ -49,10 +49,10 @@ Use the ID and password that are listed in the {{site.data.keyword.cloud_notm}} 
 7. Type **“Y”** to enter recovery mode and boot the ESXi server with the previous version.
 8. Monitor its progress via the console. The boot can take 10 - 20 minutes.
 
-**Next topic:** [Types of VMware software updates](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-type-updates)
+**Next topic:** [Types of VMware software updates](/docs/vmwaresolutions?topic=vmware-solutions-vum-type-updates)
 
 ## Related links
 {: #vum-applying-nic-related}
 
-* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

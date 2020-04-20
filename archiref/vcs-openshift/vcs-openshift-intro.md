@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-10"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 
 The {{site.data.keyword.vmwaresolutions_full}} offering includes fully automated, rapid deployments of VMware vCenter Server. This offering complements the on-premises infrastructure and allows existing and future workloads to run on {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes that are used on-premises. For more information, see [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture){:external}.
 
-Red Hat OpenShift on {{site.data.keyword.vmwaresolutions_short}} provides the capability to deploy a Red Hat OpenShift Cluster 4.1 by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift Cluster on {{site.data.keyword.cloud_notm}} components are deployed as virtual machines (VM) or appliances by using VMware NSX software-defined networking.
+Red Hat OpenShift on {{site.data.keyword.vmwaresolutions_short}} provides the capability to deploy a Red Hat OpenShift Cluster 4.1 by using an automated deployment of the VMware Software Defined Data Center (SDDC) architecture. The Red Hat OpenShift Cluster on {{site.data.keyword.cloud_notm}} components are deployed as virtual machines (VM) or appliances by using VMware NSX software-defined networking.
 
 This reference architecture is for Red Hat OpenShift Clusters deployed on a vCenter Server instance. It provides the foundation for customers who are starting their application modernization journey to the {{site.data.keyword.cloud_notm}}.
 - **vCenter Server** - an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware-based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
@@ -53,12 +53,12 @@ For example, a common pattern is to have front-end SOE applications that are dep
 
 Because your IT infrastructure and business needs are unique, you need an approach to modernization that helps accelerate business value delivery, reduces your risks, and preserves your existing investments. IBM provides such an approach that is customized to address your unique business and technology needs related to application modernization.
 
-**Next topic:** [System context for vCenter Server and Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-syscontext)
+**Next topic:** [System context for vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-syscontext)
 
 ## Related links
 {: #vcs-openshift-intro-related}
 
-* [Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch)
-* [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
-* [{{site.data.keyword.cloud_notm}} networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
-* [Storage options on {{site.data.keyword.cloud_notm}} and Red Hat OpenShift](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)
+* [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch)
+* [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
+* [{{site.data.keyword.cloud_notm}} networking and infrastructure](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
+* [Storage options on {{site.data.keyword.cloud_notm}} and Red Hat OpenShift](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-01"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -93,7 +93,7 @@ If your jump-host or remote device uses Linux, complete the following steps:
   `curl -L https://github.com/vmware/govmomi/releases/download/v0.20.0/govc_linux_amd64.gz | gunzip > /usr/local/bin/govc`.
 2. `chmod +x /usr/local/bin/govc`.
 
-## Validating Distributed PortGroup and Datastore names 
+## Validating Distributed PortGroup and Datastore names
 {: #openshift-runbook-runbook-prereq-netstorage-ic4v}
 
 vCenter Server deployment uses deployment-specific naming for the datastores and distributed PortGroups. This runbook uses 'vsanDatastore', 'SDDC-DPortGroup-Mgmt' and 'SDDC-DPortGroup-External'. You need to use your vCenter Server deployment-specific network and storage names in your deployment configurations. For example, you might have datastore such as 'workload_share_YgkI8' (in case IBM Cloud File Storage is used for the datastore) or your private portgoup can be like 'fra04test-fra04-test01-dpg-mgmt'.  
@@ -152,11 +152,11 @@ govc datastore.mkdir isos
 govc datastore.upload rhel-server-7.6-x86_64-dvd.iso isos/rhel-server-7.6-x86_64-dvd.iso
 ```
 
-**Next topic:** [OpenShift NSX logical switches configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxls-intro)
+**Next topic:** [OpenShift NSX logical switches configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxls-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-prerequisites-related}
 
-* [OpenShift NSX DLR configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro)
-* [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
+* [OpenShift NSX DLR configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro)
+* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
 * [Visual Studio Code](https://code.visualstudio.com/){:external}

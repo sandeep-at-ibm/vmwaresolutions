@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-04-17"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -137,4 +140,4 @@ set routing-options static route 0.0.0.0/0 next-hop 10.135.70.1
 EOF
 
 
-**Next topic:** [vSRX deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-deployment).
+**Next topic:** [vSRX deployment](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-deployment)

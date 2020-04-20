@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -38,10 +38,10 @@ The edge cluster does not use any vSphere resiliency features and back up of the
 
 Business continuity at the workload layers is the responsibility of the client to design, implement, and maintain.
 
-**Next topic**: [FSS Cloud HyTrust integration](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-hytrust)
+**Next topic**: [FSS Cloud HyTrust integration](/docs/vmwaresolutions?topic=vmware-solutions-fss-hytrust)
 
 ## Related links
 {: #fss-budr-related}
 
 * [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance)
-* [Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [Veeam](/docs/vmwaresolutions?topic=vmware-solutions-veeam_considerations)

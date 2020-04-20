@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-31"
+lastupdated: "2020-04-02"
 
 keywords: NSX license upgrade, upgrade license hybridity, hybridity license
 
@@ -16,6 +16,8 @@ subcollection: vmware-solutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Upgrading licenses for vCenter Server with NSX-V instances
 {: #vc_upgrade-lic}
@@ -24,6 +26,8 @@ You can upgrade your NSX license for V2.1 or later instances.
 
 ## Procedure to upgrade your NSX license
 {: #vc_upgrade-lic-nsx}
+{: help}
+{: support}
 
 This procedure applies to instances that are deployed in V2.1 or later. For instances that are deployed in V2.0 and earlier, you must upgrade the NSX license manually.
 
@@ -35,7 +39,7 @@ You can upgrade the NSX license for your instance to a later edition. License ed
 
    If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or a networking issue. Resolve the problem before continuing with the next step, otherwise the upgrade might fail.
 
-4. Click **Update and Patch** on the left navigation pane and click **Upgrade**. In the **Upgrade NSX License Edition** window, select the edition that you want to upgrade to and click **Upgrade**.
+4. Click **Licensing** on the left navigation pane and click **Upgrade**. In the **Upgrade NSX License Edition** window, select the edition that you want to upgrade to and click **Upgrade**.
 
    The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
    {:note}
@@ -43,5 +47,5 @@ You can upgrade the NSX license for your instance to a later edition. License ed
 ## Related links
 {: #vc_upgrade-lic-related}
 
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQs](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQs](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)

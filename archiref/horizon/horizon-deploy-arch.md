@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-01-14"
+lastupdated: "2020-04-16"
 
 subcollection: vmware-solutions
 
@@ -62,7 +62,7 @@ The three options are:
 * Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz per core
 * Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz per core
 
-The Dual Intel Xeon Gold 6140 option is recommended for VMware Horizon desktop workloads as it provides the most cores and the highest clock rate. This will allow for a greater density of desktops per host. The Management Cluster does not require the Xeon Gold 6140 option, and this workload can utilize the Dual Intel Xeon Silver 4110 processors.
+The Dual Intel Xeon Gold 6140 option is recommended for VMware Horizon desktop workloads as it provides the most cores and the highest clock rate. This will allow for a greater density of desktops per host. The management cluster does not require the Xeon Gold 6140 option, and this workload can utilize the Dual Intel Xeon Silver 4110 processors.
 
 {{site.data.keyword.cloud_notm}} provides multiple options for host RAM. These options range from 64 GB per host to 1.5 TB per host. The total amount of RAM that is required for the management cluster is determined by the memory required to run the vSphere and NSX management components and the Horizon management components.
 
@@ -81,7 +81,7 @@ Expanding the environment beyond 1000 users would require more Unified Access Ga
 
 The amount of RAM required for workload cluster is the number of desktops multiplied by the amount of RAM per desktop. This amount, when added to the management server requirements, will provide the total RAM needed to run the environment.
 
-The vCenter Server offering has two storage types – one based on an All-Flash VSAN and one based on NFS storage. VMware vSAN is preferred for all VDI workloads to provide the best performance. vSAN provides several options during configuration, including the number and size of the capacity tier drives and the ability to utilize Intel Optane for the VSAN cache tier. The Management Cluster should utilize NFS storage for the management VMs. Each datastore should be configured by using the NFS storage option and have 1 TB of capacity with at least 2 IOPS per GB. Environments that are planning to place large file servers might require more IOPS to provide a good user experience in the environment.
+The vCenter Server offering has two storage types – one based on an All-Flash VSAN and one based on NFS storage. VMware vSAN is preferred for all VDI workloads to provide the best performance. vSAN provides several options during configuration, including the number and size of the capacity tier drives and the ability to utilize Intel Optane for the VSAN cache tier. The management cluster should utilize NFS storage for the management VMs. Each datastore should be configured by using the NFS storage option and have 1 TB of capacity with at least 2 IOPS per GB. Environments that are planning to place large file servers might require more IOPS to provide a good user experience in the environment.
 
 For assistance with sizing the cluster environment, use the [vSAN ReadyNode™ Sizer](https://vsansizer.vmware.com/){:external}.
 
@@ -132,8 +132,8 @@ For the full documentation on how to set up and configure CPA, see "Administerin
 
 You can deploy Horizon 7 in a hybrid cloud environment when you use CPA to interconnect Horizon 7 on-premises and Horizon 7 pods on {{site.data.keyword.cloud_notm}}. You can easily entitle your users to Virtual Desktop and RDS published apps on-premises and/or on {{site.data.keyword.cloud_notm}}. You can configure it such that they can connect to whichever site is closest to them geographically as they roam.
 
-You can also stretch CPA across Horizon 7 pods in two or more {site.data.keyword.CloudDataCents_notm}} with the same flexibility to entitle your users to one or multiple pods as wanted.
+You can also stretch CPA across Horizon 7 pods in two or more {{site.data.keyword.cloud_notm}} data centers with the same flexibility to entitle your users to one or multiple pods as wanted.
 
-The use of CPA is optional. You can choose to deploy Horizon 7 exclusively in a single {site.data.keyword.CloudDataCent_notm}} without linking it to any other data center.
+The use of CPA is optional. You can choose to deploy Horizon 7 exclusively in a single {{site.data.keyword.cloud_notm}} data center without linking it to any other data center.
 
-**Next topic:** [Configuring IBM Cloud for Horizon 7 deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-deploy-config)
+**Next topic:** [Configuring IBM Cloud for Horizon 7 deployment](/docs/vmwaresolutions?topic=vmware-solutions-horizon-deploy-config)

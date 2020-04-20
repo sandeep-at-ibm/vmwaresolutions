@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-28"
+lastupdated: "2020-04-17"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -19,7 +19,7 @@ subcollection: vmware-solutions
 ## Deploy and manage VMware virtualized environments
 {: #under_the_hood-deploy}
 
-Take an in-depth look at the architecture of {{site.data.keyword.vmwaresolutions_full}}, an {{site.data.keyword.cloud}} offering that provides deployment and management of VMware virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
+Take an in-depth look at the architecture of {{site.data.keyword.vmwaresolutions_full}}, an {{site.data.keyword.cloud_notm}} offering that provides deployment and management of VMware virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
 
 ## Two companies, one streamlined solution
 {: #under_the_hood-two-companies}
@@ -57,7 +57,7 @@ The vCenter Server order form presents you with various CPU, memory, and storage
 
 {{site.data.keyword.cloud_notm}} deploys your vCenter Server instance by using three VLANs: one public and two private. The public VLAN is connected to dual 10 GbE interfaces and is largely reserved for your use at your discretion for public connectivity or tunneling for your own workload deployments. However, at deployment time, an NSX Edge Services Gateway pair is deployed on the public VLAN to allow some add-on services to connect to the public network for licensing and billing purposes. The private VLANs are connected to separate dual 10 GbE interfaces: the first private VLAN is used for management communications and NSX VTEP, and the second is used for vMotion and for NFS storage traffic.
 
-VMware instances can be provisioned in 35 different {{site.data.keyword.CloudDataCents_notm}}. {{site.data.keyword.cloud_notm}} provisions new data centers from time to time. Check the {{site.data.keyword.cloud_notm}} catalog for the latest list of available locations.
+VMware instances can be provisioned in 35 different {{site.data.keyword.cloud_notm}} data centers. {{site.data.keyword.cloud_notm}} provisions new data centers from time to time. Check the {{site.data.keyword.cloud_notm}} catalog for the latest list of available locations.
 
 ### Instance deployment
 {: #under_the_hood-inst-deploy}
@@ -65,14 +65,14 @@ VMware instances can be provisioned in 35 different {{site.data.keyword.CloudDat
 When you order a new VMware vCenter instance, you choose the instance location and specification. {{site.data.keyword.vmwaresolutions_short}} then uses your previously selected {{site.data.keyword.cloud_notm}} user name and API key to orchestrate the entire process of ordering, installing, and configuring your virtualization environment. This includes:
 
 1. Ordering VLANs and subnets for networking.
-2. Ordering {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with vSphere Hypervisor installed.
+2. Ordering {{site.data.keyword.cloud_notm}} bare metal servers with vSphere Hypervisor installed.
 3. Deploying and configuring VMware vCenter Server with embedded Platform Services Controller, VMware NSX Manager, Controllers, and Edge Services Gateways.
 4. Ordering and configuring your cluster storage, including VMware vSAN or {{site.data.keyword.cloud_notm}} Endurance storage.
 5. Deploying an IBM management component called the IBM CloudDriver.
 6. Deploying and configuring any addon services that you selected for your instance.
 7. Validating the installation and configuration of the environment.
 
-You select the {{site.data.keyword.CloudDataCent_notm}} where you want to provision your instance. Provided the hardware is available in your selected {{site.data.keyword.CloudDataCent_notm}}, the instance provisioning process typically takes less than 24 hours.
+You select the {{site.data.keyword.cloud_notm}} data center where you want to provision your instance. Provided the hardware is available in your selected {{site.data.keyword.cloud_notm}} data center, the instance provisioning process typically takes less than 24 hours.
 
 Once your instance has been provisioned, if you are connected to your {{site.data.keyword.cloud_notm}} account through a VPN, you can connect to your vCenter server directly from your workstation web browser.
 
@@ -93,7 +93,7 @@ After your instance has been deployed, you can manage it from the console. The m
 * Deploy and remove addon services for your instance
 * Upgrade certain license editions for your instance
 
-The {{site.data.keyword.vmwaresolutions_short}} console provides a detailed view of each of your vCenter Server instances. For each instance, the **Summary** tab includes a link to the vCenter console and other details about the instance and management components. The **Infrastructure** tab shows details about the instance's clusters, hosts, storage, and networking, and allows you to add or remove clusters and hosts and storage. On the **Update and patch** tab, you can upgrade certain license editions. On the **Services** tab, you can view and manage the add-on services that are deployed for your instance. The **Deployment history** tab shows a history of all actions that are performed on your instance.
+The {{site.data.keyword.vmwaresolutions_short}} console provides a detailed view of each of your vCenter Server instances. For each instance, the **Summary** tab includes a link to the vCenter console and other details about the instance and management components. The **Infrastructure** tab shows details about the instance's clusters, hosts, storage, and networking, and allows you to add or remove clusters and hosts and storage. On the **Licensing** tab, you can upgrade certain license editions. On the **Services** tab, you can view and manage the add-on services that are deployed for your instance. The **Deployment history** tab shows a history of all actions that are performed on your instance.
 
 ## IBM Cloud for VMware Solutions components
 {: #under_the_hood-comp}
@@ -127,7 +127,7 @@ For all instances, vSphere Hypervisor is installed on the bare metal servers. {{
 
 Depending on your choice, either one Microsoft Windows VSI or two Microsoft Windows VMs are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
 
-Regardless of how you choose to provide business continuity for your own workloads, {{site.data.keyword.cloud_notm}} strongly recommends that you back up the management components of your instance. The {{site.data.keyword.vmwaresolutions_short}} console allows you to deploy an integrated IBM Spectrum Protect Plus backup server or a Veeam Backup & Replication backup server together with your instance. These backup services can be used as part of a [complete backup solution](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup) for your instance.
+Regardless of how you choose to provide business continuity for your own workloads, {{site.data.keyword.cloud_notm}} strongly recommends that you back up the management components of your instance. The {{site.data.keyword.vmwaresolutions_short}} console allows you to deploy an integrated IBM Spectrum Protect Plus backup server or a Veeam Backup & Replication backup server together with your instance. These backup services can be used as part of a [complete backup solution](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup) for your instance.
 
 ### Licenses
 {: #under_the_hood-licenses}
@@ -162,5 +162,5 @@ Now that you're armed with everything you need to know to get started, go ahead 
 ## Related links
 {: #under_the_hood-related}
 
-* [Getting started](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)
-* [VMware Solutions architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Getting started](/docs/vmwaresolutions?topic=vmware-solutions-getting-started)
+* [VMware Solutions architecture](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)

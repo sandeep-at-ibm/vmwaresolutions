@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-04-17"
 
 keywords: vRealize, vRealize info, tech specs vRealize
 
@@ -22,14 +22,14 @@ subcollection: vmware-solutions
 # vRealize Operations and Log Insight overview
 {: #vrops_overview}
 
-The vRealize Operations and Log Insight service deploys the VMware vRealize Operations (vROps) and VMware vRealize Log Insight (vRLI) tools. These tools help you operate and monitor the performance, health, and capacity of your IBM-hosted, dedicated VMware environment. The service also includes vRLI to help you troubleshoot issues by using log files more quickly.
+The vRealize Operations and Log Insight service deploys the VMware vRealize Operations (vROps) and VMware vRealize Log Insight (vRLI) tools. These tools help you operate and monitor the performance, health, and capacity of your {{site.data.keyword.IBM}}-hosted, dedicated VMware environment. The service also includes vRLI to help you troubleshoot issues by using log files more quickly.
 {: shortdesc}
 
 These tools are deployed by using the IBM advanced automation and are based on a consistent highly available design. vROps includes preinstalled and configured Management Packs to provide deeper visibility into the core VMware Software Defined Data Center components like VMware NSX, vSAN, and HCX. The automation provides optimized dashboards out of the box so that you can monitor the full VMware stack more easily.
 
 Like the other VMware components in the stack, you have the flexibility to bring your enterprise licenses to the cloud (per CPU or OSI) or to rent VMware licenses from {{site.data.keyword.cloud_notm}}.
 
-The current versions that are installed are vROps 7.5 and vRLI 4.8.
+The current versions that are installed are vROps 7.5 and vRLI 4.8. vROps and vRLI support vCenter Server with NSX-V instances and vCenter Server with NSX-T instances.
 {:note}
 
 ## Technical specifications for vRealize Operations and Log Insight
@@ -39,7 +39,7 @@ The following components are ordered and included in the vRealize Operations and
 * VMware vRealize Operations (vROps) 7.5
 * VMware vRealize Log Insight (vRLI) 4.8
 
-For information about the design, requirements, and preconfigured management packs, see [Operations management architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch).
+For information about the design, requirements, and preconfigured management packs, see [Operations management architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch).
 
 ### Resource requirements for vRealize Operations and Log Insight
 {: #vrops_overview-resource-req}
@@ -129,5 +129,5 @@ Review the following considerations before you remove the service:
 ## Related links
 {: #vrops_overview-related}
 
-* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_ordering)
-* [Managing vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_vrops)
+* [Ordering vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_ordering)
+* [Managing vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-managing_vrops)

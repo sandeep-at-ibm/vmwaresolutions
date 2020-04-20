@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-05"
+lastupdated: "2020-04-07"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -37,7 +37,7 @@ To view the instance summary:
 | Name | The name of the instance. |
 | Type | The type of vCenter Server instance. |
 | Version | The release version that the instance was deployed in, or upgraded to. |  
-| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |  
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |  
 | Creation time | The date and time when the instance was created. |
 | Status | The status of the instance. |   
 {: caption="Table 1. vCenter Server instance items" caption-side="top"}
@@ -65,10 +65,10 @@ To view the property and access information details of an instance:
 |:------------- |:------------- |
 | Name | The name of the instance. |
 | ID | The ID of the instance. |
-| Region | The {{site.data.keyword.CloudDataCent_notm}} region where the instance is hosted. |
-| Witness Cluster Location | The {{site.data.keyword.CloudDataCent_notm}} where the witness cluster is hosted. |
-| Management Cluster Location | The {{site.data.keyword.CloudDataCents_notm}} where the management cluster is hosted. |
-| Resource Cluster Location | The {{site.data.keyword.CloudDataCents_notm}} where the stretched vSAN cluster is hosted. |
+| Region | The {{site.data.keyword.cloud_notm}} data center region where the instance is hosted. |
+| Witness Cluster Location | The {{site.data.keyword.cloud_notm}} data center where the witness cluster is hosted. |
+| Management Cluster Location | The {{site.data.keyword.cloud_notm}} data center where the management cluster is hosted. |
+| Resource Cluster Location | The {{site.data.keyword.cloud_notm}} data center where the stretched vSAN cluster is hosted. |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter version | The VMware vCenter Server version.<br><br>**Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
@@ -104,7 +104,7 @@ Under **Access Information**, view the access information for the instance-relat
   * **Name**: The name of the cluster.
   * **ESXi Servers**: The number of ESXi servers in the cluster.
   * **Storage**: The type of storage that the cluster uses.
-  * **Data Center Location**: The {{site.data.keyword.CloudDataCent_notm}} where the cluster is hosted.
+  * **Data Center Location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Networking**: The type of network settings.
   * **Status**: The status of the cluster. The status can have one of the following values:
@@ -153,7 +153,7 @@ Click **View Resource** to access the VLAN details.
 ## Related links
 {: #mcv_viewingclusters-related}
 
-* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_overview)
-* [Ordering multi-zone stretch clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
-* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
-* [Expanding and contracting capacity for multi-zone stretched clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_addingremovingservers)
+* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv_overview)
+* [Ordering multi-zone stretch clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
+* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
+* [Expanding and contracting capacity for multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_addingremovingservers)

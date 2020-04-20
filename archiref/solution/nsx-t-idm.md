@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-20"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -21,13 +21,13 @@ subcollection: vmware-solutions
 
 VMware Identity Manager delivers multi-factor authentication (MFA), conditional access, and single sign-on (SSO) services for VMware solutions. It has recently been changed to a new name called VMware Workspace ONE Access, but for consistency, VMware Identity Manager (vIDM) is used.
 
-By acting as a broker to identity stores, VMware Identity Manager can also be used to provide role base access control (RBAC) to NSX-T, which is its primary use case with {{site.data.keyword.vmwaresolutions_short}}. By default, NSX-T Data Center appliances have two built-in users: **admin** and **audit**, which might be feasible for lab environments. However, for production deployments, clients require granular access control for various use cases and the built-in users are not sufficient.
+By acting as a broker to identity stores, VMware Identity Manager can also be used to provide role base access control (RBAC) to NSX-T, which is its primary use case with {{site.data.keyword.vmwaresolutions_short}}. By default, NSX-T data center appliances have two built-in users: **admin** and **audit**, which might be feasible for lab environments. However, for production deployments, clients require granular access control for various use cases and the built-in users are not sufficient.
 
-VMware Identity Manager is necessary to provide RBAC to NSX-T. NSX-T Data Center integrates with VMware Identity Manager, and NSX-T Manager is then configured to use role-based access control for the users that vIDM manages. This way, clients can restrict NSX-T system access with multiple levels to authorized users.
+VMware Identity Manager is necessary to provide RBAC to NSX-T. NSX-T data center integrates with VMware Identity Manager, and NSX-T Manager is then configured to use role-based access control for the users that vIDM manages. This way, clients can restrict NSX-T system access with multiple levels to authorized users.
 
 Users are assigned to NSX-T roles and each role has specific permissions. With this integration enabled, you can add, change, and delete role assignments to users or user groups in NSX-T Controller Manager GUI.
 
-NSX-T Data Center has the following roles:
+NSX-T data center has the following roles:
 
 * Enterprise Administrator
 * Auditor
@@ -58,7 +58,7 @@ NSX-T roles are built in and you cannot add any new roles.
 
 {{site.data.keyword.vmwaresolutions_short}} does not currently provide an automated vIDM deployment. For more information, see [VMware Workspace ONE Access Documentation](https://docs.vmware.com/en/VMware-Workspace-ONE-Access/index.html){:external}.
 
-**Next topic:** [Common services design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_commonservice)
+**Next topic:** [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice)
 
 ## Related links
 {: #nsx-t-idm-related}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-06"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -109,14 +109,14 @@ Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._
 ```
 
 
-**Next topic:** [OpenShift Bastion node setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
+**Next topic:** [OpenShift Bastion node setup](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-dns-related}
 
-* [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
-* [Prerequisites for installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro)
-* [OpenShift NSX configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxedge-intro)
-* [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
-* [Red Hat OpenShift 4.2 additional configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
+* [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
+* [Prerequisites for installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro)
+* [OpenShift NSX configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxedge-intro)
+* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
+* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
+* [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-11"
+lastupdated: "2020-03-30"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -60,5 +60,5 @@ Some of the following warnings might appear. You can ignore these warning messag
 ## Related links
 {: #managing_vrops-related}
 
-* [vRealize Operations and Log Insight overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_overview)
-* [Ordering vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_ordering)
+* [vRealize Operations and Log Insight overview](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview)
+* [Ordering vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_ordering)

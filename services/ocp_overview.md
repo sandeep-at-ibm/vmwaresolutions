@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-06"
+lastupdated: "2020-03-30"
 
 keywords: red hat openshift, request openshift for vmware, tech specs openshift vmware
 
@@ -29,21 +29,21 @@ The current Red Hat OpenShift version that is installed is 4.2.16.
 
 The cluster consists of three master nodes and three worker nodes, all running Red Hat CoreOS. In addition, there are also two VMware NSX VMs, a Red Hat CoreOS template, and a bastion VM running CentOS. 
 
-For more information about the architecture, see [Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch).
+For more information about the architecture, see [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch).
 
 ## Technical specifications for OpenShift for VMware
 {: #ocp_overview-specs}
 
-The following capacity requirements apply only if your vCenter Server instance is using vSAN storage. If you are using 
+The following capacity requirements apply only if your vCenter Server instance is using vSAN storage. If you are using
 NFS, a new 2-TB NFS datastore, which is dedicated to OpenShift, will be ordered. The solution topology requirements are:
 
 * 79 vCPUs
 * 155 GB RAM
 * 952 GB storage
 
-To successfully deploy Red Hat OpenShift on vCenter Server, you must have a Red Hat account and the Pull Secret key 
-from your account. All Red Hat accounts have an associated Pull Secret, which you can retrieve by [logging into your 
-Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}. You must 
+To successfully deploy Red Hat OpenShift on vCenter Server, you must have a Red Hat account and the Pull Secret key
+from your account. All Red Hat accounts have an associated Pull Secret, which you can retrieve by [logging into your
+Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}. You must
 purchase Red Hat support entitlements through Red Hat. You must also direct all Red Hat OpenShift support issues to Red Hat.
 
 ### Bastion details
@@ -62,16 +62,16 @@ The OpenShift-related files from the bastion include: an SSH key, an installatio
 ### SSH key
 {: #ocp_overview-bastion-ssh-key}
 
-The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. The full path to the SSH key is displayed on the service details page. For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_managing#ocp_managing-change-ssh-key).
+The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. The full path to the SSH key is displayed on the service details page. For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmware-solutions-ocp_managing#ocp_managing-change-ssh-key).
 
 The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. When you log in to a cluster VM from the bastion, you must connect as the `core` user as shown in the following example: `root@bastion# ssh core@master0`
 
-For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. The full path to the SSH key is displayed on the service details page. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_managing#ocp_managing-change-ssh-key).
+For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. The full path to the SSH key is displayed on the service details page. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmware-solutions-ocp_managing#ocp_managing-change-ssh-key).
 
 ### Installation configuration files
 {: #ocp_overview-bastion-install-config-file}
 
-The installation configuration file named `install-config.yaml.bak` is located in the installation directory on the 
+The installation configuration file named `install-config.yaml.bak` is located in the installation directory on the
 bastion. The file is a copy of the original `install-config.yaml` file that was consumed by the `openshift-install` program to generate the ignition files. The generated ignition files can also be found in the installation directory on the bastion.
 
 The `oc` and `kubectl` command-line tools from the Red Hat OpenShift client software are on the bastion. The installer program, named `openshift-install`, is used to install OpenShift and can also be used to generate fresh ignition files.  
@@ -116,7 +116,7 @@ For more information about updating Red Hat OpenShift, see [Updating a cluster b
 ## Considerations when you install Red Hat OpenShift for VMware
 {: #ocp_overview-consid-install}
 
-* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit. The storage capacity check only applies to 
+* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit. The storage capacity check only applies to
 vSAN because NFS clusters will have a new NFS datastore dedicated to OpenShift added.
 * The cluster will be associated with the Red Hat account from the pull secret that is provided.
 * The **Latency Sensitivity** setting of the OpenShift cluster VMs can affect Kubernetes scheduling performance. By default, the setting is set to **Normal**, but it can be set to **High** if you encounter Kubernetes performance issues.
@@ -124,7 +124,7 @@ vSAN because NFS clusters will have a new NFS datastore dedicated to OpenShift a
 ## Considerations when you remove Red Hat OpenShift for VMware
 {: #ocp_overview-consid-remove}
 
-* Before you remove Red Hat OpenShift, you must remove any additional VMs that you created in the "ocp" folder on 
+* Before you remove Red Hat OpenShift, you must remove any additional VMs that you created in the "ocp" folder on
 VMware. Automation only removes the items that were deployed during the initial installation of OpenShift (VMs, Storage, and NSX). Any node that is deployed after the installation is not cleaned up.
 * The VXLAN, DLR, and the Edge Gateway that were created during the initial deployment of Red Hat OpenShift for VMware will be deleted. The VMs that you deployed on VXLAN will lose connectivity after the removal of Red Hat OpenShift for VMware starts.
 * If you are using a vSAN datastore, it is recommended to delete any persistent volumes that you no longer need before you uninstall OpenShift. Any volumes that are not deleted will remain in the vSAN storage after the OpenShift uninstallation.
@@ -133,8 +133,8 @@ VMware. Automation only removes the items that were deployed during the initial 
 ## Related links
 {: #ocp_overview-related}
 
-* [vCenter Server and Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
-* [vCenter Server and Red Hat OpenShift guide](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
+* [vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
+* [vCenter Server and Red Hat OpenShift guide](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
 * [OpenShift Container Platform documentation](https://docs.openshift.com/container-platform/4.2/welcome/index.html){:external}
 * [Red Hat OpenShift](https://www.openshift.com/){:external}
 * [Succeeding with Red Hat OpenShift and VMware’s Software-Defined Datacenter (SDDC)](https://blog.openshift.com/red-hat-openshift-and-vmware-better-together/){:external}

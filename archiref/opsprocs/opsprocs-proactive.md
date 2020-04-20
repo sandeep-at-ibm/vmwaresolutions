@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-28"
+lastupdated: "2020-04-14"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -60,16 +63,16 @@ shares, not reservation, to allocate resources fairly across VMs. Shares take ef
 | Cluster CPU and memory capacity/utilization check | Review the capacity/utilization metrics for the cluster's CPU and memory by using vCenter by navigating to each cluster in turn and selecting  Monitor, Performance. Review the graphs and statistics to ensure that your cluster has enough resources to satisfy demand. Demand should be based on maintaining enough capacity for VMs to burst when needed, a vSphere ESXi host to fail, and for VMs to be added according to your known service requests. |
 | Datastore capacity/utilization check  |  Review the capacity/utilization metrics for the datastores by using vCenter by navigating to each datastore in turn and selecting Monitor, Performance, Space. Review the graphs and statistics to ensure that your datastore has enough space to satisfy demand. Demand should be based on maintaining enough capacity a vSphere ESXi host to fail (for a vSAN cluster) and for VMs to be added according to your known service requests. |
 | Datastore performance check  |  Review the performance metrics for the datastores by using vCenter by navigating to each datastore in turn and selecting: Monitor, Performance, Performance, Real-time. Review the graphs and statistics to ensure that your datastore performance baseline is expected and that any changes can be accounted for. Investigate any abnormalities. |
-| Bare metal server firmware | Best practices recommend to install the latest firmware updates for your bare metal server hosts. Check for firmware updates on the bare metal server hosts by navigating to the remote management page at `control.softlayer.com` for each host in turn and select OS reload. On the page that is displayed, review the current and update version for system board and hard disk drives and see whether there are updates available. If so, plan for updating the firmware in your next maintenance window. For more information, see [FAQs: Bare Metal Servers](/docs/bare-metal?topic=bare-metal-bm-faq#what-if-my-bare-metal-server-has-out-of-date-firmware). |
-| vSphere ESXi patching | For information about checking for the availability of vSphere ESXi patches, see [Creating baselines and attaching to inventory objects](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-baselines#vum-baselines). |
-| VM hardware updates | For information about checking for the availability of VM hardware updates, see [Creating baselines and attaching to inventory objects](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-baselines#vum-baselines). |
-| VM Tools updates | For more information, see [Creating baselines and attaching to inventory objects](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-baselines#vum-baselines). |
-| vSphere vSAN patching  | For information about checking for the availability of vSphere vSAN patches and the patch process, see [Updating vSAN clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan#vum-updating-vsan). |
-| vCenter patching | For more information about checking for the availability of VCSA patches and applying the update, see [VCSA update and SSO-linked vCenters](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vcsa#vum-updating-vcsa). |
-| Updating NSX | For more information about checking for the availability of NSX patches and applying the upgrades, see [NSX patching](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx#vum-updating-nsx). |
+| Bare metal server firmware | Best practices recommend to install the latest firmware updates for your bare metal server hosts. Check for firmware updates on the bare metal server hosts by navigating to the remote management page at `control.softlayer.com` for each host in turn and select OS reload. On the page that is displayed, review the current and update version for system board and hard disk drives and see whether there are updates available. If so, plan for updating the firmware in your next maintenance window. For more information, see [FAQs: Bare Metal Servers](/docs/bare-metal?topic=bare-metal-bm-faq#what-if-my-bare-metal-server-has-out-of-date-firmware-). |
+| vSphere ESXi patching | For information about checking for the availability of vSphere ESXi patches, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmware-solutions-vum-baselines#vum-baselines). |
+| VM hardware updates | For information about checking for the availability of VM hardware updates, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmware-solutions-vum-baselines#vum-baselines). |
+| VM Tools updates | For more information, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmware-solutions-vum-baselines#vum-baselines). |
+| vSphere vSAN patching  | For information about checking for the availability of vSphere vSAN patches and the patch process, see [Updating vSAN clusters](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan#vum-updating-vsan). |
+| vCenter patching | For more information about checking for the availability of VCSA patches and applying the update, see [VCSA update and SSO-linked vCenters](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-vcsa#vum-updating-vcsa). |
+| Updating NSX | For more information about checking for the availability of NSX patches and applying the upgrades, see [NSX patching](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx#vum-updating-nsx). |
 | Check for VMs without VM Tools | It is good practice to install VM Tools as this allows greater interaction with the OS, that is, graceful power down of the VM. You can use vCenter to check which VMs do not have VM Tools installed. Go to the cluster, select **Related Objects**, **VMs**, and in the table enable the columns for **VM Tools running** and **VM Tools version**. Review the list and install VM Tools if needed. |
 | VMs with snapshots | For information about best practices when working with snapshots, see [Best practices for using snapshots in the vSphere environment (1025279)](https://kb.vmware.com/s/article/1025279){:external}. It is important to identify the existence of VMs with snapshots as using a single snapshot for more than 72 hours creates a snapshot file that continues to grow in size and can cause the snapshot storage location to run out of space and impact the system performance. To review VMs with snapshots, connect to vCenter by using the Web Client, select the vCenter Server and go to Related Objects tab. Right-click on the column titles and go to Show/Hide Columns list. From the list of columns chose Needs Consolidation option. This column shows a summary of all the VMs that are currently running. |
-| AD/DNS OS patching | The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to download the updates only. For more information, see [More limitations and considerations](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations) for further updating advice. |
+| AD/DNS OS patching | The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to download the updates only. For more information, see [More limitations and considerations](/docs/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations) for further updating advice. |
 | Check storage latency  |  Check storage latency to understand any changes for the vSphere ESXi hosts to access the datastores. Too high a latency causes applications that are hosted in the VMs to slow down. In vCenter, go to each of the datastores and, on the Performance tab, review the average write latency per VM. |
 | Review VMs with virtual devices | Virtual devices such as CD or diskette drives create an overhead, therefore, remove any devices that are not needed for a VM. |
 | vSAN capacity advice | When any capacity device in your cluster reaches 80% full, vSAN automatically rebalances the cluster until the space available on all capacity devices is below the threshold. The following operations can cause disk capacity to reach 80% and initiate cluster rebalancing: hardware failures, vSAN hosts are placed in maintenance mode with the Evacuate all data option, or vSAN hosts are placed in maintenance mode with Ensure data accessibility when objects assigned PFTT=0 reside on the host. To provide enough space for maintenance and reprotection, and to minimize automatic rebalancing of events in the vSAN cluster, consider keeping 30% capacity available always. |
@@ -80,9 +83,9 @@ shares, not reservation, to allocate resources fairly across VMs. Shares take ef
 | Check VM hardware device compatibility | Using the VMware hardware compatibility online resource, check that your VMs' hardware resources; network, storage devices etc. are supported for that OS. If they are not supported change to a supported device to improve reliability and performance.  |
 {: caption="Table 1. Proactive tasks" caption-side="bottom"}
 
-**Next topic**: [Troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-trouble)
+**Next topic**: [Troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-opsprocs-trouble)
 
 ## Related links
 {: #opsprocs-proactive-links}
 
-* [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
+* [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)

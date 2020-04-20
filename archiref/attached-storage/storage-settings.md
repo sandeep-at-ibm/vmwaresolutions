@@ -2,12 +2,11 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-29"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -20,7 +19,7 @@ subcollection: vmware-solutions
 
 This design supports the attachment of shared storage via NFS v3 only. NFS v4 and v4.1 aren't supported.
 
-The attached storage for this design is limited to the {{site.data.keyword.cloud}} storage available in the same {{site.data.keyword.CloudDataCent_notm}} as the vCenter Server solution. Additionally, all virtual disks that are stored to the datastore are thin-provisioned by default.
+The attached storage for this design is limited to the {{site.data.keyword.cloud}} storage available in the same {{site.data.keyword.cloud_notm}} data center as the vCenter Server solution. Additionally, all virtual disks that are stored to the datastore are thin-provisioned by default.
 {:note}
 
 The architecture specifies that NFS v3 datastores are attached by using the DNS name from {{site.data.keyword.cloud_notm}} storage to connect to the share. The NFS share is attached to all hosts in the vCenter Server cluster and placed into a datastore cluster with storage DRS enabled.
@@ -94,9 +93,9 @@ This design adds advanced configuration parameters that are recommended by {{sit
 | NFS.MaxQueueDepth | 64 |
 {: caption="Table 2. NFS advanced configuration parameters" caption-side="bottom"}
 
-**Next topic:** [Cluster settings](/docs/services/vmwaresolutions?topic=vmware-solutions-cluster-settings)
+**Next topic:** [Cluster settings](/docs/vmwaresolutions?topic=vmware-solutions-cluster-settings)
 
 ## Related links
 {: #storage-settings-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)

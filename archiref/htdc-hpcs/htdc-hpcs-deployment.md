@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-01-23"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -30,7 +30,7 @@ Detailed instructions for each of these activities are contained within the prod
 ## Hyper Protect Crypto Services
 {: #htdc-hpcs-deployment-hpcs}
 
-* Provision an IBM HPCS instance - [Provisioning service instances](/docs/services/hs-crypto?topic=hs-crypto-provision)
+* Provision an IBM HPCS instance - [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision)
 * Set up the IBM HPCS environment:
   * Verify API endpoint.
   * Set up CLI - Install the IBM Cloud CLI, if not already installed. See [Getting started with the IBM Cloud CLI and Developer Tools](/docs/cli?topic=cloud-cli-getting-started).
@@ -53,8 +53,8 @@ Detailed instructions for each of these activities are contained within the prod
 * Create a root key - IBM HPCS uses the recommended envelope encryption mechanism of taking a key that is used to encrypt data, the data encryption key or DEK, and encrypting the key itself with a root key. This root key never leaves the HSM.
   * Using the IBM Cloud Portal, view the IBM Cloud resources, and find your IBM HPCS instance.
   * Click the **Add Key** button and then generate a new root key.
-  * Review [Creating root keys](https://cloud.ibm.com/docs/services/hs-crypto?topic=hs-crypto-create-root-keys) for more information of this step.
-* Create a standard key - Perform this operation to [create a standard key](https://cloud.ibm.com/docs/services/hs-crypto?topic=hs-crypto-create-standard-keys).
+  * Review [Creating root keys](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-create-root-keys) for more information of this step.
+* Create a standard key - Perform this operation to [create a standard key](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-create-standard-keys).
 
 ## Service ID
 {: #htdc-hpcs-deployment-serviceid}
@@ -80,8 +80,8 @@ Copy the API key or click download to save it. You will not be able to view this
 ## HyTrust DataControl
 {: #htdc-hpcs-deployment-htdc}
 
-* Order HyTrust DataControl - [Ordering HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_ordering)
-* Update static routes on the HTDC VMs - Review [Managing HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtdc) for further details.
+* Order HyTrust DataControl - [Ordering HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_ordering)
+* Update static routes on the HTDC VMs - Review [Managing HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtdc) for further details.
 * Configure the Customer ESG to use SNAT to allow communication between VMs to be encrypted connected to the NSX overlay networks and the HyTrust DataControl virtual machines, which are connected to the IBM Cloud underlay network. Review [Add a SNAT rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-BEF4D960-5F8A-4DE5-84F6-0160DF916FDA.html){:external} and [Add a firewall rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-C7A0093A-4AFA-47EC-9187-778BDDAD1C65.html){:external}.
 * Configure HTDC - [HyTrust DataControl Administration Guide](https://docs.hytrust.com/DataControl/Admin_Guide-4.0/Content/OLH-Files/Admin-Guide.htm){:external}
   * Initializing the KeyControl webGUI.
@@ -102,5 +102,5 @@ Copy the API key or click download to save it. You will not be able to view this
 ## Related links
 {: #htdc-hpcs-deployment-related}
 
-*  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started)
-*  [HyTrust DataControl overview](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+*  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
+*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)

@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-14"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -21,18 +20,18 @@ subcollection: vmware-solutions
 # vCenter Server overview
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three {{site.data.keyword.cloud}} {{site.data.keyword.baremetal_short}} and it soffers shared network-attached storage and dedicated software-defined storage options. It also includes the automatic deployment and configuration of an easy-to-manage logical edge firewall, which VMware NSX powers.
+VMware vCenter Server is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three {{site.data.keyword.cloud}} bare metal servers and it offers shared network-attached storage and dedicated software-defined storage options. It also includes the automatic deployment and configuration of an easy-to-manage logical edge firewall, which VMware NSX powers.
 {: shortdesc}
 
 In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
 After initial instance deployment, you can increase shared storage by ordering more Network File System (NFS) file shares from the {{site.data.keyword.slportal}} and by manually attaching them to all ESXi servers in a cluster. You can also take advantage of VMware vSAN as a storage option. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
 
-For dedicated storage, see [NetApp ONTAP Select](/docs/services/vmwaresolutions?topic=vmware-solutions-netapp).
+For dedicated storage, see [NetApp ONTAP Select](/docs/vmwaresolutions?topic=vmware-solutions-netapp).
 
 For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize Operations. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
-For vCenter Server with NSX-T instances, management functions such as ordering add-on services and applying updates are not supported.
+For vCenter Server with NSX-T instances, applying updates are not supported. Also, only a limited number of add-on services are supported.
 {:important}
 
 ## vCenter Server with NSX-V architecture
@@ -79,21 +78,21 @@ In total, the base offering has the following requirements, which are reserved f
 
 The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, virtual machine (VM) sizing, and workload performance requirements.
 
-For more information about the architecture, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview).
+For more information about the architecture, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview).
 
 ## Technical specifications for vCenter Server instances
 {: #vc_vcenterserveroverview-specs}
 
-The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
 {:note}
 
 The following components are included in your vCenter Server instance.
 
-### Bare Metal Server
+### Bare metal server
 {: #vc_vcenterserveroverview-bare-metal}
 
-* For NSX-V, you can order two or more {{site.data.keyword.baremetal_short}}.
-* For NSX-T, you can order three or more  {{site.data.keyword.baremetal_short}} in the Management cluster and two or more in the Workload cluster.
+* For NSX-V, you can order two or more bare metal servers.
+* For NSX-T, you can order three or more bare metal servers in the Management cluster and two or more in the Workload cluster.
 
 The following configurations are available:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
@@ -101,7 +100,7 @@ The following configurations are available:
 * **SAP-certified**: Intel Skylake generation servers (Intel Xeon 6140/E5-2690/E7-8890 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
 * (NSX-V only) **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
 
-If you plan to use vSAN storage, the configuration requires a minimum of four {{site.data.keyword.baremetal_short}}.
+If you plan to use vSAN storage, the configuration requires a minimum of four bare metal servers.
 {:note}
 
 ### Networking
@@ -113,13 +112,13 @@ The following networking components are ordered:
 *  (NSX-V only) One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching extra VXLANs to new logical interfaces on the DLR.
 * (NSX-T only) One overlay network with a T1 and T0 router for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. This is deployed as a sample routing topology, which you can modify, build on, or remove.
 *  VMware NSX Edge Services Gateways (two for NSX-V and four for NSX-T):
-  * One secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * One secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
 
     This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
   * Secure customer-managed ESG for outbound and inbound HTTPS workload traffic. The ESG is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For NSX-V, one ESG is deployed. For NSX-T, two ESGs are deployed on the datastore with the highest IOPS.
 
-  For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx)
+  For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#faq-customer-nsx)
 
 ### Virtual Server Instances
 {: #vc_vcenterserveroverview-vsi}
@@ -133,21 +132,21 @@ The following virtual server instances (VSIs) are ordered:
 
 During initial deployment, you can choose between vSAN and NFS storage options.
 
-After deployment, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see the *Adding NFS storage to vCenter Server instances* section in [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#adding-nfs-storage-to-vcenter-server-instances).
+After deployment, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
 {:note}
 
 #### vSAN storage
 {: #vc_vcenterserveroverview-vsan-storage}
 
 The vSAN option offers customized configurations, with various options for disk type, size, and quantity:
-* Disk quantity: 2, 4, 6, or 8
+* Disk quantity: 2, 4, 6, 8, or 10
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
 
   In addition, two cache disks of 960 GB are also ordered per host.
 
   3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
   {:note}
-* High-Performance Intel Optane option, which provides two extra capacity disk bays for a total of 12 capacity disks. This option depends on the CPU model.
+* High Performance with Intel Optane: this option provides two extra capacity disk bays. This option depends on the CPU model.
 
 #### NFS storage
 {: #vc_vcenterserveroverview-nfs-storage}
@@ -163,7 +162,7 @@ The NFS option offers customized shared file-level storage for workloads with va
 #### Local disk storage (NSX-V only)
 {: #vc_vcenterserveroverview-local-disk-storage}
 
-The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only, offers customized configurations with various options for disk count and disk type.
+The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor bare metal configuration only, offers customized configurations with various options for disk count and disk type.
 
 ### Licenses (IBM-provided or BYOL) and fees
 {: #vc_vcenterserveroverview-license-and-fee}
@@ -182,7 +181,7 @@ Each vCenter Server expansion node deploys and incurs charges for the following 
 ### Hardware for expansion nodes
 {: #vc_vcenterserveroverview-expansion-node-hardware}
 
-One Bare Metal Server with the configuration presented in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs).
+One bare metal server with the configuration presented in [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs).
 
 ### Licenses and fees for expansion nodes
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
@@ -204,7 +203,7 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
 ## Support and Services fee
 {: #vc_vcenterserveroverview-support-services-fee}
 
-VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short_sing}}. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} DevOps and Level 2 Support teams for any issues pertaining to:
+VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} DevOps and Level 2 Support teams for any issues pertaining to:
 
 * Automation in the platform
 * VMware products included in the solution
@@ -212,8 +211,8 @@ VMware vCenter Server instances include a Support and Services fee that is charg
 ## Related links
 {: #vc_vcenterserveroverview-related}
 
-* [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [Planning vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Attached storage for vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-benefits#storage-benefits)
-* [Expanding File Share capacity](/docs/infrastructure/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)
+* [vCenter Server Software Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
+* [Planning vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
+* [Attached storage for vCenter Server](/docs/vmwaresolutions?topic=vmware-solutions-storage-benefits#storage-benefits)
+* [Expanding File Share capacity](/docs/FileStorage?topic=FileStorage-expandCapacity#expandCapacity)

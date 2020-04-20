@@ -2,24 +2,32 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-10-08"
+lastupdated: "2020-04-03"
 
 keywords: troubleshooting, vSphere timeout, timeout console
 
 subcollection: vmware-solutions
 
-
 ---
+
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 
 # Timeout reached while connecting to the VMware vSphere Web Client
 {: #trbl_timeout_vc_console}
+{: troubleshoot}
+{: support}
 
 ## Problem
 {: #trbl_timeout_vc_console-problem}
 
 When you try to connect to the vSphere Web Client, you might get the following timeout error:
+{: tsSymptoms}
 
 `The server at <IP_address> is taking too long to respond.`
 
@@ -27,11 +35,12 @@ When you try to connect to the vSphere Web Client, you might get the following t
 {: #trbl_timeout_vc_console-resolution}
 
 Use the following steps to investigate and fix the problem.
+{: tsResolve}
 
 1. Ensure that you completed the steps from the tooltip that gets displayed when you hover over the **vCenter console** button. For
    your convenience, these steps are also listed as follows:
-   1. [Create a VPN password](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started#set-vpn-password).
-   2. [Log in to the data center VPN](/docs/infrastructure/iaas-vpn?topic=VPN-getting-started#login-to-the-vpn) by using the {{site.data.keyword.cloud_notm}} infrastructure VPN credentials.
+   1. [Create a VPN password](/docs/iaas-vpn?topic=iaas-vpn-getting-started#set-vpn-password).
+   2. [Log in to the data center VPN](/docs/iaas-vpn?topic=iaas-vpn-getting-started#login-to-the-vpn) by using the {{site.data.keyword.cloud_notm}} infrastructure VPN credentials.
    3. Add the IP address and the host name mapping of the vCenter Server into the `hosts` file on your local computer. Use the following format:
 
       ```javascript

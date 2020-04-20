@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-29"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -118,4 +118,4 @@ The Remote Collector VM details are shown in the following table.
 |Installed Application Components	|Remote Collector |
 {: caption="Table 9. Remote collector" caption-side="bottom"}
 
-**Next topic:** [Step 1 - Initial planning and prerequisites](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step1)
+**Next topic:** [Step 1 - Initial planning and prerequisites](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-step1)

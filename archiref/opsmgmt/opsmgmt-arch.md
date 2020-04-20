@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-03-30"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -170,4 +173,4 @@ The design uses the following quantity and size of appliances:
 {: caption="Table 2. Operational tooling software versions" caption-side="bottom"}
 
 
-**Next topic**: [vRealize Operations Manager design](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrops)
+**Next topic**: [vRealize Operations Manager design](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrops)

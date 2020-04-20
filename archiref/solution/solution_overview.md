@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -42,15 +42,15 @@ Unlike a managed service offering, vCenter Server gives you full and complete ac
 The VMware on {{site.data.keyword.cloud_notm}} offerings bring the following benefits:
 
 * **Accelerating delivery** of IT projects for developers and lines of business by reducing the time it takes for procurement, architecture, implementation, and deployment of resources from weeks or even months, to hours.
-* **Enhancing security** with dedicated Bare Metal Servers in a hosted private cloud, including the encryption of data at rest. For vSAN storage, encryption of data at rest is optional using either vSAN or vSphere encryption. For shared file–level or block storage, service–provider–managed encryption at rest is available by default in select data centers or it is optional using vSphere encryption. You must manage the necessary encryption keys.
+* **Enhancing security** with dedicated {{site.data.keyword.cloud_notm}} bare metal servers in a hosted private cloud, including the encryption of data at rest. For vSAN storage, encryption of data at rest is optional using either vSAN or vSphere encryption. For shared file–level or block storage, service–provider–managed encryption at rest is available by default in select data centers or it is optional using vSphere encryption. You must manage the necessary encryption keys.
 * **Enabling consistent management and governance** of the deployed hybrid cloud by providing full administrative access to virtualization management, thus preserving your existing VMware tools, scripts, and investments in training.
-* **Using VMware expertise at global scale** with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.CloudDataCents_notm}} worldwide.
+* **Using VMware expertise at global scale** with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.cloud_notm}} data centers worldwide.
 
-**Next topic:** [IBM Cloud for VMware Solutions components](/docs/services/vmwaresolutions?topic=vmware-solutions-design_overview)
+**Next topic:** [IBM Cloud for VMware Solutions components](/docs/vmwaresolutions?topic=vmware-solutions-design_overview)
 
 ## Related links
 {: #solution_overview-related}
 
-* [Design overview](/docs/services/vmwaresolutions?topic=vmware-solutions-design_overview)
-* [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling)
-* [Backing up components](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup)
+* [Design overview](/docs/vmwaresolutions?topic=vmware-solutions-design_overview)
+* [Scaling capacity](/docs/vmwaresolutions?topic=vmware-solutions-solution_scaling)
+* [Backing up components](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-06"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -298,10 +298,10 @@ Disconnect-NsxServer
 ```
 
 
-**Next topic:** [OpenShift NSX DLR configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro)
+**Next topic:** [OpenShift NSX DLR configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-nsxedge-related}
 
-* [OpenShift Bastion host setup](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
+* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
+* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)

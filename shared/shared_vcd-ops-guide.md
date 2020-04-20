@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-02"
+lastupdated: "2020-04-17"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -26,7 +26,7 @@ subcollection: vmware-solutions
 
 The VMware vCloud Director tenant portal is used for administration of your organization and to create and configure virtual machines (VMs), vApps, and networks within vApps.
 
-You can also configure advanced networking capabilities that are provided by VMware NSX® for vSphere® within a vCloud Director environment. With the tenant portal, you can also create and manage catalogs, vApp, and Virtual Data Center templates, and create and manage cross-Virtual Data Center networks.
+You can also configure advanced networking capabilities that are provided by VMware NSX® for vSphere® within a vCloud Director environment. With the tenant portal, you can also create and manage catalogs, vApp, and virtual data center templates.
 
 ### Roles, permissions, and users
 {: #shared_vcd-ops-guide-roles}
@@ -66,8 +66,8 @@ Each organization has access to the VMware Solutions Shared public catalog. The 
 
 Review the following considerations for the VMware Solutions Shared public:
 
-* Operating system licensing costs apply for usage. For more information about how commercial operating system license rentals are billed, see [VMware Solutions Shared pricing](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_pricing).
-* Public templates that are configured to services on the IBM private network require an extra configuration step to enable VM access to the IBM Services network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
+* Operating system licensing costs apply for usage. For more information about how commercial operating system license rentals are billed, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmware-solutions-shared_pricing).
+* Public templates that are configured to services on the IBM private network require an extra configuration step to enable VM access to the IBM Services network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
 * Public templates require a minimum level of customization to establish the initial administrator password. For more information, see [Changing the guest OS customization properties of a VM](#shared_vcd-ops-guide-customization).
 
 The public catalog contains vApp templates for the following components:
@@ -114,23 +114,23 @@ The Red Hat Enterprise Linux templates that are provided in the public catalog h
 * Firewall activated
 * NTP server that is configured to the IBM private network servers
 
-After you deploy the VM on the tenant portal, register the Red Hat VM with your RHEL activation key in IBM RHEL Capsule Server. To register the Red Hat VM with your RHEL activation key, you must enable VM access to connect to the IBM service network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
+After you deploy the VM on the tenant portal, register the Red Hat VM with your RHEL activation key in IBM RHEL Capsule Server. To register the Red Hat VM with your RHEL activation key, you must enable VM access to connect to the IBM service network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
 {: important}
 
-Complete the following steps to register the Red Hat VM with your RHEL activation key. For more information about accessing instance details, see [Procedure to view Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-viewing).
+Complete the following steps to register the Red Hat VM with your RHEL activation key. For more information about accessing instance details, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-viewing).
 
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click the instance name in the **VMware Solutions Shared** instance table.
 2. On the instance details page, locate and make note of the **Red Hat activation key**.
 3. Run the following commands from the Red Hat VM.
   1. ``rpm -ivh http://52.117.132.7/pub/katello-ca-consumer-latest.noarch.rpm``
-  2. uuid=``uuidgen``
+  2. ``uuid= `uuidgen` ``
   3. ``echo '{"dmi.system.uuid": "'$uuid'"}' > /etc/rhsm/facts/uuid_override.facts``
   4. ``subscription-manager register --org="customer" --activationkey="${activation_key}" --force``  
   Where:  
   ``${activation_key}`` is the Red Hat activation key that is located on the instance details page.  
 
-You can still use another RHEL Capsule Server or a satellite server if you already have an RHEL subscription outside of IBM. Charges for the RHEL license are incurred against RHEL VMs that are running in a Virtual Data Center instance.
+You can still use another RHEL Capsule Server or a satellite server if you already have an RHEL subscription outside of IBM. Charges for the RHEL license are incurred against RHEL VMs that are running in a virtual data center instance.
 {:note}
 
 ### Defining catalogs and policies
@@ -176,7 +176,7 @@ When you use the tenant portal, you can create a VM or provision a VM from a tem
 {: #shared_vcd-ops-guide-machine}
 
 1. From the tenant portal, click the menu icon at the top of the page and select **Datacenters**.
-2. Under **Virtual datacenters**, click the Virtual Data Center to create the VM in.
+2. Under **Virtual datacenters**, click the virtual data center to create the VM in.
 3. In the right pane under **Compute**, select **Virtual Machines**.
 4. In the left pane, click **NEW VM**.
 5. Define the Name, Computer Name, Description (optional). Then, select **New** for the type and the **Power on** option.
@@ -190,7 +190,7 @@ When you use the tenant portal, you can create a VM or provision a VM from a tem
 {: #shared_vcd-ops-guide-virtual}
 
 1. From the tenant portal, click the menu icon at the top of the page and select **Datacenters**.
-2. Under **Virtual Datacenters**, click the Virtual Data Center to create the VM in.
+2. Under **Virtual Datacenters**, click the virtual data center to create the VM in.
 3. On the right pane, under **Compute**, select **Virtual Machines**.
 4. In the left pane, click **NEW VM**.
 5. Define the Name, Computer Name, and Description (optional). Then, select **From Template** for type and the **Power on** option.
@@ -240,10 +240,10 @@ If the VM is deployed from the IBM templates that are provided in the public cat
 ## vApps
 {: #shared_vcd-ops-guide-vapps}
 
-A vApp consists of one or more VMs that communicate over a network and use resources and services in a Virtual Data Center.
+A vApp consists of one or more VMs that communicate over a network and use resources and services in a virtual data center.
 
 1. From the tenant portal, click the menu icon at the top of the page and select **Datacenters**.
-2. Under **Virtual Datacenters**, click the Virtual Data Center under which to create the vApp.
+2. Under **Virtual Datacenters**, click the virtual data center under which to create the vApp.
 3. Under **Compute** in the right pane, select **vApp**.
 4. In the left pane, click **NEW vAPPS**.
 5. Enter the vApp name and click **Create**.
@@ -255,33 +255,35 @@ For more information about vApps, see [Working with vApps](https://docs.vmware.c
 ## Networking
 {: #shared_vcd-ops-guide-networking}
 
-Every VMware Solutions Shared Virtual Data Center comes configured with one edge gateway with five public IP addresses and one private IBM Services network IP address. The edge gateway services are customer configurable and require configuration to allow network traffic in and out of their organization Virtual Data Center.
+Every VMware Solutions Shared virtual data center comes configured with one edge gateway with five public IP addresses and one private IBM Services network IP address. You can open an {{site.data.keyword.cloud_notm}} Support ticket to request five additional public IP addresses or an entire subnet for your virtual data center. Include the following details in your support ticket:
 
-Configuration is required for access to the internet and the IBM Services network. The five public addresses are used for public facing vApps for inbound and outbound public internet traffic. The service address is used for access to {{site.data.keyword.cloud_notm}} infrastructure services on the {{site.data.keyword.cloud_notm}} internal private network, including:
+* Instance region and location
+* Organization ID
+* Virtual data center name
+* Number of additional IPs required
+
+For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
+
+The edge gateway services are customer configurable and require configuration to allow network traffic in and out of their organization virtual data center. Configuration is required for access to the internet and the IBM Services network. The five public addresses are used for public facing vApps for inbound and outbound public internet traffic. The service address is used for access to {{site.data.keyword.cloud_notm}} infrastructure services on the {{site.data.keyword.cloud_notm}} internal private network, including:
 
 * NTP
 * Windows operating system licensing and updates
 * Red Hat operating system licensing and updates
 * Cloud Object Storage
 
-There are three types of organization Virtual Data Center networks available in the VMware Solutions Shared Virtual Data Center: routed, internal, or cross-Virtual Data Center.
+There are three types of organization virtual data center networks available in the VMware Solutions Shared virtual data center: routed or internal.
 
 ### Routed network
 {: #shared_vcd-ops-guide-routed}
 
-Accessible only by the same organization Virtual Data Center. Only VMs in this organization Virtual Data Center can connect to this network. This network also provides controlled access to an external network. An organization administrator can configure Network Address Translation (NAT), firewall, and VPN settings to make specific VMs accessible from the external network.
+Accessible only by the same organization virtual data center. Only VMs in this organization virtual data center can connect to this network. This network also provides controlled access to an external network. An organization administrator can configure Network Address Translation (NAT), firewall, and VPN settings to make specific VMs accessible from the external network.
 
 ### Internal or isolated network
 {: #shared_vcd-ops-guide-internal}
 
-Accessible only by the same organization Virtual Data Center. Only VMs in this organization Virtual Data Center can connect to and see traffic on the internal organization Virtual Data Center network.
+Accessible only by the same organization virtual data center. Only VMs in this organization virtual data center can connect to and see traffic on the internal organization virtual data center network.
 
-The isolated organization Virtual Data Center network provides an organization Virtual Data Center with an isolated, private network that multiple VMs and vApps can connect to. This network provides no connectivity to VMs outside the organization Virtual Data Center. VMs that are outside of the organization Virtual Data Center have no connectivity to VMS that are in the organization Virtual Data Center.
-
-### Cross-Virtual Data Center
-{: #shared_vcd-ops-guide-cross-vdc}
-
-This network is part of a stretched network, spanning a datacenter group. A datacenter group can comprise 2 - 4 organization Virtual Data Centers in a single or multisite vCloud Director deployment. VMs connected to this network are connected to the underlying stretched network.
+The isolated organization virtual data center network provides an organization virtual data center with an isolated, private network that multiple VMs and vApps can connect to. This network provides no connectivity to VMs outside the organization virtual data center. VMs that are outside of the organization virtual data center have no connectivity to VMs that are in the organization virtual data center.
 
 ### Creating a network
 {: #shared_vcd-ops-guide-create-network}
@@ -290,67 +292,70 @@ Create a sample network topology that includes: configuring DHCP services, defin
 
 ![{{site.data.keyword.vmwaresolutions_short}} Network topology](../images/vcd-sample-topology.svg "{{site.data.keyword.vmwaresolutions_short}} Network topology"){: caption="Figure 1. {{site.data.keyword.vmwaresolutions_short}} Network topology" caption-side="bottom"}
 
-#### Creating a routed organization Virtual Data Center network
+#### Creating a routed organization virtual data center network
 {: #shared_vcd-ops-guide-routed-organization}
 
 1. From the tenant portal, click the menu icon at the top of the page and select **Datacenters**.
-2. On the main page, under **Virtual Datacenters**, click the Virtual Data Center where the network is created.
+2. On the main page, under **Virtual Datacenters**, click the virtual data center where the network is created.
 3. Under the **Networking** section in the left pane, click **Networks**.
 4. Click **ADD** in the main pane.
 5. Select **Routed** and click **Next**.
 6. Provide details for **Name** and **Gateway CIDR**. For example, Name:``Web`` Gateway CIDR:``192.168.100.1/24``
-7. (Optional) Enter a description of the organization Virtual Data Center network.
-8. (Optional) To make the organization Virtual Data Center network available to other organization Virtual Data Centers within the same organization, set the Shared option. One use case is when an application within an Organization Virtual Data Center has a reservation or allocation pool set as the allocation model. In this case, it might not have enough room to run more VMs. As a solution, you can create a secondary organization Virtual Data Center with On-demand and run more VMs on that network on a temporary basis. **Note**: The Organization Virtual Data Centers must be backed by the same Provider Virtual Data Center. If On-demand and Reserved are different Provider Virtual Data Centers, it might not work for both. Click **Next**.
+7. (Optional) Enter a description of the organization virtual data center network.
+8. (Optional) To make the organization virtual data center network available to other organization virtual data centers within the same organization, set the Shared option. One use case is when an application within an Organization virtual data center has a reservation or allocation pool set as the allocation model. In this case, it might not have enough room to run more VMs. As a solution, you can create a secondary Organization virtual data center with On-demand and run more VMs on that network on a temporary basis. Then, click **Next**.  
+  **Note**: Virtual data center instances can only share networks if they are in the same region.  
 9. Select the edge.
 10. From the **Interface Type** list, select **Distributed** and click **Next**.
 11. (Optional) Enter a static IP range and click **ADD**. If static IP addresses are required for the defined subnet, enter the range of addresses. Click **Next**.
 12. (Optional) If known, provide DNS details. Otherwise, click **Next**.
 13. Review the **Ready to Complete** page and click **Finish**.
-14. (Optional) To create another organization Virtual Data Center network, repeat the previous process. Give the network a different **Name**: ``App`` and a different **Gateway CIDR**: ``192.168.101.1/24``.
+14. (Optional) To create another Organization virtual data center network, repeat the previous process. Give the network a different **Name**: ``App`` and a different **Gateway CIDR**: ``192.168.101.1/24``.
 
 #### Validate that the network is connected to the Edge
 {: #shared_vcd-ops-guide-validate-network}
 
 1. From the tenant portal, click the menu icon at the top of the page and select **Datacenters**.
-2. Under **Virtual Datacenters**, click the Virtual Data Center for that edge gateway.
+2. Under **Virtual Datacenters**, click the virtual data center for that edge gateway.
 3. In the left pane under Networking, click **Edges**.
 4. In the right pane, click the edge then click **CONFIGURE SERVICES**.
 5. Click the **Routing** tab, then click **Static Routes**.
-6. Validate the organization Virtual Data Center networks that are defined earlier are listed. The Next Hop shows `10.255.255.250`, which is the internal interface of the edge gateway.
+6. Validate the Organization virtual data center networks that are defined earlier are listed. The Next Hop shows `10.255.255.250`, which is the internal interface of the edge gateway.
 
 #### Edge DHCP configuration
 {: #shared_vcd-ops-guide-configure-dhcp}
 
-Configure DHCP on the edge gateway to automatically assign IP addresses to the VMs connected to the organization Virtual Data Center networks.
+Configure DHCP on the edge gateway to automatically assign IP addresses to the VMs connected to the Organization virtual data center networks.
 
 1. From the tenant portal, click the menu icon at the top of the page and select **Datacenters**.
-2. Click the Virtual Data Center for that edge gateway.
+2. Click the virtual data center for that edge gateway.
 3. In the left pane under Networking click **Edges**, then **CONFIGURE SERVICES**.
 4. Click the **DHCP** tab.
 5. Under **DHCP Pools** click **+** to add a pool.
-6. Define the IP Range, which is a range from the organization Virtual Data Center network that is attached to the edge.
+6. Define the IP Range, which is a range from the Organization virtual data center network that is attached to the edge.
 7. Define the primary and secondary name servers, if available. These names can be defined or changed later.
-8. Define the default gateway, which is the gateway CIDR or the organization Virtual Data Center network that is attached to the edge.
+8. Define the default gateway, which is the gateway CIDR or the Organization virtual data center network that is attached to the edge.
 9. Define the subnet mask and set the lease time. Click **KEEP**.
-10. Repeat the process for additional organization Virtual Data Center networks that are attached to the edge that requires DHCP services.
+10. Repeat the process for additional Organization virtual data center networks that are attached to the edge that requires DHCP services.
 11. Set the DHCP service status to enabled.
 12. Click **Save changes**.
 
 #### Connect the VMs to the network
 {: #shared_vcd-ops-guide-connect-vm}
 
-Stand-alone VMs, or VMs in a vApp, can connect to an organization Virtual Data Center network.  
+Stand-alone VMs, or VMs in a vApp, can connect to an Organization virtual data center network.  
 
 1. From the tenant portal, click the menu icon at the top of the page to access the menu and then select **Datacenters**.
-2. Under **Virtual Datacenters**, click the Virtual Data Center where the VMs are located.
+2. Under **Virtual Datacenters**, click the virtual data center where the VMs are located.
 3. Under **Compute** on the left pane, click **Virtual Machines**.
 4. Click **Details** for the VM you want to connect the network to.
 5. Scroll down and expand the **Hardware** section.
-6. Scroll down to **NICs**, expand **Network**, and select one of the available networks.
-7. Check the connect box and set the IP Mode to DHCP. Click **Save**.
-8. Repeat this process for any other VMs. Click **Save**.
+6. Scroll down to **NICs** and click **Add** to add a new network interface.
+7. Select the new network interface.
+8. Expand **Network** and select one of the available networks.
+9. Check the connect box and select the method that you want to use to assign IP addresses under **IP mode**. Click **Save**.
+10. Repeat this process for any other VMs. Click **Save**.
 
-After the VMs are connected to the organization Virtual Data Center network, they are able to communicate with each other. You can ping from one of the VMs to another to test. If there’s no response from the ping command, check the OS firewalls to see whether ICMP is allowed.
+After the VMs are connected to the Organization virtual data center network, they are able to communicate with each other. You can ping from one of the VMs to another to test. If there’s no response from the ping command, check the OS firewalls to see whether ICMP is allowed.
 
 #### Enable inbound and outbound traffic
 {: #shared_vcd-ops-guide-enable-traffic}
@@ -358,7 +363,7 @@ After the VMs are connected to the organization Virtual Data Center network, the
 To enable VMs to reach the internet, you must configure a SNAT (Source Network Address Translation) rule and firewall policy to allow the VM traffic outbound. To allow inbound traffic, you must configure a DNAT (Destination Network Address Translation) rule and firewall policy.
 
 1. From the tenant portal, click the menu icon at the top of the page and then select **Datacenters**.
-2. On the main page, under **Virtual Datacenters**, click the Virtual Data Center for that edge gateway.
+2. On the main page, under **Virtual Datacenters**, click the virtual data center for that edge gateway.
 3. In the left pane under **Networking**, click **Edges**.
 4. In the right pane click the edge, scroll down to the IP address section, and note the ``location-Customer-External`` IP address. Any of the addresses under **Suballocated IP Pool** for the ``location-Customer-External`` range can also be used for SNAT and DNAT. After the IP addresses are noted, scroll up and click **CONFIGURE SERVICES**.
 5. Under **Firewall Rules**, click **+**.
@@ -385,10 +390,10 @@ To test internet connectivity, log in to one of the VMs that are attached to the
 ##### Destination NAT definition and port forwarding
 {: #shared_vcd-ops-guide-destination-nat}
 
-A destination NAT allows an outside host, in this case the internet, to connect to an inside host, the organization Virtual Data Center. The destination NAT maps one IP address or port to another IP address or port. The following instructions are an example of configuring DNAT and port forwarding to allow a remote desktop connection to a VM in the organization Virtual Data Center. Port forwarding is optional.
+A destination NAT allows an outside host, in this case the internet, to connect to an inside host, the Organization virtual data center. The destination NAT maps one IP address or port to another IP address or port. The following instructions are an example of configuring DNAT and port forwarding to allow a remote desktop connection to a VM in the Organization virtual data center. Port forwarding is optional.
 
 1. From the tenant portal, click the menu icon at the top of the page and then select **Datacenters**.
-2. Under **Virtual Datacenters** on the main page, click the Virtual Data Center for that edge gateway.
+2. Under **Virtual Datacenters** on the main page, click the virtual data center for that edge gateway.
 3. In the left pane under **Networking**, click **Edges**.
 4. In the main pane click the edge, then **CONFIGURE SERVICES**.
 5. Click the **NAT** tab, under **NAT44 Rules** click **+ DNAT RULE**.
@@ -396,7 +401,7 @@ A destination NAT allows an outside host, in this case the internet, to connect 
 7. The **Original IP/Range** is one of the IPs from the Suballocated IP address range.
 8. Optionally, for port forwarding, click the **Protocol** down arrow and select **TCP**.
 9. The **Original Port** in this example is ``8000``. Ports below 1024 are reserved. Select a port that is not previously used with the original IP address or range.
-10. The **Translated IP/Range** is the IP address of the VM on the private organization Virtual Data Center you want connected.  
+10. The **Translated IP/Range** is the IP address of the VM on the private Organization virtual data center you want connected.  
 11. The **Translated Port** is the port on the previous VM that the servicer is listening on. In this example, port 3389 is the default remote desktop port.
 12. Optionally, define a description, then click **KEEP**.
 13. Click **Save changes**.
@@ -410,7 +415,7 @@ To test the configuration, use the remote desktop client and connect to the ``Cu
 #### Enabling VM access to IBM Cloud Services by using the private network
 {: #shared_vcd-ops-guide-enable-access}
 
-vApps and VMs running inside of the Virtual Data Center can be configured to use the {{site.data.keyword.cloud_notm}} private network to access {{site.data.keyword.cloud_notm}} services. Accessing {{site.data.keyword.cloud_notm}} services through a private network can save on outbound public networking costs and can provide a higher degree of reliability and security. Virtual Data Centers route to the {{site.data.keyword.cloud_notm}} private network through a Virtual Data Center service network that is configured as an available external network on Virtual Data Centers edge.
+vApps and VMs running inside of the virtual data center can be configured to use the {{site.data.keyword.cloud_notm}} private network to access {{site.data.keyword.cloud_notm}} services. Accessing {{site.data.keyword.cloud_notm}} services through a private network can save on outbound public networking costs and can provide a higher degree of reliability and security. Virtual data centers route to the {{site.data.keyword.cloud_notm}} private network through a virtual data center service network that is configured as an available external network on virtual data centers edge.
 
 VMware Solutions Shared fully enables access to IaaS endpoints for {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC). For more information, see [Endpoints available for VPC](/docs/vpc?topic=vpc-service-endpoints-for-vpc).
 
@@ -433,10 +438,10 @@ Enabling access to the service network is done in two edge configuration steps.
 
 Add a NAT rule for translating internal network addresses into the service network IP address space.
 1. Log in to the VMware vCloud Director portal.
-2. Click the Virtual Data Center **Edges** tab and open the single preconfigured edge.
+2. Click the virtual data center **Edges** tab and open the single preconfigured edge.
 3. Find the name of the service network and the IP address that is assigned for the service network interface from the **IP Addresses** table in the **Edge Gateway Settings** section. The format for the service network name is ``w<idx>-service<idx>``, for example, ``w02-service02``.
 4. Click **CONFIGURE SERVICES** to open the Edge Gateway configuration page. Click the **NAT** tab and click **+ SNAT RULE** to add a SNAT rule.
-5. Select the service network next to the **Applied on** field, add the IP addresses or range from one of the Virtual Data Center internal networks to the **Original** field.
+5. Select the service network next to the **Applied on** field, add the IP addresses or range from one of the virtual data center internal networks to the **Original** field.
 6. Set the translated IP address to the IP address of the network selected in step 3. This address can be found under Network Edge settings for External Networks.
 7. Specify `Any` for the **Port** field for the **Original** and **Protocol** fields.
 8. Click **Save changes**.
@@ -451,7 +456,7 @@ Add a firewall rule to allow the traffic from the internal network to the servic
 4. Specify `Any` for the **Service** field and `Accept` for the **Action** field.
 5. Click **Save changes**.
 
-After the previous configuration is completed, you can use the supported {{site.data.keyword.cloud_notm}} services on the VMs in your Virtual Data Center.
+After the previous configuration is completed, you can use the supported {{site.data.keyword.cloud_notm}} services on the VMs in your virtual data center.
 
 If your vApp or VM is deployed from the IBM templates that are provided in the public catalog, the services are already configured on the VM. To enable the connection, you must complete the previous steps in **Adding the NAT rule** and **Adding the firewall rule**.
 
@@ -461,7 +466,7 @@ If your vApp or VM is deployed from the IBM templates that are provided in the p
 If you have not already done so, create a vApp containing at least two VMs. For more information, see [Working with vApps](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-AC48FB5E-4ADC-4835-AACE-B949B297A147.html){: external}.
 
 1. From the tenant portal, click the menu icon at the top of the page and then select **Datacenters**.
-2. From the main page under **Virtual Datacenters**, click the Virtual Data Center where you would like to create the vApp network.
+2. From the main page under **Virtual Datacenters**, click the virtual data center where you would like to create the vApp network.
 3. In the right pane under **Compute**, click **vApps**.
 4. Click **Details** on the vApp you would like to add a vApp network to.
 5. Click the **Network** tab, and click **New** in the **vApp Fencing** section.
@@ -475,8 +480,8 @@ If you have not already done so, create a vApp containing at least two VMs. For 
 ## Related links
 {: #shared_vcd-ops-guide-related}
 
-* [VMware Solutions Shared overview](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Requirements and planning for VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_planning)
-* [Ordering Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_ordering)
-* [Viewing and managing Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing)
+* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview)
+* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
 * [VMware vCloud Director](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
+* [Video tutorial: IBM Cloud for VMware Solutions Shared - Setup the Network](https://www.youtube.com/watch?v=gG0jp3TEtt0&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE&index=3&t=0s){:external}
+* [Video tutorial: IBM Cloud for VMware Solutions Shared - Deploy a VM](https://www.youtube.com/watch?v=5yl-_60gUUw&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE&index=4&t=0s){:external}

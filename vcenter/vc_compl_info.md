@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-31"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -100,7 +100,7 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 * Due to the level of specialization that is required to maintain superior technical expertise at the team level, it is sometimes necessary to involve more than one support team in resolving a particular software problem. This is easily handled, as our support teams are all networked together and work as one to resolve whatever problems or issues arise.
 * In order to investigate the issue, IBM might need to access information on your system relative to the failure or might need to re-create the failure to get additional information.
 * A client–generated support ticket serves as acknowledgment that IBM Support can access the VMware management layer for investigation, debugging, and triage. If maintenance outage or changes to the environment are required, IBM Support will request additional documented confirmation from the client through tickets as part of our change management process.
-* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} and [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support).
+* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} and [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
 
 ## Client responsibilities
 {: #vc_compl_info-client-responsibilities}
@@ -111,7 +111,7 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 * Upon initial deployment, the offering’s automation and client’s account are separate. The client is allowed and encouraged to change all passwords that IBM provides in the portal.
 * vCenter access and credentials are created during initial deployments and provided to the client. As part of the requirement of our offering, IBM Support must retain full access to the management layer to provide life–cycle management and support to our clients.
 * If credentials such as passwords are changed at any time, IBM Support may no longer be able to help the client recover lost or forgotten credentials or even troubleshoot client environments.
-* For more information about this issue and related concerns, see [Considerations when changing passwords for NSX components](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations) and [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact).
+* For more information about this issue and related concerns, see [Considerations when changing passwords for NSX components](/docs/vmwaresolutions?topic=vmware-solutions-vc_networkingonvcenterserver#vc_networkingonvcenterserver-change-nsx-component-password-considerations) and [Considerations about changing vCenter Server artifacts](/docs/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact).
 
 ### Communication and troubleshooting
 {: #vc_compl_info-communication-troubleshooting}
@@ -163,5 +163,5 @@ If the client has not granted consent to proactive support for an instance in th
 ## Related links
 {: #vc_compl_info-related}
 
-* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

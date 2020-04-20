@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -42,7 +42,7 @@ The edge services cluster does not provide protection to any overlay network seg
 
 The use of a gateway device to control traffic flows within the workload region and between the workload region and the IBM Cloud public and private networks is recommended.
 
-**Next topic**: [FSS Cloud vSphere components](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-vsphere-platform)
+**Next topic**: [FSS Cloud vSphere components](/docs/vmwaresolutions?topic=vmware-solutions-fss-vsphere-platform)
 
 ## Related links
 {: #fss-overlay-network-related}

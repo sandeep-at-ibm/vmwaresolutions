@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-03-31"
 
 keywords: IAM user, invite user, service access
 
@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 {: #iamuserinvite-reqs}
 
 * Ensure that you are the account owner or that your platform management role for the **VMware Solutions** service is **Administrator**.
-* Ensure that you reviewed the user roles and permissions in [Managing user access with Identity and Access Management](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam).
+* Ensure that you reviewed the user roles and permissions in [Managing user access with Identity and Access Management](/docs/vmwaresolutions?topic=vmware-solutions-iam#iam).
 
 ## Procedure to invite users to access services and resources
 {: #iamuserinvite-procedure}
@@ -47,4 +47,4 @@ After the added users accept your invitation, they can log in to the {{site.data
 * [Inviting users to an account](/docs/iam?topic=iam-iamuserinv)
 * [Getting started with IAM tutorial](/docs/iam?topic=iam-getstarted)
 * [What is IBM Cloud Identity and Access Management?](/docs/iam?topic=iam-iamoverview)
-* [Migrating pre-V2.5 vCenter Server instances to {{site.data.keyword.cloud_notm}} accounts](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addinstancetousraccount)
+* [Migrating pre-V2.5 vCenter Server instances to {{site.data.keyword.cloud_notm}} accounts](/docs/vmwaresolutions?topic=vmware-solutions-vc_addinstancetousraccount)

@@ -42,10 +42,6 @@ During the V2.2 upgrade process, the IBM CloudDriver virtual machine is redeploy
 * If you are using a backup solution that references the IBM CloudDriver virtual machine, after you upgrade to V2.2, ensure that the backup solution is referencing the new IBM CloudDriver virtual machine.
 * Before you upgrade to V2.2, ensure that you replace the old Veeam VSI with the Veeam on {{site.data.keyword.cloud_notm}} service. The old Veeam is no longer supported in V2.2 and later. Therefore, the management component backups that are associated with the old Veeam are not available for a restore.
 
-For more information about using the Veeam on {{site.data.keyword.cloud_notm}} service, see:
-* [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-
 ## Advanced configuration settings on ESXi servers
 {: #relnotes_v22-config-esxi}
 
@@ -54,14 +50,12 @@ For instances that are upgraded from a previous release to V2.2 or later release
 
 It is recommended that you change the remaining configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.cloud_notm}} for VMware Solutions future releases.
 
-For more information, see _Advanced configuration settings for ESXi servers_ in [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom#advanced-configuration-settings-for-esxi-servers).
-
 ## Support for up to 51 ESXi servers for an initial cluster and up to 59 ESXi servers for more clusters
 {: #relnotes_v22-esxi-cluster}
 
 For V2.2 and later releases, you can now increase the number of ESXi servers to a maximum of 51 for an initial cluster and up to 59 for extra clusters.
 
-For instances deployed in V2.1 or earlier releases, you must enable necessary vSAN support to increase the cluster size beyond 32. For more information about steps to increase the number of ESXi servers, see [How many ESXi servers can I add to a cluster?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq_esxi#how-many-esxi-servers-can-i-add-to-a-cluster-).
+For instances deployed in V2.1 or earlier releases, you must enable necessary vSAN support to increase the cluster size beyond 32.
 {:important}
 
 ## More network configuration options for vCenter Server and Cloud Foundation instances
@@ -69,7 +63,7 @@ For instances deployed in V2.1 or earlier releases, you must enable necessary vS
 
 For vCenter Server and Cloud Foundation instance orders, you can now reuse existing public and private VLANs for your network configuration. When existing VLANs are not available, you can order one new public and two new private VLANs.
 
-For important considerations before you select existing VLANs, see the *Network interface settings* sections in [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
+For important considerations before you select existing VLANs, see the *Network interface settings* sections in [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v22-vcs}
@@ -77,9 +71,9 @@ For important considerations before you select existing VLANs, see the *Network 
 ### NSX component and port group configuration setting updates
 {: #relnotes_v22-nsx}
 
-The current release applies the VMware NSX for vSphere 6.3.5 component update. For more information about components, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
+The current release applies the VMware NSX for vSphere 6.3.5 component update.
 
-For VMware vCenter Server instances that are deployed in V2.2 or later releases, the NSX and port group configuration settings are updated. For more information, see the *NSX and port group configuration settings* section in [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom#nsx-and-port-group-configuration-settings).
+For VMware vCenter Server instances that are deployed in V2.2 or later releases, the NSX and port group configuration settings are updated.
 
 ### New option for DNS configuration
 {: #relnotes_v22-dns}
@@ -89,12 +83,10 @@ You can now select the deployment of a single Microsoft Windows Server Virtual S
 You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
 {:note}
 
-For more information, see the *System settings* section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#system-settings)​.
-
 ### Increased number of clusters per instance
 {: #relnotes_v22-clusters-per-inst}
 
-You can now add up to 10 clusters to VMware vCenter Server instances that are deployed in or upgraded to V2.2. and later releases. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)​.
+You can now add up to 10 clusters to VMware vCenter Server instances that are deployed in or upgraded to V2.2. and later releases.
 
 ## Updates for VMware vSphere clusters
 {: #relnotes_v22-vss}
@@ -104,17 +96,15 @@ You can now add up to 10 clusters to VMware vCenter Server instances that are de
 
 As a Business Partner user, you can now select from four component license bundles when you order a new vSphere cluster. Choose from Standard with Management, Advanced, Advanced with Networking, or Advanced with Networking and Management. You can also include more VMware components to your order. However, the option to Bring Your Own License is not available.
 
-For more information, see the *Licensing settings* section in [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances).
-
 ## Updates for NetApp ONTAP Select instances
 {: #relnotes_v22-netapp}
 
 The current release applies the update of NetApp ONTAP Select 9.3.
 
-### Increased number of SATA drives for high capacity IBM Cloud Bare Metal Servers
+### Increased number of SATA drives for high capacity IBM Cloud bare metal servers
 {: #relnotes_v22-sata-drives}
 
-Thirty Four SATA drives are now available for NetApp ONTAP Select high capacity {{site.data.keyword.baremetal_short}}. For more information, see [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview#specs).
+Thirty Four SATA drives are now available for NetApp ONTAP Select high capacity bare metal servers.
 
 ## Updates for add-on services
 {: #relnotes_v22-services}
@@ -122,7 +112,7 @@ Thirty Four SATA drives are now available for NetApp ONTAP Select high capacity 
 ### Increased bandwidth option for F5 on IBM Cloud
 {: #relnotes_v22-bandwidth}
 
-You can now select a maximum bandwidth of 10 Gbps when you install the F5 on {{site.data.keyword.cloud_notm}} service for Cloud Foundation and vCenter Server instances. For more information, see [Considerations for F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations).
+You can now select a maximum bandwidth of 10 Gbps when you install the F5 on {{site.data.keyword.cloud_notm}} service for Cloud Foundation and vCenter Server instances.
 
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v22-kmip}
@@ -140,8 +130,6 @@ This service provides an efficient and scalable solution for data protection, da
 
 The IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service provides data protection for the workload VMs only.
 
-For more information, see [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingspp).
-
 ### Managed Services
 {: #relnotes_v22-managed-services}
 
@@ -153,21 +141,12 @@ The Zerto on {{site.data.keyword.cloud_notm}} service provides replication and d
 
 You can request managed services for your instances from the **Getting Started** page, either by placing a new instance order, or by adding the service to an existing instance.
 
-For more information, see the following topics:
-* [Requesting services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [Requesting services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
-
 ## New and updated documentation
 {: #relnotes_v22-new-docs}
 
-* A comparison table with the supported functions for Cloud Foundation instances, vCenter Server instances, and VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions?topic=vmware-solutions-inst_comp_chart).
+* A comparison table with the supported functions for Cloud Foundation instances, vCenter Server instances, and VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides.
 
 * The VLANs and software Bill of Materials (BOM) is now provided in the documentation for Cloud Foundation, vCenter Server, and VMware vSphere clusters.
-
-  For more information, see the following topics:
-
-  * [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
-  * [VMware vSphere Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_bom)
 
 ## User interface updates and enhancements
 {: #relnotes_v22-ui}
@@ -175,5 +154,5 @@ For more information, see the following topics:
 Improvements are made throughout the user interface:
 
 * When you order an instance, all hardware options are now filtered by location and the unavailable options are displayed in the disabled state.
-* The **{{site.data.keyword.baremetal_short}}** configuration is now automatically populated when you order a vSphere cluster based on existing configurations. You can update the configuration according to your requirements.
+* The **Bare Metal Server** configuration is now automatically populated when you order a vSphere cluster based on existing configurations. You can update the configuration according to your requirements.
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

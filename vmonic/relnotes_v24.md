@@ -52,13 +52,11 @@ The following languages are supported, in addition to English:
 ## Skylake Xeon CPU support
 {: #relnotes_v24-skylake}
 
-Starting with the V2.4 release, the following new Bare Metal Server CPU models are available for deployment for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} and VMware vSphere on {{site.data.keyword.cloud_notm}} instances and clusters:
+Starting with the V2.4 release, the following new bare metal server CPU models are available for deployment for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} and VMware vSphere on {{site.data.keyword.cloud_notm}} instances and clusters:
 
 * Dual Intel Skylake Xeon Silver 4110 processor / 16 cores total, 2.1 GHz
 * Dual Intel Skylake Xeon Gold 5120 processor / 28 cores total, 2.2 GHz
 * Dual Intel Skylake Xeon Gold 6140 processor / 36 cores total, 2.3 GHz
-
-For more information, see [Bare Metal Server settings](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances#vs_orderinginstances-bare-metal-settings).
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v24-vcs}
@@ -66,7 +64,7 @@ For more information, see [Bare Metal Server settings](/docs/services/vmwaresolu
 ### Network File System performance enhancement
 {: #relnotes_v24-nfs}
 
-The performance level of 10 IOPS/GB, designed for the most demanding workload types, is no longer limited to specific {{site.data.keyword.CloudDataCent_notm}}, but is now available to all. For more information, see [Storage](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-storage).
+The performance level of 10 IOPS/GB, designed for the most demanding workload types, is no longer limited to specific {{site.data.keyword.cloud_notm}} data centers, but is now available to all.
 
 ## Updates for add-on services
 {: #relnotes_v24-services}
@@ -74,12 +72,12 @@ The performance level of 10 IOPS/GB, designed for the most demanding workload ty
 ### IBM Spectrum Protect Plus on IBM Cloud
 {: #relnotes_v24-spp}
 
-The current release installs IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.1 Patch 1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:external}.
+The current release installs IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 on all newly deployed instances.
 
 ### VMware HCX on IBM Cloud
 {: #relnotes_v24-hcx}
 
-A new option is now available for you to choose between public network and private network for HCX interconnects when you order this service. For more information, see [Ordering VMware HCX on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_ordering).
+A new option is now available for you to choose between public network and private network for HCX interconnects when you order this service.
 
 ## New and updated documentation
 {: #relnotes_v24-new-docs}
@@ -87,23 +85,12 @@ A new option is now available for you to choose between public network and priva
 ### Reference architecture documentation
 {: #relnotes_v24-ref-archi}
 
-The {{site.data.keyword.vmwaresolutions_short}} architecture document is now available in the *Reference* section of the user documentation. For more information, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview).
+The {{site.data.keyword.vmwaresolutions_short}} architecture document is now available in the *Reference* section of the user documentation.
 
 ### Services documentation
 {: #relnotes_v24-docs-services}
 
 The services information is restructured and the navigation is improved to easily locate relevant information when you order services.
-
-For more information, see the following topics:
-
-* [Ordering F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_ordering)
-* [Ordering FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_ordering)
-* [Ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_ordering)
-* [Ordering Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_ordering)
-* [Ordering Hytrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_ordering)
-* [Ordering IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_ordering)
-* [Ordering Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_ordering)
-* [Ordering Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering)
 
 ## User interface updates and enhancements
 {: #relnotes_v24-ui}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-14"
+lastupdated: "2020-04-17"
 
 subcollection: vmware-solutions
 
@@ -28,9 +28,9 @@ The {{site.data.keyword.cloud}} for VMware Mission Critical Workloads architectu
 ## IBM Cloud multi-zone regions
 {: #mcv-archi-design-mzr}
 
-The Mission Critical Workloads architecture is dependent on {{site.data.keyword.cloud_notm}} Multi-Zone Regions (MZRs). An MZR is an {{site.data.keyword.CloudDataCents_notm}} designation consisting of triplets of geographically close sites with high bandwidth and low latency between them. These are the only supported site configurations for the Mission Critical Workloads offering, enforced at order time.
+The Mission Critical Workloads architecture is dependent on {{site.data.keyword.cloud_notm}} Multi-Zone Regions (MZRs). An MZR is an {{site.data.keyword.cloud_notm}} data center designation consisting of triplets of geographically close sites with high bandwidth and low latency between them. These are the only supported site configurations for the Mission Critical Workloads offering, enforced at order time.
 
-| Region        | IBM Cloud Data Centers       |
+| Region        | {{site.data.keyword.cloud_notm}} data centers       |
 |:------------- |:------------- |
 | Dallas (US South) | DAL10, DAL12, DAL13 |
 | Washington (US East) | WDC04, WDC06, WDC07 |
@@ -43,7 +43,7 @@ The Mission Critical Workloads architecture is dependent on {{site.data.keyword.
 ## Distribution across multi-zone regions
 {: #mcv-archi-design-distibution}
 
-When you order an Mission Critical Workloads architecture, you select one of the three {{site.data.keyword.CloudDataCents_notm}} in the MZR as the witness site. This site hosts all components that require representatives to maintain quorum for high availability. The other two {{site.data.keyword.CloudDataCents_notm}} in the MZR host the management and resource components of the Mission Critical Workloads instance.
+When you order an Mission Critical Workloads architecture, you select one of the three {{site.data.keyword.cloud_notm}} data centers in the MZR as the witness site. This site hosts all components that require representatives to maintain quorum for high availability. The other two {{site.data.keyword.cloud_notm}} data centers in the MZR host the management and resource components of the Mission Critical Workloads instance.
 
 The designation of witness and management and resource data centers in the MZR is fixed for each Mission Critical Workloads instance. You can select any data center to use as either a witness or for management and resources. There is nothing unique about a data center that makes it suitable or preferable for either purpose.
 
@@ -114,9 +114,11 @@ Management and resource Site B contains the following:
 *	Remaining half of stretch cluster
   * Customer workload
 
+**Next topic:** [Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
+
 ## Related links
 {: #mcv-archi-design-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
-* [Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
-* [Component and feature details](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
+* [Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
+* [Component and feature details](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)

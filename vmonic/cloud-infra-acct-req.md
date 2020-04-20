@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-17"
 
 keywords: user account, user permissions, VRF account
 
@@ -33,8 +33,8 @@ Authorized users can verify and update the permissions for an {{site.data.keywor
 
 | Permission         | Details                                 |
 |:------------------ |:--------------------------------------- |
-| Add Server | This permission is required for the following operations: to order {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} on which VMware ESXi runs and to provision hourly virtual servers that are used for instance configuration, maintenance, and support operations. |
-| Cancel Server | This permission is required to release and reclaim {{site.data.keyword.baremetal_short}} on which VMware ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
+| Add Server | This permission is required for the following operations: to order {{site.data.keyword.cloud_notm}} bare metal servers on which VMware ESXi runs and to provision hourly virtual servers that are used for instance configuration, maintenance, and support operations. |
+| Cancel Server | This permission is required to release and reclaim bare metal servers on which VMware ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
 | View Virtual Server Details | This permission is required to retrieve the server provisioning details, which are required for order validation and automated configuration. |
 | Add Storage | This permission is required to order backup storage and shared storage for the instance. |
 | Manage Storage | This permission is required to manage backup storage and shared storage for the instance. |
@@ -48,21 +48,21 @@ Authorized users can verify and update the permissions for an {{site.data.keywor
 | Reboot/Control | This permission is required to power off the hardware during the hardware cancellation process when you delete an instance. |
 | View Licenses | This permission is required to retrieve and validate the licenses that are used by your instance. |
 | View Passwords | This permission is required to be able to administer the ordered VSIs. |
-| Manage Server Monitoring | This permission is not required to place an order but it is required to retrieve and validate the monitoring status of the {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} on which the VMware ESXi servers are running in your instance. |
+| Manage Server Monitoring | This permission is not required to place an order. However, it is required to retrieve and validate the monitoring status of the {{site.data.keyword.cloud_notm}} bare metal servers on which the VMware ESXi servers are running in your instance. |
 {: caption="Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastructure account" caption-side="top"}
 
-## VRF with Service Endpoints enabled
+## Virtual Routing and Forwarding with Service Endpoints enabled
 {: #cloud-infra-acct-req-vrf-se}
 
-Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account. If your account is non-VRF, you must convert to a VRF account. It's also recommended to enable your VRF account for using Service Endpoints.
+Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account. If your account is non-VRF, you must convert to a VRF account. It is also recommended to enable your VRF account for using Service Endpoints.
 
 For more information, see:
-* [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
-* [Converting to VRF](/docs/infrastructure/direct-link?topic=direct-link-what-happens-during-the-account-conversion-process)
+* [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+* [Converting to VRF](/docs/direct-link?topic=direct-link-what-happens-during-the-account-conversion-process)
 * [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 
 ## Related links
 {: #cloud-infra-acct-req-related}
 
-* [Requirements for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning)
-* [User account and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount)
+* [Requirements for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning)
+* [User account and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount)

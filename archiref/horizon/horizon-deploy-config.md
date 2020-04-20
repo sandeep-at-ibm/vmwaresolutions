@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-01-13"
+lastupdated: "2020-04-16"
 
 subcollection: vmware-solutions
 
@@ -23,10 +23,10 @@ The recommendation for a production environment is to use a minimum of four host
 
 To deploy VMware Horizon 7:
 
-1. Create a vCenter Server instance with three hosts and two NFS datastores for the Horizon Management Components. See [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
+1. Create a vCenter Server instance with three hosts and two NFS datastores for the Horizon Management Components. See [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 2. Configure supporting infrastructure for VMware Horizon in {{site.data.keyword.cloud_notm}}. This includes an Active Directory Domain and Microsoft SQL Server.
-3. Deploy Horizon 7.8 or later in the Management Cluster. See the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external}.
-4. Deploy App Volumes 2.17 or later in the Management Cluster. See the [VMware App Volumes documentation](https://docs.vmware.com/en/VMware-App-Volumes/index.html){:external}.
+3. Deploy Horizon 7.8 or later in the management cluster. See the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external}.
+4. Deploy App Volumes 2.17 or later in the management cluster. See the [VMware App Volumes documentation](https://docs.vmware.com/en/VMware-App-Volumes/index.html){:external}.
 5. Deploy VDI workload cluster with the required number of hosts to support the desktop workloads and with VMware VSAN for storage.
 6. Create Desktop Template and deploy desktops.
 
@@ -205,4 +205,4 @@ Ensure that you change the template location in the metadata file to point to th
 
 Use VMware User Environment Manager for application personalization and dynamic policy configuration across any virtual, physical, and cloud-based environment. Install and configure the User Environment Manager on {{site.data.keyword.cloud_notm}} just like installing on-premises.
 
-**Next topic:** [Use case definitions and desktop assessments](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-use-cases)
+**Next topic:** [Use case definitions and desktop assessments](/docs/vmwaresolutions?topic=vmware-solutions-horizon-use-cases)

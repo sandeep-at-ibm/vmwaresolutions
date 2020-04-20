@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-10-22"
+lastupdated: "2020-04-07"
 
 keywords: horizon, horizon 7, horizon 7 architecture
 
@@ -36,14 +36,14 @@ With {{site.data.keyword.cloud_notm}}, you can create vSphere Software-Defined D
 
 After you deployed an SDDC on {{site.data.keyword.cloud_notm}}, you can deploy Horizon 7 in that cloud environment just like you would in an on-premises vSphere environment. There is no requirement to purchase new hardware, and you can use the pay-as-you-go option on {{site.data.keyword.cloud_notm}}.
 
-By using the Cloud Pod Architecture (CPA) Horizon 7 feature, you can scale your Horizon 7 deployment across multiple pods and sites for federated management. You can deploy Horizon 7 in a hybrid cloud environment when you use CPA to interconnect on-premises data centers and {{site.data.keyword.CloudDataCents_notm}}.
+By using the Cloud Pod Architecture (CPA) Horizon 7 feature, you can scale your Horizon 7 deployment across multiple pods and sites for federated management. You can deploy Horizon 7 in a hybrid cloud environment when you use CPA to interconnect on-premises data centers and {{site.data.keyword.cloud_notm}} data centers.
 
 A single pod and the Connection Servers in it must be located within a single data center and cannot span locations. Multiple locations must have their own separate pods. These pods can be managed individually or interconnected by using Cloud Pod Architecture (CPA).
 {:important}
 
 Since the Horizon 7 architecture is the same on-premises and in {{site.data.keyword.cloud_notm}}, the deployment and management experience remain the same across on-premises sites and in the cloud. When you use multiple data centers, you must use a storage replication mechanism, such as DFS-R in a hub-spoke topology, for replicating user data.
 
-You can also stretch CPA across two or more {{site.data.keyword.CloudDataCents_notm}}. Usage of CPA is optional. You can choose to deploy Horizon 7 exclusively in a single {{site.data.keyword.CloudDataCent_notm}} without linking it to any other data center.
+You can also stretch CPA across two or more {{site.data.keyword.cloud_notm}} data centers. Usage of CPA is optional. You can choose to deploy Horizon 7 exclusively in a single {{site.data.keyword.cloud_notm}} data center without linking it to any other data center.
 
 ## Differences Between Horizon 7 and Horizon Cloud
 {: #horizon-arch-ovw-diffs}
@@ -82,7 +82,7 @@ You can also have other published applications that are still on-premises. When 
 
 The cost of building an on-premises BCDR infrastructure can be high. When you use {{site.data.keyword.cloud_notm}}, you pay for the use of BCDR infrastructure during those times when the primary infrastructure is down or when you require a small pilot during normal operations for a quick Recovery Time Objective (RTO) during a disaster event.
 
-Having a unified Horizon 7 architecture across the primary site on-premises and the BCDR site on {{site.data.keyword.cloud_notm}} makes the failover process simple. You can also deploy Cloud Pod Architecture across multiple {{site.data.keyword.CloudDataCents_notm}}} for BCDR Deployment Architecture for Horizon 7.
+Having a unified Horizon 7 architecture across the primary site on-premises and the BCDR site on {{site.data.keyword.cloud_notm}} makes the failover process simple. You can also deploy Cloud Pod Architecture across multiple {{site.data.keyword.cloud_notm}} data centers for BCDR Deployment Architecture for Horizon 7.
 
 ## Understanding key components of Horizon 7
 {: #horizon-arch-ovw-key-comp}
@@ -120,4 +120,4 @@ The compute components are:
 
 The Horizon Cloud Connector is a new component in the Horizon 7 architecture. It is a virtual appliance that connects to a Horizon pod and bridges it with the Horizon Cloud Service. The Horizon 7 Cloud Connector is required when using the Horizon Universal License for license management and for using Horizon Cloud Control Plane features like Cloud Monitoring Service and the health status dashboard.
 
-**Next topic:** [Deployment architecture for Horizon 7](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-deploy-arch)
+**Next topic:** [Deployment architecture for Horizon 7](/docs/vmwaresolutions?topic=vmware-solutions-horizon-deploy-arch)

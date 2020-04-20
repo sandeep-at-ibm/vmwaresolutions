@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-04-10"
 
 subcollection: vmware-solutions
 
@@ -27,7 +27,7 @@ IBM Cloud for VMware Solutions automation is used to deploy all layers of the pl
 
 ![FSS Cloud infrastructure overview](../../images/fss-architecture.svg "FSS Cloud infrastructure overview"){: caption="Figure 1. FSS Cloud infrastructure overview" caption-side="bottom"}
 
-\* The management network is shown as one common network. However, the network traffic is routed through vSRX for improved security.
+In the previous figure, the management network is shown as one common network. However, the network traffic is routed through vSRX for improved security.
 
 The minimum viable product consists of at least one workload cluster that includes four or more ESXi hosts, vSAN and NSX-T, a three ESXi host management cluster and a two ESXi host edge services cluster, for a minimum of three total clusters: management, edge services, workload.
 
@@ -72,13 +72,13 @@ NSX-T provides a highly secure and flexible software defined network to support 
 
 While the FSS Cloud is available as a customer or independent services vendor-managed solution, a customer might elect to deploy the FSS Cloud as an IBM-Managed offering. If ordered as a managed offering, IBM SOS services are included to continually scan the environment for security and compliance issues and report anomalies for action. Additionally, SOS establishes proof of the security and compliance status to the customer of all layers in the FSS Cloud.
 
-**Next topic**: [FSS Cloud system context](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-context)
+**Next topic**: [FSS Cloud system context](/docs/vmwaresolutions?topic=vmware-solutions-fss-context)
 
 ## Related links
 {: #fss-overview-related}
 
 * [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance){:external}
-* [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
-* [HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
-* [HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
-* [vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_overview)
+* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
+* [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
+* [HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+* [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview)

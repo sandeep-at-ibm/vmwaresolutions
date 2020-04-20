@@ -2,28 +2,27 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-04-14"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
 subcollection: vmware-solutions
-
 
 ---
 
 # Ordering KMIP for VMware instances
 {: #kmip_standalone_ordering}
 
-You can order a KMIP for VMware instance without associating it to any VMware instance for flexible management of the service and instances.
+You can order a KMIP for VMware instance without associating it to any VMware vCenter Server instance for flexible management of the service and instances.
 
 ## Before you begin
 {: #kmip_standalone_ordering-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
-* You reviewed all the considerations in [Considerations when installing KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
+* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
+* You reviewed all the considerations in [Considerations when installing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
 
 ## Procedure to order KMIP for VMware instances
 {: #kmip_standalone_ordering-procedure}
@@ -38,10 +37,19 @@ Ensure that you completed the following tasks:
 
 When you order this service, provide the following settings:
 
+### Resource group
+{: #kmip_standalone_ordering-resource-group}
+
+Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
+
+If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+
 ### Instance Name
 {: #kmip_standalone_ordering-config-instance-name}
 
-Specify a name for your KMIP for VMware instance.
+The instance name is set to **kmip-_xx_** by default, where _xx_ represents two randomly generated alphabetic characters.
+
+You can also specify a name for your KMIP for VMware instance.
 
 ### Service Location
 {: #kmip_standalone_ordering-config-service-region}
@@ -85,11 +93,11 @@ When the instance is ready to use, the status of the instance is changed to **In
 ## What to do next
 {: #kmip_standalone_ordering-next}
 
-Add client certificates for the KMIP for VMware instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert).
+Add client certificates for the KMIP for VMware instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert).
 
 ## Related links
 {: #kmip_standalone_ordering-related}
 
-* [Viewing KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
-* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)
+* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
+* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-06"
+lastupdated: "2020-04-08"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -87,7 +87,7 @@ To manage the FortiGate Security Appliance service, you must access the FortiGat
 * Log in to the FortiOS Web Client by using the credentials that you can find on the FortiGate Security Appliance service details page.
 * Access the console via SSH connection by using the credentials that you can find on the FortiGate Security Appliance service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Considerations when you remove FortiGate Security Appliance
 {: #fsa_considerations-remove}
@@ -100,9 +100,9 @@ Review the following considerations before you remove the FortiGate Security App
 ## Related links
 {: #fsa_considerations-related}
 
-* [Ordering FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_ordering)
-* [Managing FortiGate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-managingfsa)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Ordering FortiGate Security Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_ordering)
+* [Managing FortiGate Security Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fsa_considerations#fsa_considerations-managingfsa)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
 * [Fortinet website](https://www.fortinet.com/){:external}
 * [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

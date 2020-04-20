@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-27"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -20,12 +20,12 @@ subcollection: vmware-solutions
 
 Infrastructure management refers to the VMware components that are managing the vSphere ESXi infrastructure.
 
-For more information about the components, see [Virtual infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure).
+For more information about the components, see [Virtual infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure).
 
 ## Virtual networking design
 {: #storage-infra-mgmt-visual-net-design}
 
-The network virtualization that is used in this design uses the existing vSphere Distributed Switch (vDS) associated with the private network and specified in [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview).
+The network virtualization that is used in this design uses the existing vSphere Distributed Switch (vDS) associated with the private network and specified in [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview).
 
 ## vSphere Distributed Switch
 {: #storage-infra-mgmt-vsphere-ds}
@@ -54,9 +54,9 @@ In addition to the creation of the vDS port group for NFS storage traffic, a VMk
 
 Although the vDS is configured with a new port group and a VMkernel port is assigned to the port group, the solution creates a static route on each vSphere ESXi host in the deployment so that all NFS traffic traverses the VLAN and subnet for NFS. The static route is created in `/etc/rc.local.d/local.sh` so that it persists across host restarts.
 
-**Next topic:** [Configuration and settings for attached storage](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-settings)
+**Next topic:** [Configuration and settings for attached storage](/docs/vmwaresolutions?topic=vmware-solutions-storage-settings)
 
 ## Related links
 {: #storage-infra-mgmt-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)

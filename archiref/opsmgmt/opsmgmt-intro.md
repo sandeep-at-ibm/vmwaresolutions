@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-10-18"
+lastupdated: "2020-03-31"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -36,9 +39,9 @@ The design allows the client to complete the following tasks:
 ![Architecture diagram](../../images/opsmgmt-architecture.svg "Architecture diagram"){: caption="Figure 1. Architectural layers" caption-side="bottom"}
 
 * Physical Layer - The lowest layer of the architecture is the physical layer, which consists of the compute, network, and storage components leveraged from {{site.data.keyword.cloud_notm}}:
-  * {{site.data.keyword.baremetal_short}} that run the management, edge, and compute workloads.
+  * {{site.data.keyword.cloud_notm}} bare metal servers that run the management, edge, and compute workloads.
   * {{site.data.keyword.cloud_notm}} network that consist of VLANs, subnets, Frontend, and Backend Customer Routers (FCR/BCR).
-  * vSAN storage, which is a consolidated datastore from the SSDs in the {{site.data.keyword.baremetal_short}} or Endurance storage.
+  * vSAN storage, which is a consolidated datastore from the SSDs in the {{site.data.keyword.cloud_notm}} bare metal servers or Endurance storage.
 
 * Virtual Infrastructure Layer - The virtual infrastructure layer runs on top of the physical layer components. The virtual infrastructure layer controls the access to the underlying physical infrastructure, and controls and allocates resources to the management and compute workloads. The management workloads consist of elements in the virtual infrastructure layer itself, together with elements in the cloud management, service management, business continuity, and security layers.
 
@@ -69,4 +72,4 @@ For more information about how this architecture can be extended with Chef integ
 
 * Service Management Layer – This layer focuses on the full lifecycle of the IT environment and is typically implemented at the enterprise level combining inputs from all the silos of IT Operations and technologies. This layer has traditionally been, architected on IT Service Management (ITSM) frameworks such as; the IT Infrastructure Library (ITIL) and ISO/IEC 20000, which are a framework of best practices for delivering IT services through the processes and stages of the IT service lifecycle. At a product level, ITSM is typified by a centralized workflow management system for handling incidents, service requests, problems, changes, and knowledge connected to a configuration management database.
 
-**Next topic**: [Operations management architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch)
+**Next topic**: [Operations management architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch)

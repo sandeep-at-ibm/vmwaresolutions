@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -58,7 +58,7 @@ The three key services available through the RiskForesight GUI are: Risk Managem
 - Full drill-down capability for events and log-based analysis
 - Alerts and notifications
 
-**Next topic:** [Caveonix RiskForesight use cases and benefits](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-on-vcs)
+**Next topic:** [Caveonix RiskForesight use cases and benefits](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-on-vcs)
 
 ## Related links
 {: #caveonix-intro-related}

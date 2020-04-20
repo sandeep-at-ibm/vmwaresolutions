@@ -4,7 +4,10 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-20"
+lastupdated: "2020-04-07"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -98,7 +101,7 @@ In an aid to isolating the affected components, this documentation on troublesho
 | vSphere ESXi host is in a non-responding state | For information about troubleshooting a vSphere ESXi host that shows as Not Responding, Disconnected, or the VMs on the host show as unavailable in vCenter, see [ESX/ESXi hosts do not respond and is grayed out (1019082)](https://kb.vmware.com/s/article/1019082){:external}. |
 | When powering on a VM, you see a `File not found` error | For information about re-creating a lost virtual disk descriptor file (VMDK), see [Re-creating a missing virtual machine disk descriptor file (1002511)](https://kb.vmware.com/s/article/1002511){:external}. |
 | VM Performance issues | For information about isolating a performance issue on a vSphere ESXi host, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003?lang=en_US){:external}. Performance issues can be caused by CPU constraints, memory over commitment, storage latency, or network latency. |
-| Bare Metal Server is down | If the Bare Metal Server running vSphere ESXi is unresponsive or down then log on to the {{site.data.keyword.cloud_notm}} management UI or console and check the status. If required, open a case to get assistance with your Bare Metal Server. For more information, see [Working with support cases](/docs/get-support?topic=get-support-open-case#open-case){:external}. |
+| Bare Metal Server is down | If the bare metal server running vSphere ESXi is unresponsive or down then log on to the {{site.data.keyword.cloud_notm}} management UI or console and check the status. If required, open a case to get assistance with your bare metal server. For more information, see [Working with support cases](/docs/get-support?topic=get-support-open-case#open-case){:external}. |
 | vSphere ESXi host is in disconnected or a not responding state  | For more information, see [Troubleshooting an ESXi/ESX host in non responding state (1003409)](https://kb.vmware.com/s/article/1003409?lang=en_US){:external}. |
 | Purple screen of death  | The Purple Screen of Death (PSOD) is a kernel panic and the vSphere ESXi kernel (vmkernel) triggers this safety measure in response to an event or error that is unrecoverable and would mean that continuing to run would pose a high risk for the services and VMs. When the panic occurs and the vSphere ESXi host crashes, it ends all the services running on it together with all the VMs hosted. The VMs are not gracefully shut down, but rather abruptly powered off. If the host is part of a cluster and you configured HA, these VMs are restarted on the other hosts in the cluster. For more information, see [Knowledge - KB0012864 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=dd5d2330db11f300c4fa302f9d96198d){:external}. |
 {: caption="Table 2. Typical vSphere ESXi hosts troubleshooting" caption-side="bottom"}
@@ -114,7 +117,7 @@ In an aid to isolating the affected components, this documentation on troublesho
 | Storage troubleshooting | For more information about slow performance, unpredictable failures, disk corruption, or VM corruption, see [Troubleshooting storage issues when using VMware products (2013160)](https://kb.vmware.com/s/article/2013160?lang=en_US){:external}. |
 | vSAN troubleshooting | For more information, see [Failure Handling in vSAN](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-monitoring.doc/GUID-35A4B700-6640-4519-A885-440A1AE8D3BD.html){:external}.  |
 | vSAN Disk Failure | For more information about how to identify a specific disk failure in a vSAN deduplication cluster, see [Identifying specific disk failure in a vSAN deduplication cluster (2149067)](https://kb.vmware.com/s/article/2149067){:external}. |
-| Clear vSAN health issues | In the VMware vSphere Web Client Monitor page, you might see alerts and warnings that relate to vSAN Health issues. For information about clearing these issues, see [Virtual SAN Health alerts and warnings](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_vsan_alerts#trbl_vsan_alerts){:external}.|
+| Clear vSAN health issues | In the VMware vSphere Web Client Monitor page, you might see alerts and warnings that relate to vSAN Health issues. For information about clearing these issues, see [Virtual SAN Health alerts and warnings](/docs/vmwaresolutions?topic=vmware-solutions-trbl_vsan_alerts#trbl_vsan_alerts){:external}.|
 | vSAN rebalance | If disks report errors in the health check indicating that the cluster is imbalanced and there are disks that are high on space usage while others are low, and you should run a proactive rebalance. This manually initiates a rebalance of the objects in a vSAN cluster. For more information about vSAN proactive rebalance and when it might be applicable, see [vSAN proactive rebalance (2149809)](https://kb.vmware.com/s/article/2149809){:external}. |
 | Initiate vSAN health test | If you suspect there is an issue with vSAN, you can initiate a health test to verify that the cluster components are working as expected. Running the VM creation test creates a VM on each host in the cluster and then deletes it. If these tasks are successful, then the cluster components are working as expected and the cluster is functional. Then, network performance test is used to detect and diagnose connectivity issues, and to ensure that the network bandwidth between the hosts is adequate. For more information, see [Proactive Tests](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-monitoring.doc/GUID-B88B5900-33A4-4821-9659-59861EF70FB8.html){:external}. |
 | Monitoring vSAN performance | For more information, see [Monitoring vSAN Performance](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-monitoring.doc/GUID-3D2D1382-9DDC-44D4-AF3B-ACA4F1DDBDCC.html){:external}. Performance charts are available for clusters, hosts, physical disks, VMs, and virtual disks. |
@@ -131,7 +134,7 @@ In an aid to isolating the affected components, this documentation on troublesho
 |---|---|
 |  NSX Edge /var/log is getting full on active Edge | For information about a workaround if you are alerted that the Edge disk is filling up and discover that the /var/log partition is getting full, see [NSX Edge /var/log is getting full on active Edge (50108355)](https://kb.vmware.com/s/article/50108355){:external}.  |
 | Testing HCX bandwidth  | For information about using `perftest` to find the available bandwidth within the HCX tunnels if you believe that you have a network bandwidth issue with HCX, see [Steps to Run Perftest in HCX (56211)](https://kb.vmware.com/s/article/56211?lang=en_US){:external}. Bidirectional tests are carried out for each `perftest`. For the pair of gateways, one is inside the source data center (on-premises), and the other one is in {{site.data.keyword.cloud_notm}}. The way `perftest` throughput works is to have the sender try to send as fast as the link can sustain. Therefore, for each test, you see a higher "sender" rate than the "receiver" rate. You can consider the "receiver" rate value as a one-way throughput result. |
-| HCX troubleshooting | For more information, see [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting). |
+| HCX troubleshooting | For more information, see [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting). |
 | HCX Syncing state with 0% progress and 0 bytes with status Error | For more information, see [HCX replication are in Syncing state with 0% progress and 0 bytes with status Error (56710)](https://kb.vmware.com/s/article/56710?lang=en_US#q=HCX){:external}. |
 | Poor VM network performance | Review the VM virtual NIC settings. VMware recommends VMXNET 3 virtual NICs for VMs as it is the latest generation of paravirtualized NICs designed for performance. Check for compatibility of VMXNET 3 using the VMware compatibility list, and if supported change the virtual NIC for additional network performance. For more information, see [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external}. |
 {: caption="Table 4. Typical network troubleshooting" caption-side="bottom"}
@@ -169,16 +172,16 @@ In an aid to isolating the affected components, this documentation on troublesho
 {: class="comparison-tab-table"}
 {: row-headers}
 
-**Next topic**: [Compliance](/docs/services/vmwaresolutions?topic=vmware-solutions-opsprocs-compliance)
+**Next topic**: [Compliance](/docs/vmwaresolutions?topic=vmware-solutions-opsprocs-compliance)
 
 ## Related links
 {: #opsprocs-trouble-links}
 
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support#trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support#trbl_support)
 * [vSphere troubleshooting overview](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-C70D5A5E-7D84-446C-B8CE-0766AA7351A4.html){:external}
 * [vSphere troubleshooting with logs](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-552CC9E8-441C-434A-88FC-3F50881245D7.html){:external}
-* [Operations management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
+* [Operations management on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
 * [Support log gathering](https://kb.vmware.com/s/article/1010705){:external}
 * [Monitoring events, alarms, and automated actions](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.monitoring.doc/GUID-9272E3B2-6A7F-427B-994C-B15FF8CADC25.html){:external}
 * [vSphere System Log files](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.monitoring.doc/GUID-DABCB024-E083-4A4D-8AE0-D1AF4CB3800C.html){:external}
-* [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
+* [Considerations about changing vCenter Server artifacts](/docs/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)

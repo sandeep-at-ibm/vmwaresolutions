@@ -25,7 +25,7 @@ This release includes new features, usability enhancements, and bug fixes. For a
 ## Shared File-level Storage for vCenter Server instances
 {: #relnotes_v13-storage}
 
-You can now add shared NAS (Network Attached Storage) to vCenter Server instances. The addition of this feature enables you to run production workloads on vCenter Server and to prevent loss of data if node failures occur. NFS (Network File System) File Storage is provided as an option in the ordering process for vCenter Server instances. For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
+You can now add shared NAS (Network Attached Storage) to vCenter Server instances. The addition of this feature enables you to run production workloads on vCenter Server and to prevent loss of data if node failures occur. NFS (Network File System) File Storage is provided as an option in the ordering process for vCenter Server instances.
 
 ## Zerto disaster recovery removal
 {: #relnotes_v13-zerto}
@@ -42,10 +42,6 @@ During instance deployment, a Management NSX Edge Services Gateway (ESG) is depl
 To ensure security, firewall rules are in place to allow only outbound HTTPS communications that are initiated by the management virtual
 machines. This ESG is deployed in a Large configuration, and only IBM Support can modify the configuration.
 
-For more information, see the following topics:
-* [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-mgmt-nsx)
-* [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:external}
-
 ## Instance order process
 {: #relnotes_v13-inst-order}
 
@@ -54,19 +50,17 @@ The instance order process is improved for both Cloud Foundation instances and v
 * The summary page displays all applicable terms and conditions for all components and services that are ordered, for easy access to review and agree with these terms before you place the order.
 * You can save and print the order summary for your instance before you place the order. With this new function, you can review the instance settings and cost, modify the components that are ordered if needed, obtain approval, and then come back to your order.
 
-For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
-
 ## Instance management
 {: #relnotes_v13-inst-mgmt}
 
 New features and improvements are made to the instance management process:
 
-* For both Cloud Foundation instances and vCenter Server instances, you can see and review the estimated cost of your ESXi servers before you decide to add them to your instance. After you specify how many servers you want to add, the estimated cost per server, per month, is displayed on the console. For more information, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers).
+* For both Cloud Foundation instances and vCenter Server instances, you can see and review the estimated cost of your ESXi servers before you decide to add them to your instance. After you specify how many servers you want to add, the estimated cost per server, per month, is displayed on the console.
 * For both Cloud Foundation instances and vCenter Server instances, the total number of instances is displayed at the top of the summary page. You can also order an instance with one click from the instance summary pages. Also, on the summary page you can view detailed order status during provisioning. When you hover over the status that is displayed, you can see more details about the current step or the error, if any.
 * For Cloud Foundation instances, the instance details page displays the deployment history of the instance, with information about the deployment status step by step.
-* For Cloud Foundation instances, the usability of the updates and patches process is improved by providing more details about the update on the **Update and Patch** page, such as: the downtime that is required for a patch, the time that the update was scheduled for, and visual indication when a required patch needs to be applied before the current one.
+* For Cloud Foundation instances, the usability of the updates and patches process is improved by providing more details about the update, such as: the downtime that is required for a patch, the time that the update was scheduled for, and visual indication when a required patch needs to be applied before the current one.
 
 ## Email notifications
 {: #relnotes_v13-email-notif}
 
-You now receive a notification by email when a new order was placed for instance deployment and when a service was added, deployed, or removed from your instance. The notification settings are enabled by default. Based on your preferences, you can set what notifications you want to receive on the **Settings** page. For more information, see [User accounts and setting](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
+You now receive a notification by email when a new order was placed for instance deployment and when a service was added, deployed, or removed from your instance. The notification settings are enabled by default. Based on your preferences, you can set what notifications you want to receive on the **Settings** page.

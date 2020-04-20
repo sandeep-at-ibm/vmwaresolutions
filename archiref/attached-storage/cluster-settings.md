@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-29"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -102,4 +102,4 @@ vSphere HA uses datastore heart beating to identify hosts that have failed and h
 ## Related links
 {: #cluster-settings-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)

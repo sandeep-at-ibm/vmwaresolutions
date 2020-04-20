@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -44,10 +44,10 @@ If you have primary and secondary vCenter Server instances, then your VCSAs are 
 
 You can specify a VUM instance by selecting the name of the VCSA with which the VUM instance is registered from the navigation bar. You can also manage baselines, baseline groups, scan, and remediate only the inventory objects that are managed by the VCSA with which the VUM instance is registered.
 
-**Next topic:** [Applying native NIC drivers](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-applying-nic)
+**Next topic:** [Applying native NIC drivers](/docs/vmwaresolutions?topic=vmware-solutions-vum-applying-nic)
 
 ## Related links
 {: #vum-updating-vcsa-related}
 
-* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

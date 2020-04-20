@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-04-14"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Ordering VMware HCX
 {: #hcx_ordering}
 
-You can order the VMware HCX service as part of your new VMware vCenter Server order or you can add the service to your existing instance.
+You can include the VMware HCX service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
 
 A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a host or cluster before the end of the 12-month commitment period.
 {:important}
@@ -99,10 +99,10 @@ The deployment of HCX is automated. Whether you order a vCenter Server instance 
 ## Related links
 {: #hcx_ordering-related}
 
-* [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
-* [Managing HCX ](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghcx)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Glossary of HCX terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
+* [Managing HCX ](/docs/vmwaresolutions?topic=vmware-solutions-managinghcx)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

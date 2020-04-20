@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -30,7 +30,7 @@ The cross-vCenter NSX capability allows for linking in a primary, secondary rela
 
 The following example adds an NSX universal transport zone to the basic management and workload topologies that are discussed in the previous sections, and also includes the following characteristics:
 
-* The universal transport zone spans two {{site.data.keyword.CloudDataCents_notm}} or PODs within an {{site.data.keyword.CloudDataCent_notm}}.
+* The universal transport zone spans two {{site.data.keyword.cloud_notm}} data centers or PODs within an {{site.data.keyword.cloud_notm}} data center.
 * After the transport zone is added, multiple VXLANs are added along with a Universal Distributed Router that spans the new VXLANs.
 * You must configure uplinks to the workload ESGs in both sites. This configuration allows virtual machines (VMs) in the local site to traverse to its local ESG.
 * For inbound traffic, a global load balancer is required. See the {{site.data.keyword.cloud_notm}} global load balancing offerings to meet this requirement.
@@ -41,4 +41,4 @@ The following example adds an NSX universal transport zone to the basic manageme
 ## Related links
 {: #nsx-multi_site-related}
 
-* [Networking services on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-networking_services)
+* [Networking services on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmware-solutions-nsx-networking_services)

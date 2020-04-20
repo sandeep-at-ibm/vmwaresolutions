@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-03"
+lastupdated: "2020-04-07"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,7 +25,7 @@ subcollection: vmware-solutions
 The F5 BIG-IP service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
 {: shortdesc}
 
-The current BIG-IP VE version that is installed is v15.1.
+The current BIG-IP VE version that is installed is v15.1.0.2.
 {:note}
 
 ## Technical specifications for F5 BIG-IP
@@ -85,7 +85,7 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs are 
 
   `RAM reservation = RAM size` (from Table 1)
 
-* {{site.data.keyword.vmwaresolutions_full}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/tmos-implementations-11-5-0/2.html){:external}.
+* {{site.data.keyword.vmwaresolutions_full}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/en-us/bigip-14-1-0/big-ip-device-service-clustering-administration-14-1-0/creating-an-active-standby-configuration-using-the-setup-utility.html){:external}.
 * For information about the activities you should perform after you deploy F5 networks, see [Working with F5 Networks BigIP in IBM Cloud for VMware](https://developer.ibm.com/recipes/tutorials/working-with-f5-networks-bigip-in-ibm-cloud-for-vmware/){:external}.
 
 ### Planning considerations
@@ -133,8 +133,8 @@ Before you remove the F5 BIG-IP service, ensure that the existing BIG-IP VE conf
 ## Related links
 {: #f5_considerations-related}
 
-* [Ordering F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_ordering)
-* [Managing F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_f5)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Ordering F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-f5_ordering)
+* [Managing F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-managing_f5)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
 * [F5 website](https://www.f5.com/){:external}

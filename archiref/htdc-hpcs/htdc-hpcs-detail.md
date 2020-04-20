@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -118,7 +118,7 @@ A KEK provides an extra layer of security by encrypting the individual DEKs on t
 ### Cloud VM Set KEK setup flow
 {: #htdc-hpcs-detail-processes-kek}
 
-1. In the IBM HCPCS instance, an HCPS service user creates or imports a Root Key. This Root Key will be used by HTDC to wrap the KEK of a Cloud VM Set. The Root Key is non-extractable/exportable and never leaves the IBM HPCS instance.
+1. In the IBM HPCS instance, an HPCS service user creates or imports a Root Key. This Root Key will be used by HTDC to wrap the KEK of a Cloud VM Set. The Root Key is non-extractable/exportable and never leaves the IBM HPCS instance.
 2. In HTDC, the HTDC Cloud administrator configures a KEK for a Cloud VM Set with the following characteristics:
    * IBM HPCS REST API endpoint.
    * CA Certificate to verify the IBM HPCS instance.
@@ -154,7 +154,7 @@ HTDC PA requests the HTKC server for a DEK when attaching an encrypted disk.
 6. HTDC securely erases the KEK from memory.
 7. HTDC returns the unwrapped DEK to the HTDC PA.
 
-**Next topic:** [Deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-deployment)
+**Next topic:** [Deployment](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-deployment)
 
 ## Related links
 {: #htdc-hpcs-detail-related}

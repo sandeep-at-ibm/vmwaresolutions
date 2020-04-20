@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-30"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -154,6 +154,6 @@ It is your responsibility to perform patching and ongoing maintenance of multi-z
 ## Related links
 {: #mcv-archi-comps-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
-* [Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
+* [Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)

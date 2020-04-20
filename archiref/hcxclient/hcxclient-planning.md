@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -23,7 +23,7 @@ The installation of VMware HCX has the following software requirements:
 {: #hcxclient-planning-config-net}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
-* For information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req).
+* For information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req).
 * Both the on-premises vSphere environment and the VCS HCX Cloud environment must allow Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
@@ -72,7 +72,7 @@ HCX allows for cross vSphere instance migration of a VM or group of VMs that rep
 
 The network stretch components of the HCX fleet are very stable. At one particular customer with greater than 20 VLANs that are stretched into the {{site.data.keyword.cloud}} across 1 Gbps WAN shared with other traffic and HCX migration tunnels, there are no application issues attributed to the network. The network links are up for greater than 6 months in this way.
 
-More stretched networks were added and removed without issue. Picking an {{site.data.keyword.CloudDataCent_notm}} that is close (<6 ms latency for this particular customer) also plays into network stability of stretched networking. Leaving the stretched networks up long term, should not be a negative factor in your design given you have enough bandwidth and low enough latency for your applications.
+More stretched networks were added and removed without issue. Picking an {{site.data.keyword.cloud_notm}} data center that is close (<6 ms latency for this particular customer) also plays into network stability of stretched networking. Leaving the stretched networks up long term, should not be a negative factor in your design given you have enough bandwidth and low enough latency for your applications.
 
 ## Migration lifecycle
 {: #hcxclient-planning-mig-lifecycle}
@@ -157,13 +157,13 @@ HCX Cloud side is provisioned by {{site.data.keyword.cloud_notm}} automation.
 
 As deployed by the {{site.data.keyword.vmwaresolutions_short}} automation, HCX cloud side installation is configured to connect to across the public internet by default.
 
-**Next topic:** [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+**Next topic:** [HCX Client deployment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
 
 ## Related links
 {: #hcxclient-planning-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
-* [Monitoring parameters and components](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

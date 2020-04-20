@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -26,10 +26,10 @@ If you find that a vSphere ESXi host can't enter maintenance mode during remedia
 3. Select the **Policies** tab and ensure that **Allow Zerto to always enter hosts to maintenance mode during remediation** is selected.
 4. Log out of Zerto.
 
-**Next topic:** [Host Profiles](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-host-profiles)
+**Next topic:** [Host Profiles](/docs/vmwaresolutions?topic=vmware-solutions-vum-host-profiles)
 
 ## Related links
 {: #vum-zerto-related}
 
-* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" category="compute" audience="infrastructure" href="/docs/vmwaresolutions?topic=vmware-solutions-getting-started" path="vmwaresolutions"}
+{: .toc subcollection="vmware-solutions" category="compute" audience="infrastructure" href="/docs/vmwaresolutions?topic=vmware-solutions-getting-started" product-page="https://www.ibm.com/cloud/vmware" console-page="/infrastructure/vmware-solutions/console" path="vmwaresolutions"}
 VMware Solutions
 
     {: .navgroup id="learn"}
@@ -11,10 +11,11 @@ VMware Solutions
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
     vmonic/vmware-comp-guide.md
-    vmonic/relnotes_v35.md
+    vmonic/relnotes_v36.md
 
     {: .topicgroup}
     Previous release notes
+        vmonic/relnotes_v35.md
         vmonic/relnotes_v34.md
         vmonic/relnotes_v33.md
         vmonic/relnotes_v32.md
@@ -82,7 +83,6 @@ VMware Solutions
         vcenter/vc_addingremovingservers.md
         vcenter/vc_addingremovingservices.md
         vcenter/vc_viewinginstances.md
-        vcenter/vc_applyingupdates.md
         vcenter/vc_upgrade-lic.md
         vcenter/vc_addinstancetousraccount.md
         vcenter/vc_deletinginstance.md
@@ -242,7 +242,12 @@ VMware Solutions
         services/managing_veeam_services.md
         services/managing_zerto_services.md
         services/managing_ices.md
+        services/managing_mcms.md
         services/netapp_overview.md
+    
+    {: .topicgroup}
+    Enhancing security for IBM Cloud for VMware Solutions
+        vmonic/data-security.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

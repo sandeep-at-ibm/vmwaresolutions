@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-02"
+lastupdated: "2020-04-17"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -18,15 +18,15 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Viewing and managing Virtual Data Center instances
+# Viewing and managing virtual data center instances
 {: #shared_managing}
 
-View the summary and detailed information of the {{site.data.keyword.vmwaresolutions_full}} Shared Virtual Data Center instance and reset the **admin** password to access the vCloud Director Management console.
+View the summary and detailed information of the {{site.data.keyword.vmwaresolutions_full}} Shared virtual data center instance and set the **admin** password to access the vCloud Director Management console.
 
-## Procedure to view Virtual Data Center instances
+## Procedure to view virtual data center instances
 {: #shared_managing-viewing}
 
-To view a summary of all the VMware Solutions Shared Virtual Data Center instances that are provisioned for a user account, complete the following steps:
+To view a summary of all the VMware Solutions Shared virtual data center instances that are provisioned for a user account, complete the following steps:
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.  
@@ -35,12 +35,11 @@ To view a summary of all the VMware Solutions Shared Virtual Data Center instanc
 | Item        | Description       |  
 |:------------- |:------------- |
 | Name | The name of the instance. |
-| Type | The type of the Virtual Data Center. |
-| Version | The release version that the instance was deployed in, or upgraded to. |
-| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |  
+| Type | The type of the virtual data center. |
+| Location | The {{site.data.keyword.cloud_notm}} data center} where the instance is hosted. |  
 | Creation time | The date and time when the instance was created. |
 | Status | The status of the instance. |
-{: caption="Table 1. Virtual Data Center instance items" caption-side="top"}
+{: caption="Table 1. Virtual data center instance items" caption-side="top"}
 
 The instance can have a range of statuses.
 
@@ -50,62 +49,69 @@ The instance can have a range of statuses.
 | Ready to Use | The instance is ready to use. |
 | Modifying | The instance is being modified. |
 | Deleting | The instance is being deleted. |
-| Deleted | The instance is deleted. |
-{: caption="Table 2. Status descriptions for Virtual Data Center instances" caption-side="top"}
+{: caption="Table 2. Status descriptions for virtual data center instances" caption-side="top"}
 
-## Procedure to view Virtual Data Center instance details
+## Procedure to view virtual data center instance details
 {: #shared_managing-procedure-view-vdc-details}
 
-The instance details include property details, recommended services that are enabled or available for the instance, operating system details, and the total reserved virtual CPU (vCPU) and RAM.
+The instance details include property details, recommended services that are enabled or available for the instance, and the total reserved virtual CPU (vCPU) and RAM.
 
 To view the details of an instance:
 
 1. In the **VMware Solutions Shared** table, click an instance name.
-2. View the instance property, service, operating system, and resource details.
+2. View the instance property, service, and resource details.
 
 | Property        | Description       |
 |:------------- |:------------- |
 | Name | The name of the instance. |
-| Organization name | The name of the organization. |
-| Type | The Virtual Data Center type. |
-| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |
+| Type | The virtual data center type. |
+| Region | The {{site.data.keyword.cloud_notm}} data center region where your organization is created and the organization password is maintained. |
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |
 | ID | The ID of the instance. |
 | Creation time | The date and time when the instance was created, which is also when billing starts. |
+| Public IP | Every virtual data center comes with five public IP addresses that can be used to connect virtual applications (vApps) and VMs to the internet. |
 | Red Hat activation key | The activation key that you use to register the Red Hat virtual machine (VM). |
-| Public IP | Every Virtual Data Center comes with five public IP addresses that can be used to connect virtual applications (vApps) and VMs to the internet. |
-{: caption="Table 3. Virtual Data Center instance properties" caption-side="top"}
+{: caption="Table 3. Virtual data center instance properties" caption-side="top"}
+
+You can open an {{site.data.keyword.cloud_notm}} Support ticket to request five additional public IP addresses or an entire subnet for your virtual data center. Include the following details in your support ticket:
+
+* Instance region and location
+* Organization ID
+* Virtual data center name
+* Number of additional IPs required
+
+For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
 
 | Resource        | Description       |
 |:------------- |:------------- |
-| vCPU reserved | The limit or reserved amount of vCPU that can be used at any time by the Virtual Data Center.  |
-| RAM | The limit or reserved amount of memory that can be used at any time by the Virtual Data Center.  |
-{: caption="Table 4. Virtual Data Center instance resource reservations" caption-side="top"}
+| vCPU Limit | The limit or reserved amount of vCPU that can be used at any time by the virtual data center.  |
+| RAM Limit | The limit or reserved amount of memory that can be used at any time by the virtual data center.  |
+{: caption="Table 4. Virtual data center instance resource reservations" caption-side="top"}
 
 ## Procedure to launch the vCloud Director Management console
 {: #shared_managing-accessing}
 
-Use the vCloud Director Management console to manage the Virtual Data Center. You can access the vCloud Director console from the Virtual Data Center details page.
+Use the vCloud Director Management console to manage the virtual data center. You can access the vCloud Director console from the virtual data center details page.
 
-The first time that you access the vCloud Director console, you must use the **admin** credentials to generate an initial, complex, and random password. After the first **admin** password is generated, the **vCloud Director console** option is enabled on the Virtual Data Center instance details page.
+The first time that you access the vCloud Director console for the virtual data center region, you must set the **admin** credentials to generate an initial, complex, and random password. After the first **admin** password is generated, the **vCloud Director console** option is enabled on the virtual data center instance details page.
+
+You do not need to generate an **admin** password for each virtual data center. Reuse the same password for all virtual data centers in the same region.
 
 {{site.data.keyword.vmwaresolutions_short}} does not store the **admin** password. After a password is generated, you must capture it. If the password is lost or you get locked out of your account, you can generate a new password at any time.
 {:note}
 
-1. From the **Properties** pane on the Virtual Data Center instance details page, click **Reset location password** to generate a random password.
-2. From the upper right corner of the Virtual Data Center instance details page, click **Launch vCloud Director** to access the console.
+1. From the **Properties** pane on the virtual data center instance details page, click **Set Organization Admin Password** to generate a random password.
+2. From the upper right corner of the virtual data center instance details page, click **vCloud Director console** to access the console.
 3. Use the ** admin** username and password to log in to the vCloud Director console.
 
-All Virtual Data Centers in the same location have the same **admin** password. Resetting the password on a Virtual Data Center instance resets the **admin** password for accessing the vCloud Director Management console for all Virtual Data Center instances in the same location.
+All virtual data centers in the same region have the same **admin** password. Resetting the password on a virtual data center instance resets the **admin** password for accessing the vCloud Director Management console for all virtual data center instances in the same region.
 {:important}
 
 ## Related links
 {: #shared_managing-related}
 
-* [VMware Solutions Shared overview](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Requirements and planning for VMware Solutions Shared instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_planning)
-* [Ordering VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_ordering)
-* [Resizing Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_resizeinstance)
-* [Operating VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
-* [Managing Veeam for VMware Solutions Shared instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_veeam)
-* [Deleting VMware Solutions Shared instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_deletinginstance)
+* [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_resize)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
+* [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_veeam)
+* [Deleting VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_deletinginstance)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}

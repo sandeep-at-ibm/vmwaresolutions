@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-04-17"
 
 subcollection: vmware-solutions
 
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# System Context
+# System context
 {: #htdc-hpcs-system-context}
 
 The following diagram shows the system context for vCenter Server instance with HyTrust DataControl and IBM Hyper Protect Crypto Services. A system context diagram is a high-level diagram that provides an initial view of the system. It defines the key elements of a system, the boundary of the system, and the entities that interact with it, along with the interaction.
@@ -62,10 +62,10 @@ The system context diagram identifies the following systems:
 * Service ID - A service ID identifies a service or application similar to how a user ID identifies a user. Service IDs are created to enable access to IBM Cloud services by applications hosted both inside and outside of IBM Cloud. The API Key is configured in the Service ID and used in the configuration of the Cloud VM Set.
 * IBM Cloud Identity and Access Management (IAM) - The IBM Cloud service that validates access to IBM Cloud services, including IBM HPCS.
 
-**Next topic:** [Reference architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-reference-architecture)
+**Next topic:** [Reference architecture](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-reference-architecture)
 
 ## Related links
 {: #htdc-hpcs-system-context-related}
 
-*  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started)
-*  [HyTrust DataControl overview](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+*  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
+*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-12"
+lastupdated: "2020-03-30"
 
 keywords: Veeam, request Veeam, Veeam managed service
 
@@ -34,12 +34,12 @@ When you request managed backup services, you get both Veeam backup software and
 3. On the **Veeam** page, review the description and technical specifications for Veeam as a managed service, and then click **Continue**.
 4. Specify the configuration settings according to your requirements or accept the default values.
 5. Click **vCenter Server** to add the service to one of your instances.
-6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance) instance.
+6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance) instance.
 7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance, and then click **Provision** to confirm.
 
 ## Related links
 {: #managing_veeam_services-related}
 
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
 * [Data Backup and Protection Services](https://www.ibm.com/services/business-continuity/backup-data-protection){:external}

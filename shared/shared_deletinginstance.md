@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-25"
+lastupdated: "2020-04-13"
 
 keywords: VMware Solutions Shared delete instance, delete VMware Solutions Shared, remove VMware Solutions Shared
 
@@ -17,25 +17,25 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 
-# Deleting Virtual Data Center instances
+# Deleting virtual data center instances
 {: #shared_deletinginstance}
 
-You can delete a Virtual Data Center instance when it's in the **Ready To Use** state.
+You can delete a virtual data center instance when it's in the **Ready To Use** state.
 
-Before you delete your Virtual Data Center instance, ensure that any items that you created within the instance are removed. Items might include the following artifacts:
+Before you delete your virtual data center instance, ensure that any items that you created within the instance are removed. Items might include the following artifacts:
 
 * vApps, vApp templates, and virtual machines (VMs). You must remove these items even if they are stopped.
 * Organization networks that are removed or unshared from the instance
 * Organization catalogs
-* DHCP pools created within the Organization Virtual Data Center edge gateway
-* Custom routes defined on the Organization Virtual Data Center edge gateway distributed router
-* Load balancer custom configurations defined on the Organization Virtual Data Center edge gateway
-* VPN custom configurations defined on the Organization Virtual Data Center edge gateway
+* DHCP pools created within the Organization virtual data center edge gateway
+* Custom routes defined on the Organization virtual data center edge gateway distributed router
+* Load balancer custom configurations defined on the Organization virtual data center edge gateway
+* VPN custom configurations defined on the Organization virtual data center edge gateway
 
-## Considerations when deleting Virtual Data Center instances
+## Considerations when deleting virtual data center instances
 {: #shared_deletinginstance-considerations}
 
-All of the Virtual Data Center VM restore points in Veeam are automatically deleted when you delete a VMware Solutions Shared instance.
+All of the virtual data center VM restore points in Veeam are automatically deleted when you delete a VMware Solutions Shared instance.
 {:important}
 
 Any job that includes instructions to backup the VM fails when the VM restore points in Veeam are deleted. The existing VMs in the job are still backed up, however the job status is marked as failed. To remove the failed status, you must manually edit the job to remove the instruction to back up the now deleted VMs.
@@ -60,11 +60,8 @@ Any job that includes instructions to backup the VM fails when the VM restore po
 ## Related links
 {: #shared_deletinginstance-related}
 
-* [VMware Solutions Shared overview](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Requirements and planning for VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_planning)
-* [Ordering Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_ordering)
-* [Viewing and managing Virtual Data Center instances](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_managing)
-* [Operating VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
-* [Managing Veeam for VMware Solutions Shared](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_veeam)
+* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
+* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-03-30"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -18,11 +21,11 @@ VMware Update Manager (VUM) enables centralized, automated patch and version man
 * Install and update third-party software on the hosts
 * Upgrade virtual machine (VM) hardware, VMware Tools, and virtual appliances
 
-For the detailed design of VMware Update Manager, see [VMware Update Manager introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-intro).
+For the detailed design of VMware Update Manager, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro).
 
 ![Network diagram](../../images/opsmgmt-vumnw.svg "Network diagram"){: caption="Figure 1. VUM network" caption-side="bottom"}
 
-**Next topic**: [Integration](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-integration)
+**Next topic**: [Integration](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-integration)
 
 ## Related links
 {: #opsmgmt-vum-links}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -21,7 +21,7 @@ If you need to upgrade both NSX and vSphere, VMware recommends completing the NS
 1. **Upgrade ESXi** - After the ESXi upgrade completes, the host exits maintenance mode, however, you cannot move VMs connected to logical switches to the host until the next step is complete.
 2. **Upgrade NSX VIBs** - After the VIBs are upgraded and the host is removed from maintenance mode, you can move VMs connected to logical switches to the host.
 
-NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VMware vCenter Server instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support).
+NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VMware vCenter Server instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
 
 Before you begin the upgrade, check the NSX notes for upgrade issues and workarounds. Using the release notes, verify that vCenter meets the new system requirements for NSX.
 
@@ -65,10 +65,10 @@ The workflow is as follows:
   - In the vSphere Web Client, select **Networking & Security** > **NSX Edges**. For each NSX Edge instance, select **Upgrade Version** from the **Actions** menu.
   - After the NSX Edge is upgraded successfully, the Status is Deployed, and the Version column displays the new NSX version. If an Edge fails to upgrade and does not roll back to the old version, click the **Redeploy NSX Edge** icon and then retry the upgrade.
 
-**Next topic:** [Updating vSAN clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan)
+**Next topic:** [Updating vSAN clusters](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan)
 
 ## Related links
 {: #vum-updating-nsx-related}
 
-* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

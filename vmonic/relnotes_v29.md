@@ -38,7 +38,7 @@ Existing customers who use VMware Cloud Foundation on {{site.data.keyword.cloud_
 
 After May 13 2020, management functions for VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} instances will be removed from the {{site.data.keyword.vmwaresolutions_short}} console. Instances that have not been migrated to VMware vCenter Server on {{site.data.keyword.cloud_notm}} can be accessed by using the IBM Cloud infrastructure console.
 
-Customers will be contacted by {{site.data.keyword.cloud_notm}} Support before March 25, 2020 to begin migration from VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}. For more information about migration options for existing customers, see the [{{site.data.keyword.vmwaresolutions_short}} wiki page](https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wf58c4c538dbf_45b4_b7a7_5003d0ceb79b/page/IBM%20Cloud%20for%20VMware%20Solutions){:external}.
+Customers will be contacted by {{site.data.keyword.cloud_notm}} Support before March 25, 2020 to begin migration from VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}.
  
 Customers can view their existing VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} instance on the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console/gettingstarted).
 
@@ -49,19 +49,14 @@ You can now order VMware vSphere version 6.7 Update 1 with your VMware vCenter S
 
 Additionally, Single-node Trial for Migration and App Modernization instances are now ordered with vSphere Enterprise Plus 6.7u1.
 
-vSphere Enterprise Plus 6.7u1 is available for Broadwell and Skylake {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} only.
-
-For more information, see the _License settings_ sections in:
-
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
+vSphere Enterprise Plus 6.7u1 is available for Broadwell and Skylake {{site.data.keyword.cloud_notm}} bare metal servers only.
 
 ## Support for application programming interfaces
 {: #relnotes_v29-api}
 
 Application programming interfaces (APIs) are now available for deploying instances, deleting instances, and adding and removing ESXi servers and clusters.
 
-The REST API documentation is also available in the *Reference* section of the user documentation. For more information, see [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions).
+The REST API documentation is available in the *Reference* section of the user documentation.
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v29-vcs}
@@ -77,12 +72,10 @@ This release applies the following upgrades and improvements:
 * NSX for vSphere 6.4.4 (build 11197766)
 * NSX-T for vSphere 2.4
 
-For more information about selecting your VMware components, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
-
 ### Updates to data centers
 {: #relnotes_v29-dc}
 
-The following new data centers are available for deployment: **FRA-05 - Frankfurt** and **LON-05 - London**. For more information, see [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning).
+The following new data centers are available for deployment: **FRA-05 - Frankfurt** and **LON-05 - London**.
 
 ### ESXi server enhancements
 {: #relnotes_v29-vcs-esxi}
@@ -92,8 +85,6 @@ The following new data centers are available for deployment: **FRA-05 - Frankfur
 
    * Add new ESXi servers to an existing cluster while the servers are in maintenance mode. Virtual machines are not migrated to the new servers until you remove them from maintenance mode.
    * Simultaneously add or remove ESXi servers across multiple clusters in your instance.
-
-For more information, see [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers).
 
 ### Network File System storage size
 {: #relnotes_v29-vcs-nfs}
@@ -115,38 +106,32 @@ You can order vCenter Server instances with the Caveonix RiskForesight on {{site
 
 You can also order a stand-alone Caveonix RiskForesight license without associating it with any VMware instance for licensing and activation of your on-premises workloads.
 
-For more information, see:
-* [Considerations for Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
-* [Ordering Caveonix RiskForesight on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_ordering)
-* [Considerations for Caveonix licenses](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_considerations)
-* [Ordering Caveonix licenses](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_ordering)
-
 ### F5 on IBM Cloud
 {: #relnotes_v29-services-f5}
 
-In the current release, F5-BigIP VE V14.1.0.2 is installed on all newly deployed instances. For more information about the new features in F5-BigIP VE V14.1.0.2, see [Release Note: BIG-IP 14.1.0 New and Installation](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/releasenotes/product/relnote-bigip-14-1-0.html){:external}.
+In the current release, F5-BigIP VE V14.1.0.2 is installed on all newly deployed instances.
 
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v29-services-htcc}
 
-In the current release, HyTrust CloudControl 5.4.2 is installed on all newly deployed instances. For more information about the new features in HyTrust CloudControl 5.4.2, see [HyTrust CloudControl Release Notes Version 5.4.2](https://docs.hytrust.com/CloudControl/5.4.2/Online/index.html#HTCC_Admin_Guide/_FrontMatter/Whats-New.html%3FTocPath%3D_____2){:external}.
+In the current release, HyTrust CloudControl 5.4.2 is installed on all newly deployed instances.
 
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v29-services-kmip}
 
-Two new endpoints are now available in Sydney for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service. For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} service configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering#kmip_standalone_ordering-config).
+Two new endpoints are now available in Sydney for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service.
 
-(Updated on 09 April 2019) Previously, KMIP for VMware on {{site.data.keyword.cloud_notm}} used IBM Key Protect for {{site.data.keyword.cloud_notm}} to create, encrypt, and decrypt encryption keys. Starting with the V2.9 release, KMIP for VMware on {{site.data.keyword.cloud_notm}} can also use {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services. These services are a complete set of encryption and key management services that manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. For more information, see [KMIP for VMware on IBM Cloud overview](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) and [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/services/hs-crypto?topic=hs-crypto-get-started).
+(Updated on 09 April 2019) Previously, KMIP for VMware on {{site.data.keyword.cloud_notm}} used IBM Key Protect for {{site.data.keyword.cloud_notm}} to create, encrypt, and decrypt encryption keys. Starting with the V2.9 release, KMIP for VMware on {{site.data.keyword.cloud_notm}} can also use {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services. These services are a complete set of encryption and key management services that manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}.
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}
 
-In the current release, Veeam Backup and Replication 9.5 Update 4 is installed on all newly deployed instances. For more information about the new features in Veeam 9.5u4, see [Release information for Veeam Backup and Replication 9.5 Update 4](https://www.veeam.com/kb2878){:external}.
+In the current release, Veeam Backup and Replication 9.5 Update 4 is installed on all newly deployed instances.
 
 ### Zerto on IBM Cloud
 {: #relnotes_v29-services-zerto}
 
-In the current release, Zerto Virtual Replication 6.5 update 3 is installed on all newly deployed instances. For more information about the new features in Zerto Virtual Replication 6.5 update 3, see [Release notes for Zerto Virtual Replication V6.5 Update 3](http://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Release%20Notes.pdf){:external}.
+In the current release, Zerto Virtual Replication 6.5 update 3 is installed on all newly deployed instances.
 
 ## User interface updates and enhancements
 {: #relnotes_v29-ui}

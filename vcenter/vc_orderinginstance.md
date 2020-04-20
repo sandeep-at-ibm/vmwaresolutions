@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-12"
+lastupdated: "2020-04-17"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -23,20 +22,23 @@ subcollection: vmware-solutions
 
 To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance.
 
-For NSX-V, you can also add services, such as [Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-addingzertodr) for disaster recovery.
+You can also add services, such as [Zerto](/docs/vmwaresolutions?topic=vmware-solutions-addingzertodr) for disaster recovery. For more information about the available services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-available-services).
+
+Only a limited number of add-on services are supported for vCenter Server with NSX-T instances.
+{:important}
 
 ## Requirements for vCenter Server
 {: #vc_orderinginstance-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
-* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning).
-* You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
+* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
+* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning).
+* You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the username and server names of the instance.
 
 | Name        | Value Format |
 |:------------|:------------ |
 | Domain name | `<root_domain>` |  
-| vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
+| vCenter Server login username | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
 | vCenter Server (with embedded PSC) FQDN | `<instance_name>-vc.<root_domain>`. The maximum length is 50 characters. |
 | Single Sign-On (SSO) site name | `<subdomain_label>` |
 | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. The maximum length is 50 characters. |
@@ -53,24 +55,35 @@ You must specify the following system settings when you order a vCenter Server i
 ### Instance configurations
 {: #vc_orderinginstance-inst-config}
 
-You can select **New Configuration** to specify settings for an instance and finally place the order or save the settings as a configuration template without placing an order.
+You can select **New Configuration** to specify settings for an instance and place the order or save the settings as a configuration template without placing an order.
 
 You can also select a saved configuration template to further edit it, or to update it and then save it as a new configuration template.
 
 ### Instance name
 {: #vc_orderinginstance-inst-name}
 
-The instance name must meet the following requirements:
+The instance name is set to **vcs-_xx_** by default, where _xx_ represents two randomly generated alphabetic characters.
+
+You can also specify an instance name that meets the following requirements:
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
 * The instance name must start with a lowercase alphabetic character.
 * The instance name must end with a lowercase alphabetic or numeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
 
-### Initial cluster name
+### Resource group
+{: #vc_orderinginstance-resource-group}
+
+Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
+
+If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+
+### Initial cluster name (NSX-V only)
 {: #vc_orderinginstance-cluster-name}
 
-The initial cluster name must meet the following requirements:
+The initial cluster name is set to **_instance name_-cluster** by default.
+
+You can also specify a new initial cluster name that meets the following requirements:
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
 * The cluster name must start with a lowercase alphabetic character.
 * The cluster name must end with a lowercase alphabetic or numeric character.
@@ -80,11 +93,11 @@ The initial cluster name must meet the following requirements:
 ### VMware vSphere version
 {: #vc_orderinginstance-vsphere-license}
 
-For NSX-V, select whether to order vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.5u3. 6.7u2 is available for only Skylake, Cascade Lake, and Broadwell {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+For vCenter Server with NSX-V instances, select whether to order vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.5u3. 6.7u2 is available for only Skylake, Cascade Lake, and Broadwell {{site.data.keyword.cloud_notm}} bare metal servers.
 
-For NSX-T, only the vSphere Enterprise Plus 6.7u2 license is supported and it is selected by default.
+For vCenter Server with NSX-T instances, only the vSphere Enterprise Plus 6.7u2 license is supported and it is selected by default.
 
-### VMware NSX Network virtualization version
+### VMware NSX networking solution
 {: #vc_orderinginstance-nsx}
 
 Select either **NSX-V** or **NSX-T**.
@@ -96,6 +109,18 @@ Select whether to order a new primary instance or a secondary instance for an ex
 
 ## Licensing settings
 {: #vc_orderinginstance-licensing-settings}
+
+### Use VMware Subscription Purchasing Program
+{: #vc_orderinginstance-licensing-spp}
+
+The **Use VMware Subscription Purchasing Program** option is available only to users who are billed in the US.
+{:note}
+
+By using the VMware Subscription Purchasing Program (SPP), you can consume VMware Subscription Services in the form of Subscription Credits (SPP Credits). Using SPP Credits requires consumption of VMware vCenter Server, VMware vSphere, and VMware NSX.
+
+Charges for the licensing of these VMware software components will not be billed to your IBM Cloud account and SPP Credits will be taken from your SPP Fund Balance. If you select SPP, an IBM representative will contact you to confirm the SPP Credits usage after you place the instance order.
+
+When you select SPP, the option **Include with purchase** for all licenses will be set automatically and the **I will provide** option is not available.
 
 ### License options
 {: #vc_orderinginstance-licensing-opt}
@@ -119,30 +144,38 @@ For users who are not Business Partners, you can use the IBM-provided VMware lic
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
 
-## Bare Metal Server settings
+## Cluster name (NSX-T only)
+{: #vc_orderinginstance-mngt-workload-cluster-settings}
+
+By default, the cluster name of the management cluster is set to **_instance name_-management**, and the cluster name of the workload cluster is set to **_instance name_-workload**.
+
+You can also specify a new cluster name for the management cluster or the workload cluster. The cluster name must meet the requirements that are listed in [Initial cluster name](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-cluster-name).
+
+## Bare metal server settings
 {: #vc_orderinginstance-bare-metal-settings}
 
-Bare Metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing, see [Exporting VMware inventory](/docs/services/vmwaresolutions?topic=vmware-solutions-vmware-inventory-export).
+Bare metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing, see [Exporting VMware inventory](/docs/vmwaresolutions?topic=vmware-solutions-vmware-inventory-export).
 
-For NSX-T, the Bare Metal Server settings must be specified for both the Management Cluster and the Workload Cluster.
+For NSX-T, the bare metal server settings must be specified for both the management cluster and the workload cluster.
 {:note}
 
-### Data Center Location
+### Data center location
 {: #vc_orderinginstance-dc-location}
 
-Select the {{site.data.keyword.CloudDataCent_notm}} where the instance (for NSX-V) or the Management Cluster and the Workload Cluster (for NSX-T) are hosted.
+* For NSX-V, select the {{site.data.keyword.cloud_notm}} data center where the instance is hosted.
+* For NSX-T, select the {{site.data.keyword.cloud_notm}} data center where the management cluster and the workload cluster are hosted.
 
 ### Skylake
 {: #vc_orderinginstance-skylake}
 
-When you select **Skylake**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
+When you select **Skylake**, you can choose the CPU and RAM combination for the bare metal server according to your needs.
 
 | CPU model | RAM options for NSX-V | RAM options for NSX-T |
 |:--------- |:--------------------- |:--------------------- |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-{: caption="Table 2. Options for Skylake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+| Dual Intel Xeon Silver 4110 processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 2. Options for Skylake bare metal servers" caption-side="top"}
 
 ### Cascade Lake
 {: #vc_orderinginstance-cascade}
@@ -151,59 +184,59 @@ For the **Cascade Lake** setting, you have options for the **CPU Model** and **R
 
 | CPU model | RAM options |
 |:--------- |:----------- |
-| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 Processor[^vsphere] / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
-{: caption="Table 3. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
-[^vsphere]: If you use vSAN storage, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 does not currently support the High Performance Intel Optane option.
+| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor[^vsphere] / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+{: caption="Table 3. Options for Cascade Lake bare metal servers" caption-side="top"}
+[^vsphere]: If you use vSAN storage, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 does not currently support the High Performance with Intel Optane option.
 
 ### SAP-certified
 {: #vc_orderinginstance-sap}
 
 When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
 
-Based on your requirements, select a Bare Metal Server configuration from the following table:
+Based on your requirements, select a bare metal server configuration from the following table:
 
 | CPU model | RAM options |
 |:--------- |:----------- |
 | Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
 | Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz | 768 GB |
-| Dual Intel Xeon Platinum 8280M processor / 56 cores total, 2.7 GHz | 1.5 TB, 3 TB |
+| Dual Intel Xeon Platinum 8280 M processor / 56 cores total, 2.7 GHz | 1.5 TB, 3 TB |
 | Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB |
 | Dual Intel Xeon E5-2690 v4 processor / 28 cores total, 2.6 GHz | 512 GB |
 | Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.2 GHz | 1 TB, 2 TB, 4 TB |
-{: caption="Table 4. Options for SAP-certified {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 4. Options for SAP-certified bare metal servers" caption-side="top"}
 
 ### Broadwell (NSX-V only)
 {: #vc_orderinginstance-broadwell}
 
-When you select **Broadwell**, you can choose the CPU and RAM combination for the Bare Metal Server according to your needs.
+When you select **Broadwell**, you can choose the CPU and RAM combination for the bare metal server according to your needs.
 
 | CPU model | RAM options |
 |:--------- |:----------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 5. Options for Broadwell {{site.data.keyword.baremetal_short}}" caption-side="top"}
+{: caption="Table 5. Options for Broadwell bare metal servers" caption-side="top"}
 
-### Number of Bare Metal Servers
+### Number of bare metal servers
 {: #vc_orderinginstance-bare-metal-number}
 
 * All servers that you order have the same configuration.
 * If you are planning to use vSAN storage, you can order 4 - 20 servers.
-* If you are planning to use NFS storage, you can order 2 - 20 servers. However, for production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#is-a-two-node-vcenter-server-instance-highly-available-)
+* If you are planning to use NFS storage, you can order 2 - 20 servers. However, for production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
 ## Storage settings
 {: #vc_orderinginstance-storage-settings}
 
-Storage settings are based on your selection of Bare Metal Server configuration and the storage type.
+Storage settings are based on your selection of bare metal server configuration and the storage type.
 
-For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
+For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
 
 ### vSAN storage
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN is available for the **Skylake**, **Cascade Lake**, and **Broadwell** Bare Metal configurations only. **Broadwell** is supported for NSX-V only.
+vSAN is available for the **Skylake**, **Cascade Lake**, and **Broadwell** bare metal configurations only. **Broadwell** is supported for NSX-V only.
 
 #### Disk Type and Size for vSAN Capacity Disks
 {: #vc_orderinginstance-vsan-storage-typesize-capdisks}
@@ -215,33 +248,33 @@ Select an option for the capacity disks that you need.
 
 Specify the number of capacity disks that you want to add.
 
-If you want to add capacity disks over the limit of 10, check the **High Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+If you want to add more capacity disks, select the **High Performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
 
-The **High Performance Intel Optane** option is available only for the Skylake and Cascade Lake CPU models. Currently, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 is not supported for this option.
+The **High Performance with Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
 {:note}
 
 #### Disk Size for vSAN Cache Disks
 {: #vc_orderinginstance-vsan-storage-size-cachedisks}
 
-Review the **Disk Size for vSAN Cache Disks** value. The value depends on whether you checked the **High Performance Intel Optane** box.
+Review the **Disk Size for vSAN Cache Disks** value. The value depends on whether you selected the **High Performance with Intel Optane** checkbox.
 
 #### Number of vSAN Cache Disks
 {: #vc_orderinginstance-vsan-storage-number-cachedisks}
 
-Review the **Number of vSAN Cache Disks** value. The value depends on whether you checked the **High Performance Intel Optane** box.
+Review **Number of vSAN Cache Disks**. The value depends on whether you selected the **High Performance with Intel Optane** checkbox.
 
 #### Enable vSAN compression and deduplication
 {: #vc_orderinginstance-vsan-storage-enable-comp}
 
 vSAN storage depends on the number of servers and your total disk capacity.
 
-If vSAN compression and deduplication is enabled (the default setting), a ratio of 3.5 is assumed. For example, 1 TB of data uses only 1/3.5 TB. Therefore, the **Total Estimated Usable Storage** is greater than the **Total Raw Storage**.
+If vSAN compression and deduplication are enabled (the default setting), a ratio of 3.5 is assumed. For example, 1 TB of data uses only 1/3.5 TB. Therefore, the **Total Estimated Usable Storage** is greater than the **Total Raw Storage**.
 
 The following table shows the values for **Total Raw Storage** and **Total Estimated Usable Storage** when you enable vSAN compression and deduplication and when you do not enable it.
 
 | Selected values | If compression is enabled | If compression is not enabled |
 |:---------------------|:-------------------------|:-----------------------------|
-| Number of Bare Metal Servers: 4</br>Disk Type and Size for vSAN Capacity Disks: 1.9 TB SSD SED</br>Number of vSAN Cache Disks: 4 | Total Raw Storage: 30.40 TB</br>Total Estimated Usable Storage: 55.52 TB | Total Raw Storage: 30.40 TB</br>Total Estimated Usable Storage: 15.52 TB |
+| Number of bare metal servers: 4</br>Disk Type and Size for vSAN Capacity Disks: 1.9 TB SSD SED</br>Number of vSAN Cache Disks: 4 | Total Raw Storage: 30.40 TB</br>Total Estimated Usable Storage: 55.52 TB | Total Raw Storage: 30.40 TB</br>Total Estimated Usable Storage: 15.52 TB |
 {: caption="Table 6. vSAN Storage values if vSAN compression and deduplication is enabled and not enabled" caption-side="top"}
 
 #### vSAN License
@@ -249,12 +282,12 @@ The following table shows the values for **Total Raw Storage** and **Total Estim
 
 Use the IBM-provided VMware license for the vSAN component by selecting **Include with purchase**, or Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license key.
 
-If your initial cluster was a vSAN cluster, any additional vSAN clusters use the same vSAN license and have the same configuration as the initial one. This is also true if any cluster in the instance has vSAN chosen to be deployed on it (initial or additional). The first time you're prompted for the vSAN license (BYOL or purchased) and the edition. The next time that you select vSAN for a new cluster, the license that is chosen initially is reused.
+If your initial cluster was a vSAN cluster, any additional vSAN clusters use the same vSAN license and have the same configuration as the initial one. This is also true if any cluster (initial or additional) in the instance has vSAN chosen to be deployed on it. The first time you're prompted for the vSAN license (BYOL or purchased) and the edition. The next time that you select vSAN for a new cluster, the license that is chosen initially is reused.
 
 ### NFS storage
 {: #vc_orderinginstance-nfs-storage}
 
-When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. The number of file shares must be in the range of 1 to 32.
+When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. The number of file shares must be in the range of 1 to 100.
 
 Specify the following NFS options:
 * **Configure shares individually**: Select to specify different configuration settings for each file share.
@@ -276,25 +309,65 @@ Choose performance level options according to your needs.
 ### Local Disks (NSX-V SAP-certified only)
 {: #vc_orderinginstance-local-disks}
 
-The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor Bare Metal configuration only.
+If you selected the **Use VMware Subscription Purchasing Program** option, the local disks option is not available.
+{:note}
+
+The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor bare metal configuration only.
 
 Specify the following options:
 * **Local Disk Count**: Select the number of disks that you want to add.
 * **Local Disk type**: Select an option for the disk type that you need.
+
+## Edge services cluster
+{: #vc_orderinginstance-edge-services-cluster}
+
+Select the **Edge Services Cluster** checkbox to order a dedicated cluster for the network edge and the firewall components that are required for the Juniper vSRX service. The edge services cluster is deployed in:
+* For NSX-V: the same data center as the instance
+* For NSX-T: the management cluster
+
+Review the following restrictions for edge services clusters:
+* The vSphere version must be 6.7.
+* The data center of the instance (for NSX-V) or the management cluster (for NSX-T) must be available for edge services cluster deployment. Edge services cluster deployment is not supported for **DAL09 - Dallas** and **HKG02 - Hong Kong**.
+* You cannot add more than one edge services cluster in the same data center pod. If you are adding multiple edge services clusters in the same pod, the clusters would share a transit VLAN, which might cause subsequent issues with the Juniper vSRX installation.
+
+### Cluster name
+{: #vc_orderinginstance-edge-cluster-name}
+
+The cluster name must meet the requirements that are listed in [Cluster name](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-cluster-name).
+
+### CPU model
+{: #vc_orderinginstance-edge-cluster-cpu}
+
+The CPU model for the edge services cluster is Dual Intel Xeon Gold 5120 Processor (Skylake) and it cannot be changed.
+
+### RAM
+{: #vc_orderinginstance-edge-cluster-ram}
+
+You can select different values between 64 GB and 1.5 TB.
+
+### Number of bare metal servers
+{: #vc_orderinginstance-edge-cluster-bare-metal}
+
+The number of servers is set to two and cannot be changed. Both servers have the same configuration.
+
+### Enable private NICs only
+{: #vc_orderinginstance-edge-cluster-private-nics}
+
+Select either **Public and Private Network** or **Private Network Only** for the edge services cluster.
 
 ## Network interface settings
 {: #vc_orderinginstance-network-interface-settings}
 
 You must specify the following network interface settings when you order a vCenter Server instance.
 
-### Host name prefix
+### Hostname prefix
 {: #vc_orderinginstance-host-name-prefix}
 
-The host name prefix must meet the following requirements:
+The hostname prefix must meet the following requirements:
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
-* The host name prefix must start with a lowercase alphabetic character.
-* The host name prefix must end with a lowercase alphabetic or numeric character.
-* The maximum length of the host name prefix is 10 characters.
+* The hostname prefix must start with a lowercase alphabetic character.
+* The hostname prefix must end with a lowercase alphabetic or numeric character.
+* The maximum length of the hostname prefix is 10 characters.
 
 ### Subdomain label
 {: #vc_orderinginstance-subdomain-label}
@@ -336,7 +409,7 @@ Network interface card (NIC) enablement settings are based on your selection of 
 
 Network settings are based on your selection of **Order New VLANs** or **Select Existing VLANs**.
 
-One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each Bare Metal Server.
+One public VLAN and two private VLANs are required for your instance order. The two private VLANs are trunked into each {{site.data.keyword.cloud_notm}} bare metal server.
 
 #### Order New VLANs
 {: #vc_orderinginstance-new-vlans}
@@ -346,24 +419,36 @@ Select to order one new public VLAN and two new private VLANs.
 #### Select Existing VLANs
 {: #vc_orderinginstance-existing-vlans}
 
-Depending on the {{site.data.keyword.CloudDataCent_notm}} that you selected, existing public and private VLANs might be available.
+Depending on the {{site.data.keyword.cloud_notm}} data center that you selected, existing public and private VLANs might be available.
 
 When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
 * **Public VLAN** is for public network access. If you select the **Allocate a new one** option for this field, a new public VLAN is allocated automatically. This field is only available on the **Public and Private Network** tab.
-* **Public Primary Subnet** is assigned to physical hosts for public network access. If you select the **Allocate a new one** option for this field, a new public primary subnet is allocated automatically. This field is only available on the **Public and Private Network** tab.
+* **Public Primary Subnet** is assigned to physical hosts for public network access. If you select the **Auto assigned** option for this field, a new public primary subnet is selected automatically and a new one is created if necessary. This field is only available on the **Public and Private Network** tab.
 * **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}. If you select the **Allocate a new one** option for this field, a new private VLAN is allocated automatically.
-* **Private Primary Subnet** is assigned to physical hosts for management traffic. If you select the **Allocate a new one** option for this field, a new private primary subnet is allocated automatically.
+* **Private Primary Subnet** is assigned to physical hosts for management traffic. If you select the **Auto assigned** option for this field, a new private primary subnet is selected automatically and a new one is created if necessary.
 * **Secondary Private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
+{:important}  
+
+Optionally, use **Advanced Settings** to configure portable subnets for VLANs.
+
+Use the **Public VLAN**, **Private VLAN**, or **Secondary Private VLAN** tabs to specify the **Portable Subnet** for each applicable purpose. If you select the **Allocate a new one** option for this field, a new portable subnet is allocated automatically.
+
+**Notes**:
+* You must complete the **Public VLAN**, **Private VLAN**, or **Secondary Private VLAN** settings before you can configure portable subnets.
+* The number of portable subnets is displayed on the **Advanced Settings** button after you save the portable subnet settings. Click **Portable Subnets** to edit the settings.
+* The saved portable subnet settings are cleared if you change the **Public VLAN**, **Private VLAN**, or **Secondary Private VLAN** settings.
+
+{{site.data.keyword.vmwaresolutions_short}} takes control of the entire subnet and you can't use any IP addresses in the subnet.
 {:important}
 
-### DNS configuration
+### Domain Name System configuration
 {: #vc_orderinginstance-dns-config}
 
 Select the Domain Name System (DNS) configuration for your instance:
 
-* **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
+* **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option is deployed by default for V1.9 and later instances.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
 You must provide two Microsoft Windows Server 2016 Standard edition licenses if you configure your instance to use the two Microsoft Windows VMs.
@@ -373,12 +458,12 @@ Each license can be assigned only to one single physical server and covers up to
 
 You have 30 days to activate the VMs.
 
-For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
+For more information about ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
 
-## Services settings (NSX-V only)
+## Services settings
 {: #vc_orderinginstance-addon-services}
 
-When you order a vCenter Server with NSX-V instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances).
+When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-available-services).
 
 A 12-month commitment is required when you order the VMware HCX service.
 {:note}
@@ -393,33 +478,36 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server instances
 {: #vc_orderinginstance-procedure}
 
-For information about deploying Multi Zone Stretched Clusters, see [Ordering multi-zone stretched clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering).
+For more information about deploying Multi Zone Stretched Clusters, see [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering).
 {:note}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 2. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
 3. On the **VMware Solutions Dedicated** page, click the **vCenter Server** card. Ensure that you are on the **Single Zone Cluster** tab.
 4. If you want to create a new configuration, select **New Configuration**. If you want to update a saved configuration or create a new configuration based on a saved one, select a saved configuration.
-5. Enter the instance name and then enter the initial cluster name.
-6. Select the vSphere version. For NSX-T, only vSphere 6.7u2 is supported.
-7. Select either **NSX-V** or **NSX-T** as the VMware NSX Networking solution.
-8. Select the instance type:
+5. Enter the instance name and select a resource group.
+6. (NSX-V only) Accept the default value for the initial cluster name or specify your own name.
+7. Select the vSphere version. For NSX-T, only vSphere 6.7u2 is supported.
+8. Select either **NSX-V** or **NSX-T** as the VMware NSX Networking solution.
+9. Select the instance type:
    * Click **Primary Instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary Instance** to connect the instance with an existing (primary) instance in the environment for high availability. Select the primary instance that you want the secondary instance to be connected with, then enter the vCenter Server Administrator password for the primary instance.
-9. Complete the license settings for the instance components.
+10. Complete the license settings for the instance components.
+    * To use VMware SPP, select the **Use VMware Subscription Purchasing Program** checkbox, and then specify **VMware Account Number** and **SPP Credit Fund Number**.
     * To use IBM-provided licenses, ensure that the **Include with purchase** option is selected. For NSX, specify the license edition.
-    * To use your own licenses, for each license, click **I will provide** and enter the license key.
-10. Complete the Bare Metal Server settings for your instance.
+    * To use your own licenses, ensure that the **Use VMware Subscription Purchasing Program** option is not selected. For each license, click **I will provide** and enter the license key.
+11. (NSX-T only) Specify the cluster name.
 
-   For NSX-T, complete steps 10 - 12 for both the Management Cluster and the Workload Cluster.
+   For NSX-T, complete steps 11 - 13 for both the management cluster and the workload cluster.
    {:note}
 
-    1. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance or cluster.
-    2. Select the Bare Metal Server configuration.
+12. Complete the bare metal server settings.
+    1. Select the {{site.data.keyword.cloud_notm}} data center to host the instance or cluster.
+    2. Select the bare metal server configuration.
        * For **Skylake**, **Cascade Lake**, or **Broadwell** (NSX-V only), specify the CPU model and the RAM size.
        * For **SAP-certified**, choose one of the preset configurations.
-    3. Specify the number of {{site.data.keyword.baremetal_short}}. If you're planning to use vSAN storage, a minimum of four {{site.data.keyword.baremetal_short}} are needed.
-11. Complete the storage configuration.
+    3. Specify the number of bare metal servers. If you're planning to use vSAN storage, a minimum of four bare metal servers are needed.
+13. Complete the storage configuration.
   * If you select **vSAN Storage**, specify the following values:
     * Disk type and size for the vSAN capacity disks
     * Number of vSAN capacity disks
@@ -427,24 +515,31 @@ For information about deploying Multi Zone Stretched Clusters, see [Ordering mul
     * Number of vSAN cache disks
     * vSAN License edition
 
-    If you want more storage, check the **High Performance Intel Optane** box.
+    If you want more storage, select the **High Performance with Intel Optane** checkbox.
 
-    By default, the **Enable vSAN compression and deduplication** box is checked. If you don't want to enable vSAN compression and deduplication, clear the check box.
+    By default, the **Enable vSAN compression and deduplication** checkbox is selected. If you do not want to enable vSAN compression and deduplication, clear the checkbox.
 
   * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
   * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
   * **(NSX-V SAP-certified only)** If you select **Local Disks**, specify the local disk count and local disk type.
-12. Complete the network interface settings.
-   1. Enter the host name prefix for the instance being provisioned, the subdomain label, and the root domain name. For a secondary instance, the domain name is automatically completed.
+
+14. If you want to order an edge services cluster with Juniper vSRX included, check the **Edge Services Cluster** box and configure the appropriate settings: the cluster name, the RAM selection, and the private NICs enablement.
+
+15. Complete the network interface settings.
+   1. Enter the hostname prefix for the instance that you are provisioning, the subdomain label, and the root domain name. For a secondary instance, the domain name is automatically completed.
    2. Select the network setting of either **Public and Private Network** or **Private Network Only**.
    3. Select the VLAN settings:
       * If you want to order new public and private VLANs, click **Order New VLANs**.
       * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and the subnets.
-   4. Specify the DNS configuration.
 
-13. **(NSX-V only)** Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card. For more information about how to provide settings for a service, see the corresponding service ordering topic.
+        For NSX-T: If the management cluster and the workload clusters are in the same location, you cannot use existing VLANs. Instead, the workload clusters will reuse the VLANs from the management cluster.
 
-14. On the **Summary** pane, review the instance settings and the estimated cost.
+      * Optionally click **Portable Subnets Settings**. Then, select the portable subnet for each purpose and click **Save**.
+   5. Specify the DNS configuration.
+
+16. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card. For more information about specific settings for a service, see the corresponding topic for ordering a service.
+
+17. On the **Summary** pane, review the instance settings and the estimated cost.
    * To save the settings as a new configuration template without placing an order, click **Save Configuration**, enter a name for the configuration, and then click **Continue**.
    * To save the updates to a saved configuration, click **Save Configuration**, select **Modify current configuration**, and then click **Continue**.
    * To save the updates to a saved configuration as another configuration, click **Save Configuration**, select **Create new configuration**, enter a new name for the configuration, and then click **Continue**.
@@ -460,7 +555,7 @@ You get a console notification that the configuration is saved successfully, and
 
 The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -483,7 +578,9 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 ## Related links
 {: #vc_orderinginstance-related}
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions?topic=vmware-solutions-signing_required_accounts#signing_required_accounts￼-cloud)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
-* [Deleting vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmware-solutions-signing_required_accounts#signing_required_accounts￼-cloud)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
+* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)
+* [VMware Subscription Purchasing Program (SPP) Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-spp-program-guide.pdf){:external}
+* [SPP Operations Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-spp-operations-guide.pdf){:external}

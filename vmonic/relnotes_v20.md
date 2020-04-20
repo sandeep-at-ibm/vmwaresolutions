@@ -29,18 +29,12 @@ The FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service is n
 
 Order instances with the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service included when you order your instance. Alternatively, add this service to your existing instances later from the **Services** tab on the instance details page. Depending on your requirements, select one of the three deployment sizes and licensing options for this service. After the service is installed successfully, manage and configure firewall rules for the FortiGate Virtual Appliances from the FortiGate console.
 
-For more information, see the following topics:
-* [Components and considerations for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations)
-* [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managingfortinetvm)
-
 ## Multiple service installations for F5 on IBM Cloud and FortiGate Virtual Appliance on IBM Cloud
 {: #relnotes_v20-multiple-services}
 
 You can now install multiple instances of the F5 on {{site.data.keyword.cloud_notm}} service and the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service for a Cloud Foundation instance or a vCenter Server instance. When you select the F5 service or the FortiGate service during your instance order, you must specify a name for the service instance. A specific name distinguishes it from the additional service instances that you install later.
 
 After the instance deployment is completed, you can add more instances of the F5 or the FortiGate service by installing the service on the **Add Services** tab of the instance details page. You can add only one service instance at a time, and you must repeat the process for all the instances that you want to add for a service.
-
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
 
 ## Updates for FortiGate Security Appliance on IBM Cloud
 {: #relnotes_v20-fsa}
@@ -56,19 +50,11 @@ In all cases, you must manage the FSAs configuration carefully to allow only nec
 
 The fully qualified domain name (FQDN) is now represented in a consistent way for all instances. When you place an order, you can enter your own subdomain prefix and hostname prefix to ensure that the industry convention for the FQDN format is followed. For example, `host-name-prefix<n>.subdomain-prefix.domain-name`.
 
-For more information, see the following topics:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
-
 ## Workload and storage estimates during an instance order
 {: #relnotes_v20-estimates-order}
 
 * During a VMware vSphere on {{site.data.keyword.cloud_notm}} order, you are provided with an estimate of how many virtual machines can run on the ordered instance.
 * During a Cloud Foundation and vCenter Server order, you are provided with an estimate of the usable storage capacity for the ordered instance.
-
-For more information, see the following topics:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
 
 ## Updates for VMware Cloud Foundation instances
 {: #relnotes_v20-vcf}
@@ -80,7 +66,7 @@ The current release applies the following component updates and improvements for
 * VMware vCenter Server 6.5U1a
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
-* VMware ESXi 6.5, Patch Release ESXi650-201710401-BG. Updates esx-base, esx-tboot, vSAN, and vsanhealth VIBs (2151061). For more information about patch details, see [VMware vCenter Server Appliance Photon OS Security Patches](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:external}.
+* VMware ESXi 6.5, Patch Release ESXi650-201710401-BG. Updates esx-base, esx-tboot, vSAN, and vsanhealth VIBs (2151061).
 
 Existing instances (from releases V1.9 and earlier) cannot be upgraded to the component versions in this list.
 {:note}
@@ -102,10 +88,10 @@ You can now customize the vSAN storage configuration by selecting the number and
 
 You can now select the vSAN license edition that you want during the Cloud Foundation instance order. You can either purchase the license as part of your order, or Bring Your Own License (BYOL).
 
-### New standardized IBM Bare Metal Server configurations for Cloud Foundation instances
+### New standardized IBM Cloud bare metal server configurations for Cloud Foundation instances
 {: #relnotes_v20-vcf-bare-metal}
 
-The following Bare Metal Server configuration settings are now available:
+The following bare metal server configuration settings are now available:
 * Small (Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz / 128 GB RAM / 12 disks)
 * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
 
@@ -122,50 +108,38 @@ The current release applies the following component updates for new deployments:
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-vCenter Server customized orders with or without the VMware vSAN component always include a 12-disk chassis server. This server results in a slightly higher cost for the {{site.data.keyword.baremetal_short}} for the non-vSAN order case in the price estimate PDF.
+vCenter Server customized orders with or without the VMware vSAN component always include a 12-disk chassis server. This server results in a slightly higher cost for the bare metal server for the non-vSAN order case in the price estimate PDF.
 {:note}
-
-For more information about components, see [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview).
 
 ### Multi-site configuration support for vCenter Server instances
 {: #relnotes_v20-vcs-multisite}
 
 You can now deploy a single vCenter Server instance in addition to secondary instances that are attached to a primary instance. The multi-site configuration model uses a hub and spoke topology with a primary site and a maximum of seven secondary sites.
 
-For more information, see [Multi-site configuration for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_multisite).
-
 ### Support for custom vSAN storage for vCenter Server instances
 {: #relnotes_v20-custom-vsan-vcs}
 
 vSAN storage is now available on vCenter Server instances for both primary and secondary instances. It is available only when you select a user-customized configuration. You can now select the vSAN license edition (Advanced or Enterprise) that you want during the vCenter Server instance order. You can either purchase the license as part of your order, or Bring Your Own License (BYOL).
-
-For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 
 ### Bring Your Own License (BYOL) for VMware vCenter Server instances
 {: #relnotes_v20-byol}
 
 BYOL is now available to vCenter Server instances. Use one or more of your own vCenter Server, vSphere, vSAN, and NSX VMware licenses when you order vCenter Server instances.
 
-For more information, see the following topics:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
-
 ## Updates for VMware vSphere on IBM Cloud
 {: #relnotes_v20-vss}
 
-### New disk types for Bare Metal Servers
+### New disk types for bare metal servers
 {: #relnotes_v20-disk-type}
 
-For the VMware vSAN component, the following disk types are now available for {{site.data.keyword.baremetal_short}}:
+For the VMware vSAN component, the following disk types are now available for {{site.data.keyword.cloud_notm}} bare metal servers:
 * 960 GB SSD SED
 * 1.9 TB SSD SED
 * 3.8 TB SSD SED
 
 **Notes**:
-* 3.8 TB SSD SED drives are supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
-* Orders with or without the VMware vSAN component always include a 12-disk chassis server. This server results in a slightly higher cost for the {{site.data.keyword.baremetal_short}} for the non-vSAN order case in the price estimate PDF.
-
-For more information, see [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances).
+* 3.8 TB SSD SED drives are supported when they are made generally available in an {{site.data.keyword.cloud_notm}} data center.
+* Orders with or without the VMware vSAN component always include a 12-disk chassis server. This server results in a slightly higher cost for the {{site.data.keyword.cloud_notm}} bare metal servers for the non-vSAN order case in the price estimate PDF.
 
 ## Updates for NetApp ONTAP Select on IBM Cloud
 {: #relnotes_v20-netapp}
@@ -178,17 +152,13 @@ The following bare metal server configuration options are now available:
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / 22 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
 
-3.8 TB SSD drives are supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
+3.8 TB SSD drives are supported when they are made generally available in an {{site.data.keyword.cloud_notm}} data center.
 {:note}
-
-For more information, see the following topics:
-* [NetApp ONTAP Select overview](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_netappoverview)
-* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-np_orderinginstances)
 
 ## New and updated documentation
 {: #relnotes_v20-new-docs}
 
-VMware Cloud Foundation users can use step-by-step instructions along with VMware's NSX operating system on the {{site.data.keyword.cloud_notm}} to allow virtual machines to communicate with each other and the internet. For more information, see [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:external}.
+VMware Cloud Foundation users can use step-by-step instructions along with VMware's NSX operating system on the {{site.data.keyword.cloud_notm}} to allow virtual machines to communicate with each other and the internet.
 
 ## User interface updates and enhancements
 {: #relnotes_v20-ui}

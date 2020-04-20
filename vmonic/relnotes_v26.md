@@ -49,20 +49,10 @@ You can now deploy vCenter Server and vCenter Server with Hybridity Bundle insta
 
 Some add-on services require public NICs and are not available if you select to enable a private only network.
 
-For more information, see the _Network interface settings_ section in the following topics:
-
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#network-interface-settings)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances#network-interface-settings)
-
 ## Deleting ESXi servers
 {: #relnotes_v26-delete-esxi}
 
 You can now delete any ESXi server from your vCenter Server, vCenter Server with Hybridity Bundle, or Cloud Foundation instance if you meet the minimum requirements for your instance.
-
-For more information about ESXi server requirements, see the following topics:
-
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v26-vcs}
@@ -82,14 +72,10 @@ This release applies the following upgrades and improvements:
 
 You can now remove the Hybridity Bundle license from your vCenter Server instance. You are required to replace the VMware NSX and VMware vSAN rental license keys with Bring Your Own License (BYOL) keys. You are required to open a support ticket to cancel charges for the rental licenses.
 
-For more information, see [Removing the Hybridity Bundle from a vCenter Server instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_deletingbundle).
-
 ### vCenter Server with Hybridity Bundle availability
 {: #relnotes_v26-bundle-available}
 
 Business Partners can now order a vCenter Server with Hybridity Bundle instance. Business Partners cannot upgrade an existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance and cannot remove the Hybridity Bundle from a vCenter Server with Hybridity Bundle instance.
-
-For more information, see [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview).
 
 ## Updates for VMware Cloud Foundation instances
 {: #relnotes_v26-vcf}
@@ -111,19 +97,15 @@ The HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service is now availa
 
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
-For more information, see the following topics:
-* [Components and considerations for HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-htkc_considerations)
-* [Managing HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtkc)
-
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v26-htcc}
 
-The current release installs HyTrust CloudControl 5.4 on all newly deployed instances. For more information about the new features in HyTrust CloudControl 5.4, see [HyTrust CloudControl v 5.4 Online Documentation Set](https://docs.hytrust.com/CloudControl/5.4.0/Online/index.html).
+The current release installs HyTrust CloudControl 5.4 on all newly deployed instances.
 
 ### HyTrust DataControl on IBM Cloud
 {: #relnotes_v26-htdc}
 
-The current release installs HyTrust DataControl 4.2 on all newly deployed instances. For more information about the new features in HyTrust DataControl 4.2, see [What's New in HyTrust DataControl 4.x](https://docs.hytrust.com/DataControl/4.2/Admin_Guide-4.2/Content/Books/aaCommon/New-Changed-4x.htm).
+The current release installs HyTrust DataControl 4.2 on all newly deployed instances.
 
 ### Veeam on IBM Cloud support for vSphere ESXi V6.5 update 2c
 {: #relnotes_v26-veeam}
@@ -132,23 +114,16 @@ Beginning in V2.6, new instances and new hosts are provisioned by using the vSph
 
 It is recommended that existing Cloud Foundation instances that have Veeam on {{site.data.keyword.cloud_notm}} installed also update to V9.5u3a or later.
 
-For more information about Veeam on {{site.data.keyword.cloud_notm}}, see [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations).
-
 ### VMware HCX on IBM Cloud
 {: #relnotes_v26-hcx}
 
-The current release installs VMware HCX 3.5.1 on all newly deployed instances. For more information about the new features in HCX 3.5.1, see [VMware HCX Documentation](https://docs.vmware.com/en/VMware-HCX/index.html).
+The current release installs VMware HCX 3.5.1 on all newly deployed instances.
 
 ### Zerto on IBM Cloud support for vSphere ESXi V6.5 update 2c
 {: #relnotes_v26-zerto}
 
 If you update existing hosts to vSphere ESXi V6.5 update 2, and have previously installed Zerto on {{site.data.keyword.cloud_notm}}, the Zerto Virtual
 Replication console might show the `Unsupported ESX Version` warning message under the Zerto Virtual Replication Appliances (VRAs) status.
-
-For more information about how to resolve this warning message, see:
-
-* [Zerto Virtual Replication Interoperability Matrix](http://s3.amazonaws.com/zertodownload_docs/6.0_Latest/Zerto%20Virtual%20Replication%20Operability%20Matrix.pdf)
-* [Updating a z/VM to Support Zerto-Approved Host Releases Prior to a Full ZVR Update](https://www.zerto.com/myzerto/knowledge-base/updating-a-zvm-to-support-zerto-approved-host-releases-prior-to-a-full-zvr-update/)
 
 ## New and updated documentation
 {: #relnotes_v26-new-docs}
@@ -157,8 +132,6 @@ For more information about how to resolve this warning message, see:
 {: #relnotes_v26-ref-archi}
 
 The {{site.data.keyword.vmwaresolutions_short}} architecture document is updated to include important considerations to understand your responsibilities for managing and operating your VMware instance.
-
-For more information, see [Post-deployment considerations for your VMware instance](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_considerations).
 
 ## User interface updates and enhancements
 {: #relnotes_v26-ui}

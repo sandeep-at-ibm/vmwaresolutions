@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-04-15"
 
 keywords: primary io hdm, hdm order, order trial hdm
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 # Ordering PrimaryIO HDM
 {: #pio_ordering}
 
-You can add PrimaryIO Hybrid Cloud Data Management (HDM) as a service to a new or existing instance. You must order PrimaryIO HDM directly from PrimaryIO.
+You can include the PrimaryIO Hybrid Cloud Data Management (HDM) service with a new vCenter Server instance or add the service to your existing vCenter Server instance. You must order PrimaryIO HDM directly from PrimaryIO.
 
 * To get started with a trial software, go to https://www.primaryio.com/free-trial/.
 * To request a quote and buy PrimaryIO HDM, go to https://www.primaryio.com/buy-now/.

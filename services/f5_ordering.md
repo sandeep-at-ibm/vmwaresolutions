@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2019-04-14"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -21,17 +21,17 @@ subcollection: vmware-solutions
 # Ordering F5 BIG-IP
 {: #f5_ordering}
 
-You can order the F5 BIG-IP service when you order a new instance with the service included or by adding the service to your existing instance.
+You can include the F5 BIG-IP service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
 
 ## Ordering F5 BIG-IP for a new instance
 {: #f5_ordering-new}
 
-When you [order the instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **F5 BIG-IP** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **F5 BIG-IP** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering F5 BIG-IP for an existing instance
 {: #f5_ordering-existing}
 
-On the [instance details page](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **F5 BIG-IP** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **F5 BIG-IP** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Ordering F5 BIG-IP for private instances
 {: #f5_ordering-private}
@@ -84,9 +84,9 @@ You cannot change the license model after service installation. To change the li
 ## Related links
 {: #f5_ordering-related}
 
-* [F5 BIG-IP overview](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations)
-* [Managing F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_f5)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting {{site.data.keyword.IBM}} Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [F5 BIG-IP overview](/docs/vmwaresolutions?topic=vmware-solutions-f5_considerations)
+* [Managing F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-managing_f5)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
 * [F5 Deployment Guides](https://www.f5.com/services/resources/deployment-guides){:external}

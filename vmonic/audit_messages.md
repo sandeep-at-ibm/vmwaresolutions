@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2019
+  years: 2016, 2020
 
-lastupdated: "2019-07-24"
+lastupdated: "2020-03-31"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Instance history messages
 {: #audit_messages}
 
-All operations that {{site.data.keyword.cloud}} performs for your VMware instance are logged in the instance history. You can use the instance history as a reference to review these operations. For more information about reviewing your instance history, see [Procedure to view the deployment history for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
+All operations that {{site.data.keyword.cloud}} performs for your VMware instance are logged in the instance history. You can use the instance history as a reference to review these operations. For more information about reviewing your instance history, see [Procedure to view the deployment history for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
 
 The following sections provide all of the possible messages that can be issued to your instance history.
 
@@ -239,5 +239,5 @@ The following sections provide all of the possible messages that can be issued t
 ## Related links
 {: #audit_messages-related}
 
-* [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
-* [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events#at-events)
+* [Considerations about changing vCenter Server artifacts](/docs/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events#at-events)

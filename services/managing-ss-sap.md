@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-01-09"
+lastupdated: "2020-04-06"
 
 keywords: security services, request security sap, tech specs sap
 
@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # IBM Security Services for SAP
 {: #managing-ss-sap}
 
-{{site.data.keyword.cloud}} Security Services for SAP offers a cybersecurity solution to automate the monitoring and protection of SAP applications on {{site.data.keyword.cloud_notm}}, and to keep workloads compliant and secure from inside and outside threats.
+{{site.data.keyword.cloud}} Security Services for SAP offer a cybersecurity solution to automate the monitoring and protection of SAP applications on {{site.data.keyword.cloud_notm}}, and to keep workloads compliant and secure from inside and outside threats.
 
 These services, developed between IBM Security and Onapsis (an IBM Business Partner), are designed to implement and configure Onapsis specifically to your environment requirements for continuous workload visibility and protection.
 
@@ -27,7 +27,7 @@ Through continuous monitoring, the Onapsis Security Platform delivers a near rea
 ## Technical specifications for IBM Security Services for SAP
 {: #managing-ss-sap-specs}
 
-IBM Security Services for SAP offers the following features:
+IBM Security Services for SAP offer the following features:
 * Comprehensive understanding of vulnerabilities and potential attack vectors
 * Methods to implement and avoid defects in ABAP code or SAP Transports
 * Identifying configuration vulnerabilities for ABAP, JAVA, and HANA environments
@@ -52,10 +52,9 @@ You can expect the following benefits when you request IBM Security Services for
 2. Scroll down to the **Services** section, and then click **IBM Security Services for SAP** on the **Featured Workload Solutions** card.
 3. On the **IBM Security Services for SAP** page, in the **Engage IBM Security Services** box, click **Request a consultation**.
 
-  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
+  An {{site.data.keyword.vmwaresolutions_short}} representative contacts you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
 
 ## Related links
 {: #managing-ss-sap-related}
 
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [Onapsis SAP Security Dashboards](https://www-356.ibm.com/partnerworld/gsd/solutiondetails.do?&solution=53208){:external}
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

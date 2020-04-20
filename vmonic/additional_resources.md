@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-05"
+lastupdated: "2020-04-17"
 
 keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 
@@ -39,7 +39,7 @@ Review the following resources to get started faster or gain more in-depth techn
 
 Review the architecture of all the [Virtualization Platform Extensions](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture/extensions){:external} such as:
 * FortiGate Security Appliance
-* {{site.data.keyword.cloud}} file and block storage
+* {{site.data.keyword.cloud_notm}} file and block storage
 * NSX Edge Services Gateway
 * Secure virtualization
 * Veeam backup and replication
@@ -62,6 +62,7 @@ Review the architecture of all the [Virtualization Platform Extensions](https://
 
 * [Resources and videos](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture/resources){:external}
 * [Featured resources and case studies](https://www.ibm.com/cloud/vmware){:external}
+* [VMware Solutions Shared videos](https://www.youtube.com/playlist?list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE){:external}
 
 ## VMware documentation
 {: #additional_resources-vmware-doc}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-28"
+lastupdated: "2020-04-14"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 
 Network virtualization provides a network overlay that exists within the virtual layer. Network virtualization provides the architecture with features such as rapid provisioning, deployment, reconfiguration, and destruction of on-demand virtual networks. This design uses the vDS and VMware NSX for vSphere to implement virtual networking.
 
-In this design, the NSX Manager is deployed in the initial cluster. The NSX Manager is assigned a VLAN-backed IP address from the private portable address block, which is designated for management components and configured with the DNS and NTP servers that are presented in [Common services design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_commonservice).
+In this design, the NSX Manager is deployed in the initial cluster. The NSX Manager is assigned a VLAN-backed IP address from the private portable address block, which is designated for management components and configured with the DNS and NTP servers that are presented in [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice).
 
 The following figure shows the placement of the NSX Manager in relation to other components in the architecture.
 
@@ -28,13 +28,13 @@ The following figure shows the placement of the NSX Manager in relation to other
 
 After initial deployment, the {{site.data.keyword.cloud_notm}} automation deploys three NSX controllers within the initial cluster. Each of the controllers is assigned a VLAN-backed IP address from the **Private A** portable subnet that is designated for management components. Additionally, the design creates VM-VM anti-affinity rules to separate the controllers among the hosts in the cluster. The initial cluster must contain a minimum of three nodes to ensure high availability for the controllers.
 
-In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS to enable the use of a virtualized network through VXLAN Tunnel Endpoints (VTEPs). The VTEPs are assigned a VLAN-backed IP address from the **Private A** portable IP address range that is specified for VTEPs as listed in [VLANs](/docs/services/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans). The VXLAN traffic resides on the untagged VLAN and is assigned to the private vDS.
+In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS to enable the use of a virtualized network through VXLAN Tunnel Endpoints (VTEPs). The VTEPs are assigned a VLAN-backed IP address from the **Private A** portable IP address range that is specified for VTEPs as listed in [VLANs](/docs/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-vlans). The VXLAN traffic resides on the untagged VLAN and is assigned to the private vDS.
 
 Then, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Only unicast is used in the transport zone because Internet Group Management Protocol (IGMP) snooping is not configured within the {{site.data.keyword.cloud_notm}}. Two VTEP kernel ports are configured per host on the same VTEP dedicated subnet per VMWare best practice.
 
-After that, if the instance has public network interfaces, two NSX Edge Services Gateway pairs are deployed. One gateway pair is used for outbound traffic from automation components that reside in the private network. A second gateway that is known as the customer-managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. For more information about the NSX Edge Services Gateways that are deployed as part of the solution, see [NSX Edge Services Gateway solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx_overview#nsx_overview).
+After that, if the instance has public network interfaces, two NSX Edge Services Gateway pairs are deployed. One gateway pair is used for outbound traffic from automation components that reside in the private network. A second gateway that is known as the customer-managed edge, is deployed and configured with an uplink to the public network and an interface that is assigned to the private network. For more information about the NSX Edge Services Gateways that are deployed as part of the solution, see [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-nsx_overview#nsx_overview).
 
-Cloud administrators can configure any required NSX components, such as Distributed Logical Router (DLR), logical switches, and firewalls. The available NSX features depend on the NSX license edition that you choose when you order the instance. For more information, see [VMware NSX edition comparison](/docs/services/vmwaresolutions?topic=vmware-solutions-solution-appendix#vmware-nsx-edition-comparison).
+Cloud administrators can configure any required NSX components, such as Distributed Logical Router (DLR), logical switches, and firewalls. The available NSX features depend on the NSX license edition that you choose when you order the instance. For more information, see [VMware NSX edition comparison](/docs/vmwaresolutions?topic=vmware-solutions-solution-appendix#solution-appendix-nsx-editions).
 
 The NSX Manager is installed with the specifications that are listed in the following table.
 
@@ -76,7 +76,7 @@ The vSphere cluster uses two virtual Distributed Switches that are configured as
 | SDDC-Dswitch-Public | External management traffic (north-south) | Enabled | Route based on originating virtual port | 2 | 1,500<br>(default) |
 {: caption="Table 3. Converged cluster distributed switches" caption-side="bottom"}
 
-The names, number, and ordering of the host NICs might vary depending on the {{site.data.keyword.CloudDataCent_notm}} and your host hardware selection.
+The names, number, and ordering of the host NICs might vary depending on the {{site.data.keyword.cloud_notm}} data center and your host hardware selection.
 {:note}
 
 | Parameter          | Setting       |
@@ -135,7 +135,7 @@ The following aspects are not configured:
 ## Public network connectivity
 {: #nsx-v-design-pub-net-config}
 
-There are various reasons that you may need public network connectivity for your instance. This can include access to public update services or other public services for your workload such as geolocation databases or weather data. Your virtualization management and add-on services might also require or benefit from public connectivity. For example, vCenter can update its HCL database and obtain [VMware Update Manager (VUM)](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-intro) updates over the public network. Zerto, Veeam, VMware HCX, F5 BIG-IP, and FortiGate-VM all use public network connectivity for some part of their product licensing, activation, or usage reporting. On top of this, you might use tunnels over the public network for connectivity to your on-premises data center for replication purposes.
+There are various reasons that you may need public network connectivity for your instance. This can include access to public update services or other public services for your workload such as geolocation databases or weather data. Your virtualization management and add-on services might also require or benefit from public connectivity. For example, vCenter can update its HCL database and obtain [VMware Update Manager (VUM)](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro) updates over the public network. Zerto, Veeam, VMware HCX, F5 BIG-IP, and FortiGate-VM all use public network connectivity for some part of their product licensing, activation, or usage reporting. On top of this, you might use tunnels over the public network for connectivity to your on-premises data center for replication purposes.
 
 Typically these communications are selectively routed and NATed to the public network through the management or customer edge services gateway (ESG). However, you might have more security requirements, or might prefer to use a proxy to simplify the path of communication. Additionally, if you deployed your instance with public interfaces disabled, you will not be able to use ESGs to route to the public network.
 
@@ -144,16 +144,16 @@ This architecture allows for the following options for routing or proxying your 
 Method|Description|Limitations
 --|--|--
 Virtualized gateway|Deploy a virtualized gateway (for example, NSX ESG, F5 BIG-IP, FortiGate-VM, or a virtual appliance of your choosing) crossing the private and public network. Configure routing on the source system (for example, vCenter, Zerto, your workload) to direct only public network traffic to the gateway, and configure the gateway according to your needs.|Applicable only to instances with public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
-Virtualized gateway with proxy|Deploy a virtualized gateway as above. Behind this gateway, [deploy a proxy server](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable only to instances with public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed at the gateway.
+Virtualized gateway with proxy|Deploy a virtualized gateway as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmware-solutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable only to instances with public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed at the gateway.
 Hardware gateway|Deploy a [hardware gateway appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) to your management VLAN. Configure the gateway to NAT outbound to the public network according to your needs.|Applicable to all instances, with or without public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
-Hardware gateway with proxy|Deploy a gateway appliance as above. Behind this gateway, [deploy a proxy server](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable to all instances, with or without public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed by the gateway.
+Hardware gateway with proxy|Deploy a gateway appliance as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmware-solutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable to all instances, with or without public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed by the gateway.
 Load balancer|IBM Cloud offers several [load balancer services](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) that you can use to provide inbound network access to your applications.|Applicable to all instances, but limited to inbound traffic patterns.
 {: caption="Table 7. Options for routing or proxying your traffic to the public network" caption-side="bottom"}
 
-**Next topic:** [VMware NSX-T design](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-t-design)
+**Next topic:** [VMware NSX-T design](/docs/vmwaresolutions?topic=vmware-solutions-nsx-t-design)
 
 ## Related links
 {: #nsx-v-design-related}
 
 * [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
-* [NSX Edge Services Gateway solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx_overview#nsx_overview)
+* [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-nsx_overview#nsx_overview)

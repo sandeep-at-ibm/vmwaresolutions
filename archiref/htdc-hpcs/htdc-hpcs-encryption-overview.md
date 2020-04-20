@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-04-17"
 
 subcollection: vmware-solutions
 
@@ -69,7 +69,7 @@ The following are considered to be best practices in key management:
 * Dual control - Dual Control requires that at least two or more individuals control a single process, so no single person is able to access or use the cryptographic keys.
 * Split Knowledge - This concept ensures that no one person knows the complete value of an encryption key. If passphrases are used to create encryption keys, then no single person would know the entire passphrase. Therefore, two or more people would need to be available to create or re-create an encryption key.
 
-**Next topic:** [Encryption options](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-encryption-options)
+**Next topic:** [vCenter Server encryption options](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-encryption-options)
 
 ## Related links
 {: #htdc-hpcs-encryption-overview-related}

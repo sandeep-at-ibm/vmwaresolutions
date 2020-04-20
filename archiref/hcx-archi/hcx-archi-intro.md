@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-10"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -35,7 +35,7 @@ This connection creates a loosely coupled interconnectivity between on-premises 
 * Migration of security policies – if NSX is used on-premises, any security policies or firewalls are
 moved along with the workload.
 
-**Next topic:** [VMware HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-overview)
+**Next topic:** [VMware HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-overview)
 
 ## Related links
 {: #hcx-archi-intro-related}

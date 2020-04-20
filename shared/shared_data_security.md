@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-02-14"
+lastupdated: "2020-04-17"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
@@ -43,7 +43,7 @@ Veeam service backups are to both {{site.data.keyword.cloud_notm}} Infrastructur
 ## High availability and disaster recovery
 {: #shared_data-ha-dr}
 
-The VMware Solutions Shared management service is initially only offered in the {{site.data.keyword.cloud_notm}} US South multi-zone region (MZR). Recovering from potential disasters that affect an entire location requires planning and preparation.
+The VMware Solutions Shared management service is initially only offered in the {{site.data.keyword.cloud_notm}} NA South Multi-Zone Region (MZR) and Limited Availability in the Europe region. Recovering from potential disasters that affect an entire location requires planning and preparation.
 
 * You are responsible for understanding your configuration, customization, and usage of the service.
 * You are responsible for enabling your VMs or virtual applications (vApps) to participate in the provided backup service.
@@ -54,7 +54,7 @@ The VMware Solutions Shared management service is initially only offered in the 
 
 VMware Solutions Shared supports high availability of the vCloud Director service itself. The service achieves high availability automatically and transparently by using the MZR feature that is provided by {{site.data.keyword.cloud_notm}}.
 
-However, you cannot configure workloads that are running VMs and vApps in a high availability manner across multiple {{site.data.keyword.CloudDataCent_notm}} sites. VMware Solutions Shared currently allows workloads to operate in only one {{site.data.keyword.CloudDataCent_notm}} site. Use VMware Solutions Shared with 	{{site.data.keyword.vmwaresolutions_short}} Dedicated to achieve high availability. You can deploy VMware Solutions Dedicated in six {{site.data.keyword.CloudDataCent_notm}} regions.
+However, you cannot configure workloads that are running VMs and vApps in a high availability manner across multiple {{site.data.keyword.cloud_notm}} data center sites. VMware Solutions Shared currently allows workloads to operate in only one {{site.data.keyword.cloud_notm}} data center site. Use VMware Solutions Shared with {{site.data.keyword.vmwaresolutions_short}} Dedicated to achieve high availability. You can deploy VMware Solutions Dedicated in six {{site.data.keyword.cloud_notm}} data center regions.
 
 ### Disaster recovery
 {: #shared_data-dr}
@@ -68,5 +68,5 @@ Your disaster recovery plan includes knowing, preserving, and being prepared to 
 ## Related links
 {: #shared_data-related}
 
-* [VMware Solutions Shared overview](/docs/services/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

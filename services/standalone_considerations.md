@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-03-30"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -31,7 +31,7 @@ A vCenter Server instance with HCX is limited to three simultaneous connections 
 
 The HCX components must be installed both on {{site.data.keyword.cloud}} and in your on-premises vSphere environment. It is recommended that you install the HCX service into your vCenter Server instance before you install the on-premises HCX instance.
 
-For more information, see [Considerations when you install HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations-install).
+For more information, see [Considerations when you install HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations-install).
 
 **Notes for HCX installations:**
 
@@ -48,7 +48,7 @@ For full HCX functionality, you need at least five private IP addresses that hav
 {: #standalone_considerations-deploy}
 
 You must complete the following tasks for a successful installation of the on-premises HCX instance:
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, order the on-premises HCX instance. For more information, see [Ordering on-premises HCX instances](/docs/services/vmwaresolutions?topic=vmware-solutions-standalone_orderingserviceinstances).
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, order the on-premises HCX instance. For more information, see [Ordering on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_orderingserviceinstances).
 2. In the **HCX Cloud Console**, complete the following steps:
     1. Click the **Administration** tab.
     2. On the **System Updates** tab, click **REQUEST DOWNLOAD LINK**.
@@ -57,7 +57,7 @@ You must complete the following tasks for a successful installation of the on-pr
 
    You must deploy the on-premises HCX Manager on a private network and allow it to access the public network. You can use an NSX Edge, Vyatta, or similar gateways to allow internet access to the on-premises HCX Manager. If the gateways used for private network access and public network access are different, it is recommended that you use the default gateway to allow for public network access and the on-premises **HCX Manager Admin Console** to create a static route for private network access.
    {:note}
-4. After the HCX Manager deployment is completed, use the **HCX Manager Admin Console** to activate the on-premises HCX Manager. To obtain an activation key for the on-premises HCX Manager, order an on-premises HCX instance in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering on-premises HCX instances](/docs/services/vmwaresolutions?topic=vmware-solutions-standalone_orderingserviceinstances).
+4. After the HCX Manager deployment is completed, use the **HCX Manager Admin Console** to activate the on-premises HCX Manager. To obtain an activation key for the on-premises HCX Manager, order an on-premises HCX instance in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_orderingserviceinstances).
 5. If you used a self-signed SSL certificate when ordering the HCX service, you must import the certificate into the on-premises HCX Manager by completing the following steps:
     1. In the on-premises **HCX Manager Admin Console**, click the **Administration** tab.
     2. From the left navigation pane, click **Trusted CA Certificate**, and then click **IMPORT** on the right.
@@ -81,13 +81,13 @@ Review the following considerations before you delete an HCX instance that was o
    {:important}
 2. In the {{site.data.keyword.vmwaresolutions_short}} console, delete the on-premises HCX instance that was ordered to obtain the activation key for the on-premises HCX Manager. Ensure that the deleted instance is no longer available in the console before you proceed to the next step.
 
-   For more information, see [Deleting on-premises HCX instances](/docs/services/vmwaresolutions?topic=vmware-solutions-standalone_deletingserviceinstances).
+   For more information, see [Deleting on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_deletingserviceinstances).
 3. In the VMware vSphere Web Client, delete the on-premises HCX Manager.
 
 ## Related links
 {: #standalone_considerations-related}
 
-* [Viewing on-premises HCX instances](/docs/services/vmwaresolutions?topic=vmware-solutions-standalone_viewingserviceinstances)
-* [Glossary of HCX terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
+* [Viewing on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_viewingserviceinstances)
+* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

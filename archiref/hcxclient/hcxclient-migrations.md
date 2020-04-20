@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-08"
 
 subcollection: vmware-solutions
 
@@ -115,7 +115,7 @@ After confidence is built around the function of HCX, bulk migration must be emp
 
 NFS is typically employed for use to share data across many servers, such as web server content. iSCSI can be employed across VM nodes that consist of an application cluster such as email or RDBMS and is typically more latency sensitive than NFS.
 
-In either case, if latency can be kept low to the {{site.data.keyword.CloudDataCent_notm}} (< ~7 ms for iSCSI and whatever the application tolerates for NFS) and allowing that the application can operate with bandwidth of ~1 Gbps or less, then the NAS network can be stretched with HCX into an {{site.data.keyword.cloud_notm}} location. After this is done, the VMs can be migrated or vMotioned with HCX.
+In either case, if latency can be kept low to the {{site.data.keyword.cloud_notm}} data center (< ~7 ms for iSCSI and whatever the application tolerates for NFS) and allowing that the application can operate with bandwidth of ~1 Gbps or less, then the NAS network can be stretched with HCX into an {{site.data.keyword.cloud_notm}} location. After this is done, the VMs can be migrated or vMotioned with HCX.
 
 Post migration, iSCSI volumes can be mirrored with the OS to another local cloud storage solution and NFS data can be replicated to any cloud solution. The considerations are:
 - Latency (iSCSI or application tolerance for NFS)
@@ -150,13 +150,13 @@ The following are considerations and implications:
 - Applications behind a load balancer that uses an internal routable IP can require routing changes if they cannot be moved together or it is not desirable to do so. For example, if there is too much perceived risk by involving too many applications in one swing.
 - VMware admins, network admins (including customers and WAN vendors), and application owners need to be involved, even if there's no planned impact on a particular system or network equipment.
 
-**Next topic:** [Monitoring parameters and components](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+**Next topic:** [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
 
 ## Related links
 {: #hcxclient-migrations-related}
 
-* [Glossary of HCX components and terms](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX Client deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [HCX troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
+* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
+* [HCX Client deployment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+* [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)

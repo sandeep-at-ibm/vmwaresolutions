@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-04-17"
 
 subcollection: vmware-solutions
 
@@ -38,22 +38,21 @@ This reference architecture is based on the HTDC and IBM HPCS option, and the fo
 
 | Item | HTDC | vSphere Encryption | vSAN Encryption | Notes |
 | ---- | ---- | ------------------ | --------------- | ----- |
-| Encryption travels with VM  | Yes | No. VM migrations to other data stores are in clear text. | Limited, not across vCenters | Critical for VMs that are mobile, especially across physical locations or public cloud providers. You don't know and can't trust the networks in-between. |
-| Encryption scope | VM | Data Store only | Hypervisor only | The higher up the stack encryption occurs, the higher the security level/fewer attack vectors. |
-| Workload boot/ clone protection | Yes | No | No | Ensures cloned workloads. VMs don't work unless authorized. |
-| Encrypted backups | Yes | No | No | Automatic encryption for backed up VMs (via VMware or other backup providers). |
-| Encryption Granularity | per VM | Per vSAN cluster | Per VM | More granularity provides more secure deployment options. |
-| Dedupe/compression | Single-Encryption Key | Flash storage only |  | De-duplication reduces storage requirements but hybrid storage is less expensive. |
-| Encrypt/rekey without downtime | Yes | No | No | Frequent rekeying is fundamental to security compliance. HyTrust can perform rekeying  automatically, while VMs continue to run. |
-| Secure workload mobility On-premises | vSphere/VSAN/Bare Metal/Any Hypervisor | Within the vSAN cluster only | Within vSphere only | With HyTrust, policies follow the workload across any platform. |
+| Compatible with replication products: Zerto, HCX, and vSphere Replication  | Yes | Yes | Yes| |
+| Encryption scope | VM | Hypervisor only | Data Store only | The higher up the stack encryption occurs, the higher the security level and fewer attack vectors. |
+| Workload boot/clone protection | Yes | No | No | Ensures cloned workloads. VMs don't work unless authorized. |
+| Encrypted backups with Veeam | Yes | Yes | Yes | |
+| Encryption granularity | Per VM | Per VM | Per vSAN cluster | More granularity provides more secure deployment options. |
+| vSAN Deduplication and Compression | No | No | Yes | Deduplication reduces storage requirements. |
+| Encrypt/rekey without downtime | Yes | No | No | Frequent rekeying is fundamental to security compliance. HyTrust can perform rekeying automatically, while VMs continue to run. |
+| Secure workload mobility | vSphere/VSAN/Bare Metal/Any Hypervisor | Within vSphere only | Within the vSAN cluster only | With HyTrust, policies follow the workload across any platform. |
 | Secure workload mobility public cloud | AWS, Azure, IBM | No | No | Operational simplicity: one solution for encryption across all platforms, less chance of mistakes. |
 | Transparency | Fully transparent | Limited | Limited | vSphere and VSAN provide limited visibility into clones and snapshots. |
 | Geo-Fencing (GDPR) | Yes | No | No | HyTrust BoundaryControl integration |
 | NIST/PCI compliant live rekey | Yes | No | No | Allows NIST-compliant rekeying without downtime. |
-| Encrypted workload migration | Yes | Clear text VM migrations between data stores | Only within the same vCenter Server |  |
 {: caption="Table 1. Encryption features comparison" caption-side="bottom"}
 
-**Next topic:** [HyTrust overview](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-hytrust-overview)
+**Next topic:** [HyTrust Workload Security Platform overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-hytrust-overview)
 
 ## Related links
 {: #htdc-hpcs-encryption-options-related}

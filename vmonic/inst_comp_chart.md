@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-10"
+lastupdated: "2020-04-07"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -29,7 +29,7 @@ Review the following chart to understand the differences in functions support fo
 | Remove ESXi servers | Supported | Supported. Automated configuration not included |
 | Multi-cluster support | Maximum number depends on VMware sizing guidelines | Supported. Automated configuration not included |
 | Client-managed updating and patching of VMware stack | Client-managed updates: Native VMware tools (VMware Update Manager)[^nsxv1] | Client-managed updates:<br/>Native VMware tools (VMware Update Manager) |
-| Backup and restore | Manually using IBM Spectrum Protect Plus or Veeam[^nsxv2] | Backup and restore solution not included |
+| Backup and restore | Manually using IBM Spectrum Protect Plus or Veeam[^nsxv2] | The backup and restore solution isn't included |
 | Software-defined networking | NSX Base, Advanced, or Enterprise | NSX Standard, Base, or Enterprise. Automated configuration not included |
 | BYOL for vSphere and vSAN | Fully supported per cluster | Supported |
 | BYOL for vCenter and NSX | Fully supported per instance | Supported |
@@ -43,19 +43,19 @@ Review the following chart to understand the differences in functions support fo
 
 [^automation]: According to a validated design and with verification during deployment.
 
-[^servers]: To increase beyond 32 ESXi servers in a vSAN cluster, see [How many ESXi servers can I add to a cluster?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-cluster).
+[^servers]: To increase beyond 32 ESXi servers in a vSAN cluster, see [How many ESXi servers can I add to a cluster?](/docs/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-cluster)
 
 [^nsxv1]: NSX-V only
 
 [^nsxv2]: NSX-V only
 
-[^nsxv3]: NSX-V only
+[^nsxv3]: Only a number of add-on services are supported for NSX-T
 
 ## Related links
 {: #inst_comp_chart-related}
 
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
-* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
-* [VMware vSphere overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview)
-* [vCenter Server BOM](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [VMware vSphere BOM](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_bom)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [VMware vSphere overview](/docs/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview)
+* [vCenter Server BOM](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
+* [VMware vSphere BOM](/docs/vmwaresolutions?topic=vmware-solutions-vs_bom)

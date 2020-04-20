@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-04-17"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -22,14 +22,16 @@ subcollection: vmware-solutions
 # HyTrust CloudControl overview
 {: #htcc_considerations}
 
-The HyTrust CloudControl service enforces and controls compliance against security standards, which includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or ESXi server within the {{site.data.keyword.CloudDataCent}}.
+The HyTrust CloudControl service enforces and controls compliance against security standards, which includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or ESXi server within the {{site.data.keyword.cloud}} data center.
 {: shortdesc}
-
-This service is available only to instances that are running vSphere 6.5. The current HyTrust CloudControl version that is installed is 5.6.
-{:note}
 
 ## Technical specifications for HyTrust CloudControl
 {: #htcc_considerations-specs}
+
+The following versions of the HyTrust CloudControl service are installed, based on the NSX networking solution type of your instance:
+
+* 5.6 for vCenter Server with NSX-V
+* 6.1 for vCenter Server with NSX-T
 
 The following components are ordered and included in the HyTrust CloudControl service:
 
@@ -38,7 +40,9 @@ The following components are ordered and included in the HyTrust CloudControl se
 
 * CPU: 4 vCPU
 * RAM: 16 GB
-* Disk: 70 GB VMDK resident on vSAN in converged cluster
+* Disk:
+  * For version 5.6: 70 GB VMDK resident on vSAN
+  * For version 6.1 or higher: 186 GB VMDK resident on vSAN
 * Network: Placed on VLAN-backed private portable network specified for management
 
 ### High availability
@@ -66,8 +70,8 @@ Before you remove the HyTrust CloudControl service, ensure that you disable **Ro
 ## Related links
 {: #htcc_considerations-related}
 
-* [Ordering HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_ordering)
-* [Managing HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-managinghtcc)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Ordering HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_ordering)
+* [Managing HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtcc)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

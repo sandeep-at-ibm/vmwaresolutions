@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-25"
+lastupdated: "2020-03-13"
+
+subcollection: vmware-solutions
+
 
 ---
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-15"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -28,17 +28,17 @@ To order {{site.data.keyword.cloud_notm}} Object Storage, complete the following
 ## Creating an Object Storage instance
 {: #icos_ordering-obj}
 
-To create an Object Storage instance, see [Creating a new service instance](/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance). Follow the steps and return to this section to continue with the following tasks.
+To create an Object Storage instance, see [Creating a new service instance](/docs/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance). Follow the steps and return to this section to continue with the following tasks.
 
 ## Creating a bucket
 {: #icos_ordering-bucket}
 
-To create a bucket, see [Create some buckets to store your data](/docs/services/cloud-object-storage?topic=cloud-object-storage-getting-started#gs-create-buckets). Follow the steps and return to this section to continue with the following tasks.
+To create a bucket, see [Create some buckets to store your data](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started#gs-create-buckets). Follow the steps and return to this section to continue with the following tasks.
 
 ## Creating service credentials
 {: #icos_ordering-service-cred}
 
-To create service credentials, including HMAC credentials, see [Service credentials](/docs/services/cloud-object-storage/hmac?topic=cloud-object-storage-service-credentials#using-hmac-credentials). Follow the steps and return to this section to continue with the following tasks.
+To create service credentials, see [Service credentials](/docs/cloud-object-storage/hmac?topic=cloud-object-storage-service-credentials). Follow the steps and return to this section to continue with the following tasks.
 
 ## Adding a scale-out repository
 {: #icos_ordering-scale-repo}
@@ -55,9 +55,9 @@ For more information, see [Managing capacity tier data](https://helpcenter.veeam
 ## Related links
 {: #icos_ordering-related}
 
-* [Veeam overview](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
-* [Ordering Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_ordering)
-* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Veeam overview](/docs/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
+* [Ordering Veeam](/docs/vmwaresolutions?topic=vmware-solutions-veeam_ordering)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
 * [Veeam on {{site.data.keyword.cloud_notm}} - Demos](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud/){:external}

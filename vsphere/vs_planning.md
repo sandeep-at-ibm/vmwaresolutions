@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-17"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Requirements and planning for VMware vSphere
 {: #vs_planning}
 
-Review the following requirements before you order a VMware vSphere cluster. Plan your VMware vSphere clusters based on the {{site.data.keyword.CloudDataCent}} location and your workload capacity requirements.
+Review the following requirements before you order a VMware vSphere cluster. Plan your VMware vSphere clusters based on the {{site.data.keyword.cloud}} data center location and your workload capacity requirements.
 
 You are responsible for setting up the environment, installing, and configuring various VMware components after the ESXi servers are deployed. The following examples are VMware components: VMware vCenter Server, VMware NSX, and VMware vSAN.
 {:note}
@@ -28,20 +28,20 @@ You are responsible for setting up the environment, installing, and configuring 
 ## IBM Cloud account requirements
 {: #vs_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req).
 
-## IBM Cloud Data Center availability
+## IBM Cloud data center availability
 {: #vs_planning-dc-availability}
 
-The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in {{site.data.keyword.CloudDataCents_notm}} that meet the requirements. The following {{site.data.keyword.CloudDataCent_notm}} are available for vSphere deployment.
+The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements. The following {{site.data.keyword.cloud_notm}} data centers are available for vSphere deployment.
 
-Cascade Lake {{site.data.keyword.baremetal_short}} are available on Multi-Zone Region
-{{site.data.keyword.CloudDataCents_notm}}. For more information, see [Multi-Zone Region (MZR) Overview](/docs/infrastructure/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
+Cascade Lake bare metal servers are available on Multi-Zone Region
+{{site.data.keyword.cloud_notm}} data centers. For more information, see [Multi-Zone Region (MZR) Overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
 {:note}
 
-| {{site.data.keyword.CloudDataCent_notm}} | Location | Region | Server options |
+| {{site.data.keyword.cloud_notm}} data center | Location | Region | Server options |
 |:----------------------|:---------|:---------------|:--------------|
 | AMS03 | Amsterdam | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
 | CHE01 | Chennai | Asia-Pacific | Skylake, SAP-certified[^sap-che01], Broadwell |
@@ -57,7 +57,6 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | LON04 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
 | LON05 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
 | LON06 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| MEL01 | Melbourne | Asia-Pacific | Skylake, SAP-certified[^sap-mel01], Broadwell |
 | MEX01 | Queretaro | NA South | Skylake, SAP-certified[^sap-mex01], Broadwell |
 | MIL01 | Milan | Europe | Skylake, SAP-certified[^sap-mil01], Broadwell |
 | MON01 | Montreal | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01], Broadwell |
@@ -78,11 +77,9 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | WDC04 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell |
 | WDC06 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell |
 | WDC07 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell |
-{: caption="Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere clusters" caption-side="top"}
+{: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vSphere clusters" caption-side="top"}
 
 [^sap-che01]: vSphere 6.5 only
-
-[^sap-mel01]: vSphere 6.5 only
 
 [^sap-mex01]: vSphere 6.5 only
 
@@ -97,6 +94,6 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 ## Related links
 {: #vs_planning-related}
 
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
-* [Scaling existing clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
-* [Scaling existing clusters created outside of the console](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
+* [Scaling existing clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Scaling existing clusters created outside of the console](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderingforclustersoutside)

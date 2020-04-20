@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -20,9 +20,9 @@ subcollection: vmware-solutions
 # Attached storage infrastructure design
 {: #storage-infra-design}
 
-{{site.data.keyword.vmwaresolutions_full}} provides VMware technology that is deployed in an automated way within {{site.data.keyword.CloudDataCents_notm}} across the globe. Within the {{site.data.keyword.cloud_notm}} solutions portfolio, the base VMware vCenter Server offering consists of up to 10 clusters each containing up to 59 vSphere hosts, a single Platform Services Controller (PSC), and a vCenter Server Appliance capable of managing up to 400 hosts and 4,000 virtual machines.
+{{site.data.keyword.vmwaresolutions_full}} provides VMware technology that is deployed in an automated way within {{site.data.keyword.cloud_notm}} data centers across the globe. Within the {{site.data.keyword.cloud_notm}} solutions portfolio, the base VMware vCenter Server offering consists of up to 10 clusters each containing up to 59 vSphere hosts, a single Platform Services Controller (PSC), and a vCenter Server Appliance capable of managing up to 400 hosts and 4,000 virtual machines.
 
-The architecture that is presented here complements the vCenter Server solution by adding attached storage as a shared storage device for the environment. The attached storage device is located within the same {{site.data.keyword.CloudDataCent_notm}} as the vCenter Server deployment and consists of a single Network file system (NFS) share or multiple NFS exports from the {{site.data.keyword.cloud_notm}}.
+The architecture that is presented here complements the vCenter Server solution by adding attached storage as a shared storage device for the environment. The attached storage device is located within the same {{site.data.keyword.cloud_notm}} data center as the vCenter Server deployment and consists of a single Network file system (NFS) share or multiple NFS exports from the {{site.data.keyword.cloud_notm}}.
 
 The following graphic provides the overall architecture of the attached storage on vCenter Server deployment.
 
@@ -41,7 +41,7 @@ Physical networking is handled by {{site.data.keyword.cloud_notm}}. The followin
 ### IBM Cloud network overview
 {: #storage-infra-design-ibm-cloud-net-ovw}
 
-The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview).
+The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview).
 
 For more information about the {{site.data.keyword.cloud_notm}} network, see [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:external}.
 
@@ -55,7 +55,7 @@ Review the following information for a description of the services network that 
 ### VLANs
 {: #storage-infra-design-vlans}
 
-For more information about the VLANs, see the _Physical network design_ section in [Physical infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure).
+For more information about the VLANs, see the _Physical network design_ section in [Physical infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure).
 
 ## Physical storage design
 {: #storage-infra-design-phys-storage-design}
@@ -76,13 +76,13 @@ Endurance is available in three IOPS performance tiers to support varying applic
 After an NFS share is ordered, it can be resized or reconfigured to allow for more or less IOPS.
 {:note}
 
-For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
+For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 
-In addition to the tiers of storage, {{site.data.keyword.cloud_notm}} Endurance storage supports a wide selection of application needs, including snapshots and replication, and encryption at rest in the {{site.data.keyword.CloudDataCent_notm}} locations.
+In addition to the tiers of storage, {{site.data.keyword.cloud_notm}} Endurance storage supports a wide selection of application needs, including snapshots and replication, and encryption at rest in the {{site.data.keyword.cloud_notm}} data center locations.
 
-**Next topic:** [Attached storage infrastructure management](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-infra-mgmt)
+**Next topic:** [Attached storage infrastructure management](/docs/vmwaresolutions?topic=vmware-solutions-storage-infra-mgmt)
 
 ## Related links
 {: #storage-infra-design-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)

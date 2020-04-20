@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-25"
+lastupdated: "2020-04-14"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -18,17 +18,17 @@ subcollection: vmware-solutions
 # Ordering IBM Spectrum Protect Plus
 {: #spp_ordering}
 
-You can order the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus service while ordering a new instance with the service included or by adding the service to your existing instance.
+You can include the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
 
 ## Ordering IBM Spectrum Protect Plus for a new instance
 {: #spp_ordering-new}
 
-When you [order the instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **IBM Spectrum Protect Plus** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **IBM Spectrum Protect Plus** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering IBM Spectrum Protect Plus for an existing instance
 {: #spp_ordering-existing}
 
-On the [instance details page](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **IBM Spectrum Protect Plus** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **IBM Spectrum Protect Plus** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## IBM Spectrum Protect Plus service configuration
 {: #spp_ordering-config}
@@ -68,9 +68,9 @@ The deployment of IBM Spectrum Protect Plus is automated. Whether you order an i
 ## Related links
 {: #spp_ordering-related}
 
-* [IBM Spectrum Protect Plus overview](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_considerations)
+* [IBM Spectrum Protect Plus overview](/docs/vmwaresolutions?topic=vmware-solutions-spp_considerations)
 * [IBM Spectrum Protect Plus Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
-* [Managing IBM Spectrum Protect Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-managingspp)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Managing IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmware-solutions-managingspp)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

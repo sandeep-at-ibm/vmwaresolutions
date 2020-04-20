@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-31"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
@@ -50,6 +50,6 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_hybrid_deletinginstance_multi-related}
 
-* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_deletinginstance)
-* [Ordering, viewing, and removing services from vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservices)
+* [Deleting vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [Ordering, viewing, and removing services from vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservices)
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

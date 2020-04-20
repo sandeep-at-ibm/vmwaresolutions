@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-15"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -144,7 +144,7 @@ The following figure depicts a high-level component diagram of the cloud gateway
 
 The second component that is deployed is the WAN Optimization appliance. While the WAN Optimization appliance is optional, it performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns.
 
-Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the {{site.data.keyword.cloud_notm}}. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer resides on vSAN storage if present, or on Endurance storage 
+Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the {{site.data.keyword.cloud_notm}}. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer resides on vSAN storage if present, or on Endurance storage
 with 2,000 IOPS. The following table shows the sizing specification for the WAN Optimization appliance.
 
 | Component | Configuration |
@@ -176,9 +176,9 @@ The L2C appliance is deployed on the management VLAN as well as the public VLAN.
 
 ![L2 Concentrator deployment](../../images/l2_concentrator_deployment.svg "L2 Concentrator deployment"){: caption="Figure 4. L2 Concentrator deployment" caption-side="bottom"}
 
-**Next topic:** [Port access requirements for VMware HCX](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req)
+**Next topic:** [Port access requirements for VMware HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req)
 
 ## Related links
 {: #hcx-archi-target-related}
 
-* [Installing and configuring on the source](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)
+* [Installing and configuring on the source](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)

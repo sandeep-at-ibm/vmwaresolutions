@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-03"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -75,7 +75,7 @@ The following subnets are used for the purposes of the Management ESG:
 
 | Interface | Interface type | IP v4 subnet type | Range | Description |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Public Uplink | Uplink | {{site.data.keyword.cloud_notm}} portable public | /30 – renders one assignable IP address | Public internet facing interface |
+| Public Uplink | Uplink | {{site.data.keyword.cloud_notm}} portable public | /28 – renders 13 assignable IP addresses | Public internet facing interface |
 | Private Uplink | Uplink | {{site.data.keyword.cloud_notm}} portable private (existing management) | /26 – renders 61 assignable IP addresses | Internal private network facing interface |
 | Internal | Internal | Link local | 169.254.0.0/16 | Internal interface used for ESG HA pair communication |
 {: caption="Table 3. NSX ESX IP configuration" caption-side="bottom"}
@@ -145,7 +145,7 @@ The topology in the following figure consists of the following NSX components:
 * Distributed Logical Router (DLR)
 * VXLAN (L2 over L3)
 
-![Network flow diagram](../../images/customer_network_flow_diagram.svg "Network flow diagram"){: caption="Figure 3. Example network flow diagram" caption-side="bottom"}
+![Example network flow diagram](../../images/customer_network_flow_diagram.svg "Example network flow diagram"){: caption="Figure 3. Example network flow diagram" caption-side="bottom"}
 
 ### Edge interfaces for the IBM workload NSX edge
 {: #nsx-networking_services-edge-interfaces-workload}
@@ -164,7 +164,7 @@ In this design, a DLR is employed to allow for potential East-West routing betwe
 
 | Interface | Interface type | Connected to | Description |
 |:--------- |:-------------- |:------------ |:----------- |
-| Transit Uplink | Uplink | Workload-Trasit | Transit VXLAN between the Workload ESG and the Workload DLR |
+| Transit Uplink | Uplink | Workload-Transit | Transit VXLAN between the Workload ESG and the Workload DLR |
 | Workload Uplink | Uplink | Workload | VXLAN for Workload connections |
 | Internal | Internal | Workload HA VXLAN | Internal interface used for ESG HA pair heartbeat |
 {: caption="Table 8. DLR interfaces" caption-side="bottom"}
@@ -176,7 +176,7 @@ The following subnets are used for the purposes of the Workload ESG:
 
 | Interface | Interface type | IP v4 subnet type | Range | Description |
 |:--------- |:-------------- |:----------------- |:----- |:----------- |
-| Public Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portable public | /30 – renders one assignable IP address | Public internet-facing interface (customer can order more IP addresses separately) |
+| Public Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portable public | /28 – renders 13 assignable IP addresses | Public internet-facing interface (customer can order more IP addresses separately) |
 | Private Uplink (ESG) | Uplink | {{site.data.keyword.cloud_notm}} portable private (existing management) | /26 – renders 61 assignable IP addresses | Internal private network-facing interface |
 | Internal (ESG and DLR) | Internal | Link local | 169.254.0.0/16 | Internal interface used for ESG HA pair communication |
 | Transit Uplink (ESG and DLR) | Uplink | Assigned by customer | TBD | Transit network connection for ESG to DLR |
@@ -188,7 +188,7 @@ The following subnets are used for the purposes of the Workload ESG:
 
 NAT is employed on the Workload ESG for the means of allowing network traffic to traverse between one IP address space and another. For the workload ESG, NAT is required not only to allow for communication to internet destinations, but also to communicate to any {{site.data.keyword.cloud_notm}} sourced IP ranges. For this design, workload traffic is allowed to exit to the internet, but not to the management or any {{site.data.keyword.cloud_notm}} networks. As such, only a SNAT need be defined on the Workload ESG. The entire workload portable subnet is configured to traverse through the SNAT.
 
-While it is possible to use NAT to allow for workload communication across multiple instances of vCenter Server, doing this becomes impractical when many workloads need to be connected across instances. For examples of using advanced NSX capabilities to create an L2 overly transit network across vCeter Server instances, see [Multi-site architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-multi_site).
+While it is possible to use NAT to allow for workload communication across multiple instances of vCenter Server, doing this becomes impractical when many workloads need to be connected across instances. For examples of using advanced NSX capabilities to create an L2 overly transit network across vCeter Server instances, see [Multi-site architecture](/docs/vmwaresolutions?topic=vmware-solutions-nsx-multi_site).
 
 | Applied on interface | Source IP range | Translated source IP | NAT Enabled or Disabled |
 |:-------------------- |:--------------- |:-------------------- |:----------------------- |
@@ -239,9 +239,9 @@ The Workload topology ESG and DLR HA pairs require L2 segments (VXLAN) for the c
 
 By default, logging is enabled on all new NSX Edge appliances. The default logging level is NOTICE.
 
-**Next topic:** [Multi-site architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-multi_site)
+**Next topic:** [Multi-site architecture](/docs/vmwaresolutions?topic=vmware-solutions-nsx-multi_site)
 
 ## Related links
 {: #nsx-networking_services-related}
 
-* [NSX Edge Services Gateway design](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx_design)
+* [NSX Edge Services Gateway design](/docs/vmwaresolutions?topic=vmware-solutions-nsx_design)

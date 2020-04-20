@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-03-30"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -30,11 +33,11 @@ vRealize Operations Manager allows you to monitor VMware objects for violations 
 
 * [VMware security hardening guides](https://www.vmware.com/uk/security/hardening-guides.html){:external}
 <!-- * [vSphere security](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-security-guide.pdf){:external} -->
-* [Fortigate Security Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fsa_considerations)
-* [Fortigate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations)
-* [F5 BIG-IP](/docs/services/vmwaresolutions?topic=vmware-solutions-f5_considerations)
-* [HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
-* [HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
-* [HyTrust KeyControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htkc_considerations)
-* [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
-* [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)
+* [Fortigate Security Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fsa_considerations)
+* [Fortigate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations)
+* [F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-f5_considerations)
+* [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
+* [HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+* [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmware-solutions-htkc_considerations)
+* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
+* [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-intro)

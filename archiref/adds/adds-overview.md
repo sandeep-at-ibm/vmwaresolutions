@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-10-31"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -78,12 +78,12 @@ There are three forest models:
 * Resource forest model – In this model, a separate forest is used to manage resources and these forests do not contain user accounts other than the service administrators. Forest trusts are established so that users from other forests can access the resources that are contained in the resource forest. This model provides service isolation.
 * Restricted access forest model – In this model, a separate forest is created to contain user accounts and resource that should be isolated from the rest of the enterprise. Users from one forest cannot be granted access to the other forest as no trust exists between the forests. This model is often adopted by service providers who can  provide infrastructure management services, for example. In this model, if users need access to resources in both forests, users have an account in one forest and a separate user account in the other forest. This model provides data isolation. The restricted access forest model is created when you provision a IC4VS vCenter Server instance.
 
-**Next topic:** [IBM Cloud for VMware Solutions infrastructure domain](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-infra-domain)
+**Next topic:** [IBM Cloud for VMware Solutions infrastructure domain](/docs/vmwaresolutions?topic=vmware-solutions-adds-infra-domain)
 
 ## Related links
 {: #adds-overview-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
-* [Getting started with {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)
-* [{{site.data.keyword.vmwaresolutions_short}}: Take a look under the hood](/docs/services/vmwaresolutions?topic=vmware-solutions-under_the_hood)
-* [More limitations and considerations - Windows automatic installation of updates](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations-windows-update)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Getting started with {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-getting-started)
+* [{{site.data.keyword.vmwaresolutions_short}}: Take a look under the hood](/docs/vmwaresolutions?topic=vmware-solutions-under_the_hood)
+* [More limitations and considerations - Windows automatic installation of updates](/docs/vmwaresolutions?topic=vmware-solutions-trbl_limitations#trbl_limitations-windows-update)

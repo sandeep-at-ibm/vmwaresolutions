@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-03-30"
 
 keywords: KMIP for VMware, view KMIP stand-alone, KMIP for VMware status
 
@@ -43,7 +43,7 @@ The instance status can have a range of options.
 ## Related links
 {: #kmip_standalone_viewing-related}
 
-* [Ordering KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering)
-* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
-* [Deleting KMIP for VMware instances](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/services/vmwaresolutions?topic=vmware-solutions-at-events)
+* [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering)
+* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
+* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events)

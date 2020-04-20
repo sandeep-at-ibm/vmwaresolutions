@@ -2,14 +2,13 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-06"
+lastupdated: "2020-03-30"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -102,7 +101,7 @@ Review the following considerations before you remove the IBM Spectrum Protect P
 {: #spp_considerations-related}
 
 * [IBM Spectrum Protect Plus Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
-* [Managing IBM Spectrum Protect Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-managingspp)
-* [Ordering IBM Spectrum Protect Plus](/docs/services/vmwaresolutions?topic=vmware-solutions-spp_ordering)
+* [Managing IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmware-solutions-managingspp)
+* [Ordering IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmware-solutions-spp_ordering)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

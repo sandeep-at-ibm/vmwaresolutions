@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-12"
+lastupdated: "2020-04-01"
 
 keywords: FAQ, license, BYOL
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -17,17 +16,19 @@ subcollection: vmware-solutions
 {:note: .note}
 {:important: .important}
 {:faq: data-hd-content-type='faq'}
+{:support: data-reuse='support'}
 
 # FAQ about licensing and Bring Your Own License
 {: #faq_byol}
 
 Find answers to frequently asked questions about licensing, including the Bring Your Own License (BYOL) feature of {{site.data.keyword.vmwaresolutions_full}}.
 
-## What is BYOL?
+## What is Bring Your Own License (BYOL) and is it supported for VMware perpetual licenses?
 {: #faq_byol-def}
 {: faq}
+{: support}
 
-BYOL is a feature available to VMware vCenter Server and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components:
+Bring Your Own License (BYOL) is a feature available to VMware vCenter Server and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -44,7 +45,7 @@ The BYOL feature is not available to Business Partner users.
 
 After an order to create a new cluster for VMware vSphere is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
-After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters).
+After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters).
 
 ## What license editions and CPUs are required for BYOL?
 {: #faq_byol-license-cpu-reqs}
@@ -126,7 +127,7 @@ IBM Support continues to be your point of contact for any instance configuration
 {: #faq_byol-vsphere}
 {: faq}
 
-{{site.data.keyword.baremetal_short}} are provisioned with VMware vSphere installed and with vSphere licenses included. If you selected BYOL for vSphere, a process is automatically initiated upon instance deployment to remove the included vSphere licenses. As part of this process, after you install your BYOL licenses, they are verified. Upon verification and confirmation, the included vSphere license charges are credited to your {{site.data.keyword.cloud_notm}} account.
+{{site.data.keyword.cloud_notm}} bare metal servers are provisioned with VMware vSphere installed and with vSphere licenses included. If you selected BYOL for vSphere, a process is automatically initiated upon instance deployment to remove the included vSphere licenses. As part of this process, after you install your BYOL licenses, they are verified. Upon verification and confirmation, the included vSphere license charges are credited to your {{site.data.keyword.cloud_notm}} account.
 
 ## Can you still use the existing manual process for BYOL?
 {: #faq_byol-manual-process}
@@ -137,5 +138,5 @@ With the introduction of the BYOL feature, continued use of the manual process i
 ## Related links
 {: #faq_byol-related}
 
-* [Accessing the console](/docs/services/vmwaresolutions?topic=vmware-solutions-loginmethod)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Accessing the console](/docs/vmwaresolutions?topic=vmware-solutions-loginmethod)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-06"
+lastupdated: "2020-04-08"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -62,7 +62,7 @@ The base infrastructure has the following specifications:
 
 The tools and technology architecture has the following specifications:
 * vRealize Operations, vRealize Log Insight, and vRealize Network Insight to provide operations and management capabilities specific to the VMware products that are used, for example NSX, vSAN, and vSphere
-* IBM Software Defined Environment Automation Tool Health Check (SAT HC) for validating deployments against best practices and security policies
+* IBM Software Defined Environment Automation Tool Health Check for validating deployments against best practices and security policies
 * Optional Disaster Recovery (DR) to an out of Region {{site.data.keyword.cloud_notm}} site
 * Fortigate Security Appliance or similar to secure any internet access and to facilitate active-active network integration with the on-premises network
 
@@ -70,7 +70,7 @@ The tools and technology architecture has the following specifications:
 {: #mcv_overview-stretched-cluster-specs}
 
 The vSphere + vSAN stretched cluster architecture has the following specifications:
-* The cluster provides storage and compute capabilities that span two sites for enhanced availability.
+* The cluster provides storage and compute capabilities, which span two sites for enhanced availability.
 * Write requests from virtual machines (VMs) are synchronously written to both sites, which incur site to site network latency.
 * Read requests from VMs are fulfilled locally to the physical location of where the VM is located, thus avoiding extra latency.
 * The witness site and witness host act as the split brain or quorum.
@@ -81,16 +81,16 @@ The vSphere + vSAN stretched cluster architecture has the following specificatio
 
 The network architecture has the following specifications:
 * Edge/DLR/VXLANs in combination with BGP metric-based routing to facilitate an active-active site design with automated failover.
-* Each site has the concept of their own set of Edges, DLRs and VXLANs.
+* Each site has the concept of their own set of Edges, DLRs, and VXLANs.
 * Under normal circumstances, any VMs connected to DLR-A, for example VM-A, are in {{site.data.keyword.cloud_notm}} availability zone #1 and traffic is both ingress and egress locally.
-* During a vMotion activity for VM-A, traffic will still ingress and egress through the {{site.data.keyword.cloud_notm}} availability zone #1.
+* During a vMotion activity for VM-A, traffic still ingresses and egresses through the {{site.data.keyword.cloud_notm}} availability zone #1.
 * During a site or edge failure, traffic routes out of the remaining available site.
 
 ## Related links
 {: #mcv_overview-related}
 
-* [Ordering multi-zone stretched clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
-* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
-* [Managed VMware Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_imi)
-* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
+* [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
+* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
+* [Managed VMware services](/docs/vmwaresolutions?topic=vmware-solutions-managing_imi)
+* [Managed backup services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Managed Disaster Recovery services](/docs/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)

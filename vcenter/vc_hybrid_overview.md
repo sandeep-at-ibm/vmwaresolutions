@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-17"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -20,10 +19,10 @@ subcollection: vmware-solutions
 # vCenter Server with Hybridity Bundle overview
 {: #vc_hybrid_overview}
 
-The VMware vCenter Server with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the HCX service.
+The VMware vCenter Server with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the Hybrid Cloud Extension (HCX) service.
 {:note}
 
-The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud}} {{site.data.keyword.baremetal_short}}, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the HCX service.
+The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud}} bare metal servers, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the HCX service.
 
 The bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers to your instance.
 
@@ -54,33 +53,33 @@ This layer virtualizes the physical infrastructure through different VMware prod
 ### Virtualization management
 {: #vc_hybrid_overview-virtualization-mgmt}
 
-This layer consists of vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC), NSX Manager, two NSX ESGs, three NSX Controllers, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
+This layer consists of vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC), NSX Manager, two NSX Edge Services Gateway (ESGs), three NSX Controllers, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-For additional management resource requirements when deploying the HCX service, see [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+For more management resource requirements when you deploy the HCX service, see [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Infrastructure hybridity
 {: #vc_hybrid_overview-infras-hybrid}
 
-This layer provides an abstraction of resources between the on-premises sites and {{site.data.keyword.cloud_notm}} sites so that you can move workloads back and forth securely and easily without the need to change VMs characteristics such as their IP addresses.
+This layer provides an abstraction of resources between the on-premises sites and {{site.data.keyword.cloud_notm}} sites so that you can move workloads back and forth securely and easily without the need to change VM characteristics such as their IP addresses.
 
-Based on VMware Hybrid Cloud Extension (HCX), you can create loosely coupled interconnects among on-premises and {{site.data.keyword.cloud_notm}} sites to enable bulk migration of VMs or live vMotion of VMs without downtime.
+Based on VMware HCX, you can create loosely coupled interconnects among on-premises and {{site.data.keyword.cloud_notm}} sites to enable bulk migration of VMs or live vMotion of VMs without downtime.
 
 ## Technical specifications for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_overview-specs}
 
 The following components are included in your vCenter Server with Hybridity Bundle instance:
 
-The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
 {:note}
 
-### Bare Metal Server
+### Bare metal server
 {: #vc_hybrid_overview-bare-metal}
 
-Your instance contains four or more {{site.data.keyword.baremetal_short}} with the server configuration selected at initial deployment.
+Your instance contains four or more {{site.data.keyword.cloud_notm}} bare metal servers with the server configuration that is selected at initial deployment.
 
 ### Networking
 {: #vc_hybrid_overview-networking}
@@ -88,15 +87,15 @@ Your instance contains four or more {{site.data.keyword.baremetal_short}} with t
 Your instance contains the following networking components:
 *  10 Gbps dual public and private network uplinks.
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs.
-*  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching additional VXLANs to new logical interfaces on the DLR.
+*  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching more VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
-  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * A secure management services VMware NSX ESG for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
 
-    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, note that using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, when you use a firewall or disable the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#faq-customer-nsx).
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#faq-customer-nsx)
 
-For more information on networking components ordered when deploying the HCX service, see [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+For more information on networking components that are ordered when you deploy the HCX service, see [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
 
 ### Virtual Server Instances
 {: #vc_hybrid_overview-vsi}
@@ -109,11 +108,11 @@ Your instance contains the following virtual server instances (VSIs):
 {: #vc_hybrid_overview-vsan-storage}
 
 vSAN storage offers customized configurations, with various options for disk type and quantity:
-* Disk quantity: 2, 4, 6, or 8.
-* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED.
+* Disk quantity: 2, 4, 6, 8, or 10
+* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
 
   In addition, two cache disks of 960 GB are included per host.
-* High Performance Intel Optane option, which provides two extra capacity disk bays for a total of 12 capacity disks. This option depends on the CPU model.
+* High Performance with Intel Optane: this option provides two extra capacity disk bays. This option depends on the CPU model.
 
 ### IBM-provided licenses and fees
 {: #vc_hybrid_overview-license-and-fee}
@@ -125,17 +124,17 @@ The following licenses are included in your instance.
 * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
 
-Additional support and services fees might apply.
+More support and services fees might apply.
 
 ## Technical specifications for vCenter Server with Hybridity Bundle expansion nodes
 {: #vc_hybrid_overview-expansion-node-specs}
 
-Each vCenter Server with Hybridity Bundle expansion node will deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
+Each vCenter Server with Hybridity Bundle expansion node deploy and incur charges for the following components in your {{site.data.keyword.cloud_notm}} account.
 
 ### Hardware for expansion nodes
 {: #vc_hybrid_overview-expansion-node-hardware}
 
-One Bare Metal Server with the configuration presented in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs).
+One bare metal server with the configuration presented in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs).
 
 ### Licenses and fees for expansion nodes
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
@@ -159,6 +158,6 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 ## Related links
 {: #vc_hybrid_overview-related}
 
-* [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [HCX overview](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [vCenter Server Software Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
+* [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)

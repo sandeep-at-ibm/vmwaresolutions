@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-28"
+lastupdated: "2020-04-16"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -24,7 +27,7 @@ vRealize Log Insight (vRLI) enables real-time logging for components in the {{si
 
 ![Log Insights networking diagram](../../images/opsmgmt-vrlinw.svg "Log Insights networking diagram"){: caption="Figure 1. Log Insights networking" caption-side="bottom"}
 
-In this design, each location has an independent vRLI cluster that is deployed on the Management Cluster. The vRLI cluster is deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses. This facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include: vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a Master Node and at least two Worker Nodes with an Integrated Load Balancer.
+In this design, each location has an independent vRLI cluster that is deployed on the management cluster. The vRLI cluster is deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses. This facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include: vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a Master Node and at least two Worker Nodes with an Integrated Load Balancer.
 
 * Master Node - Required initial node in the Cluster. The Master Node is responsible for queries and log ingestion. The Master Node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the master, which in turn distributes the workload to the Workers.
 * Worker Node - three nodes minimum are required to form a cluster with the ability to add more Workers for scale-out. A Worker Node ingests logs and stores logs locally.
@@ -136,9 +139,11 @@ This design also installs:
 * VMware NSX for vSphere
 * vRealize Network Insight
 
-Other Content Packs can be obtained from [VMware Solution Exchange](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:external}.
+Other content packs can be obtained from [VMware Solution Exchange](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:external}.
 
-**Next topic**: [vRealize Network Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrni)
+The vRealize Log Insights content pack for NSX-T provides additional dashboards for viewing log information. For installation instructions, see the [VMware documentation](https://docs.vmware.com/en/VMware-Validated-Design/4.3/com.vmware.vvd.sddc-nsxt-domain-deploy.doc/GUID-EB5EDB4D-C4A1-4906-A6A9-379F898BA372.html){:external} about installing the content pack for NSX-T.
+
+**Next topic**: [vRealize Network Insight](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrni)
 
 ## Related links
 {: #opsmgmt-vrli-related}

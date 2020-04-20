@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-04-16"
 
 subcollection: vmware-solutions
 
@@ -24,7 +24,7 @@ The operational tools support the client in compliance with current stands and a
 
 ![FSS Cloud operational tools overview](../../images/fss-opstools.svg "FSS Cloud operational tools overview"){: caption="Figure 1. FSS Cloud operational tools overview" caption-side="bottom"}
 
-## Management Cluster
+## Management cluster
 {: #fss-operations-management}
 
 All operational tools are deployed into the management cluster. The FSS Cloud depends upon multiple layers of tools to deliver comprehensive insight into the operation, security, and compliance of all layers of the platform. Clients consuming the FSS Cloud can elect to extend the use of the operational tools to monitor the VMs supporting their applications.
@@ -32,7 +32,7 @@ All operational tools are deployed into the management cluster. The FSS Cloud de
 ### Caveonix RiskForesight
 {: #fss-operations-management-riskforesight}
 
-[Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-caveonix) provides a comprehensive cloud workload protection platform for FSS Cloud that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
+[Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-fss-caveonix) provides a comprehensive cloud workload protection platform for FSS Cloud that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
 
 ### vRealize Operations
 {: #fss-operations-management-vrops}
@@ -53,21 +53,21 @@ All systems that generate logs are configured to send their logs to vRealize Log
 
 vRealize Network Insight monitors network components and management traffic throughout the entire FSS Cloud instance. The monitoring scope includes insight into the operation of the NSX-T overlay network. Network Insight is also used to help optimizing performance by eliminating network bottlenecks.
 
-## Edge Cluster
+## Edge cluster
 {: #fss-operations-edge}
 
 No operational tools components are deployed to the edge cluster. All components that are deployed in the edge cluster are configured to deliver their logs to vRealize Log Insight, inclusive of the vSRX syslog facilities.
 
-## Workload Cluster
+## Workload cluster
 {: #fss-operations-workload}
 
 No operational tools components are deployed to the edge cluster. All platform components that are deployed in the workload cluster are configured to deliver their logs to vRealize Log Insight.
 
-**Next topic**: [FSS Cloud Caveonix integration](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-caveonix)
+**Next topic**: [FSS Cloud Caveonix integration](/docs/vmwaresolutions?topic=vmware-solutions-fss-caveonix)
 
 ## Related links
 {: #fss-operations-related}
 
 * [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance)
-* [vRealize Operations and Log Insight](/docs/services/vmwaresolutions?topic=vmware-solutions-vrops_overview)
-* [Caveonix RiskForesight](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
+* [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview)
+* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)

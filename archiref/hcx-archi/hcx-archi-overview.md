@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -162,9 +162,9 @@ Before the components are described in more detail, it is imperative to understa
 * Sufficient IP addresses for the on-premises VMs provisioned during the installation.
 * If the SSO server is remote, the URL of the vCenter, external SSO Server, or Platform Services Controller (PSC) that runs the external lookup service must be identified. When the HCX service is registered with the vCenter, this URL must be supplied.
 
-**Next topic:** [VMware HCX source-side architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)
+**Next topic:** [VMware HCX source-side architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)
 
 ## Related links
 {: #hcx-archi-overview-related}
 
-* [VMware HCX introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro)
+* [VMware HCX introduction](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro)

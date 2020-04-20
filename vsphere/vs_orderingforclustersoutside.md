@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-29"
+lastupdated: "2020-04-01"
 
 keywords: vSphere scale cluster, scale vSphere, external vSphere cluster
 
@@ -26,8 +26,8 @@ You can use the VMware vSphere offering to scale existing vSphere clusters that 
 {: #vs_orderingforclustersoutside-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
-* You reviewed the requirements and considerations in [Requirements and planning for VMware vSphere](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_planning).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
+* You reviewed the requirements and considerations in [Requirements and planning for VMware vSphere](/docs/vmwaresolutions?topic=vmware-solutions-vs_planning).
 
 ## Procedure to scale clusters created outside of the console
 {: #vs_orderingforclustersoutside-procedure}
@@ -35,14 +35,14 @@ Ensure that you completed the following tasks:
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 1. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
 1. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
-1. Create a cluster with the same settings as the existing cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances).  
+1. Create a cluster with the same settings as the existing cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances).  
    For network interface, to scale a cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console, you must select the existing VLANs for the cluster.
    {:note}
 1. In the **Order Summary** pane, verify the cluster configuration, and then click **Save Configuration**.   
 1. On the **Overview** page, click the **VMware vSphere** card.
 1. On the **VMware vSphere** page, click **Continue**.
 1. Click the **Scale Existing** tab. From the **Cluster Configurations** list, select the cluster that you recently created.
-1. In the **{{site.data.keyword.baremetal_short}}** section, specify the number of {{site.data.keyword.baremetal_short}} that you want to add to the cluster.
+1. In the **Bare Metal Server** section, specify the number of {{site.data.keyword.cloud_notm}} bare metal servers that you want to add to the cluster.
 1. If the cluster does not include the FortiGate 300 Series Security Appliance HA Pair on its public VLAN, you can order one by selecting **Include with purchase** under **FortiGate Physical Appliance 300 Series HA Pair**.
 1. In the **Order Summary** pane, verify the instance configuration and the estimated cost, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
 
@@ -57,6 +57,6 @@ The vSphere clusters are not displayed on the **Resources** page, together with 
 ## Related links
 {: #vs_orderingforclustersoutside-related}
 
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
-* [Ordering vSphere clusters based on existing configurations](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
-* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
+* [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
+* [Ordering vSphere clusters based on existing configurations](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
+* [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)

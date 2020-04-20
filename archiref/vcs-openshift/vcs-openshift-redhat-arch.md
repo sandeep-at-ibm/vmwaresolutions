@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-10-18"
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 {: #vcs-openshift-redhat-arch}
 
 The {{site.data.keyword.vmwaresolutions_full}} offerings provide automation to deploy VMware technology components in
-{{site.data.keyword.CloudDataCents_notm}} across the globe. The architecture consists of a single cloud region. It supports the ability to extend into more cloud regions that are located in another geography or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
+{{site.data.keyword.cloud_notm}} data centers across the globe. The architecture consists of a single cloud region. It supports the ability to extend into more cloud regions that are located in another geography or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
 ![OpenShift architecture](../../images/openshift-components.svg){: caption="Figure 1. OpenShift architecture" caption-side="bottom"}
 
@@ -55,14 +55,14 @@ The Red Hat OpenShift deployment uses the following components of the {{site.dat
  - NSX DHCP services
  - NSX software defined networking
 
-For more information, see [IBM Cloud for VMware Solutions SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch).
+For more information, see [IBM Cloud for VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch).
 
-**Next topic:** [IBM Cloud for VMware Solutions SDDC architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
+**Next topic:** [IBM Cloud for VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
 
 ## Related links
 {: #vcs-openshift-redhat-arch-related}
 
-* [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
-* [System context for vCenter Server and Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-syscontext)
-* [{{site.data.keyword.cloud_notm}} networking and infrastructure](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
-* [Storage options on {{site.data.keyword.cloud_notm}} and Red Hat OpenShift](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)
+* [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
+* [System context for vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-syscontext)
+* [{{site.data.keyword.cloud_notm}} networking and infrastructure](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-sddc-infra)
+* [Storage options on {{site.data.keyword.cloud_notm}} and Red Hat OpenShift](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)

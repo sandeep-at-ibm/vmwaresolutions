@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-14"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -44,15 +43,24 @@ Ensure that you confirm the following requirements and complete the following ta
 * To use {{site.data.keyword.vmwaresolutions_short}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 *  Configure the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
 
-### Instance name requirements
+### Instance name
 {: #dr_backup_bundle_orderinginstance-inst-name-req}
 
-The instance name must meet the following requirements:
+The instance name is set to **vcs-_xx_** by default, where _xx_ represents two randomly generated alphabetic characters.
+
+You can also specify an instance name that meets the following requirements:
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
 * The instance name must start with a lowercase alphabetic character.
 * The instance name must end with a lowercase alphabetic or numeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
+
+### Resource group
+{: #dr_backup_bundle_orderinginstance-resource-group}
+
+Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
+
+If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
 
 ## Procedure to order Single-node Trial for Data Protection and Disaster Recovery instances
 {: #dr_backup_bundle_orderinginstance-procedure}
@@ -64,10 +72,10 @@ The instance name must meet the following requirements:
 
  This section is hidden if the API key exists.
  {:note}
-5. Enter the instance name.
-6. Select the {{site.data.keyword.CloudDataCent_notm}} to host the instance.  
+5. Enter the instance name and select a resource group.
+6. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.  
 
- By default, the DAL09 {{site.data.keyword.CloudDataCent_notm}} is preselected. Select a different {{site.data.keyword.CloudDataCent_notm}} location, if needed.
+ By default, the DAL09 {{site.data.keyword.cloud_notm}} data center is preselected. Select a different {{site.data.keyword.cloud_notm}} data center location, if needed.
  {:note}
 7. On the **Order Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
@@ -80,7 +88,7 @@ The instance name must meet the following requirements:
 
 * The deployment of the instance starts automatically and the on-premises HCX service activation key is ordered.
 * You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
-* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances](/docs/services/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs) are installed.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances](/docs/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs) are installed.
 * When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
 #### Deployment process for HCX
@@ -198,5 +206,5 @@ Complete the following steps to delete a Single-node Trial for Data Protection a
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
-* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managing Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managing Zerto](/docs/vmwaresolutions?topic=vmware-solutions-managingzertodr)

@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-06"
+lastupdated: "2020-04-02"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -51,8 +54,8 @@ A redundant Ethernet interface inherits its failover properties from the redunda
 ## Related links
 {: #vcsvsrx-components-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/?topic=vmware-solutions-vcs-hybridity-intro)
-* [Getting Started With IBM Cloud Juniper vSRX](/docs/infrastructure/vsrx?topic=vsrx-getting-started)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions/?topic=vmware-solutions-vcs-hybridity-intro)
+* [Getting Started With IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
 * [Juniper Networks vSRX Deployment Guide for VMware](https://www.juniper.net/documentation/en_US/vsrx/information-products/pathway-pages/security-vsrx-vmware-guide-pwp.html){:external}
 * [Juniper Networks Requirements for vSRX on VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/reference/general/security-vsrx-vmware-system-requirement.html){:external}
 * [Juniper Networks vSRX installation with vSphere web client](https://www.juniper.net/documentation/en_US/vsrx/topics/task/installation/security-vsrx-vsphere-client-installing.html){:external}

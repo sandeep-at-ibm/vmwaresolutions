@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2019-04-02"
 
 keywords: NSX license, upgrade license, Hybridity license
 
@@ -31,7 +31,7 @@ You can upgrade the VMware NSX license for your instance to a later edition. Lic
 
    If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or a networking issue. Resolve the problem before continuing with the next step, otherwise the upgrade might fail.
 
-4. Click **Update and Patch** on the left navigation pane and click **Upgrade**. In the **Upgrade NSX License Edition** window, select the edition that you want to upgrade to and click **Upgrade**.
+4. Click **Licensing** on the left navigation pane and click **Upgrade**. In the **Upgrade NSX License Edition** window, select the edition that you want to upgrade to and click **Upgrade**.
 
    The license upgrade replaces all existing NSX licenses on the instance. Additional charges may be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
    {:note}
@@ -39,6 +39,6 @@ You can upgrade the VMware NSX license for your instance to a later edition. Lic
 ## Related links
 {: #vc_hybrid_upgrade-lic-related}
 
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQs](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [vCenter Server with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQs](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)

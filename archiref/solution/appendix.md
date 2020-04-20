@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-17"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -88,6 +88,6 @@ The following table lists the available features for the **Advanced** and **Ente
 ## Related links
 {: #solution-appendix-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
-* [Design overview](/docs/services/vmwaresolutions?topic=vmware-solutions-design_overview)
-* [Backing up components](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Design overview](/docs/vmwaresolutions?topic=vmware-solutions-design_overview)
+* [Backing up components](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup)

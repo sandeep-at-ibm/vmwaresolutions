@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-12-04"
+lastupdated: "2020-04-02"
 
 keywords: Veeam, Veeam install, tech specs Veeam
 
@@ -51,7 +51,7 @@ The following components are ordered and included in the Veeam service:
 
 As part of the Veeam service installation and configuration, the following repositories are created:
 * For the Veeam configuration backup files: a repository named `IC4V Default Config Backup Repository`. The path to the folder where the Veeam backups are stored is `<Drive>:\ConfigBackup\`.
-* For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/services/vmwaresolutions?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
+* For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/vmwaresolutions?topic=vmware-solutions-icos_ordering#icos_ordering-scale-repo).
 * For the Virtual Machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository`.
 
 ### Networking
@@ -83,9 +83,9 @@ Removal of the Veeam service stops all backups and deletes all the previous back
 ## Related links
 {: #veeam_considerations-related}
 
-* [Ordering Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_ordering)
-* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Ordering Veeam](/docs/vmwaresolutions?topic=vmware-solutions-veeam_ordering)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

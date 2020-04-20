@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-29"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -24,10 +24,10 @@ When you select the {{site.data.keyword.vmwaresolutions_full}} RiskForesight opt
 
 The RiskForesight installation consists of the following high-level steps:
 
-1. [Initial planning and prerequisites](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step1) – Understanding and selecting a deployment option, configuring DNS to provide FQDN/IP resolution for the application components.
-2. [Virtual machine deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step2) – Deploying the VMs from an OVF template. The VM has installed on it all the application components.
-3. [Application configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step3) – Running the Caveonix configuration script that configures the application component on each of the VMs.
-4. [Application setup](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-step4) – Setting up the Service Provider and a Tenant or Organization so that the application becomes accessible for the users.
+1. [Initial planning and prerequisites](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-step1) – Understanding and selecting a deployment option, configuring DNS to provide FQDN/IP resolution for the application components.
+2. [Virtual machine deployment](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-step2) – Deploying the VMs from an OVF template. The VM has installed on it all the application components.
+3. [Application configuration](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-step3) – Running the Caveonix configuration script that configures the application component on each of the VMs.
+4. [Application setup](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-step4) – Setting up the Service Provider and a Tenant or Organization so that the application becomes accessible for the users.
 
 The automated install, provisions one VM and configures all the application components on that VM.
 {:note}
@@ -106,4 +106,4 @@ When you remove the Caveonix RiskForesight service, the {{site.data.keyword.vmwa
 * If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function.
 * If you delete vCenter Server instance A with the Caveonix RiskForesight service installed, and you used the IP addresses of the dedicated private subnet ordered for the service in vCenter Server instance B, the dedicated private subnet is canceled upon deletion of vCenter Server instance A.
 
-**Next topic:** [All-in-one deployment](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-allinone)
+**Next topic:** [All-in-one deployment](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-allinone)

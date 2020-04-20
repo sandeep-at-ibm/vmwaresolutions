@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -62,7 +62,7 @@ The vSphere administrator is responsible only for the proper operation of the wo
 The security administrator responsible for the management layer does not retain any responsibility for the security of the client applications beyond the requirement that appropriate policies are in place to protect the infrastructure upon which the client deploys their applications.
 The client designates a network administrator to provision and manage network services that are delivered via NSX-T to support the requirements of the applications deployed into the workload clusters. Limited access and scope are assigned to the client administrator by the platform network administrator. The scope that is assigned might include the ability to deploy and modify security policies that impact the workload scope but that do not extend beyond the workload context.
 
-**Next topic**: [FSS Cloud Bare Metal hosts](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-baremetal)
+**Next topic**: [FSS Cloud Bare Metal hosts](/docs/vmwaresolutions?topic=vmware-solutions-fss-baremetal)
 
 ## Related links
 {: #fss-separation-of-duties-related}

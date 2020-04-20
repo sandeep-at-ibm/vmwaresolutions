@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-07"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
@@ -48,10 +48,10 @@ When you are finished with the trial, you can delete this environment and provis
 
 The following components are included in your Single-node Trial for Data Protection and Disaster Recovery instance.
 
-The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
 {:note}
 
-### Bare Metal Server
+### Bare metal server
 {: #dr_backup_bundle_overview-bare-metal}
 
 Skylake Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz with 384 GB RAM for up to about 20 VMs
@@ -178,5 +178,5 @@ The Single-node Trial for Data Protection and Disaster Recovery includes Zerto. 
 
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
-* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managing Zerto](/docs/services/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Managing Zerto](/docs/vmwaresolutions?topic=vmware-solutions-managingzertodr)

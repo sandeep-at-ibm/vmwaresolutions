@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-30"
+lastupdated: "2020-04-17"
 
 subcollection: vmware-solutions
 
@@ -27,11 +27,11 @@ As part of the {{site.data.keyword.vmwaresolutions_short}} portfolio, the automa
 
 The Mission Critical Workloads offering is based on the fully automated provisioning of a VMware SDDC comprised of:
 
-* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.CloudDataCents_notm}}. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} Multi-Zone-Region (MZR) Data Centers.
+* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud_notm}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} Multi-Zone-Region (MZR) data centers.
 * vCenter HA including integrated Platform Services Controllers (PSCs).
 * vSAN stretched cluster support for customer workloads.
 * NSX-V with a pre–configured Management Edge.
-* High availability of storage and compute resources allowing for complete loss of one of the three {{site.data.keyword.CloudDataCents_notm}} without disruption to customer workloads.
+* High availability of storage and compute resources allowing for complete loss of one of the three {{site.data.keyword.cloud_notm}} data centers without disruption to customer workloads.
 * {{site.data.keyword.vmwaresolutions_short}} automation to add and remove workload capacity.
 
 ## Automation
@@ -46,7 +46,7 @@ Automation refers to ordering and setup of the instance. Automation does not inc
 
 The automation begins with fully ordering of infrastructure, networking components, software licenses supplied by IBM (not including Bring Your Own License), and add-on services.
 
-After the ordered infrastructure is provisioned in the {{site.data.keyword.CloudDataCents_notm}}, the automation flow begins.
+After the ordered infrastructure is provisioned in the {{site.data.keyword.cloud_notm}} data centers, the automation flow begins.
 
 The following steps outline the process:
 
@@ -56,7 +56,7 @@ The following steps outline the process:
 
 The {{site.data.keyword.vmwaresolutions_short}} automation then completes the following:
 
-1. Orders {{site.data.keyword.baremetal_short}}, {{site.data.keyword.cloud_notm}} networking components (such as VLANs and subnets), storage, software licenses, and support systems.
+1. Orders {{site.data.keyword.cloud_notm}} bare metal servers, {{site.data.keyword.cloud_notm}} networking components (such as VLANs and subnets), storage, software licenses, and support systems.
 2. Deploys vCenter.
 3. Deploys vSAN and NSX.
 4. Configures vSAN stretched clusters and vCenter HA according to the chosen configuration.
@@ -88,9 +88,11 @@ Day 2 operation and management activities are not part of the automation process
 
 Although this offering is intended to be ordered and used in conjunction with an IBM GTS support contract, it can be ordered by anyone by using the {{site.data.keyword.vmwaresolutions_short}} portal.
 
+**Next topic:** [IBM Cloud for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
+
 ## Related links
 {: #mcv-archi-overview-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
-* [Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
-* [Component and feature details](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
+* [Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
+* [Component and feature details](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)

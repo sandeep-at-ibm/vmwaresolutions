@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-14"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -72,4 +72,4 @@ Find the details of the base VM, scale-out VM, and Remote Collector VM in the fo
 {: class="comparison-tab-table"}
 {: row-headers}
 
-**Next topic:** [Fully distributed](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-fully)
+**Next topic:** [Fully distributed](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-fully)

@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-04-17"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -21,7 +24,7 @@ Deploy the vCenter Server instance before the vSRX edge gateway appliance order 
 ## Order Juniper gateway devices
 {: #vcsvsrx-deployment-order-gateway}
 
-The following procedure assumes that you are deploying the IaaS KVM-based Juniper vSRX HA cluster. If you want to build your own gateway by using ESXi, then order the No-OS gateway option instead. For more information, see [Ordering a Bring Your Own Gateway Appliance](/docs/infrastructure/gateway-appliance?topic=gateway-appliance-order-byoa).
+The following procedure assumes that you are deploying the IaaS KVM-based Juniper vSRX HA cluster. If you want to build your own gateway by using ESXi, then order the No-OS gateway option instead. For more information, see [Ordering a Bring Your Own Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
 
 Open the [IBM Cloud infrastructure customer portal](https://control.softlayer.com), then select Infrastructure->Network->Gateway Appliances->Create Gateway.
 - Gateway vendor: Juniper.
@@ -93,17 +96,17 @@ hours.
 ## Post deployment
 {: #vcsvsrx-deployment-post}
 
-If you deployed the IaaS KVM-based Juniper vSRX HA Cluster, you can continue with configuration of the vSRX cluster as described in [IBM Cloud Performing vSRX Basics](/docs/infrastructure/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics).
+If you deployed the IaaS KVM-based Juniper vSRX HA Cluster, you can continue with configuration of the vSRX cluster as described in [IBM Cloud Performing vSRX Basics](/docs/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics).
 
-If you opted to deploy the No-OS gateway offering, then follow the guidance in [Installing an Operating System on the Gateway](/docs/infrastructure/gateway-appliance?topic=gateway-appliance-order-byoa#installing-an-operating-system-on-the-gateway) to prepare the hosts for your appliance.
+If you opted to deploy the No-OS gateway offering, then follow the guidance in [Installing an Operating System on the Gateway](/docs/gateway-appliance?topic=gateway-appliance-order-byoa#installing-an-operating-system-on-the-gateway) to prepare the hosts for your appliance.
 
-**Next topic:** [vSRX base and advanced licensing](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-licensing).
+**Next topic:** [vSRX base and advanced licensing](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-licensing)
 
 ## Related links
 {: #vcsvsrx-deployment-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
-* [Getting Started With IBM Cloud Juniper vSRX](/docs/infrastructure/vsrx?topic=vsrx-getting-started)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
+* [Getting Started With IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
 * [Juniper Networks vSRX Deployment Guide for VMware](https://www.juniper.net/documentation/en_US/vsrx/information-products/pathway-pages/security-vsrx-vmware-guide-pwp.html){:external}
 * [Juniper Networks Requirements for vSRX on VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/reference/general/security-vsrx-vmware-system-requirement.html){:external}
 * [Juniper Networks vSRX installation with vSphere web client](https://www.juniper.net/documentation/en_US/vsrx/topics/task/installation/security-vsrx-vsphere-client-installing.html){:external}

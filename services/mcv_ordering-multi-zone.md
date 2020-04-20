@@ -4,14 +4,16 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-17"
+lastupdated: "2020-04-14"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
 subcollection: vmware-solutions
 
-
 ---
+
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Ordering multi-zone stretched clusters
 {: #mcv_ordering}
@@ -22,8 +24,8 @@ To deploy a multi-zone stretched cluster consisting of compute, network, and sto
 {: #mcv_ordering-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
-* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
+* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 | Name        | Value Format      |
@@ -35,7 +37,7 @@ Ensure that you completed the following tasks:
 | Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. The maximum length is 50 characters. |
 {: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
-Don't modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
+Do not modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
 {:important}
 
 ## System settings
@@ -55,12 +57,21 @@ For a sample configuration, click **Topology diagram** to see an example of the 
 ### Instance name
 {: #mcv_ordering-sys-inst-name}
 
-The instance name must meet the following requirements:
+The instance name is set to **vcs-_xx_** by default, where _xx_ represents two randomly generated alphabetic characters.
+
+You can also specify an instance name that meets the following requirements:
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
 * The instance name must start with a lowercase alphabetic character.
 * The instance name must end with a lowercase alphabetic or numeric character.
 * The maximum length of the instance name is 10 characters.
 * The instance name must be unique within your account.
+
+### Resource group
+{: #mcv_ordering-resource-group}
+
+Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
+
+If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
 
 ## Location settings
 {: #mcv_ordering-location}
@@ -70,7 +81,7 @@ Location settings are based on your selection of the {{site.data.keyword.cloud_n
 ### Multi-Zone Region
 {: #mcv_ordering-location-mzr}
 
-The multi-zone region is a group of three or more {{site.data.keyword.CloudDataCents_notm}} within close proximity of each other, ensuring high availability and resiliency.
+The multi-zone region is a group of three or more {{site.data.keyword.cloud_notm}} data centers within close proximity of each other, ensuring high availability and resiliency.
 
 ### Witness Location
 {: #mcv_ordering-location-witness}
@@ -142,14 +153,14 @@ Storage settings are based on your selection of vSAN or NFS storage.
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity over the limit of 10 disks, select the **High-Performance with Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+* If you want to add more capacity disks, select the **High Performance with Intel Optane** check box. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
 
 #### NFS storage
 {: #mcv_ordering-availability-zones-storage-nfs}
 
 When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
-The number of file shares must be in the range of 1 to 32.
+The number of file shares must be in the range of 1 to 100.
  {:note}
 
 * **Configure shares individually**: Select to specify different configuration settings for each file share.
@@ -171,7 +182,7 @@ Choose performance level options according to your needs.
 ## Network interface settings
 {: #mcv_ordering-network-interface-settings}
 
-Specify the following network interface settings for your .
+Specify the following network interface settings for your multi-zone stretched cluster.
 
 ### DNS configuration
 {: #mcv_ordering-dns-config}
@@ -232,6 +243,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 
 ## Procedure to order Multi-Zone Stretched Clusters
 {: #mcv_ordering-proc-multi}
+{: help}
+{: support}
 
 You can order Multi-Zone Stretched Clusters by using one of the following methods:
 
@@ -244,9 +257,9 @@ Proceed with the following steps to order a Multi-Zone Stretched Cluster:
 1. For the instance configuration, select to create a new configuration or select a saved configuration.
    * If you want to create a new configuration, select **New Configuration**.
    * If you want to update a saved configuration or create a new configuration based on a saved one, select a saved configuration.
-2. Enter the instance name.
+2. Enter the instance name and select a resource group.
 3. Complete the location settings.
-    1. Select the **Multi Zone Region**.
+    1. Select the **Multi-Zone Region**.
     2. Click the arrow on the **Witness Location** tile and select the availability zone for the witness site. The remaining availability zones are used for the **Management and Resource Location**.
 4. Complete the license settings for the instance components.
    *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
@@ -255,7 +268,7 @@ Proceed with the following steps to order a Multi-Zone Stretched Cluster:
     1. Specify the CPU model and the RAM size.
     2. Specify the number of hosts.
     3. Specify the storage settings.
-       * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+       * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High Performance with Intel Optane** check box.
        * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size (GB)**, and **Performance**.
        * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
 6. Complete the network interface settings.
@@ -270,7 +283,7 @@ Proceed with the following steps to order a Multi-Zone Stretched Cluster:
 ## Related links
 {: #mcv_ordering-related}
 
-* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_overview)
-* [Managed VMware Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_imi)
-* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [Managed Disaster Recovery Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
+* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv_overview)
+* [Managed VMware Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_imi)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)

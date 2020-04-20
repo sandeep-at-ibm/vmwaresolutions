@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-04-01"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -56,10 +56,10 @@ Because your initial cluster has vSAN storage, adding one or more ESXi servers a
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
    {:important}
 
-8. Complete the Bare Metal configuration.
+8. Complete the bare metal configuration.
    * Select a configuration from the existing hosts in the cluster.
-   * Select a new {{site.data.keyword.baremetal_short_sing}} configuration and specify the CPU model and the RAM size.
-9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High-Performance Intel Optane** box.
+   * Select a new bare metal server configuration and specify the CPU model and the RAM size.
+9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High Performance with Intel Optane** box.
 10. Review the estimated cost and click **Add**.
 
   You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
@@ -108,7 +108,7 @@ If you are adding ESXi servers during maintenance mode, virtual machines (VMs) a
 ## Related links
 {: #vc_hybrid_addingremovingservers-related}
 
-* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
+* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
 * [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -61,10 +61,10 @@ You can configure the vSphere Web Client to scan VMs, virtual appliances, and vS
 6.	Enter a unique name, and optionally, a description for the scan task. Click **Change** to set the frequency and the start time for the scan task. Click **OK**.
 7.	The scan task is listed in the Scheduled Tasks view of the vSphere Web Client.
 
-**Next topic:** [Staging and remediation](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-staging)
+**Next topic:** [Staging and remediation](/docs/vmwaresolutions?topic=vmware-solutions-vum-staging)
 
 ## Related links
 {: #vum-scanning-related}
 
-* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

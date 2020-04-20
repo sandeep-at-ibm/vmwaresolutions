@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -263,9 +263,9 @@ Rules that specify security groups or application groups for the source or desti
 
 Any change to the migrated policy is propagated to all VMs that use the policy.
 
-**Next topic:** [VMware HCX component-level target architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-target)
+**Next topic:** [VMware HCX component-level target architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-target)
 
 ## Related links
 {: #hcx-archi-source-related}
 
-* [Installing and configuring on the source](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)
+* [Installing and configuring on the source](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)

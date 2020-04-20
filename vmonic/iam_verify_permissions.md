@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-11-15"
+lastupdated: "2020-03-31"
 
 keywords: IAM user, user role, user permission, IAM account administrator
 
@@ -12,11 +12,17 @@ subcollection: vmware-solutions
 
 ---
 
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
+
 # Locating an IAM account administrator
 {: #iam_verify_permissions}
 
 You use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to define users for platform services and to control user access to resources across {{site.data.keyword.cloud_notm}}. For information about user roles (Viewer, Editor, Operator, and Administrator), see the table that shows roles and actions in
-[Platform management roles and permissions](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam-roles).
+[Platform management roles and permissions](/docs/vmwaresolutions?topic=vmware-solutions-iam#iam-roles).
 
 You must have an IAM account administrator role to complete various tasks, such as:
 * Set account credentials
@@ -25,11 +31,14 @@ You must have an IAM account administrator role to complete various tasks, such 
 For more information about what an account administrator can do, see [IAM Access](/docs/iam?topic=iam-userroles#userroles).
 
 If you do not have an administrator role and you want to complete a task that requires the administrator role, you can locate someone with that role. That person can then assign access.
+{: tsSymptoms}
 
 ## Locating an account owner with the administrator role
 {: #iam_verify_permissions-locate-admin}
+{: troubleshoot}
 
 To identify an account owner who has the administrator role, complete the following steps:
+{: tsResolve}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com).
 2. On the upper right corner, select the **IBM Cloud Account** you want to use.
@@ -49,8 +58,10 @@ the **Access Policies** tab. Look for the following values:
 
 ## Assigning access
 {: #iam_verify_permissions-assign-access}
+{: troubleshoot}
 
 After you find the account owner or another user with an administrator role, that person must perform the following steps to assign access:
+{: tsResolve}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com) as the {{site.data.keyword.cloud_notm}} account owner.
 2. On the upper right corner, select the **IBM Cloud Account** you want to use.

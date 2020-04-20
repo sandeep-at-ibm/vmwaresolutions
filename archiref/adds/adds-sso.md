@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-06"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -81,7 +81,7 @@ The following sections provide the settings configured in vSphere SSO.
 ### Lockout policy
 {: #adds-sso-config-lockout}
 
-For information about the lockout policy, see [Policy Configurations](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_compl_info#vc_compl_info-default-policy-config).
+For information about the lockout policy, see [Policy Configurations](/docs/vmwaresolutions?topic=vmware-solutions-vc_compl_info#vc_compl_info-default-policy-config).
 
 ### Password policy
 {: #adds-sso-config-pwd-policy}
@@ -102,10 +102,10 @@ As the customer, you have full access to tailor these settings as needed to appl
 
 Each vSphere ESXi host has its own root account along with its own password. To identify this password, go to the IBM Cloud portal and then go to  VMware, Infrastructure, Resources, _instance-name_, Infrastructure, _cluster-name_. It is also possible to have the vSphere ESXi hosts join AD, so that each system administrator can log in with their own account.
 
-**Next topic:** [IBM Cloud for VMware Solutions workload domain](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-wkld-domain)
+**Next topic:** [IBM Cloud for VMware Solutions workload domain](/docs/vmwaresolutions?topic=vmware-solutions-adds-wkld-domain)
 
 ## Related links
 {: #adds-sso-related}
 
-* [Common services design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_commonservice)
-* [Post-deployment considerations for your VMware instance - Active Directory](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_considerations#solution_considerations-ad)
+* [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice)
+* [Post-deployment considerations for your VMware instance - Active Directory](/docs/vmwaresolutions?topic=vmware-solutions-solution_considerations#solution_considerations-ad)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-22"
+lastupdated: "2020-04-02"
 
 keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
@@ -55,5 +55,5 @@ To access the console from the ibm.com website, complete the following steps:
 ## Related links
 {: #loginmethod-related}
 
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
-* [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-accessing){:external}
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-ts_logintoibm)

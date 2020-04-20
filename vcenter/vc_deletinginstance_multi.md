@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-09"
+lastupdated: "2020-03-31"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
@@ -17,6 +17,8 @@ subcollection: vmware-solutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Deleting vCenter Server instances in a multi-site configuration
 {: #vc_deletinginstance_multi}
@@ -24,7 +26,7 @@ subcollection: vmware-solutions
 Be aware of the following special considerations before you plan to delete vCenter Server instances that are part of a multi-site configuration.
 
 When you delete a vCenter Server instance, the following components are released sequentially:
-1. (NSX-V only) All deployed services
+1. All deployed services
 2. Support and Services fee
 3. VMware product licenses
 4. ESXi servers
@@ -38,8 +40,10 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 
 ## Procedure to delete vCenter Server instances in a multi-site configuration
 {: #vc_deletinginstance_multi-procedure}
+{: help}
+{: support}
 
-1. (NSX-V only) Remove all services from the secondary vCenter Server instance.
+1. Remove all services from the secondary vCenter Server instance.
 2. Ensure that no NSX objects are expanded into the secondary instance that you want to delete.
 3. Delete the secondary vCenter Server from the primary SSO (Single Sign-On) domain. For more information, see [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:external}.
 4. Demote the local domain controller VSI (Virtual Service Instance). For more information, see [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}.
@@ -50,6 +54,6 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_deletinginstance_multi-related}
 
-* [Deleting vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)
-* [Ordering, viewing, and removing services from vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)
+* [Ordering, viewing, and removing services from vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

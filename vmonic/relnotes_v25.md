@@ -44,7 +44,7 @@ This release installs VMware NSX for vSphere 6.4.1 for new deployments of VMware
 
 Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} and Veeam on {{site.data.keyword.cloud_notm}} services, when deployed, no longer preconfigure the backup of any VMs. With this change, you can ensure proper configuration of all aspects of your backup jobs, including schedule, retention period, use of deduplication, monitoring and alerts, and management of encryption keys. Additionally, the IBM CloudDriver VM is no longer configured as a persistent file server for NSX backups.
 
-You are responsible for the configuration, management, and monitoring of all software components, including the backup and availability of the management infrastructure and workloads. For more information, see [Backing up components](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_backingup#backing-up-components).
+You are responsible for the configuration, management, and monitoring of all software components, including the backup and availability of the management infrastructure and workloads.
 
 This change does not affect instances that are deployed before V2.5 that have the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} service installed.
 {:note}
@@ -64,10 +64,6 @@ Starting with the V2.5 release, {{site.data.keyword.vmwaresolutions_short}} is i
 * Instances that are deployed in V2.5 and later releases are automatically linked to the user account that is being used when the instance is ordered.
 * For instances that were deployed in V2.4 and previous releases, you can migrate them to a specified {{site.data.keyword.cloud_notm}} account and then manage them by using IAM as well.
 
-For more information, see the following topics:
-* [Inviting users to access services and resources](/docs/services/vmwaresolutions?topic=vmware-solutions-iamuserinvite)
-* [Managing user access with IAM](/docs/services/vmwaresolutions?topic=vmware-solutions-iam#iam)
-
 ## Changes to user accounts and groups for VMware vCenter Server and VMware Cloud Foundation instances
 {: #relnotes_v25-user-acct}
 
@@ -78,8 +74,6 @@ Do not edit global permissions of the **ic4v-vCenter** group in the **Users and 
 For Cloud Foundation instances, use the **customerroot** host user ID in place of the **root** host user ID.
 
 For vCenter Server instances, continue to use the **root** host user ID. The **ic4vroot** host user ID has been created for IBM use only.
-
-For more information about user accounts, see [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact).
 
 ## Updates for add-on services
 {: #relnotes_v25-services}
@@ -111,7 +105,7 @@ A new endpoint is now available in Germany for the KMIP for VMware on {{site.dat
 ### Attached storage documentation
 {: #relnotes_v25-docs-storage}
 
-The Attached storage for vCenter Server on IBM Cloud technical document is now available in the *Reference* section of the user documentation. For more information, see [Attached storage for vCenter Server on IBM Cloud](/docs/services/vmwaresolutions?topic=vmware-solutions-storage-benefits).
+The Attached storage for vCenter Server on IBM Cloud technical document is now available in the *Reference* section of the user documentation.
 
 ### Technical specifications
 {: #relnotes_v25-docs-tech-specs}
@@ -122,11 +116,6 @@ The technical specifications for all instance types and service types are now av
 {: #relnotes_v25-docs-services}
 
 The services information is improved to easily identify the service support based on the release number it was made available in.
-
-For more information, see the following topics:
-
-* [Available services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#available-services-for-vcenter-server-instances)
-* [Available services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservices#available-services-for-vcenter-server-with-hybridity-bundle-instances)
 
 ## User interface updates and enhancements
 {: #relnotes_v25-ui}

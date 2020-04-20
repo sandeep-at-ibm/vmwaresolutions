@@ -2,14 +2,13 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-02"
 
 keywords: notifications console, filter notifications, system notification
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -28,8 +27,8 @@ From the {{site.data.keyword.vmwaresolutions_full}} console, click **Notificatio
 | Severity | The severity of the event that is reported by the notification.<br>**Critical**: A critical event might impact the entire system or service.<br>**Error**: An error event occurs during an operation that might need intervention from the administrator or the user.<br>**Warning**: A component fails or is not working properly. However, the failure does not disrupt the ongoing process of the component.<br>**Informational**: A system or user operation is completed. Typically, the following events report informational notifications:<br>A service is installed.<br>A service is upgraded.<br>A service is removed.<br>All services are reconfigured for the added ESXi servers.<br>All services are reconfigured for the removed ESXi servers. |
 | Type | The type of component that the reported event is related to: vCenter Server instances, Services, System |
 | Resource | The name of the instance or service that sends the notification. |
-| Description | A short description of the notification. |
-| Date | The date and time when the notification is sent. |
+| Title | The subject of the notification. |
+| Creation time | The date and time when the notification is sent. |
 {: caption="Table 1. Notification history" caption-side="top"}
 
 ## Filtering notifications
@@ -40,5 +39,5 @@ By default, all unread notifications are displayed. You can filter the notificat
 ## Related links
 {: #notifications-related}
 
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
-* [User account and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [User account and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount)

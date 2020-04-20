@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ The installation of VMware HCX has the following software requirements:
 {: #hcx-archi-prep-install-config-net}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
-* [Port access requirements](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req) lists ports that must be opened so that HCX virtual appliances can install successfully.
+* [Port access requirements](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req) lists ports that must be opened so that HCX virtual appliances can install successfully.
 * Both the on-premises vSphere environment and the VCS HCX Cloud environment must permit Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
@@ -52,7 +52,7 @@ Layer 2 network stretching has the following requirements:
   * If the network is to be stretched over the public internet or a VPN (on an alternative path) the L2C virtual machine in VCS requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
   * If multiple Layer 2 concentrators are wanted, each must have an IP address on-premises and in the cloud.
 
-**Next topic:** [Installing and configuring HCX on the source](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)
+**Next topic:** [Installing and configuring HCX on the source](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)
 
 ## Related links
 {: #hcx-archi-prep-install-related}

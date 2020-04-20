@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -48,7 +48,7 @@ Be aware of the following behavior for hosts that are part of a vSAN cluster:
 * By design, only one host from a VSAN cluster can be in a maintenance mode at any time.
 * VUM remediates hosts that are part of a VSAN cluster sequentially even if you set the option to remediate the hosts in parallel.
 * Any VM on the host that uses a VM storage policy with a setting of 0 for **Number of failures to tolerate**, the host might experience unusual delays when it enters maintenance mode. The delay occurs because vSAN must migrate the VM data from one disk to another in the vSAN datastore cluster and this can take many hours. You can work around this by setting **Number of failures to tolerate** to 1 for the VM storage policy, which results in creating two copies of the VM files in the vSAN datastore.
-* Any VM on the host that uses a VM storage policy with a setting of 1 for **Number of failures to tolerate**, then the VM becomes non-redundant when the host enters maintenance mode. If this is not acceptable, see [Virtual machine vSAN redundancy](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-vsan-redundancy).
+* Any VM on the host that uses a VM storage policy with a setting of 1 for **Number of failures to tolerate**, then the VM becomes non-redundant when the host enters maintenance mode. If this is not acceptable, see [Virtual machine vSAN redundancy](/docs/vmwaresolutions?topic=vmware-solutions-vum-vsan-redundancy).
 
 To remediate hosts and clusters, follow these steps:
 1. Use the vSphere Web Client, select **Home** > **Hosts and Clusters**.
@@ -79,10 +79,10 @@ There is no requirement in a vCenter Server instance to select the check box und
 12. On the Ready to complete page, you can optionally click **Pre-check Remediation** to generate a cluster remediation options report and click **OK**. A Cluster Remediation Options Report dialog box opens. You can export this report or copy the entries for your own record and click **Next**.
 13. Review the **Ready to Complete** page and click **Finish**.
 
-**Next topic:** [Updating NSX](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx)
+**Next topic:** [Updating NSX](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-nsx)
 
 ## Related links
 {: #vum-staging-related}
 
-* [VMware HCX solution architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

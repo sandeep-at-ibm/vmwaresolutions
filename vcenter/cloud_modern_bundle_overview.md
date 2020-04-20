@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-07"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
@@ -45,10 +45,10 @@ This trial is intended for use up to 90 days. When you are finished with the tri
 
 The following components are included in your Single-node Trial for Migration and App Modernization instance.
 
-The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.CloudDataCent_notm}} that is selected for deployment.
+The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
 {:note}
 
-### Bare Metal Server
+### Bare metal server
 {: #cloud_modern_bundle_overview-bare-metal}
 
 Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz with 384 GB RAM) for up to about 20 virtual machines (VMs).
@@ -141,7 +141,7 @@ More HCX appliances are deployed during configuration as necessary for L2 connec
 ## Technical specifications for Red Hat OpenShift
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-Red Hat OpenShift for VMware 4.2 is installed by using the Development and Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about Red Hat OpenShift, see [Red Hat OpenShift for VMware overview](/docs/services/vmwaresolutions?topic=vmware-solutions-ocp_overview).
+Red Hat OpenShift for VMware 4.2 is installed by using the Development and Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about Red Hat OpenShift, see [Red Hat OpenShift for VMware overview](/docs/vmwaresolutions?topic=vmware-solutions-ocp_overview).
 
 ## Related links
 {: #cloud_modern_bundle_overview-related}

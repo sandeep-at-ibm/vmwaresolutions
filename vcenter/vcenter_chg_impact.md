@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-24"
+lastupdated: "2020-04-07"
 
 keywords: change vCenter Server artifacts, automation ID, VMware resource
 
@@ -96,7 +96,7 @@ The following information discusses the subnets that are ordered by {{site.data.
 
 **CAUTION:** Do not use these components for other purposes, or the stability of your environment is severely compromised.
 
-With each {{site.data.keyword.cloud_notm}} Bare Metal Server order, the following ranges of IP addresses are ordered by default:
+With each {{site.data.keyword.cloud_notm}} bare metal server order, the following ranges of IP addresses are ordered by default:
 *  A primary public range of 32 IP addresses
 *  A primary private range of 64 IP addresses
 
@@ -106,11 +106,11 @@ In addition, the following management subnets are also reserved for {{site.data.
 *  A public portable subnet of 16 IP addresses on the public VLAN
 
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways:
-*  **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
+*  **Option 1 (recommended)**: Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
 *  **Option 2**: Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.
 
 ## Related links
 {: #vcenter_chg_impact-related}
 
-* [Can I change the ESXi server names and IP addresses?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-change-name-ip)
-* [Can I disable root access on my ESXi servers?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-disable-root)
+* [Can I change the ESXi server names and IP addresses?](/docs/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-change-name-ip)
+* [Can I disable root access on my ESXi servers?](/docs/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-disable-root)

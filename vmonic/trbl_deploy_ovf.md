@@ -2,24 +2,33 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-05-28"
+lastupdated: "2020-03-18"
 
 keywords: troubleshooting, OVF deploy, how to deploy OVF file
 
 subcollection: vmware-solutions
 
-
 ---
+
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:support: data-reuse='support'}
 
 # Deploying an OVF file using the VMware vSphere Web Client
 {: #trbl_deploy_ovf}
+{: troubleshoot}
+{: support}
 
 ## Resolution
 {: #trbl_deploy_ovf-resolution}
 
 To deploy an OVF (Open Virtualization Format) file by using the vSphere Web Client, use the following procedure:
+{: tsResolve}
+
 1. Before you attempt to deploy an OVF file, add the following host information to the `/etc/hosts` file:
 
    * Host information for Platform Services Controller (PSC)

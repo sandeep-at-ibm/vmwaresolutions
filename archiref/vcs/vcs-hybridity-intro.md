@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-07"
+lastupdated: "2020-03-31"
 
 subcollection: vmware-solutions
 
@@ -15,7 +15,7 @@ subcollection: vmware-solutions
 
 VMware vCenter Server with Hybridity Bundle is a hosted private cloud that helps you to quickly and easily extend your on-premises infrastructure into the cloud for secure and seamless infrastructure hybridity and true application mobility.
 
-The vCenter Server Hybridity Bundle is deployed on a minimum of four {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}, offers dedicated storage via a virtual storage area network (VSAN), and includes the automatic deployment and configuration of an easy-to-manage software-defined networking infrastructure (NSX-V). The vCenter Server Hybridity Bundle is a reference architecture that is deployed via automation, which ensures consistency, performance, and compliance. In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute and storage capacity up and down as needed.
+The vCenter Server Hybridity Bundle is deployed on a minimum of four {{site.data.keyword.cloud_notm}} bare metal servers, offers dedicated storage via a virtual storage area network (VSAN), and includes the automatic deployment and configuration of an easy-to-manage software-defined networking infrastructure (NSX-V). The vCenter Server Hybridity Bundle is a reference architecture that is deployed via automation, which ensures consistency, performance, and compliance. In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute and storage capacity up and down as needed.
 
 Many options are available to enhance and extend the vCenter Server Hybridity Bundle. {{site.data.keyword.cloud_notm}} service offerings not only include add on storage options and various public and private WAN connectivity options, but also cover areas from platform security, Network security, traffic load balancing to back up and disaster recovery.
 
@@ -33,9 +33,9 @@ Platform integration options of the vCenter Server Hybridity Bundle aren't limit
 
 The extensive portfolio of services and multi-offering integration options available for the vCenter Server Hybridity Bundle deliver a truly hybrid platform making Hybridity as a service possible.
 
-**Next topic:** [VMware Update Manager introduction](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-intro)
+**Next topic:** [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro)
 
 ## Related links
 {: #vcs-hybridity-intro-related}
 
-* [VMware HCX Solution Architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX Solution Architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)

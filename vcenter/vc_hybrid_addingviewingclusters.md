@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-17"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -31,7 +30,7 @@ You can add clusters to your VMware vCenter Server with Hybridity Bundle instanc
 ### Before you add clusters
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
@@ -52,11 +51,11 @@ The cluster name must meet the following requirements:
 #### Data center location
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-The {{site.data.keyword.CloudDataCent_notm}} location of the cluster is set to the {{site.data.keyword.CloudDataCent_notm}} of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.CloudDataCents_notm}} is less than 150 ms. To check the network latency, use a tool such as [Looking Glass](/docs/infrastructure/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
+The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, use a tool such as [Looking Glass](/docs/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
 
-If you deploy the cluster to a different {{site.data.keyword.CloudDataCent_notm}} or {{site.data.keyword.cloud_notm}} infrastructure pod, three more VLANs are ordered for use with the ordered {{site.data.keyword.baremetal_short}}.
+If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center or {{site.data.keyword.cloud_notm}} infrastructure pod, three more VLANs are ordered for use with the ordered {{site.data.keyword.cloud_notm}} bare metal servers.
 
-### Bare Metal Server settings
+### Bare metal server settings
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
 You can choose **Skylake**, **Cascade Lake**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
@@ -68,28 +67,28 @@ When you select **Skylake**, you can choose the CPU and RAM combination accordin
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-{: caption="Table 1. Options for Skylake Bare Metal Servers" caption-side="top"}
+| Dual Intel Xeon Silver 4110 processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 1. Options for Skylake bare metal servers" caption-side="top"}
 
 #### Cascade Lake
 {: #vc_hybrid_addingviewingclusters-adding-cascade}
 
 For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
 
-Cascade Lake {{site.data.keyword.baremetal_short}} are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake bare metal servers are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
 {:note}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
-{: caption="Table 2. Options for Cascade Lake {{site.data.keyword.baremetal_short}}" caption-side="top"}
+| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+{: caption="Table 2. Options for Cascade Lake bare metal servers" caption-side="top"}
 
-The Quad Intel Xeon Gold 6248 Processor is available if you add new clusters or new ESXi servers for existing hybridity instances. If you use vSAN storage, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 does not currently support the High Performance Intel Optane option.
+The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or new ESXi servers for existing hybridity instances.
 {:note}
 
 #### Broadwell
@@ -101,13 +100,13 @@ When you select **Broadwell**, you can choose the CPU and RAM combination accord
 |:------------- |:------------- |
 | Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
 | Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 3. Options for Broadwell Bare Metal Servers" caption-side="top"}
+{: caption="Table 3. Options for Broadwell bare metal servers" caption-side="top"}
 
-#### Number of Bare Metal Servers
+#### Number of bare metal servers
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
 
 * All servers that you order have the same configuration.
-* You can order between 4 and 59 servers.
+* You can order in the range 4 - 59 servers.
 
 ### vSAN storage settings
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
@@ -115,19 +114,19 @@ When you select **Broadwell**, you can choose the CPU and RAM combination accord
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add capacity disks over the limit of 10, check the **High-Performance Intel Optane** box. This option provides two extra capacity disk bays for a total of 12 capacity disks and is useful for workloads that require less latency and higher IOPS throughput.
+* If you want to add more capacity disks, select the **High Performance with Intel Optane** check box. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High-Performance Intel Optane** option is available only for the Skylake CPU models.
+  The **High Performance with Intel Optane** option is available only for Skylake and Cascade Lake CPU models.
   {:note}
 
-* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you checked the **High-Performance Intel Optane** box.
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you selected the **High Performance with Intel Optane** check box.
 * **vSAN License**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
 ### Licensing settings
 {: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 IBM-provided licenses for the following VMware components:
-  * vSphere Enterprise Plus 6.5u3 or 6.7u3, depending on the cluster ordered, which is 6.5 or 6.7 respectively
+  * vSphere Enterprise Plus 6.5u3 or 6.7u3, depending on the cluster that is ordered, which is 6.5 or 6.7
   * vCenter Server 6.5
   * NSX Service Providers 6.4 (Advanced or Enterprise edition)
 
@@ -157,9 +156,9 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
 4. On the **Add Cluster** page, enter the cluster name.
-5. You can host the cluster in a different {{site.data.keyword.CloudDataCent_notm}} than the one that the instance is hosted in. To do so, under **Bare Metal Server**, check the **Select a different location** check box and choose the {{site.data.keyword.CloudDataCent_notm}} to host the instance.
-6. Select the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers** for the Bare Metal configuration.
-7.  Select **vSAN Storage** and specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, check the **High-Performance Intel Optane** box.
+5. You can host the cluster in a different {{site.data.keyword.cloud_notm}} data center than the one that the instance is hosted in. To do so, under **Bare Metal Server**, check the **Select a different location** checkbox and choose the {{site.data.keyword.cloud_notm}} data center to host the instance.
+6. Select the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers** for the bare metal configuration.
+7.  Select **vSAN Storage** and specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High Performance with Intel Optane** check box.
 8. Select the license edition for VMware vSAN for the license configuration.
 9. Select the network setting of either **Public and Private Network** or **Private Network Only**.
 10. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
@@ -188,7 +187,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
   * **CPU**: The CPU specification of the ESXi servers in the cluster.
   * **Customized vSAN Disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
   * **Memory**: The total memory size of the ESXi servers in the cluster.
-  * **Data Center Location**: The {{site.data.keyword.CloudDataCent_notm}} where the cluster is hosted.
+  * **Data Center Location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Status**: The status of the cluster. The status can have one of the following values:
     * Initializing: The cluster is being created and configured.
@@ -201,7 +200,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
   * ESXi servers details:
      * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
-       `host_prefix` is the host name prefix,
+       `host_prefix` is the hostname prefix,
 
        `n` is the sequence of the server,
 
@@ -210,7 +209,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
        `root_domain` is the root domain name.
 
      * **Version**: The version of the ESXi server.
-     * **Credentials**: The user name and password to access the ESXi server.
+     * **Credentials**: The username and password to access the ESXi server.
      * **Private IP**: The private IP address of the ESXi server.
      * **Status**: The status of the ESXi server, which can be one of the following values:
        * Added: The ESXi server is added and is ready for use.
@@ -245,7 +244,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ### Before you delete
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
-* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or don't plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs (virtual machines) from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
@@ -265,5 +264,5 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ## Related links
 {: #vc_hybrid_addingviewingclusters-related}
 
-* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)

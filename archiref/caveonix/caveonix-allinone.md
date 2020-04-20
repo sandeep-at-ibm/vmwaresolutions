@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-01-14"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -49,4 +49,4 @@ An automated deployment and configuration of a single virtual machine (VM) that 
 {: class="comparison-tab-table"}
 {: row-headers}
 
-**Next topic:** [Partially distributed](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-partially)
+**Next topic:** [Partially distributed](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-partially)

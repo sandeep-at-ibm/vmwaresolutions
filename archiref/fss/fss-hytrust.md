@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -56,12 +56,12 @@ The ESXi host access is strictly limited. No direct access to an ESXi host is pe
 
 The ESXi host access is strictly limited. No direct access to an ESXi host is permissible. HTCC provides the same level of access control and auditing for administrators assigned to manage the dedicated workload infrastructure, such as the SDN (NSX-T). The fine-grained RBAC capability of HTCC limits their scope of action to the workload region.
 
-**Next topic**: [FSS Cloud use case 1](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-use-case-1)
+**Next topic**: [FSS Cloud use case 1](/docs/vmwaresolutions?topic=vmware-solutions-fss-use-case-1)
 
 ## Related links
 {: #fss-hytrust-related}
 
 * [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance)
-* [HyTrust CloudControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
-* [HyTrust DataControl](/docs/services/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+* [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
+* [HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
 * [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hs-crypto)

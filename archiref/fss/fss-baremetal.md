@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -38,7 +38,7 @@ The workload cluster uses vSAN for storage and thus a minimum of four bare metal
 
 If you require dedicated resources for an application or business unit, you can deploy additional workload clusters.
 
-**Next topic**: [FSS Cloud storage](/docs/services/vmwaresolutions?topic=vmware-solutions-fss-storage)
+**Next topic**: [FSS Cloud storage](/docs/vmwaresolutions?topic=vmware-solutions-fss-storage)
 
 ## Related links
 {: #fss-baremetal-related}

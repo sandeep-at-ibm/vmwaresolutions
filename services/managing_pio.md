@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-12"
+lastupdated: "2020-03-30"
 
 keywords: primary io hdm, hdm intro, tech specs hdm
 
@@ -129,5 +129,5 @@ The following components belong to HDM on {{site.data.keyword.cloud_notm}}.
 ## Related links
 {: #managing_pio-related}
 
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
 * [PrimaryIO Hybrid Cloud Data Management](https://www.primaryio.com/){:external}

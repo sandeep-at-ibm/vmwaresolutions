@@ -31,7 +31,7 @@ VMware Horizon 7 is now available to vCenter Server instances that are deployed 
 
 This service delivers a seamlessly integrated hybrid cloud for virtual desktops and applications. It combines the enterprise capabilities of the VMware Software-Defined Data Center (SDDC), delivered as a service on {{site.data.keyword.cloud_notm}}, with the market-leading capabilities of VMware Horizon 7 for a simple, secure, and scalable solution.
 
-For more information, see [vCenter Server and Horizon 7 architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-arch-ovw).
+For more information, see [vCenter Server and Horizon 7 architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-horizon-arch-ovw).
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v33-vcs}
@@ -41,7 +41,7 @@ For more information, see [vCenter Server and Horizon 7 architecture overview](/
 
 When you add a cluster to an instance, you can choose to continue to use the default hostname prefix or to specify a new one for easy identification and management.
 
-For more information, see [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-network-interface-settings).
+For more information, see [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-network-interface-settings).
 
 ## Updates for add-on services
 {: #relnotes_v33-services}
@@ -62,12 +62,12 @@ For more information, see [About the HCX Multi-Site Services Mesh](https://docs.
 ### Updates for Mission Critical VMware on IBM Cloud
 {: #relnotes_v33-mission-critical}
 
-The Mission Critical VMware on {{site.data.keyword.cloud_notm}} product name is changed to {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv_overview).
+The Mission Critical VMware on {{site.data.keyword.cloud_notm}} product name is changed to {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmware-solutions-mcv_overview).
 
 ### Updates for NetApp ONTAP Select on IBM Cloud
 {: #relnotes_v33-ontap}
 
-Beginning with the V3.3 release, NetApp ONTAP Select is deployed as a partner service through IBM Global Services to provide greater availability, resiliency, and support. For more information, see [NetApp ONTAP Select](/docs/services/vmwaresolutions?topic=vmware-solutions-netapp).
+Beginning with the V3.3 release, NetApp ONTAP Select is deployed as a partner service through IBM Global Services to provide greater availability, resiliency, and support. For more information, see [NetApp ONTAP Select](/docs/vmwaresolutions?topic=vmware-solutions-netapp).
 
 ### Updates for Zerto
 {: #relnotes_v33-zerto-version}
@@ -84,12 +84,12 @@ This release installs the Zerto 7.0 Update 2 service version on newly deployed i
   For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions).
 
 * The following architecture reference documentation is available in the *Reference* section of the user documentation:
-  * [Active Directory Domain Services guide](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-intro)
-  * [vCenter Server and Red Hat OpenShift architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
-  * [vCenter Server and Red Hat OpenShift guide](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
-  * [vCenter Server and VMware Horizon 7 architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-horizon-arch-ovw)
+  * [Active Directory Domain Services guide](/docs/vmwaresolutions?topic=vmware-solutions-adds-intro)
+  * [vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
+  * [vCenter Server and Red Hat OpenShift guide](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
+  * [vCenter Server and VMware Horizon 7 architecture](/docs/vmwaresolutions?topic=vmware-solutions-horizon-arch-ovw)
 
-* A new topic is available in the *Troubleshooting* section to help you find someone who is an IAM account administrator if you do not have an administrator role and you want to complete an IAM task that requires one. For more information, see [Locating an IAM account administrator](/docs/services/vmwaresolutions?topic=vmware-solutions-iam_verify_permissions).
+* A new topic is available in the *Troubleshooting* section to help you find someone who is an IAM account administrator if you do not have an administrator role and you want to complete an IAM task that requires one. For more information, see [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmware-solutions-iam_verify_permissions).
 
 ## User interface updates and enhancements
 {: #relnotes_v33-ui}

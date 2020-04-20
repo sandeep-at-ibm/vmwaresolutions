@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-02-04"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -32,7 +32,7 @@ During the ordering process of a vCenter Server instance the following informati
 * Subdomain label
 * Domain name
 
-These values are then used to generate the user name and server names of the instance. For more information, see [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
+These values are then used to generate the user name and server names of the instance. For more information, see [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
 
 ## Domain controllers
 {: #adds-infra-domain-controllers}
@@ -74,7 +74,7 @@ The domain controller is provisioned with a name of `ADNS<subdomain_label>.<root
 The following diagram shows the deployment pattern of the two highly available VM domain controllers.
 ![Two highly available VM domain controllers diagram](../../images/adds-adha.svg "Two highly available VM domain controllers"){: caption="Figure 2. Two highly available VM domain controllers" caption-side="bottom"}
 
-If you order the two high availability Microsoft Windows VMs, you must provide two Microsoft Windows Server 2016 licenses. For more information, see [DNS Configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-dns-config). After the provisioning of the vCenter Server instance, you have 30 days to activate the VMs. The cluster is configured with a VM-VM anti-affinity rule, therefore, Distributed Resource Scheduler (DRS) tries to keep the VMs apart by placing them on different physical vSphere ESXi hosts. The following table describes the VM configuration.
+If you order the two high availability Microsoft Windows VMs, you must provide two Microsoft Windows Server 2016 licenses. For more information, see [DNS Configuration](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-dns-config). After the provisioning of the vCenter Server instance, you have 30 days to activate the VMs. The cluster is configured with a VM-VM anti-affinity rule, therefore, Distributed Resource Scheduler (DRS) tries to keep the VMs apart by placing them on different physical vSphere ESXi hosts. The following table describes the VM configuration.
 
 | Parameter        | Specification                                 |
 |:-----------------|:----------------------------------------------|
@@ -102,7 +102,7 @@ As the customer, you have full access to add more system administrators to the i
 
 The IBM Cloud automation initially configures some customer and IBM user IDs when the vCenter Server instance is created. The IBM user IDs are used by the automation for operations such as: adding clusters, vSphere ESXi hosts, or storage to your vCenter Server instance. These operations might fail if the IBM user IDs are deleted, disabled, or if their passwords are changed.
 
-For more information, see [IBM User IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
+For more information, see [IBM User IDs](/docs/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
 
 ## Multi-site topology
 {: #adds-infra-domain-multisite}
@@ -121,7 +121,7 @@ They key aspects of a multi-site configuration are:
 * Enhanced Linked Mode
 * Cross vCenter NSX
 
-Enhanced Linked Mode and Cross-vCenter NSX are complementary but separate from each other. For more information, see [Multi-site configuration for VMware vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_multisite).
+Enhanced Linked Mode and Cross-vCenter NSX are complementary but separate from each other. For more information, see [Multi-site configuration for VMware vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_multisite).
 
 ### Enhanced linked mode
 {: #adds-infra-domain-multisite-elm}
@@ -169,7 +169,7 @@ The secondary instances have the following configuration:
 ## Customer user IDs
 {: #adds-infra-domain-userid}
 
-The customer user IDs and passwords for the vCenter Server instance are available through the IBM Cloud for VMware Solutions console. Go to VMware Solutions, Summary, Resources, <instance_name>, Summary. For more information, see [vCenter and Platform Services Controller user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
+The customer user IDs and passwords for the vCenter Server instance are available through the IBM Cloud for VMware Solutions console. Go to VMware Solutions, Summary, Resources, <instance_name>, Summary. For more information, see [vCenter and Platform Services Controller user IDs](/docs/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
 
 ## DNS configuration
 {: #adds-infra-domain-dns}
@@ -203,11 +203,11 @@ Forwarders are DNS servers that the AD DNS server can use to resolve DNS queries
 
 All deployed appliances: VCSA, NSX Manager and Controllers, and vSphere ESXi hosts have their DNS settings configured to point to the AD DNS server as their default DNS. You can customize the DNS zone configuration if it does not interfere with the configuration of the deployed components.
 
-**Next topic:** [vCenter Single Sign On](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-sso)
+**Next topic:** [vCenter Single Sign On](/docs/vmwaresolutions?topic=vmware-solutions-adds-sso)
 
 ## Related links
 {: #adds-infra-domain-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_overview)
-* [Getting started with IBM Cloud for VMware Solutions](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started)
-* [IBM Cloud for VMware Solutions: Take a look under the hood](/docs/services/vmwaresolutions?topic=vmware-solutions-under_the_hood)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Getting started with IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmware-solutions-getting-started)
+* [IBM Cloud for VMware Solutions: Take a look under the hood](/docs/vmwaresolutions?topic=vmware-solutions-under_the_hood)

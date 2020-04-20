@@ -2,9 +2,12 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-04-17"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -283,13 +286,13 @@ set routing-options static route 10.0.0.0/8 next-hop 10.135.70.1
 
 set routing-options static route 0.0.0.0/0 next-hop 169.50.51.89
 
-**Next topic:** [The IBM Cloud IaaS vSRX default configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-iaas-def-config).
+**Next topic:** [The IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-iaas-def-config)
 
 ## Related links
 {: #vcsvsrx-default-config-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
-* [Getting Started With IBM Cloud Juniper vSRX](/docs/infrastructure/vsrx?topic=vsrx-getting-started)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
+* [Getting Started With IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
 * [Juniper Networks vSRX Deployment Guide for VMware](https://www.juniper.net/documentation/en_US/vsrx/information-products/pathway-pages/security-vsrx-vmware-guide-pwp.html){:external}
 * [Juniper Networks Requirements for vSRX on VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/reference/general/security-vsrx-vmware-system-requirement.html){:external}
 * [Juniper Networks vSRX installation with vSphere web client](https://www.juniper.net/documentation/en_US/vsrx/topics/task/installation/security-vsrx-vsphere-client-installing.html){:external}

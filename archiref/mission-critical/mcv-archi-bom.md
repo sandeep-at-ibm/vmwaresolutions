@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-30"
+lastupdated: "2020-04-17"
 
 subcollection: vmware-solutions
 
@@ -82,7 +82,7 @@ The Mission Critical Workloads order flow is included in the {{site.data.keyword
 
 The Multi Zone Stretch Cluster option is available on the vCenter Server order page. The order flow is similar to a vCenter Server order with the following exceptions:
 
-* Ordering is restricted to the multi-zone region {{site.data.keyword.CloudDataCents_notm}}
+* Ordering is restricted to the multi-zone region {{site.data.keyword.cloud_notm}} data centers
 * Only Skylake and Cascade Lake processors are supported
 * Hosts are ordered and configured across three sites automatically
 * Choose the witness site and the management and resource sites are automatically determined
@@ -107,9 +107,11 @@ The management clusters can be scaled up and down with a maximum of 51 hosts. Th
 
 For example, you can add capacity by adding pairs of hosts, one in Site A and one in Site B, to maintain uniformity in the configuration across the two sites. The status reflects that capacity is being added or removed to both sites simultaneously.
 
+**Next topic:** [Component and feature details](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)
+
 ## Related links
 {: #mcv-archi-bom-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
-* [Component and feature details](/docs/services/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
+* [Component and feature details](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)

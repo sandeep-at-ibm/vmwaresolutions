@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-03"
+lastupdated: "2020-04-17"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -92,7 +92,7 @@ Review the following considerations before you install the FortiGate Virtual App
 You order a VMware vCenter Server **Small** instance with 2 ESXi servers with the following configuration: 16 cores at 2.10 GHz each with 128 GB RAM. For FortiGate Virtual Appliance, you select the **Large** (8 vCPUs / 12 GB RAM) for deployment size and any subscription license model.
 
 In this case, a single FortiGate VM requires, on each server:
-* 2.1 GHz * 8 vCPU = 16.8 GHz of CPU, and
+* 2.1 GHz * 8 vCPU = 16.8 GHz of CPU
 * 12 GB RAM
 
 In total, that is 33.6 GHz CPU and 24 GB RAM for two FortiGate VMs.
@@ -117,9 +117,9 @@ Before you remove the FortiGate Virtual Appliance service, ensure that the confi
 ## Related links
 {: #fortinetvm_considerations-related}
 
-* [Ordering FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-fortinetvm_ordering)
-* [Managing FortiGate Virtual Appliance](/docs/services/vmwaresolutions?topic=vmware-solutions-managingfortinetvm)
-* [Contacting {{site.data.keyword.IBM}} Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Ordering FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_ordering)
+* [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-managingfortinetvm)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
 * [Fortinet website](https://www.fortinet.com/){:external}
 * [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

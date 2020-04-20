@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-27"
+lastupdated: "2020-03-31"
 
 subcollection: vmware-solutions
 
@@ -98,7 +98,7 @@ The CloudBuilder and CloudDriver are deployed only on the private network connec
 
 The following describes the order of events when you use the {{site.data.keyword.vmwaresolutions_short}} console to order a VMware instance:
 1. Ordering VLANs and subnets for networking from {{site.data.keyword.cloud_notm}}.
-2. Ordering {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}} with vSphere Hypervisor installed.
+2. Ordering {{site.data.keyword.cloud_notm}} bare metal servers with vSphere Hypervisor installed.
 3. Ordering of Microsoft Windows VSI to serve as the Active Directory domain controller.
 4. Deployment of the Cloud Driver VSI.
 5. Validation of the networking and deployed hardware.
@@ -114,13 +114,13 @@ The following describes the order of events when you use the {{site.data.keyword
 
 {{site.data.keyword.vmwaresolutions_short}} automation retains a set of user IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Automation user IDs are separate from the user IDs displayed in the {{site.data.keyword.vmwaresolutions_short}} console and which are reserved for your use.
 
-You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
+You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
 
-**Next topic:** [Scaling capacity](/docs/services/vmwaresolutions?topic=vmware-solutions-solution_scaling)
+**Next topic:** [Scaling capacity](/docs/vmwaresolutions?topic=vmware-solutions-solution_scaling)
 
 ## Related links
 {: #design_infrastructuremgmt-related}
 
-* [Physical infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure)
-* [Virtual infrastructure design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
-* [Common services design](/docs/services/vmwaresolutions?topic=vmware-solutions-design_commonservice)
+* [Physical infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure)
+* [Virtual infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
+* [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice)

@@ -2,16 +2,17 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-14"
 
 keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
 subcollection: vmware-solutions
 
-
 ---
+
+{:note: .note}
 
 # Ordering Caveonix RiskForesight licenses
 {: #caveonix_license_ordering}
@@ -21,16 +22,21 @@ You can order a Caveonix RiskForesight license without associating it to any vCe
 ## Before you begin
 {: #caveonix_license_ordering-reqs}
 
-Ensure that you configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions?topic=vmware-solutions-useraccount).
+Ensure that you configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
 
 ## Procedure to order Caveonix RiskForesight licenses
 {: #caveonix_license_ordering-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. Scroll to the **Caveonix RiskForesight Licenses** table and click **Provision New**.
-3. Specify the license name, license notes, and the number of VMs to license.
-4. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the license.
-5. Click **Provision**.
+1. Scroll to the **Caveonix RiskForesight Licenses** table and click **Provision New**.
+1. Specify the resource group.
+
+   If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+   {:note}
+
+1. Specify a new license name, or use the default one **cav-_xx_** where _xx_ represents two randomly generated alphabetic characters.
+1. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the license.
+1. Click **Provision**.
 
 ## Results
 {: #caveonix_license_ordering-results}
@@ -42,5 +48,4 @@ When the license is ready to use, the status of the license is changed to **Inst
 ## Related links
 {: #caveonix_license_ordering-related}
 
-* [Considerations for Caveonix RiskForesight licenses](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_considerations)
-* [Managing Caveonix RiskForesight licenses](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix_license_managing)
+* [Managing Caveonix RiskForesight licenses](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_license_managing)

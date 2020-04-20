@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-25"
+lastupdated: "2020-04-14"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -21,17 +21,17 @@ subcollection: vmware-solutions
 # Ordering Veeam
 {: #veeam_ordering}
 
-You can order the Veeam service when you order a new instance with the service included or by adding the service to your existing instance.
+You can include the Veeam service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
 
 ## Ordering Veeam for a new instance
 {: #veeam_ordering-new}
 
-When you [order the instance](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Veeam** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Veeam** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering Veeam for an existing instance
 {: #veeam_ordering-existing}
 
-On the [instance details page](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Veeam** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Veeam** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Veeam service configuration
 {: #veeam_ordering-config}
@@ -56,8 +56,8 @@ The IOPS (input/output operations per second) per GB based on your workload requ
 ## Related links
 {: #veeam_ordering-related}
 
-* [Managing Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Managed Backup Services](/docs/services/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

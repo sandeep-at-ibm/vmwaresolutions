@@ -4,8 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-14"
-
+lastupdated: "2020-04-07"
 
 subcollection: vmware-solutions
 
@@ -33,7 +32,7 @@ For vSphere Network NSX (NSX-V), review the following more well-known NSX-T obje
 | **VXLAN (L2 encapsulation)** | GENEVE (L2 encapsulation) |
 | **Edge Gateway** | Tier-0 (T0) Gateway[^gateway1] |
 | **Distributed Logical Router** | Tier-1 (T1) Gateway[^gateway2] |
-| **ESXi Server** | Transport Node (ESXi, KVM, Bare metal T0 Gateway) |
+| **ESXi Server** | Transport Node (ESXi, KVM, bare metal T0 Gateway) |
 {: caption="Table 1. NSX-V to NSX-T terminology" caption-side="bottom"}
 
 With NSX-T, you have Tier-0 (T0) Gateways and Tier-1 (T1) Gateways. While in the previous section they're shown as being equivalent to a T0 Gateway and T1 Gateway respectively, that's not accurate.
@@ -64,7 +63,7 @@ There are key NSX-T concepts that do not correspond to NSX-V function that need 
 
 In this design, the NSX-T controller Manager VMs are deployed on the management cluster. Additionally, each controller manager is assigned a VLAN–backed IP address from the private portable address block. The address block is designated for management components and configured with the DNS and NTP servers that are discussed in section 0. A summary of the NSX Manager installation is shown in following table.
 
-The VMware Identity Manager appliance must be deployed by the customer manually if required for basic RBAC/AD integration. It can also provide multi-factor authentication (MFA), conditional access, and single sign-on (SSO) services. For more information, see [VMware Identity Manager](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-t-idm).
+The VMware Identity Manager appliance must be deployed by the customer manually if required for basic RBAC/AD integration. It can also provide multi-factor authentication (MFA), conditional access, and single sign-on (SSO) services. For more information, see [VMware Identity Manager](/docs/vmwaresolutions?topic=vmware-solutions-nsx-t-idm).
 
 | Attribute | Specification |
 |:--------- |:------------- |
@@ -229,7 +228,7 @@ An NSX-T Tier-0 logical router provides an on and off gateway service between th
 #### Tier 1 logical gateway
 {: #nsx-t-design-tier-1}
 
-An NSX-T Tier-1 logical gateway has downlink ports to connect to NSX-T Data Center logical switches and uplink ports to connect to NSX-T Data Center tier-0 logical routers only. They run in the kernel level of the hypervisor they are configured for and not as a virtual or physical machine. For this design, one or more T-1 logical gateways are created for the needs of customer chosen topologies, although a T-1 logical gateway is not always needed, segments can be attached directly to a T-0.
+An NSX-T Tier-1 logical gateway has downlink ports to connect to NSX-T data center logical switches and uplink ports to connect to NSX-T data center tier-0 logical routers only. They run in the kernel level of the hypervisor they are configured for and not as a virtual or physical machine. For this design, one or more T-1 logical gateways are created for the needs of customer chosen topologies, although a T-1 logical gateway is not always needed, segments can be attached directly to a T-0.
 
 #### Tier 1 to Tier 0 route advertisement
 {: #nsx-t-design-tier-1-tier-0}
@@ -245,4 +244,4 @@ Workload to T1 to T0 gateway – virtual edge cluster
 
 Topology 1 is basically the same topology that is deployed with NSX-V DLR and Edge gateways. With NSX-T, no dynamic routing protocol configuration between T1 and T0. RFC-1891 IP address space is used for the workload overlay network and transit overlay network. A customer private and public portable IP space is assigned for customer use. A customer designated {{site.data.keyword.cloud_notm}} private and public portable IP space is assigned to the T0 for customer use.
 
-**Next topic:** [VMware Identity Manager](/docs/services/vmwaresolutions?topic=vmware-solutions-nsx-t-idm)
+**Next topic:** [VMware Identity Manager](/docs/vmwaresolutions?topic=vmware-solutions-nsx-t-idm)

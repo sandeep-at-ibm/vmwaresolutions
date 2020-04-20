@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-07"
+lastupdated: "2020-04-07"
 
 keywords: view vCenter Server Hybridity, view instance, view instance details
 
@@ -36,7 +36,7 @@ To view a summary of all the vCenter Server with Hybridity Bundle instances that
 | Name | The name of the instance. |
 | Type | The type of vCenter Server instance. |
 | Version | The release version that the instance was deployed in, or upgraded to. |  
-| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |  
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |  
 | Creation time | The date and time when the instance was created. |  
 | Status | The status of the instance. |
 {: caption="Table 1. vCenter Server with Hybridity Bundle instance items" caption-side="top"}
@@ -66,7 +66,7 @@ To view the property details of a vCenter Server with Hybridity Bundle instance:
 |:------------- |:------------- |
 | Name | The name of the instance. |
 | ID | The ID of the instance. |
-| Location | The {{site.data.keyword.CloudDataCent_notm}} where the instance is hosted. |
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter version | The VMware vCenter Server with Hybridity Bundle version.<br><br>**Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
@@ -111,24 +111,24 @@ Click **Deployment History** from the left navigation pane to view the deploymen
 ## What to do if errors occur
 {: #vc_hybrid_viewinginstances-if-errors-occur}
 
-If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support).
+If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
 
 ## What to do next
 {: #vc_hybrid_viewinginstances-next}
 
 Manage your instances from the {{site.data.keyword.vmwaresolutions_short}} console or the VMware vSphere Web Client.
 
-Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.CloudDataCent_notm}}. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.cloud_notm}} data center. Hover over the **vCenter console** button and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
 {:important}
 
 Review the following topics for information to help you complete the login instructions:
-*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_timeout_vc_console).
+*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/vmwaresolutions?topic=vmware-solutions-trbl_timeout_vc_console).
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network using VPN, see [VPN Access](https://www.ibm.com/cloud/vpn-access){:external}.
-*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_deploy_ovf).
+*  If you have problems when you deploy an OVF (Open Virtualization Format) file using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/vmwaresolutions?topic=vmware-solutions-trbl_deploy_ovf).
 
 ## Related links
 {: #vc_hybrid_viewinginstances-related}
 
-* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)
-* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_hybrid_deletinginstance)
+* [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Deleting vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_deletinginstance)

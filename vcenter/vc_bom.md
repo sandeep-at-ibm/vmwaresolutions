@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-25"
+lastupdated: "2020-04-17"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
 subcollection: vmware-solutions
-
 
 ---
 
@@ -45,8 +44,8 @@ The following table details the BOM information for vCenter Server software comp
 | VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) or <br/>6.5 EP 15 (build 6.5.0-14320405) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
-| VMware       | Platform Services Controller    | 6.7 Update 2b (6.7.0-13843469) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
+| VMware       | vCenter Server Appliance        | 6.7 Update 3b (6.7.0-15129973) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
+| VMware       | Platform Services Controller    | 6.7 Update 3b (6.7.0-15129973) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
 | VMware       | vSAN[^vsan]                     | 6.7 Update 1 or <br/>6.6.1 |
 | VMware       | NSX for vSphere[^nsxv]          | 6.4.5 (build 13282012) |
 | VMware       | NSX-T for vSphere[^nsxt]        | 2.4 |
@@ -60,7 +59,7 @@ The following table details the BOM information for vCenter Server software comp
 
 [^nsxt]: NSX-T only
 
-[^domain]: The domain functional level 2008 is set to allow for backward compatibility. For more information, see [Domain controllers](/docs/services/vmwaresolutions?topic=vmware-solutions-adds-infra-domain#adds-infra-domain-controllers).
+[^domain]: The domain functional level 2008 is set to allow for compatibility with an earlier version. For more information, see [Domain controllers](/docs/vmwaresolutions?topic=vmware-solutions-adds-infra-domain#adds-infra-domain-controllers).
 
 ## Advanced configuration settings for ESXi servers
 {: #vc_bom-esxi-server-advance-config}
@@ -80,7 +79,7 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 | Queue Full Threshold | **QFullThreshold** = 8 | **/Disk/QFullThreshold** = 8 |
 | TCP/IP Heap Size | **TcpipHeapSize** = 32 | Not set |
 | TCP/IP Heap Maximum | **TcpipHeapMax** = 1536 | Not set |
-{: caption="Table 3. ESXi servers advanced configuration settings for vCenter Server instances and clusters" caption-side="top"}
+{: caption="Table 3. ESXi servers advanced configuration settings for vCenter Server instances and clusters before and after V2.2" caption-side="top"}
 
 ### Notes
 {: #vc_bom-notes}
@@ -91,6 +90,17 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
   It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
 
   For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239){:external}.
+
+Review the following table for an overview of the advanced configuration settings that are applied to ESXi servers. For V3.6 or later releases, new instances are ordered with a new set of advanced configuration settings for ESXi servers.
+
+| Configuration setting | If newly deployed in V3.6 or later  | If upgraded from V3.5 or earlier |
+|:------------- |:------------- |:------------- |
+| Block guest sourced BPDU frames | **Net.BlockGuestBPDU** = 1 | **Net.BlockGuestBPDU** = 0 |
+| Duration, in seconds, to lock out a user's account after it exceeds the maximum allowed failed login attempts. | **Security.AccountUnlockTime** = 1800 | **Security.AccountUnlockTime** = 900 |
+| Maximum allowed failed login attempts before a user's account is locked out. Zero disables account locking. | **Security.AccountLockFailures** = 6 | **Security.AccountLockFailures** = 5 |
+{: caption="Table 4. ESXi servers advanced configuration settings for vCenter Server instances and clusters before and after V3.6" caption-side="top"} 
+  
+Starting in V3.6, ESXi servers join Active Directory domain for authentication. Also, the ESXi shell service is stopped instead of running.
 
 ## NSX and port group configuration settings
 {: #vc_bom-nsx-port-group-config}
@@ -108,7 +118,9 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 | Port group SDDC-DPortGroup-VSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |  
 | Port group SDDC-DPortGroup-Mgmt | **Port binding** set to **Ephemeral - no binding** and **Load balancing** set to **Route based on originating virtual port** | **Port binding** set to **Static binding** and **Load balancing** set to **Route based on physical NIC load** |  
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
-{: caption="Table 4. NSX and port group configuration settings for vCenter Server instances" caption-side="top"}
+{: caption="Table 5. NSX and port group configuration settings for vCenter Server instances" caption-side="top"}
+
+Starting in V3.6, security policies for promiscuous mode, MAC address changes, and forged transmits are now accepted on disturbed port groups.
 
 ## Network MTU configuration settings
 {: #vc_bom-network-mtu-config}
@@ -119,24 +131,24 @@ The private network connections are configured to use Jumbo Frames MTU (Maximum 
 
 In V2.1 or later, the public network connections use a standard Ethernet MTU of 1500. This setting of 1500 must be maintained; any changes might cause packet fragmentation over the internet.
 
-Review the following table for an overview of the Network MTU configuration settings that are applied to the public and private Distributed Virtual Switch (DVS), depending on whether the vCenter Server instance is deployed in V2.1 or later.
+Review the following table for an overview of the Network MTU configuration settings that are applied to the public and private Distributed Virtual Switch (DVS).
 
 | vDS | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |
 |:-------------- |:-------------- |:------------- |
 | Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
 | Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
-{: caption="Table 5. MTU configuration settings for vCenter Server instances and clusters depending on the instance version" caption-side="top"}
+{: caption="Table 6. MTU configuration settings for vCenter Server instances and clusters depending on the instance version" caption-side="top"}
 
-The settings apply to new instances and new clusters from instances deployed in V2.1 or later. The settings also apply to new clusters in cross {{site.data.keyword.CloudDataCents_notm}} from instances that were upgraded to V2.1 or later.
+The settings apply to new instances and new clusters from instances that are deployed in V2.1 or later. The settings also apply to new clusters in cross {{site.data.keyword.cloud_notm}} data centers from instances that were upgraded to V2.1 or later.
 
-The settings do not apply to new clusters in the same {{site.data.keyword.CloudDataCent_notm}}, for existing instances from V2.0 or earlier or existing instances upgraded to V2.1 or later.
+The settings do not apply to new clusters in the same {{site.data.keyword.cloud_notm}} data center, for existing instances from V2.0 or earlier or existing instances upgraded to V2.1 or later.
 
 For instances that were deployed in V2.0 or earlier, it is recommended that you update the Public Switch MTU setting to 1500.
 
 ### Updating the Public Switch MTU setting
 {: #vc_bom-procedure-update-public-switch-mtu-setting}
 
-To update the MTU setting for the Public Switch, complete the following steps in the VMware vSphere Web Client:
+To update the MTU setting for the Public Switch, complete the following steps in the VMware vSphere web client:
 1. Right-click the vDS and click **Edit Settings**.
 2. On the **Properties** tab, select the **Advanced** option.
 3. Ensure that the **Maximum MTU** value is set to 1500.
@@ -149,21 +161,21 @@ To update the MTU setting for the Public Switch, complete the following steps in
 
 The allocation of distributed switches varies if you have existing instances and clusters. Review the following considerations for switch creation when you create a new cluster:
 
-* If there is one or more existing cluster in the same pod using distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
-* If there is one or more existing cluster in the same pod using distributed switches that have been named using the same name as the pod (rather than named using the same name as the cluster), your new cluster uses the same switches as the existing cluster.
-* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches that have been named using the same name as the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
+* If there are one or more existing clusters in the same pod that uses distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
+* If one or more existing clusters are in the same pod, and the pod uses distributed switches that are named by using the same name as the pod (rather than named by using the same name as the cluster), your new cluster uses the same switches as the existing cluster.
+* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches that are named by using the same name as the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
 
 ## Enhanced VMware vMotion Compatibility (EVC) mode settings
 {: #vc_bom-evc-mode-settings}
 
 Review the following table for an overview of the EVC mode settings for vCenter Server instances and the differences between vSphere versions.
 
-| Bare Metal Server CPU model | vSphere 6.5  | vSphere 6.7 |
+| Bare metal server CPU model | vSphere 6.5  | vSphere 6.7 |
 |:------------- |:------------- |:------------- |
 | Broadwell | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Broadwell** Generation |
 | Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
 | Cascade Lake[^vsphere] | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
-{: caption="Table 6. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
+{: caption="Table 7. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
 
 [^vsphere]: For instances with vSphere 6.5, Cascade Lake supports 6.5u3 only.
 
@@ -174,5 +186,5 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){:external}
 * [{{site.data.keyword.vmwaresolutions_short}} Protection data sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
-* [vCenter Server overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Planning vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_planning)
+* [vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
+* [Planning vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning)

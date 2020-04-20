@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2020
 
-lastupdated: "2019-12-02"
+lastupdated: "2020-04-03"
 
 subcollection: vmware-solutions
 
@@ -67,7 +67,7 @@ Using the following install-config.yaml file shown in the figure, update it usin
    * DataStore name.
 4. Paste the Pull Secret.
 5. Paste the SSH key.
-6. The following figure shows the install-config.yaml file. Copy the file to the clipboard. 
+6. The following figure shows the install-config.yaml file. Copy the file to the clipboard.
 
 ```bash
 apiVersion: v1
@@ -118,7 +118,7 @@ Now that the install-config.yaml is created and populated run the OpenStack Inst
 cd /opt/ocp42install/
 openshift-install create ignition-configs --dir=/opt/ocp42install/
 ```
-  The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-openshift-runbook-trbl).
+  The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-trbl-intro).
    {:note}
 
 The following files are produced by the OpenStack Installer:
@@ -279,7 +279,7 @@ The ignition files can be copied after using the following commands to display t
 | vsphere_datastore | vsanDatastore| |
 | vm_template | rhcos-latest | |
 | vm_network | vxw-dvs-22-virtualwire-24-sid-6011-OpenShift-LS | |
-| bootstrap_ignition_url | http://192.168.133.08/bootstrap.ign | |
+| bootstrap_ignition_url | `http://192.168.133.08/bootstrap.ign` | |
 | control_plane_ignition | |
 | compute_ignition | |
 
@@ -461,9 +461,9 @@ The password for the user that was created during installation can also be found
     ```
 
 
-**Next topic:** [Red Hat OpenShift 4.2 additional configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
+**Next topic:** [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-install-related}
 
-* [VMware Solutions on {{site.data.keyword.cloud}} and Red Hat OpenShift overview](/docs/services/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
+* [VMware Solutions on {{site.data.keyword.cloud}} and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)

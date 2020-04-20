@@ -4,7 +4,10 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-01-13"
+lastupdated: "2020-04-17"
+
+subcollection: vmware-solutions
+
 
 ---
 
@@ -33,7 +36,7 @@ The following are unique to a deployment with the ESXi as the host OS.
 
 The basic vSRX offering architecture simply places a vSRX in front of all the VLANs deployed into a given customer account. The vSRX is a powerful Vyatta replacement for situations in which a customer controlled gateway appliance is desirable.
 
-The diagram following represents the typical vSRX deployment on KVM and a basic vSRX deployment in which the hypervisor is ESXi.
+The following figure represents the typical vSRX deployment on KVM and a basic vSRX deployment in which the hypervisor is ESXi.
 
 ![Figure 1 - vSRX overview](../../images/vcsvsrx-logical-overview.svg){: caption="Figure 1. vSRX overview" caption-side="bottom"}
 
@@ -44,7 +47,7 @@ Note that in either case the deployment of the VMware vCenter Server instance is
 
 Understanding the default configuration assists in both an understanding of the vSRX HA Chassis Cluster and IBM Cloud underlay networking. The default configuration is the base upon which all further integration is executed.
 
-For more information, see [Understanding the vSRX Default Configuration](/docs/infrastructure/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#understanding-the-vsrx-default-configuration) and [IBM Cloud IaaS vSRX default configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-iaas-def-config).
+For more information, see [Understanding the vSRX Default Configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#understanding-the-vsrx-default-configuration) and [IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-iaas-def-config).
 
 ## vSRX and vCenter Server integrated design
 {: #vcsvsrx-planning-vsrx-design}
@@ -155,13 +158,13 @@ The diagram illustrates one of many potential implementations of BGP from the on
 
 The traffic originating from the client facility flows through AT&T NetBond or other provider into the GNPP router. The GNPP router is peered via BGP to the vSRX gateway deployed into the client's IBM Cloud account and all traffic is encapsulated in a GRE tunnel over BGP. The packets exiting the tunnel into the vSRX are then routed to the NSX overlay network via an edge services gateway.
 
-**Next topic:** [vSRX example configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vcsvsrx-default-config).
+**Next topic:** [vSRX example configuration](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-default-config)
 
 ## Related links
 {: #vcsvsrx-planning-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
-* [Getting Started With IBM Cloud Juniper vSRX](/docs/infrastructure/vsrx?topic=vsrx-getting-started)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
+* [Getting Started With IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
 * [Juniper Networks vSRX Deployment Guide for VMware](https://www.juniper.net/documentation/en_US/vsrx/information-products/pathway-pages/security-vsrx-vmware-guide-pwp.html){:external}
 * [Juniper Networks Requirements for vSRX on VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/reference/general/security-vsrx-vmware-system-requirement.html){:external}
 * [Juniper Networks vSRX installation with vSphere web client](https://www.juniper.net/documentation/en_US/vsrx/topics/task/installation/security-vsrx-vsphere-client-installing.html){:external}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-30"
+lastupdated: "2020-03-30"
 
 subcollection: vmware-solutions
 
@@ -70,4 +70,4 @@ The following default information is used in the application setup.
 |Task |Schedule is set to Hourly for DC1AssetScan and Daily for the others |
 {: caption="Table 2. Default information used in application setup" caption-side="bottom"}
 
-**Next topic:** [Glossary of Caveonix terms](/docs/services/vmwaresolutions?topic=vmware-solutions-caveonix-terminology)
+**Next topic:** [Glossary of Caveonix terms](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-terminology)

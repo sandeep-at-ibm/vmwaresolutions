@@ -30,7 +30,7 @@ This release includes new features, component updates, usability enhancements, a
 
 In an effort to consolidate our offerings for a better customer experience, the {{site.data.keyword.vmwaresolutions_short}} platform will no longer offer VMware Cloud Foundation effective May 13, 2020.
 
-Moving forward, all customers will be directed to VMware vCenter Server on {{site.data.keyword.cloud_notm}}, our flagship VMware Software-Defined Data Center solution on {{site.data.keyword.cloud_notm}} {{site.data.keyword.baremetal_short}}.
+Moving forward, all customers will be directed to VMware vCenter Server on {{site.data.keyword.cloud_notm}}, our flagship VMware Software-Defined Data Center solution on {{site.data.keyword.cloud_notm}} bare metal servers.
 
 Existing customers who use VMware Cloud Foundation will be assisted to convert to VMware vCenter Server by the end-of-support date of May 13, 2020.
 
@@ -60,15 +60,11 @@ The Windows software that is ordered for Microsoft Active Directory (AD) and DNS
 
 The AD domain functional level remains at 2008 to allow for backward compatibility with any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
 
-For more information, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom).
-
 ### vSAN storage enhancements
 {: #relnotes_v30-vcs-vsan}
 
-* When using vSAN storage, the number of Bare Metal Servers that you can order can now be greater than four. This applies to all vCenter Server, vCenter Server with Hybridity, and vCenter Server with NSX-T instances.
-* Starting with the V3.0 release, an M.2 solid-state drive is ordered with your vSAN storage instance. You can order up to 10 capacity disks or a total of 12 capacity disks if you select the **High Performance with Intel Optaine** option.
-
-For more information, see the *Storage settings* section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-storage-settings).
+* When using vSAN storage, the number of {{site.data.keyword.cloud_notm}} bare metal servers that you can order can now be greater than four. This applies to all vCenter Server, vCenter Server with Hybridity, and vCenter Server with NSX-T instances.
+* Starting with the V3.0 release, an M.2 solid-state drive is ordered with your vSAN storage instance. You can order up to 10 capacity disks or a total of 12 capacity disks if you select the **High Performance with Intel Optane** option.
 
 ## Updates for add-on services
 {: #relnotes_v30-services}
@@ -76,47 +72,44 @@ For more information, see the *Storage settings* section in [Ordering vCenter Se
 ### HyTrust CloudControl on IBM Cloud
 {: #relnotes_v30-services-htcc}
 
-In the current release, HyTrust CloudControl 5.5 is installed on all newly deployed instances. For more information about the new features in HyTrust CloudControl 5.5, see [What's New in HyTrust CloudControl Version 5.5](https://docs.hytrust.com/CloudControl/5.5.0/Online/Content/HTCC_Admin_Guide/_FrontMatter/Whats-New.html){:external}.
+In the current release, HyTrust CloudControl 5.5 is installed on all newly deployed instances.
 
 ### HyTrust DataControl on IBM Cloud
 {: #relnotes_v30-services-htdc}
 
-The current release installs HyTrust DataControl 4.3 on all newly deployed instances. For more information about the new features in HyTrust DataControl 4.3, see [What's New in KeyControl and DataControl Version 4.3](https://docs.hytrust.com/DataControl/4.3/Online/Content/Books/aaCommon/New-Changed-4x.html){:external}.
+The current release installs HyTrust DataControl 4.3 on all newly deployed instances.
 
 ### HyTrust KeyControl on IBM Cloud
 {: #relnotes_v30-services-htkc}
 
-The current release installs HyTrust KeyControl 4.3 on all newly deployed instances. For more information about the new features in HyTrust KeyControl 4.3, see [What's New in KeyControl and DataControl Version 4.3](https://docs.hytrust.com/DataControl/4.3/Online/Content/Books/aaCommon/New-Changed-4x.html){:external}.
+The current release installs HyTrust KeyControl 4.3 on all newly deployed instances.
 
 ### IBM Cloud Private Hosted
 {: #relnotes_v30-services-icp}
 
 The current release installs {{site.data.keyword.cloud_notm}} Private Hosted 3.1.2, together with {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, on all newly deployed instances.
 
-For more information about the new features in {{site.data.keyword.cloud_notm}} Private v3.1.2, see [What's new in {{site.data.keyword.cloud_notm}} Private v3.1.2](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_3.1.2/getting_started/whats_new.html){:external}.
-For more information about the new features in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2, see [What's new in {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_whatisnew.html){:external}.
-
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v30-services-kmip}
 
-Two new endpoints are now available in London and US East for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service. For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} service configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering-config#kmip_standalone_ordering-config).
+Two new endpoints are now available in London and US East for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service.
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 {: #relnotes_v30-services-spp}
 
-The current release installs IBM Spectrum Protect™ Plus V10.1.3 on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.3, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.3/spp/r_techchg_spp.html){:external}.
+The current release installs IBM Spectrum Protect™ Plus V10.1.3 on all newly deployed instances.
 
 ### Zerto on IBM Cloud
 {: #relnotes_v30-services-zerto}
 
-You are now able to add Zerto on {{site.data.keyword.cloud_notm}} on instances that are private-only. If you choose to install Zerto on private-only instances, you must set up your own proxy server and also configure the Call Home feature for Zerto. For more information, see [Ordering Zerto on {{site.data.keyword.cloud_notm}} for instances that are private network only](/docs/services/vmwaresolutions?topic=vmware-solutions-zerto_ordering#zerto_ordering-private-only).
+You are now able to add Zerto on {{site.data.keyword.cloud_notm}} on instances that are private-only. If you choose to install Zerto on private-only instances, you must set up your own proxy server and also configure the Call Home feature for Zerto.
 
 ## New and updated documentation
 
-* Documentation is now available to assist you in upgrading {{site.data.keyword.vmwaresolutions_short}} components to VMware vSphere 6.7. This upgrade is required if you want to continue to benefit from {{site.data.keyword.vmwaresolutions_short}} automation. For more information, see [Upgrading vCenter Server vSphere software from VMware vSphere 6.5 to 6.7](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_vsphere_upgrade#vc_vsphere_upgrade).
-* Reference documentation is now available to provide you with user IDs that {{site.data.keyword.vmwaresolutions_short}} maintains for use by {{site.data.keyword.cloud_notm}} automation. Possible messages that display in your instance history logs are also available for your review. For more information, see [IBM user IDs](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_user_ids) and [Instance history messages](/docs/services/vmwaresolutions?topic=vmware-solutions-audit_messages).
-* The **Reboot/Control** permission has been added to the table describing required permissions for the IBM Cloud infrastructure account. For more information, see [Permissions for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req#cloud-infra-acct-req-permissions).
-* New reference documentation is available for the following APIs. For more information, see [API reference](https://cloud.ibm.com/apidocs/vmware-solutions).
+* Documentation is now available to assist you in upgrading {{site.data.keyword.vmwaresolutions_short}} components to VMware vSphere 6.7. This upgrade is required if you want to continue to benefit from {{site.data.keyword.vmwaresolutions_short}} automation.
+* Reference documentation is now available to provide you with user IDs that {{site.data.keyword.vmwaresolutions_short}} maintains for use by {{site.data.keyword.cloud_notm}} automation. Possible messages that display in your instance history logs are also available for your review.
+* The **Reboot/Control** permission has been added to the table describing required permissions for the IBM Cloud infrastructure account.
+* New reference documentation is available for the following APIs.
   * List all history messages for a specified VMware vCenter Server instance
   * Add shared storages to a specified cluster
   * Delete NFS storages from a specified cluster

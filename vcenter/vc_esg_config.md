@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-21"
+lastupdated: "2020-04-14"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -21,10 +21,10 @@ subcollection: vmware-solutions
 # Configuring your network to use the customer-managed NSX ESG with your VMs
 {: #vc_esg_config}
 
-Configure the network for your virtual machines (VMs) so you can take advantage of the VMware NSX Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions?topic=vmware-solutions-faq#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configure the network for your virtual machines (VMs) so you can take advantage of the VMware NSX Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#faq-mgmt-nsx)
 
 VMware NSX is a network virtualization platform that allows the virtualization of isolated networks and provides several networking
-services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
+services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
 
 As part of the ordering process for your vCenter Server instance, the following actions are completed on your behalf:
 * A private customer subnet is ordered to be used by your VMs to access the {{site.data.keyword.cloud}} infrastructure private network.
@@ -37,7 +37,7 @@ As part of the ordering process for your vCenter Server instance, the following 
   The NSX Edge is not deployed for instances that are private only.
   {:note}
 
-**(NSX-V only)** If you installed the Veeam service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when you install Veeam](/docs/services/vmwaresolutions?topic=vmware-solutions-veeam_considerations#considerations-when-you-install-veeam-on-ibm-cloud).
+**(NSX-V only)** If you installed the Veeam service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when you install Veeam](/docs/vmwaresolutions?topic=vmware-solutions-veeam_considerations#veeam_considerations-install).
 
 ## Procedure to configure the networking settings for your VMs
 {: #vc_esg_config-procedure-config-networking}
@@ -74,7 +74,7 @@ If you want your workload VMs to have outbound access to the internet, you must 
 3. Click **Management > NAT** to open the **NAT** tab.
 4. Select the default SNAT rule in the table and click the green check mark above the table to enable the rule.
 
-For more information about NSX Edge NAT rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
+For more information about NSX Edge NAT rules, see [Managing NAT rules](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
 
 ## Enabling the SNAT rule for NSX-T
 {: #vc_nsx-t_esg_config-procedure-enable-snat-rule}
@@ -98,7 +98,7 @@ Additionally, you can find more details about the customer subnets by completing
 2. Click the filter menu and in the **Subnet** field enter the identifier as seen in the description of **customer-nsx-edge** in the VMware vSphere Web Client.
 3. Review the notes that are shown for the IP addresses. These notes identify which of the subnets and IP addresses are ordered and used during the initial setup.
 
-   Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
+   Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
 ## Procedure to identify customer subnets details for NSX-T
@@ -119,12 +119,12 @@ Additionally, you can find more details about the customer subnets by completing
 2. Click the filter menu and in the **Subnet** field enter the identifier as seen in the description of **customer-nsx-edge0** in the NSX-T Web Client.
 3. Review the notes that are shown for the IP addresses. These notes identify which of the subnets and IP addresses are ordered and used during the initial setup.
 
-   Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
+   Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
 ## Related links
 {: #vc_esg_config-related}
 
-* [Troubleshooting](/docs/services/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
-* [FAQs](/docs/services/vmwaresolutions?topic=vmware-solutions-faq)
+* [Troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact)
+* [FAQs](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}

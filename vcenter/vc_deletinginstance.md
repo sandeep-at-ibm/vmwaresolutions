@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-02-11"
+lastupdated: "2020-03-31"
 
 keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server
 
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 To release the components that you ordered in a VMware vCenter Server instance, delete the instance.
 
 When you delete a vCenter Server instance, the following components are released sequentially:
-1. (NSX-V only) All deployed services
+1. All deployed services
 2. The Support and Services fee for NSX-V instances or the Support fee for NSX-V instances.
 3. VMware product licenses
 4. ESXi servers
@@ -60,9 +60,9 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_deletinginstance-related}
 
-* [Deleting vCenter Server instances in a multi-site configuration](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance_multi)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Viewing vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
+* [Deleting vCenter Server instances in a multi-site configuration](/docs/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance_multi)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
+* [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
-* [Contacting IBM Support](/docs/services/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
