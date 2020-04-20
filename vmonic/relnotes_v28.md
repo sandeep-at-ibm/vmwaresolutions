@@ -20,7 +20,7 @@ subcollection: vmware-solutions
 # Release notes for V2.8
 {: #relnotes_v28}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
+This release includes new features, component updates, usability enhancements, and bug fixes.
 
 ## Single-node Trial for Migration and App Modernization instances
 {: #relnotes_v28-single-node-trial}

@@ -21,7 +21,7 @@ subcollection: vmware-solutions
 # Release notes for V3.6
 {: #relnotes_v36}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
+This release includes new features, component updates, usability enhancements, and bug fixes.
 
 ## Updates for VMware Solutions Shared
 {: #relnotes_v36-shared}
@@ -40,12 +40,12 @@ For more information about opening a support ticket, see [Contacting IBM Support
 
 This release applies the following updates when you order VMware vCenter Server on {{site.data.keyword.cloud_notm}} and VMware vSphere on {{site.data.keyword.cloud_notm}} instances and clusters.
 
-## Updates for advanced configuration settings for ESXi servers
+### Updates for advanced configuration settings for ESXi servers
 {: #relnotes_v36-confsets-ESXi-servers}
 
 For V3.6 and later releases, new instances are ordered with a new set of advanced configuration settings for ESXi servers. For more information, see [Advanced configuration settings for ESXi servers](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom#vc_bom-esxi-server-advance-config).
 
-## Updates for port group configuration settings
+### Updates for port group configuration settings
 {: #relnotes_v36-confsets-port-group}
 
 For V3.6 and later releases, security policies for promiscuous mode, MAC address changes, and forged transmits are now accepted on disturbed port groups.

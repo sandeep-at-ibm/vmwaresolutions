@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 # Release notes for V3.2
 {: #relnotes_v32}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
+This release includes new features, component updates, usability enhancements, and bug fixes.
 
 ## VMware HCX for IBM Cloud availability
 {: #relnotes_v32-HCX}

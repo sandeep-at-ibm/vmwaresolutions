@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 # Release notes for V3.3
 {: #relnotes_v33}
 
-This release includes new features, component updates, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:external}.
+This release includes new features, component updates, usability enhancements, and bug fixes.
 
 ## VMware Horizon 7
 {: #relnotes_v33-horizon}
