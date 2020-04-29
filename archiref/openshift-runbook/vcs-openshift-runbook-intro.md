@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-03"
+lastupdated: "2020-04-29"
 
 subcollection: vmware-solutions
 
@@ -108,4 +108,4 @@ The deployment approach is best described in the following phases:
 * [OpenShift 4 Release Update](https://www.youtube.com/watch?v=YJvTu8jC6CU){:external}
 * [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html#installation-dns-user-infra_installing-vsphere){:external}
 * [IBM Cloud VPN getting started](/docs/iaas-vpn?topic=iaas-vpn-getting-started)
-* [OpenStack cheat sheet](https://cheatsheet.dennyzhang.com/cheatsheet-openshift-a4){:external}
+* [OpenShift cheat sheet](https://cheatsheet.dennyzhang.com/cheatsheet-openshift-a4){:external}

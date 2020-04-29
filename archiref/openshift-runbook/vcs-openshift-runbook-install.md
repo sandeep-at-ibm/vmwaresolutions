@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-03"
+lastupdated: "2020-04-29"
 
 subcollection: vmware-solutions
 
@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 Red Hat OpenShift 4 introduced the following concepts:
 
 * Installer Provisioned Infrastructure (IPI) - For use on supported platforms, only AWS currently. The installer provisions the underlying infrastructure for the cluster and it configures the cluster.
-* User Provisioned Infrastructure (UPI)  -  For use on bare metal, vSphere, and other clouds that do not support IPI. The user is required to provision the infrastructure; compute, network, storage that the OpenStack cluster is hosted on. The installer configures only the cluster.
+* User Provisioned Infrastructure (UPI)  -  For use on bare metal, vSphere, and other clouds that do not support IPI. The user is required to provision the infrastructure; compute, network, storage that the OpenShift cluster is hosted on. The installer configures only the cluster.
 
 These instructions use the OpenShift installer in the UPI mode. Terraform is used to provision the seven VMs for the bootstrap, control-plane, and compute nodes. The following process is completed:
 
@@ -112,7 +112,7 @@ cp install-config.yaml install-config.bak
 ## Running the OpenShift Ignition command
 {: #openshift-runbook-runbook-install-ignition-cmd}
 
-Now that the install-config.yaml is created and populated run the OpenStack Installer to create the ignition files
+Now that the install-config.yaml is created and populated run the OpenShift Installer to create the ignition files
 
 ```bash
 cd /opt/ocp42install/
@@ -121,7 +121,7 @@ openshift-install create ignition-configs --dir=/opt/ocp42install/
   The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-trbl-intro).
    {:note}
 
-The following files are produced by the OpenStack Installer:
+The following files are produced by the OpenShift Installer:
 
 ```bash
 .
@@ -350,7 +350,7 @@ module "dns" {
 ## Run Terraform
 {: #openshift-runbook-runbook-install-terraform-run}
 
-Terraform is used to deploy the VMs for bootstrap, control-plane, and compute nodes. Terraform operates as follows:
+Terraform is used to deploy the VMs for bootstrap, control-plane nodes, and compute nodes. Terraform operates as follows:
 
 * terraform init - initializes the terraform plug-ins and modules.
 * terraform plan - performs a dry run on the templates, ensuring it can connect to the vCenter.
@@ -358,11 +358,11 @@ Terraform is used to deploy the VMs for bootstrap, control-plane, and compute no
 
 After Terraform provisions the VMs, the OpenShift cluster bootstraps itself:
 
-1. The bootstrap node boots and starts hosting the remote resources that are required for the compute-nodes to boot.
-2. The compute-nodes fetch the remote resources from the bootstrap node and finish booting.
-3. The compute-nodes use the bootstrap node to form an etcd cluster.
+1. The bootstrap node boots and starts hosting the remote resources that are required for the control-plane to boot.
+2. The control-plane nodes fetch the remote resources from the bootstrap node and finish booting.
+3. The control-plane nodes use the bootstrap node to form an etcd cluster.
 4. The bootstrap node starts a temporary Kubernetes control plane by using the new etcd cluster.
-5. The temporary control plane schedules the production control plane to the compute-nodes.
+5. The temporary control plane schedules the production control plane to the control-plane nodes.
 6. The temporary control plane shuts down and passes control to the production control plane.
 7. The bootstrap node injects OpenShift Container Platform components into the production control plane.
 8. The control plane sets up the compute nodes.
