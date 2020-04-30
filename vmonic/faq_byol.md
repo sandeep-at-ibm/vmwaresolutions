@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-01"
+lastupdated: "2020-04-29"
 
 keywords: FAQ, license, BYOL
 
@@ -81,11 +81,14 @@ Yes. You can use the BYOL feature or purchase licenses for any combination of th
 {: faq}
 
 Yes. If you selected BYOL for a specific VMware component when you create a cluster, you have the following options:
-* Enter a new BYOL key
-* Continue to use an existing BYOL key
+* Enter a new BYOL key.
+* Continue to use an existing BYOL key.
 * Purchase IBM-provided licensing for that cluster.
 
 Currently, only VMware vSphere Enterprise and VMware vSAN can be licensed per cluster.
+
+You cannot mix and match BYOL and IBM-provided licensing for any VMware component within a cluster.
+{:note}
 
 ## Can you use BYOL when you create a cluster?
 {: #faq_byol-cluster}

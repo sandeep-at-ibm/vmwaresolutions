@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-04-30"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -48,7 +48,7 @@ The following table details the BOM information for vCenter Server software comp
 | VMware       | Platform Services Controller    | 6.7 Update 3b (6.7.0-15129973) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
 | VMware       | vSAN[^vsan]                     | 6.7 Update 1 or <br/>6.6.1 |
 | VMware       | NSX for vSphere[^nsxv]          | 6.4.5 (build 13282012) |
-| VMware       | NSX-T for vSphere[^nsxt]        | 2.4 |
+| VMware       | NSX-T for vSphere[^nsxt]        | 2.5.1 |
 | Microsoft    | Windows Server Standard edition | 2016 |
 | Microsoft    | Active Directory domain functional level | 2008[^domain] |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
@@ -98,8 +98,8 @@ Review the following table for an overview of the advanced configuration setting
 | Block guest sourced BPDU frames | **Net.BlockGuestBPDU** = 1 | **Net.BlockGuestBPDU** = 0 |
 | Duration, in seconds, to lock out a user's account after it exceeds the maximum allowed failed login attempts. | **Security.AccountUnlockTime** = 1800 | **Security.AccountUnlockTime** = 900 |
 | Maximum allowed failed login attempts before a user's account is locked out. Zero disables account locking. | **Security.AccountLockFailures** = 6 | **Security.AccountLockFailures** = 5 |
-{: caption="Table 4. ESXi servers advanced configuration settings for vCenter Server instances and clusters before and after V3.6" caption-side="top"} 
-  
+{: caption="Table 4. ESXi servers advanced configuration settings for vCenter Server instances and clusters before and after V3.6" caption-side="top"}
+
 Starting in V3.6, ESXi servers join Active Directory domain for authentication. Also, the ESXi shell service is stopped instead of running.
 
 ## NSX and port group configuration settings
@@ -120,7 +120,7 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
 {: caption="Table 5. NSX and port group configuration settings for vCenter Server instances" caption-side="top"}
 
-Starting in V3.6, security policies for promiscuous mode, MAC address changes, and forged transmits are now accepted on disturbed port groups.
+Starting in V3.6, security policies for promiscuous mode, MAC address changes, and forged transmits are now accepted on distributed port groups.
 
 ## Network MTU configuration settings
 {: #vc_bom-network-mtu-config}

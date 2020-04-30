@@ -147,7 +147,7 @@ Documentation for new REST APIs is available in the *Reference* section. For mor
 ## New and updated documentation
 {: #relnotes_v36-updated-doc}
 
-* Documentation is now provided about managing your data when you use {{site.data.keyword.vmwaresolutions_short}}. FOr example, what data is stored and encrypted, how to protect your sensitive data, and how you can delete any stored personal data. For more information, see [Securing your data in IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmware-solutions-mng-data).
+* Documentation is now provided about managing your data when you use {{site.data.keyword.vmwaresolutions_short}}. For example, what data is stored and encrypted, how to protect your sensitive data, and how you can delete any stored personal data. For more information, see [Securing your data in {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-mng-data).
 * VMware Solution Shared video tutorials are now available in the **Related links** sections of the VMware Solution Shared and learning resource topics. For more information, see [VMware Solutions Shared videos](https://www.youtube.com/playlist?list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE){:external}.
 
 ## User interface updates and enhancements

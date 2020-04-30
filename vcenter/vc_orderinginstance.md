@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-04-30"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -129,7 +129,7 @@ Specify the licensing options for the following VMware components in the instanc
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 (NSX-V only) or 6.7
 * (NSX-V only) NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition). The VMware HCX service requires either the NSX Advanced or NSX Enterprise edition license.
-* (NSX-T only) NSX-T 2.5 (Base, Advanced, or Enterprise edition)
+* (NSX-T only) NSX-T 2.5.1 (Base, Advanced, or Enterprise edition)
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), and the NSX license are included and purchased on your behalf. However, you must specify the edition for the NSX license.
 
