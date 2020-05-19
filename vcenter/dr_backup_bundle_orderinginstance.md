@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: single-node trial, data protection DR, order data protection DR
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -88,7 +88,7 @@ If **No resource group available** is displayed in this field, contact the accou
 
 * The deployment of the instance starts automatically and the on-premises HCX service activation key is ordered.
 * You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
-* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances](/docs/vmwaresolutions?topic=vmware-solutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs) are installed.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances](/docs/vmwaresolutions?topic=vmwaresolutions-dr_backup_bundle_overview#dr_backup_bundle_overview-tech-specs) are installed.
 * When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
 #### Deployment process for HCX
@@ -206,5 +206,5 @@ Complete the following steps to delete a Single-node Trial for Data Protection a
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
-* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managing Zerto](/docs/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
+* [Managing Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-managingzertodr)

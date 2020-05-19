@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -93,9 +93,9 @@ This design adds advanced configuration parameters that are recommended by {{sit
 | NFS.MaxQueueDepth | 64 |
 {: caption="Table 2. NFS advanced configuration parameters" caption-side="bottom"}
 
-**Next topic:** [Cluster settings](/docs/vmwaresolutions?topic=vmware-solutions-cluster-settings)
+**Next topic:** [Cluster settings](/docs/vmwaresolutions?topic=vmwaresolutions-cluster-settings)
 
 ## Related links
 {: #storage-settings-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

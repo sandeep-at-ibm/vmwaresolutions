@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -105,14 +105,14 @@ Deploying multiple L2Cs can also be advantageous where multiple paths exist betw
 
 Monitor the traffic across all interfaces that use the Monitoring tab of the L2C VM. If the total data rate is approaching 8 Gbps (4 Gbps in / out) consider adding another L2 pair and redistribute stretched networks to rebalance.
 
-**Next topic:** [Upgrading HCX components](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-upgrade)
+**Next topic:** [Upgrading HCX components](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-upgrade)
 
 ## Related links
 {: #hcxclient-monitoring-related}
 
-* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX Client deployment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
-* [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-components)
+* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install)
+* [HCX Client deployment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
+* [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting)

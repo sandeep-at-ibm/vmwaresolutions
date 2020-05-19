@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -48,9 +48,9 @@ The RFC1918 private IP address range specifically reserves the use of network ra
 
 While this makes it simple to set up a worldwide connected infrastructure within your account, the fixed IP address space can be problematic when you want to extend your data center into {{site.data.keyword.cloud_notm}} through routing when you are using the same private address space as {{site.data.keyword.cloud_notm}}. The solution is to use NSX to create an overlay topology on the vCenter Server infrastructure, isolating your Bring Your Own IP (BYOIP) address space from interacting with {{site.data.keyword.cloud_notm}} assigned private IP address space. NSX can provide an L2 VPN to span internal BYOIP address space within the tunnel across external, possibly overlapping, IP address spaces.
 
-**Next topic:** [Networking services on IBM Cloud](/docs/vmwaresolutions?topic=vmware-solutions-nsx-networking_services)
+**Next topic:** [Networking services on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-networking_services)
 
 ## Related links
 {: #nsx_design-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -28,7 +28,7 @@ Only a limited number of add-on services are supported for vCenter Server with N
 ## IBM Cloud account requirements
 {: #vc_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
 
 ## IBM Cloud data center availability
 {: #vc_planning-dc-availability}
@@ -104,7 +104,7 @@ Depending on availability and inventory supply, {{site.data.keyword.cloud_notm}}
 ## Backup of management components
 {: #vc_planning-backup-mgmt-components}
 
-You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup).
+You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup).
 
 Backup operations are not supported for vCenter Server with NSX-T instances.
 {:important}
@@ -112,7 +112,7 @@ Backup operations are not supported for vCenter Server with NSX-T instances.
 ## Services for vCenter Server instances
 {: #vc_planning-addon-services}
 
-You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
+You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
 Only a limited number of add-on services are supported for vCenter Server with NSX-T instances.
 {:important}
@@ -136,12 +136,12 @@ When you deploy this service, complete the following settings:
 ## Capacity considerations
 {: #vc_planning-capacity-considerations}
 
-For more information about capacity considerations, see [Scaling capacity](/docs/vmwaresolutions?topic=vmware-solutions-solution_scaling).
+For more information about capacity considerations, see [Scaling capacity](/docs/vmwaresolutions?topic=vmwaresolutions-solution_scaling).
 
 ## Related links
 {: #vc_planning-related}
 
-* [vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)

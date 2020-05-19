@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: Red Hat OpenShift for VMware, OpenShift configuration, order OpenShift
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -27,7 +27,7 @@ You can include the Red Hat OpenShift for VMware service with a new vCenter Serv
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 2. Scroll down to the **Services** section, and then click **Red Hat OpenShift for VMware** on the **Transformation and Modernization of VMware Applications** card.
 3. On the **Red Hat OpenShift for VMware** page, review the description and technical specifications for Red Hat OpenShift for VMware, and then click **Continue**.
-4. To add the service while you order a new instance, click **Add to New Instance**, and then continue with [ordering a new vCenter Server instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
+4. To add the service while you order a new instance, click **Add to New Instance**, and then continue with [ordering a new vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
 5. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
 
 ## Red Hat OpenShift for VMware configuration
@@ -57,6 +57,6 @@ Alternately, you can configure your local `hosts` file with the following entrie
 ## Related links
 {: #ocp_ordering-related}
 
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

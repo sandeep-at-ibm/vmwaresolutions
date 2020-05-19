@@ -8,7 +8,7 @@ lastupdated: "2019-11-12"
 
 keywords: disaster recovery, request DR services, DR managed service
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -50,11 +50,11 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 3. On the **Zerto** page, review the description and technical specifications for Zerto as a managed service, and then click **Continue**.
 4. Specify the configuration settings according to your requirements or accept the default values.
 5. Click **vCenter Server** to add the service to one of your instances.
-6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance) instance.
+6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance) instance.
 7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
 
 ## Related links
 {: #managing_zerto_services-related}
 
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

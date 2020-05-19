@@ -8,7 +8,7 @@ lastupdated: "2020-04-08"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -27,7 +27,7 @@ The HCX service extends the networks of on-premises data centers into {{site.dat
 
 VMware HCX requires you to use either NSX Advanced or Enterprise through {{site.data.keyword.cloud_notm}} or an equivalent version that uses BYOL (Bring Your Own License). A 12-month commitment is required when you order the VMware HCX service. You are charged for 12 consecutive months after the initial deployment of HCX. Any additional nodes are included within the initial provisioning expiration date. After the 12-month commitment expires, you can install and uninstall the HCX service and you can add and remove hosts and clusters without restrictions. Your account is then charged monthly and you can cancel at any time.
 
-The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:note}
 
 VMware requires you to be on one of their supported versions in order for you to open a support request for HCX. For more information, see [VMware HCX Release Notes](https://docs.vmware.com/en/VMware-HCX/services/rn/VMware-HCX-Release-Notes.html){:external}.
@@ -98,7 +98,7 @@ The HCX service cannot be installed into an instance for which the default clust
 ### Requirements on firewall rules
 {: #hcx_considerations-firewall}
 
-Before you install the HCX service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see [VMware HCX port access requirements](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req#hcx-archi-port-req).
+Before you install the HCX service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see [VMware HCX port access requirements](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req#hcx-archi-port-req).
 
 **Notes**:
 
@@ -109,7 +109,7 @@ Before you install the HCX service, you must add a firewall rule to any existing
 ## Considerations when you remove HCX
 {: #hcx_considerations-delete}
 
-A 12-month commitment is required when you order the HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure). The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
+A 12-month commitment is required when you order the HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure). The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
 {:note}
 
 Review the following considerations before you remove the HCX service:
@@ -129,10 +129,10 @@ Only the virtual machines (VMs) that were deployed during the initial installati
 ## Related links
 {: #hcx_considerations-related}
 
-* [Ordering HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx_ordering)
-* [Managing HCX](/docs/vmwaresolutions?topic=vmware-solutions-managinghcx)
+* [Ordering HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_ordering)
+* [Managing HCX](/docs/vmwaresolutions?topic=vmwaresolutions-managinghcx)
 * [VMware HCX on IBM Cloud guided demo: Learn how to migrate a VM by using HCX](https://www.ibm.com/cloud/garage/dte/producttour/vmware-hcx-ibm-cloud-guided-demo-learn-how-migrate-vm-using-hcx){:external}
-* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

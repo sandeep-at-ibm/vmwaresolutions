@@ -8,7 +8,7 @@ lastupdated: "2020-04-16"
 
 keywords: set credentials, user credentials, set notifications
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -30,7 +30,7 @@ You can also specify whether you want to receive email and console notifications
 {: #useraccount-reqs}
 
 * You can link only one {{site.data.keyword.cloud_notm}} infrastructure account to one {{site.data.keyword.cloud_notm}} user account.
-* The {{site.data.keyword.cloud_notm}} infrastructure account that you're using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req).
+* The {{site.data.keyword.cloud_notm}} infrastructure account that you're using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
 * If the API key for your {{site.data.keyword.cloud_notm}} infrastructure account changes, you must update the key on the **Settings** page in the {{site.data.keyword.vmwaresolutions_short}} console.
 
    It is your responsibility to ensure that the API key that is saved on the **Settings** page is correct and up-to-date. Otherwise, operations that require API key validation might fail.
@@ -46,7 +46,7 @@ You can also specify whether you want to receive email and console notifications
 3. If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are linked, click **Retrieve** to complete the credentials automatically.
 4. If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are not linked, you must link them. Follow the instructions in [Upgrading your account](/docs/account?topic=account-upgrading-account), then click **Retrieve** to complete the credentials automatically.
 5. If you do not have an {{site.data.keyword.cloud_notm}} infrastructure account, and you do not have a billable  {{site.data.keyword.cloud_notm}} account, first [upgrade your account](/docs/account?topic=account-upgrading-account) and then [create a classic infrastructure API key](/docs/iam?topic=iam-classic_keys#create-classic-infrastructure-key).
-6. Click **Save Credentials**. If you receive a message that administrator access is required, you can locate an account administrator using the steps in [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmware-solutions-iam_verify_permissions).
+6. Click **Save Credentials**. If you receive a message that administrator access is required, you can locate an account administrator using the steps in [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions).
 
 ## Procedure to set notifications
 {: #useraccount-set-notif}
@@ -67,8 +67,8 @@ If email or console notifications are enabled for certain instance events, you'r
 ## Related links
 {: #useraccount-related}
 
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
-* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Notifications](/docs/vmwaresolutions?topic=vmware-solutions-notifications)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
+* [Notifications](/docs/vmwaresolutions?topic=vmwaresolutions-notifications)
 * [SoftLayer API](/docs/customer-portal?topic=customer-portal-customerportal_api)
-* [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmware-solutions-iam_verify_permissions)
+* [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions)

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -57,9 +57,9 @@ Install the HCX Manager appliance in the on-premises vCenter.
   * View the **Summary** tab, the console reads **Powered On** and the **Play** button is green.
 10. The HCX Manager is powered on and ready to be registered with the vCenter.
 
-**Next topic:** [Registering HCX Manager with vCenter](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-reg-vcenter)
+**Next topic:** [Registering HCX Manager with vCenter](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-reg-vcenter)
 
 ## Related links
 {: #hcx-archi-install-cfg-src-related}
 
-* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-prep-install)
+* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-prep-install)

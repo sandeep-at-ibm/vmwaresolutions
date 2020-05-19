@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -21,11 +21,11 @@ The architecture consists of a single cloud region and supports the ability to e
 
 ![Solution components of {{site.data.keyword.vmwaresolutions_short}}](../../images/vcsv4radiagrams-ra-full.svg "The solution comprises physical infrastructure, virtual infrastructure, infrastructure management, and common services."){: caption="Figure 1. Solution components of {{site.data.keyword.vmwaresolutions_short}}" caption-side="bottom"}
 
-**Next topic:** [Physical infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure)
+**Next topic:** [Physical infrastructure design](/docs/vmwaresolutions?topic=vmwaresolutions-design_physicalinfrastructure)
 
 ## Related links
 {: #design_overview-related}
 
-* [Virtual infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
-* [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice)
-* [Infrastructure management design](/docs/vmwaresolutions?topic=vmware-solutions-design_infrastructuremgmt)
+* [Virtual infrastructure design](/docs/vmwaresolutions?topic=vmwaresolutions-design_virtualinfrastructure)
+* [Common services design](/docs/vmwaresolutions?topic=vmwaresolutions-design_commonservice)
+* [Infrastructure management design](/docs/vmwaresolutions?topic=vmwaresolutions-design_infrastructuremgmt)

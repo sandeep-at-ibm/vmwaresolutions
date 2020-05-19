@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -164,13 +164,13 @@ Install the HCX Manager appliance in the on-premises vCenter.
 
 Notice the existing **Hybrid Cloud** icon and the **Hybrid Cloud Services** menu item on the left. The Hybrid Cloud Services registration updates these labels. In the inventory, the icon label becomes **Hybrid Cloud Services**.
 
-**Next topic:** [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
+**Next topic:** [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-mesh-deployment)
 
 ## Related links
 {: #hcxclient-vcs-client-deployment-related}
 
-* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
-* [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
-* [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)
+* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-components)
+* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install)
+* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting)

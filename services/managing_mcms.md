@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: Multi-cloud Management Services, request Multi-cloud Management Services, tech specs Multi-cloud Management Services
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -38,5 +38,5 @@ Managing the VMware virtual infrastructure consisting of compute, network, and s
 ## Related links
 {: #managing_mcms-related}
 
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

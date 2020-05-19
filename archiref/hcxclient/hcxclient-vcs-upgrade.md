@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -20,14 +20,14 @@ You must upgrade both sides as any fleet component updates cause both to redeplo
 
 If VMware Support asks for the System ID, provide both the client and cloud side. Use SSH into the HCX manager (client or cloud) and run `cat /common/location` to locate the System ID.
 
-**Next topic:** [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting)
+**Next topic:** [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting)
 
 ## Related links
 {: #hcxclient-vcs-upgrade-related}
 
-* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-components)
-* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-planning-prep-install)
-* [HCX Client deployment](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-migrations)
-* [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-monitoring)
+* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-components)
+* [Preparing the installation environment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install)
+* [HCX Client deployment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-monitoring)

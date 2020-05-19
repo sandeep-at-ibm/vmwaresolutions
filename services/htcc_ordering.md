@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: Hytrust CloudControl, Hytrust configuration, order Hytrust
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -28,19 +28,19 @@ The following versions of the HyTrust CloudControl service are installed, based 
 ## Ordering HyTrust CloudControl for a new instance
 {: #htcc_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **HyTrust CloudControl** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **HyTrust CloudControl** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering HyTrust CloudControl for an existing instance
 {: #htcc_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **HyTrust CloudControl** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **HyTrust CloudControl** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Related links
 {: #htcc_ordering-related}
 
-* [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
-* [Managing HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtcc)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [Managing HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtcc)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

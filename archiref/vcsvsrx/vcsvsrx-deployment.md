@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -100,12 +100,12 @@ If you deployed the IaaS KVM-based Juniper vSRX HA Cluster, you can continue wit
 
 If you opted to deploy the No-OS gateway offering, then follow the guidance in [Installing an Operating System on the Gateway](/docs/gateway-appliance?topic=gateway-appliance-order-byoa#installing-an-operating-system-on-the-gateway) to prepare the hosts for your appliance.
 
-**Next topic:** [vSRX base and advanced licensing](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-licensing)
+**Next topic:** [vSRX base and advanced licensing](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-licensing)
 
 ## Related links
 {: #vcsvsrx-deployment-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-hybridity-intro)
 * [Getting Started With IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
 * [Juniper Networks vSRX Deployment Guide for VMware](https://www.juniper.net/documentation/en_US/vsrx/information-products/pathway-pages/security-vsrx-vmware-guide-pwp.html){:external}
 * [Juniper Networks Requirements for vSRX on VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/reference/general/security-vsrx-vmware-system-requirement.html){:external}

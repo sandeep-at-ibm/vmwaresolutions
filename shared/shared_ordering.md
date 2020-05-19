@@ -8,7 +8,7 @@ lastupdated: "2020-04-15"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -55,7 +55,7 @@ For the Reserved offering, the vCPU and RAM virtual data center reservations are
 * There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage.
 * There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB.
 
-For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmware-solutions-shared_pricing).
+For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
 
 ### Virtual data center name
 {: #shared_ordering-inst-name}
@@ -99,7 +99,7 @@ The vCPU maximum number is limited to the 40 cores with hyperthreading on each h
 
 The Veeam Availability Suite and Veeam Cloud Connect Replication services are preinstalled and ready-to-use in all virtual data center instances. Service charges are incurred only if you choose to use the service.
 
-For more information, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_veeam).
+For more information, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam).
 
 ## Summary
 {: #shared_ordering-summary}
@@ -140,19 +140,19 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 {: #shared_ordering-results}
 
 * The deployment of the resources starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Virtual Data Center Status**.
-* When the resources are successfully deployed, the components that are described in [Technical specifications for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview#shared_overview-specs) are installed on your VMware virtual platform.
+* When the resources are successfully deployed, the components that are described in [Technical specifications for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview#shared_overview-specs) are installed on your VMware virtual platform.
 * When the resources are ready to use, the status is changed to **Ready to Use**.
 
 ## What to do next
 {: #shared_ordering-next}
 
-View the virtual data center instance that you ordered and then set the **admin** password for the vCloud Director Management console. For more information, see [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing).
+View the virtual data center instance that you ordered and then set the **admin** password for the vCloud Director Management console. For more information, see [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing).
 
 ## Related links
 {: #shared_ordering-related}
 
-* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing)
-* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
-* [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_veeam)
+* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
+* [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}
 * [Video tutorial: IBM Cloud for VMware Solutions Shared - Order a Virtual Data Center](https://www.youtube.com/watch?v=uAxxDIz9wOQ&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE){:external}

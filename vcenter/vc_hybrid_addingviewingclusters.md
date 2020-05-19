@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -264,5 +264,5 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ## Related links
 {: #vc_hybrid_addingviewingclusters-related}
 
-* [Viewing vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingremovingservers)

@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -68,8 +68,8 @@ Before you remove the HyTrust KeyControl service, ensure that you decouple all c
 ## Related links
 {: #htkc_considerations-related}
 
-* [Ordering HyTrust KeyControl](/docs/vmwaresolutions?topic=vmware-solutions-htkc_ordering)
-* [Managing HyTrust KeyControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtkc)
-* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Ordering HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_ordering)
+* [Managing HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtkc)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

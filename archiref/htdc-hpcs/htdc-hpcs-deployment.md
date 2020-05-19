@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -80,8 +80,8 @@ Copy the API key or click download to save it. You will not be able to view this
 ## HyTrust DataControl
 {: #htdc-hpcs-deployment-htdc}
 
-* Order HyTrust DataControl - [Ordering HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_ordering)
-* Update static routes on the HTDC VMs - Review [Managing HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtdc) for further details.
+* Order HyTrust DataControl - [Ordering HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_ordering)
+* Update static routes on the HTDC VMs - Review [Managing HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtdc) for further details.
 * Configure the Customer ESG to use SNAT to allow communication between VMs to be encrypted connected to the NSX overlay networks and the HyTrust DataControl virtual machines, which are connected to the IBM Cloud underlay network. Review [Add a SNAT rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-BEF4D960-5F8A-4DE5-84F6-0160DF916FDA.html){:external} and [Add a firewall rule](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-C7A0093A-4AFA-47EC-9187-778BDDAD1C65.html){:external}.
 * Configure HTDC - [HyTrust DataControl Administration Guide](https://docs.hytrust.com/DataControl/Admin_Guide-4.0/Content/OLH-Files/Admin-Guide.htm){:external}
   * Initializing the KeyControl webGUI.
@@ -103,4 +103,4 @@ Copy the API key or click download to save it. You will not be able to view this
 {: #htdc-hpcs-deployment-related}
 
 *  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
-*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)

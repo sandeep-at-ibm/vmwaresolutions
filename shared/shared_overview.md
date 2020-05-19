@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -117,14 +117,14 @@ When you create or deploy vApps or VMs, a storage policy is selected. There are 
 {: #shared_overview-manage_user_access}
 
 {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) controls user access
-to {{site.data.keyword.vmwaresolutions_short}} service instances. For more information about IAM, see [Managing user access with Identity and Access Management](/docs/vmwaresolutions?topic=vmware-solutions-iam).
+to {{site.data.keyword.vmwaresolutions_short}} service instances. For more information about IAM, see [Managing user access with Identity and Access Management](/docs/vmwaresolutions?topic=vmwaresolutions-iam).
 
 ## Related links
 {: #shared_overview-related}
 
-* [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_planning)
-* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
-* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
+* [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning)
+* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [VMware vCloud Director](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
 * [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){:external}
 * [Video tutorial: IBM Cloud for VMware Solutions Shared - Order a Virtual Data Center](https://www.youtube.com/watch?v=uAxxDIz9wOQ&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE){:external}

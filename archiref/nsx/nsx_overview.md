@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 The VMware NSX Edge Services Gateway (ESG) solution is an extension of the VMware vCenter Server offering that is currently available on the {{site.data.keyword.cloud}}. The solution architecture for vCenter Server details the components of the solution and the high-level configuration of each component in the design.
 
-For more information about the vCenter Server design, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview).
+For more information about the vCenter Server design, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
 
 ## Overview of NSX Edge Services Gateway
 {: #nsx_overview-nsx-esg}
@@ -36,9 +36,9 @@ The NSX Edge Services Gateway connects isolated, stub networks to shared (uplink
 | High Availability | Ensures an active NSX Edge on the network in case the primary NSX Edge virtual machine is unavailable. |
 {: caption="Table 1. Features available with the NSX Edge Service Gateway" caption-side="bottom"}
 
-**Next topic:** [NSX Edge Services Gateway design](/docs/vmwaresolutions?topic=vmware-solutions-nsx_design)
+**Next topic:** [NSX Edge Services Gateway design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx_design)
 
 ## Related links
 {: #nsx_overview-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

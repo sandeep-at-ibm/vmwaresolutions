@@ -8,7 +8,7 @@ lastupdated: "2020-04-07"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -153,7 +153,7 @@ Click **View Resource** to access the VLAN details.
 ## Related links
 {: #mcv_viewingclusters-related}
 
-* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv_overview)
-* [Ordering multi-zone stretch clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
-* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
-* [Expanding and contracting capacity for multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_addingremovingservers)
+* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
+* [Ordering multi-zone stretch clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
+* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
+* [Expanding and contracting capacity for multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservers)

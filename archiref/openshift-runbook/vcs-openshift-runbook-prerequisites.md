@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -152,11 +152,11 @@ govc datastore.mkdir isos
 govc datastore.upload rhel-server-7.6-x86_64-dvd.iso isos/rhel-server-7.6-x86_64-dvd.iso
 ```
 
-**Next topic:** [OpenShift NSX logical switches configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxls-intro)
+**Next topic:** [OpenShift NSX logical switches configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxls-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-prerequisites-related}
 
-* [OpenShift NSX DLR configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro)
-* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-bastion-intro)
+* [OpenShift NSX DLR configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxdlr-intro)
+* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
 * [Visual Studio Code](https://code.visualstudio.com/){:external}

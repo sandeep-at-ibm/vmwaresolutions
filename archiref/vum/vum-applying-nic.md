@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-03"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -49,10 +49,10 @@ Use the ID and password that are listed in the {{site.data.keyword.cloud_notm}} 
 7. Type **“Y”** to enter recovery mode and boot the ESXi server with the previous version.
 8. Monitor its progress via the console. The boot can take 10 - 20 minutes.
 
-**Next topic:** [Types of VMware software updates](/docs/vmwaresolutions?topic=vmware-solutions-vum-type-updates)
+**Next topic:** [Types of VMware software updates](/docs/vmwaresolutions?topic=vmwaresolutions-vum-type-updates)
 
 ## Related links
 {: #vum-applying-nic-related}
 
-* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

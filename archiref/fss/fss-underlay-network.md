@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -42,7 +42,7 @@ The edge services cluster does not provide protection to any VLANs or subnets in
 
 The use of a gateway device to control traffic flows within the workload region and between the workload region and the IBM Cloud public and private networks is recommended.
 
-**Next topic**: [FSS Cloud clusters](/docs/vmwaresolutions?topic=vmware-solutions-fss-compute-clusters)
+**Next topic**: [FSS Cloud clusters](/docs/vmwaresolutions?topic=vmwaresolutions-fss-compute-clusters)
 
 ## Related links
 {: #fss-underlay-network-related}

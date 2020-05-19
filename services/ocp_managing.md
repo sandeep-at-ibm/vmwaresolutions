@@ -8,7 +8,7 @@ lastupdated: "2020-04-03"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -46,7 +46,7 @@ plane certificates](https://docs.openshift.com/container-platform/4.2/backup_and
 The SSH key pair that is generated during installation is on the OpenShift bastion VM. The location of the SSH key pair is shown in the OpenShift Service Details page. This SSH key was installed on all cluster virtual machines (VMs) to allow SSH logins from the bastion without requiring a password.
 
 It is recommended that a new SSH key pair is generated and used to replace the existing key. To generate a new
-SSH key pair, use the instructions in the Red Hat article about [updating an SSH key](https://access.redhat.com/solutions/4510281){:external}. You must run the commands from the bastion VM. For more information about logging in to the bastion, see [Bastion details](/docs/vmwaresolutions?topic=vmware-solutions-ocp_overview#ocp_overview-bastion).
+SSH key pair, use the instructions in the Red Hat article about [updating an SSH key](https://access.redhat.com/solutions/4510281){:external}. You must run the commands from the bastion VM. For more information about logging in to the bastion, see [Bastion details](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-bastion).
 
 ## Expanding an OpenShift cluster with more workers
 {: #ocp_managing-expand-cluster}
@@ -58,7 +58,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   2. Do not power on this VM yet, as there are more configuration steps ahead.
 
 2. Prepare a worker ignition file on the bastion.
-  1. For more information about logging in to the bastion, see [Bastion details](/docs/vmwaresolutions?topic=vmware-solutions-ocp_overview#ocp_overview-bastion).
+  1. For more information about logging in to the bastion, see [Bastion details](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-bastion).
   2. In the installation directory on the bastion, locate the worker ignition file named `worker.ign`. Create a base64 version of this file by using the command `base64 -w0 worker.ign > worker.ign.b64`. The contents of the newly created `worker.ign.b64` file is used in the next step.
 
 3. Set the VM attributes.
@@ -101,7 +101,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   2. Using the DNS Manager, add a new A record to the corresponding `ocp` zone. When you create the A record, make sure the option to create associated PTR record is selected.
 
 7. Approve any certificate signing requests (CSRs) from the bastion. During the provisioning of the new worker, you might have to [approve CSRs](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external} from the bastion.
-  1. Log in to the bastion as the `root` user and change to the bastion installation directory, as described in [OpenShift bastion details](/docs/vmwaresolutions?topic=vmware-solutions-ocp_overview#ocp_overview-bastion).
+  1. Log in to the bastion as the `root` user and change to the bastion installation directory, as described in [OpenShift bastion details](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-bastion).
   2. Before you can run any commands, you must authenticate to OpenShift.
     * If authentication is not configured and you are using the default `kubeadmin` account and password, run the command `export KUBECONFIG=auth/kubeconfig` and verify that you are authenticated by running the command `./oc whoami`.
     * If other backends or users are authenticated, log in by using one of those accounts as explained in the Red Hat OpenShift documentation, for example, by running the command `./oc login`.
@@ -116,6 +116,6 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
 ## Related links
 {: #ocp_managing-related}
 
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

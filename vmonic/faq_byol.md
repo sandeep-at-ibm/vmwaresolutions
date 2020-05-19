@@ -8,7 +8,7 @@ lastupdated: "2020-04-29"
 
 keywords: FAQ, license, BYOL
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -45,7 +45,7 @@ The BYOL feature is not available to Business Partner users.
 
 After an order to create a new cluster for VMware vSphere is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
-After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters).
+After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
 
 ## What license editions and CPUs are required for BYOL?
 {: #faq_byol-license-cpu-reqs}
@@ -141,5 +141,5 @@ With the introduction of the BYOL feature, continued use of the manual process i
 ## Related links
 {: #faq_byol-related}
 
-* [Accessing the console](/docs/vmwaresolutions?topic=vmware-solutions-loginmethod)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Accessing the console](/docs/vmwaresolutions?topic=vmwaresolutions-loginmethod)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

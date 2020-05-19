@@ -8,7 +8,7 @@ lastupdated: "2019-04-02"
 
 keywords: NSX license, upgrade license, Hybridity license
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -39,6 +39,6 @@ You can upgrade the VMware NSX license for your instance to a later edition. Lic
 ## Related links
 {: #vc_hybrid_upgrade-lic-related}
 
-* [vCenter Server with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQs](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [vCenter Server with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_overview#vc_hybrid_overview)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQs](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -30,12 +30,12 @@ To manage the Veeam service, access the Veeam console by completing the followin
 
 You can find the Windows IP address and the Administrator credentials on the Veeam service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
 ## Backing up and restoring management components for instances with Veeam installations
 {: #managing-veeam-backup-and-replication}
 
-The Veeam service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup).
+The Veeam service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup).
 
 For instances deployed in (or upgraded to) V1.8 or later releases, the configuration changes to your environment are not automatically backed up. Therefore, before you change the configuration of your environment, it is recommended that you back up the management components manually by running the management backup job in the Veeam console. For more information about backing up manually, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}.
 
@@ -67,14 +67,14 @@ If the Veeam service is installed on an instance with public and private network
 ### Updating Veeam licenses for instances deployed with private network only
 {: #managingveeam-update-license-private}
 
-If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and [contact {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) to get assistance with updating the license key when the renewal is needed.
+If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and [contact {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) to get assistance with updating the license key when the renewal is needed.
 
 ## Related links
 {: #managingveeam-related}
 
-* [Veeam overview](/docs/vmwaresolutions?topic=vmware-solutions-veeam_considerations)
-* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [VMware Solutions FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Veeam overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_veeam_services)
+* [VMware Solutions FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Veeam backup and replication FAQ](/docs/virtualization?topic=Virtualization-faqs-veeam-backup-and-replication)
 * [Veeam.com website](https://www.veeam.com/){:external}
 * [Veeam technical documentation](https://www.veeam.com/documentation-guides-datasheets.html){:external}

@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -150,8 +150,8 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 ## Related links
 {: #mcv_addingremovingservers-related}
 
-* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv_overview)
-* [Ordering multi-zone stretch clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
-* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
-* [Viewing IBM Cloud for VMware Mission Critical Workload clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_viewingclusters)
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
+* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
+* [Ordering multi-zone stretch clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
+* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
+* [Viewing IBM Cloud for VMware Mission Critical Workload clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_viewingclusters)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)

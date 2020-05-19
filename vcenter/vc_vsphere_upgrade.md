@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -41,7 +41,7 @@ Complete the following requirements before you begin the upgrade:
 * Upgrade any extensions or snap-ins within the vCenter Server environment. Review the following documentation before you plan your upgrade:
   * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:external}
   * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
-* Set up vSphere Update Manager (VUM) within your vCenter Server instance to download updates from VMware vSphere. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro#vum-intro).
+* Set up vSphere Update Manager (VUM) within your vCenter Server instance to download updates from VMware vSphere. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 * Open a support ticket with the {{site.data.keyword.vmwaresolutions_short}} team to notify them that an upgrade is being planned. The ticket remains open until the instance is registered at the upgraded level in the {{site.data.keyword.vmwaresolutions_short}} console.
 * Confirm whether the vCenter Server instance that you are upgrading is linked to another vCenter Server instance as primary or secondary in the {{site.data.keyword.vmwaresolutions_short}} console. All linked instances must have their Platform Services Controllers (PSCs) upgraded first as part of a particular site upgrade.
 * Confirm the following requirements for vSAN based instances:
@@ -50,7 +50,7 @@ Complete the following requirements before you begin the upgrade:
   * Verify whether the overall vSAN volume usage is above 70%. You might need to either reduce disk usage or add an ESXi host before the upgrade.
 * If your vCenter Server instance was originally ordered in V2.5 or later, contact IBM Support for the **root** user ID password for both the PSC and vCenter as only an account with **customerroot** access is visible on the console. If the PSC and vCenter **root** user ID is visible with its password, then this step is not required.
 * Confirm that you have a [My VMware](https://my.vmware.com){:external} user ID for which to download the required binary files to upgrade. If you don't, contact IBM Support with the upgrade support ticket ID.
-* Confirm that VUM is configured to reach https://www.vmware.com to download patches. If it can't be configured because of security policies, then you must manually download the most recent patch sets and upload them into VUM. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro#vum-intro).
+* Confirm that VUM is configured to reach https://www.vmware.com to download patches. If it can't be configured because of security policies, then you must manually download the most recent patch sets and upload them into VUM. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 
 ### Preparing your jumpbox
 {: #vc_vsphere_upgrade-prereq-jumpbox}
@@ -98,7 +98,7 @@ Locate the ``VMW-ESX-6.7.0-intel-nvme-vmd-1.4.0.1016-8733247.zip`` file for Inte
 
 Before you begin the upgrade, back up each component.
 
-* For more information about backing up vCenter Server and PSCs, see [Overview of Backup and Restore options in vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:external} and [vCenter file-based backup](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup#solution_backingup-vcenter).
+* For more information about backing up vCenter Server and PSCs, see [Overview of Backup and Restore options in vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:external} and [vCenter file-based backup](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup#solution_backingup-vcenter).
 * For more information about backing up NSX, see [Backing Up NSX Manager Data](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.upgrade.doc/GUID-2A75A102-518D-4D6C-B23D-877C421B1536.html){:external}.
 
 It is recommended that you use file-based backup. Image-based backup that uses vSphere Data Protection is not supported in VMware vSphere 6.7.
@@ -163,7 +163,7 @@ If you have linked instances, you must upgrade all PSC instances in the vCenter 
 {: #vc_vsphere_upgrade-procedure-psc-before}
 
 * Have your vCenter and PSC root passwords available for the following procedure. Use the {{site.data.keyword.vmwaresolutions_short}} console to note whether your vCenter Server instance version has been upgraded from V2.4 or earlier to V2.7 or later.
-* On the {{site.data.keyword.vmwaresolutions_short}} console, a single password for root for both the PSC and vCenter is displayed. However, this password is only for vCenter. You must [contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) for the root PSC password.
+* On the {{site.data.keyword.vmwaresolutions_short}} console, a single password for root for both the PSC and vCenter is displayed. However, this password is only for vCenter. You must [contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) for the root PSC password.
 * To avoid conflicts, use the IP address in the upper part of the same subnet that vCenter and the PSC are currently using. You must use a temporary IP address for the new appliance deployment.
 
 #### Procedure to upgrade the Platform Services Controller
@@ -241,7 +241,7 @@ The VMware Update Manager function within vCenter is used to upgrade and patch t
 #### Uploading the ESXi ISO into VUM
 {: #vc_vsphere_upgrade-procedure-esxi-iso}
 
-1. Ensure that you have VUM configured to download patches from https://www.vmware.com. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro).
+1. Ensure that you have VUM configured to download patches from https://www.vmware.com. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro).
 2. Use Flex or HTML to open the vCenter user interface and go to the **VUM Admin View**.
 3. From the **VUM Admin View**, select the **ESXi Images** tab and select **Import ESXi Images**.
 4. Browse for the **ESXi 6.7u1iso** image, which was downloaded from VMware and import it into the VUM repository.
@@ -281,8 +281,8 @@ Locate the image in the patch repository as an **important** Host Extension.
 
 After the upgrade, it is recommended that you apply your custom baseline for the ESXi host patches.
 
-1. Verify the correct version of the supported ESXi host patches. For more information, see [Software BOM for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmware-solutions-vc_bom#vc_bom-software).
-2. Create your custom baseline. For more information, see [Creating baselines and attaching to inventory objects](/docs/services/vmwaresolutions?topic=vmware-solutions-vum-baselines).
+1. Verify the correct version of the supported ESXi host patches. For more information, see [Software BOM for vCenter Server instances](/docs/services/vmwaresolutions?topic=vmwaresolutions-vc_bom#vc_bom-software).
+2. Create your custom baseline. For more information, see [Creating baselines and attaching to inventory objects](/docs/services/vmwaresolutions?topic=vmwaresolutions-vum-baselines).
 3. From the vCenter Server UI, select the cluster containing the ESXi hosts to be patched.
 4. Click the **updates** tab in the navigation pane and select the **Host Updates** tab. Select your custom baseline and repeat the procedure to upgrade the ESXi hosts.
 
@@ -331,7 +331,7 @@ Similar to VMware guest tools, a vCenter Server environment upgrade might cause 
 #### Upgrading firmware and drivers
 {: #vc_vsphere_upgrade-procedure-addtl-nic}
 
-You might need to update your firmware and drivers to a version that is compatible with vSphere 6.7 on the ESXi servers. Check your firmare and drivers versions and compare them to the [Product compatibility guide](/docs/vmwaresolutions?topic=vmware-solutions-vmware-comp-guide). If required, complete the necessary upgrades.
+You might need to update your firmware and drivers to a version that is compatible with vSphere 6.7 on the ESXi servers. Check your firmare and drivers versions and compare them to the [Product compatibility guide](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-comp-guide). If required, complete the necessary upgrades.
 
 #### Setting the Enhanced vMotion Compatibility mode to Intel Skylake
 {: #vc_vsphere_upgrade-procedure-addtl-evc}
@@ -368,4 +368,4 @@ When your upgrade is complete, update your support ticket with IBM Support. Prov
 
 * [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}
 * [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

@@ -8,7 +8,7 @@ lastupdated: "2020-03-31"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -54,6 +54,6 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_deletinginstance_multi-related}
 
-* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)
-* [Ordering, viewing, and removing services from vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
+* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance)
+* [Ordering, viewing, and removing services from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -140,4 +140,4 @@ set routing-options static route 0.0.0.0/0 next-hop 10.135.70.1
 EOF
 
 
-**Next topic:** [vSRX deployment](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-deployment)
+**Next topic:** [vSRX deployment](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-deployment)

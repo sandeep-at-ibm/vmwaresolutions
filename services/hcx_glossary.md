@@ -8,7 +8,7 @@ lastupdated: "2019-12-12"
 
 keywords: VMware HCX, HCX site, HCX definition
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

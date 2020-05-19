@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -48,11 +48,11 @@ The HyTrust Workload Security Platform consists of the following products:
 
 This reference architecture uses HyTrust DataControl.
 
-**Next topic:** [IBM Hyper Protect Crypto Services overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-hpcs-overview)
+**Next topic:** [IBM Hyper Protect Crypto Services overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-hpcs-overview)
 
 ## Related links
 {: #htdc-hpcs-hytrust-overview-related}
 
-* [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
-* [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
-* [HyTrust KeyControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htkc_considerations)
+* [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)
+* [HyTrust KeyControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations)

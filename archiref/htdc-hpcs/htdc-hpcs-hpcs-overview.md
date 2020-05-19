@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -30,7 +30,7 @@ The IBM HPCS service has the following key features:
 * Uses frameworks such as gRPC to enable remote application access. gRPC is a modern open source high-performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access Hyper Protect Crypto Services by calling EP11 API remotely over gRPC.
 * Dedicated keystore to ensure data isolation and security. Privileged users are locked out for protection against abusive use of system administrator credentials or root user credentials.
 
-**Next topic:** [System context](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-system-context)
+**Next topic:** [System context](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-system-context)
 
 ## Related links
 {: #htdc-hpcs-hpcs-overview-related}

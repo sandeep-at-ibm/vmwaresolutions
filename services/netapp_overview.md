@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: NetApp ONTAP Select, request NetApp ONTAP Select, tech specs NetApp ONTAP Select
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -35,5 +35,5 @@ NetApp ONTAP Select is deployed as a managed service through IBM Global Services
 ## Related links
 {: #netapp-related}
 
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

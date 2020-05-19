@@ -8,7 +8,7 @@ lastupdated: "2020-03-31"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, remove vCenter Server Hybridity
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -60,8 +60,8 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_hybrid_deletinginstance-related}
 
-* [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_deletinginstance_multi)
-* [Viewing vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservers)
+* [Deleting vCenter Server with Hybridity Bundle instances in a multi-site configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_deletinginstance_multi)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingremovingservers)
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

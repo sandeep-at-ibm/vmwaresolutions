@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -59,7 +59,7 @@ The base offering is deployed with a vCenter Server appliance that is sized to s
 
 In total, the base offering requires 38 vCPU and 67 GB vRAM that are reserved for the virtualization management layer. The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
-For more management resource requirements when you deploy the HCX service, see [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+For more management resource requirements when you deploy the HCX service, see [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations).
 
 ### Infrastructure hybridity
 {: #vc_hybrid_overview-infras-hybrid}
@@ -89,13 +89,13 @@ Your instance contains the following networking components:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs.
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching more VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
-  * A secure management services VMware NSX ESG for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
+  * A secure management services VMware NSX ESG for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 
     This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, when you use a firewall or disable the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#faq-customer-nsx)
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#faq-customer-nsx)
 
-For more information on networking components that are ordered when you deploy the HCX service, see [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations).
+For more information on networking components that are ordered when you deploy the HCX service, see [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations).
 
 ### Virtual Server Instances
 {: #vc_hybrid_overview-vsi}
@@ -134,7 +134,7 @@ Each vCenter Server with Hybridity Bundle expansion node deploy and incur charge
 ### Hardware for expansion nodes
 {: #vc_hybrid_overview-expansion-node-hardware}
 
-One bare metal server with the configuration presented in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_overview#vc_hybrid_overview-specs).
+One bare metal server with the configuration presented in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_overview#vc_hybrid_overview-specs).
 
 ### Licenses and fees for expansion nodes
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
@@ -158,6 +158,6 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 ## Related links
 {: #vc_hybrid_overview-related}
 
-* [vCenter Server Software Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [vCenter Server Software Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom)
+* [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

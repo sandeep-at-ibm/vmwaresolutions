@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -28,8 +28,8 @@ You can scale out a VMware vSphere cluster that you ordered or saved in the {{si
 {: #vs_scalingexistingclusters-req}
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_planning).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 *  You received an email with the confirmation that the cluster you want to scale is ready to use.
 
 ## Procedure to scale existing clusters
@@ -61,6 +61,6 @@ The vSphere clusters, unlike the vCenter Server instances, are not displayed on 
 ## Related links
 {: #vs_scalingexistingclusters-related}
 
-* [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
-* [Ordering vSphere clusters based on existing configurations](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
-* [Scaling clusters created outside of the console](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances)
+* [Ordering vSphere clusters based on existing configurations](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderingbasedonexistingconfig)
+* [Scaling clusters created outside of the console](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderingforclustersoutside)

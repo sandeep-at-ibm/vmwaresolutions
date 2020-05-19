@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -57,4 +57,4 @@ You can export the contents of an inventory list into a CSV file.
 ## Related links
 {:vmware-inventory-export-related}
 
-* [vCenter Server with Hybridity Bundle](/docs/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server with Hybridity Bundle](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-hybridity-intro)

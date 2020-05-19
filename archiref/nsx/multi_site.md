@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -41,4 +41,4 @@ The following example adds an NSX universal transport zone to the basic manageme
 ## Related links
 {: #nsx-multi_site-related}
 
-* [Networking services on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmware-solutions-nsx-networking_services)
+* [Networking services on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-networking_services)

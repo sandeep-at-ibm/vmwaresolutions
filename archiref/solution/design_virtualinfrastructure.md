@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-14"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -45,7 +45,7 @@ By default, the only users who can log in directly are the _root_ and _ibmvmadmi
 | Time synchronization   | Uses {{site.data.keyword.cloud}} NTP server |
 | Host access            | Supports DCUI. SSH and ESXi Shell are supported but not enabled by default |
 | User access            | Local authentication and MSAD |
-| Domain name resolution | Uses DNS as described in [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice). |
+| Domain name resolution | Uses DNS as described in [Common services design](/docs/vmwaresolutions?topic=vmwaresolutions-design_commonservice). |
 | EVC Mode | Skylake (only for “greenfield” vSphere 6.7 deployments) |
 {: caption="Table 1. vSphere ESXi configuration" caption-side="bottom"}
 
@@ -79,7 +79,7 @@ vSAN employs the following components:
 * The onboard RAID controller is configured in a RAID-0 array for each drive except for the two OS drives.
 * A single vSAN datastore is created from all storage.
 
-The available vSAN features depend on the license edition that you select when you order the instance. For more information, see [VMware vSAN edition comparison](/docs/vmwaresolutions?topic=vmware-solutions-solution-appendix#solution-appendix-vsan-editions).
+The available vSAN features depend on the license edition that you select when you order the instance. For more information, see [VMware vSAN edition comparison](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix#solution-appendix-vsan-editions).
 
 ### Virtual network setup for vSAN
 {: #design_virtualinfrastructure-net-setup}
@@ -88,7 +88,7 @@ For this design, the vSAN traffic traverses between ESXi hosts on a dedicated pr
 
 vSAN does not load balance traffic across uplinks. As a result, one adapter is active while the other is in standby to support high availability (HA). The network failover policy for vSAN is configured as **Explicit Failover** between physical network ports.
 
-For more information about physical NIC connections, see [Physical host NIC connections](/docs/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure#design_physicalinfrastructure-host-connect).
+For more information about physical NIC connections, see [Physical host NIC connections](/docs/vmwaresolutions?topic=vmwaresolutions-design_physicalinfrastructure#design_physicalinfrastructure-host-connect).
 
 ### vSAN policy design
 {: #design_virtualinfrastructure-storage-policy}
@@ -127,10 +127,10 @@ Additionally, this architecture requires that all hosts have a subnet route that
 
 Management virtual machines can be located on an NFS data store. This creates a bootstrapping problem since some of the management machines might be responsible for DNS services, which are used to resolve the NFS hostname. Therefore, this architecture specifies that at least one of the IP addresses for the management data store to be hardcoded in `/etc/hosts` on each of the hosts.
 
-**Next topic:** [VMware NSX-V design](/docs/vmwaresolutions?topic=vmware-solutions-nsx-v-design)
+**Next topic:** [VMware NSX-V design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-v-design)
 
 ## Related links
 {: #design_virtualinfrastructure-related}
 
 * [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
-* [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-nsx_overview#nsx_overview)
+* [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-nsx_overview#nsx_overview)

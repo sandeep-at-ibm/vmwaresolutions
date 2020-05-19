@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -214,10 +214,10 @@ Configure VUM to use the proxy server to access the repositories on the internet
   2. Click **Summary** and click **Reboot**.
   3. In the confirmation box, click **Yes** to confirm the operation.
 
-**Next topic:** [Collecting the metadata ](/docs/vmwaresolutions?topic=vmware-solutions-vum-metadata)
+**Next topic:** [Collecting the metadata ](/docs/vmwaresolutions?topic=vmwaresolutions-vum-metadata)
 
 ## Related links
 {: #vum-init-config-related}
 
-* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

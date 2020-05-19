@@ -8,7 +8,7 @@ lastupdated: "2020-04-07"
 
 keywords: single-node trial, data protection DR, tech specs data protection DR
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -178,5 +178,5 @@ The Single-node Trial for Data Protection and Disaster Recovery includes Zerto. 
 
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
-* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Managing Zerto](/docs/vmwaresolutions?topic=vmware-solutions-managingzertodr)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
+* [Managing Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-managingzertodr)

@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: VMware HCX standalone, HCX on-premises, delete HCX
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -23,7 +23,7 @@ Use this procedure to delete the on-premises HCX instances that you ordered for 
 ## Before you begin
 {: #standalone_deletingserviceinstances-reqs}
 
-Ensure that you reviewed all the considerations in [Considerations when deleting on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_considerations).
+Ensure that you reviewed all the considerations in [Considerations when deleting on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_considerations).
 
 ## Procedure to delete on-premises VMware HCX instances
 {: #standalone_deletingserviceinstances-procedure}
@@ -37,7 +37,7 @@ Ensure that you reviewed all the considerations in [Considerations when deleting
 ## Related links
 {: #standalone_deletingserviceinstances-related}
 
-* [Ordering on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_orderingserviceinstances)
-* [Viewing on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_viewingserviceinstances)
-* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
+* [Ordering on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_orderingserviceinstances)
+* [Viewing on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_viewingserviceinstances)
+* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

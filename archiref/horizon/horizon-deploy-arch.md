@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-16"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -136,4 +136,4 @@ You can also stretch CPA across Horizon 7 pods in two or more {{site.data.keywor
 
 The use of CPA is optional. You can choose to deploy Horizon 7 exclusively in a single {{site.data.keyword.cloud_notm}} data center without linking it to any other data center.
 
-**Next topic:** [Configuring IBM Cloud for Horizon 7 deployment](/docs/vmwaresolutions?topic=vmware-solutions-horizon-deploy-config)
+**Next topic:** [Configuring IBM Cloud for Horizon 7 deployment](/docs/vmwaresolutions?topic=vmwaresolutions-horizon-deploy-config)

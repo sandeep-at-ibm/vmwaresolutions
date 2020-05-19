@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: planning vSphere, data center, vSphere data centers
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -28,7 +28,7 @@ You are responsible for setting up the environment, installing, and configuring 
 ## IBM Cloud account requirements
 {: #vs_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmware-solutions-cloud-infra-acct-req).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
 
 ## IBM Cloud data center availability
 {: #vs_planning-dc-availability}
@@ -94,6 +94,6 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 ## Related links
 {: #vs_planning-related}
 
-* [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
-* [Scaling existing clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
-* [Scaling existing clusters created outside of the console](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances)
+* [Scaling existing clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters)
+* [Scaling existing clusters created outside of the console](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderingforclustersoutside)

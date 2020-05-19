@@ -8,7 +8,7 @@ lastupdated: "2020-04-13"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -58,7 +58,7 @@ The following {{site.data.keyword.cloud_notm}} data center is offered as a Limit
 ## Services for VMware Solutions Shared
 {: #shared_planning-addon-services}
 
-Preinstalled add-on services are available for your instance based on your needs. For more information, see [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_veeam).
+Preinstalled add-on services are available for your instance based on your needs. For more information, see [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam).
 
 Service charges are incurred only if you choose to use the service.
 {:note}
@@ -66,7 +66,7 @@ Service charges are incurred only if you choose to use the service.
 ## Related links
 {: #shared_planning-related}
 
-* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
-* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing)
-* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
+* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
+* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}

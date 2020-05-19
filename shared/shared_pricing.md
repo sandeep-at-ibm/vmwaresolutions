@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -181,12 +181,12 @@ You can change how fast inactive backup chains are moved to Cloud Object Storage
 ## Related links
 {: #shared_pricing-related}
 
-* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_planning)
-* [Ordering Data Center Virtual instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
-* [Viewing and managing VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing)
-* [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_resize)
-* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
-* [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_veeam)
+* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
+* [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning)
+* [Ordering Data Center Virtual instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
+* [Viewing and managing VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_resize)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
+* [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
 * [VMware vCloud Director](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
 * [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){:external}

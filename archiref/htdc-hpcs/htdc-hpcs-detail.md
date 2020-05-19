@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -154,7 +154,7 @@ HTDC PA requests the HTKC server for a DEK when attaching an encrypted disk.
 6. HTDC securely erases the KEK from memory.
 7. HTDC returns the unwrapped DEK to the HTDC PA.
 
-**Next topic:** [Deployment](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-deployment)
+**Next topic:** [Deployment](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-deployment)
 
 ## Related links
 {: #htdc-hpcs-detail-related}

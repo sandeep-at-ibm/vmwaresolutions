@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vRealize, vRealize info, tech specs vRealize
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -39,7 +39,7 @@ The following components are ordered and included in the vRealize Operations and
 * VMware vRealize Operations (vROps) 7.5
 * VMware vRealize Log Insight (vRLI) 4.8
 
-For information about the design, requirements, and preconfigured management packs, see [Operations management architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch).
+For information about the design, requirements, and preconfigured management packs, see [Operations management architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-arch).
 
 ### Resource requirements for vRealize Operations and Log Insight
 {: #vrops_overview-resource-req}
@@ -129,5 +129,5 @@ Review the following considerations before you remove the service:
 ## Related links
 {: #vrops_overview-related}
 
-* [Ordering vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_ordering)
-* [Managing vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-managing_vrops)
+* [Ordering vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_ordering)
+* [Managing vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-managing_vrops)

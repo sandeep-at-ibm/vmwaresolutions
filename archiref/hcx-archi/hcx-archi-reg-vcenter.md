@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -45,4 +45,4 @@ The Hybrid Cloud Services virtual appliance must be powered on before it can be 
 
 Notice the existing **Hybrid Cloud** icon and the **Hybrid Cloud Services** menu item on the left. The Hybrid Cloud Services registration updates these labels. In the inventory, the icon label becomes **Hybrid Cloud Services**.
 
-**Next topic:** [Installing and configuring hybrid services](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-hybrid)
+**Next topic:** [Installing and configuring hybrid services](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-install-cfg-hybrid)

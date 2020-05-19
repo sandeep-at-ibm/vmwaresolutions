@@ -8,7 +8,7 @@ lastupdated: "2020-04-13"
 
 keywords: VMware Solutions Shared delete instance, delete VMware Solutions Shared, remove VMware Solutions Shared
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -60,8 +60,8 @@ Any job that includes instructions to backup the VM fails when the VM restore po
 ## Related links
 {: #shared_deletinginstance-related}
 
-* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
-* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing)
-* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
+* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
+* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

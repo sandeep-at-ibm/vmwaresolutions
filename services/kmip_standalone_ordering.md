@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -21,8 +21,8 @@ You can order a KMIP for VMware instance without associating it to any VMware vC
 {: #kmip_standalone_ordering-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
-* You reviewed all the considerations in [Considerations when installing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
+* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+* You reviewed all the considerations in [Considerations when installing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations#kmip_standalone_considerations-install).
 
 ## Procedure to order KMIP for VMware instances
 {: #kmip_standalone_ordering-procedure}
@@ -93,11 +93,11 @@ When the instance is ready to use, the status of the instance is changed to **In
 ## What to do next
 {: #kmip_standalone_ordering-next}
 
-Add client certificates for the KMIP for VMware instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert).
+Add client certificates for the KMIP for VMware instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_addingdeletingcert).
 
 ## Related links
 {: #kmip_standalone_ordering-related}
 
-* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
-* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events)
+* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_viewing)
+* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events)

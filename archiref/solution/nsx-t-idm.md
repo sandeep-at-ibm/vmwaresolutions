@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -58,7 +58,7 @@ NSX-T roles are built in and you cannot add any new roles.
 
 {{site.data.keyword.vmwaresolutions_short}} does not currently provide an automated vIDM deployment. For more information, see [VMware Workspace ONE Access Documentation](https://docs.vmware.com/en/VMware-Workspace-ONE-Access/index.html){:external}.
 
-**Next topic:** [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice)
+**Next topic:** [Common services design](/docs/vmwaresolutions?topic=vmwaresolutions-design_commonservice)
 
 ## Related links
 {: #nsx-t-idm-related}

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -42,10 +42,10 @@ To change the virtual machine (VM) Settings, access the vSphere Web Client, navi
 
 To change the Host/Cluster Settings, access the vSphere Web Client, navigate to **Home** > **Update Manager** > **Manage** > **Settings** and **Host/Cluster Settings** and then clicking **Edit**.
 
-**Next topic:** [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmware-solutions-vum-baselines)
+**Next topic:** [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines)
 
 ## Related links
 {: #vum-metadata-related}
 
-* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-intro#hcx-archi-intro)
 * [VMware Solutions on 	{{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

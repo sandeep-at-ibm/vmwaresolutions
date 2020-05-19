@@ -8,7 +8,7 @@ lastupdated: "2020-03-31"
 
 keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -60,9 +60,9 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_deletinginstance-related}
 
-* [Deleting vCenter Server instances in a multi-site configuration](/docs/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance_multi)
-* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
+* [Deleting vCenter Server instances in a multi-site configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance_multi)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
+* [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
 * [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

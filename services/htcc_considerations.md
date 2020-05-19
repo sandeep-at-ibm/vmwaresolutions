@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -70,8 +70,8 @@ Before you remove the HyTrust CloudControl service, ensure that you disable **Ro
 ## Related links
 {: #htcc_considerations-related}
 
-* [Ordering HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_ordering)
-* [Managing HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtcc)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Ordering HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_ordering)
+* [Managing HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtcc)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

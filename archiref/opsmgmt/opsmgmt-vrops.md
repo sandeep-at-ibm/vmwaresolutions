@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -229,7 +229,7 @@ vRealize Operations Federation Management Pack enables a multi-site vROps deploy
 
 vRealize Operations Management Pack for HCX extends the Operations Management capabilities of vROps to hybrid capabilities presented by HCX. With the management pack, you can collect metrics, change events, and resource topology information from HCX. It enables the monitoring, isolation, and resolution of performance bottlenecks in the HCX Interconnects, Migrations, or Protected workloads.
 
-**Next topic**: [vRealize Log Insights](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrli)
+**Next topic**: [vRealize Log Insights](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrli)
 
 ## Related links
 {: #opsmgmt-vrops-links}
@@ -237,7 +237,7 @@ vRealize Operations Management Pack for HCX extends the Operations Management ca
 * [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:external}
 * [vRealize Operations Manager documentation](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:external}
 * [vRealize Operations Management Pack for vSAN 1.0 Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:external}
-* [Updating vSAN clusters](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan)
+* [Updating vSAN clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vsan)
 * [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:external}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:external}
 * [NSX Operations Guide](https://communities.vmware.com/servlet/JiveServlet/previewBody/30079-102-2-40474/NSX-Operations-Guide-v6.1.pdf){:external}

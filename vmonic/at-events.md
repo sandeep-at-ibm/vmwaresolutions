@@ -8,7 +8,7 @@ lastupdated: "2020-04-13"
 
 keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -96,4 +96,4 @@ VMware Solutions Shared and vCenter Server events are automatically forwarded to
 
 * [Provisioning an instance](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-provision)
 * [Navigating to the web UI](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-launch)
-* [KMIP for VMware overview](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations)
+* [KMIP for VMware overview](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations)

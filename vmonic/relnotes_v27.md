@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-12-14"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -83,8 +83,8 @@ In addition to VMware instance events, events for KMIP for VMware on {{site.data
 
 The following technical documents are now available in the *Reference* section of the user documentation:
 
-* [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-nsx_overview)
-* [VMware Update Manager guide](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro)
+* [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-nsx_overview)
+* [VMware Update Manager guide](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro)
 
 ## User interface updates and enhancements
 {: #relnotes_v27-ui}

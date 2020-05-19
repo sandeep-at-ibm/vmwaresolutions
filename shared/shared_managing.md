@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -80,7 +80,7 @@ You can open an {{site.data.keyword.cloud_notm}} Support ticket to request five 
 * Virtual data center name
 * Number of additional IPs required
 
-For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
+For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 
 | Resource        | Description       |
 |:------------- |:------------- |
@@ -110,8 +110,8 @@ All virtual data centers in the same region have the same **admin** password. Re
 ## Related links
 {: #shared_managing-related}
 
-* [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_resize)
-* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide)
-* [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_veeam)
-* [Deleting VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_deletinginstance)
+* [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_resize)
+* [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
+* [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
+* [Deleting VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_deletinginstance)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}

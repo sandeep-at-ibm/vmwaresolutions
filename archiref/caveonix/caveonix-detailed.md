@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -84,4 +84,4 @@ The IP Subnet, VLAN assignments are described in the following table.
 |Private B 	|Portable 	|Assigned for vMotion.|
 {: caption="Table 2. VLAN and subnets" caption-side="bottom"}
 
-**Next topic:** [Deployment models for Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-deploy)
+**Next topic:** [Deployment models for Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix-deploy)

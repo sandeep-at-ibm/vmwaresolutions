@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -94,26 +94,26 @@ Each vSphere cluster expansion node deploys and incurs charges for the following
 ### Hardware for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-hardware}
 
-One {{site.data.keyword.cloud_notm}} bare metal server with the hardware configuration presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
+One {{site.data.keyword.cloud_notm}} bare metal server with the hardware configuration presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
 ### Networking for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-network}
 
-One {{site.data.keyword.cloud_notm}} bare metal server with the networking configuration presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
+One {{site.data.keyword.cloud_notm}} bare metal server with the networking configuration presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
 ### VMware components for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
 * One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 6.7u2 or 6.5u3.  
-* Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
+* Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
-You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters).
+You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
 {:important}
 
 ## Related links
 {: #vs_vsphereclusteroverview-related}
 
-* [VMware vSphere Software Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-vs_bom)
-* [Planning vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_planning)
-* [Ordering vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
-* [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
+* [VMware vSphere Software Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vs_bom)
+* [Planning vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning)
+* [Ordering vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances)
+* [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters)

@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX virtual security appliance, Juniper virtual security appliance, Juniper vSRX console
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -99,7 +99,7 @@ Review the following considerations before you install the Juniper vSRX service:
 * The Juniper vSRX VMs are deployed only into the default cluster or the edge services cluster.
 * Juniper vSRX can only protect items in the same data center and pod.
 * You are responsible for Juniper vSRX configuration.
-* For guidance information about extra configuration options that you might want to include and as an example, see [The IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-iaas-def-config). This information does not illustrate the configuration you have or should have. Your own configuration will be different.
+* For guidance information about extra configuration options that you might want to include and as an example, see [The IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-iaas-def-config). This information does not illustrate the configuration you have or should have. Your own configuration will be different.
 
 ### Resource requirements for Juniper vSRX
 {: #vsrx_overview-resource-req}
@@ -119,9 +119,9 @@ Any network operations that rely on routes that are established via vSRX might b
 ## Related links
 {: #vsrx_overview-related-links}
 
-* [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmware-solutions-juniper-managing)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
 * [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}

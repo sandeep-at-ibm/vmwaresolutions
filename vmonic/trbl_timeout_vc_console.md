@@ -8,7 +8,7 @@ lastupdated: "2020-04-03"
 
 keywords: troubleshooting, vSphere timeout, timeout console
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 

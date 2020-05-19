@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -62,10 +62,10 @@ The system context diagram identifies the following systems:
 * Service ID - A service ID identifies a service or application similar to how a user ID identifies a user. Service IDs are created to enable access to IBM Cloud services by applications hosted both inside and outside of IBM Cloud. The API Key is configured in the Service ID and used in the configuration of the Cloud VM Set.
 * IBM Cloud Identity and Access Management (IAM) - The IBM Cloud service that validates access to IBM Cloud services, including IBM HPCS.
 
-**Next topic:** [Reference architecture](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-reference-architecture)
+**Next topic:** [Reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-reference-architecture)
 
 ## Related links
 {: #htdc-hpcs-system-context-related}
 
 *  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
-*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)

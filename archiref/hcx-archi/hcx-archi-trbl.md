@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -52,5 +52,5 @@ To resolve the problem, follow these steps:
 ## Related links
 {: #hcx-archi-trbl-related}
 
-* [Registering HCX Manager with vCenter](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-reg-vcenter)
-* [Modifying or uninstalling HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-mod-uninstall)
+* [Registering HCX Manager with vCenter](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-reg-vcenter)
+* [Modifying or uninstalling HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-mod-uninstall)

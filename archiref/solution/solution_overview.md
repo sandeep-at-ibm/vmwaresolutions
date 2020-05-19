@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -46,11 +46,11 @@ The VMware on {{site.data.keyword.cloud_notm}} offerings bring the following ben
 * **Enabling consistent management and governance** of the deployed hybrid cloud by providing full administrative access to virtualization management, thus preserving your existing VMware tools, scripts, and investments in training.
 * **Using VMware expertise at global scale** with IBM Professional and Managed Services spanning 30+ {{site.data.keyword.cloud_notm}} data centers worldwide.
 
-**Next topic:** [IBM Cloud for VMware Solutions components](/docs/vmwaresolutions?topic=vmware-solutions-design_overview)
+**Next topic:** [IBM Cloud for VMware Solutions components](/docs/vmwaresolutions?topic=vmwaresolutions-design_overview)
 
 ## Related links
 {: #solution_overview-related}
 
-* [Design overview](/docs/vmwaresolutions?topic=vmware-solutions-design_overview)
-* [Scaling capacity](/docs/vmwaresolutions?topic=vmware-solutions-solution_scaling)
-* [Backing up components](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup)
+* [Design overview](/docs/vmwaresolutions?topic=vmwaresolutions-design_overview)
+* [Scaling capacity](/docs/vmwaresolutions?topic=vmwaresolutions-solution_scaling)
+* [Backing up components](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup)

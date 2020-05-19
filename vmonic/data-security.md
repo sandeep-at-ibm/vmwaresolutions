@@ -6,7 +6,7 @@ lastupdated: "2020-04-08"
 
 keywords: data encryption in IBM Cloud for VMware Solutions, data storage for IBM Cloud for VMware Solutions, bring your own keys for IBM Cloud for VMware Solutions, BYOK for IBM Cloud for VMware Solutions, key management for IBM Cloud for VMware Solutions, key encryption for IBM Cloud for VMware Solutions, personal data in IBM Cloud for VMware Solutions, data deletion for IBM Cloud for VMware Solutions, data in IBM Cloud for VMware Solutions, data security in IBM Cloud for VMware Solutions, IBM Cloud for VMware Solutions
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -54,19 +54,19 @@ If you use VMware Solutions Shared, your workload data exists in an IBM–manage
 
 VMware Solutions uses envelope encryption to offer customer–managed keys for Dedicated VMware offerings. For VMware Solutions Shared, envelope encryption is used but with IBM–managed rather than customer–managed keys.
 
-Envelope encryption within VMware Solutions uses either the [KMIP for VMware service](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) to provide key management for VMware vSphere encryption or vSAN encryption, or [HyTrust Data Control](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations) policy–based virtual machine encryption. In both cases, these offerings use {{site.data.keyword.cloud_notm}} Key Protect or {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services for key wrapping and unwrapping. Key Protect offers Bring Your Own Key (BYOK) capability by using FIPS 140–2 level 3 certified hardware security modules (HSMs). Hyper Protect Crypto Services offers Keep Your Own Key (KYOK) capability by using FIPS 140–2 level 4 certified HSMs.
+Envelope encryption within VMware Solutions uses either the [KMIP for VMware service](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) to provide key management for VMware vSphere encryption or vSAN encryption, or [HyTrust Data Control](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) policy–based virtual machine encryption. In both cases, these offerings use {{site.data.keyword.cloud_notm}} Key Protect or {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services for key wrapping and unwrapping. Key Protect offers Bring Your Own Key (BYOK) capability by using FIPS 140–2 level 3 certified hardware security modules (HSMs). Hyper Protect Crypto Services offers Keep Your Own Key (KYOK) capability by using FIPS 140–2 level 4 certified HSMs.
 
 ### Enabling customer-managed keys for IBM Cloud for VMware Solutions
 {: #using-byok}
 
-See the [KMIP for VMware implementation guide](/docs/vmwaresolutions?topic=vmware-solutions-kmip-implementation) for using IBM Cloud key management with VMware vSphere or vSAN encryption.
+See the [KMIP for VMware implementation guide](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-implementation) for using IBM Cloud key management with VMware vSphere or vSAN encryption.
 
-See the [HyTrust Data Control and HPCS deployment guide](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-deployment) for using HyTrust Data Control together with Hyper Protect Crypto Services to secure your VMware virtual machines.
+See the [HyTrust Data Control and HPCS deployment guide](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-deployment) for using HyTrust Data Control together with Hyper Protect Crypto Services to secure your VMware virtual machines.
 
 ### Working with customer-managed keys for IBM Cloud for VMware Solutions
 {: #working-with-keys}
 
-For guidance on special considerations for VMware key management, key revocation, and key rotation, see [KMIP for VMware considerations](/docs/vmwaresolutions?topic=vmware-solutions-kmip-design#kmip-design-considerations) and [KMIP for VMware management guide](/docs/vmwaresolutions?topic=vmware-solutions-kmip-implementation#kmip-implementation-key-rotation).
+For guidance on special considerations for VMware key management, key revocation, and key rotation, see [KMIP for VMware considerations](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-design#kmip-design-considerations) and [KMIP for VMware management guide](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-implementation#kmip-implementation-key-rotation).
 
 ## Deleting your data in IBM Cloud for VMware Solutions
 {: #data-delete}

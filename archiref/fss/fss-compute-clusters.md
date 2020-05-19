@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -43,7 +43,7 @@ The workload cluster uses vSAN for storage and thus a minimum of four bare metal
 
 If wanted, more workload clusters can be added to support applications or to provide dedicated resources to satisfy business or compliance requirements.
 
-**Next topic**: [FSS Cloud overlay networking](/docs/vmwaresolutions?topic=vmware-solutions-fss-overlay-network)
+**Next topic**: [FSS Cloud overlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-fss-overlay-network)
 
 ### Related links
 {: #fss-compute-clusters-related}

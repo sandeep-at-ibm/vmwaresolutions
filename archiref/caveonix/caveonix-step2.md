@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -20,4 +20,4 @@ The {{site.data.keyword.vmwaresolutions_full}} automation requests an additional
 - Connect to Remote Collectors, either on VXLANs or hosted off-premise.
 - Allow the client to manage the IP address space when scaling up.
 
-**Next topic:** [Step 3 - Application configuration](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-step3)
+**Next topic:** [Step 3 - Application configuration](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix-step3)

@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -36,14 +36,14 @@ You can install multiple instances of Juniper vSRX on the management cluster. On
 ## Ordering Juniper vSRX for a new instance
 {: #juniper-ordering-new-instance}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Juniper vSRX** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Juniper vSRX** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
 
 The Juniper vSRX service is deployed on the management cluster unless you order the edge services cluster. For the Juniper vSRX service to function as a gateway for your vCenter Server instance, you must include the edge services cluster in your order.
 
 ## Ordering Juniper vSRX for an existing instance
 {: #juniper-ordering-exist-instance}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Juniper vSRX** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Juniper vSRX** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 When you add Juniper vSRX to an existing vCenter Server instance, you can select a cluster on which to install Juniper vSRX. You can install Juniper vSRX on a management cluster or on any edge cluster.
 You must deploy the Juniper vSRX to an edge services cluster for the Juniper vSRX to function as a gateway for your vCenter Server instance.
@@ -81,10 +81,10 @@ If you deploy Juniper vSRX on an edge services cluster, after deployment, you mu
 ## Related links
 {: #juniper-ordering-related-links}
 
-* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmware-solutions-vsrx_overview)
-* [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmware-solutions-juniper-managing)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview)
+* [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
 * [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}

@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: IBM Cloud Private
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -23,7 +23,7 @@ subcollection: vmware-solutions
 # (Deprecated) IBM Cloud Private Hosted
 {: #icp_overview}
 
-The {{site.data.keyword.cloud}} Private Hosted service is deprecated. Use the [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmware-solutions-ocp_overview) service instead.
+The {{site.data.keyword.cloud}} Private Hosted service is deprecated. Use the [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) service instead.
 {:deprecated}
 
 The {{site.data.keyword.cloud_notm}} Private Hosted service automatically deploys {{site.data.keyword.cloud_notm}} Private Hosted and {{site.data.keyword.cloud_notm}} Automation Manager on your VMware vCenter Server instances. This service brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.
@@ -50,5 +50,5 @@ If you want to deploy additional nodes, review the following information:
 * [Open a Ticket for {{site.data.keyword.cloud_notm}} Private](https://www.ibm.com/mysupport/s/?language=en_US){:external}
 * [{{site.data.keyword.cloud_notm}} Automation Manager licensing](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/licensing.html){:external}
 * [{{site.data.keyword.cloud_notm}} Automation Manager components](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/cam_managed_components.html){:external}
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

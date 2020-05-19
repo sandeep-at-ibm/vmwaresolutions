@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vmware services, request vmware service, tech specs vmware
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -44,5 +44,5 @@ The following specifications are included in the Managed VMware Services:
 ## Related links
 {: #managing_imi-related}
 
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

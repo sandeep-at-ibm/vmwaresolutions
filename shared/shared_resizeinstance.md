@@ -8,7 +8,7 @@ lastupdated: "2020-04-13"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -38,6 +38,6 @@ The virtual data center instance enters in the **Modifying** state while the cha
 ## Related links
 {: #shared_resize-related}
 
-* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing)
-* [Deleting VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_deletinginstance)
+* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
+* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Deleting VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_deletinginstance)

@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: IBM Cloud Expert Services, request IBM Cloud Expert, tech specs Cloud Expert
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -68,5 +68,5 @@ This offering speeds adoption of VMware on IBM Cloud by taking the client throug
 ## Related links
 {: #managing_ices-related}
 
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

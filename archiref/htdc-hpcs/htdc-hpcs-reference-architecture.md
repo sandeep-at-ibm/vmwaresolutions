@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -46,10 +46,10 @@ The main solution components are as follows:
 
 Crypto units that are initially assigned are in a cleared state, which is known as imprint mode, which is not yet secure. When exiting imprint mode, the command must be signed by one of the administrators by using the signature key.
 
-**Next topic:** [HyTrust DataControl on IBM Cloud with IBM Hyper Protect Crypto Services](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-detail)
+**Next topic:** [HyTrust DataControl on IBM Cloud with IBM Hyper Protect Crypto Services](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-detail)
 
 ## Related links
 {: #htdc-hpcs-reference-architecture-related}
 
 *  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
-*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)
+*  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)

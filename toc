@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmware-solutions" category="compute" audience="infrastructure" href="/docs/vmwaresolutions?topic=vmware-solutions-getting-started" product-page="https://www.ibm.com/cloud/vmware" console-page="/infrastructure/vmware-solutions/console" path="vmwaresolutions"}
+{: .toc subcollection="vmwaresolutions" category="compute" audience="infrastructure" href="/docs/vmwaresolutions?topic=vmwaresolutions-getting-started" product-page="https://www.ibm.com/cloud/vmware" console-page="/infrastructure/vmware-solutions/console" path="vmwaresolutions"}
 VMware Solutions
 
     {: .navgroup id="learn"}

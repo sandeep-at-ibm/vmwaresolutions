@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -38,7 +38,7 @@ The workload region is managed by one or more administrators that are only respo
 
 Three distinct regions: management region, edge services region, and the workload region, design the zero-trust security model into the FSS Cloud. Taking advantage of this design through audited and enforced separation of duties at every possible opportunity, assists clients to comply with industry standards or government regulations, making the FSS Cloud uniquely suited clients operating in highly regulated industries.
 
-**Next topic**: [FSS Cloud use case 2](/docs/vmwaresolutions?topic=vmware-solutions-fss-use-case-2)
+**Next topic**: [FSS Cloud use case 2](/docs/vmwaresolutions?topic=vmwaresolutions-fss-use-case-2)
 
 ## Related links
 {: #fss-use-case-1-related}

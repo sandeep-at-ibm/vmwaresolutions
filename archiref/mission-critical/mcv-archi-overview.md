@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -88,11 +88,11 @@ Day 2 operation and management activities are not part of the automation process
 
 Although this offering is intended to be ordered and used in conjunction with an IBM GTS support contract, it can be ordered by anyone by using the {{site.data.keyword.vmwaresolutions_short}} portal.
 
-**Next topic:** [IBM Cloud for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
+**Next topic:** [IBM Cloud for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
 
 ## Related links
 {: #mcv-archi-overview-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-design)
-* [Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
-* [Component and feature details](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
+* [Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
+* [Component and feature details](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)

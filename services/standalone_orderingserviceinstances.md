@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -24,8 +24,8 @@ You can order an on-premises HCX instance without associating it to any vCenter 
 {: #standalone_orderingserviceinstances-reqs}
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
-*  You reviewed all the considerations in [Considerations when installing on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_considerations).
+*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+*  You reviewed all the considerations in [Considerations when installing on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_considerations).
 
 ## Procedure to order on-premises VMware HCX instances
 {: #standalone_orderingserviceinstances-procedure}
@@ -56,7 +56,7 @@ View and manage the on-premises HCX instance that you ordered.
 ## Related links
 {: #standalone_orderingserviceinstances-related}
 
-* [Viewing on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_viewingserviceinstances)
-* [Deleting on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_deletingserviceinstances)
-* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
+* [Viewing on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_viewingserviceinstances)
+* [Deleting on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_deletingserviceinstances)
+* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

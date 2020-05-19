@@ -8,7 +8,7 @@ lastupdated: "2020-04-07"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -133,8 +133,8 @@ Before you remove the F5 BIG-IP service, ensure that the existing BIG-IP VE conf
 ## Related links
 {: #f5_considerations-related}
 
-* [Ordering F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-f5_ordering)
-* [Managing F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-managing_f5)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Ordering F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_ordering)
+* [Managing F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-managing_f5)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [F5 website](https://www.f5.com/){:external}

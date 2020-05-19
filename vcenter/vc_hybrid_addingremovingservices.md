@@ -8,7 +8,7 @@ lastupdated: "2020-04-08"
 
 keywords: vCenter Server Hybridity add service, view service vCenter Server Hybridity, remove service vCenter Server Hybridity
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -29,19 +29,19 @@ The following services are available to vCenter Server with Hybridity Bundle ins
 
 | Service name | Current version |
 |--------------|-----------------|
-| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | 2.2.2 |
-| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.1.0.2 |
-| [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | 6.2.3 |
-| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations) | 5.5.1 |
-| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations) | 4.3.2 |
-| [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmware-solutions-htkc_considerations) | 4.3.2 |
-| [{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus](/docs/vmwaresolutions?topic=vmware-solutions-spp_considerations) | 10.1.3 |
-| [Juniper vSRX](/docs/vmwaresolutions?topic=vmware-solutions-vsrx_overview) | 18.4  |
-| [KMIP for VMware](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) | 2.0  |
-| [Veeam](/docs/vmwaresolutions?topic=vmware-solutions-veeam_considerations) | 9.5u4b |
-| [HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations) | 3.5.2 |
-| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
-| [Zerto](/docs/vmwaresolutions?topic=vmware-solutions-addingzertodr) | 7.0 Update 2 |
+| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 2.2.2 |
+| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE v15.1.0.2 |
+| [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.2.3 |
+| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 5.5.1 |
+| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) | 4.3.2 |
+| [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations) | 4.3.2 |
+| [{{site.data.keyword.IBM}} Spectrum Protect&trade; Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | 10.1.3 |
+| [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | 18.4  |
+| [KMIP for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) | 2.0  |
+| [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 9.5u4b |
+| [HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations) | 3.5.2 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
+| [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 7.0 Update 2 |
 {: caption="Table 1. Available services for vCenter Server with Hybridity Bundle instances" caption-side="top"}
 
 ## Procedure to add services to vCenter Server with Hybridity Bundle instances
@@ -85,4 +85,4 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_hybrid_addingremovingservices-related}
 
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

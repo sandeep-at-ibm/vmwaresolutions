@@ -8,7 +8,7 @@ lastupdated: "2020-03-18"
 
 keywords: troubleshooting, configuration issue, ESXi server issue
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 

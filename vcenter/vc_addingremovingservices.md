@@ -8,7 +8,7 @@ lastupdated: "2020-04-08"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -37,25 +37,25 @@ The following table shows the services available for vCenter Server with NSX-V i
 
 | Service name | Current version |
 |--------------|-----------------|
-| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_considerations) | 2.2.2 |
-| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmware-solutions-f5_considerations) | BIG-IP VE v15.1.0.2 |
-| [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations) | 6.2.3 |
-| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations) | 5.6 |
-| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_considerations)  | 5.0.1 |
-| [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmware-solutions-htkc_considerations) | 5.0.1 |
-| [{{site.data.keyword.IBM}} Security Services for SAP](/docs/vmwaresolutions?topic=vmware-solutions-managing-ss-sap) | N/A |
-| [IBM Spectrum Protect&trade; Plus](/docs/vmwaresolutions?topic=vmware-solutions-spp_considerations) | V10.1.5 |
-| [Juniper vSRX](/docs/vmwaresolutions?topic=vmware-solutions-vsrx_overview) | 18.4 |
-| [KMIP for VMware](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations) | 2.0 |
-| [PrimaryIO HDM](/docs/vmwaresolutions?topic=vmware-solutions-managing_pio) | N/A |
-| [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmware-solutions-ocp_overview) | 4.2.16 |
-| [Veeam](/docs/vmwaresolutions?topic=vmware-solutions-veeam_considerations) | 9.5u4b |
-| [VMware HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations) (See **Note**) | 3.5.2 |
-| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
-| [Zerto](/docs/vmwaresolutions?topic=vmware-solutions-addingzertodr) | 7.0 Update 2 |
+| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 2.2.2 |
+| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE v15.1.0.2 |
+| [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.2.3 |
+| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 5.6 |
+| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.0.1 |
+| [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations) | 5.0.1 |
+| [{{site.data.keyword.IBM}} Security Services for SAP](/docs/vmwaresolutions?topic=vmwaresolutions-managing-ss-sap) | N/A |
+| [IBM Spectrum Protect&trade; Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | V10.1.5 |
+| [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | 18.4 |
+| [KMIP for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) | 2.0 |
+| [PrimaryIO HDM](/docs/vmwaresolutions?topic=vmwaresolutions-managing_pio) | N/A |
+| [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.2.16 |
+| [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 9.5u4b |
+| [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations) (See **Note**) | 3.5.2 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
+| [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 7.0 Update 2 |
 {: caption="Table 1. Available services for vCenter Server with NSX-V instances" caption-side="top"}
 
-A 12-month commitment is required when you order the VMware HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+A 12-month commitment is required when you order the VMware HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:note}
 
 ### Available services for vCenter Server with NSX-T instances
@@ -65,9 +65,9 @@ The following table shows the services available for vCenter Server with NSX-T i
 
 | Service name | Current version |
 |--------------|-----------------|
-| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations) | 6.1 |
-| [Juniper vSRX](/docs/vmwaresolutions?topic=vmware-solutions-vsrx_overview) | 18.4 |
-| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
+| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 6.1 |
+| [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | 18.4 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
 {: caption="Table 2. Available services for vCenter Server with NSX-T instances" caption-side="top"}
 
 ## Procedure to add services to vCenter Server instances
@@ -114,4 +114,4 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Related links
 {: #vc_addingremovingservices-related}
 
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

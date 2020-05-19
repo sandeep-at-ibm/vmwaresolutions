@@ -8,7 +8,7 @@ lastupdated: "2019-11-05"
 
 keywords: release notes, what's new, version 3.2
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

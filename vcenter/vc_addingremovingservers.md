@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -42,7 +42,7 @@ For the edge services cluster, you cannot add or remove ESXi servers.
 * Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * A vCenter Server instance with NFS storage must have at least two (for NSX-V) and three (for NSX-T) ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers.
 * A vCenter Server instance with vSAN storage must have at least four ESXi servers.
-* You can add 1 - 20 ESXi servers at a time. For more information about the minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
+* You can add 1 - 20 ESXi servers at a time. For more information about the minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
 ### Procedure to add ESXi servers
 {: #vc_addingremovingservers-adding-procedure}
@@ -100,7 +100,7 @@ If you are adding ESXi servers during maintenance mode, VMs are not migrated to 
 * (NSX-V only) If F5 BIG-IP or FortiGate Virtual Appliance is installed on your ESXi server, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
 * (NSX-V only) If IBM Spectrum Protect&trade; Plus is installed on your ESXi server, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi server to be removed.
 
-A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a server before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a server before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:important}
 
 ### Procedure to remove ESXi servers
@@ -186,9 +186,9 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 ## Related links
 {: #vc_addingremovingservers-related}
 
-* [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning)
-* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
+* [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom)
+* [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters)
 * [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}

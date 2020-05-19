@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -25,7 +25,7 @@ Review the following information for details about networking considerations and
 {: #vc_networkingonvcenterserver-networking-components}
 {: faq}
 
-To review the networking components that are included in your vCenter Server instance, see [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs).
+To review the networking components that are included in your vCenter Server instance, see [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs).
 
 ## Firewall considerations
 {: #vc_networkingonvcenterserver-firewall-considerations}
@@ -39,7 +39,7 @@ If you're using firewalls, you must configure rules for all communications from 
 
 During vCenter Server instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
 
-An NSX Edge Services Gateway is also deployed to be used by your workload VM or VMs. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/vmwaresolutions?topic=vmware-solutions-vc_esg_config).
+An NSX Edge Services Gateway is also deployed to be used by your workload VM or VMs. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 
 ## Considerations when changing passwords for NSX components
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}

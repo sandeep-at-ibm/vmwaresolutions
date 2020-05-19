@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-31"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -114,13 +114,13 @@ The following describes the order of events when you use the {{site.data.keyword
 
 {{site.data.keyword.vmwaresolutions_short}} automation retains a set of user IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Automation user IDs are separate from the user IDs displayed in the {{site.data.keyword.vmwaresolutions_short}} console and which are reserved for your use.
 
-You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/vmwaresolutions?topic=vmware-solutions-audit_user_ids).
+You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
 
-**Next topic:** [Scaling capacity](/docs/vmwaresolutions?topic=vmware-solutions-solution_scaling)
+**Next topic:** [Scaling capacity](/docs/vmwaresolutions?topic=vmwaresolutions-solution_scaling)
 
 ## Related links
 {: #design_infrastructuremgmt-related}
 
-* [Physical infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_physicalinfrastructure)
-* [Virtual infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-design_virtualinfrastructure)
-* [Common services design](/docs/vmwaresolutions?topic=vmware-solutions-design_commonservice)
+* [Physical infrastructure design](/docs/vmwaresolutions?topic=vmwaresolutions-design_physicalinfrastructure)
+* [Virtual infrastructure design](/docs/vmwaresolutions?topic=vmwaresolutions-design_virtualinfrastructure)
+* [Common services design](/docs/vmwaresolutions?topic=vmwaresolutions-design_commonservice)

@@ -8,7 +8,7 @@ lastupdated: "2020-04-06"
 
 keywords: security services, request security sap, tech specs sap
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -57,4 +57,4 @@ You can expect the following benefits when you request IBM Security Services for
 ## Related links
 {: #managing-ss-sap-related}
 
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

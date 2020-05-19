@@ -8,7 +8,7 @@ lastupdated: "2020-03-18"
 
 keywords: troubleshooting, secondary vCenter, vSphere inventory issue
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 

@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -99,10 +99,10 @@ The deployment of HCX is automated. Whether you order a vCenter Server instance 
 ## Related links
 {: #hcx_ordering-related}
 
-* [HCX overview](/docs/vmwaresolutions?topic=vmware-solutions-hcx_considerations#hcx_considerations)
-* [Managing HCX ](/docs/vmwaresolutions?topic=vmware-solutions-managinghcx)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations)
+* [Managing HCX ](/docs/vmwaresolutions?topic=vmwaresolutions-managinghcx)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

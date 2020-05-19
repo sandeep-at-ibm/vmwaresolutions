@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -26,12 +26,12 @@ You can include the Veeam service with a new vCenter Server instance or add the 
 ## Ordering Veeam for a new instance
 {: #veeam_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Veeam** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Veeam** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering Veeam for an existing instance
 {: #veeam_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Veeam** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Veeam** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Veeam service configuration
 {: #veeam_ordering-config}
@@ -56,8 +56,8 @@ The IOPS (input/output operations per second) per GB based on your workload requ
 ## Related links
 {: #veeam_ordering-related}
 
-* [Managing Veeam](/docs/vmwaresolutions?topic=vmware-solutions-managingveeam)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
+* [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_veeam_services)
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

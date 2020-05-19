@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: KMIP for VMware, remove KMIP stand-alone, delete KMIP for VMware
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -23,7 +23,7 @@ Use this procedure to delete the KMIP for VMware instances that you ordered for 
 ## Before you begin
 {: #kmip_standalone_deleting-req}
 
-Ensure that you reviewed all the considerations in [Considerations when deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_considerations).
+Ensure that you reviewed all the considerations in [Considerations when deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations).
 
 ## Procedure to delete KMIP for VMware instances
 {: #kmip_standalone_deleting-procedure}
@@ -38,8 +38,8 @@ Ensure that you reviewed all the considerations in [Considerations when deleting
 ## Related links
 {: #kmip_standalone_deleting-related}
 
-* [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering)
-* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
-* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
-* [KMIP for VMware solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-kmip-overview)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events)
+* [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering)
+* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_addingdeletingcert)
+* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_viewing)
+* [KMIP for VMware solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-overview)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events)

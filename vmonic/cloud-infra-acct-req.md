@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: user account, user permissions, VRF account
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -64,5 +64,5 @@ For more information, see:
 ## Related links
 {: #cloud-infra-acct-req-related}
 
-* [Requirements for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning)
-* [User account and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount)
+* [Requirements for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning)
+* [User account and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount)

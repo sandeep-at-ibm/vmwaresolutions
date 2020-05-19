@@ -8,7 +8,7 @@ lastupdated: "2020-04-15"
 
 keywords: primary io hdm, hdm order, order trial hdm
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

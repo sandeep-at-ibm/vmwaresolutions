@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -40,10 +40,10 @@ Caveonix RiskForesight is used to continuously monitor compliance of the edge cl
 
 Caveonix RiskForesight can optionally monitor compliance of client workloads. Enabling the use of RiskForesight for workload compliance monitoring requires appropriate rules and policies on both the edge security appliance that protects the management plane and the perimeter security appliance that protects the client workloads.
 
-**Next topic**: [FSS Cloud business continuity](/docs/vmwaresolutions?topic=vmware-solutions-fss-budr)
+**Next topic**: [FSS Cloud business continuity](/docs/vmwaresolutions?topic=vmwaresolutions-fss-budr)
 
 ## Related links
 {: #fss-caveonix-related}
 
 * [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance)
-* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
+* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)

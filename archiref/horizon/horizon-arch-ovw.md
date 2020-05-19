@@ -8,7 +8,7 @@ lastupdated: "2020-04-07"
 
 keywords: horizon, horizon 7, horizon 7 architecture
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -120,4 +120,4 @@ The compute components are:
 
 The Horizon Cloud Connector is a new component in the Horizon 7 architecture. It is a virtual appliance that connects to a Horizon pod and bridges it with the Horizon Cloud Service. The Horizon 7 Cloud Connector is required when using the Horizon Universal License for license management and for using Horizon Cloud Control Plane features like Cloud Monitoring Service and the health status dashboard.
 
-**Next topic:** [Deployment architecture for Horizon 7](/docs/vmwaresolutions?topic=vmware-solutions-horizon-deploy-arch)
+**Next topic:** [Deployment architecture for Horizon 7](/docs/vmwaresolutions?topic=vmwaresolutions-horizon-deploy-arch)

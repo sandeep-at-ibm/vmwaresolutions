@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

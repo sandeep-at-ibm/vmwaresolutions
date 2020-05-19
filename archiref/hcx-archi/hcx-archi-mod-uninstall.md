@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -84,4 +84,4 @@ The Hybrid Cloud Services deployment can be administered from the Management Por
 2. The Hybrid Cloud Services user interface opens in a web browser window by using SSL. If necessary, accept the security certificate. The VMware Hybridity and Networking log in screen opens.
 3. Enter the user name and password. By default, the user name is Admin. The password is the value that was supplied when the Hybrid Cloud Services virtual appliance was installed.
 
-**Next topic:** [Troubleshooting HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-trbl)
+**Next topic:** [Troubleshooting HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-trbl)

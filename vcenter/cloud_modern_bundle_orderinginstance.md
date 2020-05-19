@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: single-node trial, migration app modernization, order migration app modernization
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -85,7 +85,7 @@ If **No resource group available** is displayed in this field, contact the accou
 
 * The deployment of the instance starts automatically and the on-premises HCX service activation key is ordered.
 * You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
-* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Migration and App Modernization instances](/docs/vmwaresolutions?topic=vmware-solutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs) are installed.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Migration and App Modernization instances](/docs/vmwaresolutions?topic=vmwaresolutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs) are installed.
 * When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
 #### Deployment process for HCX

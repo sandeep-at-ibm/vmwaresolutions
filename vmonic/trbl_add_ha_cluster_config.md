@@ -8,7 +8,7 @@ lastupdated: "2019-08-16"
 
 keywords: troubleshooting, vSphere configuration issue, HA cluster issue
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

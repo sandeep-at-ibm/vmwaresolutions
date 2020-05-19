@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -176,9 +176,9 @@ The L2C appliance is deployed on the management VLAN as well as the public VLAN.
 
 ![L2 Concentrator deployment](../../images/l2_concentrator_deployment.svg "L2 Concentrator deployment"){: caption="Figure 4. L2 Concentrator deployment" caption-side="bottom"}
 
-**Next topic:** [Port access requirements for VMware HCX](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-port-req)
+**Next topic:** [Port access requirements for VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req)
 
 ## Related links
 {: #hcx-archi-target-related}
 
-* [Installing and configuring on the source](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-source)
+* [Installing and configuring on the source](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-source)

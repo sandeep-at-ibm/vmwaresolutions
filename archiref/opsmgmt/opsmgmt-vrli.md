@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-16"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -143,7 +143,7 @@ Other content packs can be obtained from [VMware Solution Exchange](https://mark
 
 The vRealize Log Insights content pack for NSX-T provides additional dashboards for viewing log information. For installation instructions, see the [VMware documentation](https://docs.vmware.com/en/VMware-Validated-Design/4.3/com.vmware.vvd.sddc-nsxt-domain-deploy.doc/GUID-EB5EDB4D-C4A1-4906-A6A9-379F898BA372.html){:external} about installing the content pack for NSX-T.
 
-**Next topic**: [vRealize Network Insight](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-vrni)
+**Next topic**: [vRealize Network Insight](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrni)
 
 ## Related links
 {: #opsmgmt-vrli-related}

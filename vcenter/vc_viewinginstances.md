@@ -8,7 +8,7 @@ lastupdated: "2020-04-07"
 
 keywords: view vCenter Server, view instance, view instance details
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -113,7 +113,7 @@ Click **Deployment History** from the left navigation pane to view the deploymen
 ## What to do if errors occur
 {: #vc_viewinginstances-if-errors-occur}
 
-If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
+If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 
 ## What to do next
 {: #vc_viewinginstances-next}
@@ -124,14 +124,14 @@ Before you click **vCenter console** on the instance summary page to go to the v
 {:important}
 
 Review the following topics for information to help you complete the login instructions:
-*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/vmwaresolutions?topic=vmware-solutions-trbl_timeout_vc_console).
+*  For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_timeout_vc_console).
 *  For a list of access points to log in to the {{site.data.keyword.cloud_notm}} infrastructure Private Network by using VPN, see [VPN Access](https://www.ibm.com/cloud/vpn-access){:external}.
-*  If you have problems when you deploy an OVF (Open Virtualization Format) file by using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/vmwaresolutions?topic=vmware-solutions-trbl_deploy_ovf).
+*  If you have problems when you deploy an OVF (Open Virtualization Format) file by using the vSphere Web Client, see [Deploying an OVF file using the vSphere Web Client](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_deploy_ovf).
 
 ## Related links
 {: #vc_viewinginstances-related}
 
-* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
-* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
+* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance)

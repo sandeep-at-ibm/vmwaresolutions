@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -36,10 +36,10 @@ To use baselines and baseline groups, you must attach them to selected inventory
 2. Click the cluster object that you want to scan.
 3. Go to VUM, click **Attach Baseline**, and then select the two pre-defined Patch Baselines. Click **OK**.
 
-**Next topic:** [Scanning and review](/docs/vmwaresolutions?topic=vmware-solutions-vum-scanning)
+**Next topic:** [Scanning and review](/docs/vmwaresolutions?topic=vmwaresolutions-vum-scanning)
 
 ## Related links
 {: #vum-baselines-related}
 
-* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

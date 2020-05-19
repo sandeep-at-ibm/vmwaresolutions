@@ -8,7 +8,7 @@ lastupdated: "2019-05-28"
 
 keywords: troubleshooting, Windows automatic installation, Windows updates
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

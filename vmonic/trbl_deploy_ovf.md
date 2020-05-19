@@ -8,7 +8,7 @@ lastupdated: "2020-03-18"
 
 keywords: troubleshooting, OVF deploy, how to deploy OVF file
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 

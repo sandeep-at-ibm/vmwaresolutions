@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-02-08"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -103,9 +103,9 @@ Starting with the V2.8 release, the service is available as a stand-alone servic
 (Updated on 08 February 2019) The following technical documents are new or updated in the *Reference* section of the user documentation:
 
 * [{{site.data.keyword.vmwaresolutions_short}} architecture (with NSX-V and NSX-T)
-](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview#solution_overview)
-* [Caveonix RiskForesight reference architecture](/docs/vmwaresolutions?topic=vmware-solutions-caveonix-on-vcs)
-* [VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-vcs-intro)
+](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview#solution_overview)
+* [Caveonix RiskForesight reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix-on-vcs)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-intro)
 
 ## User interface updates and enhancements
 {: #relnotes_v28-ui}

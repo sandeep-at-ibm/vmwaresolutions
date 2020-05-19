@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-03-31"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -126,19 +126,19 @@ The following table describes these items:
 | No compatible host for Secondary VM | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | No additional information |
 | Virtual machine Fault Tolerance state changed | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | No additional information |
 | Virtual Machine Fault Tolerance vLockStep interval Status Changed | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | No additional information |
-| Host processor status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host memory status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host hardware fan status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host hardware voltage | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host hardware temperature status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host hardware power status | Configure to send email once when monitor changes from green to red.| [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host hardware system board status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host battery status | Configure to send email once when monitor changes from green to red.| [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Status of other host hardware objects |  Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host storage status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host IPMI System Event Log status | Not configured as it is not service impacting. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host Baseboard Management Controller status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
-| Host error * | Configure to send email once when monitor changes to error. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support) |
+| Host processor status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host memory status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host hardware fan status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host hardware voltage | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host hardware temperature status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host hardware power status | Configure to send email once when monitor changes from green to red.| [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host hardware system board status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host battery status | Configure to send email once when monitor changes from green to red.| [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Status of other host hardware objects |  Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host storage status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host IPMI System Event Log status | Not configured as it is not service impacting. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host Baseboard Management Controller status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
+| Host error * | Configure to send email once when monitor changes to error. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
 | Virtual machine error * | Configure to send email once when critical for critical appliances. | [Troubleshooting virtual machines](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-EE645240-83CA-4F9E-B2F7-BECE864982C3.html){:external} |
 | Host connection failure * | Configure to send email once when event is Cannot connect host - network error or Cannot connect host - timeout or Host connection lost. | [Alarms about the host connection state changing from green to red frequently occur (1020210)](https://kb.vmware.com/s/article/1020210){:external} |
 | Unmanaged workload detected on SIOC-enabled datastore | Not configured as it is not service impacting. | [Unmanaged workload is detected on datastore running SIOC (1020651)](https://kb.vmware.com/s/article/1020651){:external} |
@@ -161,7 +161,7 @@ The following table describes these items:
 | Health status changed * | Configure to send email once when critical when a there is status change to critical. | [Troubleshooting hosts](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-6F6CE545-58FA-490B-8C8A-3CB8196CAEA8.html){:external} |
 | Storage DRS recommendation | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [DRS troubleshooting information](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-5E7F6DEC-02A2-4221-AABA-EDFB9AE9EC70.html){:external} |
 | Storage DRS is not supported on a host | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [DRS troubleshooting information](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-5E7F6DEC-02A2-4221-AABA-EDFB9AE9EC70.html){:external} |
-| Datastore cluster is out of space | Configure to send email once when critical when disk usage is above 85%. | [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances) |
+| Datastore cluster is out of space | Configure to send email once when critical when disk usage is above 85%. | [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances) |
 | Datastore is in multiple datacenters | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Storage DRS cannot operate on a datastore](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.troubleshooting.doc/GUID-976F5B21-8C64-4C85-BE75-0D86655E32DD.html){:external} |
 | vSphere Distributed Switch VLAN trunked status | Configure to send email once when critical when not all the configured VLANs in the vSphere Distributed Switch were trunked by the physical switch. | [Enabling vSphere Distributed Switch health check in the vSphere Web Client (2032878)](https://kb.vmware.com/s/article/2032878){:external} |
 | vSphere Distributed Switch MTU matched status  | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Enabling vSphere Distributed Switch health check in the vSphere Web Client (2032878)](https://kb.vmware.com/s/article/2032878){:external} |
@@ -328,11 +328,11 @@ The hybridity bundle installs HCX and this creates the following additional prec
 
 | Alarm Name | Guidance | More Information |
 |---|---|---|
-| Bulk Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| Cold Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| HCX Cloud Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| HCX Enterprise Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
-| HCX Interconnect tunnel status | Configure to send email once for a critical tunnel status is down event. | See [Network (WAN) connectivity](/docs/vmwaresolutions?topic=vmware-solutions-hcxclient-troubleshooting#hcxclient-troubleshooting-wan-connect). |
+| Bulk Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| Cold Migration Failed | Not considered essential for notification as migrations would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| HCX Cloud Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| HCX Enterprise Database Upgrade Failed | Not considered essential for notification as upgrades would be managed. | See [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting) and [VMware HCX troubleshooting](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-B6CF4054-9C8C-43DE-AC67-01AE0679B190.html){:external}. |
+| HCX Interconnect tunnel status | Configure to send email once for a critical tunnel status is down event. | See [Network (WAN) connectivity](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting#hcxclient-troubleshooting-wan-connect). |
 {: caption="Table 3. Preconfigured alarms - HCX" caption-side="bottom"}
 
 ## Events and alarms procedures
@@ -348,7 +348,7 @@ The following table describes a number of procedures for events and alarms.
 | View Triggered Alarms  | To view the triggered alarms, navigate to vCenter and select either **All** or **New** in the **Alarms** pane. This list refreshes every 120 seconds. To view alarms triggered on a selected inventory object, select the object. Click the **Monitor** tab, **Issues**, and select **Triggered Alarms**. |
 {: caption="Table 4. Events and alarms procedures" caption-side="bottom"}
 
-**Next topic**: [Proactive tasks](/docs/vmwaresolutions?topic=vmware-solutions-opsprocs-proactive)
+**Next topic**: [Proactive tasks](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-proactive)
 
 <!-- ## Related links
 {: #opsprocs-alarms-links}

@@ -8,7 +8,7 @@ lastupdated: "2020-04-13"
 
 keywords: veeam, veeam install, tech specs veeam
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -33,7 +33,7 @@ The Veeam Availability Suite has visibility to back up VMs from any virtual data
 
 When you use the Veeam self-service portal to create backup jobs, you can choose vApp and VM instances from any virtual data center in the organization.
 
-You can access the Veeam portal on the virtual data center details page when the instance is in the **Ready to Use** state. For information about accessing the details page, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-viewing).
+You can access the Veeam portal on the virtual data center details page when the instance is in the **Ready to Use** state. For information about accessing the details page, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-viewing).
 
 ### Procedure to access the Veeam self-service portal from the virtual data center instance
 {: #shared_veeam-portal-proc-access}
@@ -41,7 +41,7 @@ You can access the Veeam portal on the virtual data center details page when the
 1. Under **Recommended services** on the virtual data center instance details page, click **Veeam Backups**.
 2. Use the vCloud Director console **admin** username and password to log in to the Veeam self-service portal.
 
-For more information about generating the vCloud Director console credentials, see [Procedure to launch the vCloud Director Management console](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-accessing).
+For more information about generating the vCloud Director console credentials, see [Procedure to launch the vCloud Director Management console](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-accessing).
 
 Alternatively, click the **admin** drop-down in the vCloud Director console to log in to the Veeam portal.
 {:note}
@@ -55,7 +55,7 @@ Alternatively, click the **admin** drop-down in the vCloud Director console to l
 ### Licenses and fees for Veeam Availability Suite
 {: #shared_veeam-portal-fees}
 
-Veeam usage incurs On-Demand charges. For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmware-solutions-shared_pricing).
+Veeam usage incurs On-Demand charges. For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
 
 ## Veeam Cloud Connect Replication
 {: #shared_veeam-cloud-connect}
@@ -100,7 +100,7 @@ For more information about using Veeam Cloud Connect, see the [Veeam Cloud Conne
 ## Deleting Veeam Backups
 {: #shared_veeam-delete}
 
-Restore points are automatically removed from the Veeam self-service portal when you delete a virtual data center instance. For more information, see [Deleting virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_deletinginstance).
+Restore points are automatically removed from the Veeam self-service portal when you delete a virtual data center instance. For more information, see [Deleting virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_deletinginstance).
 
 If you remove all vCloud Director virtual data centers in your account, backup operations are stopped. All previous backups and restore points that are associated with the virtual data center are deleted and cannot be recovered. This is true even if you still have virtual data centers in your account.
 {:important}
@@ -108,8 +108,8 @@ If you remove all vCloud Director virtual data centers in your account, backup o
 ## Related links
 {: #shared_veeam-related}
 
-* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
+* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
+* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
 * [Using Veeam Cloud Connect Portal](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_portal_use.html?ver=95u4){:external}
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

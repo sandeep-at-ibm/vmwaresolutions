@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -117,9 +117,9 @@ Before you remove the FortiGate Virtual Appliance service, ensure that the confi
 ## Related links
 {: #fortinetvm_considerations-related}
 
-* [Ordering FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_ordering)
-* [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-managingfortinetvm)
-* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Ordering FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_ordering)
+* [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-managingfortinetvm)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Fortinet website](https://www.fortinet.com/){:external}
 * [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: primary io hdm, hdm install, download hdm
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -81,6 +81,6 @@ For more information, see the uninstallation section in the [PrimaryIO HDM - Ins
 ## Related links
 {: #pio_installing-related}
 
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [PrimaryIO Hybrid Cloud Data Management](https://www.primaryio.com/){:external}
 * [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){:external}

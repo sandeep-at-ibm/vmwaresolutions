@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-03"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -245,9 +245,9 @@ unzip terraform_0.11.13_linux_amd64.zip
 mv terraform /usr/local/bin
 ```
 
-The Bastion node is now ready for the steps to install OpenShift 4.2, which are described in [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro).
+The Bastion node is now ready for the steps to install OpenShift 4.2, which are described in [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro).
 
-**Next topic:** [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro)
+**Next topic:** [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-bastion-related}

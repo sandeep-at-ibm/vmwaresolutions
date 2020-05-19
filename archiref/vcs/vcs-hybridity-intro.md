@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-31"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -33,9 +33,9 @@ Platform integration options of the vCenter Server Hybridity Bundle aren't limit
 
 The extensive portfolio of services and multi-offering integration options available for the vCenter Server Hybridity Bundle deliver a truly hybrid platform making Hybridity as a service possible.
 
-**Next topic:** [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmware-solutions-vum-intro)
+**Next topic:** [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro)
 
 ## Related links
 {: #vcs-hybridity-intro-related}
 
-* [VMware HCX Solution Architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX Solution Architecture](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-intro#hcx-archi-intro)

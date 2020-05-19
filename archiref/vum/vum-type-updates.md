@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -30,10 +30,10 @@ VMware uses the following terms to describe software updates.
 | VIB |	A VIB is a single software package. |
 {: caption="Table 1. VMware software update terms and definitions" caption-side="bottom"}
 
-**Next topic:** [Virtual machine vSAN redundancy](/docs/vmwaresolutions?topic=vmware-solutions-vum-vsan-redundancy)
+**Next topic:** [Virtual machine vSAN redundancy](/docs/vmwaresolutions?topic=vmwaresolutions-vum-vsan-redundancy)
 
 ## Related links
 {: #vum-type-updates-related}
 
-* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

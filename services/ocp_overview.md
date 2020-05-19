@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: red hat openshift, request openshift for vmware, tech specs openshift vmware
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -29,7 +29,7 @@ The current Red Hat OpenShift version that is installed is 4.2.16.
 
 The cluster consists of three master nodes and three worker nodes, all running Red Hat CoreOS. In addition, there are also two VMware NSX VMs, a Red Hat CoreOS template, and a bastion VM running CentOS. 
 
-For more information about the architecture, see [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch).
+For more information about the architecture, see [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-redhat-arch).
 
 ## Technical specifications for OpenShift for VMware
 {: #ocp_overview-specs}
@@ -62,11 +62,11 @@ The OpenShift-related files from the bastion include: an SSH key, an installatio
 ### SSH key
 {: #ocp_overview-bastion-ssh-key}
 
-The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. The full path to the SSH key is displayed on the service details page. For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmware-solutions-ocp_managing#ocp_managing-change-ssh-key).
+The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. The full path to the SSH key is displayed on the service details page. For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_managing#ocp_managing-change-ssh-key).
 
 The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. When you log in to a cluster VM from the bastion, you must connect as the `core` user as shown in the following example: `root@bastion# ssh core@master0`
 
-For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. The full path to the SSH key is displayed on the service details page. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmware-solutions-ocp_managing#ocp_managing-change-ssh-key).
+For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. The full path to the SSH key is displayed on the service details page. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_managing#ocp_managing-change-ssh-key).
 
 ### Installation configuration files
 {: #ocp_overview-bastion-install-config-file}
@@ -133,8 +133,8 @@ VMware. Automation only removes the items that were deployed during the initial 
 ## Related links
 {: #ocp_overview-related}
 
-* [vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
-* [vCenter Server and Red Hat OpenShift guide](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-intro)
+* [vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
+* [vCenter Server and Red Hat OpenShift guide](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
 * [OpenShift Container Platform documentation](https://docs.openshift.com/container-platform/4.2/welcome/index.html){:external}
 * [Red Hat OpenShift](https://www.openshift.com/){:external}
 * [Succeeding with Red Hat OpenShift and VMware’s Software-Defined Datacenter (SDDC)](https://blog.openshift.com/red-hat-openshift-and-vmware-better-together/){:external}

@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: notifications console, filter notifications, system notification
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -39,5 +39,5 @@ By default, all unread notifications are displayed. You can filter the notificat
 ## Related links
 {: #notifications-related}
 
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
-* [User account and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [User account and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount)

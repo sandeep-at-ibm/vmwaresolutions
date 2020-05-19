@@ -8,7 +8,7 @@ lastupdated: "2020-02-24"
 
 keywords: release notes, what's new, version 3.5
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -29,7 +29,7 @@ This release includes new features, component updates, usability enhancements, a
 
 (Updated on 26 Feb 2020) {{site.data.keyword.vmwaresolutions_short}} Shared, a managed public Infrastructure as a Service (IaaS) solution, offers either a standardized or customizable deployment option of VMware vCloud Director Virtual Data Center environments. Use Virtual Data Center instances to quickly and seamlessly migrate or deploy VMware workloads to the cloud on top of IBM hosted VMware infrastructure. The Veeam Availability Suite and Veeam Cloud Connect Replication services are available and ready-to-use in all Virtual Data Center instances. Charges are incurred only if you choose to use the service.
 
-For more information, see [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview).
+For more information, see [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview).
 
 ## VMware Solutions Dedicated
 {: #relnotes_v35-dedicated}
@@ -39,8 +39,8 @@ To consolidate the {{site.data.keyword.vmwaresolutions_short}} offerings for a b
 On the {{site.data.keyword.vmwaresolutions_short}} console, in the **Start Provisioning** section, you can click the **VMware Solutions Dedicated** to start your instance order.
 
 For more information, see:
-* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
-* [Ordering VMware vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderinginstances)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
+* [Ordering VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances)
 
 ## Improved design for vCenter Server with NSX-T
 {: #relnotes_v35-nsx-t-design}
@@ -54,7 +54,7 @@ Currently, no support is provided for:
 * Local disks
 * Add-on services
 
-For more information, see the specific NSX-T details in [VMware vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview).
+For more information, see the specific NSX-T details in [VMware vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview).
 
 ## VMware vSphere 6.5u1 - Deprecated
 {: #relnotes_v35-vss-65u1dep}
@@ -71,7 +71,7 @@ If you are using vSphere 6.5u1 for your instance, any new clusters are added wit
 
 Juniper vSRX is a virtual security appliance that provides security and networking services at the perimeter or edge in virtualized private or public cloud environments. Within a VMware infrastructure, vSRX runs as a pair of virtual machines (VMs) within the vSphere environment.
 
-For more information, see [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmware-solutions-vsrx_overview).
+For more information, see [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview).
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v35-vcs}
@@ -112,8 +112,8 @@ For vCenter Server with NSX-T instances, clusters in the same pod reuse NSX-T se
 This release provides the option to disable vSAN compression and deduplication. This option is available only when you order a new instance or add a cluster.
 
 For more information, see:
-* [Enable vSAN compression and deduplication for new instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-vsan-storage-enable-comp)
-* [Enable vSAN compression and deduplication for new clusters](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-vsan-storage-enable-comp)
+* [Enable vSAN compression and deduplication for new instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-vsan-storage-enable-comp)
+* [Enable vSAN compression and deduplication for new clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-vsan-storage-enable-comp)
 
 ## Updates for add-on services
 {: #relnotes_v35-services}
@@ -138,8 +138,8 @@ A direct link to order Gateway appliances is now available on the **Security and
 ## New and updated documentation
 {: #relnotes_v35-updated-doc}
 
-* (Updated on 6 Mar 2020) The [Financial Services Sector Cloud reference architecture](/docs/vmwaresolutions?topic=vmware-solutions-fss-overview) is now available in the *Reference* section of the user documentation.
-* Documentation is now provided about the products and versions that are supported in the current release of {{site.data.keyword.vmwaresolutions_short}}. For more information, see [Product compatibility guide](/docs/vmwaresolutions?topic=vmware-solutions-vmware-comp-guide).
+* (Updated on 6 Mar 2020) The [Financial Services Sector Cloud reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-fss-overview) is now available in the *Reference* section of the user documentation.
+* Documentation is now provided about the products and versions that are supported in the current release of {{site.data.keyword.vmwaresolutions_short}}. For more information, see [Product compatibility guide](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-comp-guide).
 * Various updates are made for the [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions) and the {{site.data.keyword.vmwaresolutions_short}} Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
 
 ## User interface updates and enhancements

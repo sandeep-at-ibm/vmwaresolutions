@@ -8,7 +8,7 @@ lastupdated: "2020-04-15"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -28,8 +28,8 @@ This procedure guides you through the selection of VMware components, {{site.dat
 {: #vs_orderinginstances-req}
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_planning).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 
 ## System settings
 {: #vs_orderinginstances-sys-settings}
@@ -102,7 +102,7 @@ Using individual license keys together with the combined license keys does not m
 ## Bare metal server settings
 {: #vs_orderinginstances-bare-metal-settings}
 
-When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/vmwaresolutions?topic=vmware-solutions-vmware-inventory-export).
+When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing properly, see [Exporting VMware inventory](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-inventory-export).
 
 ### Data center location
 {: #vs_orderinginstances-dc-location}
@@ -268,7 +268,7 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 #### FortiGate Physical Appliance 300 Series HA Pair
 {: #vs_orderinginstances-fortigate-physical-appliance}
 
-You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations).
+You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations).
 
 This option is only available for an order with both a public and private network.
 {:note}
@@ -327,6 +327,6 @@ The vSphere clusters, unlike the vCenter Server instances, are not displayed on 
 ## Related links
 {: #vs_orderinginstances-related}
 
-* [Ordering vSphere clusters based on existing configurations](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderingbasedonexistingconfig)
-* [Scaling existing clusters](/docs/vmwaresolutions?topic=vmware-solutions-vs_scalingexistingclusters)
-* [Scaling clusters created outside of the console](/docs/vmwaresolutions?topic=vmware-solutions-vs_orderingforclustersoutside)
+* [Ordering vSphere clusters based on existing configurations](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderingbasedonexistingconfig)
+* [Scaling existing clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters)
+* [Scaling clusters created outside of the console](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderingforclustersoutside)

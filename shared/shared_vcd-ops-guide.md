@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -66,8 +66,8 @@ Each organization has access to the VMware Solutions Shared public catalog. The 
 
 Review the following considerations for the VMware Solutions Shared public:
 
-* Operating system licensing costs apply for usage. For more information about how commercial operating system license rentals are billed, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmware-solutions-shared_pricing).
-* Public templates that are configured to services on the IBM private network require an extra configuration step to enable VM access to the IBM Services network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
+* Operating system licensing costs apply for usage. For more information about how commercial operating system license rentals are billed, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
+* Public templates that are configured to services on the IBM private network require an extra configuration step to enable VM access to the IBM Services network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
 * Public templates require a minimum level of customization to establish the initial administrator password. For more information, see [Changing the guest OS customization properties of a VM](#shared_vcd-ops-guide-customization).
 
 The public catalog contains vApp templates for the following components:
@@ -114,10 +114,10 @@ The Red Hat Enterprise Linux templates that are provided in the public catalog h
 * Firewall activated
 * NTP server that is configured to the IBM private network servers
 
-After you deploy the VM on the tenant portal, register the Red Hat VM with your RHEL activation key in IBM RHEL Capsule Server. To register the Red Hat VM with your RHEL activation key, you must enable VM access to connect to the IBM service network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/vmwaresolutions?topic=vmware-solutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
+After you deploy the VM on the tenant portal, register the Red Hat VM with your RHEL activation key in IBM RHEL Capsule Server. To register the Red Hat VM with your RHEL activation key, you must enable VM access to connect to the IBM service network. For more information, see [Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-enable-access).
 {: important}
 
-Complete the following steps to register the Red Hat VM with your RHEL activation key. For more information about accessing instance details, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_managing#shared_managing-viewing).
+Complete the following steps to register the Red Hat VM with your RHEL activation key. For more information about accessing instance details, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-viewing).
 
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click the instance name in the **VMware Solutions Shared** instance table.
@@ -262,7 +262,7 @@ Every VMware Solutions Shared virtual data center comes configured with one edge
 * Virtual data center name
 * Number of additional IPs required
 
-For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
+For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 
 The edge gateway services are customer configurable and require configuration to allow network traffic in and out of their organization virtual data center. Configuration is required for access to the internet and the IBM Services network. The five public addresses are used for public facing vApps for inbound and outbound public internet traffic. The service address is used for access to {{site.data.keyword.cloud_notm}} infrastructure services on the {{site.data.keyword.cloud_notm}} internal private network, including:
 
@@ -480,8 +480,8 @@ If you have not already done so, create a vApp containing at least two VMs. For 
 ## Related links
 {: #shared_vcd-ops-guide-related}
 
-* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmware-solutions-shared_ordering)
+* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
+* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
 * [VMware vCloud Director](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
 * [Video tutorial: IBM Cloud for VMware Solutions Shared - Setup the Network](https://www.youtube.com/watch?v=gG0jp3TEtt0&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE&index=3&t=0s){:external}
 * [Video tutorial: IBM Cloud for VMware Solutions Shared - Deploy a VM](https://www.youtube.com/watch?v=5yl-_60gUUw&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE&index=4&t=0s){:external}

@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: KMIP certificate, add certificate KMIP, delete certificate KMIP
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -55,7 +55,7 @@ After your KMIP for VMware instance is ready, you must add certificates to it. W
 ## Related links
 {: #kmip_standalone_addingdeletingcert-related}
 
-* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
-* [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering)
-* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events)
+* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_viewing)
+* [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering)
+* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events)

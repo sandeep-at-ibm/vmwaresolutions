@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -42,9 +42,9 @@ The following table lists ports that must be opened so that Hybrid Cloud Service
 | Cloud Gateway (local) | Cloud Gateway</br>(remote) | 500  | UDP | Internet Key Exchange (ISAKMP) for the bidirectional tunnel | IPSEC |
 {: caption="Table 1. Port access requirements" caption-side="bottom"}
 
-**Next topic:** [Preparing the installation environment](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-prep-install)
+**Next topic:** [Preparing the installation environment](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-prep-install)
 
 ## Related links
 {: #hcx-archi-port-req-related}
 
-* [Installing and configuring HCX on the source](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-install-cfg-src)
+* [Installing and configuring HCX on the source](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-install-cfg-src)

@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: VMware HCX standalone, HCX on-premises, view HCX status
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -46,7 +46,7 @@ The instance status can have a range of options.
 ## Related links
 {: #standalone_viewingserviceinstances-related}
 
-* [Ordering on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_orderingserviceinstances)
-* [Deleting on-premises HCX instances](/docs/vmwaresolutions?topic=vmware-solutions-standalone_deletingserviceinstances)
-* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmware-solutions-hcx_glossary)
+* [Ordering on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_orderingserviceinstances)
+* [Deleting on-premises HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_deletingserviceinstances)
+* [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}

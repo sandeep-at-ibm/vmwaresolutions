@@ -8,7 +8,7 @@ lastupdated: "2020-03-31"
 
 keywords: FAQ, host, ESXi server
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -79,6 +79,6 @@ Adding static routes for vMotion is not supported. Changes in vMotion subnet con
 ## Related links
 {: #faq_esxi-related}
 
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

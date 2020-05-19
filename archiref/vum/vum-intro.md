@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -41,20 +41,20 @@ While VUM can be configured to import updates from a shared repository or import
 In vSphere 6.5, it's no longer supported to register VUM to a VCSA during installation of the VUM server on a separate Windows system you can't deploy VUM in a VM within the vCenter Server environment.
 
 This document is organized into the following sections:
-* [VMware Update Manager overview](/docs/vmwaresolutions?topic=vmware-solutions-vum-overview) - Describes the VUM process and introduces key terms that are needed to understand the operations and UI of the tool.
+* [VMware Update Manager overview](/docs/vmwaresolutions?topic=vmwaresolutions-vum-overview) - Describes the VUM process and introduces key terms that are needed to understand the operations and UI of the tool.
 * **Installation, Configuration, and Usage** - Describes the steps that are required to get VUM working in a vCenter Server instance:
-  - [Initial configuration](/docs/vmwaresolutions?topic=vmware-solutions-vum-init-config) - A one-time task to:
+  - [Initial configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vum-init-config) - A one-time task to:
       - Configure NSX networking to allow the proxy server access to the internet.
       - Install and configure a proxy server to provide internet access for VUM.
       - The initial setup of VUM to use the proxy server.
-  - [Collecting the metadata](/docs/vmwaresolutions?topic=vmware-solutions-vum-metadata) - VUM downloads metadata about the upgrades, patches, or extensions via a predefined automatic process that you can modify. At regular configurable intervals, VUM contacts VMware, or third-party sources, to gather the latest metadata about available upgrades, patches, or extensions.
-  - [Creating baselines](/docs/vmwaresolutions?topic=vmware-solutions-vum-baselines) - Use the pre-defined baselines and baseline groups or create custom ones. Baselines and baseline groups are then attached to inventory objects.
-  - [Scanning and review](/docs/vmwaresolutions?topic=vmware-solutions-vum-scanning) - Inventory objects are scanned, and the results are reviewed to determine how they comply with the baselines and baseline groups. Scan results can be filtered by text search, group selection, baseline selection, and compliance status selection.
-  - [Staging and remediation](/docs/vmwaresolutions?topic=vmware-solutions-vum-staging) - Patches and extensions can be optionally staged before remediation to ensure that they are downloaded to the host. During remediation, VUM applies the patches, extensions, and upgrades to the inventory objects.
+  - [Collecting the metadata](/docs/vmwaresolutions?topic=vmwaresolutions-vum-metadata) - VUM downloads metadata about the upgrades, patches, or extensions via a predefined automatic process that you can modify. At regular configurable intervals, VUM contacts VMware, or third-party sources, to gather the latest metadata about available upgrades, patches, or extensions.
+  - [Creating baselines](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines) - Use the pre-defined baselines and baseline groups or create custom ones. Baselines and baseline groups are then attached to inventory objects.
+  - [Scanning and review](/docs/vmwaresolutions?topic=vmwaresolutions-vum-scanning) - Inventory objects are scanned, and the results are reviewed to determine how they comply with the baselines and baseline groups. Scan results can be filtered by text search, group selection, baseline selection, and compliance status selection.
+  - [Staging and remediation](/docs/vmwaresolutions?topic=vmwaresolutions-vum-staging) - Patches and extensions can be optionally staged before remediation to ensure that they are downloaded to the host. During remediation, VUM applies the patches, extensions, and upgrades to the inventory objects.
 
-This document assumes that you have one Primary vCenter Server instance that is deployed, or a number of separate Primary vCenter Server instances. If you have Primary and Secondary vCenter Server instances that are deployed and that use Single Sign On (SSO), see [SSO-linked vCenters](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-vcsa).
+This document assumes that you have one Primary vCenter Server instance that is deployed, or a number of separate Primary vCenter Server instances. If you have Primary and Secondary vCenter Server instances that are deployed and that use Single Sign On (SSO), see [SSO-linked vCenters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vcsa).
 
-If you have deployed a vCenter Server by using vSAN, see [Updating vSAN Clusters](/docs/vmwaresolutions?topic=vmware-solutions-vum-updating-vsan) first.
+If you have deployed a vCenter Server by using vSAN, see [Updating vSAN Clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vsan) first.
 
 If you want to update the {{site.data.keyword.cloud_notm}} infrastructure management automation, use the {{site.data.keyword.vmwaresolutions_short}} console.
 
@@ -66,10 +66,10 @@ The [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/
 
 This facility enables the automated updating for the management components of the vCenter Server instances only. VMware product updates must be applied by using the procedures that are detailed in this document.
 
-**Next topic:** [VMware Update Manager overview](/docs/vmwaresolutions?topic=vmware-solutions-vum-overview)
+**Next topic:** [VMware Update Manager overview](/docs/vmwaresolutions?topic=vmwaresolutions-vum-overview)
 
 ## Related links
 {: #vum-intro-related}
 
-* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-hcx-archi-intro#hcx-archi-intro)
+* [VMware HCX solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-intro#hcx-archi-intro)
 * [{{site.data.keyword.vmwaresolutions_short}} Demos](https://www.ibm.com/demos/collection/IBM-Cloud-for-VMware-Solutions/) (demonstrations)

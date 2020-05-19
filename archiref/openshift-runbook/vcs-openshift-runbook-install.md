@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-29"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -118,7 +118,7 @@ Now that the install-config.yaml is created and populated run the OpenShift Inst
 cd /opt/ocp42install/
 openshift-install create ignition-configs --dir=/opt/ocp42install/
 ```
-  The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-trbl-intro).
+  The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-trbl-intro).
    {:note}
 
 The following files are produced by the OpenShift Installer:
@@ -461,9 +461,9 @@ The password for the user that was created during installation can also be found
     ```
 
 
-**Next topic:** [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
+**Next topic:** [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-install-related}
 
-* [VMware Solutions on {{site.data.keyword.cloud}} and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro)
+* [VMware Solutions on {{site.data.keyword.cloud}} and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)

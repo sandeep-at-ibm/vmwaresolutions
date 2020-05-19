@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-15"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -38,7 +38,7 @@ No vSphere management components are deployed to the edge cluster.
 
 No vSphere management components are deployed to the workload cluster.
 
-**Next topic**: [FSS Cloud operations management](/docs/vmwaresolutions?topic=vmware-solutions-fss-operations)
+**Next topic**: [FSS Cloud operations management](/docs/vmwaresolutions?topic=vmwaresolutions-fss-operations)
 
 ## Related links
 {: #fss-vsphere-platform-related}

@@ -8,7 +8,7 @@ lastupdated: "2020-04-16"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -133,14 +133,14 @@ For the **Broadwell** setting, you have a number of options for the **CPU Model*
 
 * All servers that you order have the same configuration.
 * For vSAN storage, you can order in the range 4 - 59 servers.
-* For NFS storage, you can order between 1 (for NSX-V) or 2 (for NSX-T) and 59 servers. However, for production workloads, a minimum of two (for NSX-V) and three (for NSX-T) servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
+* For NFS storage, you can order between 1 (for NSX-V) or 2 (for NSX-T) and 59 servers. However, for production workloads, a minimum of two (for NSX-V) and three (for NSX-T) servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
 ## Storage settings
 {: #vc_addingviewingclusters-adding-storage-settings}
 
 Storage settings are based on your selection of {{site.data.keyword.cloud_notm}} bare metal server configuration and the storage type.
 
-You can add NFS storage shares to an existing vSAN or NFS cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
+You can add NFS storage shares to an existing vSAN or NFS cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
 {:note}
 
 ### vSAN storage
@@ -469,7 +469,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 * Before you delete an edge services cluster, you must delete all services that are installed on that cluster.
 * The default cluster, management cluster, and workload cluster can't be deleted.
 
-A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:important}
 
 ### Procedure to delete clusters from vCenter Server instances
@@ -489,5 +489,5 @@ A 12-month commitment is required when you order the VMware HCX service. Your ac
 ## Related links
 {: #vc_addingviewingclusters-related}
 
-* [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
+* [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)

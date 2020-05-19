@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -24,8 +24,8 @@ To deploy a multi-zone stretched cluster consisting of compute, network, and sto
 {: #mcv_ordering-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
-* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 | Name        | Value Format      |
@@ -283,7 +283,7 @@ Proceed with the following steps to order a Multi-Zone Stretched Cluster:
 ## Related links
 {: #mcv_ordering-related}
 
-* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv_overview)
-* [Managed VMware Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_imi)
-* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
+* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
+* [Managed VMware Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_imi)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_veeam_services)
+* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)

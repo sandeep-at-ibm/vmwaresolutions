@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: about vmware solutions, product overview, benefits
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 {:external: target="_blank" .external}
@@ -127,7 +127,7 @@ For all instances, vSphere Hypervisor is installed on the bare metal servers. {{
 
 Depending on your choice, either one Microsoft Windows VSI or two Microsoft Windows VMs are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
 
-Regardless of how you choose to provide business continuity for your own workloads, {{site.data.keyword.cloud_notm}} strongly recommends that you back up the management components of your instance. The {{site.data.keyword.vmwaresolutions_short}} console allows you to deploy an integrated IBM Spectrum Protect Plus backup server or a Veeam Backup & Replication backup server together with your instance. These backup services can be used as part of a [complete backup solution](/docs/vmwaresolutions?topic=vmware-solutions-solution_backingup) for your instance.
+Regardless of how you choose to provide business continuity for your own workloads, {{site.data.keyword.cloud_notm}} strongly recommends that you back up the management components of your instance. The {{site.data.keyword.vmwaresolutions_short}} console allows you to deploy an integrated IBM Spectrum Protect Plus backup server or a Veeam Backup & Replication backup server together with your instance. These backup services can be used as part of a [complete backup solution](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup) for your instance.
 
 ### Licenses
 {: #under_the_hood-licenses}
@@ -162,5 +162,5 @@ Now that you're armed with everything you need to know to get started, go ahead 
 ## Related links
 {: #under_the_hood-related}
 
-* [Getting started](/docs/vmwaresolutions?topic=vmware-solutions-getting-started)
-* [VMware Solutions architecture](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Getting started](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
+* [VMware Solutions architecture](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

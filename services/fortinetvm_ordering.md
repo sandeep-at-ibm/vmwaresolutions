@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -26,12 +26,12 @@ You can include the FortiGate Virtual Appliance service with a new vCenter Serve
 ## Ordering FortiGate Virtual Appliance for a new instance
 {: #fortinetvm_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **FortiGate Virtual Appliance** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **FortiGate Virtual Appliance** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering FortiGate Virtual Appliance for an existing instance
 {: #fortinetvm_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **FortiGate Virtual Appliance** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **FortiGate Virtual Appliance** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Ordering FortiGate Virtual Appliance for private instances
 {: #fortinetvm_ordering-private}
@@ -89,10 +89,10 @@ You can't change the license model after service installation. To change the lic
 ## Related links
 {: #fortinetvm_ordering-related}
 
-* [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmware-solutions-fortinetvm_considerations)
-* [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmware-solutions-managingfortinetvm)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations)
+* [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-managingfortinetvm)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Fortinet website](https://www.fortinet.com/){:external}
 * [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -114,11 +114,11 @@ Management and resource Site B contains the following:
 *	Remaining half of stretch cluster
   * Customer workload
 
-**Next topic:** [Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
+**Next topic:** [Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
 
 ## Related links
 {: #mcv-archi-design-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-overview)
-* [Bill of Materials](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-bom)
-* [Component and feature details](/docs/vmwaresolutions?topic=vmware-solutions-mcv-archi-comp)
+* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)
+* [Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
+* [Component and feature details](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)

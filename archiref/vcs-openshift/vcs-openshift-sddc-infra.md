@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -131,12 +131,12 @@ The following tables show the specifications of the management node, control pla
 {: class="comparison-tab-table"}
 {: row-headers}
 
-**Next topic:** [Storage options on IBM Cloud and Red Hat OpenShift](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-storage)
+**Next topic:** [Storage options on IBM Cloud and Red Hat OpenShift](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-storage)
 
 ## Related links
 {: #vcs-openshift-sddc-infra-related}
 
-* [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
-* [System context for vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-syscontext)
-* [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-redhat-arch)
-* [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-arch)
+* [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
+* [System context for vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-syscontext)
+* [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-redhat-arch)
+* [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch)

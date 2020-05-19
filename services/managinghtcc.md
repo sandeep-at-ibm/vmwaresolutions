@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -36,7 +36,7 @@ To access the HTCC console from the vSphere Web Client, use the following proced
 2. Right-click **CC1** or **CC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
 ## Enabling internet access for the HyTrust CloudControl VMs
 {: #managinghtcc-internet-access}
@@ -88,7 +88,7 @@ These following steps apply for updating the HTCC network settings on the primar
 ## Related links
 {: #managinghtcc-related}
 
-* [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htcc_considerations)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

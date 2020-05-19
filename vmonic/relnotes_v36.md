@@ -8,7 +8,7 @@ lastupdated: "2020-04-20"
 
 keywords: release notes, what's new, version 3.6
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -33,7 +33,7 @@ You can open an {{site.data.keyword.cloud_notm}} Support ticket to request five 
 * Virtual data center name
 * Number of additional IPs required
 
-For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support).
+For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v36-dedicated}
@@ -43,14 +43,14 @@ This release applies the following updates when you order VMware vCenter Server 
 ### Updates for advanced configuration settings for ESXi servers
 {: #relnotes_v36-confsets-ESXi-servers}
 
-For V3.6 and later releases, new instances are ordered with a new set of advanced configuration settings for ESXi servers. For more information, see [Advanced configuration settings for ESXi servers](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom#vc_bom-esxi-server-advance-config).
+For V3.6 and later releases, new instances are ordered with a new set of advanced configuration settings for ESXi servers. For more information, see [Advanced configuration settings for ESXi servers](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom#vc_bom-esxi-server-advance-config).
 
 ### Updates for port group configuration settings
 {: #relnotes_v36-confsets-port-group}
 
 For V3.6 and later releases, security policies for promiscuous mode, MAC address changes, and forged transmits are now accepted on disturbed port groups.
 
-For more information, see [NSX and port group configuration settings](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom#vc_bom-nsx-port-group-config).
+For more information, see [NSX and port group configuration settings](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom#vc_bom-nsx-port-group-config).
 
 ### Withdrawal of support for MEL01 data center
 {: #relnotes_v36-dedicated-mel01-dc}
@@ -86,15 +86,15 @@ The support for VMware Subscription Purchasing Program (SPP) is available only t
 VMware Subscription Purchasing Program offers a flexible way to consume VMware Subscription Services in the form of Subscription Credits (SPP Credits). When you order vCenter Server instances, you can redeem SPP Credits towards licensing costs.
 
 For more information, see:
-* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance)
+* [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
 * [VMware Subscription Purchasing Program (SPP)](https://my.vmware.com/web/vmware/spp-landing){:external}
 
 ### Support for edge services cluster
 {: #relnotes_v36-vcs-edge-services-cluster}
 
 You can now order an edge services cluster when you are ordering a new vCenter Server instance, with or without the Juniper vSRX service installed on it. You can also install the Juniper vSRX service as a gateway appliance. For more information, see:
-* [Edge services cluster](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster)
-* [Ordering Juniper vSRX](/docs/vmwaresolutions?topic=vmware-solutions-juniper-ordering)
+* [Edge services cluster](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster)
+* [Ordering Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-ordering)
 
 ## Updates for add-on services
 {: #relnotes_v36-services}
@@ -106,7 +106,7 @@ This release provides the following updates for the add-on services.
 
 You can now engage Managed Services for VMware Workload Transformation for the day to day management of the virtual infrastructure so that you are free to focus on critical items. This service offers a modular approach with the best in class tools and expertise to deliver remote managed services worldwide.
 
-You can add Managed Services for VMware Workload Transformation to your instance order at any time by requesting a consultation from the **Overview** page. For more information, see [Managed Services for VMware Workload Transformation](/docs/vmwaresolutions?topic=vmware-solutions-managing_mcms).
+You can add Managed Services for VMware Workload Transformation to your instance order at any time by requesting a consultation from the **Overview** page. For more information, see [Managed Services for VMware Workload Transformation](/docs/vmwaresolutions?topic=vmwaresolutions-managing_mcms).
 
 ### Enhancements for F5 BIG-IP
 {: #relnotes_v36-services-F5BIG}
@@ -128,9 +128,9 @@ You can install the Juniper vSRX service as one of the following appliances:
 * Juniper vSRX virtual appliance on the management cluster
 
 For more information, see:
-* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmware-solutions-vsrx_overview)
-* [Ordering Juniper vSRX](/docs/vmwaresolutions?topic=vmware-solutions-juniper-ordering)
-* [Edge services cluster](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster)
+* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview)
+* [Ordering Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-ordering)
+* [Edge services cluster](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster)
 
 ### Enhancements for vRealize Operations and Log Insight
 {: #relnotes_v36-services-vrops-log}
@@ -147,7 +147,7 @@ Documentation for new REST APIs is available in the *Reference* section. For mor
 ## New and updated documentation
 {: #relnotes_v36-updated-doc}
 
-* Documentation is now provided about managing your data when you use {{site.data.keyword.vmwaresolutions_short}}. For example, what data is stored and encrypted, how to protect your sensitive data, and how you can delete any stored personal data. For more information, see [Securing your data in {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-mng-data).
+* Documentation is now provided about managing your data when you use {{site.data.keyword.vmwaresolutions_short}}. For example, what data is stored and encrypted, how to protect your sensitive data, and how you can delete any stored personal data. For more information, see [Securing your data in {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-mng-data).
 * VMware Solution Shared video tutorials are now available in the **Related links** sections of the VMware Solution Shared and learning resource topics. For more information, see [VMware Solutions Shared videos](https://www.youtube.com/playlist?list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE){:external}.
 
 ## User interface updates and enhancements

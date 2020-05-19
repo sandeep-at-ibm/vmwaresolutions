@@ -8,7 +8,7 @@ lastupdated: "2019-05-28"
 
 keywords: troubleshooting, contact support, support ticket
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

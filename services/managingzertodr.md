@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -61,8 +61,8 @@ When you add or remove ESXi servers for the primary cluster of your instance, VR
 ## Related links
 {: #managingzertodr-related}
 
-* [Zerto overview](/docs/vmwaresolutions?topic=vmware-solutions-addingzertodr)
-* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
+* [Zerto overview](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr)
+* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
 * [zerto.com website](https://www.zerto.com){:external}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:external}
 * [Zerto disaster recovery](https://www.ibm.com/downloads/cas/KDBKXLLW){:external}

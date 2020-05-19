@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -47,7 +47,7 @@ Note that in either case the deployment of the VMware vCenter Server instance is
 
 Understanding the default configuration assists in both an understanding of the vSRX HA Chassis Cluster and IBM Cloud underlay networking. The default configuration is the base upon which all further integration is executed.
 
-For more information, see [Understanding the vSRX Default Configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#understanding-the-vsrx-default-configuration) and [IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-iaas-def-config).
+For more information, see [Understanding the vSRX Default Configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#understanding-the-vsrx-default-configuration) and [IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-iaas-def-config).
 
 ## vSRX and vCenter Server integrated design
 {: #vcsvsrx-planning-vsrx-design}
@@ -158,12 +158,12 @@ The diagram illustrates one of many potential implementations of BGP from the on
 
 The traffic originating from the client facility flows through AT&T NetBond or other provider into the GNPP router. The GNPP router is peered via BGP to the vSRX gateway deployed into the client's IBM Cloud account and all traffic is encapsulated in a GRE tunnel over BGP. The packets exiting the tunnel into the vSRX are then routed to the NSX overlay network via an edge services gateway.
 
-**Next topic:** [vSRX example configuration](/docs/vmwaresolutions?topic=vmware-solutions-vcsvsrx-default-config)
+**Next topic:** [vSRX example configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-default-config)
 
 ## Related links
 {: #vcsvsrx-planning-related}
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-hybridity-intro)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-hybridity-intro)
 * [Getting Started With IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
 * [Juniper Networks vSRX Deployment Guide for VMware](https://www.juniper.net/documentation/en_US/vsrx/information-products/pathway-pages/security-vsrx-vmware-guide-pwp.html){:external}
 * [Juniper Networks Requirements for vSRX on VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/reference/general/security-vsrx-vmware-system-requirement.html){:external}

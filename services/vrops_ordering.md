@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vRealize, vRealize configuration, order vRealize
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -25,12 +25,12 @@ You can include the vRealize Operations and Log Insight service with a new vCent
 ## Ordering vRealize Operations and Log Insight for a new instance
 {: #vrops_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **vRealize Operations and Log Insight** in the **Management Tools** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **vRealize Operations and Log Insight** in the **Management Tools** category. Follow the steps to add the service to your instance.
 
 ## Ordering vRealize Operations and Log Insight for an existing instance
 {: #vrops_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **vRealize Operations and Log Insight** in the **Management Tools** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **vRealize Operations and Log Insight** in the **Management Tools** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## vRealize Operations and Log Insight configuration
 {: #vrops_ordering-config}
@@ -43,7 +43,7 @@ If you're planning to use your own vRealize Operations and vRealize Log Insight 
 ## Related links
 {: #vrops_ordering-related}
 
-* [vRealize Operations and Log Insight overview](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview)
-* [Managing vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-managing_vrops)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [vRealize Operations and Log Insight overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
+* [Managing vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-managing_vrops)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

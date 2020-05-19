@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -31,7 +31,7 @@ The current Zerto version that is installed is 7.0 Update 2.
 ## Before you begin
 {: #addingzertodr-req}
 
-* Ensure that your {{site.data.keyword.cloud_notm}} account is a billable account, and that it is linked to the {{site.data.keyword.cloud_notm}} infrastructure account where your instance is deployed. For more information, see [Billing for Zerto replication](/docs/vmwaresolutions?topic=vmware-solutions-zerto_ordering#zerto_ordering-billing).
+* Ensure that your {{site.data.keyword.cloud_notm}} account is a billable account, and that it is linked to the {{site.data.keyword.cloud_notm}} infrastructure account where your instance is deployed. For more information, see [Billing for Zerto replication](/docs/vmwaresolutions?topic=vmwaresolutions-zerto_ordering#zerto_ordering-billing).
 * This service is available only to instances that are deployed in V1.2 or later.
 
 ## Technical specifications for Zerto
@@ -72,8 +72,8 @@ Zerto Replication V6.5 update 3 license
 ## Related links
 {: #addingzertodr-related}
 
-* [Ordering Zerto](/docs/vmwaresolutions?topic=vmware-solutions-zerto_ordering)
-* [Managing Zerto](/docs/vmwaresolutions?topic=vmware-solutions-managingzertodr)
-* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
+* [Ordering Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-zerto_ordering)
+* [Managing Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-managingzertodr)
+* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
 * [zerto.com website](https://www.zerto.com){: external}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}

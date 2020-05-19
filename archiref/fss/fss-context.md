@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-10"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -41,7 +41,7 @@ Connections between the on-premises environment, CSP, CHP, and IBM Cloud travers
 * CSP (Cloud Service Provider) - deliver ancillary services to the client. Examples might include credit card transaction processing or ACH services.
 * CHP (Cloud Hosting Provider) - can provide hosting services to support disaster recovery or specialized application hosting.
 
-**Next topic**: [FSS Cloud zero-trust model](/docs/vmwaresolutions?topic=vmware-solutions-fss-separation-of-duties)
+**Next topic**: [FSS Cloud zero-trust model](/docs/vmwaresolutions?topic=vmwaresolutions-fss-separation-of-duties)
 
 ## Related links
 {: #fss-context-related}

@@ -8,7 +8,7 @@ lastupdated: "2020-04-07"
 
 keywords: vmware offering, vmware solutions functions, function support
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -43,7 +43,7 @@ Review the following chart to understand the differences in functions support fo
 
 [^automation]: According to a validated design and with verification during deployment.
 
-[^servers]: To increase beyond 32 ESXi servers in a vSAN cluster, see [How many ESXi servers can I add to a cluster?](/docs/vmwaresolutions?topic=vmware-solutions-faq_esxi#faq_esxi-cluster)
+[^servers]: To increase beyond 32 ESXi servers in a vSAN cluster, see [How many ESXi servers can I add to a cluster?](/docs/vmwaresolutions?topic=vmwaresolutions-faq_esxi#faq_esxi-cluster)
 
 [^nsxv1]: NSX-V only
 
@@ -54,8 +54,8 @@ Review the following chart to understand the differences in functions support fo
 ## Related links
 {: #inst_comp_chart-related}
 
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
-* [vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
-* [VMware vSphere overview](/docs/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview)
-* [vCenter Server BOM](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [VMware vSphere BOM](/docs/vmwaresolutions?topic=vmware-solutions-vs_bom)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
+* [VMware vSphere overview](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview)
+* [vCenter Server BOM](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom)
+* [VMware vSphere BOM](/docs/vmwaresolutions?topic=vmwaresolutions-vs_bom)

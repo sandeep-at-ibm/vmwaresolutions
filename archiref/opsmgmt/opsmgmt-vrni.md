@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -90,4 +90,4 @@ Deployment of the vRNI appliance requires two IP addresses from the Tooling priv
 
 vRNI user authentication is directly with an Active Directory Server.
 
-**Next topic:** [VMware Update Manager](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-vum)
+**Next topic:** [VMware Update Manager](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vum)

@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -69,6 +69,6 @@ Review the following considerations before you remove the service:
 ## Related links
 {: #caveonix_considerations-related}
 
-* [Ordering Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_ordering)
-* [Managing Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-managingcaveonix)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Ordering Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_ordering)
+* [Managing Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-managingcaveonix)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -16,7 +16,7 @@ subcollection: vmware-solutions
 
 Attached storage is an extension of the VMware vCenter Server offering. The attached storage solution architecture for the VMware vCenter Server details the components of the solution and the high-level configuration of each component in the design.
 
-For more information about the vCenter Server design, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview).
+For more information about the vCenter Server design, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
 
 ## Key benefits of attached storage for vCenter Server
 {: #storage-benefits-key-benefits}
@@ -31,9 +31,9 @@ While attached storage isn't a prerequisite for VMware environments, its use as 
 | vSphere Fault Tolerance | This feature provides continuous availability to VMs, by eliminating downtime and disruption, even if a complete host failure occurs. |
 {: caption="Table 1. Functions description for attached storage for vCenter Server" caption-side="bottom"}
 
-**Next topic:** [Attached storage infrastructure design](/docs/vmwaresolutions?topic=vmware-solutions-storage-infra-design)
+**Next topic:** [Attached storage infrastructure design](/docs/vmwaresolutions?topic=vmwaresolutions-storage-infra-design)
 
 ## Related links
 {: #storage-benefits-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmware-solutions-solution_overview)
+* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

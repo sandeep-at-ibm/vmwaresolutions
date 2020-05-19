@@ -8,7 +8,7 @@ lastupdated: "2020-03-30"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -31,7 +31,7 @@ You can deploy a fully managed {{site.data.keyword.cloud}} for VMware Mission Cr
 ## Related links
 {: #mcv_ordering-managed-related}
 
-* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmware-solutions-mcv_overview)
-* [Managed VMware Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_imi)
-* [Managed Backup Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
+* [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
+* [Managed VMware Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_imi)
+* [Managed Backup Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_veeam_services)
+* [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)

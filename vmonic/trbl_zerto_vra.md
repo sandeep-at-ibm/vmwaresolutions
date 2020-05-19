@@ -8,7 +8,7 @@ lastupdated: "2020-03-18"
 
 keywords: troubleshooting, Zerto VRA, Zerto uninstall
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 

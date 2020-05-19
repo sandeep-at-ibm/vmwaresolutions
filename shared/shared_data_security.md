@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -68,5 +68,5 @@ Your disaster recovery plan includes knowing, preserving, and being prepared to 
 ## Related links
 {: #shared_data-related}
 
-* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmware-solutions-shared_overview)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

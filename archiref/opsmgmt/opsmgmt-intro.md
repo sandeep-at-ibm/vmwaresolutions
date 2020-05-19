@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-31"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -72,4 +72,4 @@ For more information about how this architecture can be extended with Chef integ
 
 * Service Management Layer – This layer focuses on the full lifecycle of the IT environment and is typically implemented at the enterprise level combining inputs from all the silos of IT Operations and technologies. This layer has traditionally been, architected on IT Service Management (ITSM) frameworks such as; the IT Infrastructure Library (ITIL) and ISO/IEC 20000, which are a framework of best practices for delivering IT services through the processes and stages of the IT service lifecycle. At a product level, ITSM is typified by a centralized workflow management system for handling incidents, service requests, problems, changes, and knowledge connected to a configuration management database.
 
-**Next topic**: [Operations management architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-opsmgmt-arch)
+**Next topic**: [Operations management architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-arch)

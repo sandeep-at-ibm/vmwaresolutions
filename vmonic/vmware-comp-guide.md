@@ -8,7 +8,7 @@ lastupdated: "2020-04-17"
 
 keywords: vmware compatibility, vsan compatibility, product compatibility
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -149,8 +149,8 @@ Do not mix SSD vendors in vSAN servers or clusters.
 ## Related links
 {: #vmware-comp-guide-related}
 
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
-* [vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
-* [VMware vSphere overview](/docs/vmwaresolutions?topic=vmware-solutions-vs_vsphereclusteroverview)
-* [vCenter Server BOM](/docs/vmwaresolutions?topic=vmware-solutions-vc_bom)
-* [VMware vSphere BOM](/docs/vmwaresolutions?topic=vmware-solutions-vs_bom)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
+* [VMware vSphere overview](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview)
+* [vCenter Server BOM](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom)
+* [VMware vSphere BOM](/docs/vmwaresolutions?topic=vmwaresolutions-vs_bom)

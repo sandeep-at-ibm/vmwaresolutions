@@ -8,7 +8,7 @@ lastupdated: "2020-03-31"
 
 keywords: user IDs vCenter, PSC user, user ID service
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -98,5 +98,5 @@ Where:
 ## Related links
 {: #audit_user_ids-related}
 
-* [Considerations about changing vCenter Server artifacts](/docs/vmwaresolutions?topic=vmware-solutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events#at-events)
+* [Considerations about changing vCenter Server artifacts](/docs/vmwaresolutions?topic=vmwaresolutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events#at-events)

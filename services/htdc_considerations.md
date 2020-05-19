@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -66,8 +66,8 @@ Before you remove the HyTrust DataControl service, decouple all clients from usi
 ## Related links
 {: #htdc_considerations-related}
 
-* [Ordering HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-htdc_ordering)
-* [Managing HyTrust DataControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtdc)
-* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [Ordering HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_ordering)
+* [Managing HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtdc)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

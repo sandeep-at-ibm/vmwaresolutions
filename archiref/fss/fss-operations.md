@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-16"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -32,7 +32,7 @@ All operational tools are deployed into the management cluster. The FSS Cloud de
 ### Caveonix RiskForesight
 {: #fss-operations-management-riskforesight}
 
-[Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-fss-caveonix) provides a comprehensive cloud workload protection platform for FSS Cloud that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
+[Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-fss-caveonix) provides a comprehensive cloud workload protection platform for FSS Cloud that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
 
 ### vRealize Operations
 {: #fss-operations-management-vrops}
@@ -63,11 +63,11 @@ No operational tools components are deployed to the edge cluster. All components
 
 No operational tools components are deployed to the edge cluster. All platform components that are deployed in the workload cluster are configured to deliver their logs to vRealize Log Insight.
 
-**Next topic**: [FSS Cloud Caveonix integration](/docs/vmwaresolutions?topic=vmware-solutions-fss-caveonix)
+**Next topic**: [FSS Cloud Caveonix integration](/docs/vmwaresolutions?topic=vmwaresolutions-fss-caveonix)
 
 ## Related links
 {: #fss-operations-related}
 
 * [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance)
-* [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmware-solutions-vrops_overview)
-* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmware-solutions-caveonix_considerations)
+* [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
+* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)

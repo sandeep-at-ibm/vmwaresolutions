@@ -8,7 +8,7 @@ lastupdated: "2020-04-08"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -89,8 +89,8 @@ The network architecture has the following specifications:
 ## Related links
 {: #mcv_overview-related}
 
-* [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering)
-* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering-managed)
-* [Managed VMware services](/docs/vmwaresolutions?topic=vmware-solutions-managing_imi)
-* [Managed backup services](/docs/vmwaresolutions?topic=vmware-solutions-managing_veeam_services)
-* [Managed Disaster Recovery services](/docs/vmwaresolutions?topic=vmware-solutions-managing_zerto_services)
+* [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
+* [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
+* [Managed VMware services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_imi)
+* [Managed backup services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_veeam_services)
+* [Managed Disaster Recovery services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)

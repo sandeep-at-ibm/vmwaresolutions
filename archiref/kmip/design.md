@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-03-30"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -100,9 +100,9 @@ Your KMIP for VMware instance is authorized to your Key Protect or Hyper Protect
 ### Topology
 {: #kmip-design-topology}
 
-KMIP for VMware is available in a number of {{site.data.keyword.cloud_notm}} multi-zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering).
+KMIP for VMware is available in a number of {{site.data.keyword.cloud_notm}} multi-zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).
 
-Within each MZR, KMIP for VMware provides two network service endpoints on the {{site.data.keyword.cloud_notm}} private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering).
+Within each MZR, KMIP for VMware provides two network service endpoints on the {{site.data.keyword.cloud_notm}} private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).
 
 To access KMIP for VMware over the private network, your {{site.data.keyword.cloud_notm}} infrastructure account must be enabled for virtual routing and forwarding (VRF) and the {{site.data.keyword.cloud_notm}} network service endpoint routes must be added to the VRF routes of your account. For more information, see [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 
@@ -112,11 +112,11 @@ KMIP for VMware also connects to {{site.data.keyword.cloud_notm}} Key Protect by
 
 When using IBM Cloud Hyper Protect Crypto Services, your keys are stored in an IBM zSeries HSM instead of CloudHSM. Additionally, the connection between KMIP for VMware and {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services flows over the public network but is protected by TLS encryption and authentication.
 
-**Next topic:** [KMIP for VMware implementation and management](/docs/vmwaresolutions?topic=vmware-solutions-kmip-implementation)
+**Next topic:** [KMIP for VMware implementation and management](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-implementation)
 
 ## Related links
 {: #kmip-design-related}
 
-* [Solution overview](/docs/vmwaresolutions?topic=vmware-solutions-kmip-overview)
-* [Implementation and management](/docs/vmwaresolutions?topic=vmware-solutions-kmip-implementation)
+* [Solution overview](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-overview)
+* [Implementation and management](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-implementation)
 * [IBM Key Protect](/docs/key-protect?topic=key-protect-getting-started-tutorial)

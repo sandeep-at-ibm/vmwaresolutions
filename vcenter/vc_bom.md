@@ -8,7 +8,7 @@ lastupdated: "2020-04-30"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -59,7 +59,7 @@ The following table details the BOM information for vCenter Server software comp
 
 [^nsxt]: NSX-T only
 
-[^domain]: The domain functional level 2008 is set to allow for compatibility with an earlier version. For more information, see [Domain controllers](/docs/vmwaresolutions?topic=vmware-solutions-adds-infra-domain#adds-infra-domain-controllers).
+[^domain]: The domain functional level 2008 is set to allow for compatibility with an earlier version. For more information, see [Domain controllers](/docs/vmwaresolutions?topic=vmwaresolutions-adds-infra-domain#adds-infra-domain-controllers).
 
 ## Advanced configuration settings for ESXi servers
 {: #vc_bom-esxi-server-advance-config}
@@ -186,5 +186,5 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
 * [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){:external}
 * [{{site.data.keyword.vmwaresolutions_short}} Protection data sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
-* [vCenter Server overview](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview)
-* [Planning vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning)
+* [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
+* [Planning vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning)

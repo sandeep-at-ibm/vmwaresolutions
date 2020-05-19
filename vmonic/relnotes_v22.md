@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2018-10-19"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -63,7 +63,7 @@ For instances deployed in V2.1 or earlier releases, you must enable necessary vS
 
 For vCenter Server and Cloud Foundation instance orders, you can now reuse existing public and private VLANs for your network configuration. When existing VLANs are not available, you can order one new public and two new private VLANs.
 
-For important considerations before you select existing VLANs, see the *Network interface settings* sections in [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance).
+For important considerations before you select existing VLANs, see the *Network interface settings* sections in [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v22-vcs}

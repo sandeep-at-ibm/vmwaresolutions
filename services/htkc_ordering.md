@@ -8,7 +8,7 @@ lastupdated: "2020-04-14"
 
 keywords: Hytrust KeyControl, Hytrust configuration, order Hytrust
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -23,12 +23,12 @@ You can add the HyTrust KeyControl service (with an HA pair of HyTrust KeyContro
 ## Ordering HyTrust KeyControl for a new instance
 {: #htkc_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **HyTrust KeyControl** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **HyTrust KeyControl** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering HyTrust KeyControl for an existing instance
 {: #htkc_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmware-solutions-vc_viewinginstances), click **Services** on the left navigation pane, click **HyTrust KeyControl** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **HyTrust KeyControl** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## HyTrust KeyControl service configuration
 {: #htkc_ordering-config}
@@ -42,10 +42,10 @@ Specify whether you want to create a two-node Highly Available KeyControl cluste
 ## Related links
 {: #htkc_ordering-related}
 
-* [HyTrust KeyControl overview](/docs/vmwaresolutions?topic=vmware-solutions-htkc_considerations)
-* [Managing HyTrust KeyControl](/docs/vmwaresolutions?topic=vmware-solutions-managinghtkc)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_hybrid_addingremovingservices)
-* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [HyTrust KeyControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations)
+* [Managing HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtkc)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingremovingservices)
+* [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

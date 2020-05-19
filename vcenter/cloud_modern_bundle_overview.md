@@ -8,7 +8,7 @@ lastupdated: "2020-04-07"
 
 keywords: single-node trial, migration app modernization, tech specs migration app modernization
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -141,7 +141,7 @@ More HCX appliances are deployed during configuration as necessary for L2 connec
 ## Technical specifications for Red Hat OpenShift
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-Red Hat OpenShift for VMware 4.2 is installed by using the Development and Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about Red Hat OpenShift, see [Red Hat OpenShift for VMware overview](/docs/vmwaresolutions?topic=vmware-solutions-ocp_overview).
+Red Hat OpenShift for VMware 4.2 is installed by using the Development and Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about Red Hat OpenShift, see [Red Hat OpenShift for VMware overview](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview).
 
 ## Related links
 {: #cloud_modern_bundle_overview-related}

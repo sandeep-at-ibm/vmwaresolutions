@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -61,7 +61,7 @@ Review the following considerations before you install a KMIP for VMware instanc
    * [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)
 * Because only private connection is supported, you do not need to configure any firewall or SNAT rules in vCenter Server for the network connectivity from the vCenter Server to the endpoint of the KMIP for VMware instance.
 
-For more information, see [KMIP for VMware solution architecture](/docs/vmwaresolutions?topic=vmware-solutions-kmip-overview).
+For more information, see [KMIP for VMware solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-overview).
 
 **Notes:**
 
@@ -77,9 +77,9 @@ All data protected by the KMIP for VMware service, including encrypted backups, 
 ## Related links
 {: #kmip_standalone_considerations-related}
 
-* [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_ordering)
-* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_addingdeletingcert)
-* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_viewing)
-* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmware-solutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmware-solutions-at-events)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmware-solutions-trbl_support)
+* [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering)
+* [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_addingdeletingcert)
+* [Viewing KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_viewing)
+* [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_deleting)
+* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events)
+* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

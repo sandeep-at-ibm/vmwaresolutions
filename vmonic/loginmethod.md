@@ -8,7 +8,7 @@ lastupdated: "2020-04-02"
 
 keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -55,5 +55,5 @@ To access the console from the ibm.com website, complete the following steps:
 ## Related links
 {: #loginmethod-related}
 
-* [FAQ](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions)
+* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-ts_logintoibm)

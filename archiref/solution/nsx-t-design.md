@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-07"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -63,7 +63,7 @@ There are key NSX-T concepts that do not correspond to NSX-V function that need 
 
 In this design, the NSX-T controller Manager VMs are deployed on the management cluster. Additionally, each controller manager is assigned a VLAN–backed IP address from the private portable address block. The address block is designated for management components and configured with the DNS and NTP servers that are discussed in section 0. A summary of the NSX Manager installation is shown in following table.
 
-The VMware Identity Manager appliance must be deployed by the customer manually if required for basic RBAC/AD integration. It can also provide multi-factor authentication (MFA), conditional access, and single sign-on (SSO) services. For more information, see [VMware Identity Manager](/docs/vmwaresolutions?topic=vmware-solutions-nsx-t-idm).
+The VMware Identity Manager appliance must be deployed by the customer manually if required for basic RBAC/AD integration. It can also provide multi-factor authentication (MFA), conditional access, and single sign-on (SSO) services. For more information, see [VMware Identity Manager](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-t-idm).
 
 | Attribute | Specification |
 |:--------- |:------------- |
@@ -244,4 +244,4 @@ Workload to T1 to T0 gateway – virtual edge cluster
 
 Topology 1 is basically the same topology that is deployed with NSX-V DLR and Edge gateways. With NSX-T, no dynamic routing protocol configuration between T1 and T0. RFC-1891 IP address space is used for the workload overlay network and transit overlay network. A customer private and public portable IP space is assigned for customer use. A customer designated {{site.data.keyword.cloud_notm}} private and public portable IP space is assigned to the T0 for customer use.
 
-**Next topic:** [VMware Identity Manager](/docs/vmwaresolutions?topic=vmware-solutions-nsx-t-idm)
+**Next topic:** [VMware Identity Manager](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-t-idm)

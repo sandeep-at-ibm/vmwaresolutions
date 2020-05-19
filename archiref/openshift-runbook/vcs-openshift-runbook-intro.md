@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-29"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -23,7 +23,7 @@ The {{site.data.keyword.vmwaresolutions_full}} offering includes fully automated
 
 Red Hat OpenShift for VMware Solutions is a reference architecture and a manual build process to deploy a Red Hat OpenShift Cluster 4.2 on to an existing vCenter Server instance. The components of Red Hat OpenShift Cluster are deployed as virtual machines and appliances by using NSX software defined networking.
 
-* Reference Architecture - [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmware-solutions-vcs-openshift-intro)
+* Reference Architecture - [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
 * Build Process - This document. The process and steps that are needed to install Red Hat OpenShift 4.2 on to an existing vCenter Server instance.
 
 ![IBM Cloud for VMware Solutions and Red Hat OpenShift](../../images/openshift-sddc.svg "IBM Cloud for VMware Solutions and Red Hat OpenShift"){: caption="Figure 1. IBM Cloud for VMware Solutions and OpenShift" caption-side="bottom"}
@@ -83,22 +83,22 @@ This documentation describes the process to install Red Hat OpenShift v4.2 on to
 The deployment approach is best described in the following phases:
 
 * Phase 1 - vCenter Server instance preparation:
-  * Using the IBM Cloud for VMware Solutions console, [order a vCenter Server instance](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance), which can include NFS storage or vSAN. If you have an existing instance with enough capacity, this can be used. This step is not described in this document.
+  * Using the IBM Cloud for VMware Solutions console, [order a vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance), which can include NFS storage or vSAN. If you have an existing instance with enough capacity, this can be used. This step is not described in this document.
   * Using the IBM Cloud console, [order more private and public subnets](/docs/subnets?topic=subnets-getting-started#ordering-subnets) to be used by the OpenShift cluster
-  * Download RHEL 7.6 ISO for the OS of the bastion/deployment node and the Red Hat Enterprise Linux CoreOS (RHCOS) OVA image. This step is described in [Prerequisites for installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro).
-  * Using govc, the OVA and ISO are uploaded to a datastore on the vCenter Server instance. This step is described in [Prerequisites for installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro).
+  * Download RHEL 7.6 ISO for the OS of the bastion/deployment node and the Red Hat Enterprise Linux CoreOS (RHCOS) OVA image. This step is described in [Prerequisites for installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-prereq-intro).
+  * Using govc, the OVA and ISO are uploaded to a datastore on the vCenter Server instance. This step is described in [Prerequisites for installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-prereq-intro).
   * Add logical switches - Two logical switches are created; OpenShift-LS the network the OpenShift VMs are deployed onto and OpenShift-DLR-Transit, the uplink between the DLR and the Edge.
-  * Add an ESG - An external services gateway (ESG) is a virtual appliance that provides North-South routing, and other network functions. In this architecture, the ESG is used for; routing, NAT, firewall, and load-balancing. As the ESGs are configured as active/passive pair, DRS anti-affinity rules are used to ensure that NSX Edges do not run on the same host. Static routes are used to direct traffic to either the internet or the IBM private Network. This step is described in [OpenShift NSX Edge configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxedge-intro).
-  * Add a DLR - A distributed logical router (DLR) is a virtual appliance that contains the routing control plane, while distributing the data plane in kernel modules to each hypervisor host. The DLR provides East-West distributed routing and is the default gateway for the OpenShift VMs that will be installed on the OpenShift logical switch. The NSX DLR virtual machines are configured as an Active/Passive pair, and vSphere Distributed Resource Scheduler (DRS) anti-affinity rules are created to ensure that the DLR VMs do not run on the same host. This step is described in [OpenShift NSX DLR configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-nsxdlr-intro).
-  * Update DNS - The infrastructure DNS, provisioned with the vCS instance is updated with the names and IP addresses for the OpenShift components by using a PowerShell script. This step is described in [IBM Cloud for VMware Solutions DNS configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-dns-intro).
-* Phase 2 - Red Hat OpenShift installation. These steps are described in [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-install-intro).
+  * Add an ESG - An external services gateway (ESG) is a virtual appliance that provides North-South routing, and other network functions. In this architecture, the ESG is used for; routing, NAT, firewall, and load-balancing. As the ESGs are configured as active/passive pair, DRS anti-affinity rules are used to ensure that NSX Edges do not run on the same host. Static routes are used to direct traffic to either the internet or the IBM private Network. This step is described in [OpenShift NSX Edge configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxedge-intro).
+  * Add a DLR - A distributed logical router (DLR) is a virtual appliance that contains the routing control plane, while distributing the data plane in kernel modules to each hypervisor host. The DLR provides East-West distributed routing and is the default gateway for the OpenShift VMs that will be installed on the OpenShift logical switch. The NSX DLR virtual machines are configured as an Active/Passive pair, and vSphere Distributed Resource Scheduler (DRS) anti-affinity rules are created to ensure that the DLR VMs do not run on the same host. This step is described in [OpenShift NSX DLR configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxdlr-intro).
+  * Update DNS - The infrastructure DNS, provisioned with the vCS instance is updated with the names and IP addresses for the OpenShift components by using a PowerShell script. This step is described in [IBM Cloud for VMware Solutions DNS configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-dns-intro).
+* Phase 2 - Red Hat OpenShift installation. These steps are described in [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro).
   * A Red Hat virtual machine, the bastion node, is provisioned to run the OpenShift installer and to host an HTTP Server. It is registered with Red Hat by using your subscription, and the OpenShift installer is downloaded.
   * On the bastion node, the install-config.yaml is populated with the required OpenShift parameters and OpenShift Ignition is used to generate a number of files used for the installation of the bootstrap, master, and worker machines.
   * Terraform, on the bastion node, uses the files that are created by Ignition to create the OpenShift VMs.
 * Phase 3 - Post deployment activities:
-  * Configure a persistent volume for use by the OpenShift cluster. This step is described in [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-config-intro).
+  * Configure a persistent volume for use by the OpenShift cluster. This step is described in [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro).
 
-**Next topic:** [Prerequisites for installation](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-prereq-intro)
+**Next topic:** [Prerequisites for installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-prereq-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-intro-related}

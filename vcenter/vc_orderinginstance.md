@@ -8,7 +8,7 @@ lastupdated: "2020-04-30"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 ---
 
@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 
 To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server instance.
 
-You can also add services, such as [Zerto](/docs/vmwaresolutions?topic=vmware-solutions-addingzertodr) for disaster recovery. For more information about the available services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-available-services).
+You can also add services, such as [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) for disaster recovery. For more information about the available services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-available-services).
 
 Only a limited number of add-on services are supported for vCenter Server with NSX-T instances.
 {:important}
@@ -31,8 +31,8 @@ Only a limited number of add-on services are supported for vCenter Server with N
 {: #vc_orderinginstance-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmware-solutions-useraccount).
-* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_planning).
+* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+* You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the username and server names of the instance.
 
 | Name        | Value Format |
@@ -149,12 +149,12 @@ For users who are not Business Partners, you can use the IBM-provided VMware lic
 
 By default, the cluster name of the management cluster is set to **_instance name_-management**, and the cluster name of the workload cluster is set to **_instance name_-workload**.
 
-You can also specify a new cluster name for the management cluster or the workload cluster. The cluster name must meet the requirements that are listed in [Initial cluster name](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-cluster-name).
+You can also specify a new cluster name for the management cluster or the workload cluster. The cluster name must meet the requirements that are listed in [Initial cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-cluster-name).
 
 ## Bare metal server settings
 {: #vc_orderinginstance-bare-metal-settings}
 
-Bare metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing, see [Exporting VMware inventory](/docs/vmwaresolutions?topic=vmware-solutions-vmware-inventory-export).
+Bare metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing, see [Exporting VMware inventory](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-inventory-export).
 
 For NSX-T, the bare metal server settings must be specified for both the management cluster and the workload cluster.
 {:note}
@@ -224,14 +224,14 @@ When you select **Broadwell**, you can choose the CPU and RAM combination for th
 
 * All servers that you order have the same configuration.
 * If you are planning to use vSAN storage, you can order 4 - 20 servers.
-* If you are planning to use NFS storage, you can order 2 - 20 servers. However, for production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmware-solutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
+* If you are planning to use NFS storage, you can order 2 - 20 servers. However, for production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
 ## Storage settings
 {: #vc_orderinginstance-storage-settings}
 
 Storage settings are based on your selection of bare metal server configuration and the storage type.
 
-For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
+For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
 
 ### vSAN storage
 {: #vc_orderinginstance-vsan-storage}
@@ -333,7 +333,7 @@ Review the following restrictions for edge services clusters:
 ### Cluster name
 {: #vc_orderinginstance-edge-cluster-name}
 
-The cluster name must meet the requirements that are listed in [Cluster name](/docs/vmwaresolutions?topic=vmware-solutions-vc_orderinginstance#vc_orderinginstance-cluster-name).
+The cluster name must meet the requirements that are listed in [Cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-cluster-name).
 
 ### CPU model
 {: #vc_orderinginstance-edge-cluster-cpu}
@@ -463,7 +463,7 @@ For more information about ordering Windows Server 2016 licenses, see [Get start
 ## Services settings
 {: #vc_orderinginstance-addon-services}
 
-When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservices#vc_addingremovingservices-available-services).
+When you order a vCenter Server instance, you can also order add-on services. For more information about the services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-available-services).
 
 A 12-month commitment is required when you order the VMware HCX service.
 {:note}
@@ -478,7 +478,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server instances
 {: #vc_orderinginstance-procedure}
 
-For more information about deploying Multi Zone Stretched Clusters, see [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmware-solutions-mcv_ordering).
+For more information about deploying Multi Zone Stretched Clusters, see [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
 {:note}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
@@ -555,7 +555,7 @@ You get a console notification that the configuration is saved successfully, and
 
 The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -578,9 +578,9 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 ## Related links
 {: #vc_orderinginstance-related}
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmware-solutions-signing_required_accounts#signing_required_accounts￼-cloud)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_addingremovingservers)
-* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmware-solutions-vc_deletinginstance)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts￼-cloud)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
+* [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance)
 * [VMware Subscription Purchasing Program (SPP) Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-spp-program-guide.pdf){:external}
 * [SPP Operations Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-spp-operations-guide.pdf){:external}

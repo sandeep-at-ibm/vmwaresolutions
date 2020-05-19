@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2019-08-05"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---

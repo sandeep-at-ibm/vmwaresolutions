@@ -6,7 +6,7 @@ copyright:
 
 lastupdated: "2020-04-17"
 
-subcollection: vmware-solutions
+subcollection: vmwaresolutions
 
 
 ---
@@ -52,7 +52,7 @@ This reference architecture is based on the HTDC and IBM HPCS option, and the fo
 | NIST/PCI compliant live rekey | Yes | No | No | Allows NIST-compliant rekeying without downtime. |
 {: caption="Table 1. Encryption features comparison" caption-side="bottom"}
 
-**Next topic:** [HyTrust Workload Security Platform overview](/docs/vmwaresolutions?topic=vmware-solutions-htdc-hpcs-hytrust-overview)
+**Next topic:** [HyTrust Workload Security Platform overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-hytrust-overview)
 
 ## Related links
 {: #htdc-hpcs-encryption-options-related}
