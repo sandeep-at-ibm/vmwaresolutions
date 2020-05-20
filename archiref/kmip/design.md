@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-19"
 
 subcollection: vmwaresolutions
 
@@ -32,35 +32,35 @@ KMIP for VMware is compatible with both VMware vSAN encryption and vSphere encry
 
 VMware vSAN encryption is only applicable to vSAN datastores. With this solution, VMware vCenter and your VMware ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual disk drives used for your vSAN datastore, including both cache and capacity disks. vSAN encryption is implemented in a way that preserves the benefits of vSAN compression and deduplication, if you choose this option when you order a new instance or add a cluster.
 
-Because vSAN encryption operates at the datastore level, its primary goal is to prevent data exposure if loss of physical disk drives occurs. Also, vSAN encryption is fully compatible with all virtual machine backup and replication technologies, such as vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, Veeam, and IBM Spectrum Protect Plus.
+Because vSAN encryption operates at the datastore level, its primary goal is to prevent data exposure if loss of physical disk drives occurs. Also, vSAN encryption is fully compatible with all virtual machine (VM) backup and replication technologies, such as vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, Veeam, and IBM Spectrum Protect Plus.
 
 **Notes**:
 * vSAN encryption does not encrypt the host to host vSAN replication communications within your cluster.
 * vSAN encryption is not applicable to other storage solutions such as {{site.data.keyword.cloud_notm}} Endurance file and block storage.
 * vSAN encryption requires the vSAN Enterprise license.
-* The vSAN health check might issue periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:external}.
+* The vSAN health check might send periodic warnings that it is unable to connect to the Key Management Service (KMS) cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS health check intermittently fails with SSL handshake timeout error](https://kb.vmware.com/s/article/67115){:external}.
 
 ### vSphere encryption
 {: #kmip-design-vsphere-encrypt}
 
 VMware vSphere encryption applies to all types of VMware storage, including vSAN storage and {{site.data.keyword.cloud_notm}} Endurance file and block storage.
 
-With this solution, vCenter Server and your ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual virtual machine (VM) disks, according to your VM storage policies.
+With this solution, vCenter Server and your ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual VM disks, according to your VM storage policies.
 
-vSphere encryption operates at the virtual machine disk level, and so it can prevent data exposure if loss of physical disk drives or loss of VM disks occurs. Many backup and replication technologies cannot back up or replicate effectively because the provided data is encrypted.
+vSphere encryption operates at the VM disk level, and so it can prevent data exposure if loss of physical disk drives or loss of VM disks occurs. Some backup and replication technologies cannot back up or replicate effectively because the provided data is encrypted. 
 
-Therefore vSphere encryption is not compatible with vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, or IBM Spectrum Protect Plus. However, when properly configured, Veeam Backup and Replication is compatible with vSphere encryption.
+vSphere encryption is not compatible with cross-vCenter vMotion, VMware HCX, or Zerto. vSphere encryption is compatible with vSphere replication when you use vSphere 6.7u1 or later. When properly configured, IBM Spectrum Protect Plus and Veeam Backup and Replication are also compatible with vSphere encryption.
 
 ### More considerations
 {: #kmip-design-considerations}
 
-When either type of encryption is enabled in your vSphere cluster, VMware creates an extra key to encrypt your ESXi core dumps, since these dumps might contain sensitive data such as key management credentials, encryption keys, or decrypted data. You should familiarize yourself with [vSphere Virtual Machine Encryption and Core Dumps](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-63728E8B-810D-418B-B1AA-6A0A2F92AABE.html).
+When either type of encryption is enabled in your vSphere cluster, VMware creates an extra key to encrypt your ESXi core dumps. These core dumps might contain sensitive data such as key management credentials, encryption keys, or decrypted data. For more information, see [vSphere VM encryption and core dumps](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.security.doc/GUID-63728E8B-810D-418B-B1AA-6A0A2F92AABE.html){:external}.
 
 When KMIP for VMware is used together with vSAN encryption or vSphere encryption, several layers of key protection exist.
 
 If you plan to rotate keys, review the following information about the levels at which the keys can be rotated:
 * Your customer root key (CRK) protects all VMware keys. The keys can be rotated in the IBM Key Protect or Hyper Protect Crypto Services instance that is associated with your KMIP for VMware instance.
-* KMIP for VMware uses your CRK to protect the keys it generates and distributes to VMware. VMware considers these to be _key encrypting keys (KEKs)_.
+* KMIP for VMware uses your CRK to protect the keys it generates and distributes to VMware. VMware considers these keys to be _key encrypting keys (KEKs)_.
   * If you are using vSphere encryption, you can rotate the keys by using the **Set-VMEncryptionKey** PowerShell command.
   * If you are using vSAN encryption, you can rotate the keys on the vSAN user interface.
 * VMware uses these KEKs to protect the actual keys it uses to encrypt disk drives and VM disks. You can rotate these keys by using what VMware calls a "deep" rekey. This operation reencrypts all your encrypted data so it might take a long time.
@@ -79,14 +79,14 @@ Key management systems commonly use a technique that is known as *envelope encry
 
 {{site.data.keyword.cloud_notm}} Key Protect and Hyper Protect Crypto Services provide this service by using a *customer root key* (CRK). Key Protect stores CRKs exclusively in {{site.data.keyword.cloud_notm}} CloudHSM hardware from which they cannot be extracted; Hyper Protect Crypto Services stores keys in IBM zSeries HSMs. These CRKs are then used to wrap more encryption keys such as the ones generated by KMIP for VMware for your VMware instance.
 
-VMware implements this same concept for its keys. KMIP for VMware provides a key to VMware upon request, and VMware in turn uses this key as a KEK to wrap or encrypt the final keys that are used to encrypt your vSAN disk drives or virtual machine disks. These final keys are called data encrypting keys (DEKs).
+VMware implements this same concept for its keys. KMIP for VMware provides a key to VMware upon request. In turn, VMware uses this key as a KEK to wrap or encrypt the final keys that are used to encrypt your vSAN disk drives or VM disks. These final keys are called data encryption keys (DEKs).
 
 So we end up with the following chain of encryption:
 * Customer root key (CRK) stored permanently in IBM Key Protect or Hyper Protect Crypto Services.
 * Key encrypting key (KEK) generated by KMIP for VMware and provided to vCenter Server and to the ESXi hosts in your instance.
-* Data encrypting key (DEK) generated by VMware and stored alongside the vSAN disk or virtual machine disk.
+* Data encrypting key (DEK) generated by VMware and stored alongside the vSAN disk or VM disk.
 
-KMIP for VMware stores the wrapped form of the KEKs within IBM Key Protect or Hyper Protect Crypto Services. Although the KEKs are cryptographically secured by the CRK and are not required to be stored within an HSM, if you store them in the key management service, their presence is visible to you and you can delete them if you need to revoke individual keys.
+KMIP for VMware stores the wrapped form of the KEKs within IBM Key Protect or Hyper Protect Crypto Services. The KEKs are cryptographically secured by the CRK and are not required to be stored within an HSM. However, if you store them in the key management service, they are visible to you and you can delete them if you need to revoke individual keys.
 
 ### Authentication and authorization
 {: #kmip-design-authentication}
@@ -106,11 +106,11 @@ Within each MZR, KMIP for VMware provides two network service endpoints on the {
 
 To access KMIP for VMware over the private network, your {{site.data.keyword.cloud_notm}} infrastructure account must be enabled for virtual routing and forwarding (VRF) and the {{site.data.keyword.cloud_notm}} network service endpoint routes must be added to the VRF routes of your account. For more information, see [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 
-KMIP for VMware also connects to {{site.data.keyword.cloud_notm}} Key Protect by using the {{site.data.keyword.cloud_notm}} private network rather than the public internet.
+KMIP for VMware also connects to {{site.data.keyword.cloud_notm}} Key Protect by using the {{site.data.keyword.cloud_notm}} private network rather than the public internet, and is additionally protected by TLS encryption and authentication.
 
 ![Components of KMIP for VMware](../../images/kmip-key-protect.svg "The solution enables VMware vSphere encryption and vSAN encryption by using root keys that are stored in IBM Key Protect."){: caption="Figure 1. Components of KMIP for VMware when using IBM Key Protect" caption-side="bottom"}
 
-When using IBM Cloud Hyper Protect Crypto Services, your keys are stored in an IBM zSeries HSM instead of CloudHSM. Additionally, the connection between KMIP for VMware and {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services flows over the public network but is protected by TLS encryption and authentication.
+When you use IBM Cloud Hyper Protect Crypto Services, your keys are stored in an IBM zSeries HSM instead of CloudHSM. The connection between KMIP for VMware and {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services flows over the private network rather than the public internet, and is additionally protected by TLS encryption and authentication.
 
 **Next topic:** [KMIP for VMware implementation and management](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-implementation)
 
