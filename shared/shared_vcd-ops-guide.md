@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-06-15"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -545,7 +545,7 @@ A Destination NAT rule is necessary to allow traffic from a private network endp
 
 To validate the private network endpoint connection, login to the virtual server instance resource in your {{site.data.keyword.cloud_notm}} infrastructure account and then use SSH, RDP, or Ping (if ICMP is enabled) to connect to a VM in the virtual data center.
 
-Ensure that the organization virtual data center network type is ``routed`` and that the interface type of the network is ``SubInterface`` or ``Internal``.
+Ensure that the organization virtual data center network type is ``routed``.
 {:important}
 
 ## Related links

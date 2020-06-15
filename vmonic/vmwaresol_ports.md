@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-06-15"
 
 keywords: VLAN ports, vmware solutions ports, ports usage vmware solutions
 
@@ -66,7 +66,7 @@ Review the following information about the ports described in the table:
   * 161.26.0.0/16
 * IBM Cloud endpoint service network includes 166.8.0.0/14.
 
-For more information about OCP networking, see [OpenShift SDN](https://docs.openshift.com/container-platform/3.5/architecture/additional_concepts/sdn.html){:external}.
+For more information about OCP networking, see [About the OpenShift SDN network provider](https://docs.openshift.com/container-platform/4.4/networking/openshift_sdn/about-openshift-sdn.html){:external}.
 
 | Source | Subnet/IP range | Target | Subnet/IP range | Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:-----|:---------|:--------|:--------|
@@ -241,9 +241,9 @@ The following table provides information about the Red Hat OpenShift ports.
 | OCP edge public IPs | New subnet ordered in public VLAN | Public websites required for OpenShift installation[^osinst] | | 80/123/443 | TCP and UDP | Time service, OpenShift installation content, and images | NTP/HTTP/HTTPS |
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | OCP | New subnet ordered in private VLAN | 22 | TCP | Set up and configure OCP | SSH |
 {: caption="Table 11. Red Hat OpenShift for VMWare ports" caption-side="top"}
-[^osinst]: For more information, see [Configuring your firewall](https://docs.openshift.com/container-platform/4.2/installing/install_config/configuring-firewall.html#configuring-firewall){:external}.
+[^osinst]: For more information, see [Configuring your firewall](https://docs.openshift.com/container-platform/4.4/installing/install_config/configuring-firewall.html){:external}.
 
-For more information about OCP networking, see [OpenShift SDN](https://docs.openshift.com/container-platform/3.5/architecture/additional_concepts/sdn.html){:external}.
+For more information about OCP networking, see [About the OpenShift SDN network provider](https://docs.openshift.com/container-platform/4.4/networking/openshift_sdn/about-openshift-sdn.html){:external}.
 
 ### Ports for Veeam
 {: #vmwaresol_ports-vmware-optional-services-veeam}

@@ -107,7 +107,7 @@ All of the hosts in the resource layer contribute all of their disks to the vSAN
 ### Known issue with the default storage policy
 {: #mcv-archi-comp-storage}
 
-For a vCenter Server instance with stretched vSAN cluster, the default storage policy is not usable due to the default RAID settings. The default vSAN storage policy is set to **Failures to tolerate 1 failure - RAID-5 (Erasure Coding)**, which cannot be achieved with the minimum stretched vSAN cluster size of 6 hosts.
+For a vCenter Server instance with stretched vSAN cluster and a cluster size of only six hosts, the default storage policy is not usable. This problem is due to the fact that the default vSAN storage policy is configured with the setting **Failures to tolerate 1 failure - RAID-5 (Erasure Coding)**, which cannot be achieved with the minimum stretched vSAN cluster size of six hosts.
 
 To resolve the issue, create a new vSAN storage policy that works with the 6-host cluster. Complete the following steps from the VMware vSphere Web Client:
 1. Select **Policies and Profiles** from the main menu.

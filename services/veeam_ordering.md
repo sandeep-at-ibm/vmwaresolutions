@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-13"
+lastupdated: "2020-06-15"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -46,7 +46,7 @@ At least 10 VMs are required for license management.
 ### Storage Size
 {: #veeam_ordering-config-storage-size}
 
-The capacity that meets your storage needs.
+The capacity that meets your storage needs. For an example that shows what the capacity might be like, see [Capacity Planning for Backup Repositories](https://helpcenter.veeam.com/docs/one/reporter/capacity_planning_for_repositories.html?ver=100){:external}.
 
 ### Storage Performance
 {: #veeam_ordering-config-storage-performance}
