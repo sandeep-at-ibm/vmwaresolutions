@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-05"
 
 subcollection: vmwaresolutions
 
@@ -71,7 +71,7 @@ The current vSRX offering has limited hardware options for deployment. Since the
 ### Network design
 {: #vcsvsrx-planning-network-design}
 
-The IBM Cloud for VMware Solutions vCenter Server offering is designed to manage east-west network traffic at the SDN layer by using NSX distributed logical routers (DLR) and virtual tunnel endpoints (VTEP) on each ESXi host and north-south traffic via NSX edge services gateways (ESG). The vSRX is not a replacement for the DLR but could either assist or potentially replace the ESG firewall services in managing the north-south traffic flows.
+The vCenter Server offering is designed to manage east-west network traffic at the SDN layer by using NSX distributed logical routers (DLR) and virtual tunnel endpoints (VTEP) on each ESXi host and north-south traffic via NSX edge services gateways (ESG). The vSRX is not a replacement for the DLR but could either assist or potentially replace the ESG firewall services in managing the north-south traffic flows.
 
 The required network design changes are modest and include all customer VM traffic no matter the destination, platform management traffic, direct link traffic, where applicable, and internet bound traffic. Traffic explicitly excluded includes VTEP traffic, storage traffic and vMotion traffic.  
 

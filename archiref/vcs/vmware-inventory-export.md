@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-05"
 
 subcollection: vmwaresolutions
 
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # Exporting VMware inventory
 {: #vmware-inventory-export}
 
-You can export a VMware vCenter resource inventory into CSV files. The contents of the exported CSV files is used to size a target IBM Cloud for VMware Solutions vCenter Server environment. It can also provide insights to the virtual machines in the source environment to help with migration planning.
+You can export a VMware vCenter resource inventory into CSV files. The contents of the exported CSV files is used to size a target vCenter Server environment. It can also provide insights to the virtual machines in the source environment to help with migration planning.
 
 ## Exporting lists
 {: #export-lists}

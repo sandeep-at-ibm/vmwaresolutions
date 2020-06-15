@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-27"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 View the summary and detailed information of the {{site.data.keyword.vmwaresolutions_full}} Shared virtual data center instance and set the **admin** password to access the vCloud Director Management console.
 
-## Procedure to view virtual data center instances
+## Procedure to view virtual data center instance summary
 {: #shared_managing-viewing}
 
 To view a summary of all the VMware Solutions Shared virtual data center instances that are provisioned for a user account, complete the following steps:
@@ -36,10 +36,10 @@ To view a summary of all the VMware Solutions Shared virtual data center instanc
 |:------------- |:------------- |
 | Name | The name of the instance. |
 | Type | The type of the virtual data center. |
-| Location | The {{site.data.keyword.cloud_notm}} data center} where the instance is hosted. |  
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |  
 | Creation time | The date and time when the instance was created. |
 | Status | The status of the instance. |
-{: caption="Table 1. Virtual data center instance items" caption-side="top"}
+{: caption="Table 1. Virtual data center instance summary" caption-side="top"}
 
 The instance can have a range of statuses.
 
@@ -54,12 +54,12 @@ The instance can have a range of statuses.
 ## Procedure to view virtual data center instance details
 {: #shared_managing-procedure-view-vdc-details}
 
-The instance details include property details, recommended services that are enabled or available for the instance, and the total reserved virtual CPU (vCPU) and RAM.
+The instance details include property, operating system, resource reservation, private network endpoint, and recommended services that are enabled or available for the instance.
 
-To view the details of an instance:
+To view the property details of an instance:
 
 1. In the **VMware Solutions Shared** table, click an instance name.
-2. View the instance property, service, and resource details.
+2. Under **Properties**, view the details for the instance.
 
 | Property        | Description       |
 |:------------- |:------------- |
@@ -71,7 +71,7 @@ To view the details of an instance:
 | Creation time | The date and time when the instance was created, which is also when billing starts. |
 | Public IP | Every virtual data center comes with five public IP addresses that can be used to connect virtual applications (vApps) and VMs to the internet. |
 | Red Hat activation key | The activation key that you use to register the Red Hat virtual machine (VM). |
-{: caption="Table 3. Virtual data center instance properties" caption-side="top"}
+{: caption="Table 3. Virtual data center instance property details" caption-side="top"}
 
 You can open an {{site.data.keyword.cloud_notm}} Support ticket to request five additional public IP addresses or an entire subnet for your virtual data center. Include the following details in your support ticket:
 
@@ -82,11 +82,23 @@ You can open an {{site.data.keyword.cloud_notm}} Support ticket to request five 
 
 For more information about opening a support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 
+To view virtual data center instance resource reservation details:
+
+Under **Resource Reservation**, view the total reserved virtual CPU (vCPU) and RAM for the instance.
+
 | Resource        | Description       |
 |:------------- |:------------- |
-| vCPU Limit | The limit or reserved amount of vCPU that can be used at any time by the virtual data center.  |
-| RAM Limit | The limit or reserved amount of memory that can be used at any time by the virtual data center.  |
-{: caption="Table 4. Virtual data center instance resource reservations" caption-side="top"}
+| vCPU limit | The limit or reserved amount of vCPU that can be used at any time by the virtual data center.  |
+| RAM limit | The limit or reserved amount of memory that can be used at any time by the virtual data center.  |
+{: caption="Table 4. Virtual data center instance resource reservation details" caption-side="top"}
+
+To view virtual data center instance private network endpoint details:
+
+For information about private network endpoint details, see [Procedure to view a private network endpoint for virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_creatingendpoints#shared_creatingendpoints-view-procedure).
+
+To view virtual data center instance recommended services details:
+
+For information about recommended services details, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam).
 
 ## Procedure to launch the vCloud Director Management console
 {: #shared_managing-accessing}

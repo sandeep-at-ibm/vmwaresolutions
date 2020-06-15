@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-08"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -40,13 +40,13 @@ Ensure that you completed the following tasks:
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 2. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
 3. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card.
-4. Click the **Scale Existing** tab and select the cluster that you want to scale from the **Cluster Configurations** list.
+4. Click the **Scale existing** tab and select the cluster that you want to scale from the **Cluster configurations** list.
 5. Review the cluster settings that are automatically completed.
 6. In the **Bare Metal Server** section, specify the number of {{site.data.keyword.cloud_notm}} bare metal servers that you want to add to the cluster.
-7. If the cluster does not include the FortiGate 300 Series Security Appliance HA Pair on its public VLAN, you can order the appliance. To do so, select the **Include with purchase** check box under **FortiGate Physical Appliance 300 Series HA Pair**.
-8. In the **Order Summary** pane, verify the instance configuration and the estimated cost.
-   * To save the configuration as a template without placing an order, click **Save Configuration**.
-   * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
+7. If the cluster does not include the FortiGate 300 Series Security Appliance HA Pair on its public VLAN, you can order the appliance. To do so, select the **Include with purchase** checkbox under **FortiGate Physical Appliance 300 Series HA Pair**.
+8. In the **Summary** pane, verify the instance configuration and the estimated price.
+   * To save the configuration as a template without placing an order, click **Save configuration**.
+   * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 
 ### Results
 {: #vs_scalingexistingclusters-results}

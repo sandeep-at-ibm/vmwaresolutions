@@ -4,9 +4,9 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-12"
 
-keywords: red hat openshift, request openshift for vmware, tech specs openshift vmware
+keywords: openshift for vmware, request openshift for vmware, tech specs openshift vmware
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 
 The Red Hat OpenShift for VMware service deploys a Red Hat OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift components are deployed as virtual machines (VM) or appliances by using VMware NSX software-defined networking.
 
-The current Red Hat OpenShift version that is installed is 4.2.16.
+The Red Hat OpenShift service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 4.4.5.
 {: note}
 
 The cluster consists of three master nodes and three worker nodes, all running Red Hat CoreOS. In addition, there are also two VMware NSX VMs, a Red Hat CoreOS template, and a bastion VM running CentOS. 
@@ -53,7 +53,7 @@ The bastion VM contains an installation directory with the files and tools that 
 
 You can log in to the bastion by using the SSH protocol and the credentials that are provided on the Red Hat OpenShift for VMware service details page. To run commands as the `root` user, use the command `sudo -i`
 
-In addition, most commands for OpenShift management must be run from the installation directory. You can change to the installation directory with the command `cd /opt/ocp42install`
+In addition, most commands for OpenShift management must be run from the installation directory. You can change to the installation directory with the command `cd /opt/ocpinstall`
 
 Any commands that require the `openshift-install`, `oc`, or `kubeadmin` tools must reference the files that are located in the installation directory by prefixing the command name with `./`. For example, `./oc whoami` instead of `oc whoami`
 
@@ -106,12 +106,12 @@ For more information, see [OpenShift subscriptions information and known issues]
 
 By default, the Red Hat OpenShift installer creates a kubeadmin user that you can use to log in to the cluster. It is recommended that you create authentication backends or more users, as needed, for security purposes.
 
-For more information about how to configure OpenShift authentication, see [Understanding authentication](https://docs.openshift.com/container-platform/4.2/authentication/understanding-authentication.html){:external}.
+For more information about how to configure OpenShift authentication, see [Understanding authentication](https://docs.openshift.com/container-platform/4.4/authentication/understanding-authentication.html){:external}.
 
 ## Updating your Red Hat OpenShift cluster
 {: #ocp_overview-update-clus}
 
-For more information about updating Red Hat OpenShift, see [Updating a cluster between minor versions](https://docs.openshift.com/container-platform/4.2/updating/updating-cluster-between-minor.html){:external}.
+For more information about updating Red Hat OpenShift, see [Updating a cluster between minor versions](https://docs.openshift.com/container-platform/4.4/updating/updating-cluster-between-minor.html){:external}.
 
 ## Considerations when you install Red Hat OpenShift for VMware
 {: #ocp_overview-consid-install}
@@ -121,20 +121,20 @@ vSAN because NFS clusters will have a new NFS datastore dedicated to OpenShift a
 * The cluster will be associated with the Red Hat account from the pull secret that is provided.
 * The **Latency Sensitivity** setting of the OpenShift cluster VMs can affect Kubernetes scheduling performance. By default, the setting is set to **Normal**, but it can be set to **High** if you encounter Kubernetes performance issues.
 
-## Considerations when you remove Red Hat OpenShift for VMware
+## Considerations when you delete Red Hat OpenShift for VMware
 {: #ocp_overview-consid-remove}
 
-* Before you remove Red Hat OpenShift, you must remove any additional VMs that you created in the "ocp" folder on
+* Before you delete Red Hat OpenShift, you must remove any additional VMs that you created in the "ocp" folder on
 VMware. Automation only removes the items that were deployed during the initial installation of OpenShift (VMs, Storage, and NSX). Any node that is deployed after the installation is not cleaned up.
 * The VXLAN, DLR, and the Edge Gateway that were created during the initial deployment of Red Hat OpenShift for VMware will be deleted. The VMs that you deployed on VXLAN will lose connectivity after the removal of Red Hat OpenShift for VMware starts.
 * If you are using a vSAN datastore, it is recommended to delete any persistent volumes that you no longer need before you uninstall OpenShift. Any volumes that are not deleted will remain in the vSAN storage after the OpenShift uninstallation.
-* If your cluster uses NFS storage, removing Red Hat OpenShift deletes the NFS datastore that was added during installation.
+* If your cluster uses NFS storage, deleting Red Hat OpenShift deletes the NFS datastore that was added during installation.
 
 ## Related links
 {: #ocp_overview-related}
 
-* [vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
-* [vCenter Server and Red Hat OpenShift guide](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
-* [OpenShift Container Platform documentation](https://docs.openshift.com/container-platform/4.2/welcome/index.html){:external}
+* [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
+* [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
+* [OpenShift Container Platform documentation](https://docs.openshift.com/container-platform/4.4/welcome/index.html){:external}
 * [Red Hat OpenShift](https://www.openshift.com/){:external}
 * [Succeeding with Red Hat OpenShift and VMware’s Software-Defined Datacenter (SDDC)](https://blog.openshift.com/red-hat-openshift-and-vmware-better-together/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-02"
 
 subcollection: vmwaresolutions
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 # Operational procedures overview
 {: #opsprocs-intro-overview}
 
-This document provides a view of day 2 operations that need to carried out by the customer after your vCenter Server instance has been provisioned. {{site.data.keyword.vmwaresolutions_full}} is a deployment service that automatically deploys VMware’s Software-Defined Data Center software on to the 	{{site.data.keyword.cloud_notm}}. Many of the following day 0 and day 1 tasks are completed by the deployment automation:
+This document provides a view of day 2 operations that need to carried out by the customer after your vCenter Server instance has been provisioned. {{site.data.keyword.vmwaresolutions_full}} is a deployment service that automatically deploys VMware’s Software-Defined Data Center software on to the {{site.data.keyword.cloud_notm}}. Many of the following day 0 and day 1 tasks are completed by the deployment automation:
 
 * Day 0:
   * Requirements

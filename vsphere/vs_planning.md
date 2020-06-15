@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-08"
 
 keywords: planning vSphere, data center, vSphere data centers
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -41,42 +40,42 @@ Cascade Lake bare metal servers are available on Multi-Zone Region
 If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
 {:note}
 
-| {{site.data.keyword.cloud_notm}} data center | Location | Region | Server options |
-|:----------------------|:---------|:---------------|:--------------|
-| AMS03 | Amsterdam | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| CHE01 | Chennai | Asia-Pacific | Skylake, SAP-certified[^sap-che01], Broadwell |
-| DAL09 | Dallas | NA South | Skylake, SAP-certified, Broadwell |
-| DAL10 | Dallas | NA South | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| DAL12 | Dallas | NA South | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| DAL13 | Dallas | NA South | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| FRA02 | Frankfurt | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| FRA04 | Frankfurt | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell|
-| FRA05 | Frankfurt | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| HKG02 | Hong Kong | Asia-Pacific | Skylake, SAP-certified, Broadwell |
-| LON02 | London | Europe | Skylake, Cascade Lake, Broadwell |
-| LON04 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| LON05 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| LON06 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| MEX01 | Queretaro | NA South | Skylake, SAP-certified[^sap-mex01], Broadwell |
-| MIL01 | Milan | Europe | Skylake, SAP-certified[^sap-mil01], Broadwell |
-| MON01 | Montreal | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01], Broadwell |
-| OSL01 | Oslo | Europe | Skylake, SAP-certified[^sap-osl01], Broadwell |
-| PAR01 | Paris | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01], Broadwell |
-| SAO01 | Sao Paulo | South America | Skylake, SAP-certified, Broadwell |
-| SEO01 | Seoul | Asia-Pacific | Skylake, SAP-certified, Broadwell |
-| SJC03 | San Jose | NA West | Skylake, Broadwell |
-| SJC04 | San Jose | NA West | Skylake, Broadwell |
-| SNG01 | Singapore | Asia-Pacific | Skylake, SAP-certified, Broadwell |
-| SYD01 | Sydney | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| SYD04 | Sydney | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| SYD05 | Sydney | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
-| TOK02 | Tokyo | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| TOK04 | Tokyo | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| TOK05 | Tokyo | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| TOR01 | Toronto | NA East | Skylake, SAP-certified, Broadwell |
-| WDC04 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| WDC06 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell |
-| WDC07 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell |
+| {{site.data.keyword.cloud_notm}} data center | Region | Server options |
+|:---------------------|:---------------|:--------------|
+| Amsterdam 03 | Europe | Skylake, Cascade Lake, SAP-certified |
+| Chennai 01 | Asia-Pacific | Skylake, SAP-certified[^sap-che01] |
+| Dallas 09 | NA South | Skylake, SAP-certified |
+| Dallas 10 | NA South | Skylake, Cascade Lake, SAP-certified |
+| Dallas 12 | NA South | Skylake, Cascade Lake, SAP-certified |
+| Dallas 13 | NA South | Skylake, Cascade Lake, SAP-certified |
+| Frankfurt 02 | Europe | Skylake, Cascade Lake, SAP-certified |
+| Frankfurt 04 | Europe | Skylake, Cascade Lake, SAP-certified|
+| Frankfurt 05 | Europe | Skylake, Cascade Lake, SAP-certified |
+| Hong Kong 02 | Asia-Pacific | Skylake, SAP-certified |
+| London 02 | Europe | Skylake, Cascade Lake |
+| London 04 | Europe | Skylake, Cascade Lake, SAP-certified |
+| London 05 | Europe | Skylake, Cascade Lake, SAP-certified |
+| London 06 | Europe | Skylake, Cascade Lake, SAP-certified |
+| Mexico 01 | NA South | Skylake, SAP-certified[^sap-mex01] |
+| Milan 01  | Europe | Skylake, SAP-certified[^sap-mil01] |
+| Montreal 01 | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01] |
+| Oslo 01 | Europe | Skylake, SAP-certified[^sap-osl01] |
+| Paris 01| Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
+| Sao Paulo 01 | South America | Skylake, SAP-certified |
+| Seoul 01 | Asia-Pacific | Skylake, SAP-certified |
+| San Jose 03 | NA West | Skylake |
+| San Jose 04 | NA West | Skylake |
+| Singapore 01 | Asia-Pacific | Skylake, SAP-certified |
+| Sydney 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
+| Sydney 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
+| Sydney 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
+| Tokyo 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
+| Tokyo 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
+| Tokyo 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
+| Toronto 01 | NA East | Skylake, SAP-certified |
+| Washington DC 04 | NA East | Skylake, Cascade Lake, SAP-certified |
+| Washington DC 06 | NA East | Skylake, Cascade Lake, SAP-certified |
+| Washington DC 07 | NA East | Skylake, Cascade Lake, SAP-certified |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vSphere clusters" caption-side="top"}
 
 [^sap-che01]: vSphere 6.5 only

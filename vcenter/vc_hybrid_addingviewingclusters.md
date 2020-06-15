@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-13"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -58,12 +58,12 @@ If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data c
 ### Bare metal server settings
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal}
 
-You can choose **Skylake**, **Cascade Lake**, or **Broadwell**. Options might differ depending on the version that your instance was initially deployed in.
+You can choose **Skylake** or **Cascade Lake**. Options might differ depending on the version that your instance was initially deployed in.
 
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
 
-When you select **Skylake**, you can choose the CPU and RAM combination according to your needs.
+When you select **Skylake**, you have options for the **CPU Model** and **RAM**.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -82,25 +82,14 @@ Cascade Lake bare metal servers are available only for VMware vSphere Enterprise
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 2. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or new ESXi servers for existing hybridity instances.
 {:note}
-
-#### Broadwell
-{: #vc_hybrid_addingviewingclusters-adding-broadwell}
-
-When you select **Broadwell**, you can choose the CPU and RAM combination according to your needs.
-
-| CPU model options        | RAM options       |
-|:------------- |:------------- |
-| Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 3. Options for Broadwell bare metal servers" caption-side="top"}
 
 #### Number of bare metal servers
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
@@ -112,15 +101,15 @@ When you select **Broadwell**, you can choose the CPU and RAM combination accord
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
-* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
-* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add more capacity disks, select the **High Performance with Intel Optane** check box. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
+* **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
+* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High Performance with Intel Optane** option is available only for Skylake and Cascade Lake CPU models.
+  The **High performance with Intel Optane** option is available only for Skylake and Cascade Lake CPU models.
   {:note}
 
-* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you selected the **High Performance with Intel Optane** check box.
-* **vSAN License**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
+* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
+* **vSAN license**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
 ### Licensing settings
 {: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
@@ -133,17 +122,17 @@ IBM-provided licenses for the following VMware components:
 ### Network interface settings
 {: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
-Network interface card (NIC) settings are based on your selection of either **Public and Private Network** or **Private Network Only**. The following add-on services require public NICs and aren't available with the private option:
+Network interface card (NIC) settings are based on your selection of either **Public and private network** or **Private network only**. The following add-on services require public NICs and aren't available with the private option:
 
 * F5 BIG-IP
 * Fortigate Virtual Appliance
 
-### Order summary
+### Summary
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-Based on your selected configuration for the cluster, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+Based on your selected configuration for the cluster, the estimated price is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
 
-You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to add clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
@@ -155,17 +144,17 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
    {:note}
 
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
-4. On the **Add Cluster** page, enter the cluster name.
-5. You can host the cluster in a different {{site.data.keyword.cloud_notm}} data center than the one that the instance is hosted in. To do so, under **Bare Metal Server**, check the **Select a different location** checkbox and choose the {{site.data.keyword.cloud_notm}} data center to host the instance.
-6. Select the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers** for the bare metal configuration.
-7.  Select **vSAN Storage** and specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High Performance with Intel Optane** check box.
+4. On the **Add cluster** page, enter the cluster name.
+5. You can host the cluster in a different {{site.data.keyword.cloud_notm}} data center than the one that the instance is hosted in. To do so, under **Bare metal server**, select the **Select a different location** checkbox and choose the {{site.data.keyword.cloud_notm}} data center to host the instance.
+6. Select the **CPU model**, the amount of **RAM**, and the **Number of bare metal servers** for the bare metal configuration.
+7.  Select **vSAN storage** and specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
 8. Select the license edition for VMware vSAN for the license configuration.
-9. Select the network setting of either **Public and Private Network** or **Private Network Only**.
-10. On the **Order Summary** pane, verify the cluster configuration before you add the cluster.
+9. Select the network setting of either **Public and private network** or **Private network only**.
+10. On the **Summary** pane, verify the cluster configuration before you add the cluster.
    1. Review the settings for the cluster.
-   2. Review the estimated cost of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   2. Review the estimated price of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
-   4. Click **Provision**.
+   4. Click **Create**.
 
 ### Results after you add clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding-results}
@@ -183,11 +172,11 @@ You can't change the cluster name. Changing the cluster name might cause the add
 2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
-  * **ESXi Servers**: The number of ESXi servers in the cluster.
+  * **ESXi servers**: The number of ESXi servers in the cluster.
   * **CPU**: The CPU specification of the ESXi servers in the cluster.
-  * **Customized vSAN Disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
+  * **Customized vSAN disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
   * **Memory**: The total memory size of the ESXi servers in the cluster.
-  * **Data Center Location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
+  * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Status**: The status of the cluster. The status can have one of the following values:
     * Initializing: The cluster is being created and configured.
@@ -220,13 +209,13 @@ You can't change the cluster name. Changing the cluster name might cause the add
     * **Name**: The data store name.
     * **Size**: The capacity of the storage.
     * **IOPS/GB**: The performance level of the storage.
-    * **NFS Protocol**: The NFS version of the storage.
+    * **NFS protocol**: The NFS version of the storage.
   * Network Interface - VLAN details:
-    * **VLAN Number**: The unique VLAN number.
+    * **VLAN number**: The unique VLAN number.
     * **Description**: The description of the VLAN.
     * **Location**: The data center location.
-    * **Primary Route**: The primary route of the VLAN.
-    Click **View Resource** to access the VLAN details.
+    * **Primary route**: The primary route of the VLAN.
+    Click **View resource** to access the VLAN details.
   * Network Interface - Subnet details:
     * **Name**: The subnet name. Click the name to access the subnet details.
     * **Type**: The type of subnet: primary or portable.
@@ -254,9 +243,9 @@ You might want to delete a cluster from an instance when it's no longer needed.
 {: #vc_hybrid_addingviewingclusters-deleting-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance that you want to delete clusters from.
+2. In the **vCenter Server instances** table, click the instance that you want to delete clusters from.
 
-   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot remove clusters from the instance.
+   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
    {:note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.

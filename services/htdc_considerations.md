@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-02"
+lastupdated: "2020-06-08"
 
 keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 The HyTrust DataControl service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service provides encryption at both the operating system level and at the data level. This enables any directory, folder, or file within a workload to be encrypted and decrypted.
 {: shortdesc}
 
-The current HyTrust DataControl version that is installed is 5.0.1.
+The current HyTrust DataControl version that is installed is 5.1.1.
 {:note}
 
 ## Technical specifications for HyTrust DataControl
@@ -56,12 +56,13 @@ Per-host license: A HyTrust DataControl license is ordered for each host in the 
 
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* Starting with v5.1.1, a static route is set up during installation to allow public traffic to the HyTrust DataControl appliances.
 
-## Considerations when you remove HyTrust DataControl
+## Considerations when you delete HyTrust DataControl
 {: #htdc_considerations-remove}
 
-Before you remove the HyTrust DataControl service, decouple all clients from using DataControl. After you remove the service, the keys might be deleted and you might be locked out of your virtual machines.
+Before you delete the HyTrust DataControl service, decouple all clients from using DataControl. After you delete the service, the keys might be deleted and you might be locked out of your virtual machines.
 
 ## Related links
 {: #htdc_considerations-related}

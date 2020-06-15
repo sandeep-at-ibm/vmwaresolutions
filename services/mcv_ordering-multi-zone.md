@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-13"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -137,9 +137,9 @@ For the host settings, you have options for the CPU Model, RAM, and number of ho
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.3 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Host CPU and RAM options" caption-side="top"}
 
 ### Storage settings
@@ -153,7 +153,7 @@ Storage settings are based on your selection of vSAN or NFS storage.
 Specify the following vSAN options:
 * **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add more capacity disks, select the **High Performance with Intel Optane** check box. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
+* If you want to add more capacity disks, select the **High Performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
 
 #### NFS storage
 {: #mcv_ordering-availability-zones-storage-nfs}
@@ -237,9 +237,9 @@ The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs i
 ## Summary
 {: #mcv_ordering-summary}
 
-Based on your selected configuration for the instance, the estimated cost is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+Based on your selected configuration for the instance, the estimated price is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
 
-You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to order Multi-Zone Stretched Clusters
 {: #mcv_ordering-proc-multi}
@@ -260,7 +260,7 @@ Proceed with the following steps to order a Multi-Zone Stretched Cluster:
 2. Enter the instance name and select a resource group.
 3. Complete the location settings.
     1. Select the **Multi-Zone Region**.
-    2. Click the arrow on the **Witness Location** tile and select the availability zone for the witness site. The remaining availability zones are used for the **Management and Resource Location**.
+    2. Click the arrow on the **Witness Location** card and select the availability zone for the witness site. The remaining availability zones are used for the **Management and Resource Location**.
 4. Complete the license settings for the instance components.
    *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
    *  To use your own license, select **I will provide** and enter the license key.
@@ -268,22 +268,21 @@ Proceed with the following steps to order a Multi-Zone Stretched Cluster:
     1. Specify the CPU model and the RAM size.
     2. Specify the number of hosts.
     3. Specify the storage settings.
-       * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High Performance with Intel Optane** check box.
+       * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High Performance with Intel Optane** checkbox.
        * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size (GB)**, and **Performance**.
        * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
 6. Complete the network interface settings.
    1. Specify the DNS configuration.
    2. Enter the host name prefix, the subdomain label, and the domain name. The price calculation begins after all fields are complete.
-7. On the **Summary** pane, review the instance settings and the estimated cost.
-   * To save the settings as a new configuration template without placing an order, click **Save Configuration**, enter a name for the configuration, and then click **Continue**.
-   * To save the updates to a saved configuration, click **Save Configuration**, select **Modify current configuration**, and then click **Continue**.
-   * To save the updates to a saved configuration as another configuration, click **Save Configuration**, select **Create new configuration**, enter a new name for the configuration, and then click **Continue**.
-   * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
+7. On the **Summary** pane, review the instance settings and the estimated price.
+   * To save the settings as a new configuration template without placing an order, click **Save Configuration**, enter a name for the configuration, and click **Continue**.
+   * To save the updates to a saved configuration, click **Save Configuration**, select **Modify current configuration**, and click **Continue**.
+   * To save the updates to a new saved configuration, click **Save Configuration**, select **Create new configuration**, enter a new name for the configuration, and click **Continue**.
+8. To place the order, ensure that the account to be charged is correct, review and accept the terms, and click **Create**.
 
 ## Related links
 {: #mcv_ordering-related}
 
 * [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
 * [Managed VMware Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_imi)
-* [Managed Backup Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_veeam_services)
 * [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)

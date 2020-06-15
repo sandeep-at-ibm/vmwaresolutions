@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-06"
+lastupdated: "2020-05-21"
 
 keywords: security services, request security sap, tech specs sap
 
@@ -35,7 +35,7 @@ IBM Security Services for SAP offer the following features:
 * Identifying, monitoring and review of highly privileged SAP accounts
 * Enabling continuous monitoring of vulnerabilities with integration to existing SIEM solution
 
-## Key benefits of IBM Security Services
+## Key benefits of IBM Security Services for SAP
 {: #managing-ss-sap-benefits}
 
 You can expect the following benefits when you request IBM Security Services for SAP:
@@ -52,7 +52,7 @@ You can expect the following benefits when you request IBM Security Services for
 2. Scroll down to the **Services** section, and then click **IBM Security Services for SAP** on the **Featured Workload Solutions** card.
 3. On the **IBM Security Services for SAP** page, in the **Engage IBM Security Services** box, click **Request a consultation**.
 
-  An {{site.data.keyword.vmwaresolutions_short}} representative contacts you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
+  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
 
 ## Related links
 {: #managing-ss-sap-related}

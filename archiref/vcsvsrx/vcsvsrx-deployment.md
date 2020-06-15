@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-03"
 
 subcollection: vmwaresolutions
 
@@ -49,7 +49,7 @@ server for hostname resolution.
         - Example: myvcsdomain.local
 - Location.
   - Select geography. Example: NA South.
-    - Select dataCenter. Example: DAL10 - Dallas.
+    - Select dataCenter. Example: Dallas 10.
 - POD.
   - Select POD where existing vCenter Server instance is deployed to.
 Example: dal10.pod01.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-12"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
@@ -63,7 +63,7 @@ Disaster recovery can become an issue if an {{site.data.keyword.cloud_notm}} loc
 
 If a catastrophic failure occurs, IBM might not be able to recover data from database backups. In this case, you need to restore your data to return your service instance to its most recent state. You can restore the data to the same or to a different location, including a VMWare Solutions Dedicated instance.
 
-Your disaster recovery plan includes knowing, preserving, and being prepared to restore all data that is maintained on {{site.data.keyword.cloud_notm}}. This stored data includes the training data for your classifiers.
+Your disaster recovery plan includes knowing, preserving, and being prepared to restore all data that is maintained on {{site.data.keyword.cloud_notm}}.
 
 ## Related links
 {: #shared_data-related}

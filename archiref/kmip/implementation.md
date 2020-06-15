@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-03"
+lastupdated: "2020-05-12"
 
 subcollection: vmwaresolutions
 
@@ -25,9 +25,11 @@ subcollection: vmwaresolutions
 
 There is no charge for the KMIP for VMware service. To review the Key Protect and Hyper Protect Crypto Services pricing plans, see the [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) and [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services) catalog pages.
 
-If you are using vSAN encryption, plan to consume one root key in Key Protect or Hyper Protect Crypto Services, plus two standard keys for each vSAN cluster that you encrypt.
+If you are using vSAN encryption, plan to use one root key in Key Protect or Hyper Protect Crypto Services, and two standard keys for each vSAN cluster that you encrypt.
 
-If you are using vSphere encryption, plan to consume one root key, plus one standard key per vSphere cluster, plus one standard key per encrypted virtual machine.
+If you are using vSphere encryption, plan to use one root key, one standard key per vSphere cluster, and one standard key per encrypted virtual machine (VM).
+
+Key Protect and Hyper Protect Crypto Services are available in multi-zone regions only. Hyper Protect Crypto Services is currently available in selected multi-zone regions only. It is recommended to deploy KMIP for VMware and Key Protect (or Hyper Protect Crypto Services) together in the same region, and to choose a region as close as possible to your vCenter Server instance. vCenter Server can tolerate high latency to the KMIP service, so distance should not be a cause for concern.
 
 ## Connecting the key management server
 {: #kmip-implementation-connecting-kms}
@@ -48,10 +50,10 @@ To enable vSphere encryption or vSAN encryption by using KMIP for VMware, you ne
 
 To use vSAN encryption, edit the vSAN general settings in your vCenter cluster and select the encryption checkbox.
 
-The vSAN health check might send periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL Handshake Timeout error](https://kb.vmware.com/s/article/67115){:external}.
+The vSAN health check might send periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL handshake timeout error](https://kb.vmware.com/s/article/67115){:external}.
 {:note}
 
-To use vSphere encryption, edit your virtual machine storage policies to require disk encryption.
+To use vSphere encryption, edit your VM storage policies to require disk encryption.
 
 ## Key rotation
 {: #kmip-implementation-key-rotation}

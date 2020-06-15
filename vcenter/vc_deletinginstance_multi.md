@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-06-02"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
@@ -43,7 +43,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {: help}
 {: support}
 
-1. Remove all services from the secondary vCenter Server instance.
+1. Delete all services from the secondary vCenter Server instance.
 2. Ensure that no NSX objects are expanded into the secondary instance that you want to delete.
 3. Delete the secondary vCenter Server from the primary SSO (Single Sign-On) domain. For more information, see [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:external}.
 4. Demote the local domain controller VSI (Virtual Service Instance). For more information, see [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}.
@@ -55,5 +55,5 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {: #vc_deletinginstance_multi-related}
 
 * [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance)
-* [Ordering, viewing, and removing services from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
-* [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
+* [Ordering, viewing, and deleting services from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Managing virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-virtual-servers)

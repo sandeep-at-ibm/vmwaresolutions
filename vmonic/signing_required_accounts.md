@@ -2,14 +2,13 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2020
 
-lastupdated: "2020-04-08"
+lastupdated: "2020-06-10"
 
 keywords: user account, ibm cloud account, ibm cloud infrastructure
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -17,24 +16,25 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 
 # Signing up for required accounts
 {: #signing_required_accounts}
 
 ## Signing up for an IBM Cloud account
-{: #signing_required_accounts￼-cloud}
+{: #signing_required_accounts-cloud}
 
 You can sign up for an {{site.data.keyword.cloud}} account by using an existing **IBMid** or by creating a new **IBMid**. For more information about how to sign up for an {{site.data.keyword.cloud_notm}} account, see [Signing up for {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-signup).
 
 ## Signing up for an IBM Cloud infrastructure account
-{: #signing_required_accounts￼-infra}
+{: #signing_required_accounts-infra}
 
 The {{site.data.keyword.cloud_notm}} infrastructure account is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services.
 
-To sign up for an {{site.data.keyword.cloud_notm}} infrastructure account, upgrade your {{site.data.keyword.cloud_notm}} account to a billable account. For more information, see [How do I upgrade or change my account type?](/docs/account?topic=account-accountfaqs#changeacct)
+To sign up for an {{site.data.keyword.cloud_notm}} infrastructure account, upgrade your {{site.data.keyword.cloud_notm}} account to a billable account. For more information, see [How do I upgrade or convert my account type?](/docs/account?topic=account-accountfaqs#changeacct)
 
 ## Related links
-{: #signing_required_accounts￼-related}
+{: #signing_required_accounts-related}
 
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req)

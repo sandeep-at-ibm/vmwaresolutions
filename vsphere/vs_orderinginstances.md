@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-15"
+lastupdated: "2020-06-11"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -113,13 +113,12 @@ Select the {{site.data.keyword.cloud_notm}} data center where the cluster is to 
 {: #vs_orderinginstances-notes}
 
 * If you select a vSAN component, the location list is filtered by SSD availability.
-* Broadwell bare metal servers are not available for the **FRA05 - Frankfurt** data center location.
-* SAP-certified and Broadwell bare metal servers are not available for the **LON05 - London** data center location.
+* SAP-certified bare metal servers are not available for the **London 05** data center location.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
 
-When you select **Skylake**, you can choose the CPU and RAM combination for the bare metal server according to your needs. Options available depend on whether you selected the VMware vSAN component.
+When you select **Skylake**, you have options for the **CPU Model** and **RAM**. Options available depend on whether you selected the VMware vSAN component.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -131,7 +130,7 @@ When you select **Skylake**, you can choose the CPU and RAM combination for the 
 ### Cascade Lake
 {: #vs_orderinginstance-cascade}
 
-For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake**, you have options for the **CPU Model** and **RAM**.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -149,25 +148,30 @@ The **SAP-certified** tab is not available if you selected VMware vSAN previousl
 
 Based on your requirements, select a bare metal server configuration:
 
-| CPU model options        | RAM options       |
+| CPU model     | RAM options   |  
 |:------------- |:------------- |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 768 GB |
-| Dual Intel Xeon Platinum 8280M Processor / 56 cores total, 2.7 GHz | 1.5 TB, 3 TB |
-| Quad Intel Xeon E7-8890 v4 Processor / 96 cores total, 2.2 GHz | 1 TB, 2 TB, 4 TB |
-{: caption="Table 4. Options for SAP-certified bare metal servers" caption-side="top"}
+| Dual Intel Xeon Gold 6140 processor (Skylake) / 36 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB |
+| Dual Intel Xeon Gold 5218 processor (Cascade, BI.S4.NW192) / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
+| Dual Intel Xeon Gold 6248 processor (Cascade, BI.S4.NW768) / 40 cores total, 2.5 GHz | 768 GB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW1500) / 56 cores total, 2.70 GHz| 1.5 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW3000) / 56 cores total, 2.70 GHz| 3 TB |
+{: caption="Table 4. Options for SAP-certified bare metal servers - NetWeaver" caption-side="bottom"}
+{: class="simple-tab-table"}
+{: #simpletabtable1}
+{: tab-title="NetWeaver"}
+{: tab-group="SAP-certified Intel servers"}
 
-### Broadwell
-{: #vs_orderinginstances-broadwell}
-
-When you select **Broadwell**, you can choose the CPU and RAM combination for the bare metal server according to your needs. Options available depend on whether you selected the VMware vSAN component.
-
-| CPU model options        | RAM options       |
+| CPU model     | RAM options |  
 |:------------- |:------------- |
-| Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-| Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz | 128 GB, 256 GB, 512 GB, 1 TB, 2 TB, 3 TB |
-{: caption="Table 5. Options for Broadwell bare metal servers" caption-side="top"}
+| Dual Intel Xeon Gold 5218 processor (Cascade) / 32 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Gold 6248 processor (Cascade) / 40 cores total, 2.5 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade) / 56 cores total, 2.70 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8280M processor (Cascade) / 112 cores total, 2.70 GHz| 3 TB, 6 TB |
+{: caption="Table 5. Options for SAP-certified bare metal servers - HANA" caption-side="bottom"}
+{: #simpletabtable2}
+{: tab-title="HANA"}
+{: tab-group="SAP-certified Intel servers"}
+{: class="simple-tab-table"}
 
 ### Number of bare metal servers
 {: #vs_orderinginstances-bare-metal-number}
@@ -181,17 +185,17 @@ The number of ESXi servers that you want add to the vSphere cluster. All the ESX
 
 For orders without vSAN, ESXi servers are ordered with a 12-disk chassis, with two disks for the ESXi operating system (OS).
 
-For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and two disks ordered for caching. The ESXi OS is placed on a single M.2 solid state drive that does not consume a disk bay. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting **Disk Type and Size for vSAN Capacity Disks** and **Number of vSAN Capacity Disks**.
+For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and two disks ordered for caching. The ESXi OS is placed on a single M.2 solid state drive that does not consume a disk bay. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting **Disk type and size for vSAN capacity disks** and **Number of vSAN capacity disks**.
 
 If you select the VMware vSAN component for the cluster, specify the following settings:
-* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
-* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add more capacity disks, select the **High Performance with Intel Optane** check box. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
+* **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
+* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High Performance with Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
+  The **High performance with Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
   {:note}
 
-* Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN Cache Disks** values. These values depend on whether you selected the **High Performance with Intel Optane** check box.
+* Review the **Disk size for vSAN cache disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
 
 ## Network interface settings
 {: #vs_orderinginstances-network-interface-settings}
@@ -230,34 +234,34 @@ The domain name is used for all {{site.data.keyword.cloud_notm}} bare metal serv
 * The length of the other strings must be in the range 1 - 63 characters.
 * The maximum length of the domain name is 189 characters.
 
-### Public or private network
+### Enable private NICs only
 {: #vs_orderinginstances-public-private-network}
 
-Network interface card (NIC) enablement settings are based on your selection of either **Public and Private Network** or **Private Network Only**.
+Network interface card (NIC) enablement settings are based on your selection of either **Public and private network** or **Private network only**.
 
 ### VLANs
 {: #vs_orderinginstances-vlans}
 
-Network settings are based on your selection of either **Order New VLANs** or **Select Existing VLANs**.
+Network settings are based on your selection of either **Order new VLANs** or **Select existing VLANs**.
 
-#### Order New VLANs
+#### Order new VLANs
 {: #vs_orderinginstances-new-vlans}
 
 If you are ordering for a public and private network, one public VLAN and two private VLANs are required for your cluster order. The two private VLANs are trunked into each bare metal server.
 
 If you are ordering for a private network, two private VLANs are only required for your cluster order.
 
-#### Select Existing VLANs
+#### Select existing VLANs
 {: #vs_orderinginstances-existing-vlans}
 
 Depending on the {{site.data.keyword.cloud_notm}} data center that you selected, existing public and private VLANs might be available.
 
 When you select to reuse existing public and private VLANs, specify the VLANs and subnets:
 * **Public VLAN** is for public network access. If you select the **Allocate a new one** option for **Public VLAN**, a new primary public subnet is allocated automatically and cannot be modified.
-* **Public Primary Subnet** is assigned to physical hosts for public network access.
+* **Public primary subnet** is assigned to physical hosts for public network access.
 * **Private VLAN** is for connectivity among the data centers and services within the {{site.data.keyword.cloud_notm}}. If you select the **Allocate a new one** option for **Private VLAN**, a new private primary subnet is allocated automatically and cannot be modified.
-* **Private Primary Subnet** is assigned to physical hosts for management traffic.
-* **Secondary Private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
+* **Private primary subnet** is assigned to physical hosts for management traffic.
+* **Secondary private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 ##### Important
 {: #vs_orderinginstances-important}
@@ -273,19 +277,19 @@ You can also select whether to include the FortiGate Physical Appliance 300 Seri
 This option is only available for an order with both a public and private network.
 {:note}
 
-## Order summary
+## Summary
 {: #vs_orderinginstances-order-summary}
 
-Based on your selected configuration, the estimated cost is instantly generated and displayed in the **Order Summary** right pane. Click **Pricing details** to generate a PDF document with the cost summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+Based on your selected configuration, the estimated price is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
 
-You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to order vSphere clusters
 {: #vs_orderinginstances-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 1. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
-1. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create New** tab and that **New cluster** is displayed in the **Cluster Configurations** list.
+1. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create new** tab and that **New cluster** is displayed in the **Cluster configurations** list.
 1. Enter the cluster name.
 1. Select the VMware components:
   * If you are an IBM Business Partner, select a license bundle and any additional available VMware components.
@@ -296,28 +300,27 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 1. Complete the bare metal server settings:
    1. Select the {{site.data.keyword.cloud_notm}} data center to host the cluster.
    1. Select the bare metal server configuration.
-      * When you select **Skylake**, **Cascade Lake**, or **Broadwell**, specify the CPU model and the RAM size.
-      * When you select **SAP-certified**, choose one of the preset configurations.
+      * When you select **Skylake** or **Cascade Lake**, specify the CPU model and the RAM size.
+      * When you select **SAP-certified** NetWeaver, choose one of the preset configurations. When you select **SAP-certified** HANA, specify the CPU model and RAM size.
    1. Specify the number of bare metal servers.
-1. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, select the **High Performance with Intel Optane** check box.
+1. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
 1. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and domain name.
-   1. Select the network setting of either **Public and Private Network** or **Private Network Only**.
+   1. Select the network setting of either **Public and private network** or **Private network only**.
    1. Select the network interface that you want to use.
-    * If you want to order new public and private VLANs, click **Order New VLANs**.
-    * If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs** and specify the VLANs and optionally the subnets.
+    * If you want to order new public and private VLANs, click **Order new VLANs**.
+    * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and optionally the subnets.
     1. If you are ordering public VLANS, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
-1. In the **Order Summary** pane, verify the cluster configuration and the estimated cost.
-   * To save the configuration as a template without placing an order, click **Save Configuration**.
-   * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Provision**.
-
+1. In the **Summary** pane, verify the cluster configuration and the estimated price.
+   * To save the configuration as a template without placing an order, click **Save configuration**.
+   * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
    Only the {{site.data.keyword.cloud_notm}} bare metal servers are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
    {:note}
 
 ### Results after you order vSphere clusters
 {: #vs_orderinginstances-results}
 
-If you saved the cluster configuration as a template, you get a console notification that the configuration is saved successfully, and then you can find the template in the **Cluster Configurations** list.
+If you saved the cluster configuration as a template, you get a console notification that the configuration is saved successfully, and then you can find the template in the **Cluster configurations** list.
 
 If you placed an order, the deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 

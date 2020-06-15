@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-02"
 
 subcollection: vmwaresolutions
 
@@ -28,22 +28,22 @@ The {{site.data.keyword.cloud}} for VMware Mission Critical Workloads architectu
 ## IBM Cloud multi-zone regions
 {: #mcv-archi-design-mzr}
 
-The Mission Critical Workloads architecture is dependent on {{site.data.keyword.cloud_notm}} Multi-Zone Regions (MZRs). An MZR is an {{site.data.keyword.cloud_notm}} data center designation consisting of triplets of geographically close sites with high bandwidth and low latency between them. These are the only supported site configurations for the Mission Critical Workloads offering, enforced at order time.
+The Mission Critical Workloads architecture is dependent on {{site.data.keyword.cloud_notm}} Multi-Zone Regions (MZRs). A MZR is an {{site.data.keyword.cloud_notm}} data center designation consisting of triplets of geographically close sites with high bandwidth and low latency between them. These are the only supported site configurations for the Mission Critical Workloads offering, enforced at order time.
 
-| Region        | {{site.data.keyword.cloud_notm}} data centers       |
+| Region        | {{site.data.keyword.cloud_notm}} data centers |
 |:------------- |:------------- |
-| Dallas (US South) | DAL10, DAL12, DAL13 |
-| Washington (US East) | WDC04, WDC06, WDC07 |
-| London | LON04, LON05, LON06 |
-| Frankfurt | FRA02, FRA04, FRA05 |
-| Tokyo | TOK02, TOK04, TOK05 |
-| Sydney | SYD01, SYD04, SYD05 |
+| NA South | Dallas 10, Dallas 12, Dallas 13 |
+| NA East | Washington DC 04, Washington DC 06, Washington DC 07 |
+| Europe | London 04, London 05, London 06 |
+| Europe | Frankfurt 02, Frankfurt 04, Frankfurt 05 |
+| Asia-Pacific | Tokyo 02, Tokyo 04, Tokyo 05 |
+| Asia-Pacific | Sydney 01, Sydney 04, Sydney 05 |
 {: caption="Table 1. Available MZRs in {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 ## Distribution across multi-zone regions
 {: #mcv-archi-design-distibution}
 
-When you order an Mission Critical Workloads architecture, you select one of the three {{site.data.keyword.cloud_notm}} data centers in the MZR as the witness site. This site hosts all components that require representatives to maintain quorum for high availability. The other two {{site.data.keyword.cloud_notm}} data centers in the MZR host the management and resource components of the Mission Critical Workloads instance.
+When you order a Mission Critical Workloads architecture, you select one of the three {{site.data.keyword.cloud_notm}} data centers in the MZR as the witness site. This site hosts all components that require representatives to maintain quorum for high availability. The other two {{site.data.keyword.cloud_notm}} data centers in the MZR host the management and resource components of the Mission Critical Workloads instance.
 
 The designation of witness and management and resource data centers in the MZR is fixed for each Mission Critical Workloads instance. You can select any data center to use as either a witness or for management and resources. There is nothing unique about a data center that makes it suitable or preferable for either purpose.
 

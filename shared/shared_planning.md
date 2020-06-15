@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-13"
+lastupdated: "2020-06-01"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -43,17 +43,17 @@ The VMware Solutions Shared deployment has strict requirements on the physical i
 
 The following {{site.data.keyword.cloud_notm}} data center is available for VMware Solutions Shared deployment.
 
-| {{site.data.keyword.cloud_notm}} data center | Location | Region |
-|:----------------------|:---------|:-------|:---------------|
-| DAL10 | Dallas | NA South |
+| {{site.data.keyword.cloud_notm}} data center | Region |
+|:----------------------|:-------|
+| Dallas 10 | NA South |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data center for VMware Solutions Shared instances" caption-side="top"}
 
 The following {{site.data.keyword.cloud_notm}} data center is offered as a Limited Availability data center for VMware Solutions Shared deployment.
 
-| Limited Availability {{site.data.keyword.cloud_notm}} data center | Location | Region |
-|:----------------------|:---------|:-------|:---------------|
-| FRA04 | Frankfurt | Europe |
-{: caption="Table 2.  Limited Availability {{site.data.keyword.cloud_notm}} data center for VMware Solutions Shared instances" caption-side="top"}
+| Limited Availability {{site.data.keyword.cloud_notm}} data center | Region |
+|:------------- |:-------|
+|  Frankfurt 04 | Europe |
+{: caption="Table 2. Limited Availability {{site.data.keyword.cloud_notm}} data center for VMware Solutions Shared instances" caption-side="top"}
 
 ## Services for VMware Solutions Shared
 {: #shared_planning-addon-services}

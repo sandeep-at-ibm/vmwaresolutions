@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -68,11 +68,11 @@ The following table is for an example deployment. Use your own values.
 | compute-1 Host | compute-1.ocp.dallas.ibm.local | 192.168.133.14 |
 | compute-2 Host | compute-2.ocp.dallas.ibm.local | 192.168.133.15 |
 | Application Wildcard DNS (Load Balancer) | *.apps.ocp.dallas.ibm.local | 10.208.242.131 |
-| Kubernetes API URL (Load Balancer) | bastion.ocp.dallas.ibm.local | 10.208.242.132 |
-| Kubernetes API-INT (Internal) URL (Load Balancer) | bastion.ocp.dallas.ibm.local | 10.208.242.132 |
-| etcd Node0 | control-plane-0.ocp.dallas.ibm.local | 192.168.133.10 |
-| etcd Node1 | control-plane-1.ocp.dallas.ibm.local | 192.168.133.11 |
-| etcd Node2 | control-plane-2.ocp.dallas.ibm.local | 192.168.133.12 |
+| Kubernetes API URL (Load Balancer) | api.ocp.dallas.ibm.local | 10.208.242.132 |
+| Kubernetes API-INT (Internal) URL (Load Balancer) | api-int.ocp.dallas.ibm.local | 10.208.242.132 |
+| etcd Node0 | etcd-0.ocp.dallas.ibm.local | 192.168.133.10 |
+| etcd Node1 | etcd-1.ocp.dallas.ibm.local | 192.168.133.11 |
+| etcd Node2 | etcd-2.ocp.dallas.ibm.local | 192.168.133.12 |
 | etcd Service Record Node 0 | _etcd-server-ssl._tcp.ocp.dallas.ibm.local | 192.168.133.10 |
 | etcd Service Record Node 1 | _etcd-server-ssl._tcp.ocp.dallas.ibm.local | 192.168.133.11 |
 | etcd Service Record Node 2 | _etcd-server-ssl._tcp.ocp.dallas.ibm.local | 192.168.133.12 |
@@ -117,6 +117,5 @@ Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._
 * [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
 * [Prerequisites for installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-prereq-intro)
 * [OpenShift NSX configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxedge-intro)
-* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
-* [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
+* [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
+* [Red Hat OpenShift 4.4 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)

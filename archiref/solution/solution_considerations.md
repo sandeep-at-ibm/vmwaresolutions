@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -103,10 +103,9 @@ Complete the following steps to ensure proper planning for software maintenance.
 
 Ensure to plan for and implement the following solutions for monitoring your instance and instance components.
 
-- A logging server that includes log forwarding or collection for all instance components and adequate log retention.
+- A logging server that includes log forwarding or collection for all instance components and adequate log retention. The [VMware vRealize LogInsight on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) offering can help you with log management and visibility.
 - An alert infrastructure, including configuration of the SMTP server and short message service (SMS) gateway, as needed.
-- Proactive monitoring of hosts, drives, management software, and network.
-- vSAN monitoring, if applicable.
+- Proactive monitoring of hosts, drives, management software, and network, including vSAN monitoring if applicable. The [VMware vRealize Operations on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) offering can help you operate and monitor the performance, health, and capacity of your VMware environment.
 - Capacity monitoring and planning. You can [add and remove clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters) and [add and remove hosts](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers) to your instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 - Monitoring your backup infrastructure and backup jobs.
 
@@ -137,7 +136,7 @@ In addition to capacity planning, complete the following to ensure that your sto
 
 In addition, see the IBM Developer recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
 
-**Next topic:** [Comparison chart for VMware component editions](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix)
+**Next topic:** [Comparison chart for VMware NSX and VMware vSAN editions](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix)
 
 ## Related links
 {: #solution_considerations-related}

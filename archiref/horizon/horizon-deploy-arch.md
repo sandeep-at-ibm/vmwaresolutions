@@ -4,10 +4,9 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-06-13"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -55,7 +54,7 @@ The minimum number of hosts that are required for the workload cluster is four n
 ### Host sizing and storage recommendations
 {: #horizon-deploy-arch-host-sizing}
 
-{{site.data.keyword.cloud_notm}} provides multiple host options based on the Intel Skylake and Broadwell processor architectures with the vCenter Server service. VMware recommends using the Skylake-enabled hosts. Currently, Skylake-enabled hosts on {{site.data.keyword.cloud_notm}} offer three processor options.
+{{site.data.keyword.cloud_notm}} provides multiple host options based on the Intel Skylake processor architecture with the vCenter Server service. VMware recommends using the Skylake-enabled hosts. Currently, Skylake-enabled hosts on {{site.data.keyword.cloud_notm}} offer three processor options.
 
 The three options are:
 * Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz per core

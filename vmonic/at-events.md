@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-04-13"
+lastupdated: "2020-06-04"
 
 keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
 
@@ -13,17 +13,17 @@ subcollection: vmwaresolutions
 
 ---
 
-# Activity Tracker events
+# Auditing events for VMware Solutions
 {: #at-events}
 
 Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud_notm}}.
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to investigate for abnormal activity and critical actions, and comply with regulatory audit requirements. In addition, you can be alerted on actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [{{site.data.keyword.cloud_notm}} Activity Tracker with LogDNA](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to investigate for abnormal activity and critical actions, and comply with regulatory audit requirements. In addition, you can be alerted on actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [Getting started with {{site.data.keyword.cloud_notm}} Activity Tracker](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 
-## Tracking VMware Solutions Shared events
+## Events for VMware Solutions Shared
 {: #at-events-vdc}
 
-When you use {{site.data.keyword.vmwaresolutions_short}} Shared an event is generated to track how users and applications interact with virtual data centers.
+When you use {{site.data.keyword.vmwaresolutions_short}} Shared, an event is generated to track how users and applications interact with virtual data centers.
 
 The following table lists the actions that generate and send an event to Activity Tracker.
 
@@ -36,10 +36,10 @@ The following table lists the actions that generate and send an event to Activit
 {: caption="Table 1. Description of actions that generate VMware Solutions Shared events" caption-side="top"}
 
 
-## Tracking vCenter Server instance management events
+## Events for vCenter Server instance management
 {: #at-events-instance-mgmt}
 
-When you manage user accounts, instances, clusters, and services in {{site.data.keyword.vmwaresolutions_short}}, an event is generated and sent to a global domain or to an instance of the service in the location where the service is provisioned. For more information, see [Monitoring global and location-based events](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type).
+When you manage user accounts, instances, clusters, and services in {{site.data.keyword.vmwaresolutions_short}}, an event is generated.
 
 The following table provides the actions that generate and send management events to Activity Tracker.
 
@@ -67,12 +67,14 @@ The following table provides the actions that generate and send management event
 | `vmware-solutions.service.delete` | A service is deleted. |
 {: caption="Table 2. Description of actions that generate management events" caption-side="top"}
 
-## Tracking events for the KMIP for VMware service
+## Events for KMIP for VMware
 {: #at-events-kmip}
 
-When you manage keys for the KMIP for VMware service, an event is generated. The event is sent to a global domain or to an instance of the service in the location where the service is provisioned. For more information, see [Monitoring global and location-based events](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-monitor_events#mon_def_event_type).
+When you manage keys for the KMIP for VMware service, an event is generated.
 
-The following table provides the actions that generate and send events for the KMIP for VMware service.
+The following table provides the actions that generate and send events for KMIP for VMware. These actions are performed by an initiator from VMware vCenter Server and do not include the initiator's IP address. The requests for these actions run from within the IBM Cloud private network.
+
+The initiator ID is derived from the TLS (Transport Layer Security) certificate of the vCenter Server that is used to authenticate the connection to the KMIP server. The initiator ID is in the format `CertificateID-<value>`, where the value matches the fingerprint of the corresponding TLS certificate. Using the fingerprint, you can identify the vCenter Server that triggered the action.
 
 | Action                                      | Description                               |
 |:--------------------------------------------|:------------------------------------------|
@@ -84,16 +86,16 @@ The following table provides the actions that generate and send events for the K
 | `vmware-solutions.kmip-key.destroy` | A KMIP key is destroyed. |
 {: caption="Table 3. Description of actions that generate events for the KMIP for VMware service" caption-side="top"}
 
-## Where to view the events
+## Viewing events
 {: #at-events-viewing}
 
-VMware Solutions Shared and vCenter Server events are automatically forwarded to the {{site.data.keyword.at_full_notm}} service instance that is available in the **Dallas** location. KMIP for VMware service events are automatically forwarded to the {{site.data.keyword.at_full_notm}} service instance that is available in the same location as the KMIP for VMware instance.
+VMware Solutions Shared and vCenter Server events are global events. KMIP for VMware events are location-based events that are automatically forwarded to the {{site.data.keyword.at_full_notm}} service instance that is available in the same location as the KMIP for VMware instance. For more information, see [Monitoring global and location-based events](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-monitor_events#mon_def_event_type).
 
-{{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the same location where your service instance is available. For more information, see [Launching the web UI through the IBM Cloud UI](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-launch#launch_step2).
+{{site.data.keyword.at_full_notm}} can have only one instance per location. To view events, you must access the web UI of the {{site.data.keyword.at_full_notm}} service in the same location where your service instance is available. For more information, see [Navigating to the web UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch).
 
 ## Related links
 {: #at-events-related}
 
-* [Provisioning an instance](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-provision)
-* [Navigating to the web UI](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-launch)
+* [Provisioning an instance](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-provision)
+* [Navigating to the web UI](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-launch)
 * [KMIP for VMware overview](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations)

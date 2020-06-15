@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-03"
+lastupdated: "2020-06-10"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
@@ -31,14 +31,14 @@ Red Hat OpenShift for VMware uses kubelet client certificates that must be rotat
 
 The initial certificates that are created during installation expire 24 hours after they are created. IBM's automation process, which installs Red Hat OpenShift, handles the approval of the CSRs for this initial rotation, which is done by running a script on the bastion for the first 30 hours. The script is named `/root/approve-csr.sh` and its log file is named `/root/approve-csr.log`. 
 
-For the script to run successfully, the initial `kubeadmin` credentials must be the same until the initial certificate rotation is complete. Do not change the kubeadmin credentials for the first 24 hours. If the credentials are changed, you must monitor and approve the CSRs for the initial certificate rotation. For more information, see [Approving the CSRs for your machines](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external}.
+For the script to run successfully, the initial `kubeadmin` credentials must be the same until the initial certificate rotation is complete. Do not change the kubeadmin credentials for the first 24 hours. If the credentials are changed, you must monitor and approve the CSRs for the initial certificate rotation. For more information, see [Approving the CSRs for your machines](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external}.
 
 It is important not to restart any of the Red Hat OpenShift cluster virtual machines (VMs) or the bastion VM until the first certificate rotation is done.
 
 After the initial certificate rotation, certificates are renewed every 30 days. You must establish a process to approve the CSRs for every certificate rotation. According to Red Hat, you can approve CSRs when they reach 80% of their expiration period, which is approximately 25 days into the lifespan of the CSRs.
 
 If you do not approve CSRs in time and the certificates expire, you can recover from expired control plane certificates and get the OpenShift cluster operational again. For more information, see [Recovering from expired control
-plane certificates](https://docs.openshift.com/container-platform/4.2/backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){:external}.
+plane certificates](https://docs.openshift.com/container-platform/4.4/backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){:external}.
 
 ## Changing the SSH key on the OpenShift bastion
 {: #ocp_managing-change-ssh-key}
@@ -88,11 +88,11 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   2. On the list of NSX edges that is displayed, click the edge named `ocp-nsx-edge` to open its configuration window. If the edge is not listed, scroll down the list to locate it.
   3. In the configuration window for the `ocp-nsx-edge` NSX edge, click **Load Balancer** along the top bar and then click **Pools** on the left. The list of existing pools is displayed.
   4. Add the new worker VM as a member of the `api-pool-80` pool. To do this, select the `api-pool-80` pool and click **Edit**. Then, click **Members**.
-  5. A list of existing pool members is displayed. Before you add the new worker as a member, select the existing **Compute_0** entry and click **Edit** to view the settings. Make note of all the settings shown. Be careful not to change any values.
+  5. A list of existing pool members is displayed. Before you add the new worker VM as a member, select the existing **Compute_0** entry and click **Edit** to view the settings. Make note of all the settings shown. Do not change any values.
   6. Click **Cancel** to return to the Edit Pool window. Then, click **Members**.
   7. Click **Add** to open the New Member window. Complete the **Name** and **IP Address / VC Container** fields with the values for the new worker VM. For all other fields, use the same values that you noted from the **Compute_0** member. Click **OK** to save the values and close the New Member window. Click **Save** to close the Edit Pool window.
   8. You must also add the new worker VM as a member of the `api-pool-443` pool. To do this, select the `api-pool-443` pool and click **Edit**. Then, click **Members**.
-  9. A list of existing pool members is displayed. Before you add the new worker as a member, select the existing **Compute_0** entry and click **Edit** to view the settings. Make note of all the settings shown. Be careful not to change any values.
+  9. A list of existing pool members is displayed. Before you add the new worker VM as a member, select the existing **Compute_0** entry and click **Edit** to view the settings. Make note of all the settings shown. Do not change any values.
   10. Click **Cancel** to return to the Edit Pool window. Then, click **Members**.
   11. Click **Add** to open the New Member window. Complete the **Name** and **IP Address / VC Container** fields with the values for the new worker VM. For all other fields, use the same values that you noted from the **Compute_0** member. Click **OK** to save the values and close the New Member window. Click **Save** to close the Edit Pool window.
 
@@ -100,7 +100,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   1. Log in to the AD NS server for your vCenter instance.
   2. Using the DNS Manager, add a new A record to the corresponding `ocp` zone. When you create the A record, make sure the option to create associated PTR record is selected.
 
-7. Approve any certificate signing requests (CSRs) from the bastion. During the provisioning of the new worker, you might have to [approve CSRs](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external} from the bastion.
+7. Approve any certificate signing requests (CSRs) from the bastion. During the provisioning of the new worker, you might have to [approve CSRs](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external} from the bastion.
   1. Log in to the bastion as the `root` user and change to the bastion installation directory, as described in [OpenShift bastion details](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-bastion).
   2. Before you can run any commands, you must authenticate to OpenShift.
     * If authentication is not configured and you are using the default `kubeadmin` account and password, run the command `export KUBECONFIG=auth/kubeconfig` and verify that you are authenticated by running the command `./oc whoami`.
@@ -116,6 +116,6 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
 ## Related links
 {: #ocp_managing-related}
 
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

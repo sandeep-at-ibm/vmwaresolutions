@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-06-04"
 
 keywords: IAM user, user role, user permission
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-# Managing user access with Identity and Access Management
+# Managing access for VMware Solutions
 {: #iam}
 
 Access to {{site.data.keyword.vmwaresolutions_full}} service instances for the users in your account is controlled by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). Every user that accesses the {{site.data.keyword.vmwaresolutions_short}} services in your account must be assigned an access policy with an IAM user role defined.

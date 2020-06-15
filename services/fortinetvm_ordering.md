@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-05-05"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -83,7 +83,7 @@ The license model for FortiGate Virtual Appliance offers the following options:
 In 3Q 2018, Fortinet added three new services (CASB, Industrial Security, and Security Rating) to their Enterprise bundle. These services are available for FortiGate V6.0 and later only.
 {:note}
 
-You can't change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.
+You can't change the license model after service installation. To change the license model, you must delete the existing service and reinstall the service by selecting a different license option.
 {:important}
 
 ## Related links
@@ -91,7 +91,7 @@ You can't change the license model after service installation. To change the lic
 
 * [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations)
 * [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-managingfortinetvm)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Fortinet website](https://www.fortinet.com/){:external}

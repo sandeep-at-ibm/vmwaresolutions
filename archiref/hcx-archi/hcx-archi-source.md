@@ -240,13 +240,13 @@ That is, R1 can use routing to reach a specific virtual machine through R2, rath
 ### MAC address retention
 {: #hcx-archi-source-mac-addr-ret}
 
-* The option to retain the MAC address is a check box in the migration wizard. It is only visible for replication-based migration.
+* The option to retain the MAC address is a checkbox in the migration wizard. It is only visible for replication-based migration.
 * By default, **Retain MAC** is enabled if the source virtual machine is in a stretched network, and disabled when the network is not stretched. If the MAC address is not retained the virtual machine obtains a new address when the migration is done. The decision to retain a MAC address or acquire a new one can impact the migration process and the post-migration network traffic flow.
 * Retaining the MAC address is required for the following reasons:
   * Licenses based on the MAC address: Some software pairs the license to the MAC address of the VM. Changing the MAC address of a virtual machine invalidates the license.
   * Linux NIC order: On Linux, if the MAC address is changed on a virtual machine, the NIC Ethernet device number might change after a restart. A device number change can alter the NIC presentation order within the operating system, breaking applications or scripts that depend on NIC order.
   * Less downtime if the network is stretched: If the virtual machine is migrated over a stretched network, enabling **Retain MAC** minimizes downtime because the network does not have to learn a new MAC address.
-  * The check box is on the **Select destination network** page during migration operation.
+  * The checkbox is on the **Select destination network** page during migration operation.
 
 ### Security Policy Migration
 {: #hcx-archi-source-sec-policy-mig}

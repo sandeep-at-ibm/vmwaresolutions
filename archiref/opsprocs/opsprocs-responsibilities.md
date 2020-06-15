@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -18,14 +18,14 @@ subcollection: vmwaresolutions
 
 The two key principles with respect to day 2 operations are:
 * Your vCenter Server instance is not actively monitored by {{site.data.keyword.IBM}}. After deployment, the customer should leverage existing tooling, use a managed service such as that provided by IBM Integrated Managed Infrastructure, third-party managed service or implement a self-managed monitoring solution as described in [Operations management introduction](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-intro) to monitor and manage their environment.
-* IBM Support will not enter the VMware management layer under normal operations without a client–written support ticket. A customer must raise a support ticket, as described in [Contacting IBM support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) to invoke support from IBM. Once raised, the ticket must be actively managed by the customer and ensure that they provide the requested information required by IBM in a timely manor. For more information, see [Managing your support cases](/docs/get-support?topic=get-support-open-case#check-case-status) and [Escalating support cases](/docs/get-support?topic=get-support-escalation).
+* IBM Support will not enter the VMware management layer under normal operations without a client–written support ticket. A customer must raise a support ticket, as described in [Contacting IBM support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) to invoke support from IBM. Once raised, the ticket must be actively managed by the customer and ensure that they provide the requested information required by IBM in a timely manor. For more information, see [Managing your support cases](/docs/get-support?topic=get-support-check-case-status) and [Escalating support cases](/docs/get-support?topic=get-support-escalation).
 
 For more information about IBM and customer responsibilities concerning compliance, see [Customer versus IBM responsibility for vCenter Server](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-responsibility) .
 
 Day 2 responsibilities include the following items:
 
 * Service Support - IBM provides support for {{site.data.keyword.vmwaresolutions_short}} issues that you report. Customers should raise support tickets as directed in [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
-* Service Provisioning - Customers can provision and resize their vCenter Server instances on demand, using the [IBM Cloud for VMware Solutions console](https://cloud.ibm.com/infrastructure/vmware-solutions/console).
+* Service Provisioning - Customers can provision and resize their vCenter Server instances on demand, using the [VMware Solutions console](https://cloud.ibm.com/infrastructure/vmware-solutions/console).
 * IBM Management component updates - For instances deployed in (or upgraded to) V2.5 or later, updates and patches for the IBM management components are applied automatically, as needed.
 * Incident and Problem Management - Customers are responsible for incident and problem management of their vCenter Server instances after deployment. Customer's should have tools and processes to; detect incidents, record the issues, classify their severity, escalate, and return the failing component to service.
 * Capacity Management - Customers are responsible for capacity management of their vCenter Server instances, adding or removing additional capacity to match business demands. For more information, see [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers) and [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters).
@@ -48,4 +48,4 @@ Day 2 responsibilities include the following items:
 * [Compliance information for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info)
 * [Getting support](/docs/get-support?topic=get-support-getting-customer-support)
 * [Getting support FAQs](/docs/get-support?topic=get-support-get-supportfaq)
-* [Getting started with Cloud Event Management](/docs/EventManagement?topic=cloudeventmanagement-event_gettingstarted)
+* [Getting started with Cloud Event Management](/docs/EventManagement?topic=EventManagement-event_gettingstarted)

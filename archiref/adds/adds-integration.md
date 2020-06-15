@@ -32,7 +32,7 @@ However, if you need information about this integration, review the following mo
 ## {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust
 {: #adds-integration-parent-child}
 
-This model creates a single forest by using the existing IC4V infrastructure domain as the parent and configuring a new {{site.data.keyword.vmwaresolutions_short}} workload child domain. As all parent-child domains use transitive two-way trusts by default, vSphere SSO can access all users from either domain. The following diagram shows the AD DS topology for this {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust model.
+This model creates a single forest by using the existing {{site.data.keyword.vmwaresolutions_short}}  infrastructure domain as the parent and configuring a new {{site.data.keyword.vmwaresolutions_short}} workload child domain. As all parent-child domains use transitive two-way trusts by default, vSphere SSO can access all users from either domain. The following diagram shows the AD DS topology for this {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust model.
 
 ![{{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust diagram](../../images/adds-forestwithparentchildtrust.svg "{{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust diagram"){: caption="Figure 1. {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust diagram" caption-side="bottom"}
 

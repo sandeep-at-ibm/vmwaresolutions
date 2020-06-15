@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-08"
+lastupdated: "2020-06-04"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -22,29 +22,29 @@ subcollection: vmwaresolutions
 # VMware HCX overview
 {: #hcx_considerations}
 
-The HCX service extends the networks of on-premises data centers into {{site.data.keyword.cloud}}, and it helps you migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware environment from vSphere 5.1 to the most recent vSphere version without needing to refractor or modify your existing application, as HCX enables this seamless transformation. With HCX, you can bring your IP subnet ranges into {{site.data.keyword.cloud_notm}} ensuring the IP consistency through a hybrid deployment and by providing high-level security with end-to-end Suite B encryptions.
+The HCX service extends the networks of on-premises data centers into {{site.data.keyword.cloud}}, and it helps you migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware environment from vSphere 5.1 to the most recent vSphere version without needing to refactor or modify your existing application, as HCX enables this seamless transformation. With HCX, you can bring your IP subnet ranges into {{site.data.keyword.cloud_notm}} ensuring the IP consistency through a hybrid deployment and by providing high-level security with end-to-end Suite B encryptions.
 {: shortdesc}
 
 VMware HCX requires you to use either NSX Advanced or Enterprise through {{site.data.keyword.cloud_notm}} or an equivalent version that uses BYOL (Bring Your Own License). A 12-month commitment is required when you order the VMware HCX service. You are charged for 12 consecutive months after the initial deployment of HCX. Any additional nodes are included within the initial provisioning expiration date. After the 12-month commitment expires, you can install and uninstall the HCX service and you can add and remove hosts and clusters without restrictions. Your account is then charged monthly and you can cancel at any time.
 
-The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
+The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:note}
 
-VMware requires you to be on one of their supported versions in order for you to open a support request for HCX. For more information, see [VMware HCX Release Notes](https://docs.vmware.com/en/VMware-HCX/services/rn/VMware-HCX-Release-Notes.html){:external}.
+VMware requires you to be on one of their supported versions in order for you to open a support request for HCX. For more information, see [VMware HCX release notes](https://docs.vmware.com/en/VMware-HCX/services/rn/VMware-HCX-Release-Notes.html){:external}.
 
 A vCenter Server instance with HCX is limited to three simultaneous connections from on-premises sites.
 
 HCX is supported on the following platforms:
-* vSphere 5.1 (command line only for vCenter 5.1 using API)
-* vSphere 5.5 (web client UI supported on vCenter 5.5u3 and above)
+* vSphere 5.1 (command line only for vCenter Server 5.1 using the REST API)
+* vSphere 5.5 (web client UI supported on vCenter Server 5.5u3 and later)
 * vSphere 6.0
 * vSphere 6.5 (vDS must be at a 6.0 level)
 * vSphere 6.7
 
-## HCX and Multi-Site Services Mesh
+## HCX and multi-site service mesh
 {: #hcx_considerations-hcx-services-mesh}
 
-HCX uses Multi-Site Services Mesh to provide its services. Multi-Site Services Mesh provides:
+HCX uses multi-site service mesh to provide its services. Multi-site service mesh provides:
 
 * Increased flexibility in the configuration and scalability of HCX.
 * Numerous usability improvements, such as deployment diagrams and diagnostic tools.
@@ -52,7 +52,7 @@ HCX uses Multi-Site Services Mesh to provide its services. Multi-Site Services M
 
 The {{site.data.keyword.vmwaresolutions_short}} automation configures the Compute profile and Network profiles on the cloud side HCX instance when it is installed, so the instance is ready for pairings with on-premises data centers.
 
-For more information, see [About the HCX Multi-Site Services Mesh](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-59FC4E76-5DE4-444C-ADDD-50A3D31AA677.html){:external}.
+For more information, see [About the HCX multi-site service mesh](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-59FC4E76-5DE4-444C-ADDD-50A3D31AA677.html){:external}.
 
 ## Technical specifications for HCX
 {: #hcx_considerations-specs}
@@ -104,19 +104,19 @@ Before you install the HCX service, you must add a firewall rule to any existing
 
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
-## Considerations when you remove HCX
+## Considerations when you delete HCX
 {: #hcx_considerations-delete}
 
-A 12-month commitment is required when you order the HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure). The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
+A 12-month commitment is required when you order the HCX service. You cannot delete the service until your 12-month period has expired. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure). The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
 {:note}
 
-Review the following considerations before you remove the HCX service:
-* Ensure that the service mesh and extended networks between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are removed. To remove the service mesh and extended networks, use the HCX user interface in the on-premises VMware vSphere Web Client.
+Review the following considerations before you delete the HCX service:
+* Ensure that the service mesh and extended networks between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are deleted. To remove the service mesh and extended networks, use the HCX user interface in the on-premises VMware vSphere Web Client.
 
 * Ensure that the site pairings between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are removed. To remove the site pairings, use the HCX user interface in the on-premises VMware vSphere Web Client.
-* The removal of HCX is automated. The following procedures are completed for the successful removal of this service:
+* The deletion of HCX is automated. The following procedures are completed for the successful deletion of this service:
    * The HCX license that is ordered for the cloud-side HCX Manager is deactivated.
    * HCX Manager is deleted.
    * The vMotion IP addresses that were reserved for HCX are released.

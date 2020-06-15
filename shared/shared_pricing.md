@@ -4,7 +4,7 @@ copyright:
 
   years: 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-05-22"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -32,11 +32,11 @@ subcollection: vmwaresolutions
 
 | Plans | Description |
 |:----- |:----------- |
-| VMware Solutions Shared On-demand | - The vCPU and RAM virtual data center are allocated based on the demand. Resources are not preallocated and in cases of large regional demand there can be delays in availability. <br/> - The limits that are established for the amount of vCPU and RAM are maximums. <br/> - vCPU and RAM resource limits can be increased and decreased later as required. <br/> - The cost is calculated hourly and it is based on the resource usage in the virtual data center. <br/> - There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage. <br/> - There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB. |
+| VMware Solutions Shared On-demand | - The vCPU and RAM virtual data center are allocated based on the demand. Resources are not preallocated and in cases of large regional demand there can be delays in availability. <br/> - The limits that are established for the amount of vCPU and RAM are maximums. <br/> - vCPU and RAM resource limits can be increased and decreased later as required. <br/> - The price is calculated hourly and it is based on the resource usage in the virtual data center. <br/> - There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage. <br/> - There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB. |
 | VMware Solutions Shared Reserved | - The vCPU and RAM virtual data center reservations are pre-allocated and their availability is guaranteed. <br/> - vCPU and RAM resources can be increased and decreased later as required. <br/> - There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage. <br/> - There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB. |
 {: caption="Table 1. Pricing plans" caption-side="top"}
 
-## Cost Breakdown
+## Price breakdown
 {: #shared_pricing-cost}
 
 ### Usage
@@ -73,7 +73,7 @@ VMware Solutions Shared On-Demand virtual data center resources are allocated as
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
-| MAX_BASE_COST | Monthly | Instance cost, which includes the edge gateway with five IP addresses. |
+| MAX_BASE_COST | Monthly | Instance price, which includes the edge gateway with five IP addresses. |
 | TOTAL_VCPU_HOURS | Hourly | The peak vCPU **usage** over the period of an hour. |
 | TOTAL_RAM_GB_HOURS | Hourly | The peak memory **usage** over the period of an hour. |
 | TOTAL_EGRESS_GB | Usage | The **total** outbound public traffic is charged per GB transferred over the period of an hour. This value includes public outbound traffic. |
@@ -157,6 +157,17 @@ VMware Shared Solutions Reserved virtual data center resources are preallocated 
 {: class="comparison-tab-table"}
 {: row-headers}
 
+## Private network endpoint billing plan
+{: #shared_pricing-private-network-endpoints}
+
+Private network endpoint usage incurs charges as part of the On-Demand or Reserved virtual data center plan. On the **VMware Solutions Shared** order page, select the **About** tab to view the pricing plan details.
+
+| Metric                                   | Frequency   | Description |
+|:-----------------------------------------|:------------|:------------|
+| MAX_PRIVATE_NETWORK_ONE_G_COST | Monthly | Charge for private network endpoint at 1GB uplink over a period of one month. |
+| MAX_PRIVATE_NETWORK_TEN_G_COST | Monthly | Charge for private network endpoint at 10GB uplink over a period of one month. |
+{: caption="Table 8. Billing plan for private network endpoints" caption-side="top"}
+
 ## Licenses and fees for Veeam Availability Suite
 {: #shared_pricing-veeam}
 
@@ -169,7 +180,7 @@ In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solu
 | MAX_VEEAM_LICENSES | Monthly | Veeam license charge for every VM under backup. The monthly charge is for the highest number of VMs under backup at any time period in the month. |
 | TOTAL_VEEAM_BLOCK_STORAGE_GB_HOURS | Hourly | Charge per GB of block storage used for all backups. |
 | TOTAL_VEEAM_OBJECT_STORAGE_GB_HOURS | Hourly | Charge per GB of object storage used for all backups. |
-{: caption="Table 8. Licenses and fees" caption-side="top"}
+{: caption="Table 9. Licenses and fees for Veeam" caption-side="top"}
 
 There are no additional Veeam usage charges for VMware Solutions Shared.
 {:note}

@@ -106,14 +106,14 @@ The allocation of distributed switches for vCenter Server with NSX-V instances i
 
 For vCenter Server with NSX-T instances, clusters in the same pod reuse NSX-T segments and ESXi TEP IP pools. New clusters in new pods create new segments and IP pools.
 
-### vSAN compression and deduplication
+### vSAN deduplication and compression
 {: #relnotes_v35-vsan-compress-dedup}
 
-This release provides the option to disable vSAN compression and deduplication. This option is available only when you order a new instance or add a cluster.
+This release provides the option to disable vSAN deduplication and compression. This option is available only when you order a new instance or add a cluster.
 
 For more information, see:
-* [Enable vSAN compression and deduplication for new instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-vsan-storage-enable-comp)
-* [Enable vSAN compression and deduplication for new clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-vsan-storage-enable-comp)
+* [Enable vSAN deduplication and compression for new instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-vsan-storage-enable-comp)
+* [Enable vSAN deduplication and compression for new clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters-adding-vsan-storage-enable-comp)
 
 ## Updates for add-on services
 {: #relnotes_v35-services}

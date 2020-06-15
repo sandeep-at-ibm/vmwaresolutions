@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-09"
 
 subcollection: vmwaresolutions
 
@@ -43,7 +43,7 @@ This reference architecture is based on the HTDC and IBM HPCS option, and the fo
 | Workload boot/clone protection | Yes | No | No | Ensures cloned workloads. VMs don't work unless authorized. |
 | Encrypted backups with Veeam | Yes | Yes | Yes | |
 | Encryption granularity | Per VM | Per VM | Per vSAN cluster | More granularity provides more secure deployment options. |
-| vSAN Deduplication and Compression | No | No | Yes | Deduplication reduces storage requirements. |
+| vSAN deduplication and compression | No | No | Yes | Deduplication reduces storage requirements. |
 | Encrypt/rekey without downtime | Yes | No | No | Frequent rekeying is fundamental to security compliance. HyTrust can perform rekeying automatically, while VMs continue to run. |
 | Secure workload mobility | vSphere/VSAN/Bare Metal/Any Hypervisor | Within vSphere only | Within the vSAN cluster only | With HyTrust, policies follow the workload across any platform. |
 | Secure workload mobility public cloud | AWS, Azure, IBM | No | No | Operational simplicity: one solution for encryption across all platforms, less chance of mistakes. |

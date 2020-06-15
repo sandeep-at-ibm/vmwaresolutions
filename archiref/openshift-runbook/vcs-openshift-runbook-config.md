@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-11"
 
 subcollection: vmwaresolutions
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Red Hat OpenShift 4.2 additional configuration
+# Red Hat OpenShift 4.4 additional configuration
 {: #openshift-runbook-runbook-config-intro}
 
 ## vSphere Storage for Kubernetes
@@ -52,7 +52,7 @@ Complete the following steps to create a new volume.
 4. Use the CLI to log in to your Kubernetes environment:
 
     ```bash
-    export KUBECONFIG=/opt/ocp42install/auth/kubeconfig
+    export KUBECONFIG=/opt/ocpinstall/auth/kubeconfig
     oc login
     ```
 
@@ -76,7 +76,7 @@ Complete the following steps to create a new volume.
     ```
 
     ```bash
-    export KUBECONFIG=/opt/ocp42install/auth/kubeconfig
+    export KUBECONFIG=/opt/ocpinstall/auth/kubeconfig
     kubectl create -f  vsphere-volume-pv.yaml
     ```
 

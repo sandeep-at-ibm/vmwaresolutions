@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-04-20"
 
 subcollection: vmwaresolutions
 
@@ -20,14 +20,14 @@ subcollection: vmwaresolutions
 {: #fss-operations}
 
 The IBM FSS (Financial Services Sector) Cloud is delivered as a clean and tuned environment. Extensive work was performed to identify and remediate common errors and warnings that are often found in a typical vSphere deployment. IBM and VMware best practices that are combined with standard and customized templates for vRealize Operations ensure that every FSS Cloud is deployed in the cleanest possible condition, ready for onboarding. Caveonix RiskForesight is used to scan the environment for compliance with industry and government standards such as NIST, PCI, and more. RiskForesight is continually monitoring the FSS Cloud for adherence to compliance standards. RiskForesight can provide on-demand compliance posture reporting and at-a-glance compliance status.
-The operational tools support the client in compliance with current stands and assists them in rapidly responding to a changing compliance landscape.
+The operational tools support the user in compliance with current standards and assists them in rapidly responding to a changing compliance landscape.
 
 ![FSS Cloud operational tools overview](../../images/fss-opstools.svg "FSS Cloud operational tools overview"){: caption="Figure 1. FSS Cloud operational tools overview" caption-side="bottom"}
 
 ## Management cluster
 {: #fss-operations-management}
 
-All operational tools are deployed into the management cluster. The FSS Cloud depends upon multiple layers of tools to deliver comprehensive insight into the operation, security, and compliance of all layers of the platform. Clients consuming the FSS Cloud can elect to extend the use of the operational tools to monitor the VMs supporting their applications.
+All operational tools are deployed into the management cluster. The FSS Cloud depends upon multiple layers of tools to deliver comprehensive insight into the operation, security, and compliance of all layers of the platform. Users consuming the FSS Cloud can elect to extend the use of the operational tools to monitor the VMs supporting their applications.
 
 ### Caveonix RiskForesight
 {: #fss-operations-management-riskforesight}
@@ -61,7 +61,7 @@ No operational tools components are deployed to the edge cluster. All components
 ## Workload cluster
 {: #fss-operations-workload}
 
-No operational tools components are deployed to the edge cluster. All platform components that are deployed in the workload cluster are configured to deliver their logs to vRealize Log Insight.
+No operational tools components are deployed to the workload cluster. All platform components that are deployed in the workload cluster are configured to deliver their logs to vRealize Log Insight.
 
 **Next topic**: [FSS Cloud Caveonix integration](/docs/vmwaresolutions?topic=vmwaresolutions-fss-caveonix)
 

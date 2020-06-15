@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-20"
 
 subcollection: vmwaresolutions
 
@@ -29,7 +29,7 @@ Identity and access management for administrators of the FSS Cloud infrastructur
 ### Hytrust CloudControl
 {: #fss-hytrust-management-cloudcontrol}
 
-HTCC is used to unified security policies for access to the management stack and to customer workloads (if desired), unified visibility to security configuration and context as well as visibility to customer workloads, continuous compliance by using templates to enforce segregation of duties and provides a robust audit trail that includes a full record of all actions taken by security, network and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS and other privacy regulations. When OpenShift is included in the FSS Cloud, HTCC provides full stack protection to secure the underlying virtual and IaaS platform as well as the containers deployed to OpenShift.
+HTCC is used to unify security policies for access to the management stack and to customer workloads (if desired), unify visibility to security configuration and context as well as visibility to customer workloads, continuous compliance by using templates to enforce segregation of duties and provide a robust audit trail that includes a full record of all actions taken by security, network, and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS and other privacy regulations. When OpenShift is included in the FSS Cloud, HTCC provides full stack protection to secure the underlying virtual and IaaS platform as well as the containers deployed to OpenShift.
 
 ![HyTrust CloudControl transparent proxy](../../images/fss-transparent-proxy.svg "HyTrust CloudControl transparent proxy"){: caption="Figure 1. HyTrust CloudControl transparent proxy" caption-side="bottom"}
 
@@ -39,7 +39,7 @@ HTCC is used to unified security policies for access to the management stack and
 HTCC is composed of many internal functional components:
 - Transparent Proxy – provides the proxy functionality for requests to vCenter and ESXi. This same mechanism is used for vSphere Client, vSphere Web Client and even SSH to ESXi hosts.
 - Policy Engine – enforces security policies created by the security administrators.
-- Authentication Engine – uniform authentication policy, integrates with Active Directory or LDAP as well as applying multi-factor authentication policy.
+- Authentication Engine – a uniform authentication policy that integrates with Active Directory or LDAP, and applies a multi-factor authentication policy.
 - Inventory Engine – keeps an synchronized inventory of vCenter objects and determines the trust level for ESXi hosts.
 - Compliance Engine – performs configuration assessments and remediation.
 - Logging – Logs every action, regardless of whether it was performed or denied by policy, and, if configured, forwards to syslog server or SIEM tool.

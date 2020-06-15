@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-03"
+lastupdated: "2020-05-05"
 
 subcollection: vmwaresolutions
 
@@ -18,11 +18,11 @@ ESXi 6.5 contains many new native drivers that are replacement for the earlier v
 
 ixgben is a native driver that replaces the vmklinux net-ixgbe driver but does not support SR-IOV and SW FcOE. The ICVS automation would not enable this driver when your vSphere ESXi host was provisioned. It is advisable to enable this driver for the performance benefits it brings. The following procedure described in this appendix, shows you how to enable and disable the native drivers by using the vSphere Command-Line (vCLI).
 
-Before you start this task, retrieve all the physical hosts IPMI IP addresses, login IDs, and passwords from the [{{site.data.keyword.cloud}} infrastructure customer portal](https://control.softlayer.com/devices). This is required in a backout or to check on the progress of an upgrade, where no direct network access to the host exists.
+Before you start this task, retrieve all the physical hosts IPMI IP addresses, login IDs, and passwords from the [{{site.data.keyword.cloud}} infrastructure customer portal](https://control.softlayer.com/devices). This is required in a back out or to check on the progress of an upgrade, where no direct network access to the host exists.
 
 For each host, successively:
 1. Use the vSphere Web Client to place the vSphere ESXi host into maintenance mode by, selecting **Home** > **Hosts and Clusters**. In the Navigator pane, select the vSphere ESXi host and right-click the host and select **Maintenance Mode** > **Enter Maintenance Mode**. As the host is part of an automated DRS cluster, virtual machines are migrated to different hosts when the host enters maintenance mode.
-2. SSH into the vSphere ESXi host, by using the details from the IBM Cloud for VMware Solutions console.
+2. SSH into the vSphere ESXi host, by using the details from the {{site.data.keyword.vmwaresolutions_short}} console.
 3. Run the following vCLI command to enable the ixgben native drivers:
   `esxcli system module set --enabled=true --module=ixgben`
 4. Run the following vCLI command to restart the vSphere ESXi host:
@@ -42,7 +42,7 @@ Use the ID and password that are listed in the {{site.data.keyword.cloud_notm}} 
 
 1. Go to the Device Details, Remote Mgmt page for the vSphere ESXi host and select **Actions** > **KVM Console**. Another window opens for you to enter the IPMI User and Password.
 2. Select **Remote Control** > **iKVM/HTML5** and click **iKVM/HTML5** to relaunch. You can now be able to access the vSphere ESXi host’s console.
-3. If the host is responding to commands, use **ALT-F1** in the console to access the ESXi host console. Use the host’s credentials to log in.
+3. If the host is responding to commands, use **ALT-F1** in the console to access the ESXi host console. Use the host credentials to log in.
 4. If the host is not responding, use the IPMI menus to power cycle the host.
 5. Watch the HTML5 console carefully as the host restarts. You have only a few seconds to go into recovery mode when ESXi restarts.
 6. Press **CMD + R** keys simultaneously to enter recovery mode.

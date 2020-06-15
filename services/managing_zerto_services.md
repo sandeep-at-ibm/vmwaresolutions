@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-11-12"
+lastupdated: "2020-05-05"
 
 keywords: disaster recovery, request DR services, DR managed service
 
@@ -56,5 +56,5 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 ## Related links
 {: #managing_zerto_services-related}
 
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

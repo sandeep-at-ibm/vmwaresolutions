@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-05"
 
 keywords: HCX updates, HCX management console, login HCX console
 
@@ -27,7 +27,7 @@ To manage the HCX service, you must access the HCX Cloud Console or the HCX Mana
 2. To access the HCX Cloud Console, click **View HCX Cloud Console** on the HCX service details page, and then log in by using the vCenter Server credentials.
 3. To access the HCX Manager Admin Console, click **View HCX Manager Admin Console** on the HCX service details page, and then log in by using the HCX Manager credentials listed on the same service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
 ## Applying updates to HCX
 {: #managinghcx-updates}

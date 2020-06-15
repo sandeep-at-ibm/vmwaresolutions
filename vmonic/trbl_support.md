@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-05-28"
+lastupdated: "2019-06-02"
 
 keywords: troubleshooting, contact support, support ticket
 
@@ -20,20 +20,18 @@ subcollection: vmwaresolutions
 # Contacting IBM Support
 {: #trbl_support}
 
-If you need help with {{site.data.keyword.vmwaresolutions_full}}, create an {{site.data.keyword.cloud_notm}} Support ticket from the {{site.data.keyword.vmwaresolutions_short}} console to get assistance.
+If you need help with {{site.data.keyword.vmwaresolutions_full}}, create a case from the {{site.data.keyword.cloud}} Support Center to get assistance.
 
-## Procedure to submit a Support ticket from the IBM Cloud for VMware Solutions console
+## Procedure to create a case for VMware Solutions
 {: #trbl_support-procedure}
 
-1. Go to https://cloud.ibm.com/infrastructure/vmware-solutions/console.
-2. Log in to the console with your **IBMid** account.
-3. Click **Support** on the menu bar.
-4. On the **Get support** page, click **Create a case**.
+1. Go to the [{{site.data.keyword.cloud}} Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter).
+2. Log in with your **IBMid** account.
+3. Select **All Products** and type **VMware Solutions** where prompted for the product name, then click **VMware Solutions**.
+4. Review the various solutions offered. If you do not see an answer to your problem, click **Create a case**.
 5. On the **New support case** page, provide the following information:
-   1. Select **Technical** as the type of support that you need.   
-   2. From the **Category** list, select **VMware**.  
-   3. Enter a subject for your issue.
-   4. Describe your issue in detail, such as the error messages, steps to re-create, and the URL you are accessing.
-   5. To upload screen captures of the issue, click **Attach file**.
-   6. If you want to be notified of updates on the issue, select the **Email me updates** check box.
+   1. Enter a subject for your issue.
+   2. Describe your issue in detail, such as the error messages, steps to re-create, and the URL that you are accessing.
+   3. Under **Add attachments**, upload screen captures of the issue.
+   4. If you want to be notified of updates on the issue, select the **Email me updates about this case** checkbox.
 6. Click **Submit**.

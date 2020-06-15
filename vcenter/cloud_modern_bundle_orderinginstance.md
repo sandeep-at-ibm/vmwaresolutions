@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-03"
 
-keywords: single-node trial, migration app modernization, order migration app modernization
+keywords: single-node, migration app modernization, order migration app modernization
 
 subcollection: vmwaresolutions
 
@@ -17,12 +17,12 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Ordering, viewing, and deleting Single-node Trial for Migration and App Modernization instances
+# Ordering, viewing, and deleting Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_orderinginstance}
 
-Review the planning requirements before you order a Single-node Trial for Migration and App Modernization instance.
+Review the planning requirements before you order a Single-node for Migration and App Modernization instance.
 
-## Requirements and planning for ordering Single-node Trial for Migration and App Modernization instances
+## Requirements and planning for ordering Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_orderinginstance-req}
 
 Ensure that you confirm the following requirements and complete the following tasks.
@@ -37,7 +37,7 @@ Ensure that you confirm the following requirements and complete the following ta
 ### IBM Cloud infrastructure account
 {: #cloud_modern_bundle_orderinginstance-account-req}
 
-* To use {{site.data.keyword.vmwaresolutions_short}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
+* To use {{site.data.keyword.vmwaresolutions_short}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The price of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 *  Configure the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
 
 ### Instance name
@@ -59,34 +59,33 @@ Use resource groups to organize the resources in your account for access control
 
 If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
 
-## Procedure to order Single-node Trial for Migration and App Modernization instances
+## Procedure to order Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_orderinginstance-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. In the **Featured Services** section, click the **Single-node Trial for Migration and App Modernization** card.
-3. On the **Single-node Trial for Migration and App Modernization** page, click **Continue**.
-4. Complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User Name** and **API Key** and click **Retrieve**.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **VMware Solutions** from the left navigation pane.
+2. In the **Featured Services** section, click the **Single-node for Migration and App Modernization** card.
+3. On the **Single-node for Migration and App Modernization** page, complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User name** and **API key** and click **Retrieve**.
 
  This section is hidden if the API key exists.
  {:note}
 5. Enter the instance name and select a resource group.
 6. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.  
 
- By default, the DAL09 {{site.data.keyword.cloud_notm}} data center is preselected. Select a different {{site.data.keyword.cloud_notm}} data center location, if needed.
+ By default, the **Dallas 09** {{site.data.keyword.cloud_notm}} data center is preselected. Select a different {{site.data.keyword.cloud_notm}} data center location, if needed.
  {:note}
-7. On the **Order Summary** pane, verify the instance configuration before you place the order.
+7. On the **Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
-   2. Review the estimated cost of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+   2. Review the estimated price of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.
-   4. Click **Provision**.
+   4. Click **Create**.
 
-### Results after you order Single-node Trial for Migration and App Modernization instances
+### Results after you order Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_orderinginstance-results}
 
 * The deployment of the instance starts automatically and the on-premises HCX service activation key is ordered.
-* You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment History** section of the instance details.
-* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node Trial for Migration and App Modernization instances](/docs/vmwaresolutions?topic=vmwaresolutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs) are installed.
-* When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
+* You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment history** section of the instance details.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for Single-node for Migration and App Modernization instances](/docs/vmwaresolutions?topic=vmwaresolutions-cloud_modern_bundle_overview#cloud_modern_bundle_overview-tech-specs) are installed.
+* When the instance is ready to use, the status of the instance is changed to **Ready to use** and you receive a notification by email.
 
 #### Deployment process for HCX
 {: #cloud_modern_bundle_orderinginstance-hcx-deploy-process}
@@ -119,11 +118,11 @@ The deployment of HCX is automated. The following steps are completed by the {{s
 #### Viewing instance details
 {: #cloud_modern_bundle_orderinginstance-view-inst-details}
 
-You can check the status of the deployment by viewing the instance details. Click **Resources** from the left navigation pane and locate the **vCenter Server Instances** or **On-premises HCX Instances** table to view information about the instances that you ordered.
+You can check the status of the deployment by viewing the instance details. Click **Resources** from the left navigation pane and locate the **vCenter Server instances** or **On-premises HCX licenses** table to view information about the instances that you ordered.
 
-When the instance is successfully deployed, the components that are described in the *Technical specifications* sections of this topic are installed on your VMware virtual platform and the on-premises HCX service activation key is listed in the **On-premises HCX Instances** table.
+When the instance is successfully deployed, the components that are described in the *Technical specifications* sections of this topic are installed on your VMware virtual platform and the on-premises HCX service activation key is listed in the **On-premises HCX licenses** table.
 
-The status of the instance changes to **Ready to Use** and you receive a notification by email.
+The status of the instance changes to **Ready to use** and you receive a notification by email.
 
 ### What to do next
 {: #cloud_modern_bundle_orderinginstance-next}
@@ -132,13 +131,13 @@ Install the on-premises HCX Enterprise Manager and configure the connection to y
 
 1. Locate the on-premises activation key on the **Resources** page.
   1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-  2. In the **vCenter Server Instances** table, review the **Type** column to locate the Single-node Trial for Migration and App Modernization instance and make note of the instance name.
-  3. Scroll to the **On-premises HCX Instances** table and review the **Name** column to locate the instance that has the same name as the single-node instance that you ordered with the *-OnPrem* suffix.
+  2. In the **vCenter Server instances** table, review the **Type** column to locate the Single-node for Migration and App Modernization instance and make note of the instance name.
+  3. Scroll to the **On-premises HCX licenses** table and review the **Name** column to locate the instance that has the same name as the single-node instance that you ordered with the *-OnPrem* suffix.
   4. Make note of the key in the **Activation key** field.
 2. Obtain the on-premises HCX Enterprise Manager Open Virtual Appliance (OVA) from the HCX Manager console.
   1. Connect to the HCX Cloud Console.
-    1. In the **vCenter Server Instances** table, click the Single-node Trial for Migration and App Modernization instance to view the instance details.
-    2. Under **Access Information**, locate and make note of the vCenter credentials.
+    1. In the **vCenter Server instances** table, click the Single-node for Migration and App Modernization instance to view the instance details.
+    2. Under **Access information**, locate and make note of the vCenter credentials.
     3. Click **Services** from the left navigation pane.
     4. On the **Services** page, click **HCX**.
     5. On the **HCX** details page, locate and make note of the **HCX Cloud IP**.
@@ -171,10 +170,10 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} infrastructure c
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console and can make your environment unstable.
 {:important}
 
-## Procedure to delete Single-node Trial for Migration and App Modernization instances
+## Procedure to delete Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_orderinginstance-deleting-procedure}
 
-When you delete a Single-node Trial for Migration and App Modernization instance, the following components are released sequentially:
+When you delete a Single-node for Migration and App Modernization instance, the following components are released sequentially:
 
 1. All deployed services
 3. VMware product licenses
@@ -187,19 +186,19 @@ Because of resource dependencies, the components in your instance are not releas
 You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the deleted instance.
 {:note}
 
-Complete the following steps to delete a Single-node Trial for Migration and App Modernization instance:
+Complete the following steps to delete a Single-node for Migration and App Modernization instance:
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, find the instance to delete.
-3. In the **Actions** column, click the Delete icon.
+2. In the **vCenter Server instances** table, find the instance to delete.
+3. Click the vertical overflow menu next to the **Status** column, and then click **Delete instance**.
    The status of the instance is changed to **Deleting**. When the instance is deleted successfully, the components of the instance are released, and the status of the instance is changed to **Deleted**.
-4. If you want to remove the instance record from the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
-   1. In the **Actions** column, click the Delete icon again.
-   2. In the **Delete Instance** window, click **OK**.
+4. If you want to delete the instance record from the {{site.data.keyword.vmwaresolutions_short}} console, complete the following steps:
+   1. Click the vertical overflow menu next to the **Status** column, and then click **Delete from the console**.
+   2. In the **Delete instance** window, click **Delete**.
 
 ## Related links
 {: #cloud_modern_bundle_orderinginstance-related}
 
 * [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
-* [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
+* [Managing virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-virtual-servers)

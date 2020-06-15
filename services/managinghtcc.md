@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-02"
+lastupdated: "2020-06-03"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -36,7 +36,12 @@ To access the HTCC console from the vSphere Web Client, use the following proced
 2. Right-click **CC1** or **CC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+
+## Known issue about Network Time (NTP) displayed as disabled
+{: #managinghtcc-known-issue-ntp}
+
+On the web console for Hytrust CloudControl v5.6, if you navigate to General > Health, the Network Time (NTP) value in the Services section might be shown as disabled. Although the value shows disabled on the console, NTP is working as expected.
 
 ## Enabling internet access for the HyTrust CloudControl VMs
 {: #managinghtcc-internet-access}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-21"
 
 subcollection: vmwaresolutions
 
@@ -15,16 +15,17 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # FSS Cloud Caveonix integration
 {: #fss-caveonix}
 
-The FSS (Financial Services Sector) Cloud requires Caveonix RiskForesight for continuous compliance monitoring. The FSS Cloud architecture is designed to enable ease of compliance to NIST and other necessary compliance certifications as required of the client that uses the FSS Cloud offering.
+The FSS (Financial Services Sector) Cloud requires Caveonix RiskForesight for continuous compliance monitoring. The FSS Cloud architecture is designed to enable ease of compliance to NIST and other necessary compliance certifications as required of the user that uses the FSS Cloud offering.
 
 ## Management cluster
 {: #fss-caveonix-management}
 
-[Caveonix RiskForesight](https://www.caveonix.com/) provides a comprehensive cloud workload protection platform for FSS Cloud that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
+[Caveonix RiskForesight](https://www.caveonix.com/){:external} provides a comprehensive cloud workload protection platform for FSS Cloud that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
 
 With the RMCP, you maintain continuous and real-time visibility into workload deployments at scale, incorporating the latest cyberthreats and regulatory compliance needs, evaluating workload-specific cyber and compliance risks, and providing proactive defense by using agentless enforcement at network, security, and compute control planes of deployment.
 
@@ -38,7 +39,7 @@ Caveonix RiskForesight is used to continuously monitor compliance of the edge cl
 ## Workload cluster
 {: #fss-caveonix-workload}
 
-Caveonix RiskForesight can optionally monitor compliance of client workloads. Enabling the use of RiskForesight for workload compliance monitoring requires appropriate rules and policies on both the edge security appliance that protects the management plane and the perimeter security appliance that protects the client workloads.
+Caveonix RiskForesight can optionally monitor compliance of user workloads. Enabling the use of RiskForesight for workload compliance monitoring requires appropriate rules and policies on both the edge security appliance that protects the management plane and the perimeter security appliance that protects the user workloads.
 
 **Next topic**: [FSS Cloud business continuity](/docs/vmwaresolutions?topic=vmwaresolutions-fss-budr)
 

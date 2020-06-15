@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-05-27"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Compliance information for vCenter Server with NSX-V instances
+# Compliance information for vCenter Server instances
 {: #vc_compl_info}
 
 Review the following information for details about compliance for VMware vCenter Server instances.

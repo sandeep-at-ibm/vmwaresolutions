@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-05-06"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 The F5 BIG-IP service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
 {: shortdesc}
 
-The current BIG-IP VE version that is installed is v15.1.0.2.
+The F5 BIG-IP service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.0.2.
 {:note}
 
 ## Technical specifications for F5 BIG-IP
@@ -51,7 +51,7 @@ The following components are included with the F5 BIG-IP service:
 
 License fees for each VM are applied to each billing cycle depending on the licensing option (Good, Better, or Best) and the selected bandwidth.
 
-You cannot change the licensing level after service installation. To change the licensing level, you must remove the existing service and reinstall the service using a different licensing option.
+You cannot change the licensing level after service installation. To change the licensing level, you must delete the existing service and reinstall the service using a different licensing option.
 {:important}
 
 ## Considerations when you install F5 BIG-IP
@@ -102,7 +102,7 @@ Due to these requirements, you must plan for the space that is needed for F5 BIG
 
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## F5 BIG-IP order example
 {: #f5_considerations-example}
@@ -125,10 +125,10 @@ Since there will be other workloads present on the ESXi servers, for example, VM
 
 In this case, the F5 BIG-IP installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 BIG-IP service, you can add more ESXi servers before installing F5 BIG-IP.
 
-## Considerations when you remove F5 BIG-IP
+## Considerations when you delete F5 BIG-IP
 {: #f5_considerations-remove}
 
-Before you remove the F5 BIG-IP service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
+Before you delete the F5 BIG-IP service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
 
 ## Related links
 {: #f5_considerations-related}

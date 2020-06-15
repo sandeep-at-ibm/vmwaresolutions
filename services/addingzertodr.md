@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-01"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 The Zerto service integrates replication and disaster recovery capabilities into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud}}.
 {: shortdesc}
 
-The current Zerto version that is installed is 7.0 Update 2.
+The Zerto service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 7.5 Update 3.
 {:note}
 
 ## Before you begin
@@ -48,7 +48,7 @@ Zerto Virtual Replication Appliance (VRA) components are deployed only into the 
 * One Virtual Service Instance (VSI) - Zerto Virtual Manager
 * 2 x 2.0 GHz cores
 * 4 GB RAM
-* Windows Server 2016 Standard Edition (64-bit)
+* Windows Server 2019 Standard Edition (64-bit)
 
 ### Storage
 {: #addingzertodr-specs-storage}

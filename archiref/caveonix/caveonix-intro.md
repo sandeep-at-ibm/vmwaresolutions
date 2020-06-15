@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{:external: target="_blank" .external}
 
 # Caveonix RiskForesight introduction
 {: #caveonix-intro}
@@ -63,4 +65,4 @@ The three key services available through the RiskForesight GUI are: Risk Managem
 ## Related links
 {: #caveonix-intro-related}
 
-* [Caveonix website](https://www.caveonix.com)
+* [Caveonix website](https://www.caveonix.com){:external}

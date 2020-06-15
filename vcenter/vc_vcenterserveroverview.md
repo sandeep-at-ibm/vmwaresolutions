@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-11"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -31,7 +31,7 @@ For dedicated storage, see [NetApp ONTAP Select](/docs/vmwaresolutions?topic=vmw
 
 For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize Operations. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
-For vCenter Server with NSX-T instances, applying updates are not supported. Also, only a limited number of add-on services are supported.
+For vCenter Server with NSX-T instances, applying license updates is not supported. Also, only a limited number of add-on services are supported.
 {:important}
 
 ## vCenter Server with NSX-V architecture
@@ -67,14 +67,14 @@ This layer consists of the following components:
 * vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
 * NSX Manager (NSX-V only)
 * Three NSX Controllers
-* NSX Edge Services Gateways (ESGs): two for NSX-V and three for NSX-T
+* NSX Edge Services Gateways (ESGs): two for NSX-V and four for NSX-T (two in the management cluster and two in the workload cluster)
 * IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4,000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
 In total, the base offering has the following requirements, which are reserved for the virtualization management layer.
-* 38 vCPU
-* For NSX-V, 67 GB vRAM. For NSX-T, 128 GB vRAM.
+* For NSX-V, 38 vCPU and 67 GB vRAM
+* For NSX-T, 42 vCPU and 128 GB vRAM
 
 The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, virtual machine (VM) sizing, and workload performance requirements.
 
@@ -92,13 +92,12 @@ The following components are included in your vCenter Server instance.
 {: #vc_vcenterserveroverview-bare-metal}
 
 * For NSX-V, you can order two or more bare metal servers.
-* For NSX-T, you can order three or more bare metal servers in the Management cluster and two or more in the Workload cluster.
+* For NSX-T, you can order two or more bare metal servers in the management cluster and in the workload cluster.
 
 The following configurations are available:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
 * **Cascade Lake**: 4-CPU Intel Cascade Lake generation server (Quad Intel Xeon Gold 6248) and 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
-* **SAP-certified**: Intel Skylake generation servers (Intel Xeon 6140/E5-2690/E7-8890 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
-* (NSX-V only) **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
+* **SAP-certified**: Intel Skylake generation servers (Intel Xeon 6140 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
 
 If you plan to use vSAN storage, the configuration requires a minimum of four bare metal servers.
 {:note}
@@ -204,7 +203,6 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
 {: #vc_vcenterserveroverview-support-services-fee}
 
 VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} DevOps and Level 2 Support teams for any issues pertaining to:
-
 * Automation in the platform
 * VMware products included in the solution
 

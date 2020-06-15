@@ -76,7 +76,7 @@ Configure a Network Extension service either for single path deployment, or for 
 ### Procedure to configure the Network Extension service
 {: #hcx-archi-install-cfg-hybrid-proc-config-nes}
 
-1. On the **Network Extension Service** page, select a virtual distributed switch from the **Distributed Switch** menu. When you install a standard Layer 2 Concentrator, the **Route stretched networks via Hybrid Cloud Gateway** check box will be available. It is not there for the high throughput L2C.
+1. On the **Network Extension Service** page, select a virtual distributed switch from the **Distributed Switch** menu. When you install a standard Layer 2 Concentrator, the **Route stretched networks via Hybrid Cloud Gateway** checkbox will be available. It is not there for the high throughput L2C.
 2. If **Route stretched networks via Hybrid Cloud Gateway** is selected, the installer determines a reasonable placement for the Layer 2 Concentrator (based on the switch) and populates the placement information. Otherwise, the placement information must be manually entered in the next step.
 3. Set the route for the L2 Concentrator placement. If **Route stretched networks via Hybrid Cloud Gateway** was selected, these values cannot be edited.
   * **Network** - The deployment network for the Layer 2 Concentrator’s management interface.

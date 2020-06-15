@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-05-05"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -63,7 +63,7 @@ Specify the nickname for the installed instance in the **Enter a name for the HA
 
 Review the features of the two licenses and select either **Standard Edition** or **Content Security Bundle**.
 
-You can't change the license model after service installation. To change the license model, you must remove the existing service and reinstall the service by selecting a different license option.
+You can't change the license model after service installation. To change the license model, you must delete the existing service and reinstall the service by selecting a different license option.
 {:important}
 
 After the service is ordered, the vSRX nodes are automatically ordered with the selected license models.
@@ -76,14 +76,14 @@ The Juniper vSRX nodes are deployed to the edge services cluster if you selected
 If you deploy Juniper vSRX on an edge services cluster, after deployment, you must configure Juniper vSRX specifically for your environment. Complete the following steps:
 1. Configure the redundant Ethernet (reth) 2 interface with the default gateway IP addresses of each subnet in your private trunk VLAN. The IP addresses are assigned to the logical interface, which is in the format of `reth2.VLANid`.
 2. Configure the redundant Ethernet (reth) 3 interface with the default gateway IP addresses of each subnet in your public trunk VLAN, if you have one. The IP addresses are assigned to the logical interface, which is in the format of `reth3.VLANid`.
-3. In the IBM Cloud classic infrastructure view, look at the gateway appliance ordered for the edge services cluster. From there, assign the VLANs that you want to the gateway appliance and put them in route through mode.
+3. In the IBM Cloud classic infrastructure view, look at the gateway appliance ordered for the edge services cluster. From there, assign the VLANs that you want to the gateway appliance and put them in *route-through* mode.
 
 ## Related links
 {: #juniper-ordering-related-links}
 
 * [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview)
 * [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-06"
+lastupdated: "2020-06-04"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -59,7 +59,7 @@ The model contains the following layers:
 
 You can assign only one secondary instance to a primary instance at a time. You cannot assign multiple secondary instances to a primary instance at the same time. To do that, you must go through the order process again and select the previously defined primary instance as a primary instance for the secondary instance. You must repeat the process for all secondary instances that you want to create.
 
-You can have a maximum of 8 (1 primary and 7 secondary) instances that are deployed in a multi-site configuration.
+You can have a maximum of 15 (one primary and 14 secondary) instances that are deployed in a multi-site configuration.
 
 Deleting vCenter Server instances that are part of a multi-site configuration requires special planning. For more information, see [Deleting vCenter Server instances in a multi-site configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance_multi).
 {:note}

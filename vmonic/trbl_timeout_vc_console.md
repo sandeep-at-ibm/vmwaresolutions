@@ -56,4 +56,4 @@ Use the following steps to investigate and fix the problem.
 
       For example, if the IP address for your instance is `xx.yyy.zz.15` and the IP address for vCenter is `xx.yyy.zz.10`, you must grant access for the subnet `xx.yyy.zz.0/26`.
 
-   5. Select the **Grant Access** check box for that subnet and click **Save**.
+   5. Select the **Grant Access** checkbox for that subnet and click **Save**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-27"
 
 subcollection: vmwaresolutions
 
@@ -33,7 +33,7 @@ Detailed instructions for each of these activities are contained within the prod
 * Provision an IBM HPCS instance - [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision)
 * Set up the IBM HPCS environment:
   * Verify API endpoint.
-  * Set up CLI - Install the IBM Cloud CLI, if not already installed. See [Getting started with the IBM Cloud CLI and Developer Tools](/docs/cli?topic=cloud-cli-getting-started).
+  * Set up CLI - Install the IBM Cloud CLI, if not already installed. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started).
   * Install TKE plug-in - Using the CLI, log in and install the Trusted Key Entry plug-in, `ibmcloud plugin install tke`.
   * Set up local directory for key files - On your local workstation, create a directory, for the master key part files and signature key part files, which will be named in the variable CLOUDTKEFILES.
 * Manage crypto units in a service instance:

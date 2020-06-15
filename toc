@@ -1,20 +1,21 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="vmwaresolutions" category="compute" audience="infrastructure" href="/docs/vmwaresolutions?topic=vmwaresolutions-getting-started" product-page="https://www.ibm.com/cloud/vmware" console-page="/infrastructure/vmware-solutions/console" path="vmwaresolutions"}
+{: .toc subcollection="vmwaresolutions" category="compute_baremetal" audience="infrastructure" href="/docs/vmwaresolutions?topic=vmwaresolutions-getting-started" product-page="https://www.ibm.com/cloud/vmware" console-page="/infrastructure/vmware-solutions/console" path="vmwaresolutions"}
 VMware Solutions
 
     {: .navgroup id="learn"}
     index.md
-    [What is IBM Cloud for VMware Solutions](https://www.ibm.com/cloud/vmware)
-    [Why IBM Cloud for VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
+    [What is VMware Solutions](https://www.ibm.com/cloud/vmware)
+    [Why VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
     vmonic/vmware-comp-guide.md
-    vmonic/relnotes_v36.md
+    vmonic/relnotes_v37.md
 
     {: .topicgroup}
     Previous release notes
+        vmonic/relnotes_v36.md
         vmonic/relnotes_v35.md
         vmonic/relnotes_v34.md
         vmonic/relnotes_v33.md
@@ -51,9 +52,9 @@ VMware Solutions
         vmonic/signing_required_accounts.md
         vmonic/loginmethod.md
         vmonic/useraccount.md
-        vmonic/iam.md
         vmonic/iamuserinvite.md
         vmonic/notifications.md
+        vmonic/vmwaresol_ports.md
 
     {: .topicgroup}
     VMware Solutions Shared
@@ -61,10 +62,11 @@ VMware Solutions
         shared/shared_planning.md
         shared/shared_data_security.md
         shared/shared_ordering.md
+        shared/shared_creatingendpoints.md
+        shared/shared_veeam.md
         shared/shared_managing.md
         shared/shared_vcd-ops-guide.md
         shared/shared_resizeinstance.md
-        shared/shared_veeam.md
         shared/shared_deletinginstance.md
         shared/shared_pricing.md
 
@@ -99,12 +101,12 @@ VMware Solutions
         vsphere/vs_orderingforclustersoutside.md
 
     {: .topicgroup}
-    Single-node Trial for Migration and App Modernization
+    Single-node for Migration and App Modernization
         vcenter/cloud_modern_bundle_overview.md
         vcenter/cloud_modern_bundle_orderinginstance.md
 
     {: .topicgroup}
-    Single-node Trial for Data Protection and Disaster Recovery
+    Single-node for Data Protection and Disaster Recovery
         vcenter/dr_backup_bundle_overview.md
         vcenter/dr_backup_bundle_orderinginstance.md
 
@@ -135,8 +137,6 @@ VMware Solutions
         services/f5_considerations.md
         services/f5_ordering.md
         services/managing_f5.md
-
-    services/fsa_considerations.md
 
     {: .topicgroup}
     FortiGate Virtual Appliance
@@ -215,14 +215,15 @@ VMware Solutions
         services/ocp_ordering.md
         services/ocp_managing.md
 
-    services/icp_overview.md
-
     {: .topicgroup}
     Veeam
         services/veeam_considerations.md
+        services/veeamvm_overview.md
         services/veeam_ordering.md
-        services/icos_ordering.md
         services/managingveeam.md
+        services/veeam_ordering_licenses.md
+        services/veeam_managing_licenses.md
+        services/icos_ordering.md
 
     {: .topicgroup}
     vRealize Operations and Log Insight
@@ -239,15 +240,19 @@ VMware Solutions
     {: .topicgroup}
     Professional Services
         services/managing_imi.md
-        services/managing_veeam_services.md
         services/managing_zerto_services.md
         services/managing_ices.md
         services/managing_mcms.md
         services/netapp_overview.md
-    
+
+    services/fsa_considerations.md
+    services/icp_overview.md
+
     {: .topicgroup}
-    Enhancing security for IBM Cloud for VMware Solutions
+    Enhancing security for VMware Solutions
+        vmonic/iam.md
         vmonic/data-security.md
+        vmonic/at-events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -255,6 +260,7 @@ VMware Solutions
 
     {: .topicgroup}
     FAQs
+        vmonic/faq_shared.md
         vmonic/faq.md
         vmonic/faq_esxi.md
         vmonic/faq_byol.md
@@ -276,9 +282,9 @@ VMware Solutions
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    vmonic/at-events.md
     [VMware Solutions API reference](https://cloud.ibm.com/apidocs/vmware-solutions)
     [VMware Solutions Shared API reference](https://cloud.ibm.com/apidocs/vmware-solutions-shared)
+    vmonic/understand-responsib.md
 
     {: .topicgroup}
     Auditing

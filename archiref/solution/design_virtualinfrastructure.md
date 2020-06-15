@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -46,7 +46,7 @@ By default, the only users who can log in directly are the _root_ and _ibmvmadmi
 | Host access            | Supports DCUI. SSH and ESXi Shell are supported but not enabled by default |
 | User access            | Local authentication and MSAD |
 | Domain name resolution | Uses DNS as described in [Common services design](/docs/vmwaresolutions?topic=vmwaresolutions-design_commonservice). |
-| EVC Mode | Skylake (only for “greenfield” vSphere 6.7 deployments) |
+| EVC Mode | Highest available level supported by vSphere version. However, for a management cluster with Cascade Lake processors, no EVC is set where Cascade Lake EVC is not supported by the vSphere version. |
 {: caption="Table 1. vSphere ESXi configuration" caption-side="bottom"}
 
 The vSphere cluster houses the virtual machines (VMs) that manage the vCenter Server instance and the compute resources for user workloads.
@@ -59,10 +59,8 @@ You can scale up to a maximum of 59 ESXi hosts during or post initial deployment
 To support more user workloads, you can scale the environment by:  
 
 * Deploying more compute hosts in existing clusters
-* Deploying more clusters that are managed by the same vCenter Server Appliance
-* Deploying new vCenter Server instances with their own vCenter Server Appliance
-
-For more information about clusters, see [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
+* Deploying more clusters that are managed by the same vCenter Server appliance
+* Deploying new vCenter Server instances with their own vCenter Server appliance
 
 ## VMware vSAN design
 {: #design_virtualinfrastructure-vsan-design}
@@ -132,5 +130,4 @@ Management virtual machines can be located on an NFS data store. This creates a 
 ## Related links
 {: #design_virtualinfrastructure-related}
 
-* [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
 * [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-nsx_overview#nsx_overview)

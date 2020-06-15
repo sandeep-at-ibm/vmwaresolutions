@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-05-05"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -71,6 +71,6 @@ The deployment of IBM Spectrum Protect Plus is automated. Whether you order an i
 * [IBM Spectrum Protect Plus overview](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations)
 * [IBM Spectrum Protect Plus Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
 * [Managing IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-managingspp)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

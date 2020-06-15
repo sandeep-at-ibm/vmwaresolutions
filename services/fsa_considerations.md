@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-08"
+lastupdated: "2020-05-05"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -70,7 +70,7 @@ Review the following considerations before you install the FortiGate Security Ap
 
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Managing FortiGate Security Appliance
 {: #fsa_considerations-managingfsa}
@@ -87,15 +87,15 @@ To manage the FortiGate Security Appliance service, you must access the FortiGat
 * Log in to the FortiOS Web Client by using the credentials that you can find on the FortiGate Security Appliance service details page.
 * Access the console via SSH connection by using the credentials that you can find on the FortiGate Security Appliance service details page.
 
-For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
-## Considerations when you remove FortiGate Security Appliance
+## Considerations when you delete FortiGate Security Appliance
 {: #fsa_considerations-remove}
 
-Review the following considerations before you remove the FortiGate Security Appliance service:
-* Removing the FortiGate Security Appliance service removes the public VLAN that was added.
-* During the service removal, your instance might not be able to access the internet temporarily.
-* All FortiGate rules to permit, inspect, block, and route NAT traffic are removed together with the Fortinet service. If you have any NAT rules, you must reconfigure them.
+Review the following considerations before you delete the FortiGate Security Appliance service:
+* Deleting the FortiGate Security Appliance service deletes the public VLAN that was added.
+* During the service deletion, your instance might not be able to access the internet temporarily.
+* All FortiGate rules to permit, inspect, block, and route NAT traffic are deleted together with the Fortinet service. If you have any NAT rules, you must reconfigure them.
 
 ## Related links
 {: #fsa_considerations-related}

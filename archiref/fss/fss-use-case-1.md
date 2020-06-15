@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-20"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # FSS Cloud use case 1
 {: #fss-use-case-1}
 
-The FSS Cloud delivers a virtualized platform that is suited for clients in a highly regulated industry, who require a platform that is designed to support compliance to industry security standards or governmental regulations.
+The FSS Cloud delivers a virtualized platform that is suited for users in a highly regulated industry, who require a platform that is designed to support compliance to industry security standards or governmental regulations.
 
 Typical hyper-converged virtual infrastructure designs include management, edge services, and compute, all on the same cluster. This approach might blur the lines between the virtualization administrator, typically responsible for the compute and storage infrastructure, the network administrator, and the security administrator.
 
@@ -34,9 +34,9 @@ The network and security administrators use the NSX-T dedicated management porta
 
 The edge services region is strictly limited to the protection of the management region and the vSphere components delivering compute and storage resources to the workload region. The security administrator, who has the responsibility of managing the SDN security, might also serve as the administrator of the gateway VMs that run on the edge services cluster. Or, the responsibility might be assigned to an administrator who has access only to the edge gateway and no access to manage SDN security to isolate a single administrator's scope of influence.
 
-The workload region is managed by one or more administrators that are only responsible for the management of the application VMs deployed upon the workload clusters. One approach where multiple administrators are useful is the case where a client wants to isolate administrative tasks on a per business unit basis or other compliance requirements.
+The workload region is managed by one or more administrators that are only responsible for the management of the application VMs deployed upon the workload clusters. One approach where multiple administrators are useful is the case where a user wants to isolate administrative tasks on a per business unit basis or other compliance requirements.
 
-Three distinct regions: management region, edge services region, and the workload region, design the zero-trust security model into the FSS Cloud. Taking advantage of this design through audited and enforced separation of duties at every possible opportunity, assists clients to comply with industry standards or government regulations, making the FSS Cloud uniquely suited clients operating in highly regulated industries.
+Three distinct regions: management region, edge services region, and the workload region, design the zero-trust security model into the FSS Cloud. Taking advantage of this design through audited and enforced separation of duties at every possible opportunity, assists users to comply with industry standards or government regulations, making the FSS Cloud uniquely suited users operating in highly regulated industries.
 
 **Next topic**: [FSS Cloud use case 2](/docs/vmwaresolutions?topic=vmwaresolutions-fss-use-case-2)
 

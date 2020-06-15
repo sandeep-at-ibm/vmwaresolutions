@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-01"
+lastupdated: "2020-06-08"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -46,23 +46,23 @@ Because your initial cluster has vSAN storage, adding one or more ESXi servers a
 {: #vc_hybrid_addingremovingservers-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance for which you want to expand capacity.
+2. In the **vCenter Server instances** table, click the instance for which you want to expand capacity.
 3. Click **Infrastructure** on the left navigation pane.
 4. In the **CLUSTERS** table, click the cluster to which you want to add ESXi servers.
-5. In the **ESXi Servers** table, click **Add**.
-6. In the **Add Server** window, enter the number of servers that you want to add.
+5. In the **ESXi servers** table, click **Add**.
+6. In the **Add server** window, enter the number of servers that you want to add.
 7. Optionally, select the checkbox to add servers during maintenance mode. The checkbox is selected by default.
 
-   When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
+   When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance mode** checkbox. You do not receive a confirmation message before the migration begins.
    {:important}
 
 8. Complete the bare metal configuration.
    * Select a configuration from the existing hosts in the cluster.
    * Select a new bare metal server configuration and specify the CPU model and the RAM size.
-9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High Performance with Intel Optane** box.
-10. Review the estimated cost and click **Add**.
+9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High performance with Intel Optane** box.
+10. Review the estimated price and click **Add**.
 
-  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ### Results after you add ESXi servers
 {: #vc_hybrid_addingremovingservers-adding-results}
@@ -90,10 +90,10 @@ If you are adding ESXi servers during maintenance mode, virtual machines (VMs) a
 {: #vc_hybrid_addingremovingservers-removing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance for which you want to contract capacity.
+2. In the **vCenter Server instances** table, click the instance for which you want to contract capacity.
 3. Click **Infrastructure** on the left navigation pane.
 4. In the **CLUSTERS** table, click the cluster from which you want to remove ESXi servers.
-5. In the **ESXi Servers** table, select the servers that you want to remove and click **Remove**.
+5. In the **ESXi servers** table, select the servers that you want to remove and click **Remove**.
 
 ### Results after you remove ESXi servers
 {: #vc_hybrid_addingremovingservers-removing-results}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-05-05"
 
 subcollection: vmwaresolutions
 
@@ -37,7 +37,7 @@ Your responsibility includes backups, patching, configuration, and monitoring of
 
 In addition, {{site.data.keyword.cloud_notm}} Professional Services and Managed Services are also available to help accelerate your journey to the cloud with offerings like migration, implementation, and onboarding services.
 
-Unlike a managed service offering, vCenter Server gives you full and complete access to all components that allows for a greater flexibility than what a managed service might offer. However, there are certain constraints that apply to allow the IBM Cloud for VMware Solutions automation to function, post vCenter Server deployment.
+Unlike a managed service offering, vCenter Server gives you full and complete access to all components that allows for a greater flexibility than what a managed service might offer. However, there are certain constraints that apply to allow the {{site.data.keyword.vmwaresolutions_short}} automation to function, post vCenter Server deployment.
 
 The VMware on {{site.data.keyword.cloud_notm}} offerings bring the following benefits:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # OpenShift NSX logical switches configuration
 {: #openshift-runbook-runbook-nsxls-intro}
 
-This section details the NSX logical switches that are used to support the OpenShift 4.2 environment. To use this information, you must understand how to create these components and add the configuration.
+This section details the NSX logical switches that are used to support the OpenShift 4.4 environment. To use this information, you must understand how to create these components and add the configuration.
 
 Review [Add a logical switch](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-295720D5-DD75-4523-9095-1D694D99717A.html){:external}. PowerNSX commands are provided if you would want to use this method.
 
@@ -70,5 +70,5 @@ Disconnect-NsxServer
 ## Related links
 {: #vcs-openshift-runbook-nsxdls-related}
 
-* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
+* [OpenShift Bastion node setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
+* [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)

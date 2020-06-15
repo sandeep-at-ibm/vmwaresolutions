@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -19,9 +19,9 @@ subcollection: vmwaresolutions
 # Red Hat OpenShift NSX Edge configuration
 {: #openshift-runbook-runbook-nsxedge-intro}
 
-This section details the NSX components that are used to support the OpenShift 4.2 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){:external}. PowerNSX commands are provided if you would want to use this method.
+This section details the NSX components that are used to support the OpenShift 4.4 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){:external}. PowerNSX commands are provided if you would want to use this method.
 
-![OpenShift 4.2 networking](../../images/openshift-networking41.svg "OpenShift 4.2 networking"){: caption="Figure 1. OpenShift 4.2 networking" caption-side="bottom"}
+![OpenShift 4.4 networking](../../images/openshift-networking41.svg "OpenShift 4.4 networking"){: caption="Figure 1. OpenShift 4.4 networking" caption-side="bottom"}
 
 ## NSX ESG
 {: #openshift-runbook-runbook-nsxedge-config}
@@ -74,7 +74,7 @@ Configure rules to allow communication to the internet, to the IBM Cloud network
 ## NSX ESG DHCP
 {: #openshift-runbook-runbook-nsxedge-dhcp}
 
-For the OpenShift 4.2 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network, which provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using terraform.
+For the OpenShift 4.4 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network, which provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using terraform.
 
 | DCHP pool | Value |
 | --- | --- |
@@ -303,5 +303,5 @@ Disconnect-NsxServer
 ## Related links
 {: #vcs-openshift-runbook-nsxedge-related}
 
-* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.2 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
+* [OpenShift Bastion node setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
+* [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)

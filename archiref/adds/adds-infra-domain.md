@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-04"
 
 subcollection: vmwaresolutions
 
@@ -37,7 +37,7 @@ These values are then used to generate the user name and server names of the ins
 ## Domain controllers
 {: #adds-infra-domain-controllers}
 
-All AD domain controllers that are used in the IBM Cloud for VMware Solutions infrastructure domain are exclusively yours and nothing is shared with other customers. You must provide operational management to monitor, update, back up, and recover these domain controllers.
+All AD domain controllers that are used in the {{site.data.keyword.vmwaresolutions_full}} infrastructure domain are exclusively yours and nothing is shared with other customers. You must provide operational management to monitor, update, back up, and recover these domain controllers.
 
 You must administer users, groups, computer and group policies, in the same manner as you do with your on-premises AD by using standard AD tools. You have full administrative control of the operating system and the AD environment that gets deployed as part of the vCenter Server instance provisioning. You can set up custom configurations and create simple or complex topology as needed.
 
@@ -89,13 +89,13 @@ If you order the two high availability Microsoft Windows VMs, you must provide t
 
 After the domain controllers are provisioned, AD DS is configured as follows:
 1. The domain name is set as <root_domain>, collected from the order process.
-2. The ic4V-vCenter AD security group is added to the domain.
+2. The `ic4V-vCenter` AD security group is added to the domain.
 3. The following AD users are created in the domain:
-* automation - Member of Administrators, Domain Admins, Domain Users, Enterprise Admins, ic4v-vCenter, Schema Admins, and Users AD groups.
+* automation - Member of Administrators, Domain Admins, Domain Users, Enterprise Admins, `ic4V-vCenter`, Schema Admins, and Users AD groups.
 * cloudbase-init - member of the Administrators and Domain Users AD groups (this user is created by the VSI automation for use during initial provisioning of the VSI).
 * add-on service accounts, for example, `prod-Caveonix-19765` or `prod-Zerto-5c9cb035` - member of `ic4V-vCenter` and `Domain Users` AD groups.
 
-As the customer, you have full access to add more system administrators to the ic4V-vCenter AD security group to allow each administrator with access to vCenter. It is recommended that this domain holds only the resources and user accounts for administration of the vCenter Server instance only.
+As the customer, you have full access to add more system administrators to the `ic4V-vCenter` AD security group to allow each administrator with access to vCenter. It is recommended that this domain holds only the resources and user accounts for administration of the vCenter Server instance only.
 
 ## User IDs
 {: #adds-infra-domain-ids}
@@ -109,7 +109,7 @@ For more information, see [IBM User IDs](/docs/vmwaresolutions?topic=vmwaresolut
 
 As an option in {{site.data.keyword.vmwaresolutions_short}}, you can provision vCenter Server instances in a multi-site topology. Your first instance is the primary instance, but subsequent orders can be either primary or secondary depending on the topology you want to create. By using a primary instance and then selecting secondary instances, you create a multi-site topology.
 
-You can have a maximum of one primary and seven secondary instances in a multi-site configuration:
+You can have a maximum of 15 instances (one primary and 14 secondary) in a multi-site configuration:
 * Primary instance - To deploy the first instance, you define that instance as primary during the instance order process.
 * Secondary instances - The instances that are attached to the primary instance are defined as secondary instances during the order process.
 
@@ -134,7 +134,7 @@ Enhanced Linked Mode (ELM) lets you view and search across all linked vCenter Se
 * In a cross-vCenter NSX environment, ELM allows to you manage all NSX Managers from a single vSphere Web Client
 * Single pane of glass management across all sites for both NSX and normal vCenter functions.
 
-ELM does not bring high availability for vCenter services, just simplifies the management of multiple vCenters. ELM is configured by the IC4VS automation when a secondary instance is deployed.
+ELM does not bring high availability for vCenter services, just simplifies the management of multiple vCenters. ELM is configured by the {{site.data.keyword.vmwaresolutions_short}} automation when a secondary instance is deployed.
 
 ### Cross vCenter NSX
 {: #adds-infra-domain-multisite-nsx}
@@ -169,7 +169,7 @@ The secondary instances have the following configuration:
 ## Customer user IDs
 {: #adds-infra-domain-userid}
 
-The customer user IDs and passwords for the vCenter Server instance are available through the IBM Cloud for VMware Solutions console. Go to VMware Solutions, Summary, Resources, <instance_name>, Summary. For more information, see [vCenter and Platform Services Controller user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
+The customer user IDs and passwords for the vCenter Server instance are available through the {{site.data.keyword.vmwaresolutions_short}} console. Go to VMware Solutions, Summary, Resources, <instance_name>, Summary. For more information, see [vCenter and Platform Services Controller user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
 
 ## DNS configuration
 {: #adds-infra-domain-dns}

@@ -26,7 +26,7 @@ There are three types of migrations:
 
 Use the HCX web UI snap-in portal or the vSphere web client contextual extension menus to initiate a cross cloud vMotion. In either case, the same migration wizard comes up. For the contextual menus, only a single VM is selected for migration operations. For the portal, multiple VMs can be selected.
 
-Reverse migrating VMs is only possible from the web UI portal that uses the **Reverse migration** check box in the HCX Migration wizard.
+Reverse migrating VMs is only possible from the web UI portal that uses the **Reverse migration** checkbox in the HCX Migration wizard.
 
 ## vMotion
 {: #hcxclient-migrations-vmotion}

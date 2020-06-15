@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-13"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -36,7 +36,7 @@ On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vi
 ## Veeam service configuration
 {: #veeam_ordering-config}
 
-When you order the service, provide the following settings.
+When you order the service, provide the following settings:
 
 ### Number of VMs to License
 {: #veeam_ordering-config-vms}
@@ -46,7 +46,7 @@ At least 10 VMs are required for license management.
 ### Storage Size
 {: #veeam_ordering-config-storage-size}
 
-The capacity that meets your storage needs. For considerations to estimate storage size, see [Estimating Repository Capacity](https://bp.veeam.expert/repository_server/repository_planning/repository_planning_sizing){:external}.
+The capacity that meets your storage needs.
 
 ### Storage Performance
 {: #veeam_ordering-config-storage-performance}
@@ -56,8 +56,13 @@ The IOPS (input/output operations per second) per GB based on your workload requ
 ## Related links
 {: #veeam_ordering-related}
 
+* [Veeam v9.5 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)
+* [Veeam v10 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
-* [Managed Backup Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_veeam_services)
+* [Ordering Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering_licenses)
+* [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)
+* [Ordering and configuring IBM Cloud Object Storage with Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Veeam backup and replication](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){:external}
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}

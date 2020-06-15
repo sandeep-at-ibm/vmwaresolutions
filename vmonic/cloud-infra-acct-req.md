@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-10"
 
 keywords: user account, user permissions, VRF account
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -22,14 +21,14 @@ subcollection: vmwaresolutions
 # Requirements for the IBM Cloud infrastructure account
 {: #cloud-infra-acct-req}
 
-To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The cost of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
+To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The price of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 
 ## Permissions for the IBM Cloud infrastructure account
 {: #cloud-infra-acct-req-permissions}
 
 The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must have certain permissions to be able to order the components in your instances and perform operations on your behalf. The permission requirements are applicable to all types of instances and services you are ordering from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} infrastructure account in the {{site.data.keyword.slportal}}. For more information, see [Editing a user's customer portal permissions](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm).
+You can verify or update permissions for classic infrastructure users at any time. For more information, see [Classic infrastructure permissions](/docs/iam?topic=iam-infrapermission).
 
 | Permission         | Details                                 |
 |:------------------ |:--------------------------------------- |
@@ -51,10 +50,10 @@ Authorized users can verify and update the permissions for an {{site.data.keywor
 | Manage Server Monitoring | This permission is not required to place an order. However, it is required to retrieve and validate the monitoring status of the {{site.data.keyword.cloud_notm}} bare metal servers on which the VMware ESXi servers are running in your instance. |
 {: caption="Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastructure account" caption-side="top"}
 
-## Virtual Routing and Forwarding with Service Endpoints enabled
+## Virtual routing and forwarding with service endpoints enabled
 {: #cloud-infra-acct-req-vrf-se}
 
-Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account. If your account is non-VRF, you must convert to a VRF account. It is also recommended to enable your VRF account for using Service Endpoints.
+Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account. If your account is non-VRF, you must convert it to a VRF account. It is also recommended to enable your VRF account for using service endpoints.
 
 For more information, see:
 * [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

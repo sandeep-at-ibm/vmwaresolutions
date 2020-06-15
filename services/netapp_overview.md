@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-02"
+lastupdated: "2020-05-21"
 
 keywords: NetApp ONTAP Select, request NetApp ONTAP Select, tech specs NetApp ONTAP Select
 
@@ -30,7 +30,7 @@ NetApp ONTAP Select is deployed as a managed service through IBM Global Services
 3. In the **Contact us for NetApp ONTAP Select** box, click **Request a consultation**.
 4. On the IBM Services Experts page, click **Book a consultation** to book 30 minutes with a services expert.
 
-  An {{site.data.keyword.vmwaresolutions_short}} representative contacts you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
+  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
 
 ## Related links
 {: #netapp-related}

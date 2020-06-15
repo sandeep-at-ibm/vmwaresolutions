@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,7 @@ Before you can start the build process to install the Red Hat OpenShift cluster 
 * Ordering new subnets for the OpenShift environment:
   * A private portable subnet for the Red Hat OpenShift cluster NSX ESG.
   * A public portable subnet for the Red Hat OpenShift cluster NSX ESG.
-* Downloading Red Hat OpenShift 4.2 - Access to a Red Hat subscription to download the installer, pull secret and Red Hat Enterprise CoreOS OVA.
+* Downloading Red Hat OpenShift 4.4 - Access to a Red Hat subscription to download the installer, pull secret and Red Hat Enterprise CoreOS OVA.
 * Downloading RHEL 7.6 ISO - Access to a Red Hat subscription to download the Red Hat Enterprise Linux 7.x ISO for the bastion host.
 * {{site.data.keyword.cloud}} environment details - Collect the following details for {{site.data.keyword.cloud_notm}} for VMware Solutions environment:
   * vCenter Server instance details and passwords
@@ -44,7 +44,7 @@ Requirements:
 * 8 Public portable addresses assigned to the Public VLAN collected in the previous step.
 * 64 Private portable addresses assigned to the Private VLAN collected in the previous step.
 
-## Downloading Red Hat OpenShift 4.2
+## Downloading Red Hat OpenShift 4.4
 {: #openshift-runbook-runbook-prereq-download41}
 
 Access the [OpenShift Infrastructure Providers page](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}.
@@ -52,7 +52,7 @@ Access the [OpenShift Infrastructure Providers page](https://cloud.redhat.com/op
 1. Download the installer.
 2. Download the Pull Secret.
 3. Download the Red Hat Enterprise Linux CoreOS (RHEL CoreOS) OVA image or download the OVA by using `curl`:
-  `curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.2/latest/rhcos-4.2.0-x86_64-vmware.ova`.
+  `curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.4/latest/rhcos-4.4.3-x86_64-vmware.x86_64.ova`.
 4. Download the command-line tools if you want to run the commands from a desktop or outside Bastion host.
 
 ## Downloading RHEL 7.6 ISO
@@ -129,11 +129,14 @@ export GOVC_PASSWORD='xxxxx'
 export GOVC_INSECURE=1
 export GOVC_NETWORK='SDDC-DPortGroup-Mgmt'
 export GOVC_DATASTORE='vsanDatastore'
-govc import.spec ./rhcos-4.2.0-x86_64-vmware.ova | python -m json.tool > rhcos.json
+
+rhcos-4.4.3-x86_64-vmware.x86_64.ova
+
+govc import.spec ./rhcos-4.4.3-x86_64-vmware.x86_64.ova | python -m json.tool > rhcos.json
 vi rhcos.json
   - replace  "Network": "SDDC-DPortGroup-Mgmt"
   - leave name as "VM network"
-govc import.ova -options=./rhcos.json -name=rhcos-latest ./rhcos-4.2.0-x86_64-vmware.ova
+govc import.ova -options=./rhcos.json -name=rhcos-4.4.3-x86_64-vmware.x86_64.ova
 govc vm.markastemplate vm/rhcos-latest
 ```
 
@@ -158,5 +161,5 @@ govc datastore.upload rhel-server-7.6-x86_64-dvd.iso isos/rhel-server-7.6-x86_64
 {: #vcs-openshift-runbook-prerequisites-related}
 
 * [OpenShift NSX DLR configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxdlr-intro)
-* [OpenShift Bastion host setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
+* [OpenShift Bastion node setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
 * [Visual Studio Code](https://code.visualstudio.com/){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-10"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -205,6 +205,10 @@ For more information about working with VMs, see [Working with Virtual Machines]
 
 You can edit the properties of a VM, including the virtual machine name and description, hardware and network settings, and guest operating system settings.
 
+If you use the tenant portal **Password Reset** field to change your Windows Administrator password, ensure that you adhere to Windows complexity requirements. If you change the password in the tenant portal without doing so, the password does not work in the Windows VM template.
+{:important}
+
+
 #### Changing the general properties of a virtual machine
 {: #shared_vcd-ops-guide-change-properties}
 
@@ -233,6 +237,9 @@ For more information, see [Edit Virtual Machine Properties](https://docs.vmware.
 {: #shared_vcd-ops-guide-ibm-templates}
 
 If the VM is deployed from the IBM templates that are provided in the public catalog, the initial password that was generated during power-on is required when you first log in to the VM. You can find this password on the VM **Details** page.
+
+If you use the tenant portal **Password Reset** field to change your Windows Administrator password, ensure that you adhere to Windows complexity requirements. If you change the password in the tenant portal without doing so, the password does not work in the Windows VM template.
+{:important}
 
 1. From the **Guest OS Customization** pane, locate the **Password Reset** section. Then, locate the password in the **Specify password** field.
 2. After a successful login with the initial password, reset the password and log in again with the new password.
@@ -271,7 +278,7 @@ The edge gateway services are customer configurable and require configuration to
 * Red Hat operating system licensing and updates
 * Cloud Object Storage
 
-There are three types of organization virtual data center networks available in the VMware Solutions Shared virtual data center: routed or internal.
+There are two types of organization virtual data center networks available in the VMware Solutions Shared virtual data center: routed or internal.
 
 ### Routed network
 {: #shared_vcd-ops-guide-routed}
@@ -421,14 +428,16 @@ VMware Solutions Shared fully enables access to IaaS endpoints for {{site.data.k
 
 The following services are available:
 
-| Service | IP address |
+| Service | IP address (Endpoint) |
 |---|---|
 | Microsoft Windows Update Server | 52.117.132.5 |
 | Microsoft Key Management Server | 52.117.132.4 |
 | Red Hat Capsule Server | 52.117.132.7 |
-| DNS | 161.26.0.10 and 161.26.0.11 |
-| Ubuntu and Debian APT Mirrors | 161.26.0.6 |
-| NTP | 161.26.0.6 |
+| DNS | 161.26.0.10 (rs1.adn.networklayer.com) and 161.26.0.11 (rs2.adn.networklayer.com) |
+| Ubuntu and Debian APT Mirrors | 161.26.0.6 (mirrors.adn.networklayer.com) |
+| RHEL and CentOS YUM repo | 161.26.0.6 (mirrors.adn.networklayer.com) |
+| NTP | 161.26.0.6 (time.adn.networklayer.com) |
+| IBM Cloud Object Storage | [s3.direct.xxx.cloud-object-storage.appdomain.cloud](/docs/vpc?topic=vpc-connecting-vpc-cos) |
 {: caption="Table 2. Available services" caption-side="top"}
 
 Enabling access to the service network is done in two edge configuration steps.
@@ -476,6 +485,68 @@ If you have not already done so, create a vApp containing at least two VMs. For 
 9. Leave the **Static IP Pools** section blank.
 10. Set the slider to **Connect to an organization VDC network**.
 11. Click **Add**.
+
+## Configuring a private network endpoint
+{: #shared_vcd-ops-guide-pne}
+
+Every private network endpoint comes configured with one private network IP address that can be used to configure your virtual data center.
+
+### Prerequisites for configuring a private network endpoint
+{: #shared_vcd-ops-guide-pne-prereqs}
+
+* You must have a running VM. For more information, see [Creating a virtual machine](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-machine).
+* The VM must be connected to a routed organization virtual data center network. For more information, see [Creating a routed organization virtual data center network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-routed-organization) and [Connect the VMs to the network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-connect-vm).
+* You must have virtual routing and forwarding and service endpoints enabled on the account that the whitelisted IP or subnet belong to. For more information, see [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint).
+
+### Collecting network IP addresses
+{: #shared_vcd-ops-guide-pne-IPs}
+
+Collect the service network and private network IP addresses to configure the firewall and DNAT rules.
+
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
+2. In the **VMware Solutions Shared** table, click on the virtual data center to configure.
+3. In the **Private Network Endpoint** section, collect the **Service network IP** address and **Private network IP** address.
+
+### Configuring firewall rules for the VMware NSX Edge Services Gateway
+{: #shared_vcd-ops-guide-pne-firewall-rules}
+
+The firewall rule allows traffic from the private network IP to go through your Edge Service Gateway. You may need to repeat this process (steps 5 to 10) to allow different traffic to enter your virtual data center, depending on which ports and protocols you need to open up.
+
+1. From the tenant portal, click the menu icon at the top of the page and then select **Datacenters**.
+2. From the main page under **Virtual Datacenters**, click the virtual data center where you would like to configure the private network.
+3. In the left pane under **Networking**, click **Edges**.
+4. In the right pane select the network and click **Configure Services**.
+5. Click the **Firewall** tab and click **+** to add a firewall rule.
+6. Add the private network IP that you collected from the {{site.data.keyword.cloud_notm}} virtual data center details page to the **Source** field.
+7. Add the service network IP that you collected from the {{site.data.keyword.cloud_notm}} virtual data center details page to the **Destination** field.
+8. Select the **Protocol**, (TCP, UDP, or Any) and specify **ports** for the **Service** field.
+9. Select **Accept** for the **Action** field.
+10. Click **Save changes**.
+
+### Configuring DNAT rules for the NSX Edge Services Gateway
+{: #shared_vcd-ops-guide-pne-dnat-rules}
+
+A Destination NAT rule is necessary to allow traffic from a private network endpoint to the virtual data center.
+
+1. From the **Edge Gateway Services** pane, click the **NAT** tab.
+2. Under the **NAT44 Rules**, click **+ DNAT Rule**.
+3. Find the name of the service network that is assigned for the service network interface from the **IP Addresses** table in the **Edge Gateway Settings** section. The format for the service network name is ``w<idx>-service<idx>``, for example, ``w02-service02``.
+4. Click the **Applied On** arrow and select the **service network** interface.
+5. Add the Service network IP to the **Original Source IP/Range**.
+6. Click **Protocol** and select the port type for inbound traffic.
+7. For the ``TCP`` or ``UDP`` protocols, click **Original Port** and enter the port range you want to allow. Skip this step for the ``Any`` protocol.
+8. The **Translated Source IP/Range** is the IP addresses of the VM connected to the routed organization virtual data center.
+9. For the ``TCP`` or ``UDP`` protocols, select the **Translated Port** to route the traffic to. Skip this step for the ``Any`` protocol.
+10. Skip the **ICMP Type**. Optionally enter a description. Click **KEEP**.
+11. Click **Save changes**.
+
+### Validating the private network endpoint connection
+{: #shared_vcd-ops-guide-pne-validate}
+
+To validate the private network endpoint connection, login to the virtual server instance resource in your {{site.data.keyword.cloud_notm}} infrastructure account and then use SSH, RDP, or Ping (if ICMP is enabled) to connect to a VM in the virtual data center.
+
+Ensure that the organization virtual data center network type is ``routed`` and that the interface type of the network is ``SubInterface`` or ``Internal``.
+{:important}
 
 ## Related links
 {: #shared_vcd-ops-guide-related}

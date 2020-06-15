@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-08"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -58,8 +58,7 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
 You can order one or more {{site.data.keyword.cloud_notm}} bare metal servers with one of the following configurations:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
 * **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) and 4-CPU Intel Cascade Lake generation servers (Quad Intel Xeon Gold 6248) with your selected CPU model and RAM size.
-* **SAP-certified**: 2-CPU Intel Skylake or Intel Broadwell generation servers (Intel Xeon 6140/E7-8890 series) and Intel Cascade Lake generation servers (Intel Xeon Gold 5200/6200 series and Intel Xeon Platinum 8200 series) with your selected CPU model.
-* **Broadwell**: 4-CPU Intel Broadwell generation servers (Intel Xeon E7-4800 series) with your selected CPU model and RAM size.
+* **SAP-certified**: 2-CPU Intel Skylake generation servers (Intel Xeon 6140/E7-8890 series) and Intel Cascade Lake generation servers (Intel Xeon Gold 5200/6200 series and Intel Xeon Platinum 8200 series) with your selected CPU model.
 
 The options available depend on whether you selected the VMware vSAN component.
 

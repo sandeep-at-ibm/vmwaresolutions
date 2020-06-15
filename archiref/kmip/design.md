@@ -4,10 +4,9 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-19"
+lastupdated: "2020-06-05"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -30,7 +29,7 @@ KMIP for VMware is compatible with both VMware vSAN encryption and vSphere encry
 ### VMware vSAN encryption
 {: #kmip-design-vsan-encrypt}
 
-VMware vSAN encryption is only applicable to vSAN datastores. With this solution, VMware vCenter and your VMware ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual disk drives used for your vSAN datastore, including both cache and capacity disks. vSAN encryption is implemented in a way that preserves the benefits of vSAN compression and deduplication, if you choose this option when you order a new instance or add a cluster.
+VMware vSAN encryption is only applicable to vSAN datastores. With this solution, VMware vCenter and your VMware ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual disk drives used for your vSAN datastore, including both cache and capacity disks. vSAN encryption is implemented in a way that preserves the benefits of vSAN deduplication and compression, if you choose this option when you order a new instance or add a cluster.
 
 Because vSAN encryption operates at the datastore level, its primary goal is to prevent data exposure if loss of physical disk drives occurs. Also, vSAN encryption is fully compatible with all virtual machine (VM) backup and replication technologies, such as vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, Veeam, and IBM Spectrum Protect Plus.
 
@@ -59,11 +58,11 @@ When either type of encryption is enabled in your vSphere cluster, VMware create
 When KMIP for VMware is used together with vSAN encryption or vSphere encryption, several layers of key protection exist.
 
 If you plan to rotate keys, review the following information about the levels at which the keys can be rotated:
-* Your customer root key (CRK) protects all VMware keys. The keys can be rotated in the IBM Key Protect or Hyper Protect Crypto Services instance that is associated with your KMIP for VMware instance.
-* KMIP for VMware uses your CRK to protect the keys it generates and distributes to VMware. VMware considers these keys to be _key encrypting keys (KEKs)_.
-  * If you are using vSphere encryption, you can rotate the keys by using the **Set-VMEncryptionKey** PowerShell command.
-  * If you are using vSAN encryption, you can rotate the keys on the vSAN user interface.
-* VMware uses these KEKs to protect the actual keys it uses to encrypt disk drives and VM disks. You can rotate these keys by using what VMware calls a "deep" rekey. This operation reencrypts all your encrypted data so it might take a long time.
+* Level 1: Your customer root key (CRK) protects all VMware keys. These keys can be rotated in the IBM Key Protect or Hyper Protect Crypto Services instance that is associated with your KMIP for VMware instance. When these keys are rotated in the IBM Key Protect instance, KMIP for VMware handles the new CRK automatically and no operation is needed in VMware or vCenter Server.
+* Level 2: KMIP for VMware uses your CRK to protect the keys that it generates and distributes to VMware. VMware considers these keys to be key encrypting keys (KEKs). KEKs rotation is relatively fast. VMware reaches out to KMIP for a new key, takes the DEKs encrypted by the original key and wraps them in this new key, and then stores the updated encrypted DEKs.
+  * If you are using vSphere encryption, you can rotate the KEKs by using the **Set-VMEncryptionKey** PowerShell command.
+  * If you are using vSAN encryption, you can rotate the KEKs by using the vSAN user interface.
+* Level 3: VMware uses these KEKs to protect the actual keys that it uses to encrypt disk drives and VM disks. You can rotate these keys by using what VMware calls a "deep" rekey. This operation reencrypts all your encrypted data so it might take a long time.
   * If you are using vSphere encryption, you can perform a deep rekey by using the **Set-VMEncryptionKey** PowerShell command.
   * If you are using vSAN encryption, you can perform a deep rekey by using the vSAN user interface.
 

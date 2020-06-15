@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-04-21"
 
 subcollection: vmwaresolutions
 
@@ -47,7 +47,7 @@ range and default gateway.
 9. Click **OK** to save.
 10. Find the CGW-<xxx>-WANOPT in vCenter.
 11. Edit settings on the VM.
-12. Click the check box to connect Network adapter 1.
+12. Select the checkbox to connect Network adapter 1.
 13. Click **OK**.
 14. Go to `https://<configured_WAN_OPT_IP>`.
 15. Log in with the `admin` default user and the `admin` password.

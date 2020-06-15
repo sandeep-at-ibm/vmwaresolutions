@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-02"
+lastupdated: "2020-05-21"
 
 keywords: Multi-cloud Management Services, request Multi-cloud Management Services, tech specs Multi-cloud Management Services
 
@@ -33,7 +33,7 @@ Managing the VMware virtual infrastructure consisting of compute, network, and s
 2. Scroll down to the **Services** section, and then click **Managed Services for VMware Workload Transformation** on the **Professional Services** card.
 3. On the Managed Services for VMware Workload Transformation page, in the **Engage Managed Services for VMware Workload Transformation Pre-Sales** box, click **Request a consultation**.
 
-  A Managed Services for VMware Workload Transformation representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
+  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
 
 ## Related links
 {: #managing_mcms-related}

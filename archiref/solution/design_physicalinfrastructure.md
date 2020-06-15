@@ -4,10 +4,9 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-06-13"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -39,18 +38,18 @@ The {{site.data.keyword.cloud_notm}} bare metal servers reside in the {{site.dat
 
 Each vCenter Server instance begins with a 3- or 4-host deployment, depending on the choice of storage solution.
 
-The physical host employs two locally attached disks that are allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Each physical host has redundant 10-Gbps network connections for both public and private network access.
+The physical host employs two locally attached disks that are allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf){:external}. Each physical host has redundant 10-Gbps network connections for both public and private network access.
 
 The {{site.data.keyword.cloud_notm}} bare metal server has the following specifications:
 * CPU: Dual or Quad Intel Xeon, varying core and speed configuration
 * Memory: Varying configuration, 64 GB or larger
 * Network: 4 x 10 Gbps
-* Number of Drives: 2 or more
+* Number of drives: two or more
 
 ## Physical network design
 {: #design_physicalinfrastructure-net-design}
 
-Physical networking is handled by {{site.data.keyword.cloud_notm}}. Review the following descriptions of the physical network that is provided by the IBM Cloud and physical host connections (VLANs, MTU) associated with the physical hosts.
+Physical networking is handled by {{site.data.keyword.cloud_notm}}. Review the following descriptions of the physical network that is provided by the {{site.data.keyword.cloud_notm}} and physical host connections (VLANs, MTU) associated with the physical hosts.
 
 ### IBM Cloud network overview
 {: #design_physicalinfrastructure-ibm-cloud-network}
@@ -177,15 +176,15 @@ For more information about the supported configurations, see the [vCenter Server
 ### Shared File-level storage across hosts
 {: #design_physicalinfrastructure-shared-storage}
 
-When using shared file-level storage, a 2-TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, which is known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX.
+When using shared file-level storage, a 2 TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, which is known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX.
 
-The storage is attached by using the NFS v3 protocol at a 2 IOPS/GB level from IBM Cloud.
+The storage is attached by using the NFS v3 protocol at a 4 IOPS/GB level from {{site.data.keyword.cloud_notm}}.
 
 ![NFS shares that are attached to VMware deployment](../../images/vcsv4radiagrams-ra-nfs-shares.svg "NFS shares that are attached to VMware deployment: management share and customer specified share"){: caption="Figure 4. NFS shares that are attached to VMware deployment" caption-side="bottom"}
 
 You can allocate and mount more file shares across all hosts for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.cloud_notm}} data center. All shares are attached by using the NFS v3 protocol. Additionally, it is possible to attach NFS v3 file shares by applying the NetApp ONTAP Select offering.
 
-The availability of the 10 IOPS/GB depends on the IBM Cloud data center. {{site.data.keyword.cloud_notm}} data centers that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/vmwaresolutions?topic=vmwaresolutions-storage-benefits#storage-benefits).
+The availability of the 10 IOPS/GB depends on the {{site.data.keyword.cloud_notm}} data center. {{site.data.keyword.cloud_notm}} data centers that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/vmwaresolutions?topic=vmwaresolutions-storage-benefits#storage-benefits).
 
 For more information about the shared NAS used in this solution, see [Shared storage architecture](/docs/vmwaresolutions?topic=vmwaresolutions-storage-benefits#storage-benefits).
 

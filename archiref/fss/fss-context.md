@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-04-20"
 
 subcollection: vmwaresolutions
 
@@ -35,10 +35,10 @@ Connections between the on-premises environment, CSP, CHP, and IBM Cloud travers
 * Management cluster - provides compute, storage, and network services to support management functions.
 * Management services - enable administrators to monitor, operate, and maintain the infrastructure to ensure it is compliant, secure, and available to support client applications.
 * Workload clusters - provides compute, storage, and network services to support client applications and operations.
-* Applications - applications are VMs that deliver services to the client that support business operations.
+* Applications - applications are VMs that deliver services to the user that supports business operations.
 * Workload edge services cluster (optional) - deployed where necessary to protect client applications. The cluster is only necessary where dedicated resources are wanted or required for a gateway appliance.
-* On-premises facilities - client existing facilities.
-* CSP (Cloud Service Provider) - deliver ancillary services to the client. Examples might include credit card transaction processing or ACH services.
+* On-premises facilities - user existing facilities.
+* CSP (Cloud Service Provider) - deliver ancillary services to the user. Examples might include credit card transaction processing or ACH services.
 * CHP (Cloud Hosting Provider) - can provide hosting services to support disaster recovery or specialized application hosting.
 
 **Next topic**: [FSS Cloud zero-trust model](/docs/vmwaresolutions?topic=vmwaresolutions-fss-separation-of-duties)

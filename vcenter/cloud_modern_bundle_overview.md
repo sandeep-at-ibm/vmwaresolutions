@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-06-12"
 
-keywords: single-node trial, migration app modernization, tech specs migration app modernization
+keywords: single-node, migration app modernization, tech specs migration app modernization
 
 subcollection: vmwaresolutions
 
@@ -19,31 +19,31 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Single-node Trial for Migration and App Modernization overview
+# Single-node for Migration and App Modernization overview
 {: #cloud_modern_bundle_overview}
 
-The Single-node Trial for Migration and App Modernization provides the option to test drive {{site.data.keyword.cloud}} to migrate VMware workloads to the {{site.data.keyword.cloud_notm}} and then modernize simple workloads by using containers. This offering is a trial version of Red Hat OpenShift for VMware. It provides the Kubernetes management platform for containers and the single-tenant VMware platform, which you can manage by using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while you maintain the same level of control and visibility that is provided on-premises.
+The Single-node for Migration and App Modernization provides the option to test drive {{site.data.keyword.cloud}} to migrate VMware workloads to the {{site.data.keyword.cloud_notm}} and then modernize simple workloads by using containers. This offering is a trial version of Red Hat OpenShift for VMware. It provides the Kubernetes management platform for containers and the single-tenant VMware platform, which you can manage by using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while you maintain the same level of control and visibility that is provided on-premises.
 {: shortdesc}
 
-The trial is designed for migration of up to 20 simple development or test workloads by using vCenter Server and containerization of those workloads with the Kubernetes-based OpenShift application development platform. Automation installs and configures VMware HCX in the {{site.data.keyword.cloud_notm}}, provides an on-premises HCX activation key, and installs and configures a small development and test topology of Red Hat OpenShift in a matter of hours.
+This offering is designed for migration of up to 20 simple development or test workloads by using vCenter Server and containerization of those workloads with the Kubernetes-based OpenShift application development platform. Automation installs and configures VMware HCX in the {{site.data.keyword.cloud_notm}}, provides an on-premises HCX activation key, and installs and configures a small development and test topology of Red Hat OpenShift in a matter of hours.
 
-The Single-node Trial for Migration and App Modernization is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering add-on services, and applying updates are not supported.
+The Single-node for Migration and App Modernization is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts, adding and deleting clusters, ordering add-on services, and applying updates are not supported.
 {:important}
 
-To get the most out of the Single-node Trial instance, you can use on demand consulting and expert services to help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. For more information, see:
+To get the most out of the Single-node instance, you can use on demand consulting and expert services to help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. For more information, see:
 
 * [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external}
-* [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}
+* [IBM Expertise Connect](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}
 
-Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
+Additionally, [IBM Garage](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
 
-This trial is intended for use up to 90 days. When you are finished with the trial, you can delete this environment and provision a new environment that meets your capacity needs.
+This offering is intended for use up to 90 days. When you are finished with it, you can delete this environment and provision a new environment that meets your capacity needs.
 {:note}
 
-## Technical specifications for Single-node Trial for Migration and App Modernization instances
+## Technical specifications for Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_overview-tech-specs}
 
-The following components are included in your Single-node Trial for Migration and App Modernization instance.
+The following components are included in your Single-node for Migration and App Modernization instance.
 
 The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
 {:note}
@@ -72,7 +72,7 @@ Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz with 384 GB RAM) f
 * 1 TB for customer workload (for 20 customer VMs)
 * 2 TB for Red Hat OpenShift
 
-### Networking specifications for Single-node Trial for Migration and App Modernization instances
+### Networking specifications for Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_overview-networking-specs}
 
 The following networking components are ordered:
@@ -82,7 +82,7 @@ The following networking components are ordered:
 *  Two VMware NSX Edge Services Gateways:
   * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation.
 
-    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Single-node Trial for Migration and App Modernization instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Single-node for Migration and App Modernization instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
   * A secure customer-managed VMware NSX Edge Services Gateway (ESG) for outbound and inbound HTTPS workload traffic. The ESG is deployed by IBM as a template that you can modify to provide VPN access or public access.
 
@@ -97,20 +97,20 @@ The following virtual server instances (VSIs) are ordered:
 ### IBM-provided licenses and fees
 {: #cloud_modern_bundle_overview-license-and-fee}
 
-The following licenses are included with your Single-node Trial for Migration and App Modernization instance order:
+The following licenses are included with your Single-node for Migration and App Modernization instance order:
 
 * VMware vSphere Enterprise Plus 6.7u2
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
-* Red Hat OpenShift for VMware 4.2
+* Red Hat OpenShift for VMware 4.4
 
-Single-node Trial for Migration and App Modernization instances do not support Bring Your Own License (BYOL).
+Single-node for Migration and App Modernization instances do not support Bring Your Own License (BYOL).
 {:note}
 
 ## Technical specifications for HCX
 {: #cloud_modern_bundle_overview-hcx-tech-specs}
 
-The Single-node Trial for Migration and App Modernization includes HCX. The following components are ordered and included in the HCX service.
+The Single-node for Migration and App Modernization includes HCX. The following components are ordered and included in the HCX service.
 
 On-premises HCX instances include only licensing and activation.
 {:note}
@@ -141,7 +141,7 @@ More HCX appliances are deployed during configuration as necessary for L2 connec
 ## Technical specifications for Red Hat OpenShift
 {: #cloud_modern_bundle_overview-icp-tech-specs}
 
-Red Hat OpenShift for VMware 4.2 is installed by using the Development and Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about Red Hat OpenShift, see [Red Hat OpenShift for VMware overview](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview).
+Red Hat OpenShift for VMware 4.4 is installed by using the Development and Test topology on all Single-node for Migration and App Modernization instances. For more information about Red Hat OpenShift, see [Red Hat OpenShift for VMware overview](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview).
 
 ## Related links
 {: #cloud_modern_bundle_overview-related}

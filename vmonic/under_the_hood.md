@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-05-22"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 ---
 {:external: target="_blank" .external}
 
-# IBM Cloud for VMware Solutions: Take a look under the hood
+# VMware Solutions: Take a look under the hood
 {: #under_the_hood}
 
 ## Deploy and manage VMware virtualized environments
@@ -69,7 +69,7 @@ When you order a new VMware vCenter instance, you choose the instance location a
 3. Deploying and configuring VMware vCenter Server with embedded Platform Services Controller, VMware NSX Manager, Controllers, and Edge Services Gateways.
 4. Ordering and configuring your cluster storage, including VMware vSAN or {{site.data.keyword.cloud_notm}} Endurance storage.
 5. Deploying an IBM management component called the IBM CloudDriver.
-6. Deploying and configuring any addon services that you selected for your instance.
+6. Deploying and configuring any add-on services that you selected for your instance.
 7. Validating the installation and configuration of the environment.
 
 You select the {{site.data.keyword.cloud_notm}} data center where you want to provision your instance. Provided the hardware is available in your selected {{site.data.keyword.cloud_notm}} data center, the instance provisioning process typically takes less than 24 hours.
@@ -89,18 +89,18 @@ Your instance components are typically accessed by their host names rather than 
 After your instance has been deployed, you can manage it from the console. The management capabilities include the ability to do each of the following:
 
 * Deploy and remove nodes from your cluster
-* Deploy and remove additional clusters in the same data center and pod, or in alternative data centers and pods
-* Deploy and remove addon services for your instance
+* Deploy and delete additional clusters in the same data center and pod, or in alternative data centers and pods
+* Deploy and delete addon services for your instance
 * Upgrade certain license editions for your instance
 
-The {{site.data.keyword.vmwaresolutions_short}} console provides a detailed view of each of your vCenter Server instances. For each instance, the **Summary** tab includes a link to the vCenter console and other details about the instance and management components. The **Infrastructure** tab shows details about the instance's clusters, hosts, storage, and networking, and allows you to add or remove clusters and hosts and storage. On the **Licensing** tab, you can upgrade certain license editions. On the **Services** tab, you can view and manage the add-on services that are deployed for your instance. The **Deployment history** tab shows a history of all actions that are performed on your instance.
+The {{site.data.keyword.vmwaresolutions_short}} console provides a detailed view of each of your vCenter Server instances. For each instance, the **Summary** tab includes a link to the vCenter console and other details about the instance and management components. The **Infrastructure** tab shows details about the instance's clusters, hosts, storage, and networking, and allows you to add or delete clusters and hosts and storage. On the **Licensing** tab, you can upgrade certain license editions. On the **Services** tab, you can view and manage the add-on services that are deployed for your instance. The **Deployment history** tab shows a history of all actions that are performed on your instance.
 
 ## IBM Cloud for VMware Solutions components
 {: #under_the_hood-comp}
 
-A number of different components work together to provision and manage your environment. Most of these components are deployed into your {{site.data.keyword.cloud_notm}} account. Because the solution depends on all of these components working together, you should not modify or cancel any of these components from your {{site.data.keyword.cloud_notm}} account. The correct way to remove a running instance is by using the console rather than canceling the individual components.
+A number of different components work together to provision and manage your environment. Most of these components are deployed into your {{site.data.keyword.cloud_notm}} account. Because the solution depends on all of these components working together, you should not modify or cancel any of these components from your {{site.data.keyword.cloud_notm}} account. The correct way to delete a running instance is by using the console rather than canceling the individual components.
 
-While this is an integrated virtualization environment, the cost of various virtualization components (such as VMware licenses), infrastructure components (bare metal servers, VLANs, subnets, and storage), and management components is itemized in the bill that you receive from {{site.data.keyword.cloud_notm}}.
+While this is an integrated virtualization environment, the price of various virtualization components (such as VMware licenses), infrastructure components (bare metal servers, VLANs, subnets, and storage), and management components is itemized in the bill that you receive from {{site.data.keyword.cloud_notm}}.
 
 ### The IBM Cloud for VMware Solutions console
 {: #under_the_hood-console}

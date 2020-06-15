@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-05"
 
 keywords: KMIP for VMware, remove KMIP stand-alone, delete KMIP for VMware
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -23,7 +22,13 @@ Use this procedure to delete the KMIP for VMware instances that you ordered for 
 ## Before you begin
 {: #kmip_standalone_deleting-req}
 
-Ensure that you reviewed all the considerations in [Considerations when deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations).
+You must remove encryption and configuration in the following sequence:
+1. Decrypt all virtual machines or vSAN datastores that are protected by this KMIP for VMware instance.
+2. Remove the Key Management Server (KMS) configuration for all vCenter Server instances that are connected to this KMIP for VMware instance.
+3. Remove the KMIP for VMware instance.
+4. Remove all standard keys in your Key Protect or Hyper Protect Crypto Services (HPCS) instance that were in use by this KMIP for VMware instance.
+5. If wanted, remove the customer root key (CRK) in your Key Protect or HPCS service instance that was in use by this KMIP for VMware instance. First, ensure that there are no other users of this CRK.
+6. If wanted, remove the Key Protect or HPCS service instance that was in use by this KMIP for VMware instance. First, ensure that there are no other users of this Key Protect or HPCS service instance.
 
 ## Procedure to delete KMIP for VMware instances
 {: #kmip_standalone_deleting-procedure}

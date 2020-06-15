@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-13"
+lastupdated: "2020-06-11"
 
 keywords: veeam, veeam install, tech specs veeam
 
@@ -35,6 +35,9 @@ When you use the Veeam self-service portal to create backup jobs, you can choose
 
 You can access the Veeam portal on the virtual data center details page when the instance is in the **Ready to Use** state. For information about accessing the details page, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-viewing).
 
+Starting with the V3.6 release, Veeam Availability Suite v10 provides off-site copy mode for new and existing VMware Solutions Shared instances. You must contact IBM support to enable copy mode. For more information, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
+{:note}
+
 ### Procedure to access the Veeam self-service portal from the virtual data center instance
 {: #shared_veeam-portal-proc-access}
 
@@ -57,10 +60,15 @@ Alternatively, click the **admin** drop-down in the vCloud Director console to l
 
 Veeam usage incurs On-Demand charges. For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
 
+### Backup data storage and encryption
+{: #shared_veeam-storage}
+
+For more information about how Veeam Availability Suite stores backups, see [How your data is stored and encrypted in the IBM Cloud for VMware Solutions Shared Veeam Availability Suite service](/docs/vmwaresolutions?topic=vmwaresolutions-data-security-mng-data#data-security-data-veeamshared).
+
 ## Veeam Cloud Connect Replication
 {: #shared_veeam-cloud-connect}
 
-Veeam Cloud Connect Replication provides to seamless replication of your workloads from on-premises to {{site.data.keyword.cloud}}. Use Veeam Cloud Connect as disaster recovery for failover during on-premises outages or to permanently move workloads directly to {{site.data.keyword.cloud_notm}}.
+Veeam Cloud Connect Replication provides seamless replication of your workloads from on-premises to {{site.data.keyword.cloud}}. Use Veeam Cloud Connect as disaster recovery for failover during on-premises outages or to permanently move workloads directly to {{site.data.keyword.cloud_notm}}.
 
 When you access Veeam Cloud Connect, **DNS name** and **Port** details are specific to the region where your virtual data center exists.
 
@@ -97,7 +105,7 @@ You must add a prefix to your **User** credentials with your organization name. 
 
 For more information about using Veeam Cloud Connect, see the [Veeam Cloud Connect User Guide](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_user_guide.html?ver=95u4){:external}.
 
-## Deleting Veeam Backups
+## Deleting Veeam backups
 {: #shared_veeam-delete}
 
 Restore points are automatically removed from the Veeam self-service portal when you delete a virtual data center instance. For more information, see [Deleting virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_deletinginstance).

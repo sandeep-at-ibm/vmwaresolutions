@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-22"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -45,7 +45,7 @@ ESXi servers for stretched vSAN clusters are added in pairs.
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
    {:important}
 
-8. Review the estimated cost and click **Provision**.
+8. Review the estimated price and click **Provision**.
 
 ### Results after you add ESXi servers
 {: #mcv_addingremovingservers-adding-results}
@@ -107,7 +107,7 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 6. In the **Storage** window, complete the storage configuration.
    * If you want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
    * If you want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share.
-7. Review the estimated cost and click **Provision**.
+7. Review the estimated price and click **Provision**.
 
 ### Results after you add NFS storage
 {: #mcv_addingremovingservers-adding-nfs-storage-results}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-06-05"
 
 keywords: FAQ, host, ESXi server
 
@@ -34,7 +34,7 @@ Your vCenter Server instance allows you to expand the default cluster to have up
 {: #faq_esxi-cluster}
 {: faq}
 
-For instances deployed in V2.2 and later, you can add a maximum of 51 ESXi servers to an initial cluster and a maximum of 59 ESXi servers to the added clusters.
+You can add a maximum of 51 ESXi servers to an initial cluster and a maximum of 59 ESXi servers to the added clusters.
 
 For instances deployed in V2.1 or earlier, you must enable the necessary vSAN support to increase the cluster size beyond 32. Complete the following steps to enable the necessary vSAN support:
 

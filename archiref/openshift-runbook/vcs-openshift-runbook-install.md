@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-29"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Red Hat OpenShift 4.2 user provider infrastructure installation
+# Red Hat OpenShift 4.4 user provider infrastructure installation
 {: #openshift-runbook-runbook-install-intro}
 
 Red Hat OpenShift 4 introduced the following concepts:
@@ -33,7 +33,7 @@ These instructions use the OpenShift installer in the UPI mode. Terraform is use
 5. The `terraform.tfvars` file is created to hold the variables for the Terrafrom installation.
 6. Terraform is run, which provisions the VMs. The VMs are started, configured, and the OpenShift cluster is created.
 
-For more information about installing the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.2/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
+For more information about installing the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
 
 ## Creating the OpenShift Installer yaml file
 {: #openshift-runbook-runbook-install-yaml}
@@ -97,7 +97,7 @@ sshKey: 'COPY PUBLIC SSH KEY HERE'
 In the SSH session to the bastion node with root privileges, use the following commands to create the install-config.yaml file:
 
 ```bash
-cd /opt/ocp42install
+cd /opt/ocpinstall
 vi install-config.yaml
 ```
 
@@ -115,8 +115,8 @@ cp install-config.yaml install-config.bak
 Now that the install-config.yaml is created and populated run the OpenShift Installer to create the ignition files
 
 ```bash
-cd /opt/ocp42install/
-openshift-install create ignition-configs --dir=/opt/ocp42install/
+cd /opt/ocpinstall/
+openshift-install create ignition-configs --dir=/opt/ocpinstall/
 ```
   The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-trbl-intro).
    {:note}
@@ -165,7 +165,7 @@ The DNS IP details are hardcoded within the Terraform template. You must change 
 {: caption="Table 2. ignition.tf file parameters" caption-side="top"}
 
 1. In the SSH session to the bastion node, with root privileges, use the following command to open the file:
-   `vi /opt/ocp42install/installer/upi/vsphere/machine/ignition.tf`
+   `vi /opt/ocpinstall/installer/upi/vsphere/machine/ignition.tf`
 2. Type `i` to enter insert mode, and then scroll down to the DNS1 entry.
 3. Update the IP address from 8.8.8.8 to match the deployment.
 4. Press Esc, then type `:wq` to save the file and exit the vi editor.
@@ -258,9 +258,9 @@ Use the following table to document the parameters needed for your deployment, e
 
 The ignition files can be copied after using the following commands to display the files:
 
-`cat /opt/ocp42install/master.ign`
+`cat /opt/ocpinstall/master.ign`
 
-`cat /opt/ocp42install/worker.ign`
+`cat /opt/ocpinstall/worker.ign`
 
 | Parameter | Example | Your Deployment |
 | --- | --- | --- |
@@ -317,7 +317,7 @@ END_OF_WORKER_IGNITION
 {: caption="Figure 2. terraform.tfvars example file" caption-side="bottom"}
 
 The terraform.tfvars file is created as follows:
-1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocp42install/installer/upi/vsphere/terraform.tfvars`.
+1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocpinstall/installer/upi/vsphere/terraform.tfvars`.
 2. Type `i` to enter insert mode, paste the file contents.
 3. Press Esc, then type `:wq` to save the file and exit the vi editor.
 
@@ -325,7 +325,7 @@ The terraform.tfvars file is created as follows:
 {: #openshift-runbook-runbook-install-terraform-main}
 
 Remove the dns module section as the file expects to use AWS route 53 for DNS. The main.tf file is updated as follows:
-1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocp42install/installer/upi/vsphere/main.tf`.
+1. In the SSH session to the bastion node, with root privileges, use the following command to open the file; `vi /opt/ocpinstall/installer/upi/vsphere/main.tf`.
 2. Type `i` to enter insert mode.
 3. Scroll down the file until you reach the DNS module section.
 4. Delete the entire section shown in "File 3: Section to be removed".
@@ -372,7 +372,7 @@ After Terraform provisions the VMs, the OpenShift cluster bootstraps itself:
 In the SSH session to the bastion node, with root privileges, run the following commands, ensuring that each one completes with no errors before entering the next command.
 
 ```bash
-cd /opt/ocp42install/installer/upi/vsphere/
+cd /opt/ocpinstall/installer/upi/vsphere/
 terraform init
 terraform plan
 terraform apply -auto-approve
@@ -384,7 +384,7 @@ terraform apply -auto-approve
 1. After the virtual machines have bootstrapped, run the following command to monitor the installation:
 
     ```bash
-    cd /opt/ocp42install
+    cd /opt/ocpinstall
     openshift-install --dir=. wait-for bootstrap-complete --log-level debug
     ```
 
@@ -398,7 +398,7 @@ terraform apply -auto-approve
 
     ```bash
     mkdir /root/.kube/
-    cp /opt/ocp42install/auth/kubeconfig ~/.kube/config
+    cp /opt/ocpinstall/auth/kubeconfig ~/.kube/config
     oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"storage":{"emptyDir":{}}}}'
     ```
 
@@ -421,7 +421,7 @@ terraform apply -auto-approve
 
 The password for the user that was created during installation can also be found in the auth subdirectory in the install-dir. It lets you log in through oc login and also gives you access to the web console. The URL for the console is `https://console-openshift-console.<cluster>.<base_domain>`.
 
-1. Run the following command from the */opt/ocp42install* directory:
+1. Run the following command from the */opt/ocpinstall* directory:
 
     ```bash
     watch -n5 oc get clusteroperators
@@ -433,37 +433,37 @@ The password for the user that was created during installation can also be found
     Every 5.0s: oc get clusteroperators
 
     NAME                                 VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
-    authentication                       4.2.0    True        False         False      20m
-    cloud-credential                     4.2.0    True        False         False      38m
-    cluster-autoscaler                   4.2.0    True        False         False      38m
-    console                              4.2.0    True        False         False      27m
-    dns                                  4.2.0    True        False         False      35m
-    image-registry                       4.2.0    True        False         False      14m
-    ingress                              4.2.0    True        False         False      30m
-    kube-apiserver                       4.2.0    True        False         False      33m
-    kube-controller-manager              4.2.0    True        False         False      33m
-    kube-scheduler                       4.2.0    True        False         False      32m
-    machine-api                          4.2.0    True        False         False      38m
-    machine-config                       4.2.0    True        False         False      33m
-    marketplace                          4.2.0    True        False         False      30m
-    monitoring                           4.2.0    True        False         False      28m
-    network                              4.2.0    True        False         False      37m
-    node-tuning                          4.2.0    True        False         False      32m
-    openshift-apiserver                  4.2.0    True        False         False      31m
-    openshift-controller-manager         4.2.0    True        False         False      33m
-    openshift-samples                    4.2.0    True        False         False      24m
-    operator-lifecycle-manager           4.2.0    True        False         False      35m
-    operator-lifecycle-manager-catalog   4.2.0    True        False         False      35m
-    service-ca                           4.2.0    True        False         False      38m
-    service-catalog-apiserver            4.2.0    True        False         False      32m
-    service-catalog-controller-manager   4.2.0    True        False         False      32m
-    storage                              4.2.0    True        False         False      30m
+    authentication                       4.4.5    True        False         False      20m
+    cloud-credential                     4.4.5    True        False         False      38m
+    cluster-autoscaler                   4.4.5    True        False         False      38m
+    console                              4.4.5    True        False         False      27m
+    dns                                  4.4.5    True        False         False      35m
+    image-registry                       4.4.5    True        False         False      14m
+    ingress                              4.4.5    True        False         False      30m
+    kube-apiserver                       4.4.5    True        False         False      33m
+    kube-controller-manager              4.4.5    True        False         False      33m
+    kube-scheduler                       4.4.5    True        False         False      32m
+    machine-api                          4.4.5    True        False         False      38m
+    machine-config                       4.4.5    True        False         False      33m
+    marketplace                          4.4.5    True        False         False      30m
+    monitoring                           4.4.5    True        False         False      28m
+    network                              4.4.5    True        False         False      37m
+    node-tuning                          4.4.5    True        False         False      32m
+    openshift-apiserver                  4.4.5    True        False         False      31m
+    openshift-controller-manager         4.4.5    True        False         False      33m
+    openshift-samples                    4.4.5    True        False         False      24m
+    operator-lifecycle-manager           4.4.5    True        False         False      35m
+    operator-lifecycle-manager-catalog   4.4.5    True        False         False      35m
+    service-ca                           4.4.5    True        False         False      38m
+    service-catalog-apiserver            4.4.5    True        False         False      32m
+    service-catalog-controller-manager   4.4.5    True        False         False      32m
+    storage                              4.4.5    True        False         False      30m
     ```
 
 
-**Next topic:** [Red Hat OpenShift 4.2 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
+**Next topic:** [Red Hat OpenShift 4.4 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-install-related}
 
-* [VMware Solutions on {{site.data.keyword.cloud}} and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
+* [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)

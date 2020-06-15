@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -38,7 +38,7 @@ This section describes the overall configuration design for enabling {{site.data
   * Create a Host Group for Site A and a host group for Site B. Add the correct hosts into each group.
   * Create a VM Group for Site A and a VM Group for Site B. Add the correct VMs into each group.
   * With a ‘Should’ Rule, pin a VM Group to a Host Group to avoid VMs moving between sites under normal circumstances.
-5.	Isolation address for vSAN Stretched Cluster
+5. Isolation address for vSAN Stretched Cluster
   * das.usedefaultisolationaddress – set to false
   * das.isolationaddress0 - IP address on vSAN network on Site A.
     Use another IP on the same subnet as the vSAN VMK; preferably the vSAN VMK default gateway in Site A.
@@ -51,7 +51,7 @@ This section describes the overall configuration design for enabling {{site.data
   * vMotion traffic: 50 shares
   * vSAN traffic: 100 shares
   * All other unused services must be set to *Low* or *0 shares*
-7.	Performance Profile for the system hardware is set to Max Performance.
+7. Performance Profile for the system hardware is set to Max Performance.
 
 ## vCenter High Availability
 {: #mcv-archi-comp-HA}
@@ -103,6 +103,24 @@ All of the hosts in the resource layer contribute all of their disks to the vSAN
 8. When you configure a vSAN Stretched Cluster specify the following to create two failure domains:
   * Hosts which are in Site A are part of the Primary Site
   * Host which are in Site B are part of the Secondary Site
+
+### Known issue with the default storage policy
+{: #mcv-archi-comp-storage}
+
+For a vCenter Server instance with stretched vSAN cluster, the default storage policy is not usable due to the default RAID settings. The default vSAN storage policy is set to **Failures to tolerate 1 failure - RAID-5 (Erasure Coding)**, which cannot be achieved with the minimum stretched vSAN cluster size of 6 hosts.
+
+To resolve the issue, create a new vSAN storage policy that works with the 6-host cluster. Complete the following steps from the VMware vSphere Web Client:
+1. Select **Policies and Profiles** from the main menu.
+2. From the left navigation pane, click **VM Storage Policies**.
+3. In the middle pane, click **Create VM Storage Policy**.
+4. In the window that opens, enter the following values and click **Next** after each of them:
+  * For name, enter **Minimal vSAN storage policy**.
+  * On the Policy Structure page, under **Datastore specific rules**, select the checkbox **Enable rules for vSAN storage**.
+  * On the vSAN page, select **None - standard cluster** for **Site disaster tolerance** and **1 failure - RAID 1 (Mirroring)** for **Failures to tolerate**.
+  * On the Storage compatibility page, you should see **vsanDatastore** displayed in the table of compatible datastores.
+5. On the summary page, click **Finish**.
+
+   The new storage policy is now ready to use. Apply the new storage policy to all VMs deployed on the stretched vSAN cluster.
 
 ### Network design
 {: #mcv-archi-comp-vsan-network}

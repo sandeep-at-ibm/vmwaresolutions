@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-05-28"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -37,7 +37,7 @@ As part of the ordering process for your vCenter Server instance, the following 
   The NSX Edge is not deployed for instances that are private only.
   {:note}
 
-**(NSX-V only)** If you installed the Veeam service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when you install Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations#veeam_considerations-install).
+**(NSX-V only)** If you installed the Veeam service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Veeam overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations).
 
 ## Procedure to configure the networking settings for your VMs
 {: #vc_esg_config-procedure-config-networking}

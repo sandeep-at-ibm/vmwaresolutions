@@ -4,14 +4,16 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-27"
+
+keywords: nsx editions, vsan editions, nsx edition comparison, vsan edition comparison
 
 subcollection: vmwaresolutions
 
 
 ---
 
-# Comparison chart for VMware component editions
+# Comparison chart for VMware NSX and VMware vSAN editions
 {: #solution-appendix}
 
 ## VMware NSX edition comparison
@@ -30,7 +32,7 @@ Component | Purpose | License
 NSX Base for Service Providers edition is only available for service providers through the VMware vCloud Air Network (vCAN). The features in this edition can be found in the following table.
 {:note}
 
-| NSX Feature                                   | Base | Advanced | Enterprise |
+| NSX feature                                   | Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|
 | Distributed switching and routing             | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | NSX Edge firewall                             | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
@@ -64,7 +66,7 @@ NSX Base for Service Providers edition is only available for service providers t
 
 The following table lists the available features for the **Advanced** and **Enterprise** editions of VMware vSAN that the solution supports.
 
-| vSAN Feature                                    | Advanced | Enterprise |
+| vSAN feature                                    | Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|
 | Storage policy-based management                 | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | Flash read/write caching                        | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |

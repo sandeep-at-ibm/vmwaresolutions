@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-08"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -50,34 +49,36 @@ For the edge services cluster, you cannot add or remove ESXi servers.
 {: support}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance for which you want to expand capacity.
+2. In the **vCenter Server instances** table, click the instance for which you want to expand capacity.
 3. Click **Infrastructure** on the left navigation pane.
-4. In the **CLUSTERS** table, click the cluster to which you want to add ESXi servers.
-5. In the **ESXi Servers** section, click **Add**.
-6. In the **Add Server** window, select the number of servers that you want to add.
-7. Optionally, select the checkbox to add servers during maintenance mode. The checkbox is selected by default.
+4. In the **Clusters** table, click the cluster to which you want to add ESXi servers.
+5. In the **ESXi servers** section, click **Add**.
+6. On the **ESXi server** page, select the number of bare metal servers that you want to add.
+7. Optionally, select the **Maintenance mode** checkbox to add servers during maintenance mode. The checkbox is selected by default.
 
-   When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
+   When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance mode** checkbox. You do not receive a confirmation message before the migration begins.
    {:important}
 
-8. Complete the bare metal configuration.
-   * Select a configuration from the existing hosts in the cluster.
-   * Select a new {{site.data.keyword.cloud_notm}} bare metal server configuration.
+8. Complete the bare metal server configuration.
+   * Select an existing bare metal server configuration that is being used by the existing hosts in the cluster. This option is disabled  under the following conditions:
+      * The bare metal configuration being used by the existing hosts in the cluster is **Broadwell**. 
+      * The storage type of the cluster is **Local disks**.
+   * Select a new bare metal server configuration:
       * (NSX-V only) For instances with vSphere Enterprise Plus 6.7u1, specify the VMware vSphere version for the new ESXi server.
-      * For **Skylake**, **Cascade Lake**, or **Broadwell** (NSX-V only), specify the **CPU Model**, the amount of **RAM**, and the **Number of Bare Metal Servers**.
-      * For **SAP-certified**, specify the **CPU Model and RAM** and the **Number of Bare Metal Servers**.
+      * For **Skylake** and **Cascade Lake**, specify the **CPU model**, the amount of **RAM**, and the **Number of bare metal servers**.
+      * For **SAP-certified**, specify the **CPU model and RAM** and the **Number of bare metal servers**.
 9. Complete the subnet settings.
-   * Select to continue to use the previously selected primary subnets.
-   * Select to specify primary subnets. Then, use the drop-down lists to select the **Public Primary Subnet** and **Private Primary Subnet**.
-10. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High Performance Intel Optane** box.
-11. Review the estimated cost and click **Add**.
+   * Select to continue using the previously selected primary subnets.
+   * Select to specify primary subnets. Then, use the drop-down lists to select the **Public primary subnet** and **Private primary subnet**.
+10. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, select the **High performance Intel Optane** checkbox.
+11. On the **Summary** pane, review the estimated pricing and click **Create**.
 
-  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ### Results after you add ESXi servers
 {: #vc_addingremovingservers-adding-results}
 
-1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
+1. You might experience a slight delay on the console while the instance status changes from **Ready to use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
 2. You are notified by email that your request to add ESXi servers is being processed. On the console, the status of the cluster that is associated with the ESXi servers is changed to **Modifying**.
 3. If you do not see the new ESXi servers added to the list in the cluster, check the email or console notifications to find more details about the failure.
 4. (NSX-V only) You must use the Zerto Virtual Manager (ZVM) console and the pre-populated Zerto Virtual Replication Appliance (VRA) IP address to manually deploy the VRA virtual machine in the following circumstances:
@@ -107,15 +108,15 @@ A 12-month commitment is required when you order the VMware HCX service. Your ac
 {: #vc_addingremovingservers-removing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance for which you want to contract capacity.
+2. In the **vCenter Server instances** table, click the instance for which you want to contract capacity.
 3. Click **Infrastructure** on the left navigation pane.
-4. In the **CLUSTERS** table, click the cluster from which you want to remove ESXi servers.
-5. In the **ESXi Servers** section, select the servers that you want to remove and click **Remove**.
+4. In the **Clusters** table, click the cluster from which you want to remove ESXi servers.
+5. In the **ESXi servers** section, select the servers that you want to remove and click **Remove**.
 
 ### Results after you remove ESXi servers
 {: #vc_addingremovingservers-removing-results}
 
-1. You might experience a slight delay on the console, while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
+1. You might experience a slight delay on the console, while the instance status changes from **Ready to use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
 2. You are notified by email that your request to remove ESXi servers is being processed. On the console, the status of the cluster that is associated with the ESXi servers is changed to **Modifying**.
 3. The ESXi servers are fully reclaimed by {{site.data.keyword.cloud_notm}} infrastructure at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days.
 
@@ -134,21 +135,21 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 {: #vc_addingremovingservers-adding-nfs-storage-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance for which you want to expand capacity.
+2. In the **vCenter Server instances** table, click the instance for which you want to expand capacity.
 3. Click **Infrastructure** on the left navigation pane.
-4. In the **CLUSTERS** table, click the cluster to which you want to add NFS storage.
+4. In the **Clusters** table, click the cluster to which you want to add NFS storage.
 5. In the **Storage** section, click **Add**.
 6. In the **Storage** window, complete the storage configuration.
-   * If you want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
-   * If you want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share.
-7. Review the estimated cost and click **Add NFS Storage**.
+   * If you want to add and configure the same settings to all file shares, specify the **Number of shares**, **Performance**, and **Size (GB)**.
+   * If you want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon next to the **Add shared storage** label and select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share.
+7. Review the estimated price and click **Add NFS storage**.
 
-  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the cost of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ### Results after you add NFS storage
 {: #vc_addingremovingservers-adding-nfs-storage-results}
 
-1. You might experience a slight delay on the console while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
+1. You might experience a slight delay on the console while the instance status changes from **Ready to use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
 2. You are notified by email that your request to add NFS storage is being processed. On the console, the status of the cluster that is associated with the NFS storage is changed to **Modifying**.
 3. If you do not see the new NFS storage added to the list in the cluster, check the email or console notifications to find more details about the failure.
 
@@ -161,22 +162,22 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 * Do not remove NFS storage from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 * Before you remove the NFS storage, ensure that you removed all the VMs that reside on the storage.
 * Ensure that the shares you plan to remove are associated with the correct vCenter Server instance.
-* The cluster must be in **Ready to Use** status.
+* The cluster must be in **Ready to use** status.
 
 ### Procedure to remove NFS storage
 {: #vc_addingremovingservers-removing-nfs-storage-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance for which you want to contract capacity.
+2. In the **vCenter Server instances** table, click the instance for which you want to contract capacity.
 3. Click **Infrastructure** on the left navigation pane.
-4. In the **CLUSTERS** table, click the cluster from which you want to remove NFS storage.
+4. In the **Clusters** table, click the cluster from which you want to remove NFS storage.
 5. In the **Storage** section, select the storage share that you want to remove and click **Delete**.
-6. Click **Remove** in the **Remove Storage** window.
+6. Click **Remove** in the **Remove storage** window.
 
 ### Results after you remove NFS storage
 {: #vc_addingremovingservers-removing-nfs-storage-results}
 
-1. You might experience a slight delay on the console, while the instance status changes from **Ready to Use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
+1. You might experience a slight delay on the console, while the instance status changes from **Ready to use** to **Modifying**. Allow the operation to fully complete before you make more changes to the instance.
 2. You are notified by email that your request to remove NFS storage is being processed. On the console, the status of the cluster that is associated with the NFS storage is changed to **Modifying**.
 3. The NFS storage is fully reclaimed by {{site.data.keyword.cloud_notm}} infrastructure at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days.
 

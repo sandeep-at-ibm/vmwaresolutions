@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-06-08"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -28,49 +27,49 @@ Only a limited number of add-on services are supported for vCenter Server with N
 ## IBM Cloud account requirements
 {: #vc_planning-account-req}
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
+The {{site.data.keyword.cloud}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
 
 ## IBM Cloud data center availability
 {: #vc_planning-dc-availability}
 
 The vCenter Server deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements. The following {{site.data.keyword.cloud_notm}} data centers are available for vCenter Server deployment.
 
-| {{site.data.keyword.cloud_notm}} data center | Location | Region | Server options for NSX-V| Server options for NSX-T |
-|:----------------------|:---------|:-------|:---------------|:-----------------|
-| AMS03 | Amsterdam | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| CHE01 | Chennai | Asia-Pacific | Skylake, SAP-certified[^sap-che01], Broadwell | Skylake |
-| DAL09 | Dallas | NA South | Skylake, SAP-certified, Broadwell | Skylake, SAP-certified |
-| DAL10 | Dallas | NA South | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| DAL12 | Dallas | NA South | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| DAL13 | Dallas | NA South | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| FRA02 | Frankfurt | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| FRA04 | Frankfurt | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| FRA05 | Frankfurt | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| HKG02 | Hong Kong | Asia-Pacific | Skylake, SAP-certified, Broadwell | Skylake, SAP-certified |
-| LON02 | London | Europe | Skylake, Cascade Lake, Broadwell | Skylake, Cascade Lake |
-| LON04 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| LON05 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| LON06 | London | Europe | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| MEX01 | Queretaro | NA South | Skylake, SAP-certified[^sap-mex01], Broadwell | Skylake |
-| MIL01 | Milan | Europe | Skylake, SAP-certified[^sap-mil01], Broadwell | Skylake |
-| MON01 | Montreal | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01], Broadwell | Skylake, Cascade Lake |
-| OSL01 | Oslo | Europe | Skylake, SAP-certified[^sap-osl01], Broadwell | Skylake |
-| PAR01 | Paris | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01], Broadwell | Skylake, Cascade Lake |
-| SAO01 | Sao Paulo | South America | Skylake, SAP-certified, Broadwell | Skylake, SAP-certified |
-| SEO01 | Seoul | Asia-Pacific | Skylake, SAP-certified, Broadwell | Skylake, SAP-certified |
-| SJC03 | San Jose | NA West | Skylake, Broadwell | Skylake |
-| SJC04 | San Jose | NA West | Skylake, Broadwell | Skylake |
-| SNG01 | Singapore | Asia-Pacific | Skylake, SAP-certified, Broadwell | Skylake, SAP-certified |
-| SYD01 | Sydney | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| SYD04 | Sydney | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| SYD05 | Sydney | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| TOK02 | Tokyo | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| TOK04 | Tokyo | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| TOK05 | Tokyo | Asia-Pacific | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| TOR01 | Toronto | NA East | Skylake, SAP-certified, Broadwell | Skylake, SAP-certified |
-| WDC04 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| WDC06 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
-| WDC07 | Washington, DC | NA East | Skylake, Cascade Lake, SAP-certified, Broadwell | Skylake, Cascade Lake, SAP-certified |
+| {{site.data.keyword.cloud_notm}} data center | Region | Server options for NSX-V| Server options for NSX-T |
+|:----------------------|:-------|:---------------|:-----------------|
+| Amsterdam 03 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Chennai 01 | Asia-Pacific | Skylake, SAP-certified[^sap-che01] | Skylake |
+| Dallas 09 | NA South | Skylake, SAP-certified | Skylake, SAP-certified |
+| Dallas 10 | NA South | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Dallas 12 | NA South | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Dallas 13 | NA South | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Frankfurt 02 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Frankfurt 04 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Frankfurt 05 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Hong Kong 02 | Asia-Pacific | Skylake, SAP-certified | Skylake, SAP-certified |
+| London 02 | Europe | Skylake, Cascade Lake | Skylake, Cascade Lake |
+| London 04 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| London 05 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| London 06 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Mexico 01 | NA South | Skylake, SAP-certified[^sap-mex01] | Skylake |
+| Milan 01 | Europe | Skylake, SAP-certified[^sap-mil01] | Skylake |
+| Montreal 01 | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01] | Skylake, Cascade Lake |
+| Oslo 01 | Europe | Skylake, SAP-certified[^sap-osl01] | Skylake |
+| Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] | Skylake, Cascade Lake |
+| Sao Paulo 01 | South America | Skylake, SAP-certified | Skylake, SAP-certified |
+| Seoul 01 | Asia-Pacific | Skylake, SAP-certified | Skylake, SAP-certified |
+| San Jose 03 | NA West | Skylake | Skylake |
+| San Jose 04 | NA West | Skylake | Skylake |
+| Singapore 01| Asia-Pacific | Skylake, SAP-certified | Skylake, SAP-certified |
+| Sydney 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Sydney 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Sydney 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Tokyo 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Tokyo 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Tokyo 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Toronto 01 | NA East | Skylake, SAP-certified | Skylake, SAP-certified |
+| Washington DC 04 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Washington DC 06 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Washington DC 07 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vCenter Server instances" caption-side="top"}
 
 [^sap-che01]: vSphere 6.5 only
@@ -88,7 +87,7 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 ### Cascade Lake notes
 {: #vc_planning-dc-notes}
 
-* Cascade Lake (4-CPU Quad Intel Xeon Gold 6248) is available only in the **DAL10 - Dallas** IBM Cloud Data Center.
+* Cascade Lake (4-CPU Quad Intel Xeon Gold 6248) is available only in the **Dallas 10** {{site.data.keyword.cloud_notm}} data center.
 * Cascade Lake bare metal servers are also available on Multi-Zone Region
 {{site.data.keyword.cloud_notm}} data centers. For more information, see [Multi-Zone Region (MZR) Overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
@@ -106,13 +105,10 @@ Depending on availability and inventory supply, {{site.data.keyword.cloud_notm}}
 
 You are responsible for maintaining and ensuring the availability of all instance components. It is recommended that you plan for backup or high availability of all management components. For more information, see [Backing up components](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup).
 
-Backup operations are not supported for vCenter Server with NSX-T instances.
-{:important}
-
 ## Services for vCenter Server instances
 {: #vc_planning-addon-services}
 
-You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
 Only a limited number of add-on services are supported for vCenter Server with NSX-T instances.
 {:important}

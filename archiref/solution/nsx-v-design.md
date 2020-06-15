@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-06-10"
 
 subcollection: vmwaresolutions
 
@@ -81,15 +81,16 @@ The names, number, and ordering of the host NICs might vary depending on the {{s
 
 | Parameter          | Setting       |
 |:------------------ |:------------- |
-| Load balancing     | Route based on the originating virtual port \* |
+| Load balancing     | Route based on the originating virtual port[^port-failover1] |
 | Failover detection | Link status only |
 | Notify switches    | Enabled |
 | Failback           | No |
-| Failover order     | Active uplinks: Uplink1, Uplink2 \* |
+| Failover order     | Active uplinks: Uplink1, Uplink2[^port-failover2] |
 {: caption="Table 4. Converged cluster distributed switch port group configuration settings" caption-side="bottom"}
 
-\* The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
-{:note}
+[^port-failover1]: The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
+
+[^port-failover2]: The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
 
 Port Group|Teaming|Uplinks|VLAN ID
 ---|---|---|--
@@ -155,5 +156,4 @@ Load balancer|IBM Cloud offers several [load balancer services](https://cloud.ib
 ## Related links
 {: #nsx-v-design-related}
 
-* [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
 * [NSX Edge Services Gateway solution architecture](/docs/vmwaresolutions?topic=vmwaresolutions-nsx_overview#nsx_overview)

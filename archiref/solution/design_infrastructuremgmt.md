@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-06-12"
 
 subcollection: vmwaresolutions
 
@@ -59,13 +59,13 @@ With this design, you can cluster the vSphere ESXi hosts that are provisioned th
 
 This design uses vSphere Distributed Resource Scheduling (DRS) in the initial cluster to place VMs and uses DRS in additional clusters to dynamically migrate VMs to achieve balanced clusters. The automation level is set to fully automated so that initial placement and migration recommendations are run automatically by vSphere. Additionally, the migration threshold is set to moderate so that vCenter applies priority 1, 2, 3 recommendations to achieve at least a decent improvement in the load balance of the cluster.
 
-Power management via the **Distributed Power Management** feature is not used in this design.
+Power management through the **Distributed Power Management** feature is not used in this design.
 {:note}
 
 ### vSphere High Availability
 {: #design_infrastructuremgmt-vsphere-ha}
 
-This design uses vSphere High Availability (HA) in the initial cluster and extra clusters to detect compute failures and recover VMs that run within a cluster. The vSphere HA feature in this design is configured with both the **Host Monitoring** and **Admission Control** options enabled in the cluster. Additionally, the initial cluster reserves one node’s resources as spare capacity for the admission control policy.
+This design uses vSphere High Availability (HA) in the initial cluster and in the additional clusters to detect compute failures and recover VMs that run in a cluster. The vSphere HA feature in this design is configured with both the **Host Monitoring** and **Admission Control** options enabled in the cluster. Additionally, the initial cluster reserves one node’s resources as spare capacity for the admission control policy.
 
 You are responsible to adjust the admission control policy when the cluster is later expanded or contracted.
 {:note}
@@ -75,7 +75,7 @@ By default, the **VM restart priority** option is set to medium and the **Host i
 ### Enhanced vMotion compatibility
 {: #design_infrastructuremgmt-evc}
 
-To simplify vMotion compatibility across cluster nodes with potentially differing CPU capabilities, Enhanced vMotion Compatibility (EVC) mode is enabled at a Skylake level to ensure vMotion compatibility across cluster nodes when newer processors arrive within {{site.data.keyword.cloud}} inventory and allows for cluster expansion in the future if Skylake processor servers aren't in inventory.
+To simplify vMotion compatibility across cluster nodes with potentially differing CPU capabilities, Enhanced vMotion Compatibility (EVC) mode is enabled at the highest available level that is supported by the vSphere version. This setting ensures vMotion compatibility across cluster nodes when newer processors arrive within {{site.data.keyword.cloud}} inventory and it allows for cluster expansion in the future if the original processor is no longer in inventory. An exception to this rule is that EVC mode is not set for a management cluster with Cascade Lake processors where Cascade Lake EVC is not supported by the vSphere version.
 
 ## IBM CloudDriver
 {: #design_infrastructuremgmt-cloud-driver}
@@ -87,7 +87,7 @@ works to bring up a new VMware instance and perform lifecycle management functio
 
 IBM CloudDriver is an ephemeral {{site.data.keyword.cloud_notm}} VM virtual server instance (VSI) which is deployed as needed for day 2 operations such as adding hosts, clusters, or add-on services to your VMware instance.
 
-The CloudBuilder and CloudDriver are deployed only on the private network connecting to the IBM management plane over a private message queue. They are IBM developed components, are not user accessible, and have the following attributes and functions:
+The IBM CloudBuilder and IBM CloudDriver components are deployed only on the private network that connects to the IBM management plane over a private message queue. They are IBM developed components, are not user accessible, and have the following attributes and functions:
 * Deployment and configuration of the vCenter Server instance within the user account.
 * Add and remove hosts from the vCenter Server clusters.
 * Add and remove clusters from vCenter Server instances.
@@ -96,7 +96,7 @@ The CloudBuilder and CloudDriver are deployed only on the private network connec
 ### Automation flow
 {: #design_infrastructuremgmt-auto-flow}
 
-The following describes the order of events when you use the {{site.data.keyword.vmwaresolutions_short}} console to order a VMware instance:
+The following flow describes the order of events when you use the {{site.data.keyword.vmwaresolutions_short}} console to order a VMware instance:
 1. Ordering VLANs and subnets for networking from {{site.data.keyword.cloud_notm}}.
 2. Ordering {{site.data.keyword.cloud_notm}} bare metal servers with vSphere Hypervisor installed.
 3. Ordering of Microsoft Windows VSI to serve as the Active Directory domain controller.
@@ -114,7 +114,7 @@ The following describes the order of events when you use the {{site.data.keyword
 
 {{site.data.keyword.vmwaresolutions_short}} automation retains a set of user IDs and passwords encrypted within the {{site.data.keyword.cloud_notm}} management plane. Automation user IDs are separate from the user IDs displayed in the {{site.data.keyword.vmwaresolutions_short}} console and which are reserved for your use.
 
-You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
+You can change these passwords and should use your own password information management (PIM) system to store and manage these passwords. You cannot change or disable the passwords that are used by automation without disrupting the automation. For more information, see [IBM user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
 
 **Next topic:** [Scaling capacity](/docs/vmwaresolutions?topic=vmwaresolutions-solution_scaling)
 

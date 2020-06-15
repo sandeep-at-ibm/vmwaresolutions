@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-30"
+lastupdated: "2020-06-12"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -135,20 +135,20 @@ Review the following table for an overview of the Network MTU configuration sett
 
 | vDS | V2.1 or later  | V2.0 or earlier (or upgraded from V2.0 or earlier) |
 |:-------------- |:-------------- |:------------- |
-| Public Switch  | 1500 (default) | 9000 (Jumbo Frames) |
-| Private Switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
+| Public switch  | 1500 (default) | 9000 (Jumbo Frames) |
+| Private switch | 9000 (Jumbo Frames) | 9000 (Jumbo Frames) |
 {: caption="Table 6. MTU configuration settings for vCenter Server instances and clusters depending on the instance version" caption-side="top"}
 
 The settings apply to new instances and new clusters from instances that are deployed in V2.1 or later. The settings also apply to new clusters in cross {{site.data.keyword.cloud_notm}} data centers from instances that were upgraded to V2.1 or later.
 
 The settings do not apply to new clusters in the same {{site.data.keyword.cloud_notm}} data center, for existing instances from V2.0 or earlier or existing instances upgraded to V2.1 or later.
 
-For instances that were deployed in V2.0 or earlier, it is recommended that you update the Public Switch MTU setting to 1500.
+For instances that were deployed in V2.0 or earlier, it is recommended that you update the public switch MTU setting to 1500.
 
-### Updating the Public Switch MTU setting
+### Updating the public switch MTU setting
 {: #vc_bom-procedure-update-public-switch-mtu-setting}
 
-To update the MTU setting for the Public Switch, complete the following steps in the VMware vSphere web client:
+To update the MTU setting for the public switch, complete the following steps in the VMware vSphere Web Client:
 1. Right-click the vDS and click **Edit Settings**.
 2. On the **Properties** tab, select the **Advanced** option.
 3. Ensure that the **Maximum MTU** value is set to 1500.
@@ -159,7 +159,7 @@ To update the MTU setting for the Public Switch, complete the following steps in
 ## Distributed switch allocation
 {: #vc_bom-network-dswitch-allocation}
 
-The allocation of distributed switches varies if you have existing instances and clusters. Review the following considerations for switch creation when you create a new cluster:
+The allocation of distributed switches varies if you have existing instances and clusters. Review the following considerations for switch creation when you create a cluster:
 
 * If there are one or more existing clusters in the same pod that uses distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
 * If one or more existing clusters are in the same pod, and the pod uses distributed switches that are named by using the same name as the pod (rather than named by using the same name as the cluster), your new cluster uses the same switches as the existing cluster.
@@ -172,9 +172,8 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 
 | Bare metal server CPU model | vSphere 6.5  | vSphere 6.7 |
 |:------------- |:------------- |:------------- |
-| Broadwell | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Broadwell** Generation |
-| Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
-| Cascade Lake[^vsphere] | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation |
+| Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation. |
+| Cascade Lake[^vsphere] | For the management cluster, EVC is not set. For all other clusters, EVC is set to Intel **Broadwell** Generation. | For the management cluster, EVC is not set. For all other clusters, EVC is set to Intel **Skylake** Generation. |
 {: caption="Table 7. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
 
 [^vsphere]: For instances with vSphere 6.5, Cascade Lake supports 6.5u3 only.

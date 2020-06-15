@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-05-15"
 
-keywords: single-node trial, data protection DR, tech specs data protection DR
+keywords: single-node, data protection DR, tech specs data protection DR
 
 subcollection: vmwaresolutions
 
@@ -19,34 +19,34 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Single-node Trial for Data Protection and Disaster Recovery overview
+# Single-node for Data Protection and Disaster Recovery overview
 {: #dr_backup_bundle_overview}
 
-The Single-node Trial for Data Protection and Disaster Recovery provides the option to test drive
- {{site.data.keyword.cloud}} to migrate and recover VMware workloads to the {{site.data.keyword.cloud_notm}}. In addition, it includes the Veeam, HCX, and Zerto services. The Single-node Trial is a trial version of vCenter Server that provides the single-tenant VMware platform, which you can manage using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while you maintain the same level of control and visibility that is provided on-premises.
+The Single-node for Data Protection and Disaster Recovery provides the option to test drive
+ {{site.data.keyword.cloud}} to migrate and recover VMware workloads to the {{site.data.keyword.cloud_notm}}. In addition, it includes the Veeam, HCX, and Zerto services. The Single-node is a trial version of vCenter Server that provides the single-tenant VMware platform, which you can manage using the same tools as in on-premises environments. You can take advantage of the speed and scale of the cloud while you maintain the same level of control and visibility that is provided on-premises.
 {: shortdesc}
 
-The trial is designed for migration of up to 20 simple development or test workloads that use vCenter Server. Automation installs and configures VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install Veeam and Zerto in a matter of hours. You can back up and replicate 20 virtual machines (VMs) with Veeam and Zerto. 
+This offering is designed for migration of up to 20 simple development or test workloads that use vCenter Server. Automation installs and configures VMware HCX in the {{site.data.keyword.cloud_notm}}, provide an on-premises HCX activation key, and install Veeam and Zerto in a matter of hours. You can back up and replicate 20 virtual machines (VMs) with Veeam and Zerto. 
 
-The Single-node Trial for Data Protection and Disaster Recovery is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts and clusters, ordering more add-on services, and applying updates are not supported.
+The Single-node for Data Protection and Disaster Recovery is for proof of concept (POC) only. Do not run production workloads on this environment. Management functions such as adding and removing hosts, adding and deleting clusters, ordering more add-on services, and applying updates are not supported.
 {:important}
 
-After your Single-node Trial instance is deployed, you can use on demand consulting and expert services to help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. For more information, see:
+After your Single-node instance is deployed, you can use on demand consulting and expert services to help you migrate your VMware workloads to the {{site.data.keyword.cloud_notm}}. For more information, see:
 
 * [IBM On Demand Consulting for Hybrid Cloud](https://public.dhe.ibm.com/software/data/sw-library/services/ODC.pdf){:external}
 * [IBM Analytics Cloud Expert Services](https://www.ibm.com/analytics/us/en/services/cloud-expert-services.html){:external}
 
 Additionally, [{{site.data.keyword.cloud_notm}} Garage Services](https://www.ibm.com/cloud/garage/){:external} can help you accelerate application modernization through the latest cloud native practices.
 
-This trial is intended for use up to 90 days. Monthly recurring charges are billed based on your billing schedule, and not when the instance is ordered. If the instance is not cancelled on or before the last day of your billing cycle, you are charged for the next month. A 90-day trial might result in four months of charges, unless the cancellation is completed before the fourth month begins.
+This offering is intended for use up to 90 days. Monthly recurring charges are billed based on your billing schedule, and not when the instance is ordered. If the instance is not cancelled on or before the last day of your billing cycle, you are charged for the next month. A 90-day trial might result in four months of charges, unless the cancellation is completed before the fourth month begins.
 {:note}
 
-When you are finished with the trial, you can delete this environment and provision a new environment that meets your capacity needs.
+When you are finished with it, you can delete this environment and provision a new environment that meets your capacity needs.
 
-## Technical specifications for Single-node Trial for Data Protection and Disaster Recovery instances
+## Technical specifications for Single-node for Data Protection and Disaster Recovery instances
 {: #dr_backup_bundle_overview-tech-specs}
 
-The following components are included in your Single-node Trial for Data Protection and Disaster Recovery instance.
+The following components are included in your Single-node for Data Protection and Disaster Recovery instance.
 
 The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
 {:note}
@@ -73,17 +73,17 @@ Skylake Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz with 384 G
 * 2 TB for management
 * 1 TB for customer workload (for 20 customer VMs)
 
-### Networking specifications for Single-node Trial for Data Protection and Disaster Recovery instances
+### Networking specifications for Single-node for Data Protection and Disaster Recovery instances
 {: #dr_backup_bundle_overview-networking-specs}
 
 The following networking components are ordered:
 *  10 Gbps dual public and private network uplinks
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
-*  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching more VXLANs to new logical interfaces on the DLR.
+*  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or delete it. You can also add security zones by attaching more VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
   * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation.
 
-    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Single-node Trial for Data Protection and Disaster Recovery instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the Single-node for Data Protection and Disaster Recovery instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
   * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access.
 
@@ -100,7 +100,7 @@ The following virtual server instances (VSIs) are ordered:
 ### IBM-provided licenses and fees
 {: #dr_backup_bundle_overview-license-and-fee}
 
-The following licenses are included with your Single-node Trial for Data Protection and Disaster Recovery instance order.
+The following licenses are included with your Single-node for Data Protection and Disaster Recovery instance order.
 
 * The vCenter Server licenses:
   * VMware vSphere Enterprise Plus 6.7u2
@@ -108,13 +108,13 @@ The following licenses are included with your Single-node Trial for Data Protect
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2
 
-Single-node Trial for Data Protection and Disaster Recovery instances do not support Bring Your Own License.
+Single-node for Data Protection and Disaster Recovery instances do not support Bring Your Own License.
 {:note}
 
 ## Technical specifications for HCX
 {: #dr_backup_bundle_overview-hcx-tech-specs}
 
-The Single-node Trial for Data Protection and Disaster Recovery includes HCX. The following components are ordered and included in the HCX service.
+The Single-node for Data Protection and Disaster Recovery includes HCX. The following components are ordered and included in the HCX service.
 
 On-premises HCX instances include only licensing and activation.
 {:note}
@@ -145,7 +145,7 @@ More HCX appliances are deployed during configuration as necessary for L2 connec
 ## Technical specifications for Veeam
 {: #dr_backup_bundle_overview-veeam-tech-specs}
 
-The Single-node Trial for Data Protection and Disaster Recovery includes Veeam. The following components are ordered and included in the Veeam service.
+The Single-node for Data Protection and Disaster Recovery includes Veeam. The following components are ordered and included in the Veeam service.
 
 * 25 package license of the Veeam Availability Suite
 * 4000 GB storage
@@ -159,7 +159,7 @@ The Single-node Trial for Data Protection and Disaster Recovery includes Veeam. 
 ## Technical specifications for Zerto
 {: #dr_backup_bundle_overview-zerto-tech-specs}
 
-The Single-node Trial for Data Protection and Disaster Recovery includes Zerto. The following components are ordered and included in the Zerto service.
+The Single-node for Data Protection and Disaster Recovery includes Zerto. The following components are ordered and included in the Zerto service.
 
 * Zerto Virtual Replication V6.5u3 License
 * One Virtual Service Instance (VSI) - Zerto Virtual Manager
@@ -171,7 +171,7 @@ The Single-node Trial for Data Protection and Disaster Recovery includes Zerto. 
 ## Technical specifications for IBM Cloud Automation Manager
 {: #dr_backup_bundle_overview-cam-tech-specs}
 
-{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 is installed by using the Development and Test topology on all Single-node Trial for Data Protection and Disaster Recovery instances. For more information about {{site.data.keyword.cloud_notm}} Automation Manager, see [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
+{{site.data.keyword.cloud_notm}} Automation Manager 3.1.2 is installed by using the Development and Test topology on all Single-node for Data Protection and Disaster Recovery instances. For more information about {{site.data.keyword.cloud_notm}} Automation Manager, see [{{site.data.keyword.cloud_notm}} Automation Manager documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37_3.1.2.0/kc_welcome.html){: external}.
 
 ## Related links
 {: #dr_backup_bundle_overview-related}

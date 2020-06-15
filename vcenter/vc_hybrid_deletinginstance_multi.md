@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-06-02"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, delete multi-site
 
@@ -39,7 +39,7 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 ## Procedure to delete vCenter Server with Hybridity Bundle instances in a multi-site configuration
 {: #vc_hybrid_deletinginstance_multi-procedure}
 
-1. Remove all services from the secondary vCenter Server with Hybridity Bundle instance.
+1. Delete all services from the secondary vCenter Server with Hybridity Bundle instance.
 2. Ensure that you do not have any NSX objects that are expanded into the secondary instance that you want to delete.
 3. Delete the secondary vCenter Server from the primary SSO (Single Sign-On) domain. For more information, see [Unregister vCenter Server from Single Sign-On](https://kb.vmware.com/s/article/2106736){:external}.
 4. Demote the local domain controller Virtual Service Instance (VSI). For more information, see [Demoting domain controllers and domains](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:external}.
@@ -51,5 +51,5 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {: #vc_hybrid_deletinginstance_multi-related}
 
 * [Deleting vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_deletinginstance)
-* [Ordering, viewing, and removing services from vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingremovingservices)
-* [Canceling virtual servers](/docs/vsi?topic=virtual-servers-managing-virtual-servers#cancel)
+* [Ordering, viewing, and deleting services from vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingremovingservices)
+* [Managing virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-virtual-servers)

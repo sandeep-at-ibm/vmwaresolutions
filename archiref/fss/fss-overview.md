@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-10"
+lastupdated: "2020-05-05"
 
 subcollection: vmwaresolutions
 
@@ -23,7 +23,7 @@ The FSS (Financial Services Sector) Cloud architecture is an extension of the VM
 
 The design extends and enhances the basic vCenter Server architecture to deliver a secure, high-performance platform. Clients are able to run both classic virtualized workloads and containerized applications with the addition of OpenShift.
 
-IBM Cloud for VMware Solutions automation is used to deploy all layers of the platform thus consistently delivering a secure and compliant build for every FSS Cloud instance ordered.
+{{site.data.keyword.vmwaresolutions_full}} automation is used to deploy all layers of the platform thus consistently delivering a secure and compliant build for every FSS Cloud instance ordered.
 
 ![FSS Cloud infrastructure overview](../../images/fss-architecture.svg "FSS Cloud infrastructure overview"){: caption="Figure 1. FSS Cloud infrastructure overview" caption-side="bottom"}
 

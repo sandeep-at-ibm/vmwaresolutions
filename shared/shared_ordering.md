@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-04-15"
+lastupdated: "2020-05-28"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -41,7 +41,7 @@ For the On-Demand offering, virtual data center virtual CPU (vCPU) and RAM are a
 
 * The limits that are established for the amount of vCPU and RAM are maximum values that can be used at any time.
 * vCPU and RAM resources can be increased and decreased later as required.
-* The cost is calculated hourly and it is based on the resource usage in the virtual data center.
+* The price is calculated hourly and it is based on the resource usage in the virtual data center.
 * There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage.
 * There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB.
 
@@ -50,7 +50,7 @@ For the On-Demand offering, virtual data center virtual CPU (vCPU) and RAM are a
 
 For the Reserved offering, the vCPU and RAM virtual data center reservations are pre-allocated and their availability is guaranteed.
 
-* The cost is calculated monthly for the full reservation and it is based on the allocation size of the virtual data center.
+* The price is calculated monthly for the full reservation and it is based on the allocation size of the virtual data center.
 * vCPU and RAM resources can be increased and decreased later as required.
 * There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage.
 * There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB.
@@ -65,6 +65,13 @@ The virtual data center name is set to **vdc-_xx_** by default, where _xx_ repre
 You can also specify a virtual data center name that meets the following requirements:
 * Maximum length is 128 characters.
 * Only alphanumeric, dash (-), and underscore (_) characters are allowed.
+
+### Resource group
+{: #shared_ordering-resource-group}
+
+Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
+
+If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
 
 ### Data center location
 {: #shared_ordering-dc}
@@ -104,9 +111,9 @@ For more information, see [Managing Veeam for VMware Solutions Shared instances]
 ## Summary
 {: #shared_ordering-summary}
 
-Based on your selected configuration for the virtual data center instance, the estimated cost is instantly generated and displayed in the **Summary** right pane.
+Based on your selected configuration for the virtual data center instance, the estimated price is instantly generated and displayed in the **Summary** right pane.
 
-You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. The tool is useful if you want to estimate the cost of the selected VMware Solutions Shared resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider purchasing.
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. The tool is useful if you want to estimate the price of the selected VMware Solutions Shared resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider purchasing.
 
 ## Procedure to order VMware Solutions Shared On-Demand
 {: #shared_ordering-procedure-ondemand}
@@ -116,10 +123,10 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 2. In the **Start Provisioning** section, click the **VMware Solutions Shared** card.
 3. On the **Create** tab of the **VMware Solutions Shared** page, select **On-Demand**.
-4. Enter the virtual data center name.
+4. Enter the virtual data center name and select a resource group.
 5. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
 6. Select the vCPU and RAM limits according to your requirements.
-6. On the **Summary** pane, verify the configuration and estimated cost before you place the order.
+6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
 7. Click **Create**.
 
 ## Procedure to order VMware Solutions Shared Reserved
@@ -128,12 +135,12 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
 2. In the **Start Provisioning** section, click the **VMware Solutions Shared** card.
 3. On the **Create** tab of the **VMware Solutions Shared** page, select **Reserved**.
-4. Enter the virtual data center name.
+4. Enter the virtual data center name and resource group.
 5. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
 6. Complete the resource reservation.
   * If you select **Preconfigured**, select the preconfigured vCPU model and RAM size.
   * If you select **Custom**, specify the vCPU and RAM limits according to your requirements.
-7. On the **Summary** pane, verify the configuration and estimated cost before you place the order.
+7. On the **Summary** pane, verify the configuration and estimated price before you place the order.
 8. Click **Create**.
 
 ## Results after you order VMware Shared Solution

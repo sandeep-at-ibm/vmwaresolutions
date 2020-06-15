@@ -103,7 +103,7 @@ Once set up, here is an example of an alarm workflow, typically adopted by syste
 The following table describes these items:
 
 * Alarm Name - The name of the alarm visible in vCenter.
-* Guidance - IC4V guidance on the use of this alarm.
+* Guidance - {{site.data.keyword.vmwaresolutions_short}} guidance on the use of this alarm.
 * More Information - Additional information available from IBM or VMware to help with the resolution of these alarms once triggered.
 
 | Alarm Name | Guidance | More Information |
@@ -219,7 +219,7 @@ The following table describes these items:
 If you have a vSAN cluster, the additional preconfigured alarms in the following table apply:
 
 * Alarm Name - The name of the alarm visible in vCenter.
-* Guidance - IC4V guidance on the use of this alarm.
+* Guidance - {{site.data.keyword.vmwaresolutions_short}} guidance on the use of this alarm.
 * More Information - Additional information available from {{site.data.keyword.IBM}} or VMware to help with the resolution of these alarms once triggered.
 
 | Alarm Name | Guidance | More Information |

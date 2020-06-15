@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-06-10"
 
 keywords: set credentials, user credentials, set notifications
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -42,11 +41,11 @@ You can also specify whether you want to receive email and console notifications
 {: support}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
-2. In the **IBM Cloud Infrastructure Credentials** area, review the information for the steps that you need to take.
+2. In the **IBM Cloud infrastructure credentials** area, review the information for the steps that you need to take.
 3. If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are linked, click **Retrieve** to complete the credentials automatically.
 4. If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are not linked, you must link them. Follow the instructions in [Upgrading your account](/docs/account?topic=account-upgrading-account), then click **Retrieve** to complete the credentials automatically.
 5. If you do not have an {{site.data.keyword.cloud_notm}} infrastructure account, and you do not have a billable  {{site.data.keyword.cloud_notm}} account, first [upgrade your account](/docs/account?topic=account-upgrading-account) and then [create a classic infrastructure API key](/docs/iam?topic=iam-classic_keys#create-classic-infrastructure-key).
-6. Click **Save Credentials**. If you receive a message that administrator access is required, you can locate an account administrator using the steps in [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions).
+6. Click **Save credentials**. If you receive a message that administrator access is required, you can locate an account administrator using the steps in [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions).
 
 ## Procedure to set notifications
 {: #useraccount-set-notif}
@@ -70,5 +69,4 @@ If email or console notifications are enabled for certain instance events, you'r
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
 * [Notifications](/docs/vmwaresolutions?topic=vmwaresolutions-notifications)
-* [SoftLayer API](/docs/customer-portal?topic=customer-portal-customerportal_api)
 * [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions)

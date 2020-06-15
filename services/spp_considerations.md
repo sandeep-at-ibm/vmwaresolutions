@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-06"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 The {{site.data.keyword.IBM}} Spectrum Protect Plus service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.
 {: shortdesc}
 
-This service is available only to instances that are running VMware vSphere 6.5. The current IBM Spectrum Protect Plus version that is installed is V10.1.5.
+This service is available only to instances that are running VMware vSphere 6.5. The {{site.data.keyword.IBM}} Spectrum Protect Plus service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 10.1.5.
 {:note}
 
 ## Technical specifications for IBM Spectrum Protect Plus
@@ -87,15 +87,15 @@ Review the following considerations before you install the IBM Spectrum Protect 
 
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
-## Considerations when you remove IBM Spectrum Protect Plus
+## Considerations when you delete IBM Spectrum Protect Plus
 {: #spp_considerations-remove}
 
-Review the following considerations before you remove the IBM Spectrum Protect Plus service:
+Review the following considerations before you delete the IBM Spectrum Protect Plus service:
 * Ensure that all the backup job configurations are removed along with active backup or restore operations.
-* When you remove the service, the storage for the backup repository is removed from the IBM Spectrum Protect Plus VM and the storage order is canceled, which deletes the backup repository data permanently.
-* When you remove the service, the backup storage that is ordered for the service is removed too. All the backups become inaccessible during service removal.
+* When you delete the service, the storage for the backup repository is deleted from the IBM Spectrum Protect Plus VM and the storage order is canceled, which deletes the backup repository data permanently.
+* When you delete the service, the backup storage that is ordered for the service is deleted too. All the backups become inaccessible during service deletion.
 
 ## Related links
 {: #spp_considerations-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-05"
 
 subcollection: vmwaresolutions
 
@@ -44,17 +44,17 @@ The workflow is as follows:
 4. On the download page, select **Upgrade Bundle, Download Now**.
 5. Download to a suitable folder.
 6. **Upgrade NSX Manager**:
-  - Log in to the NSX Manager Virtual Appliance, by using the IP address and credentials that are documented in the IBM Cloud for VMware Solutions console, and click the Upgrade button on the home page.
+  - Log in to the NSX Manager Virtual Appliance, by using the IP address and credentials that are displayed on the {{site.data.keyword.vmwaresolutions_full}} console. Click the **Upgrade** button on the home page.
   - Log in to the NSX Manager.
   - Under **Appliance Management**, click **Backups & Restore**.
-  - Click Backup and enter an appropriate file name. VMware recommends that you reinstall the NSX Manager appliance before you restore NSX Manager data. While a restore operation on an existing NSX Manager appliance might work, it isn't officially supported. The best practice is to take note of the IP settings for the NSX Manager appliance so that they can be used to specify IP information and backup location information for the newly deployed NSX Manager appliance.
+  - Click **Backup** and enter an appropriate file name. VMware recommends that you reinstall the NSX Manager appliance before you restore NSX Manager data. While a restore operation on an existing NSX Manager appliance might work, it isn't officially supported. The best practice is to take note of the IP settings for the NSX Manager appliance so that they can be used to specify IP information and backup location information for the newly deployed NSX Manager appliance.
   - On the upper-right, click the **Upload Bundle** and upload the file that you downloaded from _my.vmware.com_.
   - Read the upgrade information and select if you want to enable SSH and participate in the VMware Customer Experience Improvement Program.
   - Click **Upgrade**.
   - When the upload completes, you are redirected to the NSX Manager login page. Login back in and verify that the current software version displays is correct.
 7. **Upgrade the NSX Controller Cluster**:
   - Open the vSphere Web Client and log in to the VCSA.
-  - Navigate to **Home** > **Networking & Security** > **Installation**, select the **Management** tab, and click **Upgrade Available** in the Controller Cluster Status column.
+  - Go to **Home** > **Networking & Security** > **Installation**, select the **Management** tab, and click **Upgrade Available** in the Controller Cluster Status column.
   - The controllers in your environment are upgraded and rebooted one at a time. After you initiate the upgrade, the system downloads the upgrade file, upgrades each controller, restarts each controller, and updates the upgrade status of each controller.
 8. **Upgrade NSX Host Clusters**:
   - After upgrading NSX Manager and NSX Controllers, the host clusters are updated the NSX VIBs on the vSphere ESXi hosts.
