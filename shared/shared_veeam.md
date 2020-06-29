@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-11"
+lastupdated: "2020-06-15"
 
 keywords: veeam, veeam install, tech specs veeam
 
@@ -75,7 +75,7 @@ When you access Veeam Cloud Connect, **DNS name** and **Port** details are speci
 | {{site.data.keyword.cloud_notm}} data center location | DNS name   | Port |
 |:-------------------------------|:----------|:------|
 | Dallas | ``dalvccgw.vmware-solutions.cloud.ibm.com`` | ``6180``|
-| Frankfurt (Limited Availability) | ``fravccgw.vmware-solutions.cloud.ibm.com`` | ``6180`` |
+| Frankfurt | ``fravccgw.vmware-solutions.cloud.ibm.com`` | ``6180`` |
 {: caption="Table 1. Virtual data center region details" caption-side="top"}
 
 ### Procedure to connect to Veeam Cloud Connect for replication

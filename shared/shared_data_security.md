@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-05-12"
+lastupdated: "2020-05-15"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
@@ -43,7 +43,7 @@ Veeam service backups are to both {{site.data.keyword.cloud_notm}} Infrastructur
 ## High availability and disaster recovery
 {: #shared_data-ha-dr}
 
-The VMware Solutions Shared management service is initially only offered in the {{site.data.keyword.cloud_notm}} NA South Multi-Zone Region (MZR) and Limited Availability in the Europe region. Recovering from potential disasters that affect an entire location requires planning and preparation.
+The VMware Solutions Shared management service is initially only offered in the {{site.data.keyword.cloud_notm}} NA South and Europe regions. Recovering from potential disasters that affect an entire location requires planning and preparation.
 
 * You are responsible for understanding your configuration, customization, and usage of the service.
 * You are responsible for enabling your VMs or virtual applications (vApps) to participate in the provided backup service.

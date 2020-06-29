@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-15"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -35,25 +35,20 @@ The virtual data center name must meet the following requirements:
 
 * Maximum length is 128 characters
 * Only alphanumeric, dash (-), and underscore (_) characters are allowed
+* The name must be unique from active virtual data centers within your account. You may create a virtual data center that has the same name as a previously deleted virtual data center.
 
 ## IBM Cloud data center availability
 {: #shared_planning-dc-availability}
 
 The VMware Solutions Shared deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements.
 
-The following {{site.data.keyword.cloud_notm}} data center is available for VMware Solutions Shared deployment.
+The following {{site.data.keyword.cloud_notm}} data centers are available for VMware Solutions Shared deployment.
 
-| {{site.data.keyword.cloud_notm}} data center | Region |
+| {{site.data.keyword.cloud_notm}} data centers | Region |
 |:----------------------|:-------|
 | Dallas 10 | NA South |
-{: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data center for VMware Solutions Shared instances" caption-side="top"}
-
-The following {{site.data.keyword.cloud_notm}} data center is offered as a Limited Availability data center for VMware Solutions Shared deployment.
-
-| Limited Availability {{site.data.keyword.cloud_notm}} data center | Region |
-|:------------- |:-------|
-|  Frankfurt 04 | Europe |
-{: caption="Table 2. Limited Availability {{site.data.keyword.cloud_notm}} data center for VMware Solutions Shared instances" caption-side="top"}
+| Frankfurt 04 | Europe |
+{: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Solutions Shared instances" caption-side="top"}
 
 ## Services for VMware Solutions Shared
 {: #shared_planning-addon-services}
