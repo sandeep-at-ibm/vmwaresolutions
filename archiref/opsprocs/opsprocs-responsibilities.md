@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-07-09"
 
 subcollection: vmwaresolutions
 
@@ -48,4 +48,4 @@ Day 2 responsibilities include the following items:
 * [Compliance information for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info)
 * [Getting support](/docs/get-support?topic=get-support-getting-customer-support)
 * [Getting support FAQs](/docs/get-support?topic=get-support-get-supportfaq)
-* [Getting started with Cloud Event Management](/docs/EventManagement?topic=EventManagement-event_gettingstarted)
+* [Cloud Event Management documentation](https://www.ibm.com/support/knowledgecenter/en/SSURRN/com.ibm.cem.doc/index.html)
