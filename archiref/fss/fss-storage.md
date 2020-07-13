@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-13"
 
 subcollection: vmwaresolutions
 
@@ -39,7 +39,7 @@ The workload clusters require the use of vSAN. vSAN is the only storage option o
 ## Bare metal storage design
 {: #fss-storage-bare-metal}
 
-Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared network-attached storage. This includes the operating system (vSphere ESXi) and the disks that are used for storage of the virtual machines (VMs). Storage for VMs consists of local disks that are virtualized by VMware vSAN. Cloud Object Storage is available in Q4.
+Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared network-attached storage. This includes the operating system (vSphere ESXi) and the disks that are used for storage of the virtual machines (VMs). Storage for VMs consists of local disks that are virtualized by VMware vSAN.
 
 ![Storage options](../../images/fss-storage-connections.svg "Storage Options"){: caption="Figure 1. Storage options" caption-side="bottom"}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-13"
 
 subcollection: vmwaresolutions
 
@@ -45,7 +45,7 @@ The deployment of more workload clusters is supported if a client wants dedicate
 
 Each physical host in this design has two redundant pairs of 10 Gbps Ethernet connections into each IBM Cloud Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This design allows networking interface card (NIC) connections to work independently from each other.
 
-Removing physical network connectivity to the public or private network for the Bare Metal Servers that are used within the vCenter Server offering is not possible. When the IBM Cloud for VMware Regulated Workloads is deployed with the private only network option, the physical ports on the internal NIC of the bare metal hosts are disabled. However, there is no support for unplugging the cables.
+Removing physical network connectivity to the public or private network for the Bare Metal Servers that are used within the vCenter Server offering is not possible. When the IBM Cloud for VMware Regulated Workloads is deployed with the private only network option, the physical ports on the internal NIC of the bare metal hosts are disabled and the top of rack switch ports are administratively downed. However, there is no support for unplugging the cables.
 
 ![Physical host connections](../../images/fss-nics-physical.svg "Physical host connections"){: caption="Figure 2. Physical host connections" caption-side="bottom"}
 
