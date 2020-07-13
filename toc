@@ -11,10 +11,11 @@ VMware Solutions
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
     vmonic/vmware-comp-guide.md
-    vmonic/relnotes_v37.md
+    vmonic/relnotes_v38.md
 
     {: .topicgroup}
     Previous release notes
+        vmonic/relnotes_v37.md
         vmonic/relnotes_v36.md
         vmonic/relnotes_v35.md
         vmonic/relnotes_v34.md
@@ -89,6 +90,11 @@ VMware Solutions
         vcenter/vc_addinstancetousraccount.md
         vcenter/vc_deletinginstance.md
         vcenter/vc_deletinginstance_multi.md
+
+    {: .topicgroup}
+    VMware Solutions Dedicated - IBM Cloud for VMware Regulated Workloads
+        vcenter/fss-cloud-vmware-config.md
+        vcenter/fss-cloud-orderinginstance.md
 
     {: .topicgroup}
     VMware Solutions Dedicated - VMware vSphere
@@ -249,7 +255,7 @@ VMware Solutions
     services/icp_overview.md
 
     {: .topicgroup}
-    Enhancing security for VMware Solutions
+    Enhancing security
         vmonic/iam.md
         vmonic/data-security.md
         vmonic/at-events.md
@@ -368,20 +374,27 @@ VMware Solutions
         archiref/caveonix/caveonix-terminology.md
 
     {: .topicgroup}
-    Financial Services Sector Cloud reference architecture
+    IBM Cloud for VMware Regulated Workloads reference architecture
         archiref/fss/fss-overview.md
         archiref/fss/fss-context.md
         archiref/fss/fss-separation-of-duties.md
         archiref/fss/fss-baremetal.md
         archiref/fss/fss-storage.md
         archiref/fss/fss-underlay-network.md
-        archiref/fss/fss-compute-clusters.md
         archiref/fss/fss-overlay-network.md
+        archiref/fss/fss-mzr.md
+        archiref/fss/fss-nsxt-topologies.md
         archiref/fss/fss-vsphere-platform.md
+        archiref/fss/fss-encryption.md
         archiref/fss/fss-operations.md
         archiref/fss/fss-caveonix.md
         archiref/fss/fss-budr.md
         archiref/fss/fss-hytrust.md
+        archiref/fss/fss-iam-active-directory.md
+        archiref/fss/fss-iam-vsphere.md
+        archiref/fss/fss-iam-nsxt.md
+        archiref/fss/fss-iam-hytrust.md
+        archiref/fss/fss-iam-vrealize.md
         archiref/fss/fss-use-case-1.md
         archiref/fss/fss-use-case-2.md
 
@@ -484,7 +497,7 @@ VMware Solutions
         archiref/hcx-archi/hcx-archi-trbl.md
 
     {: .topicgroup}
-    VMware HCX for VMware Solutions
+    HCX for VMware Solutions
         archiref/hcxclient/hcxclient-vcs-intro.md
         archiref/hcxclient/hcxclient-planning.md
         archiref/hcxclient/hcxclient-vcs-client-deployment.md
