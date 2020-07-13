@@ -11,11 +11,10 @@ VMware Solutions
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
     vmonic/vmware-comp-guide.md
-    vmonic/relnotes_v38.md
+    vmonic/relnotes_v37.md
 
     {: .topicgroup}
     Previous release notes
-        vmonic/relnotes_v37.md
         vmonic/relnotes_v36.md
         vmonic/relnotes_v35.md
         vmonic/relnotes_v34.md
