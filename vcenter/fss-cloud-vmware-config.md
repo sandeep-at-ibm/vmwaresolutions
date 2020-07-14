@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-13"
+lastupdated: "2020-07-14"
 
 keywords: cloud for vmware regulated workloads, cloud for vmware instance, instance config cloud for vmware
 
@@ -117,7 +117,7 @@ The following table provides information about the components and settings for a
 | Component or setting | Details |
 |:-------------------- |:------- |
 | Required services[^req_services_config] | Hyper Protect Crypto Services</br>KMIP for VMware (recommended) or HyTrust DataControl</br>Fortigate Security Appliance or Edge services cluster with Juniper vSRX (recommended)</br>Direct Link Dedicated |
-| Optional services | vRealize Network Insight</br>Veeam Availability Suite v10, Windows Server VM on the management cluster</br>Juniper vSRX Standard edition |
+| Optional services | vRealize Network Insight</br>Veeam Availability Suite v10[^veeam_remove], Windows Server VM on the management cluster</br>Juniper vSRX[^juniper_remove] Standard edition |
 | Included services | Caveonix RiskForesight</br>HyTrust CloudControl</br>vRealize Operations and Log Insight |
 | Licensing | All options are customizable |
 | Management cluster | CPU generation: Cascade Lake</br>Enable private NICs for private network only</br>All other available options are customizable |
@@ -134,6 +134,10 @@ The following table provides information about the components and settings for a
 [^req_services_b_b]: Required services to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture
 
 [^req_services_config]: Required services to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture
+
+[^veeam_remove]: The Veeam 10 service is optional. If you do not want to use this service, click the **Veeam 10** service card, and then click **Remove service** in the **Configure Veeam** window.
+
+[^juniper_remove]: The Juniper vSRX service is optional. If you do not want to use this service, click the **Juniper vSRX 18.4** service card, and then click **Remove service** in the **Configure Juniper vSRX** window.
 
 ## Related links
 {: #fss-cloud-vmware-config-related}
