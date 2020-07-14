@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-15"
+lastupdated: "2020-07-14"
 
 keywords: release notes, what's new, version 3.7
 
@@ -44,6 +44,15 @@ Veeam Availability Suite v10 provides off-site copy mode for new and existing VM
 {: #relnotes_v37-dedicated}
 
 This release applies the following updates when you order VMware Solutions Dedicated instances.
+
+### IBM Cloud for VMware Regulated Workloads
+{: #relnotes_v37-fss}
+
+(Updated on July 14, 2020) You can now order {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instances through predefined vCenter Server instance configurations as part of your vCenter Server order flow. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is an extension of the vCenter Server offering, which enhances the basic vCenter Server architecture to deliver a secure, high-performance platform.
+
+For more information, see:
+* [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configurations](/docs/vmwaresolutions?topic=vmwaresolutions-fss-cloud-vmware-config)
+* [Ordering {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instances](/docs/vmwaresolutions?topic=vmwaresolutions-fss-cloud-orderinginstance)
 
 ### New SAP-certified Cascade server support
 {: #relnotes_v37-sapserver}
@@ -122,15 +131,16 @@ The documentation provides information about both Veeam v9.5u4b and Veeam v10.
 ## New and updated documentation
 {: #relnotes_v37-updated-doc}
 
+* (Updated on July 14, 2020) The [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-fss-overview) is updated.
 * Documentation about the responsibilities of IBM vs the customer's is available at [Understanding your responsibilities when using VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-understand-responsib).
-* Documentation is available about the access type that IBM Cloud Support has to your environment and the steps that you can take to limit the access, if required. For more information, see [IBM Cloud Support access](/docs/vmwaresolutions?topic=vmwaresolutions-data-security-mng-data#data-security-ibm-access).
+* Documentation is available about the access type that {{site.data.keyword.cloud_notm}} Support has to your environment and the steps that you can take to limit the access, if required. For more information, see [{{site.data.keyword.cloud_notm}} Support access](/docs/vmwaresolutions?topic=vmwaresolutions-data-security-mng-data#data-security-ibm-access).
 * Documentation is now available about the various ports that VMware Solutions uses. This documentation includes details about:
   * VLANs and subnets that are used
   * Ports for deployment and day 2 operations
   * Ports that VMware uses
   * Ports that the optional services use, such as Caveonix RiskForesight, Juniper vSRX, and Veeam.
 
-  The information is available at [Ports that are used by VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-vmwaresol_ports).
+  For more information, see [Ports that are used by VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-vmwaresol_ports).
 * New FAQ about VMware Solutions Shared is now provided at [General FAQ about VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions-shared). Various updates to the existing FAQs have also been made.
 
 ## User interface updates and enhancements

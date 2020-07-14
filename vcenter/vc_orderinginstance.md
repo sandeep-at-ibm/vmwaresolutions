@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-13"
+lastupdated: "2020-07-13"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -55,7 +55,9 @@ You must specify the following system settings when you order a vCenter Server i
 ### Instance configurations
 {: #vc_orderinginstance-inst-config}
 
-You can select **New configuration** to specify settings for an instance and place the order or save the settings as a configuration template without placing an order. You can also select a saved configuration template to further edit it, or to update it and then save it as a new configuration template.
+* You can select **New configuration** to specify settings for an instance and place the order or save the settings as a configuration template without placing an order.
+* You can also select a saved configuration template to further edit it, or to update it and then save it as a new configuration template.
+* To order {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instances, select one of the instance configurations that starts with **IBM Cloud for VMware Regulated Workloads**. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configurations](/docs/vmwaresolutions?topic=vmwaresolutions-fss-cloud-vmware-config).
 
 ### Instance name
 {: #vc_orderinginstance-inst-name}
@@ -491,6 +493,7 @@ For more information about deploying Multi Zone Stretched Clusters, see [Orderin
 4. Specify the instance configuration:
     * If you want to create a new configuration, select **New configuration**.
     * If you want to update a saved configuration or create a new configuration based on a saved one, select a saved configuration.
+    * To order {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instances, select one of the instance configurations that starts with **IBM Cloud for VMware Regulated Workloads**. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configurations](/docs/vmwaresolutions?topic=vmwaresolutions-fss-cloud-vmware-config).
 5. Enter the instance name and select a resource group.
 6. (NSX-V only) Accept the default value for the initial cluster name or specify your own name.
 7. Select the vSphere version. For NSX-T, only vSphere 6.7u2 is supported.
@@ -525,7 +528,7 @@ For more information about deploying Multi Zone Stretched Clusters, see [Orderin
 
     By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
 
-  * If you select **NFS storage** and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB), and **Performance**.
+  * If you select **NFS storage** and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
   * If you select **NFS storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
   * **(NSX-V SAP-certified only)** If you select **Local disks**, specify the local disk count and local disk type.
 
