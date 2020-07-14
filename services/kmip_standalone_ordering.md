@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-05"
+lastupdated: "2020-07-14"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -27,10 +27,9 @@ Ensure that you completed the following tasks:
 ## Procedure to order KMIP for VMware instances
 {: #kmip_standalone_ordering-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. Scroll down to the **Services** section, and then click **KMIP for VMware** on the **Security and Compliance** card.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the **Services** section and click **KMIP for VMware** on the **Security and Compliance** card.
 3. On the **KMIP for VMware** page, configure the service settings as required.
-4. Click **Provision**.
+4. Click **Create**.
 
 ## KMIP for VMware service configuration
 {: #kmip_standalone_ordering-config}
@@ -44,14 +43,14 @@ Use resource groups to organize the resources in your account for access control
 
 If **No resource group available** is displayed, you currently don't have permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
 
-### Instance Name
+### Instance name
 {: #kmip_standalone_ordering-config-instance-name}
 
 The instance name is set to **kmip-_xx_** by default, where _xx_ represents two randomly generated alphabetic characters.
 
 You can also specify a name for your KMIP for VMware instance.
 
-### Service Location
+### Service location
 {: #kmip_standalone_ordering-config-service-region}
 
 Select the {{site.data.keyword.cloud_notm}} location where your KMIP for VMware instance is to be hosted.
@@ -68,17 +67,17 @@ Select the {{site.data.keyword.cloud_notm}} location where your KMIP for VMware 
 | Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
 {: caption="Table 1. KMIP for VMware network service endpoint locations" caption-side="top"}
 
-### API Key for Service ID
+### API key for service ID
 {: #kmip_standalone_ordering-config-api-key}
 
 Enter the API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the service instance of Key Protect or Hyper Protect Crypto Services.
 
-### Key Manager Instance
+### Key Manager instance
 {: #kmip_standalone_ordering-config-key-protect}
 
 Click **Retrieve** to get the list of available key manager instances and select the one to use for key management.
 
-### Customer Root Key
+### Customer root key
 {: #kmip_standalone_ordering-config-root-key}
 
 Click **Retrieve** to get the customer root key that is stored in your selected key manager instance.
