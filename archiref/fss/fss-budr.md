@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-16"
 
 subcollection: vmwaresolutions
 
@@ -30,14 +30,14 @@ The management cluster relies upon native vSphere DRS capabilities to keep manag
 |---|---|---
 |**Active Directory / DNS** | Image through the Veeam agent | Daily |
 |**Veeam Virtual Machine** |  |  |
-|**vCenter** | Backup Server File| Daily |
-|**NSX-T Controllers** |Backup Server File | Daily|
+|**vCenter** | Backup server file| Daily |
+|**NSX-T Controllers** | Backup server file | Daily|
 |**vRealize Operations Manager** | VMDK through Veeam | Daily |
 |**vRealize Log Insights** | VMDK through Veeam | Daily |
-|**HyTrust Cloud Control** | Backup Server File | |
-|**HyTrust Data Control** | Backup Server File | |
+|**HyTrust Cloud Control** | Backup server file | |
+|**HyTrust Data Control** | Backup server file | |
 |**Virtual Machine Backup Server** | VMDK through Veeam| |
-|**Juniper vSRX** | Backup Server File through SCP from vSRX | Commit Change |
+|**Juniper vSRX** | Backup server file through SCP from vSRX | Commit change |
 {: caption="Table 1. Backup options" caption-side="top"}
 
 ### Veeam backup server
@@ -45,7 +45,7 @@ The management cluster relies upon native vSphere DRS capabilities to keep manag
 
 Veeam on IBM Cloud™ delivers reliable backup for virtual machines within the IBM Cloud for VMware Regulated Workloads environment.
 
-* Veeam is an available option that provides continuous backup of the management stack for protection against disasters. If corruption of any management stack component occurs, Veeam also provides rapid restoration to known good states. Veeam can also provide backup services for the workload cluster. The single site deployment must use the Veeam bare metal option to provide an acceptable backup repository.
+Veeam is an available option that provides continuous backup of the management stack for protection against disasters. If corruption of any management stack component occurs, Veeam also provides rapid restoration to known good states. Veeam can also provide backup services for the workload cluster. The single site deployment must use the Veeam bare metal option to provide an acceptable backup repository.
 
 The Veeam environment is provisioned initially with a single virtual machine. The ISV can extend this instance to their custom requirements, including remote database, more proxy servers, and scaling out of the backup repository.
 

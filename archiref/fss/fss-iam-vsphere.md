@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-20"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # vCenter identity and access management
 {: #fss-iam-vsphere}
 
-Inside the IBM Cloud for VMware Regulated Workloads solution, there are multiple levels of access. The automation uses a set of userIDs to perform operations such as adding hosts, clusters, or storage to your VMware instance.
+Inside the IBM Cloud for VMware Regulated Workloads solution, there are multiple levels of access. The automation uses a set of user IDs to perform operations such as adding hosts, clusters, or storage to your VMware instance.
 
 ## vCenter and Platform Services Controller user IDs
 {: #fss-iam-vsphere-vcenter}
@@ -76,7 +76,6 @@ ISV is granted cloudadmin access to the vCenter through the HyTrust Cloud Contro
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
 | ISV      | IC4v-vCenter    | vCenter Administration Group |
-
 {: caption="Table 5. Active Directory user IDs" caption-side="top"}
 
 ## Service user IDs

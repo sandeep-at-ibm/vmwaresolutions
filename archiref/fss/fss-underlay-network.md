@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-16"
 
 subcollection: vmwaresolutions
 
@@ -49,30 +49,35 @@ The workload cluster network design is closely aligned to that of a traditional 
 Within the workload clusters, NSX-T provides a highly secure and flexible software defined network to support the application requirements. NSX-T management is external to the workload cluster thus ensuring that network and security changes are not possible by anyone other than the designated administrators. All north-south network access in the workload cluster is done through private and secure connections by using IPsec or IBM Direct Link. The workload clusters are protected by the same edge services cluster with the vSRX or the physical FortiGate that protects the management plane.
 
 ## IBM Cloud networking
+{: #fss-underlay-network-cloud}
 
 The physical network of IBM Cloud is separated into two distinct networks: public and private. The private network also contains the management Intelligent Platform Management Interface (IPMI) traffic to the physical servers.
 
 ![IBM Cloud high–level network](../../images/fss-ibmcloudnetwork.svg "IBM Cloud high–level network"){: caption="Figure 1. IBM Cloud high–level network" caption-side="bottom"}
 
 ### Public network
+{: #fss-underlay-network-cloud-public}
 
-IBM Cloud Data Centers and network points of presence (PoPs) have multiple 1 Gbps or 10-Gbps connections to the top-tier transit and peering network carriers. Network traffic from anywhere in the world connects to the closest network PoP, and travels directly across the network to its data center, minimizing the number of network hops and handoffs between providers.
+IBM Cloud data centers and network points of presence (PoPs) have multiple 1 Gbps or 10-Gbps connections to the top-tier transit and peering network carriers. Network traffic from anywhere in the world connects to the closest network PoP, and travels directly across the network to its data center, minimizing the number of network hops and handoffs between providers.
 
 Inside the data center, IBM Cloud provides 1 Gbps or 10 Gbps of network bandwidth to individual servers through a pair of separate, peer-aggregated front-end customer switches (FCS). These aggregated switches are attached to a pair of separate routers, FCR, for L3 networking.
 
 This multitier design allows the network to scale across racks, rows, and pods within an IBM Cloud Data Center.
 
 ### Private network
+{: #fss-underlay-network-cloud-private}
 
-All IBM Cloud Data Centers and PoPs are connected by the private network backbone. This private network is separate from the public network, and it enables connectivity to services in IBM Cloud Data Centers around the world. Moving data between IBM Cloud Data Centers is done through multiple 10 Gbps or 40 Gbps connections to the private network.
+All IBM Cloud data centers and PoPs are connected by the private network backbone. This private network is separate from the public network, and it enables connectivity to services in IBM Cloud data centers around the world. Moving data between IBM Cloud data centers is done through multiple 10 Gbps or 40 Gbps connections to the private network.
 
 Similar to the public network, the private network is multi-tiered in that servers and other infrastructure components are connected to aggregated back-end customer switches (BCS). These aggregated switches are attached to a pair of separate back-end customer routers (BCR) for L3 networking. The private network also supports the ability to use jumbo frames (MTU 9000) for physical host connections.
 
 ### Management network
+{: #fss-underlay-network-cloud-management}
 
 In addition to the public and private networks, each IBM Cloud server is connected for management to the private primary network subnet. This connection allows Intelligent Platform Management Interface (IPMI) access to the server independently of its CPU, firmware, and operating system, for maintenance and administration purposes.
 
 ### Primary and portable IP blocks
+{: #fss-underlay-network-cloud-ipblocks}
 
 IBM Cloud allocates two types of IP addresses to be used within the IBM Cloud infrastructure:
 
@@ -82,12 +87,14 @@ IBM Cloud allocates two types of IP addresses to be used within the IBM Cloud in
 Primary or portable IP addresses can be made routable to any VLAN within your account when the account is configured as a **Virtual Routing and Forwarding (VRF)** account.
 
 ### Virtual routing and forwarding
+{: #fss-underlay-network-cloud-vrf}
 
 The IBM Cloud infrastructure customer portal account must be configured as a Virtual Routing and Forwarding (VRF) account, which will enable automatic global routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
 As various connectivity options along with network routing options require that the IBM Cloud account is in a VRF mode, it is recommended that the account is in VRF mode before provisioning the IBM Cloud for VMware Regulated Workloads.
 
 ### Physical host connections
+{: #fss-underlay-network-cloud-hosts}
 
 Each physical host in this design has two redundant pairs of 10 Gbps Ethernet connections into each IBM Cloud Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This allows networking interface card (NIC) connections to work independently from each other.
 
@@ -98,12 +105,13 @@ While IBM Cloud does offer an SSL VPN option, the use of the SSL VPN is discoura
 ![Physical host connections](../../images/fss-nics-physical.svg "Physical host connections"){: caption="Figure 2. Physical host connections" caption-side="bottom"}
 
 ### VLANs and underlay to overlay routing
+{: #fss-underlay-network-cloud-vlans}
 
 The IBM Cloud for VMware Solutions offerings are designed with 3 VLANs, one public and two private, assigned upon deployment. As shown in the previous figure, the public VLAN is assigned to `eth1` and `eth3`, and the private VLANs are assigned to `eth0` and `eth2`.
 
 The public and the first private VLAN created and assigned in this design are untagged by default within the IBM Cloud. Then, the additional private VLAN is trunked on the physical switch ports and tagged within the VMware port groups that are using these subnets.
 
-![VLAN Connections](../../images/fss-nics-vlans.svg "VLAN Connections"){: caption="Figure 3. VLAN Connections" caption-side="bottom"}
+![VLAN connections](../../images/fss-nics-vlans.svg "VLAN connections"){: caption="Figure 3. VLAN connections" caption-side="bottom"}
 
 The private network consists of two VLANs within this design. Three subnets are allocated to the first of these VLANs (here designated Private VLAN A):
 
@@ -127,8 +135,6 @@ The public network consists of one VLAN within this design. Subnets allocated to
 All subnets that are configured as part of an IBM Cloud for VMware Regulated Workloads automated deployment use IBM Cloud managed ranges. This is to ensure that any IP address can be routed to any data center within the IBM Cloud.
 
 Review the following table for a summary.
-
-Table 1. VLAN and subnet summary
 
 | VLAN | Type | Description |
 |--------- |---- |----------- |

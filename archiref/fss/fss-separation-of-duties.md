@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-20"
 
 subcollection: vmwaresolutions
 
@@ -52,7 +52,7 @@ Suggested network/security admin roles:
     - NSX-T network security admin - dedicated security admin that has responsibility limited to the firewall/security aspects of NSX-T
     - Tenant NSX-T admin - where wanted - scope that is limited to a function/application/business unit as applicable to manage resources with such limited scope. Would include deployment of T1 routers for example.
 
-HyTrust CloudControl transparent proxy with example work flow.
+HyTrust CloudControl transparent proxy with example workflow.
 
 ![Network change workflow](../../images/fss-hytrust-nsxt-flow.svg "Network change workflow"){: caption="Figure 1. Network change workflow" caption-side="bottom"}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-16"
 
 subcollection: vmwaresolutions
 
@@ -90,9 +90,9 @@ The backup server primary instance is backed up to the primary server through rs
 
 | System | Backup Option | Frequency | Location|
 |--- |--- |--- | --- |
-|**vCenter** | Backup Server File| Daily | Update Needed in DR to point at new backup IP|
-|**NSX-T Controllers** |Backup Server File | Daily | Update Needed in DR to point at new backup IP |
-|**HyTrust Cloud Control** | Backup Server File | Update Needed in DR to point at new backup IP |
+|**vCenter** | Backup Server File| Daily | Update needed in DR to point at new backup IP address |
+|**NSX-T Controllers** |Backup Server File | Daily | Update needed in DR to point at new backup IP address |
+|**HyTrust Cloud Control** | Backup Server File | Update needed in DR to point at new backup IP address |
 |**Juniper vSRX** | Backup Server File through SCP from vSRX | Commit Change | Site specific |
 {: caption="Table 1. Backup source and frequency" caption-side="top"}
 

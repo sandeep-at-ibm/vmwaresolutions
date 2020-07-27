@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-16"
 
 subcollection: vmwaresolutions
 
@@ -30,10 +30,10 @@ The trust manifests provides access and control to the following resources:
 ### HyTrust CloudControl trust manifest
 {: #fss-iam-hytrust-trust-manifest}
 
-- **Default ASC_SuperAdmin rule** Super admin role. This user has full access to all three products that are protected.
-- **Cloud Admin Role** Grants access to the vCenter.
-- **Cloud Read Only** Grants read-only access to the vCenter
-- **Cloud NSX-T UI** Grants access to manage the NSX-T objects.
+- **Default ASC_SuperAdmin rule** - Super admin role. This user has full access to all three products that are protected.
+- **Cloud Admin Role** - Grants access to the vCenter.
+- **Cloud Read Only** - Grants read-only access to the vCenter
+- **Cloud NSX-T UI** - Grants access to manage the NSX-T objects.
 
 ### HyTrust CloudControl roles
 {: #fss-iam-hytrust-trust-roles}

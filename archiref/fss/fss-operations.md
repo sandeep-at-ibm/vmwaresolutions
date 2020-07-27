@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-20"
 
 subcollection: vmwaresolutions
 
@@ -45,6 +45,8 @@ All operational tools are deployed into the management cluster. The IBM Cloud fo
 [vRealize Log Insight](https://www.vmware.com/products/vrealize-log-insight.html){:external} delivers heterogeneous and highly scalable log management with intuitive, actionable dashboards, sophisticated analytics, and broad third-party extensibility. It provides deep operational visibility and faster troubleshooting across physical, virtual, and cloud environments.
 
 All systems that generate logs are configured to send their logs to vRealize Log Insight. Centralized collection of all logging enables a comprehensive view of all aspects of the IBM Cloud for VMware Regulated Workloads operation. Log Insight is also capable of forwarding logs to security scanning services such as IBM QRadar.
+
+![vRealize Log Insight integration](../../images/fss-log-flow.svg "vRealize Log Insight integration"){: caption="Figure 2. vRealize Log Insight integration" caption-side="bottom"}
 
 ### vRealize Network Insight
 {: #fss-operations-management-vrni}

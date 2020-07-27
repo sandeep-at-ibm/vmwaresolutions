@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-23"
 
 subcollection: vmwaresolutions
 
@@ -29,7 +29,7 @@ Network isolation is maintained between the workload region and the management a
 
 The use of shared resources, such as VSIs or shared storage options, prevents any data leakage out of the IBM Cloud for VMware Regulated Workloads. All resources necessary to support the workloads are delivered from within the IBM Cloud for VMware Regulated Workloads.
 
-Data and VM encryption options are included in the IBM Cloud for VMware Regulated Workloads. The options available include keep your own key (KYOK) and bring your own key (BYOK) capability by using IBM Hyper Protect Crypto Services (HPCS). Connecting HPCS to the IBM Cloud for VMware Regulated Workloads is either accomplished by using HyTrust Data Control with its embedded KMS or through the IBM Cloud KMIP adapter that is required to integrate with the vCenter directly.
+Data and VM encryption options are included in the IBM Cloud for VMware Regulated Workloads. The preferred option is keep your own key (KYOK) using IBM Hyper Protect Crypto Services (HPCS). Connecting HPCS to the IBM Cloud for VMware Regulated Workloads is either accomplished by using HyTrust Data Control with its embedded KMS or through the IBM Cloud KMIP adapter that is required to integrate with the vCenter directly.
 
 Where HyTrust CloudControl is a required component of the IBM Cloud for VMware Regulated Workloads, Data Control is optional. If Data Control is selected, then IBM Cloud for VMware Regulated Workloads is able to take advantage of HyTrust Boundary Control. Boundary Control adds geo-fencing to the IBM Cloud for VMware Regulated Workloads security toolbox.
 

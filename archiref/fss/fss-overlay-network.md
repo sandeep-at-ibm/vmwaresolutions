@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-20"
 
 subcollection: vmwaresolutions
 
@@ -40,7 +40,7 @@ Traffic from the ISV's customer passes through the vSRX in an encrypted tunnel, 
 ## Workload cluster
 {: #fss-overlay-network-workload}
 
-![Workload Cluster Networks](../../images/fss-workload-overlay.svg)
+![Workload cluster overlay network](../../images/fss-workload-overlay.svg "Workload cluster overlay network"){: caption="Figure 1. Workload cluster overlay network" caption-side="bottom"}
 
 The workload cluster network design requires both the overlay network that is delivered with NSX-T and two or more VLANs to support the infrastructure layer functions.
 

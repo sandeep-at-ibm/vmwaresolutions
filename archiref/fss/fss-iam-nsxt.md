@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-16"
 
 subcollection: vmwaresolutions
 
@@ -19,8 +19,7 @@ subcollection: vmwaresolutions
 # NSX-T administration interface identity and access management
 {: #fss-iam-nsxt}
 
-The main principles / requirements
-
+The following main principles or requirements apply:
 - Infrastructure Admin has execute/full access to components.
 - Auditor has read-only access to all components.
 
@@ -71,7 +70,7 @@ NSX-T Data Center has the following built-in roles. You cannot add any new roles
 | IBM      | automation_admin | Automation account used by IBM. It uses the principle identity functions to create configuration and protect it with a certificate. |
 {: caption="Table 2. NSX-T user IDs" caption-side="top"}
 
-[VMware documentation - RBAC for NSX-T](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.5/administration/GUID-26C44DE8-1854-4B06-B6DA-A2FD426CDF44.html){:external}
+For more information, see the [VMware documentation - RBAC for NSX-T](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.5/administration/GUID-26C44DE8-1854-4B06-B6DA-A2FD426CDF44.html){:external}.
 
 **Next topic**: [HyTrust identity and access management](/docs/vmwaresolutions?topic=vmwaresolutions-fss-iam-hytrust)
 

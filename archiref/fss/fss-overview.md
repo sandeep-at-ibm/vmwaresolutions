@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-20"
 
 subcollection: vmwaresolutions
 
@@ -27,6 +27,8 @@ The design extends and enhances the basic vCenter Server architecture to deliver
 
 ![IBM Cloud for VMware Regulated Workloads infrastructure overview](../../images/fss-architecture.svg "IBM Cloud for VMware Regulated Workloads infrastructure overview"){: caption="Figure 1. IBM Cloud for VMware Regulated Workloads infrastructure overview" caption-side="bottom"}
 
+\* The perimeter gateway cluster shown in the workload region is the same gateway running on the dedicated edge services cluster.
+
 The minimum viable product consists of the following components:
 * At least one workload cluster that includes four or more ESXi hosts
 * vSAN and NSX-T
@@ -34,7 +36,7 @@ The minimum viable product consists of the following components:
 * A two ESXi host edge services cluster or physical FortiGate appliance
 
 ## Management cluster
-{: #fss-overview-mamagement}
+{: #fss-overview-management}
 
 The management cluster is sized to support only the requirements of the management software stack. Do not run non-management function workloads in the management cluster. Keeping the management functions fully isolated from the workload cluster makes it impossible for a runaway workload VM to use resources that are dedicated to platform management. This way, administrators ensure that they can maintain full control of the environment.
 
