@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-16"
+lastupdated: "2020-07-28"
 
 subcollection: vmwaresolutions
 
@@ -22,9 +22,9 @@ subcollection: vmwaresolutions
 ## HyTrust trust manifests
 {: #fss-iam-hytrust-trust}
 
-The trust manifests provides access and control to the following resources:
-- vCenter Server
-- NSX-T user interface
+The trust manifests provide access and control to the following resources:
+- VMware vCenter Server®
+- NSX-T administration interface
 - HyTrust CloudControl
 
 ### HyTrust CloudControl trust manifest
@@ -38,7 +38,7 @@ The trust manifests provides access and control to the following resources:
 ### HyTrust CloudControl roles
 {: #fss-iam-hytrust-trust-roles}
 
-| HyTrust Cloud Control Role Function                       | Super Admin | Cloud Admin | NSX-T Admin | Read-only vCenter |
+| HyTrust CloudControl Role Function                       | Super Admin | Cloud Admin | NSX-T Admin | Read-only vCenter |
 | ---                                                       | ---         | ---         | ---         | ---               |
 | CloudControl.Asc.Login                                 | X           |             |             |                   |
 | Management.CloudPlatform.Login                         | X           |             | X           |                   |

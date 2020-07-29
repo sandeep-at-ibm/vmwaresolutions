@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-20"
+lastupdated: "2020-07-28"
 
 subcollection: vmwaresolutions
 
@@ -19,15 +19,15 @@ subcollection: vmwaresolutions
 # Operations management
 {: #fss-operations}
 
-The IBM Cloud for VMware Regulated Workloads is delivered as a clean environment. Extensive work was performed to identify and remediate common errors and warnings that are often found in a typical vSphere deployment. IBM and VMware best practices that are combined with standard and customized templates for vRealize Operations ensure that every IBM Cloud for VMware Regulated Workloads is deployed in the cleanest possible condition, ready for onboarding. Caveonix RiskForesight is used to scan the environment for compliance with industry and government standards such as NIST, PCI, and more. RiskForesight is continually monitoring the IBM Cloud for VMware Regulated Workloads for adherence to compliance standards. RiskForesight can provide on-demand compliance posture reporting and at-a-glance compliance status.
-The operational tools support the ISV in compliance with current standards and assist them in rapidly responding to a changing compliance landscape.
+IBM Cloud for VMware® Regulated Workloads is delivered as a clean environment. Extensive work was performed to identify and remediate common errors and warnings that are often found in a typical vSphere deployment. IBM and VMware best practices that are combined with standard and customized templates for vRealize Operations ensure that every IBM Cloud for VMware Regulated Workloads is deployed in the cleanest possible condition, ready for onboarding. Caveonix RiskForesight is used to scan the environment for compliance with industry and government standards such as NIST, PCI, and more. RiskForesight is continually monitoring the IBM Cloud for VMware Regulated Workloads for adherence to compliance standards. RiskForesight provides on-demand compliance posture reporting and at-a-glance compliance status.
+The operational tools support the SaaS provider in compliance with current standards and assist them in rapidly responding to a changing compliance landscape.
 
 ![IBM Cloud for VMware Regulated Workloads operational tools overview](../../images/fss-opstools.svg "IBM Cloud for VMware Regulated Workloads operational tools overview"){: caption="Figure 1. IBM Cloud for VMware Regulated Workloads operational tools overview" caption-side="bottom"}
 
 ## Management cluster
 {: #fss-operations-management}
 
-All operational tools are deployed into the management cluster. The IBM Cloud for VMware Regulated Workloads depends upon multiple layers of tools to deliver comprehensive insight into the operation, security, and compliance of all layers of the platform. ISVs consuming the IBM Cloud for VMware Regulated Workloads can elect to extend the use of the operational tools to monitor the VMs supporting their applications.
+All operational tools are deployed into the management cluster. The IBM Cloud for VMware Regulated Workloads depends upon multiple layers of tools to deliver comprehensive insight into the operation, security, and compliance of all layers of the platform. SaaS providers that use IBM Cloud for VMware Regulated Workloads can extend the use of the operational tools to monitor the VMs supporting their applications.
 
 ### Caveonix RiskForesight
 {: #fss-operations-management-riskforesight}
@@ -37,7 +37,7 @@ All operational tools are deployed into the management cluster. The IBM Cloud fo
 ### vRealize Operations
 {: #fss-operations-management-vrops}
 
-[VMware vRealize Operations](https://www.vmware.com/products/vrealize-operations.html){:external} delivers self-driving IT operations management from apps to infrastructure to optimize, plan, and scale hybrid cloud and HCI deployments while unifying multi-cloud monitoring. Powered by AI/ML, it helps IT run production operations hands-off and hassle-free with a unified operations platform, delivering continuous performance optimization, efficient capacity management, proactive planning, intelligent remediation, and integrated compliance.
+[VMware vRealize Operations](https://www.vmware.com/products/vrealize-operations.html){:external} delivers self-driving IT operations management from apps to infrastructure to optimize, plan, and scale hybrid cloud and HCI deployments while unifying multi-cloud monitoring. Powered by AI/ML, vRealize Operations helps IT run production operations hands-off and hassle-free with a unified operations platform. This platform delivers continuous performance optimization, efficient capacity management, proactive planning, intelligent remediation, and integrated compliance.
 
 ### vRealize Log Insight
 {: #fss-operations-management-vrli}
@@ -58,7 +58,7 @@ vRealize Network Insight monitors network components and management traffic thro
 ## Edge cluster
 {: #fss-operations-edge}
 
-No operational tooling is deployed to the edge services cluster. All components of the edge cluster are configured to deliver their logs to vRealize Log Insight, inclusive of the vSRX syslog facilities. If the physical FortiGate is deployed in the place of the edge services cluster its syslog facility must send logs to VRLI.
+No operational tooling is deployed to the edge services cluster. All components of the edge cluster are configured to deliver their logs to vRealize Log Insight, inclusive of the virtual gateway syslog facilities. If the physical FortiGate is deployed in the place of the edge services cluster its syslog facility must send logs to VRLI.
 
 ## Workload cluster
 {: #fss-operations-workload}

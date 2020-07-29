@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-16"
+lastupdated: "2020-07-28"
 
 subcollection: vmwaresolutions
 
@@ -22,14 +22,14 @@ subcollection: vmwaresolutions
 ## Overview
 {: #fss-iam-vrealize-overview}
 
-The operational tooling consist of the following components:
+The operational tooling consists of the following components:
 
-- vRealize Operations Manager - Using data collected from objects in the VMware platform, vRealize Operations Manager (vROps) uses detailed dashboards to show system health, capacity, and performance.
+- vRealize Operations Manager - Using data collected from objects in the VMware® platform, vRealize Operations Manager (vROps) uses detailed dashboards to show system health, capacity, and performance.
 - vRealize Log Insights - Objects in the VMware platform have been configured to send their logging events to vRealize Log Insights (vRLI) to enable a centralized log management function.
 
 The following main principles or requirements for identity and access management to the operational tooling apply:
 - The principle of least privilege to be used so that a user account has assigned only the privileges that are essential to perform the intended function.
-- ISV operations has full access to the Operational tooling.
+- SaaS provider operations has full access to the operational tooling.
 - Auditor has read-only access to the operational tooling.
 - IC4V Active Directory (AD) is used to host accounts and define roles.
 
@@ -41,19 +41,12 @@ The following terminology is used to define the account types:
 - User IDs - These IDs are assigned to people who require access to the system.
 - Service IDs - These IDs are used by the IC4V automation or used by software components.
 - Local IDs - These IDs are local to the application.
-- SSH IDs - These IDs are used to access the Linux VMs that host the applications
+- SSH IDs - These IDs are used to access the Linux® VMs that host the applications
 
 ## IBM Cloud for VMware Solutions infrastructure AD domain
 {: #fss-iam-vrealize-ad}
 
-The IBM Cloud™ for VMware Solutions infrastructure AD domain, which is installed, configured, and maintained by IBM holds the resource objects and user accounts for the administration of the VMware platform only. The customer has no access to the Workload AD domain controllers.
-
-The Workload AD domain, which is installed, configured, and maintained by the customer, holds the resource objects and user accounts for the administration of the virtual machines. IBM has no access to the Workload AD domain controllers.
-
-The following AD groups are configured in the infrastructure AD. These groups are assigned a scope of Domain Local:
-- `icv4-vCenter` - This group contains the Service IDs and User IDs used by ISV for the management of the VCS VMware platform.
-- `ic4v-infra` - This group contains the User IDs used by the customer for the management of virtual machines and logical networks that are hosted on the VMware vCenter Server platform.
-- `ic4v-auditor` - This group contains the User IDs used by the customer for the read only visibility of virtual machines, logical networks, and the VMware platform.
+The IBM Cloud™ for VMware Solutions infrastructure AD domain holds the resource objects and user accounts for the administration of the VMware platform only.
 
 ## vRealize Operations Manager
 {: #fss-iam-vrealize-vrops}
@@ -110,7 +103,7 @@ By default, the following local users are configured during service instantiatio
 | admin | Local ID | Super Admin |
 {: caption="Table 3. vROps default user IDs" caption-side="top"}
 
-This User ID is not used on a day-to-day basis and the password is held in the IBM repository. This user ID is only used by IBM for configuration tasks.
+This account is not used on a day-to-day basis and for configuration tasks.
 
 ![vRealize Log Insights logical](../../images/fss-vrealize-logical.svg){: caption="Figure 2. vRealize Log Insights logical" caption-side="bottom"}
 

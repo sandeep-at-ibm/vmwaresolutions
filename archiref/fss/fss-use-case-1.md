@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-28"
 
 subcollection: vmwaresolutions
 
@@ -19,13 +19,13 @@ subcollection: vmwaresolutions
 # Use case 1
 {: #fss-use-case-1}
 
-The IBM Cloud for VMware Regulated Workloads delivers a virtualized platform that is suited for users in a highly regulated industry, who require a platform that is designed to support compliance to industry security standards or governmental regulations.
+IBM Cloud for VMware® Regulated Workloads delivers a virtualized platform that is suited for users in a highly regulated industry that require a platform that is designed to support compliance to industry security standards or governmental regulations.
 
-Typical hyper-converged virtual infrastructure designs include management, edge services, and compute, all on the same cluster. This approach might blur the lines between the virtualization administrator, typically responsible for the compute and storage infrastructure, the network administrator, and the security administrator.
+Typical hyper-converged virtual infrastructure designs include management, edge services, and compute all on the same cluster. This approach might blur the lines between the virtualization administrator, typically responsible for the compute and storage infrastructure, the network administrator, and the security administrator.
 
 The IBM Cloud for VMware Regulated Workloads architecture restores the strict separation of duties that are usually enforced in an on-premises environment.
 
-HyTrust CloudControl (HTCC) is specified in the design to ensure that all activities taken, or attempted, by an administrator or user are fully logged and auditable. HTCC also improves the capability to control account privileges through fine grained role-based access control (RBAC).
+HyTrust CloudControl (HTCC) is specified in the design to ensure that all activities taken, or attempted, by an administrator or other privileged user are fully logged and auditable. HTCC also improves the capability to control account privileges through fine grained role-based access control (RBAC).
 
 The IBM Cloud for VMware Regulated Workloads architecture spreads the delivery of necessary services across purpose-built regions.
 
@@ -36,7 +36,7 @@ The edge services region is strictly limited to the protection of the management
 
 The workload region is managed by one or more administrators that are only responsible for the management of the application VMs deployed upon the workload clusters. One approach where multiple administrators are useful is the case where a user wants to isolate administrative tasks on a per business unit basis or other compliance requirements.
 
-Three distinct regions: management region, edge services region, and the workload region, design the zero-trust security model into the IBM Cloud for VMware Regulated Workloads. Taking advantage of this design through audited and enforced separation of duties at every possible opportunity, assists users to comply with industry standards or government regulations, making the IBM Cloud for VMware Regulated Workloads uniquely suited users who are operating in highly regulated industries.
+Three distinct regions: management region, edge services region, and the workload region, design the zero-trust security model into the IBM Cloud for VMware Regulated Workloads. Taking advantage of this design through audited and enforced separation of duties at every possible opportunity, assists users to comply with industry standards or government regulations, making the IBM Cloud for VMware Regulated Workloads that are uniquely suited for hosting applications for clients in highly regulated industries.
 
 **Next topic**: [Use case 2](/docs/vmwaresolutions?topic=vmwaresolutions-fss-use-case-2)
 

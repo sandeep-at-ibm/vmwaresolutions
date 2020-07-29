@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-20"
+lastupdated: "2020-07-28"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # vCenter identity and access management
 {: #fss-iam-vsphere}
 
-Inside the IBM Cloud for VMware Regulated Workloads solution, there are multiple levels of access. The automation uses a set of user IDs to perform operations such as adding hosts, clusters, or storage to your VMware instance.
+Inside IBM Cloud for VMware® Regulated Workloads, there are multiple levels of access. The automation uses a set of user IDs to perform operations such as adding hosts, clusters, or storage to your VMware instance.
 
 ## vCenter and Platform Services Controller user IDs
 {: #fss-iam-vsphere-vcenter}
@@ -28,10 +28,10 @@ The following user IDs are used to add an identity source, which is embedded by 
 
 | User     | User ID      | Method | Description |
 |:---------|:-------------|:-------|:------------|
-| ISV      | `root`       | SSH    | Used for VMware configuration such as setting up VMware High Availability and creating distributed switches. Used post deployment to pair primary and secondary vCenter Server instances. |
-| ISV | customerroot | SSH    | Created for customer use only. |
-| IBM      | automation@``root_domain``<br/>(Active Directory user) | HTTP | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines for add-on services. |
-| ISV | `cloudadmin`@`root_domain`<br/>(Active Directory user) | HTTP | Created for ISVr use only. |
+| SaaS provider | `root` | SSH | Used for VMware configuration such as setting up VMware High Availability and creating distributed switches. Used post deployment to pair primary and secondary vCenter Server instances. |
+| SaaS provider | `customerroot` | SSH | Created for customer use only. |
+| IBM | `automation`@``root_domain``<br/>(Active Directory user) | HTTP | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines for add-on services. |
+| SaaS provider | `cloudadmin`@`root_domain`<br/>(Active Directory user) | HTTP | Created for SaaS provider use only. |
 {: caption="Table 1. vCenter and Platform Services Controller user IDs" caption-side="top"}
 
 HTTPS is used for vCenter setup and configuration, and for VMware operations such as adding hosts, clusters, or storage for vCenter management of resources.
@@ -39,15 +39,15 @@ HTTPS is used for vCenter setup and configuration, and for VMware operations suc
 ### vCenter access
 {: #fss-iam-vsphere-vcenter-access}
 
-ISV is granted cloudadmin access to the vCenter through the HyTrust Cloud Control role, there is no direct access to the vCenter.
+SaaS provider is granted `cloudadmin` access to the vCenter through the HyTrust CloudControl role, there is no direct access to the vCenter.
 
 ## NSX Manager user IDs
 {: #fss-iam-vsphere-nsx}
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| IBM      | ibm_automation <br/>(NSX-T Principle Identity user) | Used post deployment to manage NSX VTEP IP addresses, manage host and cluster configuration when adding and removing hosts and clusters, and manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
-| ISV | admin        | Created for customer use only. |
+| IBM | `ibm_automation`<br/>(NSX-T Principle Identity user) | Used post deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added or removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
+| SaaS provider | `admin` | Created for customer use only. |
 {: caption="Table 2. NSX Manager user IDs" caption-side="top"}
 
 ## ESXi host user IDs
@@ -55,19 +55,19 @@ ISV is granted cloudadmin access to the vCenter through the HyTrust Cloud Contro
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| ISV      | ic4vroot     | Used post deployment to add more NFS storage, configure routes for that storage, and to run all server validation code. |
-| ISV    | root         | Created for customer use only. |
+| SaaS provider | `ic4vroot` | Used post deployment to add more NFS storage, configure routes for that storage, and to run all server validation code. |
+| SaaS provider | `root` | Created for customer use only. |
 {: caption="Table 3. ESXi host user IDs" caption-side="top"}
 
-## Microsoft Active Directory user IDs
+## Active Directory user IDs
 {: #fss-iam-vsphere-aduser}
 
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
-| IBM      | automation    | Used to add a host or a virtual machine for service, and to set up Active Directory and DNS entries. |
-| ISV      | Administrator | Default Windows user |
-| ISV | cloudadmin    | Default user for customer to access vCenter Server |
-| ISV | cloudreadonly | Read-only account for customer |
+| IBM | `automation` | Used to add a host or a virtual machine for service, and to set up Microsoft® Active Directory and DNS entries. |
+| SaaS provider | `Administrator` | Default Windows® user |
+| SaaS provider | `cloudadmin` | Default user for customer to access vCenter Server |
+| SaaS provider | `cloudreadonly` | Read-only account for customer |
 {: caption="Table 4. Active Directory user IDs" caption-side="top"}
 
 ## Microsoft Active Directory groups
@@ -75,7 +75,7 @@ ISV is granted cloudadmin access to the vCenter through the HyTrust Cloud Contro
 
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
-| ISV      | IC4v-vCenter    | vCenter Administration Group |
+| SaaS provider | `IC4v-vCenter` | vCenter Administration Group |
 {: caption="Table 5. Active Directory user IDs" caption-side="top"}
 
 ## Service user IDs
@@ -100,8 +100,8 @@ ISV is granted cloudadmin access to the vCenter through the HyTrust Cloud Contro
 
 where:
 
-- ``dynamicID`` is the 8 - 10 characters that generated dynamically during the service installation.
-- ``shortID`` is the 5 characters that generated dynamically during the service installation.
+- ``dynamicID`` is the 8 - 10 characters that are generated dynamically during the service installation.
+- ``shortID`` is the 5 characters that are generated dynamically during the service installation.
 - ``domainName`` is the domain name of your instance.
 
 **Next topic**: [NSX-T administration interface identity and access management](/docs/vmwaresolutions?topic=vmwaresolutions-fss-iam-nsxt)
