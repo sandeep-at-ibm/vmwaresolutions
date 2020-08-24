@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-11"
+lastupdated: "2020-07-28"
 
 keywords: data encryption in VMware Solutions, data storage for VMware Solutions, bring your own keys for VMware Solutions, BYOK for VMware Solutions, key management for VMware Solutions, key encryption for VMware Solutions, personal data in VMware Solutions, data deletion for VMware Solutions, data in VMware Solutions, data security in VMware Solutions
 
@@ -48,7 +48,7 @@ These solutions include:
 * HyTrust KeyControl as a key server that enables vSAN or vSphere encryption for your workloads
 * Other self–managed VMware–compatible encryption technologies
 
-If you use VMware Solutions Shared, your workload data exists in an IBM–managed cloud infrastructure account. VMware vSphere encryption is automatically enabled by IBM for your virtual machines by using IBM–managed keys that are backed by the {{site.data.keyword.cloud_notm}} KMIP for VMware and Hyper Protect Crypto Services. You can optionally implement your own encryption solutions within your VMware workloads.
+If you use VMware Solutions Shared, your workload data exists in an IBM–managed cloud infrastructure account. You are provided with the default VMware vSphere encryption option for your virtual machines using IBM–managed keys that are backed by the {{site.data.keyword.cloud_notm}} KMIP for VMware and Hyper Protect Crypto Services. You can optionally implement your own encryption solutions within your VMware workloads.
 
 ## How your data is stored and encrypted in the VMware Solutions Shared Veeam Availability Suite service
 {: #data-security-data-veeamshared}
@@ -83,7 +83,7 @@ In VMware Solutions Dedicated, you can take steps to limit {{site.data.keyword.c
 
 For VMware Solutions Dedicated, envelope encryption is used to offer customer–managed keys. For VMware Solutions Shared, envelope encryption is used but with IBM–managed rather than customer–managed keys.
 
-Envelope encryption within VMware Solutions uses either the [KMIP for VMware service](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) to provide key management for VMware vSphere encryption or vSAN encryption, or [HyTrust Data Control](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) policy–based virtual machine encryption.
+Envelope encryption within VMware Solutions uses either the [KMIP for VMware service](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) to provide key management for VMware vSphere encryption or vSAN encryption, or [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) policy–based virtual machine encryption.
 
 In both cases, these offerings use {{site.data.keyword.cloud_notm}} Key Protect or {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services for key wrapping and unwrapping. Key Protect offers Bring Your Own Key (BYOK) capability by using FIPS 140–2 level 3 certified hardware security modules (HSMs). Hyper Protect Crypto Services offers Keep Your Own Key (KYOK) capability by using FIPS 140–2 level 4 certified HSMs.
 
@@ -92,7 +92,7 @@ In both cases, these offerings use {{site.data.keyword.cloud_notm}} Key Protect 
 
 You can use {{site.data.keyword.cloud_notm}} key management with VMware vSphere or vSAN encryption. For more information, see the [KMIP for VMware implementation guide](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-implementation).
 
-You can use HyTrust Data Control together with Hyper Protect Crypto Services to secure your VMware virtual machines. For more information, see the [HyTrust Data Control and HPCS deployment guide](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-deployment).
+You can use HyTrust DataControl together with Hyper Protect Crypto Services to secure your VMware virtual machines. For more information, see the [HyTrust DataControl and HPCS deployment guide](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-deployment).
 
 ### Working with customer-managed keys for VMware Solutions
 {: #data-security-working-with-keys}

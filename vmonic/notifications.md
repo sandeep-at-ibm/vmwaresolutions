@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-06-29"
 
 keywords: notifications console, filter notifications, system notification
 
@@ -25,7 +25,7 @@ From the {{site.data.keyword.vmwaresolutions_full}} console, click **Notificatio
 | Column | Description |
 |:------ |:----------- |
 | Severity | The severity of the event that is reported by the notification.<br>**Critical**: A critical event might impact the entire system or service.<br>**Error**: An error event occurs during an operation that might need intervention from the administrator or the user.<br>**Warning**: A component fails or is not working properly. However, the failure does not disrupt the ongoing process of the component.<br>**Informational**: A system or user operation is completed. Typically, the following events report informational notifications:<br>A service is installed.<br>A service is upgraded.<br>A service is removed.<br>All services are reconfigured for the added ESXi servers.<br>All services are reconfigured for the removed ESXi servers. |
-| Type | The type of component that the reported event is related to: vCenter Server instances, services, or system. |
+| Type | The type of component that the reported event is related to: VMware vCenter Server® instances, services, or system. |
 | Resource | The name of the instance or service that sends the notification. |
 | Title | The subject of the notification. |
 | Creation time | The date and time when the notification is sent. |

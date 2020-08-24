@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-04"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -131,7 +131,7 @@ Enhanced Linked Mode (ELM) lets you view and search across all linked vCenter Se
 * A single-pane-of-glass view into the environment and where there are multiple vCenter Servers.
 * Simplified primary, secondary relationship creation by using Single sign-on (SSO) credentials.
 * vCenter Server automation configuration for DNS name resolution for all the sites that are linked together.
-* In a cross-vCenter NSX environment, ELM allows to you manage all NSX Managers from a single vSphere Web Client
+* In a cross-vCenter NSX environment, ELM allows to you manage all NSX managers from a single vSphere Web Client
 * Single pane of glass management across all sites for both NSX and normal vCenter functions.
 
 ELM does not bring high availability for vCenter services, just simplifies the management of multiple vCenters. ELM is configured by the {{site.data.keyword.vmwaresolutions_short}} automation when a secondary instance is deployed.
@@ -139,7 +139,7 @@ ELM does not bring high availability for vCenter services, just simplifies the m
 ### Cross vCenter NSX
 {: #adds-infra-domain-multisite-nsx}
 
-In cross-vCenter NSX, you have a primary NSX Manager and multiple secondary NSX Managers. Each of these NSX Managers is linked to a separate vCenter Server. On the primary NSX Manager, you can create universal NSX components such as switches and routers that are viewable from the secondary NSX Managers.
+In cross-vCenter NSX, you have a primary NSX Manager and multiple secondary NSX managers. Each of these NSX managers is linked to a separate vCenter Server. On the primary NSX Manager, you can create universal NSX components such as switches and routers that are viewable from the secondary NSX managers.
 
 Cross-vCenter NSX includes these features:
 * The same logical networks are available in the cross-vCenter environment, so it's possible for VMs on any cluster on any vCenter Server system to be connected to the same logical network.
@@ -147,7 +147,7 @@ Cross-vCenter NSX includes these features:
 * Centralized management of universal objects, reducing administration effort.
 * VMs can be migrated by using vMotion across vCenter Servers without having to reconfigure the VM or change firewall rules.
 
-When cross-vCenter NSX is combined with ELM, you can view and manage any of the NSX Managers and all of the universal NSX components from any of the linked vCenter Servers. ELM is not a prerequisite or requirement for cross-vCenter NSX. Without ELM, you can still create cross-vCenter universal transport zones, universal switches, universal routers, and universal firewall rules. However, without ELM in place, you must log in to the individual vCenter Servers to access each NSX Manager instance. Cross vCenter NSX is not automatically deployed and the customer must deploy this manually by following the tasks in [Configuring the Primary NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.cross-vcenter-install.doc/GUID-0B74FB40-1D90-4A6A-B7CE-B4EF3B923452.html){:external}.
+When cross-vCenter NSX is combined with ELM, you can view and manage any of the NSX managers and all of the universal NSX components from any of the linked vCenter Servers. ELM is not a prerequisite or requirement for cross-vCenter NSX. Without ELM, you can still create cross-vCenter universal transport zones, universal switches, universal routers, and universal firewall rules. However, without ELM in place, you must log in to the individual vCenter Servers to access each NSX Manager instance. Cross vCenter NSX is not automatically deployed and the customer must deploy this manually by following the tasks in [Configuring the Primary NSX Manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.cross-vcenter-install.doc/GUID-0B74FB40-1D90-4A6A-B7CE-B4EF3B923452.html){:external}.
 
 ### Active Directory, SSO, and DNS in a multi-site topology
 {: #adds-infra-domain-multisite-ad}

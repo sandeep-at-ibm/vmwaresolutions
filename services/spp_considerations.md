@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-06"
+lastupdated: "2020-08-10"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -24,11 +24,15 @@ subcollection: vmwaresolutions
 The {{site.data.keyword.IBM}} Spectrum Protect Plus service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.
 {: shortdesc}
 
-This service is available only to instances that are running VMware vSphere 6.5. The {{site.data.keyword.IBM}} Spectrum Protect Plus service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 10.1.5.
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
+The {{site.data.keyword.IBM}} Spectrum Protect Plus service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 10.1.5.
 {:note}
 
 ## Technical specifications for IBM Spectrum Protect Plus
 {: #spp_considerations-specs}
+
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are ordered and included in the IBM Spectrum Protect Plus service:
 
@@ -83,12 +87,6 @@ Review the following considerations before you install the IBM Spectrum Protect 
 
   The IBM Spectrum Protect Plus service can use up to 11 of the NFS volumes on each ESXi server in the default cluster of your instance. In addition, the service creates transient NFS mounts for backup and restore purposes. Therefore, you must set the number of NFS mounts to a minimum of 64 to ensure that the service can be installed and function successfully.
 
-**Notes:**
-
-* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
-* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
-
 ## Considerations when you delete IBM Spectrum Protect Plus
 {: #spp_considerations-remove}
 
@@ -100,8 +98,8 @@ Review the following considerations before you delete the IBM Spectrum Protect P
 ## Related links
 {: #spp_considerations-related}
 
-* [IBM Spectrum Protect Plus Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650){:external}
+* [IBM Spectrum Protect Plus Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650)
 * [Managing IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-managingspp)
 * [Ordering IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_ordering)
-* [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html){:external}
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
+* [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [Opening a case for IBM Spectrum Protect Plus](https://www.ibm.com/mysupport/s/article/How-to-Open-a-Case)

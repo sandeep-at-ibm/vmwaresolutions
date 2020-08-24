@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-14"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-# HCX Client deployment
+# HCX client deployment
 {: #hcxclient-vcs-client-deployment}
 
 A minimal HCX installation consists of a single cloud and client-side deployment.
@@ -21,7 +21,7 @@ The HCX client side can install on any version of vSphere supported by HCX assum
 ## Requirements
 {: #hcxclient-vcs-client-deployment-req}
 
-| Component | CPU Count | Memory (GB) | Disk (GB) |
+| Component | CPU count | Memory (GB) | Disk (GB) |
 |--------|--------|---------|-------|
 | HCX Manager | 4 | 12G |  60G |
 | HCX Interconnect (HCX-IX) | 4 | 3G |  2G |
@@ -29,7 +29,7 @@ The HCX client side can install on any version of vSphere supported by HCX assum
 | HCX WAN Optimizer (HCX-WAN) | 8 | 14G |  100G |
 {: caption="Table 1. Requirements" caption-side="bottom"}
 
-## Client Licensing
+## Client licensing
 {: #hcxclient-vcs-client-deployment-licensing}
 
 HCX is a service. HCX is licensed per site and per virtual machine (VM) managed through licensing servers that are maintained by VMware. The HCX cloud and client-side instances require communication with the VMware registration site throughout their lifecycle.
@@ -40,7 +40,7 @@ HCX is a service. HCX is licensed per site and per virtual machine (VM) managed 
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. Scroll to the **On-premises HCX Licenses** table and click **Provision New**.
+2. Scroll to the **On-premises HCX licenses** table and click **Provision new**.
 3. Specify the license name.
 4. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the license.
 5. Click **Provision**.
@@ -63,7 +63,7 @@ target {{site.data.keyword.cloud_notm}}.
   * Two IP addresses per HCX Manager appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more Direct Connect lines.
   * Add one if there is a separate vMotion network connection.
 
-## Client-Side OVA Download
+## Client-side OVA download
 {: #hcxclient-vcs-client-deployment-client-ova}
 
 The client-side HCX is user-deployed and it requires administrator level permissions to the source vCenter. As of this writing, the HCX client-side manager ova is approximately 1.7 GB. When use the {{site.data.keyword.vmwaresolutions_short}} console to order HCX, a URL is provided with a link to download the version of HCX for the client-side that matches the version of HCX deployed on the cloud side. This link is provided in the cloud side HCX Manager user interface (UI).

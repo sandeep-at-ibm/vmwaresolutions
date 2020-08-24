@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-06-13"
+lastupdated: "2020-06-24"
 
 subcollection: vmwaresolutions
 
@@ -32,7 +32,7 @@ A building block consists of:
 * Shared storage
 * Virtual desktops or RDS hosts for users
 
-<img src="../../images/horizon-cloud-pod.svg" alt="Building block architecture" style="width: 400px;"/>
+![Building block architecture](../../images/horizon-cloud-pod.svg "Building block architecture"){: caption="Figure 1. Building block architecture" caption-side="bottom"}
 
 When you deploy Horizon 7, a two-cluster approach is recommended. This approach provides a small management cluster for running the server workloads that are used to support the Horizon environment and a larger workload cluster for the VDI or Published Apps workload. The management cluster consists of a three-node cluster that uses NFS storage, and the workload cluster will consider of at least four-nodes utilizing VMware VSAN.
 
@@ -122,7 +122,7 @@ Cloud Pod Architecture (CPA) is a standard Horizon 7 feature that allows you to 
 CPA is not a stretched deployment. Each Horizon 7 pod is distinct and all Connection Servers belonging to each of the individual pods are required to be located in a single location and run on the same broadcast domain from a network perspective.
 {:important}
 
-![Basic two site - two pods CPA implementation](../../images/horizon-inter-pod.svg){: caption="Figure 3. Overview of a basic two sites - two pods CPA implementation)" caption-side="bottom"}
+![Basic two site - two pods CPA implementation](../../images/horizon-inter-pod.svg){: caption="Figure 3. Overview of a basic two sites - two pods CPA implementation" caption-side="bottom"}
 
 For the full documentation on how to set up and configure CPA, see "Administering View Cloud Pod Architecture" in the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external} and [VMware Workspace ONE and VMware Horizon Reference Architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){:external}.
 

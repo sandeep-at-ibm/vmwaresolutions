@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-13"
+lastupdated: "2020-08-07"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -51,7 +51,7 @@ The cluster name must meet the following requirements:
 #### Data center location
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, use a tool such as [Looking Glass](/docs/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
+The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, use a tool such as [Looking Glass](http://lg.softlayer.com/){:external}.
 
 If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center or {{site.data.keyword.cloud_notm}} infrastructure pod, three more VLANs are ordered for use with the ordered {{site.data.keyword.cloud_notm}} bare metal servers.
 
@@ -63,7 +63,7 @@ You can choose **Skylake** or **Cascade Lake**. Options might differ depending o
 #### Skylake
 {: #vc_hybrid_addingviewingclusters-adding-skylake}
 
-When you select **Skylake**, you have options for the **CPU Model** and **RAM**.
+When you select **Skylake**, you have options for the **CPU model** and **RAM**.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -75,9 +75,9 @@ When you select **Skylake**, you have options for the **CPU Model** and **RAM**.
 #### Cascade Lake
 {: #vc_hybrid_addingviewingclusters-adding-cascade}
 
-For the **Cascade Lake** setting, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake** setting, you have options for the **CPU model** and **RAM**.
 
-Cascade Lake bare metal servers are available only for VMware vSphere Enterprise Plus 6.7 U2 instances.
+Cascade Lake bare metal servers are available only for VMware vSphere Enterprise Plus 6.7u3 instances.
 {:note}
 
 | CPU model options        | RAM options       |
@@ -138,9 +138,9 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
+2. In the **vCenter Server instances** table, click the instance to view the clusters in it.
 
-   Ensure that the instance status is **Ready to Use**. Otherwise, you can't add clusters to the instance.
+   Ensure that the instance status is **Ready to use**. Otherwise, you can't add clusters to the instance.
    {:note}
 
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
@@ -160,7 +160,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 {: #vc_hybrid_addingviewingclusters-adding-results}
 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history on the **Summary** page of the instance.
-2. When the cluster is ready to use, its status changes to **Ready to Use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
+2. When the cluster is ready to use, its status changes to **Ready to use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
 You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
 {:important}
@@ -169,7 +169,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click the instance to view the clusters in it.
+2. In the **vCenter Server instances** table, click the instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
   * **ESXi servers**: The number of ESXi servers in the cluster.
@@ -181,7 +181,7 @@ You can't change the cluster name. Changing the cluster name might cause the add
   * **Status**: The status of the cluster. The status can have one of the following values:
     * Initializing: The cluster is being created and configured.
     * Modifying: The cluster is being modified.
-    * Ready to Use: The cluster is ready to use.
+    * Ready to use: The cluster is ready to use.
     * Deleting: The cluster is being deleted.
     * Deleted: The cluster is deleted.
 4. Click a cluster name to view the ESXi servers, storage, and network interface details:
@@ -245,7 +245,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server instances** table, click the instance that you want to delete clusters from.
 
-   Ensure that the instance is in the **Ready to Use** status. Otherwise, you cannot delete clusters from the instance.
+   Ensure that the instance is in the **Ready to use** status. Otherwise, you cannot delete clusters from the instance.
    {:note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.

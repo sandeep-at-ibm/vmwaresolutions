@@ -81,7 +81,7 @@ This release installs the following service versions on newly deployed instances
 ### Updates for IBM Cloud for VMware Mission Critical Workloads
 {: #relnotes_v34-mission-critical}
 
-Enterprises can now migrate VMware-based Mission Critical Workloads to the {{site.data.keyword.cloud_notm}}, capable of delivering maximum uptime in six multi-zone regions (MZRs) around the world.
+Enterprises can now migrate VMware-based Mission Critical Workloads to the {{site.data.keyword.cloud_notm}}, capable of delivering maximum uptime in six multizone regions (MZRs) around the world.
 
 You can deploy VMware’s stretched vSAN clusters in an automated and self-managed infrastructure allowing you the flexibility to control and manage all aspects of your solution set. This option is available in on-demand ordering from the **vCenter Server** page on the {{site.data.keyword.vmwaresolutions_short}} console.
 
@@ -90,7 +90,7 @@ You can deploy a fully managed solution delivered by IBM Services. {{site.data.k
 ## New and updated documentation
 {: #relnotes_v34-updated-doc}
 
-* Technical documentation is available in the *Reference* section for {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads and ordering multi-zone stretch clusters.
+* Technical documentation is available in the *Reference* section for {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads and ordering multizone stretched clusters.
 * The [Upgrading VMware NSX](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vsphere_upgrade#vc_vsphere_upgrade-procedure-nsx) section of **Upgrading vCenter Server vSphere software from VMware vSphere 6.5 to 6.7** has additional information to help you determine whether you must upgrade your current version of NSX. You might have to upgrade NSX so it’s compatible with VMware vCenter Server 6.7.
 * The [Technical specifications for IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations#spp_considerations-specs) are updated.
 * The [vCenter Server and vSRX guide](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-intro) is now available in the *Reference* section of the user documentation.

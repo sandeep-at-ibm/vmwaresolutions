@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -36,7 +36,7 @@ In this design, the definition of a multi-site deployment is comprised of the fo
    * DNS and AD replication setup between the secondary and primary site AD VMs
    * vCenter setup with Enhanced Linked Mode to the primary site vCenter
 
-Additionally, the NSX manager in secondary sites may be set up as secondary NSX managers for the NSX manager on the primary site. This is a manual process that you need to complete.
+Additionally, the NSX Manager in secondary sites may be set up as secondary NSX managers for the NSX Manager on the primary site. This is a manual process that you need to complete.
 
 ## Adding new clusters
 {: #solution_scaling-clusters}

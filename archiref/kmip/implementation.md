@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-12"
+lastupdated: "2020-08-06"
 
 subcollection: vmwaresolutions
 
@@ -29,7 +29,7 @@ If you are using vSAN encryption, plan to use one root key in Key Protect or Hyp
 
 If you are using vSphere encryption, plan to use one root key, one standard key per vSphere cluster, and one standard key per encrypted virtual machine (VM).
 
-Key Protect and Hyper Protect Crypto Services are available in multi-zone regions only. Hyper Protect Crypto Services is currently available in selected multi-zone regions only. It is recommended to deploy KMIP for VMware and Key Protect (or Hyper Protect Crypto Services) together in the same region, and to choose a region as close as possible to your vCenter Server instance. vCenter Server can tolerate high latency to the KMIP service, so distance should not be a cause for concern.
+Key Protect and Hyper Protect Crypto Services are available in multizone regions (MZRs) only. Hyper Protect Crypto Services is currently available in selected MZRs only. It is recommended to deploy KMIP for VMware and Key Protect (or Hyper Protect Crypto Services) together in the same region, and to choose a region as close as possible to your vCenter Server instance. vCenter Server can tolerate high latency to the KMIP service, so distance should not be a cause for concern.
 
 ## Connecting the key management server
 {: #kmip-implementation-connecting-kms}
@@ -37,9 +37,9 @@ Key Protect and Hyper Protect Crypto Services are available in multi-zone region
 To enable vSphere encryption or vSAN encryption by using KMIP for VMware, you need to complete the following tasks:
 
 1. [Enable service endpoints in your account](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
-2. Create a key manager instance, by using either [IBM Key Protect](/docs/key-protect?topic=key-protect-getting-started-tutorial) or [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started#get-started). If you are using Hyper Protect Crypto Services, be sure to [initialize your crypto instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) so that Hyper Protect Crypto Services can provide key related functions.
+2. Create a key manager instance, by using either [IBM Key Protect](/docs/key-protect?topic=key-protect-getting-started-tutorial) or [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started#get-started). If you are using Hyper Protect Crypto Services, be sure to [initialize your crypto instance](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm) so that Hyper Protect Crypto Services can provide key-related functions.
 3. Create a customer root key (CRK) within your key manager instance.
-4. Create an Identity and Access Management (IAM) [service ID and API key](/docs/iam?topic=iam-serviceidapikeys) for use with KMIP for VMware. Grant this service ID platform viewer access and service write access to your key manager instance.
+4. Create an Identity and Access Management (IAM) [API key for a service ID](/docs/account?topic=account-serviceidapikeys#create_service_key) for use with KMIP for VMware. Grant this service ID Platform Viewer access and Service Write access to your Key Manager instance.
 5. [Create a KMIP for VMware instance](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering) from the {{site.data.keyword.vmwaresolutions_short}} console.
 6. Within VMware vCenter, create a key management server (KMS) cluster with two servers, one for each KMIP for VMware endpoint in your chosen region.
 7. Select one of VMware&rsquo;s methods to generate or install a KMS client certificate in vCenter.

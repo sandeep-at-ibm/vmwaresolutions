@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-03"
+lastupdated: "2020-07-22"
 
 keywords: single-node, migration app modernization, order migration app modernization
 
@@ -57,23 +57,23 @@ You can also specify an instance name that meets the following requirements:
 
 Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
 
-If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
+{:note}
 
 ## Procedure to order Single-node for Migration and App Modernization instances
 {: #cloud_modern_bundle_orderinginstance-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **VMware Solutions** from the left navigation pane.
-2. In the **Featured Services** section, click the **Single-node for Migration and App Modernization** card.
-3. On the **Single-node for Migration and App Modernization** page, complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User name** and **API key** and click **Retrieve**.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **Single-node for Migration and App Modernization** card in the **Featured Services** section.
+2. On the **Single-node for Migration and App Modernization** page, complete the steps to request an {{site.data.keyword.cloud_notm}} infrastructure account or provide your existing **User name** and **API key** and click **Retrieve**.
 
  This section is hidden if the API key exists.
  {:note}
-5. Enter the instance name and select a resource group.
-6. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.  
+3. Enter the instance name and select a resource group.
+4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.  
 
  By default, the **Dallas 09** {{site.data.keyword.cloud_notm}} data center is preselected. Select a different {{site.data.keyword.cloud_notm}} data center location, if needed.
  {:note}
-7. On the **Summary** pane, verify the instance configuration before you place the order.
+5. On the **Summary** pane, verify the instance configuration before you place the order.
    1. Review the settings for the instance.
    2. Review the estimated price of the instance. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you order the instance.

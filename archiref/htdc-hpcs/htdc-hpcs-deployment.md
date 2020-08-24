@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-21"
 
 subcollection: vmwaresolutions
 
@@ -35,21 +35,21 @@ Detailed instructions for each of these activities are contained within the prod
   * Verify API endpoint.
   * Set up CLI - Install the IBM Cloud CLI, if not already installed. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cli-getting-started).
   * Install TKE plug-in - Using the CLI, log in and install the Trusted Key Entry plug-in, `ibmcloud plugin install tke`.
-  * Set up local directory for key files - On your local workstation, create a directory, for the master key part files and signature key part files, which will be named in the variable CLOUDTKEFILES.
+  * Set up local directory for key files - On your local workstation, create a directory, for the primary key part files and signature key part files, which will be named in the variable CLOUDTKEFILES.
 * Manage crypto units in a service instance:
   * Display assigned crypto units.
   * Add crypto units - Using the CLI, select the crypto unit so that you can perform operations against it.
-* Load master key - To create and load a master key into a master key register, you need to create a signature key so that you can sign the operation of creating the master key:
+* Load primary key - To create and load a primary key into a primary key register, you need to create a signature key so that you can sign the operation of creating the primary key:
   * Create Signature keys - Using the CLI, create a signature key by using a username and password and select the signature key.
   * Manage administrators:
     * Add Administrators - Add an admin user, and signature key, to the crypto unit so it can perform operations.
     * Exit imprint mode - Exit imprint mode as the initial setup is complete.
-  * Create master key parts - It is good practice to create multiple parts of a master key, split across different people in the enterprise, where these people would need to use their keys at the same time. Create a master key part, choosing a highly secure password. At least two master key parts are required, so repeat this process.
-  * The two master key parts and the signature key are on the workstation, in the directory CLOUDTKEFILES. They need to be on the same machine to add the master key parts to an HSM crypto unit.
-  * Load master key:
-    * Load new master key - Passwords for all three keys will now be required, in practice these will be different passwords, known to different people, and stored on different systems.
-    * Commit master register key - Commit this master key register. The CLI will prompt for the password for the signature key for the administrator with access to the crypto unit. You should now have a fully-committed master key.
-    * Activate master key - There are two registers for master keys in the crypto unit, one for a new key and one for the current key. To activate this master key, it needs to become the current key. On the IBM Cloud Portal, the HPCS instance manage tab should confirm that the HSM master key has been configured.
+  * Create primary key parts - It is good practice to create multiple parts of a primary key, split across different people in the enterprise, where these people would need to use their keys at the same time. Create a primary key part, choosing a highly secure password. At least two primary key parts are required, so repeat this process.
+  * The two primary key parts and the signature key are on the workstation, in the directory CLOUDTKEFILES. They need to be on the same machine to add the primary key parts to an HSM crypto unit.
+  * Load primary key:
+    * Load new primary key - Passwords for all three keys will now be required, in practice these will be different passwords, known to different people, and stored on different systems.
+    * Commit primary register key - Commit this primary key register. The CLI will prompt for the password for the signature key for the administrator with access to the crypto unit. You should now have a fully-committed primary key.
+    * Activate primary key - There are two registers for primary keys in the crypto unit, one for a new key and one for the current key. To activate this primary key, it needs to become the current key. On the IBM Cloud Portal, the HPCS instance manage tab should confirm that the HSM primary key has been configured.
 * Create a root key - IBM HPCS uses the recommended envelope encryption mechanism of taking a key that is used to encrypt data, the data encryption key or DEK, and encrypting the key itself with a root key. This root key never leaves the HSM.
   * Using the IBM Cloud Portal, view the IBM Cloud resources, and find your IBM HPCS instance.
   * Click the **Add Key** button and then generate a new root key.
@@ -59,7 +59,7 @@ Detailed instructions for each of these activities are contained within the prod
 ## Service ID
 {: #htdc-hpcs-deployment-serviceid}
 
-* Create a Service ID. For more information, see [Creating and working with service IDs](/docs/iam?topic=iam-serviceids).
+* Create a Service ID. For more information, see [Creating and working with service IDs](/docs/account?topic=account-serviceids).
 
 | Parameter                           | Example                          |
 | ----------------------------------- | -------------------------------- |

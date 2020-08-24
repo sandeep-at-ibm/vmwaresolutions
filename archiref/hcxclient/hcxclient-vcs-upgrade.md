@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -14,11 +14,11 @@ subcollection: vmwaresolutions
 # Upgrading HCX components
 {: #hcxclient-vcs-upgrade}
 
-Upgrading HCX is a simple process that uses the client web user interface (UI) on the client-side HCX manager update and the cloud web UI on the cloud side HCX manager update.
+Upgrading HCX is a simple process that uses the client web user interface (UI) on the client-side HCX Manager update and the cloud web UI on the cloud side HCX Manager update.
 
 You must upgrade both sides as any fleet component updates cause both to redeploy the fleet components with the level of code that is installed on HCX Manager.
 
-If VMware Support asks for the System ID, provide both the client and cloud side. Use SSH into the HCX manager (client or cloud) and run `cat /common/location` to locate the System ID.
+If VMware Support asks for the System ID, provide both the client and cloud side. Use SSH into HCX Manager (client or cloud) and run `cat /common/location` to locate the System ID.
 
 **Next topic:** [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting)
 

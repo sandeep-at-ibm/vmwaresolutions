@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-27"
+lastupdated: "2020-08-06"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -31,7 +31,7 @@ The vCenter Server with NSX-T offering is not supported for HIPAA customers.
 
 The following diagram provides details about the customer (you) and {{site.data.keyword.IBM}} responsibilities for compliance activities.
 
-![Customer versus IBM responsibility matrix](../images/customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix"){: caption="Figure 1. Customer versus IBM responsibility matrix for VMware vCenter Server" caption-side="bottom"}
+![Customer versus IBM responsibility matrix](../images/customer_ibm_responsibility_matrix.svg "Customer versus IBM responsibility matrix"){: caption="Figure 1. Customer versus IBM responsibility matrix for vCenter Server" caption-side="bottom"}
 
 ## Health data restrictions
 {: #vc_compl_info-health-data-restrictions}
@@ -57,7 +57,7 @@ This Cloud Service is not designed to any specific security requirements for reg
 ## Policy configurations
 {: #vc_compl_info-default-policy-config}
 
-The generated vCenter password for vCenter Server primary instances is now 15 characters in length. Previously, the generated password was the vCenter default of eight characters in length.
+The generated password for vCenter Server primary instances is now 15 characters in length. Previously, the generated password was the vCenter default of 8 characters in length.
 
 The following table details vCenter policy configurations for a new primary instance.
 
@@ -73,7 +73,7 @@ The generated NSX Manager password for vCenter Server primary instances is now 1
 ## Policy for accessing clients instances
 {: #vc_compl_info-policy-for-access-client-inst}
 
-VMware vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of {{site.data.keyword.cloud_notm}} for VMware products and services, IBM Support might be required to help guarantee their success. For the most part, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the {{site.data.keyword.cloud_notm}} internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by {{site.data.keyword.cloud_notm}} SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
+vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of {{site.data.keyword.vmwaresolutions_short}} products and services, IBM Support might be required to help guarantee their success. For the most part, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the {{site.data.keyword.cloud_notm}} internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by {{site.data.keyword.cloud_notm}} SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
 
 ## Proactive support
 {: #vc_compl_info-proactive-support}
@@ -105,8 +105,8 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 ## Client responsibilities
 {: #vc_compl_info-client-responsibilities}
 
-* While we commend clients taking steps to make their environments more secure, it should be noted that some practices might have adverse effects on the effectiveness of {{site.data.keyword.cloud_notm}} for VMware.
-* Clients are accountable for the firewalls they create and the resulting limitations that are imposed on communications between {{site.data.keyword.cloud_notm}} for VMware components. These firewalls might also hinder the ability of IBM Support to access client instances and resolve issues.
+* While we commend clients taking steps to make their environments more secure, it should be noted that some practices might have adverse effects on the effectiveness of VMware Solutions.
+* Clients are accountable for the firewalls they create and the resulting limitations that are imposed on communications between the VMware Solutions components. These firewalls might also hinder the ability of IBM Support to access client instances and resolve issues.
 * Clients are fully responsible for encrypting the data in their system.
 * Upon initial deployment, the offering’s automation and client’s account are separate. The client is allowed and encouraged to change all passwords that IBM provides in the portal.
 * vCenter access and credentials are created during initial deployments and provided to the client. As part of the requirement of our offering, IBM Support must retain full access to the management layer to provide life–cycle management and support to our clients.

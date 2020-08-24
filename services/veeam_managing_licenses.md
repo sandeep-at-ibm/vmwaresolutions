@@ -5,7 +5,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-07-22"
 
 keywords: Veeam, Veeam license, manage Veeam license, Veeam 10
 
@@ -39,7 +39,7 @@ You can view, edit notes, or delete the Veeam licenses that you ordered for stan
 2. Scroll down to the **Veeam licenses** table.
 3. To view the details of a specific license, click the license.
 
-A license key is not displayed. When licenses are ordered, the system does not generate a key. We are applying a master key.
+A license key is not displayed. When licenses are ordered, the system does not generate a key, but it applies a primary key.
 {:note}
 
 The following information is displayed for the Veeam license:
@@ -77,8 +77,8 @@ For more information, see [Procedure to delete services for vCenter Server insta
 To delete a Veeam license:
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. Scroll down to the **Veeam licenses** table and select the license you want to delete.
-3. From the **Actions** drop-down menu, click **Delete instance**.
+2. Scroll down to the **Veeam licenses** table and select the license that you want to delete.
+3. From the **Actions** menu, click **Delete instance**.
 4. In the **Delete license** window, click **Delete**.
    The status of the license is changed to **Removing**. When the license deletion is completed, the license is no longer listed in the **Veeam licenses** table.
 

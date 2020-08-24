@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-04"
+lastupdated: "2020-08-10"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX virtual security appliance, Juniper virtual security appliance, Juniper vSRX console
 
@@ -30,17 +30,19 @@ subcollection: vmwaresolutions
 # Juniper vSRX overview
 {: #vsrx_overview}
 
-Juniper vSRX is a virtual security appliance that provides security and networking services at the perimeter or edge in virtualized private or public cloud environments. Within a VMware infrastructure, vSRX runs as a pair of virtual machines (VMs) within the vSphere environment.
+Juniper® vSRX is a virtual security appliance that provides security and networking services at the perimeter or edge in virtualized private or public cloud environments. Within a VMware infrastructure, vSRX runs as a pair of virtual machines (VMs) within the VMware vSphere® environment.
 {: shortdesc}
 
-The current Juniper vSRX version that is installed is 18.4.
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
+The current Juniper vSRX version that is installed is 19.4R2.6.
 {:note}
 
 You can install Juniper vSRX as one of the following components:
 * As a virtual appliance on the management cluster. In this case, Juniper vSRX protects the traffic in the management cluster. That is, the service  protects only the traffic that you forward from your devices, for example, setting the default gateway to point to Juniper vSRX.
 * As a security or gateway appliance on the edge services cluster. In this case, Juniper vSRX works like a gateway appliance, which you can set without having to configure any devices. Juniper vSRX protects all clusters in the same pod and data center. With this deployment, you route all traffic in the same pod and data center to protect a broader portion of the system.
 
-Juniper vSRX is built on the Junos operating system (Junos OS) and delivers networking and security features similar to ones on the software releases for SRX Series Services Gateways.
+Juniper vSRX is built on the Junos® operating system (Junos OS™) and delivers networking and security features similar to ones on the software releases for SRX Series Services Gateways.
 
 Juniper vSRX provides a complete Next-Generation Firewall (NGFW) solution, including core firewall, VPN, NAT, advanced Layer 4 through Layer 7 security services such as Application Security, intrusion detection and prevention (IPS), and UTM features,  which include Enhanced Web Filtering and Anti-Virus.
 
@@ -48,6 +50,8 @@ You can install multiple instances of this service as needed. You can manage thi
 
 ## Technical specifications for Juniper vSRX
 {: #vsrx_overview-specs}
+
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are ordered and included in the Juniper vSRX service:
 
@@ -96,16 +100,6 @@ Review the following considerations before you install the Juniper vSRX service:
 * Juniper vSRX can only protect items in the same data center and pod.
 * You are responsible for Juniper vSRX configuration.
 * For guidance information about extra configuration options that you might want to include and as an example, see [The IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-iaas-def-config). This information does not illustrate the configuration you have or should have. Your own configuration will be different.
-
-### Resource requirements for Juniper vSRX
-{: #vsrx_overview-resource-req}
-
-* Before the service is installed in your environment, a check is done against the available capacity of the default cluster in the environment to ensure that the service components can fit. You must have enough available capacity to accomodate two VMs with the following requirements, on different hosts:
-   * 6 vCPUs
-   * 8 GB RAM
-   * 16 GB disk storage
-* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster either by adding more hosts or by freeing up RAM, CPU, or disk space. After that, add the service again in the console and delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Considerations when you delete Juniper vSRX
 {: #vsrx_overview-remove-consider}

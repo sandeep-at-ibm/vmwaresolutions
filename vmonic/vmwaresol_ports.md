@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-15"
+lastupdated: "2020-08-21"
 
 keywords: VLAN ports, vmware solutions ports, ports usage vmware solutions
 
@@ -29,25 +29,25 @@ subcollection: vmwaresolutions
 # Ports that are used by VMware Solutions
 {: #vmwaresol_ports}
 
-A vCenter Server instance can connect to the following different VLANs for different purposes:
+A VMware vCenter Server® instance can connect to the following different VLANs for different purposes:
 * Public VLAN
 * Private VLAN
 * Secondary private VLAN
 {: shortdesc}
 
-For more information about VLANs, see [IBM Cloud for VMware Solutions network architecture](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood#under_the_hood-network).
+For more information about VLANs, see [{{site.data.keyword.vmwaresolutions_full}} network architecture](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood#under_the_hood-network).
 
 ## VLANs and subnets in VMware Solutions
 {: #vmwaresol_ports-icv4}
 
 The following table provides information about the subnets that are used in each VLAN. You can either order new VLANs or subnets for vCenter Server or you can select existing VLANs. You can define your firewall rules based on the subnets and ports that the network traffic goes through.
 
-It is not recommended to put a firewall on a secondary private VLAN that has storage and vMotion traffic.
+It is not recommended to put a firewall on a secondary private VLAN that has storage and vSphere® vMotion® traffic.
 {:note}
 
 | Public VLAN | Private VLAN | Secondary private VLAN |
 |:------------|:-------------|:-----------------------|
-| Primary subnet<br><br>Portable subnets:<br>- Management edge gateway public<br>- Customer edge gateway public | Primary subnet<br><br>Portable subnets:<br>- Infrastructure VMs (CD/vCenter/AD)<br>- NSX Host TEP (NSX-V)<br>- Customer edge gateway private | Portable subnets:<br>- vSAN traffic<br>- Shared storage traffic<br>- vMotion traffic<br>- NSX host TEP traffic (NSX-T)<br>- NSX edge TEP traffic (NSX-T)<br>- Customer edge TEP traffic (NSX-T) |
+| Primary subnet<br><br>Portable subnets:<br>- Management edge gateway public<br>- Customer edge gateway public | Primary subnet<br><br>Portable subnets:<br>- Infrastructure VMs (CD/vCenter/AD)<br>- NSX Host TEP (NSX-V)<br>- Customer edge gateway private | Portable subnets:<br>- vSAN™ traffic<br>- Shared storage traffic<br>- vMotion traffic<br>- NSX host TEP traffic (NSX-T)<br>- NSX edge TEP traffic (NSX-T)<br>- Customer edge TEP traffic (NSX-T) |
 {: caption="Table 1. Subnets for public, private, and secondary private VLANs" caption-side="top"}
 
 ## Ports that are used for deployment and day 2 operations
@@ -57,7 +57,7 @@ The following table provides information about the ports for deployment and day 
 
 Review the following information about the ports described in the table:
 
-* Windows Active Directory has two options: single Windows Virtual Service Instance (VSI) and two HA dedicated Windows Server virtual machines (VMs).
+* Windows® Active Directory™ has two options: single Windows Virtual Service Instance (VSI) and two HA dedicated Windows Server virtual machines (VMs).
    For single Windows VSI, the VSI is in the primary subnet. For Windows server VMs, the VSIs are in the infrastructure VMs subnet.
 * IBM Cloud infrastructure services network includes the following subnets. For more information, see [IBM Cloud IP ranges](/docs/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges#ibm-cloud-ip-ranges).
   * 10.0.0.0/14
@@ -70,8 +70,8 @@ For more information about OCP networking, see [About the OpenShift SDN network 
 
 | Source | Subnet/IP range | Target | Subnet/IP range | Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:-----|:---------|:--------|:--------|
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi host | Private primary subnet | 22 | TCP | Set up, configure, patch ESXi host | SSH |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi vMotion | vMotion traffic | | ICMP | Set up ESXi network | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi™ host | Private primary subnet | 22 | TCP™ | Set up, configure, patch ESXi host | SSH |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi vMotion | vMotion traffic | | ICMP™ | Set up ESXi network | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi vSAN | vSAN traffic | | ICMP | Set up ESXi network | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi shared storage | Shared storage traffic | | ICMP | Set up ESXi network | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | Customer edge private | Customer edge gateway private | | ICMP | Set up NSX edge network | |
@@ -81,11 +81,11 @@ For more information about OCP networking, see [About the OpenShift SDN network 
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vCenter Server | Infrastructure VMs | 443 | TCP | Install and configure vCenter Server and cluster | SSH |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vCenter Server | Infrastructure VMs | 9443 | TCP | Install and configure vCenter Server and cluster | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vCenter Server | Infrastructure VMs | 5489 | TCP | Install and configure vCenter Server and cluster | |
-| IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | | ICMP | Install and set up NSX manager | |
-| IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | 443 | TCP | Set up and configure NSX manager | HTTPS |
-| IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | 80 | TCP | Set up and configure NSX manager | HTTP |
+| IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | | ICMP | Install and set up NSX Manager | |
+| IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | 443 | TCP | Set up and configure NSX Manager | HTTPS |
+| IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | 80 | TCP | Set up and configure NSX Manager | HTTP |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure provisioning API | IBM Cloud infrastructure services network | 443 | TCP | Order and provision IBM Cloud infrastructure resources | HTTPS |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure DNS service | IBM Cloud infrastructure services network | 53 | UDP | Use IBM Cloud infrastructure DNS service | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure DNS service | IBM Cloud infrastructure services network | 53 | UDP™ | Use IBM Cloud infrastructure DNS service | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure endurance storage  | IBM Cloud infrastructure services network | Any | ICMP and TCP | Set up endurance storage for ESXi host | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud Service - Cloud Object Storage | IBM Cloud endpoint service network | 443 | TCP | Use IBM Cloud Object Storage service | HTTPS |
@@ -107,7 +107,7 @@ For more information about OCP networking, see [About the OpenShift SDN network 
 ## Ports that are used by VMware
 {: #vmwaresol_ports-vmwareuses}
 
-The following table shows the ports that are used by VMware. The ports in VMware traffic are disclosed in {{site.data.keyword.vmwaresolutions_short}} deployment and day 2 operations.
+The following table shows the ports that are used by VMware®. The ports in VMware traffic are disclosed in {{site.data.keyword.vmwaresolutions_short}} deployment and day 2 operations.
 
 | Source | Subnet | Target | Subnet | Port | Protocol |
 |:-------|:-------|:-------|:-------|:-----|:---------|
@@ -139,7 +139,7 @@ The following topics provide information about the ports that are used by the ad
 ### Ports for Caveonix RiskForesight
 {: #vmwaresol_ports-vmware-optional-services-caveonix}
 
-The following table provides information about the Caveonix RiskForesight ports.
+The following table provides information about the Caveonix RiskForesight™ ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
@@ -153,7 +153,7 @@ The following table provides information about the Caveonix RiskForesight ports.
 ### Ports for F5 BIG-IP
 {: #vmwaresol_ports-vmware-optional-services-f5bigip}
 
-The following table provides information about the F5 BIG-IP ports.
+The following table provides information about the F5 BIG-IP® ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
@@ -164,11 +164,11 @@ The following table provides information about the F5 BIG-IP ports.
 ### Ports for FortiGate Virtual Appliance
 {: #vmwaresol_ports-vmware-optional-services-fortigate}
 
-The following table provides information about the FortiGate Virtual Appliance ports.
+The following table provides information about the FortiGate® Virtual Appliance ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
-| Management-nsx-edge public IP | Public subnet for management edge | Fortinet servers | 208.91.112.0/22 | 443 | TCP | FortiGate installation | HTTPS |
+| Management-nsx-edge public IP | Public subnet for management edge | Fortinet® servers | 208.91.112.0/22 | 443 | TCP | FortiGate installation | HTTPS |
 | Management-nsx-edge public IP | Public subnet for management edge | Fortinet servers | 96.45.33.0/24 | 443 | TCP | FortiGate installation | HTTPS |
 | Management-nsx-edge public IP | Public subnet for management edge | Fortinet servers | 66.35.17.248 | 443 | TCP | FortiGate installation | HTTPS |
 {: caption="Table 6. FortiGate Virtual Appliance ports" caption-side="top"}
@@ -176,7 +176,7 @@ The following table provides information about the FortiGate Virtual Appliance p
 ### Ports for VMware HCX
 {: #vmwaresol_ports-vmware-optional-services-hcx}
 
-The following table provides information about the VMware HCX ports.
+The following table provides information about the VMware HCX™ ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
@@ -192,7 +192,7 @@ The following table provides information about the VMware HCX ports.
 ### Ports for Hytrust CloudControl, Hytrust DataControl, and Hytrust KeyControl
 {: #vmwaresol_ports-vmware-optional-services-hytrust}
 
-The following table provides information about the Hytrust CloudControl, Hytrust DataControl, and Hytrust KeyControl ports.
+The following table provides information about the Hytrust® CloudControl™, Hytrust DataControl®, and Hytrust KeyControl™ ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range | Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:-----|:---------|:--------|:--------|
@@ -209,7 +209,7 @@ The following table provides information about the Hytrust CloudControl, Hytrust
 ### Ports for IBM Spectrum Protect Plus
 {: #vmwaresol_ports-vmware-optional-services-spp}
 
-The following table provides information about the IBM Spectrum Protect Plus ports.
+The following table provides information about the IBM Spectrum® Protect Plus ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|

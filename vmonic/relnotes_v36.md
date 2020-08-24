@@ -59,7 +59,7 @@ As part of the data center modernization strategy for {{site.data.keyword.cloud_
 
 {{site.data.keyword.cloud_notm}} invests significantly in data center infrastructure. These investments include rolling out newer data centers and multizone regions (MZRs) designed to deliver a more resilient architecture with higher levels of network throughput and redundancy.
 
-Part of this modernization strategy is to close older data centers that are unsuitable for upgrading. As this transition approaches, help is available to assist you in your migration to modern data centers. For more information, see [Migrating resources to a different data center](/docs/resources?topic=resources-migrate-data-center).
+Part of this modernization strategy is to close older data centers that are unsuitable for upgrading. As this transition approaches, help is available to assist you in your migration to modern data centers. For more information, see [Migrating resources to a different data center](/docs/account?topic=account-migrate-data-center).
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v36-vcs}
@@ -74,8 +74,6 @@ When you order the following instances, services, or licenses, you can now selec
    * Caveonix RiskForesight licenses
    * On-premises VMware HCX instances
    * KMIP for VMware instances
-
-For more information about resource groups, see [Best practices for organizing resources in a resource group](/docs/resources?topic=resources-bp_resourcegroups#bp_resourcegroups).
 
 ### Support for VMware Subscription Purchasing Program
 {: #relnotes_v36-vcs-spp}
@@ -157,7 +155,7 @@ The user interface is updated and provides the following enhancements:
 
 * {{site.data.keyword.cloud_notm}} data center regional pricing is available as a list in the **Pricing Plans** section of the **About** tab for VMware Solutions Shared instances. Use the {{site.data.keyword.cloud_notm}} Cost Estimator to compare the price difference for each region. For more information about comparing prices, see [Estimating your costs](/docs/billing-usage?topic=billing-usage-cost).
 * When there are new notifications for your system status or user actions, a red dot indicator is displayed along with **Notifications** on the left navigation pane in the {{site.data.keyword.vmwaresolutions_short}} console.
-* On the instance details page, the tags that were specified for search and identification of the instances are displayed next to the instance status. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+* On the instance details page, the tags that were specified for search and identification of the instances are displayed next to the instance status.
 * When you order instances, clusters, and licenses, the instance name, cluster name, and license name are set to a default value as follows:
    * Virtual data center instances: vdc-_xx_
    * vCenter Server instances: vcs-_xx_

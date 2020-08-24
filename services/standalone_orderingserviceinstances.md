@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-14"
+lastupdated: "2020-07-22"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -31,15 +31,15 @@ Ensure that you completed the following tasks:
 {: #standalone_orderingserviceinstances-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-1. Scroll down to the **On-premises HCX Instances** table and click **Provision New**.
-1. Specify the resource group.
+2. Scroll down to the **On-premises HCX activation keys** table and click **Provision new**.
+3. Specify the resource group.
 
-   If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+   If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
    {:note}
 
-1. Specify a new on-premises instance name, or use the default one **hcx-_xx_** where _xx_ represents two randomly generated alphabetic characters.
-1. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
-1. Click **Provision**.
+4. Specify a new on-premises instance name, or use the default one **hcx-_xx_** where _xx_ represents two randomly generated alphabetic characters.
+5. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the instance.
+6. Click **Provision**.
 
 ## Results
 {: #standalone_orderingserviceinstances-results}

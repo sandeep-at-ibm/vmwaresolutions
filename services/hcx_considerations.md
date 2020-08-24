@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-04"
+lastupdated: "2020-08-10"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -26,6 +26,8 @@ The HCX service extends the networks of on-premises data centers into {{site.dat
 {: shortdesc}
 
 VMware HCX requires you to use either NSX Advanced or Enterprise through {{site.data.keyword.cloud_notm}} or an equivalent version that uses BYOL (Bring Your Own License). A 12-month commitment is required when you order the VMware HCX service. You are charged for 12 consecutive months after the initial deployment of HCX. Any additional nodes are included within the initial provisioning expiration date. After the 12-month commitment expires, you can install and uninstall the HCX service and you can add and remove hosts and clusters without restrictions. Your account is then charged monthly and you can cancel at any time.
+
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
 The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:note}
@@ -57,12 +59,14 @@ For more information, see [About the HCX multi-site service mesh](https://docs.v
 ## Technical specifications for HCX
 {: #hcx_considerations-specs}
 
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+
 The following components are ordered and included in the HCX service.
 
 On-premises HCX instances include only licensing and activation.
 {:note}
 
-### An active/passive pair of VMware NSX Edge Services Gateways for HCX Management
+### An active/passive pair of VMware NSX Edge Services Gateways for HCX management
 {: #hcx_considerations-nsx}
 
 * CPU: 6 vCPU
@@ -99,12 +103,6 @@ The HCX service cannot be installed into an instance for which the default clust
 {: #hcx_considerations-firewall}
 
 Before you install the HCX service, you must add a firewall rule to any existing firewalls to allow all outbound HTTPS traffic so that the HCX Manager virtual appliance (HCX Manager) can register itself. After the HCX Manager installation is completed, you can remove the firewall rule. In addition, you must configure firewall rules to allow HCX to function properly. For more information, see [VMware HCX port access requirements](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req#hcx-archi-port-req).
-
-**Notes**:
-
-* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
-* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Considerations when you delete HCX
 {: #hcx_considerations-delete}

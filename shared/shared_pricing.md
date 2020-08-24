@@ -4,7 +4,7 @@ copyright:
 
   years: 2020
 
-lastupdated: "2020-05-22"
+lastupdated: "2020-07-24"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -71,6 +71,9 @@ The maximum value of the metric used over an hour. For example, if 100 vCPU is u
 
 VMware Solutions Shared On-Demand virtual data center resources are allocated as needed. Pricing is hourly based on the resource usage in the virtual data center. The following metrics are part of this plan.
 
+The standard storage policy pricing is the same as the 4 IOPS/GB storage policy. The number of IOPS/GB for the standard storage policy is not guaranteed.
+{:note}
+
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
 | MAX_BASE_COST | Monthly | Instance price, which includes the edge gateway with five IP addresses. |
@@ -116,6 +119,9 @@ VMware Solutions Shared On-Demand virtual data center resources are allocated as
 {: #shared_pricing-cost-reserved}
 
 VMware Shared Solutions Reserved virtual data center resources are preallocated and guaranteed. Pricing is monthly based on the allocation size of the virtual data center.
+
+The standard storage policy pricing is the same as the 4 IOPS/GB storage policy. The number of IOPS/GB for the standard storage policy is not guaranteed.
+{:note}
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
@@ -199,5 +205,5 @@ You can change how fast inactive backup chains are moved to Cloud Object Storage
 * [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_resize)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
-* [VMware vCloud Director](https://docs.vmware.com/en/vCloud-Director/9.7/com.vmware.vcloud.tenantportal.doc/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
+* [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
 * [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){:external}

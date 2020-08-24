@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-07"
 
 keywords: primary io hdm, hdm intro, tech specs hdm
 
@@ -47,6 +47,8 @@ PrimaryIO HDM enables the following use cases:
 
 ## Technical specifications for PrimaryIO HDM
 {: #managing_pio-specs}
+
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following technical specifications apply to PrimaryIO HDM.
 

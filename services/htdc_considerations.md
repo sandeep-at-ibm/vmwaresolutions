@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-08-10"
 
 keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
@@ -25,11 +25,15 @@ subcollection: vmwaresolutions
 The HyTrust DataControl service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service provides encryption at both the operating system level and at the data level. This enables any directory, folder, or file within a workload to be encrypted and decrypted.
 {: shortdesc}
 
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service's licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
 The current HyTrust DataControl version that is installed is 5.1.1.
 {:note}
 
 ## Technical specifications for HyTrust DataControl
 {: #htdc_considerations-specs}
+
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are ordered and included in the HyTrust DataControl service:
 
@@ -50,14 +54,6 @@ Two DataControl appliances are deployed in an active-active configuration.
 {: #htdc_considerations-licenses}
 
 Per-host license: A HyTrust DataControl license is ordered for each host in the environment.
-
-## Considerations when you install HyTrust DataControl
-{: #htdc_considerations-install}
-
-* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
-* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
-* Starting with v5.1.1, a static route is set up during installation to allow public traffic to the HyTrust DataControl appliances.
 
 ## Considerations when you delete HyTrust DataControl
 {: #htdc_considerations-remove}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-14"
+lastupdated: "2020-08-21"
 
 keywords: cloud for vmware regulated workloads, cloud for vmware instance, instance config cloud for vmware
 
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 # IBM Cloud for VMware Regulated Workloads instance configurations
 {: #fss-cloud-vmware-config}
 
-IBM Cloud for VMware® Regulated Workloads are an extension of the VMware vCenter Server® offering, which enhances the basic vCenter Server architecture to deliver a secure, high-performance platform.
+{{site.data.keyword.cloud}} for VMware® Regulated Workloads are an extension of the VMware vCenter Server® offering, which enhances the basic vCenter Server architecture to deliver a secure, high-performance platform.
 
 ## Before you begin
 {: #fss-cloud-vmware-config-before}
@@ -39,11 +39,10 @@ The following instance configurations are available:
 
 The following options or settings are not available for any of the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configurations:
 * VMware Subscription Purchasing Program
-* NFS storage. Only vSAN storage is available.
 * Local disks
 * vSAN compression and deduplication
 * Selection of existing VLANs. Only the option to order new VLANs is available.
-* Single public Windows VSI for Active Directory/DNS configuration. Only the option to order two highly available dedicated Windows server VMs on the management cluster is available.
+* Single public Windows VSI for Active Directory/DNS configuration. Only the option to order two highly available dedicated Windows server virtual machines (VMs) on the management cluster is available.
 
 ## IBM Cloud for VMware Regulated Workloads - Package A
 {: #fss-cloud-vmware-config-medium}
@@ -125,15 +124,15 @@ The following table provides information about the components and settings for a
 | Edge services cluster | Dual Intel Xeon Gold 5120 Processor (Skylake) 28 cores, 2.20 GHz</br>64 GB RAM</br>Two {{site.data.keyword.cloud_notm}} bare metal servers</br>All other available options are customizable |
 {: caption="Table 5. Components and settings for {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads - Configurable" caption-side="top"}
 
-[^req_services_a]: Required services to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture
+[^req_services_a]: These services are required to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture.
 
-[^req_services_a_b]: Required services to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture
+[^req_services_a_b]: These services are required to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture.
 
-[^req_services_b]: Required services to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture
+[^req_services_b]: These services are required to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture.
 
-[^req_services_b_b]: Required services to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture
+[^req_services_b_b]: These services are required to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture.
 
-[^req_services_config]: Required services to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture
+[^req_services_config]: These services are required to ensure compliance with the IBM Cloud for VMware Regulated Workloads architecture.
 
 [^veeam_remove]: The Veeam 10 service is optional. If you do not want to use this service, click the **Veeam 10** service card, and then click **Remove service** in the **Configure Veeam** window.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -39,7 +39,7 @@ The system context diagram identifies the following actors:
 The system context diagram identifies the following systems:
 
 * **NSX Edge** - Virtual appliances that manage north-south traffic into and out of the vCenter Server instance.
-* **NSX load balancer** - Used by OpenShift for access to master and worker hosts. Load balancing is a function within the NSX Edge, providing an L4/7 application load balancer.  
+* **NSX load balancer** - Used by OpenShift for access to control plane and worker hosts. Load balancing is a function within the NSX Edge, providing an L4/7 application load balancer.  
 * **{{site.data.keyword.vmwaresolutions_short}} Active Directory** - Used for vCenter and NSX Manager authentication and can be extended to be used by OpenShift.
 * **{{site.data.keyword.vmwaresolutions_short}} DNS** - Used by the VMware and OpenShift environment to provide FQDN registration and resolution. DNS is configured to forward lookups to shared IBM DNS servers, allowing the resolution of public endpoints.
 * **{{site.data.keyword.cloud_notm}} shared NTP** - Used to maintain time synchronization within the environment.

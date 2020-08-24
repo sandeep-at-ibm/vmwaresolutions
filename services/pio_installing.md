@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-06-16"
 
 keywords: primary io hdm, hdm install, download hdm
 
@@ -50,10 +50,10 @@ The first HDM component to be deployed is the PIO Appliance. This appliance prov
 
 Only the on-premises components are deployed (the cloud components are not needed yet). The components are in place for HDM to monitor and analyze virtual machines, make recommendations, and gain insights into the workload that runs in the data center. For more information, see [PrimaryIO HDM - Administration Guide](https://www.primaryio.com/free-downloads-2/){:external}.
 
-### Adding an IBM Cloud Endpoint
+### Adding an IBM Cloud endpoint
 {: #pio_installing-add}
 
-After successful completion of the previous steps, you can add an {{site.data.keyword.cloud}} Endpoint to HDM. The following components are installed in the selected cluster in the cloud data center.
+After successful completion of the previous steps, you can add an {{site.data.keyword.cloud}} endpoint to HDM. The following components are installed in the selected cluster in the cloud data center.
 * PrimaryIO On-cloud Manager
 * PrimaryIO Cloud Cache (one per each ESXi node in cloud cluster)
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2019-03-31"
+lastupdated: "2019-07-22"
 
 subcollection: vmwaresolutions
 
@@ -125,7 +125,7 @@ The following table describes these items:
 | Timed out starting Secondary VM * | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | [Timeout starting Secondary VM alarm (2064169)](https://kb.vmware.com/s/article/2064169){:external} |
 | No compatible host for Secondary VM | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | No additional information |
 | Virtual machine Fault Tolerance state changed | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | No additional information |
-| Virtual Machine Fault Tolerance vLockStep interval Status Changed | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | No additional information |
+| Virtual machine fault tolerance vLockStep interval status changed | Not configured as it monitors VMware Fault Tolerance, which is not recommended for vCenter Server instances. | No additional information |
 | Host processor status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
 | Host memory status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
 | Host hardware fan status | Configure to send email once when monitor changes from green to red. | [Contact IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) |
@@ -151,7 +151,7 @@ The following table describes these items:
 | Refreshing CA certificates and CRLs for a VASA provider failed | Not configured in vCenter Server instances as they do not support VASA storage. | No additional information |
 | Insufficient vSphere HA failover resources | Configure to send email once when critical. | [Knowledge - KB0012739 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=fe1f0beedb8db300d5a971198c96191a){:external} |
 | vSphere HA failover in progress | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |
-| Cannot find vSphere HA master agent | Configure to send email once when unable to find or communicate with HA master agent. | [About vSphere availability](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-63F459B7-8884-4818-8872-C9753B2E0215.html){:external} |
+| Cannot find vSphere HA primary agent | Configure to send email once when unable to find or communicate with HA primary agent. | [About vSphere availability](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-63F459B7-8884-4818-8872-C9753B2E0215.html){:external} |
 | vSphere HA host status  | Configure to send email once when: vSphere HA agent on a host has an error, vSphere HA detects a network isolated host, vSphere HA detects a network-partitioned host, or vSphere HA detects a host failure. | [Troubleshooting vSphere HA host states](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-DF7CEF44-98EC-458A-8614-50CCAEC0A7C5.html){:external} |
 | vSphere HA virtual machine failover failed | Configure to send email once when critical for critical appliances. | [Creating and using vSphere HA Clusters](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html){:external} |
 | vSphere HA virtual machine monitoring action | Configure to send email once when critical for critical appliances. | [Creating and using vSphere HA clusters](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html){:external} |

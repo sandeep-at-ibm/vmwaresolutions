@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-07-20"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -42,7 +42,7 @@ The availability and pricing of standardized hardware configurations might vary 
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Select licenses (IBM-provided or BYOL) for the following VMware components:
-* VMware vSphere Enterprise Plus 6.7u2 or 6.5u3
+* VMware vSphere Enterprise Plus 6.7u3 or 6.5u3
 * The following VMware components are optional:
    * VMware vCenter Server Standard
    * VMware NSX (Base, Advanced, or Enterprise)
@@ -103,7 +103,7 @@ One {{site.data.keyword.cloud_notm}} bare metal server with the networking confi
 ### VMware components for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 6.7u2 or 6.5u3.  
+* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 6.7u3 or 6.5u3.  
 * Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
 You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).

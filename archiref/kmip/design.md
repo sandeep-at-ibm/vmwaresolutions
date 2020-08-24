@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-05"
+lastupdated: "2020-08-06"
 
 subcollection: vmwaresolutions
 
@@ -46,7 +46,7 @@ VMware vSphere encryption applies to all types of VMware storage, including vSAN
 
 With this solution, vCenter Server and your ESXi hosts connect to a key management server such as KMIP for VMware to get encryption keys. These keys are used to protect individual VM disks, according to your VM storage policies.
 
-vSphere encryption operates at the VM disk level, and so it can prevent data exposure if loss of physical disk drives or loss of VM disks occurs. Some backup and replication technologies cannot back up or replicate effectively because the provided data is encrypted. 
+vSphere encryption operates at the VM disk level, and so it can prevent data exposure if loss of physical disk drives or loss of VM disks occurs. Some backup and replication technologies cannot back up or replicate effectively because the provided data is encrypted.
 
 vSphere encryption is not compatible with cross-vCenter vMotion, VMware HCX, or Zerto. vSphere encryption is compatible with vSphere replication when you use vSphere 6.7u1 or later. When properly configured, IBM Spectrum Protect Plus and Veeam Backup and Replication are also compatible with vSphere encryption.
 
@@ -99,7 +99,7 @@ Your KMIP for VMware instance is authorized to your Key Protect or Hyper Protect
 ### Topology
 {: #kmip-design-topology}
 
-KMIP for VMware is available in a number of {{site.data.keyword.cloud_notm}} multi-zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).
+KMIP for VMware is available in a number of {{site.data.keyword.cloud_notm}} multizone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).
 
 Within each MZR, KMIP for VMware provides two network service endpoints on the {{site.data.keyword.cloud_notm}} private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering).
 

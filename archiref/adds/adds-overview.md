@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-30"
 
 subcollection: vmwaresolutions
 
@@ -30,7 +30,7 @@ AD uses the following terminology:
 * Domain - A domain is a partition in a forest. Partitioning data enables organizations to replicate data only to where it is needed. In this way, the directory can scale globally over a network that has limited available bandwidth. The area of a network covered by one single authentication database.
 * Schema - A set of rules that define the classes of objects and the attributes that are contained in the directory, the constraints and limits on instances of these objects, and the format of their names.
 * Domain controller - Domain controllers provide the physical storage for the AD DS database, in addition to providing the services and data that allow enterprises to effectively manage their servers, workstations, users, and applications. Domain controller should be made secure to avoid compromising your Active Directory data.
-* Root Domain - The root domain contains the Enterprise Admins and Schema Admins groups. These service administrator groups are used to manage forest-level operations such as the addition and removal of domains and the implementation of changes to the schema.
+* Root domain - The root domain contains the Enterprise Admins and Schema Admins groups. These service administrator groups are used to manage forest-level operations such as the addition and removal of domains and the implementation of changes to the schema.
 * Parent domain - Several domains can be linked together to form a tree structure. In the hierarchy, the top domain is known as the parent domain, and has one or more child domains linked to it.
 * Child domains - These domains link to a parent domain and inherit the address space of the parent, so the child is a subdomain. A child to one domain can also be the parent to other domains. A child domain name always includes the complete parent domain name. A child domain and its parent share a two-way transitive trust.
 * Global Catalog - A global catalog server is a domain controller that stores partial copies of all Active Directory objects in the forest. It stores a complete copy of all objects in the directory of the domain and a partial copy of all objects of all other forest domains. This allows users and administrators to find directory information regardless of which domain in the directory contains the data. It is replicated to every domain controller that is a member of that forest.

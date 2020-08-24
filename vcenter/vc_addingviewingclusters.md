@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-13"
+lastupdated: "2020-08-20"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -74,7 +74,7 @@ Options might differ depending on the version that your instance was initially d
 ### Data center location
 {: #vc_addingviewingclusters-adding-dc-location}
 
-The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](/docs/network-tools?topic=network-tools-about-looking-glass#about-looking-glass).
+The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](http://lg.softlayer.com/){:external}.
 
 If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.cloud_notm}} bare metal servers.
 
@@ -154,6 +154,9 @@ You can add NFS storage shares to an existing vSAN or NFS cluster. For more info
 ### vSAN storage
 {: #vc_addingviewingclusters-adding-vsan-storage}
 
+If you are using vSAN storage, even though vSphere 6.7u3 might be selected, vSphere ESXi 6.7u2 will be installed.
+{: note}
+
 Specify the following vSAN options:
 
 #### Disk type and size for vSAN capacity disks
@@ -224,13 +227,13 @@ Performance level details:
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 {: caption="Table 6. NFS performance level options" caption-side="top"}
 
-### Local disks (NSX-V only)
+### Local disks (NSX-V SAP-certified HANA only)
 {: #vc_addingviewingclusters-adding-local-disks}
 
-If you selected the **Use VMware Subscription Purchasing Program** option, the local disks option is not available.
+The **Local disks** option is enabled for the **SAP-certified HANA** bare metal server configuration only. If you selected the **Use VMware Subscription Purchasing Program** option, the **Local disks** option is disabled.
 {:note}
 
-The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor bare metal server configuration only. Specify the following options:
+Specify the following options:
 * **Local disk count**: Select the number of disks that you want to add.
 * **Local disk type**: Select an option for the disk type that you need.
 
@@ -365,7 +368,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
   * **Storage**: The type of storage that the cluster uses.
   * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
-  * **Networking**: Whether **Public and Private Network** or **Private Network Only**.
+  * **Networking**: Whether **Public and private network** or **Private network only**.
   * **Status**: The status of the cluster. The status can have one of the following values:
      * Initializing: The cluster is being created and configured.
      * Modifying: The cluster is being modified.
@@ -382,28 +385,24 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
 | Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
-{: caption="Table 7. ESXi server details" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the properties of the ESXi server. The column headers identify the description of the properties. To find the explanation of an ESXi server property, go to that row, and find the information that you need in the description column."}
+{: caption="Table 7. ESXi server details" caption-side="bottom"}
+{: class="simple-tab-table"}
 {: #table1}
 {: tab-title="ESXi server details"}
 {: tab-group="Cluster details"}
-{: class="comparison-tab-table"}
-{: row-headers}
 
-| Item        | Description       |  
+| Item        | Description       |
 |:------------- |:------------- |
 | CPU | The CPU specification of the ESXi servers in the cluster. |
 | Memory | The total memory size of the ESXi servers in the cluster. |
 | Customized vSAN disks | The number of vSAN disks in the cluster, including the disk type and capacity. |
 | vSAN cache disks | The type and number of vSAN cache disks. |
 | Networking |The network interface card (NIC) enablement settings of either Public and Private Network or Private Network Only. |
-{: caption="Table 8. Additional ESXi server details" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the additional properties of the ESXi server. The column headers identify the description of the properties. To find the explanation of a property, go to that row, and find the information that you need in the description column."}
+{: caption="Table 8. Additional ESXi server details" caption-side="bottom"}
+{: class="simple-tab-table"}
 {: #table2}
 {: tab-title="Additional ESXi server details"}
 {: tab-group="Cluster details"}
-{: class="comparison-tab-table"}
-{: row-headers}
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -412,13 +411,11 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
 | IOPS/GB | The performance level of the storage. |
 | NFS protocol | The NFS version of the storage. |
 | Status | The storage status, which can be one of the following values:<br> **Added** The storage is added and is ready for use.<br> **Adding** The storage is being added.<br> **Deleting** The storage is being deleted. |
-{: caption="Table 9. Storage details" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the storage properties. The column headers identify the description of the properties. To find the explanation of a storage property, go to that row, and find the information that you need in the description column."}
+{: caption="Table 9. Storage details" caption-side="bottom"}
+{: class="simple-tab-table"}
 {: #table3}
 {: tab-title="Storage details"}
 {: tab-group="Cluster details"}
-{: class="comparison-tab-table"}
-{: row-headers}
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -426,13 +423,11 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
 | Description | The description of the VLAN.  |
 | Location | The data center location. |
 | Primary route | The primary route of the VLAN. |
-{: caption="Table 10. Network interface - VLAN details" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the network interface properties. The column headers identify the description of the properties. To find the explanation of a network interface property, go to that row, and find the information that you need in the description column."}
+{: caption="Table 10. Network interface - VLAN details" caption-side="bottom"}
+{: class="simple-tab-table"}
 {: #table4}
 {: tab-title="Network interface details"}
 {: tab-group="Cluster details"}
-{: class="comparison-tab-table"}
-{: row-headers}
 
 Click **View resource** to access the VLAN details, including the subnet details and IP details.
 
@@ -441,26 +436,22 @@ Click **View resource** to access the VLAN details, including the subnet details
 | Name | The subnet name. Click the name to access the subnet details. |
 | Type | The type of subnet: primary or portable. |
 | Description | The description of the subnet. |
-{: caption="Table 11. Network interface - Subnet details" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the subnet properties. The column headers identify the description of the properties. To find the explanation of a subnet property, go to that row and find the information that you need in the description column."}
+{: caption="Table 11. Network interface - Subnet details" caption-side="bottom"}
+{: class="simple-tab-table"}
 {: #vlan-table1}
 {: tab-title="Subnet details"}
 {: tab-group="Network interface VLAN details"}
-{: class="comparison-tab-table"}
-{: row-headers}
 
 | Item        | Description       |  
 |:------------- |:------------- |
 | IP | The IP address. |
 | Status | The status of the IP address. |
 | Description |The description of the IP address.  |
-{: caption="Table 12. Network interface - IP details" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the IP properties. The column headers identify the description of the properties. To find the explanation of an IP property, go to that row and find the information that you need in the description column."}
+{: caption="Table 12. Network interface - IP details" caption-side="bottom"}
+{: class="simple-tab-table"}
 {: #vlan-table2}
 {: tab-title="IP details"}
 {: tab-group="Network interface VLAN details"}
-{: class="comparison-tab-table"}
-{: row-headers}
 
 ## Deleting clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting}
@@ -471,11 +462,11 @@ You might want to delete a cluster from an instance when it's no longer needed.
 {: #vc_addingviewingclusters-deleting-prereq}
 
 * Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or don't plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* You can delete only clusters that are added as part of day 2 operations. Clusters that are created during initial deployment can't be deleted.
 * You can delete a single cluster at a time. To delete more than one cluster, you must do it in sequence. Wait for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
-* Before you delete an edge services cluster, you must delete all services that are installed on that cluster.
-* The default cluster, management cluster, and workload cluster can't be deleted.
+* You do not have to delete any services that are installed on the cluster, including services on an edge services cluster. The services are automatically deleted when you delete the cluster.
 
 A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
 {:important}

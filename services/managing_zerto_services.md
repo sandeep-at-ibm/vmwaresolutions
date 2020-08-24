@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-07-14"
 
 keywords: disaster recovery, request DR services, DR managed service
 
@@ -45,13 +45,11 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 ## Procedure to request Managed Disaster Recovery Services
 {: #managing_zerto_services-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. Scroll down to the **Services** section, and then click **Managed Disaster Recovery Services** on the **Professional Services** card.
-3. On the **Zerto** page, review the description and technical specifications for Zerto as a managed service, and then click **Continue**.
-4. Specify the configuration settings according to your requirements or accept the default values.
-5. Click **vCenter Server** to add the service to one of your instances.
-6. To add the service while you order a new instance, click **Add to New Instance**, and then continue with ordering a new [vCenter Server](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance) instance.
-7. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the **Services** section and click **Managed Disaster Recovery Services** on the **Professional Services** card.
+2. On the **Managed Disaster Recovery Services** page, click the **About** tab to review the description and technical specifications for Zerto as a managed service.
+3. Click the **Create** tab.
+4. To add the service while you order a new instance, click **Add to new instance**, and then continue with [ordering a new vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
+5. To add the service to an existing instance, click **Add to existing instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Upgrade**.
 
 ## Related links
 {: #managing_zerto_services-related}

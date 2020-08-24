@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-08-18"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
@@ -22,12 +22,12 @@ subcollection: vmwaresolutions
 # Managing Red Hat OpenShift for VMware
 {: #ocp_managing}
 
-Review the following information to manage your OpenShift for VMware service after deployment.
+Review the following information to manage your Red Hat® OpenShift® for VMware® service after deployment.
 
 ## Required rotation of the OpenShift certificates
 {: #ocp_managing-cert-rotation}
 
-Red Hat OpenShift for VMware uses kubelet client certificates that must be rotated periodically for security purposes. Red Hat OpenShift mainly automates the rotation process, but requires manual approval of Certificate Signing Requests (CSRs). Therefore, it is important that you understand the OpenShift certificate rotation schedule to avoid expired certificates.  
+Red Hat OpenShift for VMware uses kubelet client certificates that must be rotated periodically for security purposes. Red Hat OpenShift mainly automates the rotation process, but requires manual approval of certificate signing requests (CSRs). Therefore, it is important that you understand the OpenShift certificate rotation schedule to avoid expired certificates.  
 
 The initial certificates that are created during installation expire 24 hours after they are created. IBM's automation process, which installs Red Hat OpenShift, handles the approval of the CSRs for this initial rotation, which is done by running a script on the bastion for the first 30 hours. The script is named `/root/approve-csr.sh` and its log file is named `/root/approve-csr.log`. 
 
@@ -70,20 +70,20 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   6. Create a value named `disk.EnableUUID`. Set the value to the string `TRUE`.
   7. After you create the new parameters, click **OK** to close the Configuration Parameters window. Click **OK** to close the Edit Settings window.
 
-4. Create a DHCP binding for the worker VM.
+4. Create a DHCP binding for the worker VM:
   1. When the new worker VM comes online, it attempts to get its IP address by using DHCP. Your Red Hat OpenShift for VMware environment is already configured with the proper networking and DHCP settings to allow getting the IP address. However, you must create a new binding for this VM.
   2. Make a note of the new worker VM's name and MAC address.
-  3. To go to the NSX edge configuration named `ocp-nsx-edge`, from the vSphere Web Client, go to to **Menu > Networking and Security**. On the left navigation pane, click **NSX Edges**.
+  3. To go to the NSX edge configuration named `ocp-nsx-edge`, from the vSphere Web Client, go to **Menu > Networking and Security**. On the left navigation pane, click **NSX Edges**.
   4. The list of NSX edges is displayed. Click the edge named `ocp-nsx-edge` to open its configuration window. If the edge is not listed, scroll down the list to locate it.
   5. In the configuration window for the `ocp-nsx-edge` NSX edge, click **DHCP** along the top bar and then click **Bindings** on the left. The list of existing DHCP bindings is displayed. The DHCP bindings associate VM MAC addresses to the IP address they are assigned.
- 6. Look at the **IP Address** column for the existing bindings. Make a note of the next available **IP Address**, which is the address you will assign to the new worker VM.
+  6. Look at the **IP Address** column for the existing bindings. Make a note of the next available **IP Address**, which is the address you will assign to the new worker VM.
   7. Locate worker0 in the **Host Name** column. To view the binding details for worker0, select the worker0 binding and click **Edit**.
   8. Make a note of all the settings on both the **General** and **DNS Settings** tabs. With the exception of the **MAC Address**, **Hostname**, and **IP Address**  fields, you will be creating a new binding with all the same settings as worker0. When you are finished viewing the information for worker0, click **Cancel** to close the window.
   9. To create a new DHCP binding for the new worker VM, click the **Add** button in the DHCP Bindings window. The New DHCP Binding window is displayed. Select the **Use MAC Binding** option at the top and enter the **MAC Address**, **Hostname**, and **IP Address** that correspond to the new worker VM you are adding. For the rest of the fields, enter the settings that you previously noted from the existing worker0 binding. Click the **Add** button.
   10. Your changes are saved and the New DHCP Binding window is closed.
   11. The Bindings window is displayed. A blue rectangular box is displayed at the top explaining that changes to the DHCP configuration take effect after they're published. To publish your changes, click the **PUBLISH** button inside the blue box. The blue box disappears after the changes are processed.
 
-5. Add a worker to the Load Balancer pools.
+5. Add a worker to the Load Balancer pools:
   1. Go into the NSX edge configuration named `ocp-nsx-edge`. To do this, from the vSphere Web Client, go to **Menu > Networking and Security**. On the left navigation pane, click **NSX Edges**.
   2. On the list of NSX edges that is displayed, click the edge named `ocp-nsx-edge` to open its configuration window. If the edge is not listed, scroll down the list to locate it.
   3. In the configuration window for the `ocp-nsx-edge` NSX edge, click **Load Balancer** along the top bar and then click **Pools** on the left. The list of existing pools is displayed.
@@ -101,7 +101,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   2. Using the DNS Manager, add a new A record to the corresponding `ocp` zone. When you create the A record, make sure the option to create associated PTR record is selected.
 
 7. Approve any certificate signing requests (CSRs) from the bastion. During the provisioning of the new worker, you might have to [approve CSRs](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external} from the bastion.
-  1. Log in to the bastion as the `root` user and change to the bastion installation directory, as described in [OpenShift bastion details](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-bastion).
+  1. Log in to the bastion as the `root` user and change to the bastion installation directory, as described in [Bastion details](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-bastion).
   2. Before you can run any commands, you must authenticate to OpenShift.
     * If authentication is not configured and you are using the default `kubeadmin` account and password, run the command `export KUBECONFIG=auth/kubeconfig` and verify that you are authenticated by running the command `./oc whoami`.
     * If other backends or users are authenticated, log in by using one of those accounts as explained in the Red Hat OpenShift documentation, for example, by running the command `./oc login`.

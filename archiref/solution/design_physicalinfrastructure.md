@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-13"
+lastupdated: "2020-08-21"
 
 subcollection: vmwaresolutions
 
@@ -64,7 +64,7 @@ The following figure uses these acronyms:
 * DAR - Distribution Aggregation Router
 * FCR - Frontend Customer Router
 * LBR - Load Balancer Router
-* MSR - Master Services Router
+* MSR - Multiservice Switch Router
 * POPs - Points of Presence
 * PPR - Pod to Pod Router
 * SLR - Service Layer Router

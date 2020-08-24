@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-05-28"
+lastupdated: "2020-08-11"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -24,6 +24,11 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.vmwaresolutions_full}} Shared offers either a standardized or customizable deployment option of VMware virtual data center environments. Choose the On-Demand or Reserved option.
 
+## Requirements for virtual data center instances
+{: #shared_ordering-reqs}
+
+If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+
 ## System settings
 {: #shared_ordering-sys-settings}
 
@@ -42,7 +47,7 @@ For the On-Demand offering, virtual data center virtual CPU (vCPU) and RAM are a
 * The limits that are established for the amount of vCPU and RAM are maximum values that can be used at any time.
 * vCPU and RAM resources can be increased and decreased later as required.
 * The price is calculated hourly and it is based on the resource usage in the virtual data center.
-* There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage.
+* The amount of storage that can be allocated and used in the virtual data center is limited to 200 TB for each storage policy. Charges are hourly based on GB of allocated storage.
 * There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB.
 
 #### Reserved
@@ -65,13 +70,16 @@ The virtual data center name is set to **vdc-_xx_** by default, where _xx_ repre
 You can also specify a virtual data center name that meets the following requirements:
 * Maximum length is 128 characters.
 * Only alphanumeric, dash (-), and underscore (_) characters are allowed.
+* The name must be unique from active virtual data centers within your account. You may create a virtual data center that has the same name as a previously deleted virtual data center.
+
+
 
 ### Resource group
 {: #shared_ordering-resource-group}
 
 Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
 
-If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
 
 ### Data center location
 {: #shared_ordering-dc}
@@ -120,35 +128,33 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 {: help}
 {: support}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. In the **Start Provisioning** section, click the **VMware Solutions Shared** card.
-3. On the **Create** tab of the **VMware Solutions Shared** page, select **On-Demand**.
-4. Enter the virtual data center name and select a resource group.
-5. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
-6. Select the vCPU and RAM limits according to your requirements.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **Start provisioning** section.
+2. On the **Create** tab of the **VMware Solutions Shared** page, select **On-Demand**.
+3. Enter the virtual data center name and select a resource group.
+4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
+5. Select the vCPU and RAM limits according to your requirements.
 6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
 7. Click **Create**.
 
 ## Procedure to order VMware Solutions Shared Reserved
 {: #shared_ordering-procedure-reserved}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. In the **Start Provisioning** section, click the **VMware Solutions Shared** card.
-3. On the **Create** tab of the **VMware Solutions Shared** page, select **Reserved**.
-4. Enter the virtual data center name and resource group.
-5. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
-6. Complete the resource reservation.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **Start provisioning** section.
+2. On the **Create** tab of the **VMware Solutions Shared** page, select **Reserved**.
+3. Enter the virtual data center name and resource group.
+4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
+5. Complete the resource reservation.
   * If you select **Preconfigured**, select the preconfigured vCPU model and RAM size.
   * If you select **Custom**, specify the vCPU and RAM limits according to your requirements.
-7. On the **Summary** pane, verify the configuration and estimated price before you place the order.
-8. Click **Create**.
+6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
+7. Click **Create**.
 
 ## Results after you order VMware Shared Solution
 {: #shared_ordering-results}
 
 * The deployment of the resources starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Virtual Data Center Status**.
 * When the resources are successfully deployed, the components that are described in [Technical specifications for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview#shared_overview-specs) are installed on your VMware virtual platform.
-* When the resources are ready to use, the status is changed to **Ready to Use**.
+* When the resources are ready to use, the status is changed to **Ready to use**.
 
 ## What to do next
 {: #shared_ordering-next}

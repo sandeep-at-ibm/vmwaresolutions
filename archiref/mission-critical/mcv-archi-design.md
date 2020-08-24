@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-02"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -16,6 +16,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
+{:term: .term}
 
 # IBM Cloud for VMware Mission Critical Workloads architecture
 {: #mcv-archi-design}
@@ -25,10 +26,10 @@ subcollection: vmwaresolutions
 
 The {{site.data.keyword.cloud}} for VMware Mission Critical Workloads architecture relies on a highly available storage, compute and networking solution in {{site.data.keyword.cloud_notm}}. In addition, there is a number of VMware and IBM components required in order to provide management and tooling capabilities.
 
-## IBM Cloud multi-zone regions
+## IBM Cloud multizone regions
 {: #mcv-archi-design-mzr}
 
-The Mission Critical Workloads architecture is dependent on {{site.data.keyword.cloud_notm}} Multi-Zone Regions (MZRs). A MZR is an {{site.data.keyword.cloud_notm}} data center designation consisting of triplets of geographically close sites with high bandwidth and low latency between them. These are the only supported site configurations for the Mission Critical Workloads offering, enforced at order time.
+The Mission Critical Workloads architecture is dependent on {{site.data.keyword.cloud_notm}} [multizone regions](#x9774820){: term} (MZRs). An MZR is an {{site.data.keyword.cloud_notm}} data center designation consisting of triplets of geographically close sites with high bandwidth and low latency between them. These are the only supported site configurations for the Mission Critical Workloads offering, enforced at order time.
 
 | Region        | {{site.data.keyword.cloud_notm}} data centers |
 |:------------- |:------------- |
@@ -40,7 +41,7 @@ The Mission Critical Workloads architecture is dependent on {{site.data.keyword.
 | Asia-Pacific | Sydney 01, Sydney 04, Sydney 05 |
 {: caption="Table 1. Available MZRs in {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
-## Distribution across multi-zone regions
+## Distribution across multizone regions
 {: #mcv-archi-design-distibution}
 
 When you order a Mission Critical Workloads architecture, you select one of the three {{site.data.keyword.cloud_notm}} data centers in the MZR as the witness site. This site hosts all components that require representatives to maintain quorum for high availability. The other two {{site.data.keyword.cloud_notm}} data centers in the MZR host the management and resource components of the Mission Critical Workloads instance.
@@ -52,7 +53,7 @@ Separate instances may also be deployed in the same or different MZR with their 
 ### Witness site
 {: #mcv-archi-design-distibution-witness}
 
-The witness site selected for the first cluster contains the witness component for vCenter HA, NSX controllers, and vSAN stretched cluster.
+The witness site selected for the first cluster contains the witness component for vCenter HA, an NSX Manager, and the vSAN witness for the stretched cluster.
 
 You select the witness site during the deployment process. The witness site can be either vSAN or NFS Endurance based. This choice cannot be modified after deployment. If the witness is vSAN based it remains separate from and does not participate in the stretched cluster configuration deployed onto the management and resource sites.
 
@@ -85,7 +86,7 @@ The following configuration with separate management and edge clusters is an IBM
 {: #mcv-archi-design-distibution-mgmt-diff}
 
 The two sites containing the management and resource layers of the Mission Critical Workloads instance are designated Site A and Site B.
-vCenter functions in an active-passive availability model with a witness appliance. The NSX control plane functions in an active–active availability model with a quorum of controllers.
+vCenter functions in an active-passive availability model with a witness appliance. The NSX control plane functions in an active–active availability model with a quorum of managers.
 
 Your workloads are deployed onto active–active storage mirrored between the workload sites. You must plan for sufficient host capacity to run the entire workload in one site. VMware admission control should be used to ensure that neither side is over-committed and that complete loss of a site can be accommodated by moving all workloads to the remaining site. Additional planning is also required to design a workload network topology, such as that used by the IBM GTS Mission Critical Workloads architecture, that is highly available.
 
@@ -94,9 +95,8 @@ Your workloads are deployed onto active–active storage mirrored between the wo
 Management and resource Site A contains the following:
 
 *	Management cluster
-  * vCenter server active appliance
-  * NSX manager
-  * NSX controller
+  * vCenter Server active appliance
+  * NSX Manager
   * Active Directory server
 
 *	Half of a stretch cluster
@@ -107,8 +107,8 @@ Management and resource Site A contains the following:
 Management and resource Site B contains the following:
 
 *	Management cluster
-  * vCenter server passive appliance
-  * NSX controller
+  * vCenter Server passive appliance
+  * NSX Manager
   * Active Directory server
 
 *	Remaining half of stretch cluster

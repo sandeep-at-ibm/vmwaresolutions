@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-08-07"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -15,6 +15,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:term: .term}
 
 # Requirements and planning for VMware vSphere
 {: #vs_planning}
@@ -34,8 +35,8 @@ The {{site.data.keyword.cloud_notm}} account that you are using must meet certai
 
 The vSphere deployment has strict requirements on the physical infrastructure. Therefore, you can deploy clusters only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements. The following {{site.data.keyword.cloud_notm}} data centers are available for vSphere deployment.
 
-Cascade Lake bare metal servers are available on Multi-Zone Region
-{{site.data.keyword.cloud_notm}} data centers. For more information, see [Multi-Zone Region (MZR) Overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
+Cascade Lake bare metal servers are available in [multizone region](#x9774820){: term}
+{{site.data.keyword.cloud_notm}} data centers. For more information, see [Multizone region (MZR) overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
 {:note}

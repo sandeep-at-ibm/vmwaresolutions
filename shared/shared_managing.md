@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-05-27"
+lastupdated: "2020-08-07"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -46,7 +46,7 @@ The instance can have a range of statuses.
 | Status        | Description       |
 |:------------- |:------------- |
 | Creating | The instance is being created. |
-| Ready to Use | The instance is ready to use. |
+| Ready to use | The instance is ready to use. |
 | Modifying | The instance is being modified. |
 | Deleting | The instance is being deleted. |
 {: caption="Table 2. Status descriptions for virtual data center instances" caption-side="top"}
@@ -115,6 +115,8 @@ You do not need to generate an **admin** password for each virtual data center. 
 1. From the **Properties** pane on the virtual data center instance details page, click **Set Organization Admin Password** to generate a random password.
 2. From the upper right corner of the virtual data center instance details page, click **vCloud Director console** to access the console.
 3. Use the ** admin** username and password to log in to the vCloud Director console.
+
+After the **admin** is logged in to the vCloud Director console, you can create additional users who have roles that allow them access the vCloud Director console.
 
 All virtual data centers in the same region have the same **admin** password. Resetting the password on a virtual data center instance resets the **admin** password for accessing the vCloud Director Management console for all virtual data center instances in the same region.
 {:important}

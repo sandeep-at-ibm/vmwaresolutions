@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-07-10"
+lastupdated: "2020-08-11"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
@@ -89,7 +89,7 @@ Review and choose add-on services for your deployment offering.
 | Security and compliance | [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) | This service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service can provide encryption at both the operating system level and at the data level, which means that any directory, folder, or file within a workload can be encrypted and decrypted. |
 | Security and compliance | [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations) | This service simplifies the management of encrypted workloads by automating and simplifying the lifecycle of encryption keys. The service can easily manage encryption keys at scale by using FIPS 140-2 compliant encryption. |
 | Professional services | [{{site.data.keyword.cloud_notm}} Expert Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_ices) | This service can help you modernize and deploy your business in a flexible and secure platform by adopting VMware on {{site.data.keyword.cloud_notm}}. By engaging Expert Services, you can accelerate your time to value. |
-| Business continuity and migration | [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview) | This service delivers a multi-zone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region. |
+| Business continuity and migration | [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview) | This service delivers a multizone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region. |
 | Featured workload solutions | [IBM Security Services for SAP®](/docs/vmwaresolutions?topic=vmwaresolutions-managing-ss-sap) | This service offers a cybersecurity solution to automate the monitoring and protection of SAP applications on {{site.data.keyword.cloud_notm}}, and to keep workloads compliant and secure from inside and outside threats. |
 | Business continuity and migration | [IBM Spectrum® Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | This service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance. |
 | Security and compliance | [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | This service provides security and networking services at the perimeter or edge in virtualized private or public cloud environments. Within a VMware infrastructure, vSRX runs as a virtual machine (VM) within the VMware vSphere environment. The vSRX provides a complete Next-Generation Firewall (NGFW) solution. |
@@ -115,17 +115,17 @@ To access the {{site.data.keyword.vmwaresolutions_short}} console:
 1. Go to https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid**.
 
-## Step 2: Configuring your user account and settings
+## Step 2: Setting up your environment for your first order
 {: #getting-started-step2}
 
-Before you order an instance, you must enter the user name and API key of your {{site.data.keyword.cloud_notm}} infrastructure account on the **Settings** page of the console.
+Decide upon a deployment offering, which is managed as an instance in the console, and then ensure that your environment is ready for your order. Follow the instructions in the **Before you begin** section at the top of the ordering page. The instructions might vary depending on the instance type that you select.
 
-For information about how to configure your user account and settings, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+For information about how to set up your environment for your first order, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 
 ## Step 3: Ordering an instance
 {: #getting-started-step3}
 
-After you decide upon a deployment offering, which is managed as an instance in the console, begin the ordering process.
+After you set up your environment properly, begin the ordering process.
 
 For information about how to order an instance, see the following topics based on your selection of deployment offering:
 * [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)

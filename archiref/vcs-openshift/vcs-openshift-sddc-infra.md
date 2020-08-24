@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -79,14 +79,14 @@ Since the NSX Edges are configured as active/passive in either the internal or d
 ## NSX Load Balancer specifications
 {: #vcs-openshift-sddc-infra-nsx-load-spec}
 
-Within the OpenShift environment, two load balancers for accessing the master nodes and the worker nodes are required. The NSX Edge is enabled to use load balancing and is configured with application profiles that use a certificate for inbound connection from the source. The NSX Edge is also configured with load-balancing pools to point to the OpenShift masters and OpenShift Workers. Additionally, a virtual server is created with a virtual IP address (vIP) on the private interface with rules that connect the pools with vIP.
+Within the OpenShift environment, two load balancers for accessing the control plane nodes and the worker nodes are required. The NSX Edge is enabled to use load balancing and is configured with application profiles that use a certificate for inbound connection from the source. The NSX Edge is also configured with load-balancing pools to point to the OpenShift Primaries and OpenShift Workers. Additionally, a virtual server is created with a virtual IP address (vIP) on the private interface with rules that connect the pools with vIP.
 
 | Description | Port number | Algorithm  | Monitor | Members | Protocol | IP subnet |
 |:---|:----|:------|:---| :--- | :--- |:---|
 | Application Load Balancer | 80 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | IBM Cloud 10.x |
 | Application Load Balancer | 443 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | IBM Cloud 10.x |
-| API & API-INT Load Balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Master Nodes | TCP | IBM Cloud 10.x |
-| API & API-INT Load Balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Master Nodes | TCP | IBM Cloud 10.x |
+| API & API-INT Load Balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
+| API & API-INT Load Balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
 {: caption="Table 4. NSX Load Balancer specifications" caption-side="top"}
 
 ## Red Hat OpenShift specifications

@@ -43,7 +43,7 @@ The {{site.data.keyword.cloud_notm}} Private Hosted service is now available to 
 
 The Mission Critical VMware on {{site.data.keyword.cloud_notm}} service is now available to instances that are deployed in, or upgraded to, V2.7 or later releases.
 
-Mission Critical VMware on {{site.data.keyword.cloud_notm}} delivers a multi-zone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region. With this cloud architecture, you can achieve a higher availability and failover success rate than most VMware clients can achieve with on-premises environments or competing cloud platforms.
+Mission Critical VMware on {{site.data.keyword.cloud_notm}} delivers a multizone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region. With this cloud architecture, you can achieve a higher availability and failover success rate than most VMware clients can achieve with on-premises environments or competing cloud platforms.
 
 ### F5 on IBM Cloud
 {: #relnotes_v27-f5}
@@ -93,5 +93,5 @@ The user interface is updated and provides the following enhancements:
 
 * The **Customized** tab is now split into the **Skylake** and **Broadwell** tabs based on the server type to help you in server selection. This tab is where you specify CPU model and RAM for bare metal server settings when you order instances.
 * The **Preconfigured** options for bare metal server configuration are not available anymore.
-* The **Type** column is now included in the **vCenter Server Instances** table on the **Resources** page to identify vCenter Server, vCenter Server with Hybridity Bundle, and vCenter Limited Test Drive instances.
+* The **Type** column is now included in the **vCenter Server instances** table on the **Resources** page to identify vCenter Server, vCenter Server with Hybridity Bundle, and vCenter Limited Test Drive instances.
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

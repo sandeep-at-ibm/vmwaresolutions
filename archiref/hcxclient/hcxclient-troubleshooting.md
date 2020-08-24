@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -22,7 +22,7 @@ Review the following information for common HCX issues and fixes.
 ### HCX user interface token timeout
 {: #hcxclient-troubleshooting-hcx-ui-issues}
 
-Typically, if the vCenter user interface (UI) has been left opened for some time, you might encounter a timeout in the HCX UI. This is because the login token to the HCX manager server has timed out. Log out of the vSphere web UI and back in to refresh the token.
+Typically, if the vCenter user interface (UI) has been left opened for some time, you might encounter a timeout in the HCX UI. This is because the login token to the HCX Manager server has timed out. Log out of the vSphere web UI and back in to refresh the token.
 
 ### HCX Client UI displaying “NaN” for all metrics on the dashboard screen
 {: #hcxclient-troubleshooting-nan-display}
@@ -45,12 +45,12 @@ If a migration fails because of a licensing issue, current versions of HCX clear
 If there is an issue with WAN connectivity, always check the **Interconnect -> HCX Components** screen
 within the HCX UI for tunnel status. The fleet components typically do not need to be reset or rebooted. If WAN connectivity is restored, they reconnect automatically.
 
-If there are fixes and updates that were applied to the HCX Managers (Client and Cloud) and those updates also patch issues with the fleet components, you must redeploy the Cloud Gateway and any L2Cs deployed. It is possible to do further tunnel status debugging, by connecting to the HCX manager through an SSH client such as ccli  
+If there are fixes and updates that were applied to the HCX managers (Client and Cloud) and those updates also patch issues with the fleet components, you must redeploy the Cloud Gateway and any L2Cs deployed. It is possible to do further tunnel status debugging, by connecting to HCX Manager through an SSH client such as `ccli`
 
-1. SSH to the HCX manager by using the admin account and the supplied password.
+1. SSH to HCX Manager by using the admin account and the supplied password.
 2. Run the `su –` command and enter the password of the `root` user (same as admin password) to change to root.
 3. Change the directory to `/opt/vmware/bin` and run the `./ccli` command. If this attempt is not successful because the environment is not set up for root, run the `./ccliSetup.pl` command.
-4. Run the `list` command within the `ccli` shell to list the fleet components registered with the HCX manager.
+4. Run the `list` command within the `ccli` shell to list the fleet components registered with HCX Manager.
 5. Specify the fleet ID for the `ccli` by typing the ID listed for the fleet component. For example, `go 8`.
 6. Run the `debug remoteaccess enable` command to connect by using SSH to the wanted fleet component.
 7. Exit `ccli` and connect by using SSH to the IP address of the SSH-enabled fleet component.

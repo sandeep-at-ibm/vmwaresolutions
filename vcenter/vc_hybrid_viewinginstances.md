@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-08-07"
 
 keywords: view vCenter Server Hybridity, view instance, view instance details
 
@@ -47,7 +47,7 @@ The instance can have a range of statuses.
 |:------------- |:------------- |
 | Creating | The instance is being created. |
 | Building | The instance is being configured. |
-| Ready to Use | The instance is ready to use. |
+| Ready to use | The instance is ready to use. |
 | Modifying | The instance is being modified. |
 | Failed | The creation, configuration, or modification process failed. |
 | Deleting | The instance is being deleted. |
@@ -71,8 +71,8 @@ To view the property details of a vCenter Server with Hybridity Bundle instance:
 | vCenter version | The VMware vCenter Server with Hybridity Bundle version.<br><br>**Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | NSX license edition | The version and edition of the VMware NSX license. |
-| DNS, Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
-| DNS, SSO Domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server with Hybridity Bundle instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
+| DNS, Root domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
+| DNS, SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server with Hybridity Bundle instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
 | DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server with Hybridity Bundle instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 | Hybridity Bundle | Indicates if the vCenter Server with Hybridity Bundle is installed. |
 | Status  | The status of the instance.<br><br>The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |

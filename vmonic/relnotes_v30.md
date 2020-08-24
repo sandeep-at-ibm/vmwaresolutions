@@ -44,7 +44,7 @@ Starting with the V3.0 release, Broadwell 2-CPU servers are no longer available 
 ## Network file system operation enhancements
 {: #relnotes_v30-nfs}
 
-Starting with the V3.0 release you can simultaneously add or remove NFS storage and ESXi servers to clusters that are in the **Ready to Use** state. For example, you can add or remove an ESXi server in a cluster and add or remove NFS storage in another cluster. This applies to all vCenter Server and vCenter Server with NSX-T instances.
+Starting with the V3.0 release you can simultaneously add or remove NFS storage and ESXi servers to clusters that are in the **Ready to use** state. For example, you can add or remove an ESXi server in a cluster and add or remove NFS storage in another cluster. This applies to all vCenter Server and vCenter Server with NSX-T instances.
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v30-vcs}

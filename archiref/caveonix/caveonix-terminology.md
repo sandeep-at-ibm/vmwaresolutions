@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-08-05"
+lastupdated: "2020-07-07"
 
 subcollection: vmwaresolutions
 
@@ -37,7 +37,7 @@ This glossary provides some descriptions for terms that are associated with the 
 -	**Organizations:** Tenant organizations and sub-organizations of the Service Provider. If the Asset Repository is vCenter, the Organization / Tenant List must be created manually.
 -	**Roles:** Pre-configured Roles and Service Provider created Roles. Preconfigured roles are not editable by the Service Provider.
 -	**Organization Users:** Users of the Tenant Organizations and Sub-Organizations.
--	**Asset Repository:** An integration point that enables RiskForesight to synchronize the current asset across the CSP management zone and customer zone. The current version of RiskForesight supports the synchronization for VMware vCloud Director and vCenter Servers. It also supports data collection from VMware NSX Manager. Assets	are collected from the Asset Repository. The Service Provider assigns Assets that are collected from vCenter to Tenant Organizations and Sub-Organizations of the Service Provider. An Asset can be assigned only to one Organization.
+-	**Asset Repository:** An integration point that enables RiskForesight to synchronize the current asset across the CSP (Cloud Service Provider) management zone and customer zone. The current version of RiskForesight supports the synchronization for VMware vCloud Director and vCenter Servers. It also supports data collection from VMware NSX Manager. Assets	are collected from the Asset Repository. The Service Provider assigns Assets that are collected from vCenter to Tenant Organizations and Sub-Organizations of the Service Provider. An Asset can be assigned only to one Organization.
 -	**Remote Access:** Provides end machine credentials to enable scans for vulnerability and compliance monitoring and to collect system events logs. The Service Provider can only enable remote access for their own assets. Tenants have control over remote access from their Assets.
 -	**Applications and Subapplications:** A logical way to group assets. Example Application: SAP, example Sub-Applications: SAP Front End, SAP Middle Tier, SAP Back End.
 -	**Locations:** Assets are uniquely grouped by Location, Cloud Provider, and Asset Repository.

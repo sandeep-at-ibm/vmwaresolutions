@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-06"
+lastupdated: "2020-08-10"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -27,11 +27,15 @@ The FortiGate Virtual Appliance service deploys a pair of FortiGate Virtual Appl
 
 You can install multiple instances of this service as needed. You can manage this service by using the FortiOS web Client or the CLI through SSH.
 
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
 The FortiGate Virtual Appliance service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 6.2.3.
 {:note}
 
 ## Technical specifications for FortiGate Virtual Appliance
 {: #fortinetvm_considerations-specs}
+
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are ordered and included in the FortiGate Virtual Appliance service:
 
@@ -78,12 +82,6 @@ Review the following considerations before you install the FortiGate Virtual App
    * VMware vSphere HA has enough resources to host two FortiGate VMs with 100% CPU and RAM.
 
   Due to these requirements, you must plan carefully for the space that is needed for the FortiGate Virtual Appliance. If needed, before you order FortiGate Virtual Appliance, add 1 - 2 ESXi servers to your instance, or reduce the vSphere HA CPU reservation for failover, or both.
-
-**Notes**:
-
-* Before the service is installed in your environment, a check is done against the available capacity of the default cluster in the environment to ensure that the service components can fit.
-* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by adding more hosts, by freeing up RAM, CPU, or disk space. After that, add the service again in the console and delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## FortiGate Virtual Appliance order example
 {: #fortinetvm_considerations-example}

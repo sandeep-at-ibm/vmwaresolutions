@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-15"
+lastupdated: "2020-08-21"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -33,8 +33,8 @@ To order VMware Solutions Shared, you must have a **Pay As You Go** or **Subscri
 
 The virtual data center name must meet the following requirements:
 
-* Maximum length is 128 characters
-* Only alphanumeric, dash (-), and underscore (_) characters are allowed
+* Maximum length is 128 characters.
+* Only alphanumeric, dash (-), and underscore (_) characters are allowed.
 * The name must be unique from active virtual data centers within your account. You may create a virtual data center that has the same name as a previously deleted virtual data center.
 
 ## IBM Cloud data center availability

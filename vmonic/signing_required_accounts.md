@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-07-21"
 
 keywords: user account, ibm cloud account, ibm cloud infrastructure
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 ## Signing up for an IBM Cloud account
 {: #signing_required_accounts-cloud}
 
-You can sign up for an {{site.data.keyword.cloud}} account by using an existing **IBMid** or by creating a new **IBMid**. For more information about how to sign up for an {{site.data.keyword.cloud_notm}} account, see [Signing up for {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-signup).
+You can sign up for an {{site.data.keyword.cloud}} account by using an existing **IBMid** or by creating a new **IBMid**. For more information about how to sign up for an {{site.data.keyword.cloud_notm}} account, see [Signing up for {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud).
 
 ## Signing up for an IBM Cloud infrastructure account
 {: #signing_required_accounts-infra}
@@ -40,4 +40,4 @@ To sign up for an {{site.data.keyword.cloud_notm}} infrastructure account, upgra
 * [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req)
 * [Video - How to create an {{site.data.keyword.cloud_notm}} account](https://www.youtube.com/watch?v=HBkY-Fs1d6E){:external}
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
-* [Requiring MFA for users in your account](/docs/iam?topic=iam-enablemfa#enablemfa#unifyingaccounts)
+* [Requiring MFA for users in your account](/docs/account?topic=account-enablemfa#enablemfa)

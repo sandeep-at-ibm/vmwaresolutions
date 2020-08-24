@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-13"
+lastupdated: "2020-08-21"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -15,16 +15,22 @@ subcollection: vmwaresolutions
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Ordering multi-zone stretched clusters
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:term: .term}
+
+# Ordering a stretched cluster across multizone region
 {: #mcv_ordering}
 
-To deploy a multi-zone stretched cluster consisting of compute, network, and storage elements that are deployed across three availability zones in an {{site.data.keyword.cloud}} multi-zone region (MZR), order {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads multi-zone stretched clusters.
+To deploy a cluster that consists of compute, network, and storage elements, which are deployed across three availability zones in an {{site.data.keyword.cloud}} [multizone region](#x9774820){: term}, order a stretched cluster across multizone region.
 
 ## Requirements
 {: #mcv_ordering-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 * You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
@@ -48,11 +54,11 @@ You must specify the following system settings when you order a vCenter Server i
 ### Instance configurations
 {: #mcv_ordering-sys-config}
 
-You can select **New Configuration** to specify settings for an instance and place the order or save the settings as a configuration template without placing an order.
+You can create a new configuration to specify settings for an instance and place the order or save the settings as a configuration template without placing an order.
 
 You can also select a sample configuration template to further edit it, or to update it and then save it as a new configuration template.
 
-For a sample configuration, click **Topology diagram** to see an example of the configuration.
+To see an example of an instance configuration, click **Topology diagram** next to the **Instance configurations** field.
 
 ### Instance name
 {: #mcv_ordering-sys-inst-name}
@@ -71,24 +77,25 @@ You can also specify an instance name that meets the following requirements:
 
 Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
 
-If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
+{:note}
 
 ## Location settings
 {: #mcv_ordering-location}
 
-Location settings are based on your selection of the {{site.data.keyword.cloud_notm}} multi-zone region (MZR), witness location, and management and resource location.
+Location settings are based on your selection of the {{site.data.keyword.cloud_notm}} multizone region, witness location, and management and resource location.
 
-### Multi-Zone Region
+### Multizone region
 {: #mcv_ordering-location-mzr}
 
-The multi-zone region is a group of three or more {{site.data.keyword.cloud_notm}} data centers within close proximity of each other, ensuring high availability and resiliency.
+The multizone region is a group of three or more {{site.data.keyword.cloud_notm}} data centers within close proximity of each other, ensuring high availability and resiliency.
 
-### Witness Location
+### Witness location
 {: #mcv_ordering-location-witness}
 
-From the multi-zone region, select the availability zone of the witness site. The remaining management and vSAN stretched resource clusters are placed in the remaining availability zones. The witness site in a vSAN stretched cluster acts as the arbitrator to determine placement in the event of a loss of connectivity or failure of an availability zone.  This witness is considered the third fault domain in the stretched cluster architecture.
+From the multizone region, select the availability zone of the witness site. The remaining management and vSAN stretched resource clusters are placed in the remaining availability zones. The witness site in a vSAN stretched cluster acts as the arbitrator to determine placement in the event of a loss of connectivity or failure of an availability zone.  This witness is considered the third fault domain in the stretched cluster architecture.
 
-### Management and Resource Location
+### Management and resource location
 {: #mcv_ordering-location-mgmt-resource}
 
 The remaining availability zones are where the resource and management cluster components are placed.
@@ -98,7 +105,7 @@ The remaining availability zones are where the resource and management cluster c
 
 Specify the licensing options for the following VMware components in the instance:
 * VMware vSAN Enterprise
-* NSX Service Providers 6.4 (Advanced or Enterprise edition)
+* NSX-T 3.0 (Data Center Advanced or Data Center Enterprise edition)
 
 A deployment of VMware vSAN stretched clusters on {{site.data.keyword.cloud_notm}} requires a vSAN Enterprise Edition license.
 {:note}
@@ -117,13 +124,13 @@ You can use the IBM-provided VMware licenses for these components by selecting *
 ## Availability zone settings
 {: mcv_ordering-availability-zones}
 
-The deployment of a multi-zone stretched cluster consists of compute, network, and storage elements deployed across the following three availability zones in an {{site.data.keyword.cloud_notm}} multi-zone region.
+The deployment of a stretched cluster across multizone regions consists of compute, network, and storage elements deployed across the following three availability zones in an {{site.data.keyword.cloud_notm}} multizone region.
 
 <dl>
   <dt>Witness cluster</dt>
   <dd>An availability zone that maintains the vSAN witness appliance and any other site specific components as needed.</dd>
   <dt>Management cluster</dt>
-  <dd>An availability zone that provides vSphere management such as vCenter, NSX manager, NSX-based networking components, vRealize management tools, additional tooling such as backup, disaster recovery or other required management elements.</dd>
+  <dd>An availability zone that provides vSphere management such as vCenter, NSX Manager, NSX-based networking components, vRealize management tools, additional tooling such as backup, disaster recovery or other required management elements.</dd>
   <dt>vSAN stretched cluster</dt>
   <dd>An availability zone that has customer defined workloads that require high availability and availability zone resilience.</dd>
 </dl>
@@ -133,7 +140,7 @@ The availability zone cluster settings are based on your host and storage select
 ### Host settings
 {: #mcv_ordering-availability-zones-host}
 
-For the host settings, you have options for the CPU Model, RAM, and number of hosts.
+For the host settings, you have options for the CPU model, RAM, and number of hosts.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -151,23 +158,23 @@ Storage settings are based on your selection of vSAN or NFS storage.
 {: #mcv_ordering-availability-zones-storage-vsan}
 
 Specify the following vSAN options:
-* **Disk Type and Size for vSAN Capacity Disks**: Select an option for the capacity disks that you need.
-* **Number of vSAN Capacity Disks**: Specify the number of capacity disks that you want to add.
-* If you want to add more capacity disks, select the **High Performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
+* **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
+* **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
+* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
 
 #### NFS storage
 {: #mcv_ordering-availability-zones-storage-nfs}
 
-When you select **NFS Storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
+When you select **NFS storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
 
 The number of file shares must be in the range of 1 to 100.
  {:note}
 
 * **Configure shares individually**: Select to specify different configuration settings for each file share.
-* **Number of Shares**: When you use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
+* **Number of shares**: When you use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
 * **Size (GB)**: Select the capacity that meets your shared storage needs.
 * **Performance**: Select the IOPS (input/output operations per second) per GB based on your workload requirements.
-* **Add Shared Storage**: Select to add individual file shares that use different configuration settings.
+* **Add shared storage**: Select to add individual file shares that use different configuration settings.
 
 Choose performance level options according to your needs.
 
@@ -182,14 +189,14 @@ Choose performance level options according to your needs.
 ## Network interface settings
 {: #mcv_ordering-network-interface-settings}
 
-Specify the following network interface settings for your multi-zone stretched cluster.
+Specify the following network interface settings for your stretched cluster across multizone region.
 
 ### DNS configuration
 {: #mcv_ordering-dns-config}
 
 Select the Domain Name System (DNS) configuration for your instance:
 
-* **Single Public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
+* **Single public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
 * **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
 You must provide two Microsoft Windows Server 2016 Standard edition licenses if you configure your instance to use the two Microsoft Windows VMs.
@@ -241,43 +248,42 @@ Based on your selected configuration for the instance, the estimated price is in
 
 You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
-## Procedure to order Multi-Zone Stretched Clusters
+## Procedure to order a stretched cluster across multizone region
 {: #mcv_ordering-proc-multi}
 {: help}
 {: support}
 
-You can order Multi-Zone Stretched Clusters by using one of the following methods:
+You can order a stretched cluster across multizone region by using one of the following methods on the {{site.data.keyword.vmwaresolutions_short}} console:
 
-* From the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from left navigation pane, and then click the **VMware Solutions - Dedicated** card in the **Start Provisioning** section. On the **VMware Solutions - Dedicated** page, ensure that the **vCenter Server** card is selected and click the **Multi Zone Stretched Clusters** tab.
+* In the **Start provisioning** section, click the **VMware Solutions Dedicated** card. On the **VMware Solutions Dedicated** page, ensure that the **vCenter Server** card is selected and click the **Stretched cluster across multizone region** tab.
+* Scroll down to the **Services** section and click **IBM Cloud for VMware Mission Critical Workloads** on the **Business continuity and migration** card. Click **Order your stretched cluster across multizone region**.
 
-* From the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane, scroll to the **Services** section, and then click **IBM Cloud for VMware Mission Critical Workloads** on the **Business Continuity and Migration** card. Click **Order Stretched Cluster**.
-
-Proceed with the following steps to order a Multi-Zone Stretched Cluster:
+Proceed with the following steps to order a stretched cluster across multizone region:
 
 1. For the instance configuration, select to create a new configuration or select a saved configuration.
-   * If you want to create a new configuration, select **New Configuration**.
+   * If you want to create a new configuration, select **New configuration**.
    * If you want to update a saved configuration or create a new configuration based on a saved one, select a saved configuration.
 2. Enter the instance name and select a resource group.
 3. Complete the location settings.
-    1. Select the **Multi-Zone Region**.
-    2. Click the arrow on the **Witness Location** card and select the availability zone for the witness site. The remaining availability zones are used for the **Management and Resource Location**.
+    1. Select the multizone region.
+    2. Click the arrow on the **Witness location** card and select the availability zone for the witness site. The remaining availability zones are used for the management and resource location.
 4. Complete the license settings for the instance components.
    *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
    *  To use your own license, select **I will provide** and enter the license key.
-5. Complete the settings for the witness, management, and vSAN stretched clusters.
+5. Complete the settings for the witness, management, and vSAN stretched cluster.
     1. Specify the CPU model and the RAM size.
     2. Specify the number of hosts.
     3. Specify the storage settings.
-       * If you select **vSAN Storage**, specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High Performance with Intel Optane** checkbox.
-       * If you select **NFS Storage** and want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Size (GB)**, and **Performance**.
-       * If you select **NFS Storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add Shared Storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
+       * If you select **vSAN storage**, specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
+       * If you select **NFS storage** and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
+       * If you select **NFS storage** and you want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
 6. Complete the network interface settings.
    1. Specify the DNS configuration.
    2. Enter the host name prefix, the subdomain label, and the domain name. The price calculation begins after all fields are complete.
 7. On the **Summary** pane, review the instance settings and the estimated price.
-   * To save the settings as a new configuration template without placing an order, click **Save Configuration**, enter a name for the configuration, and click **Continue**.
-   * To save the updates to a saved configuration, click **Save Configuration**, select **Modify current configuration**, and click **Continue**.
-   * To save the updates to a new saved configuration, click **Save Configuration**, select **Create new configuration**, enter a new name for the configuration, and click **Continue**.
+   * To save the settings as a new configuration template without placing an order, click **Save configuration**, enter a name for the configuration, and click **Continue**.
+   * To save the updates to a saved configuration, click **Save configuration**, select **Modify current configuration**, and click **Continue**.
+   * To save the updates to a new saved configuration, click **Save configuration**, select **Create new configuration**, enter a new name for the configuration, and click **Continue**.
 8. To place the order, ensure that the account to be charged is correct, review and accept the terms, and click **Create**.
 
 ## Related links

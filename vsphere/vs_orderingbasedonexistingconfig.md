@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-08-11"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -26,20 +25,19 @@ You can order a VMware vSphere cluster based on a configuration template that yo
 {: #vs_orderingbasedonexistingconfig-req}
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 *  You created a configuration template to be reused.
 
 ## Procedure to order vSphere clusters based on existing configurations
 {: #vs_orderingbasedonexistingconfig-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
-3. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card.
-4. Ensure that you are on the **Create new** tab. Select a configuration template from the **Cluster configurations** list.
-5. Enter a new cluster name.
-6. Review the cluster settings that are automatically completed and update the settings according to your needs. For more information about the settings, see [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances).
-7. In the **Summary** pane, verify the instance configuration and the estimated price.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **Start provisioning** section.
+2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card.
+3. Ensure that you are on the **Create new** tab. Select a configuration template from the **Cluster configurations** list.
+4. Enter a new cluster name.
+5. Review the cluster settings that are automatically completed and update the settings according to your needs. For more information about the settings, see [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances).
+6. In the **Summary** pane, verify the instance configuration and the estimated price.
    * To save the configuration as a template without placing an order, click **Save configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 

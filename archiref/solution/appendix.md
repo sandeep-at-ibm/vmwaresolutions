@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-27"
+lastupdated: "2020-07-22"
 
 keywords: nsx editions, vsan editions, nsx edition comparison, vsan edition comparison
 
@@ -16,17 +16,17 @@ subcollection: vmwaresolutions
 # Comparison chart for VMware NSX and VMware vSAN editions
 {: #solution-appendix}
 
-## VMware NSX edition comparison
+## NSX edition comparison
 {: #solution-appendix-nsx-editions}
 
 Within this design, there are multiple components that require licenses. This information captures the minimum licenses that are required for the environment to operate correctly.
 
 Component | Purpose | License
 ----------|---------|-------------
-**vSphere** | Compute virtualization | vSphere 6.7 Enterprise Plus
-**vCenter Server** | Infrastructure Management | vCenter Server 6.7 Standard
-**NSX** | Network virtualization | NSX Base for Service Providers 6.4
-**vSAN** | Storage virtualization | vSAN 6.6 Advanced  
+VMware vSphere | Compute virtualization | vSphere 6.7 Enterprise Plus
+VMware vCenter Server | Infrastructure Management | vCenter Server 6.7 Standard
+NSX | Network virtualization | NSX Base for Service Providers 6.4
+vSAN | Storage virtualization | vSAN 6.6 Advanced  
 {: caption="Table 1. License requirements" caption-side="bottom"}
 
 NSX Base for Service Providers edition is only available for service providers through the VMware vCloud Air Network (vCAN). The features in this edition can be found in the following table.
@@ -54,14 +54,11 @@ NSX Base for Service Providers edition is only available for service providers t
 | Multi-site NSX optimizations                  |      |          | ![Available](../../../icons/checkmark-icon.svg) |
 | Remote Gateway                                |      |          | ![Available](../../../icons/checkmark-icon.svg) |
 | Integration with HW VTEPs                     |      |          | ![Available](../../../icons/checkmark-icon.svg) |
-{: row-headers}
-{: class="comparison-table"}
-{: caption="Table 2. VMware NSX edition comparison chart" caption-side="bottom"}
-{: summary="This table has row and column headers. The row headers identify the NSX features. The column headers indentify the NSX editions. To check an NSX feature is supported in which NSX edition, navigate to the row, and then find the checkmark icon in the edition column."}
+{: caption="Table 2. NSX edition comparison chart" caption-side="top"}
 
-[^OpenStack]: L2, L3 & NSX Edge integration only. No consumption of Security Groups.
+[^OpenStack]: L2, L3 & NSX Edge integration only. No consumption of security groups.
 
-## VMware vSAN edition comparison
+## vSAN edition comparison
 {: #solution-appendix-vsan-editions}
 
 The following table lists the available features for the **Advanced** and **Enterprise** editions of VMware vSAN that the solution supports.
@@ -82,10 +79,7 @@ The following table lists the available features for the **Advanced** and **Ente
 | RAID-5/6 erasure coding                         | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | Data at rest encryption                         |          | ![Available](../../../icons/checkmark-icon.svg) |
 | Stretched cluster with local failure protection |          | ![Available](../../../icons/checkmark-icon.svg) |
-{: caption="Table 3. VMware vSAN edition comparison chart" caption-side="bottom"}
-{: row-headers}
-{: class="comparison-table"}
-{: summary="This table has row and column headers. The row headers identify the vSAN features. The column headers indentify the vSAN editions. To check a feature is available in which vSAN edition, navigate to the row, and then find the checkmark icon in the edition column."}
+{: caption="Table 3. vSAN edition comparison chart" caption-side="top"}
 
 ## Related links
 {: #solution-appendix-related}

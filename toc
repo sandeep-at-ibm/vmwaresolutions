@@ -6,15 +6,15 @@ VMware Solutions
 
     {: .navgroup id="learn"}
     index.md
-    [What is VMware Solutions](https://www.ibm.com/cloud/vmware)
     [Why VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
     vmonic/vmware-comp-guide.md
-    vmonic/relnotes_v37.md
+    vmonic/relnotes_v38.md
 
     {: .topicgroup}
     Previous release notes
+        vmonic/relnotes_v37.md
         vmonic/relnotes_v36.md
         vmonic/relnotes_v35.md
         vmonic/relnotes_v34.md
@@ -48,12 +48,13 @@ VMware Solutions
     {: .navgroup id="howto"}
     {: .topicgroup}
     First steps
-        vmonic/cloud-infra-acct-req.md
         vmonic/signing_required_accounts.md
+        vmonic/cloud-infra-acct-req.md
         vmonic/loginmethod.md
-        vmonic/useraccount.md
+        vmonic/completing_checklist.md
         vmonic/iamuserinvite.md
         vmonic/notifications.md
+        vmonic/useraccount.md
         vmonic/vmwaresol_ports.md
 
     {: .topicgroup}

@@ -5,7 +5,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-07-22"
 
 keywords: Veeam, Veeam license, order Veeam license, Veeam 10
 
@@ -44,7 +44,7 @@ Ensure that you configured the {{site.data.keyword.cloud}} infrastructure creden
 2. Scroll down to the **Veeam licenses** table and click **Provision new**.
 3. Specify the resource group.
 
-   If **No resource group available** is displayed in this field, contact the account owner to be assigned an Editor or Administrator role on a resource group in the account because you currently do not have the permission to add the instance to any resource group in this account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+   If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
    {:note}
 
 4. Specify a new license name or use the default name **veeam-_xx_** where _xx_ represents two randomly generated alphabetic characters.

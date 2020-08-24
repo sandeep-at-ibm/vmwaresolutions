@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-11"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -169,7 +169,7 @@ The deployment of the OpenShift nodes uses Ignition, and this process requires a
 
 For the OpenShift container platform clusters on which you want to perform installation debugging or disaster recovery, you must provide an SSH key that your ssh-agent process uses to the installer.
 
-You can use this key to SSH into the master nodes as the user core. When you deploy the cluster, the key is added to the core user’s `~/.ssh/authorized_keys` list.
+You can use this key to SSH into the nodes as the user core. When you deploy the cluster, the key is added to the core user’s `~/.ssh/authorized_keys` list.
 
 You must use a local key.
 

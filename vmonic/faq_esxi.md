@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-05"
+lastupdated: "2020-08-07"
 
 keywords: FAQ, host, ESXi server
 
@@ -63,7 +63,7 @@ Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} 
 
 It is recommended to keep root access enabled on ESXi servers, otherwise failure in the {{site.data.keyword.vmwaresolutions_short}} functions might occur.
 
-If necessary, you can disable root access after the ESXi servers have a status of **Ready to Use** on the {{site.data.keyword.vmwaresolutions_short}} console.
+If necessary, you can disable root access after the ESXi servers have a status of **Ready to use** on the {{site.data.keyword.vmwaresolutions_short}} console.
 
 You must re-enable root access for subsequent automation operations, for example, when you add or remove file shares or when you install add-on services, such as Zerto.
 

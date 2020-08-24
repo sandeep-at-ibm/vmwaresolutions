@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-13"
+lastupdated: "2020-08-21"
 
 keywords: vmware regulated workloads order instance, order vmware regulated workloads, order regulated workloads instance
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Ordering IBM Cloud for VMware Regulated Workloads instances
 {: #fss-cloud-orderinginstance}
 
-IBM Cloud for VMware® Regulated Workloads are an extension of the vCenter Server - Dedicated offering. These instances are defined based on specific components and settings of vCenter Server instances.
+{{site.data.keyword.cloud}} for VMware® Regulated Workloads are an extension of the vCenter Server - Dedicated offering. These instances are defined based on specific components and settings of vCenter Server instances.
 
 ## Requirements for IBM Cloud for VMware Regulated Workloads instances
 {: #fss-cloud-orderinginstance-req}
@@ -42,11 +42,10 @@ For more information, see [{{site.data.keyword.cloud_notm}} for VMware Regulated
 ## Procedure to order IBM Cloud for VMware Regulated Workloads instances
 {: #fss-cloud-orderinginstance-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
-3. On the **VMware Solutions Dedicated** page, click the **vCenter Server** card. Ensure that you are on the **Single-zone cluster** tab.
-4. From the **Instance configurations** list, select one of the instance configurations that starts with **IBM Cloud for VMware Regulated Workloads**. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configurations](/docs/vmwaresolutions?topic=vmwaresolutions-fss-cloud-vmware-config).
-5. Continue to specify the settings for your instance order. For more information, see [Procedure to order vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure).
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **Start provisioning** section.
+2. On the **VMware Solutions Dedicated** page, click the **vCenter Server** card. Ensure that you are on the **Deployment in single-zone region** tab.
+3. From the **Instance configurations** list, select one of the instance configurations that starts with **{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads**. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configurations](/docs/vmwaresolutions?topic=vmwaresolutions-fss-cloud-vmware-config).
+4. Continue to specify the settings for your instance order. For more information, see [Procedure to order vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure).
 
   Available options might differ depending on the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configuration that you selected.
   {:note}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-08-21"
 
 subcollection: vmwaresolutions
 
@@ -16,10 +16,10 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Multi-zone region
+# Multizone region
 {: #fss-mzr}
 
-Expanding the single zone region topology into a multi-zone region (MZR) topology, introduces complexity around high availability of components. It also introduces some new capabilities, including stretch network between the data centers and stretched VSAN.
+Expanding the single zone region topology into a multizone region (MZR) topology, introduces complexity around high availability of components. It also introduces some new capabilities, including stretch network between the data centers and stretched VSAN.
 
 ## Multi data center view
 {: #fss-mzr-view}
@@ -43,7 +43,7 @@ Dual Domain controllers in each data center with default domain replication to e
 ### Veeam management backup
 {: #fss-mzr-considerations-veeam}
 
-An optional Veeam backup and replication server (VBR) is placed in both the primary and secondary sites. The backup repository is the opposite availability zone (AZ) vSAN volume that is assigned to each VBR and the built-in proxy is used for backup jobs. A copy job that goes to Cloud Object Storage is created when permitted for each backup repository, this design allows either site to restore the other. The VBR servers at each site will store a VBR config back on the server in the other site. If a total loss of the VBR server occurs in one site, it can be restored to the other.
+An optional Veeam backup and replication server (VBR) is placed in both the primary and secondary sites. The backup repository is the opposite availability zone (AZ) vSAN volume that is assigned to each VBR and the built-in proxy is used for backup jobs. A copy job that goes to Cloud Object Storage is created when permitted for each backup repository, this design allows either site to restore the other. The VBR servers at each site will store a VBR configuration backup on the server in the other site. If a total loss of the VBR server occurs in one site, it can be restored to the other.
 
 ### vCenter
 {: #fss-mzr-considerations-vcenter}

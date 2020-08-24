@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-07-30"
 
 keywords: Veeam 9.5, Veeam 9 overview, Veeam 9.5 deprecated
 
@@ -23,19 +23,23 @@ subcollection: vmwaresolutions
 # Veeam v9.5 overview
 {: #veeam_considerations}
 
-Veeam v9.5 is deprecated. However, you can continue to use Veeam v9.5. This topic provides information about Veeam v9.5u4b.
-{:deprecated}
+Veeam v9.5u4b has known vulnerabilities and it is no longer installed with new VMware Solutions deployments. However, if you installed the service in a previous release, you can continue to use Veeam v9.5u4b.
+{:note}
+
+The new Veeam Availability Suite v10 known as Veeam v10 is now installed.
 
 The Veeam service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 {: shortdesc}
 
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service. A promotion might be available for Veeam v10 or later only. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
 ## Technical specifications for Veeam v9.5u4b
 {: #veeam_considerations-specs}
 
-The following components are in the Veeam v9.5u4b service:
-
-The current Veeam version that is installed is v10. The documentation about Veeam v9.5u4b is included for customers using that version.
+The current Veeam version that is installed is Veeam v10. The documentation about Veeam v9.5u4b is included for your information if you are using Veeam v9.5u4b.
 {:note}
+
+The following components are in the Veeam v9.5u4b service:
 
 ### VSIs for Veeam v9.5u4b
 {: #veeam_considerations-specs-vsi}
@@ -60,7 +64,7 @@ The current Veeam version that is installed is v10. The documentation about Veea
 As part of the Veeam service installation and configuration, the following repositories are created:
 * For the Veeam configuration backup files: a repository named `IC4V Default Config Backup Repository`. The path to the folder where the Veeam backups are stored is `<Drive>:\ConfigBackup\`.
 * For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering#icos_ordering-scale-repo).
-* For the Virtual Machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository.
+* For the virtual machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository.
 
 ### Networking for Veeam v9.5u4b
 {: #veeam_considerations-specs-networking}
@@ -70,7 +74,7 @@ One primary private IP address.
 ### Licenses and fees for Veeam v9.5u4b
 {: #veeam_considerations-specs-licenses}
 
-Veeam Availability Suite 9.5 (10, 25, 50, 100, or 200 VM license)
+Veeam Availability Suite v9.5 (10, 25, 50, 100, or 200 VM license)
 
 ## Considerations when you delete Veeam v9.5u4b
 {: #veeam_considerations-remove}
@@ -88,5 +92,4 @@ Deleting the Veeam service stops all backups and deletes all the previous backup
 * [Ordering and configuring IBM Cloud Object Storage with Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Veeam backup and replication](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){:external}
-* [Veeam website](https://www.veeam.com/){:external}
-* [Veeam Help Center (Technical Documentation)](https://www.veeam.com/documentation-guides-datasheets.html){:external}
+* [Veeam technical documentation)](https://www.veeam.com/documentation-guides-datasheets.html){:external}

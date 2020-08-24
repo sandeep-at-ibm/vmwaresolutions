@@ -23,14 +23,8 @@ subcollection: vmwaresolutions
 {: troubleshoot}
 {: support}
 
-## Problem
-{: #trbl_no_zerto_vra-problem}
-
 Virtual Replication Appliances (VRA) are not displayed on the Zerto Virtual Replication console after you add ESXi servers to a VMware vCenter Server instance with Zerto disaster recovery installed.
 {: tsSymptoms}
-
-## Resolution
-{: #trbl_no_zerto_vra-resolution}
 
 The Zerto disaster recovery service is installed only on the ESXi server from the default cluster (**cluster1** for instances that are deployed in V3.1 or earlier). If new clusters are created in the same vCenter Server environment or if ESXi servers are added to new clusters, Zerto disaster recovery is not installed on them. On those clusters, you must install Zerto disaster recovery separately.
 {: tsCauses}

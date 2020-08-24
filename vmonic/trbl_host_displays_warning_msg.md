@@ -24,9 +24,6 @@ subcollection: vmwaresolutions
 {: troubleshoot}
 {: support}
 
-## Problem
-{: #trbl_host_displays_warning_msg-problem}
-
 A configuration issue is displayed in the **Issues** tab of the **Monitor** tab of the VMware ESXi server in the vSphere client.
 {: tsSymptoms}
 
@@ -35,9 +32,6 @@ The following message is displayed in the **Issues** tab for the ESXi server:
 `This host currently has no management network redundancy`
 
 The message is displayed even though there are two available uplinks for the private distributed switch, which provides a redundancy.
-
-## Resolution
-{: #trbl_host_displays_warning_msg-resolution}
 
 This configuration issue is a VMware known issue.
 {: tsCauses}

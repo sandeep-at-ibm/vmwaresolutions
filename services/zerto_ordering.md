@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-07-21"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -47,7 +47,7 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you are prompted to 
 
 * For information about free and billable accounts, see [Account types](/docs/account?topic=account-accounts).
 * For information about upgrading to a billable account, see [Upgrading your account](/docs/account?topic=account-upgrading-account).
-* For information about linking your {{site.data.keyword.cloud_notm}} and your {{site.data.keyword.cloud_notm}} infrastructure accounts, see [Requiring MFA for users in your account](/docs/iam?topic=iam-enablemfa#enablemfa).
+* For information about linking your {{site.data.keyword.cloud_notm}} and your {{site.data.keyword.cloud_notm}} infrastructure accounts, see [Requiring MFA for users in your account](/docs/account?topic=account-enablemfa).
 
 ## Ordering Zerto for a new instance
 {: #zerto_ordering-new}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -41,7 +41,7 @@ There are three Caveonix RiskForesight deployment models:
   -	Central Collector configured in a Cluster.
   -	Relational Datastore deployed in a Primary / Secondary model.
   -	Messaging Datastore deployed in a cluster.
-  -	Index Datastore that is deployed with Master and Data Nodes.
+  -	Index Datastore that is deployed with Primary and Data Nodes.
   -	More Data Nodes that are used for Scale Out as number of assets increases.
 
 All components must have an FQDN and registered in DNS before any VM deployment. This step is completed by the {{site.data.keyword.vmwaresolutions_full}} automation for the initial "all-in-one" deployment, but is your responsibility when scaling the deployment.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -32,12 +32,12 @@ The system context diagram identifies the following actors:
 * VMware administrator - The VMware administrator is responsible for the ongoing configuration and maintenance of the VMware environment.
 * IBM HPCS administrators - The following are the roles that Hyper Protect Crypto Services supports.
     * Crypto unit administrator - Issue commands to the crypto units. Multiple administrators can be added to one crypto unit to increase security. Each administrator owns one private signature key for identity authentication.
-    * Key owner - Provides master key parts for initializing a service instance.
+    * Key owner - Provides primary key parts for initializing a service instance.
     * Service user - Stores, retrieves, and generates root keys and standard keys through user interface and APIs. Note, the HTDC Cloud administrator is an HPCS service user
 * HyTrust DataControl administrators - There are three distinct administrative roles in HTDC. These roles can be combined and there are no limits to the number of administrators. Administrators can be placed in administrative groups to provide peer oversight. All objects in the system are owned by one or more administrative groups, not by individual administrators.
   * Security administrator:
     * Manage users and groups.
-    * Master Key management.
+    * Primary Key management.
     * Views all audit records.
   * Domain administrator:
     * Manages KeyControl nodes.

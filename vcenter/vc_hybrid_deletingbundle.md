@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-18"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, remove vCenter Server Hybridity
 
@@ -91,7 +91,7 @@ Verify the following requirements before you remove the Hybridity Bundle:
    7. Click **OK** to assign the license.
 7. Optionally complete the following steps to install a VMware vSphere Enterprise Plus BYOL:
   1. Click the **Hosts** tab.
-  2. Complete the following steps for each cluster that is associated with your vCenter Server instance or complete for all clusters at the same time if the same license is being applied to all clusters associated to your vCenter server:
+  2. Complete the following steps for each cluster that is associated with your vCenter Server instance or complete for all clusters at the same time if the same license is being applied to all clusters associated to your vCenter Server:
     1. Select all hosts that are associated to the cluster and click **All Actions > Assign license**.
     2. Click the **Add** icon and type the license key. Click **Next**.
     3. Type the name for the license and click **Next**. Click **Finish** to add the license.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-06-16"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -26,7 +26,7 @@ You can include the FortiGate Virtual Appliance service with a new vCenter Serve
 ## Ordering FortiGate Virtual Appliance for a new instance
 {: #fortinetvm_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **FortiGate Virtual Appliance** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Services** section and click **FortiGate Virtual Appliance** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering FortiGate Virtual Appliance for an existing instance
 {: #fortinetvm_ordering-existing}
@@ -45,7 +45,7 @@ To ensure continued operation, FortiGate Virtual Appliance must have persistent 
 
 When you order the service, provide the following settings.
 
-### FortiGuard Network Connection
+### FortiGuard network connection
 {: #fortinetvm_ordering-config-network-connect}
 
 Select **Public network** or **Private network** for FortiGuard. If the target cluster is configured with private-only network interfaces, only the **Private network** option is available. This selection determines how FortiGuard contacts the Fortinet license server to activate the license and to download security patches, and it doesn't impact the workload data plane.

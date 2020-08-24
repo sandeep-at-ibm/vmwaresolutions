@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-05-15"
+lastupdated: "2020-08-21"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
@@ -52,7 +52,7 @@ The VMware Solutions Shared management service is initially only offered in the 
 ### High availability
 {: #shared_data-ha}
 
-VMware Solutions Shared supports high availability of the vCloud Director service itself. The service achieves high availability automatically and transparently by using the MZR feature that is provided by {{site.data.keyword.cloud_notm}}.
+VMware Solutions Shared supports high availability of the vCloud Director service itself. The service achieves high availability automatically and transparently by using the Multizone region (MZR) feature that is provided by {{site.data.keyword.cloud_notm}}.
 
 However, you cannot configure workloads that are running VMs and vApps in a high availability manner across multiple {{site.data.keyword.cloud_notm}} data center sites. VMware Solutions Shared currently allows workloads to operate in only one {{site.data.keyword.cloud_notm}} data center site. Use VMware Solutions Shared with {{site.data.keyword.vmwaresolutions_short}} Dedicated to achieve high availability. You can deploy VMware Solutions Dedicated in six {{site.data.keyword.cloud_notm}} data center regions.
 

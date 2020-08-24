@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-08-12"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 # (Deprecated) FortiGate Security Appliance
 {: #fsa_considerations}
 
-Automated deployment of the FortiGate Security Appliance service is deprecated. Use the {{site.data.keyword.cloud}} catalog to order and configure the FortiGate Security Appliance service. For more information, see [FortiGate Security Appliance](https://cloud.ibm.com/catalog/infrastructure/fortigate-security-appliance-group).
+Automated deployment of the FortiGate Security Appliance service is deprecated. For a similar service, consider the FortiGate Virtual Appliance, which is also deployed automatically. For more information, see [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations).
 {:deprecated}
 
 The FortiGate Security Appliance service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances.

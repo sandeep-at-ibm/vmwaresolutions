@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-08-21"
 
 subcollection: vmwaresolutions
 
@@ -24,11 +24,11 @@ subcollection: vmwaresolutions
 
 This topology creates a single edge cluster, with active-passive Tier-0 and Tier-1.
 
-Active-passive on the Tier0 provides IPsec capability for access through the HA VIP address. Alternatively, Tier-0 would BGP peer with a vSRX firewall.
+Active-passive on the Tier0 provides IPsec capability for access through the HA VIP address. Alternatively, Tier-0 would Border Gateway Protocol (BGP) peer with a vSRX firewall.
 
 ![IBM Cloud for VMware Regulated Workloads single data center](../../images/fss-nsxt-topology-single-dc-ap-simple.svg "Single data center"){: caption="Figure 1. Single data center" caption-side="bottom"}
 
-## Multi-zone region data center active-active topology
+## Multizone region data center active-active topology
 {: #fss-nsx-topologiest-mzraa}
 
 This topology is one of the more complex topologies and requires a large CPU/Memory footprint for all the moving parts.

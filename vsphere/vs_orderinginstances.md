@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-11"
+lastupdated: "2020-08-21"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -28,7 +28,7 @@ This procedure guides you through the selection of VMware components, {{site.dat
 {: #vs_orderinginstances-req}
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 
 ## System settings
@@ -41,9 +41,7 @@ You must specify the following system settings when you order a new vSphere clus
 
 The cluster name is set to **vss-_xx_** by default, where _xx_ represents two randomly generated alphabetic characters.
 
-You can also specify a cluster name that meets the following requirements:
-* Only alphanumeric characters are allowed.
-* The maximum length of the cluster name is 128 characters.
+You can also specify a cluster name with a maximum length of 30 characters.
 
 ## Licensing settings
 {: #vs_orderinginstances-licensing-settings}
@@ -55,8 +53,8 @@ Select the VMware components to be ordered with your cluster and specify the lic
 
 If you are an IBM Business Partner user, you can select a component license bundle when you order a new vSphere cluster. The following bundles are available:
 
-| Bundle | Components                   |
-|:------------------------- |:----------------------- |
+| Bundle | Components |
+|:------ |:---------- |
 | Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
@@ -75,7 +73,7 @@ For IBM Business Partner users, the Bring Your Own License (BYOL) option is not 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 If you're a non-Business Partner, you can select the following components for your vSphere cluster:
-* VMware vSphere Enterprise Plus 6.7 U2, or 6.5 U2
+* VMware vSphere Enterprise Plus 6.7u3 or 6.5u2
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -90,14 +88,15 @@ The VMware vSAN component is not available when you order VMware vSphere Enterpr
 ### Licensing options
 {: #vs_orderinginstances-licensing-options}
 
-You have the following options for licensing the selected VMware components:
-* **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
-* **I will provide the license**: In this case, you use your own license for the VMware component.
-
-If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple ESXi servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
-
 Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you will need.
 {:important}
+
+You have the following options for licensing the selected VMware components:
+* **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
+
+   If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple ESXi servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
+
+* **I will provide the license**: In this case, you use your own license (BYOL) for the VMware component. You will not enter your BYOL licenses when you create your order for the first time, but you will do it later when the vSphere cluster is created.
 
 ## Bare metal server settings
 {: #vs_orderinginstances-bare-metal-settings}
@@ -118,7 +117,7 @@ Select the {{site.data.keyword.cloud_notm}} data center where the cluster is to 
 ### Skylake
 {: #vs_orderinginstances-skylake}
 
-When you select **Skylake**, you have options for the **CPU Model** and **RAM**. Options available depend on whether you selected the VMware vSAN component.
+When you select **Skylake**, you have options for the **CPU model** and **RAM**. Options available depend on whether you selected the VMware vSAN component.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -130,7 +129,7 @@ When you select **Skylake**, you have options for the **CPU Model** and **RAM**.
 ### Cascade Lake
 {: #vs_orderinginstance-cascade}
 
-For the **Cascade Lake**, you have options for the **CPU Model** and **RAM**.
+For the **Cascade Lake**, you have options for the **CPU model** and **RAM**.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -287,31 +286,31 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vSphere clusters
 {: #vs_orderinginstances-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-1. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
-1. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create new** tab and that **New cluster** is displayed in the **Cluster configurations** list.
-1. Enter the cluster name.
-1. Select the VMware components:
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **Start provisioning** section.
+2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create new** tab and that **New cluster** is displayed in the **Cluster configurations** list.
+3. Enter the cluster name.
+4. Select the VMware components:
   * If you are an IBM Business Partner, select a license bundle and any additional available VMware components.
   * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
   When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered bare metal servers to be replaced with your provided licenses.   
 
-    **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure License Settings for an ESXi Host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
-1. Complete the bare metal server settings:
+    **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure license settings for an ESXi host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
+5. Complete the bare metal server settings:
    1. Select the {{site.data.keyword.cloud_notm}} data center to host the cluster.
-   1. Select the bare metal server configuration.
+   2. Select the bare metal server configuration.
       * When you select **Skylake** or **Cascade Lake**, specify the CPU model and the RAM size.
-      * When you select **SAP-certified** NetWeaver, choose one of the preset configurations. When you select **SAP-certified** HANA, specify the CPU model and RAM size.
-   1. Specify the number of bare metal servers.
-1. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
-1. Complete the network interface settings:
+      * When you select **SAP-certified** NetWeaver, choose one of the preset configurations.
+      * When you select **SAP-certified** HANA, specify the CPU model and RAM size.
+   3. Specify the number of bare metal servers.
+6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
+7. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and domain name.
-   1. Select the network setting of either **Public and private network** or **Private network only**.
-   1. Select the network interface that you want to use.
+   2. Select the network setting of either **Public and private network** or **Private network only**.
+   3. Select the network interface that you want to use.
     * If you want to order new public and private VLANs, click **Order new VLANs**.
     * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and optionally the subnets.
-    1. If you are ordering public VLANS, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
-1. In the **Summary** pane, verify the cluster configuration and the estimated price.
+    1. If you are ordering public VLANs, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
+8. In the **Summary** pane, verify the cluster configuration and the estimated price.
    * To save the configuration as a template without placing an order, click **Save configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
    Only the {{site.data.keyword.cloud_notm}} bare metal servers are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.

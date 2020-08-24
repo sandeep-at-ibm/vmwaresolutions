@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-07-03"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -21,7 +20,7 @@ subcollection: vmwaresolutions
 # Ordering and configuring IBM Cloud Object Storage with Veeam
 {: #icos_ordering}
 
-Starting with Veeam Availability Suite 9.5 Update 4 and subsequent versions, Veeam is compatible with {{site.data.keyword.cloud}} Object Storage (ICOS). The ordering of {{site.data.keyword.cloud_notm}} Object Storage is not automated when you order Veeam, but it can be added after deployment.
+Starting with Veeam Availability Suite 9.5 Update 4 and subsequent versions, Veeam is compatible with {{site.data.keyword.cloud}} Object Storage. The ordering of {{site.data.keyword.cloud_notm}} Object Storage is not automated when you order Veeam, but it can be added after deployment.
 
 To order {{site.data.keyword.cloud_notm}} Object Storage, complete the following tasks in the specified order:
 
@@ -50,7 +49,7 @@ To create service credentials, see [Service credentials](/docs/cloud-object-stor
 ## Veeam on an instance deployed with private network only
 {: #icos_ordering-private-network}
 
-If you want to access IBM COS with Veeam on a private only instance, a proxy is required.
+If you want to access {{site.data.keyword.cloud_notm}} Object Storage using Veeam on a private-only vCenter Server instance, you must configure Veeam to access the internet using a proxy server, so that Veeam can verify the TLS certificate used by {{site.data.keyword.cloud_notm}} Object Storage. For more information, see [How to set a HTTP proxy for Veeam components](https://www.veeam.com/kb3090){:external}.
 
 ## Maintaining and managing your cloud tier
 {: #icos_ordering-manage-cloud}

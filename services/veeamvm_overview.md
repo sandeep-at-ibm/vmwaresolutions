@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-08-10"
 
 keywords: Veeam, Veeam 10, Veeam install, tech specs Veeam, Veeam overview
 
@@ -26,11 +26,15 @@ subcollection: vmwaresolutions
 The Veeam service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 {: shortdesc}
 
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
 The current Veeam service that is installed is the new Veeam Availability Suite v10 known as Veeam v10.
 {:note}
 
 ## Technical specifications for Veeam v10
 {: #veeamvm_overview-specs}
+
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 You can choose one of the following deployment types with Veeam v10:
 * Windows Server virtual machine (VM) on the management cluster
@@ -73,7 +77,7 @@ The following components are included if you deploy Veeam v10 as a single public
 As part of the Veeam service installation and configuration, the following repositories are created:
 * For the Veeam configuration backup files: a repository named `IC4V Default Config Backup Repository`. The path to the folder where the Veeam backups are stored is `<Drive>:\ConfigBackup\`.
 * For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering#icos_ordering-scale-repo).
-* For the Virtual Machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository.
+* For the virtual machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository.
 
 ### Networking for Veeam v10
 {: #veeamvm_overview-specs-networking}
@@ -85,25 +89,15 @@ One primary private IP address.
 
 For Veeam Availability Suite 10, you can order 10 - 500 VM licenses in increments of 10.
 
+You must provide a Microsoft Windows Server 2019 Standard edition license if you choose the option of installing Veeam as a VM.
+{:important}
+
 ## Considerations when you install Veeam v10
 {: #veeamvm_overview-install}
 
-There are five different tasks you might perform with Veeam v10, such as ordering a new vCenter Server instance with Veeam and ordering or deleting a Veeam standalone license. For more information, see [Tasks you can perform with Veeam v10](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-fivetasks_v10).
+There are various tasks that you might complete with Veeam v10, such as ordering a new vCenter Server instance with Veeam and ordering or deleting a Veeam stand-alone license. For more information, see [Tasks you can complete with Veeam v10](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-fivetasks_v10).
 
-The way in which a Veeam license is installed and deleted is different starting with Veeam v10. For more information, see [Considerations for installing and deleting Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-install-delete-consid).
-
-### Resource requirements for Veeam v10
-{: #veeamvm_overview-resource-req}
-
-If you select Veeam as a VSI option, there is no capacity requirement. If you select Veeam as a VM option, the following capacity is required:
-
-* 8 cores
-* 32 GB memory
-
-Review the following information about capacity for installing Veeam as a VM option:
-* Before the Veeam service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
-* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the Veeam service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can remove the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+Veeam license installation and deletion are different starting with Veeam v10. For more information, see [Considerations for installing and deleting Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-install-delete-consid).
 
 ### Considerations when you delete Veeam v10
 {: #veeamvm_overview-remove}
@@ -114,7 +108,7 @@ Deleting the Veeam service stops all backups and deletes all the previous backup
 Review the following considerations before you delete the service:
 * Deleting the Veeam v10 service does not cancel the Veeam license. You must delete the Veeam license from the Veeam licenses table on the Resources page in the {{site.data.keyword.vmwaresolutions_short}} console.
 * When you delete the Veeam v10 service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single Veeam VM or VSI that was deployed and the dedicated private subnet that was ordered for it. Therefore, if you scaled out the Veeam VM or VSI into multiple ones, those additional VMs or VSIs are not deleted.
-* The iSCSI storage is deleted, so anything you have there will be lost.
+* The iSCSI storage is deleted, so any data within that storage is lost.
 
 ## Related links
 {: #veeamvm_overview-related}

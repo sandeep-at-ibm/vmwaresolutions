@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-06-16"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -29,7 +29,7 @@ A 12-month commitment is required when you order the VMware HCX service. Your ac
 ## Ordering VMware HCX for a new instance
 {: #hcx_ordering-new}
 
-To order a new VMware vCenter Server instance with VMware HCX, click **HCX 3.5** under the **Hybridity/Migration** category in the **Optional Services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_full}} console.
+To order a new VMware vCenter Server instance with VMware HCX, click **HCX 3.5** under the **Business continuity and migration** category in the **Optional services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_full}} console.
 
 
 ## Ordering VMware HCX for an existing instance

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-07-14"
 
 keywords: Red Hat OpenShift for VMware, OpenShift configuration, order OpenShift
 
@@ -22,18 +22,18 @@ subcollection: vmwaresolutions
 # Ordering Red Hat OpenShift for VMware
 {: #ocp_ordering}
 
-You can include the Red Hat OpenShift for VMware service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
+You can include the Red Hat® OpenShift® for VMware® service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Overview** from the left navigation pane.
-2. Scroll down to the **Services** section, and then click **Red Hat OpenShift for VMware** on the **Transformation and Modernization of VMware Applications** card.
-3. On the **Red Hat OpenShift for VMware** page, review the description and technical specifications for Red Hat OpenShift for VMware, and then click **Continue**.
-4. To add the service while you order a new instance, click **Add to New Instance**, and then continue with [ordering a new vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
-5. To add the service to an existing instance, click **Add to Existing Instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Provision**.
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the **Services** section and click **Red Hat OpenShift for VMware** on the **Transformation and Modernization of VMware Applications** card.
+2. On the **Red Hat OpenShift for VMware** page, click the **About** tab to review the description and technical specifications for Red Hat OpenShift for VMware.
+3. Click the **Create** tab.
+4. To add the service while you order a new instance, click **Add to new instance**, and then continue with [ordering a new vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
+5. To add the service to an existing instance, click **Add to existing instance**, select the instance that you want from the list, and then confirm that you want to proceed with the order by clicking **Create**.
 
 ## Red Hat OpenShift for VMware configuration
 {: #ocp_ordering-config}
 
-When you order the service, you must provide a Red Hat Pull Secret. This Pull Secret is used to associate the new OpenShift cluster with your existing Red Hat account. You can obtain a copy of your Pull Secret by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external} and clicking **Copy Pull Secret**.
+When you order the service, you must provide a Red Hat pull secret. This pull secret is used to associate the new OpenShift cluster with your existing Red Hat account. You can obtain a copy of your pull secret by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external} and clicking **Copy Pull Secret**.
 
 ## Setting up DNS to access your OpenShift console
 {: #ocp_ordering-dns-setup}

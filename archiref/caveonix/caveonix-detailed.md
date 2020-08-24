@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -55,7 +55,7 @@ The following table shows the ports and protocols that are required for each com
 |Remote Collector|8081|
 |Relational Datastore Primary or Secondary|5432|
 |Messaging Datastore Cluster|9092|
-|Index Datastore Master Nodes|9200, 9300, 5601, 443|
+|Index Datastore Primary Nodes|9200, 9300, 5601, 443|
 {: caption="Table 1. Ports and protocols" caption-side="bottom"}
 
 The following diagram shows the network topology with the Caveonix portable private subnet that is associated with Private VLAN A. You are responsible for managing the IP address space for this subnet so that you can manually scale out from the “all-in-one” to the fully distributed deployment model, through the partially distributed model as needed.

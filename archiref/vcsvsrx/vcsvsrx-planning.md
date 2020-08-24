@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -61,7 +61,7 @@ The tight integration of the vSRX HA Chassis Cluster into an IBM Cloud vCenter S
 
 When a standard vCenter Server instance is deployed to a customer account it is typically a single hyper-converged cluster in which compute, management and edge functions are delivered by a single three ESXi host (NFS shared storage) or four node (VSAN shared storage) cluster configuration.
 
-The addition of the vSRX offering on ESXi impacts the basic VCS design by moving the edge services out of the hyper-converged cluster onto a dedicated two ESXi host cluster. The edge cluster is managed by the existing vCenter server deployed with the initial vCenter Server instance.
+The addition of the vSRX offering on ESXi impacts the basic VCS design by moving the edge services out of the hyper-converged cluster onto a dedicated two ESXi host cluster. The edge cluster is managed by the existing vCenter Server deployed with the initial vCenter Server instance.
 
 #### Host sizing
 {: #vcsvsrx-planning-host-sizing}

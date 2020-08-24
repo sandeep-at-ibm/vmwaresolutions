@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-11"
+lastupdated: "2020-08-05"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -65,8 +65,8 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 This layer consists of the following components:
 * vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
-* NSX Manager (NSX-V only)
-* Three NSX Controllers
+* For NSX-V: one NSX Manager and three NSX Controller nodes (total of four nodes)
+* For NSX-T: three NSX Manager or Controller nodes (total of three nodes)
 * NSX Edge Services Gateways (ESGs): two for NSX-V and four for NSX-T (two in the management cluster and two in the workload cluster)
 * IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
@@ -166,8 +166,8 @@ The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-88
 ### Licenses (IBM-provided or BYOL) and fees
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus: 6.5u3 or 6.7u2. For NSX-T, only 6.7u2 is supported.
-* VMware vCenter Server 6.5
+* VMware vSphere Enterprise Plus: 6.5u3 or 6.7u3. For NSX-T, only 6.7u3 is supported.  
+* VMware vCenter Server 6.7 or 6.5
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4.
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 * Support and Services fee (one license per node)
@@ -185,7 +185,7 @@ One bare metal server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.5u3 or 6.7u2.  For NSX-T, only 6.7u2 is supported.
+* One VMware vSphere Enterprise Plus 6.5u3 or 6.7u3.  For NSX-T, only 6.7u3 is supported.
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6

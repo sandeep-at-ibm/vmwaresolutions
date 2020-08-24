@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-11"
+lastupdated: "2020-08-18"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -31,7 +31,7 @@ You must apply patches and upgrade the VMware software periodically, over the li
 
 The following procedure provides the steps that are required to convert a VMware vSphere 6.5-based instance to a VMware vSphere 6.7-based instance. These steps provide the initial upgrade to vSphere, NSX, and vSAN 6.7. After this upgrade, you might need to use the normal vSphere functions to upgrade virtual machine (VM) hardware levels and tools.
 
-vCenter Server is designed to allow for a “rolling” upgrade. That is, VM workloads that are currently functioning continue to function without an outage if you complete the following procedure. Enterprises must engage their change management policies to enable a structured and communicated upgrade and plan for contingencies. However, during the upgrade process of certain management functions, such as vCenter Server and NSX manager, temporary outages of management functions, configuration changes, powering off and on VMs, might be impacted.
+vCenter Server is designed to allow for a “rolling” upgrade. That is, VM workloads that are currently functioning continue to function without an outage if you complete the following procedure. Enterprises must engage their change management policies to enable a structured and communicated upgrade and plan for contingencies. However, during the upgrade process of certain management functions, such as vCenter Server and NSX Manager, temporary outages of management functions, configuration changes, powering off and on VMs, might be impacted.
 {:note}
 
 ## Before you begin
@@ -152,7 +152,7 @@ Upgrading VMware NSX can take some time as the upgrade process updates the vSphe
 For more information, see the [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}.
 
 1. Read the release notes for NSX 6.4.4 to ensure compatibility with your specific environment configuration. For more information, see [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}.
-2. Upgrade the NSX manager first. If you have multiple NSX environments that use cross vCenter linked mode, upgrade all NSX managers before you upgrade components in the NSX user interface **Upgrade Coordinator**.
+2. Upgrade NSX Manager first. If you have multiple NSX environments that use cross vCenter linked mode, upgrade all NSX managers before you upgrade components in the NSX user interface **Upgrade Coordinator**.
 3. Use the **Upgrade Coordinator** in the NSX user interface within the vCenter Server user interface to upgrade NSX components.
 4. To ensure that the upgrade is progressing until all components are upgraded, continue to review and monitor the NSX upgrade user interface within the vCenter user interface.
 
@@ -345,7 +345,7 @@ You can set hosts with the Intel Skylake generation for a cluster into Skylake E
 
 For more information, see [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}.
 
-#### Reconfiguring the NSX manager and HCX manager to point to the PSC
+#### Reconfiguring NSX Manager and HCX Manager to point to the PSC
 
 1. From a web browser, navigate to the NSX Manager appliance user interface at ``https://<nsx-manager-ip>`` or ``https://<nsx-manager-hostname>``. Log in with the credentials.
 2. From the home page, click **Manage vCenter Registration**.

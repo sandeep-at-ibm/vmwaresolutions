@@ -23,16 +23,10 @@ subcollection: vmwaresolutions
 {: troubleshoot}
 {: support}
 
-## Problem
-{: #trbl_timeout_vc_console-problem}
-
 When you try to connect to the vSphere Web Client, you might get the following timeout error:
 {: tsSymptoms}
 
 `The server at <IP_address> is taking too long to respond.`
-
-## Resolution
-{: #trbl_timeout_vc_console-resolution}
 
 Use the following steps to investigate and fix the problem.
 {: tsResolve}

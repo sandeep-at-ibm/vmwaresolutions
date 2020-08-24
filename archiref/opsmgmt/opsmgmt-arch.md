@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -112,7 +112,7 @@ The NSX components need to be configured to send syslog to vRLI.
 * NSX Edge - [Configure Remote Syslog Servers](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-9C25E097-E2CC-461A-9DA6-E8118D16EE62.html){:external}.
 * Firewall - You must configure the remote syslog server for each cluster that has firewall enabled. The remote syslog server is specified in the `Syslog.global.logHost` attribute.
 
-NSX Flow Monitoring can be used in NSX manager to determine which flows are approved and which flows are blocked. If required, then port mirroring can be configured for a vSphere Distributed Switch.
+NSX Flow Monitoring can be used in NSX Manager to determine which flows are approved and which flows are blocked. If required, then port mirroring can be configured for a vSphere Distributed Switch.
 
 ### Monitoring of NSX-T
 {: #opsmgmt-arch-components-nsxt}

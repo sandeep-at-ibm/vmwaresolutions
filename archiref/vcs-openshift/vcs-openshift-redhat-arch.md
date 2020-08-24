@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -34,10 +34,10 @@ The Management host is a Red Hat Enterprise Linux 7.6 virtual machine (VM). This
 
 The bootstrap node is a Red Hat Enterprise Linux CoreOS (RHCOS), a new container-oriented operating system designed for running containers. The node is a temporary node that is used to start the installation.
 
-## Master hosts
-{: #vcs-openshift-redhat-arch-master-host}
+## Control Plane hosts
+{: #vcs-openshift-redhat-arch-control-plane-host}
 
-The master hosts are Red Hat Enterprise Linux CoreOS (RHCOS), a new container-oriented operating system designed for running containers. The master nodes are known as the control plane, where Kubernetes services such as API server, etcd, and controller manager are defined. An NSX load balancer is configured to spread load across these VMs for ports 6443 and 22623, exposing the `api` and `api-int` functions.
+The control plane hosts are Red Hat Enterprise Linux CoreOS (RHCOS), a new container-oriented operating system designed for running containers. The control plane nodes are known as the control plane, where Kubernetes services such as API server, etcd, and controller manager are defined. An NSX load balancer is configured to spread load across these VMs for ports 6443 and 22623, exposing the `api` and `api-int` functions.
 
 ## Worker hosts
 {: #vcs-openshift-redhat-arch-worker-host}

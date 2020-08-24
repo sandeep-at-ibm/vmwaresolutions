@@ -15,6 +15,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:term: .term}
 
 # Requirements and planning for vCenter Server instances
 {: #vc_planning}
@@ -88,8 +89,8 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 {: #vc_planning-dc-notes}
 
 * Cascade Lake (4-CPU Quad Intel Xeon Gold 6248) is available only in the **Dallas 10** {{site.data.keyword.cloud_notm}} data center.
-* Cascade Lake bare metal servers are also available on Multi-Zone Region
-{{site.data.keyword.cloud_notm}} data centers. For more information, see [Multi-Zone Region (MZR) Overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
+* Cascade Lake bare metal servers are also available on [multizone region](#x9774820){: term}
+{{site.data.keyword.cloud_notm}} data centers. For more information, see [Multizone region (MZR) overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 Depending on availability and inventory supply, {{site.data.keyword.cloud_notm}} data centers might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
 

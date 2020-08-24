@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-07-22"
 
 subcollection: vmwaresolutions
 
@@ -48,7 +48,7 @@ Deploy a Unified Access Gateway appliance and connect it to the Connection Serve
 * Specify netmask0-2 for the NICs.
 * Deploy a load balancer if you are using two or more Connection Servers.
 * Optionally, install a Horizon event database on Microsoft SQL Server 2016.
-* Install Horizon Agent on the master images for RDS hosts and VDI Virtual Desktop VMs. This agent communicates with the Connection Servers.
+* Install Horizon Agent on the primary images for RDS hosts and VDI Virtual Desktop VMs. This agent communicates with the Connection Servers.
 
 ## Deploy Horizon 7 over Hybrid Cloud
 {: #horizon-deploy-config-hybrid-cloud}
@@ -115,7 +115,7 @@ When you connect multiple Horizon 7 pods together with Cloud Pod Architecture, t
 
 Content Libraries are container objects for VM, vApp, and OVF templates and other types of files, such as templates, ISO images, and text files. vSphere administrators can use the templates in the library to deploy virtual machines and vApps in the vSphere inventory. Sharing golden images across multiple vCenter Server instances, between multiple {{site.data.keyword.cloud_notm}} and/or on-premises SDDCs guarantees consistency, compliance, efficiency, and automation in deploying workloads at scale.
 
-For more information, see [Using Content Libraries](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-254B2CE8-20A8-43F0-90E8-3F6776C2C896.html){:external} in the vSphere Virtual Machine Administration guide in the [VMware vSphere documentation](https://docs.vmware.com/en/VMware-vSphere/index.html){:external}.
+For more information, see [Using Content Libraries](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-254B2CE8-20A8-43F0-90E8-3F6776C2C896.html){:external} in the vSphere virtual machine administration guide in the [VMware vSphere documentation](https://docs.vmware.com/en/VMware-vSphere/index.html){:external}.
 
 ## Licensing
 {: #horizon-deploy-config-licensing}

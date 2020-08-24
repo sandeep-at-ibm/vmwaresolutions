@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-14"
+lastupdated: "2020-07-21"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -41,7 +41,7 @@ When you order this service, provide the following settings:
 
 Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
 
-If **No resource group available** is displayed, you currently don't have permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+If **No resource group available** is displayed, you currently don't have permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
 
 ### Instance name
 {: #kmip_standalone_ordering-config-instance-name}

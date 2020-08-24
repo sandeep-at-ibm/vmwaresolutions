@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -19,15 +19,15 @@ subcollection: vmwaresolutions
 The vROps Analytics Cluster contains the nodes that analyze and store data from the monitored components and in this deployment, four nodes are deployed and two NSX Load Balancers. This size allows monitoring of up to 30,000 VMs and 9,000,000 metrics to be collected.
 
 The 4-node analytics cluster consists of the following components:
-* Master Node – The Master node is the initial node in a vROps cluster. In a large environment, this node manages all the other nodes.
-* Master Node Replica – This node enables high availability of the master node.
+* Primary Node – The Primary node is the initial node in a vROps cluster. In a large environment, this node manages all the other nodes.
+* Primary Node Replica – This node enables high availability of the Primary node.
 * Data Nodes – The data node enables scale out of vROps in larger environments, two are deployed in this design.
 
-Additionally, the design uses Remote Collector Nodes, which act as a proxy/relay server to collect data only and forward collected data to the Master/Data Nodes. Data Nodes and Remote Collectors can be added to scale up depending on environment size. The placement of vROps components onto VLANs/VXLANs is shown in the following diagram.
+Additionally, the design uses Remote Collector Nodes, which act as a proxy/relay server to collect data only and forward collected data to the Primary/Data Nodes. Data Nodes and Remote Collectors can be added to scale up depending on environment size. The placement of vROps components onto VLANs/VXLANs is shown in the following diagram.
 
 ![Operations Manager network diagram](../../images/opsmgmt-vropsnw.svg "Operations Manager network diagram"){: caption="Figure 1. Operations Manager networking" caption-side="bottom"}
 
-* Master Node, Master Node Replica, and Data Nodes are deployed on the tooling subnet by using {{site.data.keyword.cloud}} Portable IP addresses to facilitate communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space including; vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. An NSX Load Balancer is used along with a VIP for HA.
+* Primary Node, Primary Node Replica, and Data Nodes are deployed on the tooling subnet by using {{site.data.keyword.cloud}} Portable IP addresses to facilitate communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space including; vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. An NSX Load Balancer is used along with a VIP for HA.
 * As customer workloads use IP addressing from the BYOIP address space then this design uses Remote Collectors that are hosted in a VXLAN. These remote collectors are not configured as part of the {{site.data.keyword.vmwaresolutions_full}} automation and must be manually implemented by the client.
 
 ![Operations Manager components diagram](../../images/opsmgmt-vropscomponent.svg "Operations Manager components diagram"){: caption="Figure 2. Operations Manager components" caption-side="bottom"}
@@ -50,17 +50,17 @@ The client can configure vROps manually to collect data from vRealize Automation
 ## System requirements
 {: #opsmgmt-vrops-requirements}
 
-The analytics cluster consists of one master node, one master replica node, and two data nodes to enable scaling out and high availability. Additional data nodes are added to scale up. The analytics cluster can scale to a maximum of eight medium-sized nodes.
+The analytics cluster consists of one Primary Node, one Primary Replica Node, and two data nodes to enable scaling out and high availability. Additional data nodes are added to scale up. The analytics cluster can scale to a maximum of eight medium-sized nodes.
 
 | Attribute | Specification |
 |---|---|
 | vCPU | 8 |
 | Memory | 32 GB |
 | Disk (thick provisioned) | 254 GB |
-{: caption="Table 1. Operations Manager Master/Replica Node system settings" caption-side="bottom"}
-{: summary="This table has row and column headers. The row headers identify the attribute of the master ro replica node. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: caption="Table 1. Operations Manager Primary/Replica Node system settings" caption-side="bottom"}
+{: summary="This table has row and column headers. The row headers identify the attribute of the primary replica node. The column headers identify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
 {: #table1}
-{: tab-title="Master/Replica Node system settings"}
+{: tab-title="Primary/Replica Node system settings"}
 {: tab-group="System settings"}
 {: class="comparison-tab-table"}
 {: row-headers}
@@ -107,7 +107,7 @@ Deployment of the vROps appliance requires six IP addresses from the Tooling pri
 * Customer Networks
 * NTP server (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
-* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the Master Node, Master Node Replica, and Data Nodes
+* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the Primary Node, Primary Node Replica, and Data Nodes
 
 ## Ports
 {: #opsmgmt-vrops-ports}

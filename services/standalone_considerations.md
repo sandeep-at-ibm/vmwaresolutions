@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-06-23"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -77,7 +77,7 @@ Review the following considerations before you delete an HCX instance that was o
     2. Ensure that all the extended networks are removed.
     3. Ensure that all the interconnect components with paired cloud sites are removed.
 
-   You must complete all the previous steps before you proceed to the next step. Otherwise, the license for the on-premises HCX instance is canceled. If the license is canceled, migrations can't be performed and errors might occur for HCX components.  
+   You must complete all the previous steps before you proceed to the next step. Otherwise, the activation key for the on-premises HCX instance is canceled. If the activation key is canceled, migrations can't be performed and errors might occur for HCX components.
    {:important}
 2. In the {{site.data.keyword.vmwaresolutions_short}} console, delete the on-premises HCX instance that was ordered to obtain the activation key for the on-premises HCX Manager. Ensure that the deleted instance is no longer available in the console before you proceed to the next step.
 

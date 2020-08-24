@@ -53,7 +53,7 @@ Starting with the V3.2 release, the following new bare metal server CPU models a
 * Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz
 * Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz
 
-Cascade Lake bare metal servers are available on Multi-Zone Region
+Cascade Lake bare metal servers are available on multizone region
 {{site.data.keyword.cloud_notm}} data centers.
 
 ## Updates for VMware vCenter Server instances

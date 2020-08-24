@@ -4,10 +4,9 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-08-06"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -33,12 +32,12 @@ The main solution components are as follows:
 
 * IBM Hyper Protect Crypto Services - IBM HPCS consists of the following components:
   * Signature keys - An administrator must sign any commands that are issued to the crypto unit with a signature key. The private part of the signature key file is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator.
-  * Master keys - Master keys are used to encrypt the IBM HPCS service instances for key storage. The master key is used to encrypt the entire chain of keys, which includes root keys and standard keys. A master key is composed of several master key parts, and typically, each key part can be owned by a different person. The key part owner should be the only person who knows the password that is associated with the key part file. Administrators configure the master key first before root keys and standard keys are managed. If the master key is deleted, all data that was encrypted with the keys that are managed in the service will be crypto-shredded.
+  * Primary keys - Primary keys are used to encrypt the IBM HPCS service instances for key storage. The primary key is used to encrypt the entire chain of keys, which includes root keys and standard keys. A primary key is composed of several primary key parts, and typically, each key part can be owned by a different person. The key part owner should be the only person who knows the password that is associated with the key part file. Administrators configure the primary key first before root keys and standard keys are managed. If the primary key is deleted, all data that was encrypted with the keys that are managed in the service will be crypto-shredded.
   * Root keys - Root keys are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other keys. A root key can never leave IBM HPCS. IBM HPCS, creates, stores, and manages the lifecycle of root keys to control the other keys stored in the cloud.
   * Standard keys - Standard keys directly encrypt and decrypt data. Standard Keys are not used in this reference architecture.
   * Hardware security module - The Hardware security module (HSM) is a physical device that safeguards and manages digital keys for strong authentication and provides crypto-processing. At the FIPS 140-2 Level 4 certification, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
-  * Crypto unit - A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM. Each crypto unit can manage up to 5000 digital keys. Two crypto units are located in different availability zones within the multi-zone region that is selected when creating the service instance.
-  * Trusted Key Entry plug-in - Trusted Key Entry (TKE) plug-in is IBM Cloud CLI plug-in that provides functions for managing assigned crypto units. The TKE plug-in is used to set up administrators and load the master key.
+  * Crypto unit - A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM. Each crypto unit can manage up to 5000 digital keys. Two crypto units are located in different availability zones within the multizone region that is selected when creating the service instance.
+  * Trusted Key Entry plug-in - Trusted Key Entry (TKE) plug-in is IBM Cloud CLI plug-in that provides functions for managing assigned crypto units. The TKE plug-in is used to set up administrators and load the primary key.
   * PKCS #11 - Public-Key Cryptography Standards (PKCS) #11 API defines a platform-independent API to cryptographic tokens, such as HSM and smart cards. Existing applications that use PKCS #11 can benefit from enhanced security by using secure key cryptography and stateless interface, which makes the cryptographic operations much more efficient.
   * Enterprise PKCS #11 - Enterprise PKCS #11 (EP11) is designed for customers who need support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard PKCS #11 API. The HSM that crypto units run on supports EP11 library, so users can call EP11 API through gRPC for their own key management and data encryption.
   * gRPC - gRPC is a modern open source high-performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access the IBM HPCS EP11 library by calling the EP11 API remotely through gRPC.

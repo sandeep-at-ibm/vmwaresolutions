@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -66,7 +66,7 @@ The VMware Identity Manager appliance must be deployed by the customer manually 
 
 | Attribute | Specification |
 |:--------- |:------------- |
-| **NSX Managers** | Three Virtual Appliances |
+| **NSX managers** | Three Virtual Appliances |
 | **Number of vCPUs** | 6 |
 | **Memory** |  24 GB |
 | **Disk** | 200 GB |
@@ -74,7 +74,7 @@ The VMware Identity Manager appliance must be deployed by the customer manually 
 | **NetworkPrivate A** | Private A |
 {: caption="Table 3. NSX-T Manager - controller specifications" caption-side="bottom"}
 
-The following figure shows the placement of the NSX Managers in relation to the other components in this architecture.
+The following figure shows the placement of the NSX managers in relation to the other components in this architecture.
 
 ![NSX-T Manager network overview](../../images/vcsv4radiagrams-ra-vcs-nsxt-overview.svg "NSX-T Manager network overview"){: caption="Figure 1. NSX-T Manager network overview" caption-side="bottom"}
 

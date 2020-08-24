@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-15"
+lastupdated: "2020-08-04"
 
 keywords: single-node, data protection DR, tech specs data protection DR
 
@@ -103,7 +103,7 @@ The following virtual server instances (VSIs) are ordered:
 The following licenses are included with your Single-node for Data Protection and Disaster Recovery instance order.
 
 * The vCenter Server licenses:
-  * VMware vSphere Enterprise Plus 6.7u2
+  * VMware vSphere Enterprise Plus 6.7u3
   * VMware vCenter Server 6.5
   * VMware NSX Service Providers Advanced Edition 6.4
 * {{site.data.keyword.cloud_notm}} Automation Manager 3.1.2

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-08-06"
 
 subcollection: vmwaresolutions
 
@@ -46,7 +46,7 @@ The workload cluster network design requires both the overlay network that is de
 
 Traffic from the SaaS consumer is peered with the overlay network virtual edge. It is the virtual edge that the SaaS consumer uses as the secure tunnel end point to establish an encrypted VPN.
 
-**Next topic**: [Multi-zone region](/docs/vmwaresolutions?topic=vmwaresolutions-fss-mzr)
+**Next topic**: [Multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-fss-mzr)
 
 ## Related links
 {: #fss-overlay-network-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-08-20"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -41,25 +41,24 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer | Component                       | Version       |
 |:------------ |:------------------------------- |:------------- |
-| VMware       | vSphere ESXi                    | 6.7 EP 10 (build 6.7.0-13981272) or <br/>6.5 EP 15 (build 6.5.0-14320405) |
+| VMware       | vSphere ESXi                    | 6.7 EP 15 (build 6.7.0-16316930) or <br/>ESXi 6.5 P04 (build 6.5.0-15256549) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 3b (6.7.0-15129973) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
-| VMware       | Platform Services Controller    | 6.7 Update 3b (6.7.0-15129973) or <br/>6.5 Update 3d (build 6.5.0-14836121) |
-| VMware       | vSAN[^vsan]                     | 6.7 Update 1 or <br/>6.6.1 |
-| VMware       | NSX for vSphere[^nsxv]          | 6.4.5 (build 13282012) |
-| VMware       | NSX-T for vSphere[^nsxt]        | 2.5.1 |
-| Microsoft    | Windows Server Standard edition | 2016 |
-| Microsoft    | Active Directory domain functional level | 2008[^domain] |
+| VMware       | vCenter Server Appliance        | 6.7 Update 3g (6.7.0-16046470) or <br/>6.5 Update 3i (build 6.5.0-15808842) |
+| VMware       | vSAN[^vsan]                     | 6.7 EP 10 or<br> 6.6.1 Patch 04 |
+| VMware       | NSX for vSphere[^nsxv]          | 6.4.6 (build 14819921) |
+| VMware       | NSX-T for vSphere[^nsxt]        | 3.0.1 (build 16404476) |
+| Microsoft    | Windows Server Standard edition | 2019 |
+| Microsoft    | Active Directory domain functional level | 2016 (WinThreshold)[^domain] |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
 
-[^vsan]: VMware vSAN is an optional component. The vSphere ESXi 6.5 EP 15 (build 6.5.0-14320405) update is applicable only to 6.5u3 hosts, and not to 6.5u2 hosts.
+[^vsan]: VMware vSAN is an optional component. The vSphere ESXi 6.5 P04 (build 6.5.0-15256549) update is applicable only to 6.5u3 hosts and not to 6.5u2 hosts. The vSphere ESXi 6.7 EP10 (build 6.7.0-13981272) update is applicable to 6.7u2 hosts.
 
-[^nsxv]: NSX-V only
+[^nsxv]: vCenter Server with NSX-V only
 
-[^nsxt]: NSX-T only
+[^nsxt]: vCenter Server with NSX-T only
 
-[^domain]: The domain functional level 2008 is set to allow for compatibility with an earlier version. For more information, see [Domain controllers](/docs/vmwaresolutions?topic=vmwaresolutions-adds-infra-domain#adds-infra-domain-controllers).
+[^domain]: The domain functional level 2016 is set to allow for compatibility with an earlier version. For more information, see [Domain controllers](/docs/vmwaresolutions?topic=vmwaresolutions-adds-infra-domain#adds-infra-domain-controllers).
 
 ## Advanced configuration settings for ESXi servers
 {: #vc_bom-esxi-server-advance-config}

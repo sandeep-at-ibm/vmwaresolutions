@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-21"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -78,7 +78,7 @@ and 4500 for the tunnel traffic between the L2C appliances.
 
 Monitor HCX components such as HCX Manager, Cloud Gateway, WAN opt, and the Layer 2 Concentrator operations in the following ways:
 
-- Configure HCX Manager to send logs to a syslog server. Use the HCX manager appliance management utility to run the `https://<hcxhostname or IP>:9443` command.
+- Configure HCX Manager to send logs to a syslog server. Use the HCX Manager appliance management utility to run the `https://<hcxhostname or IP>:9443` command.
 - Set up a ping to a VM that is migrated before network swing for each stretched L2 network.
 - Monitor the HCX component VM health with VMware vRealize Operations Manager or other VMware VM monitoring tools.
 

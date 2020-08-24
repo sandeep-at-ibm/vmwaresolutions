@@ -4,12 +4,11 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-05"
 
 keywords: IAM user, invite user, service access
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -27,8 +26,8 @@ subcollection: vmwaresolutions
 ## Procedure to invite users to access services and resources
 {: #iamuserinvite-procedure}
 
-1. At the left side of the banner, click **Manage > Security > Identity and access**.
-2. On the **Users** page, click **Invite users**.
+1. At the right side of the banner, click **Manage > Access (IAM)**.
+2. From the left navigation pane, click **Users**, and then click **Invite users** on the **Users** page.
 3. On the **Invite users** page, in the **Users** section, enter the email addresses of the users that you want to invite in the **Email address** field.
 4. In the **Access** section, expand **Services**, and then complete the following tasks:
    1. Select **Resource** from the **Assign access to** list.
@@ -44,7 +43,7 @@ After the added users accept your invitation, they can log in to the {{site.data
 ## Related links
 {: #iamuserinvite-related}
 
-* [Inviting users to an account](/docs/iam?topic=iam-iamuserinv)
-* [Getting started with IAM tutorial](/docs/iam?topic=iam-getstarted)
-* [What is IBM Cloud Identity and Access Management?](/docs/iam?topic=iam-iamoverview)
+* [Inviting users to an account](/docs/account?topic=account-iamuserinv)
+* [Setting up user access](/docs/account?topic=account-access-getstarted)
+* [What is {{site.data.keyword.cloud_notm}} IAM](/docs/account?topic=account-iamoverview)
 * [Migrating pre-V2.5 vCenter Server instances to {{site.data.keyword.cloud_notm}} accounts](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addinstancetousraccount)

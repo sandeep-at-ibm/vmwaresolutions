@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-06-15"
+lastupdated: "2020-08-21"
 
 keywords: veeam, veeam install, tech specs veeam
 
@@ -33,20 +33,20 @@ The Veeam Availability Suite has visibility to back up VMs from any virtual data
 
 When you use the Veeam self-service portal to create backup jobs, you can choose vApp and VM instances from any virtual data center in the organization.
 
-You can access the Veeam portal on the virtual data center details page when the instance is in the **Ready to Use** state. For information about accessing the details page, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-viewing).
+You can access the Veeam portal on the virtual data center details page when the instance is in the **Ready to use** state. For information about accessing the details page, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-viewing).
 
-Starting with the V3.6 release, Veeam Availability Suite v10 provides off-site copy mode for new and existing VMware Solutions Shared instances. You must contact IBM support to enable copy mode. For more information, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
+You must contact {{site.data.keyword.IBM}} Support to restore a backup of your data. For more information, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 {:note}
 
 ### Procedure to access the Veeam self-service portal from the virtual data center instance
 {: #shared_veeam-portal-proc-access}
 
 1. Under **Recommended services** on the virtual data center instance details page, click **Veeam Backups**.
-2. Use the vCloud Director console **admin** username and password to log in to the Veeam self-service portal.
+2. Use a user with the Organization Administrator role to log in to the Veeam self-service portal. A newly provisioned virtual data center's **admin** user has the role by default.
 
 For more information about generating the vCloud Director console credentials, see [Procedure to launch the vCloud Director Management console](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-accessing).
 
-Alternatively, click the **admin** drop-down in the vCloud Director console to log in to the Veeam portal.
+Alternatively, click the drop-down under the user in the upper-right of the vCloud Director tenant portal and select **Veeam Backup**.
 {:note}
 
 ### Limitations for Veeam Availability Suite
@@ -68,7 +68,7 @@ For more information about how Veeam Availability Suite stores backups, see [How
 ## Veeam Cloud Connect Replication
 {: #shared_veeam-cloud-connect}
 
-Veeam Cloud Connect Replication provides seamless replication of your workloads from on-premises to {{site.data.keyword.cloud}}. Use Veeam Cloud Connect as disaster recovery for failover during on-premises outages or to permanently move workloads directly to {{site.data.keyword.cloud_notm}}.
+Veeam Cloud Connect Replication provides seamless replication of your workloads from on-premises to {{site.data.keyword.cloud_notm}}. Use Veeam Cloud Connect as disaster recovery for failover during on-premises outages or to permanently move workloads directly to {{site.data.keyword.cloud_notm}}.
 
 When you access Veeam Cloud Connect, **DNS name** and **Port** details are specific to the region where your virtual data center exists.
 
@@ -81,10 +81,7 @@ When you access Veeam Cloud Connect, **DNS name** and **Port** details are speci
 ### Procedure to connect to Veeam Cloud Connect for replication
 {: #shared_veeam-cloud-connect-proc-access}
 
-It is recommended that you use a separate vCloud Director user with the **Organization Admin** role when you add the service provider in your Veeam Backup and Replication Server. For more information about managing users in vCloud Director, see [Managing Users](https://docs.vmware.com/en/vCloud-Director/9.5/com.vmware.vcloud.tenantportal.doc/GUID-FE38C285-7605-4473-870C-6AD44D8BF42E.html){:external}.
-{:important}
-
-1. Add your service provider to your Veeam Backup and Replication Server: [Connecting to Service Providers](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_sp.html?ver=95u4){:external}
+1. Add your service provider to your Veeam Backup and Replication Server: [Connecting to Service Providers](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_sp.html?ver=100){:external}
   * For **Step 2: Specify Cloud Gateway Settings**, use the **DNS name** and **Port** details that are specific to your virtual data center region. You can  locate your **DNS name** and **Port** details on the virtual data center instance details page. Scroll down to the **Recommended services** pane and locate **Connection Details** for Veeam Cloud Connect.  
   * For **Step 3: Verify TLS Certificate and Specify User Account Settings**, use the following credentials:  
     *Organization\Username* or *Username@Organization*  
@@ -100,17 +97,17 @@ If you don't have access to your on-premises Veeam Backup and Replication Server
 1. Under **Recommended services** on the virtual data center details page, click **Veeam Cloud Connect**. The Veeam Cloud Connect self-service portal login is displayed.
 2. Log in to the Veeam Cloud Connect portal.
 
-You must add a prefix to your **User** credentials with your organization name. You can locate your organization name under the self-service portal access information under **Veeam Cloud Connect Replication**. For example, `8823e1828b208ef9380b3\admin`
+You must add your organization name as a prefix to your **User** credential to login to the Veeam Cloud Connect self-service portal. You can locate your organization name under the self-service portal access information under **Veeam Cloud Connect Replication**. For example, `8823e1828b208ef9380b3\admin`.
 {:important}
 
-For more information about using Veeam Cloud Connect, see the [Veeam Cloud Connect User Guide](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_user_guide.html?ver=95u4){:external}.
+For more information about using Veeam Cloud Connect, see the [Veeam Cloud Connect User Guide](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_user_guide.html?ver=100){:external}.
 
 ## Deleting Veeam backups
 {: #shared_veeam-delete}
 
 Restore points are automatically removed from the Veeam self-service portal when you delete a virtual data center instance. For more information, see [Deleting virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_deletinginstance).
 
-If you remove all vCloud Director virtual data centers in your account, backup operations are stopped. All previous backups and restore points that are associated with the virtual data center are deleted and cannot be recovered. This is true even if you still have virtual data centers in your account.
+If you remove a vCloud Director virtual data center from your account, all backups and restore points that are associated with the virtual data center are deleted and cannot be recovered. If you remove all vCloud Director virtual data centers in your account, all backup operations are stopped.
 {:important}
 
 ## Related links
@@ -118,7 +115,7 @@ If you remove all vCloud Director virtual data centers in your account, backup o
 
 * [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
 * [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
-* [Using Veeam Cloud Connect Portal](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_portal_use.html?ver=95u4){:external}
+* [Using Veeam Cloud Connect Portal](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_portal_use.html?ver=100){:external}
 * [Veeam website](https://www.veeam.com/){:external}
 * [Veeam Help Center](https://www.veeam.com/documentation-guides-datasheets.html){:external}
 * [Video tutorial: IBM Cloud for VMware Solutions Shared - Restore a VM using Veeam](https://www.youtube.com/watch?v=bNfv6PqqhMw&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE&index=5&t=0s){:external}

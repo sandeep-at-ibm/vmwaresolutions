@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-06"
+lastupdated: "2020-08-10"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,11 +25,15 @@ subcollection: vmwaresolutions
 The F5 BIG-IP service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
 {: shortdesc}
 
-The F5 BIG-IP service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.0.2.
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
+The F5 BIG-IP service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.0.4.
 {:note}
 
 ## Technical specifications for F5 BIG-IP
 {: #f5_considerations-specs}
+
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are included with the F5 BIG-IP service:
 
@@ -92,17 +96,11 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs are 
 {: #f5_considerations-planning}
 
 You must meet the following requirements to avoid failures with F5 BIG-IP:
-* At least two active ESXi servers are available for the two BIG-IP VE VMs to be deployed with the anti-affinity rule of keeping the VMs on separate servers.
+* At least two active ESXi™ servers are available for the two BIG-IP VE VMs to be deployed with the anti-affinity rule of keeping the VMs on separate servers.
 * The two active ESXi servers have enough resources available so that one BIG-IP VE VM can be hosted on each ESXi server with 100% CPU and RAM reservation.
-* VMware vSphere HA has enough resources to host two BIG-IP VMs with 100% CPU and RAM.
+* VMware vSphere® HA has enough resources to host two BIG-IP VMs with 100% CPU and RAM.
 
 Due to these requirements, you must plan for the space that is needed for F5 BIG-IP. If needed, before you order F5 BIG-IP, add 1-2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, or both.
-
-**Notes**:
-
-* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
-* If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## F5 BIG-IP order example
 {: #f5_considerations-example}
@@ -121,9 +119,9 @@ However, by default, vSphere HA reserves 50 percent of CPU and RAM for failover 
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
 
-Since there will be other workloads present on the ESXi servers, for example, VMware vCenter Server, VMware NSX Controller, VMware NSX Edge, using these resources we cannot satisfy the third requirement, because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
+There will be other workloads present on the ESXi servers, for example, VMware vCenter Server, VMware NSX® Controller™, and VMware NSX Edge™. Because we are using these resources, we cannot satisfy the third requirement because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
 
-In this case, the F5 BIG-IP installation might fail, unless at least one ESXi server is added to the environment and vShpere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 BIG-IP service, you can add more ESXi servers before installing F5 BIG-IP.
+In this case, the F5 BIG-IP installation might fail, unless at least one ESXi server is added to the environment and vSphere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 BIG-IP service, you can add more ESXi servers before installing F5 BIG-IP.
 
 ## Considerations when you delete F5 BIG-IP
 {: #f5_considerations-remove}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-08-21"
 
 keywords: openshift for vmware, request openshift for vmware, tech specs openshift vmware
 
@@ -22,40 +22,53 @@ subcollection: vmwaresolutions
 # Red Hat OpenShift for VMware overview
 {: #ocp_overview}
 
-The Red Hat OpenShift for VMware service deploys a Red Hat OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift components are deployed as virtual machines (VM) or appliances by using VMware NSX software-defined networking.
+The Red Hat® OpenShift® for VMware® service deploys a Red Hat OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift components are deployed as virtual machines (VM) or appliances by using VMware NSX® software-defined networking.
 
-The Red Hat OpenShift service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 4.4.5.
+Red Hat OpenShift for VMware cannot be installed on multiple vCenter Server instances in a multi-site configuration. Before installing Red Hat OpenShift on an instance, verify that no other instances in the multi-site configuration have the service installed.
+
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+
+The current Red Hat OpenShift version that is installed is 4.4.13.
 {: note}
 
-The cluster consists of three master nodes and three worker nodes, all running Red Hat CoreOS. In addition, there are also two VMware NSX VMs, a Red Hat CoreOS template, and a bastion VM running CentOS. 
+The cluster consists of three primary nodes and three worker nodes, all running Red Hat CoreOS. In addition, there are also two VMware NSX® VMs, a Red Hat CoreOS template, and a bastion VM running CentOS. 
 
 For more information about the architecture, see [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-redhat-arch).
 
 ## Technical specifications for OpenShift for VMware
 {: #ocp_overview-specs}
 
-The following capacity requirements apply only if your vCenter Server instance is using vSAN storage. If you are using
+For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+
+The following capacity requirements apply only if your VMware vCenter Server® instance is using vSAN™ storage. If you are using
 NFS, a new 2-TB NFS datastore, which is dedicated to OpenShift, will be ordered. The solution topology requirements are:
 
 * 79 vCPUs
 * 155 GB RAM
 * 952 GB storage
 
-To successfully deploy Red Hat OpenShift on vCenter Server, you must have a Red Hat account and the Pull Secret key
-from your account. All Red Hat accounts have an associated Pull Secret, which you can retrieve by [logging into your
+To successfully deploy Red Hat OpenShift on vCenter Server, you must have a Red Hat account and the pull secret key
+from your account. All Red Hat accounts have an associated pull secret, which you can retrieve by [logging into your
 Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}. You must
 purchase Red Hat support entitlements through Red Hat. You must also direct all Red Hat OpenShift support issues to Red Hat.
+
+### Selection of the target cluster for installation
+{: #ocp_overview-select-target-cluster}
+
+During deployment, you are not prompted for the cluster. The service is automatically installed to the management cluster.
+
+During day 2 operations, you are prompted for the cluster. You can install the service to a management cluster or a workload cluster.
 
 ### Bastion details
 {: #ocp_overview-bastion}
 
 The bastion VM contains an installation directory with the files and tools that are needed to manage and expand the OpenShift cluster.   
 
-You can log in to the bastion by using the SSH protocol and the credentials that are provided on the Red Hat OpenShift for VMware service details page. To run commands as the `root` user, use the command `sudo -i`
+You can log in to the bastion by using the SSH protocol and the credentials that are provided on the Red Hat OpenShift for VMware service details page. To run commands as the `root` user, use the command `sudo -i`.
 
-In addition, most commands for OpenShift management must be run from the installation directory. You can change to the installation directory with the command `cd /opt/ocpinstall`
+In addition, most commands for OpenShift management must be run from the installation directory. You can change to the installation directory with the command `cd /opt/ocpinstall`.
 
-Any commands that require the `openshift-install`, `oc`, or `kubeadmin` tools must reference the files that are located in the installation directory by prefixing the command name with `./`. For example, `./oc whoami` instead of `oc whoami`
+Any commands that require the `openshift-install`, `oc`, or `kubeadmin` tools must reference the files that are located in the installation directory by prefixing the command name with `./`. For example, `./oc whoami` instead of `oc whoami`.
 
 The OpenShift-related files from the bastion include: an SSH key, an installation configuration file, command-line tools, and a `kubeconfig` file. The exact location of the installation configuration directory on the bastion is shown on the service details page.
 
@@ -64,7 +77,7 @@ The OpenShift-related files from the bastion include: an SSH key, an installatio
 
 The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. The full path to the SSH key is displayed on the service details page. For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_managing#ocp_managing-change-ssh-key).
 
-The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. When you log in to a cluster VM from the bastion, you must connect as the `core` user as shown in the following example: `root@bastion# ssh core@master0`
+The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. When you log in to a cluster VM from the bastion, you must connect as the `core` user as shown in the following example: `root@bastion# ssh core@control-plane0`.
 
 For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. The full path to the SSH key is displayed on the service details page. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_managing#ocp_managing-change-ssh-key).
 
@@ -76,9 +89,9 @@ bastion. The file is a copy of the original `install-config.yaml` file that was 
 
 The `oc` and `kubectl` command-line tools from the Red Hat OpenShift client software are on the bastion. The installer program, named `openshift-install`, is used to install OpenShift and can also be used to generate fresh ignition files.  
 
-The bastion also holds a file that is named `auth/kubeconfig`, needed for authentication. This file holds the initial kubeadmin credentials that are created during installation. Before you initially use the `oc` or `kubectl` tools, you must set the KUBECONFIG environment variable with the path to this file. For example, `export KUBECONFIG=auth/kubeconfig`
+The bastion also holds a file that is named `auth/kubeconfig`, needed for authentication. This file holds the initial kubeadmin credentials that are created during installation. Before you initially use the `oc` or `kubectl` tools, you must set the KUBECONFIG environment variable with the path to this file. For example, `export KUBECONFIG=auth/kubeconfig`.
 
-After that is done, any commands you run will be as the `kubeadmin` user. You can verify the user account by running the command `./oc whoami`
+After that is done, any commands you run will be as the `kubeadmin` user. You can verify the user account by running the command `./oc whoami`.
 
 After you configure your authentication and any additional users, you no longer need to source this file, and you can log in as the user that you created.
 
@@ -116,7 +129,7 @@ For more information about updating Red Hat OpenShift, see [Updating a cluster b
 ## Considerations when you install Red Hat OpenShift for VMware
 {: #ocp_overview-consid-install}
 
-* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit. The storage capacity check only applies to
+* Before the service is installed in your environment, a check is performed against the available capacity of the target cluster in the environment to ensure that the service components can fit. The storage capacity check only applies to
 vSAN because NFS clusters will have a new NFS datastore dedicated to OpenShift added.
 * The cluster will be associated with the Red Hat account from the pull secret that is provided.
 * The **Latency Sensitivity** setting of the OpenShift cluster VMs can affect Kubernetes scheduling performance. By default, the setting is set to **Normal**, but it can be set to **High** if you encounter Kubernetes performance issues.

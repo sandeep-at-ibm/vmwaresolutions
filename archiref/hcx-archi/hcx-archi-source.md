@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -108,7 +108,7 @@ The following steps are basic installation tasks:
 Architecture planning includes the VMs to be migrated, the networks that are used for virtual machine traffic, and the networks to be extended.
 
 The maximum and minimum values for the deployment components are:
-* vSphere vCenter. The HCX manager appliance must be installed on the vCenter that requires hybrid services. There can be only one HCX deployment per vCenter. This restriction applies to linked mode. The HCX management appliance is only installed in the primary vCenter. HCX supports up to five registered vCenters in linked mode.
+* vSphere vCenter. The HCX Manager appliance must be installed on the vCenter that requires hybrid services. There can be only one HCX deployment per vCenter. This restriction applies to linked mode. The HCX management appliance is only installed in the primary vCenter. HCX supports up to five registered vCenters in linked mode.
 * Cloud registrations. The maximum number of cloud endpoints is ten. To find the number of endpoints, Hybrid Cloud Services tracks vCenter connections to the cloud.
 
 ### Maximum number of migrations and network extensions
@@ -182,7 +182,7 @@ The Layer 2 Concentrator appliance has two interfaces:
 ### Migration only
 {: #hcx-archi-source-mig-only}
 
-The minimal configuration to perform migration only requires the HCX manager and the Cloud Gateway appliances. It is possible to migrate virtual machines without network extension. In this case, the virtual machine obtains a new IP address by using the Guest Customization service after it is migrated.
+The minimal configuration to perform migration only requires the HCX Manager and the Cloud Gateway appliances. It is possible to migrate virtual machines without network extension. In this case, the virtual machine obtains a new IP address by using the Guest Customization service after it is migrated.
 
 To stretch a network and maintain the original IP address, a distributed virtual switch must be configured in the on-premises vSphere vCenter.
 

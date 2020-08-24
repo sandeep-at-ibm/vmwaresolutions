@@ -4,12 +4,11 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-08-06"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -17,20 +16,21 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:term: .term}
 
-# Viewing multi-zone stretched clusters
+# Viewing a stretched cluster across multizone region
 {: #mcv_viewingclusters}
 
-View the summary and detailed information of the multi-zone stretched clusters.
+View the summary and detailed information of the stretched cluster across [multizone region](#x9774820){: term}.
 
-## Procedure to view multi-zone stretched cluster instance details
+## Procedure to view the details of a stretched cluster across multizone region
 {: #mcv_viewingclusters-procedure-view-inst-details}
 
 To view the instance summary:
 
 1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Resources** from the left navigation pane.
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.  
-3. In the **vCenter Server Instances** table, view the list of multi-zone stretched cluster instances that are provisioned in the selected user account.
+3. In the **vCenter Server instances** table, view the list of stretched clusters across multizone region that are provisioned in the selected user account.
 
 | Item        | Description       |  
 |:------------- |:------------- |
@@ -48,36 +48,37 @@ The instance can have a range of statuses.
 |:------------- |:------------- |
 | Creating | The instance is being created. |
 | Building | The instance is being configured. |
-| Ready to Use | The instance is ready to use. |
+| Ready to use | The instance is ready to use. |
 | Modifying | The instance is being modified. |
 | Failed | The creation, configuration, or modification process failed. |
 | Deleting | The instance is being deleted. |
-| Deletion Error | An error occurred when the instance was being deleted. |
+| Deletion error | An error occurred when the instance was being deleted. |
 | Deleted | The instance is deleted. |
 {: caption="Table 2. vCenter Server instances status descriptions" caption-side="top"}
 
 To view the property and access information details of an instance:
 
-1. In the **vCenter Server Instances** table, click an instance name.
+1. In the **vCenter Server instances** table, click an instance name.
 2. Under **Properties**, view the details for the instance.
 
 | Property        | Description       |
 |:------------- |:------------- |
 | Name | The name of the instance. |
 | ID | The ID of the instance. |
-| Region | The {{site.data.keyword.cloud_notm}} data center region where the instance is hosted. |
-| Witness Cluster Location | The {{site.data.keyword.cloud_notm}} data center where the witness cluster is hosted. |
-| Management Cluster Location | The {{site.data.keyword.cloud_notm}} data center where the management cluster is hosted. |
-| Resource Cluster Location | The {{site.data.keyword.cloud_notm}} data center where the stretched vSAN cluster is hosted. |
+| Multizone region | The {{site.data.keyword.cloud_notm}} data center region where the instance is hosted. |
+| Witness cluster location | The {{site.data.keyword.cloud_notm}} data center where the witness cluster is hosted. |
+| Management cluster location | The {{site.data.keyword.cloud_notm}} data center where the management cluster is hosted. |
+| Resource cluster location | The {{site.data.keyword.cloud_notm}} data center where the stretched vSAN cluster is hosted. |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter version | The VMware vCenter Server version.<br><br>**Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere Web Client. Both are correct. |
+| VMware NSX networking solution | The VMware NSX networking solution option selected for the instance is **NSX-V** or **NSX-T**. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | NSX license edition | The version and edition of the VMware NSX license. |
-| DNS, Root Domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
-| DNS, SSO Domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
-| DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Status  | The status of the instance.<br><br>The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
-{: caption="Table 3. Multi-zone stretched cluster instance property details" caption-side="top"}
+| Root domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft Active Directory (AD) forest root name. |
+| SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
+| Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
+| Enable private NICs only | Network interface card (NIC) enablement is set to **Public and private network (False)** or **Private network only (True)** when the instance was ordered. |
+{: caption="Table 3. Stretched cluster across multizone region property details" caption-side="top"}
 
 Under **Access Information**, view the access information for the instance-related components. The passwords displayed are initial passwords that are generated by the system. If you change them outside of the {{site.data.keyword.vmwaresolutions_short}} console, they are not updated on the instance summary page.
 
@@ -93,24 +94,24 @@ Under **Access Information**, view the access information for the instance-relat
 | AD/DNS IPs | The IP addresses of the two AD servers. |
 | AD/DNS FQDNs | The AD/DNS server fully qualified domain names.<br><br>**Note:** The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
 | AD/DNS Remote Desktop | The user name and password to access the AD server via a remote desktop connection. |  
-{: caption="Table 4. Multi-zone stretched clusters access information for instance-related components" caption-side="top"}
+{: caption="Table 4. Stretched cluster across multizone region - Access information for related components" caption-side="top"}
 
-## Procedure to view multi-zone stretched clusters
+## Procedure to view a stretched cluster across multizone region
 {: #mcv_viewingclusters-viewing-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. In the **vCenter Server Instances** table, click an instance to view the clusters in it.
-3. Click **Infrastructure** on the left navigation pane. In the **Witness Cluster**, **Management Cluster**, and **Stretched vSAN Cluster** table, view the summary about the clusters:
+2. In the **vCenter Server instances** table, click an instance to view the clusters in it.
+3. Click **Infrastructure** on the left navigation pane. In the **Witness cluster**, **Management cluster**, and **Stretched vSAN cluster** table, view the summary about the clusters:
   * **Name**: The name of the cluster.
-  * **ESXi Servers**: The number of ESXi servers in the cluster.
+  * **ESXi servers**: The number of ESXi servers in the cluster.
   * **Storage**: The type of storage that the cluster uses.
-  * **Data Center Location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
+  * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Networking**: The type of network settings.
   * **Status**: The status of the cluster. The status can have one of the following values:
      * Initializing: The cluster is being created and configured.
      * Modifying: The cluster is being modified.
-     * Ready to Use: The cluster is ready to use.
+     * Ready to use: The cluster is ready to use.
      * Deleting: The cluster is being deleted.
      * Deleted: The cluster is deleted.
 
@@ -125,7 +126,7 @@ View ESXi server details for witness, management, and stretched vSAN clusters:
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
 | Status | The status of the ESXi server, which can be one of the following values:<br> **Added** The ESXi server is added and is ready for use.<br> **Adding** The ESXi server is being added.<br> **Deleting** The ESXi server is being deleted. |
-{: caption="Table 5. ESXi server details for multi-zone stretched clusters" caption-side="top"}
+{: caption="Table 5. ESXi server details for a stretched cluster across multizone region" caption-side="top"}
 
 View storage details for witness and management clusters:
 
@@ -134,7 +135,7 @@ View storage details for witness and management clusters:
 | Name | The data store name. |
 | Size | The capacity of the storage. |
 | IOPS/GB | The performance level of the storage. |
-| NFS Protocol | The NFS version of the storage. |
+| NFS protocol | The NFS version of the storage. |
 | Status | The status of the storage, which can be one of the following values:<br> **Added** The storage is added and is ready for use.<br> **Adding** The storage is being added.<br> **Deleting** The storage is being deleted. |
 {: caption="Table 6. Storage details for witness and management clusters" caption-side="top"}
 
@@ -142,11 +143,11 @@ View network interface details for witness, management, and stretched vSAN clust
 
 | Item        | Description       |  
 |:------------- |:------------- |
-| VLAN Number | The unique VLAN number.  |
+| VLAN number | The unique VLAN number.  |
 | Description | The description of the VLAN.  |
 | Location | The data center location. |
-| Primary Route | The primary route of the VLAN. |
-{: caption="Table 7. Network Interface - VLAN details for multi-zone stretched clusters" caption-side="top"}
+| Primary route | The primary route of the VLAN. |
+{: caption="Table 7. Network Interface - VLAN details for a stretched cluster across multizone region" caption-side="top"}
 
 Click **View Resource** to access the VLAN details.
 
@@ -154,6 +155,6 @@ Click **View Resource** to access the VLAN details.
 {: #mcv_viewingclusters-related}
 
 * [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
-* [Ordering multi-zone stretch clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
+* [Ordering a stretched cluster across multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
 * [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
-* [Expanding and contracting capacity for multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservers)
+* [Expanding and contracting capacity for a stretched cluster across multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservers)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-21"
 
 subcollection: vmwaresolutions
 
@@ -159,4 +159,4 @@ HTDC PA requests the HTKC server for a DEK when attaching an encrypted disk.
 ## Related links
 {: #htdc-hpcs-detail-related}
 
-* [Creating and working with service IDs](https://cloud.ibm.com/docs/iam?topic=iam-serviceids)
+* [Creating and working with service IDs](/docs/account?topic=account-serviceids)

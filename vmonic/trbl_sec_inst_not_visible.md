@@ -23,14 +23,8 @@ subcollection: vmwaresolutions
 {: troubleshoot}
 {: support}
 
-## Problem
-{: #trbl_sec_inst_not_visible-problem}
-
 In a multi-site configuration, after you add a secondary instance, its vCenter Server system is not visible when logged in to the VMware vSphere Web Client of a previously ordered instance.
 {: tsSymptoms}
-
-## Resolution
-{: #trbl_sec_inst_not_visible-resolution}
 
 This is a known VMware 6.5 issue.
 {: tsCauses}

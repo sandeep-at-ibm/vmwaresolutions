@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-13"
+lastupdated: "2020-08-20"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -16,6 +16,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:term: .term}
 
 # Ordering vCenter Server instances
 {: #vc_orderinginstance}
@@ -31,7 +32,7 @@ Only a limited number of add-on services are supported for vCenter Server with N
 {: #vc_orderinginstance-req}
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 * You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the username and server names of the instance.
 
@@ -76,7 +77,8 @@ You can also specify an instance name that meets the following requirements:
 
 Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
 
-If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/iam?topic=iam-userroles#platformroles).
+If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
+{:note}
 
 ### Initial cluster name (NSX-V only)
 {: #vc_orderinginstance-cluster-name}
@@ -93,9 +95,9 @@ You can also specify a new initial cluster name that meets the following require
 ### VMware vSphere version
 {: #vc_orderinginstance-vsphere-license}
 
-For vCenter Server with NSX-V instances, select whether to order vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.5u3.
-
-For vCenter Server with NSX-T instances, only the vSphere Enterprise Plus 6.7u2 license is supported and it is selected by default.
+* For vCenter Server with NSX-V instances, select whether to order vSphere Enterprise Plus 6.7u3 or vSphere Enterprise Plus 6.5u3.
+* For vCenter Server with NSX-T instances, only the vSphere Enterprise Plus 6.7u3 license is supported and it is selected by default.
+* If you are using vSAN storage, even though vSphere 6.7u3 might be selected, vSphere ESXi 6.7u2 will be installed.
 
 ### VMware NSX networking solution
 {: #vc_orderinginstance-nsx}
@@ -129,7 +131,7 @@ Specify the licensing options for the following VMware components in the instanc
 * vCenter Server 6.5
 * vSphere Enterprise Plus 6.5 (NSX-V only) or 6.7
 * (NSX-V only) NSX Service Providers 6.4 (Base, Advanced, or Enterprise edition). The VMware HCX service requires either the NSX Advanced or NSX Enterprise edition license.
-* (NSX-T only) NSX-T 2.5.1 (Base, Advanced, or Enterprise edition)
+* (NSX-T only) NSX-T 3.0.1 (Base, Advanced, or Enterprise edition)
 
 For Business Partner users, the vCenter Server license (Standard edition), the vSphere license (Enterprise Plus edition), and the NSX license are included and purchased on your behalf. However, you must specify the edition for the NSX license.
 
@@ -242,7 +244,8 @@ For deployed instances, you can add NFS storage shares to an existing NFS or vSA
 ### vSAN storage
 {: #vc_orderinginstance-vsan-storage}
 
-vSAN is available for the **Skylake** and **Cascade Lake** bare metal configurations only.
+* vSAN is available for the **Skylake** and **Cascade Lake** bare metal configurations only.
+* If you are using vSAN storage, even though vSphere 6.7u3 might be selected, vSphere ESXi 6.7u2 will be installed.
 
 #### Disk type and size for vSAN capacity disks
 {: #vc_orderinginstance-vsan-storage-typesize-capdisks}
@@ -312,13 +315,11 @@ Choose performance level options according to your needs.
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 {: caption="Table 7. NFS performance level options" caption-side="top"}
 
-### Local disks (NSX-V SAP-certified only)
+### Local disks (NSX-V SAP-certified HANA only)
 {: #vc_orderinginstance-local-disks}
 
-If you selected the **Use VMware Subscription Purchasing Program** option, the local disks option is not available.
+The **Local disks** option is enabled for the **SAP-certified HANA** bare metal configuration only. If you selected the **Use VMware Subscription Purchasing Program** option, the **Local disks** option is disabled.
 {:note}
-
-The local disks option is available for the **SAP-certified** Quad Intel Xeon E7-8890 v4 processor bare metal configuration only.
 
 Specify the following options:
 * **Local disk count**: Select the number of disks that you want to add.
@@ -484,53 +485,48 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server instances
 {: #vc_orderinginstance-procedure}
 
-For more information about deploying Multi Zone Stretched Clusters, see [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
+For information about deploying a stretched cluster across [multizone region](#x9774820){: term}, see [Ordering a stretched cluster across multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
 {:note}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **VMware Solutions** from the left navigation pane.
-2. In the **Start Provisioning** section, click the **VMware Solutions Dedicated** card.
-3. On the **VMware Solutions Dedicated** page, click the **vCenter Server** card. Ensure that you are on the **Single-zone cluster** tab.
-4. Specify the instance configuration:
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **Start provisioning** section.
+2. On the **VMware Solutions Dedicated** page, click the **vCenter Server** card. Ensure that you are on the **Deployment in single-zone region** tab.
+3. Specify the instance configuration:
     * If you want to create a new configuration, select **New configuration**.
     * If you want to update a saved configuration or create a new configuration based on a saved one, select a saved configuration.
     * To order {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instances, select one of the instance configurations that starts with **IBM Cloud for VMware Regulated Workloads**. For more information, see [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance configurations](/docs/vmwaresolutions?topic=vmwaresolutions-fss-cloud-vmware-config).
-5. Enter the instance name and select a resource group.
-6. (NSX-V only) Accept the default value for the initial cluster name or specify your own name.
-7. Select the vSphere version. For NSX-T, only vSphere 6.7u2 is supported.
-8. Select either **NSX-V** or **NSX-T** as the VMware NSX networking solution.
-9. Select the instance type:
+4. Enter the instance name and select a resource group.
+5. (NSX-V only) Accept the default value for the initial cluster name or specify your own name.
+6. Select the vSphere version. For NSX-T, only vSphere 6.7u3 is supported. If you are using vSAN storage, even though vSphere 6.7u3 might be selected, vSphere ESXi 6.7u2 will be installed.
+7. Select either **NSX-V** or **NSX-T** as the VMware NSX networking solution.
+8. Select the instance type:
    * Click **Primary instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary instance** to connect the instance with an existing (primary) instance in the environment for high availability. Select the primary instance that you want the secondary instance to be connected with, then enter the vCenter Server Administrator password for the primary instance.
-10. Complete the license settings for the instance components.
+9. Complete the license settings for the instance components.
     * To use VMware SPP, select the **Use VMware Subscription Purchasing Program** checkbox, and then specify **VMware account number** and **SPP credit fund number**.
     * To use IBM-provided licenses, ensure that the **Include with purchase** option is selected. For NSX, specify the license edition.
     * To use your own licenses, ensure that the **Use VMware Subscription Purchasing Program** option is not selected. For each license, click **I will provide** and enter the license key.
-11. (NSX-T only) Specify the cluster name.
+10. (NSX-T only) Specify the cluster name.
 
    For NSX-T, complete steps 11 - 13 for both the management cluster and the workload cluster.
    {:note}
 
-12. Complete the bare metal server settings.
+11. Complete the bare metal server settings.
     1. Select the {{site.data.keyword.cloud_notm}} data center to host the instance or cluster.
     2. Select the bare metal server configuration.
        * For **Skylake** and **Cascade Lake**, specify the CPU model and the RAM size.
-       * For **SAP-certified** NetWeaver, choose one of the preset configurations. For **SAP-certified** HANA, specify the CPU model and the RAM size.
+       * For **SAP-certified** NetWeaver, choose one of the preset configurations.
+       * For **SAP-certified** HANA, specify the CPU model and the RAM size.
     3. Specify the number of bare metal servers. For guidance about your selection, see [Number of bare metal servers](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-bare-metal-number).
-13. Complete the storage configuration.
-  * If you select **vSAN storage**, specify the following values:
-    * Disk type and size for the vSAN capacity disks
-    * Number of vSAN capacity disks
-    * Disk size for vSAN cache disks
-    * Number of vSAN cache disks
-    * vSAN License edition
+12. If you want to use vSAN storage, select the corresponding option.
+  * Specify the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, the disk size for vSAN cache disks, the number of vSAN cache disks, and the vSAN license edition.
+  * If you want more storage, select the **High performance with Intel Optane** checkbox.
+  * By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
+  * For vSAN storage, even though vSphere 6.7u3 might be selected previously, vSphere ESXi 6.7u2 will be installed. 
 
-    If you want more storage, select the **High performance with Intel Optane** checkbox.
-
-    By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
-
-  * If you select **NFS storage** and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
-  * If you select **NFS storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
-  * **(NSX-V SAP-certified only)** If you select **Local disks**, specify the local disk count and local disk type.
+13. If you want to use NFS storage, select the corresponding option.
+  * To add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
+  * To add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
+  * (NSX-V SAP-certified only) If you select **Local disks**, specify the local disk count and local disk type.
 
 14. If you want to order an edge services cluster with Juniper vSRX included, select the **Edge services cluster** checkbox and configure the appropriate settings: the cluster name, the RAM selection, and the private NICs enablement.
 
@@ -562,13 +558,10 @@ You get a console notification that the configuration is saved successfully, and
 ### Results if you placed an order
 {: #vc_orderinginstance-results-order}
 
-The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment history** section of the instance details.
-
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
-
-When the instance is ready to use, the status of the instance is changed to **Ready to use** and you receive a notification by email.
-
-When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
+* The deployment of the instance starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Deployment history** section of the instance details.
+* When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs) are installed on your VMware virtual platform. If you ordered add-on services, the deployment of the services starts after your order is completed.
+* When the instance is ready to use, the status of the instance is changed to **Ready to use** and you receive a notification by email.
+* When you order a secondary instance, the VMware vSphere Web Client for the primary instance (linked to the secondary one) might be restarted after your secondary instance order is completed.
 
 Next, you can view and manage the vCenter Server instance that you ordered.
 

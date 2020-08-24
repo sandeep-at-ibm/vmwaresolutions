@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-08-21"
 
 subcollection: vmwaresolutions
 
@@ -103,7 +103,7 @@ By default, the following local users are configured during service instantiatio
 | admin | Local ID | Super Admin |
 {: caption="Table 3. vROps default user IDs" caption-side="top"}
 
-This account is not used on a day-to-day basis and for configuration tasks.
+This account is not used on a day-to-day basis or for configuration tasks.
 
 ![vRealize Log Insights logical](../../images/fss-vrealize-logical.svg){: caption="Figure 2. vRealize Log Insights logical" caption-side="bottom"}
 

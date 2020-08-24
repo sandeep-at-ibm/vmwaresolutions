@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-08-04"
 
 keywords: single-node, migration app modernization, tech specs migration app modernization
 
@@ -99,7 +99,7 @@ The following virtual server instances (VSIs) are ordered:
 
 The following licenses are included with your Single-node for Migration and App Modernization instance order:
 
-* VMware vSphere Enterprise Plus 6.7u2
+* VMware vSphere Enterprise Plus 6.7u3
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Advanced Edition 6.4
 * Red Hat OpenShift for VMware 4.4

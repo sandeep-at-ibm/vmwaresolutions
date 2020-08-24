@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-22"
 
 subcollection: vmwaresolutions
 
@@ -40,7 +40,7 @@ The following table shows the settings for the vSphere DRS cluster in the VMware
 | Enable individual machine automation levels | Selected, set to 15 ms |
 {: caption="Table 1. DRS Automation settings for the vSphere DRS cluster" caption-side="bottom"}
 
-For more information about configuring these settings in the vSphere Web Client, see [Set a Custom Automation Level for a Virtual Machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
+For more information about configuring these settings in the vSphere Web Client, see [Set a custom automation level for a virtual machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
 
 Along with the automation level and migration threshold of the cluster, this design enables VM automation so that you can override values per individual VM. More granular control of VMs enables further prioritization of the load balancing of VMs.
 
@@ -87,7 +87,7 @@ The following table shows the settings for the vSphere HA cluster in the VMware 
 | Maximum resets time window | Within 1 hrs |
 {: caption="Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster" caption-side="bottom"}
 
-For more information about configuring these settings in the vSphere Web Client, see [Configure Virtual Machine Responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html).
+For more information about configuring these settings in the vSphere Web Client, see [Configure virtual machine responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html){:external}.
 
 #### Admission control
 {: #cluster-settings-admin-control}

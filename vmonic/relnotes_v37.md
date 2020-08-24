@@ -109,24 +109,24 @@ You might encounter the following problems, which cause false alarms about unhea
 ### Updates for Veeam
 {: #relnotes_v37-services-veeam}
 
-Veeam v9.5 is deprecated. You can continue to use Veeam v9.5. However, the new version of Veeam, Version 10, is now installed. For more information, see [Veeam v10 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview).
-{:deprecated}
+Veeam v9.5u4b has known vulnerabilities and it is no longer installed with new VMware Solutions deployments. However, if you installed the service in a previous release, you can continue to use Veeam v9.5u4b.
+{:note}
+
+The new Veeam Availability Suite v10 known as Veeam v10 is now installed. For more information, see [Veeam v10 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview).
 
 There are two deployment types for Veeam v10:
 * Windows Server VM on the management cluster
-* Single Public Windows VSI
+* Single public Windows VSI
 
 The host Windows platform for the Veeam VSI is now Windows Server 2019 Standard Edition (64-bit).
 
-The way in which a Veeam license is installed and deleted is different starting with Veeam v10. The license is not deleted when you delete Veeam 10. You must delete the license or you will continue to be charged. For more information about licenses, see [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam).
-
-The documentation provides information about both Veeam v9.5u4b and Veeam v10.
+The process of installing and deleting Veeam licenses is different starting with Veeam v10, in that the license is not deleted when you delete Veeam 10. To avoid being charged, you must delete the license yourself. For more information, see [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam).
 
 ## Updates to REST APIs
 {: #relnotes_v37-api}
 
 * Application programming interfaces (APIs) are now available for the following services: Caveonix RiskForesight, HyTrust DataControl (HTDC), and Veeam.
-* Various updates are made for the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
+* Various updates are made to the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
 
 ## New and updated documentation
 {: #relnotes_v37-updated-doc}
@@ -134,7 +134,7 @@ The documentation provides information about both Veeam v9.5u4b and Veeam v10.
 * (Updated on July 14, 2020) The [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-fss-overview) is updated.
 * Documentation about the responsibilities of IBM vs the customer's is available at [Understanding your responsibilities when using VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-understand-responsib).
 * Documentation is available about the access type that {{site.data.keyword.cloud_notm}} Support has to your environment and the steps that you can take to limit the access, if required. For more information, see [{{site.data.keyword.cloud_notm}} Support access](/docs/vmwaresolutions?topic=vmwaresolutions-data-security-mng-data#data-security-ibm-access).
-* Documentation is now available about the various ports that VMware Solutions uses. This documentation includes details about:
+* Documentation is now available about the various ports that are  used in VMware Solutions. The documentation includes details about:
   * VLANs and subnets that are used
   * Ports for deployment and day 2 operations
   * Ports that VMware uses

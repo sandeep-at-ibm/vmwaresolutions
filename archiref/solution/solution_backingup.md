@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -54,7 +54,7 @@ VMware requires the backup location to be an empty folder, so plan for your back
 ## NSX file-based backup
 {: #solution_backingup-nsx}
 
-Proper backup of all NSX components is crucial to restoring the system to its working state if a failure occurs. The design requires you to configure NSX backup through the NSX manager backup function. For this purpose, you can configure NSX manager to regularly perform backups to your file server. Ensure that your file server or its data is backed up correctly, and ensure the rotation of old NSX backups.
+Proper backup of all NSX components is crucial to restoring the system to its working state if a failure occurs. The design requires you to configure NSX backup through the NSX Manager backup function. For this purpose, you can configure NSX Manager to regularly perform backups to your file server. Ensure that your file server or its data is backed up correctly, and ensure the rotation of old NSX backups.
 
 ## Image-based backup of management virtual machines
 {: #solution_backingup-image}
@@ -75,8 +75,8 @@ If you deploy add-on solution components into your instance, you should also pla
 * Zerto Virtual Replication: The Zerto Virtual Manager (ZVM) system is deployed as an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) and its backup is not supported by Veeam or IBM Spectrum Protect Plus. If your disaster recovery strategy requires you to recover the ZVM without performing a site failover, you should use your preferred Windows backup solution to back up and restore the ZVM.
 * F5 BIG-IP: F5 recommends [file-based backup of the F5 configuration](https://support.f5.com/csp/article/K13132){:external}, which you can direct to your file server.
 * FortiGate Security Appliance or VM: Fortinet recommends [file-based backup of the FortiGate configuration](https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:external}, which you can direct to your file server.
-* HyTrust Cloud Control and Data Control: HyTrust supports both image and file-based backup of the HyTrust server appliances. For more information, see the HyTrust administration guides.
-* VMware HCX: The HCX appliance management interface allows you to create and download a file-based backup of the HCX manager configuration similar to the vCenter Server Appliance.
+* HyTrust CloudControl and DataControl: HyTrust supports both image and file-based backup of the HyTrust server appliances. For more information, see the HyTrust administration guides.
+* VMware HCX: The HCX appliance management interface allows you to create and download a file-based backup of the HCX Manager configuration similar to the vCenter Server Appliance.
 
 ## More considerations
 {: #solution_backingup-considerations}

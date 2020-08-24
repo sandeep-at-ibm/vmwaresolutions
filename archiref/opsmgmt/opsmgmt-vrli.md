@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -27,12 +27,12 @@ vRealize Log Insight (vRLI) enables real-time logging for components in the {{si
 
 ![Log Insights networking diagram](../../images/opsmgmt-vrlinw.svg "Log Insights networking diagram"){: caption="Figure 1. Log Insights networking" caption-side="bottom"}
 
-In this design, each location has an independent vRLI cluster that is deployed on the management cluster. The vRLI cluster is deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses. This facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include: vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a Master Node and at least two Worker Nodes with an Integrated Load Balancer.
+In this design, each location has an independent vRLI cluster that is deployed on the management cluster. The vRLI cluster is deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses. This facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include: vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a Primary Node and at least two Worker Nodes with an Integrated Load Balancer.
 
-* Master Node - Required initial node in the Cluster. The Master Node is responsible for queries and log ingestion. The Master Node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the master, which in turn distributes the workload to the Workers.
+* Primary Node - Required initial node in the Cluster. The Primary Node is responsible for queries and log ingestion. The Primary Node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the primary, which in turn distributes the workload to the Workers.
 * Worker Node - three nodes minimum are required to form a cluster with the ability to add more Workers for scale-out. A Worker Node ingests logs and stores logs locally.
 * Integrated Load Balancer - This provides high availability by using proprietary load-balancing configuration (no external load balancer required).
-* Log Insight Forwarder – This is deployed to receive logs from the NSX overlay components. Additionally, it can be leveraged by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight Master Node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are outside of the BYOIP address space, NAT rules must be implemented on the NSX ESG.
+* Log Insight Forwarder – This is deployed to receive logs from the NSX overlay components. Additionally, it can be leveraged by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight Primary Node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are outside of the BYOIP address space, NAT rules must be implemented on the NSX ESG.
 
 The following sizes are available and the appropriate one is selected:
 * Small – 2,000 events per second
@@ -75,7 +75,7 @@ To accommodate all log data from the log sources in the environment, the vRLI no
 | vCPU                     | 8                                 |
 | Memory                   | 18 GB                             |
 | Disk (thick provisioned) | 530 GB (490 GB for event storage) |
-{: caption="Table 1. Log Insight Master and Replica Node system settings" caption-side="bottom"}
+{: caption="Table 1. Log Insight Primary and Replica Node system settings" caption-side="bottom"}
 
 Each vRLI virtual appliance has three default virtual disks and can use more virtual disks for storage.
 * Hard disk 1 - 20 GB for the root file system
@@ -94,7 +94,7 @@ Deployment of the vRLI appliance requires three IP addresses from the tooling pr
 * Customer Networks
 * NTP server (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
-* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the Master Node, Master Node Replica, and Data Nodes
+* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the Primary Node, Primary Node Replica, and Data Nodes
 
 ## Ports
 {: #opsmgmt-vrli-ports}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-08-17"
 
 subcollection: vmwaresolutions
 
@@ -16,6 +16,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 {:deprecated: .deprecated}
+{:term: .term}
 
 # Bill of Materials
 {: #mcv-archi-bom}
@@ -25,15 +26,15 @@ subcollection: vmwaresolutions
 
 The following components are available for {{site.data.keyword.cloud}} for VMware Mission Critical Workloads:
 
-* vSphere 6.7U2
-* vRealize Components
+* VMware vSphere 6.7u2
+* VMware vRealize Components
   * vRO v7.5
   * vRLI v4.2
   * vRNI v4.8
-* NSX–V v6.4.5 (NSX–T is not supported)
-* Skylake plus Cascade Lake when available. Skylake 4110 is supported for witness and management clusters only.
+* VMware NSX-V v6.4.5 (NSX-T is not supported)
+* Skylake plus Cascade Lake when available. Skylake 4110 is supported for the witness and management clusters only.
 * Optane drives are the only supported option for vSAN cache disks.
-* vSAN with the option of RAID–1, RAID–5, and RAID–6.
+* VMware vSAN with the option of RAID–1, RAID–5, and RAID–6.
 * Licensing
   * vSAN Enterprise
   * NSX Enterprise or Enterprise Plus
@@ -82,7 +83,7 @@ The Mission Critical Workloads order flow is included in the {{site.data.keyword
 
 The Multi Zone Stretch Cluster option is available on the vCenter Server order page. The order flow is similar to a vCenter Server order with the following exceptions:
 
-* Ordering is restricted to the multi-zone region {{site.data.keyword.cloud_notm}} data centers
+* Ordering is restricted to the [multizone region](#x9774820){: term} {{site.data.keyword.cloud_notm}} data centers
 * Only Skylake and Cascade Lake processors are supported
 * Hosts are ordered and configured across three sites automatically
 * Choose the witness site and the management and resource sites are automatically determined

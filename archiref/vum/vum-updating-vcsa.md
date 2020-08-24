@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -28,8 +28,8 @@ You must initiate a snapshot of the appliance or a backup of the PSC/VCSA before
 To update the PSC/VCSA, follow these steps:
 1. You can download updates by going to the [VMware Patch Download Center](https://www.vmware.com/patchmgr/findPatchByReleaseName.portal), logging in and choosing VC from the **Search by Product** menu. Select the appropriate patch and click **Download**.
 2. Using the vSphere Web Client, upload the ISO file to the vCenter datastore repository.
-3. Mount the update ISO file to the vCenter server.
-4. Take a snapshot of your vCenter server.
+3. Mount the update ISO file to the vCenter Server.
+4. Take a snapshot of your vCenter Server.
 5. Log in to vCenter appliance management console at: `https://pscip:5480` (for the PSC) or `https://vcenterip:5480` (for the VCSA)
 6. Go to the **Update** section and select **Check Updates** and then **Check CDROM**. The update is listed.
 7. Select **Install Updates** and **Accept** the EULA. The update installs.

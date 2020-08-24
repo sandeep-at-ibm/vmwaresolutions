@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-06-04"
+lastupdated: "2020-08-18"
 
 keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
 
@@ -56,7 +56,7 @@ The following table provides the actions that generate and send management event
 | `vmware-solutions.vcs.update` | A vCenter Server instance is updated. |
 | `vmware-solutions.vcs-cluster.create` | A cluster is created for a vCenter Server instance. |
 | `vmware-solutions.vcs-cluster.delete` | A cluster is deleted for a vCenter Server instance. |
-| `vmware-solutions.vcs-nsx-license.update` | The NSX license is updated for a vCenter server instance. |
+| `vmware-solutions.vcs-nsx-license.update` | The NSX license is updated for a vCenter Server instance. |
 | `vmware-solutions.vcs-nfs-storage.add` | NFS storage is added to a vCenter Server instance. |
 | `vmware-solutions.vcs-nfs-storage.remove` | NFS storage is removed from a vCenter Server instance. |
 | `vmware-solutions.vcs-plan.update` | A vCenter Server instance's plan is updated. |

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
 
@@ -20,10 +20,10 @@ subcollection: vmwaresolutions
 # Component and feature details
 {: #mcv-archi-comp}
 
-## vSphere configuration
+## VMware vSphere configuration
 {: #mcv-archi-comp-vsphere}
 
-This section describes the overall configuration design for enabling {{site.data.keyword.cloud}} for VMware Mission Critical Workloads.
+The following information describes the configuration design for enabling {{site.data.keyword.cloud}} for VMware Mission Critical Workloads.
 
 1. High Availability and host monitoring is enabled.
   * Host failure response: Restart VMs
@@ -47,7 +47,7 @@ This section describes the overall configuration design for enabling {{site.data
    * das.isolationaddress[2–5] – HSRP IP addresses on vSAN network on Site A and Site B
 6. Network I/O Control
   * Management traffic: 20 shares
-  * Virtual Machine traffic: 30 shares
+  * Virtual machine traffic: 30 shares
   * vMotion traffic: 50 shares
   * vSAN traffic: 100 shares
   * All other unused services must be set to *Low* or *0 shares*
@@ -58,12 +58,12 @@ This section describes the overall configuration design for enabling {{site.data
 
 The Mission Critical Workloads instance is configured with vCenter High Availability (HA) enabled during provisioning. Automated failover is managed and performed by vCenter.
 
-Investigation is underway for automation of the reassignment of the vCenter IP address in DNS. Otherwise you must manually reassign the IP address upon vCenter failover or contact IBM Global Technology Services (GTS) for assistance.
+Investigation is underway for automation of the reassignment of the vCenter IP address in DNS. Otherwise, you must manually reassign the IP address upon vCenter failover or contact IBM Global Technology Services (GTS) for assistance.
 
 ### Network design
 {: #mcv-archi-comp-HA-network}
 
-New private subnets are provisioned for the VCHA network traffic when you provision the instance. This is a /29 (8 IP address range) on each portable private VLAN provisioned for the hosts.
+New private subnets are provisioned for the VCHA network traffic when you provision the instance. This range is a /29 (8 IP address range) on each portable private VLAN provisioned for the hosts.
 
 A new Distributed Virtual Switch (DVS) is created for the VCHA with a new port group for each site.
 
@@ -71,15 +71,14 @@ The following figure shows vmk1 added for VCHA network traffic with IP from the 
 
 ![Network design](../../images/mcv-network-design.svg "Network design"){: caption="Figure 1. Network design" caption-side="bottom"}
 
-vCenter access is through a fully qualified domain name (FQDN) which has an A record to the IP address of the vCenter in Site A. During a Site A failure, that DNS A record is modified. This will is done using automation running in the witness site.
+vCenter access is done through a fully qualified domain name (FQDN) that has an A record to the IP address of the vCenter in Site A. During a Site A failure, that DNS A record is modified by using automation running in the witness site.
 
 ## Stretched vSAN cluster
 {: #mcv-archi-comp-vsan}
 
-All of the hosts in the resource layer contribute all of their disks to the vSAN stretched cluster. The following describes the cluster configuration:
+All of the hosts in the resource layer contribute all of their disks to the stretched vSAN cluster. The following flow describes the cluster configuration:
 
-1. Hosts that are part of the Resource Cluster (vSAN Stretched Cluster) are part of a single Management Port Group
-–	Management Port Group
+1. Hosts that are part of the Resource Cluster (vSAN Stretched Cluster) are part of a single Management Port Group.
 2. For the Resource Cluster (vSAN Stretched Cluster) there is a separate Port Group per site for vSAN and vMotion.
   * vSAN Site A Port Group
   * vSAN Site B Port Group
@@ -101,26 +100,15 @@ All of the hosts in the resource layer contribute all of their disks to the vSAN
   * Failure Tolerance Method (FTM) = RAID 5/6
   * FTT and RAID settings are set based on number of hosts ordered. You can change this setting.
 8. When you configure a vSAN Stretched Cluster specify the following to create two failure domains:
-  * Hosts which are in Site A are part of the Primary Site
-  * Host which are in Site B are part of the Secondary Site
+  * Hosts that are in Site A are part of the Primary Site
+  * Host that are in Site B are part of the Secondary Site
 
 ### Known issue with the default storage policy
 {: #mcv-archi-comp-storage}
 
-For a vCenter Server instance with stretched vSAN cluster and a cluster size of only six hosts, the default storage policy is not usable. This problem is due to the fact that the default vSAN storage policy is configured with the setting **Failures to tolerate 1 failure - RAID-5 (Erasure Coding)**, which cannot be achieved with the minimum stretched vSAN cluster size of six hosts.
+For a vCenter Server instance with stretched vSAN cluster and a cluster size of only six hosts, the default storage policy is not usable. This problem occurs because the default vSAN storage policy is configured with the setting **Failures to tolerate 1 failure - RAID-5 (Erasure Coding)**, which cannot be achieved with the minimum stretched vSAN cluster size of six hosts.
 
-To resolve the issue, create a new vSAN storage policy that works with the 6-host cluster. Complete the following steps from the VMware vSphere Web Client:
-1. Select **Policies and Profiles** from the main menu.
-2. From the left navigation pane, click **VM Storage Policies**.
-3. In the middle pane, click **Create VM Storage Policy**.
-4. In the window that opens, enter the following values and click **Next** after each of them:
-  * For name, enter **Minimal vSAN storage policy**.
-  * On the Policy Structure page, under **Datastore specific rules**, select the checkbox **Enable rules for vSAN storage**.
-  * On the vSAN page, select **None - standard cluster** for **Site disaster tolerance** and **1 failure - RAID 1 (Mirroring)** for **Failures to tolerate**.
-  * On the Storage compatibility page, you should see **vsanDatastore** displayed in the table of compatible datastores.
-5. On the summary page, click **Finish**.
-
-   The new storage policy is now ready to use. Apply the new storage policy to all VMs deployed on the stretched vSAN cluster.
+During installation, a new storage policy that is named `IC4v Minimal vsan policy` is created. This storage policy can be used for deployments into the vSAN stretched cluster.
 
 ### Network design
 {: #mcv-archi-comp-vsan-network}
@@ -149,7 +137,7 @@ To resolve the issue, create a new vSAN storage policy that works with the 6-hos
 
 The management edge is preconfigured to allow outbound access to the public internet.
 
-### NSX manager and NSX Controller
+### NSX Manager and NSX Controller
 {: #mcv-archi-comp-nsx-mgr-controller}
 
 The active side contains the NSX Manager.
@@ -160,14 +148,14 @@ There is no automated failover of the NSX Manager during recovery of a failed si
 ### NSX Edge configuration
 {: #mcv-archi-comp-nsx-config}
 
-No additional NSX configuration is performed other than allowing outbound traffic for the management cluster as described above. It is your responsibility to provide and manage any other needed NSX configurations.
+No additional NSX configuration is performed other than allowing outbound traffic for the management cluster as previously described. It is your responsibility to provide and manage any other needed NSX configurations.
 
 ## Support
 {: #mcv-archi-comp-support}
 
-As with vCenter Server instance orders, the {{site.data.keyword.vmwaresolutions_short}} Devops team provides provisioning support for multi-zone stretched cluster orders.
+As with vCenter Server instance orders, IBM Support provides provisioning support for stretched cluster orders.
 
-It is your responsibility to perform patching and ongoing maintenance of multi-zone stretched clusters or to contact IBM GTS for assistance.
+It is your responsibility to perform patching and ongoing maintenance of the stretched cluster or to contact IBM GTS for assistance.
 
 ## Related links
 {: #mcv-archi-comps-related}

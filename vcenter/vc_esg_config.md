@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-28"
+lastupdated: "2020-08-21"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -48,8 +48,8 @@ To take advantage of NSX for your workload VMs, you must configure a number of s
    1. On the **New Virtual Machine** dialog box, click the **Customize Hardware** tab.
    2. On the **new device** menu, select **Network** and click **Add**.
    3. On the newly added network adapter, select the workload logical switch from the menu. The example name of the workload logical switch is:
-   * For NSX-V: **vxw-dvs-17-virtualwire-1-sid-6000-Workload**
-   * For NSX-T: **overlay-ls**
+      * For NSX-V: **vxw-dvs-17-virtualwire-1-sid-6000-Workload**
+      * For NSX-T: **overlay-ls**
 
    Ensure that you do not select the **Workload Transit** switch.
    {:important}

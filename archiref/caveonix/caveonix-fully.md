@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -79,8 +79,8 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 |RAM	|16 GB |
 |Disk	|1 TB |
 |OS	|CentOS 7 |
-|Installed Application Components	|Index Datastore (Master Nodes) |
-{: caption="Table 6. Base - index datastore (master nodes)" caption-side="bottom"}
+|Installed Application Components	|Index Datastore (Primary Nodes) |
+{: caption="Table 6. Base - index datastore (primary nodes)" caption-side="bottom"}
 
 |Parameter	|Value |
 |---|---|

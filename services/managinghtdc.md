@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-08-21"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -38,7 +38,7 @@ To access the HTDC console from the vSphere Web Client, use the following proced
 
 For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
-## Enabling internet access for the HyTrust DataControl VMs
+## Enabling internet access for the HyTrust DataControl virtual machines
 {: #managinghtdc-internet-access}
 
 For HTDC 4.3.2 and later, {{site.data.keyword.vmwaresolutions_short}} provides automatic renewal support for HyTrust licenses that have the Call Home feature enabled. For vCenter Server instances that are not private-only, HTDC is deployed with firewall and SNAT (Source Network Address Translation) rules that are defined on the management services ESG **mgmt-nsx-edge**.

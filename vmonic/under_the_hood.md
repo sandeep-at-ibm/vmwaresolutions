@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-05-22"
+lastupdated: "2020-08-18"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -19,14 +19,14 @@ subcollection: vmwaresolutions
 ## Deploy and manage VMware virtualized environments
 {: #under_the_hood-deploy}
 
-Take an in-depth look at the architecture of {{site.data.keyword.vmwaresolutions_full}}, an {{site.data.keyword.cloud_notm}} offering that provides deployment and management of VMware virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
+Take an in-depth look at the architecture of {{site.data.keyword.vmwaresolutions_full}}, an {{site.data.keyword.cloud_notm}} offering that provides deployment and management of VMware® virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
 
 ## Two companies, one streamlined solution
 {: #under_the_hood-two-companies}
 
 For some time now, users have been deploying VMware virtualized environments to the IBM Public Cloud, either by themselves or with the help of professional services. In February 2016, [IBM and VMware announced a partnership](https://www-03.ibm.com/press/us/en/pressrelease/49154.wss){:external} to automate the process of deploying VMware software and VMware environments in the {{site.data.keyword.cloud_notm}}. One of the early fruits of this partnership was the ability to order various VMware product deployments and licenses from the {{site.data.keyword.vmwaresolutions_short}} console, and later offering [VMware Horizon Air](https://www-03.ibm.com/press/us/en/pressrelease/49932.wss){:external} in {{site.data.keyword.cloud_notm}}. In addition, IBM and VMware worked together to jointly produce a [standard reference architecture and deployment prescription for VMware](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture){:external} in the IBM Public Cloud.
 
-In the fall of 2016, IBM and VMware jointly released {{site.data.keyword.vmwaresolutions_short}}. This set of offerings is based on VMware's virtualization technologies, including virtualized compute (VMware vSphere), networking (VMware NSX), and optionally including virtualized storage (VMware vSAN). These environments are aptly called software-defined data centers.
+In the fall of 2016, IBM and VMware jointly released {{site.data.keyword.vmwaresolutions_short}}. This set of offerings is based on VMware's virtualization technologies, including virtualized compute (VMware vSphere®), networking (VMware NSX®), and optionally including virtualized storage (VMware vSAN®). These environments are aptly called software-defined data centers.
 
 {{site.data.keyword.vmwaresolutions_short}} builds on VMware technology to significantly streamline the deployment and management of these software-defined data centers in the IBM Public Cloud. Using {{site.data.keyword.vmwaresolutions_short}}, it is now possible to deploy portions of the standard reference architecture to the {{site.data.keyword.cloud_notm}} automatically rather than manually. Environments that previously took weeks to deploy and configure can now be provisioned in a matter of hours.
 
@@ -38,11 +38,11 @@ Now let's take a look under the hood of the {{site.data.keyword.vmwaresolutions_
 
 Your software-defined data centers are provisioned and managed by using the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console). You log in to the console by using your IBMid account.
 
-From the VMware Solutions catalog, you can provision one of several kinds of virtualization environment. The featured virtualization solution is vCenter Server, which offers VMware's vSphere hypervisor, VMware vCenter Server, VMware NSX, and optionally VMware vSAN. You can also provision this environment with more add–on services that provide backup, disaster recovery, migration, security, compliance, and networking services.
+From the VMware Solutions catalog, you can provision one of several kinds of virtualization environment. The featured virtualization solution is vCenter Server, which offers VMware's vSphere hypervisor, VMware vCenter Server®, VMware NSX, and optionally VMware vSAN. You can also provision this environment with more add–on services that provide backup, disaster recovery, migration, security, compliance, and networking services.
 
 Before ordering a vCenter Server instance, you must configure your {{site.data.keyword.cloud_notm}} infrastructure API key in the VMware Solutions catalog. To do this, click [Settings](https://cloud.ibm.com/infrastructure/vmware-solutions/console/settings) in the left menu of the console, and enter your user name and API key where prompted for {{site.data.keyword.cloud_notm}} infrastructure credentials. The system verifies that your API key and account have appropriate permissions and settings to deploy your instance.
 
-When ordering your vCenter Server instance, you first choose its name and the VMware vSphere version. All VMware instances are deployed together with Microsoft Active Directory domain controllers, and for single sign-on purposes, you must designate your instance as either a primary or secondary site. A primary instance is the first or the only instance in your single sign-on domain. You can deploy more secondary instances and associate them with the same single sign-on domain of an existing primary instance. Next, you choose whether to bring your own VMware licenses, or which edition of license you want to rent from {{site.data.keyword.cloud_notm}}. Finally, you choose the {{site.data.keyword.cloud_notm}} region and data center for your instance, as well as the CPU and memory characteristics for the hosts in your cluster.
+When ordering your vCenter Server instance, you first choose its name and the VMware vSphere version. All VMware instances are deployed together with Microsoft® Active Directory® domain controllers, and for single sign-on purposes, you must designate your instance as either a primary or secondary site. A primary instance is the first or the only instance in your single sign-on domain. You can deploy more secondary instances and associate them with the same single sign-on domain of an existing primary instance. Next, you choose whether to bring your own VMware licenses, or which edition of license you want to rent from {{site.data.keyword.cloud_notm}}. Finally, you choose the {{site.data.keyword.cloud_notm}} region and data center for your instance, as well as the CPU and memory characteristics for the hosts in your cluster.
 
 In the next part of the order page, you enter the storage and networking characteristics for your instance. You can choose between vSAN and NFS storage for your cluster, with the ability to choose the size and number of vSAN Flash disks and the vSAN license edition, or the size and count and performance of NFS storage volumes. For networking, you choose the host name prefix for your hosts and the subdomain and domain for the cluster. You have the option of deploying the Active Directory controllers as a single {{site.data.keyword.cloud_notm}} virtual server instance (VSI). Or, you can deploy the controllers as two virtual machines (VMs) within your cluster (for those VMs, you need to provide licensing and activation).
 
@@ -74,7 +74,7 @@ When you order a new VMware vCenter instance, you choose the instance location a
 
 You select the {{site.data.keyword.cloud_notm}} data center where you want to provision your instance. Provided the hardware is available in your selected {{site.data.keyword.cloud_notm}} data center, the instance provisioning process typically takes less than 24 hours.
 
-Once your instance has been provisioned, if you are connected to your {{site.data.keyword.cloud_notm}} account through a VPN, you can connect to your vCenter server directly from your workstation web browser.
+Once your instance has been provisioned, if you are connected to your {{site.data.keyword.cloud_notm}} account through a VPN, you can connect to your vCenter Server directly from your workstation web browser.
 
 Your instance components are typically accessed by their host names rather than their IP addresses. In order to connect to and authenticate with vCenter, you should ensure that the vCenter and Platform Services Controller (PSC) hostname can be resolved by your workstation by adding it to your workstation's hosts file as shown in Listing 1. You can find the hostname and IP address in the {{site.data.keyword.vmwaresolutions_short}} console, on the **Summary** tab for your instance. You might also want to add the hostnames and IP addresses for your vSphere hosts to your hosts file.
 
@@ -125,7 +125,7 @@ For all instances, vSphere Hypervisor is installed on the bare metal servers. {{
 ### Additional components
 {: #under_the_hood-add-comp}
 
-Depending on your choice, either one Microsoft Windows VSI or two Microsoft Windows VMs are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
+Depending on your choice, either one Microsoft Windows® VSI or two Microsoft Windows VMs are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
 
 Regardless of how you choose to provide business continuity for your own workloads, {{site.data.keyword.cloud_notm}} strongly recommends that you back up the management components of your instance. The {{site.data.keyword.vmwaresolutions_short}} console allows you to deploy an integrated IBM Spectrum Protect Plus backup server or a Veeam Backup & Replication backup server together with your instance. These backup services can be used as part of a [complete backup solution](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup) for your instance.
 

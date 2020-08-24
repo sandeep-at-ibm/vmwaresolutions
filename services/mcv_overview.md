@@ -4,21 +4,26 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-08-18"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
 subcollection: vmwaresolutions
 
-
 ---
+
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:term: .term}
 
 # IBM Cloud for VMware Mission Critical Workloads overview
 {: #mcv_overview}
 
-{{site.data.keyword.cloud}} for VMware Mission Critical Workloads delivers a multi-zone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region.
+{{site.data.keyword.cloud}} for VMware Mission Critical Workloads delivers a multizone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region.
 
-You can deploy VMware’s stretched vSAN clusters in an automated and self-managed infrastructure that gives you the flexibility to control and manage all aspects of your solution set. This option is available in on-demand ordering within the current vCenter server workflow.
+You can deploy VMware’s stretched vSAN clusters in an automated and self-managed infrastructure that gives you the flexibility to control and manage all aspects of your solution set. This option is available in on-demand ordering within the current vCenter Server workflow.
 
 In addition, you can deploy a fully managed solution that is delivered by IBM Services. {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads delivers greater availability, resiliency, and support than many enterprises currently maintain on premises. This option is available as a coordinated engagement with IBM Services teams.
 
@@ -29,10 +34,10 @@ Mission critical applications are traditional applications that require near con
 ## Technical specifications for IBM Cloud for VMware Mission Critical Workloads
 {: #mcv_overview-specs}
 
-The {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture is an end to end reference architecture that provides automated failover for customer workloads. It uses an {{site.data.keyword.cloud_notm}} multi-zone region with an IBM-managed service that covers the following components:
+The {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture is an end to end reference architecture that provides automated failover for customer workloads. It uses an {{site.data.keyword.cloud_notm}} [multizone region](#x9774820){: term} with an IBM-managed service that covers the following components:
 
 * Compute architecture (VMware vSphere)
-* Network architecture (currently NSX-V)
+* Network architecture (NSX-T)
 * Storage architecture (VMware vSAN)
 * Integration with IBM Services Platform with Watson to enable the consumption of services
 * Tools for monitoring, troubleshooting, performance, and capacity management:
@@ -89,7 +94,7 @@ The network architecture has the following specifications:
 ## Related links
 {: #mcv_overview-related}
 
-* [Ordering multi-zone stretched clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
+* [Ordering a stretched cluster across multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
 * [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
 * [Managed VMware services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_imi)
 * [Managed Disaster Recovery services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)

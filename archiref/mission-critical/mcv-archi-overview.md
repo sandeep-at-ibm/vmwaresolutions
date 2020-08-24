@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-08-07"
 
 subcollection: vmwaresolutions
 
@@ -14,6 +14,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:term: .term}
 
 # IBM Cloud for VMware Mission Critical Workloads architecture overview
 {: #mcv-archi-overview}
@@ -27,7 +28,7 @@ As part of the {{site.data.keyword.vmwaresolutions_short}} portfolio, the automa
 
 The Mission Critical Workloads offering is based on the fully automated provisioning of a VMware SDDC comprised of:
 
-* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud_notm}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} Multi-Zone-Region (MZR) data centers.
+* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud_notm}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} [multizone regions](#x9774820){: term} (MZRs) data centers.
 * vCenter HA including integrated Platform Services Controllers (PSCs).
 * vSAN stretched cluster support for customer workloads.
 * NSX-V with a pre–configured Management Edge.

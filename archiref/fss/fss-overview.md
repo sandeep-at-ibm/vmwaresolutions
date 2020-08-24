@@ -4,10 +4,9 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-08-18"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -46,7 +45,8 @@ The management software stack includes:
 * vCenter Server, which manages all hosts in the entire IBM Cloud for VMware Regulated Workloads instance.
 * Microsoft® AD/DNS servers, which provide DNS and authentication services.
 * NSX-T management components to fully isolate the SDN control plane from the workload cluster.
-* HTCC (HyTrust CloudControl) is used to unify security policies for access to the management stack. In addition, HTCC is used for unified visibility into security configuration and context and continuous compliance by using templates to enforce segregation of duties. HTCC also provides a robust audit trail that includes a full record of all actions that are taken by security, network, and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS, and other regulations. Security is further enhanced when the optional IBM Hyper Protect Crypto Services are included with the IBM Cloud for VMware Regulated Workloads. HPCS uses a FIPS 140-2 Level 4 hardware security module (HSM) that gives access to the highest level of security for regulated data and digital assets. HPCS helps meet regulatory compliance requirements by providing complete control of data encryption keys, including the HSM primary key.
+* HTCC (HyTrust CloudControl) is used to unify security policies for access to the management stack. In addition, HTCC is used for unified visibility into security configuration and context and continuous compliance by using templates to enforce segregation of duties. HTCC also provides a robust audit trail that includes a full record of all actions that are taken by security, network, and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS, and other regulations.
+* Security is further enhanced when the optional IBM Hyper Protect Crypto Services (HPCS) service is included with IBM Cloud for VMware Regulated Workloads. HPCS uses a FIPS 140-2 Level 4 hardware security module (HSM) that gives access to the highest level of security for regulated data and digital assets. HPCS helps meet regulatory compliance requirements by providing complete control of data encryption keys, including the HSM primary key.
 
 ![IBM Cloud for VMware Regulated Workloads HyTrust overview](../../images/fss-htcc.svg "IBM Cloud for VMware Regulated Workloads HyTrust overview"){: caption="Figure 2. IBM Cloud for VMware Regulated Workloads HyTrust overview" caption-side="bottom"}
 

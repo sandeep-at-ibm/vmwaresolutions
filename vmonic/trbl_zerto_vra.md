@@ -23,14 +23,8 @@ subcollection: vmwaresolutions
 {: troubleshoot}
 {: support}
 
-## Problem
-{: #trbl_zerto_vra-problem}
-
 Zerto Virtual Replication Appliances (VRAs) are not removed after using the {{site.data.keyword.slportal_full}} to successfully uninstall the Zerto service.
 {: tsSymptoms}
-
-## Resolution
-{: #trbl_zerto_vra-resolution}
 
 Manually remove the VRAs from the vCenter console.
 {: tsResolve}

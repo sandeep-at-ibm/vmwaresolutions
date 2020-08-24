@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-07-06"
 
 subcollection: vmwaresolutions
 
@@ -43,11 +43,11 @@ The nodes operating system is Red Hat Enterprise Linux CoreOS, which is the cont
 In the reference architecture, there are the following components that are installed and configured in this build process:
 
 * Bastion node - This RHEL VM acts as a "jump-server" on the overlay network to enable the build process. It is accessed via SSH via the private network. It also hosts a webserver to help the build process of the cluster.
-* Bootstrap node - As each node in the cluster requires information about the cluster when it is provisioned, a temporary bootstrap node is used. The bootstrap node creates the master nodes that make up the control plane. The control plane nodes then create the worker nodes. After the cluster initializes, the bootstrap node can be destroyed.
-* Control-plane nodes - These nodes run services that are required to control the Kubernetes cluster. They contain more than just the Kubernetes services for managing the cluster. The terms "master" and "control-plane" are used interchangeably.
+* Bootstrap node - As each node in the cluster requires information about the cluster when it is provisioned, a temporary bootstrap node is used. The bootstrap node creates the control plane nodes that make up the control plane. The control plane nodes then create the worker nodes. After the cluster initializes, the bootstrap node can be destroyed.
+* Control-plane nodes - These nodes run services that are required to control the Kubernetes cluster. They contain more than just the Kubernetes services for managing the cluster. The terms "primary" and "control-plane" are used interchangeably.
 * Compute nodes - In a Kubernetes cluster, the compute nodes are where the workloads are run. The compute nodes advertise their capacity to the control-plane nodes.
 * DNS - A correct DNS setup is imperative for a functioning OpenShift cluster. The vCenter Server instance AD DNS server to host the required DNS records.
-* Load-balancer - An NSX ESG load-balancer service is used to front end the Red OpenShift APIs, both internal and external, and the OpenShift router. The load balancer is configured so that Port 6443 and 22623 point to the bootstrap and master nodes, while ports 80 and 443 are configured to point to the worker nodes.
+* Load-balancer - An NSX ESG load-balancer service is used to front end the Red OpenShift APIs, both internal and external, and the OpenShift router. The load balancer is configured so that Port 6443 and 22623 point to the bootstrap and control plane nodes, while ports 80 and 443 are configured to point to the worker nodes.
 * Webserver - A web server is needed to hold the ignition configurations and installation images for the installation of RHEL CoreOS. NGINX is installed on the bastion node to provide this function.
 * Persistent Storage - To support the persistent storage requirements the vSphere Cloud Provider is used to provide storage volumes up to the OpenShift platform backed by any supported vSphere datastore that is, VMware vSAN, NFS, or iSCSI. While there are two ways to deliver storage to OpenShift - static provisioning or dynamic provisioning, the preferred method is to use dynamic provisioning. Dynamic provisioning automatically triggers the creation of the persistent volume and its backend VMDK file. For dynamic provisioning a default StorageClass for the OpenShift cluster is defined and a PersistentVolumeClaim in Kubernetes is created.
 
@@ -93,7 +93,7 @@ The deployment approach is best described in the following phases:
   * Update DNS - The infrastructure DNS, provisioned with the vCS instance is updated with the names and IP addresses for the OpenShift components by using a PowerShell script. This step is described in [IBM Cloud for VMware Solutions DNS configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-dns-intro).
 * Phase 2 - Red Hat OpenShift installation. These steps are described in [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro).
   * A Red Hat virtual machine, the bastion node, is provisioned to run the OpenShift installer and to host an HTTP Server. It is registered with Red Hat by using your subscription, and the OpenShift installer is downloaded.
-  * On the bastion node, the install-config.yaml is populated with the required OpenShift parameters and OpenShift Ignition is used to generate a number of files used for the installation of the bootstrap, master, and worker machines.
+  * On the bastion node, the install-config.yaml is populated with the required OpenShift parameters and OpenShift Ignition is used to generate a number of files used for the installation of the bootstrap, control plane, and worker machines.
   * Terraform, on the bastion node, uses the files that are created by Ignition to create the OpenShift VMs.
 * Phase 3 - Post deployment activities:
   * Configure a persistent volume for use by the OpenShift cluster. This step is described in [Red Hat OpenShift 4.4 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro).

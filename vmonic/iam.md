@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-04"
+lastupdated: "2020-08-05"
 
 keywords: IAM user, user role, user permission
 
@@ -62,7 +62,7 @@ For {{site.data.keyword.vmwaresolutions_short}}, the following actions exist:
 
 You can add new users to the {{site.data.keyword.cloud_notm}} account so that these users can share the services and resources that are provisioned for the account. For more information, see [Inviting users to access services and resources](/docs/vmwaresolutions?topic=vmwaresolutions-iamuserinvite).
 
-You can also manage the access for existing users, including modifying existing access, assigning new access, and reviewing assigned access. To manage access for users, you must be the account owner or you must have the **Administrator** platform management role. For more information, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
+You can also manage the access for existing users, including modifying existing access, assigning new access, and reviewing assigned access. To manage access for users, you must be the account owner or you must have the **Administrator** platform management role. For more information, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 
 ## Migrating existing instances to IBM Cloud accounts
 {: #iam-migrate}
@@ -74,7 +74,7 @@ For your existing instances that were deployed in V2.4 and earlier releases, you
 ## Related links
 {: #iam-related}
 
-* [Getting started with IAM tutorial](/docs/iam?topic=iam-getstarted)
-* [Inviting users to an account](/docs/iam?topic=iam-iamuserinv#iamuserinv)
-* [What is IBM Cloud Identity and Access Management?](/docs/iam?topic=iam-iamoverview)
+* [Setting up user access](/docs/account?topic=account-access-getstarted)
+* [Inviting users to an account](/docs/account?topic=account-iamuserinv)
+* [What is {{site.data.keyword.cloud_notm}} IAM](/docs/account?topic=account-iamoverview)
 * [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions)
