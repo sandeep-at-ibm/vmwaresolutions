@@ -26,7 +26,7 @@ This release includes new features, component updates, usability enhancements, a
 ## Updates for VMware Solutions Shared
 {: #relnotes_v38-shared}
 
-VMware® Solutions provides an upgrade to the Shared infrastructure to the latest version of VMware vCloud Director (vCD) v10.1.1. The v10.1.1 update is available to Frankfurt {{site.data.keyword.cloud}} data centers.
+(Updated on August 25, 2020) VMware® Solutions provides an upgrade to the Shared infrastructure to the latest version of VMware vCloud Director (vCD) v10.1.1. The v10.1.1 update is available to Dallas and Frankfurt {{site.data.keyword.cloud}} data centers.
 
 The Flash portal is no longer available with the v10.1.1 update.
 {:note}
