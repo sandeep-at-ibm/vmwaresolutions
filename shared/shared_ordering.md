@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-11"
+lastupdated: "2020-09-16"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -22,12 +22,12 @@ subcollection: vmwaresolutions
 # Ordering virtual data center instances
 {: #shared_ordering}
 
-{{site.data.keyword.vmwaresolutions_full}} Shared offers either a standardized or customizable deployment option of VMware virtual data center environments. Choose the On-Demand or Reserved option.
+{{site.data.keyword.vmwaresolutions_full}} Shared offers either a standardized or customizable deployment option of VMware® virtual data center environments. Choose the On-demand or Reserved option.
 
 ## Requirements for virtual data center instances
 {: #shared_ordering-reqs}
 
-If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+If you are ordering an instance for the first time, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 
 ## System settings
 {: #shared_ordering-sys-settings}
@@ -37,18 +37,18 @@ You must specify the following system settings when you order a VMware Solutions
 ### Pricing plans
 {: #shared_ordering-pricing}
 
-The pricing plan is based on your selection of **On-Demand** or **Reserved**.
+The pricing plan is based on your selection of **On-demand** or **Reserved**.
 
-#### On-Demand
+#### On-demand
 {: #shared_ordering-pricing-on-demand}
 
-For the On-Demand offering, virtual data center virtual CPU (vCPU) and RAM are allocated as needed. The amount of time that the allocation takes depends on global usage of the virtual data center vCPU and RAM.
+For the On-demand offering, virtual data center virtual CPU (vCPU) and RAM are allocated as needed. The amount of time that the allocation takes depends on global usage of the virtual data center vCPU and RAM.
 
 * The limits that are established for the amount of vCPU and RAM are maximum values that can be used at any time.
 * vCPU and RAM resources can be increased and decreased later as required.
 * The price is calculated hourly and it is based on the resource usage in the virtual data center.
 * The amount of storage that can be allocated and used in the virtual data center is limited to 200 TB for each storage policy. Charges are hourly based on GB of allocated storage.
-* There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB.
+* The amount of inbound and outbound public networking is unlimited. Public outbound bandwidth is charged per GB.
 
 #### Reserved
 {: #shared_ordering-pricing-reserved}
@@ -57,8 +57,8 @@ For the Reserved offering, the vCPU and RAM virtual data center reservations are
 
 * The price is calculated monthly for the full reservation and it is based on the allocation size of the virtual data center.
 * vCPU and RAM resources can be increased and decreased later as required.
-* There are no limits on the amount of storage that can be allocated and used in the virtual data center. Charges are hourly based on GB of allocated storage.
-* There are no limits on the amount of inbound and outbound public networking. Public outbound bandwidth is charged per GB.
+* The amount of storage that can be allocated and used in the virtual data center is unlimited. Charges are hourly based on GB of allocated storage.
+* The amount of inbound and outbound public networking is unlimited. Public outbound bandwidth is charged per GB.
 
 For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
 
@@ -68,11 +68,9 @@ For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolution
 The virtual data center name is set to **vdc-_xx_** by default, where _xx_ represents two randomly generated alphabetic characters.
 
 You can also specify a virtual data center name that meets the following requirements:
-* Maximum length is 128 characters.
+* The maximum length is 128 characters.
 * Only alphanumeric, dash (-), and underscore (_) characters are allowed.
-* The name must be unique from active virtual data centers within your account. You may create a virtual data center that has the same name as a previously deleted virtual data center.
-
-
+* The name must be unique within all active virtual data centers in your account. You can create a virtual data center that has the same name as a previously deleted virtual data center.
 
 ### Resource group
 {: #shared_ordering-resource-group}
@@ -84,14 +82,14 @@ If **No resource group available** is displayed in this field, you currently do 
 ### Data center location
 {: #shared_ordering-dc}
 
-Select the IBM Cloud Data Center where the instance is to be hosted.
+Select the {{site.data.keyword.cloud}} data center where the instance is to be hosted.
 
 ## Virtual data center capacity
 {: #shared_ordering-cpu}
 
-Virtual data center capacity is based on your selection of the **On-Demand** or **Reserved** pricing plan.
+Virtual data center capacity is based on your selection of the **On-demand** or **Reserved** pricing plan.
 
-If you selected **On-Demand**, select the vCPU and RAM limits.
+If you selected **On-demand**, select the vCPU and RAM limits.
 
 If you selected **Reserved**, your vCPU model settings are based on your selection of **Preconfigured** or **Custom**.
 
@@ -123,13 +121,13 @@ Based on your selected configuration for the virtual data center instance, the e
 
 You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. The tool is useful if you want to estimate the price of the selected VMware Solutions Shared resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider purchasing.
 
-## Procedure to order VMware Solutions Shared On-Demand
+## Procedure to order VMware Solutions Shared On-demand
 {: #shared_ordering-procedure-ondemand}
 {: help}
 {: support}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **Start provisioning** section.
-2. On the **Create** tab of the **VMware Solutions Shared** page, select **On-Demand**.
+2. On the **Create** tab of the **VMware Solutions Shared** page, select **On-demand**.
 3. Enter the virtual data center name and select a resource group.
 4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
 5. Select the vCPU and RAM limits according to your requirements.
@@ -149,11 +147,11 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
 7. Click **Create**.
 
-## Results after you order VMware Shared Solution
+## Results after you order VMware Solutions Shared
 {: #shared_ordering-results}
 
 * The deployment of the resources starts automatically and you receive confirmation that the order is being processed. You can check the deployment status, including any issues that might require your attention, by viewing the **Virtual Data Center Status**.
-* When the resources are successfully deployed, the components that are described in [Technical specifications for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview#shared_overview-specs) are installed on your VMware virtual platform.
+* When the resources are successfully deployed, the components that are described in [Technical specifications for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview#shared_overview-specs) are installed on your VMware® virtual platform.
 * When the resources are ready to use, the status is changed to **Ready to use**.
 
 ## What to do next
@@ -168,4 +166,3 @@ View the virtual data center instance that you ordered and then set the **admin*
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}
-* [Video tutorial: IBM Cloud for VMware Solutions Shared - Order a Virtual Data Center](https://www.youtube.com/watch?v=uAxxDIz9wOQ&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE){:external}
