@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-09-16"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -492,8 +492,8 @@ A destination NAT allows an outside host, in this case on the internet, to conne
 3. In the left pane under **Networking**, click **Edges**.
 4. In the main pane click the edge, then **SERVICES**.
 5. Click the **NAT** tab, under **NAT44 Rules** click **+ DNAT RULE**.
-6. Click the **Applied On** drop-down arrow and select the ``location-Customer-External`` interface.
-7. The **Original IP/Range** is one of the IPs from the Suballocated Public IP address range. Click the **SELECT** button, and select an IP from the **IP Address** drop-down menu. Click **KEEP**.
+6. Click the **Applied On** drop-down arrow and select the ``<datacenter>-w<idx>-tenant-external`` interface, for example, ``dal13-w02-tenant-external``.
+7. The **Original IP/Range** is one of the IPs from the Suballocated Public IP address range. Click the **SELECT** button, and select an IP from the **IP Address** drop-down menu. This is the `tenant-external IP address` referenced in future steps. Click **KEEP**.
 8. (Optional) For port forwarding, click the **Protocol** dropdown arrow and select **TCP**.
 9. The **Original Port** in this example is ``8000``. Ports below 1024 are reserved. Select a port that is not previously used with the original IP address or range.
 10. If ICMP has been selected in the **Protocol** dropdown, the **ICMP Type** can be selected.
@@ -503,12 +503,12 @@ A destination NAT allows an outside host, in this case on the internet, to conne
 14. Click **Save changes**.
 15. Click the **Firewall** tab, and click **+** to add a new Firewall rule.
 16. (Optional) If you want to restrict access to the internal Organization virtual data center VM to a specific IP or IP range, the **Source** may be defined.
-17. Set the Destination to the Customer-External IP address used for **Original IP/Range** in the DNAT rule.
-18. Click **+** in the Service column and set the **Protocol** to TCP and the **Destination Port** to the Customer-External IP address used in the DNAT rule. In our example, port ``8000`` is used.
+17. Set the Destination to the `tenant-external IP address` used for **Original IP/Range** in the DNAT rule.
+18. Click **+** in the Service column and set the **Protocol** to TCP and the **Destination Port** to the `tenant-external IP address` used in the DNAT rule. In our example, port ``8000`` is used.
 19. Click **Save changes** in the upper left corner.
 20. Exit the **Edge Gateway** services pane.
 
-To test the configuration, use the remote desktop client and connect to the ``Customer-External IP address:port number`` as the destination in the **Computer** field.
+To test the configuration, use the remote desktop client and connect to the ``tenant-external IP address:port number`` as the destination in the **Computer** field.
 
 #### Enabling VM access to {{site.data.keyword.cloud_notm}} Services by using the private network
 {: #shared_vcd-ops-guide-enable-access}
@@ -537,14 +537,15 @@ Enabling access to the service network is done in two edge configuration steps.
 {: #shared_vcd-ops-guide-nat-rule}
 
 Add a NAT rule for translating internal network addresses into the service network IP address space.
-1. Log in to the VMware vCloud Director portal.
+1. Log in to the VMware vCloud Director tenant portal.
 2. Click the virtual data center **Edges** tab and open the single preconfigured edge.
-3. Find the name of the service network and the IP address that is assigned for the service network interface from the **IP Addresses** table in the **Edge Gateway Settings** section. The format for the service network name is ``w<idx>-service<idx>``, for example, ``w02-service02``.
+3. In the **External Networks** section, click the **IP Allocations** link. Find the name of the service network and the IP address that is assigned for the service network interface from the table displayed. The format for the service network name is ``<datacenter>-w<idx>-service<idx>``, for example, ``dal13-w02-service02``.
 4. Click **SERVICES** to open the Edge Gateway configuration page. Click the **NAT** tab and click **+ SNAT RULE** to add a SNAT rule.
-5. Select the service network next to the **Applied on** field, add the IP addresses or range from one of the virtual data center internal networks to the **Original** field.
-6. Set the translated IP address to the IP address of the network selected in step 3. This address can be found under Network Edge settings for External Networks.
-7. Specify `Any` for the **Port** field for the **Original** and **Protocol** fields.
-8. Click **Save changes**.
+5. Select the service network next to the **Applied on** field and add the IP addresses or range from one of the virtual data center internal networks to the **Original Source IP/Range** field.
+6. In the **Translated Source IP/Range** field, click the **Select** button. From the **Network** dropdown, select the external network. The format for the external network name is ``<datacenter>-w<idx>-tenant-external``. For example, ``dal13-w02-tenant-external``. From the **IP Address** dropdown, select the external IP address you want to use.
+7. Optionally, set the **Destination IP Address**, **Destination Port**, and **Description** fields.
+8. Verify **Enabled** is selected and click **KEEP**.
+9. Click **Save Changes**.
 
 ##### Adding the firewall rule
 {: #shared_vcd-ops-guide-firewall-rule}
@@ -645,5 +646,3 @@ Ensure that the organization virtual data center network type is ``routed``.
 * [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
 * [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
 * [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
-* [Video tutorial: {{site.data.keyword.vmwaresolutions_short}} Shared - Setup the Network](https://www.youtube.com/watch?v=gG0jp3TEtt0&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE&index=3&t=0s){:external}
-* [Video tutorial: {{site.data.keyword.vmwaresolutions_short}} Shared - Deploy a VM](https://www.youtube.com/watch?v=5yl-_60gUUw&list=PLIsX_jY0PwvU4fJ28go4QOau2xdHLXvmE&index=4&t=0s){:external}
