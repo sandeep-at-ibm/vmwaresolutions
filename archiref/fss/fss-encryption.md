@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-10-09"
 
 subcollection: vmwaresolutions
 
@@ -19,25 +19,22 @@ subcollection: vmwaresolutions
 # Encryption
 {: #fss-encryption}
 
-There are no native key management tools in vSphere thus the SaaS provider must bring a tool of their choosing to provide the necessary key management functions. The SaaS provider can use the IBM Hyper Protect Crypto Services (HPCS) with the Key Management Interoperability Protocol (KMIP) adapter or HyTrust DataControl on the IBM Cloud for VMware® Regulated Workloads or their own on-premises key management services.
+VMware vSphere® encryption is the tool the IBM Cloud for VMware® Regulated Workloads relies upon to secure management and production VMs while at-rest or in-transit. The IBM Hyper Protect Crypto Services (HPCS) through the Key Management Interoperability Protocol (KMIP) on the IBM Cloud is the KMS required for the vCenter. HPCS is a mandatory service. On-premises key management service integration is possible through HPCS.
 
 ## Hyper Protect Crypto Services
 {: #fss-encryption-hpcs}
 
 VMware vSphere® encryption applies to all types of VMware storage, including vSAN storage. With vSphere encryption solution, vCenter Server and your ESXi hosts connect to a key management server to get the required encryption keys. These keys are used to protect individual virtual machine (VM) disks, according to your VM storage policies.
 
-As vSphere encryption operates at the virtual machine disk level, it can prevent regulated data exposure if loss of physical disk drives or loss of VM disks occurs. Many backup and replication technologies cannot back up or replicate effectively if the VM is encrypted. It is also notable, that vSphere encryption is not compatible with vSphere replication, cross-vCenter vMotion, VMware HCX, Zerto, or IBM Spectrum Protect Plus. However, when properly configured, Veeam Backup and Replication is compatible with vSphere encryption.
+As vSphere encryption operates at the virtual machine disk level, it can prevent regulated data exposure if loss of physical disk drives or loss of VM disks occurs. Many backup and replication technologies cannot back up or replicate effectively if the VM is encrypted. It is also notable, that vSphere encryption is not compatible with cross-vCenter vMotion, VMware HCX, or Zerto. However, when properly configured, Veeam Backup and Replication is compatible with vSphere encryption.
 
 HPCS is used as the key management service that supports Keep Your Own Key (KYOK). HPCS is accessible through the Enterprise PKCS#11 (EP11) API, but VMware vSphere encryption supports only a key management system (KMS) that uses the KMIP standard. Therefore, the KMIP adapter is required to act as an adapter between the vCenter Server appliance and HPCS.
 
-HyTrust DataControl (HTDC) can replace the use of vSphere encryption but requires the installation of agents into each VM for which encryption is required. HTDC does not use the KMIP adapter service.
-
 ![vSphere encryption with Hyper Protect Crypto Services](../../images/fss-hpcs-mgmt.svg){: caption="Figure 1. vSphere encryption with Hyper Protect Crypto Services" caption-side="bottom"}
 
-IBM HPCS is a single-tenant key management service, backed by a FIPS 140-2 level 4 certified hardware security module (HSM). With IBM HPCS, SaaS providers and SaaS consumers can move their most mission critical workloads to the IBM Cloud with the assurance of using the highest level of security to prevent unauthorized access to their regulated data.
+IBM HPCS is backed by a FIPS 140-2 level 4 certified hardware security module (HSM). With IBM HPCS, SaaS providers and SaaS consumers can move their most mission critical workloads to the IBM Cloud with the assurance of using the highest level of security to prevent unauthorized access to their regulated data.
 
-At a high level the IBM HPCS consists of the following components:
-
+At a high level, the IBM HPCS consists of the following components:
 - Crypto unit - a singular unit that represents a piece of hardware, the HSM, and the corresponding software stack, both are dedicated to a single tenant.
 - Service instance - a cluster of crypto units, which operates as a single logical entity to provide redundancy and scalability. It is recommended to have at least two instances to provide high availability.
 
@@ -73,7 +70,7 @@ The keys that are provided by the SaaS consumer are used to protect any regulate
 
 Review the following information for the step-by-step process to order and initialize KMIP:
 * [VMware Solutions KMIP considerations](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations)
-* [Provisioning documentation for HPCS](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)
+* [Documentation to provision HPCS](/docs/hs-crypto?topic=hs-crypto-initialize-hsm#initialize-hsm)
 
 **Next topic**: [Operations management](/docs/vmwaresolutions?topic=vmwaresolutions-fss-operations)
 

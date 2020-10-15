@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-10-09"
 
 subcollection: vmwaresolutions
 
@@ -27,9 +27,9 @@ IBM Cloud for VMware® Regulated Workloads requires Caveonix RiskForesight for c
 ## Management cluster
 {: #fss-caveonix-management}
 
-[Caveonix RiskForesight](https://www.caveonix.com/){:external} provides a comprehensive cloud workload protection platform for IBM Cloud for VMware Regulated Workloads that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
+[Caveonix RiskForesight](https://www.caveonix.com/){:external} provides a comprehensive cloud workload protection platform for IBM Cloud for VMware Regulated Workloads. This platform delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
 
-The RMCP enables the SaaS provider to maintain continuous and real-time visibility into workload deployments at scale, incorporating the latest cyberthreats and regulatory compliance needs. RiskForesight also evaluates workload-specific cyber and compliance risks and provides proactive defense by using agentless enforcement at network, security, and compute control planes of deployment.
+The RMCP enables the SaaS provider to maintain continuous and real-time visibility into workload deployments at scale, incorporating the latest cyberthreats and regulatory compliance needs. RiskForesight also evaluates workload-specific cyberrisks and compliance risks and provides proactive defense by using agentless enforcement at network, security, and compute control planes of deployment.
 
 RiskForesight’s unique Risk Management Control Plane (RMCP) interface slashes or eliminates needless security blind spots and compliance gaps, restoring risk visibility and confidence in compliant deployments.
 
@@ -38,10 +38,12 @@ RiskForesight’s unique Risk Management Control Plane (RMCP) interface slashes 
 ## Edge cluster
 {: #fss-caveonix-edge}
 
-Caveonix RiskForesight is used to continuously monitor compliance of the edge cluster.
+Caveonix RiskForesight is used to continuously monitor compliance of the edge services cluster.
 
 ## Workload cluster
 {: #fss-caveonix-workload}
+
+Caveonix RiskForesight is used to continuously monitor compliance of all workload cluster hosts.
 
 Caveonix RiskForesight can optionally monitor compliance of SaaS consumer workloads. Enabling the use of RiskForesight for workload compliance monitoring requires appropriate rules and policies on the perimeter security appliance that isolates the workload regions.
 

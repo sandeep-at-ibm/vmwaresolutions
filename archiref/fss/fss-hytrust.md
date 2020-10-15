@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-10-09"
 
 subcollection: vmwaresolutions
 
@@ -47,17 +47,17 @@ HTCC is composed of many internal functional components:
 
 ![IBM Cloud for VMware Regulated Workloads HyTrust integration](../../images/fss-htcc.svg "IBM Cloud for VMware Regulated Workloads HyTrust integration"){: caption="Figure 2. IBM Cloud for VMware Regulated Workloads HyTrust integration" caption-side="bottom"}
 
-All access is through HyTrust CloudControl and no direct access to the ESXi hosts is enabled. The network is designed to allow only the necessary connections from the vCenter Server. Lockdown mode is enabled. Allowlisting of IP addresses permitted network access to the ESXi hosts is configured in the integrated host firewall. The rules on the gateway further enforce limited traffic flows from the vCenter Server to the subnets upon which the ESXi hosts are deployed. The cloud account administrator (through IBM Cloud IAM) should not authorize VPN connections to the subnets upon which the ESXi hosts are deployed except for the connections that are essential to support DR recovery operations.
+All access is through HyTrust CloudControl and no direct access to the ESXi hosts is enabled. The network is designed to allow only the necessary connections from the vCenter Server. Lockdown mode is enabled. Allow listing of IP addresses permitted network access to the ESXi hosts is required in the integrated host firewall. The rules on the perimeter gateway further enforce the limited traffic flows from the vCenter Server to the subnets upon which the ESXi hosts are deployed. The cloud account administrator (through IBM Cloud IAM) should not authorize VPN connections to the subnets upon which the ESXi hosts are deployed except for the connections that are essential to support DR recovery operations.
 
 ## Edge cluster
 {: #fss-hytrust-edge}
 
-The ESXi host access is strictly limited. No direct access to an ESXi host is permissible. The gateway appliance uses only local accounts and is configured to forward all logs to vRealize Log Insight. These logs can contain authentication failure and success events for full visibility into the activities taken that might impact security or compliance status. HyTrust does not play a role in authentication or authorization for access to the gateway appliance. The host level firewall is also configured with allowlisted IPs to permit required network traffic.
+Access to the ESXi hosts is strictly limited. No direct access to an ESXi host is permissible. The gateway appliance is deployed with only local accounts and it is necessary to configure the appliance to use centrally managed user accounts (Radius or Tacplus server for the vSRX). The gateway is configured to forward all logs to vRealize Log Insight. These logs contain authentication failure and success events for full visibility into the activities taken that potentially impact security or compliance status. HyTrust does not play a role in authentication or authorization for access to the gateway appliance. Allow listing of IP addresses permitted network access to the ESXi hosts is required in the integrated host firewall.
 
 ## Workload cluster
 {: #fss-hytrust-workload}
 
-The ESXi host access is strictly limited. No direct access to an ESXi host is permissible. HTCC provides the same level of access control and auditing for administrators who are assigned to manage the dedicated workload infrastructure, such as the SDN (NSX-T). The fine-grained RBAC capability of HTCC limits their scope of action to the workload region. The host level firewall is also configured with allowlisted IPs to permit required network traffic.
+The ESXi host access is strictly limited. No direct access to an ESXi host is permissible. HTCC provides the same level of access control and auditing for administrators who are assigned to manage the dedicated workload infrastructure, such as the SDN (NSX-T). The fine-grained RBAC capability of HTCC limits their scope of action to the workload region. Allow listing of IP addresses permitted network access to the ESXi hosts is required in the integrated host firewall.
 
 **Next topic**: [Active Directory](/docs/vmwaresolutions?topic=vmwaresolutions-fss-iam-active-directory)
 

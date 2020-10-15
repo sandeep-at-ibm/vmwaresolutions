@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-10-13"
 
 subcollection: vmwaresolutions
 
@@ -19,20 +19,20 @@ subcollection: vmwaresolutions
 # Operations management
 {: #fss-operations}
 
-IBM Cloud for VMware® Regulated Workloads is delivered as a clean environment. Extensive work was performed to identify and remediate common errors and warnings that are often found in a typical vSphere deployment. IBM and VMware best practices that are combined with standard and customized templates for vRealize Operations ensure that every IBM Cloud for VMware Regulated Workloads is deployed in the cleanest possible condition, ready for onboarding. Caveonix RiskForesight is used to scan the environment for compliance with industry and government standards such as NIST, PCI, and more. RiskForesight is continually monitoring the IBM Cloud for VMware Regulated Workloads for adherence to compliance standards. RiskForesight provides on-demand compliance posture reporting and at-a-glance compliance status.
-The operational tools support the SaaS provider in compliance with current standards and assist them in rapidly responding to a changing compliance landscape.
+IBM Cloud for VMware® Regulated Workloads is delivered as a clean environment. Extensive work was done to identify and remediate common errors and warnings that are often found in a typical vSphere deployment. IBM and VMware® best practices, which are combined with standard and customized templates for vRealize Operations, ensure that all IBM Cloud for VMware Regulated Workloads configurations are deployed as clean as possible, ready for onboarding. Caveonix RiskForesight is used to scan the environment for compliance with industry and government standards such as NIST, PCI, and more. RiskForesight is continually monitoring the IBM Cloud for VMware Regulated Workloads for adherence to compliance standards. RiskForesight provides on-demand compliance posture reporting and at-a-glance compliance status.
+The operational tools support the customer in compliance with current standards and assist them in rapidly responding to a changing compliance landscape.
 
 ![IBM Cloud for VMware Regulated Workloads operational tools overview](../../images/fss-opstools.svg "IBM Cloud for VMware Regulated Workloads operational tools overview"){: caption="Figure 1. IBM Cloud for VMware Regulated Workloads operational tools overview" caption-side="bottom"}
 
 ## Management cluster
 {: #fss-operations-management}
 
-All operational tools are deployed into the management cluster. The IBM Cloud for VMware Regulated Workloads depends upon multiple layers of tools to deliver comprehensive insight into the operation, security, and compliance of all layers of the platform. SaaS providers that use IBM Cloud for VMware Regulated Workloads can extend the use of the operational tools to monitor the VMs supporting their applications.
+All operational tools are deployed into the management cluster. The IBM Cloud for VMware Regulated Workloads depends upon multiple layers of tools to deliver comprehensive insight into the operation, security, and compliance of all layers of the platform. Customers that use IBM Cloud for VMware Regulated Workloads can extend the use of the operational tools to monitor the VMs supporting their applications.
 
 ### Caveonix RiskForesight
 {: #fss-operations-management-riskforesight}
 
-[Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-fss-caveonix) provides a comprehensive cloud workload protection platform for IBM Cloud for VMware Regulated Workloads that delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
+[Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-fss-caveonix) provides a comprehensive cloud workload protection platform for IBM Cloud for VMware Regulated Workloads. This platform delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
 
 ### vRealize Operations
 {: #fss-operations-management-vrops}
@@ -44,7 +44,7 @@ All operational tools are deployed into the management cluster. The IBM Cloud fo
 
 [vRealize Log Insight](https://www.vmware.com/products/vrealize-log-insight.html){:external} delivers heterogeneous and highly scalable log management with intuitive, actionable dashboards, sophisticated analytics, and broad third-party extensibility. It provides deep operational visibility and faster troubleshooting across physical, virtual, and cloud environments.
 
-All systems that generate logs are configured to send their logs to vRealize Log Insight. Centralized collection of all logging enables a comprehensive view of all aspects of the IBM Cloud for VMware Regulated Workloads operation. Log Insight is also capable of forwarding logs to security scanning services such as IBM QRadar.
+All systems that generate logs are configured to send their logs to vRealize Log Insight (vRLI). Centralized collection of all logging enables a comprehensive view of all aspects of the IBM Cloud for VMware Regulated Workloads operation. Log Insight is also capable of forwarding logs to security scanning services such as IBM QRadar.
 
 ![vRealize Log Insight integration](../../images/fss-log-flow.svg "vRealize Log Insight integration"){: caption="Figure 2. vRealize Log Insight integration" caption-side="bottom"}
 
@@ -58,12 +58,12 @@ vRealize Network Insight monitors network components and management traffic thro
 ## Edge cluster
 {: #fss-operations-edge}
 
-No operational tooling is deployed to the edge services cluster. All components of the edge cluster are configured to deliver their logs to vRealize Log Insight, inclusive of the virtual gateway syslog facilities. If the physical FortiGate is deployed in the place of the edge services cluster its syslog facility must send logs to VRLI.
+No operational tools are deployed to the edge services cluster. The edge cluster is monitored and managed by using the tools that are deployed on the management cluster. All components of the edge services cluster are configured to deliver their log files to vRLI, inclusive of the virtual gateway syslog facilities. If the physical FortiGate is deployed instead of the edge services cluster, its syslog facility must send logs to vRLI.
 
 ## Workload cluster
 {: #fss-operations-workload}
 
-No operational tooling is deployed to the workload cluster. All platform components that are deployed in the workload cluster are configured to deliver their logs to vRealize Log Insight.
+No operational tools are deployed to the workload cluster. The workload cluster is monitored and managed by using the tools that are deployed on the management cluster. All platform components that are deployed in the workload cluster are configured to deliver their log files to vRLI.
 
 **Next topic**: [Caveonix integration](/docs/vmwaresolutions?topic=vmwaresolutions-fss-caveonix)
 

@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 600 302.3" style="enable-background:new 0 0 600 302.3;" xml:space="preserve">
+	 viewBox="0 0 679.3 273.3" style="enable-background:new 0 0 679.3 273.3;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#4C84C5;}
 	.st1{fill:#959595;}
 	.st2{fill:#1DA78D;}
 	.st3{fill:#FFFFFF;}
-	.st4{font-family:'Roboto-Light';}
-	.st5{font-size:24px;}
-	.st6{font-size:21px;}
+	.st4{font-family:'IBMPlexSans';}
+	.st5{font-size:14px;}
+	.st6{font-size:12px;}
 </style>
-<rect id="left_blue" class="st0" width="297.7" height="100"/>
-<rect id="right_blue" x="305.7" y="0.7" class="st0" width="295.3" height="100"/>
-<rect y="214.7" class="st1" width="600" height="87.3"/>
-<rect y="110" class="st2" width="297.5" height="95"/>
-<rect x="305.3" y="109.3" class="st2" width="294.7" height="95.7"/>
-<text transform="matrix(1 0 0 1 15.8257 42.7046)" class="st3 st4 st5">Virtualization Management</text>
-<text transform="matrix(1 0 0 1 343.3569 42.7044)" class="st3 st4 st5">Network Management</text>
-<text transform="matrix(1 0 0 1 28.0393 153.6688)" class="st3 st4 st5">Compute Virtualization</text>
-<text transform="matrix(1 0 0 1 341.6111 153.6689)" class="st3 st4 st5">Network Virtualization</text>
-<text transform="matrix(1 0 0 1 121.0566 250.5371)" class="st3 st4 st5">Physical Infrastructure on IBM Cloud </text>
-<text transform="matrix(1 0 0 1 412.2971 283.8423)" class="st3 st4 st6">Network</text>
-<text transform="matrix(1 0 0 1 273.906 283.8424)" class="st3 st4 st6">Storage</text>
-<text transform="matrix(1 0 0 1 121.1154 283.8432)" class="st3 st4 st6">Compute</text>
-<text transform="matrix(1 0 0 1 67.954 186.3333)" class="st3 st4 st6">VMware vSphere</text>
-<text transform="matrix(1 0 0 1 395.3 186.333)" class="st3 st4 st6">VMware NSX</text>
-<text transform="matrix(1 0 0 1 47.5063 75.9495)" class="st3 st4 st6">VMware vCenter Server</text>
-<text transform="matrix(1 0 0 1 350.3597 76.6162)" class="st3 st4 st6">VMware NSX Manager</text>
+<rect x="126" y="4" class="st0" width="205.7" height="85"/>
+<rect x="339.7" y="4" class="st0" width="201.3" height="85"/>
+<rect x="127.3" y="184.7" class="st1" width="413.7" height="85"/>
+<rect x="126.7" y="96" class="st2" width="205.7" height="81.7"/>
+<rect x="339" y="95.7" class="st2" width="202.7" height="81.7"/>
+<text transform="matrix(1 0 0 1 147.4572 34.0378)"><tspan x="0" y="0" class="st3 st4 st5">Virtualization Management</tspan><tspan x="21.1" y="34" class="st3 st4 st6">VMware vCenter Server</tspan></text>
+<text transform="matrix(1 0 0 1 374.4834 35.7044)"><tspan x="0" y="0" class="st3 st4 st5">Network Management</tspan><tspan x="10.1" y="34" class="st3 st4 st6">VMware NSX Manager</tspan></text>
+<text transform="matrix(1 0 0 1 156.6976 132.6688)"><tspan x="0" y="0" class="st3 st4 st5">Compute Virtualization</tspan><tspan x="26.5" y="23.9" class="st3 st4 st6">VMware vSphere</tspan></text>
+<text transform="matrix(1 0 0 1 372.1625 132.1194)"><tspan x="0" y="0" class="st3 st4 st5">Network Virtualization</tspan><tspan x="35.3" y="23.9" class="st3 st4 st6">VMware NSX</tspan></text>
+<text transform="matrix(1 0 0 1 215.4224 219.2038)" class="st3 st4 st5">Physical Infrastructure on IBM Cloud </text>
+<text transform="matrix(1 0 0 1 432.1519 253.6171)" class="st3 st4 st6">Network</text>
+<text transform="matrix(1 0 0 1 313.4063 253.5091)" class="st3 st4 st6">Storage</text>
+<text transform="matrix(1 0 0 1 197.9439 254.4141)" class="st3 st4 st6">Compute</text>
 </svg>

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-10-09"
 
 subcollection: vmwaresolutions
 
@@ -24,18 +24,16 @@ IBM Cloud for VMware® Regulated Workloads provides business continuity only at 
 ## Management cluster
 {: #fss-budr-management}
 
-The management cluster relies upon native vSphere DRS capabilities to keep management services available to the platform administrators. Even with the configuration of the vSphere DRS features there are times when manual intervention is necessary to restore access to management services. The use of shared storage minimizes the necessity of manual restoration activities if an ESXi host is lost.
+The management cluster relies upon native vSphere DRS capabilities to keep management services available to the platform administrators. Even with the configuration of the vSphere DRS features, manual intervention is sometimes necessary to restore access to management services. The use of shared storage minimizes the necessity of manual restoration activities if an ESXi host is lost.
 
 | System | Backup option | Frequency |
 |---|---|---
 |**Active Directory / DNS** | Image through the Veeam agent | Daily |
-|**Veeam Virtual Machine** |  |  |
 |**vCenter** | Backup server file| Daily |
 |**NSX-T Controllers** | Backup server file | Daily|
 |**vRealize Operations Manager** | VMDK through Veeam | Daily |
 |**vRealize Log Insights** | VMDK through Veeam | Daily |
 |**HyTrust CloudControl** | Backup server file | |
-|**HyTrust DataControl** | Backup server file | |
 |**Virtual Machine Backup Server** | VMDK through Veeam| |
 |**Juniper vSRX** | Backup server file through SCP from vSRX | Commit change |
 {: caption="Table 1. Backup options" caption-side="top"}
@@ -45,25 +43,16 @@ The management cluster relies upon native vSphere DRS capabilities to keep manag
 
 Veeam on IBM Cloud™ delivers reliable backup for virtual machines within the IBM Cloud for VMware Regulated Workloads environment.
 
-Veeam is an available option that provides continuous backup of the management stack for protection against disasters. If corruption of any management stack component occurs, Veeam also provides rapid restoration to known good states. Veeam can also provide backup services for the workload cluster. The single site deployment must use the Veeam bare metal option to provide an acceptable backup repository.
+Veeam provides continuous backup of the management stack for protection against disasters. If corruption of any management stack component occurs, Veeam also provides rapid restoration to known good states. Veeam can also provide backup services for the workload cluster. The single site deployment must use the Veeam bare metal option to provide an acceptable backup repository.
 
 The Veeam environment is provisioned initially with a single virtual machine. The SaaS provider can extend this instance to their custom requirements, including remote database, more proxy servers, and scaling out of the backup repository.
 
-Veeam is deployed to the management regions in both availability zones (AZ) for use in an MZR. Veeam in the primary (active) AZ is configured to use the secondary (standby) AZ vSAN as the backup repository. The management region in the secondary (standby) AZ of the MZR is backed up across to the primary AZ vSAN.
-
-### Zerto service
-{: #fss-budr-management-zerto}
-
-Zerto provides disaster recovery and cloud mobility within a single, simple, scalable solution. Zerto Virtualization Manager (ZVM) and Virtual Replication Appliances (VRA) are an optional service that is deployed into the IBM Cloud for VMware Regulated Workloads environment. Zerto provides backup and disaster recovery into the cloud environment or between different zones within IBM Cloud.
-
-Zerto VRAs are deployed in the management regions of the primary (active) and secondary (standby) AZs. Zerto is configured to synchronize from AZ1 to AZ2. If a DR event occurs AZ2 becomes the active region. Zerto uses the witness zone of the MZR to support the ZVM.
-
-![IBM Cloud for VMware Regulated Workloads Zerto](../../images/fss-zerto-topology.svg "Zerto topology"){: caption="Figure 1. Zerto topology" caption-side="bottom"}
+Veeam is deployed to the management regions in both availability zones (AZ) for use in an MZR.
 
 ## Edge cluster
 {: #fss-budr-edge}
 
-The edge cluster does not use any vSphere resiliency features and backup of the gateway VMs is not performed. The gateway appliances deliver resilience at the application layer through formation of a high-availability cluster at the time of deployment. When you are using the vSRX, it is recommended that the rescue configuration is set anytime a change is made to the running configuration. To update it, in operational mode, run `request system configuration rescue save`. The use of an SCP server to automatically back up the configuration anytime changes are made is optional and left to the client to implement.
+The edge services cluster does not use any vSphere resiliency features and backup of the gateway VMs is not performed. The gateway appliances deliver resilience at the application layer through formation of a high-availability cluster at the time of deployment. When you are using the vSRX, it is recommended that the rescue configuration is set anytime a change is made to the running configuration. To update it, in operational mode, run `request system configuration rescue save`. The use of an SCP server to automatically back up the configuration anytime changes are made is optional and left to the client to implement.
 
 ```
 vSRX config archive on commit
@@ -94,9 +83,8 @@ archive-sites {
 
 Business continuity at the workload layers is the responsibility of the SaaS provider to design, implement, and maintain.
 
-There are several options available in the IBM Cloud including:
-* Veeam backup server
-* Zerto service
+Veeam backup server is the recommended solution.
+
 
 **Next topic**: [HyTrust integration](/docs/vmwaresolutions?topic=vmwaresolutions-fss-hytrust)
 

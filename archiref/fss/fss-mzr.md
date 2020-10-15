@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-10-13"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # Multizone region
 {: #fss-mzr}
 
-Expanding the single zone region topology into a multizone region (MZR) topology, introduces complexity around high availability of components. It also introduces some new capabilities, including stretch network between the data centers and stretched VSAN.
+Expanding the single zone region topology into a multizone region (MZR) topology, introduces complexity around high availability of components. It also introduces some new capabilities, including stretched networking between the data centers and stretched VSAN.
 
 ## Multi data center view
 {: #fss-mzr-view}
@@ -43,19 +43,19 @@ Dual Domain controllers in each data center with default domain replication to e
 ### Veeam management backup
 {: #fss-mzr-considerations-veeam}
 
-An optional Veeam backup and replication server (VBR) is placed in both the primary and secondary sites. The backup repository is the opposite availability zone (AZ) vSAN volume that is assigned to each VBR and the built-in proxy is used for backup jobs. A copy job that goes to Cloud Object Storage is created when permitted for each backup repository, this design allows either site to restore the other. The VBR servers at each site will store a VBR configuration backup on the server in the other site. If a total loss of the VBR server occurs in one site, it can be restored to the other.
+Veeam backup and replication servers (VBR) are placed in both the primary and secondary sites. The built-in proxy is used for backup jobs. A copy job that goes to Cloud Object Storage is created when allowed for each backup repository, this design allows either site to restore the other. The VBR servers at each site store a VBR configuration backup on the server in the other site. If a total loss of the VBR server occurs in one site, it can be restored to the other.
 
 ### vCenter
 {: #fss-mzr-considerations-vcenter}
 
-Use vCenter High Availability (HA). Automated failover is managed and performed by vCenter Server. The reassignment of the vCenter Server IP address in DNS is required if a failover occurs.
+Use vCenter High Availability (HA). Automated failover is managed and done by vCenter Server. The reassignment of the vCenter Server IP address in DNS is required if a failover occurs.
 
 ### NSX-T controllers
 {: #fss-mzr-considerations-nsx}
 
 The NSX controllers are provisioned in each of the three AZs to ensure that NSX management continues if a DR event occurs.
 
-The NSX-T UI VIP, cannot span a subnet so the IBM Cloud Load Balancer (Private-2-Private) provides a single URL to access the interface.
+Each controller is assigned an IP address from the AZ management plane it is deployed to. Therefore, the NSX-T UI VIP for the controller-embedded load balancing function can't operate when it is deployed in an MZR. Proper operation of NSX-T in the MZR deployment requires an IBM Cloud Load Balancer (private-to-private) so the NSX-T UI is available at a single URL.
 
 ### NSX-T topologies
 {: #fss-mzr-considerations-nsxtopo}
@@ -75,7 +75,7 @@ Each site has a stand-alone instance of vRealize Operations, which is deployed i
 ### HyTrust CloudControl
 {: #fss-mzr-considerations-htcc}
 
-A HyTrust CloudControl cluster is deployed with an instance in each site (primary / secondary). The HyTrust CloudControl cluster is configured with the Multi-Site-HA option. This option creates a VIP address (which is a different IP from the one assigned to the node) for each node. Since the nodes have different subnets, a PIP is configured to point at these VIPs.
+A HyTrust CloudControl cluster is deployed with an instance in the primary and secondary site. The HyTrust CloudControl cluster is configured with the Multi-Site-HA option. This option creates a VIP address (which is a different IP from the one assigned to the node) for each node. Since the nodes have different subnets, a PIP is configured to point at these VIPs.
 
 The IBM Cloud Load Balancer is configured to point to the previous VIP addresses. The IBM Cloud Load Balancer creates an instance in two of the three data centers and must be resolvable through DNS. In the IBM Cloud for VMware® Regulated Workloads environment, a new CNAME is defined that resolves to the friendly name of the Cloud Load Balancer FQDN.
 
@@ -86,9 +86,9 @@ Between the HyTrust CloudControl cluster and the IBM Cloud Load Balancer, the ca
 ### Backup server
 {: #fss-mzr-considerations-buserver}
 
-The backup server primary instance is backed up to the primary server through rsync across to the secondary backup server in the secondary data center. If a failover of the backup server occurs, the following systems require a manual update to the new backup server IP.
+The primary configuration backup server instance is backed up using rsync across to the secondary configuration backup server in the secondary AZ. If a failover of the backup server occurs, the following systems require a manual update to the new backup server IP.
 
-| System | Backup Option | Frequency | Location|
+| System | Backup option | Frequency | Location|
 |--- |--- |--- | --- |
 |**vCenter Server** | Backup Server File | Daily | Update needed in DR to point at new backup IP address |
 |**NSX-T Controllers** |Backup Server File | Daily | Update needed in DR to point at new backup IP address |

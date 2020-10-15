@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-10-09"
 
 subcollection: vmwaresolutions
 
@@ -26,7 +26,7 @@ The following main principles or requirements apply:
 ## NSX-T role mapping
 {: #fss-iam-nsxt-rolemapping}
 
-NSX-T Component | Auditor | Infrastructure Admin |
+NSX-T component | Auditor | Infrastructure admin |
 ----------------|------------------------------|--------------------|----------------|
 Controllers     | Read | Full |
 Transport Nodes | Read | Full |
@@ -48,26 +48,26 @@ The roles and privileges for load balancing, firewall rules, and VPN services fo
 
 NSX-T Data Center has the following built-in roles. You cannot add any new roles.
 
-- Enterprise Administrator
+- Enterprise administrator
 - Auditor
-- Network Engineer
-- Network Operations
-- Security Engineer
-- Security Operations
-- Load Balancer Administrator
-- Load Balancer Auditor
-- VPN Administrator
-- Guest Introspection Administrator
-- Network Introspection Administrator
+- Network engineer
+- Network operations
+- Security engineer
+- Security operations
+- Load balancer administrator
+- Load balancer auditor
+- VPN administrator
+- Guest introspection administrator
+- Network introspection administrator
 
 ## NSX-T user interface user IDs
 {: #fss-iam-nsxt-ids}
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| SaaS provider | admin | Used post-deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added and removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
-| SaaS provider | `cloudadmin` | Through the HyTrust Cloud Controller URL, customers authenticate with the `cloudadmin` user who is defined in Active Directory. More users can be added from customer space through HyTrust. |
-| IBM | automation_admin | Automation account used by IBM. It uses the principle identity functions to create configuration and protect it with a certificate. |
+| Privileged user | `admin` | Used post-deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added and removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
+| Privileged user | `cloudadmin` | Through the HyTrust Cloud Controller URL, customers authenticate with the `cloudadmin` user who is defined in Active Directory. More users can be added from customer space through HyTrust. |
+| IBM automation | `automation_admin` | Automation account used by IBM. It uses the principle identity functions to create configuration and protect it with a certificate. |
 {: caption="Table 2. NSX-T user IDs" caption-side="top"}
 
 For more information, see the [VMware documentation - RBAC for NSX-T](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.5/administration/GUID-26C44DE8-1854-4B06-B6DA-A2FD426CDF44.html){:external}.

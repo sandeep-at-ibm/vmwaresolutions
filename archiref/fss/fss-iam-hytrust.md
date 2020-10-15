@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-09-21"
 
 subcollection: vmwaresolutions
 
@@ -101,8 +101,8 @@ The trust manifests provide access and control to the following resources:
 | Network.DHCP.Edit                                      | X           |             | X           |                   |
 | Network.Firewall.Enable                                | X           |             | X           |                   |
 | Network.Firewall.Disable                               | X           |             | X           |                   |
-| Network.Firewall.Edit                                  | X           |             | x           |                   |
-| Network.Firewall.Configure_Settings                    | X           |             | x           |                   |
+| Network.Firewall.Edit                                  | X           |             | X           |                   |
+| Network.Firewall.Configure_Settings                    | X           |             | X           |                   |
 | Network.Router.Configure_Firewall_Settings             | X           |             | X           |                   |
 | Network.Firewall.Create_Policy                         | X           |             | X           |                   |
 | Network.Firewall.Delete_Policy                         | X           |             | X           |                   |
@@ -143,9 +143,9 @@ The trust manifests provide access and control to the following resources:
 | Network.NAT.Create                                     | X           |             | X           |                   |
 | Network.NAT.Delete                                     | X           |             | X           |                   |
 | Network.NAT.Edit                                       | X           |             | X           |                   |
-| Network.Service.Create                                 | X           |             | x           |                   |
-| Network.Service.Delete                                 | X           |             | x           |                   |
-| Network.Service.Edit                                   | X           |             | x           |                   |
+| Network.Service.Create                                 | X           |             | X           |                   |
+| Network.Service.Delete                                 | X           |             | X           |                   |
+| Network.Service.Edit                                   | X           |             | X           |                   |
 | Network.ServiceContainer.Create                        | X           |             |             |                   |
 | Network.ServiceContainer.Delete                        | X           |             |             |                   |
 | Network.ServiceContainer.Edit                          | X           |             |             |                   |

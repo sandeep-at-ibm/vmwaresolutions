@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-28"
+lastupdated: "2020-10-09"
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,7 @@ IBM Cloud for VMware® Regulated Workloads employs multiple storage types.
 ## Management cluster
 {: #fss-storage-management}
 
-The management cluster storage is vSAN. Security requirements mandate that multi-tenant shared storage is not permissible and in such cases the use of vSAN is necessary. Shifting storage to vSAN requires deploying a minimum of four ESXi hosts to the management cluster. Where the SaaS provider is willing to accept more operational risk the use of NFS shared storage and Cloud Object Storage is available.
+The management cluster storage is vSAN. Security requirements mandate that multi-tenant shared storage is not permissible and in such cases the use of vSAN is necessary. vSAN requires deploying a minimum of four ESXi hosts to the management cluster.
 
 ## Edge cluster
 {: #fss-storage-edge}
@@ -39,7 +39,7 @@ The workload clusters require the use of vSAN. vSAN is the only storage option o
 ## Bare metal storage design
 {: #fss-storage-bare-metal}
 
-Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared network-attached storage if applicable. It includes the operating system (vSphere ESXi) and the disks that are used for storage of the virtual machines (VMs). Storage for VMs consists of local disks that are virtualized by VMware vSAN.
+Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared network-attached storage if applicable. It includes the operating system (vSphere ESXi) and the disks that are used for storage of the virtual machines (VMs). Storage for VMs consists of local disks that are virtualized by VMware® vSAN.
 
 ![Storage options](../../images/fss-storage-connections.svg "Storage Options"){: caption="Figure 1. Storage options" caption-side="bottom"}
 
@@ -51,7 +51,7 @@ The vSphere ESXi hypervisor is installed in a persistent location. As a result, 
 ### vSAN disks
 {: #fss-storage-vsan-disks}
 
-This design allows for the option of using either VMware vSAN or shared network-attached storage (an option for the management layer only) as the primary data store for virtual machines. For VMware vSAN, it is configured by using an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes.
+VMware vSAN is the required storage platform. vSAN uses an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes.
 
 All configurations use two vSAN disk groups of solid-state disks (SSD):
 * Two disks for cache tier (one per disk group)
