@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-25"
 
 keywords: KMIP for VMware, view KMIP stand-alone, KMIP for VMware status
 
@@ -23,18 +23,18 @@ Use this procedure to view the KMIP for VMware instances that you ordered and in
 
 Click **Resources** from the left navigation pane and scroll down to the **KMIP for VMware Instances** table to view information about the instances that you ordered:
 
-| Item        | Description       |  
-|:----------- |:----------------- |
+| Item | Description |
+|:---- |:----------- |
 | Name | The name of the instance. |
 | Region | The {{site.data.keyword.cloud}} region where the instance is hosted. |
 | Creation time | The date and time when the instance was created. |  
 | Status | The status of the instance. |
 {: caption="Table 1. KMIP for VMware instances items" caption-side="top"}
 
-The instance status can have a range of options.
+The instance can have different statuses.
 
-| Status        | Description       |
-|:------------- |:------------- |
+| Status | Description |
+|:------ |:----------- |
 | Installing | The instance is being created. |
 | Installed | The instance is ready to use. |
 | Removing | The instance is being deleted. |

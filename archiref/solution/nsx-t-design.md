@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -32,7 +32,7 @@ For vSphere Network NSX (NSX-V), review the following more well-known NSX-T obje
 | **Edge Gateway** | Tier-0 (T0) Gateway[^gateway1] |
 | **Distributed Logical Router** | Tier-1 (T1) Gateway[^gateway2] |
 | **ESXi Server** | Transport Node (ESXi, KVM, bare metal T0 Gateway) |
-{: caption="Table 1. NSX-V to NSX-T terminology" caption-side="bottom"}
+{: caption="Table 1. NSX-V to NSX-T terminology" caption-side="top"}
 
 With NSX-T, you have Tier-0 (T0) Gateways and Tier-1 (T1) Gateways. While in the previous section they're shown as being equivalent to a T0 Gateway and T1 Gateway respectively, that's not accurate.
 
@@ -46,12 +46,12 @@ For NSX-T, there are two new concepts: Distributed Router (DR) and Service Route
 |:------------ |:------------ |
 | **Distributed Router** | Provides basic packet forwarding and distributed east-west routing functions<br>Spans all transport nodes<br>On ESXi runs as kernel module |
 | **Service Router** | Provides gateway services<br>- NAT<br>- Load Balancer<br>- Gateway firewall<br>- North-south routing<br>- VPN<br>- DNS Forwarding<br>- DHCP |
-{: caption="Table 2. NSX-T Distributer and Service Routers" caption-side="bottom"}
+{: caption="Table 2. NSX-T Distributer and Service Routers" caption-side="top"}
 
 There are key NSX-T concepts that do not correspond to NSX-V function that need to be understood for this design’s implementation of NSX-T.
 
-- An edge cluster is one or more VMs or physical machines that participate in an NSX-T virtual fabric. They are endpoints for the overlay network transport zones and VLAN backed transport zones. An edge cluster can support a single T-0 gateway instance.
-- A T-0 gateway is a virtual router instance, but not a VM. Multiple T-0 gateway instances can run within an edge cluster each with its own routing table and functions. An edge cluster must exist before you can create a T-0 router instance.
+- An edge services cluster is one or more VMs or physical machines that participate in an NSX-T virtual fabric. They are endpoints for the overlay network transport zones and VLAN backed transport zones. An edge services cluster can support a single T-0 gateway instance.
+- A T-0 gateway is a virtual router instance, but not a VM. Multiple T-0 gateway instances can run within an edge services cluster each with its own routing table and functions. An edge services cluster must exist before you can create a T-0 router instance.
 - A transport zone can span endpoints across different platforms and multiple vSphere vCenter instances. No cross vCenter linked NSX is required. Transport zones can be excluded from specific endpoints. An N-VDS can be correlated with one Overlay Transport Zone and many VLAN transport zones. N-VDS can be created as part of Transport Zone creation.
 - Uplink failover order is created independent of a particular logical switch as they are created in profiles as “Uplink Profiles” and are applied to a particular logical switch based on VLAN. It's possible to need a differing failover order or load balancing of physical uplinks for the same VLAN. Therefore, the uplink profile for a particular VLAN can contain multiple entries for “Teaming” with different a failover order and load balancing. When you assign the uplink profile to a logical switch, the specific teaming profile is chosen.
 - The manager VM and the controller VM function are combined, which results in three NSX-T manager VMs being deployed. If on the same subnet, they use an internal network load balancer. If across different subnets, an external load balancer is required.
@@ -72,7 +72,7 @@ The VMware Identity Manager appliance must be deployed by the customer manually 
 | **Disk** | 200 GB |
 | **Disk type** | Thin provisioned |
 | **NetworkPrivate A** | Private A |
-{: caption="Table 3. NSX-T Manager - controller specifications" caption-side="bottom"}
+{: caption="Table 3. NSX-T Manager - controller specifications" caption-side="top"}
 
 The following figure shows the placement of the NSX managers in relation to the other components in this architecture.
 
@@ -93,7 +93,7 @@ The VMware Identity Manager appliance needs to be deployed by the customer manua
 
 The following table summarizes the requirements for a medium size environment, which is the recommended starting size for production workloads.
 
-| Resources | Manager x3 | Edge cluster x4 | Bare Metal Edge |
+| Resources | Manager x3 | Edge cluster x4 | Bare metal edge |
 |:--------- |:---------- |:--------------- |:--------------- |
 | **Medium size** | Virtual appliance | Virtual appliance | Physical Server |
 | **Number of vCPUs** | 6 | 4 | 8 |
@@ -101,7 +101,7 @@ The following table summarizes the requirements for a medium size environment, w
 | **Disk** | 200 GB vSAN/management NFS | 200 GB vSAN/management NFS | 200 GB |
 | **Disk type** | Thin provisioned | Thin provisioned | Physical |
 | **Network** | Private A | Private A | Private A |
-{: caption="Table 4. NSX-T component specification" caption-side="bottom"}
+{: caption="Table 4. NSX-T component specification" caption-side="top"}
 
 ## Distributed switch design
 {: #nsx-t-design-distr-switch}
@@ -117,7 +117,7 @@ VLANs are used to segment physical network functions. This design uses three VLA
 | VLAN 1 | Private A   | ESXi management, management, ESXi (TEP) |
 | VLAN 2 | Private B   | vSAN, NFS, NSX-T Edge (TEP), and vMotion|
 | VLAN 3 | Public      | Available for internet access |
-{: caption="Table 5. VLAN mapping to traffic types" caption-side="bottom"}
+{: caption="Table 5. VLAN mapping to traffic types" caption-side="top"}
 
 ## Naming conventions
 {: #nsx-t-design-naming}
@@ -136,7 +136,7 @@ The following naming conventions are used for deployment. For readability, only 
 | **IP address pools** | "instancename”-"dcname”-“clustername”-“primary-vlan-id”-esxi-tep-pool<br>"instancename”-"dcname”-“clustername”-“secondary-vlan-id”-edge-tep-pool<br>|
 | **Transport nodes profiles** | "instancename”-"dcname”-“clustername”-esxi-tpn-profile|
 | **Tier-0 and Tier-1 gateways** | "instancename”-"dcname”-“clustername”-T0-xxx (specific to the function, such as: workload, OpenShift, HCX)<br>"instancename”-"dcname”-“clustername”-T1-xxx |
-{: caption="Table 6. NSX-T design naming convention" caption-side="bottom"}
+{: caption="Table 6. NSX-T design naming convention" caption-side="top"}
 
 ## Transport zones and N-VDS
 {: #nsx-t-design-transport-zones}
@@ -150,7 +150,7 @@ Transport zones dictate which hosts and which VMs can participate in the use of 
 | **tz-esxi-public** | VLAN | nvds-public | Default |
 | **tz-esxi-private** | VLAN | nvds-private | NFS, vSAN, iSCSI-A&B Default |
 | **tz-edge-private** | VLAN | nvds-edge-private | Default |
-{: caption="Table 7. NSX-T transport zones and N-VDS" caption-side="bottom"}
+{: caption="Table 7. NSX-T transport zones and N-VDS" caption-side="top"}
 
 ## Transport nodes
 {: #nsx-t-design-transport-nodes}
@@ -161,7 +161,7 @@ Transport nodes define the physical server objects or VMs that participate in th
 |:------------------- |:------------ |:-------------- |:------------- |
 | **ESXi** | nvds-private<br>nvds-public | esxi-private-profile<br>esxi-public-profile | esxi-tep-pool |
 | **Edge Cluster** | nvds-edge-private<br>nvds-edge-public<br>nvds-private | edge-private-profile<br>edge-public-profile<br>edge-tep-profile | edge-tep-pool |
-{: caption="Table 8. NSX-T transport nodes" caption-side="bottom"}
+{: caption="Table 8. NSX-T transport nodes" caption-side="top"}
 
 ## Uplink profiles and teaming
 {: #nsx-t-design-uplink-profiles}
@@ -181,7 +181,7 @@ An uplink profile defines policies for the links from hypervisor hosts to NSX-T 
 | **esxi-private-profile** | default | iscsi-b<br>Failover order|Uplink-2 |   | 9000 |
 | **edge-public-profile**  | default | Load Balance source | uplink-1|uplink-2 | 1500 |
 | **edge-tep-profile**     | Storage VLAN | Failover order | uplink-1 |   | 9000 |
-{: caption="Table 9. NSX-T uplink profiles" caption-side="bottom"}
+{: caption="Table 9. NSX-T uplink profiles" caption-side="top"}
 
 ## VNI pools
 {: #nsx-t-design-vni-pools}
@@ -208,12 +208,12 @@ An NSX-T segment reproduces switching functions, broadcast, unknown unicast, mul
 | T0-public | Default | tz-edge-public |
 | T0-private | Default | tz-edge-private |
 | customer-workload  |   | tz-vm-overlay |
-{: caption="Table 10. NSX-T logical switches" caption-side="bottom"}
+{: caption="Table 10. NSX-T logical switches" caption-side="top"}
 
 ### Edge cluster
 {: #nsx-t-design-edge-cluster}
 
-Within this design, two virtual edge node clusters are provisioned, one for use by management and the other for customer workloads. There is a limitation of one T0 per Edge Transport Node, which means that a single Edge Node Cluster can support one T0 Gateway (in either Active/Standby or Active/Active). See the following figure which diagrams the functional components of an NSX-T edge cluster.
+Within this design, two virtual edge node clusters are provisioned, one for use by management and the other for customer workloads. There is a limitation of one T0 per Edge Transport Node, which means that a single Edge Node Cluster can support one T0 Gateway (in either Active/Standby or Active/Active). See the following figure which diagrams the functional components of an NSX-T edge services cluster.
 
 ![NSX-T Edge cluster example of T0 to T1 scale](../../images/vcsv4radiagrams-ra-nsx-t-edge-cluster-t0-to-t1-scale.svg "NSX-T Edge cluster example of T0 to T1 scale"){: caption="Figure 3. NSX-T Edge cluster example of T0 to T1 scale" caption-side="bottom"}
 
@@ -237,7 +237,7 @@ To provide Layer 3 connectivity between VMs connected to logical switches that a
 ### Preconfigured topologies
 {: #nsx-t-design-preconfig-topo}
 
-Workload to T1 to T0 gateway – virtual edge cluster
+Workload to T1 to T0 gateway – virtual edge services cluster
 
 ![NSX-T deployed topology virtual T0 Edge Gateway](../../images/vcsv4radiagrams-topology-1.svg "NSX-T deployed topology virtual T0 Edge Gateway"){: caption="Figure 5. NSX-T deployed topology virtual T0 Edge Gateway" caption-side="bottom"}
 

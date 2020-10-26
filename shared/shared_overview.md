@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-09-16"
+lastupdated: "2020-10-14"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -21,12 +21,12 @@ subcollection: vmwaresolutions
 # VMware Solutions Shared overview
 {: #shared_overview}
 
-{{site.data.keyword.vmwaresolutions_full}} Shared provides standardized and customizable deployment choices of VMware virtual data center environments. With VMware Solutions Shared virtual data center instances, you can quickly and seamlessly migrate or deploy VMware workloads to the cloud on top of IBM hosted VMware infrastructure. IBM provides a self-service on-demand VMware cloud computing platform with VMware vCloud Director running on {{site.data.keyword.cloud_notm}}. This Infrastructure as a Service (IaaS) on-demand offering provides the option to use specific virtual CPU (vCPU), storage, vRAM, Network, and IP, as needed.
+{{site.data.keyword.vmwaresolutions_full}} Shared provides standardized and customizable deployment choices of VMware® virtual data center environments. With VMware Solutions Shared virtual data center instances, you can quickly and seamlessly migrate or deploy VMware workloads to the cloud, on IBM-hosted VMware infrastructure. IBM provides a self-service on-demand VMware cloud computing platform with VMware vCloud Director running on {{site.data.keyword.cloud_notm}}. This Infrastructure as a Service (IaaS) on-demand offering provides the option to use specific virtual CPU (vCPU), storage, vRAM, Network, and IP, as needed.
 
 VMware Solutions Shared has the following IaaS subscription service types:
 
-* Multi-tenant On-Demand virtual data center instances
-* Multi-tenant Reserved virtual data center instances
+* Multi-tenant on-demand virtual data center instances
+* Multi-tenant reserved virtual data center instances
 
 You can manage the lifecycle of virtual data centers by using the VMware Solutions Shared offering. The following functions are supported when you use the vCloud Director Management console or public API:
 
@@ -99,23 +99,23 @@ The public IP addresses can be used for public facing vApps for inbound or outbo
 The service address can be used for access to {{site.data.keyword.cloud_notm}} infrastructure services on the {{site.data.keyword.cloud_notm}} internal private network, including the following services:
 
 * NTP
-* Windows operating system licensing and updates
-* Red Hat Enterprise Linux operating system licensing and updates
+* Windows® operating system licensing and updates
+* Red Hat® Enterprise Linux® operating system licensing and updates
 * Cloud Object Storage
 
 ### Storage
 {: #shared_overview-specs-storage}
 
-When you create or deploy vApps or VMs, you can select either an unencrypted or encrypted storage policy. There are five different tiers of storage available for each option, depending on the storage performance required:
+When you create or deploy vApps or VMs, you can select either an unencrypted or encrypted storage policy. Each option has five different tiers of storage available, depending on the storage performance required.
 
 #### Unencrypted storage policy options
 {: #shared_overview-specs-storage-unencrypted}
 
-* Standard: The storage tier with no maximum throughput. The number of IOPS/GB is not guaranteed.
-* 10 IOPS/GB: The storage tier with a maximum throughput of 10 IOPS/GB, the highest guaranteed performance.
-* 4 IOPS/GB: Storage tier with a maximum throughput of 4 IOPS/GB.
-* 2 IOPS/GB: Storage tier with a maximum throughput of 2 IOPS/GB.
-* 0.25 IOPS/GB: Storage tier with a maximum throughput of 0.25 IOPS/GB.
+* Standard - The storage tier with no maximum throughput. The number of IOPS/GB is not guaranteed.
+* 10 IOPS/GB - The storage tier with a maximum throughput of 10 IOPS/GB, the highest guaranteed performance.
+* 4 IOPS/GB - Storage tier with a maximum throughput of 4 IOPS/GB.
+* 2 IOPS/GB - Storage tier with a maximum throughput of 2 IOPS/GB.
+* 0.25 IOPS/GB - Storage tier with a maximum throughput of 0.25 IOPS/GB.
 
 Standard is the default policy for virtual data centers.
 {:note}  
@@ -131,16 +131,21 @@ Encryption enabled storage policies are available to all organization virtual da
 * 2 IOPS/GB - Encrypted: Storage tier with a maximum throughput of 2 IOPS/GB.
 * 0.25 IOPS/GB - Encrypted: Storage tier with a maximum throughput of 0.25 IOPS/GB.
 
-For information about VM encryption limitations for VMware Cloud Director 10.1, see [Enabling VM Encryption on Storage Policies of an Organization Virtual Data Center](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-80F58C1D-A97E-43FE-8E41-E9242A1D2332.html){:external}.
+For information about the VM encryption limitations for VMware Cloud Director 10.1, see [Enabling VM encryption on storage policies of an organization virtual data center](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-80F58C1D-A97E-43FE-8E41-E9242A1D2332.html){:external}.
 
-The encryption storage policies do not currently work with VM customizations. IBM is working closely with VMware to resolve this issue in a future release. In the meantime, you can use encryption storage policies after a VM is deployed and customized using the unencrypted storage policies. For more information, see [Switching between storage properties](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-change-properties-storage).
+The encryption storage policies do not currently work with VM customizations. IBM is working closely with VMware to resolve this issue in a future release. In the meantime, you can use encryption storage policies after a VM is deployed and customized by using the unencrypted storage policies. For more information, see [Switching between storage properties](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-change-properties-storage).
 {:note}
+
+### Maximum disk size
+{: #shared_overview-specs-disk-size}
+
+* The maximum disk size is 16 TBs per disk for 0.25 IOPS/GB, 2 IOPS/GB, 4 IOPS/GB, and Standard storage policies.
+* The maximum disk size is 4 TBs per disk for the 10 IOPs/GB storage policy.
 
 ### Maximum host capacity
 {: #shared_overview-specs-capacity}
 
-The following is the maximum host capacity for a single VM:
-
+The maximum host capacity for a single VM has the following specifications:
 * 80 vCPU
 * 1.5 TB RAM
 * Storage is not limited

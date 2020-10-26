@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-08-06"
+lastupdated: "2020-09-25"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -32,20 +32,20 @@ To view the instance summary:
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.  
 3. In the **vCenter Server instances** table, view the list of stretched clusters across multizone region that are provisioned in the selected user account.
 
-| Item        | Description       |  
-|:------------- |:------------- |
+| Item | Description |
+|:---- |:----------- |
 | Name | The name of the instance. |
 | Type | The type of vCenter Server instance. |
-| Version | The release version that the instance was deployed in, or upgraded to. |  
-| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |  
+| Version | The release version that the instance was deployed in, or upgraded to. |
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |
 | Creation time | The date and time when the instance was created. |
-| Status | The status of the instance. |   
+| Status | The status of the instance. |
 {: caption="Table 1. vCenter Server instance items" caption-side="top"}
 
-The instance can have a range of statuses.
+The instance can different statuses.
 
-| Status        | Description       |
-|:------------- |:------------- |
+| Status | Description |
+|:------ |:----------- |
 | Creating | The instance is being created. |
 | Building | The instance is being configured. |
 | Ready to use | The instance is ready to use. |
@@ -147,7 +147,7 @@ View network interface details for witness, management, and stretched vSAN clust
 | Description | The description of the VLAN.  |
 | Location | The data center location. |
 | Primary route | The primary route of the VLAN. |
-{: caption="Table 7. Network Interface - VLAN details for a stretched cluster across multizone region" caption-side="top"}
+{: caption="Table 7. Network interface - VLAN details for a stretched cluster across multizone region" caption-side="top"}
 
 Click **View Resource** to access the VLAN details.
 

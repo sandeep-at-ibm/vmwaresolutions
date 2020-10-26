@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-17"
 
 keywords: vCenter Server migrate instance, add account vCenter Server, migrate cloud account
 
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 # Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts
 {: #vc_addinstancetousraccount}
 
-VMware vCenter Server instances that are deployed in V2.5 and later releases in your {{site.data.keyword.cloud}} account are automatically added to your account and are managed by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
+VMware vCenter Server® instances that are deployed in V2.5 and later releases in your {{site.data.keyword.cloud}} account are automatically added to your account and are managed by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
 
 For instances that were deployed in V2.4 and earlier releases, you can migrate them to specified {{site.data.keyword.cloud_notm}} accounts for IAM-enabled user management.
 

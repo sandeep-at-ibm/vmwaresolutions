@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-09-24"
 
 keywords: VLAN ports, vmware solutions ports, ports usage vmware solutions
 
@@ -13,7 +13,6 @@ subcollection: vmwaresolutions
 ---
 
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -59,12 +58,12 @@ Review the following information about the ports described in the table:
 
 * Windows® Active Directory™ has two options: single Windows Virtual Service Instance (VSI) and two HA dedicated Windows Server virtual machines (VMs).
    For single Windows VSI, the VSI is in the primary subnet. For Windows server VMs, the VSIs are in the infrastructure VMs subnet.
-* IBM Cloud infrastructure services network includes the following subnets. For more information, see [IBM Cloud IP ranges](/docs/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges#ibm-cloud-ip-ranges).
+* {{site.data.keyword.cloud}} infrastructure services network includes the following subnets. For more information, see [IBM Cloud IP ranges](/docs/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-ibm-cloud-ip-ranges#ibm-cloud-ip-ranges).
   * 10.0.0.0/14
   * 10.198.0.0/15
   * 10.200.0.0/14
   * 161.26.0.0/16
-* IBM Cloud endpoint service network includes 166.8.0.0/14.
+* {{site.data.keyword.cloud_notm}} endpoint service network includes 166.8.0.0/14.
 
 For more information about OCP networking, see [About the OpenShift SDN network provider](https://docs.openshift.com/container-platform/4.4/networking/openshift_sdn/about-openshift-sdn.html){:external}.
 
@@ -84,24 +83,26 @@ For more information about OCP networking, see [About the OpenShift SDN network 
 | IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | | ICMP | Install and set up NSX Manager | |
 | IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | 443 | TCP | Set up and configure NSX Manager | HTTPS |
 | IBM CloudBuilder | Private primary subnet/<br>infrastructure VMs | NSX Manager | Infrastructure VMs | 80 | TCP | Set up and configure NSX Manager | HTTP |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure provisioning API | IBM Cloud infrastructure services network | 443 | TCP | Order and provision IBM Cloud infrastructure resources | HTTPS |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure DNS service | IBM Cloud infrastructure services network | 53 | UDP™ | Use IBM Cloud infrastructure DNS service | |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure endurance storage  | IBM Cloud infrastructure services network | Any | ICMP and TCP | Set up endurance storage for ESXi host | |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud Service - Cloud Object Storage | IBM Cloud endpoint service network | 443 | TCP | Use IBM Cloud Object Storage service | HTTPS |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud Service - Rabbit MQ | IBM Cloud endpoint service network | 31989 | TCP | Use IBM Cloud Rabbit MQ service | |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | IBM Cloud Service - LogDNA | IBM Cloud endpoint service network | 443 | TCP | Use IBM Cloud LogNDA service | HTPPS |
-| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure DNS service | IBM Cloud infrastructure services network | 53 | UDP | Use IBM Cloud infrastructure DNS service | |
-| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | |
-| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure WSUS service | IBM Cloud infrastructure services network | 80 | TCP | Use IBM Cloud infrastructure WSUS service | HTTP |
-| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | IBM Cloud infrastructure Windows KMS service | IBM Cloud infrastructure services network | 1688 | TCP | Use IBM Cloud infrastructure Windows KMS service | |
-| ESXi host | Private primary subnet | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | |
-| vCenter Server | Infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | |
-| NSX Manager | Infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | |
-| ESXi host shared storage | ESXi shared storage | IBM Cloud infrastructure endurance storage | IBM Cloud infrastructure services network | 1116352049 | TCP and UDP | Use IBM Cloud infrastructure endurance storage | |
-| IBM CloudBuilder/<br>IBM CloudDriver/<br>Windows Active Directory (VSI) | Private primary subnet | IBM Cloud infrastructure engine | IBM Cloud infrastructure services network | 80 | TCP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) | |
-| IBM Cloud infrastructure engine | IBM Cloud infrastructure services network | IBM CloudBuilder/<br>IBM CloudDriver/<br>Windows Active Directory (VSI) | Private primary subnet | Any | TCP and UDP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) | |
-| IBM Cloud infrastructure engine | IBM Cloud infrastructure services network | ESXi host management0 | Private primary subnet | 623 | TCP and UDP | IBM Cloud infrastructure IPMI      | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure provisioning API | {{site.data.keyword.cloud_notm}} infrastructure services network | 443 | TCP | Order and provision {{site.data.keyword.cloud_notm}} infrastructure resources | HTTPS |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure DNS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 53 | UDP™ | Use {{site.data.keyword.cloud_notm}} infrastructure DNS service | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure endurance storage | {{site.data.keyword.cloud_notm}} infrastructure services network | Any | ICMP and TCP | Set up endurance storage for ESXi host | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Cloud Object Storage | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} Object Storage service | HTTPS |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Rabbit MQ | {{site.data.keyword.cloud_notm}} endpoint service network | 31989 | TCP | Use {{site.data.keyword.cloud_notm}} Rabbit MQ service | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - LogDNA | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} LogNDA service | HTPPS |
+| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure DNS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 53 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure DNS service | |
+| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | |
+| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure WSUS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 80 | TCP | Use {{site.data.keyword.cloud_notm}} infrastructure WSUS service | HTTP |
+| Windows Active Directory | Private primary subnet/<br>infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure Windows KMS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 1688 | TCP | Use {{site.data.keyword.cloud_notm}} infrastructure Windows KMS service | |
+| ESXi host | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | |
+| vCenter Server | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | |
+| NSX Manager | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | |
+| NSX Manager | Infrastructure VMs | TEP subnet | TEP traffic | 443 |  |  |  |
+| NSX Manager | Infrastructure VMs | Customer edge subnet | Customer edge private traffic | 443 |  |  |  |
+| ESXi host shared storage | ESXi shared storage | {{site.data.keyword.cloud_notm}} infrastructure endurance storage | {{site.data.keyword.cloud_notm}} infrastructure services network | 111, 635, and 2049 | TCP and UDP | Use {{site.data.keyword.cloud_notm}} infrastructure endurance storage | |
+| IBM CloudBuilder/<br>IBM CloudDriver/<br>Windows Active Directory (VSI) | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | 80 | TCP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) | |
+| {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | IBM CloudBuilder/<br>IBM CloudDriver/<br>Windows Active Directory (VSI) | Private primary subnet | Any | TCP and UDP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) | |
+| {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | ESXi host management0 | Private primary subnet | 623 | TCP and UDP | {{site.data.keyword.cloud_notm}} infrastructure IPMI | |
 {: caption="Table 2. Ports for deployment and day 2 operations" caption-side="top"}
 
 ## Ports that are used by VMware
@@ -145,7 +146,7 @@ The following table provides information about the Caveonix RiskForesight™ por
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
 | Caveonix | New subnet ordered in private VLAN | vCenter Server | Infrastructure VMs | 443 | TCP | Use vCenter Server REST service | HTTPS |
 | Caveonix | New subnet ordered in private VLAN | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
-| Caveonix | New subnet ordered in private VLAN | IBM Cloud infrastructure Redis service | IBM Cloud infrastructure services network | 6379 | TCP | Use IBM Cloud infrastructure Redis service | |
+| Caveonix | New subnet ordered in private VLAN | {{site.data.keyword.cloud_notm}} infrastructure Redis service | {{site.data.keyword.cloud_notm}} infrastructure services network | 6379 | TCP | Use {{site.data.keyword.cloud_notm}} infrastructure Redis service | |
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | Caveonix | New subnet ordered in private VLAN | 1337 | TCP | Set up and configure Caveonix | |
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | Caveonix | New subnet ordered in private VLAN | 8080 | TCP | Set up and configure Caveonix | |
 {: caption="Table 4. Caveonix RiskForesight ports" caption-side="top"}
@@ -196,13 +197,13 @@ The following table provides information about the Hytrust® CloudControl™, Hy
 
 | Source | Subnet/IP range | Target | Subnet/IP range | Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:-----|:---------|:--------|:--------|
-| Hytrust CloudControl | Infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | NTP |
+| Hytrust CloudControl | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
 | Hytrust CloudControl | Infrastructure VMs | Windows Active Directory and DNS server | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
 | Hytrust CloudControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | | ICMP | Ping | Ping |
 | Hytrust CloudControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 443 | TCP | Access Windows Active Directory | HTTPS |
-| Hytrust DataControl | Infrastructure VMs | Windows Active Directory | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | NTP |
+| Hytrust DataControl | Infrastructure VMs | Windows Active Directory | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
 | Hytrust DataControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
-| Hytrust KeyControl | Infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123  | UDP | Use IBM Cloud infrastructure NTP service | NTP |
+| Hytrust KeyControl | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123  | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
 | Hytrust KeyControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
 {: caption="Table 8. Hytrust CloudControl, Hytrust DataControl, and Hytrust KeyControl ports" caption-side="top"}
 
@@ -213,7 +214,7 @@ The following table provides information about the IBM Spectrum® Protect Plus p
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
-| IBM Spectrum Protect Plus | Infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | NTP |
+| IBM Spectrum Protect Plus | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
 {: caption="Table 9. IBM Spectrum Protect Plus ports" caption-side="top"}
 
 ### Ports for Juniper vSRX
@@ -236,7 +237,7 @@ The following table provides information about the Red Hat OpenShift ports.
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
 | OCP | New subnet ordered in private VLAN | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
 | OCP | New subnet ordered in private VLAN | vCenter Server | Infrastructure VMs | 443 | TCP | Use vCenter Server REST service | HTTPS |
-| OCP | New subnet ordered in private VLAN | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | NTP |
+| OCP | New subnet ordered in private VLAN | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
 | OCP | New subnet ordered in private VLAN | OCP cluster network | OCP internal IP range 10.128.0.0/14 | 5443/8443 | TCP | OCP cluster management | WEBREST API |
 | OCP edge public IPs | New subnet ordered in public VLAN | Public websites required for OpenShift installation[^osinst] | | 80/123/443 | TCP and UDP | Time service, OpenShift installation content, and images | NTP/HTTP/HTTPS |
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | OCP | New subnet ordered in private VLAN | 22 | TCP | Set up and configure OCP | SSH |
@@ -252,18 +253,18 @@ The following table provides information about about the Veeam ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
-| Veeam | Private primary subnet | IBM Cloud infrastructure DNS service | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use IBM Cloud infrastructure DNS service | UDP |
-| Veeam | Private primary subnet | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP service | NTP |
-| Veeam | Private primary subnet | IBM Cloud infrastructure Service - Provision Windows VSI | IBM Cloud infrastructure services network | | ICMP | Use infrastructure services to provision Windows VSI for Veeam | Ping |
-| Veeam | Private primary subnet | IBM Cloud infrastructure Service - Provision Windows VSI | IBM Cloud infrastructure services network | 10000 | TCP | Use infrastructure services to provision Windows VSI for Veeam | |
-| Veeam | Private primary subnet | IBM Cloud infrastructure Service - Provision Windows VSI | IBM Cloud infrastructure services network | 10001 | TCP | Use infrastructure services to provision Windows VSI for Veeam | |
-| Veeam | Private primary subnet | IBM Cloud infrastructure Service - Provision Windows VSI | IBM Cloud infrastructure services network | 88 | TCP and UDP | Use infrastructure services to provision Windows VSI for Veeam | |
-| Veeam | Private primary subnet | IBM Cloud infrastructure Windows KMS service | IBM Cloud infrastructure services network | 1688 | TCP | Use IBM Cloud infrastructure Windows KMS service | |
-| Veeam | Private primary subnet | IBM Cloud Service - Cloud Object Storage | IBM Cloud endpoint service network | 443 | TCP | Use IBM Cloud Object Storage service | HTTPS |
-| Veeam | Private primary subnet | IBM Cloud infrastructure WSUS service | IBM Cloud infrastructure services network | 80 | TCP | Use IBM Cloud infrastructure WSUS service | HTPP |
-| Veeam | Private primary subnet | IBM Cloud infrastructure endurance storage | IBM Cloud infrastructure services network | 3260 | TCP | Use IBM Cloud infrastructure endurance storage | ISCSI |
-| IBM Cloud infrastructure Service - Provision Windows VSI | IBM Cloud infrastructure services network 10.0.0.0/14 | Veeam | Private primary subnet | 8051 | TCP | EMC2 (Legato) Networker or Sun Solstice Backup | |
-| IBM Cloud infrastructure Service - Provision Windows VSI | IBM Cloud infrastructure services network 10.200.0.0/14 | Veeam | Private primary subnet | | ICMP | ICMP | Ping |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure DNS service | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure DNS service | UDP |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure service - Provision Windows VSI | {{site.data.keyword.cloud_notm}} infrastructure services network | | ICMP | Use infrastructure services to provision Windows VSI for Veeam | Ping |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure service - Provision Windows VSI | {{site.data.keyword.cloud_notm}} infrastructure services network | 10000 | TCP | Use infrastructure services to provision Windows VSI for Veeam | |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure service - Provision Windows VSI | {{site.data.keyword.cloud_notm}} infrastructure services network | 10001 | TCP | Use infrastructure services to provision Windows VSI for Veeam | |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure service - Provision Windows VSI | {{site.data.keyword.cloud_notm}} infrastructure services network | 88 | TCP and UDP | Use infrastructure services to provision Windows VSI for Veeam | |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure Windows KMS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 1688 | TCP | Use {{site.data.keyword.cloud_notm}} infrastructure Windows KMS service | |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} service - Cloud Object Storage | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} Object Storage service | HTTPS |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure WSUS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 80 | TCP | Use {{site.data.keyword.cloud_notm}} infrastructure WSUS service | HTPP |
+| Veeam | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure endurance storage | {{site.data.keyword.cloud_notm}} infrastructure services network | 3260 | TCP | Use {{site.data.keyword.cloud_notm}} infrastructure endurance storage | ISCSI |
+| {{site.data.keyword.cloud_notm}} infrastructure Service - Provision Windows VSI | {{site.data.keyword.cloud_notm}} infrastructure services network 10.0.0.0/14 | Veeam | Private primary subnet | 8051 | TCP | EMC2 (Legato) Networker or Sun Solstice Backup | |
+| {{site.data.keyword.cloud_notm}} infrastructure Service - Provision Windows VSI | {{site.data.keyword.cloud_notm}} infrastructure services network 10.200.0.0/14 | Veeam | Private primary subnet | | ICMP | ICMP | Ping |
 {: caption="Table 12. Veeam ports" caption-side="top"}
 
 ### Ports for vRealize Operations and Log Insight
@@ -285,7 +286,7 @@ The following table provides information about the vRealize Operations and Log I
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vROps | New subnet ordered in private VLAN | 22 | TCP | Set up and configure vROps | SSH |
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vROps | New subnet ordered in private VLAN | 443 | TCP | Set up and configure vROps | HTTPS |
 | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | vROps | New subnet ordered in private VLAN | 9543 | TCP | Set up and configure vROps | |
-{: caption="Table 13. vROps ports for NSX-V instance" caption-side="top"}
+{: caption="Table 13. vROps ports for NSX-V instances" caption-side="top"}
 
 The following table provides information about the vROps ports for vCenter Server with NSX-T instances.
 
@@ -309,9 +310,9 @@ The following table provides information about the vROps ports for vCenter Serve
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vROps | New subnet ordered in private VLAN | 9543 | TCP | Set up and configure vROps | HTTPS |
 | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | vROps | New subnet ordered in private VLAN | 9543 | TCP | Set up and configure vROps | |
 | Service edge | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | TCP and UDP | Use Windows DNS service | DNS |
-| Service edge | Infrastructure VMs | IBM Cloud infrastructure DNS service | IBM Cloud infrastructure services network | 53 | UDP | Use IBM Cloud infrastructure NTP | DNS |
-| Service edge | Infrastructure VMs | IBM Cloud infrastructure NTP service | IBM Cloud infrastructure services network | 123 | UDP | Use IBM Cloud infrastructure NTP | NTP |
-{: caption="Table 14. vROps ports for NSX-T instance" caption-side="top"}
+| Service edge | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure DNS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 53 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP | DNS |
+| Service edge | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP | NTP |
+{: caption="Table 14. vROps ports for NSX-T instances" caption-side="top"}
 
 For more information about port requirements for vROPs, see [TCP and UDP ports required to access VMware vRealize Operations Manager](https://kb.vmware.com/s/article/52964){:external}.
 
@@ -332,4 +333,4 @@ For more information about Zerto networking, see [Zerto - prerequisites and requ
 ## Related links
 {: #vmwaresol_ports-related}
 
-* [IBM Cloud for VMware Solutions network architecture](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood#under_the_hood-network)
+* [VMware Solutions network architecture](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood#under_the_hood-network)

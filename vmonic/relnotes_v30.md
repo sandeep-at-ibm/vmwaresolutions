@@ -28,23 +28,23 @@ This release includes new features, component updates, usability enhancements, a
 ## End of Support for VMware Cloud Foundation on IBM Cloud
 {: #relnotes_v30-vcf-eos}
 
-In an effort to consolidate our offerings for a better customer experience, the {{site.data.keyword.vmwaresolutions_short}} platform will no longer offer VMware Cloud Foundation effective May 13, 2020.
+To consolidate our offerings for a better customer experience, the {{site.data.keyword.vmwaresolutions_short}} platform will no longer offer VMware® Cloud Foundation effective May 13, 2020.
 
-Moving forward, all customers will be directed to VMware vCenter Server on {{site.data.keyword.cloud_notm}}, our flagship VMware Software-Defined Data Center solution on {{site.data.keyword.cloud_notm}} bare metal servers.
+Moving forward, all customers are directed to VMware vCenter Server® on {{site.data.keyword.cloud_notm}}, our flagship VMware Software-Defined Data Center solution on {{site.data.keyword.cloud_notm}} bare metal servers.
 
 Existing customers who use VMware Cloud Foundation will be assisted to convert to VMware vCenter Server by the end-of-support date of May 13, 2020.
 
-After May 13 2020, management functions for VMware Cloud Foundation instances will no longer be available from the {{site.data.keyword.vmwaresolutions_short}} console until the instances have been converted to VMware vCenter Server. Customers who choose not to have their VMware Cloud Foundation instances migrated or converted to VMware vCenter Server can access their instances from the {{site.data.keyword.cloud_notm}} infrastructure console.
+After May 13 2020, management functions for VMware Cloud Foundation instances will no longer be available from the {{site.data.keyword.vmwaresolutions_short}} console until the instances are converted to VMware vCenter Server. Customers who choose not to have their VMware Cloud Foundation instances migrated or converted to VMware vCenter Server can access their instances from the {{site.data.keyword.cloud_notm}} infrastructure console.
 
 ## Removed support for Broadwell 2-CPU servers
 {: #relnotes_v30-broadwell}
 
 Starting with the V3.0 release, Broadwell 2-CPU servers are no longer available for deployment for new vCenter Server, vCenter Server with Hybridity Bundle, vCenter Server with NSX-T, and vSphere on {{site.data.keyword.cloud_notm}} instances and clusters. You can still add servers to existing clusters.
 
-## Network file system operation enhancements
+## Network File System operation enhancements
 {: #relnotes_v30-nfs}
 
-Starting with the V3.0 release you can simultaneously add or remove NFS storage and ESXi servers to clusters that are in the **Ready to use** state. For example, you can add or remove an ESXi server in a cluster and add or remove NFS storage in another cluster. This applies to all vCenter Server and vCenter Server with NSX-T instances.
+Starting with the V3.0 release you can simultaneously add or remove NFS storage and ESXi servers to clusters that are in the **Ready to use** state. For example, you can add or remove an ESXi server in a cluster and add or remove NFS storage in another cluster. This update applies to all vCenter Server and vCenter Server with NSX-T instances.
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v30-vcs}
@@ -56,14 +56,14 @@ This release applies the following upgrades and improvements:
 * vCenter Server Appliance 6.7 Update 1b (build 6.7.0-11727113)
 * Platform Services Controller 6.7 Update 1b (build 6.7.0-11727113)
 
-The Windows software that is ordered for Microsoft Active Directory (AD) and DNS (Domain Name System) services is upgraded to Windows Server 2016 for both configuration options: the VSIs (Virtual Server Instances) and the two highly-available Windows VMs.
+The Windows software that is ordered for Microsoft® Active Directory (AD) and DNS (Domain Name System) services is upgraded to Windows® Server 2016 for both configuration options: the VSIs (Virtual Server Instances) and the two highly available Windows VMs.
 
-The AD domain functional level remains at 2008 to allow for backward compatibility with any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
+The AD domain functional level remains at 2008 to allow for compatibility with an earlier version for any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
 
 ### vSAN storage enhancements
 {: #relnotes_v30-vcs-vsan}
 
-* When using vSAN storage, the number of {{site.data.keyword.cloud_notm}} bare metal servers that you can order can now be greater than four. This applies to all vCenter Server, vCenter Server with Hybridity, and vCenter Server with NSX-T instances.
+* When you use vSAN storage, the number of {{site.data.keyword.cloud_notm}} bare metal servers that you can order can now be greater than four. This update applies to all vCenter Server, vCenter Server with Hybridity, and vCenter Server with NSX-T instances.
 * Starting with the V3.0 release, an M.2 solid-state drive is ordered with your vSAN storage instance. You can order up to 10 capacity disks or a total of 12 capacity disks if you select the **High Performance with Intel Optane** option.
 
 ## Updates for add-on services
@@ -106,9 +106,9 @@ You are now able to add Zerto on {{site.data.keyword.cloud_notm}} on instances t
 
 ## New and updated documentation
 
-* Documentation is now available to assist you in upgrading {{site.data.keyword.vmwaresolutions_short}} components to VMware vSphere 6.7. This upgrade is required if you want to continue to benefit from {{site.data.keyword.vmwaresolutions_short}} automation.
+* Documentation is now available to assist you in upgrading {{site.data.keyword.vmwaresolutions_short}} components to VMware vSphere® 6.7. This upgrade is required if you want to continue to benefit from {{site.data.keyword.vmwaresolutions_short}} automation.
 * Reference documentation is now available to provide you with user IDs that {{site.data.keyword.vmwaresolutions_short}} maintains for use by {{site.data.keyword.cloud_notm}} automation. Possible messages that display in your instance history logs are also available for your review.
-* The **Reboot/Control** permission has been added to the table describing required permissions for the IBM Cloud infrastructure account.
+* The **Reboot/Control** permission is added to the table that describes required permissions for the IBM Cloud infrastructure account.
 * New reference documentation is available for the following APIs.
   * List all history messages for a specified VMware vCenter Server instance
   * Add shared storages to a specified cluster

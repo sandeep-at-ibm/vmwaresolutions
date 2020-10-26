@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-09-16"
 
 subcollection: vmwaresolutions
 
@@ -40,13 +40,13 @@ If you need to revert, and you can't SSH to the vSphere ESXi host, then you need
 
 Use the ID and password that are listed in the {{site.data.keyword.cloud_notm}} control window with the IPMI IP address to log in to the IPMI web interface. You need to be connected to the data center where the host is located through VPN. For more information, see [Getting started with IBM Cloud SSL Virtual Private Networking](/docs/iaas-vpn?topic=iaas-vpn-getting-started).
 
-1. Go to the Device Details, Remote Mgmt page for the vSphere ESXi host and select **Actions** > **KVM Console**. Another window opens for you to enter the IPMI User and Password.
-2. Select **Remote Control** > **iKVM/HTML5** and click **iKVM/HTML5** to relaunch. You can now be able to access the vSphere ESXi host’s console.
+1. Go to the **Device Details, Remote Mgmt** page for the vSphere ESXi host and select **Actions** > **KVM Console**. Enter the IPMI user and password.
+2. Select **Remote Control** > **iKVM/HTML5** and click **iKVM/HTML5** to restart. You can now be able to access the vSphere ESXi host’s console.
 3. If the host is responding to commands, use **ALT-F1** in the console to access the ESXi host console. Use the host credentials to log in.
 4. If the host is not responding, use the IPMI menus to power cycle the host.
 5. Watch the HTML5 console carefully as the host restarts. You have only a few seconds to go into recovery mode when ESXi restarts.
 6. Press **CMD + R** keys simultaneously to enter recovery mode.
-7. Type **“Y”** to enter recovery mode and boot the ESXi server with the previous version.
+7. Type **Y** to enter recovery mode and boot the ESXi server with the previous version.
 8. Monitor its progress via the console. The boot can take 10 - 20 minutes.
 
 **Next topic:** [Types of VMware software updates](/docs/vmwaresolutions?topic=vmwaresolutions-vum-type-updates)

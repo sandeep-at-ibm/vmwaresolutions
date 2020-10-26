@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-14"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -23,11 +23,11 @@ The HCX client side can install on any version of vSphere supported by HCX assum
 
 | Component | CPU count | Memory (GB) | Disk (GB) |
 |--------|--------|---------|-------|
-| HCX Manager | 4 | 12G |  60G |
-| HCX Interconnect (HCX-IX) | 4 | 3G |  2G |
-| HCX Network Extension (HCX-NE) | 4 | 3G |  2G |
-| HCX WAN Optimizer (HCX-WAN) | 8 | 14G |  100G |
-{: caption="Table 1. Requirements" caption-side="bottom"}
+| HCX Manager | 4 | 12 | 60 |
+| HCX Interconnect (HCX-IX) | 4 | 3 | 2 |
+| HCX Network Extension (HCX-NE) | 4 | 3 | 2 |
+| HCX WAN Optimizer (HCX-WAN) | 8 | 14 | 100 |
+{: caption="Table 1. Requirements" caption-side="top"}
 
 ## Client licensing
 {: #hcxclient-vcs-client-deployment-licensing}
@@ -70,11 +70,11 @@ The client-side HCX is user-deployed and it requires administrator level permiss
 
 A one-time use registration key is also provided. Use the following steps to configure the use registration.
 
-1. Download HCX client (enterprise) OVA from the link provided in the
+Download HCX client (enterprise) OVA from the link provided in the
 cloud side HCX UI.
-    1. Log in to the cloud side HCX UI by using the HCX registration UI provided by IBM.
-    2. Use the cloud vCenter ID and password to log in to the UI.
-    3. On the **Administration** tab, select **request download link** to download the client-side OVA. Use a “jump box” that is local to the source vCenter where the OVA is deployed to complete this step.
+1. Log in to the cloud side HCX UI by using the HCX registration UI provided by IBM.
+2. Use the cloud vCenter ID and password to log in to the UI.
+3. On the **Administration** tab, select **request download link** to download the client-side OVA. Use a “jump box” that is local to the source vCenter where the OVA is deployed to complete this step.
 
 ## Installing and configuring HCX on the source
 {: #hcxclient-vcs-client-deployment-install-cfg-src}
@@ -107,12 +107,12 @@ Install the HCX Manager appliance in the on-premises vCenter.
 | Field                    | Value           |
 |--------------------------|-----------------|
 | Hostname                 | HCM_1           |
-| Network 1 IPv4 Address   | 192.168.200.101 |
-| Network 1 IPv4 Prefix    | 24              |
-| Default IPv4 Gateway     | 192.168.200.1   |
-| Network 1 IPv6 Address   |                 |
-| Network 1 IPv6 Prefix    |                 |
-{: caption="Table 2. Sample values for network properties" caption-side="bottom"}
+| Network 1 IPv4 address   | 192.168.200.101 |
+| Network 1 IPv4 prefix    | 24              |
+| Default IPv4 gateway     | 192.168.200.1   |
+| Network 1 IPv6 address   |                 |
+| Network 1 IPv6 prefix    |                 |
+{: caption="Table 2. Sample values for network properties" caption-side="top"}
 
 8. Review the vService bindings page. Click **Next** to continue.
 9. On the **Ready to complete** page, follow these steps:

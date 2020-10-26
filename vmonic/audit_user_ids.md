@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-09-22"
 
 keywords: user IDs vCenter, PSC user, user ID service
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.vmwaresolutions_full}} maintains a set of users in your account for use by {{site.data.keyword.cloud_notm}} automation when you run operations such as adding hosts, clusters, or storage to your VMware instance. Users in your account can also be used for installation and configuration of services by {{site.data.keyword.cloud_notm}} services automation. Review the following sections for {{site.data.keyword.cloud_notm}} automation user IDs.
 
-VMware instance operations fail if the IBM user IDs are deleted, disabled, or if their passwords are changed.
+VMware instance operations fail if IBM user IDs are deleted, disabled, or if their passwords are changed.
 {:important}
 
 ## vCenter and Platform Services Controller user IDs
@@ -55,8 +55,8 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| IBM      | `ic4vroot`     | Used post deployment to add more NFS storage, configure routes for that storage, and run all server validation code. |
-| Customer | `root`         | Created for customer use only. |
+| IBM      | `ic4vroot`   | Used post deployment to add more NFS storage, configure routes for that storage, and run all server validation code. |
+| Customer | `root`       | Created for customer use only. |
 {: caption="Table 3. ESXi host user IDs" caption-side="top"}
 
 ## Microsoft Active Directory user IDs
@@ -64,7 +64,7 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
-| IBM      | `automation`    | Used to add a host, add a virtual machine for service, and set up Active Directory and DNS entries. |
+| IBM      | `automation`  | Used to add a host, add a virtual machine for service, and set up Active Directory and DNS entries. |
 | Customer | Administrator | Created for customer use only. |
 {: caption="Table 4. Active Directory user IDs" caption-side="top"}
 
@@ -73,27 +73,26 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 {: #audit_user_ids-services}
 
 | User ID                                    | Description |
-|:-------------------------------------------|:----------- |
-| prod-BigIP-``dynamicID``-@``domainName`` | Used for installation and configuration of the F5 on {{site.data.keyword.cloud_notm}} service. |
-| prod-Caveonix-``dynamicID``-@``domainName`` | Used for installation and configuration of the Caveonix RiskForesight service. |
-| prod-Fortigate-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Security Appliance (Deprecated) service. |
-| prod-FortigateVM-``dynamicID``-@``domainName`` | Used for installation and configuration of the FortiGate Virtual Appliance service. |
-| prod-HyTrustCC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust CloudControl service. |
-| prod-HyTrustDC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust DataControl service. |
-| prod-HyTrustKC-``shortID``-@``domainName`` | Used for installation and configuration of the HyTrust KeyControl service. |
-| prod-KMIPAdapter-``dynamicID``-@``domainName`` | Used for installation and configuration of the KMIP for VMware service. |
-| prod-ICP-``dynamicID``-@``domainName`` | Used for installation and configuration of the {{site.data.keyword.cloud_notm}} Private Hosted service. |
-| prod-SPPlus-``dynamicID``-@``domainName`` | Used for installation and configuration of the IBM Spectrum Protect Plus service. |
-| prod-Veeam-``dynamicID``-@``domainName`` | Used for installation and configuration of the Veeam service. |
-| prod-HCX-``dynamicID``-@``domainName`` | Used for installation and configuration of the VMware HCX service. |
-| prod-Zerto-``dynamicID``-@``domainName`` | Used for installation and configuration of the Zerto service. |
+|:------------------------------------------ |:----------- |
+| `prod-BigIP-dynamicID-@domainName` | Used for installation and configuration of the F5 service. |
+| `prod-Caveonix-dynamicID-@domainName` | Used for installation and configuration of the Caveonix RiskForesight service. |
+| `prod-Fortigate-dynamicID-@domainName` | Used for installation and configuration of the FortiGate Security Appliance (Deprecated) service. |
+| `prod-FortigateVM-dynamicID-@domainName` | Used for installation and configuration of the FortiGate Virtual Appliance service. |
+| `prod-HyTrustCC-shortID-@domainName` | Used for installation and configuration of the HyTrust CloudControl service. |
+| `prod-HyTrustDC-shortID-@domainName` | Used for installation and configuration of the HyTrust DataControl service. |
+| `prod-HyTrustKC-shortID-@domainName` | Used for installation and configuration of the HyTrust KeyControl service. |
+| `prod-KMIPAdapter-dynamicID-@domainName` | Used for installation and configuration of the KMIP for VMware service. |
+| `prod-ICP-dynamicID-@domainName` | Used for installation and configuration of the {{site.data.keyword.cloud_notm}} Private Hosted service. |
+| `prod-SPPlus-dynamicID-@domainName` | Used for installation and configuration of the IBM Spectrum Protect Plus service. |
+| `prod-Veeam-dynamicID-@domainName` | Used for installation and configuration of the Veeam service. |
+| `prod-HCX-dynamicID-@domainName` | Used for installation and configuration of the VMware HCX service. |
+| `prod-Zerto-dynamicID-@domainName` | Used for installation and configuration of the Zerto service. |
 {: caption="Table 5. Service user IDs" caption-side="top"}
 
-Where:
-
-* ``dynamicID``: the 8 - 10 characters that generated dynamically during the service installation.
-* ``shortID``: the 5 characters that generated dynamically during the service installation.
-* ``domainName``: the domain name of your instance.
+In the previous table, the following notations are used:
+* `dynamicID`: the 8 - 10 characters that generated dynamically during the service installation.
+* `shortID`: the 5 characters that generated dynamically during the service installation.
+* `domainName`: is the domain name of your instance.
 
 ## Related links
 {: #audit_user_ids-related}

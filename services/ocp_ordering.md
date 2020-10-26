@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-07-14"
+lastupdated: "2020-08-27"
 
 keywords: Red Hat OpenShift for VMware, OpenShift configuration, order OpenShift
 
@@ -42,7 +42,7 @@ Red Hat OpenShift depends on DNS to function properly. There is a wildcard zone
 
 Because the Red Hat OpenShift web console runs as an application within Red Hat OpenShift, your system must properly resolve DNS names before you can connect to the Red Hat OpenShift web console. You must complete the following steps before you open the Red Hat OpenShift console:
 
-1. Ensure you are connected to your environment by using the IBM Cloud infrastructure VPN.
+1. Ensure you are connected to your environment by using the {{site.data.keyword.cloud}} infrastructure VPN.
 
 2. Ensure the system that you will be using to connect to the Red Hat OpenShift web console can properly resolve hostnames in the DNS zone for your VMware environment. If you have an existing DNS infrastructure, it is recommended that you configure the DNS delegation so that queries for hostnames within the VMware instance's root zone are handled by the AD DNS server that is running within your VMware environment.
 

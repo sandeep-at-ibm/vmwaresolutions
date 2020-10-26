@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-07-06"
+lastupdated: "2020-09-30"
 
 subcollection: vmwaresolutions
 
@@ -28,11 +28,11 @@ vCenter Server cluster requires the
 following minimum specification.
 
 | Item | NFS deployment | vSAN deployment |
-|:-- |:---- |:---- |
-| Number of servers | 3 | 4
+|:---- |:-------------- |:--------------- |
+| Number of servers | 3 | 4 |
 | CPU | 28 Cores 2.2 GHz | 28 Cores 2.2 GHz |
-| Memory | 384 GB | 384 GB |
-| Storage |2,000 GB 2 IOPS/GB Management, 2,000 GB 4IOPS/GB Workload, 4,000 GB 4 IOPS/GB | Min 960-GB SSD x2
+| Memory (GB) | 384 | 384 |
+| Storage |2,000 GB 2 IOPS/GB Management </br>2,000 GB 4 IOPS/GB Workload </br>4,000 GB 4 IOPS/GB | Min 960-GB SSD x2 |
 {: caption="Table 1. vCenter Server specification for Red Hat OpenShift" caption-side="top"}
 
 In addition to the Red Hat OpenShift hardware requirements, you must create persistent volumes in the Red Hat OpenShift environment to store images from the container register or customer workloads.
@@ -59,7 +59,7 @@ configured as an active-passive pair of X-Large NSX Edge devices.
 The Quad-Large NSX Edge was chosen and as part of the configuration process, the NSX Edge is connected to the IBM Cloud public and private VLAN.
 
 | Component | Configuration |
-|:-----------:|:---------------:|
+|:--------- |:------------- |
 | CPU       | 6 vCPU        |
 | RAM       | 8 GB          |
 | Disk      | 4.5 GB VMDK resident on shared storage with 4 GB swap |
@@ -67,13 +67,11 @@ The Quad-Large NSX Edge was chosen and as part of the configuration process, the
 
 Since the NSX Edges are configured as active/passive in either the internal or dedicated deployment, vSphere Distributed Resource Scheduler (DRS) anti-affinity rules must be created by the user to ensure that NSX Edges do not run on the same host as their respective peer appliance.
 
-
-| Field     | Value         |
-|:-----------:|:---------------:|
-| Name      | NSX Edge OpenShift |
-| Type      | Separate virtual machines |
-| Members   | openshift-edge-0 |
-|           | openshift-edge-1 |
+| Field   | Value         |
+|:------- |:------------- |
+| Name    | NSX Edge OpenShift |
+| Type    | Separate VMs |
+| Members | `openshift-edge-0` </br>`openshift-edge-1` |
 {: caption="Table 3. vSphere Distributed Resource Scheduler rules" caption-side="top"}
 
 ## NSX Load Balancer specifications
@@ -82,11 +80,11 @@ Since the NSX Edges are configured as active/passive in either the internal or d
 Within the OpenShift environment, two load balancers for accessing the control plane nodes and the worker nodes are required. The NSX Edge is enabled to use load balancing and is configured with application profiles that use a certificate for inbound connection from the source. The NSX Edge is also configured with load-balancing pools to point to the OpenShift Primaries and OpenShift Workers. Additionally, a virtual server is created with a virtual IP address (vIP) on the private interface with rules that connect the pools with vIP.
 
 | Description | Port number | Algorithm  | Monitor | Members | Protocol | IP subnet |
-|:---|:----|:------|:---| :--- | :--- |:---|
+|:----------- |:----------- |:---------- |:------- |:------- |:-------- |:--------- |
 | Application Load Balancer | 80 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | IBM Cloud 10.x |
 | Application Load Balancer | 443 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | IBM Cloud 10.x |
-| API & API-INT Load Balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
-| API & API-INT Load Balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
+| API and API-INT Load Balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
+| API and API-INT Load Balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
 {: caption="Table 4. NSX Load Balancer specifications" caption-side="top"}
 
 ## Red Hat OpenShift specifications
@@ -94,42 +92,36 @@ Within the OpenShift environment, two load balancers for accessing the control p
 
 The following tables show the specifications of the management node, control plane node, and worker node.
 
-| Host description | vCPU  | Memory GB | Disk GB | OS |
-|:-----------------|:-----------------|:-----------------|:-----------------| :---|
+| Host description | vCPU  | Memory (GB) | Disk (GB) | OS |
+|:---------------- |:----- |:----------- |:--------- |:-- |
 | Management0 | 2 | 8 | 50 | Red Hat Enterprise Linux 7.6 |
+{: class="simple-tab-table"}
 {: caption="Table 5. Management node specifications" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the hosts. The column headers indentify the parameters of the hosts. To find the value of a parameter for a certain host, navigate to the row, and then find the value in the corresponding parameter column."}
 {: #table1}
 {: tab-title="Management node"}
-{: tab-group="Red Hat OpenShift specifications"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-group="rhos-specs"}
 
-| Host description | vCPU  | Memory GB | Disk GB | OS | Host name |
-|:-----------------|:-----------------|:-----------------|:-----------------| :---|
+| Host description | vCPU  | Memory (GB) | Disk (GB) | OS | Host name |
+|:---------------- |:----- |:----------- |:--------- |:-- |:--------- |
 | Control-plane0 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
 | Control-plane1 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
 | Control-plane2 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
-{: caption="Table 6. Control plane node specifications" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the hosts. The column headers indentify the parameters of the hosts. To find the value of a parameter for a certain host, navigate to the row, and then find the value in the corresponding parameter column."}
-{: #table2}
+{: class="simple-tab-table"}
+{: caption="Table 5. Control plane node specifications" caption-side="top"}
+{: #table1}
 {: tab-title="Control plane node"}
-{: tab-group="Red Hat OpenShift specifications"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-group="rhos-specs"}
 
-| Host description | vCPU  | Memory GB | Disk GB | OS | Host name |
-|:-----------------|:-----------------|:-----------------|:-----------------| :---|
+| Host description | vCPU  | Memory (GB) | Disk (GB) | OS | Host name |
+|:---------------- |:----- |:----------- |:--------- |:-- |:--------- |
 | Worker0 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
 | Worker1 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
 | Worker2 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
-{: caption="Table 7. Worker node specifications" caption-side="top"}
-{: summary="This table has row and column headers. The row headers identify the hosts. The column headers indentify the parameters of the hosts. To find the value of a parameter for a certain host, navigate to the row, and then find the value in the corresponding parameter column."}
-{: #table3}
+{: caption="Table 5. Worker node specifications" caption-side="top"}
+{: #table1}
 {: tab-title="Worker node"}
-{: tab-group="Red Hat OpenShift specifications"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-group="rhos-specs"}
+{: class="simple-tab-table"}
 
 **Next topic:** [Storage options on IBM Cloud and Red Hat OpenShift](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-storage)
 

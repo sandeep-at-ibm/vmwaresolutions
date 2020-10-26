@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -40,8 +40,8 @@ To find the customer's private portable subnet:
 4. Select the **subnet** and you will be redirected to the subnet details page that displays the IP addresses and their allocations.
 5. Using the information, select a non-allocated IP address and update the **Note** with appropriate comments. Use this IP address for the `proxy ip` parameter in the following table.
 
-| Parameter | Suggested Values | Notes |
-|:--------- |:-------------- |:------ |
+| Parameter | Suggested values | Notes |
+|:--------- |:---------------- |:----- |
 | Proxy CPU | 1 vCPU | Squid has no minimum requirements |
 | Proxy RAM | 2 GB | Squid has no minimum requirements |
 | Proxy Disk | 25 | GB	Squid has no minimum requirements |
@@ -52,7 +52,7 @@ To find the customer's private portable subnet:
 | DNS Server | AD/DNS ip | This IP address can be found on the instance page in the {{site.data.keyword.vmwaresolutions_short}} console, the **Resources** page. |
 | BCR IP | bcr ip | On the same page where you selected the proxy IP above, note the address labeled Gateway. This address is the IP address of the {{site.data.keyword.cloud_notm}} Backend Customer Router and is the gateway for 10.0.0.0/8 and 161.26.0.0/16. You will use this address below in a static route in the proxy server so that it can reach the VCSA and the AD/DNS server. |
 | NAT IP | customer-nsx-edge public uplink ip | The public address of the customer NSX ESG will serve as the public NAT address for the proxy. This IP address can be found by reviewing the **Settings** tab for **customer-nsx-edge**. |
-{: caption="Table 1. Deployment values" caption-side="bottom"}
+{: caption="Table 1. Deployment values" caption-side="top"}
 
 ## Configuring NSX
 {: #vum-init-config-config-nsx}
@@ -67,15 +67,15 @@ NSX Customer ESG firewall and NAT settings are required to enable proxy server t
 3. Click the **+** symbol and add a firewall rule.
 4. Supply the required parameters as noted in the following table. The new firewall rule must come before the last rule, the Default Deny rule.
 
-| Parameter | Suggested Values |
-|:--------- |:-------------- |
+| Parameter | Suggested values |
+|:--------- |:---------------- |
 | Name | Outbound Proxy01 |
 | Type | User |
 | Source | proxy server ip |
 | Destination | any |
 | Service | HTTP/HTTPS/ICMP Echo |
 | Action | Accept |
-{: caption="Table 2. Firewall rule" caption-side="bottom"}
+{: caption="Table 2. Firewall rule" caption-side="top"}
 
 After parameters are supplied, click **Publish Changes**.
 
@@ -86,8 +86,8 @@ After parameters are supplied, click **Publish Changes**.
 2. Click on the **+** symbol and add a SNAT rule.
 3. Supply the required parameters as noted in the following table and click **OK**. Then click **Publish Changes**.
 
-| Parameter | Suggested Values |
-|:--------- |:-------------- |
+| Parameter | Suggested values |
+|:--------- |:---------------- |
 | Rule Type | USER |
 | Action | SNAT |
 | Applied On | Public Uplink |
@@ -101,7 +101,7 @@ After parameters are supplied, click **Publish Changes**.
 | Status | Enable |
 | Logging | Enable |
 | Description | Proxy01 SNAT |
-{: caption="Table 3. NAT rule" caption-side="bottom"}
+{: caption="Table 3. NAT rule" caption-side="top"}
 
 ### Installing and configuring a proxy server
 {: #vum-init-config-inst-cfg-proxy}

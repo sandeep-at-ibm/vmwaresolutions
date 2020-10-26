@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-27"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Ordering Veeam
 {: #veeam_ordering}
 
-You can include the Veeam service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
+You can include the Veeam service with a new VMware vCenter Server instance or add the service to your existing vCenter Server instance.
 
 ## Ordering Veeam for a new instance
 {: #veeam_ordering-new}
@@ -38,10 +38,20 @@ On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vi
 
 When you order the service, provide the following settings.
 
+### Name
+{: #veeam_ordering-name}
+
+Specify a unique name for this service instance. The name must be unique across all Veeam service instances and all instances in the {{site.data.keyword.cloud_notm}} account.
+
+### Deployment type
+{: #veeam_ordering-depl-type}
+
+Select either **Windows Server VM on the management cluster** or **Single public Windows VSI**.
+
 ### Number of VMs to license
 {: #veeam_ordering-config-vms}
 
-At least 10 VMs are required for license management.
+Specify the number of VMs to license, in increments of 10. At least 10 VMs are required for license management.
 
 ### Storage size
 {: #veeam_ordering-config-storage-size}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-15"
+lastupdated: "2020-09-16"
 
 keywords: SPP management console, apply SPP updates, login SPP console
 
@@ -27,7 +27,7 @@ subcollection: vmwaresolutions
 
 To manage the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus service, you must access the IBM Spectrum Protect Plus management console by completing the following steps:
 1. Use the {{site.data.keyword.cloud_notm}} infrastructure VPN or a jump server to allow access to the IP address of the IBM Spectrum Protect Plus virtual machine (VM). You can find the IP address on the service details page for IBM Spectrum Protect Plus in the {{site.data.keyword.vmwaresolutions_short}} console.
-2. To access the IBM Spectrum Protect Plus management console, click **View IBM Spectrum Protect Plus Console** on the service details page for IBM Spectrum Protect Plus, and then log in by using the credentials listed on the same service details page.
+2. To access the IBM Spectrum Protect Plus management console, click **View IBM Spectrum Protect Plus console** on the service details page for IBM Spectrum Protect Plus, and then log in by using the credentials listed on the same service details page.
 
 ## Applying updates to IBM Spectrum Protect Plus
 {: #managingspp-updates}
@@ -39,13 +39,13 @@ For more information, see [Ordering, viewing, and deleting services for vCenter 
 ## Updating the operating system of the IBM Spectrum Protect Plus VM
 {: #managingspp-update-os}
 
-To update the operating system of the IBM Spectrum Protect Plus VM, you must log in as the **serveradmin** user. The **serveradmin** user password is the same as the password from the service details page for IBM Spectrum Protect Plus.
+To update the operating system of the IBM Spectrum Protect Plus VM, you must log in as the `serveradmin` user. The `serveradmin` user password is the same as the password from the service details page for IBM Spectrum Protect Plus.
 
 ## Related links
 {: #managingspp-related}
 
 * [IBM Spectrum Protect Plus overview](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations)
-* [How to increase vsnap storage for IBM Spectrum Protect Plus post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
+* [How to increase `vsnap` storage for IBM Spectrum Protect Plus post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
 * [How to configure IBM Spectrum Protect Plus to offload to {{site.data.keyword.cloud_notm}} Object Storage](https://developer.ibm.com/recipes/tutorials/how-to-configure-ibm-spectrum-protect-plus-to-offload-to-ibm-cloud-object-storage/)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
 * [Opening a case for IBM Spectrum Protect Plus](https://www.ibm.com/mysupport/s/article/How-to-Open-a-Case)

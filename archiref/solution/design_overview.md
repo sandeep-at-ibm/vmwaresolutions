@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.vmwaresolutions_full}} provides automation to deploy VMware technology components into {{site.data.keyword.cloud_notm}} data centers across the globe.
 
-The offerings in this solution portfolio include VMware vSphere products within an automatically deployed and configured cluster: VMware vSphere ESXi, VMware vCenter Server Appliance with an embedded Platform Services Controller (PSC), VMware NSX-V or NSX-T, and optionally, VMware vSAN.
+The offerings in this solution portfolio include VMware vSphere products within an automatically deployed and configured cluster: VMware vSphere ESXi™, VMware vCenter Server® Appliance with an embedded Platform Services Controller (PSC), VMware NSX®-V or NSX-T, and optionally, VMware vSAN™.
 
 The architecture consists of a single cloud region and supports the ability to extend into more cloud regions that are located in another geography and into another {{site.data.keyword.cloud_notm}} pod within the same data center. A region is defined as a unique vCenter Server instance. This design also allows for automated expansion and contraction of virtual capacity within a vCenter Server instance.
 

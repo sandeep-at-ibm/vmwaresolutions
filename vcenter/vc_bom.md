@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-20"
+lastupdated: "2020-10-19"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -43,14 +43,16 @@ The following table details the BOM information for vCenter Server software comp
 |:------------ |:------------------------------- |:------------- |
 | VMware       | vSphere ESXi                    | 6.7 EP 15 (build 6.7.0-16316930) or <br/>ESXi 6.5 P04 (build 6.5.0-15256549) |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
-| VMware       | vSphere 6.5                     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 6.7 Update 3g (6.7.0-16046470) or <br/>6.5 Update 3i (build 6.5.0-15808842) |
+| VMware       | vSphere 6.5[^vcs-vsphere65]     | Distributed vSwitch 6.5.0 |
+| VMware       | vCenter Server Appliance        | 6.7 Update 3j (6.7.0-16708996) |
 | VMware       | vSAN[^vsan]                     | 6.7 EP 10 or<br> 6.6.1 Patch 04 |
 | VMware       | NSX for vSphere[^nsxv]          | 6.4.6 (build 14819921) |
-| VMware       | NSX-T for vSphere[^nsxt]        | 3.0.1 (build 16404476) |
+| VMware       | NSX-T for vSphere[^nsxt]        | 3.0.1.1 (build 16556500) |
 | Microsoft    | Windows Server Standard edition | 2019 |
 | Microsoft    | Active Directory domain functional level | 2016 (WinThreshold)[^domain] |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
+
+[^vcs-vsphere65]: Existing vSphere 6.5 clusters only
 
 [^vsan]: VMware vSAN is an optional component. The vSphere ESXi 6.5 P04 (build 6.5.0-15256549) update is applicable only to 6.5u3 hosts and not to 6.5u2 hosts. The vSphere ESXi 6.7 EP10 (build 6.7.0-13981272) update is applicable to 6.7u2 hosts.
 
@@ -108,13 +110,13 @@ Review the following table for an overview of the VMware NSX and port group conf
 
 The settings apply to new instances and new clusters in new instances V2.2 or later. The settings do not apply to new clusters in existing instances from V2.1 or earlier or existing instances that are upgraded to V2.2 or later.
 
-| Configuration setting | V2.1 or earlier  | V2.2 or later |   
-|:------------- |:------------- |:------------- |
+| Configuration setting | V2.1 or earlier | V2.2 or later |
+|:--------------------- |:--------------- |:------------- |
 | NSX VXLAN cluster teaming policy | Fail Over | Load Balance - SRCID |
 | NSX VXLAN cluster VTEP | 1 | 2 |
-| Segment ID pool for primary instance | 6000-8000 | 6000-7999 |  
+| Segment ID pool for primary instance | 6000 - 8000 | 6000 - 7999 |
 | Segment ID pool for subsequent secondary instance or instances | 6000-8000 | Previous end range in the multi-site configuration + 1 to the previous end range in the multi-site configuration + 2000 |  
-| Port group SDDC-DPortGroup-VSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |  
+| Port group SDDC-DPortGroup-VSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |
 | Port group SDDC-DPortGroup-Mgmt | **Port binding** set to **Ephemeral - no binding** and **Load balancing** set to **Route based on originating virtual port** | **Port binding** set to **Static binding** and **Load balancing** set to **Route based on physical NIC load** |  
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
 {: caption="Table 5. NSX and port group configuration settings for vCenter Server instances" caption-side="top"}
@@ -169,11 +171,13 @@ The allocation of distributed switches varies if you have existing instances and
 
 Review the following table for an overview of the EVC mode settings for vCenter Server instances and the differences between vSphere versions.
 
-| Bare metal server CPU model | vSphere 6.5  | vSphere 6.7 |
+| Bare metal server CPU model | vSphere 6.5[^evc-vsphere65]  | vSphere 6.7 |
 |:------------- |:------------- |:------------- |
 | Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation. |
 | Cascade Lake[^vsphere] | For the management cluster, EVC is not set. For all other clusters, EVC is set to Intel **Broadwell** Generation. | For the management cluster, EVC is not set. For all other clusters, EVC is set to Intel **Skylake** Generation. |
 {: caption="Table 7. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
+
+[^evc-vsphere65]: Existing vSphere 6.5 clusters only
 
 [^vsphere]: For instances with vSphere 6.5, Cascade Lake supports 6.5u3 only.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-21"
 
 subcollection: vmwaresolutions
 
@@ -18,7 +18,7 @@ The installer provisions and configures a virtual machine for each service virtu
 ## Prerequisites
 {: #hcx-archi-install-cfg-hybrid-prereq}
 
-* The HCX Manager must be installed on premises, and registered with a VCS HCX enabled cloud endpoint.
+* The HCX Manager must be installed on premises, and registered with a vCenter Server HCX-enabled cloud endpoint.
 * The target virtual data center must have sufficient resources.
 
 ## Configuration overview
@@ -34,7 +34,7 @@ The configuration procedure assumes that all service virtual appliances will be 
 
 The simple web interface is used to install the service virtual appliances and to configure more Layer 2 Concentrators.
 
-The HCX Manager must be installed and registered with the VCS HCX enabled cloud endpoint.
+The HCX Manager must be installed and registered with the vCenter Server HCX-enabled cloud endpoint.
 
 ### Procedure to install and configure the Hybrid Service Virtual Appliance
 {: #hcx-archi-install-cfg-hybrid-proc-install}
@@ -119,7 +119,7 @@ View the Cloud Gateway tunnel status. The network extension service must be up b
 
 ## Stretching a Layer 2 Network to IBM Cloud
 
-Extend a Layer 2 network from the on-premises data center to VCS HCX enabled cloud.
+Extend a Layer 2 network from the on-premises data center to the  vCenter Server HCX-enabled cloud.
 {: #hcx-archi-install-cfg-hybrid-stretch-layer-2}
 
 ### Prerequisites for stretching a Layer 2 Network to IBM Cloud

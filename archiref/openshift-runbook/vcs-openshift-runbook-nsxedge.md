@@ -164,7 +164,7 @@ Within the OpenShift environment, two load balancers are required, one for acces
 |--- | --- | --- | --- | --- |
 | Name | api-6443-lb | api-22623-lb | apps-80-lb | apps-443-lb |
 | Description | API / API-INT | API / API-INT | Application HTTP | Application HTTPs |
-| Default Pool | pool-1 | pool-2 | pool-3 | pool-4 |
+| Default pool | pool-1 | pool-2 | pool-3 | pool-4 |
 | IP address | 10.208.242.132 | 10.208.242.132| 10.208.242.131 | 10.208.242.131 |
 | Protocol | tcp | tcp | tcp | tcp |
 | Port | 6443 | 22623 | 80 | 443 |
@@ -177,34 +177,34 @@ This section provides example PowerNSX commands that you can use to automate the
 
 Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described previously.
 
-| Parameters | Example | Your Deployment |
+| Parameters | Example | Your deployment |
 | --- | --- | --- |
 | vCenter Server IP address | | |
-| vCenter User | | |
-| vCenter Password | | |
-| AD DNS Server IP address | 10.187.214.66 | |
+| vCenter Server user | | |
+| vCenter Server password | | |
+| AD DNS server IP address | 10.187.214.66 | |
 | Transit Logical Switch| OpenShift-Transit | |
-| OpenShift Network | 192.168.133.0/24 |  |
-| Transit Network | 192.168.100.0/24 |
-| ESG Transit | 192.168.100.1 | |
-| DLR Transit | 192.168.100.2 | |
-| ESG Name | OpenShift-ESG | |
-| vCenter Server instance Cluster | cluster1 | |
-| vCenter Server instance Datastore | vsanDatastore | |
-| Private Portable Subnet | 10.208.242.128/26| |
+| OpenShift network | 192.168.133.0/24 |  |
+| Transit network | 192.168.100.0/24 |
+| ESG transit | 192.168.100.1 | |
+| DLR transit | 192.168.100.2 | |
+| ESG name | OpenShift-ESG | |
+| vCenter Server instance cluster | cluster1 | |
+| vCenter Server instance datastore | vsanDatastore | |
+| Private portable subnet | 10.208.242.128/26| |
 | BCR IP address | 10.208.242.129 | |
-| ESG Private Primary | 10.208.242.130 |  |
-| ESG Private Secondary 1 | 10.208.242.131 |  |
-| ESG Private Secondary 2 | 10.208.242.132 |  |
-| ESG Private Secondary 3 | 10.208.242.133 |  |
-| Public Portable Subnet | 169.48.73.40/29 |  |
+| ESG private primary | 10.208.242.130 |  |
+| ESG private secondary 1 | 10.208.242.131 |  |
+| ESG private secondary 2 | 10.208.242.132 |  |
+| ESG private secondary 3 | 10.208.242.133 |  |
+| Public portable subnet | 169.48.73.40/29 |  |
 | FCR IP address | 169.48.73.41| |
-| ESG Public Primary | 169.48.73.42 |  |
-| ESG Public Secondary 1 | 169.48.73.43 |  |
-| ESG Public Secondary 2 | 169.48.73.44 |  |
-| ESG UserName | admin | |
-| ESG Password | VMware12345! | |
-{: caption="Table 12. PowerNSX DLR Parameters" caption-side="top"}
+| ESG public primary | 169.48.73.42 |  |
+| ESG public secondary 1 | 169.48.73.43 |  |
+| ESG public secondary 2 | 169.48.73.44 |  |
+| ESG user name | admin | |
+| ESG password | VMware12345! | |
+{: caption="Table 12. PowerNSX DLR parameters" caption-side="top"}
 
 ```powernsx
 # Connect to NSX Manager

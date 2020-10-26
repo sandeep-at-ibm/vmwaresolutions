@@ -4,17 +4,15 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-10"
+lastupdated: "2020-10-16"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX virtual security appliance, Juniper virtual security appliance, Juniper vSRX console
 
 subcollection: vmwaresolutions
 
-
 ---
 
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -35,8 +33,10 @@ Juniper® vSRX is a virtual security appliance that provides security and networ
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The current Juniper vSRX version that is installed is 19.4R2.6.
+The current Juniper vSRX version that is installed is 3.0 (20.1R1.11).
 {:note}
+
+For information about vSRX and the vSRX 3.0 architecture, see [Understand vSRX with VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/concept/security-vsrx-vmware-overview.html){:external}.
 
 You can install Juniper vSRX as one of the following components:
 * As a virtual appliance on the management cluster. In this case, Juniper vSRX protects the traffic in the management cluster. That is, the service  protects only the traffic that you forward from your devices, for example, setting the default gateway to point to Juniper vSRX.
@@ -59,7 +59,7 @@ The following components are ordered and included in the Juniper vSRX service:
 {: #vsrx_overview-specs-vms}
 
 * vSRX is deployed as a pair of VMs configured for High Availability.
-* Each VM is configured with 6 vCPUs, 8 GB of memory, and 16 GB of storage.
+* Each VM is configured with 6 vCPUs, 16 GB of memory, and 16 GB of storage.
 
 ### High availability
 {: #vsrx_overview-specs-ha}
@@ -111,7 +111,8 @@ Any network operations that rely on routes that are established via vSRX might b
 
 * [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
 * [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
-* [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
+* [Overview of the available virtual SRX models, vSRX and vSRX 3.0](https://kb.juniper.net/InfoCenter/index?page=content&id=KB33572){:external}
 * [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}

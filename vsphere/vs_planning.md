@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-07"
+lastupdated: "2020-10-19"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -44,52 +44,55 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | {{site.data.keyword.cloud_notm}} data center | Region | Server options |
 |:---------------------|:---------------|:--------------|
 | Amsterdam 03 | Europe | Skylake, Cascade Lake, SAP-certified |
-| Chennai 01 | Asia-Pacific | Skylake, SAP-certified[^sap-che01] |
-| Dallas 09 | NA South | Skylake, SAP-certified |
+| Chennai 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified[^sap-che01] |
+| Dallas 09 | NA South | Skylake, Cascade Lake, SAP-certified |
 | Dallas 10 | NA South | Skylake, Cascade Lake, SAP-certified |
 | Dallas 12 | NA South | Skylake, Cascade Lake, SAP-certified |
 | Dallas 13 | NA South | Skylake, Cascade Lake, SAP-certified |
 | Frankfurt 02 | Europe | Skylake, Cascade Lake, SAP-certified |
 | Frankfurt 04 | Europe | Skylake, Cascade Lake, SAP-certified|
 | Frankfurt 05 | Europe | Skylake, Cascade Lake, SAP-certified |
-| Hong Kong 02 | Asia-Pacific | Skylake, SAP-certified |
+| Hong Kong 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | London 02 | Europe | Skylake, Cascade Lake |
 | London 04 | Europe | Skylake, Cascade Lake, SAP-certified |
 | London 05 | Europe | Skylake, Cascade Lake, SAP-certified |
 | London 06 | Europe | Skylake, Cascade Lake, SAP-certified |
-| Mexico 01 | NA South | Skylake, SAP-certified[^sap-mex01] |
-| Milan 01  | Europe | Skylake, SAP-certified[^sap-mil01] |
+| Mexico 01 | NA South | Skylake, Cascade Lake, SAP-certified[^sap-mex01] |
+| Milan 01  | Europe | Skylake, Cascade Lake, SAP-certified[^sap-mil01] |
 | Montreal 01 | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01] |
-| Oslo 01 | Europe | Skylake, SAP-certified[^sap-osl01] |
+| Osaka 21 | Asia-Pacific | Cascade Lake, SAP-certified |
+| Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified |
+| Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified |
+| Oslo 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-osl01] |
 | Paris 01| Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
-| Sao Paulo 01 | South America | Skylake, SAP-certified |
-| Seoul 01 | Asia-Pacific | Skylake, SAP-certified |
-| San Jose 03 | NA West | Skylake |
-| San Jose 04 | NA West | Skylake |
-| Singapore 01 | Asia-Pacific | Skylake, SAP-certified |
+| Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified |
+| Seoul 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
+| San Jose 03 | NA West | Skylake, Cascade Lake |
+| San Jose 04 | NA West | Skylake, Cascade Lake |
+| Singapore 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Sydney 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Sydney 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Sydney 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Tokyo 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Tokyo 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Tokyo 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
-| Toronto 01 | NA East | Skylake, SAP-certified |
+| Toronto 01 | NA East | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 04 | NA East | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 06 | NA East | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 07 | NA East | Skylake, Cascade Lake, SAP-certified |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vSphere clusters" caption-side="top"}
 
-[^sap-che01]: vSphere 6.5 only
+[^sap-che01]: Existing vSphere 6.5 clusters only
 
-[^sap-mex01]: vSphere 6.5 only
+[^sap-mex01]: Existing vSphere 6.5 clusters only
 
-[^sap-mil01]: vSphere 6.5 only
+[^sap-mil01]: Existing vSphere 6.5 clusters only
 
-[^sap-mon01]: vSphere 6.5 only
+[^sap-mon01]: Existing vSphere 6.5 clusters only
 
-[^sap-osl01]: vSphere 6.5 only
+[^sap-osl01]: Existing vSphere 6.5 clusters only
 
-[^sap-par01]: vSphere 6.5 only
+[^sap-par01]: Existing vSphere 6.5 clusters only
 
 ## Related links
 {: #vs_planning-related}

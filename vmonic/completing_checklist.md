@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-09-16"
 
 keywords: ordering prerequisites, before you order, pre-order checklist, before first order
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Setting up your environment for your first order
 {: #completing_checklist}
 
-When you order your instance for the first time, ensure that your environment is ready for your order. Follow the instructions in the **Before you begin** section at the top of the ordering page. The instructions might vary depending on the instance type that you select.
+When you order your instance for the first time, ensure that your environment is ready for your order. Follow the instructions in the **Before you begin** section on the ordering page. The instructions might vary depending on the instance type that you select.
 
 ## Procedure to set up your environment for your first order
 {: #completing_checklist-procedure}

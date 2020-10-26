@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -57,7 +57,7 @@ To remediate hosts and clusters, follow these steps:
 4. Select the target hosts that you want to remediate and click **Next**. If you chose to remediate a single host and not a container object, the host is selected by default.
 5. Optionally, on the **Patches and Extensions** page, clear specific patches or extensions to exclude them from the remediation process, and click **Next**.
 6. Optionally, on the **Advanced options** page, select the option to schedule the remediation to run later and specify a unique name and an optional description for the task. The time that you set for the scheduled task is the time on the VCSA. Optionally, select the option to ignore warnings about unsupported devices on the host, or no longer supported VMFS datastore to continue with the remediation. Click **Next**.
-7. On the Host **Remediation Options** page, from the **VM Power state** drop-down menu, you can select the change in the power state of the VMs and virtual appliances that are running on the hosts to be remediated. A host cannot enter maintenance mode until VMs on the host are powered off, suspended, or migrated with vMotion to other hosts in a DRS cluster. Some updates require that a host enters maintenance mode before remediation. VMs and appliances cannot run when a host is in maintenance mode. To reduce the host remediation downtime at the expense of VM availability, you can choose to shut down or suspend VMs and virtual appliances before remediation. In a DRS cluster, if you do not power off the VMs, the remediation takes longer but the VMs are available during the entire remediation process because they are migrated with vMotion to other hosts. The selections are as follows:
+7. On the Host **Remediation Options** page, from the **VM Power state** menu, you can select the change in the power state of the VMs and virtual appliances that are running on the hosts to be remediated. A host cannot enter maintenance mode until VMs on the host are powered off, suspended, or migrated with vMotion to other hosts in a DRS cluster. Some updates require that a host enters maintenance mode before remediation. VMs and appliances cannot run when a host is in maintenance mode. To reduce the host remediation downtime at the expense of VM availability, you can choose to shut down or suspend VMs and virtual appliances before remediation. In a DRS cluster, if you do not power off the VMs, the remediation takes longer but the VMs are available during the entire remediation process because they are migrated with vMotion to other hosts. The selections are as follows:
 
   * **Power Off virtual machines** - Power off all VMs and virtual appliances before remediation.
   * **Suspend virtual machines** - Suspend all running VMs and virtual appliances before remediation.

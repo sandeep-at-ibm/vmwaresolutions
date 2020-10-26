@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -34,7 +34,7 @@ The NSX Edge Services Gateway connects isolated, stub networks to shared (uplink
 | SSL VPN-Plus |  SSL VPN-Plus enables remote users to connect securely to private networks behind an NSX Edge gateway. |
 | Load Balancing | Provides simple and dynamically configurable virtual IP addresses and server groups. |
 | High Availability | Ensures an active NSX Edge on the network in case the primary NSX Edge virtual machine is unavailable. |
-{: caption="Table 1. Features available with the NSX Edge Service Gateway" caption-side="bottom"}
+{: caption="Table 1. Features available with the NSX Edge Service Gateway" caption-side="top"}
 
 **Next topic:** [NSX Edge Services Gateway design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx_design)
 

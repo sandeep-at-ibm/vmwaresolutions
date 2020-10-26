@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-23"
+lastupdated: "2020-09-25"
 
 keywords: VMware HCX standalone, HCX on-premises, view HCX status
 
@@ -25,8 +25,8 @@ Use this procedure to view the on-premises HCX instances that you ordered for on
 
 Click **Resources** from the left navigation pane and scroll down to the **On-premises HCX activation keys** table to view information about the instances that you ordered:
 
-| Item        | Description   |
-|:----------- |:------------- |
+| Item | Description |
+|:---- |:----------- |
 | Name | The name of the instance. |
 | Activation key | The activation key of the on-premises HCX instance. |
 | Creation time | The date and time when the instance was created. |
@@ -34,10 +34,10 @@ Click **Resources** from the left navigation pane and scroll down to the **On-pr
 | Actions | Click the **Delete** icon to delete the instance. |
 {: caption="Table 1. On-premises HCX activation keys" caption-side="top"}
 
-The instance status can have a range of options.
+The instance can have different statuses.
 
-| Status        | Description       |
-|:------------- |:------------- |
+| Status | Description |
+|:------ |:----------- |
 | Modifying | The instance is being created. |
 | Installed | The instance is ready to use. |
 | Removing | The instance is being deleted. |

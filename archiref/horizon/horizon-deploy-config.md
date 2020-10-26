@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-09-16"
 
 subcollection: vmwaresolutions
 
@@ -179,7 +179,7 @@ App Volumes provides real-time application delivery and management, now for on p
 * Provide end users with quick access to a Windows workspace and applications, with a personalized and consistent experience across devices and locations.
 * Simplify end-user profile management by providing organizations with a single and scalable solution that leverages the existing infrastructure.
 * Speed up the login process by applying configuration and environment settings in an asynchronous process instead of all at login.
-* Provide a dynamic environment configuration, such as drive or printer mappings, when a user launches an application.
+* Provide a dynamic environment configuration, such as drive or printer mappings, when a user starts an application.
 
 For more information on how to configure, see “Configuring App Volumes Manager” in the App Volumes Administration guide for App Volumes.
 

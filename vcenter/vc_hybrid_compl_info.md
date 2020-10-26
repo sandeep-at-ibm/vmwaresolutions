@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-08-27"
 
 keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
@@ -51,7 +51,7 @@ This Cloud Service is not designed to any specific security requirements for reg
 ## Policy for accessing clients instances
 {: #vc_hybrid_compl_info-policy-for-access-client-inst}
 
-VMware vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of IBM Cloud for VMware products and services, IBM Support might be required to help guarantee their success. Usually, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the IBM Cloud internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by IBM Cloud SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or IBM Cloud management components and never to the client virtual machines or applications.
+VMware vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of VMware Solutions products and services, IBM Support might be required to help guarantee their success. Usually, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the {{site.data.keyword.cloud}} internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by {{site.data.keyword.cloud_notm}} SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
 
 ## Proactive support
 {: #vc_hybrid_compl_info-proactive-support}
@@ -61,14 +61,14 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 
 * During the initial ordering and provisioning of an instance or service, IBM Support can access client instances and information without prior notification of the client to ensure that orders are properly fulfilled.
 * IBM Support actively monitors instance lifecycle operations such as adding new hosts, in addition to the ordering, provisioning, and installation processes.
-* To fix issues that have arisen or might arise in the future, IBM Support might take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing Operating System reload operations, or opening IBM Cloud tickets using the provided client IBM Cloud user ID and API key.
+* To fix issues that have arisen or might arise in the future, IBM Support might take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing Operating System reload operations, or opening {{site.data.keyword.cloud_notm}} tickets using the provided client {{site.data.keyword.cloud_notm}} user ID and API key.
 
 ### Proactive support for steady-state operations
 {: #vc_hybrid_compl_info-proactive-support-for-steady-state-operations}
 
 * On rare occasions, IBM Support might require access to client instances during steady-state operations to proactively troubleshoot an instance issue or to verify function of provisioned services or components.
-* This access is through the IBM Cloud internal support network. IBM Support will not modify instance configuration without prior consent from the client.
-* Access is to VMware management components and/or IBM Cloud management components and never to the client virtual machines or applications.
+* This access is through the {{site.data.keyword.cloud_notm}} internal support network. IBM Support will not modify instance configuration without prior consent from the client.
+* Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
 
 ### Support tickets
 {: #vc_hybrid_compl_info-support-tickets}
@@ -83,8 +83,8 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 ## Client responsibilities
 {: #vc_hybrid_compl_info-client-responsibilities}
 
-* While we commend clients taking steps to make their environments more secure, it should be noted that some practices might have adverse effects on the effectiveness of IBM Cloud for VMware.
-* Clients are accountable for the firewalls they create and the resulting limitations that are imposed on communications between IBM Cloud for VMware components. The firewalls might also hinder the ability of IBM Support to access client instances and resolve issues.
+* While we commend clients taking steps to make their environments more secure, it should be noted that some practices might have adverse effects on the effectiveness of {{site.data.keyword.cloud_notm}} for VMware.
+* Clients are accountable for the firewalls they create and the resulting limitations that are imposed on communications between {{site.data.keyword.cloud_notm}} for VMware components. The firewalls might also hinder the ability of IBM Support to access client instances and resolve issues.
 * Clients are fully responsible for encrypting the data in their system.
 * Upon initial deployment, the offering’s automation and client’s account are separate. The client is allowed and encouraged to change all passwords that IBM provides in the portal.
 * vCenter access and credentials are created during initial deployments and provided to the client. As part of the requirement of our offering, IBM Support must retain full access to the management layer to provide life–cycle management and support to our clients.

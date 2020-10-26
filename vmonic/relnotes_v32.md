@@ -96,7 +96,7 @@ This service provides VMware vRealize Log Insight (vRLI) integrated with vRealiz
 
 You can order vCenter Server instances with vRealize Operations and vRealize Log Insight on {{site.data.keyword.cloud_notm}} included, or add this service to your existing instances later from the Services tab on the instance details page.
 
-You can also bring your enterprise vRealize Operations and vRealize Log Insight licenses to the cloud (per CPU or OSI) or you can rent licenses from IBM Cloud.
+You can also bring your enterprise vRealize Operations and vRealize Log Insight licenses to the cloud (per CPU or OSI) or you can rent licenses from {{site.data.keyword.cloud_notm}}.
 
 ## New and updated documentation
 {: #relnotes_v32-updated-doc}

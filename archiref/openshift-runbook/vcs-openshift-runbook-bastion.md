@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-07-06"
+lastupdated: "2020-09-21"
 
 subcollection: vmwaresolutions
 
@@ -38,23 +38,23 @@ Provision a Red Hat virtual machine based on the following specifications. This 
 | Virtual machine | IP address | Gateway | Disk (GB) | Memory (GB) | vCPU | NAT address |
 | --- | --- | --- | --- | --- | --- | --- |
 | bastion | 192.168.133.8 | 192.168.133.1 | 50 | 2 | 1 | 10.208.59.197 |
-{: caption="Table 1. Red Hat virtual machine - provision" caption-side="top"}
+{: caption="Table 1. Red Hat VM - provision" caption-side="top"}
 
 Use the following table to record your deployment details:
 
-| Parameters | Example | Your Deployment |
+| Parameter | Example | Your deployment |
 | --- | --- | --- |
 | vCenter Server IP address | | |
-| vCenter User | | |
-| vCenter Password | | |
-| Logical Switch | OpenShift-LS | |
-| vCenter Server instance data store | vsanDatastore | |
-| VM Name | bastion | | |
-| ISO file name | rhel-server-7.6-x86_64-dvd.iso | |
+| vCenter Server user | | |
+| vCenter Server password | | |
+| Logical Switch | `OpenShift-LS` | |
+| vCenter Server instance data store | `vsanDatastore` | |
+| VM name | `bastion` | | |
+| ISO file name | `rhel-server-7.6-x86_64-dvd.iso` | |
 | IP address | 192.168.133.8 | |
 | Netmask |255.255.255.0  | |
 | Default gateway | 192.168.133.1 | |
-{: caption="Table 2. Red Hat virtual machine deployment" caption-side="top"}
+{: caption="Table 2. Red Hat VM deployment" caption-side="top"}
 
 Before you begin, create the VM by using the vCenter CLI or the following PowerCLI script.
 

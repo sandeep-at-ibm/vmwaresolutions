@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-11"
+lastupdated: "2020-09-16"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
@@ -25,7 +25,7 @@ You can order a VMware vSphere cluster based on a configuration template that yo
 {: #vs_orderingbasedonexistingconfig-req}
 
 Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 *  You created a configuration template to be reused.
 

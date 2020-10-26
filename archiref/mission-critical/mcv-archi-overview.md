@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-08-07"
+lastupdated: "2020-10-08"
 
 subcollection: vmwaresolutions
 
@@ -28,10 +28,10 @@ As part of the {{site.data.keyword.vmwaresolutions_short}} portfolio, the automa
 
 The Mission Critical Workloads offering is based on the fully automated provisioning of a VMware SDDC comprised of:
 
-* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud_notm}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} [multizone regions](#x9774820){: term} (MZRs) data centers.
+* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud_notm}} data centers. Because the design relies on vSAN stretched clusters and extremely low latency, deployment is restricted to {{site.data.keyword.cloud_notm}} [multizone regions](#x9774820){: term} (MZRs) data centers.
 * vCenter HA including integrated Platform Services Controllers (PSCs).
 * vSAN stretched cluster support for customer workloads.
-* NSX-V with a pre–configured Management Edge.
+* NSX-T pre-configured on all nodes.
 * High availability of storage and compute resources allowing for complete loss of one of the three {{site.data.keyword.cloud_notm}} data centers without disruption to customer workloads.
 * {{site.data.keyword.vmwaresolutions_short}} automation to add and remove workload capacity.
 

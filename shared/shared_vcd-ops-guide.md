@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-09-16"
+lastupdated: "2020-10-22"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -39,16 +39,15 @@ The tenant portal includes a preconfigured set of user roles and their rights. T
 * vApp User
 * Console Access Only
 
-### Procedure to create or modify user settings
-{: #shared_vcd-ops-guide-roles-procedure}
+For more information about roles and permissions, see [VMware Cloud Director Tenant Portal Roles and Rights](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-754BD24F-63C7-422F-83BC-BFA275CEDA8E.html){:external}.
 
-You can create a user or change passwords or roles for an existing user.
 
-1. From the tenant portal, click **Administration**.
-2. Under **Access Control** in the left pane, click **Users**. In the **Users** pane, you can create a user or edit, enable, disable, and unlock existing users.  
-3. To create a user, click **NEW** and define the username, password, role, and VM quotas. Then, click **Save**.
+#### Managing users
+{: #shared_vcd-ops-guide-roles-procedures}
 
-For more information about roles and permissions, see [vCloud Director Tenant Portal Roles and Rights](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-754BD24F-63C7-422F-83BC-BFA275CEDA8E.html){: external}.
+Use the tenant portal to create a user or change passwords or roles for an existing user. For more information on accessing the tenant portal, see [Log In to the VMware Cloud Director Tenant Portal](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-28972197-D45B-4156-A733-5966730B5E03.html){:external}.
+
+For more information about creating and modifying tenant portal users, see [Managing users](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-FE38C285-7605-4473-870C-6AD44D8BF42E.html){:external}.
 
 ## Catalogs
 {: #shared_vcd-ops-guide-catalogs}
@@ -140,85 +139,34 @@ You can still use another RHEL Capsule Server or a satellite server if you alrea
 ### Defining catalogs and policies
 {: #shared_vcd-ops-guide-policies}
 
-To create a catalog, you must have either the **Organizational Administrator** or **Catalog Author** role.
+To create a catalog, you must have either the **Organizational Administrator** or **Catalog Author** tenant portal role.
 
-1. From the tenant portal, click the **Libraries** tab, and then select **Catalogs** from the left pane.
-2. Click **New** to create a catalog.
-3. Enter the name and optionally a description of the catalog.
-4. (Optional) Select if you want to assign a pre-provisioned storage policy to the catalog and select a storage policy.
-5. (Optional) Create the catalog from an external published catalog. Enable **Subscribe to an external catalog** and provide the URL to create a read-only copy of it. It can be password protected if needed.
-6. (Optional) Download the content from the external catalog.
-7. Click **OK**.
-8. To edit, delete, publish, share, set metadata, synchronize, change storage policies, or change the owner of a catalog, click the three horizontal dots to the left of the name of the catalog.
+For more information about defining catalogs and policies, see [Working with Catalogs](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-6424C4A7-EA95-49A0-B673-9DDB971AB566.html){:external}.
 
 ### Uploading your media or templates
 {: #shared_vcd-ops-guide-customer}
 
-Large image files or templates might take extended time to upload.
+OVF packages can be uploaded to a catalog as a vApp template to make the template available to users. For more information, see [Create a vApp Template from an OVF File](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-5EA412C4-179A-42CF-9B30-1B81C23551E6.html).
 
-#### Uploading templates
-{: #shared_vcd-ops-guide-templates}
+Media files, such as ISO disc images and FLP floppy drive images, can be uploaded to a catalog as a media file. For more information, see [Working with Media Files](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-A7530A4B-F782-4848-90FC-BBDE41E3AE85.html).
 
-OVF packages can be uploaded to a catalog as a vApp template to make the template available to users.
-
-1. From the tenant portal, click the **Libraries** tab. Under **Content Libraries** click **vApp Templates**.
-2. Click **NEW** in the right pane and provide a URL or browse to a location on your local computer of the OVF/OVA file. Then, click **NEXT**.
-3. Review the details and click **NEXT**.
-4. Provide a name, description (optional), and select the catalog for the template. Click **NEXT and FINISH**.
-
-#### Uploading media
-{: #shared_vcd-ops-guide-media}
-
-Media files, such as ISO disc images and FLP floppy drive images, can be uploaded to a catalog as a media file.
-
-1. From the tenant portal, click the **Libraries** tab. Under **Content Libraries** click **Media & Other**.
-2. Click **ADD** in the right pane.
-3. Select the catalog, optionally provide a name, and select the media to be uploaded.
-4. Click **OK**.
-
-For more information about working with catalogs, see [Working with Catalogs](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-6424C4A7-EA95-49A0-B673-9DDB971AB566.html){:external}.
+The maximum import size is 750 GB. Large image files or templates might take extended time to upload. Contact IBM Support for assistance with files larger than 750 GB. For more information, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
+{:note}
 
 ## Virtual machines
 {: #shared_vcd-ops-guide-machines}
 
 When you use the tenant portal, you can create a VM or provision a VM from a template.
 
-### Creating a virtual machine
-{: #shared_vcd-ops-guide-machine}
-
-1. From the tenant portal, click the **Data Centers** tab.
-2. Under **Virtual Data Center**, click the virtual data center tile in which to create the VM.
-3. On the right pane under **Compute**, select **Virtual Machines**.
-4. In the left pane, click **NEW VM**.
-5. (Optional). Enter the **Name**, **Computer Name**, and **Description**.
-6. In **Type** select the **New** radio button.
-7. In **Power on** select the desired state of the provisioned VM.
-8. Select the operating system type for **OS family**, the operating system for **Operating System**, and the image ISO for **Boot image**.
-9. If no compute policies are created, the system default is used for **Compute policy**.
-10. Select the size for your VM. There are three predefined options: small, medium, and large. Choose custom if the predefined options do not meet your requirements.
-11. Define the storage requirements for the virtual machine, storage policy, and size of disk. Add more disks if required.
-12. Define the network to connect the VM to, if any networks are created. Click **OK**.
-
-### Creating a virtual machine from a template
-{: #shared_vcd-ops-guide-virtual}
-
-1. From the tenant portal, click **Data Centers**.
-2. Under **Virtual Data Center**, click the virtual data center tile in which to create the VM.
-3. On the right pane, under **Compute**, select **Virtual Machines**.
-4. In the left pane, click **NEW VM**.
-5. Enter the Name, Computer Name, and Description (optional).
-6. In **Type** select the **New** radio button.
-7. In **Power on** select the desired state of the provisioned VM.
-8. Select the template to provision.
-9. Select **Use custom storage policy**, if required. If left cleared, the default storage policy is used.
-10. Click **OK**.
-
-For more information about working with VMs, see [Working with Virtual Machines](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-DF0C111D-B638-4EC3-B805-CC33994F8D53.html){:external}.
+For more information, see [Create a New Standalone Virtual Machine
+](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-12E43116-1120-45FA-A1E7-AEBEE61373C1.html){:external}.
 
 ### Customizing virtual machine properties
 {: #shared_vcd-ops-guide-cust-properties}
 
 You can edit the properties of a VM, including the virtual machine name and description, hardware and network settings, and guest operating system settings.
+
+For more information about working with VMs, see [Working with virtual machines](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-DF0C111D-B638-4EC3-B805-CC33994F8D53.html){:external}.
 
 If you use the tenant portal **Password Reset** field to change your Windows Administrator password, ensure that you adhere to Windows complexity requirements. If you change the password in the tenant portal without doing so, the password does not work in the Windows VM template.
 {:important}
@@ -242,12 +190,15 @@ You can change the name, description, storage policy, and other general properti
 
 You can change the hardware properties of a VM, number of vCPUs, memory, hard disk allocation, and network configuration.
 
-#### Changing the guest OS customization properties of a VM
+#### Changing the Guest OS Customization properties of a virtual machine
 {: #shared_vcd-ops-guide-customization}
 
 Guest OS customization is optional for all platforms. It is required for VMs that must join a Windows domain when the VMs are being powered on.
 
-When you use an IBM template to create the VM, use the Guest OS customization to acquire or set the unique password for the OS instance. Ensure that the **Enable guest customization** option is selected and then use one of the **Password Reset** options to establish the initial Administrator credential.
+When you use an IBM template to create the VM, use the **Guest OS Customization** pane to acquire or set the unique password for the OS instance. Ensure that the **Enable guest customization** option is selected and then use one of the **Password Reset** options to establish the initial administrator credential.
+
+For more information, see [Change the Guest OS Customization Properties of a Virtual Machine
+](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-2B7A04E8-7479-4EE9-99B0-1A46751BE46F.html){:external}.
 
 #### Changing the advanced properties of a virtual machine
 {: #shared_vcd-ops-guide-advanced}
@@ -259,24 +210,19 @@ For more information, see [Edit Virtual Machine Properties](https://docs.vmware.
 ### Using IBM templates
 {: #shared_vcd-ops-guide-ibm-templates}
 
-If the VM is deployed from the IBM templates that are provided in the public catalog, the initial password that was generated during power-on is required when you first log in to the VM. You can find this password on the VM **Details** page.
+If the VM is deployed from the IBM templates that are provided in the public catalog, the initial password that was generated during power-on is required when you first log in to the VM. You can find this password on the VM details page.
 
 If you use the tenant portal **Password Reset** field to change your Windows Administrator password, ensure that you adhere to Windows complexity requirements. If you change the password in the tenant portal without doing so, the password does not work in the Windows VM template.
 {:important}
 
-1. From the **Guest OS Customization** pane, click **EDIT** and locate the **Password Reset** section. Then, locate the password in the **Specify password** field.
-2. After a successful login with the initial password, reset the password and log in again with the new password.
+1. From the **Guest OS Customization** pane, click **EDIT**.
+2. From the **Edit Guest Properties** pane, locate the password in the **Specify password** field.
+2. After a successful login with the initial password, return to the **Edit Guest Properties** pane to reset the password and log in again with the new password.
 
 ## vApps
 {: #shared_vcd-ops-guide-vapps}
 
-A vApp consists of one or more VMs that communicate over a network and use resources and services in a virtual data center.
-
-1. From the tenant portal, and click **Data Centers**.
-2. Under **Virtual Data Center**, click the virtual data center under which to create the vApp.
-3. Under **Compute** in the right pane, select **vApp**.
-4. In the left pane, click **NEW vAPPS**.
-5. Enter the vApp name and click **Create**.
+A vApp consists of one or more VMs that communicate over a network and use resources and services in a virtual data center. Create the vApp, then add VMs and networks.
 
 You can now add VMs and networks to the vApp.
 
@@ -437,7 +383,7 @@ A source NAT rule is necessary to allow traffic from the organization virtual da
   8. Click **KEEP**.
 6. Click **Save changes**.
 
-##### Create the Organization virtual data center network firewall rule to allow access to the IBM Cloud Services Network
+##### Create the Organization virtual data center network firewall rule to allow access to the {{site.data.keyword.cloud}} Services Network
 {: #shared_vcd-ops-guide-create-vdc-network-rule-ibm-services-network}
 
 1. From the tenant portal, click the menu icon at the top of the page and then select **Data Centers**.
@@ -492,8 +438,8 @@ A destination NAT allows an outside host, in this case on the internet, to conne
 3. In the left pane under **Networking**, click **Edges**.
 4. In the main pane click the edge, then **SERVICES**.
 5. Click the **NAT** tab, under **NAT44 Rules** click **+ DNAT RULE**.
-6. Click the **Applied On** drop-down arrow and select the ``<datacenter>-w<idx>-tenant-external`` interface, for example, ``dal13-w02-tenant-external``.
-7. The **Original IP/Range** is one of the IPs from the Suballocated Public IP address range. Click the **SELECT** button, and select an IP from the **IP Address** drop-down menu. This is the `tenant-external IP address` referenced in future steps. Click **KEEP**.
+6. Click the **Applied On** arrow and select the ``<datacenter>-w<idx>-tenant-external`` interface, for example, ``dal13-w02-tenant-external``.
+7. The **Original IP/Range** is one of the IPs from the Suballocated Public IP address range. Click the **SELECT** button, and select an IP from the **IP Address** menu. This is the `tenant-external IP address` referenced in future steps. Click **KEEP**.
 8. (Optional) For port forwarding, click the **Protocol** dropdown arrow and select **TCP**.
 9. The **Original Port** in this example is ``8000``. Ports below 1024 are reserved. Select a port that is not previously used with the original IP address or range.
 10. If ICMP has been selected in the **Protocol** dropdown, the **ICMP Type** can be selected.
@@ -586,7 +532,7 @@ Every private network endpoint comes configured with one private network IP addr
 ### Prerequisites for configuring a private network endpoint
 {: #shared_vcd-ops-guide-pne-prereqs}
 
-* You must have a running VM. For more information, see [Creating a virtual machine](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-machine).
+* You must have a running VM.
 * The VM must be connected to a routed organization virtual data center network. For more information, see [Creating a routed organization virtual data center network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-routed-organization) and [Connect the VMs to the network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-connect-vm).
 * You must have virtual routing and forwarding and service endpoints enabled on the account that the allowlisted IP or subnet belong to. For more information, see [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint).
 

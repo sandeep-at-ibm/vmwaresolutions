@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-16"
+lastupdated: "2020-09-22"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -36,9 +36,9 @@ On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vi
 ## Ordering FortiGate Virtual Appliance for private instances
 {: #fortinetvm_ordering-private}
 
-When you order FortiGate Virtual Appliance for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available through Virtual Routing and Forwarding (VRF) before the Fortigate Virtual Appliance installation can start.
+When you order FortiGate Virtual Appliance for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available through Virtual Routing and Forwarding (VRF) before the FortiGate Virtual Appliance installation can start.
 
-To ensure continued operation, FortiGate Virtual Appliance must have persistent access to the Fortigate license server through the internet.
+To ensure continued operation, FortiGate Virtual Appliance must have persistent access to the FortiGate license server through the internet.
 
 ## FortiGate Virtual Appliance service configuration
 {: #fortinetvm_ordering-config}
@@ -51,10 +51,10 @@ When you order the service, provide the following settings.
 Select **Public network** or **Private network** for FortiGuard. If the target cluster is configured with private-only network interfaces, only the **Private network** option is available. This selection determines how FortiGuard contacts the Fortinet license server to activate the license and to download security patches, and it doesn't impact the workload data plane.
 
 If you select **Private network**, specify the following settings:
-* **Proxy IP Address**: The IPv4 address of the proxy server.
-* **Proxy Port Number**: The port number of the proxy server, usually 8080 or 3128.
-* **Proxy User Name**: If you require proxy authentication, enter the user name of the proxy server.
-* **Proxy Password**: If you require proxy authentication, enter the password of the proxy server.
+* **Proxy IP Address** - The IPv4 address of the proxy server.
+* **Proxy Port Number** - The port number of the proxy server, usually 8080 or 3128.
+* **Proxy User Name** - If you require proxy authentication, enter the user name of the proxy server.
+* **Proxy Password** - If you require proxy authentication, enter the password of the proxy server.
 
 ### Name
 {: #fortinetvm_ordering-config-name}

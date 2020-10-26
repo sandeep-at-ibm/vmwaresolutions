@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-04"
+lastupdated: "2020-09-16"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -119,7 +119,7 @@ vSAN storage offers customized configurations, with various options for disk typ
 
 The following licenses are included in your instance.
 
-* VMware vSphere Enterprise Plus 6.5u3 or 6.7u3
+* VMware vSphere Enterprise Plus 6.7u3
 * VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
@@ -139,7 +139,7 @@ One bare metal server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_hybrid_overview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.5u3 or 6.73
+* One VMware vSphere Enterprise Plus 6.73
 * One VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * One Support and Services fee
 * VMware vSAN (Advanced or Enterprise) 6.6

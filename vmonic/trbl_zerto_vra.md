@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-18"
+lastupdated: "2020-09-17"
 
 keywords: troubleshooting, Zerto VRA, Zerto uninstall
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:support: data-reuse='support'}
 
-# Zerto VRA visible on ESXi host in the vCenter console after Zerto is uninstalled
+# Why are Zerto VRAs visible on the ESXi host in the vCenter console after Zerto is uninstalled?
 {: #trbl_zerto_vra}
 {: troubleshoot}
 {: support}

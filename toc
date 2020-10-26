@@ -10,10 +10,11 @@ VMware Solutions
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
     vmonic/vmware-comp-guide.md
-    vmonic/relnotes_v38.md
+    vmonic/relnotes_v39.md
 
     {: .topicgroup}
     Previous release notes
+        vmonic/relnotes_v38.md
         vmonic/relnotes_v37.md
         vmonic/relnotes_v36.md
         vmonic/relnotes_v35.md
@@ -67,6 +68,7 @@ VMware Solutions
         shared/shared_veeam.md
         shared/shared_managing.md
         shared/shared_vcd-ops-guide.md
+        shared/shared_sysdig.md
         shared/shared_resizeinstance.md
         shared/shared_deletinginstance.md
         shared/shared_pricing.md
@@ -259,10 +261,13 @@ VMware Solutions
         vmonic/iam.md
         vmonic/data-security.md
         vmonic/at-events.md
+
+    vmonic/ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     vmonic/trbl_support.md
+    vmonic/iam_verify_permissions.md
 
     {: .topicgroup}
     FAQs
@@ -276,7 +281,6 @@ VMware Solutions
 
     {: .topicgroup}
     Troubleshooting
-        vmonic/iam_verify_permissions.md
         vmonic/trbl_timeout_vc_console.md
         vmonic/trbl_sec_inst_not_visible.md
         vmonic/trbl_add_ha_cluster_config.md

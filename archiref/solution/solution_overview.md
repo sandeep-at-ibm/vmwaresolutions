@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -27,7 +27,7 @@ This design serves as a baseline architecture that provides the foundation for o
 ## Key benefits of IBM Cloud for VMware Solutions
 {: #solution_overview-benefits}
 
-VMware vCenter Server provides the fundamental building blocks, which include VMware vSphere, vCenter Server, NSX, and shared storage options, such as vSAN. These components are needed to flexibly design a VMware software-defined data center solution that best fits your workloads.
+VMware vCenter Server® provides the fundamental building blocks, which include VMware vSphere®, vCenter Server, VMware NSX®, and shared storage options, such as vSAN™. These components are needed to flexibly design a VMware software-defined data center solution that best fits your workloads.
 
 By applying advanced automation and single-tenant bare metal infrastructure, you can quickly deploy the entire VMware environment to the {{site.data.keyword.cloud_notm}} in hours. Then you can access and manage the IBM­-hosted environment via the native VMware clients, Command Line Interface (CLI), existing scripts, or other familiar vSphere API-compatible tools.
 

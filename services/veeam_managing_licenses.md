@@ -5,7 +5,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-25"
 
 keywords: Veeam, Veeam license, manage Veeam license, Veeam 10
 
@@ -14,7 +14,6 @@ subcollection: vmwaresolutions
 ---
 
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}

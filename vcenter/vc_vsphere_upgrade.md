@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-09-22"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -50,7 +50,7 @@ Complete the following requirements before you begin the upgrade:
   * Ensure that the vSAN Health tool is enabled and reports no critical errors. If critical errors are present, contact the IBM Support team with the upgrade support ticket ID.
   * Ensure that there is space on each node to handle rebuilding redundancy of vSAN objects in case an ESXi host fails to come back up during the upgrade. You might need to either reduce disk usage or add an ESXi host before the upgrade.  
   * Verify whether the overall vSAN volume usage is above 70%. You might need to either reduce disk usage or add an ESXi host before the upgrade.
-* Verify that the PSC and vCenter **root** user ID with its credentials are visible on the console. If your vCenter Server instance was initially ordered in V2.5 or later, only the account with **customerroot** access is visible on the console. In this case, contact IBM Support for the **root** user ID password for PSC and vCenter Server.
+* Verify that the PSC and vCenter `root` user ID with its credentials are visible on the console. If your vCenter Server instance was initially ordered in V2.5 or later, only the account with `customerroot` access is visible on the console. In this case, contact IBM Support for the **root** user ID password for PSC and vCenter Server.
 * Confirm that you have a [My VMware](https://my.vmware.com){:external} user ID for which to download the required binary files to upgrade. If you don't, contact IBM Support with the upgrade support ticket ID.
 * Confirm that VUM is configured to reach https://www.vmware.com to download patches. If it can't be configured because of security policies, then you must manually download the most recent patch sets and upload them into VUM. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 
@@ -80,7 +80,7 @@ Skip the first step if you have a VSI jumpbox in your environment.
 6. Use Google Chrome to access the vCenter Server instance to upgrade. Use **administrator@vsphere.local** and ensure that you can view the user interface.  
 7. Check the vSphere environment for errors and issues as discussed in the previous section.
 8. Use your SSH terminal software to access the PSC and vCenter Server with the portal or support supplied passwords for **root**.
-9. Optionally, Use the **root** user ID and password noted in the IBM Cloud infrastructure control pane to access each ESXi host to verify the **root** password.
+9. Optionally, Use the **root** user ID and password noted in the {{site.data.keyword.cloud_notm}} infrastructure control pane to access each ESXi host to verify the **root** password.
 
 #### Downloading binary files
 {: #vc_vsphere_upgrade-prereq-jumpbox-binary}
@@ -171,9 +171,9 @@ If you have instances that are linked, you must upgrade all PSC instances in the
 #### Procedure to upgrade the Platform Services Controller
 {: #vc_vsphere_upgrade-procedure-psc-procedure}
 
-1. Log in to both the PSC, `https://<psc-fqdn>:5480`, and vCenter appliance management user interfaces to confirm whether the root password expired. If the password expiration date is **1970**, then it is expired and you must enable SSH and the bash shell in the PSC appliance management user interface.
+1. Log in to both the PSC, `https://<psc-fqdn>:5480`, and vCenter appliance management user interfaces to confirm whether the root password expired. If the password expiration date is `1970`, then it is expired and you must enable SSH and the bash shell in the PSC appliance management user interface.
     1. SSH into the PSC with the root ID and password. You can log in, even though the password is expired.
-    2. Use the shell **passwd** command to set a new root password for both the PSC and vCenter.
+    2. Use the shell `passwd` command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter 6.7u1b ISO within your jump box.
 3. Follow the VMware instructions for upgrading all PSCs first. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}.
@@ -186,7 +186,7 @@ It is recommended that you use vCenterServer as your source and target for the u
 ### Upgrading vCenter Server
 {: #vc_vsphere_upgrade-procedure-vcenter}
 
-For vCenter Server linked instances, it is recommended to upgrade all vCenter Server instances in the vCenter Server secondary sites. However, these upgrades arenot required.
+For vCenter Server linked instances, it is recommended to upgrade all vCenter Server instances in the vCenter Server secondary sites. However, these upgrades aren't required.
 
 #### Before you upgrade vCenter Server
 {: #vc_vsphere_upgrade-procedure-vcenter-before}
@@ -197,9 +197,9 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
 #### Procedure to upgrade vCenter Server
 {: #vc_vsphere_upgrade-procedure-vcenter-procedure}
 
-1. Log in to both the PSC, `https://<psc-fqdn>:5480`, and vCenter appliance management user interfaces to confirm whether the root password has expired. If the password expiration date is **1970**, then it is expired and you must enable SSH and the bash shell in the PSC appliance management user interface.
+1. Log in to both the PSC, `https://<psc-fqdn>:5480`, and vCenter appliance management user interfaces to confirm whether the root password has expired. If the password expiration date is `1970`, then it is expired and you must enable SSH and the bash shell in the PSC appliance management user interface.
     1. SSH into the PSC with the root ID and password. You can log in, even though the password is expired.
-    2. Use the shell **passwd** command to set a new root password for both the PSC and vCenter.
+    2. Use the shell `passwd` command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter Server 6.7u1b ISO within your jumpbox.
 3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.

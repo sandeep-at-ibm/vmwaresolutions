@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-08-27"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 To manage the HyTrust® CloudControl™ service, access the Hytrust CloudControl WebGUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the Hytrust CloudControl console from the VMware vSphere® Web Client.
 
-## Accessing the HyTrust CloudControl WebGUI from the IBM Cloud for VMware Solutions console
+## Accessing the HyTrust CloudControl WebGUI from the VMware Solutions console
 {: #managinghtcc-accessing-webgui}
 
 To log in to the WebGUI of the primary or secondary HTCC appliance, use the WebGUI credentials found on the HyTrust CloudControl service details page.

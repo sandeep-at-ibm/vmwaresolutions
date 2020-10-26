@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-08-27"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 To manage the HyTrust DataControl service (HTDC), access the HTDC WebGUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTDC console from the vSphere Web Client.
 
-## Accessing the HyTrust DataControl WebGUI from the IBM Cloud for VMware Solutions console
+## Accessing the HyTrust DataControl WebGUI from the VMware Solutions console
 {: #managinghtdc-accessing-webgui}
 
 To log in to the WebGUI of the primary or secondary HTDC appliance, use the WebGUI credentials found on the HyTrust DataControl service details page.

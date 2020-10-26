@@ -154,5 +154,5 @@ You can request managed services for your instances from the **Getting Started**
 Improvements are made throughout the user interface:
 
 * When you order an instance, all hardware options are now filtered by location and the unavailable options are displayed in the disabled state.
-* The **Bare Metal Server** configuration is now automatically populated when you order a vSphere cluster based on existing configurations. You can update the configuration according to your requirements.
+* The bare metal server configuration is now automatically populated when you order a vSphere cluster based on existing configurations. You can update the configuration according to your requirements.
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

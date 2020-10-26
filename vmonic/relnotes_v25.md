@@ -69,11 +69,11 @@ Starting with the V2.5 release, {{site.data.keyword.vmwaresolutions_short}} is i
 
 The **ic4v-vCenter** user group has been created on the Microsoft Active Directory server and added to global permissions on vCenter Server and user groups for the NSX Manager. The group contains the **automation** user account for vCenter Server instances and service-specific user accounts for vCenter Server and Cloud Foundation instances.
 
-Do not edit global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere Web Client. Doing so can impact management operations.
+Do not edit global permissions of the `ic4v-vCenter` group in the **Users and Groups** page on the VMware vSphere Web Client. Doing so can impact management operations.
 
-For Cloud Foundation instances, use the **customerroot** host user ID in place of the **root** host user ID.
+For Cloud Foundation instances, use the `customerroot` host user ID in place of the `root` host user ID.
 
-For vCenter Server instances, continue to use the **root** host user ID. The **ic4vroot** host user ID has been created for IBM use only.
+For vCenter Server instances, continue to use the `root` host user ID. The `ic4vroot` host user ID has been created for IBM use only.
 
 ## Updates for add-on services
 {: #relnotes_v25-services}

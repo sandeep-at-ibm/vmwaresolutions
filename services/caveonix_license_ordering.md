@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-27"
 
 keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 # Ordering Caveonix RiskForesight licenses
 {: #caveonix_license_ordering}
 
-You can order a Caveonix RiskForesight™ license without associating it to any vCenter Server® instance for licensing and activation of your on-premises workloads.
+You can order a Caveonix RiskForesight™ license without associating it to any VMware vCenter Server® instance for licensing and activation of your on-premises workloads.
 
 ## Before you begin
 {: #caveonix_license_ordering-reqs}
@@ -34,7 +34,7 @@ Ensure that you configured the {{site.data.keyword.cloud}} infrastructure creden
    If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
    {:note}
 
-4. Specify a new license name, or use the default one **cav-_xx_** where _xx_ represents two randomly generated alphabetic characters.
+4. Specify a new license name, or use the default one **cav-_xx_** where _xx_ represents two randomly generated alphabetic characters. The name must be unique across all Caveonix service instances and all instances in the {{site.data.keyword.cloud_notm}} account.
 5. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the license.
 6. Click **Provision**.
 

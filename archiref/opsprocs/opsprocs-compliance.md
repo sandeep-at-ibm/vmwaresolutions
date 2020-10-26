@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -33,8 +33,8 @@ vRealize Operations Manager allows you to monitor VMware objects for violations 
 
 * [VMware security hardening guides](https://www.vmware.com/uk/security/hardening-guides.html){:external}
 <!-- * [vSphere security](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-security-guide.pdf){:external} -->
-* [Fortigate Security Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fsa_considerations)
-* [Fortigate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations)
+* [FortiGate Security Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fsa_considerations)
+* [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations)
 * [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations)
 * [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
 * [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)

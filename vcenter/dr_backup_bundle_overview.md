@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-04"
+lastupdated: "2020-09-03"
 
 keywords: single-node, data protection DR, tech specs data protection DR
 
@@ -176,7 +176,7 @@ The Single-node for Data Protection and Disaster Recovery includes Zerto. The fo
 ## Related links
 {: #dr_backup_bundle_overview-related}
 
-* [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX resources](https://cloud.vmware.com/vmware-hcx#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
 * [Managing Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-managingzertodr)

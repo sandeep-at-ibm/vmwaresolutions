@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-09-22"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -48,8 +48,8 @@ To take advantage of NSX for your workload VMs, you must configure a number of s
    1. On the **New Virtual Machine** dialog box, click the **Customize Hardware** tab.
    2. On the **new device** menu, select **Network** and click **Add**.
    3. On the newly added network adapter, select the workload logical switch from the menu. The example name of the workload logical switch is:
-      * For NSX-V: **vxw-dvs-17-virtualwire-1-sid-6000-Workload**
-      * For NSX-T: **overlay-ls**
+      * For NSX-V: `vxw-dvs-17-virtualwire-1-sid-6000-Workload`
+      * For NSX-T: `overlay-ls`
 
    Ensure that you do not select the **Workload Transit** switch.
    {:important}
@@ -109,7 +109,7 @@ The logical routers **Customer-T1-LR** and **Customer-T0-LR** as well as edges *
 To identify the details for the customer subnets so you can use the IP addresses ordered, complete the following steps in the NSX-T Web Client:
 
 1. Click the **Advanced Networking & Security** tab.
-2. On the left pane, click **Fabric**, then on the drop-down list select **Nodes**.
+2. On the left pane, click **Fabric**, then on the list select **Nodes**.
 3. On the tab, select **Edge Transport Nodes**.
 4. Click one of the customer edges. For example, **cust-nsx-edge0**. The public and private customer subnets are displayed in the **Description** field.
 

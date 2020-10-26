@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-11"
+lastupdated: "2020-09-16"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -27,7 +27,7 @@ You can scale out a VMware vSphere cluster that you ordered or saved in the {{si
 {: #vs_scalingexistingclusters-req}
 
 Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 *  You received an email with the confirmation that the cluster you want to scale is ready to use.
 

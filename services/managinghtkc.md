@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-08-27"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 To manage the HyTrust KeyControl service (HTKC), access the HTKC Web GUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTKC console from the vSphere Web Client.
 
-## Accessing the HyTrust KeyControl Web GUI from the IBM Cloud for VMware Solutions console
+## Accessing the HyTrust KeyControl Web GUI from the VMware Solutions console
 {: #managinghtkc-accessing-webgui}
 
 To log in to the Web GUI of the primary or secondary HTKC appliance, use the WebGUI credentials found on the HyTrust KeyControl service details page.

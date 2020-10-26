@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-20"
+lastupdated: "2020-09-25"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -31,8 +31,8 @@ To view a summary of all the vCenter Server instances that are provisioned for a
 2. From the console banner, click your user account icon, and then click the **Account** field. Select the user account that you want to check instances for.
 3. In the **vCenter Server instances** table, view the list of instances that are provisioned in the selected user account.
 
-| Item        | Description       |  
-|:------------- |:------------- |
+| Item        | Description |
+|:----------- |:----------- |
 | Name | The name of the instance. |
 | Type | The type of vCenter Server instance. |
 | Version | The release version that the instance was deployed in, or upgraded to. |  
@@ -41,10 +41,10 @@ To view a summary of all the vCenter Server instances that are provisioned for a
 | Status | The status of the instance. |   
 {: caption="Table 1. vCenter Server instance items" caption-side="top"}
 
-The instance can have a range of statuses.
+The instance can have different statuses.
 
-| Status        | Description       |
-|:------------- |:------------- |
+| Status        | Description |
+|:------------- |:----------- |
 | Creating | The instance is being created. |
 | Building | The instance is being configured. |
 | Ready to use | The instance is ready to use. |

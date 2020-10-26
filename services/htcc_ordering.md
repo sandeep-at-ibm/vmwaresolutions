@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-13"
+lastupdated: "2020-09-11"
 
 keywords: Hytrust CloudControl, Hytrust configuration, order Hytrust
 
@@ -23,7 +23,7 @@ You can add the HyTrust® CloudControl™ service (with an HA pair of HyTrust Da
 The following versions of the HyTrust CloudControl service are installed, based on the NSX networking solution type of your instance:
 
 * 5.6 for vCenter Server with NSX-V
-* 6.1 for vCenter Server with NSX-T
+* 6.2 for vCenter Server with NSX-T
 
 ## Ordering HyTrust CloudControl for a new instance
 {: #htcc_ordering-new}

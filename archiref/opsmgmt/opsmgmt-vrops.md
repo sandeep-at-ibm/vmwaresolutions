@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-06"
+lastupdated: "2020-09-30"
 
 subcollection: vmwaresolutions
 
@@ -53,46 +53,42 @@ The client can configure vROps manually to collect data from vRealize Automation
 The analytics cluster consists of one Primary Node, one Primary Replica Node, and two data nodes to enable scaling out and high availability. Additional data nodes are added to scale up. The analytics cluster can scale to a maximum of eight medium-sized nodes.
 
 | Attribute | Specification |
-|---|---|
+|-----------|---------------|
 | vCPU | 8 |
 | Memory | 32 GB |
 | Disk (thick provisioned) | 254 GB |
-{: caption="Table 1. Operations Manager Primary/Replica Node system settings" caption-side="bottom"}
-{: summary="This table has row and column headers. The row headers identify the attribute of the primary replica node. The column headers identify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: class="simple-tab-table"}
+{: caption="Table 1. Operations Manager primary/replica node system settings" caption-side="top"}
 {: #table1}
-{: tab-title="Primary/Replica Node system settings"}
-{: tab-group="System settings"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-title="Primary/replica node system settings"}
+{: tab-group="sys-settings"}
 
 | Attribute | Specification |
-|---|---|
+|-----------|---------------|
 | vCPU | 8 |
 | Memory | 32 GB |
 | Disk (thick provisioned) | 254 GB |
-{: caption="Table 2. Operations Manager Data Node system settings" caption-side="bottom"}
-{: summary="This table has row and column headers. The row headers identify the attribute of the data node. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: caption="Table 1. Operations Manager data node system settings" caption-side="top"}
 {: #table2}
-{: tab-title="Data Node system settings"}
-{: tab-group="System settings"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-title="Data node system settings"}
+{: tab-group="sys-settings"}
+{: class="simple-tab-table"}
 
 If monitoring of the compute VMs is required, the client should install two remote collector nodes on a VXLAN. The size of a Standard Remote Collector Virtual Appliance is 2 vCPU with 4 GB of RAM and the default appliance VMDK size is sufficient. The remote collector nodes are deployed with thin-provisioned disks as the remote collectors do not perform analytics operations or store data.
 
-| Setting | Load Balancer 1 | Load Balancer 2|
-|---|---|---|
+| Setting | Load balancer 1 | Load balancer 2|
+|:------- |:--------------- |:-------------- |
 | Name | vrops-ui | vrops-data |
 | Interval | 30 | 5 |
 | Timeout | 5 | 15 |
 | Max Retries | 3 | |
 | Type | HTTPS | TCP |
-| Method | Get | -- |
-| URL | /suite-api/api/deployment/node/status | -- |
-| Receive | ONLINE | -- |
+| Method | Get |  |
+| URL | /suite-api/api/deployment/node/status |   |
+| Receive | ONLINE |   |
 | Algorithm | ROUND-ROBIN | LEASTCONN |
 | Pool | Four nodes of vROPs | Four nodes of vROPs |
-{: caption="Table 3. Operations Manager Load Balancer settings" caption-side="bottom"}
+{: caption="Table 2. Operations Manager Load Balancer settings" caption-side="top"}
 
 <!-- For more information, see [vRealize Automation Load Balancing](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){:external}. -->
 
@@ -113,15 +109,15 @@ Deployment of the vROps appliance requires six IP addresses from the Tooling pri
 {: #opsmgmt-vrops-ports}
 
 | Component | Protocol | Port |
-|---|---|---|
-| vCenter | TCP | 443 |
+|:--------- |:-------- |:---- |
+| vCenter Server | TCP | 443 |
 | DNS | TCP/UDP | 53 |
 | LDAP/LDAPS | TCP | 389/636 |
 | LDAP GC | TCP | 3268/3269 |
 | NTP | UDP | 123 |
 | SMTP | TCP | 25 |
 | SNMP | UDP | 161 |
-{: caption="Table 4. Operation Manager ports" caption-side="bottom"}
+{: caption="Table 3. Operation Manager ports" caption-side="top"}
 
 ### Authentication
 {: #opsmgmt-vrops-auth}

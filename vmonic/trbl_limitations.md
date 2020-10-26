@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2020
 
-lastupdated: "2019-05-28"
+lastupdated: "2020-09-28"
 
 keywords: troubleshooting, Windows automatic installation, Windows updates
 
@@ -20,8 +20,8 @@ subcollection: vmwaresolutions
 
 Review the following considerations and limitations when you work with {{site.data.keyword.vmwaresolutions_full}}.
 
-## Windows automatic installation of updates
+## Automatic installation of updates from Windows Update
 {: #trbl_limitations-windows-update}
 {: faq}
 
-The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to download the updates only. It does not install these updates or restart automatically. You must install the updates manually and restart at a scheduled time that avoids any interruptions of the ongoing AD server configuration and other backup jobs. To apply Windows updates, install the updates manually.
+The Microsoft® Active Directory (AD) Domain Services server is automatically set up to download the updates only. It does not install these updates or restart automatically. You must install the updates manually and restart at a scheduled time that avoids any interruptions of the ongoing AD server configuration and other backup jobs. To apply Windows® updates, install the updates manually.

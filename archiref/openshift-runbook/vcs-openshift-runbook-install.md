@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -43,18 +43,18 @@ Use the following table to document the parameters you will need for your deploy
 * The SSH key can be copied after being displayed by using the command: `cat /root/.ssh/id_rsa.pub`.
 * The pull secret collected from Red Hat. For more information, see [OpenShift Infrastructure Providers](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}.
 
-| Parameters | Example | Your Deployment |
-| --- | --- | --- |
-| Base Domain | dallas.ibm.local | |
-| metadata name | ocp | |
+| Parameters | Example | Your deployment |
+|:---------- |:------- |:--------------- |
+| Base domain | `dallas.ibm.local` | |
+| Metadata name | `ocp` | |
 | vCenter Server IP address | 10.208.17.2 | |
-| UserName | administrator@vsphere.local | |
-| Password | s3cretPassw0rd | |
-| vCenter Server instance datacenter | datacenter1 | |
-| vCenter Server instance datastore | vsanDatastore | |
+| UserName | `administrator@vsphere.local` | |
+| Password | `s3cretPassw0rd` | |
+| vCenter Server instance data center | `datacenter1` | |
+| vCenter Server instance datastore | `vsanDatastore` | |
 | Pull Secret | | |
 | Public SSH Key| | |
-{: caption="Table 1. install-config.yaml file parameters" caption-side="top"}
+{: caption="Table 1. File parameters for `install-config.yaml`" caption-side="top"}
 
 Using the following install-config.yaml file shown in the figure, update it using your deployment details from the previous table:
 
@@ -112,7 +112,7 @@ cp install-config.yaml install-config.bak
 ## Running the OpenShift Ignition command
 {: #openshift-runbook-runbook-install-ignition-cmd}
 
-Now that the install-config.yaml is created and populated run the OpenShift Installer to create the ignition files
+Now that the install-config.yaml is created and populated run the OpenShift Installer to create the ignition files.
 
 ```bash
 cd /opt/ocpinstall/
@@ -150,19 +150,19 @@ cp bootstrap.ign /usr/share/nginx/html
 
 There are three Terraform files that need updating:
 
-* ignition.tf - This file needs to be updated so that the DNS entry matches the deployment.
-* terraform.tfvars - This file needs to be created and holds the variables that are used by the main.tf file
-* main.tf - This file needs to be updated to remove the DNS section.
+* `ignition.tf` - This file needs to be updated so that the DNS entry matches the deployment.
+* `terraform.tfvars` - This file needs to be created and holds the variables that are used by the main.tf file
+* `main.tf` - This file needs to be updated to remove the DNS section.
 
 ### ignition.tf - Updating the DNS entry in the template
 {: #openshift-runbook-runbook-install-terraform-ignition}
 
 The DNS IP details are hardcoded within the Terraform template. You must change this IP to be the vCenter Server instance AD DNS server.
 
-| Parameters | Example | Your Deployment |
-| --- | --- | --- |
+| Parameter | Example | Your deployment |
+|:--------- |:------- |:--------------- |
 | DNS1 | 10.187.214.66 | |
-{: caption="Table 2. ignition.tf file parameters" caption-side="top"}
+{: caption="Table 2. File parameters for `ignition.tf`" caption-side="top"}
 
 1. In the SSH session to the bastion node, with root privileges, use the following command to open the file:
    `vi /opt/ocpinstall/installer/upi/vsphere/machine/ignition.tf`
@@ -262,8 +262,8 @@ The ignition files can be copied after using the following commands to display t
 
 `cat /opt/ocpinstall/worker.ign`
 
-| Parameter | Example | Your Deployment |
-| --- | --- | --- |
+| Parameter | Example | Your deployment |
+|:--------- |:------- |:--------------- |
 | bootstrap_ip | 192.168.133.9| |
 | control_plane_ips | 192.168.133.10<br>192.168.133.11<br>192.168.133.12| |
 | compute_ips | 192.168.133.13<br>192.168.133.14<br>192.168.133.15| |
@@ -282,8 +282,7 @@ The ignition files can be copied after using the following commands to display t
 | bootstrap_ignition_url | `http://192.168.133.08/bootstrap.ign` | |
 | control_plane_ignition | |
 | compute_ignition | |
-
-{: caption="Table 2. ignition.tf file parameters" caption-side="bottom"}
+{: caption="Table 3. ignition.tf file parameters" caption-side="top"}
 
 Using the following terraform-tvars example file shown in the figure, update the file using your deployment details from the previous table. Copy the file to the clipboard.
 
@@ -460,10 +459,9 @@ The password for the user that was created during installation can also be found
     storage                              4.4.5    True        False         False      30m
     ```
 
-
 **Next topic:** [Red Hat OpenShift 4.4 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-install-related}
 
-* [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
+* [VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)

@@ -4,11 +4,16 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-08-11"
+lastupdated: "2020-10-22"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
 
 subcollection: vmwaresolutions
+
+content-type: tutorial
+services: vmwaresolutions
+account-plan: paid
+completion-time: 2h
 
 ---
 
@@ -17,13 +22,17 @@ subcollection: vmwaresolutions
 {:screen: .screen}
 {:note: .note}
 {:important: .important}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+{:step: data-tutorial-type='step'}
 
-# Getting started with IBM Cloud for VMware Solutions
+# Getting started with VMware Solutions
 {: #getting-started}
+{: toc-content-type="tutorial"}
+{: toc-services="vmwaresolutions"}
+{: toc-completion-time="2h"}
 
 In this {{site.data.keyword.vmwaresolutions_full}} getting started tutorial, we take you through the process of ordering an instance and some add-on services for it.
 {:shortdesc}
@@ -81,7 +90,7 @@ Review and choose add-on services for your deployment offering.
 | Service category | Service name | Description |
 |:------------ |:------------ |:----------- |
 | Security and compliance | [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | This service manages cyber and compliance risk with proactive monitoring and automated defense controls to protect against threats and to meet industry or government regulations. |
-| Security and compliance | FortiGate® Security Appliance | This service deploys either the [Fortigate Security Appliance 1 Gbps](/docs/fortigate-1g) or [Fortigate Security Appliance 10 Gbps](/docs/fortigate-10g) service. |
+| Security and compliance | FortiGate® Security Appliance | This service deploys either the [FortiGate Security Appliance 1 Gbps](/docs/fortigate-1g) or [FortiGate Security Appliance 10 Gbps](/docs/fortigate-10g) service. |
 | Security and compliance | [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | This service deploys a pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure. |
 | Security and compliance | [F5 BIG-IP®](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | This service provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. |
 | Business continuity and migration | [HCX™](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations) | This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. |
@@ -106,8 +115,9 @@ Review and choose add-on services for your deployment offering.
 | Business continuity and migration | [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | This service provides replication and disaster recovery capabilities, which can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}. |
 {: caption="Table 3. Available add-on services for deployment offerings" caption-side="top"}
 
-## Step 1: Accessing the IBM Cloud for VMware Solutions console
+## Accessing the IBM Cloud for VMware Solutions console
 {: #getting-started-step1}
+{: step}
 
 The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.cloud_notm}} infrastructure customer portal.
 
@@ -115,15 +125,17 @@ To access the {{site.data.keyword.vmwaresolutions_short}} console:
 1. Go to https://cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid**.
 
-## Step 2: Setting up your environment for your first order
+## Setting up your environment for your first order
 {: #getting-started-step2}
+{: step}
 
-Decide upon a deployment offering, which is managed as an instance in the console, and then ensure that your environment is ready for your order. Follow the instructions in the **Before you begin** section at the top of the ordering page. The instructions might vary depending on the instance type that you select.
+Decide upon a deployment offering, which is managed as an instance in the console, and then ensure that your environment is ready for your order. Follow the instructions in the **Before you begin** section on the ordering page. The instructions might vary depending on the instance type that you select.
 
 For information about how to set up your environment for your first order, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 
-## Step 3: Ordering an instance
+## Ordering an instance
 {: #getting-started-step3}
+{: step}
 
 After you set up your environment properly, begin the ordering process.
 
@@ -134,8 +146,9 @@ For information about how to order an instance, see the following topics based o
 * [Ordering Single-node for Migration and App Modernization instances](/docs/vmwaresolutions?topic=vmwaresolutions-cloud_modern_bundle_orderinginstance)
 * [Ordering Single-node for Data Protection and Disaster Recovery instances](/docs/vmwaresolutions?topic=vmwaresolutions-dr_backup_bundle_orderinginstance)
 
-## Step 4: Viewing the instance
+## Viewing the instance
 {: #getting-started-step4}
+{: step}
 
 After you place an instance order in **Step 3**, the deployment of the instance starts automatically. You can track the status of the deployment by viewing the instance details. When the instance deployment is completed, you can view the summary and detailed information of the instance and its add-on services on the instance details page too.
 

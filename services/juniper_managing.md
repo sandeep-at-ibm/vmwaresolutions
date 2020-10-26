@@ -4,17 +4,15 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-07-01"
+lastupdated: "2020-08-27"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
 subcollection: vmwaresolutions
 
-
 ---
 
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -40,7 +38,7 @@ For more information, see [Ordering, viewing, and deleting services for vCenter 
 {: #juniper-managing-related-links}
 
 * [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview)
-* [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
 * [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-10-20"
 
 subcollection: vmwaresolutions
 
@@ -61,7 +61,7 @@ The Mission Critical Workloads instance is configured with vCenter High Availabi
 Investigation is underway for automation of the reassignment of the vCenter IP address in DNS. Otherwise, you must manually reassign the IP address upon vCenter failover or contact IBM Global Technology Services (GTS) for assistance.
 
 ### Network design
-{: #mcv-archi-comp-HA-network}
+{: #mcv-archi-comp-ha-network}
 
 New private subnets are provisioned for the VCHA network traffic when you provision the instance. This range is a /29 (8 IP address range) on each portable private VLAN provisioned for the hosts.
 
@@ -94,14 +94,14 @@ All of the hosts in the resource layer contribute all of their disks to the stre
 6. Specify vMotion Gateway per site in vMotion TCP/IP Stack on an individual ESXi host basis.
   * Site A vMotion Gateway
   * Site B vMotion Gateway
-7. vSAN Storage Policy with the following:
+7. vSAN Storage Policy with the following settings:
   * Primary Failures to Tolerate (PFTT) = 1
   * Secondary Failures to Tolerate (SFTT) = 1 (minimum)
   * Failure Tolerance Method (FTM) = RAID 5/6
   * FTT and RAID settings are set based on number of hosts ordered. You can change this setting.
-8. When you configure a vSAN Stretched Cluster specify the following to create two failure domains:
-  * Hosts that are in Site A are part of the Primary Site
-  * Host that are in Site B are part of the Secondary Site
+8. When you configure a vSAN stretched cluster, specify the following settings to create two failure domains:
+  * Hosts that are in Site A are part of the primary site
+  * Host that are in Site B are part of the secondary site
 
 ### Known issue with the default storage policy
 {: #mcv-archi-comp-storage}
@@ -110,45 +110,26 @@ For a vCenter Server instance with stretched vSAN cluster and a cluster size of 
 
 During installation, a new storage policy that is named `IC4v Minimal vsan policy` is created. This storage policy can be used for deployments into the vSAN stretched cluster.
 
-### Network design
-{: #mcv-archi-comp-vsan-network}
-
-1. esxi–vmk is the management interface (vmk0) of the ESXi hosts
-  *	Route based on physical NIC Load (LBT)
-  * Uses both Uplink 1 and Uplink 2
-2. vMotion–A is the vMotion interface (vmk1) for Site A and vMotion–B is the vMotion interface (vmk1) for Site B
-  * Explicit Failover
-  * Uplink 2 is Active and Uplink 1 is Passive
-3. vSAN–A is the vSAN interface (vmk2) for Site A and vSAN–B is the vMotion interface (vmk2) for Site B
-  * Explicit Failover
-  * Uplink 1 is Active and Uplink 2 is Passive
-4. VTEP is the NSX interface (vmk3 and vmk4)
-  * Route based on Originating Virtual Port ID (SCRID)
-  * Uses both Uplink 1 and Uplink 2
-5. MGMT–VMs is the management port group for Management virtual machines
-  * Route based on physical NIC Load (LBT)
-  * Uses both Uplink 1 and Uplink 2
-
-## NSX
+## VMware NSX
 {: #mcv-archi-comp-nsx}
 
-### NSX–V Management Edge
+### NSX–T Management Edge
 {: #mcv-archi-comp-nsx-nsxv}
 
 The management edge is preconfigured to allow outbound access to the public internet.
 
-### NSX Manager and NSX Controller
+### NSX Manager/Controller
 {: #mcv-archi-comp-nsx-mgr-controller}
 
-The active side contains the NSX Manager.
+Three manager/controller appliances are deployed across the three availability zones and pinned to their respective clusters. These appliances are deployed in the following way: one in **Mgmt-A**, one in **Mgmt-B**, and one in the witness cluster.
 
-There is no automated failover of the NSX Manager during recovery of a failed site. It is the operator’s responsibility to recover the NSX Manager from backup and activate it during recovery from a fail–over scenario.
+If an availability zone failure or failover occurs, use vCenter Server to determine the IP address of an alternative NSX Manager/Controller and connect to it by using the credentials in the VMware Solutions console.
 {:note}
 
 ### NSX Edge configuration
 {: #mcv-archi-comp-nsx-config}
 
-No additional NSX configuration is performed other than allowing outbound traffic for the management cluster as previously described. It is your responsibility to provide and manage any other needed NSX configurations.
+No additional NSX configuration is performed other than allowing outbound traffic for the management cluster. It is your responsibility to provide and manage any other needed NSX configurations.
 
 ## Support
 {: #mcv-archi-comp-support}

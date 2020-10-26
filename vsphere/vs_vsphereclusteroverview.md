@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-20"
+lastupdated: "2020-10-01"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -21,12 +21,12 @@ subcollection: vmwaresolutions
 # VMware vSphere overview
 {: #vs_vsphereclusteroverview}
 
-VMware vSphere is a streamlined and optimized ordering platform for VMware. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components. A minimum of four ESXi servers is required.
+VMware vSphere® is a streamlined and optimized ordering platform for VMware®. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components. A minimum of four ESXi servers is required.
 {: shortdesc}
 
 The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented.
 
-VMware vSphere does not automate the installation, configuration, and bring-up of the optional VMware components. The platform allows maximum of flexibility to design and build your hosted VMware environment while incorporating VMware-compatible hardware.
+VMware vSphere does not automate the installation, configuration, and bring-up of the optional VMware components. The platform allows maximum of flexibility to design and build your hosted VMware environment while you incorporate VMware-compatible hardware.
 
 Use this offering to create a new cluster of ESXi servers or scale out an existing cluster of ESXi servers in an {{site.data.keyword.cloud_notm}} data center. Depending on the VMware components that you select, you can start with just one ESXi server and then scale the cluster later as needed.
 
@@ -42,9 +42,9 @@ The availability and pricing of standardized hardware configurations might vary 
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Select licenses (IBM-provided or BYOL) for the following VMware components:
-* VMware vSphere Enterprise Plus 6.7u3 or 6.5u3
+* VMware vSphere Enterprise Plus 6.7u3
 * The following VMware components are optional:
-   * VMware vCenter Server Standard
+   * VMware vCenter Server® Standard
    * VMware NSX (Base, Advanced, or Enterprise)
    * VMware vSAN (Advanced or Enterprise)
    * VMware Site Recovery Manager
@@ -56,13 +56,13 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
 {: #vs_vsphereclusteroverview-specs-bare-metal}
 
 You can order one or more {{site.data.keyword.cloud_notm}} bare metal servers with one of the following configurations:
-* **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
-* **Cascade Lake**: 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) and 4-CPU Intel Cascade Lake generation servers (Quad Intel Xeon Gold 6248) with your selected CPU model and RAM size.
-* **SAP-certified**: 2-CPU Intel Skylake generation servers (Intel Xeon 6140/E7-8890 series) and Intel Cascade Lake generation servers (Intel Xeon Gold 5200/6200 series and Intel Xeon Platinum 8200 series) with your selected CPU model.
+* **Skylake** - 2-CPU Intel® Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
+* **Cascade Lake** - 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200/8200 series) and 4-CPU Intel Cascade Lake generation servers (Quad Intel Xeon Gold 6248 and Quad Intel Xeon Platinum 8260) with your selected CPU model and RAM size.
+* **SAP-certified** - 2-CPU Intel Skylake generation servers Intel Cascade Lake generation servers (Intel Xeon Gold 5200/6200 series and Intel Xeon Platinum 8200 series) with your selected CPU model.
 
 The options available depend on whether you selected the VMware vSAN component.
 
-Additionally, the following disk and networking specifications:
+Additionally, the following disk and networking specifications apply:
 * 10 Gbps dual public and private network uplinks
 * One RAID disk controller
 
@@ -81,9 +81,9 @@ User-customized storage for vSAN configuration when the VMware vSAN component is
 
   Additionally, two cache disks of 960 GB are also ordered per host.
 
-  3.8 TB SSD (Solid State Disk) drives are supported when they are made generally available in a data center.
+  3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in a data center.
   {:note}
-* High Performance with Intel Optane option: this option provides two extra capacity disk bays. This option depends on the CPU model.
+* High Performance with Intel Optane option. This option provides two extra capacity disk bays and it depends on the CPU model.
 
 ## Technical specifications for vSphere cluster expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs}
@@ -103,10 +103,10 @@ One {{site.data.keyword.cloud_notm}} bare metal server with the networking confi
 ### VMware components for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 6.7u3 or 6.5u3.  
+* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 6.7u3.  
 * Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
-You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
+You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After you create a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
 {:important}
 
 ## Related links

@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# IBM Cloud for VMware Solutions SDDC architecture
+# VMware Solutions SDDC architecture
 {: #vcs-openshift-arch}
 
 ## Common services components

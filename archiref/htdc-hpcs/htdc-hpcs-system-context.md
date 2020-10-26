@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-07-06"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,8 @@ subcollection: vmwaresolutions
 # System context
 {: #htdc-hpcs-system-context}
 
-The following diagram shows the system context for vCenter Server instance with HyTrust DataControl and IBM Hyper Protect Crypto Services. A system context diagram is a high-level diagram that provides an initial view of the system. It defines the key elements of a system, the boundary of the system, and the entities that interact with it, along with the interaction.
+The following diagram shows the system context for vCenter Server instance with HyTrust®
+ DataControl® and IBM Hyper Protect Crypto Services. A system context diagram is a high-level diagram that provides an initial view of the system. It defines the key elements of a system, the boundary of the system, and the entities that interact with it, along with the interaction.
 
 ![System Context](../../images/htdc-hpcs-system-context.svg){: caption="Figure 1. System context" caption-side="bottom"}
 
@@ -28,7 +29,7 @@ The following diagram shows the system context for vCenter Server instance with 
 
 The system context diagram identifies the following actors:
 
-* IBM Cloud administrator - The IBM Cloud administrator is responsible for assign access to the IBM Cloud account, and is required to configure the Service ID to enable access to Hyper Protect Crypto Services from HyTrust DataControl.
+* {{site.data.keyword.cloud}} administrator - The {{site.data.keyword.cloud_notm}} administrator is responsible for assign access to the {{site.data.keyword.cloud_notm}} account, and is required to configure the Service ID to enable access to Hyper Protect Crypto Services from HyTrust DataControl.
 * VMware administrator - The VMware administrator is responsible for the ongoing configuration and maintenance of the VMware environment.
 * IBM HPCS administrators - The following are the roles that Hyper Protect Crypto Services supports.
     * Crypto unit administrator - Issue commands to the crypto units. Multiple administrators can be added to one crypto unit to increase security. Each administrator owns one private signature key for identity authentication.
@@ -40,7 +41,7 @@ The system context diagram identifies the following actors:
     * Primary Key management.
     * Views all audit records.
   * Domain administrator:
-    * Manages KeyControl nodes.
+    * Manages KeyControl™ nodes.
     * KeyControl backup / restore.
     * Limited audit view.
   * Cloud administrator:
@@ -56,16 +57,16 @@ The system context diagram identifies the following systems:
 
 * vCenter Server instance - The vCenter Server instance hosts the workloads that require encryption and the HyTrust virtual machines.
 * HyTrust DataControl - The virtual machines that host the HyTrust DataControl software.
-* IBM Hyper Protect Crypto Service - IBM Cloud Hyper Protect Crypto Services is a key management and cloud hardware security module.
-* IBM Cloud private network - Provides communication between the HyTrust DataControl virtual machines and the IBM Hyper Protect Crypto Service.
-* IBM Cloud public network - Provides communication between the HyTrust DataControl virtual machines and the IBM Cloud Identity and Access Management service to validate the API key.
-* Service ID - A service ID identifies a service or application similar to how a user ID identifies a user. Service IDs are created to enable access to IBM Cloud services by applications hosted both inside and outside of IBM Cloud. The API Key is configured in the Service ID and used in the configuration of the Cloud VM Set.
-* IBM Cloud Identity and Access Management (IAM) - The IBM Cloud service that validates access to IBM Cloud services, including IBM HPCS.
+* IBM Hyper Protect Crypto Service - {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services is a key management and cloud hardware security module.
+* {{site.data.keyword.cloud_notm}} private network - Provides communication between the HyTrust DataControl virtual machines and the IBM Hyper Protect Crypto Service.
+* {{site.data.keyword.cloud_notm}} public network - Provides communication between the HyTrust DataControl virtual machines and the {{site.data.keyword.cloud_notm}} Identity and Access Management service to validate the API key.
+* Service ID - A service ID identifies a service or application similar to how a user ID identifies a user. Service IDs are created to enable access to {{site.data.keyword.cloud_notm}} services by applications hosted both inside and outside of {{site.data.keyword.cloud_notm}}. The API Key is configured in the Service ID and used in the configuration of the Cloud VM Set.
+* {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) - The {{site.data.keyword.cloud_notm}} service that validates access to {{site.data.keyword.cloud_notm}} services, including IBM HPCS.
 
 **Next topic:** [Reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-reference-architecture)
 
 ## Related links
 {: #htdc-hpcs-system-context-related}
 
-*  [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
+*  [Getting started with {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
 *  [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)

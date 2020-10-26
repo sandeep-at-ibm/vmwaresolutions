@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-28"
 
 keywords: user account, user permissions, VRF account
 
@@ -33,7 +33,7 @@ You can verify or update permissions for classic infrastructure users at any tim
 | Permission         | Details                                 |
 |:------------------ |:--------------------------------------- |
 | Add Server | This permission is required for the following operations: to order {{site.data.keyword.cloud_notm}} bare metal servers on which VMware® ESXi™ runs and to provision hourly virtual servers that are used for instance configuration, maintenance, and support operations. |
-| Cancel Server | This permission is required to release and reclaim bare metal servers on which VMware ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
+| Cancel Server | This permission is required to release and reclaim bare metal servers on which VMware® ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
 | View Virtual Server Details | This permission is required to retrieve the server provisioning details, which are required for order validation and automated configuration. |
 | Add Storage | This permission is required to order backup storage and shared storage for the instance. |
 | Manage Storage | This permission is required to manage backup storage and shared storage for the instance. |
@@ -44,7 +44,7 @@ You can verify or update permissions for classic infrastructure users at any tim
 | Edit Tickets | This permission is required to edit the service tickets that are created on your behalf. |
 | View Tickets | This permission is required to monitor the service tickets that are related to the components in your instance for {{site.data.keyword.cloud_notm}} infrastructure provisioning delays and problems. |
 | View Hardware Details | This permission is required to retrieve the hardware details, which are needed for order validation and automated configuration. |
-| Reboot/Control | This permission is required to power off the hardware during the hardware cancellation process when you delete an instance. |
+| Reboot / Control | This permission is required to power off the hardware during the hardware cancellation process when you delete an instance. |
 | View Licenses | This permission is required to retrieve and validate the licenses that are used by your instance. |
 | View Passwords | This permission is required to be able to administer the ordered VSIs. |
 | Manage Server Monitoring | This permission is not required to place an order. However, it is required to retrieve and validate the monitoring status of the {{site.data.keyword.cloud_notm}} bare metal servers on which the VMware ESXi servers are running in your instance. |

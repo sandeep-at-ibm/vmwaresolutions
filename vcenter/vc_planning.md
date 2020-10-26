@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-08"
+lastupdated: "2020-10-19"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -38,58 +38,60 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 | {{site.data.keyword.cloud_notm}} data center | Region | Server options for NSX-V| Server options for NSX-T |
 |:----------------------|:-------|:---------------|:-----------------|
 | Amsterdam 03 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| Chennai 01 | Asia-Pacific | Skylake, SAP-certified[^sap-che01] | Skylake |
-| Dallas 09 | NA South | Skylake, SAP-certified | Skylake, SAP-certified |
+| Chennai 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified[^sap-che01] | Skylake, Cascade Lake |
+| Dallas 09 | NA South | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Dallas 10 | NA South | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Dallas 12 | NA South | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Dallas 13 | NA South | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Frankfurt 02 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Frankfurt 04 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Frankfurt 05 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| Hong Kong 02 | Asia-Pacific | Skylake, SAP-certified | Skylake, SAP-certified |
+| Hong Kong 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | London 02 | Europe | Skylake, Cascade Lake | Skylake, Cascade Lake |
 | London 04 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | London 05 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | London 06 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| Mexico 01 | NA South | Skylake, SAP-certified[^sap-mex01] | Skylake |
-| Milan 01 | Europe | Skylake, SAP-certified[^sap-mil01] | Skylake |
+| Mexico 01 | NA South | Skylake, Cascade Lake, SAP-certified[^sap-mex01] | Skylake, Cascade Lake |
+| Milan 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-mil01] | Skylake, Cascade Lake |
 | Montreal 01 | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01] | Skylake, Cascade Lake |
-| Oslo 01 | Europe | Skylake, SAP-certified[^sap-osl01] | Skylake |
+| Osaka 21 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
+| Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
+| Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
+| Oslo 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-osl01] | Skylake, Cascade Lake |
 | Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] | Skylake, Cascade Lake |
-| Sao Paulo 01 | South America | Skylake, SAP-certified | Skylake, SAP-certified |
-| Seoul 01 | Asia-Pacific | Skylake, SAP-certified | Skylake, SAP-certified |
-| San Jose 03 | NA West | Skylake | Skylake |
-| San Jose 04 | NA West | Skylake | Skylake |
-| Singapore 01| Asia-Pacific | Skylake, SAP-certified | Skylake, SAP-certified |
+| Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Seoul 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| San Jose 03 | NA West | Skylake, Cascade Lake | Skylake, Cascade Lake |
+| San Jose 04 | NA West | Skylake, Cascade Lake | Skylake, Cascade Lake |
+| Singapore 01| Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Sydney 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Sydney 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Sydney 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Tokyo 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Tokyo 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Tokyo 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| Toronto 01 | NA East | Skylake, SAP-certified | Skylake, SAP-certified |
+| Toronto 01 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 04 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 06 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 07 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vCenter Server instances" caption-side="top"}
 
-[^sap-che01]: vSphere 6.5 only
+[^sap-che01]: Existing vSphere 6.5 clusters only
 
-[^sap-mex01]: vSphere 6.5 only
+[^sap-mex01]: Existing vSphere 6.5 clusters only
 
-[^sap-mil01]: vSphere 6.5 only
+[^sap-mil01]: Existing vSphere 6.5 clusters only
 
-[^sap-mon01]: vSphere 6.5 only
+[^sap-mon01]: Existing vSphere 6.5 clusters only
 
-[^sap-osl01]: vSphere 6.5 only
+[^sap-osl01]: Existing vSphere 6.5 clusters only
 
-[^sap-par01]: vSphere 6.5 only
+[^sap-par01]: Existing vSphere 6.5 clusters only
 
 ### Cascade Lake notes
 {: #vc_planning-dc-notes}
 
-* Cascade Lake (4-CPU Quad Intel Xeon Gold 6248) is available only in the **Dallas 10** {{site.data.keyword.cloud_notm}} data center.
-* Cascade Lake bare metal servers are also available on [multizone region](#x9774820){: term}
+Cascade Lake bare metal servers are also available on [multizone region](#x9774820){: term}
 {{site.data.keyword.cloud_notm}} data centers. For more information, see [Multizone region (MZR) overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 Depending on availability and inventory supply, {{site.data.keyword.cloud_notm}} data centers might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.

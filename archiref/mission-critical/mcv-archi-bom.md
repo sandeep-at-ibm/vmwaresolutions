@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-08-17"
+lastupdated: "2020-10-08"
 
 subcollection: vmwaresolutions
 
@@ -27,27 +27,27 @@ subcollection: vmwaresolutions
 The following components are available for {{site.data.keyword.cloud}} for VMware Mission Critical Workloads:
 
 * VMware vSphere 6.7u2
-* VMware vRealize Components
-  * vRO v7.5
+* VMware vRealize components
+  * vROps v7.5
   * vRLI v4.2
   * vRNI v4.8
-* VMware NSX-V v6.4.5 (NSX-T is not supported)
+* VMware NSX-T 3.0 (NSX-V is not supported).
 * Skylake plus Cascade Lake when available. Skylake 4110 is supported for the witness and management clusters only.
 * Optane drives are the only supported option for vSAN cache disks.
 * VMware vSAN with the option of RAID–1, RAID–5, and RAID–6.
-* Licensing
-  * vSAN Enterprise
-  * NSX Enterprise or Enterprise Plus
-  * Bring Your Own Licenses (BYOL) is supported
+* Licensing:
+  * vSAN Enterprise.
+  * NSX Enterprise or Enterprise Plus.
+  * Bring Your Own Licenses (BYOL) is supported.
 * HA Active Directory with two virtual machines or two VSIs distributed between the two workload sites.
 
 ### Component naming conventions
 {: #mcv-archi-bom-components-naming}
 
-| Component       | Format     | Example |
-|:-------- |:------------ |:------------|
+| Component | Format | Example |
+|:--------- |:------ |:------- |
 | Host name| `<dc_name><host_prefix><host_number>` | datacenter-host01.subdomain.domain |
-| Stretch cluster name | `<instance>-stretch<suffix><datacenter>` | mcv1-stretch1-dal |
+| Stretched cluster name | `<instance>-stretch<suffix><datacenter>` | mcv1-stretch1-dal |
 | Cluster and management component | `<instance>-mgmt-<component><suffix>` | mcv1-mgmt-dvs01<br/>DAL10-DVS |
 {: caption="Table 1. Component naming conventions" caption-side="top"}
 

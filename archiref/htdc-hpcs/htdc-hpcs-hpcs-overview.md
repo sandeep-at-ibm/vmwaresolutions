@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # IBM Hyper Protect Crypto Services overview
 {: #htdc-hpcs-hpcs-overview}
 
-IBM Hyper Protect Crypto Services (IBM HPCS) is a single-tenant key management service, backed by a FIPS140-2 level 4 certified Hardware Security Module (HSM), that supports Keep Your Own Key (KYOK). With IBM HPCS, customers can now move their most mission critical workloads to the IBM Cloud with the assurance of using the highest level of security to prevent unauthorized access to their sensitive data. Customers maintain complete control over their keys and data in the cloud and no one, including IBM Cloud admins, has access to the customer data. Additionally, no single person has access to the full key. At a high level the IBM HPCS consists of the following components:
+IBM Hyper Protect Crypto Services (IBM HPCS) is a single-tenant key management service, backed by a FIPS140-2 level 4 certified Hardware Security Module (HSM), that supports Keep Your Own Key (KYOK). With IBM HPCS, customers can now move their most mission critical workloads to the {{site.data.keyword.cloud_notm}} with the assurance of using the highest level of security to prevent unauthorized access to their sensitive data. Customers maintain complete control over their keys and data in the cloud and no one, including {{site.data.keyword.cloud_notm}} admins, has access to the customer data. Additionally, no single person has access to the full key. At a high level the IBM HPCS consists of the following components:
 
 * Crypto unit - a singular unit representing a piece of hardware, the HSM, and the corresponding software stack, both are dedicated to a single tenant.
 * Service instance - a cluster of crypto units, which operates as a single logical entity to provide redundancy and scalability.
@@ -35,4 +35,4 @@ The IBM HPCS service has the following key features:
 ## Related links
 {: #htdc-hpcs-hpcs-overview-related}
 
-* [Getting started with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)
+* [Getting started with {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-get-started)

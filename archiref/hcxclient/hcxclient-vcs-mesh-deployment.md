@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-21"
 
 subcollection: vmwaresolutions
 
@@ -57,10 +57,10 @@ The Site Pairing is registered and displayed on the UI.
 
 | Network Name | MTU |
 | -----| ----|
-| External | 1500|
-| Management | 9000|
-| vMotion | 9000|
-{: caption="Table 1. Results" caption-side="bottom"}
+| External | 1500 |
+| Management | 9000 |
+| vMotion | 9000 |
+{: caption="Table 1. Results" caption-side="top"}
 
 ### Creating on-premises Service Mesh compute profiles
 {: #hcxclient-vcs-mesh-deployment-profiles-compute}

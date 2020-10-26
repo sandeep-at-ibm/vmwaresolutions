@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -19,9 +19,9 @@ subcollection: vmwaresolutions
 # HyTrust Workload Security Platform overview
 {: #htdc-hpcs-hytrust-overview}
 
-The HyTrust Workload Security Platform consists of the following products:
+The HyTrust® Workload Security Platform consists of the following products:
 
-* HyTrust KeyControl - HyTrust KeyControl (HTKC) serves as a Key Management Server for VMware vSphere and vSAN encrypted clients, or other products that support KMIP. HTKC manages the encryption keys for virtual machines and encrypted data stores and can scale to support thousands of encrypted workloads in large deployments. The following key features are included:
+* HyTrust KeyControl™ - HyTrust KeyControl (HTKC) serves as a Key Management Server for VMware vSphere and vSAN encrypted clients, or other products that support KMIP. HTKC manages the encryption keys for virtual machines and encrypted data stores and can scale to support thousands of encrypted workloads in large deployments. The following key features are included:
     * VMware Certified Key Manager Server (KMS) for vSphere 6.5, 6.7 – vSAN6.6.
     * Highly Availability (HA) active- active deployments and clustering.
     * Initial implementation of a 2-Node KeyControl cluster, but can be extended to up to four KeyControl Nodes in a cluster.
@@ -35,10 +35,10 @@ The HyTrust Workload Security Platform consists of the following products:
     * Dashboard and log based forensic analytics.
     * Role-based access control (RBAC) for administrative controls over policy and key access.
     * Cross-cloud key management.
-    * Pre-integration with HyTrust CloudControl and HyTrust BoundaryControl to provide automated data geo-fencing for workloads.
+    * Pre-integration with HyTrust CloudControl™ (HTCC) and HyTrust BoundaryControl to provide automated data geo-fencing for workloads.
     * File/folder level encryption on selected operating systems.
     * Pre-integration with Intel TXT/TPM for hardware host attestation.
-* HyTrust CloudControl - HyTrust CloudControl (HTCC) provides a number of security and policy enhancements to VMware vSphere.​ HTCC is deployed as a transparent proxy. It mediates the actions that are taken by VMware administrators by approving actions that are allowed, disapproving actions that are blocked, and requesting additional approval if enabled. The following key features are included:
+* HyTrust CloudControl - HyTrust CloudControl provides a number of security and policy enhancements to VMware vSphere.​ HTCC is deployed as a transparent proxy. It mediates the actions that are taken by VMware administrators by approving actions that are allowed, disapproving actions that are blocked, and requesting additional approval if enabled. The following key features are included:
     * Policy-based protection for the hypervisor, VMs, and data.
     * Continuous monitoring of hypervisor and VMs for security and compliance.
     * One-click security and compliance remediation on vulnerable VMs.

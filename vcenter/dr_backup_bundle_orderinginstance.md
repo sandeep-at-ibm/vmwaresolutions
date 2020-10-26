@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-09-03"
 
 keywords: single-node, data protection DR, order data protection DR
 
@@ -202,7 +202,7 @@ Complete the following steps to delete a Single-node for Data Protection and Dis
 ## Related links
 {: #dr_backup_bundle_orderinginstance-related}
 
-* [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX resources](https://cloud.vmware.com/vmware-hcx#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [Managing virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-virtual-servers)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)

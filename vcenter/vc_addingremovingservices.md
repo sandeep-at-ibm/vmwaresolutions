@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-19"
+lastupdated: "2020-10-23"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -37,17 +37,17 @@ The following table shows the services available for vCenter Server with NSX-V i
 | Service name | Current version |
 |--------------|-----------------|
 | [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 2.3 |
-| [F5® BIG-IP®](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE v15.1.0.4 |
+| [F5® BIG-IP®](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE v15.1.0.5 |
 | [FortiGate® Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.2.3 |
 | [HyTrust® CloudControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 5.6 |
 | [HyTrust DataControl®](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.1.1 |
 | [HyTrust KeyControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations) | 5.0.1 |
 | [{{site.data.keyword.IBM}} Security Services for SAP®](/docs/vmwaresolutions?topic=vmwaresolutions-managing-ss-sap) | N/A |
 | [IBM Spectrum® Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | V10.1.5 |
-| [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | 19.4R2.6 |
+| [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | 3.0 (20.1R1.11) |
 | [KMIP™ for VMware®](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) | 2.0 |
 | [PrimaryIO™ HDM](/docs/vmwaresolutions?topic=vmwaresolutions-managing_pio) | N/A |
-| [Red Hat® OpenShift® for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.4.13 |
+| [Red Hat® OpenShift® for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.4.23 |
 | [Veeam®](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 10 |
 | [vRealize® Operations™ and Log Insight™](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
 | [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 7.5 Update 3 |
@@ -61,12 +61,15 @@ The following table shows the services available for vCenter Server with NSX-T i
 | Service name | Current version |
 |--------------|-----------------|
 | [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 2.3 |
-| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 6.1.1 |
+| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 6.2 |
 | [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.1.1 |
-| [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | 19.4R2.6 |
+| [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview) | 3.0 (20.1R1.11) |
+| [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.4.23[^nsxtver] |
 | [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 10 |
 | [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 7.5 and vRLI 4.8 |
 {: caption="Table 2. Available services for vCenter Server with NSX-T instances" caption-side="top"}
+
+[^nsxtver]: If adding the service to an existing instance, you must upgrade NSX-T from 2.5.1 to 3.0.2.
 
 ## Promotions for VMware Solutions add-on services
 {: #vc_addingremovingservices-service-promotions}
@@ -95,26 +98,25 @@ Promotion pricing starts when the promo is applied. The pricing is automatically
 
 There are specific resource requirements for several add-on services.
 
-For certain services, the system performs a capacity check before installing the service in your environment. Some services require a minimum amount of resources in order to be installed. The check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+For certain services, the system performs a capacity check on the targeted clusters before installing the service in your environment. Some services require a minimum amount of resources in order to be installed. The check is performed against the available capacity of the targeted cluster in the environment to ensure that the service components can fit.
 
 During deployment, if the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email. The message displays the expected capacity for all of the services that failed the check.
-
-If you are installing Red Hat OpenShift on a workload cluster, a capacity check is not performed before installation. However, an informational message is displayed with the expected capacity required to install the service.
 
 To install the service, you must increase the capacity in your default cluster either by adding more hosts or by freeing up RAM, CPU, or disk space. After that, add the service or services again in the console and delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 The following table provides the resource requirements for services that the system performs a capacity check for before installing the service.
 
 | Service name | Resource requirements |
-|--------------|-----------------|
+|:------------ |:--------------------- |
 | Caveonix RiskForesight | CPU: 8 vCPUs<br>RAM: 32 GB<br>Storage: 100 GB |
 | F5 BIG-IP[^f5bigip] | CPU: 4, 8, or 16 vCPUs depending on license and bandwidth chosen<br>RAM: 8, 16, or 32 GB depending on license and bandwidth chosen |
 | FortiGate Virtual Appliance | CPU: 4, 8, or 16 vCPUs depending on license chosen<br>RAM: 8, 12, or 24 GB depending on license chosen |
-| HyTrust CloudControl | CPU: 4 vCPUs<br>RAM: 16 GB<br>Storage:<br>For version 5.6: 70 GB VMDK resident on vSAN<br> For version 6.1.1: 186 GB VMDK resident on vSAN |
+| HyTrust CloudControl | CPU: 4 vCPUs<br>RAM: 16 GB<br>Storage:<br>For version 5.6: 70 GB VMDK resident on vSAN<br> For version 6.2: 186 GB VMDK resident on vSAN |
 | IBM Spectrum Protect Plus | CPU: 16 vCPUs<br>RAM: 48 GB |
 | Juniper vSRX | You must have enough available capacity to accommodate two VMs with the following requirements, on different hosts:<br>CPU: 12 vCPUs<br>RAM: 16 GB<br>Storage: 32 GB |
 | Red Hat OpenShift | CPU: 27 vCPUs<br>RAM: 155 GB<br>Storage: 952 GB |
-| Veeam | If you select Veeam as a VSI option, there is no capacity requirement.<br>If you select Veeam as a VM option, the following capacity is required:<br>CPU: 8 vCPUs<br>RAM: 32 GB<br>Storage: 100 GB |
+| Veeam | If you select Veeam as a VSI option, there is no capacity requirement.<br><br>If you select Veeam as a VM option, the following capacity is required:<br>CPU: 8 vCPUs<br>RAM: 32 GB<br>Storage: 100 GB |
+| VMware HCX | For each gateway in the active/passive pair of VMware NSX edge services gateways:<br>CPU: 6 vCPUs<br>RAM: 8 GB<br>Storage: 3 GB VMDK<br><br>For HCX Management Appliance - virtual machine:<br>CPU: 4 vCPUs<br>RAM: 12 GB<br>Storage: 60 GB VMDK |
 | vRealize Operations and Log Insight | CPU: 18 vCPUs<br>RAM: 208 GB |
 | Zerto | CPU: 2 vCPUs<br>RAM: 4 GB |
 {: caption="Table 3. Resources required for services the system checks for capacity problems" caption-side="top"}
@@ -124,7 +126,7 @@ The following table provides the resource requirements for services that the sys
 ### Formulas for calculating space requirements for services
 {: #vc_addingremovingservices-resource-requirements-spacecalc-forms}
 
-The following formulas are used to calculate the space requirements for the services and the management overheads.
+The following formulas are used to calculate the space requirements for the services and the management overheads. The formulas apply to management clusters, workload clusters, edge services clusters, and single-node management clusters.
 
 #### Formula to calculate the number of available cores
 {: #vc_addingremovingservices-resource-requirements-spacecalc-forms-cores}
@@ -134,15 +136,19 @@ The following formulas are used to calculate the space requirements for the serv
 The following table lists the variables that are used in the previous formula.
 
 | Variable | Description | Unit | vSAN example | NFS example |
-|:--------- |:----------- |:---- |:------------- |:----------- |
+|:-------- |:----------- |:---- |:------------ |:----------- |
 | AvailableCores | The number of cores available for workloads and services in the environment | Cores | 38 | 43 |
 | HostCount | The number of hosts in the default cluster | Hosts | 4 | 4 |
 | HostCoreCount | The number of raw cores available in each host in the default cluster | Cores | 16 | 16 |
 | HostOverheadCores | The number of cores that are reserved by the ESXi server as overhead | Cores | 0.1 | 0.1 |
-| MgmtOverheadCores | The number of cores reserved by the vCenter Server management components (vCenter Server, PSC, AD/DNS, Edges) | Cores | 5 | 5 |
-| vSphereHAHostTolerance | The number of hosts to tolerate in the vSphere HA configuration | Hosts | 1 | 1 |
+| MgmtOverheadCores[^mgmtcores] | The number of cores reserved by the vCenter Server management components (vCenter Server, PSC, AD/DNS, Edges) | Cores | 5 | 5 |
+| vSphereHAHostTolerance[^vspherehacores] | The number of hosts to tolerate in the vSphere HA configuration | Hosts | 1 | 1 |
 | HostVsanOverheadCorePercentage | The percentage of a host cores used by vSAN | % | 10 | 0 |
-{: caption="Table 4. Description of variables in Formula 1" caption-side="top"}
+{: caption="Table 4. Description of variables in formula 1" caption-side="top"}
+
+[^mgmtcores]: Management cluster only. No core reservation for the workload cluster, the edge services cluster, and the single-node management cluster.
+
+[^vspherehacores]: Management and workload clusters only. No hosts are reserved for the edge services cluster or the single-node management cluster.
 
 #### Formula to calculate the available memory
 {: #vc_addingremovingservices-resource-requirements-spacecalc-forms-memory}
@@ -152,17 +158,21 @@ The following table lists the variables that are used in the previous formula.
 The following table lists the variables that are used in the previous formula.
 
 | Variable | Description | Unit | vSAN example | NFS example |
-|:--------- |:----------- |:---- |:------------- |:----------- |
+|:-------- |:----------- |:---- |:------------ |:----------- |
 | AvailableMemory | The number of GB of memory available for workloads and services in the environment | GB | 693 | 860 |
 | HostCount | The number of hosts in the default cluster | Hosts | 6 | 6 |
 | HostMemory | The number of raw GB of memory available in each host in the default cluster | GB | 192 | 192 |
 | HostVsanCapacityDiskSize | The number of GB of a capacity of each vSAN capacity SSD disk on this host | GB | 960, 1,946, or 3,891 | 0 |
 | HostOverheadMemory | The number of GB of memory that is reserved by the ESXi server as overhead | GB | 4.6 | 4.6 |
-| MgmtOverheadMemory | The number of GB of memory reserved by the vCenter Server management components (vCenter Server, PSC, AD/DNS, Edges) | GB | 77 | 77 |
-| vSphereHAHostTolerance | The number of hosts to tolerate in the vSphere HA configuration | Hosts	| 1 | 1 |
+| MgmtOverheadMemory[^mgmtmem] | The number of GB of memory reserved by the vCenter Server management components (vCenter Server, PSC, AD/DNS, Edges) | GB | 77 | 77 |
+| vSphereHAHostTolerance[^vspherehamem] | The number of hosts to tolerate in the vSphere HA configuration | Hosts | 1 | 1 |
 | HostVsanOverheadMemoryDiskPercentage | The number of GB of memory reserved by vSAN management (represented as percentage of one of the capacity vSAN disks) | % | 2.75% | 2.75% |
 | HostVsanOverheadMemory | The number of GB of memory reserved by vSAN management regardless of disk size | GB |  7 | 0 |
-{: caption="Table 5. Description of variables in Formula 2" caption-side="top"}
+{: caption="Table 5. Description of variables in formula 2" caption-side="top"}
+
+[^mgmtmem]: Management cluster only. No memory reservation for the workload cluster, the edge services cluster, and the single-node management cluster.
+
+[^vspherehamem]: Management and workload clusters only. No hosts are reserved for the edge services cluster or the single-node management cluster.
 
 ## Procedure to add services to vCenter Server instances
 {: #vc_addingremovingservices-adding-procedure}

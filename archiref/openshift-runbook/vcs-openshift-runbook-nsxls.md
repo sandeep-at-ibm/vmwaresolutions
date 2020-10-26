@@ -39,14 +39,13 @@ This section provides example PowerNSX commands that you can use to automate the
 
 Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described previously.
 
-| Parameters | Example | Your Deployment |
-| --- | --- | --- |
+| Parameters | Example | Your deployment |
+|:---------- |:------- |:--------------- |
 | vCenter Server IP address | | |
-| vCenter User | | |
-| vCenter Password | | |
+| vCenter Server user | | |
+| vCenter Server password | | |
 | NSX Transport Zone| transport-1 | |
-
-{: caption="Table 1. PowerNSX LS Parameters" caption-side="bottom"}
+{: caption="Table 1. PowerNSX LS Parameters" caption-side="top"}
 
 ```powernsx
 # Allow self-signed certificates on PowerCLI
@@ -63,7 +62,6 @@ Get-NsxTransportZone transport-1 | new-nsxlogicalswitch -Name OpenShift-HA -Desc
 # Disconnect
 Disconnect-NsxServer
 ```
-
 
 **Next topic:** [Red Hat OpenShift NSX Edge configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxedge-intro)
 

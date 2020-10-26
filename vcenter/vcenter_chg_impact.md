@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-10-19"
 
 keywords: change vCenter Server artifacts, automation ID, VMware resource
 
@@ -53,11 +53,11 @@ The `<service_name>` together with the `<service_uuid>` truncates to 20 characte
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
 {: faq}
 
-If the vCenter Server instance is in a **Ready to use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer datastore names from the VMware vSphere Web Client.
+If the vCenter Server instance is in a **Ready to use** state, you can modify the VMware virtual datacenter, cluster, switches, port groups, and customer Network File System (NFS) datastore names from the VMware vSphere Web Client.
 
 Review the following restrictions:
 
-* Do not change the name of the management datastore from its default value, which is  **vsanDatastore** for vSAN instances and **management-share** for Network File System (NFS) instances.
+* Do not change the name of the management datastore from its default value, which is  **vsanDatastore** for VMware vSAN instances and **management-share** for NFS instances.
 * Do not change the name of the network uplinks that are created during provisioning.
 * Do not change the ESXi server names and the IP addresses because they are registered for Windows DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 

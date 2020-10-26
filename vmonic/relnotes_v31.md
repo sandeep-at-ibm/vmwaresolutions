@@ -27,7 +27,7 @@ This release includes new features, component updates, usability enhancements, a
 ## Single-node Trial for Data Protection and Disaster Recovery instances
 {: #relnotes_v31-dr-bundle}
 
-The Single-node Trial for Data Protection and Disaster Recovery is a quick way to test drive {{site.data.keyword.cloud_notm}} to migrate and recover VMware workloads into the {{site.data.keyword.cloud_notm}}. This trial is a version of VMware vCenter Server on IBM Cloud, a single-tenant VMware platform that can be managed using the same familiar tools as on-premises environments. This trial includes the Veeam on {{site.data.keyword.cloud_notm}}, VMware HCX on {{site.data.keyword.cloud_notm}}, and Zerto on {{site.data.keyword.cloud_notm}} services.
+The Single-node Trial for Data Protection and Disaster Recovery is a quick way to test drive {{site.data.keyword.cloud_notm}} to migrate and recover VMware workloads into the {{site.data.keyword.cloud_notm}}. This trial is a version of VMware vCenter Server, a single-tenant VMware platform that can be managed using the same familiar tools as on-premises environments. This trial includes the Veeam on {{site.data.keyword.cloud_notm}}, VMware HCX on {{site.data.keyword.cloud_notm}}, and Zerto on {{site.data.keyword.cloud_notm}} services.
 
 ## IBM Cloud Expert Services
 {: #relnotes_v31-expert-services}

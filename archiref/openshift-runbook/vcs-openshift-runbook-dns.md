@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 1. Log in to [{{site.data.keyword.cloud}}](https://cloud.ibm.com/login){:external}.
 2. From left menu, select **VMware**, then **Resources**.
 3. Select your deployed instance.
-4. Collect the AD/DNS IP and remote desktop credentials
+4. Collect the AD/DNS IP and remote desktop credentials.
 5. From a jump box or by using SSL VPN, remote desktop to the AD/DNS server.
 
 ## Create DNS records
@@ -36,16 +36,17 @@ subcollection: vmwaresolutions
 3. From the Windows RDP Session, open a PowerShell command window.
 4. Run commands to create the DNS artifacts.
    - Reverse Lookup Zones
-   - Create DNS A Records, with PTR.
-   - Create DNS Service record for etcd.
-   - Create DNS SRV record for etcd.
+   - Create DNS A Records, with PTR
+   - Create DNS Service record for etcd
+   - Create DNS SRV record for etcd
 
 **Note:** The *Add-DnsServerPrimaryZone -networkid* cmdlet creates only classful reverse lookup zones. Therefore, if you specify a prefix longer than /24, say a /26, then the cmdlet creates a /32 reverse lookup zone. Therefore, as a workaround in the script use /24 instead of a /26. You also need to modify the private portable subnet to match classful /24 network in the commands.
 
 Do not create CNAME entries as OpenShift's certificates are keyed to the DNS returning the IP address only and not a referral to the base hostname.
 {:note}
 
-Use the following format for DNS naming standards: `HostName.ClusterName.SubDomain.DomainName`, where:
+Use the following format for DNS naming standards:
+`HostName.ClusterName.SubDomain.DomainName`, where:
 - **HostName** - Name of the virtual machine or host, for example, `control-plane-0`
 - **ClusterName** - OpenShift cluster name, for example, `ocp`
 - **SubDomain** - Subdomain of the {{site.data.keyword.vmwaresolutions_short}} deployment, for example, `dallas`

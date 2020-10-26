@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 VMware uses the following terms to describe software updates.
 
 | Term | Definition |
-|:------- |:----------- |
+|:---- |:---------- |
 | Bulletin |	A grouping of one or more VIBs. Bulletins are defined within metadata. |
 | Depot |	A logical grouping of VIBs and associated metadata that is published online |
 | Host upgrade image |	An ESXi image that you can import in the Update Manager repository and use for upgrading ESXi 5.5 or ESXi 6.0 hosts to ESXi 6.5. |
@@ -28,7 +28,7 @@ VMware uses the following terms to describe software updates.
 | Roll-up |	A collection of patches that is grouped for ease of download and deployment. |
 | VA upgrade |	Updates for a virtual appliance, which the vendor considers an upgrade. |
 | VIB |	A VIB is a single software package. |
-{: caption="Table 1. VMware software update terms and definitions" caption-side="bottom"}
+{: caption="Table 1. VMware software update terms and definitions" caption-side="top"}
 
 **Next topic:** [Virtual machine vSAN redundancy](/docs/vmwaresolutions?topic=vmwaresolutions-vum-vsan-redundancy)
 

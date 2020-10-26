@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-09-22"
 
 keywords: nsx editions, vsan editions, nsx edition comparison, vsan edition comparison
 
@@ -21,19 +21,19 @@ subcollection: vmwaresolutions
 
 Within this design, there are multiple components that require licenses. This information captures the minimum licenses that are required for the environment to operate correctly.
 
-Component | Purpose | License
-----------|---------|-------------
-VMware vSphere | Compute virtualization | vSphere 6.7 Enterprise Plus
-VMware vCenter Server | Infrastructure Management | vCenter Server 6.7 Standard
-NSX | Network virtualization | NSX Base for Service Providers 6.4
-vSAN | Storage virtualization | vSAN 6.6 Advanced  
-{: caption="Table 1. License requirements" caption-side="bottom"}
+| Component | Purpose | License |
+|:--------- |:------- |:------- |
+| VMware vSphere | Compute virtualization | vSphere 6.7 Enterprise Plus |
+| VMware vCenter Server | Infrastructure Management | vCenter Server 6.7 Standard |
+| VMwareNSX | Network virtualization | NSX Base for Service Providers 6.4 |
+| VMwarevSAN | Storage virtualization | vSAN 6.6 Advanced |
+{: caption="Table 1. License requirements" caption-side="top"}
 
 NSX Base for Service Providers edition is only available for service providers through the VMware vCloud Air Network (vCAN). The features in this edition can be found in the following table.
 {:note}
 
 | NSX feature                                   | Base | Advanced | Enterprise |
-|-----------------------------------------------|------|----------|------------|
+|:--------------------------------------------- |:---- |:-------- |:---------- |
 | Distributed switching and routing             | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | NSX Edge firewall                             | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | NAT                                           | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
@@ -64,7 +64,7 @@ NSX Base for Service Providers edition is only available for service providers t
 The following table lists the available features for the **Advanced** and **Enterprise** editions of VMware vSAN that the solution supports.
 
 | vSAN feature                                    | Advanced | Enterprise |
-|-------------------------------------------------|----------|------------|
+|:----------------------------------------------- |:-------- |:---------- |
 | Storage policy-based management                 | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | Flash read/write caching                        | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | Distributed RAID                                | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |

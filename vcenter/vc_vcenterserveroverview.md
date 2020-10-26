@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-05"
+lastupdated: "2020-09-30"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -96,7 +96,7 @@ The following components are included in your vCenter Server instance.
 
 The following configurations are available:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
-* **Cascade Lake**: 4-CPU Intel Cascade Lake generation server (Quad Intel Xeon Gold 6248) and 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200 series) with your selected CPU model and RAM size.
+* **Cascade Lake**: 4-CPU Intel Cascade Lake generation server (Quad Intel Xeon Gold 6248 and Quad Intel Xeon Platinum 8260) and 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200/8200 series) with your selected CPU model and RAM size.
 * **SAP-certified**: Intel Skylake generation servers (Intel Xeon 6140 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
 
 If you plan to use vSAN storage, the configuration requires a minimum of four bare metal servers.
@@ -166,7 +166,7 @@ The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-88
 ### Licenses (IBM-provided or BYOL) and fees
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus: 6.5u3 or 6.7u3. For NSX-T, only 6.7u3 is supported.  
+* VMware vSphere Enterprise Plus 6.7  
 * VMware vCenter Server 6.7 or 6.5
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4.
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
@@ -185,7 +185,7 @@ One bare metal server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.5u3 or 6.7u3.  For NSX-T, only 6.7u3 is supported.
+* One VMware vSphere Enterprise Plus 6.7u3
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6

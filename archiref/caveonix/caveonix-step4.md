@@ -43,31 +43,31 @@ The following information is collected from the user at time of order and is use
 
 |Setup stage |Parameter |
 |---|---|
-|Organization / Asset Repositories  |Organization Name |
-|Organization |Phone Number |
-|Organization |Email |
-|Organization / Asset Repositories |Address Line 1 |
-|Cloud Provider/ Asset Repositories |Name |
+|Organization / Asset repositories | Organization name |
+|Organization | Phone Number |
+|Organization | Email |
+|Organization / Asset Repositories | Address Line 1 |
+|Cloud Provider / Asset Repositories |Name |
 |Cloud Provider |Description |
 |Cloud Provider |POC email |
 |Cloud Provider |Type|
 |Cloud Provider |POC Name |
 |Cloud Provider |POC Phone |
-{: caption="Table 1. Information collected from the user" caption-side="bottom"}
+{: caption="Table 1. Information collected from the user" caption-side="top"}
 
 The following default information is used in the application setup.
 
-|Setup stage |Parameter |
+| Setup stage | Parameter |
 |---|---|
-|Environment |Environment Name is set to “Initial”|
-|Environment | Score is set to 5|
-|Asset Repository | Two Asset Repositories are configured; vCenter and NSX Manager. Host URL set to `https://vCenter_fqdn` and `https://*NSX Manager_fqdn` |
-|Asset Repository |Two Asset Repositories are configured; vCenter and NSX Manager, both use the same user name. User name set to vCenter administrator user name|
-|Asset Repository |Two Asset Repositories are configured; vCenter and NSX Manager, both use the same password. Password is set to vCenter administrator password
-|Asset Repository |Two Asset Repositories are configured; vCenter and NSX Manager, both use the same password. Type is set to vCenter for one repository and NSX for the other
-|Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. ScanName is set to DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
-|Task |Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. Type is set to vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
-|Task |Schedule is set to Hourly for DC1AssetScan and Daily for the others |
-{: caption="Table 2. Default information used in application setup" caption-side="bottom"}
+| Environment | Environment Name is set to “Initial”|
+| Environment | Score is set to 5|
+| Asset Repository | Two Asset Repositories are configured; vCenter and NSX Manager. Host URL set to `https://vCenter_fqdn` and `https://NSX Manager_fqdn` |
+| Asset Repository | Two Asset Repositories are configured; vCenter and NSX Manager, both use the same user name. User name set to vCenter administrator user name|
+| Asset Repository | Two Asset Repositories are configured; vCenter and NSX Manager, both use the same password. Password is set to vCenter administrator password
+| Asset Repository | Two Asset Repositories are configured; vCenter and NSX Manager, both use the same password. Type is set to vCenter for one repository and NSX for the other
+| Task | Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. ScanName is set to DC1AssetScan, NSXFlows, VMWInfraScan, VMWVulnScan |
+| Task | Four tasks are set up; Asset Scan, NSX Flows, VMware Infrastructure Scan, and VMware Vulnerability. Type is set to vCenter, NSX, VMWareInfrastructureScan, VMWareVulnerabilityScan |
+| Task | Schedule is set to hourly for `DC1AssetScan` and daily for the others |
+{: caption="Table 2. Default information used in application setup" caption-side="top"}
 
 **Next topic:** [Glossary of Caveonix terms](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix-terminology)

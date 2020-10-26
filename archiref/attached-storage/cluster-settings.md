@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-09-21"
 
 subcollection: vmwaresolutions
 
@@ -38,7 +38,7 @@ The following table shows the settings for the vSphere DRS cluster in the VMware
 | Automation Level | Fully Automated |
 | Migration Threshold | Apply priority 1, priority 2, and priority 3 recommendations |
 | Enable individual machine automation levels | Selected, set to 15 ms |
-{: caption="Table 1. DRS Automation settings for the vSphere DRS cluster" caption-side="bottom"}
+{: caption="Table 1. DRS Automation settings for the vSphere DRS cluster" caption-side="top"}
 
 For more information about configuring these settings in the vSphere Web Client, see [Set a custom automation level for a virtual machine in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-C21C0609-923B-46FB-920C-887F00DBCAB9.html).
 
@@ -85,7 +85,7 @@ The following table shows the settings for the vSphere HA cluster in the VMware 
 | Minimum uptime | 90 s |
 | Maximum per-VM resets | 10 |
 | Maximum resets time window | Within 1 hrs |
-{: caption="Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster" caption-side="bottom"}
+{: caption="Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster" caption-side="top"}
 
 For more information about configuring these settings in the vSphere Web Client, see [Configure virtual machine responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html){:external}.
 

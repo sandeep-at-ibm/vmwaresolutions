@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-10-19"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -28,7 +28,7 @@ This procedure guides you through the selection of VMware components, {{site.dat
 {: #vs_orderinginstances-req}
 
 Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 *  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 
 ## System settings
@@ -73,7 +73,7 @@ For IBM Business Partner users, the Bring Your Own License (BYOL) option is not 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 If you're a non-Business Partner, you can select the following components for your vSphere cluster:
-* VMware vSphere Enterprise Plus 6.7u3 or 6.5u2
+* VMware vSphere Enterprise Plus 6.7u3
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -136,9 +136,10 @@ For the **Cascade Lake**, you have options for the **CPU model** and **RAM**.
 | Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 Processor[^vsphere] / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Platinum 8260 Processor / 48 cores total, 2.4 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 Processor / 96 cores total, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 3. Options for Cascade Lake bare metal servers" caption-side="top"}
-[^vsphere]: If you use vSAN storage, the 4-CPU Intel Cascade Lake server Quad Intel Xeon Gold 6248 does not currently support the High Performance Intel Optane option.
 
 ### SAP-certified
 {: #vs_orderinginstances-sap}
@@ -147,26 +148,25 @@ The **SAP-certified** tab is not available if you selected VMware vSAN previousl
 
 Based on your requirements, select a bare metal server configuration:
 
-| CPU model     | RAM options   |  
+| CPU model     | RAM options   |
 |:------------- |:------------- |
-| Dual Intel Xeon Gold 6140 processor (Skylake) / 36 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB |
 | Dual Intel Xeon Gold 5218 processor (Cascade, BI.S4.NW192) / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
 | Dual Intel Xeon Gold 6248 processor (Cascade, BI.S4.NW768) / 40 cores total, 2.5 GHz | 768 GB |
 | Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW1500) / 56 cores total, 2.70 GHz| 1.5 TB |
 | Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW3000) / 56 cores total, 2.70 GHz| 3 TB |
-{: caption="Table 4. Options for SAP-certified bare metal servers - NetWeaver" caption-side="bottom"}
+{: caption="Table 4. Options for SAP-certified bare metal servers - NetWeaver" caption-side="top"}
 {: class="simple-tab-table"}
 {: #simpletabtable1}
 {: tab-title="NetWeaver"}
 {: tab-group="SAP-certified Intel servers"}
 
 | CPU model     | RAM options |  
-|:------------- |:------------- |
+|:------------- |:----------- |
 | Dual Intel Xeon Gold 5218 processor (Cascade) / 32 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
 | Dual Intel Xeon Gold 6248 processor (Cascade) / 40 cores total, 2.5 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
 | Dual Intel Xeon Platinum 8280M processor (Cascade) / 56 cores total, 2.70 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
 | Quad Intel Xeon Platinum 8280M processor (Cascade) / 112 cores total, 2.70 GHz| 3 TB, 6 TB |
-{: caption="Table 5. Options for SAP-certified bare metal servers - HANA" caption-side="bottom"}
+{: caption="Table 4. Options for SAP-certified bare metal servers - HANA" caption-side="top"}
 {: #simpletabtable2}
 {: tab-title="HANA"}
 {: tab-group="SAP-certified Intel servers"}
@@ -238,6 +238,16 @@ The domain name is used for all {{site.data.keyword.cloud_notm}} bare metal serv
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and private network** or **Private network only**.
 
+### Uplink speed
+{: #vs_orderinginstances-uplink}
+
+The following options are provided for uplink speed:
+* 10 GB: this option is selected by default.
+* 25 GB: this option is available only when the vSphere cluster meets the following requirements:
+   * The vSphere version is 6.7.
+   * The bare metal server is Cascade Lake.
+   * The data center is DAL10 or WDC04.
+
 ### VLANs
 {: #vs_orderinginstances-vlans}
 
@@ -297,19 +307,19 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
     **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure license settings for an ESXi host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
 5. Complete the bare metal server settings:
    1. Select the {{site.data.keyword.cloud_notm}} data center to host the cluster.
-   2. Select the bare metal server configuration.
-      * When you select **Skylake** or **Cascade Lake**, specify the CPU model and the RAM size.
-      * When you select **SAP-certified** NetWeaver, choose one of the preset configurations.
-      * When you select **SAP-certified** HANA, specify the CPU model and RAM size.
+   2. Select the bare metal server CPU generation.
+      * For **Skylake**, **Cascade Lake**, or **SAP-certified** - **HANA** servers, specify the CPU model and the RAM size.
+      * For **SAP-certified** - **NetWeaver** server, choose one of the preset configurations.
    3. Specify the number of bare metal servers.
 6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
 7. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label, and domain name.
    2. Select the network setting of either **Public and private network** or **Private network only**.
-   3. Select the network interface that you want to use.
+   3. Select the uplink speed setting.
+   4. Select the network interface that you want to use.
     * If you want to order new public and private VLANs, click **Order new VLANs**.
     * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and optionally the subnets.
-    1. If you are ordering public VLANs, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
+   5. If you are ordering public VLANs, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
 8. In the **Summary** pane, verify the cluster configuration and the estimated price.
    * To save the configuration as a template without placing an order, click **Save configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-09-28"
 
 keywords: VMware Solutions Shared create private network endpoint, VMware Solutions Shared view private network endpoint, VMware Solutions Shared delete private network endpoint
 
@@ -22,9 +22,9 @@ subcollection: vmwaresolutions
 # Using and managing the Private network endpoint service
 {: #shared_creatingendpoints}
 
-VMware Solutions Shared now supports both public and private network endpoints. The public network endpoints provisioned by default are the 5 Public IPs displayed in the VMware Solutions Shared virtual data center detail page. A private network endpoint allows a customer's {{site.data.keyword.cloud}} account devices or resources to connect to their virtual data centers using the IBM Cloud private network. The **Private network endpoint** service is available and ready-to-use in all provisioned virtual data center instances. Once configured, the service allows your {{site.data.keyword.cloud_notm}} account resources to connect to virtual machines (VMs) in your virtual data center over the {{site.data.keyword.cloud_notm}} private network.
+VMware Solutions Shared now supports both public and private network endpoints. The public network endpoints that are provisioned by default are the five public IP addresses that are displayed in the VMware Solutions Shared virtual data center detail page. A private network endpoint allows a customer's {{site.data.keyword.cloud}} account devices or resources to connect to their virtual data centers by using the {{site.data.keyword.cloud}} private network. The **Private network endpoint** service is available and ready-to-use in all provisioned virtual data center instances. After it is configured, the service allows your {{site.data.keyword.cloud_notm}} account resources to connect to virtual machines (VMs) in your virtual data center over the {{site.data.keyword.cloud_notm}} private network.
 
-Connections to private network endpoints do not require public internet access. A private network endpoint provides a unique IP address that is accessible to you without a VPN connection. Private network endpoints support one way traffic from {{site.data.keyword.cloud_notm}} account resources to the VMs in your virtual data center.
+Connections to private network endpoints do not require public internet access. A private network endpoint provides a unique IP address that is accessible to you without a VPN connection. Private network endpoints support one-way traffic from {{site.data.keyword.cloud_notm}} account resources to the VMs in your virtual data center.
 
 Service charges are incurred only if you choose to use the service.
 {:note}
@@ -34,7 +34,7 @@ Service charges are incurred only if you choose to use the service.
 
 * If you have an {{site.data.keyword.cloud_notm}} Direct Link on your account, you must establish a tunnel between the cross-connect router and the customer edge to have access to the virtual data center.
 * You can order only one private network endpoint per virtual data center.
-* If you want to change the device type of your private network endpoint, you must first delete the existing private network endpoint and then create a new private network endpoint with the new device type.
+* If you want to change the device type of your private network endpoint, you must first delete the existing private network endpoint. Then, create a new private network endpoint with the new device type.
 * You can simultaneously make resource updates to your virtual data center instance while you create or delete a private network endpoint.
 
 ## System settings
@@ -54,10 +54,10 @@ Select from the following device type options:
 You are not charged for the multi-tenant option.
 {:note}
 
-### Allowlisted IPs and subnets
+### Allowlisted IP addresses and subnets
 {: #shared_creatingendpoints-sys-settings-ip-subnet}
 
-Add the IPs or subnets you want to have access to the private network endpoint.
+Add the IP addresses or subnets you want to have access to the private network endpoint.
 
 ## Monthly cost
 {: #shared_creatingendpoints-cost}
@@ -74,7 +74,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 3. Under **Private network endpoint** on the virtual data center instance details page, click **Create a private network endpoint**.
 4. Complete the following configuration in the **Create new private network endpoint** pane.
   1. Select the device type.
-  2. Provide the IPs or subnets to allowlist.
+  2. Provide the IP addresses or subnets to allowlist.
   3. Click **Create**.
 
 ### Results after you create a private network endpoint for virtual data center instances
@@ -88,23 +88,23 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **VMware Solutions Shared** table, click an instance name.
-3. View the **Private network endpoint** details. Expand **Allowlisted IPs and subnets** to view the list of IPs and subnets that you added when you ordered the private network endpoint.
+3. View the **Private network endpoint** details. Expand **Allowlisted IPs and subnets** to view the list of IP addresses and subnets that you added when you ordered the private network endpoint.
 
-| Item        | Description       |  
+| Item          | Description   |
 |:------------- |:------------- |
 | Device type | The multi-tenant or dedicated device and size. |
 | Service network IP | The IP address for the service network. |
 | Private network IP | The IP address for the private network. |
 | Service address | The IP address that your virtual data center is allocated for {{site.data.keyword.cloud_notm}} access. |
-| Allowlisted IPs and subnets | The list of all allowlisted IPs and subnets for the instance. |
+| Allowlisted IPs and subnets | The list of all allowlisted IP addresses and subnets for the instance. |
 {: caption="Table 1. Private network endpoint items" caption-side="top"}
 
 The **Service address** is available only when you select the *Dedicated 1 Gbps uplinks* or *Dedicated 10 Gbps uplinks* **Device type** when you order the private network endpoint.
 {:note}
 
-The private network endpoint can have a range of statuses.
+The private network endpoint can have different statuses.
 
-| Status        | Description       |
+| Status        | Description   |
 |:------------- |:------------- |
 | Creating | The private network endpoint is being created. |
 | Ready to use | The private network endpoint is operating. |
@@ -115,9 +115,8 @@ The private network endpoint can have a range of statuses.
 ## Procedure to modify a private network endpoint for virtual data center instances
 {: #shared_creatingendpoints-modify}
 
-You must open an IBM Support ticket to modify or adjust allowlisted IPs or subnets. Provide the following details when you contact IBM Support:
-
-* The IPs and subnets that you want to add or delete
+You must open an IBM Support ticket to modify or adjust allowlisted IP addresses or subnets. Provide the following details when you contact IBM Support:
+* The IP addresses and subnets that you want to add or delete
 * The virtual data center instance ID
 
 For more information about submitting an IBM Support ticket, see [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).

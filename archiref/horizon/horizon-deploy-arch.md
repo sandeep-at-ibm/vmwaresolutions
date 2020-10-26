@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-06-24"
+lastupdated: "2020-09-25"
 
 subcollection: vmwaresolutions
 
@@ -63,7 +63,7 @@ The three options are:
 
 The Dual Intel Xeon Gold 6140 option is recommended for VMware Horizon desktop workloads as it provides the most cores and the highest clock rate. This will allow for a greater density of desktops per host. The management cluster does not require the Xeon Gold 6140 option, and this workload can utilize the Dual Intel Xeon Silver 4110 processors.
 
-{{site.data.keyword.cloud_notm}} provides multiple options for host RAM. These options range from 64 GB per host to 1.5 TB per host. The total amount of RAM that is required for the management cluster is determined by the memory required to run the vSphere and NSX management components and the Horizon management components.
+{{site.data.keyword.cloud_notm}} provides multiple options for host RAM. These options range from 64 GB to 1.5 TB per host. The total amount of RAM that is required for the management cluster is determined by the memory required to run the vSphere and NSX management components and the Horizon management components.
 
 To support 1,000 users in {{site.data.keyword.cloud_notm}}, 102 GB of RAM is required for the management components.  
 
@@ -122,7 +122,7 @@ Cloud Pod Architecture (CPA) is a standard Horizon 7 feature that allows you to 
 CPA is not a stretched deployment. Each Horizon 7 pod is distinct and all Connection Servers belonging to each of the individual pods are required to be located in a single location and run on the same broadcast domain from a network perspective.
 {:important}
 
-![Basic two site - two pods CPA implementation](../../images/horizon-inter-pod.svg){: caption="Figure 3. Overview of a basic two sites - two pods CPA implementation" caption-side="bottom"}
+![Basic two site - two pods CPA implementation](../../images/horizon-inter-pod.svg){: caption="Figure 3. Overview of a two sites - two pods CPA implementation" caption-side="bottom"}
 
 For the full documentation on how to set up and configure CPA, see "Administering View Cloud Pod Architecture" in the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external} and [VMware Workspace ONE and VMware Horizon Reference Architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){:external}.
 

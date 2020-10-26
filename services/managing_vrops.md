@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-10"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -26,7 +26,7 @@ subcollection: vmwaresolutions
 
 To access the vRealize Operations Manager console, complete the following steps:
 
-1. On the service details page for vRealize Operations and Log Insight, click **vRealize Operations Manager Console**.
+1. On the service details page for vRealize Operations and Log Insight, click **vRealize Operations Manager console**.
 2. Log in by using the credentials listed on the same service details page.
 3. When you log in to the vRealize Operations Manager console for the first time after installation, the vRealize Operations Manager Configuration wizard prompts you to enter your license (product key). Ensure that you select the **Product evaluation (no key required)** option to proceed.
 
@@ -45,7 +45,7 @@ The Management Pack adapter instance for vSAN must be manually started. Complete
 
 To access the vRealize Log Insight console, complete the following steps:
 
-1. On the service details page for vRealize Operations and Log Insight, click **vRealize Log Insight Console**.
+1. On the service details page for vRealize Operations and Log Insight, click **vRealize Log Insight console**.
 2. Log in by using the credentials listed on the same service details page.
 
 ## Known issues

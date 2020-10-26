@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-10-19"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -30,7 +30,7 @@ To deploy a cluster that consists of compute, network, and storage elements, whi
 {: #mcv_ordering-req}
 
 Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 * You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
@@ -105,7 +105,7 @@ The remaining availability zones are where the resource and management cluster c
 
 Specify the licensing options for the following VMware components in the instance:
 * VMware vSAN Enterprise
-* NSX-T 3.0 (Data Center Advanced or Data Center Enterprise edition)
+* NSX-T 3.0.1.1 (Data Center Advanced or Data Center Enterprise edition)
 
 A deployment of VMware vSAN stretched clusters on {{site.data.keyword.cloud_notm}} requires a vSAN Enterprise Edition license.
 {:note}

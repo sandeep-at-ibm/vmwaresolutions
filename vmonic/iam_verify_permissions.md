@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-17"
 
 keywords: IAM user, user role, user permission, IAM account administrator
 
@@ -12,35 +12,24 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
 {:support: data-reuse='support'}
 
 # Locating an IAM account administrator
 {: #iam_verify_permissions}
 
-You use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to define users for platform services and to control user access to resources across {{site.data.keyword.cloud_notm}}. For more information about user roles (Viewer, Editor, Operator, and Administrator), see the table that shows roles and actions in [Platform management roles and permissions](/docs/vmwaresolutions?topic=vmwaresolutions-iam#iam-roles).
+Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to define users for platform services and to control user access to resources across {{site.data.keyword.cloud_notm}}. For more information about user roles (Viewer, Editor, Operator, and Administrator), see the table that shows roles and actions in [Platform management roles and permissions](/docs/vmwaresolutions?topic=vmwaresolutions-iam#iam-roles).
 
-You must have an IAM account administrator role to complete various tasks, such as:
-* Set account credentials
-* Grant platform access to users
+You must have an IAM account administrator role to complete various tasks. For example, setting account credentials and granting platform access to users.
 
-For more information about what an account administrator can do, see [IAM access](/docs/account?topic=account-userroles#userroles).
-
-If you do not have an administrator role and you want to complete a task that requires the administrator role, you can locate someone with that role. That person can then assign access.
-{: tsSymptoms}
+If you do not have an administrator role and you want to complete a task that requires the administrator role, you can locate someone with that role. That person can then assign access. For more information about what an account administrator can do, see [IAM access](/docs/account?topic=account-userroles#userroles).
 
 ## Locating an account owner with the administrator role
 {: #iam_verify_permissions-locate-admin}
-{: troubleshoot}
 
 To identify an account owner who has the administrator role, complete the following steps:
-{: tsResolve}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com).
-2. On the upper right corner, select the IBM Cloud account that you want to use.
+2. On the upper right corner, select the {{site.data.keyword.cloud_notm}} account that you want to use.
 3. Click **Manage** > **Access (IAM)** > **Users**.
 4. Scroll down through the list until you find a name with an oval icon to the right with the word **Owner**, which indicates that the user is an account administrator.
 5. Write down the name of this user.
@@ -54,10 +43,8 @@ To locate a user with an administrator role, click the name link and review the 
 
 ## Assigning access
 {: #iam_verify_permissions-assign-access}
-{: troubleshoot}
 
 After you find the account owner or another user with an administrator role, that person must perform the following steps to assign access:
-{: tsResolve}
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com) as the {{site.data.keyword.cloud_notm}} account owner.
 2. On the upper right corner, select the {{site.data.keyword.cloud_notm}} account that you want to use.

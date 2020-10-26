@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-10-22"
 
 subcollection: vmwaresolutions
 
@@ -209,5 +209,5 @@ All deployed appliances: VCSA, NSX Manager and Controllers, and vSphere ESXi hos
 {: #adds-infra-domain-related}
 
 * [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
-* [Getting started with IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
+* [Getting started with VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
 * [IBM Cloud for VMware Solutions: Take a look under the hood](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood)

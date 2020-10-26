@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-14"
+lastupdated: "2020-09-17"
 
 keywords: FAQ vmware solutions shared, vmware solutions shared questions
 
@@ -28,22 +28,24 @@ Find answers to frequently asked questions about the VMware Solutions Shared off
 {: #faq-shared}
 {: faq}
 
-{{site.data.keyword.vmwaresolutions_short}} Shared is a multi-tenant VMware infrastructure solution based on a robust VMware product called vCloud Director. You can use this solution to rapidly create, migrate, and consume your VMs in the cloud.
+{{site.data.keyword.vmwaresolutions_short}} Shared is a multi-tenant VMware® infrastructure solution based on a robust VMware product called vCloud Director. You can use this solution to rapidly create, migrate, and use your VMs in the cloud.
 
-## What are my options to consume resources with VMware Solutions Shared?
+## What are my options to use resources with VMware Solutions Shared?
 {: #faq-shared-options}
 {: faq}
 {: support}
 
 You are provided with the following two consumption models:
-* **On-Demand**: with this consumption model, you only pay for the compute you actually consume in an hourly pricing model.
-* **Reserved**: with this consumption model, you can “reserve” compute in advance to ensure that your capacity is available when you need it. Billing for “Reserved” will be available monthly, yearly, or on multi-year basis. Other resources such as storage and egress will be billed as per the actual usage irrespective of the consumption model.
+* **On-demand**. With this consumption model, you pay only for the compute resources that you use, in an hourly pricing model.
+* **Reserved**. With this consumption model, you can reserve compute resources in advance to ensure that your capacity is available when you need it. Billing for **Reserved** is available monthly, yearly, or on a multi-year basis. Other resources, such as storage and egress, are billed per usage, regardless of the consumption model.
 
 ## Why should I subscribe to VMware Solutions Shared?
 {: #faq-shared-subscribe}
 {: faq}
 
-{{site.data.keyword.vmwaresolutions_short}} Shared enables you to extend your VMs to the cloud with ultimate capacity flexibility and scalability. Whether you are looking to begin your cloud journey with a dev/test environment, a disaster recovery site, or a full enterprise grade hybrid cloud transformation, {{site.data.keyword.vmwaresolutions_short}} Shared provides a cost-effective and self-service way to get started moving VMs to the cloud within minutes. With IBM managing the infrastructure up to the hypervisor, you do not need to worry about managing patching, upgrades, and monitoring yourself, which gives you more time and resources to focus on innovation. In addition, with a native like VMware experience, you can leverage your existing VMware resources and skill sets.
+With {{site.data.keyword.vmwaresolutions_short}} Shared, you can extend your VMs to the cloud with ultimate capacity flexibility and scalability. Whether you are looking to begin your cloud journey with a Development or Test environment, a disaster recovery site, or a full enterprise-grade hybrid cloud transformation, {{site.data.keyword.vmwaresolutions_short}} Shared provides a cost-effective and self-service way to start moving your VMs to the cloud within minutes. 
+
+With IBM managing the infrastructure up to the hypervisor, you do not need to worry about managing patches, upgrades, and monitoring, which gives you more time and resources to focus on innovation. In addition, with a native like VMware experience, you can use your existing VMware resources and skill sets.
 
 ## What user accounts do I need for VMware Solutions Shared?
 {: #faq-user-accts-shared}
@@ -59,7 +61,7 @@ You are provided with the following two consumption models:
 {: faq}
 {: support}
 
-When you order your instance for the first time, follow the instructions on the **Settings** page in the console to locate and copy the {{site.data.keyword.cloud_notm}} infrastructure user name and API key from the {{site.data.keyword.slportal}}. The {{site.data.keyword.cloud_notm}} infrastructure credentials are stored in the {{site.data.keyword.vmwaresolutions_short}} console after the first order. Future orders automatically use the stored credentials.
+When you order your instance for the first time, follow the instructions on the **Settings** page in the console to locate and copy the {{site.data.keyword.cloud_notm}} infrastructure username and API key from the {{site.data.keyword.slportal}}. The {{site.data.keyword.cloud_notm}} infrastructure credentials are stored in the {{site.data.keyword.vmwaresolutions_short}} console after the first order. Future orders automatically use the stored credentials.
 
 ## How do I connect my on-premises environment to VMware Solutions Shared?
 {: #faq-shared-connect}
@@ -67,11 +69,11 @@ When you order your instance for the first time, follow the instructions on the 
 {: support}
 
 Each virtual data center has an Edge Services Gateway (ESG) which provides network connectivity to the virtual data center. On-premises connectivity to the customer virtual data center can be accomplished in the following ways:
-* IPSEC tunnel over the public Internet to the ESG
-* SSLVPN tunnel over the public Internet to the ESG
-* Direct public Internet access through the ESG to VM's using NAT or load balancing
+* IPsec tunnel over the internet to the ESG
+* SSL VPN tunnel over the internet to the ESG
+* Direct internet access through the ESG to the VMs by using NAT or load balancing
 
-Along with the Internet access methods, you can use {{site.data.keyword.cloud_notm}} Service Endpoints to access your virtual data centers from other {{site.data.keyword.cloud_notm}} accounts. This allows you to use DirectLink or other on-premises environments to access your {{site.data.keyword.cloud_notm}} account network options and then from your cloud account connect into your virtual data centers using the Cloud Service Endpoint method.
+Along with the internet access methods, you can use {{site.data.keyword.cloud_notm}} service endpoints to access your virtual data centers from other {{site.data.keyword.cloud_notm}} accounts. This way, you can use DirectLink or other on-premises environments to access your {{site.data.keyword.cloud_notm}} account network options. Then, from your cloud account, you can connect into your virtual data centers by using the Cloud Service Endpoint method.
 
 ## How are my VMware virtual platform consumptions billed?
 {: #faq-billing-shared}
@@ -110,13 +112,17 @@ If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, contact
 {: #faq-byof}
 {: faq}
 
-Yes. Each customer virtual data center comes with an edge firewall in the ESG as well as a distributed firewall that protects the internal virtual data center environment. If you want to bring your own firewall such as Fortinet or Cisco CSR, you can do so and run it between the ESG and your internal virtual machines.
+Yes. Each customer virtual data center comes with an edge firewall in the ESG and a distributed firewall that protects the internal virtual data center environment. If you want to bring your own firewall such as Fortinet or Cisco CSR, you can do so and run it between the ESG and your internal virtual machines.
 
 ## Can I bring my own IPs? If yes, how?
 {: #faq-byip}
 {: faq}
 
-You can bring your own IP addresses within your virtual data centers with few restrictions. `166.9.0.0/16` is reserved for {{site.data.keyword.cloud_notm}} service endpoints and `52.117.132.0/24` for other {{site.data.keyword.cloud_notm}} services. Other than the IP addresses used for Internet access on each customer ESG, you can use any IP address that you want. Typically, you use an IPSec tunnel from the on-premises environment to your virtual data centers providing transparent networking with full BYIP capabilities.
+You can bring your own IP addresses within your virtual data centers with a few restrictions:
+* The IP addresses `166.9.0.0/16` is reserved for {{site.data.keyword.cloud_notm}} service endpoints.
+* The IP addresses `52.117.132.0/24` is reserved for other {{site.data.keyword.cloud_notm}} services. 
+
+Other than the IP addresses used for internet access on each customer ESG, you can use any IP address that you want. Typically, you use an IPsec tunnel from the on-premises environment to your virtual data centers, which provides transparent networking with full BYIP capabilities.
 
 ## Do I get vCenter access?
 {: #faq-vcenter-access}

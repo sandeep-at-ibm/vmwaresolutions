@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-11"
+lastupdated: "2020-08-27"
 
 keywords: FAQ vmware solutions dedicated, vmware solutions dedicated questions, user account, patch management
 
@@ -30,7 +30,7 @@ Find answers to frequently asked questions about the VMware Solutions Dedicated 
 {: support}
 
 * **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal}}. For more information, see [Getting started](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started).
-* **{{site.data.keyword.cloud_notm}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by using an existing **IBMid** or by creating a new **IBMid**.
+* **{{site.data.keyword.cloud}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by using an existing **IBMid** or by creating a new **IBMid**.
 * **{{site.data.keyword.cloud_notm}} infrastructure account**. This account is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. You can get an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **{{site.data.keyword.cloud_notm}} account** to a billable account, or by linking your existing {{site.data.keyword.cloud_notm}} infrastructure account with your {{site.data.keyword.cloud_notm}} account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for required accounts](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts) and [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
 
 ## How do I associate my IBM Cloud infrastructure credentials with the VMware Solutions console?
@@ -153,15 +153,15 @@ Cancel the order, and then place a new order with the configuration that you wan
 {: faq}
 
 The account owner can increase the RAM on ESXi servers by following these steps:
-1. Log in to the IBM Cloud console and go to the device list.
+1. Log in to the {{site.data.keyword.cloud_notm}} console and go to the device list.
 2. Select the ESXi server to be modified.
 3. From the details page, click **Modify** next to RAM or memory.
 4. Specify the higher limit, then confirm the change to place your order.
 5. Repeat these steps, as needed, for each additional ESXi server.
 
-An IBM Cloud representative will confirm the billing change and contact you to schedule a maintenance window for adding the memory.
+An {{site.data.keyword.cloud_notm}} representative will confirm the billing change and contact you to schedule a maintenance window for adding the memory.
 
-You must manage the IBM Cloud for VMware Solutions components that are created in your IBM Cloud account only from the IBM Cloud for VMware Solutions console, not any other means outside of the console. If you change these components outside of the IBM Cloud for VMware Solutions console, the changes are not synchronized with the console.
+You must manage the VMware Solutions components that are created in your {{site.data.keyword.cloud_notm}} account only from the VMware Solutions console, not any other means outside of the console. If you change these components outside of the VMware Solutions console, the changes are not synchronized with the console.
 {:note}
 
 ## Does VMware vSphere use automation to install, configure, and bring up the VMware stack?

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-10"
+lastupdated: "2020-10-02"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -27,7 +27,7 @@ The F5 BIG-IP service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 l
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The F5 BIG-IP service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.0.4.
+The F5 BIG-IP service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.0.5.
 {:note}
 
 ## Technical specifications for F5 BIG-IP
@@ -90,7 +90,7 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs are 
   `RAM reservation = RAM size` (from Table 1)
 
 * {{site.data.keyword.vmwaresolutions_full}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/en-us/bigip-14-1-0/big-ip-device-service-clustering-administration-14-1-0/creating-an-active-standby-configuration-using-the-setup-utility.html){:external}.
-* For information about the activities you should perform after you deploy F5 networks, see [Working with F5 Networks BigIP in IBM Cloud for VMware](https://developer.ibm.com/recipes/tutorials/working-with-f5-networks-bigip-in-ibm-cloud-for-vmware/){:external}.
+* For information about the activities you should perform after you deploy F5 networks, see [Working with F5 Networks BigIP in {{site.data.keyword.cloud_notm}} for VMware](https://developer.ibm.com/recipes/tutorials/working-with-f5-networks-bigip-in-ibm-cloud-for-vmware/).
 
 ### Planning considerations
 {: #f5_considerations-planning}

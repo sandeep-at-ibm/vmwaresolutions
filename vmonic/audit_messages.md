@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-09-22"
 
 keywords: history message, audit history, error messages
 
@@ -104,7 +104,7 @@ The following sections provide all of the possible messages that can be issued t
 * ``The ESXi server is successfully added with the property.``
 * ``All requests for adding ESXi servers are successfully completed.``
 * ``Adding the ESXi server...``
-* ``Ordering a Bare Metal Server for the ESXi server...``
+* ``Ordering a bare metal server for the ESXi server...``
 * ``New ESXi servers are added to vCenter.``
 * ``Starting to add services to the new ESXi servers...``
 * ``The selected ESXi servers are successfully cancelled.``
@@ -121,8 +121,8 @@ The following sections provide all of the possible messages that can be issued t
 * ``Successfully completed all requests for removing ESXi servers.``
 * ``The host is successfully added.``
 * ``The host(s) are successfully removed.``
-* ``Bare Metal Server cancellation in progress...``
-* ``Bare Metal Server cancellation is complete.``
+* ``Bare metal server cancellation in progress...``
+* ``Bare metal server cancellation is complete.``
 * ``Removing ESXi servers from the vCenter Server instance...``
 * ``Removing the ESXi server.``
 * ``Removing the <server_id> ESXi server.``
@@ -140,8 +140,8 @@ The following sections provide all of the possible messages that can be issued t
 * ``Ordering additional private VLAN...``
 * ``Additional private VLAN is provisioned.``
 * ``An additional private VLAN Virtual Server Instance is provisioned.``
-* ``Trunking additional private VLAN to Bare Metal Servers...``
-* ``Successfully trunked the additional private VLAN to Bare Metal Servers.``
+* ``Trunking additional private VLAN to bare metal servers...``
+* ``Successfully trunked the additional private VLAN to bare metal servers.``
 * ``Cancelling the additional private VLAN Virtual Server Instance...``
 * ``Cancelling VLANs...``
 * ``VLAN cancellation in progress...``

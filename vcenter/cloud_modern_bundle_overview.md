@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-04"
+lastupdated: "2020-09-03"
 
 keywords: single-node, migration app modernization, tech specs migration app modernization
 
@@ -146,5 +146,5 @@ Red Hat OpenShift for VMware 4.4 is installed by using the Development and Test 
 ## Related links
 {: #cloud_modern_bundle_overview-related}
 
-* [VMware HCX resources](https://hcx.vmware.com/#/docs){:external}
+* [VMware HCX resources](https://cloud.vmware.com/vmware-hcx#/docs){:external}
 * [VMware HCX User Guide](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}

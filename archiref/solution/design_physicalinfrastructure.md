@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -31,17 +31,17 @@ For more information about storage, see [Shared storage architecture](/docs/vmwa
 ## Physical compute design
 {: #design_physicalinfrastructure-host-design}
 
-The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom).
+The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi™. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom).
 
 The {{site.data.keyword.cloud_notm}} bare metal servers reside in the {{site.data.keyword.cloud_notm}}.
 {:note}
 
 Each vCenter Server instance begins with a 3- or 4-host deployment, depending on the choice of storage solution.
 
-The physical host employs two locally attached disks that are allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf){:external}. Each physical host has redundant 10-Gbps network connections for both public and private network access.
+The physical host employs two locally attached disks that are allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN™ as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP® Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf){:external}. Each physical host has redundant 10-Gbps network connections for both public and private network access.
 
 The {{site.data.keyword.cloud_notm}} bare metal server has the following specifications:
-* CPU: Dual or Quad Intel Xeon, varying core and speed configuration
+* CPU: Dual or Quad Intel® Xeon, varying core and speed configuration
 * Memory: Varying configuration, 64 GB or larger
 * Network: 4 x 10 Gbps
 * Number of drives: two or more
@@ -96,8 +96,8 @@ In addition to the public and private networks, each {{site.data.keyword.cloud_n
 {: #design_physicalinfrastructure-ip-blocks}
 
 {{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the {{site.data.keyword.cloud_notm}} infrastructure:
-* Primary IP addresses are assigned to devices, Bare Metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. Do not assign any IP addresses in these blocks.
-* Portable IP addresses are provided for you to assign and manage as needed. vCenter Server provisions several portable IP ranges for its use. Use only the portable IP address ranges that are assigned to specific NSX-T or NSX-V components and specified for customer use. For example, **Customer EDGE**.
+* Primary IP addresses are assigned to devices, bare metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. Do not assign any IP addresses in these blocks.
+* Portable IP addresses are provided for you to assign and manage as needed. vCenter Server provisions several portable IP ranges for its use. Use only the portable IP address ranges that are assigned to specific NSX®-T or NSX-V components and specified for customer use. For example, **Customer EDGE**.
 
 Primary or portable IP addresses can be made routable to any VLAN within your account when the account is configured as a **Virtual Routing and Forwarding (VRF)** account.
 
@@ -141,14 +141,14 @@ Review the following table for a summary.
 
 | VLAN | Type | Description |
 |:---- |:---- |:----------- |
-| Public| Primary  | Assigned to physical hosts for public network access. The hosts are assigned a public IP address but this IP address is not configured on the hosts, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as NSX Edge Services Gateways (ESGs). |
-| Private A | Primary  | Single subnet assigned to physical hosts assigned by {{site.data.keyword.cloud_notm}}. Used by the management interface for vSphere management traffic. |
+| Public| Primary | Assigned to physical hosts for public network access. The hosts are assigned a public IP address but this IP address is not configured on the hosts, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as NSX Edge™ Services Gateways (ESGs). |
+| Private A | Primary | Single subnet assigned to physical hosts assigned by {{site.data.keyword.cloud_notm}}. Used by the management interface for vSphere management traffic. |
 | Private A | Portable | Single subnet that is assigned to virtual machines that function as management components |
 | Private A | Portable | Single subnet that is assigned to NSX-V or NSX-T VTEP |
 | Private B | Portable | Single subnet that is assigned for vSAN, if in use |
 | Private B | Portable | Single subnet assigned for NAS, if in use |
 | Private B | Portable | Single subnet assigned for vMotion |
-{: caption="Table 1. VLAN and subnet summary" caption-side="bottom"}
+{: caption="Table 1. VLAN and subnet summary" caption-side="top"}
 
 In this design, all VLAN-backed hosts and virtual machines are configured to point to the {{site.data.keyword.cloud_notm}} back-end “private network” customer router (BCR) as the default route. While the vCenter Server instances enable the use of Software-Defined Networking (SDN), network overlays created within a VMware instance that include routing to internal subnets are not known by the {{site.data.keyword.cloud_notm}} managed routers.
 
@@ -171,7 +171,7 @@ The vSphere ESXi hypervisor is installed in a persistent location. As a result, 
 
 This design allows for the option of using either VMware vSAN or shared network-attached storage as the primary datastore for virtual machines. For VMware vSAN, it is configured by using an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
 
-For more information about the supported configurations, see the [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom).
+For more information about the supported configurations, see [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom).
 
 ### Shared File-level storage across hosts
 {: #design_physicalinfrastructure-shared-storage}

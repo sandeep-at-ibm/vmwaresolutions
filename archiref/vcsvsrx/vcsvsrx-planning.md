@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-10-22"
 
 subcollection: vmwaresolutions
 
@@ -30,8 +30,8 @@ These features are common to both deployment types.
 - Full vSRX firewall and routing capability implemented.
 
 The following are unique to a deployment with the ESXi as the host OS.
-- VXLAN connectivity into a VCS instance.
-- Ability to host additional VMs on the edge cluster.
+- VXLAN connectivity into a vCenter Server instance.
+- Ability to host additional VMs on the edge services cluster.
   - NSX edges, load balancers, etc.
 
 The basic vSRX offering architecture simply places a vSRX in front of all the VLANs deployed into a given customer account. The vSRX is a powerful Vyatta replacement for situations in which a customer controlled gateway appliance is desirable.
@@ -54,14 +54,14 @@ For more information, see [Understanding the vSRX Default Configuration](/docs/v
 
 ![Figure 2 - vSRX and vCenter Server integration](../../images/vcsvsrx-vsrx-with-vcs-architecture.svg){: caption="Figure 2. vSRX and vCenter Server integration" caption-side="bottom"}
 
-The tight integration of the vSRX HA Chassis Cluster into an IBM Cloud vCenter Server instance extends the basic VCS architecture in a few key areas.
+The tight integration of the vSRX HA Chassis Cluster into an IBM Cloud vCenter Server instance extends the basic vCenter Server architecture in a few key areas.
 
 ### vCenter Server cluster design
 {: #vcsvsrx-planning-vcs-design}
 
 When a standard vCenter Server instance is deployed to a customer account it is typically a single hyper-converged cluster in which compute, management and edge functions are delivered by a single three ESXi host (NFS shared storage) or four node (VSAN shared storage) cluster configuration.
 
-The addition of the vSRX offering on ESXi impacts the basic VCS design by moving the edge services out of the hyper-converged cluster onto a dedicated two ESXi host cluster. The edge cluster is managed by the existing vCenter Server deployed with the initial vCenter Server instance.
+The addition of the vSRX offering on ESXi impacts the basic vCenter Server design by moving the edge services out of the hyper-converged cluster onto a dedicated two ESXi host cluster. The edge services cluster is managed by the existing vCenter Server deployed with the initial vCenter Server instance.
 
 #### Host sizing
 {: #vcsvsrx-planning-host-sizing}
@@ -75,7 +75,7 @@ The vCenter Server offering is designed to manage east-west network traffic at t
 
 The required network design changes are modest and include all customer VM traffic no matter the destination, platform management traffic, direct link traffic, where applicable, and internet bound traffic. Traffic explicitly excluded includes VTEP traffic, storage traffic and vMotion traffic.  
 
-NSX may be extended from the compute cluster to the edge cluster or the use of BGP over an IPsec VPN may be used to enable connectivity between the edge and compute clusters. Where traffic flowing between the VCS compute cluster and the edge cluster is not in conflict with the IBM Cloud infrastructure  assigned subnets the use of a local VLAN and subnet is suitable as a transit link.
+NSX may be extended from the compute cluster to the edge services cluster or the use of BGP over an IPsec VPN may be used to enable connectivity between the edge and compute clusters. Where traffic flowing between the vCenter Server compute cluster and the edge services cluster is not in conflict with the IBM Cloud infrastructure  assigned subnets the use of a local VLAN and subnet is suitable as a transit link.
 
 BGP over IPsec VPN is the preferred method of connecting to a customer on-premises data center whether the connection traverses the internet or
 passes between the customer and IBM Cloud via one of the IBM Cloud infrastructure direct link offerings.
@@ -85,7 +85,7 @@ passes between the customer and IBM Cloud via one of the IBM Cloud infrastructur
 
 The vSRX on the IBM Cloud vCenter Server platform has very specific connection requirements to enable and maintain the HA chassis cluster.
 
-![Figure 3 - vSRX HA chassis cluster on VCS interconnections](../../images/vcsvsrx-vsrx-vcs-connections.svg){: caption="Figure 3. vSRX HA chassis cluster on VCS interconnections" caption-side="bottom"}
+![Figure 3 - vSRX HA chassis cluster on vCenter Server interconnections](../../images/vcsvsrx-vsrx-vcs-connections.svg){: caption="Figure 3. vSRX HA chassis cluster on vCenter Server interconnections" caption-side="bottom"}
 
 Each network adapter defined on the vSRX is mapped to a specific interface, depending on whether the vSRX instance is a standalone VM or one of a cluster pair for high availability.
 
@@ -113,7 +113,7 @@ Network Adapter|Interface Name in Junos OS
 6|ge-0/0/4
 7|ge-0/0/5
 8|ge-0/0/6
-{: caption="Table 1. Interface names and mappings for a standalone vSRX VM" caption-side="bottom"}
+{: caption="Table 1. Interface names and mappings for a standalone vSRX VM" caption-side="top"}
 
 The following table shows information for a pair of vSRX VMs in a cluster (node 0 and node 1).
 
@@ -127,7 +127,7 @@ Network Adapter|Interface Name in Junos OS
 6|ge-0/0/3 (node 0) & ge-7/0/3 (node 1)
 7|ge-0/0/4 (node 0) & ge-7/0/4 (node 1)
 8|ge-0/0/5 (node 0) & ge-7/0/5 (node 1)
-{: caption="Table 2. Interface names and mappings for a pair of vSRX VMs in a cluster (node 0 and node 1)" caption-side="bottom"}
+{: caption="Table 2. Interface names and mappings for a pair of vSRX VMs in a cluster (node 0 and node 1)" caption-side="top"}
 
 #### Default security zone configuration
 {: #vcsvsrx-planning-default-sec-zone}
@@ -139,7 +139,7 @@ Source Zone|Destination Zone|Policy Action
 trust|untrust|permit
 trust|trust|permit
 untrust|trust|deny
-{: caption="Table 3. Factory default settings for security policies" caption-side="bottom"}
+{: caption="Table 3. Factory default settings for security policies" caption-side="top"}
 
 As noted previously the default configuration merely represents a point from which to build the required configuration to meet your requirements. The creation of additional security zones is often necessary to support the various traffic flow patterns present in the account.
 
@@ -164,7 +164,7 @@ The traffic originating from the client facility flows through AT&T NetBond or o
 {: #vcsvsrx-planning-related}
 
 * [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-hybridity-intro)
-* [Getting Started With IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
+* [Getting Started with IBM Cloud Juniper vSRX](/docs/vsrx?topic=vsrx-getting-started)
 * [Juniper Networks vSRX Deployment Guide for VMware](https://www.juniper.net/documentation/en_US/vsrx/information-products/pathway-pages/security-vsrx-vmware-guide-pwp.html){:external}
 * [Juniper Networks Requirements for vSRX on VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/reference/general/security-vsrx-vmware-system-requirement.html){:external}
 * [Juniper Networks vSRX installation with vSphere web client](https://www.juniper.net/documentation/en_US/vsrx/topics/task/installation/security-vsrx-vsphere-client-installing.html){:external}

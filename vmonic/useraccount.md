@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-11"
+lastupdated: "2020-08-27"
 
 keywords: set credentials, user credentials, set notifications
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Managing user accounts and settings
 {: #useraccount}
 
-{{site.data.keyword.vmwaresolutions_full}} communicates with the {{site.data.keyword.cloud_notm}} infrastructure through {{site.data.keyword.slapi_short}} calls. To access the {{site.data.keyword.slapi_short}} securely, you must link the credentials of your {{site.data.keyword.cloud_notm}} infrastructure account to your {{site.data.keyword.cloud_notm}} account. After your first order, you can update the user account credentials on the **Settings** page.
+{{site.data.keyword.vmwaresolutions_full}} communicates with the {{site.data.keyword.cloud}} infrastructure through {{site.data.keyword.slapi_short}} calls. To access the {{site.data.keyword.slapi_short}} securely, you must link the credentials of your {{site.data.keyword.cloud_notm}} infrastructure account to your {{site.data.keyword.cloud_notm}} account. After your first order, you can update the user account credentials on the **Settings** page.
 
 You can also specify whether you want to receive email and console notifications for various events.
 

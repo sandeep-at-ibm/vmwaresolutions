@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-09-21"
 
 subcollection: vmwaresolutions
 
@@ -75,7 +75,7 @@ On the Edge, the default route is configured to be to the transit network connec
 ### Global configuration
 {: #openshift-runbook-runbook-nsxdlr-global-config}
 
-| Global configuration | vNIC | Gateway IP |
+| Global configuration | vNIC | Gateway IP address |
 | --- | --- | --- |
 | Default Gateway | Transit-Uplink | 192.168.100.1 |
 {: caption="Table 5. Configuration for NSX Edge - global configuration" caption-side="top"}
@@ -103,19 +103,19 @@ This section provides example PowerNSX commands that you can use to automate the
 
 Use the following table to document the parameters that you need for your deployment. Examples are shown that match the deployment described previously.
 
-| Parameters | Example | Your Deployment |
+| Parameters | Example | Your deployment |
 | --- | --- | --- |
 | vCenter Server IP address | | |
-| vCenter User | | |
-| vCenter Password | | |
-| Transit Logical Switch| OpenShift-Transit | |
-| OpenShift Logical Switch | OpenShift-LS | |
-| Uplink IP address | 192.168.100.2 | |
-| Internal IP address | 192.168.133.1 | |
-| DLR Name | OpenShift-DLR | |
-| vCenter Server instance Cluster | cluster1 | |
-| vCenter Server instance Datastore | vsanDatastore | |
-{: caption="Table 8. PowerNSX DLR Parameters" caption-side="top"}
+| vCenter Server user | | |
+| vCenter Server password | | |
+| Transit Logical Switch | `OpenShift-Transit` | |
+| OpenShift Logical Switch | `OpenShift-LS` | |
+| Uplink IP address | `192.168.100.2` | |
+| Internal IP address | `192.168.133.1` | |
+| DLR name | OpenShift-DLR | |
+| vCenter Server instance cluster | `cluster1` | |
+| vCenter Server instance datastore | `vsanDatastore` | |
+{: caption="Table 8. PowerNSX DLR parameters" caption-side="top"}
 
 ```powernsx
 # Connect to NSX Manager

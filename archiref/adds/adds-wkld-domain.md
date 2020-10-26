@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-10-22"
 
 subcollection: vmwaresolutions
 
@@ -99,7 +99,7 @@ Best practice guidance for AD in a vCenter Server instance includes the followin
 * The existing `ic4V-vCenter` AD security group should not be changed.
 * The existing user automation should not be changed, or its group membership be altered.
 * The existing add-on service accounts should not be changed, or their groups membership altered.
-* When deploying the {{site.data.keyword.vmwaresolutions_short}} workload domain controllers, deploy them in subnets that don’t have a route to a NAT gateway or other device that would provide outbound Internet access.
+* When deploying the {{site.data.keyword.vmwaresolutions_short}} workload domain controllers, deploy them in subnets that don’t have a route to a NAT gateway or other device that would provide outbound internet access.
 * Keep OS security patches up-to-date on all the domain controllers.
 * Restrict ports and protocols that are allowed into the domain controllers by using NSX distributed firewall.
 * Allow remote management access, like remote desktop protocol (RDP) only from trusted networks.
@@ -124,5 +124,5 @@ Best practice guidance for AD in a vCenter Server instance includes the followin
 {: #adds-wkld-domain-related}
 
 * [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
-* [Getting started with IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
+* [Getting started with VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
 * [IBM Cloud for VMware Solutions: Take a look under the hood](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood)

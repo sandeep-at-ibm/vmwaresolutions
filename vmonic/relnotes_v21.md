@@ -26,7 +26,7 @@ This release includes new features, component updates, usability enhancements, a
 ## Spectre and Meltdown remediation
 {: #relnotes_v21-spectre}
 
-{{site.data.keyword.vmwaresolutions_short}} has released patches from VMware in response to the vulnerabilities known as Spectre and Meltdown (CVE-2017-5753, CVE-2017-5715 and CVE-2017-5754).
+{{site.data.keyword.vmwaresolutions_short}} has released patches from VMware® in response to the vulnerabilities known as Spectre and Meltdown (CVE-2017-5753, CVE-2017-5715 and CVE-2017-5754).
 
 * CVEID: [CVE-2017-5753](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
@@ -35,16 +35,16 @@ This release includes new features, component updates, usability enhancements, a
 ## VMware HCX on IBM Cloud
 {: #relnotes_v21-hcx}
 
-The HCX on {{site.data.keyword.cloud_notm}} service is now available to VMware Cloud Foundation instances and VMware vCenter Server instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.1 or later releases. This service can seamlessly extend the networks of your on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows bidirectional migration of virtual machines (VMs) between your on-premises data centers and {{site.data.keyword.cloud_notm}} without any change. By establishing a layer 2 bridge, HCX uses WAN optimization, deduplication, compression, and encryption to more quickly and securely migrate data over a Direct Link or VPN tunnel. The bulk migration of VMs is backwards compatible with VMware vSphere 5.1 or greater. If you use vSphere 6.0 or greater on-premises, you can vMotion live (powered-on) VMs from on-premises to an {{site.data.keyword.cloud_notm}} data center. You are not required to have VMware NSX installed in your data center when using HCX.
+The HCX on {{site.data.keyword.cloud_notm}} service is now available to VMware Cloud Foundation instances and VMware vCenter Server® instances that are running vSphere 6.5 and that are deployed in or upgraded to V2.1 or later releases. This service can seamlessly extend the networks of your on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows bidirectional migration of virtual machines (VMs) between your on-premises data centers and {{site.data.keyword.cloud_notm}} without any change. By establishing a layer 2 bridge, HCX uses WAN optimization, deduplication, compression, and encryption to more quickly and securely migrate data over a Direct Link or VPN tunnel. The bulk migration of VMs is compatible with VMware vSphere® 5.1 or greater. If you use vSphere 6.0 or greater on-premises, you can vMotion live (powered-on) VMs from on-premises to an {{site.data.keyword.cloud_notm}} data center. You are not required to have VMware NSX installed in your data center when you are using HCX.
 
-You can order Cloud Foundation or vCenter Server instances with the HCX on {{site.data.keyword.cloud_notm}} service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance details page.
+You can order Cloud Foundation or vCenter Server instances with the HCX on {{site.data.keyword.cloud_notm}} service included when you order your instance. Or you can add this service to your existing instances later from the **Services** tab on the instance details page.
 
 You can also order an on-premises HCX instance for licensing and activation of your on-premises HCX installation.
 
 ## More flexible Bring Your Own License model for VMware Cloud Foundation and vCenter Server
 {: #relnotes_v21-byol}
 
-Bring Your Own License (BYOL) or purchase IBM-provided subscription licensing when you create a new cluster is now available to V2.1 and later VMware Cloud Foundation instances and VMware vCenter Server instances. These options allow you to use your existing component key or to rent the license from IBM. Before V2.1, you could not purchase IBM-provided licensing for a specific VMware component if you BYOL. Currently, only VMware vSphere and VMware vSAN are available for licensing per cluster.
+Bring Your Own License (BYOL) or purchase IBM-provided subscription licensing when you create a new cluster is now available to V2.1 and later VMware Cloud Foundation instances and VMware vCenter Server instances. With these options, you can use your existing component key or to rent the license from IBM. Before V2.1, you could not purchase IBM-provided licensing for a specific VMware component if you BYOL. Currently, only VMware vSphere® and VMware vSAN are available for licensing per cluster.
 
 Additionally, when you add nodes to a cluster that is licensed with your key, the console prompts you to provide a new license key if the number of nodes exceeds the key capacity.
 

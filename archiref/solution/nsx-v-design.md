@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-10"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -46,7 +46,7 @@ The NSX Manager is installed with the specifications that are listed in the foll
 | Disk            | 60 GB on the management NFS share |
 | Disk type       | Thin-provisioned |
 | Network         | **Private A** portable designated for management components |
-{: caption="Table 1. NSX Manager requirements" caption-side="bottom"}
+{: caption="Table 1. NSX Manager requirements" caption-side="top"}
 
 ## Distributed switch design
 {: #nsx-v-design-distr-switch}
@@ -64,7 +64,7 @@ VLANs are used to segment physical network functions. This design uses three VLA
 | VLAN 1 | Private A   | ESXi management, management, VXLAN (VTEP) |
 | VLAN 2 | Private B   | vSAN, NFS, and vMotion|
 | VLAN 3 | Public      | Available for internet access |
-{: caption="Table 2. VLAN mapping to traffic types" caption-side="bottom"}
+{: caption="Table 2. VLAN mapping to traffic types" caption-side="top"}
 
 Traffic from workloads will travel on VXLAN­-backed logical switches.
 
@@ -74,7 +74,7 @@ The vSphere cluster uses two virtual Distributed Switches that are configured as
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
 | SDDC-Dswitch-Private | ESXi management, vSAN, vSphere vMotion, VXLAN tunnel endpoint, NFS (VTEP) | Enabled | Route based on explicit failover (vSAN, vMotion) originating virtual port (all else) | 2 | 9,000<br>(Jumbo frames) |
 | SDDC-Dswitch-Public | External management traffic (north-south) | Enabled | Route based on originating virtual port | 2 | 1,500<br>(default) |
-{: caption="Table 3. Converged cluster distributed switches" caption-side="bottom"}
+{: caption="Table 3. Converged cluster distributed switches" caption-side="top"}
 
 The names, number, and ordering of the host NICs might vary depending on the {{site.data.keyword.cloud_notm}} data center and your host hardware selection.
 {:note}
@@ -86,7 +86,7 @@ The names, number, and ordering of the host NICs might vary depending on the {{s
 | Notify switches    | Enabled |
 | Failback           | No |
 | Failover order     | Active uplinks: Uplink1, Uplink2[^port-failover2] |
-{: caption="Table 4. Converged cluster distributed switch port group configuration settings" caption-side="bottom"}
+{: caption="Table 4. Converged cluster distributed switch port group configuration settings" caption-side="top"}
 
 [^port-failover1]: The vSAN port group uses explicit failover with active or standby because it does not support load balancing of vSAN storage traffic.
 
@@ -100,7 +100,7 @@ SDDC-DPortGroup-VSAN|Route based on originating virtual port|Active: 0, Standby:
 SDDC-DPortGroup-NFS|Originating virtual port|Active: 0, 1|VLAN 2
 NSX generated|Originating virtual port|Active: 0, 1|VLAN 1
 SDDC-DPortGroup-External|Originating virtual port|Active: 0, 1|VLAN 3
-{: caption="Table 5. Converged cluster virtual switch port groups and VLANs, Distributed switch SDDC-Dswitch-Private" caption-side="bottom"}
+{: caption="Table 5. Converged cluster virtual switch port groups and VLANs, Distributed switch SDDC-Dswitch-Private" caption-side="top"}
 
 Purpose|Connected port group|Enabled services|MTU
 --|---|---|---
@@ -109,7 +109,7 @@ vMotion|SDDC-DPortGroup-vMotion|vMotion Traffic|9000
 VTEP|NSX generated|-|9000
 vSAN|SDDC-DPortGroup-VSAN|vSAN|9000
 NAS|SDDC-DPortGroup-NFS|NAS|9000
-{: caption="Table 6. Converged cluster VMkernel adapters, Distributed switch SDDC-Dswitch-Private" caption-side="bottom"}
+{: caption="Table 6. Converged cluster VMkernel adapters, Distributed switch SDDC-Dswitch-Private" caption-side="top"}
 
 ## NSX configuration
 {: #nsx-v-design-nsx-config}
@@ -142,14 +142,14 @@ Typically these communications are selectively routed and NATed to the public ne
 
 This architecture allows for the following options for routing or proxying your traffic to the public network:
 
-Method|Description|Limitations
---|--|--
-Virtualized gateway|Deploy a virtualized gateway (for example, NSX ESG, F5 BIG-IP, FortiGate-VM, or a virtual appliance of your choosing) crossing the private and public network. Configure routing on the source system (for example, vCenter, Zerto, your workload) to direct only public network traffic to the gateway, and configure the gateway according to your needs.|Applicable only to instances with public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
-Virtualized gateway with proxy|Deploy a virtualized gateway as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmwaresolutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable only to instances with public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed at the gateway.
-Hardware gateway|Deploy a [hardware gateway appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) to your management VLAN. Configure the gateway to NAT outbound to the public network according to your needs.|Applicable to all instances, with or without public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns.
-Hardware gateway with proxy|Deploy a gateway appliance as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmwaresolutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy.|Applicable to all instances, with or without public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed by the gateway.
-Load balancer|IBM Cloud offers several [load balancer services](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) that you can use to provide inbound network access to your applications.|Applicable to all instances, but limited to inbound traffic patterns.
-{: caption="Table 7. Options for routing or proxying your traffic to the public network" caption-side="bottom"}
+| Method | Description | Limitations |
+|:------ |:----------- |:----------- |
+| Virtualized gateway | Deploy a virtualized gateway (for example, NSX ESG, F5 BIG-IP, FortiGate-VM, or a virtual appliance of your choosing) crossing the private and public network. Configure routing on the source system (for example, vCenter, Zerto, your workload) to direct only public network traffic to the gateway, and configure the gateway according to your needs. | Applicable only to instances with public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns. |
+| Virtualized gateway with proxy | Deploy a virtualized gateway as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmwaresolutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy. | Applicable only to instances with public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed at the gateway. |
+| Hardware gateway | Deploy a [hardware gateway appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) to your management VLAN. Configure the gateway to NAT outbound to the public network according to your needs. | Applicable to all instances, with or without public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns. |
+| Hardware gateway with proxy | Deploy a gateway appliance as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmwaresolutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy. | Applicable to all instances, with or without public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed by the gateway. |
+| Load balancer | IBM Cloud offers several [load balancer services](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) that you can use to provide inbound network access to your applications. | Applicable to all instances, but limited to inbound traffic patterns. |
+{: caption="Table 7. Options for routing or proxying your traffic to the public network" caption-side="top"}
 
 **Next topic:** [VMware NSX-T design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-t-design)
 

@@ -72,7 +72,7 @@ The following new data centers are available for deployment: **DAL-09, DAL-12, D
 Improvements are made throughout the user interface:
 * You can learn about services and order an instance on the **Getting Started** page from the left navigation pane.
 * Use the overflow menu on the instance details page to delete an instance in **Ready to use** state.
-* The option to upgrade your NSX license edition is now available on the console. The license upgrade replaces all existing NSX licenses in your IBM Cloud infrastructure account with the new license.
+* The option to upgrade your NSX license edition is now available on the console. The license upgrade replaces all existing NSX licenses in your {{site.data.keyword.cloud_notm}} infrastructure account with the new license.
 * The **Backup and Restore** tab on the instance details page is no longer available.
 * You can select multiple services to deploy at the beginning of an order. In addition to the Zerto on {{site.data.keyword.cloud_notm}} service, the options to select the Veeam on {{site.data.keyword.cloud_notm}} service and the Fortinet on {{site.data.keyword.cloud_notm}} service are also available.
 * The **Available Services** tab on the **Services** tab in the instance details page is renamed to **Add Services**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-12"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -34,7 +34,7 @@ The PSC located in the primary instance is assigned the default SSO domain of `v
 The vCenter Server with an embedded PSC is installed on a portable subnet on the private VLAN that is associated with management VMs. Its default gateway is set to the IP address assigned on the BCR for that particular subnet. The virtual appliance is configured with the specifications in the following table.
 
 | Attribute                    | Specification                       |
-|------------------------------|-------------------------------------|
+|:---------------------------- |:----------------------------------- |
 | vCenter Server               | Virtual appliance                   |
 | Appliance installation size  | Large (up to 1,000 hosts and 10,000 VMs) |
 | Platform Services Controller | Integrated                            |
@@ -42,7 +42,7 @@ The vCenter Server with an embedded PSC is installed on a portable subnet on the
 | Memory                       | 32 GB                               |
 | Disk                         | 990 GB on local datastore (Large disk deployment) |
 | Disk type                    | Thin provisioned                    |
-{: caption="Table 1. vCenter Server Appliance specifications" caption-side="bottom"}
+{: caption="Table 1. vCenter Server Appliance specifications" caption-side="top"}
 
 ### vCenter Server database
 {: #design_infrastructuremgmt-vcenter-db}

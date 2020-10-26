@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-10-20"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -47,6 +47,8 @@ The following {{site.data.keyword.cloud_notm}} data centers are available for VM
 | {{site.data.keyword.cloud_notm}} data centers | Region |
 |:----------------------|:-------|
 | Dallas 10 | NA South |
+| Dallas 12 | NA South |
+| Dallas 13 | NA South |
 | Frankfurt 04 | Europe |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Solutions Shared instances" caption-side="top"}
 

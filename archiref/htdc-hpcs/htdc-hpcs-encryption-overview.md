@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -74,4 +74,4 @@ The following are considered to be best practices in key management:
 ## Related links
 {: #htdc-hpcs-encryption-overview-related}
 
-* [HyTrust DataControl](https://www.hytrust.com/products/datacontrol-workload-encryption/){:external}
+* [HyTrust® DataControl®](https://www.hytrust.com/products/datacontrol-workload-encryption/){:external}

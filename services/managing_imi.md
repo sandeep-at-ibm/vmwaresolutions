@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-14"
+lastupdated: "2020-09-18"
 
 keywords: vmware services, request vmware service, tech specs vmware
 
@@ -16,9 +16,9 @@ subcollection: vmwaresolutions
 # Managed VMware Services
 {: #managing_imi}
 
-Managed VMware Services can simplify VMware virtual infrastructure management with modular services. It uses advanced automation and analytics to manage critical infrastructure components worldwide and to deliver dynamic remote management services for a broad range of traditional and cloud virtual infrastructures.
+Managed VMware Services can simplify VMware® virtual infrastructure management with modular services. It uses advanced automation and analytics to manage critical infrastructure components worldwide and to deliver dynamic remote management services for a broad range of traditional and cloud virtual infrastructures.
 
-Managed VMware Services can serve as a single, trusted provider to reduce complexity of monitoring and managing virtual IT infrastructures by offering single-pane-of-glass managed services for VMware vCenter Server environments.
+Managed VMware Services can serve as a single, trusted provider to reduce complexity of monitoring and managing virtual IT infrastructures by offering single-pane-of-glass managed services for VMware vCenter Server® environments.
 
 These managed services include advanced VMware vSphere management, full VMware NSX coverage to ensure highly available and secure virtual network infrastructure, and VMware vSAN monitoring to ensure availability of data.
 
@@ -26,7 +26,7 @@ These managed services include advanced VMware vSphere management, full VMware N
 {: #managing_imi-specs}
 
 The following specifications are included in the Managed VMware Services:
-* Coverage options: 8X5, 16X5, or 24X7
+* Coverage options - 8 x 5, 16 x 5, or 24 x 7
 * IT Service Management tools and management process with accountability for the overall delivery
 * Compliance Management
 * Daily and weekly service management and reporting

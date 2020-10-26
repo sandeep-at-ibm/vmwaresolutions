@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-21"
+lastupdated: "2020-09-25"
 
 keywords: KMIP for VMware, order KMIP stand-alone, KMIP for VMware configuration
 
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 # Ordering KMIP for VMware instances
 {: #kmip_standalone_ordering}
 
-You can order a KMIP for VMware instance without associating it to any VMware vCenter Server instance for flexible management of the service and instances.
+You can order a KMIP for VMware® instance without associating it to any VMware vCenter Server® instance for flexible management of the service and instances.
 
 ## Before you begin
 {: #kmip_standalone_ordering-req}
@@ -59,7 +59,7 @@ Select the {{site.data.keyword.cloud_notm}} location where your KMIP for VMware 
 
 | Location         | Endpoints               |
 |:---------------|:-----------------------|
-| Dallas | <<code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Dallas | <code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
 | Frankfurt | <code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code> |
 | London | <code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
 | Sydney | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |

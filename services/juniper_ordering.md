@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-17"
+lastupdated: "2020-09-22"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -13,7 +13,6 @@ subcollection: vmwaresolutions
 ---
 
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -74,8 +73,8 @@ The Juniper vSRX nodes are deployed to the edge services cluster if you selected
 {: #juniper-ordering-service-config-edge-deployment}
 
 If you deploy Juniper vSRX on an edge services cluster, after deployment, you must configure Juniper vSRX specifically for your environment. Complete the following steps:
-1. Configure the redundant Ethernet (reth) 2 interface with the default gateway IP addresses of each subnet in your private trunk VLAN. The IP addresses are assigned to the logical interface, which is in the format of `reth2.VLANid`.
-2. Configure the redundant Ethernet (reth) 3 interface with the default gateway IP addresses of each subnet in your public trunk VLAN, if you have one. The IP addresses are assigned to the logical interface, which is in the format of `reth3.VLANid`.
+1. Configure the redundant Ethernet (`reth`) 2 interface with the default gateway IP addresses of each subnet in your private trunk VLAN. The IP addresses are assigned to the logical interface, which is in the format of `reth2.VLANid`.
+2. Configure the redundant Ethernet (`reth`) 3 interface with the default gateway IP addresses of each subnet in your public trunk VLAN, if you have one. The IP addresses are assigned to the logical interface, which is in the format of `reth3.VLANid`.
 3. In the {{site.data.keyword.cloud}} classic infrastructure view, look at the gateway appliance ordered for the edge services cluster. From there, assign the VLANs that you want to the gateway appliance and put them in *route-through* mode.
 
 ## Related links
@@ -84,7 +83,7 @@ If you deploy Juniper vSRX on an edge services cluster, after deployment, you mu
 * [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview)
 * [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
 * [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
-* [General FAQ about IBM Cloud for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
 * [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}

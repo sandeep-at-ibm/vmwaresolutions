@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-09-22"
 
 subcollection: vmwaresolutions
 
@@ -151,26 +151,26 @@ vRLI supports alerts that trigger notifications about its health and generates n
 
 The design uses the following quantity and size of appliances:
 
-||vROps|vRLI|vRNI|Proxy|
-|---|---|---|---|---|---|
-|VM Qty|4|4|1+1|1|
-|vCPU|8|8|4 + 8|4|
-|RAM GB|32|16|12 + 32|0.5|
-|Disk GB|254|1042|158 + 1000|80|
-{: caption="Table 1. Operation tooling summary system requirements" caption-side="bottom"}
+| | vROps | vRLI | vRNI | Proxy |
+|:-- |:-- |:---- |:---- |:----- |
+| VM Qty | 4 | 4 | 1+1 | 1 |
+| vCPU | 8 | 8 | 4 + 8 | 4 |
+| RAM (GB) | 32 | 16 | 12 + 32 | 0.5 |
+| Disk (GB) | 254 | 1,042 | 158 + 1000 | 80 |
+{: caption="Table 1. Operation tooling summary system requirements" caption-side="top"}
 
 ## Software versions
 {: #opsmgmt-arch-versions}
 
-|Product Name|Version|
-|---|---|
-|VMware vRealize Operations Manager Advanced or higher|7.0|
-|vRealize Operations Management Pack for NSX for vSphere|3.5.2|
-|vRealize Operations Management Pack for Storage Devices|7.0.0|
-|vRealize Operations Management Pack for Site Recovery Manager|8.1.1|
-|VMware vRealize Log Insight|4.7|
-|vRealize Log Insight Content Pack for NSX for vSphere|3.8|
-{: caption="Table 2. Operational tooling software versions" caption-side="bottom"}
+| Product name | Version |
+|:------------ |:------- |
+| VMware vRealize Operations Manager Advanced or higher | 7.0 |
+| vRealize Operations Management Pack for NSX for vSphere | 3.5.2 |
+| vRealize Operations Management Pack for Storage Devices | 7.0.0 |
+| vRealize Operations Management Pack for Site Recovery Manager | 8.1.1 |
+| VMware vRealize Log Insight | 4.7 |
+| vRealize Log Insight Content Pack for NSX for vSphere | 3.8 |
+{: caption="Table 2. Operational tooling software versions" caption-side="top"}
 
 
 **Next topic**: [vRealize Operations Manager design](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrops)

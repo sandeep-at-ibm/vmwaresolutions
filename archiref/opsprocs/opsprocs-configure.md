@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-22"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -46,7 +46,7 @@ These configuration tasks are:
 | Using VMware Update Manager | Once deployed, the VMware products are updated by your system administrators. For information about how your system administrators can use VUM in a vCenter Server Instance, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro). |
 | Key vCenter Server Instance components backup | Your system administrators are responsible for the configuration, management, and monitoring of all software components of vCenter Server instance, including the backup and availability of the management infrastructure and workloads. As part of the solution, you can optionally deploy the IBM Spectrum Protect Plus or Veeam add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components. For information about backup mechanisms and the key components to be backed up, see [Backing up components](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup). |
 | Collecting diagnostic information for VMware products | VMware Technical Support routinely requests diagnostic information when a support request is handled. This diagnostic information contains product-specific logs, configuration files, and data appropriate to the situation. For information about URLs to VMware Knowledgebase articles and detailed step-by-step tasks for collecting this information, see [Collecting diagnostic information for VMware products](https://kb.vmware.com/s/article/1008524?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:external}. For information about the process of collecting the required diagnostic information for VMware NSX Edge devices, see [Collecting diagnostic information for VMware NSX Edge (2079380)](https://kb.vmware.com/s/article/2079380?lang=en_US#q=Collecting%20diagnostic%20information%20for%20VMware%20NSX%20Edge%20){:external}. |
-{: caption="Table 1. vCenter Server instances and clusters" caption-side="bottom"}
+{: caption="Table 1. vCenter Server instances and clusters" caption-side="top"}
 
 ## VM procedures
 {: #opsprocs-configure-vm}
@@ -70,40 +70,40 @@ These configuration tasks are:
 | VM Tools | For information about the process for updating VM Tools, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines#vum-baselines). |
 | Determine the virtual disk format and convert a virtual disk from the thin provision format to a thick provision format | For information about the process to convert a VM disk to the thick provision format if it was created as a virtual disk in the thin provision format, see [Determine the virtual disk format and convert a virtual disk from the thin provision format to a thick provision format](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-E8F50BEC-F575-4AB1-BC77-D9A13CDBDCF7.html){:external}. |
 | AD/DNS server OS Updates  | The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to download updates only. For more information, see [Windows automatic installation of updates](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_limitations#trbl_limitations-windows-update). |
-{: caption="Table 2. VM procedures" caption-side="bottom"}
+{: caption="Table 2. VM procedures" caption-side="top"}
 
 ## vCenter procedures
 {: #opsprocs-configure-vcenter}
 
 | Title | Description |
-|---|---|
+|:----- |:----------- |
 | Backing up the VCSA | For more information, see [vCenter Server Appliance 6.7 file-based backup and restore walkthroughs](https://blogs.vmware.com/vsphere/2018/05/vcenter-server-appliance-6-7-file-based-backup-and-restore-walkthroughs.html){:external}. |
 | VSCA/PSC patching | For more information, see [Patching the vCenter Server Appliance and Platform Services Controller Appliance](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-043EF6BD-78F7-412F-837F-CBDF844F850C.html){:external}. |
 | Stopping, starting, or restarting VCSA services | For troubleshooting and maintenance purposes, it is sometimes necessary to change the status of VMware vCenter Server Appliance (VCSA) services. For more information, see [Stopping, starting, or restarting VMware vCenter Server Appliance 6.x services](https://kb.vmware.com/s/article/2109887?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:external}. |
 | Overview of backup and restore options for the VCSA | For more information, see [Overview of backup and restore options in vCenter Server 6.x](https://kb.vmware.com/s/article/2149237?lang=en_US){:external}. |
-| Configure vCenter email notifications | For information about configuring email notifications to be sent to an email address when a certain condition is triggered on an already defined alarm and custom created alarm, see [Configuring an email alert for the vCenter Server alarm](https://kb.vmware.com/s/article/2123925?lang=en_US){:external}. |
-{: caption="Table 3. vCenter procedures" caption-side="bottom"}
+| Configure vCenter email notifications | For information about configuring email notifications to be sent to an email address when a certain condition is triggered on an already defined alarm and custom created alarm, see [Configuring an email alert for the vCenter Server alarm](https://kb.vmware.com/articleview?docId=2123925){:external}. |
+{: caption="Table 3. vCenter procedures" caption-side="top"}
 
 ## vSphere ESXi host procedures
 {: #opsprocs-configure-host}
 
 | Title | Description |
-|---|---|
+|:----- |:----------- |
 | vSphere host maintenance | A host is placed in to maintenance mode when maintenance tasks need to be run, such as upgrades or physical device replacement. A host enters or leaves maintenance mode only as the result of a system administrator request. VMs that are running on a host entering maintenance mode need to be migrated to another host (either manually or automatically by DRS) or shut down. For more information, see [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html?hWord=N4IghgNiBcIG4GUAOALApgJzQAgBIHsBnAF2wFkwBLAO2LWrGoGM0QBfIA){:external}. |
 | Adding a vSphere ESXi host | For more information, see [Adding ESXi servers to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#vc_addingremovingservers-adding).
 | Removing a vSphere ESXi host |	For more information, see [Procedure to remove ESXi servers](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#vc_addingremovingservers-removing-procedure). |
-| Bare Metal Server firmware patching | For more information, see [What if my bare metal server has out-of-date firmware?](/docs/bare-metal?topic=bare-metal-bm-faq#what-if-my-bare-metal-server-has-out-of-date-firmware-) |
+| Bare metal server firmware patching | For more information, see [What if my bare metal server has out-of-date firmware?](/docs/bare-metal?topic=bare-metal-bm-faq#what-if-my-bare-metal-server-has-out-of-date-firmware-) |
 | vSphere ESXi host patching | For information about using VMware Update Manager (VUM) to update not only vSphere ESXi hosts but a number of other vCenter Server instance components, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro). |
 | Test host network connections	| For information about ways to verify that the network links between the physical network adapters of the vSphere ESXi host and the physical switch are up and available for use, see [Verifying network links](https://kb.vmware.com/s/article/1003724?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:external}. |
 | Determining Network/Storage firmware and driver version in ESXi | For more information, see [Determining network/dtorage firmware and driver version in ESXi 4.x and later](https://kb.vmware.com/s/article/1027206?lang=en_US#q=network%20interface%20card%20error){:external}. |
 | Troubleshooting network and TCP/UDP port connectivity issues on ESXi | For more information, see [Troubleshooting network and TCP/UDP port connectivity issues on ESX/ESXi](https://kb.vmware.com/s/article/2020669?lang=en_US#q=network%20interface%20card%20error){:external}. |
-{: caption="Table 4. vSphere ESXi host procedures" caption-side="bottom"}
+{: caption="Table 4. vSphere ESXi host procedures" caption-side="top"}
 
 ## Storage procedures
 {: #opsprocs-configure-storage}
 
 | Title | Description |
-|---|---|
+|:----- |:----------- |
 | Add {{site.data.keyword.cloud_notm}} Endurance NFS storage | For information about adding an {{site.data.keyword.cloud_notm}} Endurance NFS share to an existing cluster, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances). |
 | Remove {{site.data.keyword.cloud_notm}} Endurance NFS storage | For information about removing an {{site.data.keyword.cloud_notm}} Endurance NFS share from an existing cluster, see [Removing NFS storage from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#vc_addingremovingservers-removing-nfs-storage).
 | Grow {{site.data.keyword.cloud_notm}} Endurance NFS storage | For information about adding more capacity to an {{site.data.keyword.cloud_notm}} Endurance NFS share, see [Expanding block storage capacity](/docs/BlockStorage?topic=BlockStorage-expandingcapacity#expandingcapacity). |
@@ -116,13 +116,13 @@ These configuration tasks are:
 | Using default vSAN alarms | The default vSAN alarms can be used to monitor the cluster, hosts, and existing vSAN licenses. These alarms are automatically triggered when the events corresponding to the alarms are activated or if one or all the conditions specified in the alarms are met. You cannot edit the conditions or delete the default alarms. To configure alarms that are specific to your requirements, create custom alarms for vSAN. See Creating a vCenter Server Alarm for a vSAN Event. For information about monitoring alarms, events, editing existing alarm settings, and using the default vSAN alarms to monitor your cluster, hosts, analyze any new events, and assess the overall cluster health, see [Using the vSAN default alarms](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vsan-monitoring.doc/GUID-E7885CDE-654D-4732-A5FE-31D0AB2B2F57.html){:external}. |
 | Enable SIOC | By default, Storage IO Control (SIOC) is disabled. If you are experiencing poor performance for VMs in a datastore, you can enable SIOC to help with prioritization to storage resources. SIOC is only activated when there is storage contention to ensure that every VM gets its fair share of storage resources. Using a VM storage policy and assigning that policy to a VM or VMDK enables this. For more information, see [Managing storage I/O resources](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html){:external}. |
 | Configure a datastore cluster | A datastore cluster is a collection of datastores with shared resources and a shared management interface. Datastore clusters are to datastores what clusters are to hosts. When you create a datastore cluster, you can use vSphere Storage DRS to manage storage resources. When you add a datastore to a datastore cluster, the datastore's resources become part of the datastore cluster's resources. You use datastore clusters to aggregate storage resources, which enable you to support resource allocation policies at the datastore cluster level. For more information, see [Creating a datastore cluster](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html){:external}. |
-{: caption="Table 5. Storage procedures" caption-side="bottom"}
+{: caption="Table 5. Storage procedures" caption-side="top"}
 
 ## Network procedures
 {: #opsprocs-configure-networks}
 
 | Title | Description |
-|---|---|
+|:----- |:----------- |
 | Network considerations | For more information, see [Networking considerations for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_networkingonvcenterserver). |
 | Planning for HCX | VMware Hybrid Cloud Services (HCX), allows disparate instances of vSphere software defined data centers (SDDC) to interoperate across various network types. HCX is designed to address the security, compatibility, complexity, and performance concerns one would encounter in trying to achieve a multi-instance, multi-site, deployment of vSphere extending across on-premises and cloud provider boundaries. For more information, see [Preparing the installation environment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install). |
 | Initial NSX configuration | As part of the deployment of your vCenter Server instance, a sample customer network is available that consists of; a private subnet, a public subnet, an NSX logical switch, a distributed logical router, and an NSX edge appliance is deployed and configured to perform network address translation. For steps to configure this sample customer network for your VMs, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config#vc_esg_config). |
@@ -143,7 +143,7 @@ These configuration tasks are:
 | NSX logging and system events | For information about configuring a syslog server for the NSX components as well as information on system events, alarms, audit logs, and collecting technical support logs, see [NSX logging and system events](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.logging.doc/GUID-3F08DC2E-2D82-4C89-8829-EF1EA0160B13.html){:external}. |
 | Deploying HCX on-premises | For more information, see [Considerations for on-premises VMware HCX instances](/docs/vmwaresolutions?topic=vmwaresolutions-standalone_considerations#standalone_considerations){:external}. |
 | HCX Check | The HCX service seamlessly extends the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows you to migrate VMs to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. For information about accessing the HCX Cloud Management console and applying updates to HCX, see [Managing VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-managinghcx). |
-{: caption="Table 6. Network procedures" caption-side="bottom"}
+{: caption="Table 6. Network procedures" caption-side="top"}
 
 **Next topic**: [Alarms](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-alarms)
 

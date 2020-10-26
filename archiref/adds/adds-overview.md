@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-07-30"
+lastupdated: "2020-10-22"
 
 subcollection: vmwaresolutions
 
@@ -84,6 +84,6 @@ There are three forest models:
 {: #adds-overview-related}
 
 * [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
-* [Getting started with {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
+* [Getting started with VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
 * [{{site.data.keyword.vmwaresolutions_short}}: Take a look under the hood](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood)
 * [More limitations and considerations - Windows automatic installation of updates](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_limitations#trbl_limitations-windows-update)

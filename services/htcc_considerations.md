@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-10"
+lastupdated: "2020-10-13"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -27,21 +27,23 @@ The HyTrust® CloudControl™ service enforces and controls compliance against s
 
 The following versions of the HyTrust CloudControl service are installed, based on the VMware NSX® networking solution type of your instance:
 * 5.6 for vCenter Server with NSX-V
-* 6.1.1 for vCenter Server with NSX-T
+* 6.2 for vCenter Server with NSX-T
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
 ## Technical specifications for HyTrust CloudControl
 {: #htcc_considerations-specs}
 
-For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
-For VMware vCenter Server® with NSX-T instances, HyTrust CloudControl v6.1 is configured with connections to the following components:
+For VMware vCenter Server® with NSX-T instances, HyTrust CloudControl v6.2 is pre-configured with connections to the following components:
 * Microsoft® Active Directory™
 * vCenter Server
 * VMware NSX-T
 
-Sample users and groups are configured in Active Directory and are displayed on the service details page. If you delete HyTrust CloudControl, the sample users are  deleted from Active Directory too. A sample trust manifest is set up that gives single sign-on (SSO) permissions to the sample users that are created. You can change this or customize it for your own requirements.
+Sample users and groups are pre-configured in Active Directory (AD) and are displayed on the service details page. If you delete HyTrust CloudControl, the sample users are deleted from AD too. A sample trust manifest is set up that gives single sign-on (SSO) permissions to the sample users that are created. You can change this setting or customize it for your own requirements.
+
+During the pre-configuration of HyTrust CloudControl, global PIP is enabled.
 
 The following components are ordered and included in the HyTrust CloudControl service:
 
@@ -52,7 +54,7 @@ The following components are ordered and included in the HyTrust CloudControl se
 * RAM: 16 GB
 * Disk:
   * For version 5.6: 70 GB VMDK resident on vSAN
-  * For version 6.1.1: 186 GB VMDK resident on vSAN
+  * For version 6.2: 186 GB VMDK resident on vSAN
 * Network: Placed on VLAN-backed private portable network specified for management
 
 ### High availability

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-18"
+lastupdated: "2020-09-16"
 
 keywords: troubleshooting, configuration issue, ESXi server issue
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:support: data-reuse='support'}
 
-# ESXi server displays configuration issue
+# Why does the ESXi server display a message about management network redundancy?
 {: #trbl_host_displays_warning_msg}
 {: troubleshoot}
 {: support}

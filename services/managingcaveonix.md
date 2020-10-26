@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-25"
+lastupdated: "2020-09-10"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -34,12 +34,12 @@ To manage the Caveonix RiskForesight™ service, you must access the Caveonix Ri
       ```javascript
       RiskForesight_VM_IP_Address      RiskForesight_FQDN
       ```
-2. To access the Caveonix RiskForesight console, click **View RiskForesight Console** on the service details page for Caveonix RiskForesight, and then log in by using the credentials listed on the same service details page.
+2. To access the Caveonix RiskForesight console, click **View RiskForesight console** on the service details page for Caveonix RiskForesight, and then log in by using the credentials listed on the same service details page.
 
 ## Applying updates to Caveonix RiskForesight
 {: #managingcaveonix-update}
 
-You are responsible for maintaining Caveonix RiskForesight to keep it updated to the most recent version. You can download the required updates from the [Caveonix Service Provider Portal](https://support.caveonix.com){:external}.
+You are responsible for maintaining Caveonix RiskForesight to keep it updated to the most recent version. You can download the required updates from the [Caveonix Service Provider Portal](https://support.caveonix.com/login){:external}.
 
 ## Updating Caveonix RiskForesight licenses
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-09-16"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Multi-site configuration for VMware vCenter Server instances
+# Multi-site configuration for vCenter Server instances
 {: #vc_multisite}
 
 {{site.data.keyword.vmwaresolutions_full}} allows instances to be deployed across different locations and have them up and running in a short time.
@@ -28,8 +28,8 @@ subcollection: vmwaresolutions
 
 A multi-site deployment consists of the following components.
 
-* **Primary instance**: The primary VMware vCenter Server instance has the following configuration:
-  * Microsoft Active Directory (AD) and DNS (Domain Name System) root domain
+* **Primary instance**: The primary VMware vCenter Server® instance has the following configuration:
+  * Microsoft® Active Directory (AD) and DNS (Domain Name System) root domain
   * vCenter Server subdomain
   * SSO (Single Sign-On) domain
   * SSO site name
@@ -37,8 +37,8 @@ A multi-site deployment consists of the following components.
 * **Secondary instance or instances**: One or more secondary vCenter Server instances, linked to the primary instance, with the following configuration:
   * SSO site name
   * DNS subdomain that is linked to the root domain on the primary instance
-  * DNS and AD replication set-up between the AD virtual machines on the primary and secondary instances
-  * VMware vCenter on the secondary instances is set up with Enhanced Linked Mode to the vCenter on the primary instance
+  * DNS and AD replication setup between the AD virtual machines on the primary and secondary instances
+  * VMware® vCenter on the secondary instances is set up with Enhanced Linked Mode to the vCenter on the primary instance
 
 ## vCenter Server multi-site deployment
 {: #vc_multisite-deployment}

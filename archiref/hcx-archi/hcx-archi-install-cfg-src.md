@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-21"
 
 subcollection: vmwaresolutions
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 # Installing and configuring HCX on the source
 {: #hcx-archi-install-cfg-src}
 
-The on-premises installation entails deploying the HCX management appliance and registering it with the vCenter and one or more VCS HCX enabled cloud endpoints.
+The on-premises installation entails deploying the HCX management appliance and registering it with the vCenter and one or more vCenter Server HCX-enabled cloud endpoints.
 
 ## Installing the HCX Manager Appliance
 {: #hcx-archi-install-cfg-src-install-hma}
@@ -42,12 +42,12 @@ Install the HCX Manager appliance in the on-premises vCenter.
 | Field                    | Value           |
 |--------------------------|-----------------|
 | Hostname                 | HCM_1           |
-| Network 1 IPv4 Address   | 192.168.200.101 |
-| Network 1 IPv4 Prefix    | 24              |
-| Default IPv4 Gateway     | 192.168.200.1   |
-| Network 1 IPv6 Address   |                 |
-| Network 1 IPv6 Prefix    |                 |
-{: caption="Table 1. Sample values for network properties" caption-side="bottom"}
+| Network 1 IPv4 address   | 192.168.200.101 |
+| Network 1 IPv4 prefix    | 24              |
+| Default IPv4 gateway     | 192.168.200.1   |
+| Network 1 IPv6 address   |                 |
+| Network 1 IPv6 prefix    |                 |
+{: caption="Table 1. Sample values for network properties" caption-side="top"}
 
 8. Review the vService bindings page. Click **Next** to continue.
 9. On the **Ready to complete** page, follow these steps:

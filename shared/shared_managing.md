@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-07"
+lastupdated: "2020-09-25"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -32,8 +32,8 @@ To view a summary of all the VMware Solutions Shared virtual data center instanc
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.  
 3. In the **VMware Solutions Shared** table, view the list of instances that are provisioned in the selected user account.
 
-| Item        | Description       |  
-|:------------- |:------------- |
+| Item | Description |
+|:---- |:----------- |
 | Name | The name of the instance. |
 | Type | The type of the virtual data center. |
 | Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |  
@@ -41,10 +41,10 @@ To view a summary of all the VMware Solutions Shared virtual data center instanc
 | Status | The status of the instance. |
 {: caption="Table 1. Virtual data center instance summary" caption-side="top"}
 
-The instance can have a range of statuses.
+The instance can have different statuses.
 
-| Status        | Description       |
-|:------------- |:------------- |
+| Status | Description |
+|:------ |:----------- |
 | Creating | The instance is being created. |
 | Ready to use | The instance is ready to use. |
 | Modifying | The instance is being modified. |
@@ -100,7 +100,7 @@ To view virtual data center instance recommended services details:
 
 For information about recommended services details, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam).
 
-## Procedure to launch the vCloud Director Management console
+## Procedure to access the vCloud Director Management console
 {: #shared_managing-accessing}
 
 Use the vCloud Director Management console to manage the virtual data center. You can access the vCloud Director console from the virtual data center details page.

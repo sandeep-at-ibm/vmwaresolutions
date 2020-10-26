@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-08-24"
+lastupdated: "2020-09-09"
 
 keywords: release notes, what's new, version 3.8
 
@@ -81,10 +81,13 @@ For vSAN storage, even though vSphere 6.7u3 is selected on the user interface, v
 
 For NFS storage, vSphere ESXi 6.7u3 will be installed.
 
-### VMware NSX-T 3.0.1 support
+### VMware NSX updates
 {: #relnotes_v38-dedicated-nsx-t}
 
-New VMware vCenter Server® with NSX-T instances are now deployed with NSX-T v3.0.1 instead of v2.5.1. Day 2 operations continue to be supported for vCenter Server with NSX-T v2.5.1 instances.
+* For vCenter Server with NSX-T, new instances are now deployed with NSX-T 3.0.1. Day 2 operations continue to be supported for NSX-T 2.5.1 instances.
+* For vCenter Server with NSX-V, new instances are now deployed with NSX-V 6.4.6.
+
+For more information, see [Software BOM for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom#vc_bom-software).
 
 ### Updates for IBM Cloud for VMware Mission Critical Workloads
 {: #relnotes_v38-mcv}
@@ -129,6 +132,7 @@ For more information, see [Resource requirements for add-on services](/docs/vmwa
 {: #relnotes_v38-services-select-target-cluster}
 
 Starting with v3.8, the target cluster for installing Red Hat OpenShift varies:
+
 * During deployment, you aren't prompted for the cluster. The service is automatically installed to the management cluster.
 * During day 2 operations, you are prompted for the cluster. You can install the service to a management cluster or a workload cluster.
 
@@ -146,7 +150,8 @@ This change affects the Juniper vSRX and Red Hat OpenShift for VMware services.
 ## Updates to REST APIs
 {: #relnotes_v38-api}
 
-Various updates are made to the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared) documentation.
+* Application programming interfaces (APIs) are now available for the Red Hat OpenShift for VMware service.
+* Various updates are made to the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared) documentation.
 
 ## New and updated documentation
 {: #relnotes_v38-updated-doc}

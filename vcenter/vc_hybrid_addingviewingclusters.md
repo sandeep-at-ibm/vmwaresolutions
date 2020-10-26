@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-07"
+lastupdated: "2020-10-20"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -85,7 +85,9 @@ Cascade Lake bare metal servers are available only for VMware vSphere Enterprise
 | Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 processor / 48 cores total, 2.4 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 processor / 96 cores total, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 2. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or new ESXi servers for existing hybridity instances.
@@ -125,7 +127,7 @@ IBM-provided licenses for the following VMware components:
 Network interface card (NIC) settings are based on your selection of either **Public and private network** or **Private network only**. The following add-on services require public NICs and aren't available with the private option:
 
 * F5 BIG-IP
-* Fortigate Virtual Appliance
+* FortiGate Virtual Appliance
 
 ### Summary
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}

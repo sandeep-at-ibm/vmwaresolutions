@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-31"
+lastupdated: "2020-09-28"
 
 keywords: troubleshooting, SAN health, virtual SAN issue
 
@@ -19,18 +19,18 @@ subcollection: vmwaresolutions
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:support: data-reuse='support'}
 
-# Virtual SAN Health alerts and warnings
+# How do I manage Virtual SAN Health alerts and warnings?
 {: #trbl_vsan_alerts}
-
-## Alerts and warnings on the VMware vSphere Web Client Monitor page
-{: #trbl_vsan_alerts-problem}
 {: troubleshoot}
 {: support}
 
-You might see alerts and warnings that relate to Virtual SAN Health issues on the VMware vSphere Web Client Monitor page. These warnings are non-issues and do not indicate functional problems.
+You might see alerts and warnings that relate to Virtual SAN Health issues on the VMware vSphere® Web Client Monitor page.
 {: tsSymptoms}
 
-However, if you want to clear the warnings from the vSphere Web Client, use the following procedure.
+These warnings are non-issues and do not indicate functional problems.
+{: tsCauses}
+
+Use the following steps to clear the warnings from the vSphere Web Client:
 {: tsResolve}
 
 1. Go to http://partnerweb.vmware.com/service/vsan/all.json and save the JSON file, with the name `all.json`, on your local system.
@@ -41,7 +41,13 @@ However, if you want to clear the warnings from the vSphere Web Client, use the 
 
 For more information, see [How to download offline vSAN HCL file for vSAN Health Check plug-in](https://www.virtuallyghetto.com/2015/05/how-to-download-offline-vsan-hcl-file-for-vsan-health-check-plugin.html){:external}.
 
-## vSAN extended configuration in sync warning
-{: #trbl_vsan_alerts-sync-warn}
+On the vSAN health page, the following warning might display with the recommendation to Host restart:
+{: tsSymptoms}
 
-On the vSAN health page, a vSAN extended configuration in sync warning might be displayed, with the recommendation to Host restart. The warning is a non-issue and does not indicate functional problems. You can restart to resolve the issue.
+`vSAN extended configuration in sync.`
+
+The warning is a non-issue and does not indicate functional problems.
+{: tsCauses}
+
+Restart the vSAN Health page to resolve the issue.
+{: tsResolve}

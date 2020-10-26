@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-07-21"
+lastupdated: "2020-10-23"
 
 subcollection: vmwaresolutions
 
@@ -19,14 +19,14 @@ subcollection: vmwaresolutions
 # HyTrust DataControl on IBM Cloud with IBM Hyper Protect Crypto Services
 {: #htdc-hpcs-detail}
 
-The DataControl VM is a HyTrust-hardened version of FreeBSD, a light-weight, locked-down operating system that has no runtime login/SSH access to the system. This system prevents tampering or attempts to access clear-text data and encryption keys. Two virtual machines are deployed onto the internal management subnet. Examples of the hostnames are as follows:
+The DataControl® virtual machine (VM) is a HyTrust®-hardened version of FreeBSD, a light-weight, locked-down operating system that has no runtime login/SSH access to the system. This system prevents tampering or attempts to access clear-text data and encryption keys. Two VMs are deployed onto the internal management subnet. Examples of the hostnames are as follows:
 
 * Primary Host Name: htdc01-A68ED99E.ibmcloud.local
 * Secondary Host Name: htdc02-A68ED99E.ibmcloud.local
 
 In the previous examples, A68ED99E is the instance ID and `ibmcloud.local` is your vCenter Server instance domain name.
 
-During the deployment, the following users are configured. All service information is available in the IBM Cloud console.
+During the deployment, the following users are configured. All service information is available in the {{site.data.keyword.cloud}} console.
 
 * Web UI Security Admin User
 * Web UI Cloud User
@@ -35,18 +35,18 @@ During the deployment, the following users are configured. All service informati
 ## Firewall rules
 {: #htdc-hpcs-detail-fw-rules}
 
-The following figure describes the deployment of the HTDC virtual machines into the vCenter Server instance.
+The following figure describes the deployment of the HTDC VMs into the vCenter Server instance.
 
 ![Flows](../../images/htdc-hpcs-natfw.svg){: caption="Figure 1. Network address translation and firewall" caption-side="bottom"}
 
-The following firewall rules are configured on the management ESG when the HTDC on IBM Cloud service is deployed. This configuration allows outbound connectivity to the internet for the HyTrust virtual machines so that the license that is applied to the HTDC installation will not expire after a year.
+The following firewall rules are configured on the management ESG when the HTDC on {{site.data.keyword.cloud_notm}} service is deployed. This configuration allows outbound connectivity to the internet for the HyTrust VMs so that the license that is applied to the HTDC installation will not expire after a year.
 
 * Name: HytrustDC VM Outbound Traffic for DC1, source: <HTDC VM 1 UP>, destination:  any, service:  HTTPS/HTTP, action: Accept.
 * Name: HytrustDC VM Outbound Traffic for DC2, source: <HTDC VM 2 UP>, destination:  any, service:  HTTPS/HTTP, action: Accept.
 
 These rules will also allow automatic vitals reporting, if you enable it, as HDKC must be able to send the encrypted vitals bundle outbound to `https://vitals.hytrust.com` via TCP/443.
 
-These rules will also allow access to IBM Cloud IAM outbound to `https://iam.cloud.ibm.com` via TCP/443. This access is required to validate the API key. If this access is not configured, you will receive the following error; Cannot retrieve HPCS access token. HTTPSConnectionPool(host-iam.cloud.ibm.com port=443)
+These rules will also allow access to {{site.data.keyword.cloud_notm}} IAM outbound to `https://iam.cloud.ibm.com` via TCP/443. This access is required to validate the API key. If this access is not configured, you will receive the following error; Cannot retrieve HPCS access token. HTTPSConnectionPool(host-iam.cloud.ibm.com port=443)
 
 The following figure shows the following communication flows that are required between the HTDC components and external services.
 
@@ -57,10 +57,10 @@ In the vCenter Server instance deployment these flows are allowed, but would nee
 * The HTKC servers need to communicate to the following infrastructure services:
   * DNS - Outbound UDP/53.
   * SMTP - Outbound mail server, typically TCP/25 (optional).
-  * SYSLOG - An outbound UDP in the range 25 - 65535 if you want to use a remote syslog server (optional). KeyControl does not currently support TCP for syslog.
+  * SYSLOG - An outbound UDP in the range 25 - 65535 if you want to use a remote syslog server (optional). KeyControl™ does not currently support TCP for syslog.
   * Backup and Restore via NFS (optional) - Inbound TCP and UDP/111 (portmapper), 2046 (lockd), 2047 (rpc statd), 2048 (rcpmountd), and 2049 (default NFS port).
   * NTP - Outbound NTP servers, typically UDP/123 or TCP/123.
-  * IBM Cloud IAM - Outbound TCP/443. Required for HPCS.
+  * {{site.data.keyword.cloud_notm}} IAM - Outbound TCP/443. Required for HPCS.
 
 * The HTKC servers need to communicate to each other:
   * TCP/443 (HTTPS).
@@ -69,9 +69,9 @@ In the vCenter Server instance deployment these flows are allowed, but would nee
 Note, HTKC uses the IP address 169.254.119.1 for internal communication. This IP address must be reserved for HTKC.
 
 * For external access the following traffic flows are required:
- * KeyControl webGUI – Inbound TCP/443 and TCP/80 to the HTKC virtual machines. All requests made to TCP/80 are redirected to TCP/443 so that they use HTTPS.
+ * KeyControl webGUI – Inbound TCP/443 and TCP/80 to the HTKC VMs. All requests made to TCP/80 are redirected to TCP/443 so that they use HTTPS.
 * For HyTrust support-level access:
- * Inbound TCP/22 (for full support) and TCP/6666 (for restricted support) to the HTKC virtual machines
+ * Inbound TCP/22 (for full support) and TCP/6666 (for restricted support) to the HTKC VMs
 
 The HTDC PAs are installed in the VMs hosted on the NSX VXLAN network segments in the overlay. These VMs have Bring Your Own IP (BYOIP) addressing. Therefore, NAT or routing changes need to be implemented on the customer-ESG so that the following communication flow is allowed
 
@@ -80,7 +80,7 @@ The HTDC PAs are installed in the VMs hosted on the NSX VXLAN network segments i
 ## NAT
 {: #htdc-hpcs-detail-nat}
 
-The following Network Address Translation (NAT) rules are configured on the customer ESG when the HTDC on IBM Cloud service is deployed. These rules allow outbound connectivity to the internet to enable licensing of HTDC.
+The following Network Address Translation (NAT) rules are configured on the customer ESG when the HTDC on {{site.data.keyword.cloud_notm}} service is deployed. These rules allow outbound connectivity to the internet to enable licensing of HTDC.
 
 * Type: SNAT, Applied On: public uplink, Original Source IP: <HTDC VM 1 UP>, Translated IP Address: <Secondary IP>, Port Range: any.
 * Type: SNAT, Applied On: public uplink, Original Source IP: <HTDC VM 2 UP>, Translated IP address: <Secondary IP>, Port Range: any.
@@ -107,7 +107,7 @@ HyTrust provides several administrative interfaces to configure and maintain Key
 ## HyTrust DataControl processes
 {: #htdc-hpcs-detail-processes}
 
-With HTDC, a virtual machine must be part of a Cloud VM Set before it can be encrypted. The set controls global options for the VMs it contains and tracks KeyIDs and FSIDs. It also allows the BoundaryControl feature to be enabled that uses Policy Rules and constraints in HyTrust CloudControl (HTCC) to authenticate and authorize delivery of encryption keys for the data encrypted by the HTDC PA and managed by HTKC.
+With HTDC, a VM must be part of a Cloud VM Set before it can be encrypted. The set controls global options for the VMs it contains and tracks KeyIDs and FSIDs. It also allows the BoundaryControl feature to be enabled that uses Policy Rules and constraints in HyTrust CloudControl (HTCC) to authenticate and authorize delivery of encryption keys for the data encrypted by the HTDC PA and managed by HTKC.
 
 A KEK provides an extra layer of security by encrypting the individual DEKs on the VMs associated with the Cloud VM Set. It also controls the expiration and revocation of the DEKs. To protect the KEK, HTKC requires that the KEK is stored in the IBM HPCS instance. The following KEK flows are described:
 

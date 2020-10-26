@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-11"
+lastupdated: "2020-09-16"
 
 keywords: vSphere scale cluster, scale vSphere, external vSphere cluster
 
@@ -25,7 +25,7 @@ You can use the VMware vSphere offering to scale existing vSphere clusters that 
 {: #vs_orderingforclustersoutside-req}
 
 Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section at the top of the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 * You reviewed the requirements and considerations in [Requirements and planning for VMware vSphere](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 
 ## Procedure to scale clusters created outside of the console

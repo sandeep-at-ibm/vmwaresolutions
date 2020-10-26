@@ -110,8 +110,8 @@ The user interface is updated and provides the following enhancements:
      * A new **Featured Workload Solutions** category is added.
      * The previous **Partner Services** category is renamed to **Professional Services**, and the previous **App Modernization** category is renamed to **Transformation and Modernization of VMware Applications**.
 * The following enhancements are made to the **Network Interface** section when you order vCenter Server instances or vCenter Server with NSX-T instances and when you add clusters for these instances:
-   * A new **Allocate a new one** option is added to the drop-down lists on the **Select Existing VLANs** tab.
-   * The **Public VLAN** and **Public Primary Subnet** drop-down lists are removed from the **Select Existing VLANs** tab for the **Private Network Only** option.
-* A new **Allocate a new one** option is added to the **Public VLAN**, **Private VLAN**, and **Secondary Private VLAN** drop-down lists on the **Select Existing VLANs** tab when you order vSphere clusters.
+   * A new **Allocate a new one** option is added to the lists on the **Select Existing VLANs** tab.
+   * The **Public VLAN** and **Public Primary Subnet** lists are removed from the **Select Existing VLANs** tab for the **Private Network Only** option.
+* A new **Allocate a new one** option is added to the **Public VLAN**, **Private VLAN**, and **Secondary Private VLAN** lists on the **Select Existing VLANs** tab when you order vSphere clusters.
 * A new **Save Configuration** button is added to the **Order Summary** pane of the ordering page for vCenter Server instances, by using which you can now save your instance settings as a configuration template without placing an order. You can manage the configuration templates by further editing or deleting them as well.
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

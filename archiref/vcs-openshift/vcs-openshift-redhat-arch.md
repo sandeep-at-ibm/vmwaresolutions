@@ -49,11 +49,11 @@ The worker hosts are Red Hat Enterprise Linux CoreOS (RHCOS), a new container-or
 
 The Red Hat OpenShift deployment uses the following components of the {{site.data.keyword.vmwaresolutions_short}} SDDC architecture to help with the execution and installation:
 
- - Time services
- - Domain name resolution
- - NSX load balancers
- - NSX DHCP services
- - NSX software defined networking
+- Time services
+- Domain name resolution
+- NSX load balancers
+- NSX DHCP services
+- NSX software defined networking
 
 For more information, see [IBM Cloud for VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch).
 

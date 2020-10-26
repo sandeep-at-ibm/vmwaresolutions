@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-09-30"
 
 subcollection: vmwaresolutions
 
@@ -30,30 +30,26 @@ The vRNI Platform appliance provides the analytics, user interface, and data man
 This architecture supports 3000 VMs by using a Medium brick size.
 
 | Attribute | Specification |
-|---|---|
+|-----------|---------------|
 | vCPU | 8 |
 | Memory | 32 GB |
 | Disk (thin provisioned) | 1 TB |
-{: caption="Table 1. Network Insight Platform system requirements" caption-side="bottom"}
-{: summary="This table has row and column headers. The row headers identify the attribute of the Network Insight Platform. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: class="simple-tab-table"}
+{: caption="Table 1. Network Insight Platform system requirements" caption-side="top"}
 {: #table1}
 {: tab-title="Platform system requirements"}
-{: tab-group="System requirements"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-group="sys-req"}
 
 | Attribute | Specification |
-|---|---|
+|-----------|---------------|
 | vCPU | 4 |
 | Memory | 12 GB |
 | Disk (thin provisioned) | 200 GB |
-{: caption="Table 2. Network Insight Collector system requirements" caption-side="bottom"}
-{: summary="This table has row and column headers. The row headers identify the attribute of the Network Insight Collector. The column headers indentify the specification of the attribute. To find the specification of an attribute, navigate to the row, and then find the value in the specification column."}
+{: caption="Table 1. Network Insight Collector system requirements" caption-side="top"}
 {: #table2}
 {: tab-title="Collector system requirements"}
-{: tab-group="System requirements"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-group="sys-req"}
+{: class="simple-tab-table"}
 
 ## Networking
 {: #opsmgmt-vrni-network}
@@ -70,10 +66,10 @@ Deployment of the vRNI appliance requires two IP addresses from the Tooling priv
 ## Ports
 {: #opsmgmt-vrni-ports}
 
-| Description |Port | Protocol |
-|---|---|---|
+| Description | Port | Protocol |
+|-------------|------|----------|
 | Communication between the VMs of vRealize Network Insight | 443 | HTTPS |
-| Services that require internet access<br>svc.ni.vmware.com<br>support2.ni.vmware.com<br>reg.ni.vmware.com|443|HTTPS
+| Services that require internet access<br>`svc.ni.vmware.com`<br>`support2.ni.vmware.com`<br>`reg.ni.vmware.com` | 443 | HTTPS |
 | Log Insight Ingestion API | 9000 | TCP |
 | Log Insight Ingestion API over SSL | 9543 | TCP |
 | User Interface | 80,443 | TCP |
@@ -82,8 +78,8 @@ Deployment of the vRNI appliance requires two IP addresses from the Tooling priv
 | DNS| 53 | UDP |
 | LDAP/LDAPS | 389, 636 | TCP |
 | ESXi | 2055 | TCP |
-| VMware vSphere / NSX | 443 | TCP |
-{: caption="Table 3. Network Insight ports" caption-side="bottom"}
+| VMware vSphere and NSX | 443 | TCP |
+{: caption="Table 2. Network Insight ports" caption-side="bottom"}
 
 ## Authentication
 {: #opsmgmt-vrni-auth}

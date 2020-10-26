@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-09-22"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -70,7 +70,7 @@ For the edge services cluster, you cannot add or remove ESXi servers.
       * For **SAP-certified**, specify the **CPU model and RAM** and the **Number of bare metal servers**.
 9. Complete the subnet settings.
    * Select to continue using the previously selected primary subnets.
-   * Select to specify primary subnets. Then, use the drop-down lists to select the **Public primary subnet** and **Private primary subnet**.
+   * Select to specify primary subnets. Then, use the lists to select the **Public primary subnet** and **Private primary subnet**.
 10. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, select the **High performance Intel Optane** checkbox.
 11. On the **Summary** pane, review the estimated pricing and click **Create**.
 

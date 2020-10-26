@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-06"
+lastupdated: "2020-09-25"
 
 subcollection: vmwaresolutions
 
@@ -34,7 +34,7 @@ There are three Caveonix RiskForesight deployment models:
   -	Small-to-medium deployments – up to 500 assets with 30 days of indexing.
 - Fully Distributed - Add more base VMs and scale-out VMs according to the number of assets and data retention requirements:
   - Application components distributed onto separate VMs to facilitate scaling.
-  -	Required deployment pattern as number of assets increases in the range 500 - 100,000.
+  -	Required deployment pattern as number of assets increases in the range 500 - 100000.
   -	Remote Collectors installed on separate VMs.
   -	UI on multiple VMs.
   -	App and Plugins on multiple VMs.

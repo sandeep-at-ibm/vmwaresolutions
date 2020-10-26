@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-10-22"
 
 subcollection: vmwaresolutions
 
@@ -47,7 +47,7 @@ Data ingress (that is, data flowing into the {{site.data.keyword.cloud_notm}} da
 
 Since the data egress cost is priced per GB, the best way to estimate your data egress cost is to estimate your likely data egress traffic by using a monitoring tool in your existing on-premises environment (whether it’s already virtualized or not). Make sure that you estimate the different types of data egress traffic listed above separately as applicable. One such monitoring tool is SysTrack from Lakeside Software.
 
-[Lakeside’s SysTrack](https://www.lakesidesoftware.com/product){:external} workplace analytics solution contains an extensive set of tools to provide relevant planning information for [desktop transformation](https://www.lakesidesoftware.com/solutions/desktop-transformation){:external}. Best of all, this is available at no cost to VMware customers via the [SysTrack Desktop Assessment (SDA)](https://www.vmware.com/files/microsites/latitude/index.html){:external}. Through the SDA, customers can collect detailed environmental information, including recommendations for deployment options and resource requirements, with only the need to deploy the SysTrack agent to systems being considered for transformation. For advanced cases, the on-premises version of SysTrack can be used as well. This guide  makes the assumption that such a deployment is already in place. For more setup details or questions about the SDA, the [Quick Start Guide](https://assessment.vmware.com/SDA/ViewDocument?document=Quick_Start_Guide){:external} is a good resource.
+[Lakeside’s SysTrack](https://www.lakesidesoftware.com/product){:external} workplace analytics solution contains an extensive set of tools to provide relevant planning information for [desktop transformation](https://www.lakesidesoftware.com/solutions/desktop-transformation){:external}. For information about the SysTrack Desktop Assessment (SDA), see the [SysTrack Desktop Assessment (SDA) - Solution Brief](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutionbrief/microsites/latitude/docs/solution-brief.pdf){:external}. Through the SDA, customers can collect detailed environmental information, including recommendations for deployment options and resource requirements, with only the need to deploy the SysTrack agent to systems being considered for transformation. For advanced cases, the on-premises version of SysTrack can be used as well. This guide  makes the assumption that such a deployment is already in place. For more setup details or questions about the SDA, the [Quick Start Guide](https://assessment.vmware.com/SDA/ViewDocument?document=Quick_Start_Guide){:external} is a good resource.
 
 After SysTrack is deployed in the environment, it immediately begins collecting relevant information from devices on which it’s installed. For this guide we’ll focus on the most interesting facets of data collection for the network:
 * Per Device Network Usage
