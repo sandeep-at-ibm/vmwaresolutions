@@ -4,7 +4,7 @@ copyright:
 
   years:  2020
 
-lastupdated: "2020-10-22"
+lastupdated: "2020-10-26"
 
 keywords: release notes, what's new, version 3.8
 
