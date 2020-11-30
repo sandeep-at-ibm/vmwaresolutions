@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-10-19"
+lastupdated: "2020-11-30"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -244,7 +244,7 @@ Network interface card (NIC) enablement settings are based on your selection of 
 The following options are provided for uplink speed:
 * 10 GB: this option is selected by default.
 * 25 GB: this option is available only when the vSphere cluster meets the following requirements:
-   * The vSphere version is 6.7.
+   * The vSphere version is 6.7u3.
    * The bare metal server is Cascade Lake.
    * The data center is DAL10 or WDC04.
 
