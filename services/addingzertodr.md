@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-12-03"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -71,7 +71,7 @@ Zerto Virtual Replication Appliance (VRA) components are deployed only into the 
 ### Licenses and fees
 {: #addingzertodr-specs-licenses}
 
-Zerto Replication V6.5 update 3 license
+Zerto Replication 7.5 Update 3 license
 
 ## Related links
 {: #addingzertodr-related}
