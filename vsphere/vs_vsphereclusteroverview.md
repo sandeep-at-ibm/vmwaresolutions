@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-01"
+lastupdated: "2021-01-06"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # VMware vSphere overview
 {: #vs_vsphereclusteroverview}
 
-VMware vSphere® is a streamlined and optimized ordering platform for VMware®. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components. A minimum of four ESXi servers is required.
+VMware vSphere® is a streamlined and optimized ordering platform for VMware®. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components.
 {: shortdesc}
 
 The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented.
@@ -56,15 +56,21 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
 {: #vs_vsphereclusteroverview-specs-bare-metal}
 
 You can order one or more {{site.data.keyword.cloud_notm}} bare metal servers with one of the following configurations:
-* **Skylake** - 2-CPU Intel® Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
 * **Cascade Lake** - 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200/8200 series) and 4-CPU Intel Cascade Lake generation servers (Quad Intel Xeon Gold 6248 and Quad Intel Xeon Platinum 8260) with your selected CPU model and RAM size.
+* **Skylake** - 2-CPU Intel® Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
 * **SAP-certified** - 2-CPU Intel Skylake generation servers Intel Cascade Lake generation servers (Intel Xeon Gold 5200/6200 series and Intel Xeon Platinum 8200 series) with your selected CPU model.
-
-The options available depend on whether you selected the VMware vSAN component.
 
 Additionally, the following disk and networking specifications apply:
 * 10 Gbps dual public and private network uplinks
 * One RAID disk controller
+
+### Bare metal server notes
+{: #vs_vsphereclusteroverview-specs-bare-metal-notes}
+
+* Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
+* VMware NSX requires a minimum of three bare metal servers.
+* VMware vSAN requires a minimum of four bare metal servers.
+* The options available depend on whether you selected the VMware vSAN component.
 
 ### Networking
 {: #vs_vsphereclusteroverview-specs-network}
@@ -103,7 +109,7 @@ One {{site.data.keyword.cloud_notm}} bare metal server with the networking confi
 ### VMware components for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 6.7u3.  
+* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 6.7u3.
 * Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
 You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After you create a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
