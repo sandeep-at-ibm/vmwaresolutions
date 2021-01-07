@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-07"
 
 subcollection: vmwaresolutions
 
@@ -133,8 +133,6 @@ In addition to capacity planning, complete the following to ensure that your sto
   - RAID-6 provides protection against dual failures, but requires a minimum of six hosts compared to four hosts for RAID-5.
 - To add more storage to your vSAN cluster, you must add new hosts to the cluster or add {{site.data.keyword.cloud_notm}} Endurance NFS storage instead. Adding disks to the existing hosts is not currently supported.
 - If you mount additional {{site.data.keyword.cloud_notm}} Endurance NFS storage to your cluster, ensure that you follow the architecture guidance and configure host routes to the storage using the `SDDC-DPortGroup-NFS` port group addresses. You must authorize these addresses, rather than the hosts themselves, to the storage. For more information, see [Attached storage infrastructure management](/docs/vmwaresolutions?topic=vmwaresolutions-storage-infra-mgmt#storage-infra-mgmt-vsphere-routing).
-
-In addition, see the IBM Developer recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
 
 **Next topic:** [Comparison chart for VMware NSX and VMware vSAN editions](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix)
 

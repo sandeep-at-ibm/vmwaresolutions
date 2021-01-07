@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-22"
+lastupdated: "2021-01-07"
 
 keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 
@@ -28,11 +28,6 @@ Review the following resources to get started faster or gain more in-depth techn
 {: #additional_resources-data-sheets}
 
 * [{{site.data.keyword.vmwaresolutions_short}} Protection data sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
-
-## IBM Developer recipes
-{: #additional_resources-dWrecipes}
-
-* [IBM Developer recipes](https://developer.ibm.com/recipes/tutorials/?s=VMware+Solutions){:external}
 
 ## Platform extensions
 {: #additional_resources-plat-extensions}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-16"
+lastupdated: "2021-01-07"
 
 keywords: SPP management console, apply SPP updates, login SPP console
 
@@ -45,7 +45,5 @@ To update the operating system of the IBM Spectrum Protect Plus VM, you must log
 {: #managingspp-related}
 
 * [IBM Spectrum Protect Plus overview](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations)
-* [How to increase `vsnap` storage for IBM Spectrum Protect Plus post deployment](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/)
-* [How to configure IBM Spectrum Protect Plus to offload to {{site.data.keyword.cloud_notm}} Object Storage](https://developer.ibm.com/recipes/tutorials/how-to-configure-ibm-spectrum-protect-plus-to-offload-to-ibm-cloud-object-storage/)
 * [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
 * [Opening a case for IBM Spectrum Protect Plus](https://www.ibm.com/mysupport/s/article/How-to-Open-a-Case)
