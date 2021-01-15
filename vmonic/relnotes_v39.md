@@ -2,11 +2,11 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-10-26"
+lastupdated: "2021-01-15"
 
-keywords: release notes, what's new, version 3.8
+keywords: release notes, what's new, version 3.9
 
 subcollection: vmwaresolutions
 
@@ -100,6 +100,12 @@ This release provides the following service versions on newly deployed instances
   You can now install the Red Hat OpenShift for VMware service on vCenter Server with NSX-T instances. For NSX-T, you must have a new vCenter Server instance with NSX-T that is provisioned with NSX-T 3.0.1.1 or you must upgrade from NSX-T 2.5.1 to NSX-T 3.0.2.
 
   For information about how the target cluster is selected if you have NSX-V or NSX-T, see [Selection of the target cluster for installation](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-select-target-cluster).
+
+### HyTrust CloudControl for vCenter Server with NSX-V - deprecated
+{: #relnotes_v39-services-htcc-nsx-v-deprecated}
+
+New installations of HyTrust CloudControl are no longer supported for new or existing deployments of vCenter Server with NSX-V instances. You can still view or delete existing HyTrust CloudControl installations on your existing instances.
+{:deprecated}
 
 ## Updates to REST APIs
 {: #relnotes_v39-api}

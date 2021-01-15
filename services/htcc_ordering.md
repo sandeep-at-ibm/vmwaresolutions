@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-11"
+lastupdated: "2021-01-15"
 
 keywords: Hytrust CloudControl, Hytrust configuration, order Hytrust
 
@@ -14,16 +14,14 @@ subcollection: vmwaresolutions
 ---
 
 {:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordering HyTrust CloudControl
 {: #htcc_ordering}
 
-You can add the HyTrust® CloudControl™ service (with an HA pair of HyTrust DataControl® appliances included) to a new VMware vCenter Server® instance. You can also add the service to your existing vCenter Server instance.
-
-The following versions of the HyTrust CloudControl service are installed, based on the NSX networking solution type of your instance:
-
-* 5.6 for vCenter Server with NSX-V
-* 6.2 for vCenter Server with NSX-T
+You can add the HyTrust® CloudControl™ service (with an HA pair of HyTrust DataControl® appliances included) to a new VMware vCenter Server® with NSX-T instance. You can also add the service to your existing vCenter Server with NSX-T instance.
 
 ## Ordering HyTrust CloudControl for a new instance
 {: #htcc_ordering-new}

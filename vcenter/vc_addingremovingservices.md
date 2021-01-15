@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-01-15"
 
 keywords: vCenter Server add service, view service vCenter Server, remove service vCenter Server
 
@@ -39,7 +39,6 @@ The following table shows the services available for vCenter Server with NSX-V i
 | [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 2.3 |
 | [F5® BIG-IP®](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE v15.1.0.5 |
 | [FortiGate® Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.2.3 |
-| [HyTrust® CloudControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 5.6 |
 | [HyTrust DataControl®](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.1.1 |
 | [HyTrust KeyControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations) | 5.0.1 |
 | [{{site.data.keyword.IBM}} Security Services for SAP®](/docs/vmwaresolutions?topic=vmwaresolutions-managing-ss-sap) | N/A |
@@ -111,7 +110,7 @@ The following table provides the resource requirements for services that the sys
 | Caveonix RiskForesight | CPU: 8 vCPUs<br>RAM: 32 GB<br>Storage: 100 GB |
 | F5 BIG-IP[^f5bigip] | CPU: 4, 8, or 16 vCPUs depending on license and bandwidth chosen<br>RAM: 8, 16, or 32 GB depending on license and bandwidth chosen |
 | FortiGate Virtual Appliance | CPU: 4, 8, or 16 vCPUs depending on license chosen<br>RAM: 8, 12, or 24 GB depending on license chosen |
-| HyTrust CloudControl | CPU: 4 vCPUs<br>RAM: 16 GB<br>Storage:<br>For version 5.6: 70 GB VMDK resident on vSAN<br> For version 6.2: 186 GB VMDK resident on vSAN |
+| HyTrust CloudControl | CPU: 4 vCPUs<br>RAM: 16 GB<br>Storage: 186 GB VMDK resident on vSAN |
 | IBM Spectrum Protect Plus | CPU: 16 vCPUs<br>RAM: 48 GB |
 | Juniper vSRX | You must have enough available capacity to accommodate two VMs with the following requirements, on different hosts:<br>CPU: 12 vCPUs<br>RAM: 16 GB<br>Storage: 32 GB |
 | Red Hat OpenShift | CPU: 27 vCPUs<br>RAM: 155 GB<br>Storage: 952 GB |
