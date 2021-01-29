@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-01-29"
 
 subcollection: vmwaresolutions
 
@@ -17,7 +17,7 @@ VMware® HCX™ seamlessly integrates on-premises vSphere® vCenter™ networks 
 
 HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as VM migration and network extension.
 
-This offering creates an optimized, software-defined WAN to increase stretched network performance, enabling performance that approaches LAN speed. HCX also enables bidirectional workload and VMware NSX® security policy migration to the {{site.data.keyword.cloud_notm}}. HCX integrates with vSphere vCenter and is managed from the vSphere Web Client.
+This offering creates an optimized, software-defined WAN to increase stretched network performance, enabling performance that approaches LAN speed. HCX also enables bidirectional workload migration to {{site.data.keyword.cloud_notm}} Networking services. HCX integrates with vSphere vCenter and is managed from the vSphere Web Client.
 
 ## HCX services
 {: #hcx-archi-overview-svcs}
