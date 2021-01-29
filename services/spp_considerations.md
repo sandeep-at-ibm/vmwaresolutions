@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-02"
+lastupdated: "2021-01-28
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -21,12 +21,12 @@ subcollection: vmwaresolutions
 # IBM Spectrum Protect Plus overview
 {: #spp_considerations}
 
-The {{site.data.keyword.IBM}} Spectrum Protect Plus service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.
+The IBM Spectrum® Protect Plus service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.
 {: shortdesc}
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-For vCenter Server with NSX-V instances, the installed version is 10.1.5. Currently, automated installation of  {{site.data.keyword.IBM}} Spectrum Protect Plus is not available for vCenter Server with NSX-T instances.
+For VMware vCenter Server® with NSX-V instances, the installed version is 10.1.5. Currently, automated installation of IBM Spectrum Protect Plus is not available for vCenter Server with NSX-T instances.
 {:note}
 
 ## Technical specifications for IBM Spectrum Protect Plus
@@ -81,7 +81,7 @@ Two portable private IP addresses.
 Review the following considerations before you install the IBM Spectrum Protect Plus service.
 
 * Ensure that the CPU and memory in the default cluster of your instance is sufficient for the IBM Spectrum Protect Plus virtual machine.
-* Ensure that the NFS mounts available on the ESXi servers are sufficient based on the version of the ESXi servers.
+* Ensure that the NFS mounts available on the VMware ESXi™ servers are sufficient based on the version of the ESXi servers.
 
   Instances that are deployed in (or upgraded) to V2.2 or later releases have an `NFS.MaxVolumes` parameter setting in VMware. This parameter defines the maximum number of NFS mounts on an ESXi server and can be set to a maximum of 256 that is specific to the version of the ESXi server. For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239){:external}.
 

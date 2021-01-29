@@ -2,26 +2,25 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-25"
+lastupdated: "2021-01-28"
 
 keywords: KMIP for VMware, view KMIP stand-alone, KMIP for VMware status
 
 subcollection: vmwaresolutions
-
 
 ---
 
 # Viewing KMIP for VMware instances
 {: #kmip_standalone_viewing}
 
-Use this procedure to view the KMIP for VMware instances that you ordered and information about them.
+Use this procedure to view the KMIP™ for VMware® instances that you ordered and information about them.
 
 ## Procedure to view KMIP for VMware instances
 {: #kmip_standalone_viewing-procedure}
 
-Click **Resources** from the left navigation pane and scroll down to the **KMIP for VMware Instances** table to view information about the instances that you ordered:
+Click **Resources** from the left navigation pane and scroll down to the **KMIP for VMware instances** table to view information about the instances that you ordered:
 
 | Item | Description |
 |:---- |:----------- |
@@ -36,6 +35,8 @@ The instance can have different statuses.
 | Status | Description |
 |:------ |:----------- |
 | Installing | The instance is being created. |
+| Inactive | The instance is successfully deployed, but it is not configured yet. |
+| Configuring | The instance is being activated. |
 | Installed | The instance is ready to use. |
 | Removing | The instance is being deleted. |
 {: caption="Table 2. KMIP for VMware instances status descriptions" caption-side="top"}
@@ -46,4 +47,4 @@ The instance can have different statuses.
 * [Ordering KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering)
 * [Adding, viewing, and deleting certificates for KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_addingdeletingcert)
 * [Deleting KMIP for VMware instances](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_deleting)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events)
+* [Auditing events for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-at-events)

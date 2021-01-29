@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 Use the troubleshooting information to diagnose and fix problems with OpenShift.
 
-## RHEL Subscription
+## RHEL subscription
 {: #openshift-runbook-runbook-trbl-intro-sub}
 
 If you encounter a problem with your subscription, you can query by using the following command:
@@ -89,10 +89,10 @@ To export the kubeconfig that is created by the OpenShift Installer to an enviro
 export KUBECONFIG=/opt/ocpinstall/auth/kubeconfig
 ```
 
-## Deleting Deployment
+## Deleting deployment
 {: #openshift-runbook-runbook-trbl-intro-del}
 
-If you encounter a problem with your Terraform deployment, you can destroy your deployment with the following command:
+If you encounter a problem with your Terraform deployment, you can delete your deployment with the following command:
 
 ```bash
 terraform destroy

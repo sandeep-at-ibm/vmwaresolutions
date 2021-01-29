@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -16,6 +16,8 @@ subcollection: vmwaresolutions
 
 Additional base virtual machines (VMs) and scale-out VMs are added according to the number of assets and data retention requirements.
 
+The following table shows the user interface parameters.
+
 | Parameter | Value |
 |---|---|
 | Type | Base |
@@ -24,8 +26,10 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 | RAM | 6 GB |
 | Disk | 60 GB |
 | OS |CentOS 7|
-|  Installed application components | UI |
+| Installed application components | UI |
 {: caption="Table 1. Base - user interface" caption-side="top"}
+
+The following table shows the applications and plug-ins parameters.
 
 |Parameter | Value |
 |---|---|
@@ -38,6 +42,8 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 | Installed application components | App, Plugins|
 {: caption="Table 2. Base - applications and plug-ins" caption-side="top"}
 
+The following table shows the central collector parameters.
+
 | Parameter | Value |
 |---|---|
 | Type | Base |
@@ -49,7 +55,9 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 | Installed application components | Central collector (cluster) |
 {: caption="Table 3. Base - Central collector" caption-side="top"}
 
-|Parameter | Value |
+The following table shows the relational database parameters.
+
+| Parameter | Value |
 |---|---|
 | Type | Base |
 | VM qty | 2 |
@@ -60,7 +68,9 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 |Installed application components | Relational datastore (Primary / secondary) |
 {: caption="Table 4. Base - relational database" caption-side="top"}
 
-|Parameter | Value |
+The following table shows the messaging datastore parameters.
+
+| Parameter | Value |
 |---|---|
 | Type | Base |
 | VM qty | 3 |
@@ -71,7 +81,9 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 | Installed application components | Messaging datastore (cluster) |
 {: caption="Table 5. Base - messaging datastore" caption-side="top"}
 
-|Parameter | Value |
+The following table shows the index datastore parameters for the primary nodes.
+
+| Parameter | Value |
 |---|---|
 | Type | Base |
 | VM qty |3 |
@@ -79,10 +91,12 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 | RAM | 16 GB |
 | Disk | 1 TB |
 | OS | CentOS 7 |
-| Installed application components	|Index Datastore (Primary Nodes) |
+| Installed application component	|Index Datastore (Primary Nodes) |
 {: caption="Table 6. Base - index datastore (primary nodes)" caption-side="top"}
 
-|Parameter | Value |
+The following table shows the index datastore parameters for the data nodes.
+
+| Parameter | Value |
 |---|---|
 | Type | Base |
 | VM qty | 5 |
@@ -93,9 +107,9 @@ Additional base virtual machines (VMs) and scale-out VMs are added according to 
 | Installed application components | Index datastore (data nodes) |
 {: caption="Table 7. Database - index datastore (data nodes)" caption-side="top"}
 
-The scale-out VM details are described in the following table.
+The following table shows the scale-out VM data nodes parameters.
 
-|Parameter | Value |
+| Parameter | Value |
 |---|---|
 | Type | Scale-out |
 | VM qty | 28 |
@@ -106,7 +120,7 @@ The scale-out VM details are described in the following table.
 | Installed application components | Data nodes (scale-out) |
 {: caption="Table 8. Scale-out - data nodes" caption-side="top"}
 
-The Remote Collector VM details are shown in the following table.
+The following table shows the remote collector VM parameters.
 
 |Parameter | Value |
 |---|---|

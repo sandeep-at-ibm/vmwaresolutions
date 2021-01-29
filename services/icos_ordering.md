@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-09-18"
+lastupdated: "2020-11-30"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Ordering and configuring IBM Cloud Object Storage with Veeam
 {: #icos_ordering}
 
-Starting with Veeam Availability Suite 9.5 Update 4 and subsequent versions, Veeam is compatible with {{site.data.keyword.cloud}} Object Storage. The ordering of {{site.data.keyword.cloud_notm}} Object Storage is not automated when you order Veeam, but it can be added after deployment.
+Starting with Veeam Availability Suite™ 9.5 Update 4 and subsequent versions, Veeam® is compatible with {{site.data.keyword.cloud}} Object Storage. The ordering of {{site.data.keyword.cloud_notm}} Object Storage is not automated when you order Veeam, but it can be added after deployment.
 
 To order {{site.data.keyword.cloud_notm}} Object Storage, complete the following tasks in the specified order:
 
@@ -60,7 +60,7 @@ For more information, see [Managing capacity tier data](https://helpcenter.veeam
 {: #icos_ordering-related}
 
 * [Veeam v9.5 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)
-* [Veeam v10 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Veeam v10a overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Ordering Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
 * [Ordering Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering_licenses)

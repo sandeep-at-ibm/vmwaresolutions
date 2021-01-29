@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-09-16"
+lastupdated: "2021-01-25"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -91,7 +91,7 @@ Virtual data center capacity is based on your selection of the **On-demand** or 
 
 If you selected **On-demand**, select the vCPU and RAM limits.
 
-If you selected **Reserved**, your vCPU model settings are based on your selection of **Preconfigured** or **Custom**.
+If you selected **Reserved**, your vCPU model settings are based on your selection of **Preconfigured** or **Customizable**.
 
 If you selected **Preconfigured**, you have the following options for allocated vCPU and RAM limits.
 
@@ -102,7 +102,7 @@ If you selected **Preconfigured**, you have the following options for allocated 
 | Large | 256 cores | 2048 GB |
 {: caption="Table 1. Preconfigured vCPU and RAM options" caption-side="top"}
 
-If you selected **Custom**, you can customize your reserved vCPU and RAM limits.
+If you selected **Customizable**, you can customize your reserved vCPU and RAM limits.
 
 The vCPU maximum number is limited to the 40 cores with hyperthreading on each host. This limit allows for a maximum of 80 vCPU virtual machines.
 {:important}
@@ -126,7 +126,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 {: help}
 {: support}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **Start provisioning** section.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **IaaS platforms** section.
 2. On the **Create** tab of the **VMware Solutions Shared** page, select **On-demand**.
 3. Enter the virtual data center name and select a resource group.
 4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
@@ -137,13 +137,13 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order VMware Solutions Shared Reserved
 {: #shared_ordering-procedure-reserved}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **Start provisioning** section.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **IaaS platforms** section.
 2. On the **Create** tab of the **VMware Solutions Shared** page, select **Reserved**.
 3. Enter the virtual data center name and resource group.
 4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
 5. Complete the resource reservation.
   * If you select **Preconfigured**, select the preconfigured vCPU model and RAM size.
-  * If you select **Custom**, specify the vCPU and RAM limits according to your requirements.
+  * If you select **Customizable**, specify the vCPU and RAM limits according to your requirements.
 6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
 7. Click **Create**.
 

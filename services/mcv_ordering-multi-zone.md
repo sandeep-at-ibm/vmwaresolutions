@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-19"
+lastupdated: "2021-01-28"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -32,15 +32,15 @@ To deploy a cluster that consists of compute, network, and storage elements, whi
 Ensure that you completed the following tasks:
 * If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 * You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
-* You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
+* You reviewed the instance and domain name format. The domain name is used to generate the user name and server names of the instance.
 
 | Name        | Value Format      |
 |:------------|:------------ |
 | Domain name | `<root_domain>` |  
-| vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
+| vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft® Active Directory™ user) or `administrator@vsphere.local` |
 | vCenter Server (with embedded PSC) FQDN | `<instance_name>-vc.<root_domain>`. The maximum length is 50 characters. |
-| Single Sign-On (SSO) site name | `<subdomain_label>` |
-| Fully qualified ESXi server name | `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. The maximum length is 50 characters. |
+| Single Sign-On (SSO) site name | `<root_domain>` |
+| Fully qualified ESXi server name | `<host_prefix><n>.<root_domain>`, where `n` is the sequence of the VMware ESXi™ server. The maximum length is 50 characters. |
 {: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
 Do not modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
@@ -49,7 +49,7 @@ Do not modify any values that are set during instance order or deployment. Doing
 ## System settings
 {: #mcv_ordering-sys-settings}
 
-You must specify the following system settings when you order a vCenter Server instance.
+You must specify the following system settings when you order a VMware vCenter Server® instance.
 
 ### Instance configurations
 {: #mcv_ordering-sys-config}
@@ -80,6 +80,11 @@ Use resource groups to organize the resources in your account for access control
 If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
 {:note}
 
+### VMware properties
+{: #mcv_ordering-vmware-properties}
+
+{{site.data.keyword.cloud_notm}} multi-zone regions support only VMware vSphere® Enterprise Plus 7.0 Update 1a and VMware NSX-T.
+
 ## Location settings
 {: #mcv_ordering-location}
 
@@ -93,10 +98,10 @@ The multizone region is a group of three or more {{site.data.keyword.cloud_notm}
 ### Witness location
 {: #mcv_ordering-location-witness}
 
-From the multizone region, select the availability zone of the witness site. The remaining management and vSAN stretched resource clusters are placed in the remaining availability zones. The witness site in a vSAN stretched cluster acts as the arbitrator to determine placement in the event of a loss of connectivity or failure of an availability zone.  This witness is considered the third fault domain in the stretched cluster architecture.
+From the multizone region, select the availability zone of the witness site. The remaining management and vSAN™ stretched resource clusters are placed in the remaining availability zones. The witness site in a vSAN stretched cluster acts as the arbitrator to determine placement in the event of a loss of connectivity or failure of an availability zone. This witness is considered the third fault domain in the stretched cluster architecture.
 
-### Management and resource location
-{: #mcv_ordering-location-mgmt-resource}
+### Consolidated cluster location
+{: #mcv_ordering-location-concolidated-cluster}
 
 The remaining availability zones are where the resource and management cluster components are placed.
 
@@ -105,7 +110,7 @@ The remaining availability zones are where the resource and management cluster c
 
 Specify the licensing options for the following VMware components in the instance:
 * VMware vSAN Enterprise
-* NSX-T 3.0.1.1 (Data Center Advanced or Data Center Enterprise edition)
+* NSX-T 3.1 (Data Center Advanced or Data Center Enterprise edition)
 
 A deployment of VMware vSAN stretched clusters on {{site.data.keyword.cloud_notm}} requires a vSAN Enterprise Edition license.
 {:note}
@@ -129,10 +134,9 @@ The deployment of a stretched cluster across multizone regions consists of compu
 <dl>
   <dt>Witness cluster</dt>
   <dd>An availability zone that maintains the vSAN witness appliance and any other site specific components as needed.</dd>
-  <dt>Management cluster</dt>
-  <dd>An availability zone that provides vSphere management such as vCenter, NSX Manager, NSX-based networking components, vRealize management tools, additional tooling such as backup, disaster recovery or other required management elements.</dd>
-  <dt>vSAN stretched cluster</dt>
-  <dd>An availability zone that has customer defined workloads that require high availability and availability zone resilience.</dd>
+  <dt>Consolidated cluster</dt>
+  <dd>An availability zone that provides vSphere management such as vCenter, NSX Manager, NSX-based networking components, vRealize management tools, additional tooling such as backup, disaster recovery or other required management elements.  
+  The cluster configuration is mirrored across two availability zones and has multiple compute, network and storage options for hosting management components. The architecture utilizes two dedicated management clusters each deployed across two availability zones. This allows for management and maintenance of all components across zones without impacting workloads running in the vSAN stretched resource cluster.</dd>
 </dl>
 
 The availability zone cluster settings are based on your host and storage selections.
@@ -144,15 +148,20 @@ For the host settings, you have options for the CPU model, RAM, and number of ho
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.3 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 Processor / 48 cores total, 2.4 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.5 GHz |384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Platinum 8260 Processor / 96 cores total, 2.4 GHz |384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Host CPU and RAM options" caption-side="top"}
+
+If you are planning to use vSAN storage, you can order 3 - 30 servers. If you are planning to use NFS storage, you can order 2 - 30 servers.
 
 ### Storage settings
 {: #mcv_ordering-availability-zones-storage}
 
-Storage settings are based on your selection of vSAN or NFS storage.
+Storage settings are based on your selection of vSAN or NFS storage for the witness cluster and vSAN settings for the consolidated cluster.
 
 #### vSAN storage
 {: #mcv_ordering-availability-zones-storage-vsan}
@@ -160,12 +169,14 @@ Storage settings are based on your selection of vSAN or NFS storage.
 Specify the following vSAN options:
 * **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
-* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
+* The option to enable deduplication and compression. For more information, see [Enable vSAN deduplication and compression](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-vsan-storage-enable-comp).
 
 #### NFS storage
 {: #mcv_ordering-availability-zones-storage-nfs}
 
-When you select **NFS storage**, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. Specify the following NFS options:
+When you select **NFS storage** for the witness cluster, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. NFS storage requires a minimum of two hosts.
+
+Specify the following NFS options:
 
 The number of file shares must be in the range of 1 to 100.
  {:note}
@@ -196,10 +207,10 @@ Specify the following network interface settings for your stretched cluster acro
 
 Select the Domain Name System (DNS) configuration for your instance:
 
-* **Single public Windows VSI for Active Directory/DNS**: A single Microsoft Windows Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
-* **Two highly available dedicated Windows Server VMs on the management cluster**: Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
+* **Two public Windows VSIs for Active Directory/DNS**: Two Microsoft Windows® Server VSIs for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
+* **Four highly available dedicated Windows Server VMs on the management cluster**: Four Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
-You must provide two Microsoft Windows Server 2016 Standard edition licenses if you configure your instance to use the two Microsoft Windows VMs.
+You must provide four Microsoft Windows Server 2016 Standard edition licenses if you configure your instance to use the four Microsoft Windows VMs.
 {:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
@@ -217,21 +228,11 @@ The host name prefix must meet the following requirements:
 * The host name prefix must end with a lowercase alphabetic or numeric character.
 * The maximum length of the host name prefix is 10 characters.
 
-### Subdomain label
-{: #mcv_ordering-subdomain-label}
-
-The subdomain label must meet the following requirements:
-* Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
-* The subdomain label must start with a lowercase alphabetic character.
-* The subdomain label must end with a lowercase alphabetic or numeric character.
-* The maximum length of the subdomain label is 10 characters.
-* The subdomain label must be unique within all instances in your multi-site configuration.
-
 ### Domain name
 {: #mcv_ordering-domain-name}
 
 The root domain name must meet the following requirements:
-* The domain name must consist of two or more strings that are separated by period (.)
+* The domain name must consist of three or more strings that are separated by period (.) with a maximum of 50 characters.
 * The first string must start with a lowercase alphabetic character.
 * The first string must end with a lowercase alphabetic or numeric character.
 * All strings, except for the last one, can contain only lowercase alphabetic, numeric, and dash (-) characters.
@@ -255,8 +256,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 
 You can order a stretched cluster across multizone region by using one of the following methods on the {{site.data.keyword.vmwaresolutions_short}} console:
 
-* In the **Start provisioning** section, click the **VMware Solutions Dedicated** card. On the **VMware Solutions Dedicated** page, ensure that the **vCenter Server** card is selected and click the **Stretched cluster across multizone region** tab.
-* Scroll down to the **Services** section and click **IBM Cloud for VMware Mission Critical Workloads** on the **Business continuity and migration** card. Click **Order your stretched cluster across multizone region**.
+* In the **IaaS platforms** section, click the **VMware Solutions Dedicated** card. On the **VMware Solutions Dedicated** page, ensure that the **vCenter Server** card is selected and click the **Stretched cluster across multizone region** tab.
+* Scroll down to the **Add-on services** section and click **IBM Cloud for VMware Mission Critical Workloads** in the **Business continuity and migration** category. Click **Order your stretched cluster across multizone region**.
 
 Proceed with the following steps to order a stretched cluster across multizone region:
 
@@ -270,16 +271,16 @@ Proceed with the following steps to order a stretched cluster across multizone r
 4. Complete the license settings for the instance components.
    *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
    *  To use your own license, select **I will provide** and enter the license key.
-5. Complete the settings for the witness, management, and vSAN stretched cluster.
+5. Complete the settings for the witness and consolidated cluster.
     1. Specify the CPU model and the RAM size.
     2. Specify the number of hosts.
     3. Specify the storage settings.
-       * If you select **vSAN storage**, specify the disk types for the capacity and cache disks and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
-       * If you select **NFS storage** and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
-       * If you select **NFS storage** and you want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
+       * If you select **vSAN storage**, specify the disk types for the capacity and cache disks and the number of disks. Optionally, select the **Enable vSAN deduplication and compression** checkbox.
+       * If you select **NFS storage** for your witness cluster and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
+       * If you select **NFS storage** for your witness cluster and you want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
 6. Complete the network interface settings.
    1. Specify the DNS configuration.
-   2. Enter the host name prefix, the subdomain label, and the domain name. The price calculation begins after all fields are complete.
+   2. Enter the hostname prefix and the domain name. The price calculation begins after all fields are complete.
 7. On the **Summary** pane, review the instance settings and the estimated price.
    * To save the settings as a new configuration template without placing an order, click **Save configuration**, enter a name for the configuration, and click **Continue**.
    * To save the updates to a saved configuration, click **Save configuration**, select **Modify current configuration**, and click **Continue**.

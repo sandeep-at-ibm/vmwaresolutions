@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-12-04"
 
 subcollection: vmwaresolutions
 
@@ -21,14 +21,14 @@ HCX consists of a cloud side (target or VCD environment) and one or more clients
 
 HCX has the concept of cloud side (target or VCD environment) and client side (source).
 
-- Target side - HCX Cloud Manager is pre-deployed and configured with the network and compute profiles ready for service mesh creation.  
+- Target side - HCX Cloud is pre-deployed and configured with the network and compute profiles ready for service mesh creation.  
 - Client side - Any vSphere instances that meet the prerequisites for installation and operation. The client side of HCX is the primary that controls the cloud side secondary instance through its vCenter web client user interface (UI) snap-in.
 
 ## HCX Managers
 {: #hcxclient-components-hcx-manager}
 
-- The cloud side - HCX Cloud manager is configured to listen for incoming client-side registration, management, and control traffic.
-- The client-side - HCX Enterprise Manager is a client-side specific OVA image file that provides the UI functionality for managing and operating HCX. The client-side HCX Manager is responsible for registration with the cloud side HCX Manager and creating a management plane between the client and cloud side. Furthermore, it is responsible for deploying a service mesh on the client side and instructing the cloud side to do the same.
+- The cloud side - HCX Cloud is configured to listen for incoming client-side registration, management, and control traffic.
+- The client-side - HCX Connector is a client-side specific OVA image file that provides the UI functionality for managing and operating HCX. The client-side HCX Manager is responsible for registration with the HCX Cloud and creating a management plane between the client and cloud side. Furthermore, it is responsible for deploying a service mesh on the client side and instructing the cloud side to do the same.
 
 ## Service Mesh Components
 {: #hcxclient-components-fleet}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-10"
+lastupdated: "2021-01-27"
 
 keywords: HCX updates, HCX management console, login HCX console
 
@@ -22,9 +22,9 @@ subcollection: vmwaresolutions
 ## Accessing the HCX management consoles
 {: #managinghcx-accessing-consoles}
 
-To manage the HCX service, you must access the HCX Cloud console or the HCX Manager Admin console:
+To manage the VMware HCX® service, you must access the HCX Cloud console or the HCX Manager Admin console:
 1. Use the {{site.data.keyword.cloud}} infrastructure VPN or a jump server to allow access to the IP address of the HCX Manager virtual appliance (HCX Manager). You can find the IP address on the HCX service details page in the {{site.data.keyword.vmwaresolutions_short}} console.
-2. To access the HCX Cloud console, click **View HCX Cloud console** on the HCX service details page, and then log in by using the vCenter Server credentials.
+2. To access the HCX Cloud console, click **View HCX Cloud console** on the HCX service details page, and then log in by using the VMware vCenter Server® credentials.
 3. To access the HCX Manager Admin console, click **View HCX Manager Admin console** on the HCX service details page, and then log in by using the HCX Manager credentials listed on the same service details page.
 
 For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).

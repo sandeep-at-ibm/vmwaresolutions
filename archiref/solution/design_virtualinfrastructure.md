@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-19"
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 
 The virtual infrastructure layer includes the VMware software components that virtualize the compute, storage, and network resources provided in the physical infrastructure layer: VMware vSphere ESXi, VMware NSX-V or NSX-T, and optionally VMware vSAN.
 
-![Virtual infrastructure](../../images/vcsv4radiagrams-ra-virtinfra.svg "Virtual infrastructure"){: caption="Figure 1. Virtual infrastructure" caption-side="bottom"}
+![Virtual infrastructure](../../images/nsx-t-3-ra-diagrams-virtual-infrastructure.svg "Virtual infrastructure"){: caption="Figure 1. Virtual infrastructure" caption-side="bottom"}
 
 ## VMware vSphere design
 {: #design_virtualinfrastructure-vsphere-design}

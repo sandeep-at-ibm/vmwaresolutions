@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-09-10"
+lastupdated: "2021-01-28"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 ## Accessing the vRealize Operations Manager console
 {: #managing_vrops-access-vrops-console}
 
-To access the vRealize Operations Manager console, complete the following steps:
+To access the vRealize Operations™ Manager console, complete the following steps:
 
 1. On the service details page for vRealize Operations and Log Insight, click **vRealize Operations Manager console**.
 2. Log in by using the credentials listed on the same service details page.
@@ -33,7 +33,7 @@ To access the vRealize Operations Manager console, complete the following steps:
 ## Starting the adapter instance for vSAN
 {: #managing_vrops-start-adapter}
 
-The Management Pack adapter instance for vSAN must be manually started. Complete the following steps:
+You must manually start the Management Pack adapter instance for vSAN™. Complete the following steps:
 
 1. Log in to the vRealize Operations Manager console.
 2. Click the vSAN adapter.

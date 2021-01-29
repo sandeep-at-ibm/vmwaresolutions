@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-12-10"
 
 subcollection: vmwaresolutions
 
@@ -13,15 +13,15 @@ subcollection: vmwaresolutions
 # VMware HCX introduction
 {: #hcx-archi-intro}
 
-The VMware HCX service enables creating a seamless connection between {{site.data.keyword.vmwaresolutions_short}} instances and an on-premises VMware virtualized datacenter.
+The VMware® HCX™ service enables creating a seamless connection between {{site.data.keyword.vmwaresolutions_short}} instances and an on-premises VMware virtualized datacenter.
 
-The {{site.data.keyword.vmwaresolutions_short}} includes fully automated, rapid deployments of VMware vCenter Server in the {{site.data.keyword.cloud_notm}}. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes they use on-premises. For more information, see the [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture).
+The {{site.data.keyword.vmwaresolutions_short}} includes fully automated, rapid deployments of VMware vCenter Server® in the {{site.data.keyword.cloud_notm}}. These offerings complement the on-premises infrastructure and allow existing and future workloads to run in the {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes they use on-premises. 
 
-The VMware HCX service takes this hybridity to the next step, blending instances of vCenter Server with existing on-premises virtualized datacenters by enabling the creation of seamless network extensions and bidirectional migration of workloads.
+The VMware HCX service takes this hybridity to the next step, blending instances of vCenter Server with existing on-premises virtualized datacenters. It enables the creation of seamless network extensions and bidirectional migration of workloads.
 
-The VMware HCX components that are deployed as virtual machines in the {{site.data.keyword.cloud_notm}} VMware target site enable the establishment of a connection with the VMware HCX components installed in the peer on-premises source site.
+The VMware HCX components, which are deployed as virtual machines (VMs) in the {{site.data.keyword.cloud_notm}} VMware target site, enable the establishment of a connection with the VMware HCX components installed in the peer on-premises source site.
 
-![VMware vCenter Server – Hybrid Cloud Services](../../images/cloudfoundation_hybrid_cloud_services.svg "VMware vCenter Server – Hybrid Cloud Services"){: caption="Figure 1. VMware vCenter Server – Hybrid Cloud services" caption-side="bottom"}
+![VMware vCenter Server – Hybrid Cloud services](../../images/ibmcloud-hcx-overview.svg "VMware vCenter Server – HCX overview"){: caption="Figure 1. VMware vCenter Server - HCX overview" caption-side="bottom"}
 
 This connection creates a loosely coupled interconnectivity between on-premises and {{site.data.keyword.cloud_notm}} and enables capabilities such as:
 * Simple interconnectivity – logical network connections are established easily over any physical connection such as public internet, private VPN, or direct link.
@@ -29,15 +29,19 @@ This connection creates a loosely coupled interconnectivity between on-premises 
 * Encryption – network traffic is securely encrypted between the two sides.
 * Optimized network – selects the best connection and efficiently floods the connection so that network traffic is moved as fast as possible.
 * Data deduplication – as much as 50% reduction in network traffic can be achieved
-* Intelligent routing – when a workload is moved, proximity routing can change the network path (that is, gateway) so that network traffic uses the target site gateway and does not “hairpin” back to the originating site.
-* Zero downtime migration – a running system can be moved to and back from the cloud by using vMotion.
-* Scheduled migration – any number of virtual machines can be replicated to the destination site and then activated on that site at a designated time, which replaces the systems that are running on the originating site.
-* Migration of security policies – if NSX is used on-premises, any security policies or firewalls are
-moved along with the workload.
+* vMotion migration	- a single running system can be moved between HCX enabled sites by using the VMware vMotion protocol with no service interruption.
+* Bulk migration -	multiple systems can be moved in parallel using VMware vSphere® Replication protocol between HCX enabled sites.
+* Scheduled migration – any number of VMs can be replicated to the destination site and then activated on that site at a designated time, which replaces the systems that are running on the originating site.
+* Migration of security policies – if NSX is used on-premises, any security policies or firewalls are moved along with the workload.
 
 **Next topic:** [VMware HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-overview)
 
 ## Related links
 {: #hcx-archi-intro-related}
 
-* [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture)
+* [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-components)
+* [HCX Client deployment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-client-deployment)
+* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-mesh-deployment)
+* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
+* [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-monitoring)
+* [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting)

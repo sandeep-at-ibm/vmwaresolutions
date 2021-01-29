@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-02"
+lastupdated: "2021-01-28"
 
 keywords: openshift for vmware, request openshift for vmware, tech specs openshift vmware
 
@@ -18,17 +18,23 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 
 # Red Hat OpenShift for VMware overview
 {: #ocp_overview}
 
-The Red Hat® OpenShift® for VMware® service deploys a Red Hat OpenShift cluster by using an automated deployment of the VMware® SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift components are deployed as virtual machines (VM) or appliances by using VMware NSX® software-defined networking.
+The Red Hat® OpenShift® for VMware® service deploys a Red Hat OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift components are deployed as virtual machines (VM) or appliances by using VMware NSX® software-defined networking.
 
-Red Hat OpenShift for VMware cannot be installed on multiple vCenter Server instances in a multi-site configuration. Before you install Red Hat OpenShift on an instance, verify that no other instances in the multi-site configuration have the service installed.
+Red Hat OpenShift for VMware cannot be installed on multiple VMware vCenter Server® instances in a multi-site configuration. Before you install Red Hat OpenShift on an instance, verify that no other instances in the multi-site configuration have the service installed.
+
+You can only install Red Hat OpenShift on VMware vSphere® 7.0 with NSX-T 3.1.
+
+Red Hat OpenShift is no longer supported for new deployments or for ordering post deployment with NSX-V or NSX-T on vSphere 6.7 or NSX-V on vSphere 6.5.
+{:deprecated}
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The current Red Hat OpenShift version that is installed is 4.4.23.
+The current Red Hat OpenShift version that is installed is 4.6.
 {: note}
 
 The cluster consists of the following components:
@@ -43,7 +49,7 @@ For more information about the architecture, see [Red Hat OpenShift architecture
 ## Technical specifications for OpenShift for VMware
 {: #ocp_overview-specs}
 
-The following capacity requirements apply only if your VMware vCenter Server® instance is using vSAN™ storage. If you are using NFS, a new 2-TB NFS datastore, which is dedicated to OpenShift, is ordered.
+The following capacity requirements apply only if your VMware vCenter Server instance is using vSAN™ storage. If you are using NFS, a new 2-TB NFS datastore, which is dedicated to OpenShift, is ordered.
 
 The solution topology has the following requirements:
 
@@ -58,19 +64,7 @@ To successfully deploy Red Hat OpenShift on vCenter Server, you must have a Red 
 ### Selection of the target cluster for installation
 {: #ocp_overview-select-target-cluster}
 
-During deployment, you are not prompted for the cluster. The service is automatically installed to the management cluster if you have NSX-V and to the first workload cluster if you have NSX-T.
-
-During day 2 operations, you are prompted for the cluster. If you have NSX-V, you can install the service to a management cluster or a workload cluster. If you have NSX-T, you can install the service to a workload cluster.
-
-The following table shows the details about the installation.
-
-| Activity | Networking solution type | Cluster prompt | Install to |
-|:-------- |:------------------------ |:-------------- |:---------- |
-| Deployment | NSX-V | Not prompted | Management cluster |
-| Deployment | NSX-T | Not prompted | First workload cluster |
-| Day 2 operations | NSX-V | Prompted | Management cluster or selected workload cluster |
-| Day 2 operations | NSX-T | Prompted | Selected workload cluster |
-{: caption="Table 1. Target clusters for Red Hat OpenShift installation" caption-side="top"}
+During deployment and day 2 operations, you are prompted for the cluster. You can install the service to the management cluster or any workload cluster.
 
 ### Bastion details
 {: #ocp_overview-bastion}
@@ -93,6 +87,11 @@ The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, wh
 The SSH key on the bastion is installed on all Red Hat OpenShift cluster VMs, which allows SSH login from the bastion into any cluster VM. When you log in to a cluster VM from the bastion, you must connect as the `core` user as shown in the following example: `root@bastion# ssh core@control-plane0`.
 
 For security purposes, it is highly recommended that you generate a new SSH key and update the cluster VMs with the new key. The full path to the SSH key is displayed on the service details page. For more information, see [Changing the SSH key on the OpenShift bastion](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_managing#ocp_managing-change-ssh-key).
+
+### High availability
+{: #ocp_overview-high-avail}
+
+The Red Hat OpenShift virtual machines are deployed with DRS rules to ensure they reside on physically separate hosts. If a host must be replaced or redeployed, you must adjust the preconfigured DRS rules before you can proceed.
 
 ### Installation configuration files
 {: #ocp_overview-bastion-install-config-file}
@@ -131,12 +130,12 @@ For more information, see [OpenShift subscriptions information and known issues]
 
 By default, the Red Hat OpenShift installer creates a kubeadmin user that you can use to log in to the cluster. It is recommended that you create authentication backends or more users, as needed, for security purposes.
 
-For more information about how to configure OpenShift authentication, see [Understanding authentication](https://docs.openshift.com/container-platform/4.4/authentication/understanding-authentication.html){:external}.
+For more information about how to configure OpenShift authentication, see [Understanding authentication](https://docs.openshift.com/container-platform/4.6/authentication/understanding-authentication.html){:external}.
 
 ## Updating your Red Hat OpenShift cluster
 {: #ocp_overview-update-clus}
 
-For more information about updating Red Hat OpenShift, see [Updating a cluster between minor versions](https://docs.openshift.com/container-platform/4.4/updating/updating-cluster-between-minor.html){:external}.
+For more information about updating Red Hat OpenShift, see [Updating a cluster between minor versions](https://docs.openshift.com/container-platform/4.6/updating/updating-cluster-between-minor.html){:external}.
 
 ## Considerations when you install Red Hat OpenShift for VMware
 {: #ocp_overview-consid-install}
@@ -158,6 +157,8 @@ For more information about updating Red Hat OpenShift, see [Updating a cluster b
 
 * [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
 * [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
-* [OpenShift Container Platform documentation](https://docs.openshift.com/container-platform/4.4/welcome/index.html){:external}
+* [OpenShift Container Platform 4.6 documentation](https://docs.openshift.com/container-platform/4.6/welcome/index.html){:external}
+* [OpenShift Container Platform 4.6 release notes](https://docs.openshift.com/container-platform/4.6/release_notes/ocp-4-6-release-notes.html){:external}
+* [What's new in Red Hat OpenShift](https://www.openshift.com/learn/whats-new){:external}
 * [Red Hat OpenShift](https://www.openshift.com/){:external}
 * [Succeeding with Red Hat OpenShift and VMware’s Software-Defined Datacenter (SDDC)](https://blog.openshift.com/red-hat-openshift-and-vmware-better-together/){:external}

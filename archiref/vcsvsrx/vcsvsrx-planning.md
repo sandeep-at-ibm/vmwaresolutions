@@ -2,16 +2,16 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-22"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-# vSRX Single DC Edge
+# vSRX single data center edge
 {: #vcsvsrx-planning}
 
 {:external: target="_blank" .external}
@@ -19,9 +19,10 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-The default deployment of a vSRX HA Chassis Cluster places a pair of KVM based hosts with each supporting a single node of the vSRX. The two vSRX nodes are tied together in a highly available chassis cluster. The vSRX cluster delivers a reliable gateway solution that provides for continuous network traffic flows through the loss of a host supporting a node or a vSRX node.
+The default deployment of a vSRX HA Chassis Cluster places a pair of KVM based hosts with each supporting a single vSRX node. The two vSRX nodes are tied together in a highly available chassis cluster. The vSRX cluster delivers a reliable gateway solution that provides for continuous network traffic flows through the loss of a host supporting a node or a vSRX node.
 
-Note that while the current vSRX offering leverages KVM as the underlying host operating system the vSRX is also available in a configuration that runs natively on the VMware vSphere ESXi hypervisor.
+While the current vSRX offering leverages KVM as the underlying host operating system, vSRX is also available in a configuration that runs natively on the VMware vSphere ESXi hypervisor.
+{: note}
 
 These features are common to both deployment types.
 - Provides high availability pair within a single data center.
@@ -29,7 +30,7 @@ These features are common to both deployment types.
   - NFS storage shared between the hosts.
 - Full vSRX firewall and routing capability implemented.
 
-The following are unique to a deployment with the ESXi as the host OS.
+The following features are unique to a deployment with the ESXi as the host OS.
 - VXLAN connectivity into a vCenter Server instance.
 - Ability to host additional VMs on the edge services cluster.
   - NSX edges, load balancers, etc.
@@ -40,7 +41,8 @@ The following figure represents the typical vSRX deployment on KVM and a basic v
 
 ![Figure 1 - vSRX overview](../../images/vcsvsrx-logical-overview.svg){: caption="Figure 1. vSRX overview" caption-side="bottom"}
 
-Note that in either case the deployment of the VMware vCenter Server instance is required BEFORE the vSRX edge gateway appliance order is placed.
+The deployment of the VMware vCenter Server instance is required before the vSRX edge gateway appliance order is placed.
+{: note}
 
 ## Understanding the default vSRX configuration
 {: #vcsvsrx-planning-default-vsrx}
@@ -54,7 +56,7 @@ For more information, see [Understanding the vSRX Default Configuration](/docs/v
 
 ![Figure 2 - vSRX and vCenter Server integration](../../images/vcsvsrx-vsrx-with-vcs-architecture.svg){: caption="Figure 2. vSRX and vCenter Server integration" caption-side="bottom"}
 
-The tight integration of the vSRX HA Chassis Cluster into an IBM Cloud vCenter Server instance extends the basic vCenter Server architecture in a few key areas.
+The tight integration of the vSRX HA Chassis Cluster into a vCenter Server instance extends the basic vCenter Server architecture in a few key areas.
 
 ### vCenter Server cluster design
 {: #vcsvsrx-planning-vcs-design}
@@ -73,12 +75,11 @@ The current vSRX offering has limited hardware options for deployment. Since the
 
 The vCenter Server offering is designed to manage east-west network traffic at the SDN layer by using NSX distributed logical routers (DLR) and virtual tunnel endpoints (VTEP) on each ESXi host and north-south traffic via NSX edge services gateways (ESG). The vSRX is not a replacement for the DLR but could either assist or potentially replace the ESG firewall services in managing the north-south traffic flows.
 
-The required network design changes are modest and include all customer VM traffic no matter the destination, platform management traffic, direct link traffic, where applicable, and internet bound traffic. Traffic explicitly excluded includes VTEP traffic, storage traffic and vMotion traffic.  
+The required network design changes are modest and include all customer VM traffic no matter the destination, platform management traffic, direct link traffic, where applicable, and internet bound traffic. Traffic explicitly excluded includes VTEP traffic, storage traffic and vMotion traffic.
 
 NSX may be extended from the compute cluster to the edge services cluster or the use of BGP over an IPsec VPN may be used to enable connectivity between the edge and compute clusters. Where traffic flowing between the vCenter Server compute cluster and the edge services cluster is not in conflict with the IBM Cloud infrastructure  assigned subnets the use of a local VLAN and subnet is suitable as a transit link.
 
-BGP over IPsec VPN is the preferred method of connecting to a customer on-premises data center whether the connection traverses the internet or
-passes between the customer and IBM Cloud via one of the IBM Cloud infrastructure direct link offerings.
+BGP over IPsec VPN is the preferred method of connecting to a customer on-premises data center whether the connection traverses the internet or passes between the customer and IBM Cloud via one of the IBM Cloud infrastructure direct link offerings.
 
 #### Interface mapping for vSRX on VMware
 {: #vcsvsrx-planning-interface-map}
@@ -103,7 +104,7 @@ In cluster mode:
 
 The following table shows information for a standalone vSRX VM.
 
-Network Adapter|Interface Name in Junos OS
+Network adapter|Interface name in Junos OS
 ---|---
 1|fxp0
 2|ge-0/0/0
@@ -117,7 +118,7 @@ Network Adapter|Interface Name in Junos OS
 
 The following table shows information for a pair of vSRX VMs in a cluster (node 0 and node 1).
 
-Network Adapter|Interface Name in Junos OS
+Network adapter|Interface name in Junos OS
 ---|---
 1|fxp0 (node 0 and 1)
 2|em0 (node 0 and 1)
@@ -134,14 +135,14 @@ Network Adapter|Interface Name in Junos OS
 
 The following table shows the factory default settings for security policies.
 
-Source Zone|Destination Zone|Policy Action
+Source zone|Destination zone|Policy action
 ---|---|---
 trust|untrust|permit
 trust|trust|permit
 untrust|trust|deny
 {: caption="Table 3. Factory default settings for security policies" caption-side="top"}
 
-As noted previously the default configuration merely represents a point from which to build the required configuration to meet your requirements. The creation of additional security zones is often necessary to support the various traffic flow patterns present in the account.
+As noted previously, the default configuration merely represents a point from which to build the required configuration to meet your requirements. The creation of additional security zones is often necessary to support the various traffic flow patterns present in the account.
 
 ## vSRX to client on-premises connections
 {: #vcsvsrx-planning-client-config}

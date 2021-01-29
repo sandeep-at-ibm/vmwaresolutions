@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-11-30"
+lastupdated: "2021-01-18"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -83,6 +83,9 @@ If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data c
 
 For the **Skylake** setting, you have options for the **CPU model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
 
+Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
+{:note}
+
 | CPU model options | RAM options for NSX-V | RAM options for NSX-T |
 |:----------------- |:--------------------- |:--------------------- |
 | Dual Intel Xeon Silver 4110 processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
@@ -109,6 +112,9 @@ For the **Cascade Lake** setting, you have options for the **CPU model** and **R
 {: #vc_addingviewingclusters-adding-sap}
 
 When you select **SAP-certified**, you cannot alter the CPU or RAM settings. For NSX-T SAP-certified, only Cascade Lake servers are supported.
+
+SAP- certified servers are not supported for vSphere Enterprise Plus 7.0 instances.
+{:note}
 
 Based on your requirements, select a bare metal server configuration from the following table:
 
@@ -154,9 +160,6 @@ You can add NFS storage shares to an existing vSAN or NFS cluster. For more info
 
 ### vSAN storage
 {: #vc_addingviewingclusters-adding-vsan-storage}
-
-If you are using vSAN storage, even though vSphere 6.7u3 might be selected, vSphere ESXi 6.7u2 will be installed.
-{: note}
 
 Specify the following vSAN options:
 
@@ -267,12 +270,12 @@ For NSX-V, the following add-on services require public NICs and are not availab
 The **Uplink speed** option is not available to edge services clusters.
 {:note}
 
-The following options are provided for uplink speed:
-* 10 GB: this option is selected by default.
-* 25 GB: this option is available only when the vCenter Server instance meets the following requirements:
+The following options are provided for the uplink speed:
+* 10 Gb - This option is selected by default.
+* 25 Gb - This option is available only when the vCenter Server instance meets the following requirements:
    * The vSphere version is 6.7u3.
    * The bare metal server is Cascade Lake.
-   * The data center is DAL10 or WDC04.
+   * The data center is **Dallas 10** or **Washington DC 04**.
 
 ### VLANs
 {: #vc_addingviewingclusters-vlans}
@@ -383,7 +386,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
   * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
   * **Pod**: The pod where the cluster is deployed.
   * **Networking**: Whether **Public and private network** or **Private network only**.
-  * **Uplink speed**: Whether 10 GB or 25 GB.
+  * **Uplink speed**: Whether 10 Gb or 25 Gb.
   * **Status**: The status of the cluster. The status can have one of the following values:
      * Initializing: The cluster is being created and configured.
      * Modifying: The cluster is being modified.
@@ -395,7 +398,7 @@ You cannot change the cluster name. Changing the cluster name might cause the ad
 
 | Item | Description |
 |:---- |:----------- |
-| Name | The name of the ESXi server is in the following format: `<host_prefix><n>.<subdomain_label>.<root_domain>`, where `n` is the sequence of the ESXi server. |
+| Name | The name of the ESXi server is in the following format: `<host_prefix><n>.<root_domain>`, where `n` is the sequence of the ESXi server. |
 | Hardware | The hardware specification. |
 | Credentials | The user name and password to access the ESXi server. |
 | Private IP | The private IP address of the ESXi server. |
@@ -482,9 +485,6 @@ You might want to delete a cluster from an instance when it's no longer needed.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.
 * You do not have to delete any services that are installed on the cluster, including services on an edge services cluster. The services are automatically deleted when you delete the cluster.
-
-A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a cluster before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
-{:important}
 
 ### Procedure to delete clusters from vCenter Server instances
 {: #vc_addingviewingclusters-deleting-procedure}

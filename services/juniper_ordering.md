@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-14"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -42,7 +42,7 @@ The Juniper vSRX service is deployed on the management cluster unless you order 
 ## Ordering Juniper vSRX for an existing instance
 {: #juniper-ordering-exist-instance}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Juniper vSRX** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Juniper vSRX** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 When you add Juniper vSRX to an existing vCenter Server instance, you can select a cluster on which to install Juniper vSRX. You can install Juniper vSRX on a management cluster or on any edge services cluster.
 You must deploy the Juniper vSRX to an edge services cluster for the Juniper vSRX to function as a gateway for your vCenter Server instance.
@@ -80,7 +80,7 @@ If you deploy Juniper vSRX on an edge services cluster, after deployment, you mu
 ## Related links
 {: #juniper-ordering-related-links}
 
-* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview)
+* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
 * [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
 * [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

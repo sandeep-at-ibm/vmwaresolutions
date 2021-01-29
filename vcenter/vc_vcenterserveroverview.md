@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-30"
+lastupdated: "2021-01-28"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -20,18 +20,18 @@ subcollection: vmwaresolutions
 # vCenter Server overview
 {: #vc_vcenterserveroverview}
 
-VMware vCenter Server is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of three {{site.data.keyword.cloud}} bare metal servers and it offers shared network-attached storage and dedicated software-defined storage options. It also includes the automatic deployment and configuration of an easy-to-manage logical edge firewall, which VMware NSX powers.
+VMware vCenter Server® is a hosted private cloud that delivers the VMware vSphere® stack as a service. The VMware® environment is built on top of a minimum of three {{site.data.keyword.cloud}} bare metal servers and it offers shared network-attached storage and dedicated software-defined storage options. It also includes the automatic deployment and configuration of an easy-to-manage logical edge firewall, which VMware NSX® powers.
 {: shortdesc}
 
 In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed.
 
-After initial instance deployment, you can increase shared storage by ordering more Network File System (NFS) file shares from the {{site.data.keyword.slportal}} and by manually attaching them to all ESXi servers in a cluster. You can also take advantage of VMware vSAN as a storage option. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
+After initial instance deployment, you can increase shared storage by ordering more Network File System (NFS) file shares from the {{site.data.keyword.slportal}} and by manually attaching them to all VMware ESXi™ servers in a cluster. You can also take advantage of VMware vSAN™ as a storage option. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers post-deployment.
 
-For dedicated storage, see [NetApp ONTAP Select](/docs/vmwaresolutions?topic=vmwaresolutions-netapp).
+For dedicated storage, see [NetApp® ONTAP® Select](/docs/vmwaresolutions?topic=vmwaresolutions-netapp).
 
-For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize Operations. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
+For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize® Operations™. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
-For vCenter Server with NSX-T instances, applying license updates is not supported. Also, only a limited number of add-on services are supported.
+For vCenter Server with NSX-T instances, applying license updates is not supported. Also, not all add-on services are supported for NSX-T instances.
 {:important}
 
 ## vCenter Server with NSX-V architecture
@@ -65,9 +65,9 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 This layer consists of the following components:
 * vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
-* For NSX-V: one NSX Manager and three NSX Controller nodes (total of four nodes)
+* For NSX-V: one NSX Manager and three VMware NSX Controller™ nodes (total of four nodes)
 * For NSX-T: three NSX Manager or Controller nodes (total of three nodes)
-* NSX Edge Services Gateways (ESGs): two for NSX-V and four for NSX-T (two in the management cluster and two in the workload cluster)
+* VMware NSX Edge™ Services Gateways (ESGs): two for NSX-V and four for NSX-T (two in the management cluster and two in the workload cluster)
 * IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4,000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
@@ -92,7 +92,10 @@ The following components are included in your vCenter Server instance.
 {: #vc_vcenterserveroverview-bare-metal}
 
 * For NSX-V, you can order two or more bare metal servers.
-* For NSX-T, you can order two or more bare metal servers in the management cluster and in the workload cluster.
+* For NSX-T, you can order two or more bare metal servers in the consolidated or management cluster and in the workload cluster.
+
+Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
+{:note}
 
 The following configurations are available:
 * **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
@@ -124,7 +127,7 @@ The following networking components are ordered:
 
 The following virtual server instances (VSIs) are ordered:
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
-* You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
+* You can choose to deploy a single Microsoft® Windows® Server VSI for Microsoft Active Directory™ (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
 
 ### Storage
 {: #vc_vcenterserveroverview-storage}
@@ -166,7 +169,7 @@ The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-88
 ### Licenses (IBM-provided or BYOL) and fees
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 6.7  
+* VMware vSphere Enterprise Plus 7.0 (NSX-T only) and 6.7  
 * VMware vCenter Server 6.7 or 6.5
 * VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4.
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
@@ -185,7 +188,7 @@ One bare metal server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 6.7u3
+* One VMware vSphere Enterprise Plus 7.0 (NSX-T only) and 6.7u3
 * One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
 * One Support and Services fee
 * (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6

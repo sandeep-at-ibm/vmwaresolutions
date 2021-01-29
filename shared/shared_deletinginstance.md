@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-04-13"
+lastupdated: "2021-01-27"
 
 keywords: VMware Solutions Shared delete instance, delete VMware Solutions Shared, remove VMware Solutions Shared
 
@@ -35,7 +35,7 @@ Before you delete your virtual data center instance, ensure that any items that 
 ## Considerations when deleting virtual data center instances
 {: #shared_deletinginstance-considerations}
 
-All of the virtual data center VM restore points in Veeam are automatically deleted when you delete a VMware Solutions Shared instance.
+All of the virtual data center VM restore points in Veeam are automatically deleted when you delete a VMware® Solutions Shared instance.
 {:important}
 
 Any job that includes instructions to backup the VM fails when the VM restore points in Veeam are deleted. The existing VMs in the job are still backed up, however the job status is marked as failed. To remove the failed status, you must manually edit the job to remove the instruction to back up the now deleted VMs.

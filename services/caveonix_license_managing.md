@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-25"
+lastupdated: "2020-12-10"
 
 keywords: Caveonix view license, Caveonix manage license, delete Caveonix license
 
@@ -29,7 +29,7 @@ You can view, edit notes, or delete the Caveonix RiskForesight™ licenses that 
 1. Click **Resources** from the left navigation pane and scroll down to the **Caveonix RiskForesight Licenses** table.
 2. To view the details of a specific license, click the license.
 
-Caveonix RiskForesight license details include:
+Review the following Caveonix RiskForesight license details.
 
 | Item | Description |
 |:-----|:------------|

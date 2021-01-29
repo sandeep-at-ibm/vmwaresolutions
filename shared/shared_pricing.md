@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2020
+  years: 2020, 2021
 
-lastupdated: "2020-10-01"
+lastupdated: "2021-01-27"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -100,7 +100,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
-| MAX_WINDOWS_LICENSES | Monthly | The peak number of Windows license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
+| MAX_WINDOWS_LICENSES | Monthly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
 | TOTAL_RHEL_SMALL_LICENSES | Hourly | The peak (High Watermark) number of small RHEL licenses usage in 1-hour intervals. Small RHEL VMs are four cores or smaller. |
 | TOTAL_RHEL_LARGE_LICENSES | Hourly | The peak (High Watermark) number of large RHEL licenses usage in 1-hour intervals. Large RHEL VMs are larger than four cores. |
 {: caption="Table 2. VMware Shared Solutions On-demand billing plan - Operating system metrics" caption-side="top"}
@@ -165,7 +165,7 @@ Private network endpoint usage incurs charges as part of the On-demand or Reserv
 ## Licenses and fees for Veeam Availability Suite
 {: #shared_pricing-veeam}
 
-Veeam usage incurs the following On-demand charges. You can view the charges on the **{{site.data.keyword.cloud_notm}} billing and usage** view along with the usage and charges from all other {{site.data.keyword.cloud_notm}} services.
+Veeam® usage incurs the following On-demand charges. You can view the charges on the **{{site.data.keyword.cloud_notm}} billing and usage** view along with the usage and charges from all other {{site.data.keyword.cloud_notm}} services.
 
 In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solutions** service type. Locate the **Organization** plan to find the Veeam usage across all virtual data centers in that organization. The virtual data center usage is located in a separate plan for either VMware Solutions Shared On-demand or VMware Solutions Shared Reserved.
 
@@ -176,7 +176,7 @@ In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solu
 | TOTAL_VEEAM_OBJECT_STORAGE_GB_HOURS | Hourly | Charge per GB of object storage used for all backups. |
 {: caption="Table 5. Licenses and fees for Veeam" caption-side="top"}
 
-There are no additional Veeam usage charges for VMware Solutions Shared.
+No additional Veeam usage charges for VMware Solutions Shared are incurred.
 {:note}
 
 Initially, all backups go to the block storage that is closest to their VM workloads. Backups that are a part of an inactive backup chain are immediately moved to Cloud Object Storage. The restore speed for these inactive backups might be impacted.

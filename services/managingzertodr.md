@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-04-17"
+lastupdated: "2021-01-28"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -21,20 +21,20 @@ subcollection: vmwaresolutions
 # Managing Zerto
 {: #managingzertodr}
 
-After the Zerto service is deployed into your instance, you can configure or update Zerto Virtual Replication, and deploy more Virtual Replication Appliances to newly added ESXi servers.
+After the Zerto service is deployed into your instance, you can configure or update Zerto Virtual Replication, and deploy more Virtual Replication Appliances to newly added VMware ESXi™ servers.
 
 ## Using your own certificate for Zerto
 {: #managingzertodr-ssl-cert}
 
 As a best practice, use your own SSL certificate for Zerto Virtual Manager (ZVM). After you deployed Zerto, replace the SSL certificate for ZVM with your own certificate. To change the default security certificate for your ZVM, follow these steps:
 
-1. Open the Zerto Diagnostics utility on the Windows VM running the ZVM.
+1. Open the Zerto Diagnostics utility on the Windows® VM running the ZVM.
 2. Choose **Reconfigure Zerto Virtual Manager**.
-3. Ensure that the vCenter Server configuration is correct, and click **Next**.
+3. Ensure that the VMware vCenter Server® configuration is correct, and click **Next**.
 4. In the **HTTP Certificate** section, check the **Replace SSL Certificate** box.
-5. Click the browse (...) button, then locate and select the new SSL certificate.
-6. Enter the new SSL certificate's associated password and click **Next**.
-7. The utility will verify the necessary vCenter Server connectivity. Once passed, click **Next** and the ZVM will be reconfigured.
+5. Click browse (...), then locate and select the new SSL certificate.
+6. Enter the new SSL certificates associated password and click **Next**.
+7. The utility verifies the necessary vCenter Server connectivity. After verified, click **Next** and the ZVM is reconfigured.
 
 ## Managing the configuration of Zerto replications
 {: #managingzertodr-manage}
@@ -45,13 +45,13 @@ When you're replicating between different {{site.data.keyword.cloud}} Zerto inst
 
 Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the {{site.data.keyword.cloud_notm}} Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side. Establishing connectivity might also require secure tunneling between the sites. When you're configuring or reconfiguring routes on Zerto Virtual Manager appliances, you must ensure that all Zerto Virtual Manager appliances can connect successfully to `zerto.com` for usage reporting. You can verify this connection by opening a browser session to `https://www.zerto.com` from the Zerto Virtual Manager appliance.
 
-The Management VMware NSX Edge Services Gateway (ESG) is preconfigured to allow outbound HTTPS (TCP port 443) communications that originate from Zerto Virtual Manager.
+The Management VMware NSX Edge™ Services Gateway (ESG) is preconfigured to allow outbound HTTPS (TCP port 443) communications that originate from Zerto Virtual Manager.
 {:note}
 
 ## Updating Zerto Virtual Replication
 {: #managingzertodr-update}
 
-To update Zerto Virtual Replication, log in to the Zerto Virtual Replication console.
+To update Zerto Virtual Replication, open a ticket with IBM Support to get the Zerto installation executable file for your environment.
 
 ## Deploying VRAs to newly added ESXi servers
 {: #managingzertodr-deploy}

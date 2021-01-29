@@ -4,12 +4,17 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-04-07"
+lastupdated: "2020-12-04"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{:external: target="_blank" .external}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Preparing the installation environment
 {: #hcxclient-planning-prep-install}
@@ -17,7 +22,7 @@ subcollection: vmwaresolutions
 The installation of VMware HCX has the following software requirements:
 * vSphere 5.5 U3, or vSphere 6.0u2 or higher.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
-* To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764).
+* To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU compatibility FAQ](https://kb.vmware.com/s/article/1005764){:external}.
 
 ## Configuring network connectivity
 {: #hcxclient-planning-config-net}

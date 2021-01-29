@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-11-30"
+lastupdated: "2021-01-28"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Ordering new vSphere clusters
 {: #vs_orderinginstances}
 
-To deploy a highly customizable VMware virtualized platform, order a VMware vSphere cluster.
+To deploy a highly customizable VMware® virtualized platform, order a VMware vSphere® cluster.
 
 This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud}} bare metal server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware vSphere cluster based on your requirements.
 
@@ -55,14 +55,14 @@ If you are an IBM Business Partner user, you can select a component license bund
 
 | Bundle | Components |
 |:------ |:---------- |
-| Standard with Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise |
+| Standard with Management | vSphere Enterprise Plus, VMware vCenter Server® Standard, vRealize® Log Insight™, vRealize Operations™ Enterprise |
 | Advanced                 | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vCloud Director, NSX Base |
 | Advanced with Networking | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, NSX Advanced |
-| Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX Enterprise |
+| Advanced with Networking and Management | vSphere Enterprise Plus, vCenter Server Standard, vRealize Log Insight, vRealize Operations Enterprise, vCloud Director, NSX® Enterprise |
 {: caption="Table 1. IBM Business Partner component bundles for vSphere clusters" caption-side="top"}
 
 You can also include the following VMware components in your order:
-* VMware vSAN
+* VMware vSAN™
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
@@ -73,7 +73,7 @@ For IBM Business Partner users, the Bring Your Own License (BYOL) option is not 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 If you're a non-Business Partner, you can select the following components for your vSphere cluster:
-* VMware vSphere Enterprise Plus 6.7u3
+* VMware vSphere Enterprise Plus 7.0u1a or 6.7u3
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -94,7 +94,7 @@ Using individual license keys together with the combined license keys does not m
 You have the following options for licensing the selected VMware components:
 * **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
 
-   If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple ESXi servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
+   If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple VMware ESXi™ servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
 
 * **I will provide the license**: In this case, you use your own license (BYOL) for the VMware component. You will not enter your BYOL licenses when you create your order for the first time, but you will do it later when the vSphere cluster is created.
 
@@ -119,9 +119,12 @@ Select the {{site.data.keyword.cloud_notm}} data center where the cluster is to 
 
 When you select **Skylake**, you have options for the **CPU model** and **RAM**. Options available depend on whether you selected the VMware vSAN component.
 
+Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
+{:note}
+
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel® Xeon® Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake bare metal servers" caption-side="top"}
@@ -152,25 +155,33 @@ Based on your requirements, select a bare metal server configuration:
 |:------------- |:------------- |
 | Dual Intel Xeon Gold 5218 processor (Cascade, BI.S4.NW192) / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
 | Dual Intel Xeon Gold 6248 processor (Cascade, BI.S4.NW768) / 40 cores total, 2.5 GHz | 768 GB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW1500) / 56 cores total, 2.70 GHz| 1.5 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW3000) / 56 cores total, 2.70 GHz| 3 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW1500) / 56 cores total, 2.70 GHz[^v67-1]| 1.5 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW3000) / 56 cores total, 2.70 GHz[^v67-2]| 3 TB |
 {: caption="Table 4. Options for SAP-certified bare metal servers - NetWeaver" caption-side="top"}
 {: class="simple-tab-table"}
 {: #simpletabtable1}
 {: tab-title="NetWeaver"}
 {: tab-group="SAP-certified Intel servers"}
 
+[^v67-1]: vSphere 6.7 only
+
+[^v67-2]: vSphere 6.7 only
+
 | CPU model     | RAM options |  
 |:------------- |:----------- |
 | Dual Intel Xeon Gold 5218 processor (Cascade) / 32 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
 | Dual Intel Xeon Gold 6248 processor (Cascade) / 40 cores total, 2.5 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade) / 56 cores total, 2.70 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8280M processor (Cascade) / 112 cores total, 2.70 GHz| 3 TB, 6 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade) / 56 cores total, 2.70 GHz[^v67-3]| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8280M processor (Cascade) / 112 cores total, 2.70 GHz[^v67-4]| 3 TB, 6 TB |
 {: caption="Table 4. Options for SAP-certified bare metal servers - HANA" caption-side="top"}
 {: #simpletabtable2}
 {: tab-title="HANA"}
 {: tab-group="SAP-certified Intel servers"}
 {: class="simple-tab-table"}
+
+[^v67-3]: vSphere 6.7 only
+
+[^v67-4]: vSphere 6.7 only
 
 ### Number of bare metal servers
 {: #vs_orderinginstances-bare-metal-number}
@@ -221,11 +232,15 @@ The subdomain label must meet the following requirements:
 * The subdomain label must end with a lowercase alphabetic or numeric character.
 * The maximum length of the subdomain label is 10 characters.
 
+The subdomain label is not used for vSphere 7.0 instances.
+{:note}
+
 ### Domain name
 {: #vs_orderinginstances-domain-name}
 
 The domain name is used for all {{site.data.keyword.cloud_notm}} bare metal servers and must meet the following requirements:
-* The domain name must consist of two or more strings that are separated by period (.)
+* For vSphere 7.0 instances, the domain name must consist of three or more strings that are separated by a period (.)
+* For vSphere 6.7 instances, the domain name must consist of two or more strings that are separated by a period (.)
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
 * Each string must start with a lowercase alphabetic character and end with a lowercase alphabetic or numeric character.
 * The last string can contain only lowercase alphabetic characters.
@@ -241,12 +256,12 @@ Network interface card (NIC) enablement settings are based on your selection of 
 ### Uplink speed
 {: #vs_orderinginstances-uplink}
 
-The following options are provided for uplink speed:
-* 10 GB: this option is selected by default.
-* 25 GB: this option is available only when the vSphere cluster meets the following requirements:
+The following options are provided for the uplink speed:
+* 10 Gb - This option is selected by default.
+* 25 Gb - This option is available only when the vSphere cluster meets the following requirements:
    * The vSphere version is 6.7u3.
    * The bare metal server is Cascade Lake.
-   * The data center is DAL10 or WDC04.
+   * The data center is **Dallas 10** or **Washington DC 04**.
 
 ### VLANs
 {: #vs_orderinginstances-vlans}
@@ -296,7 +311,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vSphere clusters
 {: #vs_orderinginstances-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **Start provisioning** section.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **IaaS platforms** section.
 2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create new** tab and that **New cluster** is displayed in the **Cluster configurations** list.
 3. Enter the cluster name.
 4. Select the VMware components:
@@ -313,7 +328,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
    3. Specify the number of bare metal servers.
 6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
 7. Complete the network interface settings:
-   1. Enter the host name prefix, subdomain label, and domain name.
+   1. Enter the host name prefix, subdomain label (vSphere 6.7u3 instances only), and domain name.
    2. Select the network setting of either **Public and private network** or **Private network only**.
    3. Select the uplink speed setting.
    4. Select the network interface that you want to use.

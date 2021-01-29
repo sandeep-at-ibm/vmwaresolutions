@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-01-11"
 
 subcollection: vmwaresolutions
 
@@ -13,6 +13,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Physical infrastructure design
 {: #design_physicalinfrastructure}

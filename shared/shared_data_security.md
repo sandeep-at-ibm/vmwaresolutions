@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-08-21"
+lastupdated: "2021-01-27"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
@@ -26,7 +26,7 @@ Review the following data storage, high availability, and disaster recovery cons
 ## Data security
 {: #shared_data-security}
 
-VMWare Solutions Shared supports data storage in the form of:
+VMWare® Solutions Shared supports data storage in the form of:
 
 * VMware vCloud Director virtual machine (VM) instances
 * VMware vCloud Director customer media uploads

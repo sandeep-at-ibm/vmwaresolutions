@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-01-27"
 
 keywords: Caveonix RiskForesight, Caveonix configuration, order Caveonix
 
@@ -25,12 +25,12 @@ You can include the Caveonix RiskForesight™ service with a new VMware vCenter 
 ## Ordering Caveonix RiskForesight for a new instance
 {: #caveonix_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Services** section and click **Caveonix RiskForesight** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Add-on services** section and click **Caveonix RiskForesight** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering Caveonix RiskForesight for an existing instance
 {: #caveonix_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Caveonix RiskForesight** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Caveonix RiskForesight** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Caveonix RiskForesight configuration
 {: #caveonix_ordering-config}
@@ -40,7 +40,7 @@ When you order the Caveonix RiskForesight service, provide the following setting
 ### License name
 {: #caveonix_ordering-config-license-name}
 
-Specify a unique name for this license. The name must be unique across all Caveonix service instances and all instances in the {{site.data.keyword.cloud_notm}} account.
+Specify a unique name for this license. The name must be unique across all Caveonix service instances and all instances in the {{site.data.keyword.cloud}} account.
 
 ### License notes
 {: #caveonix_ordering-config-license-notes}
@@ -52,7 +52,7 @@ Enter the notes for the service instance. You can edit the notes later on the li
 
 Specify the number of VMs (virtual machines) to license, in increments of 10. At least 10 VMs are required for license management.
 
-After you order the Caveonix RiskForesight service, if you want more VMs licensed than you specified in the order, you can replace your Caveonix RiskForesight license by ordering a larger license, copying the license to your Caveonix RiskForesight console, and then deleting the previous license from the {{site.data.keyword.vmwaresolutions_full}} console.
+After you order the Caveonix RiskForesight service, if you want more VMs licensed than you specified in the order, you can replace your Caveonix RiskForesight license by ordering a larger license, copying the license to your Caveonix RiskForesight console, and then deleting the previous license from the {{site.data.keyword.vmwaresolutions_short}} console.
 
 For more information, see:
 * [Procedure to order Caveonix RiskForesight licenses](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_license_ordering#caveonix_license_ordering-procedure)

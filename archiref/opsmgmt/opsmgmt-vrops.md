@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-09-30"
+lastupdated: "2020-12-09"
 
 subcollection: vmwaresolutions
 
@@ -230,10 +230,9 @@ vRealize Operations Management Pack for HCX extends the Operations Management ca
 ## Related links
 {: #opsmgmt-vrops-links}
 
-* [vRealize Operations Manager 7.0 Sizing Guidelines](https://kb.vmware.com/s/article/57903){:external}
+* [vRealize Operations Manager 7.0 sizing guidelines](https://kb.vmware.com/s/article/57903){:external}
 * [vRealize Operations Manager documentation](https://docs.vmware.com/en/vRealize-Operations-Manager/index.html){:external}
 * [vRealize Operations Management Pack for vSAN 1.0 Guide](https://marketplace.vmware.com/resources/vsx/product_files/31742/original/Management-Pack-for-vSAN-Guide6d2a8895b022a5f626a86e8e84b031b5.pdf){:external}
 * [Updating vSAN clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vsan)
 * [vSAN Health Check Information](https://kb.vmware.com/s/article/2114803){:external}
 * [Operationalizing VMware NSX](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-operationalizing-nsx.pdf){:external}
-* [NSX Operations Guide](https://communities.vmware.com/servlet/JiveServlet/previewBody/30079-102-2-40474/NSX-Operations-Guide-v6.1.pdf){:external}

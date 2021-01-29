@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-07-22"
+lastupdated: "2021-01-27"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Ordering on-premises VMware HCX instances
 {: #standalone_orderingserviceinstances}
 
-You can order an on-premises HCX instance without associating it to any vCenter Server instance for licensing and activation of your on-premises HCX installation.
+You can order an on-premises VMware HCX® instance without associating it to any VMware vCenter Server® instance for licensing and activation of your on-premises HCX installation.
 
 ## Before you begin
 {: #standalone_orderingserviceinstances-reqs}

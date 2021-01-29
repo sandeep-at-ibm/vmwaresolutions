@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-09-16"
+lastupdated: "2021-01-27"
 
 keywords: veeam, veeam install, tech specs veeam
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Managing Veeam for VMware Solutions Shared instances
 {: #shared_veeam}
 
-The Veeam Availability Suite and Veeam Cloud Connect Replication services are available and ready-to-use in all virtual data center instances. These services seamlessly integrate as a managed solution to help your enterprise achieve high availability. They provide recovery points for your applications and data. By using these services, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
+The Veeam Availability Suite™ and Veeam® Cloud Connect Replication services are available and ready-to-use in all virtual data center instances. These services seamlessly integrate as a managed solution to help your enterprise achieve high availability. They provide recovery points for your applications and data. By using these services, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 
 Service charges are incurred only if you choose to use the service.
 {:note}
@@ -29,7 +29,7 @@ Service charges are incurred only if you choose to use the service.
 ## Veeam Availability Suite
 {: #shared_veeam-portal}
 
-The Veeam Availability Suite has visibility to back up VMs from any virtual data center in the organization. It is available at the VMware vCloud Director organization level for any vCloud Director user with the **Organization Administrator** role.
+The Veeam Availability Suite has visibility to back up VMs from any virtual data center in the organization. It is available at the VMware® vCloud Director organization level for any vCloud Director user with the **Organization Administrator** role.
 
 When you use the Veeam self-service portal to create backup jobs, you can choose vApp and VM instances from any virtual data center in the organization.
 

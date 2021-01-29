@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-01-28"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -34,10 +34,20 @@ To manage the Juniper® vSRX service, use one of the following ways:
 
 For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
+## Juniper vSRX security and ease of use features
+{: #juniper-managing-security-enhance}
+
+Juniper vSRX provides various features for security and ease of use on VMware vCenter Server®. The following are some considerations:
+
+* Any Juniper vSRX that is deployed with public access comes with its public interfaces deactivated. This is so the vSRX is not exposed to the public internet before users are ready. 
+* The default deny policy is set to permit. This is so you can identify any necessary flows before locking down the vSRX traffic.
+* It is recommended that you change the default credentials that {{site.data.keyword.IBM}} created in the service details page for Juniper vSRX: the root and admin passwords.
+* On edge services cluster installations, protectable VLANs are associated, but not routed, with the edge gateway.
+
 ## Related links
 {: #juniper-managing-related-links}
 
-* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-vsrx_overview)
+* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
 * [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}

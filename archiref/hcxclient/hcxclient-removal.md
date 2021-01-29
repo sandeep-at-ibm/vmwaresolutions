@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-03-30"
+lastupdated: "2021-01-27"
 
 subcollection: vmwaresolutions
 
@@ -71,10 +71,10 @@ All virtual service appliances are removed. The following elements might remain 
 
 The migrated VMs and logs can be manually backed up or deleted.
 
-## Logging in to the HCX Management Portal
+## Logging in to the HCX management portal
 {: #hcxclient-removal-uninstall-log-hcxmp}
 
-The Hybrid Cloud Services deployment can be administered from the Management Portal by using a browser-based user interface.
+The Hybrid Cloud Services deployment can be administered from the management portal by using a browser-based user interface.
 
 1. In a web browser, enter the IP address that is assigned to the Hybrid Cloud Services, and specify the port number 9443. For example, `https://HCXip:9443`.
 2. The Hybrid Cloud Services user interface opens in a web browser window by using SSL. If necessary, accept the security certificate. The VMware Hybridity and Networking log in screen opens.

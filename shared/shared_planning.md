@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-10-20"
+lastupdated: "2021-01-27"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -26,7 +26,7 @@ Review the following requirements before you order your {{site.data.keyword.vmwa
 ## IBM Cloud account requirements
 {: #shared_ordering-account-req}
 
-To order VMware Solutions Shared, you must have a **Pay As You Go** or **Subscription** {{site.data.keyword.cloud_notm}} account. The cost of the resources that are ordered is billed to that {{site.data.keyword.cloud_notm}} account.
+To order VMware® Solutions Shared, you must have a **Pay As You Go** or **Subscription** {{site.data.keyword.cloud_notm}} account. The cost of the resources that are ordered is billed to that {{site.data.keyword.cloud_notm}} account.
 
 ## Virtual data center name requirements
 {: #shared_ordering-vdc-name-req}

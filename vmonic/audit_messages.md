@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2020
 
-lastupdated: "2020-09-22"
+lastupdated: "2020-11-04"
 
 keywords: history message, audit history, error messages
 
@@ -240,4 +240,4 @@ The following sections provide all of the possible messages that can be issued t
 {: #audit_messages-related}
 
 * [Considerations about changing vCenter Server artifacts](/docs/vmwaresolutions?topic=vmwaresolutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events#at-events)
+* [Auditing events for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-at-events#at-events)

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-15"
 
 keywords: nsx editions, vsan editions, nsx edition comparison, vsan edition comparison
 
@@ -12,6 +12,11 @@ subcollection: vmwaresolutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:external: target="_blank" .external}
 
 # Comparison chart for VMware NSX and VMware vSAN editions
 {: #solution-appendix}
@@ -25,8 +30,8 @@ Within this design, there are multiple components that require licenses. This in
 |:--------- |:------- |:------- |
 | VMware vSphere | Compute virtualization | vSphere 6.7 Enterprise Plus |
 | VMware vCenter Server | Infrastructure Management | vCenter Server 6.7 Standard |
-| VMwareNSX | Network virtualization | NSX Base for Service Providers 6.4 |
-| VMwarevSAN | Storage virtualization | vSAN 6.6 Advanced |
+| VMware NSX | Network virtualization | NSX Base for Service Providers 6.4 |
+| VMware vSAN | Storage virtualization | vSAN 6.6 Advanced |
 {: caption="Table 1. License requirements" caption-side="top"}
 
 NSX Base for Service Providers edition is only available for service providers through the VMware vCloud Air Network (vCAN). The features in this edition can be found in the following table.

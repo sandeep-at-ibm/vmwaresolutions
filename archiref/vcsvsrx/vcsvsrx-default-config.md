@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-04-17"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -184,7 +184,7 @@ routing-options {
 ## Set commands
 {: #vcsvsrx-default-config-set-cmd}
 
-set version 18.4R1.8
+```set version 18.4R1.8
 
 set system login user pokeyjo uid 2000
 
@@ -285,6 +285,7 @@ set interfaces fxp0 unit 0
 set routing-options static route 10.0.0.0/8 next-hop 10.135.70.1
 
 set routing-options static route 0.0.0.0/0 next-hop 169.50.51.89
+```
 
 **Next topic:** [The IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-iaas-def-config)
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -59,7 +59,7 @@ To find the customer's private portable subnet:
 
 NSX Customer ESG firewall and NAT settings are required to enable proxy server traffic.
 
-### Firewall
+### Setting up the firewall
 {: #vum-init-config-firewall}
 
 1. Go to **Home** > **Networking & Security**.
@@ -79,7 +79,7 @@ NSX Customer ESG firewall and NAT settings are required to enable proxy server t
 
 After parameters are supplied, click **Publish Changes**.
 
-### NAT
+### Defining the NAT rule
 {: #vum-init-config-nat}
 
 1. Select **NAT**.
@@ -128,16 +128,10 @@ Create a local vCenter content library. The library is accessible only in the vC
 4. Select a datastore and then click a suitable datastore, for example, `vsanDatastore`.
 5. Review the information on the **Ready to Complete** page and click **Finish**.
 
-### Configuring the Proxy VM, install CentOS and Squid
+### Configuring the Proxy VM and installing CentOS and Squid
 {: #vum-init-config-config-proxy}
 
-This activity has the following tasks:
-
-*	Create a New VM
-*	Install CentOS
-*	Install Squid
-
-#### Create a new VM
+#### Creating a new VM
 {: #vum-init-config-create-new-vm}
 
 This task creates a new VM ready for use as the proxy server. The settings from Table 1 Deployment Values should be used to populate the configuration.
@@ -154,7 +148,7 @@ This task creates a new VM ready for use as the proxy server. The settings from 
 10.	Select the **SDDC-DPortGroup-Mgmt** network and ensure that the Connect checkbox is ticked, click **Next**.
 11.	Review and click **Finish**.
 
-#### Install CentOS
+#### Installing CentOS
 {: #vum-init-config-install-centos}
 
 This task installs and configures the newly created VM ready for the Squid installation
@@ -175,7 +169,7 @@ This task installs and configures the newly created VM ready for the Squid insta
 14.	As the installation continues, set a root password and setup a user.
 15.	When the installation is complete, log in as the user and then enter the command _ping vmware.com_. The name is resolved to an IP address and you receive a response. If you do not get responses check; IP addresses, firewall rules and NAT settings.
 
-#### Install and configure Squid
+#### Installing and configuring Squid
 {: #vum-init-config-install-cfg-squid}
 
 Squid does not have any minimum hardware requirements, but the amount of RAM might vary according to the users that are accessing the internet through your proxy and the objects that are stored in the cache. As the proxy server is accessed only by VUM and the cache is not enabled, only a small VM is configured.
@@ -199,7 +193,7 @@ Squid does not have any minimum hardware requirements, but the amount of RAM mig
 9. The CentOS firewall needs to allow access to the Squid port, TCP 3128 by using the following command:  `firewall-cmd –add-port=3128/tcp –permanent`.
 10. To save the rule and restart the service, use the following command: `firewall-cmd –reload`.
 
-## The initial setup of VUM
+## Setting up VUM initially
 {: #vum-init-config-init-setup-vum}
 
 Configure VUM to use the proxy server to access the repositories on the internet.

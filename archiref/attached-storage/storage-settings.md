@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-01-27"
 
 subcollection: vmwaresolutions
 
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 # Configuration and settings for attached storage
 {: #storage-settings}
 
-This design supports the attachment of shared storage via NFS v3 only. NFS v4 and v4.1 aren't supported.
+This design supports the attachment of shared storage with NFS v3 only. NFS v4 and v4.1 aren't supported.
 
 The attached storage for this design is limited to the {{site.data.keyword.cloud}} storage available in the same {{site.data.keyword.cloud_notm}} data center as the vCenter Server solution. Additionally, all virtual disks that are stored to the datastore are thin-provisioned by default.
 {:note}
@@ -41,12 +41,12 @@ In this design, Storage DRS is enabled with the automation level set to **Fully 
 
 The aggressiveness of Storage DRS is determined by specifying thresholds for space that is used and I/O latency. Storage DRS collects resource usage information for the datastores in a datastore cluster. vCenter Server uses this information to generate recommendations for placement of virtual disks on datastores.
 
-When low aggressiveness level is set for a datastore cluster, Storage DRS recommends Storage vMotion migrations only when necessary. For example, if I/O load, space utilization, or their imbalance is high, Storage DRS recommends a migration. If high aggressiveness level is set for a datastore cluster, Storage DRS recommends migrations whenever the datastore cluster can benefit from space or I/O load balancing.
+When low aggressiveness level is set for a datastore cluster, Storage DRS recommends Storage vMotion migrations only when necessary. For example, if I/O load, space usage, or their imbalance is high, Storage DRS recommends a migration. If high aggressiveness level is set for a datastore cluster, Storage DRS recommends migrations whenever the datastore cluster can benefit from space or I/O load balancing.
 
 The following threshold categories are available in the datastore cluster.
 
-* Space Utilization: Storage DRS generates recommendations or performs migrations when the percentage of space utilization on the datastore is greater than the threshold you set in the vSphere Web Client.
-* I/O Latency: Storage DRS generates recommendations or performs migrations when the 90th percentile I/O latency measured over a day for the datastore is greater than the threshold.
+* Space Utilization - Storage DRS generates recommendations or performs migrations when the percentage of space utilization on the datastore is greater than the threshold you set in the vSphere Web Client.
+* I/O Latency - Storage DRS generates recommendations or performs migrations when the 90th percentile I/O latency measured over a day for the datastore is greater than the threshold.
 
 In this design, the Storage DRS Runtime Settings are enabled and thresholds are kept to their respective default values. Change these values based on the workload I/O requirements and latency sensitivity.
 
@@ -68,7 +68,7 @@ When SIOC (Storage I/O Control) is enabled in the environment, it changes the de
 
 In order for SIOC to determine when a storage device is congested or constrained, it requires a defined threshold. The congestion threshold latency is different for different storage types. This design recommends and implements a threshold latency of 10 milliseconds.
 
-You can limit individual virtual disks for individual VMs or grant them different shares with SIOC. Limiting of disks and granting different shares allows you to match and align the environment to the workload with the acquired file storage volume IOPS number. The limit is set by IOPS and it is possible to set a different weight or shares.
+You can limit individual virtual disks for individual VMs or grant them different shares with SIOC. By limiting disks and granting different shares, you can match and align the environment to the workload with the acquired file storage volume IOPS number. The limit is set by IOPS and it is possible to set a different weight or shares.
 
 Virtual disks shares set to **High** (2,000 shares) receive twice as much I/O as a disk set to **Normal** (1,000 shares) and four times as much as one set to **Low** (500 shares). **Normal** is the default value for all the VMs, so you need to adjust the **Normal** settings for the VMs that require it.
 

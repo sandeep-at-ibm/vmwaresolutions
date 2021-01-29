@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-18"
+lastupdated: "2021-01-11"
 
 subcollection: vmwaresolutions
 
@@ -14,6 +14,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Common services design
 {: #design_commonservice}
@@ -59,17 +60,20 @@ The vCenter Server deployment uses the deployed AD VSIs as DNS servers for the i
 
 This design integrates DNS services on the AD VSIs in the following configuration:
 * The domain structure is specified by the user.
-* The domain name can be any number of levels up to the maximum that all vCenter Server components handle, ensuring that the lowest level is the subdomain for the instance.
-* The AD/DNS servers are configured to be authoritative for both the DNS domain and subdomain space.
+* The domain name can be any number of levels up to the maximum that all vCenter Server components handle.
+* The domain name must be at least three levels. This guideline enforces the best practice that the top-level domain delegates responsibility to the instance for the instance domain.
+* The AD/DNS servers are configured to be authoritative for the DNS domain.
 * The AD/DNS servers are configured to point to the {{site.data.keyword.cloud_notm}} DNS servers for all other zones.
-* Any secondary cloud regions that are integrated to the first or target deployed cloud region must use the same DNS name structure above the subdomain.
+* Any secondary cloud regions that are integrated to the first or target deployed cloud region must use the same DNS name structure but will use unique host prefixes.
 * Optionally, you can deploy redundant DNS servers within the vCenter Server cluster. Two AD/DNS servers are configured unlicensed. It is your responsibility to provide licenses for the Windows operating systems for these servers.
 * If a single site is provisioned with only one AD/DNS server, then all configured vCenter Server components must have only that single IP address as a DNS entry.
 
 ### Secondary vCenter Server instances
 {: #design_commonservice-secondary-vcs}
 
-For cross instance redundancy, when the first secondary vCenter Server instance is added to an existing primary vCenter Server instance or current stand-alone vCenter Server instance, that primary instance AD DNS server IP address is used in the secondary vCenter Server instance and any subsequent secondary vCenter Server instance “secondary DNS” entry for all components that require a DNS server entry. For example, ESXi, vCenter, and NSX Manager, and also add-on components, such as, HCX, Zerto, and Veeam. The primary site secondary DNS entry is then changed to the first secondary vCenter Server instances AD/DNS IP address.
+For cross instance redundancy, when the first secondary vCenter Server instance is added to an existing primary or stand-alone vCenter Server instance, that primary instance AD DNS server IP address is used in the secondary vCenter Server instance and in any subsequent secondary vCenter Server instance “secondary DNS” entry for all components that require a DNS server entry.
+
+For example, ESXi, vCenter, and NSX Manager, and also add-on components, such as, HCX, Zerto, and Veeam. The primary site secondary DNS entry is then changed to the first secondary vCenter Server instances AD/DNS IP address.
 
 ## NTP services
 {: #design_commonservice-ntp}

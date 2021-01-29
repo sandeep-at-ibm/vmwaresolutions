@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-21"
+lastupdated: "2020-11-23"
 
 keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
@@ -26,7 +26,7 @@ The Caveonix RiskForesight™ service can help to manage cyberrisk and complianc
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The current Caveonix RiskForesight version that is installed is 2.3.
+The current Caveonix RiskForesight version that is installed is 2.4.
 {:note}
 
 ## Technical specifications for Caveonix RiskForesight

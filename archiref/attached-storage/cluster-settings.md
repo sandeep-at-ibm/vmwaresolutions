@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-01-27"
 
 subcollection: vmwaresolutions
 
@@ -19,14 +19,14 @@ Before the addition of attached storage, the vCenter Server solution didn't enab
 ## vSphere Distributed Resource Scheduler
 {: #cluster-settings-vsphere-drs}
 
-Two main features are enabled when you turn on vSphere DRS on a cluster: Load Balancing and Power Management.
+Two main features are enabled when you turn on vSphere DRS on a cluster: load balancing and power management.
 
 ### Load balancing
 {: #cluster-settings-load-balance}
 
 With load balancing, the distribution and usage of CPU and memory resources for all hosts and virtual machines (VMs) in the cluster are continuously monitored. DRS compares these metrics to an ideal resource usage given the attributes of the cluster’s resource pools and VMs, and the current demand. It then completes or recommends VM migrations as needed.
 
-When a VM is first powered on in the cluster, DRS tries to maintain proper load balancing by either placing the VM on an appropriate host or making a recommendation. The placement or recommendation settings are set in the DRS Automation section of the cluster settings.
+When a VM is first powered on in the cluster, DRS tries to maintain proper load balancing by either placing the VM on an appropriate host or by making a recommendation. The placement or recommendation settings are set in the DRS Automation section of the cluster settings.
 
 In this design, the DRS Automation level is set to fully automated so when VMs are powered on they're automatically placed onto hosts with sufficient capacity. The VMs are also automatically migrated from one host to another to load balance the cluster. Additionally, the migration threshold of the DRS cluster is set at the midpoint between conservative and aggressive such that priority 1, priority 2, and priority 3 recommendations are applied. vCenter Server provides at least good improvements to the cluster’s load balance.
 
@@ -34,7 +34,7 @@ The following table shows the settings for the vSphere DRS cluster in the VMware
 
 | Setting             | Value  |
 |:------------------- |:------ |
-| Turn ON vSphere DRS | Selected |
+| Turn on vSphere DRS | Selected |
 | Automation Level | Fully Automated |
 | Migration Threshold | Apply priority 1, priority 2, and priority 3 recommendations |
 | Enable individual machine automation levels | Selected, set to 15 ms |
@@ -53,7 +53,8 @@ In this design, power management is disabled since there's no operational or fin
 ## vSphere High Availability
 {: #cluster-settings-vsphere-ha}
 
-vSphere provides high availability for VMs by pooling them and the hosts they reside on into a cluster. Hosts in the cluster are monitored and if a failure occurs, the VMs on a failed host are restarted on alternative hosts.
+vSphere provides high availability for VMs by pooling them and the hosts that they are on into a cluster. Hosts in the cluster are monitored and if a failure occurs, the VMs on a failed host are restarted on alternative hosts.
+
 In this design, vSphere High Availability is enabled with host monitoring and VM monitoring on the cluster.
 
 ### Host monitoring
@@ -84,7 +85,7 @@ The following table shows the settings for the vSphere HA cluster in the VMware 
 | Failure interval | 50 s |
 | Minimum uptime | 90 s |
 | Maximum per-VM resets | 10 |
-| Maximum resets time window | Within 1 hrs |
+| Maximum resets time window | Within 1 hr |
 {: caption="Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster" caption-side="top"}
 
 For more information about configuring these settings in the vSphere Web Client, see [Configure virtual machine responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html){:external}.
@@ -97,7 +98,7 @@ vCenter Server uses admission control to ensure that sufficient resources are av
 #### Datastore heart beating
 {: #cluster-settings-datastore}
 
-vSphere HA uses datastore heart beating to identify hosts that have failed and hosts that reside on a network partition. Datastore heart beating allows vSphere HA to monitor hosts when a management network partition occurs and to continue to respond to failures that occur. In this design, the heartbeat datastore selection policy is set to “Automatically select datastores accessible from the host”.
+vSphere HA uses datastore heart beating to identify hosts that failed and hosts that are on a network partition. Datastore heart beating allows vSphere HA to monitor hosts when a management network partition occurs and to continue to respond to failures that occur. In this design, the heartbeat datastore selection policy is set to “Automatically select datastores accessible from the host”.
 
 ## Related links
 {: #cluster-settings-related}

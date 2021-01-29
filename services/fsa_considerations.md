@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-12"
+lastupdated: "2020-11-18"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -20,11 +20,10 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-
 # (Deprecated) FortiGate Security Appliance
 {: #fsa_considerations}
 
-Automated deployment of the FortiGate Security Appliance service is deprecated. For a similar service, consider the FortiGate Virtual Appliance, which is also deployed automatically. For more information, see [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations).
+Automated deployment of the FortiGate Security Appliance service is no longer supported. For a similar service, consider the [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations), which is deployed automatically.
 {:deprecated}
 
 The FortiGate Security Appliance service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances.
@@ -96,13 +95,3 @@ Review the following considerations before you delete the FortiGate Security App
 * Deleting the FortiGate Security Appliance service deletes the public VLAN that was added.
 * During the service deletion, your instance might not be able to access the internet temporarily.
 * All FortiGate rules to permit, inspect, block, and route NAT traffic are deleted together with the Fortinet service. If you have any NAT rules, you must reconfigure them.
-
-## Related links
-{: #fsa_considerations-related}
-
-* [Ordering FortiGate Security Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_ordering)
-* [Managing FortiGate Security Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fsa_considerations#fsa_considerations-managingfsa)
-* [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
-* [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [Fortinet website](https://www.fortinet.com/){:external}
-* [Fortinet Document Library](https://docs.fortinet.com/product/fortigate/6.2){:external}

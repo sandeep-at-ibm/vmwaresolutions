@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-18"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -65,7 +65,6 @@ For the edge services cluster, you cannot add or remove ESXi servers.
       * The storage type of the cluster is **Local disks**.
    * Select a new bare metal server configuration:
       * (NSX-V only) For instances with vSphere Enterprise Plus 6.7u1, specify the VMware vSphere version for the new ESXi server.
-      * If you are using vSAN storage, even though vSphere 6.7u3 might be selected, vSphere ESXi 6.7u2 will be installed.
       * For **Skylake** and **Cascade Lake**, specify the **CPU model**, the amount of **RAM**, and the **Number of bare metal servers**.
       * For **SAP-certified**, specify the **CPU model and RAM** and the **Number of bare metal servers**.
 9. Complete the subnet settings.
@@ -101,9 +100,6 @@ If you are adding ESXi servers during maintenance mode, VMs are not migrated to 
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the VMs running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
 * (NSX-V only) If F5 BIG-IP or FortiGate Virtual Appliance is installed on your ESXi server, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
 * (NSX-V only) If IBM Spectrum Protect&trade; Plus is installed on your ESXi server, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi server to be removed.
-
-A 12-month commitment is required when you order the VMware HCX service. Your account continues to be charged for the HCX components if you delete a server before the end of 12-month commitment period. The 12-month commitment expiration date is available on the HCX details page. For more information about viewing service details, see [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure).
-{:important}
 
 ### Procedure to remove ESXi servers
 {: #vc_addingremovingservers-removing-procedure}

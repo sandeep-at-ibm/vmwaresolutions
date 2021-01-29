@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-07"
+lastupdated: "2021-01-11"
 
 subcollection: vmwaresolutions
 
@@ -14,6 +14,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Post-deployment considerations for your VMware instance
 {: #solution_considerations}
@@ -28,7 +29,7 @@ The following list is not exhaustive. For more information, see [IBM-managed ser
 ## IBM Cloud account access
 {: #solution_considerations-acct-access}
 
-To manage access to your {{site.data.keyword.cloud_notm}} account, permit other members of your team to access your instance in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Inviting users to access services and resources](/docs/vmwaresolutions?topic=vmwaresolutions-iamuserinvite).
+To manage access to your {{site.data.keyword.cloud_notm}} account, permit other members of your team to access your instance in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Inviting users to access services and resources](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount#useraccount-iamuserinv).
 
 ## Limitations
 {: #solution_considerations-limitations}
@@ -108,6 +109,7 @@ Ensure to plan for and implement the following solutions for monitoring your ins
 - Proactive monitoring of hosts, drives, management software, and network, including vSAN monitoring if applicable. The [VMware vRealize Operations on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) offering can help you operate and monitor the performance, health, and capacity of your VMware environment.
 - Capacity monitoring and planning. You can [add and remove clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters) and [add and remove hosts](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers) to your instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 - Monitoring your backup infrastructure and backup jobs.
+- vSphere Distributed Switch Health Check is enabled by default and can generate a significant number of MAC addresses for testing teaming policy, MTU size, and VLAN configuration, which results in extra network traffic. You may want to disable this health check and only re-enable as needed for network troubleshooting. For more information, see [vSphere Distributed Switch Health Check](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.networking.doc/GUID-4A6C1E1C-8577-4AE6-8459-EEB942779A82.html){:external}.
 
 ## Business continuity and availability
 {: #solution_considerations-business-cont}

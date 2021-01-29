@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-06-02"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -32,7 +32,7 @@ Day 2 operations typically consist of the following high level tasks:
 * Compliance. For more information, see [Compliance](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-compliance).
 * Proactive and reactive maintenance. For more information, see [Proactive tasks](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-proactive) and [Troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-trouble).
 
-For more information on day 2 responsibilities, see [Responsibilities for Day 2 operations](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-responsibilities).
+For more information on day 2 responsibilities, see [Responsibilities for day 2 operations](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-responsibilities).
 
 ## Operational procedures introduction
 {: #opsprocs-intro-proc}
@@ -90,7 +90,7 @@ You can have enterprise tools in place that you can use to monitor and manage yo
 
 In addition to monitoring, Operations Management on {{site.data.keyword.cloud_notm}}, helps with configuration, compliance, and many of the proactive tasks detailed in this documentation.
 
-**Next topic**: [Responsibilities for Day 2 operations](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-responsibilities)
+**Next topic**: [Responsibilities for day 2 operations](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-responsibilities)
 
 ## Related links
 {: #opsprocs-intro-links}

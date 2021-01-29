@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-09-22"
+lastupdated: "2020-12-22"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -54,17 +54,17 @@ Complete the following requirements before you begin the upgrade:
 * Confirm that you have a [My VMware](https://my.vmware.com){:external} user ID for which to download the required binary files to upgrade. If you don't, contact IBM Support with the upgrade support ticket ID.
 * Confirm that VUM is configured to reach https://www.vmware.com to download patches. If it can't be configured because of security policies, then you must manually download the most recent patch sets and upload them into VUM. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 
-### Preparing your jumpbox
+### Preparing your jump box
 {: #vc_vsphere_upgrade-prereq-jumpbox}
 
 As the {{site.data.keyword.cloud_notm}} client access VPN is limited to 512 Kbps, it is recommended that you take one of the following actions:
 * Provision an {{site.data.keyword.cloud_notm}} Windows 2012-2016 server Virtual Server Instance (VSI).
 * Set up a similar Windows VM on a separate vCenter Server environment within the same {{site.data.keyword.cloud_notm}} data center.
-This VM is used as a jumpbox into the vCenter Server instance for the upgrade and it allows you to download the binary files from https://my.vmware.com. While it is possible to place this VM on the vCenter Server instance that is being upgraded, it is not recommended.
+This VM is used as a jump box into the vCenter Server instance for the upgrade and it allows you to download the binary files from https://my.vmware.com. While it is possible to place this VM on the vCenter Server instance that is being upgraded, it is not recommended.
 
-Complete the following steps to order a VSI jumpbox.
+Complete the following steps to order a VSI jump box.
 
-Skip the first step if you have a VSI jumpbox in your environment.
+Skip the first step if you have a VSI jump box in your environment.
 {:note}
 
 1. Order an hourly or monthly VSI from the [{{site.data.keyword.cloud_notm}} infrastructure customer portal](https://control.softlayer.com/){:external}. Order the following attributes:
@@ -85,7 +85,7 @@ Skip the first step if you have a VSI jumpbox in your environment.
 #### Downloading binary files
 {: #vc_vsphere_upgrade-prereq-jumpbox-binary}
 
-Use your Windows VSI jumpbox and log in to your https://my.vmware.com account to download the following binary files:
+Use your Windows VSI jump box and log in to your https://my.vmware.com account to download the following binary files:
 
 * VMware vSphere 6.7u1 Hypervisor (ESXi ISO) image (Includes VMware Tools)
 * vCenter 6.7u1b appliance ISO. Not the update bundle
@@ -201,7 +201,7 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
     1. SSH into the PSC with the root ID and password. You can log in, even though the password is expired.
     2. Use the shell `passwd` command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
-2. Use the built-in Windows ISO mount function to mount the vCenter Server 6.7u1b ISO within your jumpbox.
+2. Use the built-in Windows ISO mount function to mount the vCenter Server 6.7u1b ISO within your jump box.
 3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.
 
 **Notes**:

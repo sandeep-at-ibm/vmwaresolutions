@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-09-25"
+lastupdated: "2020-12-16"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -71,13 +71,13 @@ To view the property details of an instance:
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter version | The VMware vCenter Server version.<br><br>**Note:** There is a slight variation between the vCenter Server version that is displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere® Web Client. Both are correct. |
 | VMware NSX® networking solution | Either NSX-V or NSX-T. |
+| VMware vSphere version | The version of VMware vSphere. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | _VMware component_ license | If you selected to use your own VMware license for any of the VMware components on the **Licensing** page when you ordered the instance, the VMware component name and the license key that you entered for the component are displayed.<br><br>Examples of VMware component licenses can include: **NSX license**, **vCenter Server license**, and **vSAN license**. |
 | NSX license edition | The version and edition of the VMware NSX license. |
 | Root domain | The root domain name is the DNS domain name and the Microsoft® Active Directory (AD) forest root name. |
 | SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
 | Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance hostnames reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
-| Enable private NICs only | Network interface card (NIC) enablement is set to **Public and private network** (False) or **Private network only** (True) when the vCenter Server instance was ordered. |
 {: caption="Table 3. vCenter Server instance properties" caption-side="top"}
 
 ## Procedure to view the access information for vCenter Server instances
@@ -87,6 +87,9 @@ Under **Access information**, view the access information for the instance-relat
 
 | Component | Description |
 |:--------- |:----------- |
+| AD/DNS IP or IPs[^ips] | The IP address or addresses of the AD server or servers. |
+| AD/DNS FQDN[^fqdn] | The AD/DNS server fully qualified domain names (FQDN).<br><br>**Note:** The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
+| AD/DNS Remote Desktop[^nsxv] | For primary instances, it displays the username and password to access the AD server through a remote desktop connection.<br><br>For secondary instances, click the **View on primary instance** link to be directed to the username and password information on the primary instance.<br><br>**Note:** After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you receive access to the correct administrator password. | 
 | vCenter/PSC IP | The IP address of the vCenter Server. |
 | vCenter/PSC FQDN | The vCenter Server fully qualified domain name (FQDN). |
 | vCenter/PSC ADMIN | The VMware vCenter Single Sign-On username and password that you can use to log in to the vCenter Server by using the vSphere Web Client. |
@@ -94,13 +97,12 @@ Under **Access information**, view the access information for the instance-relat
 | NSX Manager IP | The IP address of the NSX Manager. |
 | NSX Manager FQDN | The NSX Manager fully qualified domain name (FQDN). |
 | NSX Manager HTTP | The username and password that is used to access the NSX Manager web console. |
-| Customer Edge VM IPs[^nsxt1] | The IP address or addresses for the customer edge VM. |
+| NSX Controllers IPs[^nsxt3] | The IP address or addresses for the NSX node VM.  |
+| NSX Controllers SSH[^nsxt4] | The username and password that you can use to access the NSX node VM through KVM or SSH connection. |
+| Customer Edge VM IPs[^nsxt1] | The IP address or addresses for the Customer Edge VM. |
 | Customer Edge VM SSH[^nsxt2] | The username and password that you can use to access the Customer Edge VM through KVM or SSH connection. |
-| NSX Node VM IPs[^nsxt3] | The IP address or addresses for the NSX node VM.  |
-| NSX Node VM SSH[^nsxt4] | The username and password that you can use to access the NSX node VM through KVM or SSH connection. |
-| AD/DNS IP or IPs[^ips] | The IP address or addresses of the AD server or servers. |
-| AD/DNS FQDN[^fqdn] | The AD/DNS server fully qualified domain names (FQDN).<br><br>**Note:** The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
-| AD/DNS Remote Desktop[^nsxv] | For primary instances, it displays the username and password to access the AD server through a remote desktop connection.<br><br>For secondary instances, click the **View on primary instance** link to be directed to the username and password information on the primary instance.<br><br>**Note:** After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you receive access to the correct administrator password.  
+| Service Edge VM IPs[^nsxt5] | The IP address or addresses for the Service Edge VM. |
+| Service Edge VM SSH[^nsxt6] | The username and password that you can use to access the Service Edge VM through KVM or SSH connection. |
 {: caption="Table 4. vCenter Server access information for instance-related components" caption-side="top"}
 
 [^nsxt1]: NSX-T only
@@ -110,6 +112,10 @@ Under **Access information**, view the access information for the instance-relat
 [^nsxt3]: NSX-T only
 
 [^nsxt4]: NSX-T only
+
+[^nsxt5]: NSX-T only
+
+[^nsxt6]: NSX-T only
 
 [^ips]: For NSX-V, one IP address for one server. For NSX-T, two IP addresses for the two AD servers.
 

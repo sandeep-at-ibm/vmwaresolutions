@@ -2,14 +2,19 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-01-11"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:external: target="_blank" .external}
 
 # Overview of IBM Cloud for VMware Solutions
 {: #solution_overview}

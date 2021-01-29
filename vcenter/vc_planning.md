@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-19"
+lastupdated: "2021-01-12"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -17,12 +17,12 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:term: .term}
 
-# Requirements and planning for vCenter Server instances
+# Requirements and planning for vCenter Server
 {: #vc_planning}
 
-Review the following requirements before you order your VMware vCenter Server instances. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and add-on service requirements.
+Review the following requirements before you order your VMware vCenter Server instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and add-on service requirements.
 
-Only a limited number of add-on services are supported for vCenter Server with NSX-T instances.
+Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
 {:important}
 
 ## IBM Cloud account requirements
@@ -35,7 +35,7 @@ The {{site.data.keyword.cloud}} account that you are using must meet certain req
 
 The vCenter Server deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements. The following {{site.data.keyword.cloud_notm}} data centers are available for vCenter Server deployment.
 
-| {{site.data.keyword.cloud_notm}} data center | Region | Server options for NSX-V| Server options for NSX-T |
+| {{site.data.keyword.cloud_notm}} data center | Region | Server options for NSX-V| Server options for NSX-T[^nsx-t-7] |
 |:----------------------|:-------|:---------------|:-----------------|
 | Amsterdam 03 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Chennai 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified[^sap-che01] | Skylake, Cascade Lake |
@@ -57,7 +57,6 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 | Osaka 21 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
 | Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
 | Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
-| Oslo 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-osl01] | Skylake, Cascade Lake |
 | Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] | Skylake, Cascade Lake |
 | Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Seoul 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
@@ -71,10 +70,14 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 | Tokyo 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Tokyo 05 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Toronto 01 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
+| Toronto 04 | NA East | Cascade Lake | Cascade Lake |
+| Toronto 05 | NA East | Cascade Lake | Cascade Lake |
 | Washington DC 04 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 06 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 07 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vCenter Server instances" caption-side="top"}
+
+[^nsx-t-7]: vSphere Enterprise Plus 7.0 instances support Cascade Lake servers only
 
 [^sap-che01]: Existing vSphere 6.5 clusters only
 
@@ -83,8 +86,6 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 [^sap-mil01]: Existing vSphere 6.5 clusters only
 
 [^sap-mon01]: Existing vSphere 6.5 clusters only
-
-[^sap-osl01]: Existing vSphere 6.5 clusters only
 
 [^sap-par01]: Existing vSphere 6.5 clusters only
 
@@ -113,7 +114,7 @@ You are responsible for maintaining and ensuring the availability of all instanc
 
 You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
-Only a limited number of add-on services are supported for vCenter Server with NSX-T instances.
+Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
 {:important}
 
 ### Planning for VMware HCX

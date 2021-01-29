@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-07-15"
+lastupdated: "2021-01-28"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -18,8 +18,8 @@ subcollection: vmwaresolutions
 # Ordering IBM Spectrum Protect Plus
 {: #spp_ordering}
 
-You can include the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
-
+You can include the IBM Spectrum® Protect Plus service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
+®
 ## Ordering IBM Spectrum Protect Plus for a new instance
 {: #spp_ordering-new}
 
@@ -55,11 +55,11 @@ The IOPS (Input/output Operations Per Second) per GB based on your workload requ
 ## Deployment process for IBM Spectrum Protect Plus
 {: #spp_ordering-deploy}
 
-The deployment of IBM Spectrum Protect Plus is automated. Whether you order an instance with this service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_short}} automation process:
+The deployment of IBM Spectrum Protect Plus is automated. Whether you order an instance with this service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_full}} automation process:
 
 1. Based on the settings you specify, endurance NFS storage is ordered from the {{site.data.keyword.cloud_notm}} infrastructure for the IBM Spectrum Protect Plus backup repository.
 2. Based on the settings you specify, a number of licenses for IBM Spectrum Protect Plus are ordered from the  {{site.data.keyword.cloud_notm}} infrastructure. The licenses are ordered in increments of 10 virtual machine (VM) license packs, based on the number of VMs that you specified to license when ordering the IBM Spectrum Protect Plus service. If you want to bring an existing IBM Spectrum Protect Plus license, no license order is placed from the {{site.data.keyword.cloud_notm}} infrastructure.
-3. The NFS storage ordered for this service is mounted to all the ESXi servers in the default cluster of the instance, including adding correct static routes on each ESXi server to the storage private subnet.
+3. The NFS storage ordered for this service is mounted to all the VMware ESXi™ servers in the default cluster of the instance, including adding correct static routes on each ESXi server to the storage private subnet.
 4. NFS datastores are created in vCenter Server for all NFS storage volumes that are mounted to the ESXi servers.
 5. The IBM Spectrum Protect Plus VMs are deployed, activated, and configured in the default cluster of the instance.
 6. The NFS storage that was ordered for this service is attached to the IBM Spectrum Protect Plus VM and the backup repository is configured.

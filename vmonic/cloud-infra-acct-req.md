@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-28"
+lastupdated: "2021-01-27"
 
 keywords: user account, user permissions, VRF account
 
@@ -33,7 +33,7 @@ You can verify or update permissions for classic infrastructure users at any tim
 | Permission         | Details                                 |
 |:------------------ |:--------------------------------------- |
 | Add Server | This permission is required for the following operations: to order {{site.data.keyword.cloud_notm}} bare metal servers on which VMware® ESXi™ runs and to provision hourly virtual servers that are used for instance configuration, maintenance, and support operations. |
-| Cancel Server | This permission is required to release and reclaim bare metal servers on which VMware® ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
+| Cancel Server | This permission is required to release and reclaim bare metal servers on which VMware ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
 | View Virtual Server Details | This permission is required to retrieve the server provisioning details, which are required for order validation and automated configuration. |
 | Add Storage | This permission is required to order backup storage and shared storage for the instance. |
 | Manage Storage | This permission is required to manage backup storage and shared storage for the instance. |

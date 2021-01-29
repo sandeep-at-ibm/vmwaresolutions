@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-07"
+lastupdated: "2021-01-06"
 
 keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 

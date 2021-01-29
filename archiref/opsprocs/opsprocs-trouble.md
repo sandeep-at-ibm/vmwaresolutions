@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-30"
+lastupdated: "2021-01-27"
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ To troubleshoot your vCenter Server instance issues, your system administrators 
 
 * Identifying Symptoms - A number of potential causes might lead to the under-performance or non-performance of your instance. The first step in efficient troubleshooting is to identify exactly what is going wrong. These symptoms might be reported from: vSphere events and alarms, Operations Management in {{site.data.keyword.cloud}} or reported via your Service Desk from one of your users.
 * Isolating the affected components - After you have identified the symptoms of the issue, you must identify the software or hardware components that are affected and might be causing the issue and those components that are not involved. Tools such as vCenter Operations Management in {{site.data.keyword.cloud_notm}} assist with this step.
-* Proposing a fix or workaround - Once you understand the symptoms and have isolated the components, you can research possible fixes and workarounds. Your system administrators also use the {{site.data.keyword.cloud_notm}} Portal, including the troubleshooting scenarios in this document, IBM ServiceNow, and VMware Knowledgebase. In addition, there are many wikis and blogs that might help. For even quicker resolutions, Operations Management in {{site.data.keyword.cloud_notm}} includes a number of remediations for identified issues.
+* Proposing a fix or workaround - Once you understand the symptoms and have isolated the components, you can research possible fixes and workarounds. Your system administrators also use the {{site.data.keyword.cloud_notm}} portal, including the troubleshooting scenarios in this document, IBM ServiceNow, and VMware Knowledgebase. In addition, there are many wikis and blogs that might help. For even quicker resolutions, Operations Management in {{site.data.keyword.cloud_notm}} includes a number of remediations for identified issues.
 * Testing Possible Solutions - When you know what the symptoms of the issue are, which components are involved and have proposed a fix/workaround, your system administrators test the solutions systematically until the issue is resolved.
 
 vSphere includes a user-configurable events and alarms subsystem, which tracks events that occur throughout the vSphere environment and stores the data in log files and the vCenter database. This subsystem also enables system administrators to specify the conditions under which alarms are triggered. Alarms change state from warnings to more serious alerts as system conditions change, and can trigger automated alarm actions such as to email the system administrator team. This functionality is useful when you want to be informed, or take immediate action, when certain events or conditions occur for a specific inventory object, or group of objects.
@@ -96,7 +96,7 @@ In an aid to isolating the affected components, this documentation on troublesho
 | vSphere ESXi host is in a non-responding state | For information about troubleshooting a vSphere ESXi host that shows as Not Responding, Disconnected, or the VMs on the host show as unavailable in vCenter, see [ESX/ESXi hosts do not respond and is grayed out (1019082)](https://kb.vmware.com/s/article/1019082){:external}. |
 | When powering on a VM, you see a `File not found` error | For information about re-creating a lost virtual disk descriptor file (VMDK), see [Re-creating a missing virtual machine disk descriptor file (1002511)](https://kb.vmware.com/s/article/1002511){:external}. |
 | VM Performance issues | For information about isolating a performance issue on a vSphere ESXi host, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003?lang=en_US){:external}. Performance issues can be caused by CPU constraints, memory over commitment, storage latency, or network latency. |
-| Bare metal server is down | If the bare metal server running vSphere ESXi is unresponsive or down then log on to the {{site.data.keyword.cloud_notm}} management UI or console and check the status. If required, open a case to get assistance with your bare metal server. For more information, see [Viewing support cases](https://test.cloud.ibm.com/docs/get-support?topic=get-support-viewing-support-cases). |
+| Bare metal server is down | If the bare metal server running vSphere ESXi is unresponsive or down then log on to the {{site.data.keyword.cloud_notm}} management UI or console and check the status. If required, open a case to get assistance with your bare metal server. For more information, see [Managing your support cases](/docs/get-support?topic=get-support-managing-support-cases). |
 | vSphere ESXi host is in disconnected or a not responding state  | For more information, see [Troubleshooting an ESXi/ESX host in non responding state (1003409)](https://kb.vmware.com/s/article/1003409?lang=en_US){:external}. |
 | Purple diagnostic screen | Purple screen errors can signal a kernel panic. The vSphere ESXi kernel (vmkernel) triggers this safety measure in response to an event or error that is unrecoverable and would mean that continuing to run would pose a high risk for the services and VMs. When the panic occurs and the vSphere ESXi host crashes, it ends all the services running on it together with all the VMs hosted. The VMs are not gracefully shut down, but rather abruptly powered off. If the host is part of a cluster and you configured HA, these VMs are restarted on the other hosts in the cluster. For more information, see [Interpreting an ESX/ESXi host purple diagnostic screen (1004250)](https://kb.vmware.com/s/article/1004250){:external}. |
 {: caption="Table 1. Typical vSphere ESXi hosts troubleshooting" caption-side="top"}

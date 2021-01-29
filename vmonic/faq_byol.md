@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-06-05"
+lastupdated: "2020-12-10"
 
 keywords: FAQ, license, BYOL
 
@@ -27,7 +27,7 @@ Find answers to frequently asked questions about licensing, including the Bring 
 {: #faq_byol-license-mgmt}
 {: faq}
 
-After an order to create a new cluster for VMware vSphere is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
+After an order to create a new cluster for VMware® vSphere® is placed, the VMware licenses, ESXi servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
 After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
 
@@ -51,18 +51,18 @@ Yes. For each VMware component, one license per CPU is required. Currently, all 
 {: #faq_byol-vrops}
 {: faq}
 
-You might see a discrepancy in the supported number of VMs between what's displayed on the vRealize Operations Manager console and the per-CPU metering in {{site.data.keyword.cloud_notm}}. This issue happens if you did not select the **Product evaluation (no key required)** option when you first accessed the vROps Manager console after service installation. For more information, see [Accessing the vRealize Operations Manager console](/docs/vmwaresolutions?topic=vmwaresolutions-managing_vrops#managing_vrops-access-vrops-console).
+You might see a discrepancy in the supported number of VMs between what displays on the vRealize Operations Manager console and the per-CPU metering in {{site.data.keyword.cloud_notm}}. This issue happens if you did not select the **Product evaluation (no key required)** option when you first accessed the vROps Manager console after service installation. For more information, see [Accessing the vRealize Operations Manager console](/docs/vmwaresolutions?topic=vmwaresolutions-managing_vrops#managing_vrops-access-vrops-console).
 
 This discrepancy is a result of the fact that the vROps keys that are created for {{site.data.keyword.cloud_notm}} subscription licensing include a virtual machine (VM) capacity, however {{site.data.keyword.cloud_notm}} meters and bills the vROps license per CPU, and not per VM.
 
-The discrepancy does not indicate any service or licensing problem. The vRealize Operations and Log Insight service is fully licensed for all VMs on each vCenter Server host and will continue to work properly.
+The discrepancy does not indicate any service or licensing problem. The vRealize Operations and Log Insight service is fully licensed for all VMs on each vCenter Server host and continues to work properly.
 
 ## What is BYOL and is it supported for VMware perpetual licenses?
 {: #faq_byol-def}
 {: faq}
 {: support}
 
-BYOL is a feature available to VMware vCenter Server and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components:
+BYOL is a feature available to VMware vCenter Server® and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components:
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX
@@ -77,7 +77,7 @@ The BYOL feature is not available to Business Partner users.
 {: #faq_byol-license-cpu-reqs}
 {: faq}
 
-The minimum number of licenses for BYOL that are required depends on the number of CPUs per server and the number of servers in the order. For example, the CPU requirements based on 4 servers with 2 CPUs per server is 8 CPUs.
+The minimum number of licenses for BYOL that are required depends on the number of CPUs per server and the number of servers in the order. For example, the CPU requirements based on four servers with 2 CPUs per server is 8 CPUs.
 
 ## Can you use the BYOL feature for some VMware components and purchase monthly licenses for others?
 {: #faq_byol-mthly-license}
@@ -111,7 +111,7 @@ Currently, only VMware vSphere Enterprise and VMware vSAN can be licensed per cl
 {: #faq_byol-mgmt}
 {: faq}
 
-You can manage your BYOL licenses by using the VMware vSphere Web Client after the instance deployment is completed.
+You can manage your BYOL licenses by using the VMware vSphere web client after the instance deployment is completed.
 
 ## When you add more ESXi servers to an instance later, does the instance validate if the BYOL licenses have enough capacity?
 {: #faq_byol-add-esxi}

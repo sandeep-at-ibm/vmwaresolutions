@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-09-24"
+lastupdated: "2021-01-28"
 
 keywords: VLAN ports, vmware solutions ports, ports usage vmware solutions
 
@@ -46,7 +46,7 @@ It is not recommended to put a firewall on a secondary private VLAN that has sto
 
 | Public VLAN | Private VLAN | Secondary private VLAN |
 |:------------|:-------------|:-----------------------|
-| Primary subnet<br><br>Portable subnets:<br>- Management edge gateway public<br>- Customer edge gateway public | Primary subnet<br><br>Portable subnets:<br>- Infrastructure VMs (CD/vCenter/AD)<br>- NSX Host TEP (NSX-V)<br>- Customer edge gateway private | Portable subnets:<br>- vSAN™ traffic<br>- Shared storage traffic<br>- vMotion traffic<br>- NSX host TEP traffic (NSX-T)<br>- NSX edge TEP traffic (NSX-T)<br>- Customer edge TEP traffic (NSX-T) |
+| Primary subnet<br><br>Portable subnets:<br>- Management edge gateway public<br>- Customer edge gateway public | Primary subnet<br><br>Portable subnets:<br>- Infrastructure VMs (CD/vCenter/AD)<br>- VMware NSX® Host TEP (NSX-V)<br>- Customer edge gateway private | Portable subnets:<br>- vSAN™ traffic<br>- Shared storage traffic<br>- vMotion traffic<br>- NSX host TEP traffic (NSX-T)<br>- NSX edge TEP traffic (NSX-T)<br>- Customer edge TEP traffic (NSX-T) |
 {: caption="Table 1. Subnets for public, private, and secondary private VLANs" caption-side="top"}
 
 ## Ports that are used for deployment and day 2 operations
@@ -65,13 +65,13 @@ Review the following information about the ports described in the table:
   * 161.26.0.0/16
 * {{site.data.keyword.cloud_notm}} endpoint service network includes 166.8.0.0/14.
 
-For more information about OCP networking, see [About the OpenShift SDN network provider](https://docs.openshift.com/container-platform/4.4/networking/openshift_sdn/about-openshift-sdn.html){:external}.
+For more information about Red Hat® OpenShift® (OCP) networking, see [About the OpenShift SDN network provider](https://docs.openshift.com/container-platform/4.4/networking/openshift_sdn/about-openshift-sdn.html){:external}.
 
 | Source | Subnet/IP range | Target | Subnet/IP range | Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:-----|:---------|:--------|:--------|
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi™ host | Private primary subnet | 22 | TCP™ | Set up, configure, patch ESXi host | SSH |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi vMotion | vMotion traffic | | ICMP™ | Set up ESXi network | |
-| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi vSAN | vSAN traffic | | ICMP | Set up ESXi network | |
+| IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi vSAN™  | vSAN traffic | | ICMP | Set up ESXi network | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | ESXi shared storage | Shared storage traffic | | ICMP | Set up ESXi network | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | Customer edge private | Customer edge gateway private | | ICMP | Set up NSX edge network | |
 | IBM CloudBuilder/<br>IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | Windows Active Directory  | Private primary subnet (for Windows VSI)/<br>infrastructure VMs (for Windows VMs) | 5986 | TCP | Set up and configure Windows Active Directory and DNS  | |
@@ -190,22 +190,22 @@ The following table provides information about the VMware HCX™ ports.
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | HCX | New subnet ordered in private VLAN | 9443 | TCP | Use HCX Virtual Appliance Management Interface for HCX system configuration | HTTPS |
 {: caption="Table 7. VMware HCX ports" caption-side="top"}
 
-### Ports for Hytrust CloudControl, Hytrust DataControl, and Hytrust KeyControl
+### Ports for HyTrust CloudControl, HyTrust DataControl, and HyTrust KeyControl
 {: #vmwaresol_ports-vmware-optional-services-hytrust}
 
-The following table provides information about the Hytrust® CloudControl™, Hytrust DataControl®, and Hytrust KeyControl™ ports.
+The following table provides information about the HyTrust® CloudControl™, HyTrust DataControl®, and HyTrust KeyControl™ ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range | Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:-----|:---------|:--------|:--------|
-| Hytrust CloudControl | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
-| Hytrust CloudControl | Infrastructure VMs | Windows Active Directory and DNS server | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
-| Hytrust CloudControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | | ICMP | Ping | Ping |
-| Hytrust CloudControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 443 | TCP | Access Windows Active Directory | HTTPS |
-| Hytrust DataControl | Infrastructure VMs | Windows Active Directory | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
-| Hytrust DataControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
-| Hytrust KeyControl | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123  | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
-| Hytrust KeyControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
-{: caption="Table 8. Hytrust CloudControl, Hytrust DataControl, and Hytrust KeyControl ports" caption-side="top"}
+| HyTrust CloudControl | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
+| HyTrust CloudControl | Infrastructure VMs | Windows Active Directory and DNS server | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
+| HyTrust CloudControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | | ICMP | Ping | Ping |
+| HyTrust CloudControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 443 | TCP | Access Windows Active Directory | HTTPS |
+| HyTrust DataControl | Infrastructure VMs | Windows Active Directory | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
+| HyTrust DataControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
+| HyTrust KeyControl | Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123  | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | NTP |
+| HyTrust KeyControl | Infrastructure VMs | Windows Active Directory | Private primary subnet/<br>infrastructure VMs | 53 | UDP | Use Windows DNS service | DNS |
+{: caption="Table 8. HyTrust CloudControl, HyTrust DataControl, and HyTrust KeyControl ports" caption-side="top"}
 
 ### Ports for IBM Spectrum Protect Plus
 {: #vmwaresol_ports-vmware-optional-services-spp}
@@ -220,12 +220,13 @@ The following table provides information about the IBM Spectrum® Protect Plus p
 ### Ports for Juniper vSRX
 {: #vmwaresol_ports-vmware-optional-services-juniper-vsrx}
 
-The following table provides information about the Juniper vSRX ports.
+The following table provides information about the Juniper® vSRX ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vSRX private IPs | New subnet ordered in private VLAN | 22 | TCP | Set up and configure vSRX | SSH |
 | IBM CloudDriver | Private primary subnet/<br>infrastructure VMs | vSRX private IPs | New subnet ordered in private VLAN | 830 | TCP | Set up and configure vSRX by NETCONF over SSH | |
+| vSRX | vSRX Private IP | vRealize Log Insight (if vROPs service is installed) | vRealize Log Insight FQDN | 514 | UDP | Remote syslog logging to vRealize Log Insight if vROPs service is installed | Syslog |
 {: caption="Table 10. Juniper vSRX ports" caption-side="top"}
 
 ### Ports for Red Hat OpenShift for VMWare
@@ -249,7 +250,7 @@ For more information about OCP networking, see [About the OpenShift SDN network 
 ### Ports for Veeam
 {: #vmwaresol_ports-vmware-optional-services-veeam}
 
-The following table provides information about about the Veeam ports.
+The following table provides information about the Veeam® ports.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|
@@ -270,7 +271,7 @@ The following table provides information about about the Veeam ports.
 ### Ports for vRealize Operations and Log Insight
 {: #vmwaresol_ports-vmware-optional-services-vrops-loginsight}
 
-The following table provides information about the vRealize Operations and Log Insight (vROps) ports when vROps is deployed in a vCenter Server with NSX-V instance.
+The following table provides information about the vRealize Operations™ and vRealize Log Insight™ (vROps) ports when vROps is deployed in a vCenter Server with NSX-V instance.
 
 | Source | Subnet/IP range | Target | Subnet/IP range |  Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:------|:---------|:--------|:--------|

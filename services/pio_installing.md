@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-06-16"
+lastupdated: "2021-01-28"
 
 keywords: primary io hdm, hdm install, download hdm
 
@@ -41,7 +41,7 @@ To install HDM on the hybrid infrastructure, complete the following steps:
 ### Deploying and installing PrimaryIO HDM on-premises
 {: #pio_installing-deploy}
 
-The first HDM component to be deployed is the PIO Appliance. This appliance provides interfaces to add an on-premises vCenter Server and to register the HDM plug-in with it. After successful registration of the HDM plug-in, you can choose one of the clusters in the on-premises data center and install the following HDM components on it:
+The first HDM component to be deployed is the PIO Appliance. This appliance provides interfaces to add an on-premises VMware vCenter Server® and to register the HDM plug-in with it. After successful registration of the HDM plug-in, you can choose one of the clusters in the on-premises data center and install the following HDM components on it:
 * PrimaryIO on-premises Manager
 * PrimaryIO ESX Manager
 
@@ -55,7 +55,7 @@ Only the on-premises components are deployed (the cloud components are not neede
 
 After successful completion of the previous steps, you can add an {{site.data.keyword.cloud}} endpoint to HDM. The following components are installed in the selected cluster in the cloud data center.
 * PrimaryIO On-cloud Manager
-* PrimaryIO Cloud Cache (one per each ESXi node in cloud cluster)
+* PrimaryIO Cloud Cache (one per each VMware ESXi™ node in cloud cluster)
 
 After the cloud endpoint is successfully configured, a network connection between {{site.data.keyword.cloud_notm}} and the on-premises cluster is established.
 

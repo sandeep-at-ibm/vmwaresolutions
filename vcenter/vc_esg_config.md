@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-08"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -104,19 +104,19 @@ Additionally, you can find more details about the customer subnets by completing
 ## Procedure to identify customer subnets details for NSX-T
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
 
-The logical routers **Customer-T1-LR** and **Customer-T0-LR** as well as edges **cust-nsx-edge0** and **cust-nsx-edge1** are intended for your own usage, so you can modify it to define more NAT rules for inbound or outbound traffic. These rules must use only the IP addresses on the public or private customer subnets that are ordered on your behalf.
+The logical routers `<instance_name>-<podname>-<cluster_name>-T1-workload` and `<instance_name>-<podname>-<cluster_name>-T0-workload`, as well as the edges `cust-edge0` and `cust-edge1` are intended for your own usage, so you can modify them to define more NAT rules for inbound or outbound traffic. These rules must use only the IP addresses on the public or private customer subnets that are ordered on your behalf.
 
 To identify the details for the customer subnets so you can use the IP addresses ordered, complete the following steps in the NSX-T Web Client:
 
-1. Click the **Advanced Networking & Security** tab.
-2. On the left pane, click **Fabric**, then on the list select **Nodes**.
-3. On the tab, select **Edge Transport Nodes**.
-4. Click one of the customer edges. For example, **cust-nsx-edge0**. The public and private customer subnets are displayed in the **Description** field.
+1. Go to your vCenter Server instance infrastructure page.
+2. Select the management cluster.
+3. Go to the **Network interface** section on the cluster page.
+4. Collapse the **Public VLAN** and **Private VLAN** options. The public and private customer subnets are the ones that have **customer workload edge** in the **Description** field.
 
 Additionally, you can find more details about the customer subnets by completing the following steps in the {{site.data.keyword.slportal}}:
 
 1. Click **Networking > IP Management > Subnets**.
-2. Click the filter menu and in the **Subnet** field enter the identifier as seen in the description of **customer-nsx-edge0** in the NSX-T Web Client.
+2. Click the filter menu and in the **Subnet** field enter the identifier as seen in the description of **cust-edge0** in the NSX-T Web Client.
 3. Review the notes that are shown for the IP addresses. These notes identify which of the subnets and IP addresses are ordered and used during the initial setup.
 
    Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up additional network address translation rules, see [Managing NAT rules](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.

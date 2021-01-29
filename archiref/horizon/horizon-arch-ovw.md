@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-04-07"
+lastupdated: "2021-01-28"
 
 keywords: horizon, horizon 7, horizon 7 architecture
 
@@ -45,7 +45,7 @@ Since the Horizon 7 architecture is the same on-premises and in {{site.data.keyw
 
 You can also stretch CPA across two or more {{site.data.keyword.cloud_notm}} data centers. Usage of CPA is optional. You can choose to deploy Horizon 7 exclusively in a single {{site.data.keyword.cloud_notm}} data center without linking it to any other data center.
 
-## Differences Between Horizon 7 and Horizon Cloud
+## Differences between Horizon 7 and Horizon Cloud
 {: #horizon-arch-ovw-diffs}
 
 {{site.data.keyword.cloud_notm}} offers two solutions based on VMware Horizon – Horizon Cloud and Horizon 7. These two solutions share many features but are intended for different use cases. Horizon 7 provides some key advantages over Horizon Cloud, including:
@@ -56,7 +56,7 @@ You can also stretch CPA across two or more {{site.data.keyword.cloud_notm}} dat
 
 If you have questions about which Horizon solution is right for your use cases, talk to your VMware and {{site.data.keyword.cloud_notm}} account teams.
 
-## Horizon 7 Deployment Scenarios on IBM Cloud
+## Horizon 7 deployment scenarios on IBM Cloud
 {: #horizon-arch-ovw-scenarios}
 
 You can deploy Horizon 7 for the following scenarios.

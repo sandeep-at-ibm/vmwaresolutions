@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-01-28"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Ordering Veeam
 {: #veeam_ordering}
 
-You can include the Veeam service with a new VMware vCenter Server instance or add the service to your existing vCenter Server instance.
+You can include the Veeam® service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
 
 ## Ordering Veeam for a new instance
 {: #veeam_ordering-new}
@@ -41,7 +41,7 @@ When you order the service, provide the following settings.
 ### Name
 {: #veeam_ordering-name}
 
-Specify a unique name for this service instance. The name must be unique across all Veeam service instances and all instances in the {{site.data.keyword.cloud_notm}} account.
+Specify a unique name for this service instance. The name must be unique across all Veeam service instances and all instances in the {{site.data.keyword.cloud}} account.
 
 ### Deployment type
 {: #veeam_ordering-depl-type}
@@ -51,7 +51,7 @@ Select either **Windows Server VM on the management cluster** or **Single public
 ### Number of VMs to license
 {: #veeam_ordering-config-vms}
 
-Specify the number of VMs to license, in increments of 10. At least 10 VMs are required for license management.
+Specify the number of virtual machines (VMs) to license, in increments of 10. At least 10 VMs are required for license management.
 
 ### Storage size
 {: #veeam_ordering-config-storage-size}
@@ -67,7 +67,7 @@ The IOPS (input/output operations per second) per GB based on your workload requ
 {: #veeam_ordering-related}
 
 * [Veeam v9.5 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)
-* [Veeam v10 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Veeam v10a overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
 * [Ordering Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering_licenses)
 * [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)

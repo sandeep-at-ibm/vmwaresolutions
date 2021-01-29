@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-06-25"
+lastupdated: "2021-01-27"
 
 keywords: F5 console, BIG-IP Web UI, login F5 console
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 To manage the F5 BIG-IP® service, log in to the primary or the secondary BIG-IP Web UI consoles by using the corresponding credentials that you can find on the F5 BIG-IP service details page.
 
-For more information about viewing the service details, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+For more information about viewing the service details, see [Ordering, viewing, and deleting services for vCenter Server® instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
 ## Related links
 {: #managing_f5-related}

@@ -74,7 +74,7 @@ Metrics updates can be delayed by up to 60 minutes.
 
 You can optionally customize your dashboard.
 
-1.  In the {{site.data.keyword.cloud_notm}} Monitoring for Sysdig console, click **Dashboards** from the left navigation pane.
+1. In the {{site.data.keyword.cloud_notm}} Monitoring for Sysdig console, click **Dashboards** from the left navigation pane.
 2. Click the **IBM** menu and click **VMware Solutions Shared**.
 3. Customize your dashboard. For more information, see [Working with dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards).
 

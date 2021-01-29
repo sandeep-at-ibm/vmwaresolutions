@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-08-07"
+lastupdated: "2021-01-28"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 # Expanding and contracting capacity for a stretched cluster across multizone region
 {: #mcv_addingremovingservers}
 
-You can expand or contract the capacity of your stretched cluster across [multizone region](#x9774820){: term} according to your business needs. You can add or remove ESXi servers to and from witness, management, and stretched vSAN clusters. You can add or remove network file system (NFS) storage to and from witness and management clusters.
+You can expand or contract the capacity of your stretched cluster across [multizone region](#x9774820){: term} according to your business needs. You can add or remove VMware ESXi™ servers to and from witness, management, and stretched vSAN™ clusters. You can add or remove network file system (NFS) storage to and from witness and management clusters.
 
 ## Adding ESXi servers to a stretched cluster across multizone region
 {: #mcv_addingremovingservers-adding}
@@ -64,7 +64,7 @@ ESXi servers for stretched vSAN clusters are added in pairs.
 ### Before you remove ESXi servers
 {: #mcv_addingremovingservers-removing-prereq}
 
-* Whenever possible, remove ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, remove ESXi servers from vCenter Server only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, remove ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, remove ESXi servers from VMware vCenter Server® only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the VMs running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ### Procedure to remove ESXi servers
@@ -155,4 +155,3 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 * [Ordering a stretched cluster across multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
 * [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
 * [Viewing IBM Cloud for VMware Mission Critical Workload clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_viewingclusters)
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)

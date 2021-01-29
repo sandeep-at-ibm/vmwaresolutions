@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-01-27"
 
 subcollection: vmwaresolutions
 
@@ -49,9 +49,9 @@ Detailed instructions for each of these activities are contained within the prod
   * Load primary key:
     * Load new primary key - Passwords for all three keys will now be required, in practice these will be different passwords, known to different people, and stored on different systems.
     * Commit primary key register - Commit this primary key register. The CLI will prompt for the password for the signature key for the administrator with access to the crypto unit. You should now have a fully-committed primary key.
-    * Activate primary key - There are two registers for primary keys in the crypto unit, one for a new key and one for the current key. To activate this primary key, it needs to become the current key. On the {{site.data.keyword.cloud_notm}} Portal, the HPCS instance manage tab should confirm that the HSM primary key has been configured.
+    * Activate primary key - There are two registers for primary keys in the crypto unit, one for a new key and one for the current key. To activate this primary key, it needs to become the current key. On the {{site.data.keyword.cloud_notm}} portal, the HPCS instance manage tab should confirm that the HSM primary key has been configured.
 * Create a root key - IBM HPCS uses the recommended envelope encryption mechanism of taking a key that is used to encrypt data, the data encryption key or DEK, and encrypting the key itself with a root key. This root key never leaves the HSM.
-  * Using the {{site.data.keyword.cloud_notm}} Portal, view the {{site.data.keyword.cloud_notm}} resources, and find your IBM HPCS instance.
+  * Using the {{site.data.keyword.cloud_notm}} portal, view the {{site.data.keyword.cloud_notm}} resources, and find your IBM HPCS instance.
   * Click the **Add Key** button and then generate a new root key.
   * Review [Creating root keys](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-create-root-keys) for more information of this step.
 * Create a standard key - Perform this operation to [create a standard key](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-create-standard-keys).

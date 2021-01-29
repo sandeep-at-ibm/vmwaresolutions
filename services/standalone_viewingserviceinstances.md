@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-25"
+lastupdated: "2021-01-27"
 
 keywords: VMware HCX standalone, HCX on-premises, view HCX status
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Viewing on-premises VMware HCX instances
 {: #standalone_viewingserviceinstances}
 
-Use this procedure to view the on-premises HCX instances that you ordered for on-premises use and information about them.
+Use this procedure to view the on-premises VMware HCX® instances that you ordered for on-premises use and information about them.
 
 ## Procedure to view on-premises VMware HCX instances
 {: #standalone_viewingserviceinstances-procedure}

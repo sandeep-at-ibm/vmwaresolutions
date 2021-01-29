@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-10"
+lastupdated: "2021-01-28"
 
 keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
@@ -22,12 +22,12 @@ subcollection: vmwaresolutions
 # HyTrust KeyControl overview
 {: #htkc_considerations}
 
-The HyTrust KeyControl service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, including key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
+The HyTrust® KeyControl™ service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, including key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
 {: shortdesc}
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The HyTrust KeyControl service is not supported for vCenter Server with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 5.0.1.
+The HyTrust KeyControl service is not supported for VMware vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 5.0.1.
 {:note}
 
 ## Technical specifications for HyTrust KeyControl

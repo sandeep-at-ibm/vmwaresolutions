@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-12-02"
 
 subcollection: vmwaresolutions
 
@@ -37,7 +37,7 @@ To host these backups, deploy a Linux file server into your cluster by using the
 
 1. Order a private portable subnet from the {{site.data.keyword.cloud_notm}} infrastructure and locate it on the same VLAN as your system components. This is the private VLAN on which the management IP addresses for your hosts reside.
 2. Upload an operating system image to your VMware management datastore, such as Ubuntu Server 18.04 LTS, from the {{site.data.keyword.cloud_notm}} private mirror.
-3. Deploy this virtual machine (VM) into your cluster on the management port group by using a private portable IP address ordered previously. Ensure that the VM is configured to point to your AD/DNS servers and optionally add the VM to the DNS of your subdomain.
+3. Deploy this virtual machine (VM) into your cluster on the management port group by using a private portable IP address ordered previously. Ensure that the VM is configured to point to your AD/DNS servers and optionally add the VM to your DNS domain.
 4. Create a non-root backup user ID on this server and ensure that all the necessary services are configured and started for file transfers. For example, FTP or SSH.
 5. Ensure that this VM is included in your Veeam or IBM Spectrum Protect Plus management backup job.
 

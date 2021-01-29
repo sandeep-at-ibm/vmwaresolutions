@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-09-16"
+lastupdated: "2020-12-14"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -36,7 +36,7 @@ Ensure that you completed the following tasks:
 {: help}
 {: support}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **Start provisioning** section.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **IaaS platforms** section.
 2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card.
 3. Click the **Scale existing** tab and select the cluster that you want to scale from the **Cluster configurations** list.
 4. Review the cluster settings that are automatically completed.

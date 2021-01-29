@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-09-10"
+lastupdated: "2020-12-18"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -43,7 +43,7 @@ You are responsible for maintaining Caveonix RiskForesight to keep it updated to
 
 ## Updating Caveonix RiskForesight licenses
 
-The Caveonix RiskForesight license is valid for one year. You can update the Caveonix RiskForesight license when it expires by using the following procedure:
+The Caveonix RiskForesight license is valid for five years. You can update the Caveonix RiskForesight license when it expires by using the following procedure:
 1. Order a new Caveonix RiskForesight license and copy it to the Caveonix RiskForesight console. For more information, see [Procedure to order Caveonix RiskForesight licenses](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_license_ordering#caveonix_license_ordering-procedure).
 2. Delete the expired license from the **Caveonix RiskForesight Licenses** table in the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Procedure to delete Caveonix RiskForesight licenses](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_license_managing#caveonix_license_managing_procedure-delete).
 

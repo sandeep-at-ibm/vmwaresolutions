@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-07-14"
+lastupdated: "2021-01-28"
 
 keywords: disaster recovery, request DR services, DR managed service
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Managed Disaster Recovery Services
 {: #managing_zerto_services}
 
-The Zerto service provides replication and disaster recovery capabilities. These capabilities can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud}}.
+The Zerto service provides replication and disaster recovery capabilities. These capabilities can be integrated into the deployment offerings to protect and recover data in your VMware® virtual environment on {{site.data.keyword.cloud}}.
 
 When you request Managed Disaster Recovery Services, a fully managed disaster recovery (DR) environment can be deployed by using both Zerto DR software and IBM Resiliency Services.
 
@@ -45,7 +45,7 @@ For more information, see [IBM Resiliency Disaster Recovery as a Service](https:
 ## Procedure to request Managed Disaster Recovery Services
 {: #managing_zerto_services-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the **Services** section and click **Managed Disaster Recovery Services** on the **Professional Services** card.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the **Add-on services** section and click **Managed Disaster Recovery Services** in the **Professional services** category.
 2. On the **Managed Disaster Recovery Services** page, click the **About** tab to review the description and technical specifications for Zerto as a managed service.
 3. Click the **Create** tab.
 4. To add the service while you order a new instance, click **Add to new instance**, and then continue with [ordering a new vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).

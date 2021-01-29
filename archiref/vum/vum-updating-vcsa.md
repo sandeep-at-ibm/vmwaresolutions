@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-08-18"
+lastupdated: "2020-10-30"
 
 subcollection: vmwaresolutions
 
@@ -34,7 +34,7 @@ To update the PSC/VCSA, follow these steps:
 6. Go to the **Update** section and select **Check Updates** and then **Check CDROM**. The update is listed.
 7. Select **Install Updates** and **Accept** the EULA. The update installs.
 8. After the update is complete, you must go back to the appliance management console and select to restart the console.
-9. Log back into the vSphere Web Client and check for any errors. Complete a manual scan of VUM, **Home** > **Hosts and Cluster**, then select a datacenter or cluster and select the **Update Manager** tab and then click **Scan for Updates**. If the manual scan results in an error, see [Resetting VMware Update Manager database on a vCenter Server appliance 6.5 (2147284)](https://kb.vmware.com/s/article/2147284).
+9. Log back into the vSphere Web Client and check for any errors. Complete a manual scan of VUM, **Home** > **Hosts and Cluster**, then select a datacenter or cluster and select the **Update Manager** tab and then click **Scan for Updates**. If the manual scan results in an error, see [Resetting VMware Update Manager database on a vCenter Server appliance 6.5](https://kb.vmware.com/s/article/2147284){:external}.
 10. After testing, if you need to back out, revert to snapshot or restore the vCenter with a previous backup.
 
 ## SSO-linked vCenter Server instaces

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2020
+  years: 2016, 2021
 
-lastupdated: "2020-10-13"
+lastupdated: "2021-01-28"
 
 keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 # Auditing events for VMware Solutions
 {: #at-events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud}}.
+Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to investigate for abnormal activity and critical actions, and comply with regulatory audit requirements. In addition, you can be alerted on actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [Getting started with {{site.data.keyword.cloud_notm}} Activity Tracker](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 
@@ -47,7 +47,7 @@ The following table provides the actions that generate and send management event
 | `vmware-solutions.account-notification.update` | The notification setting for an account is updated. |
 | `vmware-solutions.instance-secure-data.wipe` | The instance secure data is wiped. |
 | `vmware-solutions.instance-bss-account.migrate` |	An instance is migrated to a BSS account. |
-| `vmware-solutions.vcs.create` | A vCenter Server instance is created. |
+| `vmware-solutions.vcs.create` | A VMware vCenter Server® instance is created. |
 | `vmware-solutions.vcs.delete` | A vCenter Server instance is deleted. |
 | `vmware-solutions.vcs-host.add` | A host is added to a vCenter Server instance. |
 | `vmware-solutions.vcs-host.remove` | A host is removed from a vCenter Server instance. |
@@ -68,9 +68,9 @@ The following table provides the actions that generate and send management event
 ## Events for KMIP for VMware
 {: #at-events-kmip}
 
-When you manage keys for the KMIP for VMware® service, an event is generated.
+When you manage keys for the KMIP™ for VMware® service, an event is generated.
 
-The following table provides the actions that generate and send events for KMIP for VMware. These actions are performed by an initiator from VMware vCenter Server® and do not include the initiator's IP address. The requests for these actions run from within the {{site.data.keyword.cloud_notm}} private network.
+The following table provides the actions that generate and send events for KMIP for VMware. These actions are performed by an initiator from VMware vCenter Server and do not include the initiator's IP address. The requests for these actions run from within the {{site.data.keyword.cloud_notm}} private network.
 
 The initiator ID is derived from the TLS (Transport Layer Security) certificate of the vCenter Server that is used to authenticate the connection to the KMIP server. The initiator ID is in the format `CertificateID-<value>`, where the value matches the fingerprint of the corresponding TLS certificate. Using the fingerprint, you can identify the vCenter Server that triggered the action.
 

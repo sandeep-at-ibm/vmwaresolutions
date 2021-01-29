@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -70,11 +70,10 @@ The client-side HCX is user-deployed and it requires administrator level permiss
 
 A one-time use registration key is also provided. Use the following steps to configure the use registration.
 
-Download HCX client (enterprise) OVA from the link provided in the
-cloud side HCX UI.
+Download HCX client (enterprise) OVA from the link provided in the cloud side HCX UI.
 1. Log in to the cloud side HCX UI by using the HCX registration UI provided by IBM.
 2. Use the cloud vCenter ID and password to log in to the UI.
-3. On the **Administration** tab, select **request download link** to download the client-side OVA. Use a “jump box” that is local to the source vCenter where the OVA is deployed to complete this step.
+3. On the **Administration** tab, select **request download link** to download the client-side OVA. Use a jump box that is local to the source vCenter where the OVA is deployed to complete this step.
 
 ## Installing and configuring HCX on the source
 {: #hcxclient-vcs-client-deployment-install-cfg-src}
@@ -126,18 +125,17 @@ Install the HCX Manager appliance in the on-premises vCenter.
 {: #hcxclient-vcs-client-deployment-inital-config}
 
 1. Ensure that the Hybrid Cloud Service virtual appliance has outbound access to `https://connect.hcx.vmware.com` and `https://hybridity-depot.vmware.com`
-2. Log in to Hybrid Cloud Services virtual appliance admin interface `https://<IP>:9443` with **admin**
+2. Log in to Hybrid Cloud Services virtual appliance admin interface `https://<IP>:9443` with **admin**.
 3. Provide the license key collected in Client-Side Prerequisites.
-4. HCX Cloud Datacenter Location
-    - Enter the city nearest to the Datacenter where the HCX Cloud Instance resides. If the city is not present, select the nearest major city.
-5. Provide System name
+4. For HCX Cloud Datacenter Location, enter the city nearest to the data center where the HCX Cloud Instance resides. If the city is not present, select the nearest major city.
+5. Provide the system name.
 
 ## Import vSphere Server certificate
 {: #hcxclient-vcs-client-deployment-import-cert}
 
 1. Log in to HCX Manager Admin Interface `https://<IP>:9443`
-2. Select the **Administration** tab, under **Certificate** -> **Trusted CA Certificate**
-3. Import vSphere Server website
+2. Select the **Administration** tab, under **Certificate** -> **Trusted CA Certificate**.
+3. Import vSphere Server website.
 
 ## Procedure to register HCX Manager with vCenter/SSO/NSX
 {: #hcxclient-vcs-client-deployment-reg-vcenter}

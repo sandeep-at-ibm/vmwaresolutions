@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -23,7 +23,7 @@ Review the following steps to configure the HCX Client instance.
 2. From the **Home** menu, select the **HCX** option.
 3. Under **Infrastructure**, **InterConnect**, click **Add Site Pairing**.
   1. Set the Site URL to the HCX Cloud Manager URL, for example, `https://x.x.x.x.x`.
-  2. Set the UserName and Password to the HCX Manager Admin Details: admin / password.
+  2. Set the Username and Password to the HCX Manager Admin Details: admin / password.
 
     The previous details can be obtained from the {{site.data.keyword.vmwaresolutions_full}} console, under **Services**, **HCX** for the vCenter Server instance.
 
@@ -49,8 +49,7 @@ The Site Pairing is registered and displayed on the UI.
    2. Provide IP address ranges for **External IPs**, **External Subnet Prefix Length**, **External Gateway**, and **DNS Details**.
    3. Set MTU to 1500.
    4. Click **Create**.
-6. Repeat the previous steps for Management and vMotion Networks.
-   Note: Set the MTU value to 9000.
+6. Repeat the previous steps for Management and vMotion Networks. Set the MTU value to 9000.
 
 #### Results
 {: #hcxclient-vcs-mesh-deployment-profiles-network-results}
@@ -115,9 +114,6 @@ Adding a Service Mesh initiates the deployment of HCX Interconnect virtual appli
 
 ## Network stretching
 {: #hcxclient-vcs-mesh-deployment-network-stretching}
-
-### Process to stretch a network
-{: #hcxclient-vcs-mesh-deployment-stretching-process-stretch}
 
 To stretch a network (VLAN or VXLAN) with HCX, complete the following steps from the client-side vCenter web UI.
 1. Log in to the vSphere Web Client.

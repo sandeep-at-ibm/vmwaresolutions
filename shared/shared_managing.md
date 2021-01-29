@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-09-25"
+lastupdated: "2021-01-27"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -26,7 +26,7 @@ View the summary and detailed information of the {{site.data.keyword.vmwaresolut
 ## Procedure to view virtual data center instance summary
 {: #shared_managing-viewing}
 
-To view a summary of all the VMware Solutions Shared virtual data center instances that are provisioned for a user account, complete the following steps:
+To view a summary of all the VMware® Solutions Shared virtual data center instances that are provisioned for a user account, complete the following steps:
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. From the console banner, click your user account icon, and then click the **Account** field to select the user account that you want to check instances for.  

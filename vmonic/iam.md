@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-05"
+lastupdated: "2021-01-28"
 
 keywords: IAM user, user role, user permission
 
@@ -41,7 +41,7 @@ The following table provides information about the actions that are mapped to pl
 | Platform management role | Actions | Example actions |
 |:----------------- |:----------------- |:----------------- |
 | Viewer | Read-only actions | View the summary of instances<br>View the details of an instance |
-| Editor | Update a specific instance | Add or remove ESXi servers<br>Add or remove clusters<br>Add or remove services<br>Upgrade an instance to a higher version |
+| Editor | Update a specific instance | Add or remove VMware ESXi™ servers<br>Add or remove clusters<br>Add or remove services<br>Upgrade an instance to a higher version |
 | Operator | Read-only actions | List instances<br>View the details of an instance |
 | Administrator | Full management access | Create new instances<br>Delete instances<br>Grant platform access to other users|
 {: caption="Table 1. Platform management roles and allowed actions" caption-side="top"}
@@ -60,7 +60,7 @@ For {{site.data.keyword.vmwaresolutions_short}}, the following actions exist:
 ## Managing access for users
 {: #iam-users}
 
-You can add new users to the {{site.data.keyword.cloud_notm}} account so that these users can share the services and resources that are provisioned for the account. For more information, see [Inviting users to access services and resources](/docs/vmwaresolutions?topic=vmwaresolutions-iamuserinvite).
+You can add new users to the {{site.data.keyword.cloud_notm}} account so that these users can share the services and resources that are provisioned for the account. For more information, see [Inviting users to access services and resources](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount#useraccount-iamuserinv).
 
 You can also manage the access for existing users, including modifying existing access, assigning new access, and reviewing assigned access. To manage access for users, you must be the account owner or you must have the **Administrator** platform management role. For more information, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
 

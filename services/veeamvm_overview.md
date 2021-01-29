@@ -2,11 +2,11 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-08-10"
+lastupdated: "2021-01-28"
 
-keywords: Veeam, Veeam 10, Veeam install, tech specs Veeam, Veeam overview
+keywords: Veeam, Veeam 10, Veeam 10a, Veeam install, tech specs Veeam, Veeam overview
 
 subcollection: vmwaresolutions
 
@@ -20,51 +20,51 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# Veeam v10 overview
+# Veeam v10a overview
 {: #veeamvm_overview}
 
-The Veeam service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
+The Veeam® service seamlessly integrates directly with your VMware® hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 {: shortdesc}
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The current Veeam service that is installed is the new Veeam Availability Suite v10 known as Veeam v10.
+The current Veeam service that is installed is the new Veeam Availability Suite™ v10a known as Veeam v10a.
 {:note}
 
-## Technical specifications for Veeam v10
+## Technical specifications for Veeam v10a
 {: #veeamvm_overview-specs}
 
 For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
-You can choose one of the following deployment types with Veeam v10:
-* Windows Server virtual machine (VM) on the management cluster
+You can choose one of the following deployment types with Veeam v10a:
+* Windows® Server virtual machine (VM) on the management cluster
 * Single Public Windows VSI
 
-The following components are ordered and included in the Veeam v10 service:
+The following components are ordered and included in the Veeam v10a service:
 
-### VMs for Veeam v10
+### VMs for Veeam v10a
 {: #veeamvm_overview-specs-vms}
 
-The following are included if you deploy Veeam v10 as a Windows Server VM on the management cluster:
+The following are included if you deploy Veeam v10a as a Windows Server VM on the management cluster:
 
-* Virtual machine (VM) with Veeam Backup and Replication 10 OS Add-on and Veeam Availability Suite 10
+* Virtual machine (VM) with Veeam Backup and Replication 10a OS Add-on and Veeam Availability Suite 10a
 * Windows Server 2019 Standard Edition (64-bit)
 * 8 vCPU, 32 GB RAM
 * 100 GB disk (SAN)
 
-### VSIs for Veeam v10
+### VSIs for Veeam v10a
 {: #veeamvm_overview-specs-vsi}
 
-The following components are included if you deploy Veeam v10 as a single public Windows VSI:
+The following components are included if you deploy Veeam v10a as a single public Windows VSI:
 
-* Single VSI with Veeam Backup and Replication 10 OS Add-on and Veeam Availability Suite 10
+* Single VSI with Veeam Backup and Replication 10a OS Add-on and Veeam Availability Suite 10a
 * Windows Server 2019 Standard Edition (64-bit)
 * 4 x 2.0 GHz Cores
 * 8 vCPU, 32 GB RAM
 * 1 Gbps private network uplink
 * 100 GB disk (SAN)
 
-### Storage for backups for Veeam v10
+### Storage for backups for Veeam v10a
 {: #veeamvm_overview-specs-storage}
 
 * Endurance iSCSI storage:
@@ -79,35 +79,35 @@ As part of the Veeam service installation and configuration, the following repos
 * For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering#icos_ordering-scale-repo).
 * For the virtual machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository.
 
-### Networking for Veeam v10
+### Networking for Veeam v10a
 {: #veeamvm_overview-specs-networking}
 
 One primary private IP address.
 
-### Licenses and fees for Veeam v10
+### Licenses and fees for Veeam v10a
 {: #veeamvm_overview-specs-licenses}
 
-For Veeam Availability Suite 10, you can order 10 - 500 VM licenses in increments of 10.
+For Veeam Availability Suite 10a, you can order 10 - 500 VM licenses in increments of 10.
 
-You must provide a Microsoft Windows Server 2019 Standard edition license if you choose the option of installing Veeam as a VM.
+You must provide a Microsoft® Windows Server 2019 Standard edition license if you choose the option of installing Veeam as a VM.
 {:important}
 
-## Considerations when you install Veeam v10
+## Considerations when you install Veeam v10a
 {: #veeamvm_overview-install}
 
-There are various tasks that you might complete with Veeam v10, such as ordering a new vCenter Server instance with Veeam and ordering or deleting a Veeam stand-alone license. For more information, see [Tasks you can complete with Veeam v10](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-fivetasks_v10).
+There are various tasks that you might complete with Veeam v10a, such as ordering a new vCenter Server instance with Veeam and ordering or deleting a Veeam stand-alone license. For more information, see [Tasks you can complete with Veeam v10a](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-fivetasks_v10).
 
-Veeam license installation and deletion are different starting with Veeam v10. For more information, see [Considerations for installing and deleting Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-install-delete-consid).
+Veeam license installation and deletion are different starting with Veeam v10a. For more information, see [Considerations for installing and deleting Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-install-delete-consid).
 
-### Considerations when you delete Veeam v10
+### Considerations when you delete Veeam v10a
 {: #veeamvm_overview-remove}
 
 Deleting the Veeam service stops all backups and deletes all the previous backups. The backup of the management VMs or VSIs stops and the deletion of previous backups is irreversible. If the management VMs or VSIs are corrupted, they can’t be restored.
 {:important}
 
 Review the following considerations before you delete the service:
-* Deleting the Veeam v10 service does not cancel the Veeam license. You must delete the Veeam license from the Veeam licenses table on the Resources page in the {{site.data.keyword.vmwaresolutions_short}} console.
-* When you delete the Veeam v10 service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single Veeam VM or VSI that was deployed and the dedicated private subnet that was ordered for it. Therefore, if you scaled out the Veeam VM or VSI into multiple ones, those additional VMs or VSIs are not deleted.
+* Deleting the Veeam v10a service does not cancel the Veeam license. You must delete the Veeam license from the Veeam licenses table on the Resources page in the {{site.data.keyword.vmwaresolutions_short}} console.
+* When you delete the Veeam v10a service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single Veeam VM or VSI that was deployed and the dedicated private subnet that was ordered for it. Therefore, if you scaled out the Veeam VM or VSI into multiple ones, those additional VMs or VSIs are not deleted.
 * The iSCSI storage is deleted, so any data within that storage is lost.
 
 ## Related links

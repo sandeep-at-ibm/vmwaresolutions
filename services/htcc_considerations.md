@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-15"
+lastupdated: "2021-01-28"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -25,10 +25,10 @@ subcollection: vmwaresolutions
 The HyTrust® CloudControl™ service enforces and controls compliance against security standards, which includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl®, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or VMware ESXi™ server within the {{site.data.keyword.cloud}} data center.
 {: shortdesc}
 
-New installations of HyTrust CloudControl are supported only for VMware vCenter server with NSX-T instances. The HyTrust CloudControl version that is installed is 6.2.1. Previous installations of HyTrust CloudControl 5.6 are still supported for existing vCenter server with NSX-V instances.
+New installations of HyTrust CloudControl are supported only for VMware vCenter Server® with NSX-T instances. The HyTrust CloudControl version that is installed is 6.2.1. Previous installations of HyTrust CloudControl 5.6 are still supported for existing vCenter Server with NSX-V instances.
 {:note}
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_short}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
 ## Technical specifications for HyTrust CloudControl
 {: #htcc_considerations-specs}

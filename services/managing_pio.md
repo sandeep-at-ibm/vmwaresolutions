@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-08-07"
+lastupdated: "2021-01-28"
 
 keywords: primary io hdm, hdm intro, tech specs hdm
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 # PrimaryIO Hybrid Cloud Data Management (HDM) overview
 {: #managing_pio}
 
-The PrimaryIO Hybrid Cloud Data Management (HDM) service decouples virtual machines (VMs) and storage (VMDKs) to seamlessly move workloads to and from {{site.data.keyword.cloud}} faster and efficiently. The PrimaryIO HDM solution enables a hybrid cloud environment to extend on-premises VMware environments to the public cloud for on-demand compute capacity.
+The PrimaryIO Hybrid Cloud Data Management (HDM) service decouples virtual machines (VMs) and storage (VMDKs) to seamlessly move workloads to and from {{site.data.keyword.cloud}} faster and efficiently. The PrimaryIO HDM solution enables a hybrid cloud environment to extend on-premises VMware® environments to the public cloud for on-demand compute capacity.
 
 HDM has built-in functions to identify frequently used data, called hot data. Hot data is moved into an intelligent cloud cache, while less used data is moved to the background. This way, HDM can provision workloads in the {{site.data.keyword.cloud_notm}} within minutes.
 
@@ -55,7 +55,7 @@ The following technical specifications apply to PrimaryIO HDM.
 ### HDM deployment configuration
 {: #managing_pio-deploy-config}
 
-* Cluster: Requires at least two ESXi servers to ensure that HA requirements for the HDM product are met.
+* Cluster: Requires at least two VMware ESXi™ servers to ensure that HA requirements for the HDM product are met.
 * Stand-alone: Requires at least one ESXi server.
 * Appliance only: Requires that only the PIO Appliance is deployed. Recommended for cold migration only.
 
@@ -72,11 +72,11 @@ The following components belong to HDM on-premises.
   * 8 GB RAM
   * 144 GB storage
 
-* **Performance**. The configuration that is deployed uses no more than 15% of compute and memory resources. The storage that is allocated is 320 GB per ESXi server approximately.
+* **Performance**. The configuration that is deployed uses no more than 15 percent of compute and memory resources. The storage that is allocated is 320 GB per ESXi server approximately.
   * PrimaryIO Prem Manager
   * PrimaryIO ESX Manager
 
-* **Standard**. The configuration that is deployed uses no more than 8% of compute and memory resources. The storage that is allocated is 192 GB per ESXi server approximately.
+* **Standard**. The configuration that is deployed uses no more than 8 percent of compute and memory resources. The storage that is allocated is 192 GB per ESXi server approximately.
   * PrimaryIO Prem Manager
   * PrimaryIO ESX Manager
 
@@ -103,11 +103,11 @@ The following components belong to HDM on {{site.data.keyword.cloud_notm}}.
 #### Virtual instances for HDM on IBM Cloud
 {: #managing_pio-ibm-cloud-virt-inst}
 
-* **Performance**. The configuration that is deployed uses no more than 15% of compute and memory resources. The cache that is allocated is 2 TB per ESXi server.
+* **Performance**. The configuration that is deployed uses no more than 15 percent of compute and memory resources. The cache that is allocated is 2 TB per ESXi server.
   * PrimaryIO Cloud Manager
   * PrimaryIO Cloud Cache
 
-* **Standard**. The configuration that is deployed uses no more than 8% of compute and memory resources. The cache that is allocated is 544 GB per ESXi server.
+* **Standard**. The configuration that is deployed uses no more than 8 percent of compute and memory resources. The cache that is allocated is 544 GB per ESXi server.
   * PrimaryIO Cloud Manager
   * PrimaryIO Cloud Cache
 

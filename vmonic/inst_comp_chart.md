@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-10-22"
+lastupdated: "2020-12-09"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -29,7 +29,7 @@ Review the following chart to understand the differences in functions support fo
 | Remove ESXi servers | Supported | Supported. Automated configuration not included. |
 | Multi-cluster support | Maximum number depends on VMware® sizing guidelines | Supported. Automated configuration not included. |
 | Client-managed updating and patching of VMware stack | Client-managed updates: Native VMware tools (VMware Update Manager™)[^nsxv1] | Client-managed updates:<br/>Native VMware tools (VMware Update Manager) |
-| Backup and restore | Manually using IBM Spectrum® Protect Plus or Veeam®[^nsxv2] | Backup and restore solution not included |
+| Backup and restore | Manually using IBM Spectrum® Protect Plus or Veeam®[^nsxv2] | Backup and restore solution is not included |
 | Software-defined networking | NSX Base, Advanced, or Enterprise | NSX Standard, Base, or Enterprise. Automated configuration not included. |
 | BYOL for vSphere and vSAN | Fully supported per cluster | Supported |
 | BYOL for vCenter and NSX | Fully supported per instance | Supported |
@@ -46,7 +46,7 @@ Review the following chart to understand the differences in functions support fo
 
 [^nsxv2]: NSX-V only
 
-[^nsxv3]: Only a limited number of add-on services are supported for NSX-T
+[^nsxv3]: Not all add-on services are supported for NSX-T instances
 
 ## Related links
 {: #inst_comp_chart-related}

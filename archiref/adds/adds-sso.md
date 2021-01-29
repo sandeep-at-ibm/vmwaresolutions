@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-12-02"
 
 subcollection: vmwaresolutions
 
@@ -39,7 +39,7 @@ The vSphere SSO flow is as follows:
 The vSphere SSO domain is used as the initial authentication mechanism it is also serves to connect an instance or multiple linked instances to the AD servers in the {{site.data.keyword.vmwaresolutions_full}} infrastructure domain. In the {{site.data.keyword.vmwaresolutions_short}} vCenter Server design, the following SSO configuration is applied:
 
 * The SSO domain of vsphere.local is always used.
-* The SSO site name equals the <subdomain_label> captured during the ordering process.
+* The SSO site name equals the <root_domain> captured during the ordering process.
 * An identity source, the {{site.data.keyword.vmwaresolutions_short}} infrastructure domain, <root_domain>, is configured.
 * The VSPHERE.LOCAL\Administrator user is configured as an Administrator role.
 * The following groups are configured with Administrator roles:

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-07-21"
+lastupdated: "2021-01-28"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Ordering Zerto
 {: #zerto_ordering}
 
-You can include the Zerto service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
+You can include the Zerto service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
 
 ## Billing for Zerto replication
 {: #zerto_ordering-billing}
@@ -52,14 +52,14 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you are prompted to 
 ## Ordering Zerto for a new instance
 {: #zerto_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Zerto** in the **Business Continuity and Migration** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Zerto** in the **Business continuity and migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering Zerto for an existing instance
 {: #zerto_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Zerto** in the **Business Continuity and Migration** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Zerto** in the **Business continuity and migration** category, and then click **Add**. Follow the steps to add the service to your instance.
 
-If you add Zerto to a vCenter Server instance that has an ESXi server that is in maintenance mode, you must use the Zerto Virtual Manager (ZVM) console and the pre-populated Zerto Virtual Replication Appliance (VRA) IP address to manually deploy the VRA virtual machine (VM).
+If you add Zerto to a vCenter Server instance that has an VMware ESXi™ server that is in maintenance mode, you must use the Zerto Virtual Manager (ZVM) console and the pre-populated Zerto Virtual Replication Appliance (VRA) IP address to manually deploy the VRA virtual machine (VM).
 {:note}
 
 ## Ordering Zerto for private-only instances

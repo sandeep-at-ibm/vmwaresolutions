@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-01-28"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Managing HyTrust DataControl
 {: #managinghtdc}
 
-To manage the HyTrust DataControl service (HTDC), access the HTDC WebGUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTDC console from the vSphere Web Client.
+To manage the HyTrust® DataControl® service (HTDC), access the HTDC WebGUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTDC console from the vSphere® Web Client.
 
 ## Accessing the HyTrust DataControl WebGUI from the VMware Solutions console
 {: #managinghtdc-accessing-webgui}
@@ -41,7 +41,7 @@ For more information, see [Ordering, viewing, and deleting services for vCenter 
 ## Enabling internet access for the HyTrust DataControl virtual machines
 {: #managinghtdc-internet-access}
 
-For HTDC 4.3.2 and later, {{site.data.keyword.vmwaresolutions_short}} provides automatic renewal support for HyTrust licenses that have the Call Home feature enabled. For vCenter Server instances that are not private-only, HTDC is deployed with firewall and SNAT (Source Network Address Translation) rules that are defined on the management services ESG **mgmt-nsx-edge**.
+For HTDC 4.3.2 and later, {{site.data.keyword.vmwaresolutions_short}} provides automatic renewal support for HyTrust licenses that have the Call Home feature enabled. For VMware vCenter Server® instances that are not private-only, HTDC is deployed with firewall and SNAT (Source Network Address Translation) rules that are defined on the management services ESG **mgmt-nsx-edge**.
 
 These rules allow you to enable internet access for the HyTrust virtual machines (VMs). If internet access is not enabled, the license that is applied to your HTDC installation will expire after a year.
 

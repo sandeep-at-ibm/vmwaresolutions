@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-05"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -13,12 +13,12 @@ subcollection: vmwaresolutions
 
 {:external: target="_blank" .external}
 
-# Responsibilities for Day 2 operations
+# Responsibilities for day 2 operations
 {: #opsprocs-responsibilities}
 
 The two key principles with respect to day 2 operations are:
 * Your vCenter Server instance is not actively monitored by {{site.data.keyword.IBM}}. After deployment, the customer should leverage existing tooling, use a managed service such as that provided by IBM Integrated Managed Infrastructure, third-party managed service or implement a self-managed monitoring solution as described in [Operations management introduction](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-intro) to monitor and manage their environment.
-* IBM Support will not enter the VMware management layer under normal operations without a client–written support ticket. A customer must raise a support ticket, as described in [Contacting IBM support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) to invoke support from IBM. Once raised, the ticket must be actively managed by the customer and ensure that they provide the requested information required by IBM in a timely manor. For more information, see [Viewing support cases](/docs/get-support?topic=get-support-viewing-support-cases) and [Escalating support cases](/docs/get-support?topic=get-support-escalation).
+* IBM Support will not enter the VMware management layer under normal operations without a client–written support ticket. A customer must raise a support ticket, as described in [Contacting IBM support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) to invoke support from IBM. Once raised, the ticket must be actively managed by the customer and ensure that they provide the requested information required by IBM in a timely manor. For more information, see [Managing your support cases](/docs/get-support?topic=get-support-managing-support-cases) and [Escalating support cases](/docs/get-support?topic=get-support-escalation).
 
 For more information about IBM and customer responsibilities concerning compliance, see [Customer versus IBM responsibility for vCenter Server](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-responsibility) .
 

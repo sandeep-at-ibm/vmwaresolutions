@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-07-30"
+lastupdated: "2021-01-28"
 
 keywords: Veeam 9.5, Veeam 9 overview, Veeam 9.5 deprecated
 
@@ -23,10 +23,10 @@ subcollection: vmwaresolutions
 # Veeam v9.5 overview
 {: #veeam_considerations}
 
-Veeam v9.5u4b has known vulnerabilities and it is no longer installed with new VMware Solutions deployments. However, if you installed the service in a previous release, you can continue to use Veeam v9.5u4b.
+Veeam® v9.5u4b has known vulnerabilities and it is no longer installed with new VMware® Solutions deployments. However, if you installed the service in a previous release, you can continue to use Veeam v9.5u4b.
 {:note}
 
-The new Veeam Availability Suite v10 known as Veeam v10 is now installed.
+The new Veeam Availability Suite™ v10a known as Veeam v10a is now installed.
 
 The Veeam service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 {: shortdesc}
@@ -36,7 +36,7 @@ The Veeam service seamlessly integrates directly with your VMware hypervisors to
 ## Technical specifications for Veeam v9.5u4b
 {: #veeam_considerations-specs}
 
-The current Veeam version that is installed is Veeam v10. The documentation about Veeam v9.5u4b is included for your information if you are using Veeam v9.5u4b.
+The current Veeam version that is installed is Veeam v10a. The documentation about Veeam v9.5u4b is included for your information if you are using Veeam v9.5u4b.
 {:note}
 
 The following components are in the Veeam v9.5u4b service:
@@ -45,7 +45,7 @@ The following components are in the Veeam v9.5u4b service:
 {: #veeam_considerations-specs-vsi}
 
 * Single VSI with Veeam Backup and Replication 9.5 OS Add-on and Veeam Availability Suite 9.5
-* Windows Server 2016 Standard Edition (64-bit)
+* Windows® Server 2016 Standard Edition (64-bit)
 * 4 x 2.0 GHz Cores
 * 8 vCPU, 32 GB RAM
 * 1 Gbps private network uplink
@@ -84,7 +84,7 @@ Deleting the Veeam service stops all backups and deletes all the previous backup
 ## Related links
 {: #veeam_considerations-related}
 
-* [Veeam v10 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Veeam v10a overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Ordering Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
 * [Ordering Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering_licenses)

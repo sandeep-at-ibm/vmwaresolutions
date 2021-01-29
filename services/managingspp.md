@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-07"
+lastupdated: "2021-01-28"
 
 keywords: SPP management console, apply SPP updates, login SPP console
 
@@ -25,8 +25,8 @@ subcollection: vmwaresolutions
 ## Accessing the IBM Spectrum Protect Plus management console
 {: #managingspp-console}
 
-To manage the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus service, you must access the IBM Spectrum Protect Plus management console by completing the following steps:
-1. Use the {{site.data.keyword.cloud_notm}} infrastructure VPN or a jump server to allow access to the IP address of the IBM Spectrum Protect Plus virtual machine (VM). You can find the IP address on the service details page for IBM Spectrum Protect Plus in the {{site.data.keyword.vmwaresolutions_short}} console.
+To manage the IBM Spectrum® Protect Plus service, you must access the IBM Spectrum Protect Plus management console by completing the following steps:
+1. Use the {{site.data.keyword.cloud}} infrastructure VPN or a jump server to allow access to the IP address of the IBM Spectrum Protect Plus virtual machine (VM). You can find the IP address on the service details page for IBM Spectrum Protect Plus in the {{site.data.keyword.vmwaresolutions_short}} console.
 2. To access the IBM Spectrum Protect Plus management console, click **View IBM Spectrum Protect Plus console** on the service details page for IBM Spectrum Protect Plus, and then log in by using the credentials listed on the same service details page.
 
 ## Applying updates to IBM Spectrum Protect Plus

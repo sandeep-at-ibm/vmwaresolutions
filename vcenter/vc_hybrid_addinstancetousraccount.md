@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-09-16"
+lastupdated: "2020-12-10"
 
 keywords: vCenter Server Hybridity migrate instance, add account vCenter Server Hybridity, migrate cloud account Hybridity
 
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 # Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts
 {: #vc_hybrid_addinstancetousraccount}
 
-VMware vCenter Server® with Hybridity Bundle instances that are deployed in V2.5 and later in your {{site.data.keyword.cloud}} account are automatically added to your account. These instances are managed by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
+VMware® vCenter Server® with Hybridity Bundle instances that are deployed in V2.5 and later in your {{site.data.keyword.cloud}} account are automatically added to your account. These instances are managed by {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
 
 For instances that were deployed in V2.4 and early releases, you can migrate them to specified {{site.data.keyword.cloud_notm}} accounts for IAM-enabled user management.
 
@@ -47,5 +47,5 @@ For more information about how to link your Iaas-only account to your PaaS accou
 {: #vc_hybrid_addinstancetousraccount-related}
 
 * [Managing user access with IAM](/docs/vmwaresolutions?topic=vmwaresolutions-iam#iam)
-* [Inviting users to access services and resources](/docs/vmwaresolutions?topic=vmwaresolutions-iamuserinvite)
+* [Inviting users to access services and resources](/docs/vmwaresolutions?topic=vmwaresolutions-useraccount#useraccount-iamuserinv)
 * [What is {{site.data.keyword.cloud_notm}} IAM](/docs/account?topic=account-iamoverview)

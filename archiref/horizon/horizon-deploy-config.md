@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-09-16"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -30,7 +30,7 @@ To deploy VMware Horizon 7:
 5. Deploy VDI workload cluster with the required number of hosts to support the desktop workloads and with VMware VSAN for storage.
 6. Create Desktop Template and deploy desktops.
 
-## Horizon 7 Environment
+## Horizon 7 environment
 {: #horizon-deploy-config-envir}
 
 When you set up the Horizon 7 environment, you must install and configure the following components:
@@ -50,7 +50,7 @@ Deploy a Unified Access Gateway appliance and connect it to the Connection Serve
 * Optionally, install a Horizon event database on Microsoft SQL Server 2016.
 * Install Horizon Agent on the primary images for RDS hosts and VDI Virtual Desktop VMs. This agent communicates with the Connection Servers.
 
-## Deploy Horizon 7 over Hybrid Cloud
+## Deploying Horizon 7 over Hybrid Cloud
 {: #horizon-deploy-config-hybrid-cloud}
 
 You might already have Horizon 7 environments on-premises. The Horizon 7 pod on-premises and your Horizon 7 pod on {{site.data.keyword.cloud_notm}} can be managed separately. Alternatively, you can extend your on-premises Horizon 7 environment to the cloud by linking it with your Horizon 7 on {{site.data.keyword.cloud_notm}} environment by using Cloud Pod Architecture (CPA). Deploying your Horizon 7 over hybrid cloud enables you to manage your on-premises deployment and your cloud deployment in a single federated space.
@@ -91,7 +91,7 @@ Properly scoped and configured firewall rules will ensure a successful deploymen
 
 For a full list of ports utilized by Horizon 7, see the [Network Ports in VMware Horizon 7](https://techzone.vmware.com/resource/network-ports-vmware-horizon-7){:external}.
 
-## Preparing Active Directory for Hybrid Cloud Deployment
+## Preparing Active Directory for Hybrid Cloud deployment
 {: #horizon-deploy-config-prep-ad}
 
 If you are deploying Horizon 7 in a hybrid cloud environment by linking the on-premises pod with the {{site.data.keyword.cloud_notm}} pod, you must prepare the on-premises Microsoft Active Directory (AD) to access the AD on {{site.data.keyword.cloud_notm}}.
@@ -106,7 +106,7 @@ You can use the Cloud Pod Architecture feature to connect Horizon 7 pods regardl
 * Optionally, when you use Cloud Pod Architecture, you can deploy a global load balancer (such as F5, {{site.data.keyword.cloud_notm}} Global Load-Balancing Service, or others) between the pods. The global load balancer provides a single-namespace capability that allows the use of a common global namespace when referring to Horizon CPA. Using CPA with a global load balancer provides your users with a single connection method and desktop icon in their Horizon Client or workspace ONE console.
 Without the global load balancer and the ability to have a single namespace for multiple environments, users will be presented with a possibly confusing array of desktop icons (corresponding to the number of pods on which desktops have been provisioned for them). For more information on how to set up Cloud Pod Architecture, see [Administering Cloud Pod Architecture in Horizon 7](https://docs.vmware.com/en/VMware-Horizon-7/7.6/horizon-cloud-pod-architecture/GUID-07C1B313-5907-4EDB-AB2F-75F7F58BD1AF.html){:external}.
 
-Use Cloud Pod Architecture to link any number of Horizon 7 pods on {{site.data.keyword.cloud_notm}}. The maximum number of pods must conform to the limits set for pods in Cloud Pod Architecture. See [VMware Horizon 7 Sizing Limits and Recommendations (2150348)](https://kb.vmware.com/s/article/2150348){:external}.
+Use Cloud Pod Architecture to link any number of Horizon 7 pods on {{site.data.keyword.cloud_notm}}. The maximum number of pods must conform to the limits set for pods in Cloud Pod Architecture. See [VMware Horizon 7 sizing limits and recommendations](https://kb.vmware.com/s/article/2150348){:external}.
 
 When you connect multiple Horizon 7 pods together with Cloud Pod Architecture, the Horizon 7 versions for each of the pods can be different from one another. The only limitation is that they all be Horizon 7 v7.0 or higher (that is, no mixing of Horizon 6 pods).
 
@@ -183,7 +183,7 @@ App Volumes provides real-time application delivery and management, now for on p
 
 For more information on how to configure, see “Configuring App Volumes Manager” in the App Volumes Administration guide for App Volumes.
 
-### Transfer App Volumes from vSphere to IBM Cloud
+### Transfering App Volumes from vSphere to IBM Cloud
 {: #horizon-deploy-config-transfer-app-volume}
 
 For migration or BCDR purpose, you can transfer your appstacks or user writable volumes from on- premise to the {{site.data.keyword.cloud_notm}} environment using your vSphere client in a two-step process.

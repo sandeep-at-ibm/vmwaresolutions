@@ -2,11 +2,11 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-01-27"
 
-keywords: set credentials, user credentials, set notifications
+keywords: set credentials, update credentials, set notifications, IAM user, invite user
 
 subcollection: vmwaresolutions
 
@@ -21,12 +21,24 @@ subcollection: vmwaresolutions
 # Managing user accounts and settings
 {: #useraccount}
 
-{{site.data.keyword.vmwaresolutions_full}} communicates with the {{site.data.keyword.cloud}} infrastructure through {{site.data.keyword.slapi_short}} calls. To access the {{site.data.keyword.slapi_short}} securely, you must link the credentials of your {{site.data.keyword.cloud_notm}} infrastructure account to your {{site.data.keyword.cloud_notm}} account. After your first order, you can update the user account credentials on the **Settings** page.
+Use procedures in this topic to invite users, to update user account credentials, and to specify whether you want to receive email and console notifications for various events.
 
-You can also specify whether you want to receive email and console notifications for various events.
+## Inviting users to access services and resources
+{: #useraccount-iamuserinv}
 
-## Before you begin
-{: #useraccount-reqs}
+{{site.data.keyword.vmwaresolutions_full}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for collaboration among multiple users. After you sign up for an {{site.data.keyword.cloud_notm}} account and log in to the {{site.data.keyword.vmwaresolutions_short}} console, you can add users to the {{site.data.keyword.cloud_notm}} account. These added users can share the services and resources that are provisioned for the account.
+
+For more information, see:
+- [Inviting users to an account](/docs/account?topic=account-iamuserinv)
+- [Managing access for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-iam)
+
+## Updating user account credentials
+{: #useraccount-set-cred}
+
+{{site.data.keyword.vmwaresolutions_short}} communicates with the {{site.data.keyword.cloud_notm}} infrastructure through {{site.data.keyword.slapi_short}} calls. To access the {{site.data.keyword.slapi_short}} securely, you must link the credentials of your {{site.data.keyword.cloud_notm}} infrastructure account to your {{site.data.keyword.cloud_notm}} account. After your first order, you can update the user account credentials on the **Settings** page.
+
+### Before you begin
+{: #useraccount-set-cred-prereqs}
 
 * You can link only one {{site.data.keyword.cloud_notm}} infrastructure account to one {{site.data.keyword.cloud_notm}} user account.
 * The {{site.data.keyword.cloud_notm}} infrastructure account that you're using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
@@ -35,8 +47,8 @@ You can also specify whether you want to receive email and console notifications
    It is your responsibility to ensure that the API key that is saved on the **Settings** page is correct and up-to-date. Otherwise, operations that require API key validation might fail.
    {:important}
 
-## Procedure to update user account credentials
-{: #useraccount-set-cred}
+### Procedure to update user account credentials
+{: #useraccount-set-cred-procedure}
 {: help}
 {: support}
 
@@ -54,8 +66,13 @@ After the {{site.data.keyword.cloud_notm}} account and the {{site.data.keyword.c
 
 The stored {{site.data.keyword.cloud_notm}} infrastructure account credentials are used in future operations that require interaction with the {{site.data.keyword.cloud_notm}} infrastructure.
 
-## Procedure to set notifications
+## Setting notifications
 {: #useraccount-set-notif}
+
+You can also specify whether you want to receive email and console notifications for various events.
+
+### Procedure to set notifications
+{: #useraccount-set-notif-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
 2. If you want to be notified by email when events occur, click **Enable email notifications**.
@@ -73,3 +90,4 @@ If email or console notifications are enabled for certain instance events, you'r
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
 * [Managing system notifications](/docs/vmwaresolutions?topic=vmwaresolutions-notifications)
+* [What is {{site.data.keyword.cloud_notm}} IAM](/docs/account?topic=account-iamoverview)

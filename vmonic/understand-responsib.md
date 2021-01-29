@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2019, 2020
+  years: 2019, 2021
 
-lastupdated: "2020-10-22"
+lastupdated: "2021-01-27"
 
 subcollection: vmwaresolutions
 
@@ -31,7 +31,7 @@ keywords: vmware solutions responsibilities, customer responsibilities, manageme
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.vmwaresolutions_full}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {:shortdesc}
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.vmwaresolutions_short}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} terms and notices](/docs/overview/terms-of-use?topic=overview-terms).
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use VMware Solutions. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} terms and notices](/docs/overview/terms-of-use?topic=overview-terms).
 
 ## Incident and operations management
 {: #understand-responsib-incident-and-ops}
@@ -54,9 +54,9 @@ The following table describes the responsibilities that are related to incident 
 {: caption="Table 1. Responsibilities for incident and operations for VMware Solutions Shared" caption-side="top"}
 {: summary="The rows are read from left to right. The first column describes the task that a customer or IBM might be responsible for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
-[^mzr1]: Multizone region virtual data centers are limited to allow listed customers. For more information, contact your {{site.data.keyword.vmwaresolutions_short}} representative.
+[^mzr1]: Multizone region virtual data centers are limited to allow listed customers. For more information, contact your VMware Solutions representative.
 
-[^mzr2]: Multizone region virtual data centers are limited to allow listed customers. For more information, contact your {{site.data.keyword.vmwaresolutions_short}} representative.
+[^mzr2]: Multizone region virtual data centers are limited to allow listed customers. For more information, contact your VMware Solutions representative.
 
 ### Incident and operations management for VMware Solutions Dedicated
 {: #understand-responsib-incident-and-ops-dedicated}
@@ -65,7 +65,7 @@ The following table describes the responsibilities that are related to incident 
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |:---- |:----------------------------------------------- |:--------------------- |
-| Availability | Offer VMware® infrastructure in multiple locations, including [multizone regions](#x9774820){: term}. | Plan and provision VMware infrastructure according to your availability requirements. |
+| Availability | Offer VMware® infrastructure in multiple locations, including [multizone regions (MZR)](#x9774820){: term}. | Plan and provision VMware infrastructure according to your availability requirements. |
 | Infrastructure monitoring and notification | Forward to the client all network intrusion notifications detected. Send notification upon hardware failures. | Implement monitoring system and integrate with virtualization management. Determine the impact of each notification reported. Engage IBM support as required. |
 | Workload monitoring |  | Monitor and respond to OS or software failures. |
 | Infrastructure management | | Implement monitoring and management system integrated with virtualization management. |

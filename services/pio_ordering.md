@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-04-15"
+lastupdated: "2021-01-28"
 
 keywords: primary io hdm, hdm order, order trial hdm
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 # Ordering PrimaryIO HDM
 {: #pio_ordering}
 
-You can include the PrimaryIO Hybrid Cloud Data Management (HDM) service with a new vCenter Server instance or add the service to your existing vCenter Server instance. You must order PrimaryIO HDM directly from PrimaryIO.
+You can include the PrimaryIO Hybrid Cloud Data Management (HDM) service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance. You must order PrimaryIO HDM directly from PrimaryIO.
 
 * To get started with a trial software, go to https://www.primaryio.com/free-trial/.
 * To request a quote and buy PrimaryIO HDM, go to https://www.primaryio.com/buy-now/.
@@ -34,7 +34,7 @@ You can include the PrimaryIO Hybrid Cloud Data Management (HDM) service with a 
 Review the following information before you begin:
 
 * Ensure that the on-premises data center is connected to the {{site.data.keyword.cloud}} infrastructure.
-* The VMware vSphere versions that are supported on-premises are 6.5 and 6.7.
+* The VMware vSphere versions that are supported on-premises are 6.5 and above.
 * The PrimaryIO HDM software is installed from the on-premises data center vCenter Server.
 * The HDM OVF can be downloaded to the on-premises data center for installation.
 

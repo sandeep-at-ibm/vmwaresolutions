@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2020
+  years: 2016, 2021
 
-lastupdated: "2020-09-25"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -126,7 +126,7 @@ CPA is not a stretched deployment. Each Horizon 7 pod is distinct and all Connec
 
 For the full documentation on how to set up and configure CPA, see "Administering View Cloud Pod Architecture" in the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external} and [VMware Workspace ONE and VMware Horizon Reference Architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){:external}.
 
-### Using CPA to build Hybrid Cloud and Scale for Horizon 7
+### Using CPA to build Hybrid Cloud and scale for Horizon 7
 {: #horizon-deploy-arch-cpa-hybrid}
 
 You can deploy Horizon 7 in a hybrid cloud environment when you use CPA to interconnect Horizon 7 on-premises and Horizon 7 pods on {{site.data.keyword.cloud_notm}}. You can easily entitle your users to Virtual Desktop and RDS published apps on-premises and/or on {{site.data.keyword.cloud_notm}}. You can configure it such that they can connect to whichever site is closest to them geographically as they roam.

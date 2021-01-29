@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-10-14"
+lastupdated: "2021-01-27"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -65,7 +65,7 @@ An organization is a unit of administration for a collection of users, groups, a
 #### Users and policies
 {: #shared_overview-users-policies}
 
-An organization can contain an arbitrary number of users and groups. Users can be created locally by the organization administrator or imported from a directory service such as LDAP. Permissions within an organization are controlled through the assignment of rights and roles to users and groups.
+An organization can contain an arbitrary number of users and groups. Users can be created locally by the organization administrator or imported from a directory service such as LDAP. Permissions within an organization are controlled through the assignment of privilages and roles to users and groups.
 
 #### Catalogs
 {: #shared_overview-cat}
@@ -126,14 +126,14 @@ Standard is the default policy for virtual data centers.
 Encryption enabled storage policies are available to all organization virtual data centers. Encryption protects not only the VMs but also VM disks and other files. Administrators can encrypt VMs and disks by associating the VM or disk with a storage policy that has the VM encryption capability.
 
 * Standard - Encrypted: The storage tier with no maximum throughput. The number of IOPS/GB is not guaranteed.
-* 10 IOPS/GB - Encrypted: The storage tier with a maximum throughput of 10 IOPS/GB, the highest guaranteed performance.
-* 4 IOPS/GB - Encrypted: Storage tier with a maximum throughput of 4 IOPS/GB.
-* 2 IOPS/GB - Encrypted: Storage tier with a maximum throughput of 2 IOPS/GB.
-* 0.25 IOPS/GB - Encrypted: Storage tier with a maximum throughput of 0.25 IOPS/GB.
+* 10 IOPS/GB - Encrypted. The storage tier with a maximum throughput of 10 IOPS/GB, the highest guaranteed performance.
+* 4 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 4 IOPS/GB.
+* 2 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 2 IOPS/GB.
+* 0.25 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 0.25 IOPS/GB.
 
 For information about the VM encryption limitations for VMware Cloud Director 10.1, see [Enabling VM encryption on storage policies of an organization virtual data center](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-80F58C1D-A97E-43FE-8E41-E9242A1D2332.html){:external}.
 
-The encryption storage policies do not currently work with VM customizations. IBM is working closely with VMware to resolve this issue in a future release. In the meantime, you can use encryption storage policies after a VM is deployed and customized by using the unencrypted storage policies. For more information, see [Switching between storage properties](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-change-properties-storage).
+The encryption storage policies do not currently work with VM customizations. IBM is working closely with VMware to resolve this issue in a future release. In the meantime, you can use encryption storage policies after a VM is deployed and customized by using the unencrypted storage policies. For more information, see [Changing the general properties of a virtual machine](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-change-properties).
 {:note}
 
 ### Maximum disk size

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-03-30"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -45,10 +45,10 @@ The downloading of upgrades, host patches, extensions, and related metadata is a
 VUM supports the recall of patches for hosts that are running ESXi 5.0 or later. A patch is recalled if the released patch has problems or potential issues. After you scan the hosts in your VMware vCenter Server instance, VUM alerts you if the recalled patch is installed on a certain host. Recalled patches cannot be installed on hosts with VUM. VUM also deletes all the recalled patches from the patch repository. After a patch fix the problem is released, VUM downloads the new patch to its patch repository. If you have installed the problematic patch, VUM notifies you that a fix was released and prompts you to apply the new patch.
 
 The VUM client interface provides two main views:
-*	Administration View
-*	Compliance View
+*	Administration view
+*	Compliance view
 
-##	Administration View
+##	Administration view
 {: #vum-overview-admin-view}
 
 The administration view is accessed by navigating to; **Home** > **Update Manager** and selecting the IP address of the Update Manager instance. In the Administration view, you can do the following tasks:
@@ -59,7 +59,7 @@ The administration view is accessed by navigating to; **Home** > **Update Manage
 *	Review and check notifications
 *	Import ESXi images
 
-##	Compliance View
+##	Compliance view
 {: #vum-overview-compliance-view}
 
 The compliance view of a selected inventory object is accessed by navigating to **Hosts and Clusters** or **VMs and Templates** and clicking the **Update Manager** tab. In the Update Manager Compliance view, you can do the following tasks:

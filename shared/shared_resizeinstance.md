@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-01-27"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -26,7 +26,7 @@ You can change the amount of resources that are assigned to a virtual data cente
 ## Procedure to resize virtual data center instances
 {: #shared_resize-procedure}
 
-1. From the VMware Solutions Shared virtual data center instance details page, click the pencil icon next to **Resource Reservation**.
+1. From the VMware® Solutions Shared virtual data center instance details page, click the pencil icon next to **Resource Reservation**.
 2. Update the values of the virtual CPU (vCPU) or RAM properties.
 3. Click the **Optional consumption-based charges** section to expand it. Verify the configuration and estimated price and place the order by clicking the **Modify** button.
 

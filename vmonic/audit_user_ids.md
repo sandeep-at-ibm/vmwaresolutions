@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2020
+  years: 2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-27"
 
 keywords: user IDs vCenter, PSC user, user ID service
 
@@ -35,7 +35,7 @@ Starting with V2.5, {{site.data.keyword.vmwaresolutions_short}} uses the followi
 | IBM      | `root`       | SSH    | Used for VMware configuration such as setting up VMware High Availability and creating distributed switches. Used post deployment to pair primary and secondary vCenter Server instances. |
 | Customer | `customerroot` | SSH    | Created for customer use only. |
 | IBM      | `automation@root_domain`<br/>(Active Directory user) | HTTP | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines for add-on services. |
-| Customer | Administrator@vsphere.local | HTTP | Created for customer use only. |
+| Customer | `administrator@vsphere.local` | HTTP | Created for customer use only. |
 {: caption="Table 1. vCenter and Platform Services Controller user IDs" caption-side="top"}
 
 HTTP is used for vCenter setup, configuration, and VMware operations such as adding hosts, clusters, or storage for vCenter management of resources.
@@ -47,7 +47,7 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
 | IBM      | `automation@root_domain`<br/>(Active Directory user) | Used post deployment to manage NSX VTEP IP addresses, manage host and cluster configuration when you add and remove hosts and clusters. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
-| Customer | Admin        | Created for customer use only. |
+| Customer | `admin` | Created for customer use only. |
 {: caption="Table 2. NSX Manager user IDs" caption-side="top"}
 
 ## ESXi host user IDs
@@ -65,7 +65,7 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
 | IBM      | `automation`  | Used to add a host, add a virtual machine for service, and set up Active Directory and DNS entries. |
-| Customer | Administrator | Created for customer use only. |
+| Customer | `administrator` | Created for customer use only. |
 {: caption="Table 4. Active Directory user IDs" caption-side="top"}
 
 
@@ -76,7 +76,7 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 |:------------------------------------------ |:----------- |
 | `prod-BigIP-dynamicID-@domainName` | Used for installation and configuration of the F5 service. |
 | `prod-Caveonix-dynamicID-@domainName` | Used for installation and configuration of the Caveonix RiskForesight service. |
-| `prod-Fortigate-dynamicID-@domainName` | Used for installation and configuration of the FortiGate Security Appliance (Deprecated) service. |
+| `prod-Fortigate-dynamicID-@domainName` | Used for installation and configuration of the FortiGate Security Appliance service. This service is deprecated. |
 | `prod-FortigateVM-dynamicID-@domainName` | Used for installation and configuration of the FortiGate Virtual Appliance service. |
 | `prod-HyTrustCC-shortID-@domainName` | Used for installation and configuration of the HyTrust CloudControl service. |
 | `prod-HyTrustDC-shortID-@domainName` | Used for installation and configuration of the HyTrust DataControl service. |
@@ -98,4 +98,4 @@ In the previous table, the following notations are used:
 {: #audit_user_ids-related}
 
 * [Considerations about changing vCenter Server artifacts](/docs/vmwaresolutions?topic=vmwaresolutions-vcenter_chg_impact#vcenter_chg_impact-automation-id)
-* [Activity Tracker events](/docs/vmwaresolutions?topic=vmwaresolutions-at-events#at-events)
+* [Auditing events for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-at-events#at-events)

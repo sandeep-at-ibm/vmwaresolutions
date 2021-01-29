@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-03-30"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -13,151 +13,117 @@ subcollection: vmwaresolutions
 # VMware HCX overview
 {: #hcx-archi-overview}
 
-VMware HCX seamlessly integrates on-premises vSphere® vCenter™ networks into {{site.data.keyword.vmwaresolutions_short}} deployments. Hybrid networking extends on-premises vSphere vCenter networks into the {{site.data.keyword.cloud_notm}}, supporting bidirectional virtual machine (VM) mobility.
+VMware® HCX™ seamlessly integrates on-premises vSphere® vCenter™ networks into {{site.data.keyword.vmwaresolutions_short}} deployments. Hybrid networking extends on-premises vSphere vCenter networks into the {{site.data.keyword.cloud_notm}}, supporting bidirectional virtual machine (VM) mobility.
 
-HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as virtual machine migration and network extension.
+HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as VM migration and network extension.
 
 This offering creates an optimized, software-defined WAN to increase stretched network performance, enabling performance that approaches LAN speed. HCX also enables bidirectional workload and VMware NSX® security policy migration to the {{site.data.keyword.cloud_notm}}. HCX integrates with vSphere vCenter and is managed from the vSphere Web Client.
 
-## Layer 2 Network Extension
-{: #hcx-archi-overview-layer-2-net}
+## HCX services
+{: #hcx-archi-overview-svcs}
 
-HCX allows an existing on-premises vSphere estate to securely stretch a network from its on-premises vCenter to an {{site.data.keyword.cloud_notm}} that runs VMware vCenter Server. This feature is enabled by the following items:
-* HCX provides an appliance that is called a Layer 2 Concentrator (L2C).
-* Extended networks link to IBM Cloud NSX edge appliances deployed on VMware vCenter Server.
-* One can deploy multiple standard Layer 2 concentrators to achieve scalability and increase throughput from the on-premises vCenter.
-* Virtual machines that are migrated through the Cloud Gateway and over stretched Layer 2 can retain their IP and MAC addresses.
+{{site.data.keyword.vmwaresolutions_short}} provides the following HCX services.
 
-## Virtual machine migration
-{: #hcx-archi-overview-vm-mig}
+### Interconnect
+{: #hcx-archi-overview-svcs-ic}
 
-HCX provides three methods of virtual machines movement: low downtime migration, vSphere vMotion migration, and cold migration.
+This service creates and secures connections between HCX installations, supporting management, migration, replication, and disaster recovery operations. This service is deployed as a virtual appliance.
 
-### Low downtime migration
-{: #hcx-archi-overview-low-downtime-mig}
+### WAN optimization
+{: #hcx-archi-overview-svcs-wo}
 
-Low downtime migration relies on vSphere Replication, which is a distributed technology that is implemented in the VMware ESX®/ESXi® hypervisor. The on-premises HCX deployment creates a replica of a live virtual machine in the {{site.data.keyword.cloud_notm}}, and performs a switchover to power off the source virtual machine and power on the migrated virtual machine.
+The WAN Optimization service works with the HCX Interconnect service to improve the network performance through a combination of deduplication, compression, and line conditioning techniques. This service is deployed as a virtual appliance.
 
-The migration path is always through the Cloud Gateway. The transport can be the internet, a Layer 2 stretched network, or a Direct Connect line.
+### Network extension
+{: #hcx-archi-overview-svcs-ne}
 
-A virtual machine can be migrated multiple times in either direction.
+This service extends the VM networks from an HCX-enabled source site to an HCX-enabled remote site. VMs that are migrated or created on the extended segment at the remote site are Layer 2 next to VMs placed on the origin network. This service is deployed as a virtual appliance.
+
+### Bulk migration
+{: #hcx-archi-overview-svcs-bm}
+
+This service uses VMware vSphere® Replication protocol to move VMs in parallel between HCX enabled sites.
 
 ### vMotion migration
-{: #hcx-archi-overview-vmotion-mig}
+{: #hcx-archi-overview-svcs-vmm}
 
-Live virtual machines can be transferred by using vMotion Migration across a network that is stretched to the {{site.data.keyword.cloud_notm}}. vMotion migration is also called zero downtime migration, or cross-cloud vMotion.
+This migration method uses the VMware vMotion protocol to move a single VM between HCX enabled sites with no service interruption.
 
-### Cold migration
-{: #hcx-archi-overview-cold-mig}
+### Disaster Recovery
+{: #hcx-archi-overview-svcs-dr}
 
-With cold migration, you can transfer a powered-off VM to the {{site.data.keyword.cloud_notm}} over a stretched network that is created by using the Layer 2 Concentrator.
-
-### Common migration features
-{: #hcx-archi-overview-cold-mig-features}
-
-Other features available across all three types of migration include software-defined WAN optimization that increases migration throughput and speed. Additionally, migration can be scheduled to occur at a specified time and keep its host name, virtual machine name, or both.
-
-## Networking features
-{: #hcx-archi-overview-net-features}
-
-The following networking features are built into the Cloud Gateway and the Layer 2 Concentrators.
-
-### Intelligent Flow Routing
-{: #hcx-archi-overview-intel-flow-routing}
-
-This feature automatically selects the best connection based on the internet path, efficiently flooding the entire connection so that workloads are moved as fast as possible. When larger flows, such as backup or replication, cause CPU contention, smaller flows are routed to less busy CPUs, improving performance of interactive traffic.
-
-### Proximity Routing
-{: #hcx-archi-overview-prox-routing}
-
-Proximity routing ensures that forwarding between virtual machines that are connected to stretched and routed networks, both on-premises and in the cloud, is symmetrical. This feature requires Advanced Networks Services with Dynamic Routing that is configured between the customer premises and the cloud.
-
-When users extend their networks to the cloud, Layer 2 connectivity is stretched onto {{site.data.keyword.cloud_notm}} networks. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called _tromboning_ or _hairpinning_.
-
-Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both source and destination virtual machines reside in the Cloud.
-
-In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. Virtual machine communication (without route optimization) failure occurs when the egress path that exits the cloud can be either the stretched Layer 2 network or the Org Routed Network. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from the {{site.data.keyword.cloud_notm}}.
-
-The Cloud Gateway maintains an inventory of virtual machines in the cloud. It also understands the VM state, which can be one of the following states:
-* Transferred to the {{site.data.keyword.cloud_notm}} with vMotion (zero-downtime migration).
-* Migrated to the cloud by using host-based replication (low-downtime migration).
-* Created in the cloud (on a stretched network).
-
-### Security
-{: #hcx-archi-overview-sec}
-
-The Cloud Gateway offers Suite B-compliant AES-GCM with IKEv2, AES-NI offload, and flow-based admission control. HCX also owns the source and destination encryption and decryption process, ensuring consistent security and administration for hybrid workflows such as virtual machine migration and network extension. Security policies that are defined and assigned to a virtual machine on-premises can be migrated with the virtual machine into the {{site.data.keyword.cloud_notm}}.
-
-Policy migration is only available under the following conditions:
-* The on-premises data center must be running NSX 6.2.2 or greater.
-* In vSphere, the security policy is a single NSX Section that can contain many rules.
-* One can name a Set of IP addresses or MAC addresses to participate in the policy. The name of the MAC Set or IP Set cannot exceed 218 characters.
-* Supported rules specify Layer 3 IP addresses or IP Sets, or Layer 2 MAC addresses or MAC Sets as the source or destination.
+The HCX Disaster Recover service replicates and protects VMs to a remote data center.
 
 ## Components of HCX
 {: #hcx-archi-overview-comp-hcx}
 
-The VMware HCX service deploys four virtual appliances that are installed and configured on both the on-premises datacenter and the {{site.data.keyword.cloud_notm}} target. This section describes each of the four required virtual appliances. Optionally, edge devices might be required depending upon the implementation design.
+The VMware HCX service deploys four virtual appliance types that are installed and configured on both the on-premises datacenter and the {{site.data.keyword.cloud_notm}} target. Optionally, edge devices might be required depending upon the implementation design.
 
-### HCX Manager
-{: #hcx-archi-overview-hcx-man}
+### Target side and client side
+{: #hcxclient-components-cloud-client-side}
 
-The HCX Manager virtual appliance is an extension to the on-premises vCenter. It is deployed as a virtual machine and its file structure contains the other hybrid service virtual appliances. The HCX Manager oversees the deployment and configuration of the Cloud Gateway, the Layer 2 Concentrators, and WAN Optimization virtual appliance both on-premises and within the {{site.data.keyword.cloud_notm}}.
+HCX has the concept of cloud side (target - destination) and client side (source).
 
-### Hybrid Cloud Gateway
-{: #hcx-archi-overview-hcg}
+- Cloud / Destination side - HCX Cloud is pre-deployed in IBM Cloud vCenter Server Deployment on customer portal request and configured with the network and compute profiles ready for service mesh creation.  
+- Client / Source side - Any vSphere instances that meet the prerequisites for installation and operation. The client side of HCX is the primary that controls the cloud side secondary instance through its vCenter web client user interface (UI) snap-in.
 
-The Hybrid Cloud Gateway (CGW) maintains a secure channel between the on-premises vSphere estate and the {{site.data.keyword.cloud_notm}}. HCX uses strong encryption to bootstrap a site-to-site connection to the {{site.data.keyword.cloud_notm}}.
+The source and destination sites are paired together for HCX operations. An HCX Connector cannot be paired with another HCX Connector.
 
-The secure channel between vSphere and {{site.data.keyword.cloud_notm}} prevents networking "middle mile" security problems. The Cloud Gateway also incorporates vSphere replication technology to perform bidirectional migration.
+In both the source and destination environments, HCX is deployed to the management zone, next to each site's vCenter Server, which provides a single plane (HCX Manager) for administering VMware HCX. This HCX Manager provides a framework for deploying HCX service VMs across both the source and destination sites. VMware HCX administrators are authenticated, and each task authorized through the existing vSphere SSO identity sources. VMware HCX mobility, extension, protection actions can be initiated from the HCX User Interface or from within the vCenter Server Navigator screen's menus.
 
-### WAN Optimization
-{: #hcx-archi-overview-wan-opt}
+### HCX Cloud and HCX Connector
+{: #hcxclient-components-manager}
 
-The WAN Optimization appliance is the component that performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns. Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the {{site.data.keyword.cloud_notm}}.
+In the HCX site-to-site architecture, an HCX source and an HCX destination environment exist. Depending on the environment, there is a specific HCX installer: HCX Connector (previously HCX Enterprise) or HCX Cloud. HCX Connector is always deployed as the source. HCX Cloud is typically deployed as the destination, but it can be used as the source in cloud-to-cloud deployments. In HCX-enabled public clouds, the cloud provider deploys HCX Cloud. The public cloud tenant deploys HCX Connector on-premises.
 
-It is important to note that virtual machine migration relies on the combination of Cloud Gateway and WAN Optimization appliance to achieve unparalleled mobility between vSphere on-premises and the {{site.data.keyword.cloud_notm}}. Additionally, Layer 2 extension benefits from WAN optimization when the data path is routed through the Cloud Gateway.
+The source and destination sites are paired together for HCX operations. An HCX Connector cannot be paired with another HCX Connector.
 
-### Layer 2 Concentrators
-{: #hcx-archi-overview-layer-2-conc}
+In both the source and destination environments, HCX is deployed to the management zone, next to each site's vCenter Server, which provides a single plane (HCX Manager) for administering VMware HCX. This HCX Manager provides a framework for deploying HCX service VMs across both the source and destination sites. VMware HCX administrators are authenticated, and each task authorized through the existing vSphere SSO identity sources. VMware HCX mobility, extension, protection actions can be initiated from the HCX User Interface or from within the vCenter Server Navigator screen's menus.
 
-The Layer 2 concentrators (L2C) appliances allow the extension of a Layer 2 network from the on-premises vSphere data center to the {{site.data.keyword.cloud_notm}}. The Layer 2 Concentrators have two interfaces:
-* Internal trunk interface - Handles virtual machine traffic on-premises for the extended networks by using a translational bridge mapping to a corresponding stretched network in {{site.data.keyword.cloud_notm}}.
-* Uplink interface - HCX uses this interface to send encapsulated overlay traffic to and from {{site.data.keyword.cloud_notm}}. Application data travels through this interface.
+### HCX-IX Interconnect Appliance (HCX-IX)
+{: #hcx-archi-overview-comp-hcx-ix}
 
-## Deployment architecture - Connect to IBM Cloud by using the public internet
-{: #hcx-archi-overview-connect-pub-internet}
+The HCX-IX service appliance provides replication and vMotion-based migration capabilities over the Internet and private lines to the destination site whereas providing strong encryption, traffic engineering, and VM mobility.
 
-This section describes the layout of the HCX components within the {{site.data.keyword.cloud_notm}} and with client on-premises. In this design, the architecture specifies a hub-and-spoke model that exists between the source environment and the {{site.data.keyword.cloud_notm}}. Thus, the source estate serves as the hub with connections to different {{site.data.keyword.cloud_notm}} environments as shown in the following figure.
+### HCX WAN Optimization Appliance (HCX-WO)
+{: #hcx-archi-overview-comp-hcx-wo}
 
-![HCX with single source](../../images/cloudfoundation_hybrid_cloud_services.svg "HCX with single source"){: caption="Figure 1. HCX with single source" caption-side="bottom"}
+The VMware HCX WAN Optimization service improves performance characteristics of the private lines or Internet paths by applying WAN optimization techniques like the data de-duplication and line conditioning. It makes performance closer to a LAN environment. It accelerates onboarding to the destination site by using Internet and VPN. This way, immediate migration is allowed, without the need to wait for Direct Link and related MPLS circuits, which can naturally be used in migration, too.
+
+### HCX Network Extension Virtual Appliance (HCX-NE)
+{: #hcx-archi-overview-comp-hcx-ne}
+
+The HCX Network Extension service provides a low-touch operation for high performance (4 - 6 Gbps) Layer 2 Extension from environments that use a vSphere Distributed Switch, or NSX Networking. HCX Network Extension allows you to keep the same IP and MAC addresses during VM migrations. HCX Network Extension with Mobility Optimized Networking eliminates tromboning between migrated VMs on different extended segments, and VMs on native NSX-T networks at the destination
+
+## Deployment architecture
+{: #hcx-archi-overview-connect}
+
+The deployment architecture consists of the HCX components within the {{site.data.keyword.cloud_notm}} and with client on-premises. In this design, the architecture specifies a hub-and-spoke model that exists between the source environment and the {{site.data.keyword.cloud_notm}}. The source estate serves as the hub with connections to different {{site.data.keyword.cloud_notm}} environments as shown in the following figure. In this model, the site peering is established over Public Internet.
+
+![HCX with single source over Public Network](../../images/hcx-public.svg "HCX with single source over Public Network"){: caption="Figure 1. HCX with single source over Public Network" caption-side="bottom"}
+
+Alternatively, the architecture also allows site peering over Private Internet.
+
+![HCX with single source over Private Network](../../images/hcx-private.svg "HCX with single source over Private Network"){: caption="Figure 1. HCX with single source over Private Network" caption-side="bottom"}
 
 The source can be placed within the {{site.data.keyword.cloud_notm}} environment as well; spokes are always cloud deployments within this design as shown in the following figure.
 
 ![HCX with multiple sources](../../images/hcx_multiple_sources.svg "HCX with multiple sources"){: caption="Figure 2. HCX with multiple sources" caption-side="bottom"}
 
-### Usage overview
-{: #hcx-archi-overview-usage-ovw}
-
-The following tasks are completed from the vSphere Web Client:
-* Deploy the HCX virtual appliances, and configure software-defined WAN components.
-* Extend on-premises VLAN and VXLAN networks from on-premises vCenter to Cloud ({{site.data.keyword.cloud_notm}}).
-* Migrate workloads to the cloud and back.
-
-### Base design dependencies
+## Base design dependencies
 {: #hcx-archi-overview-base-design}
 
-Before the components are described in more detail, it is imperative to understand the base deployment that is required as part of this design.
+The base deployment must follow the minimum requirements:
 * The source environment must contain a vSphere implementation that is managed by a vCenter Server. Supported vCenter of 5.5U3 or vCenter 6.0U2 and higher, with ESXi 5.5 or higher is required for Hybrid Cloud Services.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
 * If cross-cloud vMotion is intended, the same affinity restrictions apply across clouds as they do on-premises.
-* The source environment must have a method to connect to cloud environments. This includes public internet access or private connections by using {{site.data.keyword.cloud_notm}} Direct link. Connections, other than public internet, to other cloud vendors will not be discussed.
-* The source environment VM’s and networks to be migrated or stretched must be on portgroups within a Virtual Distributed Switch or Cisco Nexus 1000v Virtual Distributed Switch.
-* The {{site.data.keyword.cloud_notm}} must contain at least one instance of VMware vCenter Server.
+* The source environment must have a method to connect to cloud environments, which includes public internet access or private connections by using {{site.data.keyword.cloud_notm}} Direct link.
+* The source environment VM’s and networks to be migrated or stretched must be on portgroups within a Virtual Distributed Switch.
+* The {{site.data.keyword.cloud_notm}} must contain at least one instance of VMware vCenter Server®.
 * Sufficient resources for the virtual appliances.
-* The networks must permit the appliances to communicate with both local and remote virtual appliances, and other virtual machines.
+* The networks must allow the appliances to communicate with both local and remote virtual appliances, and other VMs.
 * Port Access Requirements (Appendix A) lists ports that must be opened so that Hybrid Cloud Services virtual appliances can install successfully.
-* A vSphere service account with the Administrator vCenter Server system role assigned to it.
+* A vSphere service account, which has the Administrator vCenter Server system role assigned to it.
 * Enough disk space for installing Hybrid Cloud Services and the associated service appliances.
 * Sufficient IP addresses for the on-premises VMs provisioned during the installation.
 * If the SSO server is remote, the URL of the vCenter, external SSO Server, or Platform Services Controller (PSC) that runs the external lookup service must be identified. When the HCX service is registered with the vCenter, this URL must be supplied.

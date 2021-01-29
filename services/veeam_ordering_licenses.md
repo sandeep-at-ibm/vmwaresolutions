@@ -3,9 +3,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-08-25"
+lastupdated: "2021-01-28"
 
 keywords: Veeam, Veeam license, order Veeam license, Veeam 10
 
@@ -29,7 +29,7 @@ subcollection: vmwaresolutions
 # Ordering Veeam licenses
 {: #veeam_ordering_licenses}
 
-You can order a Veeam license without associating it to any vCenter Server instance for licensing and activation of your on-premises workloads.
+You can order a Veeam® license without associating it to any VMware vCenter Server® instance for licensing and activation of your on-premises workloads.
 
 ## Before you begin
 {: #veeam_ordering_licenses-before-begin}
@@ -48,7 +48,7 @@ Ensure that you configured the {{site.data.keyword.cloud}} infrastructure creden
 
 4. Specify a new license name or use the default name **veeam-_xx_** where _xx_ represents two randomly generated alphabetic characters.
 5. In the **License note** field, enter a note. For example, you can enter a note to help you identify associated instances.
-6. Specify the number of VMs you want to license.
+6. Specify the number of virtual machines (VMs) you want to license.
 7. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms before you order the license.
 8. Click **Add to estimate** or **Create**.
 
@@ -63,7 +63,7 @@ When the license is ready to use, the status of the license is changed to **Inst
 {: #veeam_ordering_licenses-related}
 
 * [Veeam v9.5 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)
-* [Veeam v10 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Veeam v10a overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Ordering Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
 * [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)

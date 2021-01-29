@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-10-23"
+lastupdated: "2020-12-10"
 
 subcollection: vmwaresolutions
 
@@ -21,8 +21,11 @@ subcollection: vmwaresolutions
 
 The HyTrust® Workload Security Platform consists of the following products:
 
-* HyTrust KeyControl™ - HyTrust KeyControl (HTKC) serves as a Key Management Server for VMware vSphere and vSAN encrypted clients, or other products that support KMIP. HTKC manages the encryption keys for virtual machines and encrypted data stores and can scale to support thousands of encrypted workloads in large deployments. The following key features are included:
-    * VMware Certified Key Manager Server (KMS) for vSphere 6.5, 6.7 – vSAN6.6.
+* HyTrust KeyControl™ - HyTrust KeyControl (HTKC) serves as a Key Management Server for VMware vSphere and vSAN encrypted clients, or other products that support KMIP. HTKC manages the encryption keys for virtual machines (VMs) and encrypted data stores and can scale to support thousands of encrypted workloads in large deployments. The following key features are included:
+    * VMware certified Key Management Server (KMS) for:
+      * vSphere 6.5, 6.7, and 7.0
+      * vSAN 6.6, 6.7, and 7.0
+      * vSphere Trust Authority 7.0
     * Highly Availability (HA) active- active deployments and clustering.
     * Initial implementation of a 2-Node KeyControl cluster, but can be extended to up to four KeyControl Nodes in a cluster.
     * FIPS 140-2 Level 1 validated. FIPS 140-2 Level 3 compliance by using HSM support.
@@ -44,7 +47,7 @@ The HyTrust® Workload Security Platform consists of the following products:
     * One-click security and compliance remediation on vulnerable VMs.
     * Visibility of the security state, configurations, administrator actions, and compliance for VMs.
     * HyTrust BoundaryControl prevent VMs from being moved from a designated host or onto a host that does not have acceptable security policy by enforcing data policy based on software tags or by using Intel TXT.
-* HyTrust CloudAdvisor - Data discovery and classification across virtual machines and backups.
+* HyTrust CloudAdvisor - Data discovery and classification across VMs and backups.
 
 This reference architecture uses HyTrust DataControl.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-01-27"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -21,17 +21,17 @@ subcollection: vmwaresolutions
 # Ordering FortiGate Virtual Appliance
 {: #fortinetvm_ordering}
 
-You can include the FortiGate Virtual Appliance service with a new vCenter Server instance or add the service to your existing vCenter Server instance.
+You can include the FortiGate® Virtual Appliance service with a new vCenter Server® instance or add the service to your existing vCenter Server instance.
 
 ## Ordering FortiGate Virtual Appliance for a new instance
 {: #fortinetvm_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Services** section and click **FortiGate Virtual Appliance** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Add-on services** section and click **FortiGate Virtual Appliance** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering FortiGate Virtual Appliance for an existing instance
 {: #fortinetvm_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **FortiGate Virtual Appliance** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **FortiGate Virtual Appliance** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Ordering FortiGate Virtual Appliance for private instances
 {: #fortinetvm_ordering-private}

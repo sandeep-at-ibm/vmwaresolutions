@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-08-18"
+lastupdated: "2021-01-06"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -44,7 +44,7 @@ Before ordering a vCenter Server instance, you must configure your {{site.data.k
 
 When ordering your vCenter Server instance, you first choose its name and the VMware vSphere version. All VMware instances are deployed together with Microsoft® Active Directory® domain controllers, and for single sign-on purposes, you must designate your instance as either a primary or secondary site. A primary instance is the first or the only instance in your single sign-on domain. You can deploy more secondary instances and associate them with the same single sign-on domain of an existing primary instance. Next, you choose whether to bring your own VMware licenses, or which edition of license you want to rent from {{site.data.keyword.cloud_notm}}. Finally, you choose the {{site.data.keyword.cloud_notm}} region and data center for your instance, as well as the CPU and memory characteristics for the hosts in your cluster.
 
-In the next part of the order page, you enter the storage and networking characteristics for your instance. You can choose between vSAN and NFS storage for your cluster, with the ability to choose the size and number of vSAN Flash disks and the vSAN license edition, or the size and count and performance of NFS storage volumes. For networking, you choose the host name prefix for your hosts and the subdomain and domain for the cluster. You have the option of deploying the Active Directory controllers as a single {{site.data.keyword.cloud_notm}} virtual server instance (VSI). Or, you can deploy the controllers as two virtual machines (VMs) within your cluster (for those VMs, you need to provide licensing and activation).
+In the next part of the order page, you enter the storage and networking characteristics for your instance. You can choose between vSAN and NFS storage for your cluster, with the ability to choose the size and number of vSAN Flash disks and the vSAN license edition, or the size and count and performance of NFS storage volumes. For networking, you choose the host name prefix for your hosts and the subdomain and domain for the cluster. You have the option of deploying the Active Directory controllers as a single {{site.data.keyword.cloud_notm}} Microsoft Windows® virtual server instance (VSI). Or, you can deploy the controllers as two Microsoft Windows virtual machines (VMs) within your cluster (for those VMs, you need to provide licensing and activation).
 
 At the bottom of the vCenter Server order page, you can select from various add-on services that you can deploy for your VMware instance and which are billed to your {{site.data.keyword.cloud_notm}} account. Some services require additional configuration, which you specify as part of the order form.
 
@@ -110,12 +110,12 @@ You log in to the [{{site.data.keyword.vmwaresolutions_short}} console](https://
 ### The IBM CloudBuilder component
 {: #under_the_hood-ibm-cb}
 
-When you provision a new instance, the console deploys a temporary virtual server instance (VSI) to your {{site.data.keyword.cloud_notm}} account. This virtual server is known as the IBM CloudBuilder. It performs the installation and configuration of all of the instance's components, and the validation of the environment. After the provisioning is complete the CloudBuilder is deleted.
+When you provision a new instance, the console deploys a temporary VSI to your {{site.data.keyword.cloud_notm}} account. This virtual server is known as the IBM CloudBuilder. It performs the installation and configuration of all of the instance's components, and the validation of the environment. After the provisioning is complete the CloudBuilder is deleted.
 
 ### The IBM CloudDriver component
 {: #under_the_hood-ibm-cd}
 
-Much like the CloudBuilder, the IBM CloudDriver is a temporary virtual server instance (VSI) deployed into your {{site.data.keyword.cloud_notm}} account to perform subsequent operations on your instance. It is deployed as needed to configure or remove hosts, clusters, storage, or services in your instance.
+Much like the CloudBuilder, the IBM CloudDriver is a temporary VSI deployed into your {{site.data.keyword.cloud_notm}} account to perform subsequent operations on your instance. It is deployed as needed to configure or remove hosts, clusters, storage, or services in your instance.
 
 ### VMware components
 {: #under_the_hood-vmware-comp}
@@ -125,7 +125,7 @@ For all instances, vSphere Hypervisor is installed on the bare metal servers. {{
 ### Additional components
 {: #under_the_hood-add-comp}
 
-Depending on your choice, either one Microsoft Windows® VSI or two Microsoft Windows VMs are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
+Depending on your choice, either one VSI or two VMs are deployed alongside or into your cluster as Active Directory servers for management components. You can optionally add your own Active Directory servers as additional identity sources for management access.
 
 Regardless of how you choose to provide business continuity for your own workloads, {{site.data.keyword.cloud_notm}} strongly recommends that you back up the management components of your instance. The {{site.data.keyword.vmwaresolutions_short}} console allows you to deploy an integrated IBM Spectrum Protect Plus backup server or a Veeam Backup & Replication backup server together with your instance. These backup services can be used as part of a [complete backup solution](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup) for your instance.
 

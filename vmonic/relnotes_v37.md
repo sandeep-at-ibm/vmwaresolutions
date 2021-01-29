@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-15"
+lastupdated: "2021-01-18"
 
 keywords: release notes, what's new, version 3.7
 
@@ -129,7 +129,7 @@ In June 2020, IBM Cloud for VMware Solutions acquired a PCI DSS attestation of c
 ## New and updated documentation
 {: #relnotes_v37-updated-doc}
 
-* (Updated on July 14, 2020) The [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-fss-overview) is updated.
+* (Updated on July 14, 2020) The [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-archi-overview) is updated.
 * Documentation about the responsibilities of IBM vs the customer's is available at [Understanding your responsibilities when using VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-understand-responsib).
 * Documentation is available about the access type that {{site.data.keyword.cloud_notm}} Support has to your environment and the steps that you can take to limit the access, if required. For more information, see [{{site.data.keyword.cloud_notm}} Support access](/docs/vmwaresolutions?topic=vmwaresolutions-data-security-mng-data#data-security-ibm-access).
 * Documentation is now available about the various ports that are  used in VMware Solutions. The documentation includes details about:

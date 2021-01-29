@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-07"
+lastupdated: "2021-01-27"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 # F5 BIG-IP overview
 {: #f5_considerations}
 
-The F5 BIG-IP service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
+The F5 BIG-IP® service (F5 BIG-IP Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
 {: shortdesc}
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
@@ -89,7 +89,7 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs are 
 
   `RAM reservation = RAM size` (from Table 1)
 
-* {{site.data.keyword.vmwaresolutions_full}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/en-us/bigip-14-1-0/big-ip-device-service-clustering-administration-14-1-0/creating-an-active-standby-configuration-using-the-setup-utility.html){:external}.
+* {{site.data.keyword.vmwaresolutions_short}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/en-us/bigip-14-1-0/big-ip-device-service-clustering-administration-14-1-0/creating-an-active-standby-configuration-using-the-setup-utility.html){:external}.
 
 ### Planning considerations
 {: #f5_considerations-planning}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-01-28"
 
 keywords: Red Hat OpenShift for VMware, OpenShift configuration, order OpenShift
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 
 You can include the Red Hat® OpenShift® for VMware® service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
 
-1. In the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the **Services** section and click **Red Hat OpenShift for VMware** on the **Transformation and Modernization of VMware Applications** card.
+1. In the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the **Add-on services** section and click **Red Hat OpenShift for VMware** in the **Transformation and modernization of VMware applications** category.
 2. On the **Red Hat OpenShift for VMware** page, click the **About** tab to review the description and technical specifications for Red Hat OpenShift for VMware.
 3. Click the **Create** tab.
 4. To add the service while you order a new instance, click **Add to new instance**, and then continue with [ordering a new vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
@@ -42,17 +42,17 @@ Red Hat OpenShift depends on DNS to function properly. There is a wildcard zone
 
 Because the Red Hat OpenShift web console runs as an application within Red Hat OpenShift, your system must properly resolve DNS names before you can connect to the Red Hat OpenShift web console. You must complete the following steps before you open the Red Hat OpenShift console:
 
-1. Ensure you are connected to your environment by using the {{site.data.keyword.cloud}} infrastructure VPN.
+1. Ensure you are connected to your environment by using the {{site.data.keyword.cloud_notm}} infrastructure VPN.
 
-2. Ensure the system that you will be using to connect to the Red Hat OpenShift web console can properly resolve hostnames in the DNS zone for your VMware environment. If you have an existing DNS infrastructure, it is recommended that you configure the DNS delegation so that queries for hostnames within the VMware instance's root zone are handled by the AD DNS server that is running within your VMware environment.
+2. Ensure the system that you use to connect to the Red Hat OpenShift web console can properly resolve hostnames in the DNS zone for your VMware environment. If you have an existing DNS infrastructure, it is recommended that you configure the DNS delegation so that queries for hostnames within the VMware instance's root zone are handled by the AD DNS server that is running within your VMware environment.
 
 Alternately, you can configure your local `hosts` file with the following entries so you can access the OpenShift web console. In the following example:
 * Replace APPLICATION_IP with the OpenShift application IP address shown in the Red Hat OpenShift service details page.
-* Replace SUBDOMAIN with the subdomain shown on the Summary page for the vCenter Server instance.
+* Replace ROOTDOMAIN with the root domain shown on the Summary page for the vCenter Server instance.
 
-   `APPLICATION_IP  console-openshift-console.apps.ocp.SUBDOMAIN`
+   `APPLICATION_IP  console-openshift-console.apps.ocp.ROOTDOMAIN`
+   `APPLICATION_IP  oauth-openshift.apps.ocp.ROOTDOMAIN`
 
-   `APPLICATION_IP  oauth-openshift.apps.ocp.SUBDOMAIN`
 
 ## Related links
 {: #ocp_ordering-related}

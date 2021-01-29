@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-07-06"
+lastupdated: "2020-12-18"
 
 subcollection: vmwaresolutions
 
@@ -84,7 +84,7 @@ The deployment approach is best described in the following phases:
 
 * Phase 1 - vCenter Server instance preparation:
   * Using the {{site.data.keyword.vmwaresolutions_full}} console, [order a vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance), which can include NFS storage or vSAN. If you have an existing instance with enough capacity, this can be used. This step is not described in this document.
-  * Using the IBM Cloud console, [order more private and public subnets](/docs/subnets?topic=subnets-getting-started#ordering-subnets) to be used by the OpenShift cluster
+  * Using the IBM Cloud console, [order more private and public subnets](/docs/subnets?topic=subnets-getting-started) to be used by the OpenShift cluster.
   * Download RHEL 7.6 ISO for the OS of the bastion/deployment node and the Red Hat Enterprise Linux CoreOS (RHCOS) OVA image. This step is described in [Prerequisites for installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-prereq-intro).
   * Using govc, the OVA and ISO are uploaded to a datastore on the vCenter Server instance. This step is described in [Prerequisites for installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-prereq-intro).
   * Add logical switches - Two logical switches are created; OpenShift-LS the network the OpenShift VMs are deployed onto and OpenShift-DLR-Transit, the uplink between the DLR and the Edge.

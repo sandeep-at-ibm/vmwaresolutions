@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-01-28"
 
 subcollection: vmwaresolutions
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 Deploy the vCenter Server instance before the vSRX edge gateway appliance order is placed.
 
-## Order Juniper gateway devices
+## Ordering Juniper gateway devices
 {: #vcsvsrx-deployment-order-gateway}
 
 The following procedure assumes that you are deploying the IaaS KVM-based Juniper vSRX HA cluster. If you want to build your own gateway by using ESXi, then order the No-OS gateway option instead. For more information, see [Ordering a Bring Your Own Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).

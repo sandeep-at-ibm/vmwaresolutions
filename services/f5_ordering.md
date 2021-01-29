@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2019-06-25"
+lastupdated: "2020-12-04"
 
 keywords: F5 license activation, F5 configuration, order F5
 
@@ -26,12 +26,12 @@ You can include the F5 BIG-IP® service with a new vCenter Server® instance or 
 ## Ordering F5 BIG-IP for a new instance
 {: #f5_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Services** section and click **F5 BIG-IP** in the **Security and Compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Add-on services** section and click **F5 BIG-IP** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering F5 BIG-IP for an existing instance
 {: #f5_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **F5 BIG-IP** in the **Security and Compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **F5 BIG-IP** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
 
 ## Ordering F5 BIG-IP for private instances
 {: #f5_ordering-private}
