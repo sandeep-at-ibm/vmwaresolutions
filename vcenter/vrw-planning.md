@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-01"
 
 keywords: planning regulated workloads, data center for workloads, vmware workloads data centers
 
@@ -95,7 +95,7 @@ The following services are required for the regulated workloads:
 The following services are included with regulated workloads:
 * [Veeam® 10](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
-* [HyTrust® CloudContro™l](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [HyTrust® CloudControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
 * [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) (for **Edge services cluster with Juniper vSRX**)
 * [vRealize Operations™ and Log Insight™](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 
