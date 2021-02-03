@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-09"
+lastupdated: "2021-02-03"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -22,18 +22,18 @@ Review the following chart to understand the differences in functions support fo
 |:-------- |:-------------- |:-------------- |
 | Powered by {{site.data.keyword.IBM}} advanced automation[^automation] | Yes | No. Self-built and configured. |
 | Storage options | vSAN™ or NFS (Shared File-level Storage) | vSAN or NFS |
-| Number of ESXi™ servers in the initial cluster | Four for vSAN</br>(NSX-V) Minimum two (three recommended) for NFS</br>(NSX-T) Minimum two (four recommended) for NFS | One to scale an existing cluster, four for new vSAN cluster, and a minimum of three for new NFS cluster. |
+| Number of ESXi™ servers in the initial cluster | For vSAN: 4 servers </br>For NFS: </br> - 3 servers for production use </br> - 2 servers for non-production use | - For a new vSAN cluster: 4 servers </br> - For a new NFS cluster: 1 server </br> - To scale an existing cluster: 1 server |
 | Maximum number of ESXi servers[^servers] | 59 per cluster | 60 per cluster |
 | Cloud automated multi-site deployment |Supported for new instances | Supported. Automated configuration not included. |
 | Add ESXi servers | Supported | Supported. Automated configuration not included. |
 | Remove ESXi servers | Supported | Supported. Automated configuration not included. |
 | Multi-cluster support | Maximum number depends on VMware® sizing guidelines | Supported. Automated configuration not included. |
-| Client-managed updating and patching of VMware stack | Client-managed updates: Native VMware tools (VMware Update Manager™)[^nsxv1] | Client-managed updates:<br/>Native VMware tools (VMware Update Manager) |
+| Client-managed updating and patching of VMware stack | Client-managed updates: Native VMware tools (VMware Update Manager™)[^nsxv1] | Client-managed updates: Native VMware tools (VMware Update Manager) |
 | Backup and restore | Manually using IBM Spectrum® Protect Plus or Veeam®[^nsxv2] | Backup and restore solution is not included |
-| Software-defined networking | NSX Base, Advanced, or Enterprise | NSX Standard, Base, or Enterprise. Automated configuration not included. |
+| Software-defined networking | NSX Advanced or Enterprise | NSX Advanced or Enterprise. Automated configuration not included. |
 | BYOL for vSphere and vSAN | Fully supported per cluster | Supported |
 | BYOL for vCenter and NSX | Fully supported per instance | Supported |
-| NSX license upgrade options | Upgrade available from NSX Base to Advanced or Enterprise, and from NSX Advanced to Enterprise. | None |
+| NSX license upgrade options | Upgrade available from NSX Advanced to Enterprise. | None |
 | vSAN license editions | vSAN Advanced or Enterprise | vSAN Advanced or Enterprise  |
 | Add-on services | Supported[^nsxv3] | Not supported by the automation of this solution, but you can bring and install your own software. |
 {: caption="Table 1. Supported functions for vCenter Server instances and for vSphere clusters" caption-side="top"}
