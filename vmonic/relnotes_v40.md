@@ -64,20 +64,21 @@ Final certification is planned for 26 February 2021. However, this date is subje
 Until the certification is complete, you might see the following warning messages:
 
 * A warning message displays on the VMware Solutions console for vSAN storage with vSphere 7.0u1a. After certification is complete, workloads can run on vSAN clusters and no further action is required from your part.
-* A warning message displays when you log into the vCenter Server through the vSphere Web Client. When the certification is complete, you must download the latest version of the vSAN HCL DB file and update vCenter to remove the warning. For more information, see [Updating the vSAN HCL database manually (2145116)](https://kb.vmware.com/s/article/2145116){:external}.
+* A warning message displays when you log in to the vCenter Server through the vSphere Web Client. When the certification is complete, you must download the latest version of the vSAN HCL DB file and update vCenter to remove the warning. For more information, see [Updating the vSAN HCL database manually (2145116)](https://kb.vmware.com/s/article/2145116){:external}.
 
 ### Your existing instances and vSphere 7.0 Update 1a
 {: #relnotes_v40-dedicated-vsphere-v70-no-support}
 
-For vCenter Server instances with vSphere 6.5 or vSphere 6.7, in-place upgrade to vSphere 7.0 Update 1a is not currently supported due to changes in VMware license keys and changes in the vCenter Server architecture and topology.
+For vCenter Server instances with vSphere 6.5 or vSphere 6.7, in-place upgrade to vSphere 7.0 is not currently supported due to changes in VMware license keys and changes in the vCenter Server architecture and topology.
 {:note}
 
-If you want to use vSphere 7.0u1a, you have the following options:
+Carefully review the VMware product lifecycle matrix for ESXi and NSX as part of your planning. For more information, see [Product LifeCycle Matrix](https://lifecycle.vmware.com/){:external}.
 
-* Deploy a new vSphere 7.0u1a instance and migrate your current network topology and workload to the new instance. For more information about assistance with your network and workload migration, see [VMware HCX is now available with vSphere 7.0 Update 1a](#relnotes_v40-services-HCX).
-* {{site.data.keyword.cloud_notm}} plans to publish guidance for upgrading your existing instance to vSphere 7.0u1a in a future VMware Solutions release.
+{{site.data.keyword.cloud_notm}} plans to publish guidance for upgrading your existing instance to vSphere 7.0 in a future VMware Solutions release. However, an upgrade cannot be supported for all hardware combinations, will not accomplish a migration from NSX-V to NSX-T, and will enable only limited VMware Solutions capabilities at the vSphere 7.0 level.
 
-Migrating your workload to a new instance is recommended if you want to perform a hardware refresh, if you want to migrate from NSX–V to NSX–T, or if you want to migrate your existing NSX–T topology with separate management and workload clusters to a converged topology.
+Instead, {{site.data.keyword.cloud_notm}} recommends that you deploy a new vSphere 7.0 instance and migrate your current network topology and workload to the new instance. For more information about assistance with your network and workload migration, see [VMware HCX updates](#relnotes_v40-services-HCX).
+
+Migrating your workload to a new instance is especially recommended if you want to perform a hardware refresh, if you want to migrate from NSX–V to NSX–T, or if you want to migrate your existing NSX–T topology with separate management and workload clusters to a converged topology.
 
 ### Support for VMware stretched vSAN clusters for vSphere 7.0 Update 1a and NSX-T 3.1
 {: #relnotes_v40-dedicated-stretched-v70}
