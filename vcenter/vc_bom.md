@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-12"
+lastupdated: "2021-02-10"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # vCenter Server Bill of Materials
 {: #vc_bom}
 
-Review the Bill of Materials (BOM) information for VMware vCenter Server instances.
+Review the Bill of Materials (BOM) information for VMware vCenter Server® instances.
 
 ## VLANs BOM for vCenter Server instances
 {: #vc_bom-vlans}
@@ -29,9 +29,9 @@ The following table details the BOM information for the vCenter Server VLANs.
 
 | VLAN       | Type       | Details       |
 |:---------- |:---------- |:------------- |
-| VLAN1     | Public, Primary | Assigned to physical ESXi servers for public network access. The servers are assigned a public IP address but this IP address is not configured on the servers, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as NSX Edge Services Gateways (ESGs). |
-| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
-| VLAN3     | Private B, Portable | Assigned to VMware vSAN, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).<br>Note that this only applies to vSphere 6.7. For vSphere 7.0 Update 1a, all NSX VTEPs are put in VLAN2. |
+| VLAN1     | Public, Primary | Assigned to physical VMware ESXi™ servers for public network access. The servers are assigned a public IP address but this IP address is not configured on the servers, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as VMware NSX Edge™ Services Gateways (ESGs). |
+| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere® management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN3     | Private B, Portable | Assigned to VMware vSAN™, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).<br>Note that this only applies to vSphere 6.7. For vSphere 7.0 Update 1a, all NSX VTEPs are put in VLAN2. |
 {: caption="Table 1. BOM for the VLANs in vCenter Server instances" caption-side="top"}
 
 ## Software BOM for vCenter Server instances
@@ -41,7 +41,7 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer | Component                       | Version       |
 |:------------ |:------------------------------- |:------------- |
-| VMware       | vSphere ESXi                    | ESXi 7.0 Update 1a (16850804) or<br> ESXi 6.7 P04  (17167734) or<br> ESXi 6.5 EP 23 (17167537) |
+| VMware       | vSphere ESXi                    | ESXi 7.0 Update 1a (16850804) or <br>ESXi 6.7 EP 15 (16316930) or <br>ESXi 6.5 EP 23 (17167537) |
 | VMware       | vSphere 7.0 Update 1a           | Distributed vSwitch 7.0.0 |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5[^vcs-vsphere65]     | Distributed vSwitch 6.5.0 |
@@ -49,8 +49,8 @@ The following table details the BOM information for vCenter Server software comp
 | VMware       | vSAN[^vsan]                     | 6.7 EP 10 or<br> 6.6.1 Patch 04 |
 | VMware       | NSX for vSphere[^nsxv]          | 6.4.6 (build 14819921) |
 | VMware       | NSX-T for vSphere[^nsxt]        | 3.1.0.0.0 (17107171) |
-| Microsoft    | Windows Server Standard edition | 2019 |
-| Microsoft    | Active Directory domain functional level | 2016 (WinThreshold)[^domain] |
+| Microsoft®    | Windows® Server Standard edition | 2019 |
+| Microsoft    | Active Directory™ domain functional level | 2016 (WinThreshold)[^domain] |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
 
 [^vcs-vsphere65]: Existing vSphere 6.5 clusters only
@@ -175,7 +175,7 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 
 | Bare metal server CPU model | vSphere 6.5[^evc-vsphere65]  | vSphere 6.7 | vSphere 7.0 |
 |:------------- |:------------- |:------------- |:------------- |
-| Skylake | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Skylake** Generation. | Skylake is not supported |
+| Skylake | EVC is set to Intel® **Broadwell** Generation | EVC is set to Intel **Skylake** Generation. | Skylake is not supported |
 | Cascade Lake[^vsphere] | For the management cluster, EVC is not set. For all other clusters, EVC is set to Intel **Broadwell** Generation. | For the management cluster, EVC is not set. For all other clusters, EVC is set to Intel **Skylake** Generation. | EVC is set to Intel **Cascade Lake** Generation.
 {: caption="Table 7. EVC mode settings for vCenter Server instances and clusters" caption-side="top"}
 
