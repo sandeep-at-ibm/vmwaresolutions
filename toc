@@ -397,6 +397,17 @@ VMware Solutions
         archiref/vrw/vrw-iam-vrealize.md
         archiref/vrw/vrw-use-case-1.md
         archiref/vrw/vrw-use-case-2.md
+        archiref/vrw/vrw-dualregion-overview.md
+        archiref/vrw/vrw-dualregion-design.md
+
+    {: .topicgroup}
+    Veeam on bare metal server
+        archiref/veeam-bms/veeam-bms-archi-intro.md
+        archiref/veeam-bms/veeam-bms-archi-overview.md
+        archiref/veeam-bms/veeam-bms-archi-components.md
+        archiref/veeam-bms/veeam-bms-archi-physical.md
+        archiref/veeam-bms/veeam-bms-archi-post-deployment.md
+        archiref/veeam-bms/veeam-bms-archi-app-support.md
 
     {: .topicgroup}
     NSX Edge Services Gateway solution architecture

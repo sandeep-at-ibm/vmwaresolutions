@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-23"
 
 subcollection: vmwaresolutions
 
@@ -15,6 +15,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Active Directory
 {: #vrw-iam-active-directory}
@@ -26,7 +27,7 @@ Domain name services (DNS) in this design are for the cloud management and infra
 ## Active Directory groups and users
 {: #vrw-iam-active-directory-account}
 
-The IBM Cloud for VMware Regulated Workloads Active Directory is used for the privileged administrators, service accounts, and the IBM Cloud for VMware Solutions `automation` service ID.
+The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads Active Directory is used for the privileged administrators, service accounts, and the {{site.data.keyword.cloud_notm}} for VMware Solutions `automation` service ID.
 
 ### Microsoft Active Directory user IDs
 {: #vrw-iam-active-directory-account-users}

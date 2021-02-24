@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-23"
 
 subcollection: vmwaresolutions
 
@@ -15,11 +15,12 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # vSphere components
 {: #vrw-vsphere-platform}
 
-The IBM Cloud for VMware® Regulated Workloads is built with vSphere technology, which includes the ESXi hypervisors and vCenter appliance.
+The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads is built with vSphere technology, which includes the ESXi hypervisors and vCenter appliance.
 
 ## Management cluster
 {: #vrw-vsphere-platform-management}
@@ -75,7 +76,7 @@ For more information, see [vRealize Operations Manager design](/docs/vmwaresolut
 
 The vRealize Log Insight (vRLI) environment consists of four virtual machines (VMs) with an integrated load balancer.
 
-vRealize Log Insight (vRLI) enables real-time logging for components in the IBM Cloud for VMware Regulated Workloads environment. The design deploys a vRLI cluster that consists of four nodes in each instance. This configuration provides continued availability and increased log ingestion rates.
+vRealize Log Insight (vRLI) enables real-time logging for components in the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads environment. The design deploys a vRLI cluster that consists of four nodes in each instance. This configuration provides continued availability and increased log ingestion rates.
 
 vRLI collects log events from the following virtual infrastructure and cloud management components (logging clients):
 
@@ -118,7 +119,7 @@ No vSphere management components are deployed to the edge services cluster. The 
 ## Workload cluster
 {: #vrw-vsphere-platform-workload}
 
-NSX-T edge clusters virtual machines that house the Tier-0 and Tier-1 routers are on the workload clusters. No vSphere management components are deployed to the workload cluster. The tooling in the management cluster is used to manage the workload cluster ESXi hosts.
+NSX-T edge clusters VMs that house the Tier-0 and Tier-1 routers are on the workload clusters. No vSphere management components are deployed to the workload cluster. The tooling in the management cluster is used to manage the workload cluster ESXi hosts.
 
 **Next topic**: [Encryption](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-encryption)
 

@@ -106,7 +106,7 @@
  </g>
  <g transform="matrix(2 0 0 1.9997 -.5 -1.1999)" font-family="Helvetica" font-size="7px" text-anchor="middle">
   <text x="245.5" y="205">RedHat</text>
-  <text x="245.5" y="213">BareMetal</text>
+  <text x="245.5" y="213">Bare metal</text>
   <text x="245.5" y="221">T0 Edge Cluster</text>
  </g>
  <path d="m379.5 604.72 18.38-87.529" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.9999"/>

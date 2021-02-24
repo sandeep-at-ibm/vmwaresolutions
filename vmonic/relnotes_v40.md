@@ -213,7 +213,8 @@ In addition, two new endpoints are now available in the **Osaka** location for K
 ## New and updated documentation
 {: #relnotes_v40-updated-doc}
 
-A new topic, [Managing security and compliance](/docs/vmwaresolutions?topic=vmwaresolutions-manage-scc), is now available. The topic provides information about monitoring security and compliance posture with VMware Solutions by using Caveonix RiskForesight.
+* (Updated on Feb 24, 2021) The [Veeam on bare metal reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-veeam-bms-archi-intro) document is now available in the **Reference** section of the user documentation.
+* A new topic, [Managing security and compliance](/docs/vmwaresolutions?topic=vmwaresolutions-manage-scc), is now available. The topic provides information about monitoring security and compliance posture with VMware Solutions by using Caveonix RiskForesight.
 
 ## User interface updates and enhancements
 {: #relnotes_v40-ui}

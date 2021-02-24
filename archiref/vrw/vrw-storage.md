@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-24"
 
 subcollection: vmwaresolutions
 
@@ -15,11 +15,12 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Storage
 {: #vrw-storage}
 
-IBM Cloud for VMware® Regulated Workloads employs multiple storage types.
+{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads employs multiple storage types.
 
 ## Management cluster
 {: #vrw-storage-management}
@@ -34,7 +35,7 @@ The edge services cluster uses only local data stores. Local data stores are sui
 ## Workload cluster
 {: #vrw-storage-workload}
 
-The workload clusters require the use of vSAN. vSAN is the only storage option on IBM Cloud that keeps all workload data within the account and delivers resiliency to the applications deployed to the workload clusters. All workload clusters are formed by using a minimum of four ESXi hosts to meet vSAN requirements.
+The workload clusters require the use of vSAN. vSAN is the only storage option on {{site.data.keyword.cloud_notm}} that keeps all workload data within the account and delivers resiliency to the applications deployed to the workload clusters. All workload clusters are formed by using a minimum of four ESXi hosts to meet vSAN requirements.
 
 ## Bare metal storage design
 {: #vrw-storage-bare-metal}
@@ -46,7 +47,7 @@ Physical storage design consists of the configuration of the physical disks that
 ### Operating system disks
 {: #vrw-storage-os-disks}
 
-The vSphere ESXi hypervisor is installed in a persistent location. As a result, the physical hosts boot drive consists of two disks in a RAID–1 configuration to support redundancy for the vSphere ESXi hypervisor.
+The vSphere ESXi hypervisor is installed in a persistent location. As a result, the physical hosts boot drive consists of two disks in a RAID 1 configuration to support redundancy for the vSphere ESXi hypervisor.
 
 ### vSAN disks
 {: #vrw-storage-vsan-disks}
@@ -57,7 +58,7 @@ All configurations use two vSAN disk groups of solid-state disks (SSD):
 * Two disks for cache tier (one per disk group)
 * Two or more SSDs for capacity tier (one or more per disk group, drive counts must match in each disk group)
 
-All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
+All drives that are allocated for vSAN consumption are configured in single-disk RAID 0.
 
 **Next topic**: [Underlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-underlay-network)
 

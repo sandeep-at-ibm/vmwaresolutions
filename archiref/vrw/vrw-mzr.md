@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-23"
 
 subcollection: vmwaresolutions
 
@@ -15,6 +15,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Multizone region
 {: #vrw-mzr}
@@ -55,7 +56,7 @@ Use vCenter High Availability (HA). Automated failover is managed and done by vC
 
 The NSX controllers are provisioned in each of the three AZs to ensure that NSX management continues if a DR event occurs.
 
-Each controller is assigned an IP address from the AZ management plane it is deployed to. Therefore, the NSX-T UI VIP for the controller-embedded load balancing function can't operate when it is deployed in an MZR. Proper operation of NSX-T in the MZR deployment requires an IBM Cloud Load Balancer (private-to-private) so the NSX-T UI is available at a single URL.
+Each controller is assigned an IP address from the AZ management plane it is deployed to. Therefore, the NSX-T UI VIP for the controller-embedded load balancing function can't operate when it is deployed in an MZR. Proper operation of NSX-T in the MZR deployment requires an {{site.data.keyword.cloud_notm}} Load Balancer (private-to-private) so the NSX-T UI is available at a single URL.
 
 ### NSX-T topologies
 {: #vrw-mzr-considerations-nsxtopo}
@@ -77,9 +78,9 @@ Each site has a stand-alone instance of vRealize Operations, which is deployed i
 
 A HyTrust CloudControl cluster is deployed with an instance in the primary and secondary site. The HyTrust CloudControl cluster is configured with the Multi-Site-HA option. This option creates a VIP address (which is a different IP from the one assigned to the node) for each node. Since the nodes have different subnets, a PIP is configured to point at these VIPs.
 
-The IBM Cloud Load Balancer is configured to point to the previous VIP addresses. The IBM Cloud Load Balancer creates an instance in two of the three data centers and must be resolvable through DNS. In the IBM Cloud for VMware® Regulated Workloads environment, a new CNAME is defined that resolves to the friendly name of the Cloud Load Balancer FQDN.
+The {{site.data.keyword.cloud_notm}} Load Balancer is configured to point to the previous VIP addresses. The {{site.data.keyword.cloud_notm}} Load Balancer creates an instance in two of the three data centers and must be resolvable through DNS. In the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads environment, a new CNAME is defined that resolves to the friendly name of the Cloud Load Balancer FQDN.
 
-Between the HyTrust CloudControl cluster and the IBM Cloud Load Balancer, the capability to fail over between data centers is established.
+Between the HyTrust CloudControl cluster and the {{site.data.keyword.cloud_notm}} Load Balancer, the capability to fail over between data centers is established.
 
 ![HyTrust with IBM Cloud Load Balancer](../../images/vrw-htcc-glb.svg "HyTrust with IBM Cloud Load Balancer"){: caption="Figure 2. HyTrust with IBM Cloud Load Balancer" caption-side="bottom"}
 

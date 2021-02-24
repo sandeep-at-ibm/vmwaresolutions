@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-23"
 
 subcollection: vmwaresolutions
 
@@ -15,11 +15,12 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Business continuity
 {: #vrw-budr}
 
-IBM Cloud for VMware® Regulated Workloads provides business continuity only at the management and edge layers.
+{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads provides business continuity only at the management and edge layers.
 
 ## Management cluster
 {: #vrw-budr-management}
@@ -41,11 +42,11 @@ The management cluster relies upon native vSphere DRS capabilities to keep manag
 ### Veeam backup server
 {: #vrw-budr-management-veeam}
 
-Veeam on IBM Cloud™ delivers reliable backup for virtual machines within the IBM Cloud for VMware Regulated Workloads environment.
+Veeam on IBM Cloud™ delivers reliable backup for virtual machines (VMs) within the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads environment.
 
 Veeam provides continuous backup of the management stack for protection against disasters. If corruption of any management stack component occurs, Veeam also provides rapid restoration to known good states. Veeam can also provide backup services for the workload cluster. The single site deployment must use the Veeam bare metal option to provide an acceptable backup repository.
 
-The Veeam environment is provisioned initially with a single virtual machine. The SaaS provider can extend this instance to their custom requirements, including remote database, more proxy servers, and scaling out of the backup repository.
+The Veeam environment is provisioned initially with a single VM. The SaaS provider can extend this instance to their custom requirements, including remote database, more proxy servers, and scaling out of the backup repository.
 
 Veeam is deployed to the management regions in both availability zones (AZ) for use in an MZR.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-16"
 
 subcollection: vmwaresolutions
 
@@ -15,6 +15,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # HyTrust identity and access management
 {: #vrw-iam-hytrust}

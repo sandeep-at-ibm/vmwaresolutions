@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-23"
 
 subcollection: vmwaresolutions
 
@@ -15,11 +15,12 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Overlay networking
 {: #vrw-overlay-network}
 
-IBM Cloud for VMware® Regulated Workloads uses NSX-T as the software defined network overlay provider.
+{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads uses NSX-T as the software defined network overlay provider.
 
 ## Management cluster
 {: #vrw-overlay-network-management}
@@ -33,7 +34,7 @@ The optional edge services cluster does not employ any overlay networking and a 
 
 The vSRX running on the edge services cluster connects the management network to the private and public transit networks. The vSRX is configured to allow only traffic in or out of the management region that is necessary for proper operation and monitoring of the environment. The vSRX also isolates all traffic between the clusters' ESXi hosts and the vCenter Server. ESXi hosts within a cluster can communicate with each other and the vCenter Server. ESXi hosts in one cluster (workload or management for example) are unable to communicate with the hosts of any other clusters. The limitation of cross-cluster traffic is enforced by the vSRX and the configuration of the ESXi hosts' own firewalls.
 
-The edge services cluster is the peering point for traffic between the on-premises SaaS provider and IBM Cloud for VMware® Regulated Workloads. It also serves as the demarcation for traffic from the SaaS consumer. The SaaS provider uses vSRX as the secure tunnel endpoint for its VPN.
+The edge services cluster is the peering point for traffic between the on-premises SaaS provider and {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads. It also serves as the demarcation for traffic from the SaaS consumer. The SaaS provider uses vSRX as the secure tunnel endpoint for its VPN.
 
 Traffic from the SaaS consumer passes through the vSRX in an encrypted tunnel, which lands on the overlay network virtual edge device.
 

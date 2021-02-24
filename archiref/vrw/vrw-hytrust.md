@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-23"
 
 subcollection: vmwaresolutions
 
@@ -15,16 +15,17 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # HyTrust integration
 {: #vrw-hytrust}
 
-IBM Cloud for VMware® Regulated Workloads requires HyTrust CloudControl (HTCC) for identity and access management. HTCC enables fine grained role-based access control with capability of forensic auditing for all actions that are taken by any privileged user.
+{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads requires HyTrust CloudControl (HTCC) for identity and access management. HTCC enables fine grained role-based access control with capability of forensic auditing for all actions that are taken by any privileged user.
 
 ## Management cluster
 {: #vrw-hytrust-management}
 
-Identity and access management for administrators of the IBM Cloud for VMware Regulated Workloads infrastructure is handled by HTCC and Microsoft® Active Directory servers. CloudControl uses the AD to authenticate the administrator but handles the authorization of privileged users internally.
+Identity and access management for administrators of the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads infrastructure is handled by HTCC and Microsoft® Active Directory servers. CloudControl uses the AD to authenticate the administrator but handles the authorization of privileged users internally.
 
 ### HyTrust CloudControl
 {: #vrw-hytrust-management-cloudcontrol}
@@ -47,7 +48,7 @@ HTCC is composed of many internal functional components:
 
 ![IBM Cloud for VMware Regulated Workloads HyTrust integration](../../images/vrw-htcc.svg "IBM Cloud for VMware Regulated Workloads HyTrust integration"){: caption="Figure 2. IBM Cloud for VMware Regulated Workloads HyTrust integration" caption-side="bottom"}
 
-All access is through HyTrust CloudControl and no direct access to the ESXi hosts is enabled. The network is designed to allow only the necessary connections from the vCenter Server. Lockdown mode is enabled. Allow listing of IP addresses permitted network access to the ESXi hosts is required in the integrated host firewall. The rules on the perimeter gateway further enforce the limited traffic flows from the vCenter Server to the subnets upon which the ESXi hosts are deployed. The cloud account administrator (through IBM Cloud IAM) should not authorize VPN connections to the subnets upon which the ESXi hosts are deployed except for the connections that are essential to support DR recovery operations.
+All access is through HyTrust CloudControl and no direct access to the ESXi hosts is enabled. The network is designed to allow only the necessary connections from the vCenter Server. Lockdown mode is enabled. Allow listing of IP addresses permitted network access to the ESXi hosts is required in the integrated host firewall. The rules on the perimeter gateway further enforce the limited traffic flows from the vCenter Server to the subnets upon which the ESXi hosts are deployed. The cloud account administrator (through {{site.data.keyword.cloud_notm}} IAM) should not authorize VPN connections to the subnets upon which the ESXi hosts are deployed except for the connections that are essential to support DR recovery operations.
 
 ## Edge services cluster
 {: #vrw-hytrust-edge}

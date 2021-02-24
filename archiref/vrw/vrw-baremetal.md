@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-16"
 
 subcollection: vmwaresolutions
 
@@ -15,11 +15,12 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Bare metal hosts
 {: #vrw-baremetal}
 
-The IBM Cloud for VMware® Regulated Workloads is built upon multiple clusters of bare metal hosts with ESXi as the hypervisor.
+The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads is built upon multiple clusters of bare metal hosts with ESXi as the hypervisor.
 
 ![IBM Cloud for VMware Regulated Workloads infrastructure overview](../../images/vrw-architecture.svg "IBM Cloud for VMware Regulated Workloads infrastructure overview"){: caption="Figure 1. IBM Cloud for VMware Regulated Workloads infrastructure overview" caption-side="bottom"}
 
@@ -43,9 +44,9 @@ The deployment of additional workload clusters is supported to supply dedicated 
 ## Physical host connections
 {: #vrw-baremetal-phys-connect}
 
-Each physical host in this design has two redundant pairs of 10 Gbps Ethernet connections into each IBM Cloud top of rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This design allows networking interface card (NIC) connections to work independently from each other.
+Each physical host in this design has two redundant pairs of 10 Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} top of rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This design allows networking interface card (NIC) connections to work independently from each other.
 
-Removing physical network connectivity to the public or private network for the bare metal servers that are used within the vCenter Server offering is not possible. When the IBM Cloud for VMware Regulated Workloads is deployed with the private only network option, the physical ports on the internal NIC of the bare metal hosts are disabled and the top of rack switch ports are administratively down. There is no support for unplugging the cables.
+Removing physical network connectivity to the public or private network for the bare metal servers that are used within the vCenter Server offering is not possible. When the{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads is deployed with the private only network option, the physical ports on the internal NIC of the bare metal hosts are disabled and the top of rack switch ports are administratively down. There is no support for unplugging the cables.
 
 ![Physical host connections](../../images/vrw-nics-physical.svg "Physical host connections"){: caption="Figure 2. Physical host connections" caption-side="bottom"}
 

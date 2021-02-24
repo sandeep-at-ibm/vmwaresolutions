@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-16"
 
 subcollection: vmwaresolutions
 
@@ -15,6 +15,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Supported topologies
 {: #vrw-nsxt-topologies}
@@ -33,7 +34,7 @@ Active-passive on the Tier0 provides IPsec capability for access through the HA 
 
 This topology is one of the more complex topologies and requires a large CPU/Memory footprint for all the moving parts.
 
-Two levels of Tier-0 exist in combination with a stretched vSAN cluster.
+Two levels of Tier-0 exist in combination with a vSAN stretched cluster.
 
 The first level of Tier-0s is located and isolated to a data center, providing the northbound communication to the physical network and IPsec capabilities to the on-premises location.
 

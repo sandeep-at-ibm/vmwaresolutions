@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-23"
 
 subcollection: vmwaresolutions
 
@@ -15,11 +15,12 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # vCenter identity and access management
 {: #vrw-iam-vsphere}
 
-Inside IBM Cloud for VMware® Regulated Workloads, multiple levels of access are available. The automation uses a set of user IDs to perform operations such as adding hosts, clusters, or storage to your VMware® instance.
+Inside {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads, multiple levels of access are available. The automation uses a set of user IDs to perform operations such as adding hosts, clusters, or storage to your VMware® instance.
 
 ## vCenter and Platform Services Controller user IDs
 {: #vrw-iam-vsphere-vcenter}
@@ -30,7 +31,7 @@ The following user IDs are used to add an identity source, which is embedded by 
 |:---------|:-------------|:-------|:------------|
 | Privileged user | `root` | SSH | Used for VMware configuration such as setting up VMware High Availability and creating distributed switches. Used post deployment to pair primary and secondary vCenter Server instances. |
 | Privileged user | `customerroot` | SSH | Created for customer use only. |
-| IBM automation | `automation`@``root_domain``<br/>(Active Directory user) | HTTPS | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines for add-on services. |
+| IBM automation | `automation`@``root_domain``<br/>(Active Directory user) | HTTPS | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines (VMs) for add-on services. |
 | Privileged user | `cloudadmin`@`root_domain`<br/>(Active Directory user) | HTTPS | Created for customer use only. |
 {: caption="Table 1. vCenter and Platform Services Controller user IDs" caption-side="top"}
 
@@ -64,7 +65,7 @@ Privileged users are granted `cloudadmin` access to vCenter Server through the H
 
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
-| IBM automation | `automation` | Used to add a host or a virtual machine for service, and to set up Microsoft® Active Directory and DNS entries. |
+| IBM automation | `automation` | Used to add a host or a VM for service, and to set up Microsoft® Active Directory and DNS entries. |
 | Privileged user | `Administrator` | Default Windows® user |
 | Privileged user | `cloudadmin` | Default user for customer to access vCenter Server |
 | Privileged user | `cloudreadonly` | Read-only account for customer |

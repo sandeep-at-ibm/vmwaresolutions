@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-19"
 
 subcollection: vmwaresolutions
 
@@ -15,6 +15,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # NSX-T administration interface identity and access management
 {: #vrw-iam-nsxt}
@@ -37,7 +38,7 @@ T0 - Tenant     | Read | Full |
 T0 - Transit    | Read| Full |
 T0 - Management | Read | Full |
 T1s - Tenant    | Read | Full |
-T1s - Addon Services | Read | Full |
+T1s - Add-on Services | Read | Full |
 T1s - Management     | Read | Full |
 {: caption="Table 1. NSX-T role mapping" caption-side="top"}
 
