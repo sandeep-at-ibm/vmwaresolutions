@@ -59,7 +59,7 @@ For VMware vSphere 7.0 Update 1a, VMware vSAN storage is offered as a beta featu
 
 IBM and its Business Partners are working to complete full certification and to finalize the vSAN listing in the VMware Compatibility Guide for all new firmware and drivers necessary to support vSphere 7.0u1a.
 
-Final certification is planned for 26 February 2021. However, this date is subject to change. Until certification is complete, {{site.data.keyword.cloud_notm}} provides best-effort support on any issue.
+Final certification is planned for 19 March 2021. However, this date is subject to change. Until certification is complete, {{site.data.keyword.cloud_notm}} provides best-effort support on any issue.
 
 Until the certification is complete, you might see the following warning messages:
 
@@ -80,10 +80,10 @@ Instead, {{site.data.keyword.cloud_notm}} recommends that you deploy a new vSphe
 
 Migrating your workload to a new instance is especially recommended if you want to perform a hardware refresh, if you want to migrate from NSX–V to NSX–T, or if you want to migrate your existing NSX–T topology with separate management and workload clusters to a converged topology.
 
-### Support for VMware stretched vSAN clusters for vSphere 7.0 Update 1a and NSX-T 3.1
+### Support for VMware vSAN stretched clusters for vSphere 7.0 Update 1a and NSX-T 3.1
 {: #relnotes_v40-dedicated-stretched-v70}
 
-VMware vSphere Enterprise Plus 7.0 Update 1a and VMware NSX-T 3.1 are included when you order a VMware vCenter Server stretched cluster across a multizone region. The stretched cluster is deployed as a single converged cluster capable of hosting both management and workload clusters. The combination of converged cluster and support for a 3-host RAID-1 configuration enables you to deploy an instance with a minimum of eight hosts when you use NFS storage for your witness cluster, or nine hosts when you use vSAN storage for your witness cluster.
+VMware vSphere Enterprise Plus 7.0 Update 1a and VMware NSX-T 3.1 are included when you order a VMware vCenter Server stretched cluster across a multizone region. The stretched cluster is deployed as a single converged cluster capable of hosting both management and workload clusters. The combination of converged cluster and support for a 3-host RAID 1 configuration enables you to deploy an instance with a minimum of eight hosts when you use NFS storage for your witness cluster, or nine hosts when you use vSAN storage for your witness cluster.
 
 Additional features for stretched clusters are planned for future releases, including support for regulated workloads, edge services clusters, additional workload clusters, and optional add-on services.
 {:note}
