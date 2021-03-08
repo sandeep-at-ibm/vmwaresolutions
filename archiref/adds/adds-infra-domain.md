@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-12-02"
+lastupdated: "2021-03-08"
 
 subcollection: vmwaresolutions
 
@@ -46,7 +46,7 @@ During the ordering process, you can deploy:
 * A single Microsoft® Windows® Server VSI for AD DS
 * Two highly available Microsoft Windows VMs in the cluster
 
-Currently, Microsoft Windows Server 2016 Standard is deployed for the operating system. The domain functional level 2008 is set to allow for compatibility with an earlier version with any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
+Currently, Microsoft Windows Server 2019 Standard is deployed for the operating system. The domain functional level 2008 is set to allow for compatibility with an earlier version with any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
 
 For more information, see [Forest and Domain Functional Levels](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels){:external}.
 
@@ -54,15 +54,16 @@ For more information, see [Forest and Domain Functional Levels](https://docs.mic
 {: #adds-infra-domain-controllers-vsi}
 
 The following diagram shows the deployment pattern of the single VSI domain controller.
+
 ![Single VSI domain controller diagram](../../images/adds-advsi.svg "Single VSI domain controller diagram"){: caption="Figure 1. Single VSI domain controller diagram" caption-side="bottom"}
 
-If you order the single VSI, it is recommended that you manually order a second VSI of the same type. Configure this VSI as a second domain controller to enable AD DS as a highly available service. 
+If you order the single VSI, it is recommended that you manually order a second VSI of the same type. Configure this VSI as a second domain controller to enable AD DS as a highly available service.
 
 The following table describes the VSI configuration.
 
 | Parameter          | Specification                                 |
 |:-------------------|:----------------------------------------------|
-| Operating System   | Windows Server 2016 Standard Edition (64 bit) |
+| Operating System   | Windows Server 2019 Standard Edition (64 bit) |
 | CPU                | 2 x 2.0 GHz or higher Cores                   |
 | RAM                | 8 GB                                          |
 | Disk               | 100 GB (SAN)                                  |
@@ -77,11 +78,11 @@ The domain controller is provisioned with a name of `ADNS<instance_name>.<root_d
 The following diagram shows the deployment pattern of the two highly available VM domain controllers.
 ![Two highly available VM domain controllers diagram](../../images/adds-adha.svg "Two highly available VM domain controllers"){: caption="Figure 2. Two highly available VM domain controllers" caption-side="bottom"}
 
-If you order the two high availability Microsoft Windows VMs, you must provide two Microsoft Windows Server 2016 licenses. For more information, see [DNS Configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-dns-config). After the provisioning of the vCenter Server instance, you have 30 days to activate the VMs. The cluster is configured with a VM-VM anti-affinity rule. Therefore, Distributed Resource Scheduler (DRS) tries to keep the VMs apart by placing them on different physical vSphere ESXi hosts. The following table describes the VM configuration.
+If you order the two high availability Microsoft Windows VMs, you must provide two Microsoft Windows Server 2019 licenses. For more information, see [DNS Configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-dns-config). After the provisioning of the vCenter Server instance, you have 30 days to activate the VMs. The cluster is configured with a VM-VM anti-affinity rule. Therefore, Distributed Resource Scheduler (DRS) tries to keep the VMs apart by placing them on different physical vSphere ESXi hosts. The following table describes the VM configuration.
 
 | Parameter        | Specification                                 |
 |:-----------------|:----------------------------------------------|
-| Operating System | Windows Server 2016 Standard Edition (64 bit) |
+| Operating System | Windows Server 2019 Standard Edition (64 bit) |
 | CPU              | 2                                             |
 | RAM              | 8 GB                                          |
 | Disk             | 100 GB                                        |
@@ -103,7 +104,7 @@ As the customer, you have full access to add more system administrators to the `
 ## User IDs
 {: #adds-infra-domain-ids}
 
-The IBM Cloud automation initially configures some customer and IBM user IDs when the vCenter Server instance is created. The IBM user IDs are used by the automation for operations such as: adding clusters, vSphere ESXi hosts, or storage to your vCenter Server instance. These operations might fail if the IBM user IDs are deleted, disabled, or if their passwords are changed.
+The {{site.data.keyword.cloud_notm}} automation initially configures some customer and IBM user IDs when the vCenter Server instance is created. The IBM user IDs are used by the automation for operations such as: adding clusters, vSphere ESXi hosts, or storage to your vCenter Server instance. These operations might fail if the IBM user IDs are deleted, disabled, or if their passwords are changed.
 
 For more information, see [IBM user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
 
@@ -129,7 +130,7 @@ Enhanced Linked Mode and Cross-vCenter NSX are complementary but separate from e
 ### Enhanced linked mode
 {: #adds-infra-domain-multisite-elm}
 
-With Enhanced Linked Mode (ELM), you can view and search across all linked vCenter Server systems and replicate roles, permissions, licenses, policies, and tags. 
+With Enhanced Linked Mode (ELM), you can view and search across all linked vCenter Server systems and replicate roles, permissions, licenses, policies, and tags.
 
 ELM provides the following benefits:
 * A single-pane-of-glass view into the environment with multiple vCenter Servers
@@ -151,7 +152,7 @@ Cross-vCenter NSX includes these features:
 * Centralized management of universal objects, reducing administration effort.
 * VMs can be migrated by using vMotion across vCenter Servers without having to reconfigure the VM or change firewall rules.
 
-When cross-vCenter NSX is combined with ELM, you can view and manage any of the NSX managers and all of the universal NSX components from any of the linked vCenter Servers. ELM is not a prerequisite or requirement for cross-vCenter NSX. Without ELM, you can still create cross-vCenter universal transport zones, universal switches, universal routers, and universal firewall rules. However, without ELM in place, you must log in to the individual vCenter Servers to access each NSX Manager instance. 
+When cross-vCenter NSX is combined with ELM, you can view and manage any of the NSX managers and all of the universal NSX components from any of the linked vCenter Servers. ELM is not a prerequisite or requirement for cross-vCenter NSX. Without ELM, you can still create cross-vCenter universal transport zones, universal switches, universal routers, and universal firewall rules. However, without ELM in place, you must log in to the individual vCenter Servers to access each NSX Manager instance.
 
 Cross vCenter NSX is not automatically deployed. You must deploy it manually by following the tasks in [Configuring the primary NSX manager](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.cross-vcenter-install.doc/GUID-0B74FB40-1D90-4A6A-B7CE-B4EF3B923452.html){:external}.
 
@@ -175,7 +176,7 @@ The secondary instances have the following configuration:
 ## Customer user IDs
 {: #adds-infra-domain-userid}
 
-The customer user IDs and passwords for the vCenter Server instance are available through the instance details on the VMware Solutions console. 
+The customer user IDs and passwords for the vCenter Server instance are available through the instance details on the VMware Solutions console.
 
 For more information, see [vCenter and Platform Services Controller user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
 
@@ -185,7 +186,7 @@ For more information, see [vCenter and Platform Services Controller user IDs](/d
 The vCenter Server instance design integrates DNS services on the AD domain controllers:
 * The domain structure is specified during the instance order process
 * The domain controllers are configured to be authoritative for the DNS domain
-* The domain controllers servers are configured to point to the IBM Cloud DNS servers for all other zones
+* The domain controllers servers are configured to point to the {{site.data.keyword.cloud_notm}} DNS servers for all other zones
 * Any secondary vCenter Server instances that are integrated to the primary instance use the same DNS name structure
 
 When a secondary vCenter Server instance is linked to the primary instance, the vCenter Server instance appliances are configured:
@@ -207,7 +208,7 @@ The forwarder section is configured with:
 * 10.0.80.12
 * 10.0.80.11
 
-Forwarders are DNS servers that the AD DNS server can use to resolve DNS queries for records that the AD server cannot resolve. 10.0.80.12 and 10.0.80.11 are the two addresses for IBM Cloud Resolving Name Servers. Resolving name servers are located on the private network and act as DNS resolvers. The private resolvers query the internet's root name servers for domain lookups and resolve this information over the private network to keep your bandwidth usage down, reduce the load on the authoritative servers, and offer quick resolution. Private network resolvers are a convenience service for our customers.
+Forwarders are DNS servers that the AD DNS server can use to resolve DNS queries for records that the AD server cannot resolve. 10.0.80.12 and 10.0.80.11 are the two addresses for {{site.data.keyword.cloud_notm}} Resolving Name Servers. Resolving name servers are located on the private network and act as DNS resolvers. The private resolvers query the internet's root name servers for domain lookups and resolve this information over the private network to keep your bandwidth usage down, reduce the load on the authoritative servers, and offer quick resolution. Private network resolvers are a convenience service for our customers.
 
 All deployed appliances: VCSA, NSX Manager and Controllers, and vSphere ESXi hosts have their DNS settings configured to point to the AD DNS server as their default DNS. You can customize the DNS zone configuration if it does not interfere with the configuration of the deployed components.
 

@@ -210,14 +210,14 @@ Select the Domain Name System (DNS) configuration for your instance:
 * **Two public Windows VSIs for Active Directory/DNS**: Two Microsoft Windows® Server VSIs for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
 * **Four highly available dedicated Windows Server VMs on the management cluster**: Four Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
-You must provide four Microsoft Windows Server 2016 Standard edition licenses if you configure your instance to use the four Microsoft Windows VMs.
+You must provide four Microsoft Windows Server 2019 Standard edition licenses if you configure your instance to use the four Microsoft Windows VMs.
 {:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
-For more information on ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
+For more information on ordering Windows Server 2019 licenses, see [Get started with Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19){:external}.
 
 ### Hostname prefix
 {: #mcv_ordering-host-name-prefix}
