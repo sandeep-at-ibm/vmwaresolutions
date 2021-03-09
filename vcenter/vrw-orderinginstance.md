@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-09"
 
 keywords: regulated workloads order instance, order regulated workloads, regulated workloads instances
 
@@ -183,14 +183,14 @@ The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs i
 
 The only deployment type supported is **Two highly available dedicated Windows server VMs on the management cluster**, which helps enhance security and robustness.
 
-You must provide two Microsoft® Windows® Server 2016 Standard edition licenses to use the two Microsoft Windows VMs.
+You must provide two Microsoft® Windows® Server 2019 Standard edition licenses to use the two Microsoft Windows VMs.
 {:important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
-For more information about ordering Windows Server 2016 licenses, see [Get started with Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/server-basics){:external}.
+For more information about ordering Windows Server 2019 licenses, see [Get started with Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19){:external}.
 
 ## Resource details
 {: #vrw-orderinginstance-resource-details}
