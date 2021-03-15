@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-09"
+lastupdated: "2021-03-15"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -448,7 +448,7 @@ The following options are provided for the uplink speed:
 * 25 Gb - This option is available only when the vCenter Server instance meets the following requirements:
    * The vSphere version is 6.7u3.
    * The bare metal server is Cascade Lake.
-   * The data center is Dallas 10 or Washington DC 04.
+   * The data center is one of the following locations: **Dallas 10**, **Dallas 12**, **Dallas 13**, **Frankfurt 02**, **London 04**, **Paris 04**, **Paris 05**, **Paris 06**, **Sydney 04**, **Sydney 05**, **Tokyo 02**, **Tokyo 04**, **Tokyo 05**, **Toronto 04**, **Washington DC 04**, **Washington DC 06**, or **Washington DC 07**.
 
 For NSX-T, you must specify the uplink speed for both the management cluster and the workload cluster.
 {:note}
