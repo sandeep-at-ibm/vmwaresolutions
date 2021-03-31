@@ -4,9 +4,9 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-31"
 
-keywords: IBM, activity tracker, LogDNA, event, security, VMware solutions events
+keywords: IBM, activity tracker, event, security, VMware solutions events
 
 subcollection: vmwaresolutions
 
@@ -16,16 +16,16 @@ subcollection: vmwaresolutions
 # Auditing events for VMware Solutions
 {: #at-events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud_notm}}.
+Use the {{site.data.keyword.at_full}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud_notm}}.
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to investigate for abnormal activity and critical actions, and comply with regulatory audit requirements. In addition, you can be alerted on actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [Getting started with {{site.data.keyword.cloud_notm}} Activity Tracker](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to investigate for abnormal activity and critical actions, and comply with regulatory audit requirements. In addition, you can be alerted on actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [Getting started with {{site.data.keyword.at_short}}](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 
 ## Events for VMware Solutions Shared
 {: #at-events-vdc}
 
 When you use {{site.data.keyword.vmwaresolutions_short}} Shared, an event is generated to track how users and applications interact with virtual data centers.
 
-The following table lists the actions that generate and send an event to Activity Tracker.
+The following table lists the actions that generate and send an event to {{site.data.keyword.at_short}}.
 
 | Action                        | Description | Outcome |
 |:----------------------------- |:----------- |:------- |
