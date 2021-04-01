@@ -77,7 +77,7 @@ VMware Solutions
         shared/shared_veeam.md
         shared/shared_managing.md
         shared/shared_vcd-ops-guide.md
-        shared/shared_sysdig.md
+        shared/shared-monitor.md
         shared/shared_resizeinstance.md
         shared/shared_deletinginstance.md
         shared/shared_pricing.md

@@ -34,10 +34,10 @@ This release applies the following upgrades when you order VMware Solutions Shar
 The Dallas 12 and Dallas 13 {{site.data.keyword.cloud}} data centers are now available for deployment on VMware Solutions Shared instances. For more information, see [Requirements and planning for VMware Solutions Shared
 ](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning).
 
-### Integration with IBM Cloud Monitoring with Sysdig
-{: #relnotes_v39-shared-sysdig}
+### Integration with IBM Cloud Monitoring
+{: #relnotes_v39-shared-monitor}
 
-You can now use {{site.data.keyword.cloud_notm}} Monitoring for Sysdig to view and customize dashboards to visualize performance, volume of usage, and to define alerts to monitor your environment. For more information, see [Visualizing your virtual data center instance environment with IBM Cloud Monitoring with Sysdig](/docs/vmwaresolutions?topic=vmwaresolutions-shared_sysdig).
+You can now use {{site.data.keyword.cloud_notm}} Monitoring to view and customize dashboards to visualize performance, volume of usage, and to define alerts to monitor your environment. For more information, see [Visualizing your virtual data center instance environment with IBM Cloud Monitoring](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor).
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v39-dedicated}
