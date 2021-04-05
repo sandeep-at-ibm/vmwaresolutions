@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-11"
+lastupdated: "2021-03-31"
 
 subcollection: vmwaresolutions
 
@@ -37,11 +37,11 @@ The vCenter Server with an embedded PSC is installed on a portable subnet on the
 | Attribute                    | Specification                       |
 |:---------------------------- |:----------------------------------- |
 | vCenter Server               | Virtual appliance                   |
-| Appliance installation size  | Large (up to 1,000 hosts and 10,000 VMs) |
+| Appliance installation size  | Medium (up to 400 hosts or 4,000 VMs) |
 | Platform Services Controller | Integrated                            |
-| Number of vCPUs              | 16                                   |
-| Memory                       | 32 GB                               |
-| Disk                         | 990 GB on local datastore (Large disk deployment) |
+| Number of vCPUs              | 8                                   |
+| Memory                       | 28 GB                               |
+| Disk                         | 700 GB on local datastore (Large disk deployment) |
 | Disk type                    | Thin provisioned                    |
 {: caption="Table 1. vCenter Server Appliance specifications" caption-side="top"}
 

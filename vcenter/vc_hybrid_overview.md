@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-16"
+lastupdated: "2021-01-29"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -19,14 +19,14 @@ subcollection: vmwaresolutions
 # vCenter Server with Hybridity Bundle overview
 {: #vc_hybrid_overview}
 
-The VMware vCenter Server with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the Hybrid Cloud Extension (HCX) service.
+The VMware vCenter Server® with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the Hybrid Cloud Extension (HCX™) service.
 {:note}
 
-The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud}} bare metal servers, includes VMware vSAN as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX, and includes the HCX service.
+The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere® stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud}} bare metal servers, includes VMware vSAN™ as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX®, and includes the HCX service.
 
-The bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more ESXi servers to your instance.
+The bare metal infrastructure can rapidly and elastically scale the compute capacity up and down as needed. To increase the vSAN-based storage capacity of a vSAN cluster, you can add more VMware ESXi™ servers to your instance.
 
-You can upgrade the VMware NSX Advanced edition to the Enterprise edition, and you can purchase more VMware components, such as VMware vRealize Operations.
+You can upgrade the VMware NSX Advanced edition to the Enterprise edition, and you can purchase more VMware components, such as VMware vRealize Operations™.
 
 You can add IBM-managed services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is also available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
@@ -53,7 +53,7 @@ This layer virtualizes the physical infrastructure through different VMware prod
 ### Virtualization management
 {: #vc_hybrid_overview-virtualization-mgmt}
 
-This layer consists of vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC), NSX Manager, two NSX Edge Services Gateway (ESGs), three NSX Controllers, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
+This layer consists of vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC), NSX Manager, two VMware NSX Edge™ Services Gateway (ESGs), three VMware NSX Controllers™, and the IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
@@ -102,7 +102,7 @@ For more information on networking components that are ordered when you deploy t
 
 Your instance contains the following virtual server instances (VSIs):
 * A VSI for IBM CloudBuilder, which is cancelled after the instance deployment is completed.
-* You can choose to deploy a single Microsoft Windows Server VSI for Microsoft Active Directory (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
+* You can choose to deploy a single Microsoft® Windows® Server VSI for Microsoft Active Directory™ (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
 
 ### vSAN storage
 {: #vc_hybrid_overview-vsan-storage}
@@ -112,7 +112,7 @@ vSAN storage offers customized configurations, with various options for disk typ
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
 
   In addition, two cache disks of 960 GB are included per host.
-* High Performance with Intel Optane: this option provides two extra capacity disk bays. This option depends on the CPU model.
+* High Performance with Intel® Optane: this option provides two extra capacity disk bays. This option depends on the CPU model.
 
 ### IBM-provided licenses and fees
 {: #vc_hybrid_overview-license-and-fee}

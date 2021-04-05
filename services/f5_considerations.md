@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-29"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -25,15 +25,15 @@ subcollection: vmwaresolutions
 The F5 BIG-IP® service (F5 BIG-IP Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
 {: shortdesc}
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The F5 BIG-IP service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.0.5.
+The F5 BIG-IP service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.2.
 {:note}
 
 ## Technical specifications for F5 BIG-IP
 {: #f5_considerations-specs}
 
-For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are included with the F5 BIG-IP service:
 
@@ -79,7 +79,7 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs are 
 {: #f5_considerations-additional}
 
 * F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies may be able to achieve your chosen maximum bandwidth.
-* The pair of BIG-IP VE VMs suitable for high availability (HA) configuration will be deployed only into the default cluster.
+* The pair of BIG-IP VE VMs suitable for HA configuration will be deployed only into the default cluster.
 
   In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications and it is critical that resources are still available for them.
 
@@ -125,7 +125,11 @@ In this case, the F5 BIG-IP installation might fail, unless at least one ESXi se
 ## Considerations when you delete F5 BIG-IP
 {: #f5_considerations-remove}
 
-Before you delete the F5 BIG-IP service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
+Review the following considerations before you delete the service:
+
+* Before you delete the F5 BIG-IP service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
+
+* If you installed the F5 BIG-IP service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-remove-DNS-entries).
 
 ## Related links
 {: #f5_considerations-related}

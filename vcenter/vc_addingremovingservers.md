@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-02-02"
 
 keywords: vCenter Server add host, add server vCenter Server, remove host vCenter Server
 
@@ -22,11 +22,11 @@ subcollection: vmwaresolutions
 # Expanding and contracting capacity for vCenter Server instances
 {: #vc_addingremovingservers}
 
-You can expand or contract the capacity of your VMware vCenter Server instance according to your business needs, by adding or removing ESXi servers or network file system (NFS) storage.
+You can expand or contract the capacity of your VMware vCenter Server® instance according to your business needs, by adding or removing VMware ESXi™ servers or Network File System (NFS) storage.
 
-* For existing instances with VMware vSphere 6.7u1, you can add new ESXi servers with either vSphere 6.7u1 or vSphere 6.7u3.
+* For existing instances with VMware vSphere® 6.7u1, you can add new ESXi servers with either vSphere 6.7u1 or vSphere 6.7u3.
 * For existing instances with vSphere 6.5, when you add ESXi servers, the vSphere version matches the vSphere version of the existing ESXi servers in the instance. If you updated the vSphere version for the vCenter Server instance or for the existing ESXi servers, you might want to use the newer vSphere version for future additions of ESXi servers. To do so, open a VMware Solutions Support ticket to request that the VMware Solutions database is updated to reflect the correct (newer) version to be applied.
-* If your initial cluster has vSAN storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
+* If your initial cluster has vSAN® storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
 * You can add or remove NFS storage shares to or from an existing NFS or vSAN cluster.
 
 For the edge services cluster, you cannot add or remove ESXi servers.
@@ -60,15 +60,15 @@ For the edge services cluster, you cannot add or remove ESXi servers.
    {:important}
 
 8. Complete the bare metal server configuration.
-   * Select an existing bare metal server configuration that is being used by the existing ESXi servers in the cluster. This option is not available  under the following conditions:
-      * The bare metal configuration being used by the existing ESXi servers in the cluster is **Broadwell**.
+   * Select an existing bare metal server configuration that is being used by the existing ESXi servers in the cluster. This option is not available under the following conditions:
+      * The bare metal configuration used by the existing ESXi servers in the cluster is **Broadwell**.
       * The storage type of the cluster is **Local disks**.
    * Select a new bare metal server configuration:
       * (NSX-V only) For instances with vSphere Enterprise Plus 6.7u1, specify the VMware vSphere version for the new ESXi server.
       * For **Skylake** and **Cascade Lake**, specify the **CPU model**, the amount of **RAM**, and the **Number of bare metal servers**.
       * For **SAP-certified**, specify the **CPU model and RAM** and the **Number of bare metal servers**.
 9. Complete the subnet settings.
-   * Select to continue using the previously selected primary subnets.
+   * Select to continue to use the previously selected primary subnets.
    * Select to specify primary subnets. Then, use the lists to select the **Public primary subnet** and **Private primary subnet**.
 10. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, select the **High performance Intel Optane** checkbox.
 11. On the **Summary** pane, review the estimated pricing and click **Create**.
@@ -95,11 +95,11 @@ If you are adding ESXi servers during maintenance mode, VMs are not migrated to 
 {: #vc_addingremovingservers-removing-prereq}
 
 * Whenever possible, remove ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, remove ESXi servers from vCenter Server only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* If using NFS storage, NSX-V instances require at least two ESXi servers and NSX-T instances require at least three ESXi servers.
-* If using vSAN storage, at least four ESXi servers are required.
+* If you are using NFS storage, NSX-V instances require at least two ESXi servers and NSX-T instances require at least three ESXi servers.
+* If you are using vSAN storage, at least four ESXi servers are required.
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the VMs running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
-* (NSX-V only) If F5 BIG-IP or FortiGate Virtual Appliance is installed on your ESXi server, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
-* (NSX-V only) If IBM Spectrum Protect&trade; Plus is installed on your ESXi server, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi server to be removed.
+* (NSX-V only) If F5® BIG-IP® or FortiGate® Virtual Appliance is installed on your ESXi server, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
+* (NSX-V only) If IBM Spectrum® Protect Plus is installed on your ESXi server, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi server to be removed.
 
 ### Procedure to remove ESXi servers
 {: #vc_addingremovingservers-removing-procedure}

@@ -49,9 +49,9 @@ It is not recommended to put a firewall on a secondary private VLAN that has sto
 | Primary subnet<br><br>Portable subnets:<br>- Management edge gateway public<br>- Customer edge gateway public | Primary subnet<br><br>Portable subnets:<br>- Infrastructure VMs (CD/vCenter/AD)<br>- NSX host TEP traffic (NSX-T)[^hosttep-v7]<br>- VMware NSX® Host TEP (NSX-V)<br>- Customer edge gateway private | Portable subnets:<br>- vSAN™ traffic<br>- Shared storage traffic<br>- vMotion traffic<br>- NSX host TEP traffic (NSX-T)[^hosttep-v67]<br>- NSX edge TEP traffic (NSX-T)<br>- Customer edge TEP traffic (NSX-T) |
 {: caption="Table 1. Subnets for public, private, and secondary private VLANs" caption-side="top"}
 
-[^hosttep-v7]: This is only supported with NSX-T on VMware vSphere 7.
+[^hosttep-v7]: For NSX-T on vSphere 7 only
 
-[^hosttep-v67]: This is only supported with NSX-T on VMware vSphere 6.7.
+[^hosttep-v67]: For NSX-T on vSphere 6.7 only
 
 ## Ports that are used for deployment and day 2 operations
 {: #vmwaresol_ports-vmwaredeploy-day2ops}
@@ -105,8 +105,8 @@ For more information about Red Hat® OpenShift® (OCP) networking, see [About th
 | NSX Manager | Infrastructure VMs | Customer edge subnet | Customer edge private traffic | 443 |  |  |  |
 | ESXi host shared storage | ESXi shared storage | {{site.data.keyword.cloud_notm}} infrastructure endurance storage | {{site.data.keyword.cloud_notm}} infrastructure services network | 111, 635, and 2049 | TCP and UDP | Use {{site.data.keyword.cloud_notm}} infrastructure endurance storage | |
 | IBM CloudBuilder<br>IBM CloudDriver<br>Windows Active Directory (VSI) | Private primary subnet | {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | 80 | TCP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) | |
-| {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | IBM CloudBuilder<br>IBM CloudDriver<br>Windows Active Directory (VSI) | Private primary subnet | Any | TCP and UDP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) | |
-| {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | ESXi host management0 | Private primary subnet | 623 | TCP and UDP | {{site.data.keyword.cloud_notm}} infrastructure IPMI | |
+| {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | IBM CloudBuilder<br>IBM CloudDriver<br>Windows Active Directory (VSI) | Private primary subnet | Any | TCP and UDP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) |   |
+| {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | ESXi host management0 | Private primary subnet | 623 | TCP and UDP | {{site.data.keyword.cloud_notm}} infrastructure IPMI |   |
 {: caption="Table 2. Ports for deployment and day 2 operations" caption-side="top"}
 
 ## Ports that are used by VMware

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-22"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -19,18 +19,15 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:term: .term}
 
-# Expanding and contracting capacity for a stretched cluster across multizone region
+# Expanding and contracting capacity for vCenter Server multizone instances
 {: #mcv_addingremovingservers}
 
-You can expand or contract the capacity of your stretched cluster across [multizone region](#x9774820){: term} according to your business needs. You can add or remove VMware ESXi™ servers to and from witness, management, and stretched vSAN™ clusters. You can add or remove network file system (NFS) storage to and from witness and management clusters.
+You can expand or contract the capacity of your multizone instance according to your business needs. You can add or remove VMware ESXi™ servers to and from witness, consolidated, additional workload, and edge services clusters. You can add or remove Network File System (NFS) storage to and from the witness and consolidated clusters.
 
-## Adding ESXi servers to a stretched cluster across multizone region
+## Adding ESXi servers to a multizone instance
 {: #mcv_addingremovingservers-adding}
 
-You can add ESXi servers to your witness, management, or stretched vSAN cluster.
-
-ESXi servers for stretched vSAN clusters are added in pairs.
-{:note}
+You can add ESXi servers to your witness, consolidated, additional workload, and edge services clusters.
 
 ### Procedure to add ESXi servers
 {: #mcv_addingremovingservers-adding-procedure}
@@ -40,13 +37,13 @@ ESXi servers for stretched vSAN clusters are added in pairs.
 3. Click **Infrastructure** on the left navigation pane.
 4. In the applicable cluster table, click the cluster to which you want to add ESXi servers.
 5. In the **ESXi servers** section, click **Add**.
-6. In the **Add server** window, select the number of servers that you want to add.
+6. In the **ESXi server** window, select the number of servers that you want to add.
 7. Optionally, select the checkbox to add servers during maintenance mode. The checkbox is selected by default.
 
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
    {:important}
 
-8. Review the estimated price and click **Provision**.
+8. Review the estimated price and click **Create**.
 
 ### Results after you add ESXi servers
 {: #mcv_addingremovingservers-adding-results}
@@ -58,13 +55,13 @@ ESXi servers for stretched vSAN clusters are added in pairs.
    If you are adding ESXi servers during maintenance mode, VMs are not migrated to the new servers until you remove maintenance mode.
    {:important}
 
-## Removing ESXi servers from a stretched cluster across multizone region
+## Removing ESXi servers from multizone instances
 {: #mcv_addingremovingservers-removing}
 
 ### Before you remove ESXi servers
 {: #mcv_addingremovingservers-removing-prereq}
 
-* Whenever possible, remove ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, remove ESXi servers from VMware vCenter Server® only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, remove ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, remove ESXi servers from VMware vCenter Server® only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the VMs running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ### Procedure to remove ESXi servers
@@ -87,10 +84,10 @@ ESXi servers for stretched vSAN clusters are added in pairs.
    You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed ESXi servers.
    {:note}
 
-## Adding NFS storage to a stretched cluster across multizone region
+## Adding NFS storage to a multizone instance
 {: #mcv_addingremovingservers-adding-nfs-storage}
 
-You can add NFS storage to witness and management clusters.
+You can add NFS storage to the witness and management clusters.
 
 ### Before you add NFS storage
 {: #mcv_addingremovingservers-adding-nfs-storage-prereq}
@@ -117,7 +114,7 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 2. You are notified by email that your request to add NFS storage is being processed. On the console, the status of the cluster that is associated with the NFS storage is changed to **Modifying**.
 3. If you do not see the new NFS storage added to the list in the cluster, check the email or console notifications to find more details about the failure.
 
-## Removing NFS storage from a stretched cluster across multizone region
+## Removing NFS storage from a multizone instance
 {: #mcv_addingremovingservers-removing-nfs-storage}
 
 ### Before you remove NFS storage
@@ -125,7 +122,7 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 
 * Do not remove NFS storage from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 * Before you remove the NFS storage, ensure that you removed all the VMs that reside on the storage.
-* Ensure that the shares you plan to remove are associated with the correct stretched cluster across multizone region.
+* Ensure that the shares you plan to remove are associated with the correct multizone instance.
 * The cluster must be in **Ready to use** status.
 
 ### Procedure to remove NFS storage
@@ -152,6 +149,6 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 {: #mcv_addingremovingservers-related}
 
 * [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
-* [Ordering a stretched cluster across multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
+* [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
 * [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
-* [Viewing IBM Cloud for VMware Mission Critical Workload clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_viewingclusters)
+* [Viewing vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_viewinginstance)

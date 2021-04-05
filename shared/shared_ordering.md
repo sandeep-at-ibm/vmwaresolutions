@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-25"
+lastupdated: "2021-03-17"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 # Ordering virtual data center instances
 {: #shared_ordering}
 
-{{site.data.keyword.vmwaresolutions_full}} Shared offers either a standardized or customizable deployment option of VMware® virtual data center environments. Choose the On-demand or Reserved option.
+{{site.data.keyword.vmwaresolutions_full}} Shared offers either a standardized or customizable deployment option of VMware® virtual data center environments. Choose the **On-demand** or **Reserved** option.
 
 ## Requirements for virtual data center instances
 {: #shared_ordering-reqs}
@@ -84,6 +84,16 @@ If **No resource group available** is displayed in this field, you currently do 
 
 Select the {{site.data.keyword.cloud}} data center where the instance is to be hosted.
 
+## Networking
+{: #shared_ordering-networking}
+
+You must specify the following network settings for your virtual data center instance.
+
+### Networking type
+{: #shared_ordering-networking-type}
+
+Select either **Private only** or **Secure public and private**. Public networking is delivered through a generic routing encapsulation enablement tunnel system.
+
 ## Virtual data center capacity
 {: #shared_ordering-cpu}
 
@@ -110,9 +120,12 @@ The vCPU maximum number is limited to the 40 cores with hyperthreading on each h
 ## Recommended services
 {: #shared_ordering-services}
 
-The Veeam Availability Suite and Veeam Cloud Connect Replication services are preinstalled and ready-to-use in all virtual data center instances. Service charges are incurred only if you choose to use the service.
+The following services are preinstalled and ready-to-use in all virtual data center instances. Service charges are incurred only if you choose to use the service.
 
-For more information, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam).
+* Veeam Availability Suite and Veeam Cloud Connect Replication
+* Zerto
+
+For more information, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam) and [Managing Zerto for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto).
 
 ## Summary
 {: #shared_ordering-summary}
@@ -128,24 +141,26 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **IaaS platforms** section.
 2. On the **Create** tab of the **VMware Solutions Shared** page, select **On-demand**.
-3. Enter the virtual data center name and select a resource group.
-4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
-5. Select the vCPU and RAM limits according to your requirements.
-6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
-7. Click **Create**.
+3. Enter the virtual data center name, select a resource group, and data center location.
+4. Select the network type.
+5. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
+6. Select the vCPU and RAM limits according to your requirements.
+7. On the **Summary** pane, verify the configuration and estimated price before you place the order.
+8. Click **Create**.
 
 ## Procedure to order VMware Solutions Shared Reserved
 {: #shared_ordering-procedure-reserved}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **IaaS platforms** section.
 2. On the **Create** tab of the **VMware Solutions Shared** page, select **Reserved**.
-3. Enter the virtual data center name and resource group.
-4. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
-5. Complete the resource reservation.
+3. Enter the virtual data center name, select a resource group, and data center location.
+4. Select the network type.
+5. Select the {{site.data.keyword.cloud_notm}} data center to host the instance.
+6. Complete the resource reservation.
   * If you select **Preconfigured**, select the preconfigured vCPU model and RAM size.
   * If you select **Customizable**, specify the vCPU and RAM limits according to your requirements.
-6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
-7. Click **Create**.
+7. On the **Summary** pane, verify the configuration and estimated price before you place the order.
+8. Click **Create**.
 
 ## Results after you order VMware Solutions Shared
 {: #shared_ordering-results}
@@ -164,5 +179,4 @@ View the virtual data center instance that you ordered and then set the **admin*
 
 * [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
-* [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}

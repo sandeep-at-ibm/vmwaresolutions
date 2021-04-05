@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-01"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -23,12 +23,15 @@ You can include the IBM Spectrum® Protect Plus service with a new VMware vCente
 ## Ordering IBM Spectrum Protect Plus for a new instance
 {: #spp_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional services** section and click **IBM Spectrum Protect Plus** in the **Business continuity and migration** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **IBM Spectrum Protect Plus** in the **Business continuity and migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering IBM Spectrum Protect Plus for an existing instance
 {: #spp_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **IBM Spectrum Protect Plus** in the **Business continuity and migration** category, and then click **Add**. Follow the steps to add the service to your instance.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **IBM Spectrum Protect Plus** service and toggle its switch on.
+4. Follow the steps to configure and add the service to your instance.
 
 ## IBM Spectrum Protect Plus service configuration
 {: #spp_ordering-config}
@@ -58,12 +61,12 @@ The IOPS (Input/output Operations Per Second) per GB based on your workload requ
 The deployment of IBM Spectrum Protect Plus is automated. Whether you order an instance with this service included or you deploy the service later into your instance, the following steps are completed by the {{site.data.keyword.vmwaresolutions_full}} automation process:
 
 1. Based on the settings you specify, endurance NFS storage is ordered from the {{site.data.keyword.cloud_notm}} infrastructure for the IBM Spectrum Protect Plus backup repository.
-2. Based on the settings you specify, a number of licenses for IBM Spectrum Protect Plus are ordered from the  {{site.data.keyword.cloud_notm}} infrastructure. The licenses are ordered in increments of 10 virtual machine (VM) license packs, based on the number of VMs that you specified to license when ordering the IBM Spectrum Protect Plus service. If you want to bring an existing IBM Spectrum Protect Plus license, no license order is placed from the {{site.data.keyword.cloud_notm}} infrastructure.
-3. The NFS storage ordered for this service is mounted to all the VMware ESXi™ servers in the default cluster of the instance, including adding correct static routes on each ESXi server to the storage private subnet.
+2. Based on the settings you specify, a number of licenses for IBM Spectrum Protect Plus are ordered from the {{site.data.keyword.cloud_notm}} infrastructure. The licenses are ordered in increments of 10 virtual machine (VM) license packs, based on the number of VMs that you specified to license when you ordered the IBM Spectrum Protect Plus service. If you want to bring an existing IBM Spectrum Protect Plus license, no license order is placed from the {{site.data.keyword.cloud_notm}} infrastructure.
+3. The NFS storage that is ordered for this service is mounted to all the VMware ESXi™ servers in the default cluster of the instance. Correct static routes are added on each ESXi server to the storage private subnet.
 4. NFS datastores are created in vCenter Server for all NFS storage volumes that are mounted to the ESXi servers.
 5. The IBM Spectrum Protect Plus VMs are deployed, activated, and configured in the default cluster of the instance.
 6. The NFS storage that was ordered for this service is attached to the IBM Spectrum Protect Plus VM and the backup repository is configured.
-7. The host name and IP address of the IBM Spectrum Protect Plus VM are registered with the DNS server of the instance.
+7. The hostname and IP address of the IBM Spectrum Protect Plus VM are registered with the DNS server of the instance.
 
 ## Related links
 {: #spp_ordering-related}

@@ -10,10 +10,14 @@ VMware Solutions
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
     vmonic/vmware-comp-guide.md
-    vmonic/relnotes_v40.md
+    vmonic/relnotes_v41.md
 
     {: .topicgroup}
     Previous release notes
+
+        {: .topicgroup}
+        Version 4.0
+            vmonic/relnotes_v40.md
 
         {: .topicgroup}
         Version 3.0 to 3.9
@@ -75,6 +79,7 @@ VMware Solutions
         shared/shared_ordering.md
         shared/shared_creatingendpoints.md
         shared/shared_veeam.md
+        shared/shared_zerto.md
         shared/shared_managing.md
         shared/shared_vcd-ops-guide.md
         shared/shared-monitor.md
@@ -86,6 +91,7 @@ VMware Solutions
     VMware Solutions Dedicated - vCenter Server
         vcenter/vc_vcenterserveroverview.md
         vcenter/vc_bom.md
+        vcenter/vc_vsphere_70_upgrade.md
         vcenter/vc_vsphere_upgrade.md
         vcenter/vc_planning.md
         vcenter/vc_networkingonvcenterserver.md
@@ -113,11 +119,21 @@ VMware Solutions
         vsphere/vs_orderingforclustersoutside.md
 
     {: .topicgroup}
-    Regulated workloads
+    VMware Regulated Workloads
         vcenter/vrw-overview.md
         vcenter/vrw-planning.md
         vcenter/vrw-orderinginstance.md
         vcenter/vrw-view-delete-instance.md
+
+    {: .topicgroup}
+    Security and Compliance Readiness Bundle
+        vcenter/scb-overview.md
+        vcenter/scb-planning.md
+        vcenter/scb-orderinginstance.md
+        vcenter/scb-view-delete-instance.md
+        vcenter/scb_addingviewingclusters.md
+        vcenter/scb_addingremovingservers.md
+        vcenter/scb_addingremovingservices.md
 
     {: .topicgroup}
     vCenter Server with Hybridity Bundle
@@ -187,8 +203,10 @@ VMware Solutions
         services/mcv_overview.md
         services/mcv_ordering-multi-zone.md
         services/mcv_ordering-managed.md
-        services/mcv_viewingclusters.md
+        services/mcv_addviewdeleteclusters.md
         services/mcv_addingremovingservers.md
+        services/mcv_addingremovingservices.md
+        services/mcv_viewinginstance.md
 
     services/managing-ss-sap.md
 
@@ -226,13 +244,13 @@ VMware Solutions
 
     {: .topicgroup}
     Veeam
-        services/veeam_considerations.md
         services/veeamvm_overview.md
         services/veeam_ordering.md
         services/managingveeam.md
         services/veeam_ordering_licenses.md
         services/veeam_managing_licenses.md
         services/icos_ordering.md
+        services/veeam_considerations.md
 
     {: .topicgroup}
     vRealize Operations and Log Insight
@@ -374,7 +392,14 @@ VMware Solutions
         archiref/caveonix/caveonix-terminology.md
 
     {: .topicgroup}
-    VMware regulated workloads reference architecture
+    VMware Mission Critical Workloads architecture
+        archiref/mission-critical/mcv-archi-overview.md
+        archiref/mission-critical/mcv-archi-design.md
+        archiref/mission-critical/mcv-archi-bom.md
+        archiref/mission-critical/mcv-archi-comps.md
+
+    {: .topicgroup}
+    VMware Regulated Workloads reference architecture
         archiref/vrw/vrw-archi-overview.md
         archiref/vrw/vrw-context.md
         archiref/vrw/vrw-separation-of-duties.md

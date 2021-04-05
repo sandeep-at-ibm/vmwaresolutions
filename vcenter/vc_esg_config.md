@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-08"
+lastupdated: "2021-02-01"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -21,9 +21,9 @@ subcollection: vmwaresolutions
 # Configuring your network to use the customer-managed NSX ESG with your VMs
 {: #vc_esg_config}
 
-Configure the network for your virtual machines (VMs) so you can take advantage of the VMware NSX Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#faq-mgmt-nsx)
+Configure the network for your virtual machines (VMs) so you can take advantage of the VMware NSX Edge™ Services Gateway (ESG) that is deployed in your VMware vCenter Server® instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#faq-mgmt-nsx)
 
-VMware NSX is a network virtualization platform that allows the virtualization of isolated networks and provides several networking
+VMware NSX® is a network virtualization platform that allows the virtualization of isolated networks and provides several networking
 services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}.
 
 As part of the ordering process for your vCenter Server instance, the following actions are completed on your behalf:

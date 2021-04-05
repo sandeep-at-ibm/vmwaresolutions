@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-21"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Requirements and planning for VMware Solutions Shared
 {: #shared_planning}
 
-Review the following requirements before you order your {{site.data.keyword.vmwaresolutions_full}} Shared virtual data center instances. Plan your instance based on the {{site.data.keyword.cloud_notm}} data center location, your workload capacity requirements, and add-on service requirements.
+Review the following requirements before you order your {{site.data.keyword.vmwaresolutions_full}} Shared virtual data center instances. Plan your instance based on the {{site.data.keyword.cloud_notm}} data center location, your workload capacity requirements, and services requirements.
 
 ## IBM Cloud account requirements
 {: #shared_ordering-account-req}
@@ -35,7 +35,7 @@ The virtual data center name must meet the following requirements:
 
 * Maximum length is 128 characters.
 * Only alphanumeric, dash (-), and underscore (_) characters are allowed.
-* The name must be unique from active virtual data centers within your account. You may create a virtual data center that has the same name as a previously deleted virtual data center.
+* The name must be unique from active virtual data centers within your account. You can create a virtual data center that has the same name as a previously deleted virtual data center.
 
 ## IBM Cloud data center availability
 {: #shared_planning-dc-availability}
@@ -55,7 +55,9 @@ The following {{site.data.keyword.cloud_notm}} data centers are available for VM
 ## Services for VMware Solutions Shared
 {: #shared_planning-addon-services}
 
-Preinstalled add-on services are available for your instance based on your needs. For more information, see [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam).
+The following preinstalled services are available for your instance based on your needs.
+* [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
+* [Managing Zerto for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto)
 
 Service charges are incurred only if you choose to use the service.
 {:note}

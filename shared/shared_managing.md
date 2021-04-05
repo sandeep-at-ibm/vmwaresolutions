@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-16"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
@@ -56,7 +56,7 @@ The instance can have different statuses.
 
 The instance details include property, operating system, resource reservation, private network endpoint, and recommended services that are enabled or available for the instance.
 
-To view the property details of an instance:
+Use the following steps to view the property details of an instance.
 
 1. In the **VMware Solutions Shared** table, click an instance name.
 2. Under **Properties**, view the details for the instance.
@@ -98,7 +98,7 @@ For information about private network endpoint details, see [Procedure to view a
 
 To view virtual data center instance recommended services details:
 
-For information about recommended services details, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam).
+For more information about recommended services details, see [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam) and [Managing Zerto for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto).
 
 ## Procedure to access the vCloud Director Management console
 {: #shared_managing-accessing}
@@ -113,10 +113,10 @@ You do not need to generate an **admin** password for each virtual data center. 
 {:note}
 
 1. From the **Properties** pane on the virtual data center instance details page, click **Set Organization Admin Password** to generate a random password.
-2. From the upper right corner of the virtual data center instance details page, click **vCloud Director console** to access the console.
+2. On the upper right of the virtual data center instance details page, click **vCloud Director console** to access the console.
 3. Use the ** admin** username and password to log in to the vCloud Director console.
 
-After the **admin** is logged in to the vCloud Director console, you can create additional users who have roles that allow them access the vCloud Director console.
+After the **admin** is logged in to the vCloud Director console, you can create additional users who have roles that allow them to access the vCloud Director console.
 
 All virtual data centers in the same region have the same **admin** password. Resetting the password on a virtual data center instance resets the **admin** password for accessing the vCloud Director Management console for all virtual data center instances in the same region.
 {:important}
@@ -126,6 +126,5 @@ All virtual data centers in the same region have the same **admin** password. Re
 
 * [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_resize)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
-* [Managing Veeam for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
 * [Deleting VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_deletinginstance)
 * [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}

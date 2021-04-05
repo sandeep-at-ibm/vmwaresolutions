@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-01"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -28,7 +28,7 @@ After the Zerto service is deployed into your instance, you can configure or upd
 
 As a best practice, use your own SSL certificate for Zerto Virtual Manager (ZVM). After you deployed Zerto, replace the SSL certificate for ZVM with your own certificate. To change the default security certificate for your ZVM, follow these steps:
 
-1. Open the Zerto Diagnostics utility on the Windows® VM running the ZVM.
+1. Open the Zerto Diagnostics utility on the Windows® virtual machine running the ZVM.
 2. Choose **Reconfigure Zerto Virtual Manager**.
 3. Ensure that the VMware vCenter Server® configuration is correct, and click **Next**.
 4. In the **HTTP Certificate** section, check the **Replace SSL Certificate** box.
@@ -63,7 +63,7 @@ When you add or remove ESXi servers for the primary cluster of your instance, VR
 
 * [Zerto overview](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr)
 * [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
-* [zerto.com website](https://www.zerto.com){:external}
+* [Zerto](https://www.zerto.com){:external}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:external}
 * [Zerto disaster recovery](https://www.ibm.com/downloads/cas/KDBKXLLW){:external}
 * [Zerto's alarms, alerts, and events](http://s3.amazonaws.com/zertodownload_docs/Latest/Guide%20to%20Alarms%2C%20Alerts%20and%20Events.pdf){:external}

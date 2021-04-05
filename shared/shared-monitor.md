@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-02"
 
 keywords: monitor, default dashboard, custom dashboard, virtual data center, platform metrics, monitoring
 
@@ -30,7 +30,7 @@ Use {{site.data.keyword.mon_short}} dashboards to complete the following tasks.
 * Control cost of monitoring infrastructure.
 * Mitigate impact of abnormal situations with proactive notifications.
 
-For more information about the benefits of using {{site.data.keyword.cloud_notm}} Monitoring, see the *Features* section in the [IBM Cloud Monitoring getting started tutorial](/docs/Monitoring-with-Sysdig#features).
+For more information about the benefits of using {{site.data.keyword.mon_short}}, see the *Features* section in [Monitoring getting started tutorial](/docs/monitoring?topic=monitoring-getting-started#getting-started-features).
 
 ## Provisioning an IBM Cloud Monitoring instance
 {: #shared-monitor-create-instance}
@@ -48,7 +48,7 @@ Order the {{site.data.keyword.mon_short}} instance.
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **VMware Solutions Shared** table, select the instance for which you want to collect platform metrics.
 3. From the instance details page, click the **Actions** menu and click **Add monitoring**.
-4. On the {{site.data.keyword.mon_short}} provisioning page, complete the steps in [Provisioning an instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-provision) to order a {{site.data.keyword.mon_short}} instance and enable the automatic platform metrics collection.
+4. On the {{site.data.keyword.mon_short}} provisioning page, complete the steps in [Provisioning an instance](/docs/monitoring?topic=monitoring-provision) to order a {{site.data.keyword.mon_short}} instance and enable the automatic platform metrics collection.
 
 ## Viewing platform metrics for your virtual data center instance
 {: #shared-monitor-view-metrics}
@@ -76,9 +76,9 @@ You can optionally customize your dashboard.
 
 1. In the {{site.data.keyword.mon_short}} console, click **Dashboards** from the left navigation pane.
 2. Click the **IBM** menu and click **VMware Solutions Shared**.
-3. Customize your dashboard. For more information, see [Working with dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards).
+3. Customize your dashboard. For more information, see [Dashboards](/docs/monitoring?topic=monitoring-monitoring#monitoring_dashboards).
 
 ## Related links
 {: #shared-monitor-related}
 
-* [{{site.data.keyword.cloud_notm}} Monitoring getting started tutorial](/docs/Monitoring-with-Sysdig)
+* [{{site.data.keyword.cloud_notm}} Monitoring getting started tutorial](/docs/monitoring?topic=monitoring-getting-started)

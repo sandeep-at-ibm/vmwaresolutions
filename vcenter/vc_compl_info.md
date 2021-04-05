@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-06"
+lastupdated: "2021-02-22"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Compliance information for vCenter Server instances
 {: #vc_compl_info}
 
-Review the following information for details about compliance for VMware vCenter Server instances.
+Review the following information for details about compliance for VMware vCenter Server® instances.
 
 The vCenter Server with NSX-T offering is not supported for HIPAA customers.
 {:important}
@@ -36,7 +36,7 @@ The following diagram provides details about the customer (you) and {{site.data.
 ## Health data restrictions
 {: #vc_compl_info-health-data-restrictions}
 
-The following terms apply to the entire {{site.data.keyword.vmwaresolutions_short}} portfolio.
+The following terms apply to the entire {{site.data.keyword.vmwaresolutions_full}} portfolio.
 
 ### HIPAA
 {: #vc_compl_info-hipaa}
@@ -83,7 +83,7 @@ vCenter Server environments, which are delivered as {{site.data.keyword.vmwareso
 
 * During the initial ordering and provisioning of an instance or service, IBM Support might access client instances and information without prior notification of the client to ensure that orders are properly fulfilled.
 * IBM Support actively monitors instance lifecycle operations such as adding new hosts, in addition to the ordering, provisioning, and installation processes.
-* To fix issues that have arisen or might arise in the future, IBM Support might take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing Operating System reload operations, or opening {{site.data.keyword.cloud_notm}} tickets by using the provided client {{site.data.keyword.cloud_notm}} user ID and API key.
+* To fix issues that have arisen or might arise in the future, IBM Support might take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing operating system reload operations, or opening {{site.data.keyword.cloud_notm}} tickets by using the provided client {{site.data.keyword.cloud_notm}} user ID and API key.
 
 ### Proactive support for steady-state operations
 {: #vc_compl_info-proactive-support-for-steady-state-operations}

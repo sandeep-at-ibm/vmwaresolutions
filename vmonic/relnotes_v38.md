@@ -38,9 +38,6 @@ The Flash portal is no longer available with the v10.1.1 update.
 
 * This release introduces *Standard* storage policies and *Encrypted* storage policies. These new storage policies are available for new VMware Solutions Shared instances and added to existing VMware Solutions Shared instances with the VMware vCloud Director (vCD) v10.1.1 upgrade.
 
-For more information about storage policies, see the *Storage* section in [Technical specifications for VMware Solutions Shared
-](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview#shared_overview-specs-storage).
-
 #### Standard storage policies
 {: #relnotes_v38-shared-storage-standard}
 
@@ -54,7 +51,7 @@ VMware vCloud Director v10.1.1 provides the capability to create encryption enab
 ### Off-site copy mode availability for Veeam Availability Suite
 {: #relnotes_v38-shared-off-site}
 
-Veeam Availability Suite off-site copy mode is now automatically enabled for new and existing VMware Solutions Shared instances. For more information, see the *Veeam Availability Suite* section in [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam) instances.
+Veeam Availability Suite off-site copy mode is now automatically enabled for new and existing VMware Solutions Shared instances.
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v38-dedicated}
@@ -87,8 +84,6 @@ For NFS storage, vSphere ESXi 6.7u3 will be installed.
 * For vCenter Server with NSX-T, new instances are now deployed with NSX-T 3.0.1. Day 2 operations continue to be supported for NSX-T 2.5.1 instances.
 * For vCenter Server with NSX-V, new instances are now deployed with NSX-V 6.4.6.
 
-For more information, see [Software BOM for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom#vc_bom-software).
-
 ### Updates for IBM Cloud for VMware Mission Critical Workloads
 {: #relnotes_v38-mcv}
 
@@ -114,8 +109,6 @@ You can use one promotion (promo) code for one or more services for:
 * Adding a service to an existing vCenter Server
 * Ordering a stand-alone service (license), such as Caveonix or Veeam®
 
-For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
-
 ### Resource requirements for add-on services
 {: #relnotes_v38-services-resource-reqs-services}
 
@@ -126,8 +119,6 @@ In this release, capacity checks are performed to ensure that resource requireme
 * HyTrust CloudControl
 * Zerto
 
-For more information, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
-
 ### Selecting the target cluster for Red Hat OpenShift for VMware
 {: #relnotes_v38-services-select-target-cluster}
 
@@ -135,8 +126,6 @@ Starting with v3.8, the target cluster for installing Red Hat OpenShift varies:
 
 * During deployment, you aren't prompted for the cluster. The service is automatically installed to the management cluster.
 * During day 2 operations, you are prompted for the cluster. You can install the service to a management cluster or a workload cluster.
-
-For more information, see [Selection of the target cluster for installation](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-select-target-cluster).
 
 ### Deleting services from a cluster before deleting the cluster
 {: #relnotes_v38-services-delete-cluster}
@@ -151,12 +140,12 @@ This change affects the Juniper vSRX and Red Hat OpenShift for VMware services.
 {: #relnotes_v38-api}
 
 * Application programming interfaces (APIs) are now available for the Red Hat OpenShift for VMware service.
-* Various updates are made to the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared) documentation.
+* Various updates are made to the VMware Solutions API and the VMware Solutions Shared API documentation.
 
 ## New and updated documentation
 {: #relnotes_v38-updated-doc}
 
-A new topic, [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements), is now available.
+A new topic, Resource requirements for add-on services, is now available.
 
 The topic describes how capacity checking works for various services and what resources are required to install certain services, such as Caveonix RiskForesight, Juniper vSRX, and Veeam. The information replaces the documentation that was provided in the overviews of the individual services.
 
@@ -172,6 +161,4 @@ The user interface is updated and provides the following enhancements:
    * On-premises VMware HCX instances
    * Caveonix RiskForesight licenses
    * Veeam licenses
-
-  For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

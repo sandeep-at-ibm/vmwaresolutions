@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-24"
 
 subcollection: vmwaresolutions
 
@@ -65,7 +65,7 @@ Open the [IBM Cloud infrastructure customer portal](https://control.softlayer.co
 - Add-ons.
   - Accept defaults.
 - Storage Disks.
-  - Type: RAID1.
+  - Type: RAID 1.
   - \# Disks: 2.
   - Disk Media: SATA (preselected).
   - Disk Size: 4 TB.
@@ -82,7 +82,7 @@ Review order, then select Create. Provisioning takes three to four hours.
 
 If you deployed the IaaS KVM-based Juniper vSRX HA Cluster, you can continue with configuration of the vSRX cluster as described in [IBM Cloud performing vSRX basics](/docs/vsrx?topic=vsrx-performing-ibm-cloud-juniper-vsrx-basics).
 
-If you opted to deploy the No-OS gateway offering, then follow the guidance in [Installing an Operating System on the Gateway](/docs/gateway-appliance?topic=gateway-appliance-order-byoa#installing-an-operating-system-on-the-gateway) to prepare the hosts for your appliance.
+If you opted to deploy the No-OS gateway offering, then follow the guidance in [Installing an operating system on the gateway](/docs/gateway-appliance?topic=gateway-appliance-order-byoa#installing-an-operating-system-on-the-gateway) to prepare the hosts for your appliance.
 
 **Next topic:** [vSRX base and advanced licensing](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-licensing)
 

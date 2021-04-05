@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-09-17"
+lastupdated: "2021-03-17"
 
 keywords: IAM user, user role, user permission, IAM account administrator
 
@@ -29,7 +29,7 @@ If you do not have an administrator role and you want to complete a task that re
 To identify an account owner who has the administrator role, complete the following steps:
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com).
-2. On the upper right corner, select the {{site.data.keyword.cloud_notm}} account that you want to use.
+2. On the upper right of the window, select the {{site.data.keyword.cloud_notm}} account that you want to use.
 3. Click **Manage** > **Access (IAM)** > **Users**.
 4. Scroll down through the list until you find a name with an oval icon to the right with the word **Owner**, which indicates that the user is an account administrator.
 5. Write down the name of this user.
@@ -37,9 +37,9 @@ To identify an account owner who has the administrator role, complete the follow
 If the owner who you identified is not available or has left the company, find one or more other users with the administrator role. Consider who might be assigned the role, for example, a manager, team lead, or someone who works directly with {{site.data.keyword.cloud_notm}} customers.
 
 To locate a user with an administrator role, click the name link and review the information on the **Access policies** tab. Look for the following values:
-  * Role: Administrator
-  * Access Type: Service
-  * Policy Details: All VMware® Solutions resources
+  * Role - Administrator
+  * Access Type - Service
+  * Policy Details - All VMware® Solutions resources
 
 ## Assigning access
 {: #iam_verify_permissions-assign-access}
@@ -47,7 +47,7 @@ To locate a user with an administrator role, click the name link and review the 
 After you find the account owner or another user with an administrator role, that person must perform the following steps to assign access:
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com) as the {{site.data.keyword.cloud_notm}} account owner.
-2. On the upper right corner, select the {{site.data.keyword.cloud_notm}} account that you want to use.
+2. On the upper right of the window, select the {{site.data.keyword.cloud_notm}} account that you want to use.
 3. At the right side of the banner, click **Manage** > **Access (IAM)**.
 4. From the left navigation pane, click **Users**.
 5. In the row for the user that you want to assign access, click the vertical overflow menu next to the **Status** column, and then click **Assign access**.

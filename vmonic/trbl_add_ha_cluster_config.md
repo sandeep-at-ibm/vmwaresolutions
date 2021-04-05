@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-10"
+lastupdated: "2021-04-01"
 
 keywords: troubleshooting, vSphere configuration issue, HA cluster issue
 
@@ -31,5 +31,5 @@ When you add a High Availability (HA) cluster configuration with only one file s
 This issue occurs if redundancy is not in shared storage to allow for data store heart beating.
 {: tsCauses}
 
-For more information and steps how to fix the problem, see [HA error: The number of heartbeat data stores for host is 1, which is less than required: 2](https://kb.vmware.com/articleview?docid=2004739){:external}.
+For more information about how to fix the problem, see [How to add the number of vSphere HA heartbeat datastores for the ESXi host](https://communities.vmware.com/t5/VMware-vSphere-Discussions/How-to-add-the-number-of-vSphere-HA-heartbeat-datastores-for-the/td-p/1415119){:external}.
 {: tsResolve}

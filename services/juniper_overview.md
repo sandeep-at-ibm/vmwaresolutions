@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-15"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX virtual security appliance, Juniper virtual security appliance, Juniper vSRX console
 
@@ -36,22 +36,22 @@ Juniper® vSRX is a virtual security appliance that provides security and networ
 The current Juniper vSRX version that is installed is 3.0 (20.1R2).
 {:note}
 
-For information about vSRX and the vSRX 3.0 architecture, see [Understand vSRX with VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/concept/security-vsrx-vmware-overview.html){:external}.
+For more information about vSRX and the vSRX 3.0 architecture, see [Understand vSRX with VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/concept/security-vsrx-vmware-overview.html){:external}.
 
 You can install Juniper vSRX as one of the following components:
-* As a virtual appliance on the management cluster. In this case, Juniper vSRX protects the traffic in the management cluster. That is, the service  protects only the traffic that you forward from your devices, for example, setting the default gateway to point to Juniper vSRX.
+* As a virtual appliance on the management cluster. In this case, Juniper vSRX protects the traffic in the management cluster. That is, the service protects only the traffic that you forward from your devices, for example, setting the default gateway to point to Juniper vSRX.
 * As a security or gateway appliance on the edge services cluster. In this case, Juniper vSRX works like a gateway appliance, which you can set without having to configure any devices. Juniper vSRX protects all clusters in the same pod and data center. With this deployment, you route all traffic in the same pod and data center to protect a broader portion of the system.
 
 Juniper vSRX is built on the Junos® operating system (Junos OS™) and delivers networking and security features similar to ones on the software releases for SRX Series Services Gateways.
 
-Juniper vSRX provides a complete Next-Generation Firewall (NGFW) solution, including core firewall, VPN, NAT, advanced Layer 4 through Layer 7 security services such as Application Security, intrusion detection and prevention (IPS), and UTM features,  which include Enhanced Web Filtering and Anti-Virus.
+Juniper vSRX provides a complete Next-Generation Firewall (NGFW) solution, including core firewall, VPN, NAT, advanced Layer 4 through Layer 7 security services such as Application Security, intrusion detection and prevention (IPS), and UTM features, which include Enhanced Web Filtering and Anti-Virus.
 
-You can install multiple instances of this service as needed. You can manage this service by using the J-Web interface link provided on the service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
+You can install multiple instances of this service as needed. You can manage this service by using the J-Web interface link that is provided on the service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## Technical specifications for Juniper vSRX
 {: #juniper-overview-specs}
 
-For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are ordered and included in the Juniper vSRX service:
 
@@ -83,7 +83,7 @@ Each license type includes a different set of features and options. The Content 
 * UTM
 * SSL Proxy
 
-For information about the features and options in each license, see [Choosing a vSRX License](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
+For more information about the features and options in each license, see [Choosing a vSRX License](/docs/vsrx?topic=vsrx-getting-started#choosing-license).
 
 Two licenses of the selected type are ordered, one for each of the appliance nodes.
 
@@ -97,9 +97,9 @@ If you need to extend your license after expiration, you can update your vSRX li
 
 Review the following considerations before you install the Juniper vSRX service:
 * The Juniper vSRX VMs are deployed only into the default cluster or the edge services cluster.
-* Juniper vSRX can only protect items in the same data center and pod.
+* Juniper vSRX can protect only items in the same data center and pod.
 * You are responsible for Juniper vSRX configuration.
-* For guidance information about extra configuration options that you might want to include and as an example, see [The IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-iaas-def-config). This information does not illustrate the configuration you have or should have. Your own configuration will be different.
+* For guidance information about extra configuration options that you might want to include and as an example, see [The IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-iaas-def-config). This information does not illustrate your configuration. Your own configuration is different.
 
 ## Considerations when you delete Juniper vSRX
 {: #juniper-overview-remove-consider}
@@ -114,5 +114,5 @@ Any network operations that rely on routes that are established through vSRX mig
 * [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
-* [Overview of the available virtual SRX models, vSRX and vSRX 3.0](https://kb.juniper.net/InfoCenter/index?page=content&id=KB33572){:external}
+* [Overview of the available virtual SRX models, vSRX, and vSRX 3.0](https://kb.juniper.net/InfoCenter/index?page=content&id=KB33572){:external}
 * [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}

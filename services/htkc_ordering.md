@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-01"
 
 keywords: Hytrust KeyControl, Hytrust configuration, order Hytrust
 
@@ -23,12 +23,14 @@ You can add the HyTrust® KeyControl™ service (with an HA pair of HyTrust KeyC
 ## Ordering HyTrust KeyControl for a new instance
 {: #htkc_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **HyTrust KeyControl** in the **Security and compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **HyTrust KeyControl** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering HyTrust KeyControl for an existing instance
 {: #htkc_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **HyTrust KeyControl** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **HyTrust KeyControl** service and toggle its switch on.
 
 ## HyTrust KeyControl service configuration
 {: #htkc_ordering-config}

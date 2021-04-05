@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-04-14"
+lastupdated: "2021-02-01"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # Networking considerations for vCenter Server instances
 {: #vc_networkingonvcenterserver}
 
-Review the following information for details about networking considerations and requirements for your VMware vCenter Server instances. Ensure that you meet the requirements so that your instance functions properly.
+Review the following information for details about networking considerations and requirements for your VMware vCenter Server® instances. Ensure that you meet the requirements so that your instance functions properly.
 
 ## Networking components for vCenter Server instances
 {: #vc_networkingonvcenterserver-networking-components}
@@ -37,9 +37,9 @@ If you're using firewalls, you must configure rules for all communications from 
 {: #vc_networkingonvcenterserver-using-nsx-with-vm}
 {: faq}
 
-During vCenter Server instance deployment, VMware NSX is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, NSX Controllers, and NSX Transport Zone are set up, and each ESXi server is configured with the NSX components.
+During vCenter Server instance deployment, VMware NSX® is ordered, installed, licensed, and configured in your instance. Also, NSX Manager, vmware NSX Controllers™, and NSX Transport Zone are set up, and each VMware ESXi™ server is configured with the NSX components.
 
-An NSX Edge Services Gateway is also deployed to be used by your workload VM or VMs. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
+An VMware NSX Edge™ Services Gateway is also deployed to be used by your workload VM or VMs. For more information, see [Configuring your network to use the customer-managed NSX ESG with your VMs](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 
 ## Considerations when changing passwords for NSX components
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}

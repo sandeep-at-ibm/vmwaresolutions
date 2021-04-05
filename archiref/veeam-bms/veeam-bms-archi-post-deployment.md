@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,9 @@ In a self-managed vCenter Server solution, you can reconfigure provisioned backu
 
 These tasks are manual, not automated. For more information, see [Veeam Help Center technical documentation](https://www.veeam.com/documentation-guides-datasheets.html?ad=menu-resources){:external}.
 
+**Next topic**: [Overview of application support with Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam-bms-archi-app-support)
+
 ## Related links
-{: #veeam-bms-archi-overview-related}
+{: #veeam-bms-archi-post-deployment-related}
 
 * [Veeam Backup & Replication](https://www.veeam.com/vm-backup-recovery-replication-software.html?ad=menu-products){:external}

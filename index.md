@@ -4,9 +4,9 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-05"
 
-keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, add-on services for vmwaresolutions, vmwaresolutions use cases
+keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, services for vmwaresolutions, vmwaresolutions use cases
 
 subcollection: vmwaresolutions
 
@@ -34,13 +34,13 @@ completion-time: 2h
 {: toc-services="vmwaresolutions"}
 {: toc-completion-time="2h"}
 
-In this {{site.data.keyword.vmwaresolutions_full}} getting started tutorial, we take you through the process of ordering an instance and some add-on services for it.
+In this {{site.data.keyword.vmwaresolutions_full}} getting started tutorial, we take you through the process of ordering an instance and some services for it.
 {:shortdesc}
 
 ## Before you begin
 {: #getting-started-prereqs}
 
-Before you start to work with {{site.data.keyword.vmwaresolutions_short}}, review the following important information about browser requirements, users accounts, deployment options, and add-on services.
+Before you start to work with {{site.data.keyword.vmwaresolutions_short}}, review the following important information about browser requirements, users accounts, deployment options, and services.
 
 ### Browser requirements
 {: #getting-started-browser-req}
@@ -77,18 +77,19 @@ Review and choose your deployment offering.
 | [VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview) | This offering provides standardized and customizable deployment choices of VMware® virtual data center environments. |
 | [VMware Solutions Dedicated - vCenter Server](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview) | This offering allows you to deploy a VMware virtual environment by using custom compute, storage, and network resources to best fit your business needs. |
 | [VMware Solutions Dedicated - VMware vSphere®](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview) | This offering provides a customizable virtualization service that combines VMware-compatible bare metal servers, hardware components, and licenses, to build your own IBM-hosted VMware environment. |
-| [Regulated workloads](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview) | This offering includes a secure-by-default architecture that follows IBM's unique policy controls framework, it provides continuous compliance monitoring, and the highest level of data encryption (FIPS 140-2 Level 4). |
+| [VMware Regulated Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview) | This offering includes a secure-by-default architecture that follows IBM's unique policy controls framework, it provides continuous compliance monitoring, and the highest level of data encryption (FIPS 140-2 Level 4). |
+| [VMware Solutions Dedicated - Security & Compliance Readiness Bundle](/docs/vmwaresolutions?topic=vmwaresolutions-scb-overview) | This offering provides many of the security and compliance features of {{site.data.keyword.cloud_notm}} for Financial Services™ at a lower entry price. It is packaged with security and compliance tools and templates for you to use with your preferred regulation standard. |
 {: caption="Table 2. Deployment offerings" caption-side="top"}
 
 ### Add-on services
 {: #getting-started-add-on-services}
 
-Review and choose add-on services for your deployment offering.
+Review and choose services for your deployment offering.
 
 | Service category | Service name | Description |
 |:------------ |:------------ |:----------- |
 | Security and compliance | [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | This service manages cyber and compliance risk with proactive monitoring and automated defense controls to protect against threats and to meet industry or government regulations. |
-| Related security services | [FortiGate® Security Appliance](/docs/fortigate-10g) | This service deploys the FortiGate Security Appliance 10 Gbps IBM Cloud service. |
+| Related security services | [FortiGate® Security Appliance](/docs/fortigate-10g) | This service deploys the FortiGate Security Appliance 10 Gbps {{site.data.keyword.cloud_notm}} service. |
 | Security and compliance | [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | This service deploys a pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure. |
 | Security and compliance | [F5 BIG-IP®](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | This service provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. |
 | Business continuity and migration | [HCX™](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations) | This service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. |
@@ -111,7 +112,7 @@ Review and choose add-on services for your deployment offering.
 | Featured workload solutions | [VMware Horizon® 7](/docs/vmwaresolutions?topic=vmwaresolutions-horizon-arch-ovw) | This service delivers a seamlessly integrated hybrid cloud for virtual desktops and applications. |
 | Management tools | [vRealize® Operations™ and Log Insight™](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | This service deploys the VMware vRealize Operations (vROps) and VMware vRealize Log Insight (vRLI) tools, which help you operate and monitor the performance, health, and capacity of your IBM-hosted, dedicated VMware environment. |
 | Business continuity and migration | [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | This service provides replication and disaster recovery capabilities, which can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}. |
-{: caption="Table 3. Available add-on services for deployment offerings" caption-side="top"}
+{: caption="Table 3. Available services for deployment offerings" caption-side="top"}
 
 ## Accessing the IBM Cloud for VMware Solutions console
 {: #getting-started-step1}
@@ -146,6 +147,6 @@ For information about how to order an instance, see the following topics based o
 {: #getting-started-step4}
 {: step}
 
-After you place an instance order in **Step 3**, the deployment of the instance starts automatically. You can track the status of the deployment by viewing the instance details. When the instance deployment is completed, you can view the summary and detailed information of the instance and its add-on services on the instance details page too.
+After you place an instance order in **Step 3**, the deployment of the instance starts automatically. You can track the status of the deployment by viewing the instance details. When the instance deployment is completed, you can view the summary and detailed information of the instance and its services on the instance details page too.
 
 For information about how to view the instance you ordered, see [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances).

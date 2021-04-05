@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-01-27"
+lastupdated: "2021-03-15"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,8 @@ subcollection: vmwaresolutions
 # Integrating the infrastructure domain with the workload domain
 {: #adds-integration}
 
-Integrating the {{site.data.keyword.vmwaresolutions_full}} infrastructure domain with the {{site.data.keyword.vmwaresolutions_short}} workload domain is not recommended. You must allow the workload domain controllers that are connected to the underlay network to communicate with the infrastructure domain controllers that are connected to the underlay network. For more information, see:
+Integrating the {{site.data.keyword.vmwaresolutions_full}} infrastructure domain with the {{site.data.keyword.vmwaresolutions_short}} workload domain is not recommended. You must allow the workload domain controllers that are connected to the underlay network to communicate with the infrastructure domain controllers that are connected to the underlay network. For more information, see the following documents.
+
 * [Description of support boundaries for Active Directory over NAT](https://support.microsoft.com/en-us/help/978772/description-of-support-boundaries-for-active-directory-over-nat){:external}
 * [Steps to avoid registering unwanted NICs in DNS on a multi-homed Domain Controller](https://support.microsoft.com/en-us/help/2023004/steps-to-avoid-registering-unwanted-nic-s-in-dns-on-a-mulithomed-domai){:external}
 
@@ -32,7 +33,7 @@ However, if you need information about this integration, review the following mo
 ## {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust
 {: #adds-integration-parent-child}
 
-This model creates a single forest by using the existing {{site.data.keyword.vmwaresolutions_short}}  infrastructure domain as the parent and configuring a new {{site.data.keyword.vmwaresolutions_short}} workload child domain. As all parent-child domains use transitive two-way trusts by default, vSphere SSO can access all users from either domain. The following diagram shows the AD DS topology for this {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust model.
+This model creates a single forest by using the existing {{site.data.keyword.vmwaresolutions_short}} infrastructure domain as the parent and configuring a new {{site.data.keyword.vmwaresolutions_short}} workload child domain. As all parent-child domains use transitive two-way trusts by default, vSphere SSO can access all users from either domain. The following diagram shows the Active Directory Domain Services topology for this {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust model.
 
 ![{{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust diagram](../../images/adds-forestwithparentchildtrust.svg "{{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust diagram"){: caption="Figure 1. {{site.data.keyword.vmwaresolutions_short}} forest with parent-child trust diagram" caption-side="bottom"}
 
@@ -41,14 +42,16 @@ This model creates a single forest by using the existing {{site.data.keyword.vmw
 
 This model creates a single forest by using the existing {site.data.keyword.vmwaresolutions_short}} infrastructure domain as the parent and configuring a new {{site.data.keyword.vmwaresolutions_short}} workload parent domain. The tree-root trust is a two-way transitive trust between the two parent domains. The vSphere SSO connected to the {{site.data.keyword.vmwaresolutions_short}} infrastructure domain can access the users from the other parent domain.
 
-If the other parent domain has a child domain, due to the two-way trust, those users are also accessible. The following diagram shows the AD DS topology for this {{site.data.keyword.vmwaresolutions_short}} forest with tree-root trust model.
+If the other parent domain has a child domain, due to the two-way trust, those users are also accessible. The following diagram shows the Active Directory Domain Services topology for this {{site.data.keyword.vmwaresolutions_short}} forest with tree-root trust model.
 
 ![{{site.data.keyword.vmwaresolutions_short}} forest with tree-root trust diagram](../../images/adds-forestwithtreeroottrust.svg "{{site.data.keyword.vmwaresolutions_short}} forest with tree-root trust diagram"){: caption="Figure 2. {{site.data.keyword.vmwaresolutions_short}} forest with tree-root trust diagram" caption-side="bottom"}
 
 ## Two-way forest trust
 {: #adds-integration-twoway}
 
-VMware always recommends two-way trusts for forest trusts. For more information, see [Microsoft Active Directory Trusts supported by VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:external}. Due to the use of the two-way trusts between the {{site.data.keyword.vmwaresolutions_short}} infrastructure forest and the {{site.data.keyword.vmwaresolutions_short}} workload forest, vSphere SSO can use this trust so users can be authenticated from all parent and child domains in the {{site.data.keyword.vmwaresolutions_short}} workload forest. The following diagram shows the AD DS topology for this two-way forest trust model.
+VMware always recommends two-way trusts for forest trusts. For more information, see [Microsoft Active Directory Trusts supported by VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:external}.
+
+Due to the use of the two-way trusts between the {{site.data.keyword.vmwaresolutions_short}} infrastructure forest and the {{site.data.keyword.vmwaresolutions_short}} workload forest, vSphere SSO can use this trust so users can be authenticated from all parent and child domains in the {{site.data.keyword.vmwaresolutions_short}} workload forest. The following diagram shows the Active Directory Domain Services topology for this two-way forest trust model.
 
 ![Two-way forest trust diagram](../../images/adds-twowayforesttrust.svg "Two-way forest trust diagram"){: caption="Figure 3. Two-way forest trust diagram" caption-side="bottom"}
 
@@ -57,7 +60,7 @@ VMware always recommends two-way trusts for forest trusts. For more information,
 
 VMware always recommends two-way trusts for external trusts. For more information, see [Microsoft Active Directory Trusts supported by VMware vCenter Single Sign-On](https://kb.vmware.com/s/article/2064250){:external}. An external trust establishes a trust to a specific domain within a separate forest that is not joined through a forest trust.
 
-Due to the use of the two-way trust between the {{site.data.keyword.vmwaresolutions_short}} infrastructure forest and the {{site.data.keyword.vmwaresolutions_short}} workload domain, vSphere SSO can use this trust so users can be authenticated from the {{site.data.keyword.vmwaresolutions_short}} workload domain. The following diagram shows the AD DS topology for this external trust model.
+The two-way trust between the {{site.data.keyword.vmwaresolutions_short}} infrastructure forest and the {{site.data.keyword.vmwaresolutions_short}} workload domain allows vSphere SSO to use the trust so users can be authenticated from the {{site.data.keyword.vmwaresolutions_short}} workload domain. The following diagram shows the Active Directory Domain Services topology for this external trust model.
 
 ![External trust diagram](../../images/adds-externaltrust.svg "External trust diagram"){: caption="Figure 4. External trust diagram" caption-side="bottom"}
 

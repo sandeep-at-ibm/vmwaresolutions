@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-17"
 
 keywords: user account, user permissions, VRF account
 
@@ -55,7 +55,7 @@ You can verify or update permissions for classic infrastructure users at any tim
 
 Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account. If your account is non-VRF, you must convert it to a VRF account. It is also recommended to enable your VRF account for using service endpoints.
 
-For more information, see:
+For more information, seethe followingg procedures.
 * [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [Converting to VRF](/docs/direct-link?topic=direct-link-what-happens-during-the-account-conversion-process)
 * [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)

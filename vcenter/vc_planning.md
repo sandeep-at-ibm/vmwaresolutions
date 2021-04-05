@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-12"
+lastupdated: "2021-03-22"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -20,22 +20,22 @@ subcollection: vmwaresolutions
 # Requirements and planning for vCenter Server
 {: #vc_planning}
 
-Review the following requirements before you order your VMware vCenter Server instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and add-on service requirements.
+Review the following requirements before you order your VMware vCenter Server® instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and services requirements.
 
-Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
+Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
 {:important}
 
 ## IBM Cloud account requirements
 {: #vc_planning-account-req}
 
-The {{site.data.keyword.cloud}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
 
 ## IBM Cloud data center availability
 {: #vc_planning-dc-availability}
 
 The vCenter Server deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements. The following {{site.data.keyword.cloud_notm}} data centers are available for vCenter Server deployment.
 
-| {{site.data.keyword.cloud_notm}} data center | Region | Server options for NSX-V| Server options for NSX-T[^nsx-t-7] |
+| {{site.data.keyword.cloud_notm}} data center | Region | Server options for NSX-V | Server options for NSX-T[^nsx-t-7] |
 |:----------------------|:-------|:---------------|:-----------------|
 | Amsterdam 03 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Chennai 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified[^sap-che01] | Skylake, Cascade Lake |
@@ -47,21 +47,24 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 | Frankfurt 04 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Frankfurt 05 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Hong Kong 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| London 02 | Europe | Skylake, Cascade Lake | Skylake, Cascade Lake |
+| London 02 | Europe | Skylake, Cascade Lake | Skylake, Cascade Lake, SAP-certified |
 | London 04 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | London 05 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | London 06 | Europe | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| Mexico 01 | NA South | Skylake, Cascade Lake, SAP-certified[^sap-mex01] | Skylake, Cascade Lake |
-| Milan 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-mil01] | Skylake, Cascade Lake |
-| Montreal 01 | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01] | Skylake, Cascade Lake |
-| Osaka 21 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
-| Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
-| Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake |
-| Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] | Skylake, Cascade Lake |
+| Mexico 01 | NA South | Skylake, Cascade Lake, SAP-certified[^sap-mex01] | Skylake, Cascade Lake, SAP-certified |
+| Milan 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-mil01] | Skylake, Cascade Lake, SAP-certified |
+| Montreal 01 | NA East | Skylake, Cascade Lake, SAP-certified[^sap-mon01] | Skylake, Cascade Lake, SAP-certified |
+| Osaka 21 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake, SAP-certified |
+| Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake, SAP-certified |
+| Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake, SAP-certified |
+| Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] | Skylake, Cascade Lake, SAP-certified |
+| Paris 04 | Europe | Cascade Lake | Cascade Lake |
+| Paris 05 | Europe | Cascade Lake | Cascade Lake |
+| Paris 06 | Europe | Cascade Lake | Cascade Lake |
 | Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Seoul 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
-| San Jose 03 | NA West | Skylake, Cascade Lake | Skylake, Cascade Lake |
-| San Jose 04 | NA West | Skylake, Cascade Lake | Skylake, Cascade Lake |
+| San Jose 03 | NA West | Skylake, Cascade Lake | Skylake, Cascade Lake, SAP-certified |
+| San Jose 04 | NA West | Skylake, Cascade Lake | Skylake, Cascade Lake, SAP-certified |
 | Singapore 01| Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Sydney 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Sydney 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
@@ -77,7 +80,7 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 | Washington DC 07 | NA East | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vCenter Server instances" caption-side="top"}
 
-[^nsx-t-7]: vSphere Enterprise Plus 7.0 instances support Cascade Lake servers only
+[^nsx-t-7]: Skylake is not supported for vSphere 7 instances
 
 [^sap-che01]: Existing vSphere 6.5 clusters only
 
@@ -95,15 +98,6 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 Cascade Lake bare metal servers are also available on [multizone region](#x9774820){: term}
 {{site.data.keyword.cloud_notm}} data centers. For more information, see [Multizone region (MZR) overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
-Depending on availability and inventory supply, {{site.data.keyword.cloud_notm}} data centers might display a status indicator in the {{site.data.keyword.vmwaresolutions_short}} console to help you plan your deployments.
-
-| Status | Status Details |
-|:------------------------------|:--------------------------------------------------|
-| Coming Soon                   | The {{site.data.keyword.cloud_notm}} data center is not available currently. |
-| Temporarily Out of Inventory  | The {{site.data.keyword.cloud_notm}} data center has no availability currently. |
-| Limited Inventory             | The {{site.data.keyword.cloud_notm}} data center has limited availability and the order might not be completed. |
-{: caption="Table 2. Status indicators for {{site.data.keyword.cloud_notm}} data centers when you order vCenter Server instances" caption-side="top"}
-
 ## Backup of management components
 {: #vc_planning-backup-mgmt-components}
 
@@ -112,15 +106,15 @@ You are responsible for maintaining and ensuring the availability of all instanc
 ## Services for vCenter Server instances
 {: #vc_planning-addon-services}
 
-You can order add-on services for your instance base on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+You can order services for your instance based on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
-Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
+Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
 {:important}
 
 ### Planning for VMware HCX
 {: #vc_planning-addon-services-hcx}
 
-The VMware HCX service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}. This process, which allows virtual machines (VMs) to be moved to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
+The VMware HCX™ service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}. This process, which allows virtual machines (VMs) to be moved to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.
 
 When you deploy this service, complete the following settings:
 * Specify the **HCX Interconnect type** by selecting one of the following options:

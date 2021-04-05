@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Red Hat OpenShift 4.4 user provider infrastructure installation
+# Red Hat OpenShift 4.6 user provider infrastructure installation
 {: #openshift-runbook-runbook-install-intro}
 
 Red Hat OpenShift 4 introduced the following concepts:
@@ -33,7 +33,7 @@ These instructions use the OpenShift installer in the UPI mode. Terraform is use
 5. The `terraform.tfvars` file is created to hold the variables for the Terrafrom installation.
 6. Terraform is run, which provisions the VMs. The VMs are started, configured, and the OpenShift cluster is created.
 
-For more information about installing the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
+For more information about installing the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.6/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
 
 ## Creating the OpenShift Installer yaml file
 {: #openshift-runbook-runbook-install-yaml}
@@ -459,7 +459,7 @@ The password for the user that was created during installation can also be found
     storage                              4.4.5    True        False         False      30m
     ```
 
-**Next topic:** [Red Hat OpenShift 4.4 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
+**Next topic:** [Red Hat OpenShift 4.6 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-install-related}

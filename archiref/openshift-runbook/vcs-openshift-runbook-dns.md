@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -16,10 +16,10 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# IBM Cloud for VMware Solutions DNS configuration
+# VMware Solutions DNS configuration
 {: #openshift-runbook-runbook-dns-intro}
 
-## Collect Active Directory credentials
+## Collecting Active Directory credentials
 {: #openshift-runbook-runbook-dns-creds}
 
 1. Log in to [{{site.data.keyword.cloud}}](https://cloud.ibm.com/login){:external}.
@@ -28,7 +28,7 @@ subcollection: vmwaresolutions
 4. Collect the AD/DNS IP and remote desktop credentials.
 5. From a jump box or by using SSL VPN, remote desktop to the AD/DNS server.
 
-## Create DNS records
+## Creating DNS records
 {: #openshift-runbook-runbook-dns-records}
 
 1. Based on the following example, create a table to record your values.
@@ -37,13 +37,14 @@ subcollection: vmwaresolutions
 4. Run commands to create the DNS artifacts.
    - Reverse Lookup Zones
    - Create DNS A Records, with PTR
-   - Create DNS Service record for etcd
-   - Create DNS SRV record for etcd
+   - Create DNS Service record for `etcd`
+   - Create DNS SRV record for `etcd`
 
-**Note:** The *Add-DnsServerPrimaryZone -networkid* cmdlet creates only classful reverse lookup zones. Therefore, if you specify a prefix longer than /24, say a /26, then the cmdlet creates a /32 reverse lookup zone. Therefore, as a workaround in the script use /24 instead of a /26. You also need to modify the private portable subnet to match classful /24 network in the commands.
+### Notes about DNS records
+{: #openshift-runbook-runbook-dns-records-notes}
 
-Do not create CNAME entries as OpenShift's certificates are keyed to the DNS returning the IP address only and not a referral to the base hostname.
-{:note}
+* The `Add-DnsServerPrimaryZone-networkid` cmdlet creates only classful reverse lookup zones. Therefore, if you specify a prefix longer than /24, say a /26, then the cmdlet creates a /32 reverse lookup zone. Therefore, as a workaround in the script use /24 instead of a /26. You also need to modify the private portable subnet to match classful /24 network in the commands.
+* Do not create CNAME entries because the OpenShift certificates are keyed to the DNS returning the IP address only and not a referral to the base hostname.
 
 Use the following format for DNS naming standards:
 `HostName.ClusterName.SubDomain.DomainName`, where:
@@ -109,7 +110,6 @@ Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._
 Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._tcp.ocp.dallas" -DomainName "etcd-2.ocp.dallas.ibm.local"  -Priority 10 -Weight 0 -Port 2380
 ```
 
-
 **Next topic:** [OpenShift Bastion node setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
 
 ## Related links
@@ -118,5 +118,5 @@ Add-DnsServerResourceRecord -Srv -ZoneName "ibm.local" -Name "_etcd-server-ssl._
 * [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
 * [Prerequisites for installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-prereq-intro)
 * [OpenShift NSX configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-nsxedge-intro)
-* [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
-* [Red Hat OpenShift 4.4 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)
+* [Red Hat OpenShift 4.6 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
+* [Red Hat OpenShift 4.6 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)

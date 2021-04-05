@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-01"
 
 keywords: Hytrust DataControl, Hytrust configuration, order Hytrust
 
@@ -23,12 +23,14 @@ You can add the HyTrust® DataControl® service (with an HA pair of HyTrust Data
 ## Ordering HyTrust DataControl for a new instance
 {: #htdc_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **HyTrust DataControl** in the **Security and compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **HyTrust DataControl** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering HyTrust DataControl for an existing instance
 {: #htdc_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **HyTrust DataControl** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **HyTrust DataControl** service and toggle its switch on.
 
 ## Related links
 {: #htdc_ordering-related}

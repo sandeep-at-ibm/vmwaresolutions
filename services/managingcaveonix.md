@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-18"
+lastupdated: "2021-03-29"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -29,12 +29,12 @@ To manage the Caveonix RiskForesight™ service, you must access the Caveonix Ri
 1. Use the {{site.data.keyword.cloud}} infrastructure VPN or a jump server to allow access to the IP address of the Caveonix RiskForesight virtual machine (VM). You can find the IP address on the service details page for Caveonix RiskForesight in the {{site.data.keyword.vmwaresolutions_short}} console. Complete the following steps:
    1. Create a VPN password from the {{site.data.keyword.cloud_notm}} infrastructure customer portal.
    2. Log in to the data center VPN portal by using the {{site.data.keyword.cloud_notm}} infrastructure VPN credentials.
-   3. Add the IP address and the host name mapping into the `hosts` file from your local computer. Use the following format:
+   3. Add the IP address and the hostname mapping into the `hosts` file from your local computer. Use the following format:
 
       ```javascript
       RiskForesight_VM_IP_Address      RiskForesight_FQDN
       ```
-2. To access the Caveonix RiskForesight console, click **View RiskForesight console** on the service details page for Caveonix RiskForesight, and then log in by using the credentials listed on the same service details page.
+2. To access the Caveonix RiskForesight console, click **View RiskForesight console** on the service details page for Caveonix RiskForesight, and then log in by using the credentials that are listed on the same service details page.
 
 ## Applying updates to Caveonix RiskForesight
 {: #managingcaveonix-update}
@@ -42,6 +42,9 @@ To manage the Caveonix RiskForesight™ service, you must access the Caveonix Ri
 You are responsible for maintaining Caveonix RiskForesight to keep it updated to the most recent version. You can download the required updates from the [Caveonix Service Provider Portal](https://support.caveonix.com/login){:external}.
 
 ## Updating Caveonix RiskForesight licenses
+
+This information does not apply to Caveonix Foresight that is installed on VMware Regulated Workloads or Security and Compliance Readiness Bundle instances.
+{:note}
 
 The Caveonix RiskForesight license is valid for five years. You can update the Caveonix RiskForesight license when it expires by using the following procedure:
 1. Order a new Caveonix RiskForesight license and copy it to the Caveonix RiskForesight console. For more information, see [Procedure to order Caveonix RiskForesight licenses](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_license_ordering#caveonix_license_ordering-procedure).

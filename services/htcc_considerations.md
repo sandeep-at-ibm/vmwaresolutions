@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-24"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -25,15 +25,17 @@ subcollection: vmwaresolutions
 The HyTrust® CloudControl™ service enforces and controls compliance against security standards, which includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl®, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or VMware ESXi™ server within the {{site.data.keyword.cloud}} data center.
 {: shortdesc}
 
-New installations of HyTrust CloudControl are supported only for VMware vCenter Server® with NSX-T instances. The HyTrust CloudControl version that is installed is 6.2.1. Previous installations of HyTrust CloudControl 5.6 are still supported for existing vCenter Server with NSX-V instances.
+New installations of HyTrust CloudControl are supported only for VMware vCenter Server® with NSX-T instances. The HyTrust CloudControl version that is installed is 6.3. Previous installations of HyTrust CloudControl 5.6 are still supported for existing vCenter Server with NSX-V instances.
 {:note}
 
-{{site.data.keyword.vmwaresolutions_short}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+HyTrust CloudControl supports vCenter Server multizone instances. For more information, see [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
+
+{{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
 ## Technical specifications for HyTrust CloudControl
 {: #htcc_considerations-specs}
 
-For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 HyTrust CloudControl is preconfigured with connections to the following components:
 * Microsoft® Active Directory™
@@ -67,7 +69,11 @@ Per host license: A HyTrust CloudControl license is ordered for each host in the
 ## Considerations when you delete HyTrust CloudControl
 {: #htcc_considerations-remove}
 
-Before you delete the HyTrust CloudControl service, ensure that you disable **Root Password Vaulting**, if configured, and that you delete all protected hosts from HyTrust CloudControl.
+Review the following considerations before you delete the service:
+
+* Before you delete HyTrust CloudControl, ensure that you disable **Root Password Vaulting**, if configured, and that you delete all protected hosts from HyTrust CloudControl.
+
+* If you installed the HyTrust CloudControl service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-remove-DNS-entries).
 
 ## Related links
 {: #htcc_considerations-related}

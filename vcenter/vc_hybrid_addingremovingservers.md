@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-07"
+lastupdated: "2021-01-29"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservers}
 
-You can expand or contract the capacity of your VMware vCenter Server with Hybridity Bundle instance according to your business needs, by adding or removing ESXi servers.
+You can expand or contract the capacity of your VMware vCenter Server® with Hybridity Bundle instance according to your business needs, by adding or removing VMware ESXi™ servers.
 
 You can add new ESXi servers to an existing cluster by either selecting an existing configuration or a different configuration than the existing ESXi servers in the cluster. Existing configurations are available when you order your new server. To avoid performance or stability issues, it is recommended that clusters use the same or similar configuration with regards to CPU, RAM, and storage. This functionality is useful for hardware updates within the same cluster. A cluster can have only one type of storage.
 
@@ -31,7 +31,7 @@ You can add new ESXi servers to a cluster while the cluster is in maintenance mo
 * Add ESXi servers to a cluster and remove ESXi servers from additional clusters.
 * Remove ESXi servers from a cluster and add ESXi servers to additional clusters.
 
-Because your initial cluster has vSAN storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
+Because your initial cluster has vSAN™ storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
 
 ## Adding ESXi servers to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservers-adding}
@@ -39,7 +39,7 @@ Because your initial cluster has vSAN storage, adding one or more ESXi servers a
 ### Before you add ESXi servers
 {: #vc_hybrid_addingremovingservers-adding-prereq}
 
-* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you cannot or will not manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * vSAN storage requires at least 4 ESXi servers.
 
 ## Procedure to add ESXi servers
@@ -82,8 +82,8 @@ If you are adding ESXi servers during maintenance mode, virtual machines (VMs) a
 
 * Whenever possible, remove ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, remove ESXi servers from vCenter Server only for on-premises ESXi servers or ESXi servers that you can't or won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * vSAN storage requires at least 4 ESXi servers.
-* Before you remove ESXi servers with the F5 or FortiGate Virtual Appliance service installed, you must migrate the F5 BIG-IP and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
-* Before you remove ESXi servers with the IBM Spectrum Protect&trade; Plus service installed, ensure that there are no active (failed or in progress) backup or restore operations because these active operations might prevent the ESXi servers to be removed.
+* Before you remove ESXi servers with the F5® or FortiGate® Virtual Appliance service installed, you must migrate the F5 BIG-IP® and FortiGate VMs to a different ESXi server than the one that is hosting the VMs.
+* Before you remove ESXi servers with the IBM Spectrum® Protect Plus service installed, ensure that there are no active (failed or in progress) backup or restore operations because these active operations might prevent the ESXi servers to be removed.
 * When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers by using the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## Procedure to remove ESXi servers

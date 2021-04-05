@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-16"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -55,7 +55,7 @@ Some of the following warnings might appear. You can ignore these warning messag
 * NSX Logical Router is violating NSX Hardening guide (targeting workload-nsx-dlr)
 * NSX Routing Edge Service is violating the NSX Hardening guide (targeting customer-nsx-edge)
 * NSX Manager is violating NSX Hardening guide
-* No backup of the environment has been recorded
+* No backup of the environment is recorded
 
 ## Related links
 {: #managing_vrops-related}

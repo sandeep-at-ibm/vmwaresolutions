@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-07"
+lastupdated: "2021-03-17"
 
 keywords: FAQ, host, ESXi server
 
@@ -22,13 +22,13 @@ subcollection: vmwaresolutions
 # FAQ about ESXi servers
 {: #faq_esxi}
 
-Find answers to frequently asked questions about the ESXi servers managed on the {{site.data.keyword.vmwaresolutions_full}} console.
+Find answers to frequently asked questions about the VMware ESXi™ servers managed on the {{site.data.keyword.vmwaresolutions_full}} console.
 
 ## How many ESXi servers can I add to my instance?
 {: #faq_esxi-instance}
 {: faq}
 
-Your vCenter Server instance allows you to expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers. Since you can add up to 10 clusters to an instance, each deployed instance can have a maximum of 51 + 9x59 = 582 ESXi servers across all clusters.
+Your VMware vCenter Server® instance allows you to expand the default cluster to have up to 51 ESXi servers. Each of the non-default clusters can be expanded to have up to 59 ESXi servers. Since you can add up to 10 clusters to an instance, each deployed instance can have a maximum of 51 + 9x59 = 582 ESXi servers across all clusters.
 
 ## How many ESXi servers can I add to a cluster?
 {: #faq_esxi-cluster}
@@ -52,9 +52,9 @@ For instances deployed in V2.1 or earlier, you must enable the necessary vSAN su
 {: #faq_esxi-change-name-ip}
 {: faq}
 
-The ESXi server names and IP addresses cannot be changed because they are registered for Windows DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
+The ESXi server names and IP addresses cannot be changed because they are registered for Windows® DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 
-Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} user interface to change ESXi server names. This function changes the FQDN of the ESXi server, but the configured vCenter Server and the Windows VSI host registrations will be incorrect and might cause failures.
+Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} user interface to change ESXi server names. This function changes the FQDN of the ESXi server, but the configured vCenter Server and the Windows VSI host registrations are incorrect and might cause failures.
 {:note}
 
 ## Can I disable root access on my ESXi servers?

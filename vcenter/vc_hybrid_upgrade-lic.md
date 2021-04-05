@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-06-08"
+lastupdated: "2021-01-29"
 
 keywords: NSX license, upgrade license, Hybridity license
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Upgrading NSX licenses for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_upgrade-lic}
 
-You can upgrade the VMware NSX license for your instance to a later edition. License edition downgrades are not supported.
+You can upgrade the VMware NSX® license for your instance to a later edition. License edition downgrades are not supported.
 
 ## Procedure to upgrade your NSX license
 {: #vc_hybrid_upgrade-lic-nsx}
@@ -29,7 +29,8 @@ You can upgrade the VMware NSX license for your instance to a later edition. Lic
 2. In the **vCenter Server instances** table, click the instance to upgrade the NSX license for.
 3. On the **Summary** page, verify that all instance details are displayed correctly. Then click **Infrastructure** on the left navigation pane to verify the details on the **Infrastructure** page.
 
-   If the details are not displayed, this might indicate a connectivity problem with the IBM CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or a networking issue. Resolve the problem before continuing with the next step, otherwise the upgrade might fail.
+   If the details are not displayed, this might indicate a connectivity problem with the {{site.data.keyword.IBM}} 
+	 CloudDriver Virtual Server Instance (VSI), as a result of a firewall rule or a networking issue. Resolve the problem before continuing with the next step, otherwise the upgrade might fail.
 
 4. Click **Licensing** on the left navigation pane and click **Upgrade**. In the **Upgrade NSX license edition** window, select the edition that you want to upgrade to and click **Upgrade**.
 

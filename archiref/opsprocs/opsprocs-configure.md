@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-26"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -72,7 +72,7 @@ After your vCenter Server instance is provisioned, system administrators might n
 | VSCA/PSC patching | For more information, see [Patching the vCenter Server appliance and Platform Services Controller Appliance](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-043EF6BD-78F7-412F-837F-CBDF844F850C.html){:external}. |
 | Stopping, starting, or restarting VCSA services | For troubleshooting and maintenance purposes, it is sometimes necessary to change the status of VMware vCenter Server Appliance (VCSA) services. For more information, see [Stopping, starting, or restarting VMware vCenter Server appliance 6.x and above services](https://kb.vmware.com/s/article/2109887?CoveoV2.CoveoLightningApex.getInitializationData=1&r=2&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1&other.KM_Utility.getArticleDetails=1&other.KM_Utility.getArticleMetadata=2&other.KM_Utility.getUrl=1&other.KM_Utility.getUser=1&other.KM_Utility.getAllTranslatedLanguages=2&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1){:external}. |
 | Overview of backup and restore options for the VCSA | For more information, see [Overview of backup and restore options in vCenter Server 6.x](https://kb.vmware.com/s/article/2149237?lang=en_US){:external}. |
-| Configure vCenter email notifications | For information about configuring email notifications to be sent to an email address when a certain condition is triggered on an already defined alarm and custom created alarm, see [Configuring an email alert for the vCenter Server alarm](https://kb.vmware.com/articleview?docId=2123925){:external}. |
+| Configure vCenter email notifications | For information about configuring email notifications to be sent to an email address when a certain condition is triggered on an already defined alarm and custom created alarm, see [Configuring an email alert for the vCenter Server alarm](https://docs.vmware.com/en/vCloud-Usage-Meter/3.6/com.vmware.vcum.usersguide.doc/GUID-6F04C407-2888-4C44-B84C-B53558E05EC3.html){:external}. |
 {: caption="Table 3. vCenter procedures" caption-side="top"}
 
 ## vSphere ESXi host procedures

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-01"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -45,21 +45,24 @@ If you have a Zerto installation from V3.0 or earlier, your VM replication costs
 
 On the {{site.data.keyword.vmwaresolutions_short}} console, you are prompted to convert from the {{site.data.keyword.cloud_notm}} infrastructure plan to a billable plan and to upgrade your {{site.data.keyword.cloud_notm}} account to a billable account, if needed.
 
-* For information about free and billable accounts, see [Account types](/docs/account?topic=account-accounts).
-* For information about upgrading to a billable account, see [Upgrading your account](/docs/account?topic=account-upgrading-account).
-* For information about linking your {{site.data.keyword.cloud_notm}} and your {{site.data.keyword.cloud_notm}} infrastructure accounts, see [Requiring MFA for users in your account](/docs/account?topic=account-enablemfa).
+* For more information about free and billable accounts, see [Account types](/docs/account?topic=account-accounts).
+* For more information about upgrading to a billable account, see [Upgrading your account](/docs/account?topic=account-upgrading-account).
+* For more information about linking your {{site.data.keyword.cloud_notm}} and your {{site.data.keyword.cloud_notm}} infrastructure accounts, see [Requiring MFA for users in your account](/docs/account?topic=account-enablemfa).
 
 ## Ordering Zerto for a new instance
 {: #zerto_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional Services** section and click **Zerto** in the **Business continuity and migration** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **Zerto** in the **Business continuity and migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering Zerto for an existing instance
 {: #zerto_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Zerto** in the **Business continuity and migration** category, and then click **Add**. Follow the steps to add the service to your instance.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **Zerto** service and toggle its switch on.
+4. Follow the steps to configure and add the service to your instance.
 
-If you add Zerto to a vCenter Server instance that has an VMware ESXi™ server that is in maintenance mode, you must use the Zerto Virtual Manager (ZVM) console and the pre-populated Zerto Virtual Replication Appliance (VRA) IP address to manually deploy the VRA virtual machine (VM).
+If you add Zerto to a vCenter Server instance that has a VMware ESXi™ server that is in maintenance mode, you must use the Zerto Virtual Manager (ZVM) console. Use the pre-populated Zerto Virtual Replication Appliance (VRA) IP address to manually deploy the VRA virtual machine (VM).
 {:note}
 
 ## Ordering Zerto for private-only instances
@@ -75,5 +78,5 @@ If you want to add Zerto to a private-only instance, ensure that the following r
 * [Zerto overview](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr)
 * [Managing Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-managingzertodr)
 * [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
-* [zerto.com website](https://www.zerto.com){:external}
+* [Zerto](https://www.zerto.com){:external}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:external}

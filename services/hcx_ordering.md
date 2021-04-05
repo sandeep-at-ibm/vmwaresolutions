@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-31"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -26,13 +26,15 @@ You can include the VMware HCX™ service with a new VMware vCenter Server® ins
 ## Ordering VMware HCX for a new instance
 {: #hcx_ordering-new}
 
-To order a new VMware vCenter Server instance with VMware HCX, click **HCX 3.5** under the **Business continuity and migration** category in the **Optional services** section when you order the instance from the {{site.data.keyword.vmwaresolutions_full}} console.
-
+To order a new VMware vCenter Server instance with VMware HCX from the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the services section and select **HCX** in the **Business continuity and migration** category.
 
 ## Ordering VMware HCX for an existing instance
 {: #hcx_ordering-existing}
 
-To add the VMware HCX service to an existing vCenter Server instance, view the instance, click **Services** on the left navigation pane, and click **Add**.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **VMware HCX** service and toggle its switch on.
+4. Follow the steps to configure and add the service to your instance.
 
 ## VMware HCX configuration
 {: #hcx_ordering-config}
@@ -46,21 +48,21 @@ To install HCX, complete the following settings:
 
    If you choose NSX-V, the HCX manager and Service Mesh appliances are deployed in the management cluster.
 3. Specify the **HCX network connection** by selecting one of the following options. If any of the management or service mesh target clusters are deployed with private network only, the only networking option that you can choose is private.
-  * **Public network:** HCX creates an encrypted connection between sites over the public network. License registration and metering are performed over the public network.
-  * **Private network:** HCX creates an encrypted connection between sites over the private network. License registration and metering are performed over private network through HTTP proxy.  
-4. If private network connection is selected, proxy information is displayed. Otherwise, there is no proxy option.
+  * **Public network** - HCX creates an encrypted connection between sites over the public network. License registration and metering are completed over the public network.
+  * **Private network** - HCX creates an encrypted connection between sites over the private network. License registration and metering are completed over a private network through HTTP proxy.  
+4. If private network connection is selected, proxy information is displayed. Otherwise, a proxy option is not available.
    Complete the following fields:
-   * **Proxy IP address**: The IPv4 address of the proxy server.
-   * **Proxy port number**: The proxy server port. The port number is typically 8080 or 3128.
-   * **Proxy user name** (Optional): The user name if proxy authentication is required.
-   * **Proxy password** (Optional): The password if proxy authentication is required.
-   * **Reenter proxy password** (Optional): Reenter the password for proxy authentication validation.
+   * **Proxy IP address** - The IPv4 address of the proxy server.
+   * **Proxy port number** - The proxy server port. The port number is typically 8080 or 3128.
+   * **Proxy user name** (Optional) - The username if proxy authentication is required.
+   * **Proxy password** (Optional) - The password if proxy authentication is required.
+   * **Reenter proxy password** (Optional) - Reenter the password for proxy authentication validation.
 5. Specify the **Public endpoint certificate type**. If you select **CA Certificate**, configure the following settings:
-  * **Certificate contents**: Enter the contents of the CA certificate.
-  * **Private key**: Enter the private key of the CA certificate.
-  * **Password** (Optional): Enter the password for the private key, if it is encrypted.
-  * **Reenter password** (Optional): Enter the password for the private key again.
-  * **Hostname:** (Optional): The host name to be mapped to the common name (CN) of the CA certificate. HCX requires that the format of the CA certificate must be accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
+  * **Certificate contents** - Enter the contents of the CA certificate.
+  * **Private key** - Enter the private key of the CA certificate.
+  * **Password** (Optional) - Enter the password for the private key, if it is encrypted.
+  * **Reenter password** (Optional) - Enter the password for the private key again.
+  * **Hostname** (Optional) - The hostname to be mapped to the common name (CN) of the CA certificate. HCX requires that the format of the CA certificate must be accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
 
 ## Deployment process for HCX
 {: #hcx_ordering-deploy}
@@ -91,7 +93,7 @@ The deployment of HCX is automated. Whether you order a vCenter Server instance 
    * The HCX Manager is registered with vCenter Server.
    * The HCX Manager, vCenter Server (with embedded Platform Services Controller), and NSX Manager are configured.
    * The HCX Compute and Network profiles are created.
-7. The host name and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server.
+7. The hostname and IP address of the HCX Manager is registered with the DNS server of VMware vCenter Server.
 
 ## Related links
 {: #hcx_ordering-related}

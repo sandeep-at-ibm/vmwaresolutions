@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-22"
 
 subcollection: vmwaresolutions
 
@@ -25,7 +25,7 @@ keywords: vmware solutions responsibilities, customer responsibilities, manageme
 {:preview: .preview}
 {:term: .term}
 
-# Responsibilities when using VMware Solutions
+# Responsibilities when you use VMware Solutions
 {: #understand-responsib}
 
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.vmwaresolutions_full}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
@@ -68,7 +68,7 @@ The following table describes the responsibilities that are related to incident 
 | Availability | Offer VMware® infrastructure in multiple locations, including [multizone regions (MZR)](#x9774820){: term}. | Plan and provision VMware infrastructure according to your availability requirements. |
 | Infrastructure monitoring and notification | Forward to the client all network intrusion notifications detected. Send notification upon hardware failures. | Implement monitoring system and integrate with virtualization management. Determine the impact of each notification reported. Engage IBM support as required. |
 | Workload monitoring |  | Monitor and respond to OS or software failures. |
-| Infrastructure management | | Implement monitoring and management system integrated with virtualization management. |
+| Infrastructure management | | Implement monitoring and management system that is integrated with virtualization management. |
 | Incident management | Unplanned incidents with customer impact are communicated through the CIE process. | Impacted customers can obtain a report about the incident upon request. |
 {: row-headers}
 {: caption="Table 2. Responsibilities for incident and operations for VMware Solutions Dedicated" caption-side="top"}
@@ -143,7 +143,7 @@ The following table describes the responsibilities that are related to security 
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |:---- |:----------------------------------------------- |:--------------------- |
-| Encryption | Provide integration with Key Protect and Hyper Protect Crypto Services through KMIP add-on service as an option for implementing data at-rest encryption. | Configure and manage encryption for both data at rest and in transit, as needed. |
+| Encryption | Provide integration with Key Protect and Hyper Protect Crypto Services through KMIP service as an option for implementing data at-rest encryption. | Configure and manage encryption for both data at rest and in transit, as needed. |
 {: row-headers}
 {: caption="Table 7. Responsibilities for security and regulation compliance for VMware Solutions Dedicated" caption-side="top"}
 {: summary="The rows are read from left to right. The first column describes the task that a customer or IBM might be responsible for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
@@ -156,7 +156,7 @@ Disaster recovery includes tasks such as:
 * Provision disaster recovery environments
 * Data and configuration backup
 * Replicating data and configuration to the disaster recovery environment
-* Failover on disaster events
+* Fail over on disaster events
 
 ### Disaster recovery for VMware Solutions Shared
 {: #understand-responsib-disaster-recovery-shared}
@@ -180,7 +180,7 @@ The following table describes the responsibilities that are related to disaster 
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |:---- |:----------------------------------------------- |:--------------------- |
-| Business continuity and Disaster Recovery (DR) | Provide automated provision and integration for third-party add-on services such as Veeam and Zerto. | Provision third-party solutions such as Veeam and Zerto, or other solutions of your choice, along with the VMware Solutions instance. Configure these solutions to meet your business continuity and DR requirements for your workload. |
+| Business continuity and Disaster Recovery (DR) | Provide automated provision and integration for third-party services, such as Veeam and Zerto. | Provision third-party solutions such as Veeam and Zerto, or other solutions of your choice, along with the VMware Solutions instance. Configure these solutions to meet your business continuity and DR requirements for your workload. |
 {: row-headers}
 {: caption="Table 9. Responsibilities for disaster recovery for VMware Solutions Dedicated" caption-side="top"}
 {: summary="The rows are read from left to right. The first column describes the task that a customer or IBM might be responsible for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-09"
+lastupdated: "2021-04-01"
 
 keywords: regulated workloads order instance, order regulated workloads, regulated workloads instances
 
@@ -17,19 +17,19 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Ordering regulated workloads
+# Ordering VMware Regulated Workloads
 {: #vrw-orderinginstance}
 
-The regulated workloads offering includes a secure-by-default architecture that follows IBM's unique policy controls framework, it provides continuous compliance monitoring, and the highest level of data encryption (FIPS 140-2 Level 4).
+The VMware® Regulated Workloads offering includes a secure-by-default architecture that follows IBM's unique policy controls framework, it provides continuous compliance monitoring, and the highest level of data encryption (FIPS 140-2 Level 4).
 
-## Requirements for regulated workloads
+## Requirements for VMware Regulated Workloads
 {: #vrw-orderinginstance-req}
 
-Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
-* You reviewed the information in [Requirements for the {{site.data.keyword.cloud}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
-* You reviewed the information in [Regulated workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview).
-* You reviewed the instance and domain name format. The domain name is used to generate the username and server names of the instance.
+Ensure that you complete the following tasks:
+* If you are ordering an instance for the first time, complete the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* Review the information in [Requirements for the {{site.data.keyword.cloud}} account](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
+* Review the information in [VMware Regulated Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview).
+* Review the instance and domain name format. The domain name is used to generate the username and server names of the instance.
 
 | Name        | Value format |
 |:------------|:------------ |
@@ -46,7 +46,7 @@ Do not modify any values that are set during instance order or deployment. Doing
 ## Service prerequisites
 {: #vrw-orderinginstance-serv-prereq}
 
-The following services are required for regulated workloads:
+The following services are required for VMware Regulated Workloads:
 * [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
 * [KMIP™ for VMware®](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
 * [Direct Link Dedicated](https://cloud.ibm.com/interconnectivity/direct-link)
@@ -70,6 +70,11 @@ For Business Partner users, all licenses are included and purchased on your beha
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
 
+## Location
+{: #vrw-orderinginstance-mgmt-dc-location}
+
+Select the {{site.data.keyword.cloud_notm}} data center where the clusters are hosted.
+
 ## Management cluster
 {: #vrw-orderinginstance-mgmt-cluster}
 
@@ -84,11 +89,6 @@ By default, the management cluster name is set to **_instance name_-management**
 * The maximum length of the cluster name is 30 characters.
 * The cluster name must be unique within the regulated workload instance.
 
-### Data center location
-{: #vrw-orderinginstance-mgmt-dc-location}
-
-Select the {{site.data.keyword.cloud_notm}} data center where the management cluster is hosted.
-
 ### Management capacity
 {: #vrw-orderinginstance-mngt-capacity}
 
@@ -98,7 +98,7 @@ Select the {{site.data.keyword.cloud_notm}} data center where the management clu
 ### Number of bare metal servers
 {: #vrw-orderinginstance-mgmt-bare-metal}
 
-You can order 4 - 20 servers. All servers will have the same configuration.
+You can order 4 - 20 servers. All servers have the same configuration.
 
 ### vSAN configuration
 {: #vrw-orderinginstance-mgmt-vsan}
@@ -110,17 +110,12 @@ You can order 4 - 20 servers. All servers will have the same configuration.
 ### Networking
 {: #vrw-orderinginstance-mgmt-net}
 
-Only the **Enable private NICs only** option is available with 10 Gb for the uplink speed.
+The networking options are set to 10 Gb for the uplink speed and private network only for the networking type.
 
 ## Workload cluster
 {: #vrw-orderinginstance-wkld-cluster}
 
 By default, the workload cluster name is set to **_instance name_-workload**. You can also specify a new name for the workload cluster. The cluster name must meet the requirements that are listed in [Cluster name requirements](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req).
-
-### Data center location
-{: #vrw-orderinginstance-wkld-dc-location}
-
-Select the {{site.data.keyword.cloud_notm}} data center where the workload cluster is hosted.
 
 ### Workload capacity
 {: #vrw-orderinginstance-wkld-capacity}
@@ -132,7 +127,7 @@ Select the {{site.data.keyword.cloud_notm}} data center where the workload clust
 ### Number of bare metal servers
 {: #vrw-orderinginstance-wkld-bare-metal}
 
-You can order 4 - 20 servers. All servers will have the same configuration.
+You can order 4 - 20 servers. All servers have the same configuration.
 
 ### vSAN configuration
 {: #vrw-orderinginstance-wkld-vsan}
@@ -143,15 +138,15 @@ You can order 4 - 20 servers. All servers will have the same configuration.
 ### Networking
 {: #vrw-orderinginstance-wkld-net}
 
-Only the **Enable private NICs only** option is available with 10 Gb for the uplink speed.
+The networking options are set to 10 Gb for the uplink speed and private network only for the networking type.
 
 ## Firewall appliance
 {: #vrw-orderinginstance-firewall-appl}
 
 You have the following options for your firewall appliance:
-* **Edge services cluster with Juniper vSRX** - a dedicated cluster for the network edge and firewall components and install Juniper® vSRX.
-* **Edge services cluster** - a dedicated cluster for the network edge and firewall components.
-* **FortiGate Security Appliance** - an IBM Cloud service, which is an enterprise-class hardware firewall for enhanced and granular control over your network.
+* **Edge cluster with Juniper vSRX service** - a dedicated cluster for the network edge and firewall components and install Juniper® vSRX.
+* **Bring your own gateway appliance** - a dedicated cluster for the network edge and firewall components.
+* **FortiGate Security Appliance** - an {{site.data.keyword.cloud_notm}} service, which is an enterprise-class hardware firewall for enhanced and granular control over your network.
 
 The steps that you must follow differ depending on your selection.
 
@@ -181,12 +176,12 @@ The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs i
 ### DNS configuration
 {: #vrw-orderinginstance-dns-config}
 
-The only deployment type supported is **Two highly available dedicated Windows server VMs on the management cluster**, which helps enhance security and robustness.
+The only deployment type that is supported is **Two highly available dedicated Windows server VMs on the management cluster**, which helps enhance security and robustness.
 
 You must provide two Microsoft® Windows® Server 2019 Standard edition licenses to use the two Microsoft Windows VMs.
 {:important}
 
-Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per 2-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
+Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per two-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
@@ -221,34 +216,34 @@ If **No resource group available** is displayed in this field, you currently do 
 {: #vrw-orderinginstance-included-services}
 
 The following services are included with your regulated workload instance. Some of the included add-on services require configuration setup.
-* [Veeam 10](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
-* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
-* [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
-* [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) (if you're using **Edge services cluster with Juniper vSRX** as your firewall appliance)
-* [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
+* [Veeam® 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
+* [HyTrust CloudControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) (if you're using **Edge services cluster with Juniper vSRX** as your firewall appliance)
+* [vRealize® Operations and Log Insight™](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 
 ## Optional service
 {: #vrw-orderinginstance-optional-services}
 
-You can choose to install [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations).
+You can choose to install [VMware HCX™](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations).
 
-## Procedure to order regulated workloads
+## Procedure to order VMware Regulated Workloads
 {: #vrw-orderinginstance-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **Regulated workloads** card.
-2. On the **Regulated workloads** page, review the service prerequisites and confirm that you ordered the mandatory services listed.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Regulated Workloads** card.
+2. On the **VMware Regulated Workloads** page, review the service prerequisites and confirm that you ordered the mandatory services listed.
 3. Under **Licensing**, complete the license settings for the listed components.
     * To use IBM-provided licenses, ensure that the option **Include with purchase** is selected.
     * To use your own licenses, click **I will provide** and enter the license key.
+4. Select the {{site.data.keyword.cloud_notm}} data center to host the clusters.
 
-4. Specify the management cluster settings.
+5. Specify the management cluster settings.
   1. Specify the management cluster name.
-  2. Select the {{site.data.keyword.cloud_notm}} data center to host the management cluster.
-  3. Indicate the management capacity, either **Small** or **Customizable**.
+  2. Indicate the management capacity, either **Small** or **Customizable**.
     * For the **Small** capacity, specify the number of bare metal servers. Under **vSAN configuration**, specify the vSAN license edition. The disk type and size for the vSAN capacity disks and the number of vSAN capacity disks are predefined.
     * For the **Customizable** capacity, select the Cascade Lake server, specify the RAM size, and the number of bare metal servers. Under **vSAN configuration**, select the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, and the vSAN license edition.
 
-5. Specify the workload cluster settings.
+6. Specify the workload cluster settings.
   1. Specify the workload cluster name.
   2. Select the {{site.data.keyword.cloud_notm}} data center to host the workload cluster.
   3. Indicate the management capacity, either **Customizable**, **Medium**, or **Large**.
@@ -256,15 +251,15 @@ You can choose to install [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutio
     * For the **Medium** or **Large** capacity, specify the number of bare metal servers.
   4. Under **vSAN configuration**, select the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, and the vSAN license edition.
 
-6. Choose the firewall appliance for your regulated workload and follow the steps, depending on your selection:
-  * For **Edge services cluster with Juniper vSRX** or **Edge services cluster**, specify the edge services [cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req) and the private NICs enablement. For **Edge services cluster with Juniper vSRX**, you will also need to specify the Juniper vSRX settings in a later step.
+7. Choose the firewall appliance for your regulated workload and follow the steps, depending on your selection:
+  * For **Edge cluster with Juniper vSRX service** or **Bring your own firewall appliance**, specify the edge services [cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req) and the private NICs enablement. For **Edge cluster with Juniper vSRX service**, you will also need to specify the Juniper vSRX settings in a later step.
   * For **FortiGate Security Appliance**, you must order the **FortiGate Security Appliance 10Gbps** service from the [IBM Cloud catalog](https://cloud.ibm.com/catalog/infrastructure/fortigate-security-appliance-10gb). Confirm that you ordered the service and continue with the following steps.
-7. Under **Network interface**, enter the hostname prefix for the regulated workload and the root domain name.
-8. Under **Resource details**, enter the instance name and select a resource group.
-9. Under **Included services**, review the add-on services to be deployed into the regulated workload instance. If a service requires configuration, complete the service-specific settings by clicking **Edit** on the service card then clicking **Save**. For more information about specific settings for a service, see the corresponding topic for ordering a service.
-10. Under **Optional services**, if you want to deploy VMware HCX, review and update any settings, if required. For more information, see [VMware HCX configuration](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_ordering#hcx_ordering-config).
-11. On the **Summary** pane, review the regulate workload instance settings and the estimated price.
-12. To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
+8. Under **Network interface**, enter the hostname prefix for the regulated workload and the root domain name.
+9. Under **Resource details**, enter the instance name and select a resource group.
+10. Under **Included services**, review the add-on services to be deployed into the regulated workload instance. If a service requires configuration, complete the service-specific settings by clicking **Edit** on the service card then clicking **Save**. For more information about specific settings for a service, see the corresponding topic for ordering a service.
+11. Under **Optional services**, if you want to deploy VMware HCX, review and update any settings, if required. For more information, see [VMware HCX configuration](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_ordering#hcx_ordering-config).
+12. On the **Summary** pane, review the regulate workload instance settings and the estimated price.
+13. To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 
 ### Results after you place an order
 {: #vrw-orderinginstance-results-order}
@@ -273,13 +268,13 @@ The deployment of the regulated workload instance starts automatically and you r
 
 When the instance is successfully deployed, the ordered components are installed on your VMware virtual platform. The deployment of the services starts after your order is completed. When the instance is ready to use, the status of the instance is changed to **Ready to use** and you receive a notification by email.
 
-Next, you can view and manage the regulated workloads instance that you ordered.
+Next, you can view and manage the VMware Regulated Workloads instance that you ordered.
 
 You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 {:important}
 
-**CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
+**CAUTION** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
@@ -288,8 +283,8 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 ## Related links
 {: #vrw-orderinginstance-related}
 
-* [Regulated workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview)
+* [VMware Regulated Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview)
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud)
-* [Requirements and planning for regulated workloads](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-planning)
-* [Viewing and deleting regulated workloads](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-view-delete-instance)
-* [VMware regulated workloads reference architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-archi-overview)
+* [Requirements and planning for VMware Regulated Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-planning)
+* [Viewing and deleting VMware Regulated Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-view-delete-instance)
+* [VMware Regulated Workloads reference architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-archi-overview)

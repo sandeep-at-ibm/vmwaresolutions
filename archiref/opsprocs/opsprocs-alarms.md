@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-02-04"
 
 subcollection: vmwaresolutions
 
@@ -315,7 +315,7 @@ If you have a vSAN cluster, the additional preconfigured alarms in the following
 | vSAN health alarm `Witness host fault domain misconfigured` | Consider alarm only if vSAN has been stretched. | [vSAN Health Service - Witness host fault domain misconfigured (2130586)](https://kb.vmware.com/s/article/2130586){:external} |
 | vSAN health alarm `Witness host not found` | Consider alarm only if vSAN has been stretched. | [vSAN Health Service - Witness host not found (2130585)](https://kb.vmware.com/s/article/2130585){:external} |
 | vSAN health alarm `Witness host within vCenter cluster` | Consider alarm only if vSAN has been stretched. | [vSAN Health Service - Witness host within vCenter cluster (2130587)](https://kb.vmware.com/s/article/2130587){:external} |
-| vSAN health alarm for vMotion `Basic (unicast) connectivity check (normal ping)` | Configure to send email once for a critical event. | [VSAN health shows connectivity errors](https://developer.ibm.com/answers/questions/452172/vsan-health-shows-connectivity-errors/){:external} |
+| vSAN health alarm for vMotion `Basic (unicast) connectivity check (normal ping)` | Configure to send email once for a critical event. | No additional information |
 | vSAN health alarm for vMotion `MTU check (ping with large packet size)` | Configure to send email once for a critical event. | [vSAN Health Service - Network Health - Hosts small ping test (connectivity check) and Hosts large ping test (MTU check) (2108285)](https://kb.vmware.com/s/article/2108285){:external} |
 | VSAN Health Service Alarm | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |
 | vSAN health service alarm for Overall Health Summary | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |

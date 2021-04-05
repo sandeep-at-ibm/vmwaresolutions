@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-29"
+lastupdated: "2021-02-22"
 
 subcollection: vmwaresolutions
 
@@ -95,7 +95,7 @@ VM migration relies on the combination of HCX-IX Interconnect Appliance and HCX 
 ### HCX Network Extension Virtual Appliance
 {: #hcx-archi-source-layer-2-conc}
 
-The Network Extension Service is provided by the HCX Network Extension Virtual Appliance. It extends a Layer 2 network from the on-premises vSphere data center to {{site.data.keyword.cloud_notm}} and enables seamless migration between the data center and the cloud. The HCX Network Extension Virtual Appliance is required to stretch the on-premises network to IBM Cloud.
+The Network Extension Service is provided by the HCX Network Extension Virtual Appliance. It extends a Layer 2 network from the on-premises vSphere data center to {{site.data.keyword.cloud_notm}} and enables seamless migration between the data center and the cloud. The HCX Network Extension Virtual Appliance is required to stretch the on-premises network to {{site.data.keyword.cloud_notm}}.
 
 The HCX Network Extension Virtual Appliance has two interfaces:
 * Internal trunk interface - Handles VM traffic on-premises for the extended networks by using a translational bridge mapping to a corresponding stretched network in {{site.data.keyword.cloud_notm}}.
@@ -115,7 +115,7 @@ To deploy the HCX, the proper number of IP addresses must be available both on-p
   * One for each HCX Network Extension Virtual Appliance
 
 * {{site.data.keyword.cloud_notm}}
-  * Two IP addresses per HCX Connector appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more IBM Cloud Direct Link connections.
+  * Two IP addresses per HCX Connector appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more {{site.data.keyword.cloud_notm}} Direct Link connections.
   * Add one for a separate vMotion network connection (if applicable).
 
 ### Proximity routing
@@ -127,7 +127,7 @@ Proximity routing ensures forwarding between VMs that are connected to stretched
 
 When users extend their networks to the cloud, Layer 2 connectivity is stretched onto {{site.data.keyword.cloud_notm}}. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called "tromboning" or "hairpinning."
 
-Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both the source and destination VMs are in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. VM communication (without route optimization) failure occurs when the egress path exiting the cloud can be either the stretched Layer 2 network or through the VCS NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from {{site.data.keyword.cloud_notm}}.
+Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both the source and destination VMs are in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. VM communication (without route optimization) failure occurs when the egress path exiting the cloud can be either the stretched Layer 2 network or through the vCenter Server NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from {{site.data.keyword.cloud_notm}}.
 
 To prevent tromboning, HCX uses intelligent route management to choose routes appropriate to the VM state. The Cloud Gateway maintains an inventory of VMs in the cloud and it understands the VM states, which can be one of the following values:
 * Transferred to the cloud with vMotion (zero-downtime migration).

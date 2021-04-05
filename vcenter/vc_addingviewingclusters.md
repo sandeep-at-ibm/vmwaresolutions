@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-15"
+lastupdated: "2021-03-29"
 
 keywords: vCenter Server add cluster, view cluster vCenter Server, delete cluster vCenter Server
 
@@ -22,17 +22,17 @@ subcollection: vmwaresolutions
 # Adding, viewing, and deleting clusters for vCenter Server instances
 {: #vc_addingviewingclusters}
 
-You can add your own clusters to VMware vCenter Server instances to expand the compute and storage capacity. Within a cluster, you can manage ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
+You can add your own clusters to VMware vCenter Server® instances to expand the compute and storage capacity. Within a cluster, you can manage VMware ESXi™ servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instances.
 
-Starting with the V3.4 release, you can simultaneously add or delete a cluster while another cluster is being created or deleted.
+For vCenter Server instances V3.4 and later, you can simultaneously add or delete a cluster while another cluster is being created or deleted.
 {:note}
 
 ## Before you add clusters
 {: #vc_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console. Changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
-* Ensure that you reviewed the [Edge services cluster](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster) section. In addition, for the edge services cluster, you cannot add more than one cluster in the same data center pod. If you are adding multiple edge services clusters in the same pod, the clusters would share a transit VLAN, which might cause subsequent issues with the Juniper vSRX installation.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console. Changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware® sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
+* Ensure that you reviewed the [Edge services cluster](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster) section. In addition, for the edge services cluster, you cannot add more than one cluster in the same data center pod. If you are adding multiple edge services clusters in the same pod, the clusters would share a transit VLAN, which might cause subsequent issues with the Juniper® vSRX installation.
 
 ## System settings
 {: #vc_addingviewingclusters-adding-sys-settings}
@@ -81,62 +81,59 @@ If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data c
 ### Skylake
 {: #vc_addingviewingclusters-adding-skylake}
 
-For the **Skylake** setting, you have options for the **CPU model** and **RAM**. Available options might differ depending on the version that your instance was initially deployed in.
+For **Skylake** servers, you can choose the following CPU models and a supported RAM size, which depends on the NSX networking solution. Available options might differ depending on the version that your instance was initially deployed in.
 
-Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
+Skylake servers are not supported for vSphere Enterprise Plus 7.0u1 instances.
 {:note}
 
-| CPU model options | RAM options for NSX-V | RAM options for NSX-T |
-|:----------------- |:--------------------- |:--------------------- |
-| Dual Intel Xeon Silver 4110 processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| CPU model | RAM options for NSX-V | RAM options for NSX-T |
+|:--------- |:--------------------- |:--------------------- |
+| Dual Intel® Xeon® Silver 4110 processor / 16 cores total, 2.10 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake bare metal servers" caption-side="top"}
 
 ### Cascade Lake
 {: #vc_addingviewingclusters-adding-cascade}
 
-For the **Cascade Lake** setting, you have options for the **CPU model** and **RAM**.
+For **Cascade Lake** servers, you can choose the following CPU models and a supported RAM size, which depends on the NSX networking solution.
 
-| CPU model options | RAM options |
-|:----------------- |:----------- |
-| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Platinum 8260 processor / 48 cores total, 2.4 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8260 processor / 96 cores total, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| CPU model | RAM sizes for NSX-V | RAM sizes for NSX-T |
+|:--------- |:------------------- |:------------------- |
+| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.50 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 processor / 48 cores total, 2.40 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.50 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 processor / 96 cores total, 2.40 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 2. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 ### SAP-certified
 {: #vc_addingviewingclusters-adding-sap}
 
-When you select **SAP-certified**, you cannot alter the CPU or RAM settings. For NSX-T SAP-certified, only Cascade Lake servers are supported.
+For **SAP-certified** servers, you have the following options:
+* **NetWeaver**, for which the CPU and RAM size are preset.
+* **HANA**, for which you can choose the CPU model and a supported RAM size, which depends on the NSX networking solution.
 
-SAP- certified servers are not supported for vSphere Enterprise Plus 7.0 instances.
-{:note}
-
-Based on your requirements, select a bare metal server configuration from the following table:
-
-| CPU model     | RAM options   |  
-|:------------- |:------------- |
-| Dual Intel Xeon Gold 6140 processor (Skylake) / 36 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB |
-| Dual Intel Xeon Gold 5218 processor (Cascade, BI.S4.NW192) / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
-| Dual Intel Xeon Gold 6248 processor (Cascade, BI.S4.NW768) / 40 cores total, 2.5 GHz | 768 GB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW1500) / 56 cores total, 2.70 GHz| 1.5 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW3000) / 56 cores total, 2.70 GHz| 3 TB |
+| CPU model     | RAM sizes   |
+|:------------- |:----------- |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW192) / 32 cores total, 2.30 GHz | 192 GB |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW384) / 32 cores total, 2.30 GHz | 384 GB |
+| Dual Intel Xeon Gold 6248 processor (Cascade Lake, BI.S4.NW768) / 40 cores total, 2.50 GHz | 768 GB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW1500) / 56 cores total, 2.70 GHz | 1.5 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW3000) / 56 cores total, 2.70 GHz | 3 TB |
 {: caption="Table 3. Options for SAP-certified bare metal servers - NetWeaver" caption-side="top"}
 {: class="simple-tab-table"}
 {: #simpletabtable1}
 {: tab-title="NetWeaver"}
 {: tab-group="SAP-certified Intel servers"}
 
-| CPU model     | RAM options |  
-|:------------- |:------------- |
-| Dual Intel Xeon Gold 5218 processor (Cascade) / 32 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Dual Intel Xeon Gold 6248 processor (Cascade) / 40 cores total, 2.5 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade) / 56 cores total, 2.70 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8280M processor (Cascade) / 112 cores total, 2.70 GHz| 3 TB, 6 TB |
+| CPU model     | RAM sizes |
+|:------------- |:--------- |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake) / 32 cores total, 2.30 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Gold 6248 processor (Cascade Lake) / 40 cores total, 2.50 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake) / 56 cores total, 2.70 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8280M processor (Cascade Lake) / 112 cores total, 2.70 GHz | 3 TB, 6 TB |
 {: caption="Table 3. Options for SAP-certified bare metal servers - HANA" caption-side="top"}
 {: #simpletabtable2}
 {: tab-title="HANA"}
@@ -147,7 +144,7 @@ Based on your requirements, select a bare metal server configuration from the fo
 {: #vc_addingviewingclusters-adding-bare-metal-number}
 
 * All servers that you order have the same configuration.
-* For vSAN storage, you can order in the range 4 - 59 servers.
+* For vSAN™ storage, you can order in the range 4 - 59 servers.
 * For NFS storage, you can order between 1 (for NSX-V) or 2 (for NSX-T) and 59 servers. However, for production workloads, a minimum of two (for NSX-V) and three (for NSX-T) servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
 ## Storage settings
@@ -161,7 +158,7 @@ You can add NFS storage shares to an existing vSAN or NFS cluster. For more info
 ### vSAN storage
 {: #vc_addingviewingclusters-adding-vsan-storage}
 
-Specify the following vSAN options:
+Specify the following vSAN options.
 
 #### Disk type and size for vSAN capacity disks
 {: #vc_addingviewingclusters-adding-vsan-storage-typesize-capdisks}
@@ -191,16 +188,10 @@ Review **Number of vSAN cache disks**. The value depends on whether you checked 
 #### Enable vSAN deduplication and compression
 {: #vc_addingviewingclusters-adding-vsan-storage-enable-comp}
 
-vSAN storage depends on the number of servers and your total disk capacity.
+vSAN storage depends on the number of servers and your total disk capacity, and the use of deduplication and compression.
 
-If vSAN deduplication and compression are enabled (the default setting), a ratio of 3.5 is assumed. For example, 1 TB of data uses only 1/3.5 TB. Therefore, the **Total estimated usable storage** is greater than the **Total raw storage**.
-
-The following table shows the values for **Total raw storage** and **Total estimated usable storage** when you enable vSAN deduplication and compression and when you do not enable it.
-
-| Selected values      | If compression is enabled | If compression is not enabled |
-|:-------------------- |:------------------------- |:----------------------------- |
-| Number of bare metal servers: 4</br>Disk type and size for vSAN capacity disks: 1.9 TB SSD SED</br>Number of vSAN cache disks: 4 | Total raw storage: 30.40 TB</br>Total estimated usable storage: 55.52 TB | Total raw storage: 30.40 TB</br>Total estimated usable storage: 15.52 TB |
-{: caption="Table 4. vSAN Storage values when vSAN deduplication and compression is enabled and not enabled" caption-side="top"}
+The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){:external}.
+{:note}
 
 #### vSAN license
 {: #vc_addingviewingclusters-adding-vsan-storage-license}
@@ -255,14 +246,14 @@ You can use the default hostname prefix or specify a new one. When you specify a
 - The hostname prefix must end with a lowercase alphabetic or numeric character.
 - The maximum length of the hostname prefix is 10 characters.
 
-### Enable private NICs only
+### Networking type
 {: #vc_addingviewingclusters-network}
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and private network** or **Private network only**.
 
 For NSX-V, the following add-on services require public NICs and are not available if you select the private option:
-* F5 BIG-IP
-* FortiGate Virtual Appliance
+* F5® BIG-IP®
+* FortiGate® Virtual Appliance
 
 ### Uplink speed
 {: #vc_addingviewingclusters-uplink}
@@ -273,8 +264,7 @@ The **Uplink speed** option is not available to edge services clusters.
 The following options are provided for the uplink speed:
 * 10 Gb - This option is selected by default.
 * 25 Gb - This option is available only when the vCenter Server instance meets the following requirements:
-   * The vSphere version is 6.7u3.
-   * The bare metal server is Cascade Lake.
+   * The bare metal server is **Cascade Lake** or **SAP-certified**.
    * The data center is one of the following locations: **Dallas 10**, **Dallas 12**, **Dallas 13**, **Frankfurt 02**, **London 04**, **Paris 04**, **Paris 05**, **Paris 06**, **Sydney 04**, **Sydney 05**, **Tokyo 02**, **Tokyo 04**, **Tokyo 05**, **Toronto 04**, **Washington DC 04**, **Washington DC 06**, or **Washington DC 07**.
 
 ### VLANs
@@ -331,7 +321,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 
    Ensure that the instance is in the **Ready to use** status. Otherwise, you cannot add clusters to the instance.
    {:note}
-3. Click **Infrastructure** on the left navigation pane and click **Add** on the upper-right corner of the **Clusters** table.
+3. Click **Infrastructure** on the left navigation pane and click **Add** on the upper right of the **Clusters** table.
 4. On the **Cluster** page, select the cluster type and billing option, and then enter the cluster name.
 5. If you want to host the cluster in a different {{site.data.keyword.cloud_notm}} data center than the one that the instance is hosted in, under **Bare metal server**, select the **Select a different location** checkbox and choose the {{site.data.keyword.cloud_notm}} data center to host the instance.
 6. Complete the bare metal configuration.

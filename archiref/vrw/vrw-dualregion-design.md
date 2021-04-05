@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-03-08"
 
 subcollection: vmwaresolutions
 
@@ -37,7 +37,7 @@ The design is documented by using the following structure:
 ## Network design
 {: #vrw-dualregion-design-network}
 
-As the design uses two regulated workloads instances, the network design is at each region is as documented at [Underlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-underlay-network) and [Overlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overlay-network).
+As the design uses two VMware Regulated Workloads instances, the network design is at each region is as documented at [Underlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-underlay-network) and [Overlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overlay-network).
 
 The key design element at the network level, is the adoption of cross-region network for the use of the vRealize Operations Manager analytic cluster. The cross-region network is a layer 3 construct that allows the use of the same IP subnet space at either the protected region or the recovery region. In normal operations, the cross-region network is tethered to the vSRX or Fortigate in the protected region that is, the default gateway for this network is the vSRX or Fortigate. The protected region vSRX or Fortigate then advertises this network so that it is reachable from other networks. In recovery operations, the cross-region network is tethered to the vSRX or Fortigate in the recovery region. The recovery region vSRX or Fortigate then advertises this network so that it is reachable from other networks. The use of the cross-region network allows the vRealize Operations Manager Analytic cluster to retain the same IP addresses when they are recovered to the recovery region.
 
@@ -150,7 +150,7 @@ The following design decisions are documented:
 ## AD, DNS, and NTP
 {: #vrw-dualregion-design-ad}
 
-The regulated workloads automation deploys a pair of Microsoft Windows VMs in each instance. These VMs are configured as AD, DNS, and NTP servers. These services are independent in each region, a separate AD forest for each region, and recovery of the protected region services to the recovery region is not required.
+The VMware Regulated Workloads automation deploys a pair of Microsoft Windows VMs in each instance. These VMs are configured as AD, DNS, and NTP servers. These services are independent in each region, a separate AD forest for each region, and recovery of the protected region services to the recovery region is not required.
 
 vSphere HA provides availability of the VMs themselves and the Microsoft domain concept provides the availability of the Microsoft Windows services that runs on them. For business resiliency, configure image-level backups of the VMs and store them in the region's Veeam repository server. Configure a Veeam backup copy job to copy the backup to the other site so you can provide an off-site copy of the backup.
 
@@ -199,7 +199,7 @@ The following Veeam design decisions are documented:
 * Proxies can be hosted on Windows Server or Linux OS with almost no performance differences. For the all-in-one deployment scenario, a Windows OS is used.
 * For the repository server, a bare metal server is recommended to maximize performance and to separate the production environment that needs to be protected from the backup storage. It is also recommended to combine this practice with the proxy role to keep overheads on the virtual environment and on the network to a minimum. Best practice is to avoid the usage of the same storage for backups and for the virtualized infrastructure because the loss of this single system might lead to the loss of both copies of the data, the production and the backups.
 * Repository servers can be either Windows or Linux. For the all-in-one deployment scenario, a Windows OS is used. Additionally, for Microsoft Windows-based repositories, Veeam uses the Windows Crypto API complying with the Federal Information Processing Standards (FIPS 140). For Linux-based repositories, Veeam uses a statically linked OpenSSL encryption library, without the FIPS 140 support.
-* For bare metal servers, the block storage device can be a local disk or a LUN provided through a SAN by using iSCSI. For the regulated workloads design, SAN that uses iSCSI is not supported; therefore, local disk is used.
+* For bare metal servers, the block storage device can be a local disk or a LUN provided through a SAN by using iSCSI. For the VMware Regulated Workloads design, SAN that uses iSCSI is not supported; therefore, local disk is used.
 * Configure a scheduled, encrypted backup of the Veeam Backup & Replication configuration and use a Veeam file copy job to copy the file to the protected region. This way, if a failure occurs, the Veeam Backup server can be rebuilt and the configuration can be restored from an off-site copy.
 * A capacity tier that uses {{site.data.keyword.cloud_notm}} Object Storage is not configured as the storage requirements for use case 1 are low.
 
@@ -228,7 +228,7 @@ For more information, see:
 
 Currently, HPCS is available in the following regions: Dallas, Washington DC, Sydney, and Frankfurt. It is possible, but not ideal, to use an HPCS instance in a different region for {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instances in London and Tokyo.
 
-The regulated workloads design has two use cases for encryption:
+The VMware Regulated Workloads design has two use cases for encryption:
 * SaaS Provider - VMware vSphere encryption used to encrypt the management and workload VMs. These keys are managed by the SaaS Provider.
 * SaaS Consumer - An optional, application level encryption that is used to encrypt application data in addition to the VM encryption. These keys are managed by the SaaS Consumer.
 
@@ -236,7 +236,7 @@ In the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads dual re
 
 Veeam Backup and Replication has access to the unencrypted data, and backup or replication data does not need the source encryption keys. When the backup is restored or the replica is configured, specify the target encrypted storage policy.
 
-In the regulated workloads dual zone design, the following steps describe the backup and restore process between regions:
+In the VMware Regulated Workloads dual zone design, the following steps describe the backup and restore process between regions:
 1. The protected VM is encrypted with VMware vSphere encryption in the VMware datastore.
 2. A backup of the protected VM is taken.
 3. VM backup files are encrypted on disk in the Protected Region Veeam Repository with Veeam encryption that is protected by a password that is stored in the Veeam database.

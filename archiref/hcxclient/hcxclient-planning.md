@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-04"
+lastupdated: "2021-02-19"
 
 subcollection: vmwaresolutions
 
@@ -29,7 +29,7 @@ The installation of VMware HCX has the following software requirements:
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
 * For information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req).
-* Both the on-premises vSphere environment and the VCS HCX Cloud environment must allow Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
+* Both the on-premises vSphere environment and the vCenter Server HCX Cloud environment must allow Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the vCenter Server HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
 {: #hcxclient-planning-on-prem-env}
@@ -55,7 +55,7 @@ Layer 2 network stretching has the following requirements:
   * vSphere Enterprise Plus license
   * Must have a vSphere Distributed Switch (vDS). The distributed switch is available with vSphere Enterprise Plus Edition.
   * When installed, the on-premises Layer 2 concentrator service appliance must have access to a vNIC port and any VLANs to be stretched.
-  * If the network is to be stretched over the public internet or a VPN (on an alternative path) the L2C virtual machine in VCS requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
+  * If the network is to be stretched over the public internet or a VPN (on an alternative path) the L2C VM in vCenter Server requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
   * If multiple Layer 2 concentrators are wanted, each must have an IP address on-premises and in the cloud.
 
 ## Pre-deployment planning

@@ -4,7 +4,7 @@ copyright:
 
   years: 2020, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-02-11"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -96,7 +96,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 {: #table2}
 {: tab-title="Storage metrics"}
 {: tab-group="on-demand-metrics"}
-{: class="simple-tab-table"}
+{:class="simple-tab-table"}
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
@@ -131,14 +131,14 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:----------|:------------|
 | TOTAL_STORAGE_POINT_TWO_FIVE_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 0.25 IOPS/GB tier over the period of an hour. |
-| TOTAL_STORAGE_TWO_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the two IOPS/GB tier over the period of an hour. |
-| TOTAL_STORAGE_FOUR_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the four IOPS/GB tier over the period of an hour. |
+| TOTAL_STORAGE_TWO_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 2 IOPS/GB tier over the period of an hour. |
+| TOTAL_STORAGE_FOUR_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 4 IOPS/GB tier over the period of an hour. |
 | TOTAL_STORAGE_TEN_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 10 IOPS/GB tier over the period of an hour. |
 {: caption="Table 3. VMware Shared Solutions Reserved billing plan - Storage metrics" caption-side="top"}
 {: #reservedbilling-table2}
 {: tab-title="Storage metrics"}
 {: tab-group="res-billing-metrics"}
-{: class="simple-tab-table"}
+{:class="simple-tab-table"}
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
@@ -162,12 +162,12 @@ Private network endpoint usage incurs charges as part of the On-demand or Reserv
 | MAX_PRIVATE_NETWORK_TEN_G_COST | Monthly | Charge for private network endpoint at 10 GB uplink over a period of one month. |
 {: caption="Table 4. Billing plan for private network endpoints" caption-side="top"}
 
-## Licenses and fees for Veeam Availability Suite
-{: #shared_pricing-veeam}
+## Licenses and fees for Veeam Availability Suite and Zerto
+{: #shared_pricing-services}
 
-Veeam® usage incurs the following On-demand charges. You can view the charges on the **{{site.data.keyword.cloud_notm}} billing and usage** view along with the usage and charges from all other {{site.data.keyword.cloud_notm}} services.
+Veeam® and Zerto usage incurs the following On-demand charges. You can view the charges on the **{{site.data.keyword.cloud_notm}} billing and usage** view along with the usage and charges from all other {{site.data.keyword.cloud_notm}} services.
 
-In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solutions** service type. Locate the **Organization** plan to find the Veeam usage across all virtual data centers in that organization. The virtual data center usage is located in a separate plan for either VMware Solutions Shared On-demand or VMware Solutions Shared Reserved.
+In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solutions** service type. Locate the **Organization** plan to find the Veeam and Zerto usage across all virtual data centers in that organization. The virtual data center usage is located in a separate plan for either VMware Solutions Shared On-demand or VMware Solutions Shared Reserved.
 
 | Metric                                   | Frequency   | Description |
 |:-----------------------------------------|:------------|:------------|
@@ -175,11 +175,25 @@ In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solu
 | TOTAL_VEEAM_BLOCK_STORAGE_GB_HOURS | Hourly | Charge per GB of block storage used for all backups. |
 | TOTAL_VEEAM_OBJECT_STORAGE_GB_HOURS | Hourly | Charge per GB of object storage used for all backups. |
 {: caption="Table 5. Licenses and fees for Veeam" caption-side="top"}
+{: class="simple-tab-table"}
+{: #service-table1}
+{: tab-title="Veeam"}
+{: tab-group="service-billing-metrics"}
 
-No additional Veeam usage charges for VMware Solutions Shared are incurred.
+| Metric                                   | Frequency   | Description |
+|:-----------------------------------------|:------------|:------------|
+| TOTAL_ZERTO_LICENSE_HOURS | Hourly | Zerto license charge for every VM replicated. The hourly charge is for the highest number of VMs replicated to a virtual data center instance at any time period in the given hour. |
+| TOTAL_ZERTO_CLOUD_CONNECTOR_HOURS | Hourly | Charge for every virtual data center instance. One Zerto Cloud Connector per virtual data center instance. |
+{: caption="Table 5. Licenses and fees for Zerto" caption-side="top"}
+{: #service-table2}
+{: tab-title="Zerto"}
+{: tab-group="service-billing-metrics"}
+{: class="simple-tab-table"}
+
+No additional Veeam or Zerto usage charges for VMware Solutions Shared are incurred.
 {:note}
 
-Initially, all backups go to the block storage that is closest to their VM workloads. Backups that are a part of an inactive backup chain are immediately moved to Cloud Object Storage. The restore speed for these inactive backups might be impacted.
+For the Veeam service, initially, all backups go to the block storage that is closest to their VM workloads. Backups that are a part of an inactive backup chain are immediately moved to Cloud Object Storage. The restore speed for these inactive backups might be impacted.
 
 You can change how fast inactive backup chains are moved to Cloud Object Storage by opening a {{site.data.keyword.vmwaresolutions_short}} service ticket.
 

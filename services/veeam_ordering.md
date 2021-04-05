@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-02"
 
 keywords: Veeam, Veeam configuration, order Veeam
 
@@ -26,12 +26,15 @@ You can include the Veeam® service with a new VMware vCenter Server® instance 
 ## Ordering Veeam for a new instance
 {: #veeam_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional services** section and click **Veeam** in the **Business continuity and migration** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **Veeam** in the **Business continuity and migration** category. Follow the steps to add the service to your instance.
 
 ## Ordering Veeam for an existing instance
 {: #veeam_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Veeam** in the **Business continuity and migration** category, and then click **Add**. Follow the steps to add the service to your instance.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **Veeam** service and toggle its switch on.
+4. Follow the steps to configure and add the service to your instance.
 
 ## Veeam service configuration
 {: #veeam_ordering-config}
@@ -46,7 +49,11 @@ Specify a unique name for this service instance. The name must be unique across 
 ### Deployment type
 {: #veeam_ordering-depl-type}
 
-Select either **Windows Server VM on the management cluster** or **Single public Windows VSI**.
+Select one of the following:
+
+* **Windows Server VM on the management cluster**
+* **Single public Windows VSI**
+* **Bare Metal Server with local storage**
 
 ### Number of VMs to license
 {: #veeam_ordering-config-vms}
@@ -56,18 +63,29 @@ Specify the number of virtual machines (VMs) to license, in increments of 10. At
 ### Storage size
 {: #veeam_ordering-config-storage-size}
 
-The capacity that meets your storage needs. For an example that shows what the capacity might be like, see [Capacity planning for backup repositories](https://helpcenter.veeam.com/docs/one/reporter/capacity_planning_for_repositories.html?ver=100){:external}.
+The capacity that meets your storage needs. The storage size is only for VM and VSI.
+
+For an example that shows what the capacity might be like, see [Capacity planning for backup repositories](https://helpcenter.veeam.com/docs/one/reporter/capacity_planning_for_repositories.html?ver=100){:external}.
 
 ### Storage performance
 {: #veeam_ordering-config-storage-performance}
 
 The IOPS (input/output operations per second) per GB based on your workload requirements.
 
+The storage performance is only for VM and VSI. There is not a performance option for bare metal server. 
+
+### Backup disk
+{: #veeam_ordering-config-backup-disk}
+
+The backup disks are used as storage repositories for backups.
+
+The backup disk is only for bare metal server.
+
 ## Related links
 {: #veeam_ordering-related}
 
 * [Veeam v9.5 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)
-* [Veeam v10a overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Veeam v11 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
 * [Ordering Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering_licenses)
 * [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)

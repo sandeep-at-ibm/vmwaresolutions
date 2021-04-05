@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-03-24"
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Multizone region
 {: #vrw-mzr}
 
-Expanding the single zone region topology into a multizone region (MZR) topology, introduces complexity around high availability of components. It also introduces some new capabilities, including stretched networking between the data centers and stretched VSAN.
+Expanding the single-zone region topology into a multizone region (MZR) topology introduces complexity around high availability of components. It also introduces some new capabilities, including stretched networking between the data centers and stretched VSAN.
 
 ## Multi data center view
 {: #vrw-mzr-view}
@@ -44,7 +44,7 @@ Dual Domain controllers in each data center with default domain replication to e
 ### Veeam management backup
 {: #vrw-mzr-considerations-veeam}
 
-Veeam backup and replication servers (VBR) are placed in both the primary and secondary sites. The built-in proxy is used for backup jobs. A copy job that goes to Cloud Object Storage is created when allowed for each backup repository, this design allows either site to restore the other. The VBR servers at each site store a VBR configuration backup on the server in the other site. If a total loss of the VBR server occurs in one site, it can be restored to the other.
+Veeam backup and replication servers (VBR) are placed in either both the primary and secondary sites or located in the witness site. The Veeam proxy VMs deployed to the ESXi hosts are used for backup jobs since vSphere encryption is in use. A copy job that goes to Cloud Object Storage is created when allowed, this design allows the use of lower-cost storage for long-term retention of backups. When the dual site VBR servers are used a VBR configuration backup of each VBR is stored on the server in the other site. If a total loss of the VBR server occurs in one site, it can be restored to the other.
 
 ### vCenter
 {: #vrw-mzr-considerations-vcenter}
@@ -87,7 +87,7 @@ Between the HyTrust CloudControl cluster and the {{site.data.keyword.cloud_notm}
 ### Backup server
 {: #vrw-mzr-considerations-buserver}
 
-The primary configuration backup server instance is backed up using rsync across to the secondary configuration backup server in the secondary AZ. If a failover of the backup server occurs, the following systems require a manual update to the new backup server IP.
+The primary configuration backup server instance is backed up using `rsync` across to the secondary configuration backup server in the secondary AZ. If a failover of the backup server occurs, the following systems require a manual update to the new backup server IP.
 
 | System | Backup option | Frequency | Location|
 |--- |--- |--- | --- |

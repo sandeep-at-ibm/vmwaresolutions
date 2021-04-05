@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-14"
+lastupdated: "2021-04-01"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -35,14 +35,17 @@ You can install multiple instances of Juniper vSRX on the management cluster. On
 ## Ordering Juniper vSRX for a new instance
 {: #juniper-ordering-new-instance}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Optional services** section and click **Juniper vSRX** in the **Security and compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **Juniper vSRX** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
 The Juniper vSRX service is deployed on the management cluster unless you order the edge services cluster. For the Juniper vSRX service to function as a gateway for your vCenter Server instance, you must include the edge services cluster in your order.
 
 ## Ordering Juniper vSRX for an existing instance
 {: #juniper-ordering-exist-instance}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **Juniper vSRX** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **Juniper vSRX** service and toggle its switch on.
+4. Follow the steps to configure and add the service to your instance.
 
 When you add Juniper vSRX to an existing vCenter Server instance, you can select a cluster on which to install Juniper vSRX. You can install Juniper vSRX on a management cluster or on any edge services cluster.
 You must deploy the Juniper vSRX to an edge services cluster for the Juniper vSRX to function as a gateway for your vCenter Server instance.
@@ -55,7 +58,7 @@ When you order the service, provide the following settings:
 ### Name
 {: #juniper-ordering-service-config-name}
 
-Specify the nickname for the installed instance in the **Enter a name for the HA deployment** field. Because there can be multiple copies of Juniper vSRX in a single vCenter Server instance, this name is used to ensure that the names of all networking components are unique.
+Specify the nickname for the installed instance in the **Enter a name for the HA deployment** field. Because multiple copies of Juniper vSRX can be in a single vCenter Server instance, this name is used to ensure that the names of all networking components are unique.
 
 ### License model
 {: #juniper-ordering-service-config-license-model}
@@ -67,7 +70,7 @@ You can't change the license model after service installation. To change the lic
 
 After the service is ordered, the vSRX nodes are automatically ordered with the selected license models.
 
-The Juniper vSRX nodes are deployed to the edge services cluster if you selected this option. If there is no edge services cluster in your vCenter Server instance, the Juniper vSRX service is deployed on the management cluster.
+The Juniper vSRX nodes are deployed to the edge services cluster if you selected this option. If you do not have an edge services cluster in your vCenter Server instance, the Juniper vSRX service is deployed on the management cluster.
 
 ### Juniper vSRX deployment on an edge services cluster
 {: #juniper-ordering-service-config-edge-deployment}

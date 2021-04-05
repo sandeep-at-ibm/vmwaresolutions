@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-16"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
@@ -55,7 +55,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
 
 1. Create a worker VM from the RHCOREOS template.
   1. Ensure that the VM is connected to the same network as the other OpenShift worker VMs.
-  2. Do not power on this VM yet, as there are more configuration steps ahead.
+  2. Do not power on this VM yet. You complete more configuration steps ahead.
 
 2. Prepare a worker ignition file on the bastion.
   1. For more information about logging in to the bastion, see [Bastion details](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-bastion).
@@ -63,8 +63,8 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
 
 3. Set the VM attributes.
   1. Edit the configuration parameters of the new worker VM. Power off the VM before you start. To go to the Configuration Parameters window, select the new worker VM and click **Actions > Edit Settings**.
-  2. In the Edit Settings window, click the **VM Options** tab at the top. On the left, click **Advanced** to expand the **Advanced** section in the window. Then, scroll down to **Configuration Parameters** on the left. To open the Configuration Parameters window, click **Edit Configuration**.
-  3. The Configuration Parameters window might have a long list of existing parameters for the VM. To add a value, click **Add Configuration Params** near the top of the window. Two empty fields that are labeled **Name** and **Value** are displayed for you to complete. This is the process to use for each of the following values.
+  2. In the Edit Settings window, click the **VM Options** tab. On the left, click **Advanced** to expand the **Advanced** section in the window. Then, scroll down to **Configuration Parameters** on the left. To open the Configuration Parameters window, click **Edit Configuration**.
+  3. The Configuration Parameters window might have a long list of existing parameters for the VM. To add a value, click **Add Configuration Params**. Two empty fields that are labeled **Name** and **Value** are displayed for you to complete. Use this process to use for each of the following values.
   4. Create a value named `guestinfo.ignition.config.data`. Set the value to the contents of the base64-encoded ignition config file `worker.ign.b64` that was created earlier.
   5. Create a value named `guestinfo.ignition.config.data.encoding`. Set the value to the string `base64`.
   6. Create a value named `disk.EnableUUID`. Set the value to the string `TRUE`.
@@ -75,8 +75,8 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   2. Go to **Networking > Segments**.
   3. Edit the `ocp-internal` segment.
   4. Expand **DHCP Static Bindings** and click **Set** to open the Set Static Bindings window.
-  5. Review the list of existing bindings and  make a note of the next available IP address.
-  6. Examine one of the existing worker bindings to look at information that you will need later. Make a note of the gateway address and the DHCP options. To view the DHCP options, click **Set** next to **DHCP Options**. On the Options window, select **Generic Options** from the **Select DHCP Option** dropdown list.  Make a note of the options that are set.
+  5. Review the list of existing bindings and make a note of the next available IP address.
+  6. Examine one of the existing worker bindings to look at information that you need later. Make a note of the gateway address and the DHCP options. To view the DHCP options, click **Set** next to **DHCP Options**. On the Options window, select **Generic Options** from the **Select DHCP Option** dropdown list. Make a note of the options that are set.
   7. Close the existing binding that you were examining to return to the Set Static Bindings window.
   8. Click **Add IPV4 Static Binding**. Complete the details for the new worker, including the DHCP options that you previously noted.
   9. When you are done, click **Save** to commit the changes.  
@@ -85,7 +85,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   1. Go to **Networking > Load Balancer > Server Pools**.
   2. Edit the server pool named `ocp-apps`.
   3. In the edit window, under **Members/Group**, click the blue numerical link. The default is 3.
-  4. When the Configure Server Pool Members window opens, click the **Add Member** button.
+  4. When the Configure Server Pool Members window opens, click **Add Member**.
   5. Enter the new worker's name and IP address. Leave the port number empty.
   6. Click **Save** and then click **Apply** to commit your changes.
 
@@ -98,13 +98,13 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   2. Before you can run any commands, you must authenticate to OpenShift.
     * If authentication is not configured and you are using the default `kubeadmin` account and password, run the command `export KUBECONFIG=auth/kubeconfig` and verify that you are authenticated by running the command `./oc whoami`.
     * If other backends or users are authenticated, log in by using one of those accounts as explained in the Red Hat OpenShift documentation, for example, by running the command `./oc login`.
-  3. Run `./oc get nodes` and you should see the new worker. If it is not yet in the **Ready** state, you must repeatedly check for pending CSRs by using the command `./oc get csr`, and then approve the CSRs by using the command `./oc adm certificate approve <csr_name>`. Continue to check until the configuration is complete and the new worked is in the **Ready** state.
+  3. Run `./oc get nodes` to see the new worker. If it is not yet in the **Ready** state, you must repeatedly check for pending CSRs by using the command `./oc get csr`, and then approve the CSRs by using the command `./oc adm certificate approve <csr_name>`. Continue to check until the configuration is complete and the new worked is in the **Ready** state.
   4. After the new worker is in **Ready** state, it can be used by OpenShift.
 
 8. Power on the VM.
-  * After the VM is powered on, you can monitor the VM to see whether there is a problem. The VM gets an IP address, then processes the ignition file, and then opens a login prompt. 
+  * After the VM is powered on, you can monitor the VM to see whether a problem exists. The VM gets an IP address, then processes the ignition file, and then opens a login prompt. 
   * After the login prompt is shown, it might be covered by console log messages. If required, press the **Enter** key a few times on the console. If the login prompt is present but covered with console log messages, press **Enter** to display the login prompt again. 
-  * If the login prompt does not appear, either the VM is not getting an IP address (check the network the VM is connected to, and the DHCP binding settings), or the base64 value from `worker.ign.64` is not correct (it might be missing some characters or it has some extra characters, check to confirm). If you must change any settings due to the VM not displaying a login prompt, power off the VM, change the necessary settings, and power it back on.
+  * If the login prompt does not display, either the VM is not getting an IP address (check the network the VM is connected to, and the DHCP binding settings), or the base64 value from `worker.ign.64` is not correct (it might be missing some characters or it has some extra characters, check to confirm). If you must change any settings due to the VM not displaying a login prompt, power off the VM, change the necessary settings, and power it back on.
 
 ## Related links
 {: #ocp_managing-related}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-11-18"
+lastupdated: "2021-03-15"
 
 keywords: IBM Cloud Private
 
@@ -41,5 +41,5 @@ If you want to deploy additional nodes, review the following information:
 ## Considerations when you delete IBM Cloud Private Hosted
 {: #icp_overview-remove}
 
-* Only the virtual machines (VMs) that were deployed during the initial installation of the {{site.data.keyword.cloud_notm}} Private Hosted service are deleted. Any node that is deployed after the installation will not be cleaned up.
-* {{site.data.keyword.cloud_notm}} will delete the VXLAN, DLR, and the Edge Gateway that was created during the initial deployment of {{site.data.keyword.cloud_notm}} Private Hosted. The VMs that you deployed on VXLAN will lose connectivity after the removal of the {{site.data.keyword.cloud_notm}} Private Hosted service is started.
+* Only the virtual machines (VMs) that were deployed during the initial installation of the {{site.data.keyword.cloud_notm}} Private Hosted service are deleted. Any node that is deployed after the installation is not cleaned up.
+* {{site.data.keyword.cloud_notm}} deletes the VXLAN, DLR, and the Edge Gateway that was created during the initial deployment of {{site.data.keyword.cloud_notm}} Private Hosted. The VMs that you deployed on VXLAN will lose connectivity after the removal of the {{site.data.keyword.cloud_notm}} Private Hosted service is started.

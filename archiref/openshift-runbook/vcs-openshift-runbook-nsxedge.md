@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-06-12"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -19,16 +19,16 @@ subcollection: vmwaresolutions
 # Red Hat OpenShift NSX Edge configuration
 {: #openshift-runbook-runbook-nsxedge-intro}
 
-This section details the NSX components that are used to support the OpenShift 4.4 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){:external}. PowerNSX commands are provided if you would want to use this method.
+This section details the NSX components that are used to support the OpenShift 4.6 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){:external}. PowerNSX commands are provided if you would want to use this method.
 
-![OpenShift 4.4 networking](../../images/openshift-networking41.svg "OpenShift 4.4 networking"){: caption="Figure 1. OpenShift 4.4 networking" caption-side="bottom"}
+![OpenShift 4.6 networking](../../images/openshift-networking41.svg "OpenShift 4.6 networking"){: caption="Figure 1. OpenShift 4.6 networking" caption-side="bottom"}
 
 ## NSX ESG
 {: #openshift-runbook-runbook-nsxedge-config}
 
 The first component that is configured within the {{site.data.keyword.vmwaresolutions_full}} with Red Hat OpenShift is a pair of NSX Edge appliances. The NSX Edge appliances are configured as an Active/Passive pair of X-Large NSX Edge devices.
 
-As part of the configuration process, the NSX Edge is connected to the IBM Cloud Public and Private subnets that are ordered for the Red Hat OpenShift cluster.
+As part of the configuration process, the NSX Edge is connected to the {{site.data.keyword.cloud_notm}} Public and Private subnets that are ordered for the Red Hat OpenShift cluster.
 
 | Component | Configuration |
 |-----------|---------------|
@@ -49,7 +49,7 @@ Since the NSX Edges are configured as active/passive in either the internal or d
 ## NSX ESG interfaces
 {: #openshift-runbook-runbook-nsxedge-interfaces}
 
-The edge is deployed with an interface uplink to the IBM Cloud Public network and an interface uplink to the IBM Cloud Private network. Additionally, there is an interface for the Transit network connection to the Distributed Logical Router (DLR).
+The edge is deployed with an interface uplink to the {{site.data.keyword.cloud_notm}} Public network and an interface uplink to the {{site.data.keyword.cloud_notm}} Private network. Additionally, there is an interface for the Transit network connection to the Distributed Logical Router (DLR).
 
 | Interface name| Interface type | IP address | Port group / Logical switch |
 | --- | ---| --- | --- |
@@ -61,7 +61,7 @@ The edge is deployed with an interface uplink to the IBM Cloud Public network an
 ## NSX ESG firewall
 {: #openshift-runbook-runbook-nsxedge-firewall}
 
-Configure rules to allow communication to the internet, to the IBM Cloud network, and into the VXLAN networks.
+Configure rules to allow communication to the internet, to the {{site.data.keyword.cloud_notm}} network, and into the VXLAN networks.
 
 | Firewall rule | Source | Destination | Service | Action |
 | --- | --- | --- | --- | --- |
@@ -74,7 +74,7 @@ Configure rules to allow communication to the internet, to the IBM Cloud network
 ## NSX ESG DHCP
 {: #openshift-runbook-runbook-nsxedge-dhcp}
 
-For the OpenShift 4.4 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network, which provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using terraform.
+For the OpenShift 4.6 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network, which provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using terraform.
 
 | DCHP pool | Value |
 | --- | --- |
@@ -111,7 +111,7 @@ Define NAT to provide a mechanism to allow the OpenShift network access to the p
 ## NSX ESG routes
 {: #openshift-runbook-runbook-nsxedge-routes}
 
-On the edge, configure the default route to be to the public internet, then add static routes to access to the IBM Cloud Private networks.
+On the edge, configure the default route to be to the public internet, then add static routes to access to the {{site.data.keyword.cloud_notm}} Private networks.
 
 ### Global configuration
 {: #openshift-runbook-runbook-nsxedge-global-config}
@@ -304,4 +304,4 @@ Disconnect-NsxServer
 {: #vcs-openshift-runbook-nsxedge-related}
 
 * [OpenShift Bastion node setup](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-bastion-intro)
-* [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
+* [Red Hat OpenShift 4.6 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-29"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -64,7 +64,7 @@ The VMware HCX service deploys four virtual appliance types that are installed a
 
 HCX has the concept of cloud side (target - destination) and client side (source).
 
-- Cloud / Destination side - HCX Cloud is pre-deployed in IBM Cloud vCenter Server Deployment on customer portal request and configured with the network and compute profiles ready for service mesh creation.  
+- Cloud / Destination side - HCX Cloud is pre-deployed in {{site.data.keyword.cloud_notm}} vCenter Server Deployment on customer portal request and configured with the network and compute profiles ready for service mesh creation.  
 - Client / Source side - Any vSphere instances that meet the prerequisites for installation and operation. The client side of HCX is the primary that controls the cloud side secondary instance through its vCenter web client user interface (UI) snap-in.
 
 The source and destination sites are paired together for HCX operations. An HCX Connector cannot be paired with another HCX Connector.
@@ -104,11 +104,11 @@ The deployment architecture consists of the HCX components within the {{site.dat
 
 Alternatively, the architecture also allows site peering over Private Internet.
 
-![HCX with single source over Private Network](../../images/hcx-private.svg "HCX with single source over Private Network"){: caption="Figure 1. HCX with single source over Private Network" caption-side="bottom"}
+![HCX with single source over Private Network](../../images/hcx-private.svg "HCX with single source over Private Network"){: caption="Figure 2. HCX with single source over Private Network" caption-side="bottom"}
 
 The source can be placed within the {{site.data.keyword.cloud_notm}} environment as well; spokes are always cloud deployments within this design as shown in the following figure.
 
-![HCX with multiple sources](../../images/hcx_multiple_sources.svg "HCX with multiple sources"){: caption="Figure 2. HCX with multiple sources" caption-side="bottom"}
+![HCX with multiple sources](../../images/hcx_multiple_sources.svg "HCX with multiple sources"){: caption="Figure 3. HCX with multiple sources" caption-side="bottom"}
 
 ## Base design dependencies
 {: #hcx-archi-overview-base-design}

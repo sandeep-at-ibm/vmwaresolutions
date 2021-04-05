@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2020
+  years: 2016, 2021
 
-lastupdated: "2020-11-04"
+lastupdated: "2021-03-17"
 
 keywords: history message, audit history, error messages
 
@@ -27,7 +27,7 @@ The following sections provide all of the possible messages that can be issued t
 ## General instance history messages
 {: #audit_messages-general}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for general actions:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for general actions.
 
 * ``Starting to create the instance user and required services...``
 * ``The instance user and required services creation is complete.``
@@ -56,7 +56,7 @@ The following sections provide all of the possible messages that can be issued t
 ## Instance error messages
 {: #audit_messages-error}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following instance history error messages:
+{{site.data.keyword.vmwaresolutions_short}} issues the following instance history error messages.
 
 * ``Error ordering VMware licenses. Open a service ticket for assistance.``
 * ``Error ordering subnets. Open a service ticket for assistance.``
@@ -71,7 +71,7 @@ The following sections provide all of the possible messages that can be issued t
 ## Cluster history messages
 {: #audit_messages-cluster}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for vCenter Server clusters:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for vCenter Server clusters.
 
 * ``Starting the cluster configuration...``
 * ``Starting the cluster configuration for <cluster_name>...``
@@ -87,7 +87,7 @@ The following sections provide all of the possible messages that can be issued t
 ## ESXi server history messages
 {: #audit_messages-esxi}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for ESXi servers:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for ESXi servers.
 
 * ``Starting the order for <quantity> ESXi servers...``
 * ``Verifying the ESXi server order...``
@@ -133,7 +133,7 @@ The following sections provide all of the possible messages that can be issued t
 ## Networking history messages
 {: #audit_messages-network}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for network settings:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for network settings.
 
 * ``Starting the public VLAN order...``
 * ``Successfully completed the VLAN configuration.``
@@ -168,7 +168,7 @@ The following sections provide all of the possible messages that can be issued t
 ## Virtual Server Instance history messages
 {: #audit_messages-vsi}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for Virtual Server Instances (VSIs):
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for Virtual Server Instances (VSIs).
 
 * ``Ordering a new virtual server instance for the IBM CloudDriver...``
 * ``The <ip_address> IBM CloudDriver virtual server instance is provisioned.``
@@ -183,7 +183,7 @@ The following sections provide all of the possible messages that can be issued t
 ## IBM CloudBuilder history messages
 {: #audit_messages-cloudbuilder}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for IBM CloudBuilder:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for IBM CloudBuilder.
 
 * ``Verifying the IBM CloudBuilder Virtual Server Instance order...``
 * ``Starting the order for the IBM CloudBuilder Virtual Server Instance...``
@@ -194,7 +194,7 @@ The following sections provide all of the possible messages that can be issued t
 ## IBM CloudDriver history messages
 {: #audit_messages-clouddriver}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for IBM CloudDriver:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for IBM CloudDriver.
 
 * ``Preparing the IBM CloudDriver...``
 * ``The IBM CloudDriver is ready.``
@@ -210,7 +210,7 @@ The following sections provide all of the possible messages that can be issued t
 ## Storage history messages
 {: #audit_messages-storage}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for storage settings:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for storage settings.
 
 * ``Ordering the vSAN license...``
 * ``Cancelling the vSAN license...``
@@ -225,7 +225,7 @@ The following sections provide all of the possible messages that can be issued t
 ## Service history messages
 {: #audit_messages-services}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for services:
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for services.
 
 * ``Starting the management services setup...``
 * ``Ordering service entries...``

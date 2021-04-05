@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-10-20"
+lastupdated: "2021-02-08"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -20,9 +20,9 @@ subcollection: vmwaresolutions
 # Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters}
 
-The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default.
+The VMware ESXi™ servers that you configured when you ordered an instance are grouped as **cluster1** by default.
 
-You can add clusters to your VMware vCenter Server with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
+You can add clusters to your VMware vCenter Server® with Hybridity Bundle instance to expand the compute and storage capacity. Within a cluster, manage the ESXi servers for better resource allocation and high availability. When no longer needed, delete the added clusters from your instance.
 
 ## Adding clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding}
@@ -30,7 +30,7 @@ You can add clusters to your VMware vCenter Server with Hybridity Bundle instanc
 ### Before you add clusters
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
@@ -67,7 +67,7 @@ When you select **Skylake**, you have options for the **CPU model** and **RAM**.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4110 processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel® Xeon® Silver 4110 processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 | Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake bare metal servers" caption-side="top"}
@@ -102,7 +102,7 @@ The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or 
 ### vSAN storage settings
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
-VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
+VMware vSAN™ 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
 * If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
@@ -119,15 +119,15 @@ VMware vSAN 6.6 is included with your vCenter Server with Hybridity Bundle insta
 IBM-provided licenses for the following VMware components:
   * vSphere Enterprise Plus 6.5u3 or 6.7u3, depending on the cluster that is ordered, which is 6.5 or 6.7
   * vCenter Server 6.5
-  * NSX Service Providers 6.4 (Advanced or Enterprise edition)
+  * VMware NSX® Service Providers 6.4 (Advanced or Enterprise edition)
 
 ### Network interface settings
 {: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
 Network interface card (NIC) settings are based on your selection of either **Public and private network** or **Private network only**. The following add-on services require public NICs and aren't available with the private option:
 
-* F5 BIG-IP
-* FortiGate Virtual Appliance
+* F5® BIG-IP®
+* FortiGate® Virtual Appliance
 
 ### Summary
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
@@ -145,7 +145,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
    Ensure that the instance status is **Ready to use**. Otherwise, you can't add clusters to the instance.
    {:note}
 
-3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper-right corner of the **CLUSTERS** table.
+3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper right of the **CLUSTERS** table.
 4. On the **Add cluster** page, enter the cluster name.
 5. You can host the cluster in a different {{site.data.keyword.cloud_notm}} data center than the one that the instance is hosted in. To do so, under **Bare metal server**, select the **Select a different location** checkbox and choose the {{site.data.keyword.cloud_notm}} data center to host the instance.
 6. Select the **CPU model**, the amount of **RAM**, and the **Number of bare metal servers** for the bare metal configuration.

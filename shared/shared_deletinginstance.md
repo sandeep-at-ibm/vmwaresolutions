@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-16"
 
 keywords: VMware Solutions Shared delete instance, delete VMware Solutions Shared, remove VMware Solutions Shared
 
@@ -28,17 +28,17 @@ Before you delete your virtual data center instance, ensure that any items that 
 * Organization networks that are removed or unshared from the instance
 * Organization catalogs
 * DHCP pools created within the Organization virtual data center edge gateway
-* Custom routes defined on the Organization virtual data center edge gateway distributed router
+* Custom routes that are defined on the Organization virtual data center edge gateway distributed router
 * Load balancer custom configurations defined on the Organization virtual data center edge gateway
 * VPN custom configurations defined on the Organization virtual data center edge gateway
 
-## Considerations when deleting virtual data center instances
+## Considerations when you delete virtual data center instances
 {: #shared_deletinginstance-considerations}
 
 All of the virtual data center VM restore points in Veeam are automatically deleted when you delete a VMware® Solutions Shared instance.
 {:important}
 
-Any job that includes instructions to backup the VM fails when the VM restore points in Veeam are deleted. The existing VMs in the job are still backed up, however the job status is marked as failed. To remove the failed status, you must manually edit the job to remove the instruction to back up the now deleted VMs.
+Any job that includes instructions to backup the VM fails when the VM restore points in Veeam are deleted. However, the existing VMs in the job are still backed up, the job status is marked as failed. To remove the failed status, you must manually edit the job to remove the instruction to back up the now deleted VMs.
 
 ## Procedure to delete instances from the Resources page
 {: #shared_deletinginstance-procedure1}

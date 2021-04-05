@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-11"
+lastupdated: "2021-02-22"
 
 subcollection: vmwaresolutions
 
@@ -125,7 +125,7 @@ The following aspects are preconfigured:
 * NSX Edge Services Gateway appliances for use by management components
 * NSX Edge Services Gateway appliances for customer use
 * NSX VXLAN work customer workloads attached to a distributed local router (DLR) with a transit VXLAN between the DLR and the customer ESG.
-* RFC 1918 address space for the VXLANs and IBM Cloud private and public portable IP space for use as egress network on the customer ESG.
+* RFC 1918 address space for the VXLANs and {{site.data.keyword.cloud_notm}} private and public portable IP space for use as egress network on the customer ESG.
 
 The following aspects are not configured:
 
@@ -149,7 +149,7 @@ This architecture allows for the following options for routing or proxying your 
 | Virtualized gateway with proxy | Deploy a virtualized gateway as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmwaresolutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy. | Applicable only to instances with public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed at the gateway. |
 | Hardware gateway | Deploy a [hardware gateway appliance](https://cloud.ibm.com/catalog/infrastructure/gateway-appliance) to your management VLAN. Configure the gateway to NAT outbound to the public network according to your needs. | Applicable to all instances, with or without public interfaces enabled. This configuration allows for both outbound and inbound traffic patterns. |
 | Hardware gateway with proxy | Deploy a gateway appliance as above. Behind this gateway, [deploy a proxy server](/docs/vmwaresolutions?topic=vmwaresolutions-vum-init-config#vum-init-config), and configure your services and applications to connect to the public network through this proxy. | Applicable to all instances, with or without public interfaces enabled. Outbound traffic patterns can use the proxy but inbound traffic patterns must be managed by the gateway. |
-| Load balancer | IBM Cloud offers several [load balancer services](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) that you can use to provide inbound network access to your applications. | Applicable to all instances, but limited to inbound traffic patterns. |
+| Load balancer | {{site.data.keyword.cloud_notm}} offers several [load balancer services](https://cloud.ibm.com/catalog/infrastructure/load-balancer-group) that you can use to provide inbound network access to your applications. | Applicable to all instances, but limited to inbound traffic patterns. |
 {: caption="Table 7. Options for routing or proxying your traffic to the public network" caption-side="top"}
 
 **Next topic:** [VMware NSX-T design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-t-design)

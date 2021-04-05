@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-24"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -29,7 +29,7 @@ You can install multiple instances of this service as needed. You can manage thi
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-The FortiGate Virtual Appliance service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 6.2.3.
+The FortiGate Virtual Appliance service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 6.4.4.
 {:note}
 
 ## Technical specifications for FortiGate Virtual Appliance
@@ -109,7 +109,11 @@ If more resources are needed to run the FortiGate Virtual Appliance service, you
 ## Considerations when you delete FortiGate Virtual Appliance
 {: #fortinetvm_considerations-remove}
 
-Before you delete the FortiGate Virtual Appliance service, ensure that the configuration of the existing FortiGate Virtual Appliances is deleted correctly. Specifically, network traffic must be routed around FortiGate Virtual Appliances instead of through FortiGate Virtual Appliances. Otherwise, the existing data traffic within your environment might be impacted.
+Review the following considerations before you delete the service:
+
+* Before you delete the FortiGate Virtual Appliance service, ensure that the configuration of the existing FortiGate Virtual Appliances is deleted correctly. Specifically, network traffic must be routed around FortiGate Virtual Appliances instead of through FortiGate Virtual Appliances. Otherwise, the existing data traffic within your environment might be impacted.
+
+* If you installed the FortiGate Virtual Appliance service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-remove-DNS-entries).
 
 ## Related links
 {: #fortinetvm_considerations-related}

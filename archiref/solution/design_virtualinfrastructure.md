@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-19"
+lastupdated: "2021-02-24"
 
 subcollection: vmwaresolutions
 
@@ -41,7 +41,7 @@ By default, the only users who can log in directly are the _root_ and _ibmvmadmi
 
 | Attribute              | Configuration parameter |
 |:---------------------- |:----------------------- |
-| ESXi boot location     | Uses local disks that are configured in RAID-1 |
+| ESXi boot location     | Uses local disks that are configured in RAID 1 |
 | Time synchronization   | Uses {{site.data.keyword.cloud}} NTP server |
 | Host access            | Supports DCUI. SSH and ESXi Shell are supported but not enabled by default |
 | User access            | Local authentication and MSAD |
@@ -67,14 +67,14 @@ To support more user workloads, you can scale the environment by:
 
 In this design, VMware vSAN storage is employed in vCenter Server instances to provide shared storage for the vSphere hosts.
 
-As shown in the following figure, vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore. Within this design, the compute nodes contain local disk drives for the ESXi Operating System (OS) and the vSAN datastore. Regardless of which cluster a node belongs to, two OS drives are included in each node to house the ESXi installation.
+As shown in the following figure, vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore. Within this design, the compute nodes contain local disk drives for the ESXi operating system (OS) and the vSAN datastore. Regardless of which cluster a node belongs to, two OS drives are included in each node to house the ESXi installation.
 
 ![vSAN concept](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore"){: caption="Figure 2. vSAN concept" caption-side="bottom"}
 
 vSAN employs the following components:
 
 * Two-disk group vSAN design; each disk group with two or more disks. One SSD or NVMe drive of the smallest size in the group serves as the cache tier and the remaining SSDs serve as the capacity tier.
-* The onboard RAID controller is configured in a RAID-0 array for each drive except for the two OS drives.
+* The onboard RAID controller is configured in a RAID 0 array for each drive except for the two OS drives.
 * A single vSAN datastore is created from all storage.
 
 The available vSAN features depend on the license edition that you select when you order the instance. For more information, see [VMware vSAN edition comparison](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix#solution-appendix-vsan-editions).

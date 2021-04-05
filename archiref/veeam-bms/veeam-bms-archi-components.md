@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-02-25"
 
 subcollection: vmwaresolutions
 
@@ -83,7 +83,7 @@ Fr more information about ordering and configuration, see the {{site.data.keywor
 **Next topic:** [Physical infrastructure for the Veeam server with {{site.data.keyword.cloud_notm}} bare metal servers](/docs/vmwaresolutions?topic=vmwaresolutions-veeam-bms-archi-physical)
 
 ## Related links
-{: #veeam-bms-archi-overview-related}
+{: #veeam-bms-archi-components-related}
 
 * [Veeam Backup & Replication](https://www.veeam.com/vm-backup-recovery-replication-software.html?ad=menu-products){:external}
 * [Veeam Help Center technical documentation](https://www.veeam.com/documentation-guides-datasheets.html?ad=menu-resources){:external}

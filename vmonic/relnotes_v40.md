@@ -23,12 +23,12 @@ subcollection: vmwaresolutions
 
 This release includes new features, component updates, usability enhancements, and bug fixes.
 
-## Regulated workloads enhancements
+## VMware Regulated Workloads enhancements
 {: #relnotes_v40-regulated-workloads}
 
-You can now order regulated workloads directly from the VMware® Solutions main page. The regulated workloads include a secure-by-default architecture that follows IBM's unique policy controls framework, provides continuous compliance monitoring, and offers the highest level of data encryption (FIPS 140-2 Level 4). For regulated workloads, only VMware vSphere® 7.0 Update 1a is supported.
+You can now order VMware® Regulated Workloads directly from the VMware Solutions main page. The VMware Regulated Workloads include a secure-by-default architecture that follows IBM's unique policy controls framework, provides continuous compliance monitoring, and offers the highest level of data encryption (FIPS 140-2 Level 4). For VMware Regulated Workloads, only VMware vSphere® 7.0 Update 1a is supported.
 
-For more information, see [Regulated workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview).
+For more information, see [VMware Regulated Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview).
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v40-dedicated}
@@ -52,19 +52,10 @@ vSphere 7.0u1a is the exclusive basis for {{site.data.keyword.cloud}} for VMware
 vSphere 7.0u1a currently does not support 25 Gb uplink speed or High performance with Intel Optane for vSAN storage. Support for these features is planned for a future release. Additionally, vSphere 7.0u1a does not support single-node instances.
 {:note}
 
-### vSAN storage for vSphere 7.0 Update 1a - not for production use
+### vSAN storage for vSphere 7.0 Update 1a
 {: #relnotes_v40-vsan-tech-preview}
 
-For VMware vSphere 7.0 Update 1a, VMware vSAN storage is offered as a beta feature.
-
-IBM and its Business Partners are working to complete full certification and to finalize the vSAN listing in the VMware Compatibility Guide for all new firmware and drivers necessary to support vSphere 7.0u1a.
-
-Final certification is planned for 19 March 2021. However, this date is subject to change. Until certification is complete, {{site.data.keyword.cloud_notm}} provides best-effort support on any issue.
-
-Until the certification is complete, you might see the following warning messages:
-
-* A warning message displays on the VMware Solutions console for vSAN storage with vSphere 7.0u1a. After certification is complete, workloads can run on vSAN clusters and no further action is required from your part.
-* A warning message displays when you log in to the vCenter Server through the vSphere Web Client. When the certification is complete, you must download the latest version of the vSAN HCL DB file and update vCenter to remove the warning. For more information, see [Updating the vSAN HCL database manually (2145116)](https://kb.vmware.com/s/article/2145116){:external}.
+A warning message might be displayed when you log in to vCenter Server through the vSphere Web Client. To remove the warning, download the latest version of the vSAN HCL DB file and update vCenter Server. For more information, see [Updating the vSAN HCL database manually (2145116)](https://kb.vmware.com/s/article/2145116){:external}.
 
 ### Your existing instances and vSphere 7.0 Update 1a
 {: #relnotes_v40-dedicated-vsphere-v70-no-support}
@@ -83,9 +74,11 @@ Migrating your workload to a new instance is especially recommended if you want 
 ### Support for VMware vSAN stretched clusters for vSphere 7.0 Update 1a and NSX-T 3.1
 {: #relnotes_v40-dedicated-stretched-v70}
 
-VMware vSphere Enterprise Plus 7.0 Update 1a and VMware NSX-T 3.1 are included when you order a VMware vCenter Server stretched cluster across a multizone region. The stretched cluster is deployed as a single converged cluster capable of hosting both management and workload clusters. The combination of converged cluster and support for a 3-host RAID 1 configuration enables you to deploy an instance with a minimum of eight hosts when you use NFS storage for your witness cluster, or nine hosts when you use vSAN storage for your witness cluster.
+VMware vSphere Enterprise Plus 7.0 Update 1a and VMware NSX-T 3.1 are included when you order a VMware vCenter Server stretched cluster across a multizone region. The stretched cluster is deployed as a single consolidated cluster capable of hosting both management and workload clusters.
 
-Additional features for stretched clusters are planned for future releases, including support for regulated workloads, edge services clusters, additional workload clusters, and optional add-on services.
+With the combination of consolidated cluster and support for a 3-host RAID 1 configuration, you can deploy an instance with a minimum of eight hosts when you use NFS storage for your witness cluster, or nine hosts when you use vSAN storage for your witness cluster.
+
+Extra features for stretched clusters are planned for future releases, including support for VMware Regulated Workloads, edge services clusters, more workload clusters, and optional add-on services.
 {:note}
 
 ### Updates for VMware NSX
@@ -94,7 +87,7 @@ Additional features for stretched clusters are planned for future releases, incl
 Review the following information about vCenter Server with NSX-T instances for this release:
 
 * New instances of vCenter Server with NSX-T are provisioned with NSX-T 3.1.
-* Day 2 operations continue to be supported for vCenter Server with NSX-T 2.5.1 instances. For restrictions about Red Hat® OpenShift® for VMware on vCenter Server with NSX-T instances, see [Updates for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-relnotes_v40#relnotes_v40-services).
+* Day 2 operations continue to be supported for vCenter Server with NSX-T 2.5.1 instances with restrictions. For more information, see [Updates for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-relnotes_v40#relnotes_v40-services).
 * If you want to upgrade your existing vCenter Server with NSX-T instance, {{site.data.keyword.cloud_notm}} recommends that you upgrade directly to NSX-T 3.1 bypassing NSX-T 3.0.x.
 
 ### Updates to data centers
@@ -139,11 +132,14 @@ The following add-on services support VMware vSphere 7.0 Update 1a:
 * Veeam
 * vRealize Operations
 
-### Red Hat OpenShift on vSphere 6.7 with NSX-V or NSX-T and on vSphere 6.5 with NSX-V - deprecated
+### Red Hat OpenShift for VMware updates
 {: #relnotes_v40-services-rhos-vsphere67-deprecated}
 
-Red Hat OpenShift is no longer supported for new deployments or for ordering post deployment with NSX-V or NSX-T on vSphere 6.7 or NSX-V on vSphere 6.5.
-{:deprecated}
+Red Hat OpenShift for VMware is no longer supported for new deployments or for ordering post deployment for the following instances:
+- vCenter Server with NSX-V for vSphere 6.7 or 6.5
+- vCenter Server with NSX-T for vSphere 6.7 
+
+Existing installations of Red Hat OpenShift for VMware can be used or deleted.
 
 ### Juniper vSRX enhancements
 {: #relnotes_v40-services-vsrx-security-enhance}
@@ -213,7 +209,7 @@ In addition, two new endpoints are now available in the **Osaka** location for K
 ## New and updated documentation
 {: #relnotes_v40-updated-doc}
 
-* (Updated on Feb 24, 2021) The [Veeam on bare metal reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-veeam-bms-archi-intro) document is now available in the **Reference** section of the user documentation.
+* (Updated on 24 February 2021) The [Veeam on bare metal reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-veeam-bms-archi-intro) document is now available in the **Reference** section of the user documentation.
 * A new topic, [Managing security and compliance](/docs/vmwaresolutions?topic=vmwaresolutions-manage-scc), is now available. The topic provides information about monitoring security and compliance posture with VMware Solutions by using Caveonix RiskForesight.
 
 ## User interface updates and enhancements
@@ -223,6 +219,6 @@ The user interface is updated and provides the following enhancements:
 
 * The following enhancements are made to the landing page of {{site.data.keyword.vmwaresolutions_short}} console to better assist you in learning and selecting the appropriate offering and services according to your needs:
    * The previous **Start provisioning** section is renamed to **IaaS platforms**.
-   * A new **Regulated workloads** section is added.
+   * A new **VMware Regulated Workloads** section is added.
    * The previous **Services** section is renamed to **Add-on services**.
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

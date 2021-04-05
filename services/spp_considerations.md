@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28
+lastupdated: "2021-03-20"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -32,7 +32,7 @@ For VMware vCenter Server® with NSX-V instances, the installed version is 10.1.
 ## Technical specifications for IBM Spectrum Protect Plus
 {: #spp_considerations-specs}
 
-For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 The following components are ordered and included in the IBM Spectrum Protect Plus service:
 
@@ -52,8 +52,8 @@ The following components are ordered and included in the IBM Spectrum Protect Pl
 ### Storage for backups
 {: #spp_considerations-backup-storage}
 
-Customizable storage for backups with the following options:
-* Number of file storage: 1 - 10
+Customizable storage for backups with the following options.
+* Amount of file storage: 1 - 10
 * Each endurance file storage: 500, 1000, 2000, 4000, 8000, or 12000 GB
 * Storage performance: 0.25, 2, or 4 IOPS/GB
 
@@ -91,6 +91,7 @@ Review the following considerations before you install the IBM Spectrum Protect 
 {: #spp_considerations-remove}
 
 Review the following considerations before you delete the IBM Spectrum Protect Plus service:
+* Before you delete the service, you must remove any personal VMs from storage deployed with this service.
 * Ensure that all the backup job configurations are removed along with active backup or restore operations.
 * When you delete the service, the storage for the backup repository is deleted from the IBM Spectrum Protect Plus VM and the storage order is canceled, which deletes the backup repository data permanently.
 * When you delete the service, the backup storage that is ordered for the service is deleted too. All the backups become inaccessible during service deletion.

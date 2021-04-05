@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-17"
 
 keywords: set credentials, update credentials, set notifications, IAM user, invite user
 
@@ -21,14 +21,14 @@ subcollection: vmwaresolutions
 # Managing user accounts and settings
 {: #useraccount}
 
-Use procedures in this topic to invite users, to update user account credentials, and to specify whether you want to receive email and console notifications for various events.
+Use the following procedures to invite users, to update user account credentials, and to specify whether you want to receive email and console notifications for various events.
 
 ## Inviting users to access services and resources
 {: #useraccount-iamuserinv}
 
 {{site.data.keyword.vmwaresolutions_full}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for collaboration among multiple users. After you sign up for an {{site.data.keyword.cloud_notm}} account and log in to the {{site.data.keyword.vmwaresolutions_short}} console, you can add users to the {{site.data.keyword.cloud_notm}} account. These added users can share the services and resources that are provisioned for the account.
 
-For more information, see:
+For more information, see the following topics.
 - [Inviting users to an account](/docs/account?topic=account-iamuserinv)
 - [Managing access for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-iam)
 
@@ -56,7 +56,7 @@ For more information, see:
 2. If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are linked, click **Retrieve** to complete the credentials automatically, and then skip to **Step 4**.
 3. In the following situations, review the information the **IBM Cloud infrastructure credentials** area for the steps that you need to take:
    * If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are not linked, you must link them. Follow the instructions in [Upgrading your account](/docs/account?topic=account-upgrading-account), then click **Retrieve** to complete the credentials automatically.
-   * If you do not have an {{site.data.keyword.cloud_notm}} infrastructure account, and you do not have a billable  {{site.data.keyword.cloud_notm}} account, first [upgrade your account](/docs/account?topic=account-upgrading-account), and then [create a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).
+   * If you do not have an {{site.data.keyword.cloud_notm}} infrastructure account, and you do not have a billable {{site.data.keyword.cloud_notm}} account, first [upgrade your account](/docs/account?topic=account-upgrading-account), and then [create a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).
 4. Click **Save credentials**. If you receive a message that administrator access is required, you can locate an account administrator by using the steps in [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions).
 
 ### Results after you update user account credentials

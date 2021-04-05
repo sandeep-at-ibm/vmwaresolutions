@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-17"
+lastupdated: "2021-03-17"
 
 keywords: FAQ vmware solutions shared, vmware solutions shared questions
 
@@ -22,13 +22,13 @@ subcollection: vmwaresolutions
 # General FAQ about VMware Solutions Shared
 {: #faq-vmwaresolutions-shared}
 
-Find answers to frequently asked questions about the VMware Solutions Shared offering.
+Find answers to frequently asked questions about the VMware® Solutions Shared offering.
 
 ## What is VMware Solutions Shared?
 {: #faq-shared}
 {: faq}
 
-{{site.data.keyword.vmwaresolutions_short}} Shared is a multi-tenant VMware® infrastructure solution based on a robust VMware product called vCloud Director. You can use this solution to rapidly create, migrate, and use your VMs in the cloud.
+{{site.data.keyword.vmwaresolutions_short}} Shared is a multi-tenant VMware infrastructure solution based on a robust VMware product called vCloud Director. You can use this solution to rapidly create, migrate, and use your VMs in the cloud.
 
 ## What are my options to use resources with VMware Solutions Shared?
 {: #faq-shared-options}
@@ -39,7 +39,7 @@ You are provided with the following two consumption models:
 * **On-demand**. With this consumption model, you pay only for the compute resources that you use, in an hourly pricing model.
 * **Reserved**. With this consumption model, you can reserve compute resources in advance to ensure that your capacity is available when you need it. Billing for **Reserved** is available monthly, yearly, or on a multi-year basis. Other resources, such as storage and egress, are billed per usage, regardless of the consumption model.
 
-## Why should I subscribe to VMware Solutions Shared?
+## Why do I want to subscribe to VMware Solutions Shared?
 {: #faq-shared-subscribe}
 {: faq}
 

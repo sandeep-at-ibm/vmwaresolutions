@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-02-22"
 
 keywords: vCenter Server Hybridity compliance, compliance info Hybridity, vCenter Server Hybridity policy
 
@@ -18,9 +18,9 @@ subcollection: vmwaresolutions
 # Compliance information for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_compl_info}
 
-Review the following information for details about compliance for VMware vCenter Server with Hybridity Bundle instances.
+Review the following information for details about compliance for VMware vCenter Server® with Hybridity Bundle instances.
 
-## Customer versus IBM responsibility for vCenter Server IBM Cloud with Hybridity Bundle
+## Customer versus IBM responsibility for vCenter Server with Hybridity Bundle
 {: #vc_hybrid_compl_info-responsibility}
 
 The following diagram provides details about the customer (you) and {{site.data.keyword.IBM}} responsibilities for compliance activities.
@@ -30,7 +30,7 @@ The following diagram provides details about the customer (you) and {{site.data.
 ## Health data restrictions
 {: #vc_hybrid_compl_info-health-data-restrictions}
 
-The following terms apply to the entire {{site.data.keyword.vmwaresolutions_short}} portfolio.
+The following terms apply to the entire {{site.data.keyword.vmwaresolutions_full}} portfolio.
 
 ### HIPAA
 {: #vc_hybrid_compl_info-hipaa}
@@ -51,7 +51,7 @@ This Cloud Service is not designed to any specific security requirements for reg
 ## Policy for accessing clients instances
 {: #vc_hybrid_compl_info-policy-for-access-client-inst}
 
-VMware vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of VMware Solutions products and services, IBM Support might be required to help guarantee their success. Usually, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the {{site.data.keyword.cloud}} internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by {{site.data.keyword.cloud_notm}} SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
+VMware vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of VMware Solutions products and services, IBM Support might be required to help guarantee their success. Usually, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the {{site.data.keyword.cloud_notm}} internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by {{site.data.keyword.cloud_notm}} SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
 
 ## Proactive support
 {: #vc_hybrid_compl_info-proactive-support}
@@ -61,7 +61,7 @@ VMware vCenter Server environments, which are delivered as {{site.data.keyword.v
 
 * During the initial ordering and provisioning of an instance or service, IBM Support can access client instances and information without prior notification of the client to ensure that orders are properly fulfilled.
 * IBM Support actively monitors instance lifecycle operations such as adding new hosts, in addition to the ordering, provisioning, and installation processes.
-* To fix issues that have arisen or might arise in the future, IBM Support might take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing Operating System reload operations, or opening {{site.data.keyword.cloud_notm}} tickets using the provided client {{site.data.keyword.cloud_notm}} user ID and API key.
+* To fix issues that have arisen or might arise in the future, IBM Support might take a number of actions including but not limited to: reviewing client order details, restarting automation jobs, performing operating system reload operations, or opening {{site.data.keyword.cloud_notm}} tickets using the provided client {{site.data.keyword.cloud_notm}} user ID and API key.
 
 ### Proactive support for steady-state operations
 {: #vc_hybrid_compl_info-proactive-support-for-steady-state-operations}

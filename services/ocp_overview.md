@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-21"
 
 keywords: openshift for vmware, request openshift for vmware, tech specs openshift vmware
 
@@ -25,16 +25,18 @@ subcollection: vmwaresolutions
 
 The Red Hat® OpenShift® for VMware® service deploys a Red Hat OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The Red Hat OpenShift components are deployed as virtual machines (VM) or appliances by using VMware NSX® software-defined networking.
 
-Red Hat OpenShift for VMware cannot be installed on multiple VMware vCenter Server® instances in a multi-site configuration. Before you install Red Hat OpenShift on an instance, verify that no other instances in the multi-site configuration have the service installed.
+Review the following information before you install the Red Hat OpenShift for VMware service:
+* Red Hat OpenShift for VMware cannot be installed on multiple VMware vCenter Server® instances in a multi-site configuration. Before you install Red Hat OpenShift for VMware on an instance, verify that the service is not installed on any other instances in the multi-site configuration.
+* Red Hat OpenShift for VMware is supported on VMware vCenter Server instances with VMware vSphere® 7.0, only for VMware NSX-T 3.1.
+* Red Hat OpenShift for VMware is not supported for new deployments or for ordering post deployment for the following instances:
+   * vCenter Server with NSX-V for vSphere 6.7 or 6.5
+   * vCenter Server with NSX-T for vSphere 6.7
 
-You can only install Red Hat OpenShift on VMware vSphere® 7.0 with NSX-T 3.1.
+   Existing installations of Red Hat OpenShift for VMware can be used or deleted.
 
-Red Hat OpenShift is no longer supported for new deployments or for ordering post deployment with NSX-V or NSX-T on vSphere 6.7 or NSX-V on vSphere 6.5.
-{:deprecated}
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
-
-The current Red Hat OpenShift version that is installed is 4.6.
+Currently, Red Hat OpenShift v4.6 is installed.
 {: note}
 
 The cluster consists of the following components:
@@ -57,7 +59,7 @@ The solution topology has the following requirements:
 * 155 GB RAM
 * 952 GB storage
 
-For information about resource requirements and capacity checking, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
 
 To successfully deploy Red Hat OpenShift on vCenter Server, you must have a Red Hat account and the pull secret key from your account. All Red Hat accounts have an associated pull secret, which you can retrieve by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned). You must purchase Red Hat support entitlements through Red Hat. You must also direct all Red Hat OpenShift support issues to Red Hat.
 
@@ -77,7 +79,7 @@ In addition, most commands for OpenShift management must be run from the install
 
 Any commands that require the `openshift-install`, `oc`, or `kubeadmin` tools must reference the files that are located in the installation directory by prefixing the command name with `./`. For example, `./oc whoami` instead of `oc whoami`.
 
-The OpenShift-related files from the bastion include: an SSH key, an installation configuration file, command-line tools, and a `kubeconfig` file. The exact location of the installation configuration directory on the bastion is shown on the service details page.
+The OpenShift-related files from the bastion include an SSH key, an installation configuration file, command line tools, and a `kubeconfig` file. The exact location of the installation configuration directory on the bastion is shown on the service details page.
 
 ### SSH key
 {: #ocp_overview-bastion-ssh-key}
@@ -91,14 +93,14 @@ For security purposes, it is highly recommended that you generate a new SSH key 
 ### High availability
 {: #ocp_overview-high-avail}
 
-The Red Hat OpenShift virtual machines are deployed with DRS rules to ensure they reside on physically separate hosts. If a host must be replaced or redeployed, you must adjust the preconfigured DRS rules before you can proceed.
+The Red Hat OpenShift VMs are deployed with DRS rules to ensure that they are on physically separate hosts. If a host must be replaced or redeployed, you must adjust the preconfigured DRS rules before you can proceed.
 
 ### Installation configuration files
 {: #ocp_overview-bastion-install-config-file}
 
-The installation configuration file named `install-config.yaml.bak` is located in the installation directory on the bastion. The file is a copy of the original `install-config.yaml` file that was used by the `openshift-install` program to generate the ignition files. The generated ignition files can also be found in the installation directory on the bastion.
+The installation configuration file that is named `install-config.yaml.bak` is located in the installation directory on the bastion. The file is a copy of the original `install-config.yaml` file that was used by the `openshift-install` program to generate the ignition files. The generated ignition files can also be found in the installation directory on the bastion.
 
-The `oc` and `kubectl` command-line tools from the Red Hat OpenShift client software are on the bastion. The installer program, named `openshift-install`, is used to install OpenShift and can also be used to generate fresh ignition files.  
+The `oc` and `kubectl` command line tools from the Red Hat OpenShift client software are on the bastion. The installer program, named `openshift-install`, is used to install OpenShift and can also be used to generate fresh ignition files.  
 
 The bastion also holds a file that is named `auth/kubeconfig`, needed for authentication. This file holds the initial kubeadmin credentials that are created during installation. Before you initially use the `oc` or `kubectl` tools, you must set the KUBECONFIG environment variable with the path to this file. For example, `export KUBECONFIG=auth/kubeconfig`.
 
@@ -140,7 +142,7 @@ For more information about updating Red Hat OpenShift, see [Updating a cluster b
 ## Considerations when you install Red Hat OpenShift for VMware
 {: #ocp_overview-consid-install}
 
-* Before the service is installed in your environment, a check is performed against the available capacity of the target cluster in the environment to ensure that the service components can fit. The storage capacity check applies only to vSAN storage. For NFS clusters, a new NFS datastore, dedicated to OpenShift, is added.
+* Before the service is installed in your environment, a check is completed against the available capacity of the target cluster in the environment to ensure that the service components can fit. The storage capacity check applies only to vSAN storage. For NFS clusters, a new NFS datastore, dedicated to OpenShift, is added.
 * The cluster is associated with the Red Hat account from the pull secret that is provided.
 * The **Latency Sensitivity** setting of the OpenShift cluster VMs can affect Kubernetes scheduling performance. By default, the setting is set to **Normal**, but it can be set to **High** if you encounter Kubernetes performance issues.
 
@@ -148,9 +150,10 @@ For more information about updating Red Hat OpenShift, see [Updating a cluster b
 {: #ocp_overview-consid-remove}
 
 * Before you delete Red Hat OpenShift, you must remove any additional VMs that you created in the `ocp` directory on VMware. The VMware Solutions automation removes only the items that were deployed during the initial installation of OpenShift (VMs, storage, and NSX). Any node that is deployed after the installation is not cleaned up.
-* The VXLAN, DLR, and the Edge Gateway that were created during the initial deployment of Red Hat OpenShift for VMware will be deleted. The VMs that you deployed on VXLAN will lose connectivity after the removal of Red Hat OpenShift for VMware starts.
+* The VXLAN, DLR, and the Edge Gateway that were created during the initial deployment of Red Hat OpenShift for VMware is deleted. The VMs that you deployed on VXLAN will lose connectivity after the removal of Red Hat OpenShift for VMware starts.
 * If you are using a vSAN datastore, it is recommended to delete any persistent volumes that you no longer need before you uninstall OpenShift. Any volumes that are not deleted will remain in the vSAN storage after the OpenShift uninstallation.
 * If your cluster uses NFS storage, deleting Red Hat OpenShift deletes the NFS datastore that was added during installation.
+* Before you delete the service, you must remove any personal VMs from storage deployed with this service. Red Hat OpenShift only orders personal VMs if it’s not vSAN.
 
 ## Related links
 {: #ocp_overview-related}

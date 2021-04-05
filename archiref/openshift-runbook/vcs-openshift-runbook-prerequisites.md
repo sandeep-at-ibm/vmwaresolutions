@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-06-12"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,7 @@ Before you can start the build process to install the Red Hat OpenShift cluster 
 * Ordering new subnets for the OpenShift environment:
   * A private portable subnet for the Red Hat OpenShift cluster NSX ESG.
   * A public portable subnet for the Red Hat OpenShift cluster NSX ESG.
-* Downloading Red Hat OpenShift 4.4 - Access to a Red Hat subscription to download the installer, pull secret and Red Hat Enterprise CoreOS OVA.
+* Downloading Red Hat OpenShift 4.6 - Access to a Red Hat subscription to download the installer, pull secret and Red Hat Enterprise CoreOS OVA.
 * Downloading RHEL 7.6 ISO - Access to a Red Hat subscription to download the Red Hat Enterprise Linux 7.x ISO for the bastion host.
 * {{site.data.keyword.cloud}} environment details - Collect the following details for {{site.data.keyword.cloud_notm}} for VMware Solutions environment:
   * vCenter Server instance details and passwords
@@ -44,7 +44,7 @@ Requirements:
 * 8 Public portable addresses assigned to the Public VLAN collected in the previous step.
 * 64 Private portable addresses assigned to the Private VLAN collected in the previous step.
 
-## Downloading Red Hat OpenShift 4.4
+## Downloading Red Hat OpenShift 4.6
 {: #openshift-runbook-runbook-prereq-download41}
 
 Access the [OpenShift Infrastructure Providers page](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}.
@@ -96,7 +96,7 @@ If your jump-host or remote device uses Linux, complete the following steps:
 ## Validating Distributed PortGroup and Datastore names
 {: #openshift-runbook-runbook-prereq-netstorage-ic4v}
 
-vCenter Server deployment uses deployment-specific naming for the datastores and distributed PortGroups. This runbook uses 'vsanDatastore', 'SDDC-DPortGroup-Mgmt' and 'SDDC-DPortGroup-External'. You need to use your vCenter Server deployment-specific network and storage names in your deployment configurations. For example, you might have datastore such as 'workload_share_YgkI8' (in case IBM Cloud File Storage is used for the datastore) or your private portgoup can be like 'fra04test-fra04-test01-dpg-mgmt'.  
+vCenter Server deployment uses deployment-specific naming for the datastores and distributed PortGroups. This runbook uses 'vsanDatastore', 'SDDC-DPortGroup-Mgmt' and 'SDDC-DPortGroup-External'. You need to use your vCenter Server deployment-specific network and storage names in your deployment configurations. For example, you might have datastore such as 'workload_share_YgkI8' (in case {{site.data.keyword.cloud_notm}} File Storage is used for the datastore) or your private portgoup can be like 'fra04test-fra04-test01-dpg-mgmt'.  
 
 You can validate the private and public Distributed PortGroup names and the datastore names for your deployment by using GOVC.
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-09"
+lastupdated: "2021-03-17"
 
 keywords: troubleshooting, SAN health, virtual SAN issue
 
@@ -41,7 +41,7 @@ Use the following steps to clear the warnings from the vSphere Web Client:
 
 For more information, see [How to download offline vSAN HCL file for vSAN Health Check plug-in](https://www.virtuallyghetto.com/2015/05/how-to-download-offline-vsan-hcl-file-for-vsan-health-check-plugin.html){:external}.
 
-On the vSAN health page, the following warning might display with the recommendation to Host restart:
+On the vSAN health page, the following warning might display with the recommendation to Host restart.
 {: tsSymptoms}
 
 `vSAN extended configuration in sync.`

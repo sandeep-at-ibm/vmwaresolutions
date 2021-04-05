@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-24"
 
 keywords: Multi-cloud Management Services, request Multi-cloud Management Services, tech specs Multi-cloud Management Services
 

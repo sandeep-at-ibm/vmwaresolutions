@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-03-19"
 
 subcollection: vmwaresolutions
 
@@ -27,7 +27,7 @@ DR is defined as a plan to recover critical business systems and normal operatio
 {{site.data.keyword.cloud_notm}} provides three tiers of regions: multizone regions (MZR), single-zone regions (SZR), and data centers.
 
 * Multizone regions - Three or more zones that are independent from each other to ensure that single failure events affect only a single zone. Regions in the Americas include `us-south` hosted in Dallas and `us-east` hosted in Washington DC. For more information about all regions in Americas, Europe, and Asia Pacific, see [Multizone regions](/docs/overview?topic=overview-locations#mzr-table).
-* Single-zone regions - Single-zone regions are `kr-seo` hosted in Seoul and `in-che-1 that is hosted in Chennai and consist of a single availability zone. For more information, see [Single-zone regions](/docs/overview?topic=overview-locations#szr-table).
+* Single-zone regions - Single-zone regions are `kr-seo` hosted in Seoul and `in-che-1` that is hosted in Chennai and consist of a single availability zone. For more information, see [Single-zone regions](/docs/overview?topic=overview-locations#szr-table).
 * Data centers - More than 50 data centers exist around the world, including MON01 in Montreal, AMS02 in Amsterdam, and MEL01 Melbourne. For more information about all data centers, see [Data centers](/docs/overview?topic=overview-locations#data-centers). For more information about the data centers in which VMware Solutions can be deployed, see [IBM Cloud data center availability](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning#vc_planning-dc-availability).
 
 The focus of the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads DR design has the following specifications:
@@ -39,7 +39,7 @@ The focus of the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloa
 
 **Notes**
 * While this design focuses on the use of two multizone regions, a customer is able to select single-zone regions or data centers in the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance order form.
-* If you select single-zone regions or data centers, be aware that the placement of the KMIP for VMware and Hyper Protect Crypto Services is not local to the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance. Latency between the services and the instance is not an issue in practice due to when the keys are requested that is, on initial encryption, rekey requests, and ESXi server restarts.
+* If you select single-zone regions or data centers, note that the placement of the KMIP for VMware and Hyper Protect Crypto Services is not local to the VMware® Regulated Workloads instance. Latency between the services and the instance is not an issue in practice due to when the keys are requested that is, on initial encryption, rekey requests, and ESXi server restarts.
 * Ensure that you know the location of all service components and ensure that their required regulatory compliance can be achieved.
 
 ## Concept
@@ -62,7 +62,7 @@ This paring of {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads
 * The recovery region workload cluster requires sufficient free capacity to host the protected workloads from the protected region.
 * In normal operations, workload VMs can run in the recovery region if required. However, there needs to be enough initial capacity in the recovery region to run the recovered workload VMs upon DR invocation. These workloads might be test and development workloads that are considered to be sacrificial upon DR.
 
-Recovery Point Objective (RPO) and Recovery Time Objective (RTO) depend on many variables. Therefore, the regulated workloads dual region design provides no standard Service Level Agreement (SLA) for RPO or RTO. However, review the following information about RPO and RTO:
+Recovery Point Objective (RPO) and Recovery Time Objective (RTO) depend on many variables. Therefore, the VMware Regulated Workloads dual region design provides no standard Service Level Agreement (SLA) for RPO or RTO. However, review the following information about RPO and RTO:
 * The VMware vSphere clusters in the recovery region are provisioned and are available to run workloads as soon as these workload VMs are started after DR invocation.
 * The core management components in the recovery region (vCenter Server and the NSX-T Manager cluster) are running, so there is no infrastructure deployment wait time.
 * The recovery infrastructure is being monitored and compliant through the management toolset, that is, vRealize Operations and Caveonix RiskForesight, so that the recovery infrastructure resources are healthy, compliant, and ready to be used.
@@ -72,11 +72,11 @@ Recovery Point Objective (RPO) and Recovery Time Objective (RTO) depend on many 
 ## Design overview
 {: #vrw-dualregion-overview-design}
 
-The regulated workloads dual region design incorporates a number of design decisions that are justified by design simplicity, maximizing the regulated workloads instance deployment automation, and minimizing the restrictions upon DR of the workloads. The recovery of management workloads and customer workloads is considered to be independent and this design focuses on the recovery of these management components. Customer workloads can be recovered by similar methods or by using different tooling.
+The VMware Regulated Workloads dual region design incorporates a number of design decisions that are justified by design simplicity, maximizing the VMware Regulated Workloads instance deployment automation, and minimizing the restrictions upon DR of the workloads. The recovery of management workloads and customer workloads is considered to be independent and this design focuses on the recovery of these management components. Customer workloads can be recovered by similar methods or by using different tooling.
 
 ![IBM Cloud for VMware® Regulated Workloads dual region overview diagram](../../images/vrw-dualregionoverview.svg "IBM Cloud for VMware® Regulated Workloads dual region overview diagram"){: caption="Figure 1. IBM Cloud for VMware® Regulated Workloads dual region overview diagram" caption-side="bottom"}
 
-The regulated workloads dual region design uses the following specifications:
+The VMware Regulated Workloads dual region design uses the following specifications:
 * An {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance in each region, two regions are required. Available regions are; Dallas, Washington DC, Sydney, London, Frankfurt, and Tokyo.
   * In the protected region, deploy a single or multizone {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance as required to support the normal operations of the workload.
   * In the recovery region, deploy a single {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance as required to support the restoration of the workload when DR is invoked or tested.

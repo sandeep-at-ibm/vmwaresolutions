@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-27"
+lastupdated: "2021-03-17"
 
 keywords: FAQ vmware solutions dedicated, vmware solutions dedicated questions, user account, patch management
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 # General FAQ about VMware Solutions Dedicated
 {: #faq-vmwaresolutions}
 
-Find answers to frequently asked questions about the VMware Solutions Dedicated offering.
+Find answers to frequently asked questions about the VMware® Solutions Dedicated offering.
 
 ## What user accounts do I need for VMware Solutions?
 {: #faq-user-accts}
@@ -53,8 +53,8 @@ All costs for the physical and virtual infrastructure and the licenses that resu
 
 All instance types provide deployment choices for VMware virtual environments. However, the difference is the extent of customizability and automation.
 
-* When you order a VMware vCenter Server instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs).
-* When you order a VMware vSphere cluster, you obtain the maximum of flexibility to design and build your hosted VMware environment while you incorporate VMware-compatible hardware. However, {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components for the VMware vSphere cluster.
+* When you order a VMware vCenter Server® instance, you deploy a VMware virtual environment with customized compute, storage, and network resources. For more information about the deployed components, see [Technical specifications for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview#vc_vcenterserveroverview-specs).
+* When you order a VMware vSphere® cluster, you obtain the maximum of flexibility to design and build your hosted VMware environment while you incorporate VMware-compatible hardware. However, {{site.data.keyword.cloud_notm}} does not automate the installation, configuration, and bring-up of the optional VMware components for the VMware vSphere cluster.
 * The functions that are supported by vCenter Server instances and vSphere clusters are different. For more information, see [Offering comparison chart](/docs/vmwaresolutions?topic=vmwaresolutions-inst_comp_chart).
 
 ## What is included in a vCenter Server instance?
@@ -159,7 +159,7 @@ The account owner can increase the RAM on ESXi servers by following these steps:
 4. Specify the higher limit, then confirm the change to place your order.
 5. Repeat these steps, as needed, for each additional ESXi server.
 
-An {{site.data.keyword.cloud_notm}} representative will confirm the billing change and contact you to schedule a maintenance window for adding the memory.
+An {{site.data.keyword.cloud_notm}} representative confirms the billing change and contact you to schedule a maintenance window for adding the memory.
 
 You must manage the VMware Solutions components that are created in your {{site.data.keyword.cloud_notm}} account only from the VMware Solutions console, not any other means outside of the console. If you change these components outside of the VMware Solutions console, the changes are not synchronized with the console.
 {:note}

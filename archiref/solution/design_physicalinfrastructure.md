@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-11"
+lastupdated: "2021-02-24"
 
 subcollection: vmwaresolutions
 
@@ -165,12 +165,12 @@ Physical storage design consists of the configuration of the physical disks that
 ### Operating system disks
 {: #design_physicalinfrastructure-os-disks}
 
-The vSphere ESXi hypervisor is installed in a persistent location. As a result, the physical hosts are consist of two disks in a RAID–1 configuration to support redundancy for the vSphere ESXi hypervisor.
+The vSphere ESXi hypervisor is installed in a persistent location. As a result, the physical hosts are consist of two disks in a RAID 1 configuration to support redundancy for the vSphere ESXi hypervisor.
 
 ### vSAN disks
 {: #design_physicalinfrastructure-vsan-disks}
 
-This design allows for the option of using either VMware vSAN or shared network-attached storage as the primary datastore for virtual machines. For VMware vSAN, it is configured by using an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
+This design allows for the option of using either VMware vSAN or shared network-attached storage as the primary datastore for virtual machines. For VMware vSAN, it is configured by using an all–flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID 0.
 
 For more information about the supported configurations, see [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom).
 

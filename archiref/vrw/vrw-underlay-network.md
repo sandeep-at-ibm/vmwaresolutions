@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-03-08"
 
 subcollection: vmwaresolutions
 
@@ -93,7 +93,7 @@ Primary or portable IP addresses can be made routable to any VLAN within your ac
 
 The {{site.data.keyword.cloud_notm}} infrastructure account must be configured as a Virtual Routing and Forwarding (VRF) account, which enables automatic global routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
 
-As various connectivity options and network routing options require that the {{site.data.keyword.cloud_notm}} account is in VRF mode, it is recommended that the account is in VRF mode before you provision the {{site.data.keyword.cloud_notm}} for VMware regulated workloads.
+As various connectivity options and network routing options require that the {{site.data.keyword.cloud_notm}} account is in VRF mode, it is recommended that the account is in VRF mode before you provision the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads.
 
 ### Physical host connections
 {: #vrw-underlay-network-cloud-hosts}

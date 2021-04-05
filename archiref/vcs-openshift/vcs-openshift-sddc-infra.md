@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016, 2020
+  years: 2016, 2021
 
-lastupdated: "2020-09-30"
+lastupdated: "2021-03-22"
 
 subcollection: vmwaresolutions
 
@@ -56,7 +56,7 @@ OpenShift 4.1 installation on the VMware platform requires a capability to downl
 The first component that is configured within the vCenter Server with OpenShift is a pair of NSX Edge virtual machines. The NSX Edge virtual machines are
 configured as an active-passive pair of X-Large NSX Edge devices.
 
-The Quad-Large NSX Edge was chosen and as part of the configuration process, the NSX Edge is connected to the IBM Cloud public and private VLAN.
+The Quad-Large NSX Edge was chosen and as part of the configuration process, the NSX Edge is connected to the {{site.data.keyword.cloud_notm}} public and private VLAN.
 
 | Component | Configuration |
 |:--------- |:------------- |
@@ -81,10 +81,10 @@ Within the OpenShift environment, two load balancers for accessing the control p
 
 | Description | Port number | Algorithm  | Monitor | Members | Protocol | IP subnet |
 |:----------- |:----------- |:---------- |:------- |:------- |:-------- |:--------- |
-| Application Load Balancer | 80 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | IBM Cloud 10.x |
-| Application Load Balancer | 443 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | IBM Cloud 10.x |
-| API and API-INT Load Balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
-| API and API-INT Load Balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | IBM Cloud 10.x |
+| Application Load Balancer | 80 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
+| Application Load Balancer | 443 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
+| API and API-INT Load Balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
+| API and API-INT Load Balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
 {: caption="Table 4. NSX Load Balancer specifications" caption-side="top"}
 
 ## Red Hat OpenShift specifications
@@ -108,7 +108,7 @@ The following tables show the specifications of the management node, control pla
 | Control-plane2 | 4 | 8 | 60 | Red Hat Enterprise Linux CoreOS |
 {: class="simple-tab-table"}
 {: caption="Table 5. Control plane node specifications" caption-side="top"}
-{: #table1}
+{: #table2}
 {: tab-title="Control plane node"}
 {: tab-group="rhos-specs"}
 
@@ -118,7 +118,7 @@ The following tables show the specifications of the management node, control pla
 | Worker1 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
 | Worker2 | 16 | 32 | 200 | Red Hat Enterprise Linux CoreOS |
 {: caption="Table 5. Worker node specifications" caption-side="top"}
-{: #table1}
+{: #table3}
 {: tab-title="Worker node"}
 {: tab-group="rhos-specs"}
 {: class="simple-tab-table"}

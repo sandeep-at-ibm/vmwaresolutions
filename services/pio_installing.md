@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-05"
 
 keywords: primary io hdm, hdm install, download hdm
 
@@ -64,7 +64,7 @@ For detailed installation instructions, see [PrimaryIO HDM - Installation Guide]
 ## Troubleshooting PrimaryIO HDM
 {: #pio_installing-troubleshooting}
 
-For information about troubleshooting installation-related issues, see the troubleshooting section in the [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){:external}.
+For more information about troubleshooting installation-related issues, see the troubleshooting section in the [PrimaryIO HDM - installation guide](https://www.primaryio.com/free-downloads-2/){:external}.
 
 ## Uninstalling PrimaryIO HDM
 {: #pio_installing-uninstallation}

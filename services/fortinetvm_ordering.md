@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-31"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -26,12 +26,15 @@ You can include the FortiGate® Virtual Appliance service with a new vCenter Ser
 ## Ordering FortiGate Virtual Appliance for a new instance
 {: #fortinetvm_ordering-new}
 
-When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the **Add-on services** section and click **FortiGate Virtual Appliance** in the **Security and compliance** category. Follow the steps to add the service to your instance.
+When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **FortiGate Virtual Appliance** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
 ## Ordering FortiGate Virtual Appliance for an existing instance
 {: #fortinetvm_ordering-existing}
 
-On the [instance details page](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances), click **Services** on the left navigation pane, click **FortiGate Virtual Appliance** in the **Security and compliance** category, and then click **Add**. Follow the steps to add the service to your instance.
+1. On the instance details page, click **Services** on the left navigation pane.
+2. Click **Add** to add the service.
+3. On the **Services** page, locate the **FortiGate Virtual Appliance** service and toggle its switch on.
+4. Follow the steps to configure and add the service to your instance.
 
 ## Ordering FortiGate Virtual Appliance for private instances
 {: #fortinetvm_ordering-private}
@@ -53,7 +56,7 @@ Select **Public network** or **Private network** for FortiGuard. If the target c
 If you select **Private network**, specify the following settings:
 * **Proxy IP Address** - The IPv4 address of the proxy server.
 * **Proxy Port Number** - The port number of the proxy server, usually 8080 or 3128.
-* **Proxy User Name** - If you require proxy authentication, enter the user name of the proxy server.
+* **Proxy User Name** - If you require proxy authentication, enter the username of the proxy server.
 * **Proxy Password** - If you require proxy authentication, enter the password of the proxy server.
 
 ### Name
@@ -73,12 +76,12 @@ Enter the service name.
 {: #fortinetvm_ordering-config-license}
 
 The license model for FortiGate Virtual Appliance offers the following options:
-* **Standard FW**: This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination, and continuous support.
-* **Standard FW + UTM**: This bundle includes all standard firewall services in addition to the Advanced Malware Protection (AMP) service. It includes Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service, and Content Disarm & Reconstruct. It also includes the Web Filtering, IPS, Antispam, Application Control, and FortiCare services.
-* **Standard FW + Enterprise**: This bundle includes all standard firewall and UTM services in addition to the following services:
-    * Cloud Access Security Broker (CASB): This service provides visibility, compliance, data security, and threat protection for cloud-based services.
-    * Industrial Security: This service provides signatures for common ICS/SCADA protocols.
-    * Security Rating: This service provides audit capabilities to identify critical vulnerabilities and configuration weaknesses and implement best practice recommendations.
+* **Standard FW** This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination, and continuous support.
+* **Standard FW + UTM** This bundle includes all standard firewall services in addition to the Advanced Malware Protection (AMP) service. It includes Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service, and Content Disarm & Reconstruct. It also includes the Web Filtering, IPS, Antispam, Application Control, and FortiCare services.
+* **Standard FW + Enterprise** This bundle includes all standard firewall and UTM services in addition to the following services:
+    * Cloud Access Security Broker (CASB) - This service provides visibility, compliance, data security, and threat protection for cloud-based services.
+    * Industrial Security - This service provides signatures for common ICS/SCADA protocols.
+    * Security Rating - This service provides audit capabilities to identify critical vulnerabilities and configuration weaknesses and implement best practice recommendations.
 
 In 3Q 2018, Fortinet added three new services (CASB, Industrial Security, and Security Rating) to their Enterprise bundle. These services are available for FortiGate V6.0 and later only.
 {:note}

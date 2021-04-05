@@ -40,7 +40,7 @@ The following options for customized shared file-level storage are now available
 ## SAP-certified Broadwell E5-2690 and E7-8890 server support
 {: #relnotes_v28-broadwell-e5-e7}
 
-Starting with the V2.8 release, the following new {{site.data.keyword.cloud_notm}} bare metal server CPU models are available for deployment for VMware vCenter Server on {{site.data.keyword.cloud_notm}} and VMware vSphere on {{site.data.keyword.cloud_notm}} instances and clusters:
+The following {{site.data.keyword.cloud_notm}} bare metal server CPU models are available for deployment for VMware vCenter Server on {{site.data.keyword.cloud_notm}} and VMware vSphere on {{site.data.keyword.cloud_notm}} instances and clusters:
 
 * Dual Intel Xeon E5-2690 v4 processor / 28 cores total, 2.60 GHz / 512 GB RAM
 * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.20 GHz / 1024 GB RAM
@@ -50,7 +50,7 @@ Starting with the V2.8 release, the following new {{site.data.keyword.cloud_notm
 ## Broadwell E7-4820 and E7-4850 server support
 {: #relnotes_v28-broadwell-e7}
 
-Starting with the V2.8 release, the following new {{site.data.keyword.cloud_notm}} bare metal server CPU models are available for deployment for vCenter Server, vCenter Server with Hybridity Bundle, Cloud Foundation, and vSphere on {{site.data.keyword.cloud_notm}} instances and clusters:
+The following {{site.data.keyword.cloud_notm}} bare metal server CPU models are available for deployment for vCenter Server, vCenter Server with Hybridity Bundle, Cloud Foundation, and vSphere on {{site.data.keyword.cloud_notm}} instances and clusters:
 
 * Quad Intel Xeon E7-4820 v4 / 40 cores total, 2.0 GHz
 * Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz

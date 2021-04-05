@@ -124,20 +124,20 @@ In June 2020, IBM Cloud for VMware Solutions acquired a PCI DSS attestation of c
 {: #relnotes_v37-api}
 
 * Application programming interfaces (APIs) are now available for the following services: Caveonix RiskForesight, HyTrust DataControl (HTDC), and Veeam.
-* Various updates are made to the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
+* Various updates are made to the VMware Solutions API and the VMware Solutions Shared API.
 
 ## New and updated documentation
 {: #relnotes_v37-updated-doc}
 
-* (Updated on July 14, 2020) The [{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-archi-overview) is updated.
-* Documentation about the responsibilities of IBM vs the customer's is available at [Understanding your responsibilities when using VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-understand-responsib).
-* Documentation is available about the access type that {{site.data.keyword.cloud_notm}} Support has to your environment and the steps that you can take to limit the access, if required. For more information, see [{{site.data.keyword.cloud_notm}} Support access](/docs/vmwaresolutions?topic=vmwaresolutions-data-security-mng-data#data-security-ibm-access).
+* (Updated on July 14, 2020) The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture is updated.
+* Documentation about the responsibilities of IBM vs the customer's is available at Understanding your responsibilities when using VMware Solutions.
+* Documentation is available about the access type that {{site.data.keyword.cloud_notm}} Support has to your environment and the steps that you can take to limit the access, if required.
 * Documentation is now available about the various ports that are  used in VMware Solutions. The documentation includes details about:
   * VLANs and subnets that are used
   * Ports for deployment and day 2 operations
   * Ports that VMware uses
   * Ports that the optional services use, such as Caveonix RiskForesight, Juniper vSRX, and Veeam.
-* New FAQ about VMware Solutions Shared is now provided at [General FAQ about VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions-shared). Various updates to the existing FAQs have also been made.
+* New FAQ about VMware Solutions Shared is now provided at General FAQ about VMware Solutions Shared. Various updates to the existing FAQs have also been made.
 
 ## User interface updates and enhancements
 {: #relnotes_v37-ui}

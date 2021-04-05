@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-08"
+lastupdated: "2021-02-22"
 
 subcollection: vmwaresolutions
 
@@ -63,7 +63,7 @@ shares, not reservation, to allocate resources fairly across VMs. Shares take ef
 | Cluster CPU and memory capacity/utilization check | Review the capacity/utilization metrics for the cluster's CPU and memory by using vCenter by navigating to each cluster in turn and selecting  Monitor, Performance. Review the graphs and statistics to ensure that your cluster has enough resources to satisfy demand. Demand should be based on maintaining enough capacity for VMs to burst when needed, a vSphere ESXi host to fail, and for VMs to be added according to your known service requests. |
 | Datastore capacity/utilization check | Review the capacity/utilization metrics for the datastores by using vCenter by navigating to each datastore in turn and selecting Monitor, Performance, Space. Review the graphs and statistics to ensure that your datastore has enough space to satisfy demand. Demand should be based on maintaining enough capacity a vSphere ESXi host to fail (for a vSAN cluster) and for VMs to be added according to your known service requests. |
 | Datastore performance check | Review the performance metrics for the datastores by using vCenter by navigating to each datastore in turn and selecting: Monitor, Performance, Performance, Real-time. Review the graphs and statistics to ensure that your datastore performance baseline is expected and that any changes can be accounted for. Investigate any abnormalities. |
-| Bare metal server firmware | Best practices recommend to install the latest firmware updates for your bare metal server hosts. Check for firmware updates on the bare metal server hosts by using the Update Firmware option in the IBM Cloud portal. On the page that is displayed, review the current and update version for system board and hard disk drives and see whether updates are available. If they are, plan to update the firmware in your next maintenance window. For more information, see [FAQs: Bare metal servers](/docs/bare-metal?topic=bare-metal-bm-faq#what-if-my-bare-metal-server-has-out-of-date-firmware-). |
+| Bare metal server firmware | Best practices recommend to install the latest firmware updates for your bare metal server hosts. Check for firmware updates on the bare metal server hosts by using the Update Firmware option in the {{site.data.keyword.cloud_notm}} portal. On the page that is displayed, review the current and update version for system board and hard disk drives and see whether updates are available. If they are, plan to update the firmware in your next maintenance window. For more information, see [FAQs: Bare metal servers](/docs/bare-metal?topic=bare-metal-bm-faq#what-if-my-bare-metal-server-has-out-of-date-firmware-). |
 | vSphere ESXi patching | For information about checking for the availability of vSphere ESXi patches, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines#vum-baselines). |
 | VM hardware updates | For information about checking for the availability of VM hardware updates, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines#vum-baselines). |
 | VM Tools updates | For more information, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines#vum-baselines). |

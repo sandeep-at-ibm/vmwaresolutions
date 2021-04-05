@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-18"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -65,9 +65,9 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 This layer consists of the following components:
 * vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
-* For NSX-V: one NSX Manager and three VMware NSX Controller™ nodes (total of four nodes)
-* For NSX-T: three NSX Manager or Controller nodes (total of three nodes)
-* VMware NSX Edge™ Services Gateways (ESGs): two for NSX-V and four for NSX-T (two in the management cluster and two in the workload cluster)
+* For NSX-V - one NSX Manager and three VMware NSX Controller™ nodes (total of four nodes)
+* For NSX-T - three NSX Manager or Controller nodes (total of three nodes)
+* VMware NSX Edge™ Services Gateways (ESGs) - two for NSX-V and four for NSX-T (two in the management cluster and two in the workload cluster)
 * IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4,000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
@@ -98,9 +98,9 @@ Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
 {:note}
 
 The following configurations are available:
-* **Skylake**: 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
-* **Cascade Lake**: 4-CPU Intel Cascade Lake generation server (Quad Intel Xeon Gold 6248 and Quad Intel Xeon Platinum 8260) and 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200/8200 series) with your selected CPU model and RAM size.
-* **SAP-certified**: Intel Skylake generation servers (Intel Xeon 6140 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
+* **Skylake** - 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
+* **Cascade Lake** - 4-CPU Intel Cascade Lake generation server (Quad Intel Xeon Gold 6248 and Quad Intel Xeon Platinum 8260) and 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200/8200 series) with your selected CPU model and RAM size.
+* **SAP-certified** - Intel Skylake generation servers (Intel Xeon 6140 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
 
 If you plan to use vSAN storage, the configuration requires a minimum of four bare metal servers.
 {:note}
@@ -110,7 +110,7 @@ If you plan to use vSAN storage, the configuration requires a minimum of four ba
 
 The following networking components are ordered:
 *  10 Gbps dual public and private network uplinks.
-*  Three VLANs (Virtual LANs): one public and two private.
+*  Three VLANs (Virtual LANs) - one public and two private.
 *  (NSX-V only) One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching extra VXLANs to new logical interfaces on the DLR.
 * (NSX-T only) One overlay network with a T1 and T0 router for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. This is deployed as a sample routing topology, which you can modify, build on, or remove.
 *  VMware NSX Edge Services Gateways (two for NSX-V and four for NSX-T):
@@ -127,7 +127,7 @@ The following networking components are ordered:
 
 The following virtual server instances (VSIs) are ordered:
 * A VSI for IBM CloudBuilder, which is shut down after the instance deployment is completed.
-* You can choose to deploy a single Microsoft® Windows® Server VSI for Microsoft Active Directory™ (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
+* Choose to deploy a single Microsoft® Windows® Server VSI for Microsoft Active Directory™ (AD) or two high availability Microsoft Windows VMs in the management cluster to help enhance security and robustness.
 
 ### Storage
 {: #vc_vcenterserveroverview-storage}
@@ -141,21 +141,21 @@ After deployment, you can add NFS storage shares to an existing NFS or vSAN clus
 {: #vc_vcenterserveroverview-vsan-storage}
 
 The vSAN option offers customized configurations, with various options for disk type, size, and quantity:
-* Disk quantity: 2, 4, 6, 8, or 10
-* Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
+* Disk quantity - 2, 4, 6, 8, or 10
+* Storage disk - 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
 
   In addition, two cache disks of 960 GB are also ordered per host.
 
-  3.8 TB SSD (Solid State Disk) drives will be supported when they are made generally available in a data center.
+  3.8 TB SSD (Solid State Disk) drives are supported when they are made generally available in a data center.
   {:note}
-* High Performance with Intel Optane: this option provides two extra capacity disk bays. This option depends on the CPU model.
+* High Performance with Intel Optane - this option provides two extra capacity disk bays. This option depends on the CPU model.
 
 #### NFS storage
 {: #vc_vcenterserveroverview-nfs-storage}
 
 The NFS option offers customized shared file-level storage for workloads with various options for size and performance:
-* Size: 20 GB to 24 TB
-* Performance: 0.25, 2, 4, or 10 IOPS/GB. The 10 IOPS/GB performance level is limited to a maximum capacity of 4 TB per file share.
+* Size - 20 GB to 24 TB
+* Performance - 0.25, 2, 4, or 10 IOPS/GB. The 10 IOPS/GB performance level is limited to a maximum capacity of 4 TB per file share.
 * Individual configuration of file shares
 
 (NSX-V only) If you choose the NFS option, one 2 TB and 4 IOPS/GB file share for management components are ordered.
@@ -199,13 +199,13 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
 *  Expanding or contracting instance capacity through adding or removing ESXi servers
 *  Powering off components
 *  Restarting services
-   Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
+   Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include - ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
    {:important}
 
 ## Support and Services fee
 {: #vc_vcenterserveroverview-support-services-fee}
 
-VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} DevOps and Level 2 Support teams for any issues pertaining to:
+VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} DevOps and Level 2 Support teams for any issues that pertain to:
 * Automation in the platform
 * VMware products included in the solution
 

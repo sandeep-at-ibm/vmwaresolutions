@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-02-05"
 
 keywords: VMware Solutions Shared create private network endpoint, VMware Solutions Shared view private network endpoint, VMware Solutions Shared delete private network endpoint
 
@@ -69,7 +69,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to create a private network endpoint for virtual data center instances
 {: #shared_creatingendpoints-add-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
+1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **VMware Solutions Shared** table, click the instance where you want to create a private network endpoint.
 3. Under **Private network endpoint** on the virtual data center instance details page, click **Create a private network endpoint**.
 4. Complete the following configuration in the **Create new private network endpoint** pane.
@@ -85,10 +85,10 @@ For more information about creating a private network endpoint for virtual data 
 1. The status of the private network endpoint is changed to **Creating**.
 2. When the private network endpoint is created, the status changes to **ReadyToUse**.
 
-## Procedure to create and connect an IPSec tunnel over a private network endpoint
+## Procedure to create and connect an IPsec tunnel over a private network endpoint
 {: #shared_creatingendpoints-ipsec-tunnel}
 
-After you create a private network endpoint for your virtual data center instance, you can use the private network endpoint to create an IPSec tunnel between your IBM account and the virtual data center. For more information, see [IPSec Tunnel over IBM Private Network Endpoint (PNE)](https://mlwiles.github.io/vmwaresolutions/vcd/ipsec-pne/){:external}.
+After you create a private network endpoint for your virtual data center instance, you can use the private network endpoint to create an IPsec tunnel between your IBM account and the virtual data center. For more information, see [IPsec Tunnel over IBM Private Network Endpoint (PNE)](https://mlwiles.github.io/vmwaresolutions/vcd/ipsec-pne/){:external}.
 
 ## Procedure to view a private network endpoint for virtual data center instances
 {: #shared_creatingendpoints-view-procedure}

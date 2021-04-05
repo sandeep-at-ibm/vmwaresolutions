@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-15"
+lastupdated: "2021-03-16"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -33,7 +33,7 @@ To log in to the WebGUI of the primary or secondary HTCC appliance, use the WebG
 
 To access the HyTrust CloudControl console from the vSphere Web Client, use the following procedure:
 1. In the vSphere Web Client, find the virtual machines (VMs) that are named **CC1** and **CC2**.
-2. Right click **CC1** or **CC2**, and then click **Open Console**.
+2. Right-click **CC1** or **CC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl service details page.
 
 For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
@@ -60,7 +60,7 @@ For private-only vCenter Server environments, the VMware NSX® Edge Services Gat
 2. Click **Home > Networking & Security > NSX Edges**.
 3. Double-click the ESG **mgmt-nsx-edge** and click the **Manage** tab.
 4. Go to the **Firewall** tab and find the HyTrust rules. Note the source IP addresses. These are the IP addresses for the HyTrust VMs.
-5. Go to the **NAT** tab and find the SNAT rules that are created for the HyTrust VMs. The source IP addresses will match the IP addresses that you noted in the previous step.
+5. Go to the **NAT** tab and find the SNAT rules that are created for the HyTrust VMs. The source IP addresses match the IP addresses that you noted in the previous step.
 
 ### Procedure to enable internet connectivity for HyTrust CloudControl (HyTrust CloudControl 5.x only)
 {: #managinghtcc-enable-internet}
@@ -86,9 +86,9 @@ The following steps apply for updating the HyTrust CloudControl network settings
   Ensure that you set the static route before you change the default gateway, otherwise the web console might become unreachable.
   {:important}
 
-  The primary VM will now have access to the internet.
+  The primary VM now has access to the internet.
 
-7. To confirm that the primary VM has internet access, run a `wget` command to a public IP address or website. To do so, go back to vCenter and right-click **CC1 > Open Console**. Log in to the console by using the console credentials from the HyTrust CloudControl service details page. Run a `wget` command such as `wget www.ibm.com`, and you should get an immediate response. Confirm that the request was sent and a `200` response was received.
+7. To confirm that the primary VM has internet access, run a `wget` command to a public IP address or website. To do so, go back to vCenter and right-click **CC1 > Open Console**. Log in to the console by using the console credentials from the HyTrust CloudControl service details page. Run a `wget` command such as `wget www.ibm.com` to receive an immediate response. Confirm that the request was sent and a `200` response was received.
 
 ## Related links
 {: #managinghtcc-related}

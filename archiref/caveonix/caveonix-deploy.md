@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-02-19"
 
 subcollection: vmwaresolutions
 
@@ -99,7 +99,7 @@ The following table provides a summary of the deployments:
 {: caption="Table 4. Summary" caption-side="top"}
 
 **Notes:**
-When you remove the Caveonix RiskForesight service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single "all-in-one" Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
+When you remove the Caveonix RiskForesight service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single all-in-one Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
 * If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed.
 * If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function.
 * If you delete vCenter Server instance A with the Caveonix RiskForesight service installed, and you used the IP addresses of the dedicated private subnet ordered for the service in vCenter Server instance B, the dedicated private subnet is canceled upon deletion of vCenter Server instance A.

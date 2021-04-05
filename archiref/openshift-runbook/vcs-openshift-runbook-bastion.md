@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -199,9 +199,9 @@ The private key is: /root/.ssh/id_rsa. The public key is: /root/.ssh/id_rsa.pub.
 ## Downloading the installation tools
 {: #openshift-runbook-runbook-bastion-install-red-hat}
 
-For more information about installing Red Hat OpenShift 4.4, see [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html){:external}.
+For more information about installing Red Hat OpenShift 4.6, see [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.6/installing/installing_vsphere/installing-vsphere.html#installation-vsphere-infrastructure_installing-vsphere){:external}.
 
-For more information about how to access the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
+For more information about how to access the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.6/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
 
 Before you install the OpenShift Container Platform, you need to download a number of files onto the bastion node and then extract them. The following actions are completed:
 * Download `unzip` to extract the downloaded files.
@@ -245,12 +245,12 @@ unzip terraform_0.11.13_linux_amd64.zip
 mv terraform /usr/local/bin
 ```
 
-The Bastion node is now ready for the steps to install OpenShift 4.4, which are described in [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro).
+The Bastion node is now ready for the steps to install OpenShift 4.6, which are described in [Red Hat OpenShift 4.6 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro).
 
-**Next topic:** [Red Hat OpenShift 4.4 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
+**Next topic:** [Red Hat OpenShift 4.6 user provider infrastructure installation](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-install-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-bastion-related}
 
-* [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html){:external}
+* [Installing a cluster on vSphere](https://docs.openshift.com/container-platform/4.6/installing/installing_vsphere/installing-vsphere.html){:external}
 * [Using the vi text editor](http://etutorials.org/Linux+systems/red+hat+linux+bible+fedora+enterprise+edition/Part+II+Using+Red+Hat+Linux/Chapter+4+Using+Linux+Commands/Using+the+vi+Text+Editor/){:external}

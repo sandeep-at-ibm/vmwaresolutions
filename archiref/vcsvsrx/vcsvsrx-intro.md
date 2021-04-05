@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-04-17"
+lastupdated: "2021-02-22"
 
 subcollection: vmwaresolutions
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 
 This information is intended for the deployment and operations of a high availability vSRX cluster as the gateway for the vCenter Server. The guide follows best practices as currently accepted and understood.
 
-Currently, the vSRX is only available as an IBM Cloud infrastructure offering. Orders are placed from the [IBM Cloud infrastructure customer portal](https://control.softlayer.com/network/gatewayappliances), Networking, Gateway Appliances section.
+Currently, the vSRX is only available as an {{site.data.keyword.cloud_notm}} infrastructure offering. Orders are placed from the [IBM Cloud infrastructure customer portal](https://control.softlayer.com/network/gatewayappliances), Networking, Gateway Appliances section.
 
 Initial deployment consists of two bare metal hosts with KVM as the hypervisor and a single vSRX node as the only workload on each host. These items form the high-availability vSRX cluster.
 

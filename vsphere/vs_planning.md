@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-22"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -41,7 +41,7 @@ Cascade Lake bare metal servers are available in [multizone region](#x9774820){:
 If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
 {:note}
 
-| {{site.data.keyword.cloud_notm}} data center | Region | Server options |
+| {{site.data.keyword.cloud_notm}} data center | Region | Server options[^vsphere-7] |
 |:---------------------|:---------------|:--------------|
 | Amsterdam 03 | Europe | Skylake, Cascade Lake, SAP-certified |
 | Chennai 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified[^sap-che01] |
@@ -53,7 +53,7 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | Frankfurt 04 | Europe | Skylake, Cascade Lake, SAP-certified|
 | Frankfurt 05 | Europe | Skylake, Cascade Lake, SAP-certified |
 | Hong Kong 02 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
-| London 02 | Europe | Skylake, Cascade Lake |
+| London 02 | Europe | Skylake, Cascade Lake, SAP-certified |
 | London 04 | Europe | Skylake, Cascade Lake, SAP-certified |
 | London 05 | Europe | Skylake, Cascade Lake, SAP-certified |
 | London 06 | Europe | Skylake, Cascade Lake, SAP-certified |
@@ -63,11 +63,14 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | Osaka 21 | Asia-Pacific | Cascade Lake, SAP-certified |
 | Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified |
 | Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified |
-| Paris 01| Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
+| Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
+| Paris 04 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
+| Paris 05 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
+| Paris 06 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
 | Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified |
 | Seoul 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
-| San Jose 03 | NA West | Skylake, Cascade Lake |
-| San Jose 04 | NA West | Skylake, Cascade Lake |
+| San Jose 03 | NA West | Skylake, Cascade Lake, SAP-certified |
+| San Jose 04 | NA West | Skylake, Cascade Lake, SAP-certified |
 | Singapore 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Sydney 01 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
 | Sydney 04 | Asia-Pacific | Skylake, Cascade Lake, SAP-certified |
@@ -82,6 +85,8 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | Washington DC 06 | NA East | Skylake, Cascade Lake, SAP-certified |
 | Washington DC 07 | NA East | Skylake, Cascade Lake, SAP-certified |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for vSphere clusters" caption-side="top"}
+
+[^vsphere-7]: Skylake is not supported for vSphere 7 instances
 
 [^sap-che01]: Existing vSphere 6.5 clusters only
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-16"
+lastupdated: "2021-02-22"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -67,7 +67,7 @@ To view the property details of an instance:
 |:------------- |:------------- |
 | Name | The name of the instance. |
 | ID | The ID of the instance. |
-| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted.<br><br>**Note:** IBM Cloud for VMware Mission Critical Workloads list locations for each cluster type. |
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted.<br><br>**Note:** {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads list locations for each cluster type. |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter version | The VMware vCenter Server version.<br><br>**Note:** There is a slight variation between the vCenter Server version that is displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere® Web Client. Both are correct. |
 | VMware NSX® networking solution | Either NSX-V or NSX-T. |
@@ -75,7 +75,7 @@ To view the property details of an instance:
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | _VMware component_ license | If you selected to use your own VMware license for any of the VMware components on the **Licensing** page when you ordered the instance, the VMware component name and the license key that you entered for the component are displayed.<br><br>Examples of VMware component licenses can include: **NSX license**, **vCenter Server license**, and **vSAN license**. |
 | NSX license edition | The version and edition of the VMware NSX license. |
-| Root domain | The root domain name is the DNS domain name and the Microsoft® Active Directory (AD) forest root name. |
+| Root domain | The root domain name is the DNS domain name and the Microsoft® Active Directory™ (AD) forest root name. |
 | SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
 | Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance hostnames reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 {: caption="Table 3. vCenter Server instance properties" caption-side="top"}
@@ -89,7 +89,7 @@ Under **Access information**, view the access information for the instance-relat
 |:--------- |:----------- |
 | AD/DNS IP or IPs[^ips] | The IP address or addresses of the AD server or servers. |
 | AD/DNS FQDN[^fqdn] | The AD/DNS server fully qualified domain names (FQDN).<br><br>**Note:** The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
-| AD/DNS Remote Desktop[^nsxv] | For primary instances, it displays the username and password to access the AD server through a remote desktop connection.<br><br>For secondary instances, click the **View on primary instance** link to be directed to the username and password information on the primary instance.<br><br>**Note:** After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you receive access to the correct administrator password. | 
+| AD/DNS Remote Desktop[^nsxv] | For primary instances, it displays the username and password to access the AD server through a remote desktop connection.<br><br>For secondary instances, click the **View on primary instance** link to be directed to the username and password information on the primary instance.<br><br>**Note:** After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you receive access to the correct administrator password. |
 | vCenter/PSC IP | The IP address of the vCenter Server. |
 | vCenter/PSC FQDN | The vCenter Server fully qualified domain name (FQDN). |
 | vCenter/PSC ADMIN | The VMware vCenter Single Sign-On username and password that you can use to log in to the vCenter Server by using the vSphere Web Client. |
@@ -144,7 +144,7 @@ If errors occur during instance deployment or instance deletion, the {{site.data
 
 Manage your instances from the {{site.data.keyword.vmwaresolutions_short}} console or the VMware vSphere Web Client.
 
-Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your ESXi servers, you must log in to the VPN portal of the {{site.data.keyword.cloud_notm}} data center. Hover over **vCenter console** and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
+Before you click **vCenter console** on the instance summary page to go to the vSphere Web Client and start managing your VMware ESXi™ servers, you must log in to the VPN portal of the {{site.data.keyword.cloud_notm}} data center. Hover over **vCenter console** and follow the instructions to ensure that you meet all requirements and you completed the necessary steps before you access the vSphere Web Client.
 {:important}
 
 Review the following topics for information to help you complete the login instructions:

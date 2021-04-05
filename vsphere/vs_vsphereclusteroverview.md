@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-24"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -42,7 +42,7 @@ The availability and pricing of standardized hardware configurations might vary 
 {: #vs_vsphereclusteroverview-specs-vmware-components}
 
 Select licenses (IBM-provided or BYOL) for the following VMware components:
-* VMware vSphere Enterprise Plus 7.0u1a or 6.7u3
+* VMware vSphere Enterprise Plus 7.0u1 or 6.7u3
 * The following VMware components are optional:
    * VMware vCenter Server® Standard
    * VMware NSX® (Base, Advanced, or Enterprise)
@@ -109,10 +109,10 @@ One {{site.data.keyword.cloud_notm}} bare metal server with the networking confi
 ### VMware components for expansion nodes
 {: #vs_vsphereclusteroverview-expansion-node-specs-vmware-components}
 
-* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 7.0u1a or 6.7u3.  
+* One {{site.data.keyword.cloud_notm}} bare metal server with VMware vSphere Enterprise Plus 7.0u1 or 6.7u3.  
 * Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
-You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After you create a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
+You must manage the ESXi servers, optional VMware components, and additional hardware that is ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After you create a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
 {:important}
 
 ## Related links

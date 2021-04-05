@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-19"
+lastupdated: "2021-03-21"
 
 subcollection: vmwaresolutions
 
@@ -38,7 +38,7 @@ T0 - Tenant     | Read | Full |
 T0 - Transit    | Read| Full |
 T0 - Management | Read | Full |
 T1s - Tenant    | Read | Full |
-T1s - Add-on Services | Read | Full |
+T1s - Services | Read | Full |
 T1s - Management     | Read | Full |
 {: caption="Table 1. NSX-T role mapping" caption-side="top"}
 
@@ -66,7 +66,7 @@ NSX-T Data Center has the following built-in roles. You cannot add any new roles
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| Privileged user | `admin` | Used post-deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added and removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
+| Privileged user | `admin` | Used post-deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added and removed. Also used to manage ESG configuration for services that require public network access for licensing, activation, or usage reporting. |
 | Privileged user | `cloudadmin` | Through the HyTrust CloudControl URL, customers authenticate with the `cloudadmin` user who is defined in Active Directory. More users can be added from customer space through HyTrust. |
 | IBM automation | `automation_admin` | Automation account used by IBM. It uses the principle identity functions to create configuration and protect it with a certificate. |
 {: caption="Table 2. NSX-T user IDs" caption-side="top"}

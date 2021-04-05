@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-10"
+lastupdated: "2021-03-17"
 
 keywords: FAQ, license, BYOL
 
@@ -45,7 +45,7 @@ If the validation of any license key fails, you get a notification and you canno
 {: #faq_byol-license-key}
 {: faq}
 
-Yes. For each VMware component, one license per CPU is required. Currently, all vCenter Server servers have two CPUs. Therefore, two licenses are required for each server. It is recommended that you provide a license key that can support the base instance and any expansion nodes that you want to add to the instance in the future.
+Yes. For each VMware component, one license per CPU is required. Currently, all VMware vCenter Server® servers have two CPUs. Therefore, two licenses are required for each server. It is recommended that you provide a license key that can support the base instance and any expansion nodes that you want to add to the instance in the future.
 
 ## Why is there a discrepancy in the supported number of VMs for vROPs licenses?
 {: #faq_byol-vrops}
@@ -53,7 +53,7 @@ Yes. For each VMware component, one license per CPU is required. Currently, all 
 
 You might see a discrepancy in the supported number of VMs between what displays on the vRealize Operations Manager console and the per-CPU metering in {{site.data.keyword.cloud_notm}}. This issue happens if you did not select the **Product evaluation (no key required)** option when you first accessed the vROps Manager console after service installation. For more information, see [Accessing the vRealize Operations Manager console](/docs/vmwaresolutions?topic=vmwaresolutions-managing_vrops#managing_vrops-access-vrops-console).
 
-This discrepancy is a result of the fact that the vROps keys that are created for {{site.data.keyword.cloud_notm}} subscription licensing include a virtual machine (VM) capacity, however {{site.data.keyword.cloud_notm}} meters and bills the vROps license per CPU, and not per VM.
+This discrepancy is a result of vROps keys that are created for {{site.data.keyword.cloud_notm}} subscription licensing include a virtual machine (VM) capacity, however {{site.data.keyword.cloud_notm}} meters and bills the vROps license per CPU, and not per VM.
 
 The discrepancy does not indicate any service or licensing problem. The vRealize Operations and Log Insight service is fully licensed for all VMs on each vCenter Server host and continues to work properly.
 
@@ -62,7 +62,7 @@ The discrepancy does not indicate any service or licensing problem. The vRealize
 {: faq}
 {: support}
 
-BYOL is a feature available to VMware vCenter Server® and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components:
+BYOL is a feature available to VMware vCenter Server® and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components.
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX

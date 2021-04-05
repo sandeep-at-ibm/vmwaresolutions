@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-14"
+lastupdated: "2021-03-26"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -21,15 +21,15 @@ subcollection: vmwaresolutions
 # Scaling existing vSphere clusters
 {: #vs_scalingexistingclusters}
 
-You can scale out a VMware vSphere cluster that you ordered or saved in the {{site.data.keyword.vmwaresolutions_full}} console. To do so, add ESXi servers or order a FortiGate 300 Series Security Appliance HA pair for the cluster.
+You can scale out a VMware vSphere® cluster that you ordered or saved in the {{site.data.keyword.vmwaresolutions_full}} console. To do so, add VMware ESXi™ servers or order a FortiGate® 300 Series Security Appliance HA pair for the cluster.
 
-## Requirements
+## Requirements for vSphere clusters
 {: #vs_scalingexistingclusters-req}
 
-Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
-*  You received an email with the confirmation that the cluster you want to scale is ready to use.
+Ensure that you complete the following tasks:
+* If you are ordering an instance for the first time, complete the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+*  Review the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
+*  Verify that you received an email with the confirmation that the cluster you want to scale is ready to use.
 
 ## Procedure to scale existing clusters
 {: #vs_scalingexistingclusters-procedure}
@@ -51,7 +51,7 @@ Ensure that you completed the following tasks:
 
 The cluster scaling starts automatically. You receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email. If the cluster that you are scaling is not ready to use, you might receive an error message.
 
-The vSphere clusters, unlike the vCenter Server instances, are not displayed on the **Resources** page.
+The vSphere clusters, unlike the VMware vCenter Server® instances, are not displayed on the **Resources** page.
 {:note}
 
 ## Related links

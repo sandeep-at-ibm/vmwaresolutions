@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-22"
 
 subcollection: vmwaresolutions
 
@@ -47,7 +47,7 @@ The deployment of the VMware vCenter Server instance is required before the vSRX
 ## Understanding the default vSRX configuration
 {: #vcsvsrx-planning-default-vsrx}
 
-Understanding the default configuration assists in both an understanding of the vSRX HA Chassis Cluster and IBM Cloud underlay networking. The default configuration is the base upon which all further integration is executed.
+Understanding the default configuration assists in both an understanding of the vSRX HA Chassis Cluster and {{site.data.keyword.cloud_notm}} underlay networking. The default configuration is the base upon which all further integration is executed.
 
 For more information, see [Understanding the vSRX Default Configuration](/docs/vsrx?topic=vsrx-understanding-the-vsrx-default-configuration#understanding-the-vsrx-default-configuration) and [IBM Cloud IaaS vSRX default configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-iaas-def-config).
 
@@ -77,14 +77,14 @@ The vCenter Server offering is designed to manage east-west network traffic at t
 
 The required network design changes are modest and include all customer VM traffic no matter the destination, platform management traffic, direct link traffic, where applicable, and internet bound traffic. Traffic explicitly excluded includes VTEP traffic, storage traffic and vMotion traffic.
 
-NSX may be extended from the compute cluster to the edge services cluster or the use of BGP over an IPsec VPN may be used to enable connectivity between the edge and compute clusters. Where traffic flowing between the vCenter Server compute cluster and the edge services cluster is not in conflict with the IBM Cloud infrastructure  assigned subnets the use of a local VLAN and subnet is suitable as a transit link.
+NSX may be extended from the compute cluster to the edge services cluster or the use of BGP over an IPsec VPN may be used to enable connectivity between the edge and compute clusters. Where traffic flowing between the vCenter Server compute cluster and the edge services cluster is not in conflict with the {{site.data.keyword.cloud_notm}} infrastructure  assigned subnets the use of a local VLAN and subnet is suitable as a transit link.
 
-BGP over IPsec VPN is the preferred method of connecting to a customer on-premises data center whether the connection traverses the internet or passes between the customer and IBM Cloud via one of the IBM Cloud infrastructure direct link offerings.
+BGP over IPsec VPN is the preferred method of connecting to a customer on-premises data center whether the connection traverses the internet or passes between the customer and {{site.data.keyword.cloud_notm}} via one of the {{site.data.keyword.cloud_notm}} infrastructure direct link offerings.
 
 #### Interface mapping for vSRX on VMware
 {: #vcsvsrx-planning-interface-map}
 
-The vSRX on the IBM Cloud vCenter Server platform has very specific connection requirements to enable and maintain the HA chassis cluster.
+The vSRX on the {{site.data.keyword.cloud_notm}} vCenter Server platform has very specific connection requirements to enable and maintain the HA chassis cluster.
 
 ![Figure 3 - vSRX HA chassis cluster on vCenter Server interconnections](../../images/vcsvsrx-vsrx-vcs-connections.svg){: caption="Figure 3. vSRX HA chassis cluster on vCenter Server interconnections" caption-side="bottom"}
 
@@ -147,7 +147,7 @@ As noted previously, the default configuration merely represents a point from wh
 ## vSRX to client on-premises connections
 {: #vcsvsrx-planning-client-config}
 
-The preferred method of linking the IBM Cloud vCenter Server instance to a client's existing on-premises data center is BGP.  
+The preferred method of linking the {{site.data.keyword.cloud_notm}} vCenter Server instance to a client's existing on-premises data center is BGP.  
 
 If the client intends to connect over the internet using eBGP they either must obtain a public autonomous system number (ASN) or use BGP over an IPsec VPN to permit the use of private ASNs.
 
@@ -155,9 +155,9 @@ Where the client is using Direct Link then BGP using private ASNs is possible.
 
 ![Figure 4 - vSRX BGP over IBM Direct Link](../../images/vcsvsrx-bgp-direct-link.svg){: caption="Figure 4. vSRX BGP over IBM Direct Link" caption-side="bottom"}
 
-The diagram illustrates one of many potential implementations of BGP from the on-premises data center to the IBM Cloud.
+The diagram illustrates one of many potential implementations of BGP from the on-premises data center to the {{site.data.keyword.cloud_notm}}.
 
-The traffic originating from the client facility flows through AT&T NetBond or other provider into the GNPP router. The GNPP router is peered via BGP to the vSRX gateway deployed into the client's IBM Cloud account and all traffic is encapsulated in a GRE tunnel over BGP. The packets exiting the tunnel into the vSRX are then routed to the NSX overlay network via an edge services gateway.
+The traffic originating from the client facility flows through AT&T NetBond or other provider into the GNPP router. The GNPP router is peered via BGP to the vSRX gateway deployed into the client's {{site.data.keyword.cloud_notm}} account and all traffic is encapsulated in a GRE tunnel over BGP. The packets exiting the tunnel into the vSRX are then routed to the NSX overlay network via an edge services gateway.
 
 **Next topic:** [vSRX example configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-default-config)
 

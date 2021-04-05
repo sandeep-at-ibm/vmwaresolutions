@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-22"
 
 keywords: Veeam 9.5, Veeam 9 overview, Veeam 9.5 deprecated
 
@@ -20,23 +20,19 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# Veeam v9.5 overview
+# Veeam v9.5
 {: #veeam_considerations}
 
 Veeam® v9.5u4b has known vulnerabilities and it is no longer installed with new VMware® Solutions deployments. However, if you installed the service in a previous release, you can continue to use Veeam v9.5u4b.
 {:note}
 
-The new Veeam Availability Suite™ v10a known as Veeam v10a is now installed.
-
 The Veeam service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 {: shortdesc}
-
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service. A promotion might be available for Veeam v10 or later only. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
 
 ## Technical specifications for Veeam v9.5u4b
 {: #veeam_considerations-specs}
 
-The current Veeam version that is installed is Veeam v10a. The documentation about Veeam v9.5u4b is included for your information if you are using Veeam v9.5u4b.
+The current Veeam version that is installed is Veeam v11. The documentation about Veeam v9.5u4b is included for your information if you are using Veeam v9.5u4b.
 {:note}
 
 The following components are in the Veeam v9.5u4b service:
@@ -84,10 +80,8 @@ Deleting the Veeam service stops all backups and deletes all the previous backup
 ## Related links
 {: #veeam_considerations-related}
 
-* [Veeam v10a overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
-* [Ordering Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering)
+* [Veeam v11 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Managing Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam)
-* [Ordering Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering_licenses)
 * [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)
 * [Ordering and configuring IBM Cloud Object Storage with Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

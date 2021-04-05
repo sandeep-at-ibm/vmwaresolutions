@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-15"
+lastupdated: "2021-03-26"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -24,12 +24,12 @@ To deploy a highly customizable VMware® virtualized platform, order a VMware vS
 
 This procedure guides you through the selection of VMware components, {{site.data.keyword.cloud}} bare metal server settings, storage settings, and networking choices, to create a new cluster. After you place the order, the cluster configuration is captured so that you can come back and continue to scale out the cluster as needed. After the order is completed, you can manually configure the VMware vSphere cluster based on your requirements.
 
-## Requirements
+## Requirements for vSphere clusters
 {: #vs_orderinginstances-req}
 
-Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
-*  You reviewed the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
+Ensure that you complete the following tasks:
+* If you are ordering an instance for the first time, complete the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* Review the requirements and considerations in [Requirements and planning for vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_planning).
 
 ## System settings
 {: #vs_orderinginstances-sys-settings}
@@ -73,7 +73,7 @@ For IBM Business Partner users, the Bring Your Own License (BYOL) option is not 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 If you're a non-Business Partner, you can select the following components for your vSphere cluster:
-* VMware vSphere Enterprise Plus 7.0u1a or 6.7u3
+* VMware vSphere Enterprise Plus 7.0u1 or 6.7u3
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -106,82 +106,72 @@ When you size the capacity of your servers, consider your current requirements a
 ### Data center location
 {: #vs_orderinginstances-dc-location}
 
-Select the {{site.data.keyword.cloud_notm}} data center where the cluster is to be hosted.
-
-#### Notes
-{: #vs_orderinginstances-notes}
-
-* If you select a vSAN component, the location list is filtered by SSD availability.
-* SAP-certified bare metal servers are not available for the **London 05** data center location.
+Select the {{site.data.keyword.cloud_notm}} data center where the cluster is to be hosted. If you select a vSAN component, the location list is filtered by SSD availability.
 
 ### Skylake
 {: #vs_orderinginstances-skylake}
 
-When you select **Skylake**, you have options for the **CPU model** and **RAM**. Options available depend on whether you selected the VMware vSAN component.
+For **Skylake** servers, you can choose the following CPU models and a supported RAM size. Options available depend on whether you selected the VMware vSAN component.
 
-Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
+Skylake servers are not supported for vSphere Enterprise Plus 7.0u1 instances.
 {:note}
 
-| CPU model options        | RAM options       |
+| CPU model     | RAM sizes     |
 |:------------- |:------------- |
-| Dual Intel® Xeon® Silver 4110 Processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel® Xeon® Silver 4110 Processor / 16 cores total, 2.10 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake bare metal servers" caption-side="top"}
 
 ### Cascade Lake
 {: #vs_orderinginstance-cascade}
 
-For the **Cascade Lake**, you have options for the **CPU model** and **RAM**.
+For **Cascade Lake** servers, you can choose the following CPU models and a supported RAM size.
 
-| CPU model options        | RAM options       |
+| CPU model     | RAM sizes     |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Platinum 8260 Processor / 48 cores total, 2.4 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8260 Processor / 96 cores total, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.50 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 Processor / 48 cores total, 2.40 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.50 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 Processor / 96 cores total, 2.40 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 3. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 ### SAP-certified
 {: #vs_orderinginstances-sap}
 
-The **SAP-certified** tab is not available if you selected VMware vSAN previously. When you select **SAP-certified**, you cannot alter the CPU or RAM settings.
+The **SAP-certified** servers are not available if you selected VMware vSAN previously.
+{:note}
 
-Based on your requirements, select a bare metal server configuration:
+For **SAP-certified** servers, you have the following options:
+* **NetWeaver**, for which the CPU and RAM size are preset.
+* **HANA**, for which you can choose the CPU model and a supported RAM size.
 
-| CPU model     | RAM options   |
-|:------------- |:------------- |
-| Dual Intel Xeon Gold 5218 processor (Cascade, BI.S4.NW192) / 32 cores total, 2.3 GHz | 192 GB, 384 GB |
-| Dual Intel Xeon Gold 6248 processor (Cascade, BI.S4.NW768) / 40 cores total, 2.5 GHz | 768 GB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW1500) / 56 cores total, 2.70 GHz[^v67-1]| 1.5 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade, BI.S4.NW3000) / 56 cores total, 2.70 GHz[^v67-2]| 3 TB |
+| CPU model     | RAM sizes |
+|:------------- |:--------- |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW192) / 32 cores total, 2.30 GHz | 192 GB |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW384) / 32 cores total, 2.30 GHz | 384 GB |
+| Dual Intel Xeon Gold 6248 processor (Cascade Lake, BI.S4.NW768) / 40 cores total, 2.50 GHz | 768 GB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW1500) / 56 cores total, 2.70 GHz | 1.5 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW3000) / 56 cores total, 2.70 GHz | 3 TB |
 {: caption="Table 4. Options for SAP-certified bare metal servers - NetWeaver" caption-side="top"}
 {: class="simple-tab-table"}
 {: #simpletabtable1}
 {: tab-title="NetWeaver"}
 {: tab-group="SAP-certified Intel servers"}
 
-[^v67-1]: vSphere 6.7 only
-
-[^v67-2]: vSphere 6.7 only
-
-| CPU model     | RAM options |  
-|:------------- |:----------- |
-| Dual Intel Xeon Gold 5218 processor (Cascade) / 32 cores total, 2.3 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Dual Intel Xeon Gold 6248 processor (Cascade) / 40 cores total, 2.5 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade) / 56 cores total, 2.70 GHz[^v67-3]| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8280M processor (Cascade) / 112 cores total, 2.70 GHz[^v67-4]| 3 TB, 6 TB |
+| CPU model     | RAM sizes |
+|:------------- |:--------- |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake) / 32 cores total, 2.30 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Gold 6248 processor (Cascade Lake) / 40 cores total, 2.50 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake) / 56 cores total, 2.70 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8280M processor (Cascade Lake) / 112 cores total, 2.70 GHz | 3 TB, 6 TB |
 {: caption="Table 4. Options for SAP-certified bare metal servers - HANA" caption-side="top"}
 {: #simpletabtable2}
 {: tab-title="HANA"}
 {: tab-group="SAP-certified Intel servers"}
 {: class="simple-tab-table"}
-
-[^v67-3]: vSphere 6.7 only
-
-[^v67-4]: vSphere 6.7 only
 
 ### Number of bare metal servers
 {: #vs_orderinginstances-bare-metal-number}
@@ -202,7 +192,7 @@ If you select the VMware vSAN component for the cluster, specify the following s
 * **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
 * If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High performance with Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
+  The **High performance with Intel Optane** option is available only for the **Skylake** and **Cascade Lake** CPU models.
   {:note}
 
 * Review the **Disk size for vSAN cache disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
@@ -248,7 +238,7 @@ The domain name is used for all {{site.data.keyword.cloud_notm}} bare metal serv
 * The length of the other strings must be in the range 1 - 63 characters.
 * The maximum length of the domain name is 189 characters.
 
-### Enable private NICs only
+### Networking type
 {: #vs_orderinginstances-public-private-network}
 
 Network interface card (NIC) enablement settings are based on your selection of either **Public and private network** or **Private network only**.
@@ -258,9 +248,8 @@ Network interface card (NIC) enablement settings are based on your selection of 
 
 The following options are provided for the uplink speed:
 * 10 Gb - This option is selected by default.
-* 25 Gb - This option is available only when the vSphere cluster meets the following requirements:
-   * The vSphere version is 6.7u3.
-   * The bare metal server is Cascade Lake.
+* 25 Gb - This option is available only when the vCenter Server instance meets the following requirements:
+   * The bare metal server is **Cascade Lake** or **SAP-certified**.
    * The data center is one of the following locations: **Dallas 10**, **Dallas 12**, **Dallas 13**, **Frankfurt 02**, **London 04**, **Paris 04**, **Paris 05**, **Paris 06**, **Sydney 04**, **Sydney 05**, **Tokyo 02**, **Tokyo 04**, **Tokyo 05**, **Toronto 04**, **Washington DC 04**, **Washington DC 06**, or **Washington DC 07**.
 
 ### VLANs

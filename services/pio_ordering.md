@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-05"
 
 keywords: primary io hdm, hdm order, order trial hdm
 
@@ -31,10 +31,10 @@ You can include the PrimaryIO Hybrid Cloud Data Management (HDM) service with a 
 ## Before you begin
 {: #pio_ordering-before}
 
-Review the following information before you begin:
+Review the following information:
 
 * Ensure that the on-premises data center is connected to the {{site.data.keyword.cloud}} infrastructure.
-* The VMware vSphere versions that are supported on-premises are 6.5 and above.
+* The VMware vSphere versions that are supported on-premises are 6.5 and later.
 * The PrimaryIO HDM software is installed from the on-premises data center vCenter Server.
 * The HDM OVF can be downloaded to the on-premises data center for installation.
 
@@ -55,8 +55,8 @@ The PrimaryIO HDM package contains the following components:
 {: #pio_ordering-licenses}
 
 The following license types are available:
-- **Trial license**: Fully functional trial license for 30 days
-- **Production license**: HDM license key for production use
+- **Trial license** - Fully functional trial license for 30 days
+- **Production license** - HDM license key for production use
 
 ## Related links
 {: #pio_ordering-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-24"
 
 keywords: vmware services, request vmware service, tech specs vmware
 
@@ -20,7 +20,7 @@ Managed VMware® Services can simplify VMware virtual infrastructure management 
 
 Managed VMware Services can serve as a single, trusted provider to reduce complexity of monitoring and managing virtual IT infrastructures by offering single-pane-of-glass managed services for VMware vCenter Server® environments.
 
-These managed services include advanced VMware vSphere management, full VMware NSX® coverage to ensure highly available and secure virtual network infrastructure, and VMware vSAN™ monitoring to ensure availability of data.
+These managed services include advanced VMware vSphere® management, full VMware NSX® coverage to ensure highly available and secure virtual network infrastructure, and VMware vSAN™ monitoring to ensure availability of data.
 
 ## Technical specifications for Managed VMware Services
 {: #managing_imi-specs}
@@ -38,7 +38,7 @@ The following specifications are included in the Managed VMware Services:
 1. In the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the **Add-on services** section and click **Managed VMware Services** in the **Professional services** category.
 2. On the **Managed VMware Services** page, in the **Engage Managed VMware Services Pre-Sales** box, enter a description of your requirements for Managed VMware Services and click **Request a consultation**.
 
-  An {{site.data.keyword.vmwaresolutions_short}} representative will contact you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
+  An {{site.data.keyword.vmwaresolutions_short}} representative contacts you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
 
 ## Related links
 {: #managing_imi-related}

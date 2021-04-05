@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-06-11"
+lastupdated: "2021-04-01"
 
 subcollection: vmwaresolutions
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# Red Hat OpenShift 4.4 additional configuration
+# Red Hat OpenShift 4.6 additional configuration
 {: #openshift-runbook-runbook-config-intro}
 
 ## vSphere Storage for Kubernetes

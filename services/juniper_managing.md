@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-15"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -30,7 +30,7 @@ subcollection: vmwaresolutions
 
 To manage the Juniper® vSRX service, use one of the following ways:
 * Log in to the J-Web Web Client by using the credentials that you can find on the Juniper vSRX service details page.
-* Access the console via SSH connection by using the credentials that you can find on the Juniper vSRX service details page.
+* Access the console through an SSH connection by using the credentials that you can find on the Juniper vSRX service details page.
 
 For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
 
@@ -39,8 +39,8 @@ For more information, see [Ordering, viewing, and deleting services for vCenter 
 
 Juniper vSRX provides various features for security and ease of use on VMware vCenter Server®. The following are some considerations:
 
-* Any Juniper vSRX that is deployed with public access comes with its public interfaces deactivated. This is so the vSRX is not exposed to the public internet before users are ready. 
-* The default deny policy is set to permit. This is so you can identify any necessary flows before locking down the vSRX traffic.
+* Any Juniper vSRX that is deployed with public access comes with its public interfaces deactivated to ensure that the vSRX is not made available to the public internet before users are ready. 
+* The default deny policy is set to permit. This is so you can identify any necessary flows before you lock down the vSRX traffic.
 * It is recommended that you change the default credentials that {{site.data.keyword.IBM}} created in the service details page for Juniper vSRX: the root and admin passwords.
 * On edge services cluster installations, protectable VLANs are associated, but not routed, with the edge gateway.
 

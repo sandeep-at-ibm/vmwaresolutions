@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-29"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud}} for VMware® Mission Critical Workloads delivers a multizone cloud architecture to help enterprises prevent downtime for cloud applications and to automate failovers within a cloud region.
 
-You can deploy VMware’s stretched vSAN™ clusters in an automated and self-managed infrastructure that gives you the flexibility to control and manage all aspects of your solution set. This option is available in on-demand ordering within the current VMware vCenter Server® workflow.
+You can deploy VMware’s stretched vSAN™ clusters in an automated and self-managed infrastructure that gives you the flexibility to control and manage all aspects of your solution set. This option is available in on-demand ordering within the current VMware vCenter Server® order flow.
 
 In addition, you can deploy a fully managed solution that is delivered by IBM Services. {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads delivers greater availability, resiliency, and support than many enterprises currently maintain on premises. This option is available as a coordinated engagement with IBM Services teams.
 
@@ -40,7 +40,7 @@ The {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads archi
 * Network architecture (NSX-T)
 * Storage architecture (VMware vSAN or NFS)
 * Integration with IBM Services Platform with Watson to enable the consumption of services
-* Tools for monitoring, troubleshooting, performance, and capacity management, such as:
+* Tools for monitoring, troubleshooting, performance, and capacity management.
   * vRealize Suite pattern (vRealize Operations™, vRealize Log Insight™, and vRealize Network Insight™)
   * Active Directory pattern
   * Integration with IBM Netcool and IBM Bluecare for auto-ticketing, alerting, and event enrichment
@@ -94,7 +94,7 @@ The network architecture has the following specifications:
 ## Related links
 {: #mcv_overview-related}
 
-* [Ordering a stretched cluster across multizone region](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
+* [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
 * [Requesting managed IBM Cloud for VMware Mission Critical Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering-managed)
 * [Managed VMware services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_imi)
 * [Managed Disaster Recovery services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)

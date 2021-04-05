@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-28"
 
 keywords: KMIP for VMware, order KMIP, Key Protect, Hyper Protect Crypto Services, HPCS
 
@@ -56,7 +56,7 @@ You can also specify a name for your KMIP for VMware instance.
 ### Procedure
 {: #kmip_standalone_ordering-step1-procedure}
 
-1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the **Add-on services** section and click **KMIP for VMware** in the **Security and compliance** category.
+1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the services section and click **KMIP for VMware** in the **Security and compliance** category.
 2. On the **KMIP for VMware** page, configure the service settings as required.
 3. Click **Create**.
 
@@ -91,7 +91,7 @@ When you enable the inactive KMIP for VMware instance, provide the following set
 
 | Configuration   | Description |  
 |:------------- |:------------- |
-| **API key for service ID**| The API key for the IBM Cloud Service ID that is used to access the service instance of Key Protect |
+| **API key for service ID**| The API key for the {{site.data.keyword.cloud_notm}} Service ID that is used to access the service instance of Key Protect |
 | **Key Manager instance**| The list of available Key Protect instances that you can select to use for key management |
 | **Customer root key**| The list of customer root keys that are stored in your selected key manager instance |
 {: caption="Table 2. Configurations for the Key Protect service" caption-side="top"}
@@ -146,25 +146,24 @@ If you did not add client SSL certificates in Step 2, you must add it after the 
 * You get console notification that your request to add the certificate is being processed.
 * When the certificate is added successfully, you get console confirmation and the added certificate is displayed in the **Client SSL certificates** table on the service details page.
 
-## What to do next
+## Connecting vCenter Server to the KMIP instance
 {: #kmip_standalone_ordering-next}
 
-Connect your vCenter server to your KMIP instance by using the client certificate that you uploaded to the KMIP instance.
+Connect your vCenter Server to your KMIP instance by using the client certificate that you uploaded to the KMIP instance.
 
 If your KMIP instance is connected to HPCS, you can find details for the single load balanced KMIP endpoint in your KMIP for VMware instance. Use this endpoint to configure a single key provider in vCenter.
 
-If your KMIP instance is connected to Key Protect, you must use the two regional endpoints for your KMIP for VMware instance to configure a key provider cluster in vCenter. You can find the endpoints for each region in the following table:
+If your KMIP instance is connected to Key Protect, you must use the two regional endpoints for your KMIP for VMware instance to configure a key provider cluster in vCenter Server. You can find the endpoints for each region in the following table:
 
 {: #tb3}
-| Location         | Endpoints               |
-|:---------------|:-----------------------|
-| Dallas | <code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
-| Frankfurt | <code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code> |
-| London | <code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
-| Osaka | <code>kmip-1.private.jp-osa.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.jp-osa.vmware-solutions.cloud.ibm.com:5696</code> |
-| Sydney | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
-| Tokyo | <code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
-| Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br>and<br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
+| Location       | Endpoints     |
+|:------------- |:------------- |
+| Dallas | <code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Frankfurt | <code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code> |
+| London | <code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Sydney | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
+| Tokyo | <code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
+| Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
 {: caption="Table 3. KMIP for VMware network service endpoint locations" caption-side="top"}
 
 ## Related links

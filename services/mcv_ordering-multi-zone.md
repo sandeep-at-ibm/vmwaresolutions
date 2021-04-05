@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-09"
+lastupdated: "2021-04-01"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -21,23 +21,23 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:term: .term}
 
-# Ordering a stretched cluster across multizone region
+# Ordering vCenter Server multizone instances
 {: #mcv_ordering}
 
-To deploy a cluster that consists of compute, network, and storage elements, which are deployed across three availability zones in an {{site.data.keyword.cloud}} [multizone region](#x9774820){: term}, order a stretched cluster across multizone region.
+To deploy a cluster that consists of compute, network, and storage elements, which are deployed across three availability zones in an {{site.data.keyword.cloud}} [multizone region](#x9774820){: term}, order a VMware vCenter Server® multizone instance.
 
 ## Requirements
 {: #mcv_ordering-req}
 
 Ensure that you completed the following tasks:
-* If this is the first time you order an instance, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
+* If this order is your first instance order, ensure that you completed the tasks in the **Before you begin** section on the ordering page. For more information, see [Setting up your environment for your first order](/docs/vmwaresolutions?topic=vmwaresolutions-completing_checklist).
 * You reviewed the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
-* You reviewed the instance and domain name format. The domain name is used to generate the user name and server names of the instance.
+* You reviewed the instance and domain name format. The domain name is used to generate the username and server names of the instance.
 
 | Name        | Value Format      |
 |:------------|:------------ |
 | Domain name | `<root_domain>` |  
-| vCenter Server login user name | `<user_id>@<root_domain>` (Microsoft® Active Directory™ user) or `administrator@vsphere.local` |
+| vCenter Server login username | `<user_id>@<root_domain>` (Microsoft® Active Directory™ user) or `administrator@vsphere.local` |
 | vCenter Server (with embedded PSC) FQDN | `<instance_name>-vc.<root_domain>`. The maximum length is 50 characters. |
 | Single Sign-On (SSO) site name | `<root_domain>` |
 | Fully qualified ESXi server name | `<host_prefix><n>.<root_domain>`, where `n` is the sequence of the VMware ESXi™ server. The maximum length is 50 characters. |
@@ -49,16 +49,13 @@ Do not modify any values that are set during instance order or deployment. Doing
 ## System settings
 {: #mcv_ordering-sys-settings}
 
-You must specify the following system settings when you order a VMware vCenter Server® instance.
+You must specify the following system settings when you order a VMware vCenter Server instance.
 
 ### Instance configurations
 {: #mcv_ordering-sys-config}
 
-You can create a new configuration to specify settings for an instance and place the order or save the settings as a configuration template without placing an order.
-
-You can also select a sample configuration template to further edit it, or to update it and then save it as a new configuration template.
-
-To see an example of an instance configuration, click **Topology diagram** next to the **Instance configurations** field.
+- You can select New configuration to specify settings for an instance and place the order or save the settings as a configuration template without placing an order.
+- You can also select a saved configuration template to further edit it, or to update it and then save it as a new configuration template.
 
 ### Instance name
 {: #mcv_ordering-sys-inst-name}
@@ -83,7 +80,7 @@ If **No resource group available** is displayed in this field, you currently do 
 ### VMware properties
 {: #mcv_ordering-vmware-properties}
 
-{{site.data.keyword.cloud_notm}} multi-zone regions support only VMware vSphere® Enterprise Plus 7.0 Update 1a and VMware NSX-T.
+For vCenter Server multizone instances, only VMware vSphere® Enterprise Plus 7.0 and VMware NSX-T are supported.
 
 ## Location settings
 {: #mcv_ordering-location}
@@ -98,7 +95,7 @@ The multizone region is a group of three or more {{site.data.keyword.cloud_notm}
 ### Witness location
 {: #mcv_ordering-location-witness}
 
-From the multizone region, select the availability zone of the witness site. The remaining management and vSAN™ stretched resource clusters are placed in the remaining availability zones. The witness site in a vSAN stretched cluster acts as the arbitrator to determine placement in the event of a loss of connectivity or failure of an availability zone. This witness is considered the third fault domain in the stretched cluster architecture.
+From the multizone region, select the availability zone of the witness site. The remaining management and vSAN™ stretched resource clusters are placed in the remaining availability zones. The witness site in a vSAN stretched cluster acts as the arbitrator to determine placement if a loss of connectivity or failure of an availability zone. This witness is considered the third fault domain in the stretched cluster architecture.
 
 ### Consolidated cluster location
 {: #mcv_ordering-location-concolidated-cluster}
@@ -109,8 +106,10 @@ The remaining availability zones are where the resource and management cluster c
 {: #mcv_ordering-licensing-settings}
 
 Specify the licensing options for the following VMware components in the instance:
+* vCenter Server Standard
+* vSphere - Enterprise Plus
 * VMware vSAN Enterprise
-* NSX-T 3.1 (Data Center Advanced or Data Center Enterprise edition)
+* NSX-T 3.1 (Advanced or Enterprise edition)
 
 A deployment of VMware vSAN stretched clusters on {{site.data.keyword.cloud_notm}} requires a vSAN Enterprise Edition license.
 {:note}
@@ -129,17 +128,26 @@ You can use the IBM-provided VMware licenses for these components by selecting *
 ## Availability zone settings
 {: mcv_ordering-availability-zones}
 
-The deployment of a stretched cluster across multizone regions consists of compute, network, and storage elements deployed across the following three availability zones in an {{site.data.keyword.cloud_notm}} multizone region.
+The deployment of a multizone instance consists of compute, network, and storage elements deployed across the following three availability zones in an {{site.data.keyword.cloud_notm}} multizone region.
 
 <dl>
   <dt>Witness cluster</dt>
-  <dd>An availability zone that maintains the vSAN witness appliance and any other site specific components as needed.</dd>
+  <dd>An availability zone that maintains the vSAN witness appliance and any other site-specific components as needed.</dd>
   <dt>Consolidated cluster</dt>
-  <dd>An availability zone that provides vSphere management such as vCenter, NSX Manager, NSX-based networking components, vRealize management tools, additional tooling such as backup, disaster recovery or other required management elements.  
-  The cluster configuration is mirrored across two availability zones and has multiple compute, network and storage options for hosting management components. The architecture utilizes two dedicated management clusters each deployed across two availability zones. This allows for management and maintenance of all components across zones without impacting workloads running in the vSAN stretched resource cluster.</dd>
+  <dd>An availability zone that provides vSphere management such as vCenter, NSX Manager, NSX-based networking components, vRealize management tools, and more tools such as backup, disaster recovery, or other required management elements.  
+  The cluster configuration is mirrored across two availability zones and has multiple compute, network and storage options for hosting management components. The architecture uses two dedicated management clusters each deployed across two availability zones. This architecture allows for management and maintenance of all components across zones without impacting workloads that are running in the vSAN stretched resource cluster.</dd>
+  <dt>Additional workload cluster</dt>
+  <dd>Optionally select the **Include a separate, additional workload cluster** checkbox. The workload cluster configuration is also mirrored across the two availability zones as the consolidated cluster. The minimum hosts across each data center is three. A total of six bare metal servers are ordered for the workload cluster. </dd>
+  <dt>Edge services cluster</dt>
+  <dd>Optionally select the **Edge services cluster** checkbox to order three edge services clusters. One cluster is deployed in each availability zone: one for the witness location and two for the consolidated location. Two bare metal servers are required for the edge services cluster. The default CPU model for the edge services cluster is Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz and cannot be changed.</dd>
 </dl>
 
 The availability zone cluster settings are based on your host and storage selections.
+
+### Cluster name
+{: #mcv_ordering-availability-zones-name}
+
+The cluster name must meet the requirements that are listed in [Cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-cluster-name).
 
 ### Host settings
 {: #mcv_ordering-availability-zones-host}
@@ -148,12 +156,12 @@ For the host settings, you have options for the CPU model, RAM, and number of ho
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.2 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.3 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.5 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Platinum 8260 Processor / 48 cores total, 2.4 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.5 GHz |384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Platinum 8260 Processor / 96 cores total, 2.4 GHz |384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 processor / 48 cores total, 2.4 GHz |128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.5 GHz |384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Platinum 8260 processor / 96 cores total, 2.4 GHz |384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Host CPU and RAM options" caption-side="top"}
 
 If you are planning to use vSAN storage, you can order 3 - 30 servers. If you are planning to use NFS storage, you can order 2 - 30 servers.
@@ -167,48 +175,48 @@ Storage settings are based on your selection of vSAN or NFS storage for the witn
 {: #mcv_ordering-availability-zones-storage-vsan}
 
 Specify the following vSAN options:
-* **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
-* **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
+* **Disk type and size for vSAN capacity disks** - Select an option for the capacity disks that you need.
+* **Number of vSAN capacity disks** - Specify the number of capacity disks that you want to add.
 * The option to enable deduplication and compression. For more information, see [Enable vSAN deduplication and compression](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-vsan-storage-enable-comp).
 
 #### NFS storage
 {: #mcv_ordering-availability-zones-storage-nfs}
 
-When you select **NFS storage** for the witness cluster, you can add file-level shared storage for your instance where all shares use the same settings or you can specify different configuration settings for each file share. NFS storage requires a minimum of two hosts.
+When you select **NFS storage** for the witness cluster, you can add file-level shared storage for your instance where all shares use the same settings. Or you can specify different configuration settings for each file share. NFS storage requires a minimum of two hosts.
 
-Specify the following NFS options:
+Specify the following NFS options.
 
 The number of file shares must be in the range of 1 to 100.
  {:note}
 
-* **Configure shares individually**: Select to specify different configuration settings for each file share.
-* **Number of shares**: When you use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
-* **Size (GB)**: Select the capacity that meets your shared storage needs.
-* **Performance**: Select the IOPS (input/output operations per second) per GB based on your workload requirements.
-* **Add shared storage**: Select to add individual file shares that use different configuration settings.
+* **Configure shares individually** - Select to specify different configuration settings for each file share.
+* **Number of shares** - When you use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
+* **Size (GB)** - Select the capacity that meets your shared storage needs.
+* **Performance** - Select the IOPS (input/output operations per second) per GB based on your workload requirements.
+* **Add shared storage** - Select to add individual file shares that use different configuration settings.
 
 Choose performance level options according to your needs.
 
 | Option        | Details       |
 |:------------- |:------------- |
-| 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
-| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
-| 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include: transactional databases. |
-| 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+| 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with existing data, or virtual disk images of virtual memory system as backup. |
+| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
+| 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include transactional databases. |
+| 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 {: caption="Table 3. NFS performance level options" caption-side="top"}
 
 ## Network interface settings
 {: #mcv_ordering-network-interface-settings}
 
-Specify the following network interface settings for your stretched cluster across multizone region.
+Specify the following network interface settings for your multizone instance.
 
 ### DNS configuration
 {: #mcv_ordering-dns-config}
 
 Select the Domain Name System (DNS) configuration for your instance:
 
-* **Two public Windows VSIs for Active Directory/DNS**: Two Microsoft Windows® Server VSIs for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option has been deployed by default for V1.9 and later instances.
-* **Four highly available dedicated Windows Server VMs on the management cluster**: Four Microsoft Windows VMs are deployed, helping enhance security and robustness.
+* **Two public Windows VSIs for Active Directory/DNS** - Two Microsoft Windows® Server VSIs for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up. This option is by default for V1.9 and later instances.
+* **Four highly available dedicated Windows Server VMs on the management cluster** - Four Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
 You must provide four Microsoft Windows Server 2019 Standard edition licenses if you configure your instance to use the four Microsoft Windows VMs.
 {:important}
@@ -217,16 +225,16 @@ Each license can be assigned only to one single physical server and covers up to
 
 You have 30 days to activate the VMs.
 
-For more information on ordering Windows Server 2019 licenses, see [Get started with Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19){:external}.
+For more information about ordering Windows Server 2019 licenses, see [Get started with Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19){:external}.
 
 ### Hostname prefix
 {: #mcv_ordering-host-name-prefix}
 
-The host name prefix must meet the following requirements:
+The hostname prefix must meet the following requirements:
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
-* The host name prefix must start with a lowercase alphabetic character.
-* The host name prefix must end with a lowercase alphabetic or numeric character.
-* The maximum length of the host name prefix is 10 characters.
+* The hostname prefix must start with a lowercase alphabetic character.
+* The hostname prefix must end with a lowercase alphabetic or numeric character.
+* The maximum length of the hostname prefix is 10 characters.
 
 ### Domain name
 {: #mcv_ordering-domain-name}
@@ -242,24 +250,36 @@ The root domain name must meet the following requirements:
 The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
 {:note}
 
+## Service settings
+{: #mcv_ordering-services}
+
+When you order a vCenter Server multizone instance, you can also order add-on services. The following services are supported on vCenter Server multizone instances:
+
+* Caveonix RiskForesight™
+* HyTrust® CloudControl™
+* Veeam®
+* vRealize Operations™ and Log Insight™
+
+Veeam 11 and Caveonix RiskForesight 2.4 are recommended services. HyTrust CloudControl 6.3 and vRealize Operations and Log Insight 8.2 are optional services you can select.
+
 ## Summary
 {: #mcv_ordering-summary}
 
 Based on your selected configuration for the instance, the estimated price is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
 
-You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. The tool is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
-## Procedure to order a stretched cluster across multizone region
+## Procedure to order a multizone instance
 {: #mcv_ordering-proc-multi}
 {: help}
 {: support}
 
-You can order a stretched cluster across multizone region by using one of the following methods on the {{site.data.keyword.vmwaresolutions_short}} console:
+You can order a multizone instance by using one of the following methods on the {{site.data.keyword.vmwaresolutions_short}} console:
 
-* In the **IaaS platforms** section, click the **VMware Solutions Dedicated** card. On the **VMware Solutions Dedicated** page, ensure that the **vCenter Server** card is selected and click the **Stretched cluster across multizone region** tab.
-* Scroll down to the **Add-on services** section and click **IBM Cloud for VMware Mission Critical Workloads** in the **Business continuity and migration** category. Click **Order your stretched cluster across multizone region**.
+* In the **IaaS platforms** section, click the **VMware Solutions Dedicated** card. On the **VMware Solutions Dedicated** page, ensure that the **vCenter Server** card is selected and click the **Multizone VMware instance** card.
+* Scroll down to the services section and click **IBM Cloud for VMware Mission Critical Workloads** in the **Business continuity and migration** category. Click **Order your stretched cluster across multizone region**.
 
-Proceed with the following steps to order a stretched cluster across multizone region:
+Proceed with the following steps to order a multizone instance:
 
 1. For the instance configuration, select to create a new configuration or select a saved configuration.
    * If you want to create a new configuration, select **New configuration**.
@@ -272,24 +292,47 @@ Proceed with the following steps to order a stretched cluster across multizone r
    *  To use IBM-provided licenses, select **Include with purchase** and select the license edition, if necessary.
    *  To use your own license, select **I will provide** and enter the license key.
 5. Complete the settings for the witness and consolidated cluster.
-    1. Specify the CPU model and the RAM size.
-    2. Specify the number of hosts.
-    3. Specify the storage settings.
+    1. Enter the cluster name.
+    2. Specify the CPU model and the RAM size.
+    3. Specify the number of hosts.
+    4. Specify the storage settings.
        * If you select **vSAN storage**, specify the disk types for the capacity and cache disks and the number of disks. Optionally, select the **Enable vSAN deduplication and compression** checkbox.
        * If you select **NFS storage** for your witness cluster and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
        * If you select **NFS storage** for your witness cluster and you want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Performance** and **Size (GB)** for each file share. You must select at least one file share.
-6. Complete the network interface settings.
+6. Optionally, select the **Include a separate, additional workload cluster** checkbox and complete the settings for the additional workload cluster.
+7. Optionally, select the **Edge services cluster** checkbox and complete the settings for the edge services cluster.
+   1. Enter the cluster name.
+   2. Specify the RAM size and number of hosts.
+   3. Select the private NICs enablement.
+8. Complete the network interface settings.
    1. Specify the DNS configuration.
    2. Enter the hostname prefix and the domain name. The price calculation begins after all fields are complete.
-7. On the **Summary** pane, review the instance settings and the estimated price.
+9. Select the services you want to order for the vCenter Server multizone instance.
+   1. Click **Edit** to configure Veeam 11, which is a recommended service.
+   2. Complete the following information and click **Save**:
+      * Name
+      * Deployment type
+      * Storage size
+      * Storage performance
+      * Number of VMs to license
+  3. Click **Edit** to configure Caveonix RiskForesight 2.5, which is a recommended service.
+  4. Complete the following information and click **Save**:
+     * License name
+     * License notes
+     * Number of VMs to license
+  5. Optionally, select HyTrust CloudControl 6.3. No service configuration is required.
+  6. Optionally, click **Edit** to configure vRealize Operations and Log Insight 8.2.
+  7. Select whether you will provide the license for vRealize Operations and the license for vRealize Log Insight or you want to include the license with your purchase. Click **Save**.
+10. On the **Summary** pane, review the instance settings and the estimated price.
    * To save the settings as a new configuration template without placing an order, click **Save configuration**, enter a name for the configuration, and click **Continue**.
    * To save the updates to a saved configuration, click **Save configuration**, select **Modify current configuration**, and click **Continue**.
    * To save the updates to a new saved configuration, click **Save configuration**, select **Create new configuration**, enter a new name for the configuration, and click **Continue**.
-8. To place the order, ensure that the account to be charged is correct, review and accept the terms, and click **Create**.
+11. To place the order, ensure that the account to be charged is correct, review and accept the terms, and click **Create**.
 
 ## Related links
 {: #mcv_ordering-related}
 
 * [IBM Cloud for VMware Mission Critical Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_overview)
+* [Ordering, viewing, and deleting services for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservices)
 * [Managed VMware Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_imi)
 * [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
