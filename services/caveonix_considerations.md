@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-06"
 
 keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
@@ -65,8 +65,8 @@ If you order Caveonix RiskForesight for a VMware Regulated Workloads or VMware S
 
 Caveonix RiskForesight licenses that are ordered separately from the Resources page are not per-host. Because of this, you should not order new Caveonix RiskForesight licenses and apply the key to your Caveonix RiskForesight service on Regulated Workloads or Security and Compliance Readiness Bundle instances. Doing so will:
 
-• Provide less coverage than when the license was initially deployed
-• Result in you being charged twice for Caveonix RiskForesight licenses because your initial license cannot be canceled. Therefore, you would pay for both per-host and per-VM licensing.
+* Provide less coverage than when the license was initially deployed
+* Result in you being charged twice for Caveonix RiskForesight licenses because your initial license cannot be canceled. Therefore, you would pay for both per-host and per-VM licensing.
 
 You can still order Caveonix RiskForesight licenses for other types of instances, for example, for VMware vServer Center instances.
 
