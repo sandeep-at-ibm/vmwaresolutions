@@ -50,7 +50,7 @@ This release applies the following updates when you order VMware Solutions Dedic
 
 For VMware vCenter Server® instances with VMware vSphere® 6.5 or vSphere 6.7, in-place upgrade to vSphere 7.0 is now supported for select configurations. Not all hardware configurations are supported, and the upgrade cannot help you migrate from VMware NSX®-V to NSX-T or from a non-converged NSX-T topology to a converged NSX-T topology.
 
-You must contact {{site.data.keyword.vmwaresolutions_short}} DevOps for support before and after you upgrade your instance.
+You must contact {{site.data.keyword.vmwaresolutions_short}} Support before and after you upgrade your instance.
 {:important}
 
 {{site.data.keyword.cloud_notm}} supports only Cascade Lake bare metal servers for vSphere 7.0 instances. You must ensure that all VMware ESXi™ servers have the proper firmware and drivers to support 7.0. For more information about supported Cascade Lake bare metal servers, see the *Cascade Lake* section of [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-cascade).
@@ -58,10 +58,9 @@ You must contact {{site.data.keyword.vmwaresolutions_short}} DevOps for support
 After you complete an upgrade to vSphere 7.0, you can add clusters and hosts to your upgraded instance. When you add a cluster or host to the upgraded instance, you must keep the original deployment configuration, naming, and network topology.
 
 The following upgrade scenarios are supported:
-* Adding hosts and clusters on instances upgraded from vSphere 6.5 or 6.7
+* Adding NFS storage, hosts, and clusters (NFS or vSAN) on instances upgraded from vSphere 6.5 or 6.7
 * Adding hosts and clusters on upgraded NSX-V or non-converged NSX-T instances
 * Adding hosts in an upgraded NFS or vSAN™ cluster
-* Adding new NFS or vSAN storage on upgraded instances
 
 For more information, see [Upgrading vCenter Server vSphere software from VMware vSphere 6.5 or 6.7 to 7.0](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vsphere_70_upgrade).
 

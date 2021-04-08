@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-26"
+lastupdated: "2021-04-07"
 
 keywords: zerto, zerto install, tech specs zerto
 
@@ -38,7 +38,7 @@ You can access the Zerto portal on the virtual data center details page when the
 
 You must reset the zOrg administrator password before you can log in to the Zerto portal.
 
-1. Under **Enabled services** on the virtual data center instance details page, click **Reset ZORG admin password**.
+1. Under **Recommended services** on the virtual data center instance details page, click **Reset ZORG password**.
 2. In the **Reset ZORG password** window, click **Reset password**.
 3. Click **Zerto portal** and login to the self-service portal.
 
