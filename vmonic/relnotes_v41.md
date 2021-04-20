@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-20"
 
 keywords: release notes, what's new, version 4.1
 
@@ -83,6 +83,11 @@ Enhanced support is now provided for the 25 Gb uplink speed option for vCenter S
 * This option is now available for vSphere 7.0.
 * More data centers now support this option. For more information, see [Uplink speed](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-uplink).
 
+### Updates to data centers
+{: #relnotes_v41-dedicated-dc}
+
+(Updated on April 20, 2021) The  {{site.data.keyword.cloud_notm}} data centers **Sao Paulo 04** and **Sao Paulo 05** are now available for deployment.
+
 ### Updates for IBM Cloud for VMware Mission Critical Workloads
 {: #relnotes_v41-dedicated-mission-critical}
 
@@ -106,6 +111,13 @@ For more information, see the following topics.
 
 For Mission Critical Workloads, there is a known issue with vCenter HA failover. If eth0 is not active on the passive node before failover is initiated, the passive node is isolated and fails to take over as the active node. vCenter HA may not activate eth0 when failover is initiated. For assistance, contact [IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 {:important}
+
+## VMware Regulated Workloads enhancements
+{: #relnotes_v41-vrw}
+
+(Updated on April 13, 2021) The VMware Regulated Workloads offering delivers a new multizone architecture to instances that are deployed in V4.1 and later releases. The multizone architecture can help to prevent downtime for cloud applications and to automate failovers within a cloud region.
+
+For more information, see [VMware Regulated Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview).
 
 ## Security and Compliance Readiness Bundle
 {: #relnotes_v41-scb}
