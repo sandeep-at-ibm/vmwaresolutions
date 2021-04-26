@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-07"
+lastupdated: "2021-04-22"
 
 keywords: zerto, zerto install, tech specs zerto
 
@@ -33,6 +33,12 @@ Use Zerto as a service to replicate your VMs between your {{site.data.keyword.cl
 
 You can access the Zerto portal on the virtual data center details page when the instance is in the **Ready to use** state. For more information, see [Procedure to view virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-viewing).
 
+### Limitations for Zerto
+{: #shared_zerto-portal-limitations}
+
+- The current version of Zerto is v8.5 u2 and is only compatible with the N-1 and N+1 level of Zerto on your on-premises site.
+- Currently, Zerto does not support the replication of stand-alone VMs but only vApps with VMs inside them. IBM is working with Zerto to resolve this limitation.
+
 ### Procedure to access the Zerto Self-Service Portal from the virtual data center instance
 {: #shared_zerto-portal-proc-access}
 
@@ -46,11 +52,6 @@ After you reset your password on a virtual data center instance, you have access
 {:note}
 
 For more information about using the Zerto Self-Service Portal to create Virtual Protection Groups, see [Zerto Virtual Manager Administration Guide - VMware vSphere Environment](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Manager%20vSphere%20Administration%20Guide.pdf){:external}.
-### Limitations for Zerto
-{: #shared_zerto-portal-limitations}
-
-- The current version of Zerto is v8.5 u2 and is only compatible with the N-1 and N+1 level of Zerto on your on-premises site.
-- Currently, Zerto does not support the replication of standalone VMs but only vApps with VMs inside them. IBM is working with Zerto to resolve this limitation.
 
 ### Licenses and fees for Zerto
 {: #shared_zerto-portal-fees}
@@ -62,8 +63,13 @@ Zerto usage incurs charges on demand. For more information, see [VMware Solution
 
 Optionally order Zerto Cloud Connector (ZCC) as an enhanced Zerto option to link on-premises workloads to {{site.data.keyword.cloud_notm}} and replicate on-premises VMs to {{site.data.keyword.cloud_notm}}. You can order one ZCC per virtual data center instance.
 
-Currently, you can create a ZCC only if you have a network that is created in VMware® Cloud Director. You must ensure that you do not delete that network, either while the ZCC order is in progress or later.
-{:important}
+### Limitations for Zerto Cloud Connector
+{: #shared_zerto-cloud-limitations}
+
+The following limitations currently exist for Zerto Cloud Connector.
+
+- You can create a ZCC only if you have a network that is created in VMware® Cloud Director. You must ensure that you do not delete that network, either while the ZCC order is in progress or later.
+- You cannot use the ``172.16.3.x.``, ``172.16.7.x``, or ``10.0.0.0/8`` subnets for your on-premises Virtual Replication Appliance or Zerto Virtual Manager deployments if you are ordering a Zerto Cloud Connector.
 
 ### Procedure to order a Zerto Cloud Connector from the virtual data center instance
 {: #shared_zerto-cloud-connector-order}
