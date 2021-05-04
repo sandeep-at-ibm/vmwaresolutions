@@ -124,6 +124,8 @@ VMware Solutions
         vcenter/vrw-planning.md
         vcenter/vrw-orderinginstance.md
         vcenter/vrw-view-delete-instance.md
+        vcenter/vrw-addingviewingclusters.md
+        vcenter/vrw-addingremovingservers.md
 
     {: .topicgroup}
     Security and Compliance Readiness Bundle
