@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-21"
+lastupdated: "2021-04-23"
 
 keywords: planning regulated workloads, data center for workloads, vmware workloads data centers
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Requirements and planning for VMware Regulated Workloads
 {: #vrw-planning}
 
-Review the following requirements before you order your VMware Regulated Workloads instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and services requirements.
+Review the following requirements before you order your VMware® Regulated Workloads instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and services requirements.
 
 ## IBM Cloud account requirements
 {: #vrw-planning-account-req}
@@ -31,7 +31,11 @@ The {{site.data.keyword.cloud_notm}} account that you are using must meet certai
 ## IBM Cloud data center availability
 {: #vrw-planning-dc-availability}
 
-The VMware Regulated Workloads deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements. The following {{site.data.keyword.cloud_notm}} data centers are available for VMware Regulated Workloads deployment.
+The VMware Regulated Workloads deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements.
+
+### Data centers available for single-zone deployment
+
+The following {{site.data.keyword.cloud_notm}} data centers are available for VMware Regulated Workloads single-zone deployment.
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:----------------------|:-------|
@@ -57,6 +61,8 @@ The VMware Regulated Workloads deployment has strict requirements on the physica
 | Osaka 23 | Asia-Pacific |
 | Paris 01 | Europe |
 | Sao Paulo 01 | South America |
+| Sao Paulo 04 | South America |
+| Sao Paulo 05 | South America |
 | Seoul 01 | Asia-Pacific |
 | San Jose 03 | NA West |
 | San Jose 04 | NA West |
@@ -73,7 +79,14 @@ The VMware Regulated Workloads deployment has strict requirements on the physica
 | Washington DC 04 | NA East |
 | Washington DC 06 | NA East |
 | Washington DC 07 | NA East |
-{: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Regulated Workloads" caption-side="top"}
+{: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Regulated Workloads single-zone deployment" caption-side="top"}
+
+### Regions available for multizone deployment
+
+VMware Regulated Workloads multizone deployment is available in the following regions:
+* Americas - Dallas, Sao Paulo, Toronto, and Washington DC
+* Europe - Frankfurt and London
+* Asia Pacific - Sydney, Tokyo, and Osaka
 
 ## Services for VMware Regulated Workloads
 {: #vrw-planning-addon-services}
@@ -81,16 +94,16 @@ The VMware Regulated Workloads deployment has strict requirements on the physica
 The following services are required for the VMware Regulated Workloads:
 * [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
 * [Direct Link Dedicated](https://cloud.ibm.com/interconnectivity/direct-link)
-* [KMIP™ for VMware®](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
+* [KMIP for VMware](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
 
 The following services are included with VMware Regulated Workloads:
-* [Veeam® 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
-* [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
-* [HyTrust® CloudControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
-* [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) (for **Edge services cluster with Juniper vSRX**)
-* [vRealize Operations™ and Log Insight™](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
+* [Veeam 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
+* [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) (the service is for **Edge services cluster with Juniper vSRX**, and it is available to single-zone VMware instances only)
+* [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 
-VMware HCX™ is an optional service for VMware Regulated Workloads. For more information, see [Planning for VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning#vc_planning-addon-services-hcx).
+The VMware HCX™ service is optional for VMware Regulated Workloads, and it is available to single-zone VMware instances only. For more information, see [Planning for VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning#vc_planning-addon-services-hcx).
 
 ## Related links
 {: #vrw-planning-related}

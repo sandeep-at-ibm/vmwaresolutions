@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-20"
+lastupdated: "2021-05-04"
 
 keywords: release notes, what's new, version 4.1
 
@@ -31,14 +31,14 @@ This release applies the following updates when you order VMware® Solutions Sha
 ### Support for Zerto
 {: #relnotes_v41-shared-zerto}
 
-Starting with the 4.1 release, the Zerto service is available and ready-to-use to provide disaster recovery for critical workloads in your virtual data center instances. Additionally, you have the option to order the Zerto Cloud Connector (ZCC) service after you deploy your virtual data center instance. Use ZCC to replicate your on-premises virtual data centers to {{site.data.keyword.cloud}}.
+Starting with the 4.1 release, the Zerto service is available and ready-to-use to provide disaster recovery for critical workloads in your virtual data center instances. Additionally, you can order the Zerto Cloud Connector (ZCC) service after you deploy your virtual data center instance. Use ZCC to replicate your on-premises virtual data centers to {{site.data.keyword.cloud}}.
 
 Charges are incurred only if you choose to use the services. For more information, see [Managing Zerto for VMware Solutions Shared instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto).
 
 ### Network type options
 {: #relnotes_v41-shared-network}
 
-The option to select a private only network or a secure public and private network is now available when you order VMware Solutions Shared instances. For more information, see [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering#shared_ordering-networking).
+The option to select a private only network or a secure public and private network is now available when you order VMware® Solutions Shared instances. For more information, see [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering#shared_ordering-networking).
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v41-dedicated}
@@ -48,7 +48,7 @@ This release applies the following updates when you order VMware Solutions Dedic
 ### Upgrade support for vSphere 7.0 instances
 {: #relnotes_v41-dedicated-upgrade-support-vsphere-v70}
 
-For VMware vCenter Server® instances with VMware vSphere® 6.5 or vSphere 6.7, in-place upgrade to vSphere 7.0 is now supported for select configurations. Not all hardware configurations are supported, and the upgrade cannot help you migrate from VMware NSX®-V to NSX-T or from a non-converged NSX-T topology to a converged NSX-T topology.
+For VMware vCenter Server® instances with VMware vSphere® 6.5 or vSphere 6.7, in-place upgrade to vSphere 7.0 is now supported for select configurations. Not all hardware configurations are supported, and the upgrade cannot help you migrate from VMware NSX®-V to NSX-T™ or from a non-converged NSX-T topology to a converged NSX-T topology.
 
 You must contact {{site.data.keyword.vmwaresolutions_short}} Support before and after you upgrade your instance.
 {:important}
@@ -70,7 +70,7 @@ For more information, see [Upgrading vCenter Server vSphere software from VMware
 ### SAP-certified servers support for vSphere 7
 {: #relnotes_v41-dedicated-sap-cert-vsphere-7}
 
-The following SAP®-certified bare metal server models are now available for deployment with vSphere 7.0. These models are available for vCenter Server instances and clusters, and for VMware vSphere clusters.
+The following SAP®-certified bare metal server models are now available for deployment with vSphere 7.0. These models are available for vCenter Server instances and clusters, and for VMware vSphere® clusters.
 * Dual Intel® Xeon® Platinum 8280M (Cascade Lake, BI.S4.NW1500)
 * Dual Intel Xeon Platinum 8280M (Cascade Lake, BI.S4.NW3000)
 * Dual Intel Xeon Platinum 8280M (Cascade Lake)
@@ -86,7 +86,7 @@ Enhanced support is now provided for the 25 Gb uplink speed option for vCenter S
 ### Updates to data centers
 {: #relnotes_v41-dedicated-dc}
 
-(Updated on April 20, 2021) The  {{site.data.keyword.cloud_notm}} data centers **Sao Paulo 04** and **Sao Paulo 05** are now available for deployment.
+(Updated on 20 April 2021) The {{site.data.keyword.cloud_notm}} data centers **Sao Paulo 04** and **Sao Paulo 05** are now available for deployment.
 
 ### Updates for IBM Cloud for VMware Mission Critical Workloads
 {: #relnotes_v41-dedicated-mission-critical}
@@ -95,7 +95,7 @@ Starting with the 4.1 release, the following updates are available for vCenter S
 
 * You can select to use IBM-provided or your own licenses for vCenter Server Standard and vSphere Enterprise Plus licenses.
 * You can specify an initial cluster name for your witness and consolidated clusters.
-* You can optionally add an additional workload cluster and an edge services cluster to new vCenter Server multizone instances.
+* You can optionally order an additional workload cluster and an edge services cluster to new vCenter Server multizone instances.
 * You can add or remove the additional workload cluster or edge services cluster to existing vCenter Server multizone instances.
 * You can add or remove VMware ESXi servers to and from your additional workload cluster.
 * You can add or remove services to new or existing vCenter Server multizone instances.
@@ -109,13 +109,13 @@ For more information, see the following topics.
 ### Known issue for IBM Cloud for VMware Mission Critical Workloads
 {: #relnotes_v41-dedicated-mission-critical-warning}
 
-For Mission Critical Workloads, there is a known issue with vCenter HA failover. If eth0 is not active on the passive node before failover is initiated, the passive node is isolated and fails to take over as the active node. vCenter HA may not activate eth0 when failover is initiated. For assistance, contact [IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
+For Mission Critical Workloads, a known issue with vCenter HA failover exists. If eth0 is not active on the passive node before failover is initiated, the passive node is isolated and fails to take over as the active node. vCenter HA might not activate `eth0` when failover is initiated. For assistance, contact [IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 {:important}
 
 ## VMware Regulated Workloads enhancements
 {: #relnotes_v41-vrw}
 
-(Updated on April 13, 2021) The VMware Regulated Workloads offering delivers a new multizone architecture to instances that are deployed in V4.1 and later releases. The multizone architecture can help to prevent downtime for cloud applications and to automate failovers within a cloud region.
+(Updated on 4 May 2021) The VMware Regulated Workloads offering delivers a new multizone architecture to instances that are deployed in V4.1 and later releases. The multizone architecture can help to prevent downtime for cloud applications and to automate failovers within a cloud region.
 
 For more information, see [VMware Regulated Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview).
 
@@ -130,14 +130,12 @@ For more information, see [Security and Compliance Readiness Bundle overview](/d
 {: #relnotes_v41-services}
 
 This release provides the following service versions on newly deployed instances.
-
 * BIG-IP® VE v15.1.2
 * FortiGate® Virtual Appliance 6.4.4
 * HyTrust® CloudControl v6.3
 * Veeam® v11
 
 For more information, see:
-
 * [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
 * [Ordering, viewing, and deleting services for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservices)
 * [Ordering, viewing, and deleting services for Security and Compliance Readiness Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-scb_addingremovingservices)
@@ -148,9 +146,9 @@ For more information, see:
 
 Review the following information about Caveonix RiskForesight™ for this release:
 
-* Caveonix RiskForesight is offered as a per-host license for new deployments of Caveonix on VMware Regulated Workloads and VMware Security and Compliance Readiness Bundle instances. For VMware vCenter Server deployments, Caveonix is still offered as license packs that are priced per virtual machine (VM).
+* Caveonix RiskForesight is offered as a per-host license for new deployments of Caveonix on VMware Regulated Workloads and Security and Compliance Readiness Bundle instances. For vCenter Server deployments, Caveonix is still offered as license packs that are priced per virtual machine (VM).
 * A Caveonix RiskForesight license is valid for five years.
-* Deleting Caveonix RiskForesight deletes the initial Caveonix RiskForesight license associated with the service.
+* Deleting Caveonix RiskForesight deletes the initial Caveonix RiskForesight license that was associated with the service.
 
 ### Services support for vCenter Server multizone instances
 {: #relnotes_v41-services-multizone-vcs-instances}
@@ -167,7 +165,7 @@ For more information, see [Ordering, viewing, and deleting services for vCenter 
 ### Veeam on bare metal server
 {: #relnotes_v41-services-veeam-baremetal}
 
-Starting with the 4.1 release, you can install Veeam v11 on a bare metal server. This is only supported on vSphere 7.0 with NSX-T.
+Starting with the 4.1 release, you can install Veeam v11 on a bare metal server. This new feature is supported only for vSphere 7.0 with NSX-T.
 
 For more information, see [Veeam on bare metal server](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview#veeamvm_overview-baremetal-server).
 
