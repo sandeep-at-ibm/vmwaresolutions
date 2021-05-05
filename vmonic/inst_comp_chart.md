@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-02"
+lastupdated: "2021-04-05"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -61,14 +61,13 @@ Review the following table to understand the differences in feature support for 
 |:-------- |:-------------- |:-------------- |:-------------- |
 | vSphere version | 6.7 Update 3 or 7.0 Update 1c | 7.0 Update 1c | 7.0 Update 1c |
 | NSX edition | Advanced or Enterprise | Advanced or Enterprise | Enterprise |
-| NSX networking solution | NSX-V or NSX-T | NSX-T | NSX-T |
+| NSX networking solution | NSX-V or NSX-T™ | NSX-T | NSX-T |
 | NFS | Optional | Optional | Not allowed |
 | vSAN | Optional | Optional | Required |
 | Consolidated cluster | Optional | Optional | Not allowed |
-| Separate management cluster | Not supported | Not supported | Supported |
-| Minimum number of hosts | 4 | 5 for NFS, 6 for vSAN | 10 |
-| Edge services cluster | Not supported | Required (Juniper vSRX or bring your own gateway) | Required (Juniper vSRX, bring your own gateway, or FortiGate Security Appliance) |
-| Edge gateway | Not supported | Required | Required |
+| Separate management cluster | Supported | Not supported | Supported |
+| Minimum number of ESXi servers | For vSAN, four servers. </br>For NFS, three servers for production use and two servers for non-production use. | For vSAN, six servers. </br>For NFS, five servers. | 10 |
+| Edge services cluster | Optional | Required. Juniper vSRX or Bring your own gateway. | Required. Juniper vSRX, Bring your own gateway, or FortiGate Security Appliance. |
 | Logging and monitoring with VMware vRealize Operations and Log Insight | Optional | Required | Required |
 | Role-based access with HyTrust CloudControl | Optional | Required | Required |
 | Compliance with Caveonix | Optional | Required | Required |
@@ -79,8 +78,8 @@ Review the following table to understand the differences in feature support for 
 | Veeam backup server | Optional (opt out) | Optional (opt out) | Required with option to remove on day 2 |
 | Disaster recovery | Veeam or Zerto | Veeam 11 | Veeam 11|
 | Migration | HCX, Zerto, or PrimaryIO | HCX (optional) | HCX (optional) |
-| Stretched cluster - high availability | Optional | Optional | Optional |
-| Financial Services Cloud with policy framework | No | No (stepping stone to Financial Services, but no in-place upgrade) | Yes |
+| Stretched cluster - High Availability | Optional | Optional | Optional |
+| Financial Services Cloud with policy framework | No | No. Stepping stone to Financial Services, but no in-place upgrade. | Yes |
 {: caption="Table 2. Supported features for vCenter Server instances, Security and Compliance Readiness Bundle instances, and VMware Regulated Workloads" caption-side="top"}
 
 ## Related links
