@@ -9,7 +9,6 @@ VMware Solutions
     [Why VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
-    vmonic/vmware-comp-guide.md
     vmonic/relnotes_v41.md
 
     {: .topicgroup}

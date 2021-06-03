@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-22"
+lastupdated: "2021-06-03"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -333,7 +333,7 @@ Similar to VMware guest tools, a vCenter Server environment upgrade might cause 
 #### Upgrading firmware and drivers
 {: #vc_vsphere_upgrade-procedure-addtl-nic}
 
-You might need to update your firmware and drivers to a version that is compatible with vSphere 6.7 on the ESXi servers. Check your firmware and drivers versions and compare them to the [Product compatibility guide](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-comp-guide). If required, complete the necessary upgrades.
+You might need to update your firmware and drivers to a version that is compatible with vSphere 6.7 on the ESXi servers. Check your firmware and drivers versions and if required, complete the necessary upgrades.
 
 #### Setting the Enhanced vMotion Compatibility mode to Intel Skylake
 {: #vc_vsphere_upgrade-procedure-addtl-evc}
