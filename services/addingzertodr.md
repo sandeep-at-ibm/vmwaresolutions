@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-05-14"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -25,9 +25,9 @@ subcollection: vmwaresolutions
 The Zerto service integrates replication and disaster recovery capabilities into the deployment offerings to protect and recover data in your VMware® virtual environment on {{site.data.keyword.cloud}}.
 {: shortdesc}
 
-{{site.data.keyword.vmwaresolutions_short}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_short}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-The Zerto service is not supported for VMware vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is 7.5 Update 3.
+The Zerto service is not supported for VMware vCenter Server® with NSX-T™ instances. For vCenter Server with NSX-V instances, the installed version is 7.5 Update 3.
 {:note}
 
 ## Before you begin
@@ -39,7 +39,7 @@ The Zerto service is not supported for VMware vCenter Server® with NSX-T instan
 ## Technical specifications for Zerto
 {: #addingzertodr-specs}
 
-For information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 The following components are ordered and included in the Zerto service.
 

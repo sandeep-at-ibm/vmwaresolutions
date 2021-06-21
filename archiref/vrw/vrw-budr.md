@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -31,9 +31,9 @@ The management cluster relies upon native vSphere DRS capabilities to keep manag
 |---|---|---
 |**Active Directory / DNS** | Image through the Veeam agent | Daily |
 |**vCenter** | Backup server file| Daily |
-|**NSX-T Controllers** | Backup server file | Daily|
+|**NSX-T™ Controllers** | Backup server file | Daily|
 |**vRealize Operations Manager** | VMDK through Veeam | Daily |
-|**vRealize Log Insights** | VMDK through Veeam | Daily |
+|**vRealize Log Insight** | VMDK through Veeam | Daily |
 |**HyTrust CloudControl** | Backup server file | |
 |**Virtual Machine Backup Server** | VMDK through Veeam| |
 |**Juniper vSRX** | Backup server file through SCP from vSRX | Commit change |

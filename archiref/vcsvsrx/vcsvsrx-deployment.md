@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-02-24"
+lastupdated: "2021-05-18"
 
 subcollection: vmwaresolutions
 
@@ -35,28 +35,28 @@ Open the [IBM Cloud infrastructure customer portal](https://control.softlayer.co
   - Domain: Enter the applicable domain name for the gateway cluster.
     -  Example: `myvcsdomain.local`
 
-        Where myvcsdomain.local is the domain that is assigned to the previously deployed vCenter Server instance.
+        Where `myvcsdomain.local` is the domain that is assigned to the previously deployed vCenter Server instance.
   - Select High availability.
     - HA Hostname: Provide hostname for node 2 in the gateway cluster.
-      - Example: gateway02
+      - Example: `gateway02`
       - NOTE: Select a hostname consistent with the existing vCenter Server naming convention since the vSRX nodes are manually added to the vCenter Server AD/DNS server for hostname resolution.
     - HA Domain: Verify that this value is the same domain name that is provided for node1.
-        - Example: myvcsdomain.local
+        - Example: `myvcsdomain.local`
 - Location.
   - Select geography. Example: NA South.
     - Select dataCenter. Example: Dallas 10.
 - POD.
   - Select POD where existing vCenter Server instance is deployed to. Example: dal10.pod01.
   - Make sure that you order the vSRX in the same POD as your vCenter Server instance. VLANs don't span PODs so you must deploy to the correct POD.
-    - Determining SoftLayer_Network_Pod
+    - Determining `SoftLayer_Network_Pod`
 
-      SoftLayer_Network_Pod refers to a portion of a data center that share a Backend Customer Router (BCR) and usually a front-end counterpart that is known as a Frontend Customer Router (FCR). A Pod primarily denotes a logical location within the network and the physical aspects that support networks, in contrast to representing a specific physical location.
+      `SoftLayer_Network_Pod` refers to a portion of a data center that share a Backend Customer Router (BCR) and usually a front-end counterpart that is known as a Frontend Customer Router (FCR). A Pod primarily denotes a logical location within the network and the physical aspects that support networks, in contrast to representing a specific physical location.
 
-      A Pod is identified by a name, which is unique. A Pod name follows the format ‘dddnn.podii’. ‘ddd’ is a data center code, ‘nn’ is the data center number, and ‘pod’ is a literal string. ‘ii’ is a two-digit number, zero-padded to the left, which corresponds to a Backend Customer Router (BCR) of the data center. Examples:
+      A pod is identified by a name, which is unique. A Pod name follows the format `dddnn.podii`, where `ddd` is a data center code, `nn` is the data center number, and `pod` is a literal string. `ii` is a two-digit number, zero-padded to the left, which corresponds to a Backend Customer Router (BCR) of the data center. Examples:
 
-      dal09.pod01 = Dallas 9, Pod 1 (that is, bcr01)
-      sjc01.pod04 = San Jose 1, Pod 4 (that is, bcr04)
-      ams01.pod01 = Amsterdam 1, Pod 1 (that is, bcr01)
+      `dal09.pod01` is Dallas 9, Pod 1 (that is, bcr01)
+      `sjc01.pod04` is San Jose 1, Pod 4 (that is, bcr04)
+      `ams01.pod01` is Amsterdam 1, Pod 1 (that is, bcr01)
 
 - Select Dual Processor hardware option.
   - Select: Intel Xeon 5120, 28 core.

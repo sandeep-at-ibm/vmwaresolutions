@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-02"
+lastupdated: "2021-06-14"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Multizone add services, Multizone on services, services for multizone instances
 
@@ -22,13 +22,14 @@ subcollection: vmwaresolutions
 # Ordering, viewing, and deleting services for vCenter Server multizone instances
 {: #mcv_addingremovingservices}
 
-When you order a vCenter Server multizone instance, you can also order add-on services. The following services are supported on vCenter Server multizone instances:
+When you order a VMware vCenter Server® multizone instance, you can also order add-on services. The following services are supported on vCenter Server multizone instances:
 {: shortdesc}
 
-* Caveonix RiskForesight™ v2.4
-* HyTrust® CloudControl™ v6.3
-* Veeam® v11
-* vRealize Operations™ and Log Insight™ vROps v8.2 and vRLI v8.2
+* Caveonix RiskForesight™
+* HyTrust® CloudControl™
+* Juniper® vSRX
+* Veeam®
+* vRealize Operations™ and Log Insight™ vROps and vRLI.
 
 ## Resource requirements for services
 {: #mcv_addingremovingservices-resource-reqs}
@@ -42,20 +43,22 @@ During deployment, if the capacity check fails, the service is not installed and
 To install the service, you must increase the capacity in your cluster either by adding more VMware ESXi™ servers or by freeing up RAM, CPU, or disk space. After that, you can add the service or services again. To remove the existing service in the **Capacity Validation Failed** state, click the delete icon next to it.
 
 The following table provides the resource requirements for the services that the
-system performs a capacity check for. The table only includes the add-on services that are supported on vCenter Server multizone instances:
+system performs a capacity check for. The table includes only the add-on services that are supported on vCenter Server multizone instances:
 
 * Caveonix RiskForesight
 * HyTrust CloudControl
+* Juniper vSRX
 * Veeam
 * vRealize Operations and Log Insight
 
 
 | Service name | Resource requirements |
 |:------------ |:--------------------- |
-| Caveonix RiskForesight | CPU: 8 vCPUs<br>RAM: 32 GB<br>Storage: 100 GB |
-| HyTrust CloudControl | CPU: 4 vCPUs<br>RAM: 16 GB<br>Storage: 186 GB VMDK resident on vSAN™ |
-| Veeam | If you select Veeam as a VSI option, there is no capacity requirement.<br><br>If you select Veeam as a VM option, the following capacity is required:<br>CPU: 8 vCPUs<br>RAM: 32 GB<br>Storage: 100 GB<br><br>If you select Veeam as a bare metal server option, there is no capacity requirement. |
-| vRealize Operations and Log Insight | CPU: 18 vCPUs<br>RAM: 208 GB<br><br>You must have an estimated 750 GB of vSAN storage. |
+| Caveonix RiskForesight | CPU - 8 CPUs<br>RAM - 32 GB<br>Storage - 100 GB |
+| HyTrust CloudControl | CPU - 4 CPUs<br>RAM - 16 GB<br>Storage - 186 GB VMDK resident on vSAN™ |
+| Juniper vSRX | You must have enough available capacity to accommodate two VMs with the following requirements, on different hosts:<br>CPU - 6 CPUs<br>RAM - 16 GB<br>Storage - 18 GB |
+| Veeam | If you select Veeam as a VSI option, you do not have a capacity requirement.<br><br>If you select Veeam as a VM option, the following capacity is required:<br>CPU - 8 CPUs<br>RAM - 32 GB<br>Storage - 100 GB<br><br>If you select Veeam as a bare metal server option, you do not have a capacity requirement. |
+| vRealize Operations and Log Insight | CPU - 18 CPUs<br>RAM - 208 GB<br><br>You must have an estimated 750 GB of vSAN storage. |
 {: caption="Table 1. Resources required for multizone services that the system checks for capacity requirements" caption-side="top"}
 
 ### Formulas for calculating space requirements for services
@@ -63,7 +66,7 @@ system performs a capacity check for. The table only includes the add-on service
 
 The following formulas are used to calculate the space requirements for the services and the management overheads. The formulas apply to management clusters, workload clusters, edge services clusters, and single-node management clusters.
 
-For management clusters on multizone instances, approximately half of the resources are available for service installs. Therefore, for management clusters, you should use the formulas provided with approximately half of the resources.
+For management clusters on multizone instances, approximately half of the resources are available for service installs. Therefore, for management clusters, use the formulas that are provided with approximately half of the resources.
 
 #### Formula to calculate the number of available cores
 {: #mcv_addingremovingservices-resource-requirements-spacecalc-forms-cores}
@@ -114,10 +117,11 @@ The following table lists the variables that are used in the previous formula.
 ## Procedure to add services to vCenter Server multizone instances
 {: #mcv_addingremovingservices-add-services-procedure}
 
-You can easily add one or more of the four services that are supported on vCenter Server multizone instances when you order your instance. The supported services are:
+You can easily add one or more of the services that are supported on vCenter Server multizone instances when you order your instance. The supported services are:
 
 * Caveonix RiskForesight
 * HyTrust CloudControl
+* Juniper vSRX
 * Veeam
 * vRealize Operations and Log Insight
 
@@ -129,6 +133,8 @@ For more information about each service's considerations and to check the compon
 * [Ordering Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_ordering)
 * [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
 * [Ordering HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_ordering)
+* [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
+* [Ordering Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-ordering)
 * [Veeam v11 overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Ordering Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering)
 * [vRealize Operations and Log Insight overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)

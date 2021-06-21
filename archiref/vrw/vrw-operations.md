@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -54,7 +54,7 @@ All systems that generate logs are configured to send their logs to vRealize Log
 
 [VMware vRealize Network Insight](https://www.vmware.com/products/vrealize-network-insight.html){:external} helps you build an optimized, highly available, and secure network infrastructure across hybrid and multi-cloud environments. It provides network visibility and analytics to accelerate micro-segmentation security, minimize risk during application migration, optimize network performance and confidently manage and scale NSX deployments.
 
-vRealize Network Insight monitors network components and management traffic throughout the entire {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance. The monitoring scope includes insight into the operation of the NSX-T overlay network. Network Insight is also used to help optimizing performance by eliminating network bottlenecks. vRealize Network Insight is an optional component that requires manual installation.
+vRealize Network Insight monitors network components and management traffic throughout the entire {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance. The monitoring scope includes insight into the operation of the NSX-T™ overlay network. Network Insight is also used to help optimizing performance by eliminating network bottlenecks. vRealize Network Insight is an optional component that requires manual installation.
 
 ## Edge services cluster
 {: #vrw-operations-edge}

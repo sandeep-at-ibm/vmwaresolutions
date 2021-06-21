@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-08"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -49,7 +49,7 @@ Traffic from the SaaS consumer passes through the vSRX in an encrypted tunnel, w
 
 The workload cluster network design is closely aligned to that of a traditional vCenter Server deployment. VLANs and subnets are provisioned to support vMotion, vSAN, VTEPS for the Software-Defined Networking (SDN) network, and workload cluster host management functions.
 
-Within the workload clusters, NSX-T provides a highly secure and flexible software defined network to support the application requirements. NSX-T management is external to the workload cluster thus ensuring that network and security changes are not possible by anyone other than the designated administrators. All north-south network access in the workload cluster is done through private and secure connections by using IPsec or IBM Direct Link. The workload clusters are protected by the same edge services cluster with the vSRX or the physical FortiGate that protects the management plane.
+Within the workload clusters, NSX-T™ provides a highly secure and flexible software defined network to support the application requirements. NSX-T management is external to the workload cluster thus ensuring that network and security changes are not possible by anyone other than the designated administrators. All north-south network access in the workload cluster is done through private and secure connections by using IPsec or IBM Direct Link. The workload clusters are protected by the same edge services cluster with the vSRX or the physical FortiGate that protects the management plane.
 
 ## IBM Cloud networking
 {: #vrw-underlay-network-cloud}

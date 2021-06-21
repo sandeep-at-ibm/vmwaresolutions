@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-26"
+lastupdated: "2021-04-22"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
@@ -41,7 +41,7 @@ Ensure that you complete the following tasks:
    * To save the configuration as a template without placing an order, click **Save configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 
-   Only the {{site.data.keyword.cloud_notm}} bare metal servers are installed. You're responsible for installing and configuring various components after cluster deployment, such as VMware® vCenter, VMware NSX®, VMware vSAN™.
+   Only the {{site.data.keyword.cloud_notm}} bare metal servers are installed. You're responsible for installing and configuring various components after cluster deployment, such as VMware® vCenter Server, VMware NSX®, and VMware vSAN™.
    {:note}
 
 ## Results

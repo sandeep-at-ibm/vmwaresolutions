@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-08"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -27,7 +27,7 @@ Within the vCenter Server design, the {{site.data.keyword.vmwaresolutions_short}
 
 In {{site.data.keyword.vmwaresolutions_short}}, every primary instance deploys a forest root domain and configures the site topology. The {{site.data.keyword.vmwaresolutions_short}} AD/DNS is always going to be its own forest and domain, you cannot remove this forest or domain because it might break the {{site.data.keyword.vmwaresolutions_short}} automation. You can't migrate the users and resources to one of your existing domains or create a new domain, as you can't create the credentials for the IBM user named `automation`.
 
-During the ordering process of a vCenter Server instance, the following information is collected from the user that is pertinent to the Active Directory Domain Services (AD DS) and DNS configuration:
+During the ordering process of a vCenter Server instance, the following information is collected from the user that is pertinent to the Active Directory Domain Services (AD DS) and DNS configuration.
 * Hostname prefix
 * Domain name
 
@@ -48,7 +48,7 @@ During the ordering process, you can deploy:
 
 Currently, Microsoft Windows Server 2019 Standard is deployed for the operating system. The domain functional level 2008 is set to allow for compatibility with an earlier version with any potential secondary instances. If compatibility with earlier (2008) secondary instances is not a consideration in your environment, you can upgrade the domain functional level to a higher version.
 
-For more information, see [Forest and Domain Functional Levels](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels){:external}.
+For more information, see [Forest and domain functional levels](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-functional-levels){:external}.
 
 ### Single VSI domain controller
 {: #adds-infra-domain-controllers-vsi}
@@ -63,8 +63,8 @@ The following table describes the VSI configuration.
 
 | Parameter          | Specification                                 |
 |:-------------------|:----------------------------------------------|
-| Operating System   | Windows Server 2019 Standard Edition (64 bit) |
-| CPU                | 2 x 2.0 GHz or higher Cores                   |
+| Operating System   | Windows Server 2019 Standard Edition (64-bit) |
+| CPU                | 2 x 2.0 GHz or higher cores                   |
 | RAM                | 8 GB                                          |
 | Disk               | 100 GB (SAN)                                  |
 | Uplink Port Speeds | 1 Gbps Private Network Uplink                 |
@@ -78,11 +78,13 @@ The domain controller is provisioned with a name of `ADNS<instance_name>.<root_d
 The following diagram shows the deployment pattern of the two highly available VM domain controllers.
 ![Two highly available VM domain controllers diagram](../../images/adds-adha.svg "Two highly available VM domain controllers"){: caption="Figure 2. Two highly available VM domain controllers" caption-side="bottom"}
 
-If you order the two high availability Microsoft Windows VMs, you must provide two Microsoft Windows Server 2019 licenses. For more information, see [DNS Configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-dns-config). After the provisioning of the vCenter Server instance, you have 30 days to activate the VMs. The cluster is configured with a VM-VM anti-affinity rule. Therefore, Distributed Resource Scheduler (DRS) tries to keep the VMs apart by placing them on different physical vSphere ESXi hosts. The following table describes the VM configuration.
+If you order the two high availability Microsoft Windows VMs, you must provide two Microsoft Windows Server 2019 licenses. For more information, see [Domain Name System configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-dns-config).
+
+After the provisioning of the vCenter Server instance, you have 30 days to activate the VMs. The cluster is configured with a VM-VM anti-affinity rule. Therefore, Distributed Resource Scheduler (DRS) tries to keep the VMs apart by placing them on different physical vSphere ESXi hosts. The following table describes the VM configuration.
 
 | Parameter        | Specification                                 |
 |:-----------------|:----------------------------------------------|
-| Operating System | Windows Server 2019 Standard Edition (64 bit) |
+| Operating System | Windows Server 2019 Standard Edition (64-bit) |
 | CPU              | 2                                             |
 | RAM              | 8 GB                                          |
 | Disk             | 100 GB                                        |
@@ -180,14 +182,14 @@ The customer user IDs and passwords for the vCenter Server instance are availabl
 
 For more information, see [vCenter and Platform Services Controller user IDs](/docs/vmwaresolutions?topic=vmwaresolutions-audit_user_ids).
 
-## DNS configuration
+## Domain Name System configuration
 {: #adds-infra-domain-dns}
 
 The vCenter Server instance design integrates DNS services on the AD domain controllers:
-* The domain structure is specified during the instance order process
-* The domain controllers are configured to be authoritative for the DNS domain
-* The domain controllers servers are configured to point to the {{site.data.keyword.cloud_notm}} DNS servers for all other zones
-* Any secondary vCenter Server instances that are integrated to the primary instance use the same DNS name structure
+* The domain structure is specified during the instance order process.
+* The domain controllers are configured to be authoritative for the DNS domain.
+* The domain controllers servers are configured to point to the {{site.data.keyword.cloud_notm}} DNS servers for all other zones.
+* Any secondary vCenter Server instances that are integrated to the primary instance use the same DNS name structure.
 
 When a secondary vCenter Server instance is linked to the primary instance, the vCenter Server instance appliances are configured:
 * DNS is configured with the primary instances AD DNS server IP address.
@@ -199,24 +201,24 @@ AD DS DNS is configured with a forward lookup zone with the name of <root_domain
 * `<instance_name>-nsx`
 * Add-on services when ordered. For example, HCX, Caveonix RiskForesight, Veeam, or Zerto, with instance-specific names
 
-Reverse lookup zones with the start of authority (SOA), name server (NS), and the required pointer (PTR) records for the appliances in the following subnets:
+Reverse lookup zones with the start of authority (SOA), name server (NS), and the required pointer (PTR) records for the appliances are configured in the following subnets:
 * Management subnet
-* Internal-mgmt subnet
-* Add-on services subnets, for example, HCX subnet, risk foresight subnet
+* `Internal-mgmt` subnet
+* Add-on services subnets. For example: HCX subnet, risk foresight subnet.
 
 The forwarder section is configured with:
 * 10.0.80.12
 * 10.0.80.11
 
-Forwarders are DNS servers that the AD DNS server can use to resolve DNS queries for records that the AD server cannot resolve. 10.0.80.12 and 10.0.80.11 are the two addresses for {{site.data.keyword.cloud_notm}} Resolving Name Servers. Resolving name servers are located on the private network and act as DNS resolvers. The private resolvers query the internet's root name servers for domain lookups and resolve this information over the private network to keep your bandwidth usage down, reduce the load on the authoritative servers, and offer quick resolution. Private network resolvers are a convenience service for our customers.
+Forwarders are DNS servers that the AD DNS server can use to resolve DNS queries for records that the AD server cannot resolve. 10.0.80.12 and 10.0.80.11 are the two addresses for {{site.data.keyword.cloud_notm}} Resolving Name Servers. Resolving name servers are located on the private network and act as DNS resolvers. The private resolvers query the Internet root name servers for domain lookups and resolve this information over the private network to keep your bandwidth usage down, reduce the load on the authoritative servers, and offer quick resolution. Private network resolvers are a convenience service for our customers.
 
-All deployed appliances: VCSA, NSX Manager and Controllers, and vSphere ESXi hosts have their DNS settings configured to point to the AD DNS server as their default DNS. You can customize the DNS zone configuration if it does not interfere with the configuration of the deployed components.
+All deployed appliances: vCenter Server Appliance, NSX Manager and Controllers, and vSphere ESXi hosts have their DNS settings configured to point to the AD DNS server as their default DNS. You can customize the DNS zone configuration if it does not interfere with the configuration of the deployed components.
 
 **Next topic:** [vCenter Single Sign On](/docs/vmwaresolutions?topic=vmwaresolutions-adds-sso)
 
 ## Related links
 {: #adds-infra-domain-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
 * [Getting started with VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started)
 * [VMware Solutions: Take a look under the hood](/docs/vmwaresolutions?topic=vmwaresolutions-under_the_hood)

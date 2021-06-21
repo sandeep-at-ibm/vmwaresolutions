@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-16"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -26,7 +26,7 @@ subcollection: vmwaresolutions
 The operational tooling consists of the following components:
 
 - vRealize Operations Manager - Using data collected from objects in the VMware® platform, vRealize Operations Manager (vROps) uses detailed dashboards to show system health, capacity, and performance.
-- vRealize Log Insights - Objects in the VMware® platform have been configured to send their logging events to vRealize Log Insights (vRLI) to enable a centralized log management function.
+- vRealize Log Insight - Objects in the VMware® platform have been configured to send their logging events to vRealize Log Insight (vRLI) to enable a centralized log management function.
 
 The following main principles or requirements for identity and access management to the operational tooling apply:
 - The principle of least privilege to be used so that a user account has assigned only the privileges that are essential to perform the intended function.
@@ -47,7 +47,7 @@ The following terminology is used to define the account types:
 ## VMware Solutions infrastructure AD domain
 {: #vrw-iam-vrealize-ad}
 
-The IBM Cloud™ for VMware Solutions infrastructure AD domain holds the resource objects and user accounts for the administration of the VMware platform only.
+The VMware Solutions infrastructure AD domain holds the resource objects and user accounts for the administration of the VMware platform only.
 
 ## vRealize Operations Manager
 {: #vrw-iam-vrealize-vrops}
@@ -107,7 +107,7 @@ By default, the following local users are configured during service instantiatio
 
 This account is not used on a day-to-day basis or for configuration tasks.
 
-![vRealize Log Insights logical](../../images/vrw-vrli.svg){: caption="Figure 2. vRealize Log Insights logical" caption-side="bottom"}
+![vRealize Log Insight logical](../../images/vrw-vrli.svg){: caption="Figure 2. vRealize Log Insight logical" caption-side="bottom"}
 
 ### vRealize Log Insight roles
 {: #vrw-iam-vrealize-vrli-roles}

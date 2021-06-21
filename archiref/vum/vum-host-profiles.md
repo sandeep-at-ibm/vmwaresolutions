@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-05-14"
 
 subcollection: vmwaresolutions
 
@@ -18,7 +18,7 @@ vCenter has a feature that is called Host Profiles. This feature creates a profi
 
 As more VMware vCenter Server vSphere ESXi hosts are deployed by the {{site.data.keyword.vmwaresolutions_full}} automation that deployed the original cluster, there are less configuration drift than with manual methods of adding hosts. However, system administrator actions, besides the automation can make the hosts configuration different. For example, more NFS storage is added or extra VLANs are added. The use of Host Profiles to validate the configuration of a new host by checking compliance of this host against an existing host is a valid use case of this tool within {{site.data.keyword.cloud_notm}}.
 
-To add more hosts to your vCenter Server cluster, see [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers).
+To add more hosts to your vCenter Server cluster, see [Adding ESXi servers to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers).
 
 * For instances deployed at, or upgraded to, V2.1 or higher, newly deployed ESXi servers and clusters are patched with recent, but not necessarily the most recent ESXi updates from VMware.
 * You're responsible for all other updates to VMware components, including ensuring that newly deployed ESXi servers and clusters have all the most recent updates you require.

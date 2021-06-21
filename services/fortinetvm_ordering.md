@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-31"
+lastupdated: "2021-06-14"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -27,6 +27,8 @@ You can include the FortiGate® Virtual Appliance service with a new vCenter Ser
 {: #fortinetvm_ordering-new}
 
 When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **FortiGate Virtual Appliance** in the **Security and compliance** category. Follow the steps to add the service to your instance.
+
+You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
 
 ## Ordering FortiGate Virtual Appliance for an existing instance
 {: #fortinetvm_ordering-existing}
@@ -68,9 +70,10 @@ Enter the service name.
 {: #fortinetvm_ordering-config-size}
 
 {{site.data.keyword.cloud}} provides the following deployment size options:
-* Small (2 vCPUs / 4 GB RAM)
-* Medium (4 vCPUs / 6 GB RAM)
-* Large (8 vCPU / 12 GB RAM)
+* 2 CPUs / 4 GB RAM
+* 4 CPUs / 6 GB RAM
+* 8 CPU / 12 GB RAM
+* 16 CPU / 12 GB RAM
 
 ### License model
 {: #fortinetvm_ordering-config-license}
@@ -94,7 +97,7 @@ You can't change the license model after service installation. To change the lic
 
 * [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations)
 * [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-managingfortinetvm)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Fortinet website](https://www.fortinet.com/){:external}

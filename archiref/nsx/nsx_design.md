@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-04-07"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -38,8 +38,8 @@ The dedicated architecture deploys the necessary NSX Edge components in a separa
 * Provides on-ramp and off-ramp connectivity to physical networks. For example, North-South L3 routing on NSX Edge virtual appliances.
 * Allows for communication with physical devices that are connected to VLANs in the physical networks through NSX L2 bridging and hosts the control virtual machine (VM) for Distributed Logical Router (DLR) routing.
 * Can have centralized logical or physical services. For example, a firewall, load balancers, Virtual Private Network (VPN) monitoring components, log insight VMs.
-* NSX Controllers can be hosted in an Edge cluster when a dedicated vCenter is used to manage the compute and edge resources.
-* Edge cluster resources have an anti-affinity requirement to protect the active standby configuration or to maintain the bandwidth availability during failure.
+* NSX Controllers can be hosted in an edge services cluster when a dedicated vCenter is used to manage the compute and edge resources.
+* Edge services cluster resources have an anti-affinity requirement to protect the active standby configuration or to maintain the bandwidth availability during failure.
 
 ## IBM Cloud Private IP address ranges and Bring Your Own IP address ranges
 {: #nsx_design-ip-addr-ranges}
@@ -53,4 +53,4 @@ While this makes it simple to set up a worldwide connected infrastructure within
 ## Related links
 {: #nsx_design-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

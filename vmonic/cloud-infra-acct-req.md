@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-16"
 
 keywords: user account, user permissions, VRF account
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Requirements for the IBM Cloud infrastructure account
 {: #cloud-infra-acct-req}
 
-To use {{site.data.keyword.vmwaresolutions_full}} to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The price of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
+To use {{site.data.keyword.cloud}} for VMware® Solutions to order instances, you must have an {{site.data.keyword.cloud_notm}} infrastructure account. The price of the components that are ordered in your instances is billed to that {{site.data.keyword.cloud_notm}} account.
 
 ## Permissions for the IBM Cloud infrastructure account
 {: #cloud-infra-acct-req-permissions}
@@ -32,7 +32,7 @@ You can verify or update permissions for classic infrastructure users at any tim
 
 | Permission         | Details                                 |
 |:------------------ |:--------------------------------------- |
-| Add Server | This permission is required for the following operations: to order {{site.data.keyword.cloud_notm}} bare metal servers on which VMware® ESXi™ runs and to provision hourly virtual servers that are used for instance configuration, maintenance, and support operations. |
+| Add Server | This permission is required for the following operations: to order {{site.data.keyword.cloud_notm}} bare metal servers on which VMware ESXi™ runs and to provision hourly virtual servers that are used for instance configuration, maintenance, and support operations. |
 | Cancel Server | This permission is required to release and reclaim bare metal servers on which VMware ESXi runs. If you delete your instance, the ordered components are automatically released in the correct dependency sequence. |
 | View Virtual Server Details | This permission is required to retrieve the server provisioning details, which are required for order validation and automated configuration. |
 | Add Storage | This permission is required to order backup storage and shared storage for the instance. |
@@ -55,7 +55,7 @@ You can verify or update permissions for classic infrastructure users at any tim
 
 Your {{site.data.keyword.cloud_notm}} infrastructure account must be a Virtual Routing and Forwarding (VRF) account. If your account is non-VRF, you must convert it to a VRF account. It is also recommended to enable your VRF account for using service endpoints.
 
-For more information, seethe followingg procedures.
+For more information, see the following procedures:
 * [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
 * [Converting to VRF](/docs/direct-link?topic=direct-link-what-happens-during-the-account-conversion-process)
 * [Enabling service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint)

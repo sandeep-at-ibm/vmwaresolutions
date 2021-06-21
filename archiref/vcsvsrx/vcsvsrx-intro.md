@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-04-11"
 
 subcollection: vmwaresolutions
 
@@ -27,7 +27,7 @@ Initial deployment consists of two bare metal hosts with KVM as the hypervisor a
 
 The vSRX cluster must be ordered as noted previously, so the gateway role is assigned to the cluster.
 
-**Next topic:** [vSRX Single DC Edge](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-planning)
+**Next topic:** [vSRX single data center edge](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-planning)
 
 ## Related links
 {: #vcsvsrx-intro-related}

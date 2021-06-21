@@ -5,7 +5,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-05-14"
 
 keywords: Veeam, Veeam license, manage Veeam license, Veeam 10
 
@@ -71,7 +71,7 @@ If you are experiencing this problem and the only browser you can use is Firefox
 
 Deleting a Veeam license does not delete the Veeam service that is installed on a vCenter Server instance. To delete the service, you must do so in the {{site.data.keyword.vmwaresolutions_short}} console.
 
-For more information, see [Procedure to delete services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure).
+For more information, see [Deleting services from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingservices).
 
 To delete a Veeam license:
 

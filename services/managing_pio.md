@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-06-15"
 
 keywords: primary io hdm, hdm intro, tech specs hdm
 
@@ -48,7 +48,7 @@ PrimaryIO HDM enables the following use cases:
 ## Technical specifications for PrimaryIO HDM
 {: #managing_pio-specs}
 
-For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 The following technical specifications apply to PrimaryIO HDM.
 
@@ -68,7 +68,7 @@ The following components belong to HDM on-premises.
 {: #managing_pio-onprem-virt-inst}
 
 * **PrimaryIO Appliance**
-  * 4 vCPU
+  * 4 CPUs
   * 8 GB RAM
   * 144 GB storage
 
@@ -80,7 +80,7 @@ The following components belong to HDM on-premises.
   * PrimaryIO Prem Manager
   * PrimaryIO ESX Manager
 
-* **Lite**. The configuration that is deployed uses 6 vCPU and 8 GB RAM of compute and memory. The total storage that is allocated is 96 GB per instance. The maximum instance in cluster mode is 2.
+* **Lite**. The configuration that is deployed uses 6 CPUs and 8 GB RAM of compute and memory. The total storage that is allocated is 96 GB per instance. The maximum instance in cluster mode is 2.
   * PrimaryIO ESX Manager
 
 #### Networking for HDM on-premises
@@ -111,7 +111,7 @@ The following components belong to HDM on {{site.data.keyword.cloud_notm}}.
   * PrimaryIO Cloud Manager
   * PrimaryIO Cloud Cache
 
-* **Lite**. The configuration that is deployed uses 6 vCPU and 12 GB RAM of compute and memory. The total storage that is allocated for cache and OS is 544 GB per instance. The maximum instance in cluster mode is 2.
+* **Lite**. The configuration that is deployed uses 6 CPUs and 12 GB RAM of compute and memory. The total storage that is allocated for cache and OS is 544 GB per instance. The maximum instance in cluster mode is 2.
   * PrimaryIO Cloud Cache
 
 #### Networking for HDM on IBM Cloud

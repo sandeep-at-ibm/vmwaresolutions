@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -38,7 +38,7 @@ The following key roles are implemented at the time of deployment:
 ### Network and security administrator roles
 {: #vrw-separation-of-duties-network}
 
-The vCenter Server model employs a single network administrator role responsible for management across all network components (such as the underlay network, vSRX, and NSX-T).
+The vCenter Server model employs a single network administrator role responsible for management across all network components (such as the underlay network, vSRX, and NSX-T™).
 
 The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads network administrator role must break out to multiple discrete administrator roles to prevent such a situation. These limited scope administrator roles are defined in concert with the HyTrust super administrator to ensure they are fully auditable and the appropriate privileges are applied to the role.
 

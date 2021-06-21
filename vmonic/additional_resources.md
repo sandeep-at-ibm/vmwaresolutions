@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-06"
+lastupdated: "2021-04-16"
 
 keywords: vmware solutions data sheet, vmware solutions developer, vmware solutions video
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # More learning resources
 {: #additional_resources}
 
-Review the following resources to get started faster or gain more in-depth technical information for {{site.data.keyword.vmwaresolutions_full}}.
+Review the following resources to get started faster or gain more in-depth technical information for {{site.data.keyword.cloud}} for VMware® Solutions.
 * Videos and demonstrations
 * Technical in-depth analysis
 * Tutorials

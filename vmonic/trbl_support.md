@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2021
 
-lastupdated: "2019-06-02"
+lastupdated: "2021-04-16"
 
 keywords: troubleshooting, contact support, support ticket
 
@@ -20,12 +20,12 @@ subcollection: vmwaresolutions
 # Contacting IBM Support
 {: #trbl_support}
 
-If you need help with {{site.data.keyword.vmwaresolutions_full}}, create a case from the {{site.data.keyword.cloud}} Support Center to get assistance.
+If you need help with {{site.data.keyword.cloud}} for VMware® Solutions, create a case from the {{site.data.keyword.cloud_notm}} Support Center to get assistance.
 
 ## Procedure to create a case for VMware Solutions
 {: #trbl_support-procedure}
 
-1. Go to the [{{site.data.keyword.cloud}} Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter).
+1. Go to the [{{site.data.keyword.cloud_notm}} Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter).
 2. Log in with your **IBMid** account.
 3. Select **All Products** and type **VMware Solutions** where prompted for the product name, then click **VMware Solutions**.
 4. Review the various solutions offered. If you do not see an answer to your problem, click **Create a case**.

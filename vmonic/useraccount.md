@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-05"
 
 keywords: set credentials, update credentials, set notifications, IAM user, invite user
 
@@ -53,9 +53,9 @@ For more information, see the following topics.
 {: support}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Settings** from the left navigation pane.
-2. If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are linked, click **Retrieve** to complete the credentials automatically, and then skip to **Step 4**.
+2. If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are linked, click **Retrieve credentials** to complete the credentials automatically, and then skip to **Step 4**.
 3. In the following situations, review the information the **IBM Cloud infrastructure credentials** area for the steps that you need to take:
-   * If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are not linked, you must link them. Follow the instructions in [Upgrading your account](/docs/account?topic=account-upgrading-account), then click **Retrieve** to complete the credentials automatically.
+   * If you have both an {{site.data.keyword.cloud_notm}} infrastructure account and an {{site.data.keyword.cloud_notm}} account that are not linked, you must link them. Follow the instructions in [Upgrading your account](/docs/account?topic=account-upgrading-account), then click **Retrieve credentials** to complete the credentials automatically.
    * If you do not have an {{site.data.keyword.cloud_notm}} infrastructure account, and you do not have a billable {{site.data.keyword.cloud_notm}} account, first [upgrade your account](/docs/account?topic=account-upgrading-account), and then [create a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).
 4. Click **Save credentials**. If you receive a message that administrator access is required, you can locate an account administrator by using the steps in [Locating an IAM account administrator](/docs/vmwaresolutions?topic=vmwaresolutions-iam_verify_permissions).
 

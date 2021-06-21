@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 subcollection: vmwaresolutions
 
@@ -14,18 +14,18 @@ subcollection: vmwaresolutions
 # HCX on-premises Service Mesh
 {: #hcxclient-vcs-mesh-deployment}
 
-Review the following steps to configure the HCX Client instance.
+Review the following steps to configure the VMware® HCX™ Client instance.
 
-## Site pairing the IBM Cloud for VMware Solutions environment
+## Site pairing the VMware Solutions environment
 {: #hcxclient-vcs-mesh-deployment-sitepair}
 
-1. Log in to the VMware vSphere Web Client.
+1. Log in to the VMware vSphere® Web Client.
 2. From the **Home** menu, select the **HCX** option.
 3. Under **Infrastructure**, **InterConnect**, click **Add Site Pairing**.
   1. Set the Site URL to the HCX Cloud Manager URL, for example, `https://x.x.x.x.x`.
-  2. Set the Username and Password to the HCX Manager Admin Details: admin / password.
+  2. Set the username and password to the HCX Manager Admin Details: admin / password.
 
-    The previous details can be obtained from the {{site.data.keyword.vmwaresolutions_full}} console, under **Services**, **HCX** for the vCenter Server instance.
+    The previous details can be obtained from the {{site.data.keyword.vmwaresolutions_full}} console, under **Services**, **HCX** for the VMware vCenter Server® instance.
 
 4. Click **Connect**.
 
@@ -122,7 +122,7 @@ To stretch a network (VLAN or VXLAN) with HCX, complete the following steps from
 4. Click **Extend Network**:
    1. Select the network to be extended.
    2. Type the current default gateway and subnet mask in CIDR format.
-   3. Click **Stretch** at the bottom of the screen to begin the network stretch workflow.
+   3. Scroll down and click **Stretch** to begin the network stretch workflow.
 
 Network progress is monitored in the vCenter client tasks pane.
 
@@ -137,14 +137,14 @@ Typically, when you migrate a particular application, all the networks in use by
 
 Why typically and not always? It can be advantageous to disconnect certain traffic from the client side after the VM is migrated. For example, VM guest backup clients, which might cause high-bandwidth use when moved to the cloud. The in-guest backup client is not required when the VM is migrated as it is automatically picked up by a more modern block level backup on the cloud side.
 
-The client’s backup network adapter is not being accessed because it would mean accessing each VM to shut off the in-guest client backup schedule. Therefore, if a backup network is used, the backup might fail. This is a temporary situation until all the VMs can be reached post migration to disable the in-guest backup client.
+The client’s backup network adapter is not being accessed because it would mean accessing each VM to shut off the in-guest client backup schedule. Therefore, if a backup network is used, the backup might fail. This situation is temporary until all the VMs can be reached post migration to disable the in-guest backup client.
 
-Bandwidth of a single network extension is theoretically 4 Gbps. However, this value can be the limit for all stretched networks within a single network extension pair and is not achievable by a single stretched network. A single stretched network can achieve ~1 Gbps given there is enough underlay bandwidth allotted and latency is low (<~10 ms).
+Bandwidth of a single network extension is theoretically 4 Gbps. However, this value can be the limit for all stretched networks within a single network extension pair and is not achievable by a single stretched network. A single stretched network can achieve ~1 Gbps if enough underlay bandwidth is allotted and the latency is low (<~10 ms).
 
 ### Proximity Routing option
 {: #hcxclient-vcs-mesh-deployment-stretching-prox-routing}
 
-Without any type of route optimization, extended networks route back to the client side for any L3 access. This trombone-ing introduces an inefficient traffic pattern as packets need to travel back and forth between client (source) and cloud. This is true even for cases where both the source and destination VMs are in the cloud. The Proximity Routing feature of HCX was designed to address this and local egress of traffic.
+Without any type of route optimization, extended networks route back to the client side for any L3 access. This trombone-ing introduces an inefficient traffic pattern as packets need to travel back and forth between client (source) and cloud. This situation exists even for cases where both the source and destination VMs are in the cloud. The Proximity Routing feature of HCX was designed to address this issue and local egress of traffic.
 
 **Next topic:** [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
 

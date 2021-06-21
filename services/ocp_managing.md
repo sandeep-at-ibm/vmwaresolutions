@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-05-14"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
@@ -71,7 +71,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   7. After you create the new parameters, click **OK** to close the Configuration Parameters window. Click **OK** to close the Edit Settings window.
 
 4. Create a DHCP binding for the worker VM:
-  1. Log in to NSX-T.
+  1. Log in to NSX-T™.
   2. Go to **Networking > Segments**.
   3. Edit the `ocp-internal` segment.
   4. Expand **DHCP Static Bindings** and click **Set** to open the Set Static Bindings window.
@@ -90,7 +90,7 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
   6. Click **Save** and then click **Apply** to commit your changes.
 
 6. Create DNS records for the new worker.
-  1. Log in to the AD NS server for your vCenter instance.
+  1. Log in to the AD NS server for your vCenter Server instance.
   2. Using the DNS Manager, add a new A record to the corresponding `ocp` zone. When you create the A record, make sure the option to create associated PTR record is selected.
 
 7. Approve any certificate signing requests (CSRs) from the bastion. During the provisioning of the new worker, you might have to [approve CSRs](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external} from the bastion.
@@ -109,6 +109,6 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
 ## Related links
 {: #ocp_managing-related}
 
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

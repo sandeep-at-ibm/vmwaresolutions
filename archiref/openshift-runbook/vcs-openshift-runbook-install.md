@@ -432,31 +432,31 @@ The password for the user that was created during installation can also be found
     Every 5.0s: oc get clusteroperators
 
     NAME                                 VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
-    authentication                       4.4.5    True        False         False      20m
-    cloud-credential                     4.4.5    True        False         False      38m
-    cluster-autoscaler                   4.4.5    True        False         False      38m
-    console                              4.4.5    True        False         False      27m
-    dns                                  4.4.5    True        False         False      35m
-    image-registry                       4.4.5    True        False         False      14m
-    ingress                              4.4.5    True        False         False      30m
-    kube-apiserver                       4.4.5    True        False         False      33m
-    kube-controller-manager              4.4.5    True        False         False      33m
-    kube-scheduler                       4.4.5    True        False         False      32m
-    machine-api                          4.4.5    True        False         False      38m
-    machine-config                       4.4.5    True        False         False      33m
-    marketplace                          4.4.5    True        False         False      30m
-    monitoring                           4.4.5    True        False         False      28m
-    network                              4.4.5    True        False         False      37m
-    node-tuning                          4.4.5    True        False         False      32m
-    openshift-apiserver                  4.4.5    True        False         False      31m
-    openshift-controller-manager         4.4.5    True        False         False      33m
-    openshift-samples                    4.4.5    True        False         False      24m
-    operator-lifecycle-manager           4.4.5    True        False         False      35m
-    operator-lifecycle-manager-catalog   4.4.5    True        False         False      35m
-    service-ca                           4.4.5    True        False         False      38m
-    service-catalog-apiserver            4.4.5    True        False         False      32m
-    service-catalog-controller-manager   4.4.5    True        False         False      32m
-    storage                              4.4.5    True        False         False      30m
+    authentication                       4.6.5    True        False         False      20m
+    cloud-credential                     4.6.5    True        False         False      38m
+    cluster-autoscaler                   4.6.5    True        False         False      38m
+    console                              4.6.5    True        False         False      27m
+    dns                                  4.6.5    True        False         False      35m
+    image-registry                       4.6.5    True        False         False      14m
+    ingress                              4.6.5    True        False         False      30m
+    kube-apiserver                       4.6.5    True        False         False      33m
+    kube-controller-manager              4.6.5    True        False         False      33m
+    kube-scheduler                       4.6.5    True        False         False      32m
+    machine-api                          4.6.5    True        False         False      38m
+    machine-config                       4.6.5    True        False         False      33m
+    marketplace                          4.6.5    True        False         False      30m
+    monitoring                           4.6.5    True        False         False      28m
+    network                              4.6.5    True        False         False      37m
+    node-tuning                          4.6.5    True        False         False      32m
+    openshift-apiserver                  4.6.5    True        False         False      31m
+    openshift-controller-manager         4.6.5    True        False         False      33m
+    openshift-samples                    4.6.5    True        False         False      24m
+    operator-lifecycle-manager           4.6.5    True        False         False      35m
+    operator-lifecycle-manager-catalog   4.6.5    True        False         False      35m
+    service-ca                           4.6.5    True        False         False      38m
+    service-catalog-apiserver            4.6.5    True        False         False      32m
+    service-catalog-controller-manager   4.6.5    True        False         False      32m
+    storage                              4.6.5    True        False         False      30m
     ```
 
 **Next topic:** [Red Hat OpenShift 4.6 additional configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-config-intro)

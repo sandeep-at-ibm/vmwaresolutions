@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-06-11"
 
 keywords: order Security and Compliance Readiness Bundle, order scb instances, order vcs scb
 
@@ -48,7 +48,7 @@ Do not modify any values that are set during instance order or deployment. Doing
 
 The following services are required for Security and Compliance Readiness Bundle instances:
 * [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
-* [KMIP™ for VMware®](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
+* [KMIP for VMware](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
 
 ## Resource details
 {: #scb-orderinginstance-res-details}
@@ -76,16 +76,16 @@ If **No resource group available** is displayed in this field, you currently do 
 ### VMware properties
 {: #scb-orderinginstance-vm-prpt}
 
-* VMware vSphere version (vSphere 7.0u1)
-* Network virtualization platform (vCenter Server with NSX-T)
+* VMware vSphere® version (vSphere 7.0u1)
+* Network virtualization platform (vCenter Server with NSX-T™)
 * Instance type (Primary)
 
 ## Licensing
 {: #scb-orderinginstance-licensing}
 
 Specify the licensing options for the following VMware components in the instance:
-* VMware vCenter Server® Standard 7.0
-* VMware vSphere® Enterprise Plus 7.0
+* VMware vCenter Server Standard 7.0
+* VMware vSphere Enterprise Plus 7.0
 * NSX-T 3.1
 
 For Business Partner users, all licenses are included and purchased on your behalf. For users who are not Business Partners, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
@@ -96,7 +96,7 @@ For Business Partner users, all licenses are included and purchased on your beha
 * The minimum number of licenses for BYOL that are required depends on the number of CPUs per server and the number of servers in the order.
 * The minimum license editions are indicated on the user interface. You are responsible to ensure that the license key provided is correct for each VMware component selected.
 * For vSphere, a license charge is incurred at the time of order, but the license charge is then credited to your account.
-* You can change any licenses that you provided by using the VMware vSphere® Web Client after the instance deployment is completed.
+* You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
 
 ## Location
@@ -147,7 +147,7 @@ You can choose the RAM size from 128 GB, 192 GB, 384 GB, 768 GB, and 1.5 TB.
 
 Storage settings are based on your selection of the storage type.
 
-For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
+For deployed instances, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingnfs).
 
 #### vSAN storage
 {: #scb-orderinginstance-consoli-vsan}
@@ -209,7 +209,7 @@ Choose performance level options according to your needs.
 | 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
 | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include transactional databases. |
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
-{: caption="Table 3. NFS performance level options" caption-side="top"}
+{: caption="Table 2. NFS performance level options" caption-side="top"}
 
 ### Networking type
 {: #scb-orderinginstance-consoli-private-nics}
@@ -219,9 +219,17 @@ Select **Public and private network** or **Private network only** for the consol
 ### Uplink speed
 {: #scb-orderinginstance-consoli-uplink}
 
-The following options are provided for the uplink speed:
-* 10 Gb - This option is selected by default.
-* 25 Gb - This option is available only when the data center is one of the following locations: **Dallas 10**, **Dallas 12**, **Dallas 13**, **Frankfurt 02**, **London 04**, **Paris 04**, **Paris 05**, **Paris 06**, **Sydney 04**, **Sydney 05**, **Tokyo 02**, **Tokyo 04**, **Tokyo 05**, **Toronto 04**, **Washington DC 04**, **Washington DC 06**, or **Washington DC 07**.
+The uplink speed provides two options:
+* 10 Gb, which is selected by default.
+* 25 Gb, which is available only for specific locations.
+
+| {{site.data.keyword.cloud_notm}} data center | Region |
+|:-------------------------------------------- |:------ |
+| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
+| Frankfurt 02 <br>Frankfurt 05 <br>London 04 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
+| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
+| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+{: caption="Table 3. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs
 {: #scb-orderinginstance-consoli-vlans}
@@ -267,6 +275,16 @@ Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to
 
 You can select to include a separate, additional workload cluster in the same way as you order the consolidated cluster.
 
+## Firewall appliance
+{: #scb-orderinginstance-firewall-appl}
+
+You have the following options for your firewall appliance:
+* **Edge services cluster with Juniper vSRX** - Order a dedicated cluster for the network edge and firewall components and install Juniper® vSRX on it.
+* **Edge services cluster with FortiGate Virtual Appliance** - Order a dedicated cluster for the network edge and firewall components and install FortiGate Virtual Appliance on it.
+* **Bring your own gateway appliance** - Order a dedicated cluster for the network edge and firewall components.
+
+The steps that you must follow differ depending on your selection.
+
 ## Edge services cluster
 {: #scb-orderinginstance-edge}
 
@@ -289,9 +307,9 @@ The edge services cluster is deployed in the consolidated cluster.
 ### Compute capacity
 {: #scb-orderinginstance-edge-compute}
 
-* Cores: 20
-* RAM: 64 GB
-* Cluster hosts: 2
+* Cores - 20
+* RAM - 64 GB
+* Cluster hosts - 2
 
 ### Networking type
 {: #scb-orderinginstancee-edge-private-nics}
@@ -318,8 +336,7 @@ The hostname prefix applies to all clusters in the instance.
 {: #scb-orderinginstance-network-interface-domain-name}
 
 The root domain name must meet the following requirements:
-* For vSphere 7.0 instances, the domain name must consist of three or more strings that are separated by a period (.) with a maximum of 50 characters.
-* For vSphere 6.7 instances, the domain name must consist of two or more strings that are separated by a period (.)
+* The domain name must consist of three or more strings that are separated by a period (.) with a maximum of 50 characters.
 * The first string must start with a lowercase alphabetic character.
 * The first string must end with a lowercase alphabetic or numeric character.
 * All strings, except for the last one, can contain only lowercase alphabetic, numeric, and dash (-) characters.
@@ -332,12 +349,7 @@ The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs i
 ### Deployment type
 {: #scb-orderinginstance-network-interface-deploy-type}
 
-Two highly available dedicated Windows server VMs are deployed on the management cluster.
-
-## Network diagram
-{: #scb-orderinginstance-netwrod-diagram}
-
-The network diagram is displayed for you to preview.
+Two highly available dedicated Windows® server VMs are deployed on the management cluster.
 
 ## Included services
 {: #scb-orderinginstance-include-services}
@@ -346,6 +358,8 @@ The following services are included with your VMware Security and Compliance Rea
 
 * [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
 * [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) (if you're using **Edge services cluster with Juniper vSRX** as your firewall appliance)
+* [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) (if you're using **Edge services cluster with FortiGate Virtual Appliance** as your firewall appliance)
 * [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 
 ## Recommended services
@@ -381,15 +395,14 @@ The following services are optional for your Security and Compliance Readiness B
   2. Select the CPU model, RAM size, and the number of bare metal servers.
   3. If you select to use vSAN storage, complete the following settings:
       1. Specify the disk type and size for the vSAN capacity disks, and the number of vSAN capacity disks.
-      2. Review the disk size for vSAN cache disks, and the number of vSAN cache disks.
+      2. Review the predefined disk size for vSAN cache disks and the predefined number of vSAN cache disks.
       3. If you want to enable vSAN deduplication and compression, select the **Enable vSAN deduplication and compression** checkbox.
-      4. Review the vSAN summary.
       4. Specify whether to include the vSAN Enterprise license with your purchase or to use your own license.
   4. If you select to use NFS storage, complete the following settings:
       * To add and configure same settings for all file shares, select the **Number of shares**, **Size (GB)**, and **Performance**.
       * To add and configure file shares individually, select the **Configure shares individually** checkbox. Then, click **Add shared storage** and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
   5. Select the private NICs enablement.
-  6. Select the uplink speed.
+  6. Select the uplink speed. The 25 Gb option is available for specific data centers only.
   7. Select the VLAN settings:
       * If you want to order new public and private VLANs, click **Order new VLANs**.
       * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and the subnets.
@@ -398,19 +411,17 @@ The following services are optional for your Security and Compliance Readiness B
        If the consolidated or management cluster and the workload clusters are in the same location, you cannot use existing VLANs. Instead, the workload clusters reuse the VLANs from the management cluster.
        {:note}
 
-7. (Optional) Under **Workload cluster**, select the **Include a separate, additional workload cluster** checkbox, and then specify the workload cluster settings that are same as the consolidated cluster.
-8. Under **Edge services cluster**, complete the following settings:
-  1. Specify the edge services cluster name.
-  2. Review the data center location and compute capacity.
-  3. Select the private NICs enablement.
+7. (Optional) Under **Workload cluster**, select the **Include a separate, additional workload cluster** checkbox, and then specify the workload cluster settings. The configuration options are the same as the options for the consolidated cluster.
+8. Choose the firewall appliance for your instance and follow the steps, depending on your selection:
+   1. Specify the edge services [cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req), the CPU model, the RAM size, the uplink speed, and the networking type.
+   2. For **Edge services cluster with Juniper vSRX** and **Edge services cluster with FortiGate Virtual Appliance**, you must also specify the corresponding service settings in a later step.
 9. Under **Network interface**, complete the following settings:
   1. Specify the hostname prefix and the root domain name.
   2. Review the deployment type.
-10. Under **Network diagram**, review the network diagram.
-11. Under **Included services**, review the add-on services to be deployed into the instance. If a service requires configuration, complete the service-specific settings by clicking **Edit** on the service card and then clicking **Save**. For more information about specific settings for a service, see the corresponding topic for ordering the service.
-12. Under **Recommended services** and **Optional services**, if you want to deploy an add-on service, review and update its settings if required. For more information about specific settings for a service, see the corresponding topic for ordering the service.
-13. On the **Summary** pane, review the instance settings and the estimated price.
-14. To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
+10. Under **Included services**, review the add-on services to be deployed into the instance. If a service requires configuration, complete the service-specific settings by clicking **Edit** on the service card. Then, complete your edits and click **Save**. For more information about specific settings for a service, see the corresponding topic for ordering the service.
+11. Under **Recommended services** and **Optional services**, review the service options. If you want to deploy an add-on service, toggle the switch on and review the service settings. If configuration is required, click **Edit**, then complete the edits and click **Save**. For more information about specific settings for a service, see the corresponding topic for ordering the service.
+12. On the **Summary** pane, review the instance settings and the estimated price.
+13. To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 
 ### Results after you place an order
 {: #scb-orderinginstance-results-order}

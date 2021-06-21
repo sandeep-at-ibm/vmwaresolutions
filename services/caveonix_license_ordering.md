@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-20"
 
 keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
@@ -17,10 +17,10 @@ subcollection: vmwaresolutions
 # Ordering Caveonix RiskForesight licenses
 {: #caveonix_license_ordering}
 
-This information applies to VMware vCenter Server instances only. It does not apply to VMware Regulated Workloads or Security and Compliance Readiness Bundle instances.
+This information applies to VMware vCenter Server® instances only. It does not apply to VMware® Regulated Workloads or Security and Compliance Readiness Bundle instances.
 {:note}
 
-You can order a Caveonix RiskForesight™ license without associating it to any VMware vCenter Server® instance for licensing and activation of your on-premises workloads.
+You can order a Caveonix RiskForesight™ license without associating it to any VMware vCenter Server instance for licensing and activation of your on-premises workloads.
 
 ## Before you begin
 {: #caveonix_license_ordering-reqs}
@@ -38,7 +38,7 @@ Ensure that you configured the {{site.data.keyword.cloud}} infrastructure creden
    {:note}
 
 4. Specify a new license name, or use the default one **cav-_xx_** where _xx_ represents two randomly generated alphabetic characters. The name must be unique across all Caveonix service instances and all instances in the {{site.data.keyword.cloud_notm}} account.
-5. Click the link or links of the terms that apply to your order, and ensure that you agree with these terms before you order the license.
+5. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms before you order the license.
 6. Click **Provision**.
 
 ## Results

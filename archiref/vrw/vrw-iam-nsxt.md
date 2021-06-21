@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-21"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -47,7 +47,7 @@ The roles and privileges for load balancing, firewall rules, and VPN services fo
 ## NSX-T roles
 {: #vrw-iam-nsxt-roles}
 
-NSX-T Data Center has the following built-in roles. You cannot add any new roles.
+NSX-T™ Data Center has the following built-in roles. You cannot add any new roles.
 
 - Enterprise administrator
 - Auditor

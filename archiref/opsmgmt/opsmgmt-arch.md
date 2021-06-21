@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -117,7 +117,7 @@ NSX Flow Monitoring can be used in NSX Manager to determine which flows are appr
 ### Monitoring of NSX-T
 {: #opsmgmt-arch-components-nsxt}
 
-To monitor NSX-T, the following tools are implemented:
+To monitor NSX-T™, the following tools are implemented:
 
 * vRealize Operations Manager (vROps)
 * vRealize Log Insight (vRLI)

@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-04-02"
+lastupdated: "2021-04-16"
 
 keywords: activity tracker, event, security, vmware solutions events, vmware solutions shared events, instance events, view events
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 # Auditing events for VMware Solutions
 {: #at-events}
 
-Use the {{site.data.keyword.at_full}} service to track how users and applications interact with {{site.data.keyword.vmwaresolutions_short}} in {{site.data.keyword.cloud_notm}}.
+Use the {{site.data.keyword.at_full}} service to track how users and applications interact with {{site.data.keyword.cloud_notm}} for VMware® Solutions in {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. You can use this service to investigate for abnormal activity and critical actions, and comply with regulatory audit requirements. In addition, you can be alerted on actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [Getting started with {{site.data.keyword.at_short}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
@@ -54,7 +54,7 @@ The following table provides the actions that generate and send management event
 | `vmware-solutions.vcs.update` | A vCenter Server instance is updated. |
 | `vmware-solutions.vcs-cluster.create` | A cluster is created for a vCenter Server instance. |
 | `vmware-solutions.vcs-cluster.delete` | A cluster is deleted for a vCenter Server instance. |
-| `vmware-solutions.vcs-nsx-license.update` | The NSX license is updated for a vCenter Server instance. |
+| `vmware-solutions.vcs-nsx-license.update` | The VMware NSX® license is updated for a vCenter Server instance. |
 | `vmware-solutions.vcs-nfs-storage.add` | NFS storage is added to a vCenter Server instance. |
 | `vmware-solutions.vcs-nfs-storage.remove` | NFS storage is removed from a vCenter Server instance. |
 | `vmware-solutions.vcs-plan.update` | A vCenter Server instance's plan is updated. |

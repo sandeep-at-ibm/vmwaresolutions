@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-14"
 
 keywords: vSphere BOM, bill of materials vSphere, BOM
 
@@ -22,7 +22,7 @@ The following table details the Bill of Materials (BOM) information for VMware v
 
 | Manufacturer | Component                       | Version |
 |:-------------|:--------------------------------|:--------|
-| VMware       | vSphere ESXi™                    | 7.0 Update 1c, 6.7 Update 3, or 6.5 Update 3[^vsphere65]|
+| VMware®       | vSphere ESXi™                    | 7.0 Update 1c, 6.7 Update 3, or 6.5 Update 3[^vsphere65]|
 {: caption="Table 1. BOM for VMware vSphere clusters" caption-side="top"}
 
 [^vsphere65]: Existing vSphere 6.5 clusters only

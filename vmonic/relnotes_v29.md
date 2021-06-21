@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-04-09"
 
 subcollection: vmwaresolutions
 
@@ -25,7 +25,7 @@ This release includes new features, component updates, usability enhancements, a
 ## VMware vCenter Server on IBM Cloud with NSX-T
 {: #relnotes_v29-vcs-nsx-t}
 
-This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T offering as a proof of concept or sandbox testing offering. vCenter Server with NSX-T is a privately hosted cloud that you can use to test drive the VMware next generation networking platform, NSX-T.
+This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with NSX-T™ offering as a proof of concept or sandbox testing offering. vCenter Server with NSX-T is a privately hosted cloud that you can use to test drive the VMware next generation networking platform, NSX-T.
 
 ## End of Support for VMware Cloud Foundation on IBM Cloud
 {: #relnotes_v29-vcf-eos}
@@ -121,7 +121,7 @@ In the current release, HyTrust CloudControl 5.4.2 is installed on all newly dep
 
 Two new endpoints are now available in Sydney for the KMIP for VMware on {{site.data.keyword.cloud_notm}} service.
 
-(Updated on 09 April 2019) Previously, KMIP for VMware on {{site.data.keyword.cloud_notm}} used IBM Key Protect for {{site.data.keyword.cloud_notm}} to create, encrypt, and decrypt encryption keys. Starting with the V2.9 release, KMIP for VMware on {{site.data.keyword.cloud_notm}} can also use {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services. These services are a complete set of encryption and key management services that manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}.
+(Updated on 9 April 2019) Previously, KMIP for VMware on {{site.data.keyword.cloud_notm}} used IBM Key Protect for {{site.data.keyword.cloud_notm}} to create, encrypt, and decrypt encryption keys. Starting with the V2.9 release, KMIP for VMware on {{site.data.keyword.cloud_notm}} can also use {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services. These services are a complete set of encryption and key management services that manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}.
 
 ### Veeam on IBM Cloud
 {: #relnotes_v29-services-veeam}

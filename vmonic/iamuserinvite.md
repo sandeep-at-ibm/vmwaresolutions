@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-08-05"
+lastupdated: "2021-04-16"
 
 keywords: IAM user, invite user, service access
 
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 # Inviting users to access services and resources
 {: #iamuserinvite}
 
-{{site.data.keyword.vmwaresolutions_full}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for collaboration among multiple users. After you sign up for an {{site.data.keyword.cloud_notm}} account and log in to the {{site.data.keyword.vmwaresolutions_short}} console, you can add users to the {{site.data.keyword.cloud_notm}} account. These added users can share the services and resources that are provisioned for the account.
+{{site.data.keyword.cloud}} for VMware® Solutions is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for collaboration among multiple users. After you sign up for an {{site.data.keyword.cloud_notm}} account and log in to the {{site.data.keyword.vmwaresolutions_short}} console, you can add users to the {{site.data.keyword.cloud_notm}} account. These added users can share the services and resources that are provisioned for the account.
 
 ## Before you begin
 {: #iamuserinvite-reqs}

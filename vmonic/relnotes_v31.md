@@ -32,9 +32,8 @@ The Single-node Trial for Data Protection and Disaster Recovery is a quick way t
 ## IBM Cloud Expert Services
 {: #relnotes_v31-expert-services}
 
-You can now engage IBM Expert Services to work together with your internal team to deploy, migrate, and maintain your own {{site.data.keyword.cloud_notm}} solution from planning to modernization, or any stage in between.
-
-You can add {{site.data.keyword.cloud_notm}} Expert Services to your instance order at any time by requesting a consultation from the **Getting Started** page.
+You can engage IBM Cloud Expert Services to work together with your internal team to deploy, migrate, and maintain your own {{site.data.keyword.cloud_notm}} solution from planning to modernization, or any stage in between.
+{: deprecated}
 
 ## Integration with the IBM Cloud Cost Estimator
 
@@ -51,7 +50,7 @@ This release applies the following upgrades and improvements for newly deployed 
 ### Alternative ESXi server configuration for clusters
 {: #relnotes_v31-esxi-config}
 
-You can now add new ESXi servers to an existing cluster by either selecting an existing configuration or an alternative configuration than the existing hosts in the cluster. When you order new servers from the **Add Server** window, you can instantly select an existing configuration in the cluster or choose a new 	{{site.data.keyword.cloud_notm}} bare metal server configuration. This applies to all vCenter Server, vCenter Server with Hybridity, and vCenter Server with NSX-T instances.
+You can now add new ESXi servers to an existing cluster by either selecting an existing configuration or an alternative configuration than the existing hosts in the cluster. When you order new servers from the **Add Server** window, you can instantly select an existing configuration in the cluster or choose a new 	{{site.data.keyword.cloud_notm}} bare metal server configuration. This applies to all vCenter Server, vCenter Server with Hybridity, and vCenter Server with NSX-T™ instances.
 
 To avoid performance or stability issues, it is recommended that clusters use the same or similar configuration with regards to CPU, RAM, and storage. This functionality is useful for hardware updates within the same cluster.
 

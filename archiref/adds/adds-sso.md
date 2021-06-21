@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-15"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -46,9 +46,9 @@ The vSphere SSO domain is used as the initial authentication mechanism it is als
   * <root_domain>\ic4v-vCenter.
   * vsphere.local\Administrators.
 
-After deployment, the administrator@vsphere.local user has administrator access to both SSO and vCenter and can manage identity sources and default domains, specify password policies, and perform other administrative tasks in the vsphere.local domain. However, this user is integral to the VMware vSphere and NSX infrastructure authentication they are not part of AD but created automatically when vSphere is deployed. As this account is not part of AD, they can be used in situations when AD is not working correctly.
+After deployment, the `administrator@vsphere.local` user has administrator access to both SSO and vCenter Server. This user can manage identity sources and default domains, specify password policies, and perform other administrative tasks in the `vsphere.local` domain. However, this user is integral to the VMware vSphere® and NSX infrastructure authentication they are not part of AD but created automatically when vSphere is deployed. As this account is not part of AD, they can be used in situations when AD is not working correctly.
 
-As the customer, you have full access to manage the vSphere SSO users and groups as needed. For changing these policies, see [Managing vCenter Single Sign-On Users and Groups](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-31F302A6-D622-4FEC-9007-EE3BA1205AEA.html){:external}.
+As the customer, you have full access to manage the vSphere SSO users and groups as needed. For more information about changing these policies, see [Managing vCenter Single Sign-On users and groups](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-31F302A6-D622-4FEC-9007-EE3BA1205AEA.html){:external}.
 
 ## Identity sources
 {: #adds-sso-identity}
@@ -57,9 +57,9 @@ Identity sources are used to attach one or more domains to vCenter SSO. A domain
 
 * Local OS - Local operating system users are local to the operating system where the vCenter Single Sign-On server is running. The local operating system identity source exists only in basic vCenter SSO deployments and is not available in deployments with multiple vCenter SSO instances. Only one local operating system identity source is allowed. Shown as locals in the vSphere Client.
 * vsphere.local – Enables administrator@vsphere.local to be authenticated.
-* {{site.data.keyword.vmwaresolutions_short}} infrastructure domain – This domain is the <root_domain> configured on the ADDNS server based on the parameters that are collected during the ordering process. This allows the user automation@<root_domain> to be authenticated.
+* {{site.data.keyword.vmwaresolutions_short}} infrastructure domain – This domain is the <root_domain> configured on the AD DNS server based on the parameters that are collected during the ordering process. This process allows the user `automation@<root_domain>` to be authenticated.
 
-Users can log in to vCenter only if they are in a domain that is added as a vCenter SSO identity source. You add more identity sources to give your AD or LDAP users access if required.
+Users can log in to vCenter Server only if they are in a domain that is added as a vCenter SSO identity source. You add more identity sources to give your AD or LDAP users access if required.
 
 ## vSphere SSO configuration
 {: #adds-sso-config}
@@ -81,7 +81,7 @@ The following sections provide the settings that are configured in vSphere SSO.
 ### Lockout policy
 {: #adds-sso-config-lockout}
 
-For more information about the lockout policy, see [Policy Configurations](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-default-policy-config).
+For more information about the lockout policy, see [Policy configurations](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-default-policy-config).
 
 ### Password policy
 {: #adds-sso-config-pwd-policy}
@@ -92,17 +92,17 @@ For more information about the lockout policy, see [Policy Configurations](/docs
 | Restrict reuse | Users cannot reuse any previous five passwords |
 | Maximum length | 20 characters |
 | Minimum length | 15 characters |
-| Character requirements | At least two alphabetic characters<br>At least one special character<br>At least one uppercase character<br>At least one lowercase character<br>At least one numeric character<br>Identical adjacent characters: 3 |
+| Character requirements | At least two alphabetic characters<br>At least one special character<br>At least one uppercase character<br>At least one lowercase character<br>At least one numeric character<br>Identical adjacent characters - 3 |
 {: caption="Table 2. Password policy" caption-side="top"}
 
-As the customer, you have full access to tailor these settings as needed to apply your enterprise security policies. For changing these policies, see [Managing vCenter Single Sign-On Policies](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-43527B09-63BB-44A6-91D3-E3A470904698.html){:external}.
+As the customer, you have full access to tailor these settings as needed to apply your enterprise security policies. For changing these policies, see [Managing vCenter single sign-on policies](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-43527B09-63BB-44A6-91D3-E3A470904698.html){:external}.
 
 ## vSphere ESXi hosts
 {: #adds-sso-esxi}
 
-Each vSphere ESXi host has its own root account along with its own password. To identify this password, go to the VMware Solutions console and then go to **VMware > Infrastructure > Resources > _instance-name_ > Infrastructure > _cluster-name_**. It is also possible to have the vSphere ESXi hosts join AD so that each system administrator can log in with their own account.
+Each vSphere ESXi host has its own `root` account and password. To identify this password, go to the VMware Solutions console and then go to **Resources**, click the instance name, go to **Infrastructure**, and click the cluster name. It's also possible to have the vSphere ESXi hosts join AD so that each system administrator can log in with their own account.
 
-**Next topic:** [IBM Cloud for VMware Solutions workload domain](/docs/vmwaresolutions?topic=vmwaresolutions-adds-wkld-domain)
+**Next topic:** [VMware Solutions workload domain](/docs/vmwaresolutions?topic=vmwaresolutions-adds-wkld-domain)
 
 ## Related links
 {: #adds-sso-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -74,7 +74,7 @@ In both the source and destination environments, HCX is deployed to the manageme
 ### HCX Cloud and HCX Connector
 {: #hcxclient-components-manager}
 
-In the HCX site-to-site architecture, an HCX source and an HCX destination environment exist. Depending on the environment, there is a specific HCX installer: HCX Connector (previously HCX Enterprise) or HCX Cloud. HCX Connector is always deployed as the source. HCX Cloud is typically deployed as the destination, but it can be used as the source in cloud-to-cloud deployments. In HCX-enabled public clouds, the cloud provider deploys HCX Cloud. The public cloud tenant deploys HCX Connector on-premises.
+In the HCX site-to-site architecture, an HCX source environment and an HCX destination environment exist. Depending on the environment, a specific HCX installer is used, either HCX Connector (previously HCX Enterprise) or HCX Cloud. HCX Connector is always deployed as the source. HCX Cloud is typically deployed as the destination, but it can be used as the source in cloud-to-cloud deployments. In HCX-enabled public clouds, the cloud provider deploys HCX Cloud. The public cloud tenant deploys HCX Connector on-premises.
 
 The source and destination sites are paired together for HCX operations. An HCX Connector cannot be paired with another HCX Connector.
 
@@ -93,12 +93,12 @@ The VMware HCX WAN Optimization service improves performance characteristics of 
 ### HCX Network Extension Virtual Appliance (HCX-NE)
 {: #hcx-archi-overview-comp-hcx-ne}
 
-The HCX Network Extension service provides a low-touch operation for high performance (4 - 6 Gbps) Layer 2 Extension from environments that use a vSphere Distributed Switch, or NSX Networking. HCX Network Extension allows you to keep the same IP and MAC addresses during VM migrations. HCX Network Extension with Mobility Optimized Networking eliminates tromboning between migrated VMs on different extended segments, and VMs on native NSX-T networks at the destination
+The HCX Network Extension service provides a low-touch operation for high performance (4 - 6 Gbps) Layer 2 Extension from environments that use a vSphere Distributed Switch, or NSX Networking. With HCX Network Extension, you can keep the same IP and MAC addresses during VM migrations. HCX Network Extension with Mobility Optimized Networking eliminates tromboning between migrated VMs on different extended segments, and VMs on native NSX-T™ networks at the destination
 
 ## Deployment architecture
 {: #hcx-archi-overview-connect}
 
-The deployment architecture consists of the HCX components within the {{site.data.keyword.cloud_notm}} and with client on-premises. In this design, the architecture specifies a hub-and-spoke model that exists between the source environment and the {{site.data.keyword.cloud_notm}}. The source estate serves as the hub with connections to different {{site.data.keyword.cloud_notm}} environments as shown in the following figure. In this model, the site peering is established over Public Internet.
+The deployment architecture consists of the HCX components within the {{site.data.keyword.cloud_notm}} and with client on-premises. In this design, the architecture specifies a hub-and-spoke model that exists between the source environment and the {{site.data.keyword.cloud_notm}}. The source estate serves as the hub with connections to different {{site.data.keyword.cloud_notm}} environments as shown in the following figure. In this model, site peering is established over the Internet.
 
 ![HCX with single source over Public Network](../../images/hcx-public.svg "HCX with single source over Public Network"){: caption="Figure 1. HCX with single source over Public Network" caption-side="bottom"}
 
@@ -122,8 +122,8 @@ The base deployment must follow the minimum requirements:
 * The {{site.data.keyword.cloud_notm}} must contain at least one instance of VMware vCenter Server®.
 * Sufficient resources for the virtual appliances.
 * The networks must allow the appliances to communicate with both local and remote virtual appliances, and other VMs.
-* Port Access Requirements (Appendix A) lists ports that must be opened so that Hybrid Cloud Services virtual appliances can install successfully.
-* A vSphere service account, which has the Administrator vCenter Server system role assigned to it.
+* The port access requirements topic lists ports that must be opened so that Hybrid Cloud Services virtual appliances can be installed successfully.
+* A vSphere service account exists and the Administrator vCenter Server system role is assigned to it.
 * Enough disk space for installing Hybrid Cloud Services and the associated service appliances.
 * Sufficient IP addresses for the on-premises VMs provisioned during the installation.
 * If the SSO server is remote, the URL of the vCenter, external SSO Server, or Platform Services Controller (PSC) that runs the external lookup service must be identified. When the HCX service is registered with the vCenter, this URL must be supplied.

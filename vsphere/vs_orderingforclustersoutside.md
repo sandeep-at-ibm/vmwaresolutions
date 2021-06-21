@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-26"
+lastupdated: "2021-04-22"
 
 keywords: vSphere scale cluster, scale vSphere, external vSphere cluster
 
@@ -34,7 +34,7 @@ Ensure that you complete the following tasks:
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **IaaS platforms** section.
 2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create new** tab and that **New cluster** is displayed in the **Cluster configurations** list.
 3. Create a cluster with the same settings as the existing cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances).  
-   For network interface, to scale a cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console, you must select the existing VLANs for the cluster.
+   Under **Network interface**, you must choose the option to select existing VLANs.
    {:note}
 4. In the **Summary** pane, verify the cluster configuration, and then click **Save configuration**.   
 5. On the **Overview** page, click the **VMware vSphere** card.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-21"
 
 keywords: change vCenter Server artifacts, automation ID, VMware resource
 
@@ -31,7 +31,7 @@ Use the **root** host user ID. The **ic4vroot** host user ID is created for IBM 
 {: #vcenter_chg_impact-automation-id}
 {: faq}
 
-The **automation** ID is a user account that is used by the automated operations that are provided in the {{site.data.keyword.vmwaresolutions_short}} console.
+The **automation** ID is a user account that is used by the automated operations that are provided in the VMware Solutions console.
 
 Users and passwords for the automated operations in the console must not be changed because the console operations that depend on those credentials might fail.
 
@@ -44,7 +44,7 @@ Each service creates an internal user account in VMware vCenter Server®. This a
 To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
 {:important}
 
-The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
+The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam® service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
 
 The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
 {:note}
@@ -57,9 +57,10 @@ If the vCenter Server instance is in a **Ready to use** state, you can modify th
 
 Review the following restrictions:
 
-* Do not change the name of the management datastore from its default value, which is **vsanDatastore** for VMware vSAN instances and **management-share** for NFS instances.
+* Do not change the name of the management datastore from its default value, which is **vsanDatastore** for VMware vSAN™ instances and **management-share** for NFS instances.
+* Do not change the names and do not delete any of the management subnets that are created for the vCenter Server instances.
 * Do not change the name of the network uplinks that are created during provisioning.
-* Do not change the ESXi server names and the IP addresses because they are registered for Windows® DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
+* Do not change the VMware ESXi™ server names and the IP addresses because they are registered for Windows® DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 
 ## VMware resources for vCenter Server instances (V1.8 and earlier)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.8-and-earlier}
@@ -67,7 +68,7 @@ Review the following restrictions:
 
 The following table lists the operations that might be impacted if the SSO administrator changes VMware vCenter Server resources outside of the {{site.data.keyword.vmwaresolutions_short}} console. If a solution to recover is available, it is provided as well.
 
-The following table is applicable to instances deployed in V1.8 and earlier, in addition to instances deployed in V1.8 and earlier and then upgraded to V1.9 or later.
+The following table is applicable to instances deployed in V1.8 and earlier, including the ones that were initially deployed in V1.8 and earlier and then upgraded to V1.9 or later.
 
 | Attempted change  | Impacted operations  | Severity  | Recovery method  |
 |:------------- |:------------- |:--------------|:--------------|
@@ -92,9 +93,7 @@ If you choose to disable SSH or shell access, re-enable it temporarily before yo
 {: #vcenter_chg_impact-mgmt-subnets}
 {: faq}
 
-The following information discusses the subnets that are ordered by {{site.data.keyword.vmwaresolutions_short}} and it provides options for you to order extra subnets for your own use.
-
-**CAUTION** Do not use these components for other purposes, or the stability of your environment is severely compromised.
+The following information discusses the subnets that are ordered by VMware Solutions and it provides options for you to order extra subnets for your own use.
 
 With each {{site.data.keyword.cloud_notm}} bare metal server order, the following ranges of IP addresses are ordered by default:
 *  A primary public range of 32 IP addresses
@@ -105,8 +104,11 @@ In addition, the following management subnets are also reserved for {{site.data.
 *  Two portable private subnets of 64 IP addresses on the second VLAN - one for VMotion and one for vSAN
 *  A public portable subnet of 16 IP addresses on the public VLAN
 
+   Do not use these components for other purposes, do not change their names, and do not delete them, or the stability of your environment is severely compromised.
+   {:important}
+
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways.
-*  **Option 1 (recommended)** - Use VMware NSX virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
+*  **Option 1 (recommended)** - Use VMware NSX® virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 *  **Option 2** - Order your own portable public or private subnets to obtain IP addresses. To distinguish the subnets that you order from the management subnets, you can add notes to all the subnets that you are ordering.
 
 ## Related links

@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2019
 
 lastupdated: "2019-02-08"
 
@@ -100,9 +100,9 @@ Starting with the V2.8 release, the service is available as a stand-alone servic
 ## Reference architecture documentation
 {: #relnotes_v28-ref}
 
-(Updated on 08 February 2019) The following technical documents are new or updated in the *Reference* section of the user documentation:
+(Updated on 8 February 2019) The following technical documents are new or updated in the *Reference* section of the user documentation:
 
-* {{site.data.keyword.vmwaresolutions_short}} architecture (with NSX-V and NSX-T)
+* {{site.data.keyword.vmwaresolutions_short}} architecture (with NSX-V and NSX-T™)
 * Caveonix RiskForesight reference architecture
 * VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions
 

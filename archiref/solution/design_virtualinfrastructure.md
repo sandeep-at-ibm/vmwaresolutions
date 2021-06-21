@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-24"
+lastupdated: "2021-05-05"
 
 subcollection: vmwaresolutions
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Virtual infrastructure design
 {: #design_virtualinfrastructure}
 
-The virtual infrastructure layer includes the VMware software components that virtualize the compute, storage, and network resources provided in the physical infrastructure layer: VMware vSphere ESXi, VMware NSX-V or NSX-T, and optionally VMware vSAN.
+The virtual infrastructure layer includes the VMware software components that virtualize the compute, storage, and network resources provided in the physical infrastructure layer: VMware vSphere ESXi, VMware NSX-T™, and optionally VMware vSAN.
 
 ![Virtual infrastructure](../../images/nsx-t-3-ra-diagrams-virtual-infrastructure.svg "Virtual infrastructure"){: caption="Figure 1. Virtual infrastructure" caption-side="bottom"}
 
@@ -54,7 +54,7 @@ The vSphere cluster houses the virtual machines (VMs) that manage the vCenter Se
 * When a vCenter Server instance uses vSAN, the minimum number of ESXi hosts at initial deployment is four.
 * When a vCenter Server instance uses shared file–level or block-level storage, the minimum number of ESXi hosts at initial deployment is three.
 
-You can scale up to a maximum of 59 ESXi hosts during or post initial deployment.
+You can deploy up to 20 ESXi hosts in this cluster during initial deployment. After initial deployment you can scale the cluster up to a maximum of 50 hosts in increments of up to 20 hosts at a time.
 
 To support more user workloads, you can scale the environment by:  
 
@@ -74,7 +74,7 @@ As shown in the following figure, vSAN aggregates the local storage across multi
 vSAN employs the following components:
 
 * Two-disk group vSAN design; each disk group with two or more disks. One SSD or NVMe drive of the smallest size in the group serves as the cache tier and the remaining SSDs serve as the capacity tier.
-* The onboard RAID controller is configured in a RAID 0 array for each drive except for the two OS drives.
+* The onboard RAID controller is configured in a RAID 0 array for each individual drive except for the two OS drives.
 * A single vSAN datastore is created from all storage.
 
 The available vSAN features depend on the license edition that you select when you order the instance. For more information, see [VMware vSAN edition comparison](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix#solution-appendix-vsan-editions).
@@ -95,7 +95,7 @@ When vSAN is enabled and configured, storage policies are configured to define t
 
 The default storage policy in this design tolerates a single failure. The default policy is configured with erasure coding, with **Failure tolerance method** set to **RAID-5/6 (Erasure Coding) - Capacity** and **Primary level of failures** set to 1. The RAID 5 configuration requires a minimum of four hosts.
 
-Alternatively, you can choose the RAID 6 configuration with **Failure tolerance method** set to **RAID-5/6 (Erasure Coding) - Capacity** and **Primary level of failures** set to 2. The RAID 6 configuration requires a minimum of six hosts. **Duplication** and **compression** are also enabled in the default storage policy.
+Alternatively, you can choose the RAID 6 configuration with **Failure tolerance method** set to **RAID-5/6 (Erasure Coding) - Capacity** and **Primary level of failures** set to 2. The RAID 6 configuration requires a minimum of six hosts. **Deduplication** and **compression** are normally enabled in the default storage policy but can be disabled if needed.
 
 An instance uses the default policy unless otherwise specified from the vSphere console. When a custom policy is configured, vSAN will guarantee it when possible. However, if the policy can't be guaranteed, it's not possible to provision a VM that uses the policy unless it is enabled to force provisioning.
 
@@ -125,7 +125,7 @@ Additionally, this architecture requires that all hosts have a subnet route that
 
 Management virtual machines can be located on an NFS data store. This creates a bootstrapping problem since some of the management machines might be responsible for DNS services, which are used to resolve the NFS hostname. Therefore, this architecture specifies that at least one of the IP addresses for the management data store to be hardcoded in `/etc/hosts` on each of the hosts.
 
-**Next topic:** [VMware NSX-V design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-v-design)
+**Next topic:** [VMware NSX-T design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-t-design)
 
 ## Related links
 {: #design_virtualinfrastructure-related}

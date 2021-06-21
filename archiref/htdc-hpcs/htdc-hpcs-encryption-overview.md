@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2020-04-21"
 
 subcollection: vmwaresolutions
 
@@ -21,16 +21,16 @@ subcollection: vmwaresolutions
 
 ## Terms
 {: #htdc-hpcs-encryption-overview-terms}
-The following terms are used in this documentation:
 
+The following terms are used in this documentation:
 * Symmetric key cryptography - This method of encryption uses the same encryption key is used to both encrypt and decrypt the data and is used primarily to protect data at rest.
 * Asymmetric key cryptography - This method of encryption uses a pair of keys, public and private, for the encryption and decryption of the data. Asymmetric keys are primarily used to secure data-in-motion. Both keys are related to each other and created at the same time.
- * Public Key - this key is used to encrypt the data and can be freely given as it will be used to encrypt data, not to decrypt it.
+ * Public Key - this key is used to encrypt the data and can be freely given as it is used to encrypt data, not to decrypt it.
  * Private Key - this key is used to decrypt the data that the public key encrypted. This key must be safeguarded as it is the only key that can decrypt the encrypted data.
 * Data encryption key (DEK) - An encryption key whose function is to encrypt and decrypt data.
 * Key encryption key (KEK) - An encryption key, which is used to encrypt and decrypt the DEK.
-* Key management application programming interface (KM API) - An application interface that is designed to securely retrieve and communicate encryption keys from a key management server to the client requesting the keys.
-* Certificate Authority (CA) - An entity that creates public and private keys, creates certificates, verifies certificates, and performs other PKI functions.
+* Key management application programming interface (KM API) - An application interface that is designed to securely retrieve and communicate encryption keys from a key management server to the client that requests the keys.
+* Certificate authority (CA) - An entity that creates public and private keys, creates certificates, verifies certificates, and does other PKI functions.
 * Transport layer security (TLS) - A cryptographic protocol that provides security, through mutual authentication, for data-in-motion over a network.
 * Key Manager (KM) - The software that manages the key lifecycle.
 * Key Management System (KMS) - A system that hosts the key manager and key storage database.
@@ -52,19 +52,19 @@ The following sequence is a step-by-step example of how an authorized user acces
 
 ## Key lifecycle
 {: #htdc-hpcs-encryption-overview-lifecycle}
-Keys have the following lifecycle:
 
+Keys have the following lifecycle:
 * Key Creation - The encryption key is created and stored on the key management server. The key manager creates the encryption key by using a cryptographically secure random bit generator and stores the key, along with its attributes, in the key storage database.
-* Key Use  - The key manager allows an activated key to be retrieved by authorized systems and users. The key manager will also roll the key either through
+* Key Use  - The key manager allows an activated key to be retrieved by authorized systems and users. The key manager also rolls the key through.
 * A previously established schedule or allow a manual roll by an administrator.
 * Key Revocation - An administrator can request the key manager to revoke a key so that it is no longer used for encryption requests.
 * Back Up - Encryption keys need to be recoverable in case they need to be reactivated for use in decrypting data that it originally encrypted.
-* Key Deletion - If a key is no longer required, an administrator can choose to delete the key entirely from the key storage database of the encryption key manager. When the key is deleted, the data will be unrecoverable since it is impossible to re-create the key.
+* Key Deletion - If a key is no longer required, an administrator can choose to delete the key entirely from the key storage database of the encryption key manager. When the key is deleted, the data becomes unrecoverable since it is impossible to re-create the key.
 
 ## Key best practice
 {: #htdc-hpcs-encryption-overview-best}
-The following are considered to be best practices in key management:
 
+The following are considered to be best practices in key management:
 * Separation of duties - The implementation of separation of duties is critical for encryption key management, and to prevent unwanted access to protected data. The person who manages the encryption keys must not have access to the protected data, and vice versa.
 * Dual control - Dual Control requires that at least two or more individuals control a single process, so no single person is able to access or use the cryptographic keys.
 * Split Knowledge - This concept ensures that no one person knows the complete value of an encryption key. If passphrases are used to create encryption keys, then no single person would know the entire passphrase. Therefore, two or more people would need to be available to create or re-create an encryption key.

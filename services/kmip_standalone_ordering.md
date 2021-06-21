@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-28"
+lastupdated: "2021-04-28"
 
 keywords: KMIP for VMware, order KMIP, Key Protect, Hyper Protect Crypto Services, HPCS
 
@@ -57,7 +57,7 @@ You can also specify a name for your KMIP for VMware instance.
 {: #kmip_standalone_ordering-step1-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the services section and click **KMIP for VMware** in the **Security and compliance** category.
-2. On the **KMIP for VMware** page, configure the service settings as required.
+2. On the **KMIP for VMware** page, configure the service settings, as needed.
 3. Click **Create**.
 
 ### Results of Step 1
@@ -163,6 +163,7 @@ If your KMIP instance is connected to Key Protect, you must use the two regional
 | London | <code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
 | Sydney | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
 | Tokyo | <code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
+| Toronto | <code>kmip-1.private.ca-tor.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ca-tor.vmware-solutions.cloud.ibm.com:5696</code> |
 | Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
 {: caption="Table 3. KMIP for VMware network service endpoint locations" caption-side="top"}
 

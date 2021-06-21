@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-04"
+lastupdated: "2021-04-19"
 
 subcollection: vmwaresolutions
 
@@ -22,7 +22,7 @@ Review the following information for common HCX issues and fixes.
 ### HCX user interface token timeout
 {: #hcxclient-troubleshooting-hcx-ui-issues}
 
-Typically, if the vCenter user interface (UI) has been left opened for some time, you might encounter a timeout in the HCX UI. This is because the login token to the HCX Manager server has timed out. Log out of the vSphere web UI and back in to refresh the token.
+Typically, if the vCenter Server UI has been opened for some time you might encounter a timeout in the HCX UI, because the login token to the HCX Manager server timed out. Log out of the vSphere web UI and back in to refresh the token.
 
 ### HCX Client UI displaying “NaN” for all metrics on the dashboard screen
 {: #hcxclient-troubleshooting-nan-display}
@@ -42,10 +42,9 @@ If a migration fails because of a licensing issue, current versions of HCX clear
 ### Network (WAN) connectivity
 {: #hcxclient-troubleshooting-wan-connect}
 
-If there is an issue with WAN connectivity, always check the **Interconnect -> HCX Components** screen
-within the HCX UI for tunnel status. The fleet components typically do not need to be reset or rebooted. If WAN connectivity is restored, they reconnect automatically.
+If you have any WAN connectivity issues, always check the **Interconnect -> HCX Components** screen within the HCX UI for tunnel status. The fleet components typically do not need to be reset or rebooted. If WAN connectivity is restored, they reconnect automatically.
 
-If there are fixes and updates that were applied to the HCX managers (Client and Cloud) and those updates also patch issues with the fleet components, you must redeploy the Cloud Gateway and any L2Cs deployed. It is possible to do further tunnel status debugging, by connecting to HCX Manager through an SSH client such as `ccli`
+If any fixes and updates were applied to the HCX managers (Client and Cloud) and those updates also patch issues with the fleet components, you must redeploy the Cloud Gateway and any L2Cs deployed. It is possible to do further tunnel status debugging, by connecting to HCX Manager through an SSH client such as `ccli`
 
 1. SSH to HCX Manager by using the admin account and the supplied password.
 2. Run the `su –` command and enter the password of the `root` user (same as admin password) to change to root.
@@ -61,12 +60,12 @@ If there are fixes and updates that were applied to the HCX managers (Client and
 ## Destination hardware compatibility issues
 {: #hcxclient-troubleshooting-hw-compatibility}
 
-vMotion migration can be an issue when the client source side is of newer hardware version and vSphere release than the cloud. Since replication-based migration copies data to a newly built virtual machine (VM) on the destination side, changing the migration type to “Bulk Migration” should allow the migration to succeed in most cases.
+vMotion migration can be an issue when the client source side is of newer hardware version and vSphere release than the cloud. Since replication-based migration copies data to a newly built virtual machine (VM) on the destination side, changing the migration type to “Bulk Migration” allows the migration to succeed in most cases.
 
 ## Stretched L2 Concentrator issues
 {: #hcxclient-troubleshooting-stretched-l2}
 
-Very few issues have been experienced with the operation of the L2 Concentrator (L2C). Similar to the CGW, if the L2C loses connectivity it reconnects automatically after the network connectivity is restored. Use the ccli shell to check health and operation. After SSH is enabled and the L2C is connected, run the `ip tunnel` and `ip link |grep t_` commands to view the status of the tunnels.
+If the L2C loses connectivity it reconnects automatically after the network connectivity is restored. Use the ccli shell to check health and operation. After SSH is enabled and the L2C is connected, run the `ip tunnel` and `ip link |grep t_` commands to view the status of the tunnels.
 
 **Next topic:** [Modifying or uninstalling HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-removal-uninstall)
 

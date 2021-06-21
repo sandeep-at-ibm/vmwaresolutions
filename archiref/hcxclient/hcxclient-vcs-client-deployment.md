@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 subcollection: vmwaresolutions
 
@@ -14,9 +14,9 @@ subcollection: vmwaresolutions
 # HCX client deployment
 {: #hcxclient-vcs-client-deployment}
 
-A minimal HCX installation consists of a single cloud and client-side deployment.
+A minimal VMware® HCX™ installation consists of a single cloud and client-side deployment.
 
-The HCX client side can install on any version of vSphere supported by HCX assuming that there is network connectivity between the client and cloud sides.
+The HCX client side can install on any version of vSphere supported by HCX on the assumption that network connectivity between the client and cloud sides exists.
 
 ## Requirements
 {: #hcxclient-vcs-client-deployment-req}
@@ -34,7 +34,7 @@ The HCX client side can install on any version of vSphere supported by HCX assum
 
 HCX is a service. HCX is licensed per site and per virtual machine (VM) managed through licensing servers that are maintained by VMware. The HCX cloud and client-side instances require communication with the VMware registration site throughout their lifecycle.
 - Traffic on 80 and 443 must be allowed to `https://connect.hybridity.vmware.com`
-- A one-time use registration key is provided by the {{site.data.keyword.vmwaresolutions_full}} console is for the client-side installation. A key is required for each client-side HCX installation.
+- A one-time use registration key is provided by the {{site.data.keyword.vmwaresolutions_full}} console for the client-side installation. A key is required for each client-side HCX installation.
 
 ### Procedure to order on-premises HCX licenses
 {: #hcxclient-vcs-client-deployment-license-ordering-procedure}
@@ -56,12 +56,12 @@ target {{site.data.keyword.cloud_notm}}.
 
 * On-premises
   * One IP address for the HCX Manager appliance.
-  * One for each InterConnect Appliance, add one if there is a separate vMotion network.
-  * One for each standard Network Extension
+  * One for each InterConnect Appliance, and an additional one for a separate vMotion network connection, if it exists.
+  * One for each standard Network Extension.
 
 * {{site.data.keyword.cloud_notm}}
-  * Two IP addresses per HCX Manager appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more Direct Connect lines.
-  * Add one if there is a separate vMotion network connection.
+  * Two IP addresses per HCX Manager appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the Internet or one or more Direct Connect lines.
+  * An additional IP address for a separate vMotion network connection, if it exists.
 
 ## Client-side OVA download
 {: #hcxclient-vcs-client-deployment-client-ova}
@@ -73,7 +73,7 @@ A one-time use registration key is also provided. Use the following steps to con
 Download HCX client (enterprise) OVA from the link provided in the cloud side HCX UI.
 1. Log in to the cloud side HCX UI by using the HCX registration UI provided by IBM.
 2. Use the cloud vCenter ID and password to log in to the UI.
-3. On the **Administration** tab, select **request download link** to download the client-side OVA. Use a jump box that is local to the source vCenter where the OVA is deployed to complete this step.
+3. On the **Administration** tab, select **request download link** to download the client-side OVA. Use a jump server that is local to the source vCenter where the OVA is deployed to complete this step.
 
 ## Installing and configuring HCX on the source
 {: #hcxclient-vcs-client-deployment-install-cfg-src}
@@ -98,10 +98,10 @@ Install the HCX Manager appliance in the on-premises vCenter.
   6. On the **Select storage** page, select the storage for the Hybrid Cloud Services and click **Next**. From the **Select virtual disk format** list, you can select either **thin provisioning** or **thick provisioning**.
   7. On the **Setup networks** page, map the Hybrid Cloud Services adapter to a host network chosen from the **Destination** list.
 7. On the **Customized template** page, enter the values specific to the environment:
-  * For the passwords, the default user name for both the command-line interface (CLI) and the web user interface is **admin**. The **admin** user and password to log in to the web user interface is required as is also a **root** user account that has a password that can be set.
+  * For the passwords, the default username for both the command-line interface (CLI) and the web user interface is **admin**. The **admin** user and password to log in to the web user interface is required as is also a **root** user account that has a password that can be set.
   * Enter and reenter the CLI **admin** user password.
   * Enter and reenter the **root** user password. In the future, if help is needed from VMware Global Support Services (GSS), this password might have to be shared so they can troubleshoot the system.
-  * For the network properties, enter the host name for the HCX Manager VM. Enter the network IPv4 address, the IPv4 prefix (the CIDR), and the default gateway. The following table shows sample values:
+  * For the network properties, enter the hostname for the HCX Manager VM. Enter the network IPv4 address, the IPv4 prefix (the CIDR), and the default gateway. The following table shows sample values:
 
 | Field                    | Value           |
 |--------------------------|-----------------|
@@ -117,7 +117,7 @@ Install the HCX Manager appliance in the on-premises vCenter.
 9. On the **Ready to complete** page, follow these steps:
   * Check the **Power on after deployment** box.
   * Review the Hybrid Cloud Services settings, and click **Finish**. It might take several minutes for the Hybrid Cloud Services appliance to power on.
-  * To check the status, go to the vSphere Web Client home page, and on the **Home** tab, go to **Inventories** and click **Hosts and Clusters**. Expand the data center hierarchy, and click the Hybrid Cloud Services service virtual machine to display a summary in the center pane.
+  * To check the status, go to the vSphere Web Client home page, and on the **Home** tab, go to **Inventories** and click **Hosts and Clusters**. Expand the data center hierarchy, and click the Hybrid Cloud Services service VM to display a summary in the center pane.
   * View the **Summary** tab, the console reads **Powered On** and the **Play** icon is green.
 10. The HCX Manager is powered on and ready to be registered with the on-premises vCenter.
 
@@ -145,9 +145,9 @@ Install the HCX Manager appliance in the on-premises vCenter.
   1. In the left pane, under **Configure Systems**, select vCenter.
   2. Click **Add vCenter** on the upper right.
   3. Enter the IP address of the vCenter Server in the form `https://vCenter-host-name` or `https://vCenter-IP-address`. For example, `https://My-vCenter` or `https://1.1.1.1`
-  4. Enter the vCenter Server user name and password. The account that is used must have the vCenter Administrator role.
+  4. Enter the vCenter Server username and password. The account that is used must have the vCenter Administrator role.
   5. Click **OK**. Do not restart when the _You need to restart the app_ message is displayed.
-3. Configure the SSO / lookup service.
+3. Configure the SSO lookup service.
   6. Click the **Manage** tab.
   7. Click **Edit** next to the **Lookup Service URL** text box.
   8. Enter the lookup network service endpoint in the following form:

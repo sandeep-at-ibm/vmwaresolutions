@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-14"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -16,7 +16,7 @@ subcollection: vmwaresolutions
 # Requesting managed IBM Cloud for VMware Mission Critical Workloads
 {: #mcv_ordering-managed}
 
-You can deploy a fully managed {{site.data.keyword.cloud}} for VMware Mission Critical Workloads solution that is delivered by IBM Services.
+You can deploy a fully managed {{site.data.keyword.cloud}} for VMware® Mission Critical Workloads solution that is delivered by IBM Services.
 
 ## Procedure to request IBM Cloud for VMware Mission Critical Workloads
 {: #mcv_ordering-managed-procedure}

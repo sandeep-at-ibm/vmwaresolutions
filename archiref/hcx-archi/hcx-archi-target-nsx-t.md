@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-12-14"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 # VMware HCX component-level target architecture with NSX-T deployments
 {: #hcx-archi-target-t}
 
-Review the architecture of each HCX component that is deployed within the {{site.data.keyword.cloud}} environment with NSX-T.
+Review the architecture of each VMware® HCX component that is deployed within the {{site.data.keyword.cloud}} environment with NSX-T™.
 
 ## NSX-T Services Edge Tier 0 Gateway
 {: #hcx-archi-target-t-nsx-edge}
@@ -53,7 +53,7 @@ A virtual appliance is deployed after a connection is established from the sourc
 
 This HCX-IX Interconnect Appliance is deployed and configured to be on the management VLAN (Private Portable Subnet) and the vMotion VLAN (Private Portable Subnet) of the {{site.data.keyword.vmwaresolutions_short}} deployment.
 
-Additionally, another interface is configured on the Public VLAN (Public Portable) for connections that are made over the public internet. Public access is not required if there is a direct connection (private connection in place). The last connection that is associated with the HCX-IX Interconnect Appliance is a logical switch that is created and configured upon site pairing.
+Additionally, another interface is configured on the Public VLAN (Public Portable) for connections that are made over the public internet. Public access is not required if a direct private connection is in place. The last connection that is associated with the HCX-IX Interconnect Appliance is a logical switch that is created and configured upon site pairing.
 
 This logical switch is a private, non-routable network that is used as a communication channel between the HCX-IX Interconnect Appliance and HCX WAN Optimizer.
 
@@ -62,8 +62,9 @@ This logical switch is a private, non-routable network that is used as a communi
 
 The second component that is deployed is the WAN Optimization appliance. While the WAN Optimization appliance is optional, it performs WAN conditioning to reduce effects of latency. It also incorporates Forward Error Correction to negate packet loss scenarios, and deduplication of redundant traffic patterns.
 
-Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the {{site.data.keyword.cloud_notm}}. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer resides on vSAN storage if present, or on Endurance storage
-with 2,000 IOPS. The following table shows the sizing specification for the HCX WAN Optimization appliance.
+Altogether, these reduce bandwidth use and ensure the best use of available network capacity to expedite data transfer to and from the {{site.data.keyword.cloud_notm}}. The WAN Optimizer is disk intensive and requires sufficient amount of IOPS to function properly. As a result, the WAN optimizer is located on the vSAN storage, if present, or on the endurance storage with 2,000 IOPS.
+
+The following table shows the sizing specification for the HCX WAN Optimization appliance.
 
 | Component | Configuration |
 |-----------|---------------|
@@ -79,7 +80,9 @@ Unlike the HCX-IX Interconnect Appliance, the WAN Optimization appliance is only
 
 The third component is known as the HCX Network Extension Virtual Appliance and is part of the Network Extension Services. The HCX-NE is the VM that allows the extension of on-premises datacenter networks to the {{site.data.keyword.cloud_notm}}. The HCX-NE stretches on-premises VLANs or VXLANs. Each HCX-NE can stretch up to 4096 VLANs. Each HCX-NE, when paired with its on-premises partner can provide up to 1 Gbps per “flow” and up to an aggregate of 4 Gbps per VLAN (or VXLAN). Deployment of more HCX-NE appliances is supported if more network throughputs are required.
 
-As part of this design, the HCX-NE appliance is deployed so that a customer can stretch multiple VLANs and VLXANs into the {{site.data.keyword.cloud_notm}} over the public internet or through the private network by using Direct Link. The sizing specification of the HCX-NE appliance on the {{site.data.keyword.cloud_notm}} is listed in the following table.
+As part of this design, the HCX-NE appliance is deployed so that a customer can stretch multiple VLANs and VLXANs into the {{site.data.keyword.cloud_notm}} over the Internet or through the private network by using Direct-Link.
+
+The sizing specification of the HCX-NE appliance on the {{site.data.keyword.cloud_notm}} is listed in the following table.
 
 | Component | Configuration |
 |-----------|---------------|

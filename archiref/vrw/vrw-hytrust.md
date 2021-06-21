@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -58,7 +58,7 @@ Access to the ESXi hosts is strictly limited. No direct access to an ESXi host i
 ## Workload cluster
 {: #vrw-hytrust-workload}
 
-The ESXi host access is strictly limited. No direct access to an ESXi host is permissible. HTCC provides the same level of access control and auditing for administrators who are assigned to manage the dedicated workload infrastructure, such as the SDN (NSX-T). The fine-grained RBAC capability of HTCC limits their scope of action to the workload region. Allow listing of IP addresses permitted network access to the ESXi hosts is required in the integrated host firewall.
+The ESXi host access is strictly limited. No direct access to an ESXi host is permissible. HTCC provides the same level of access control and auditing for administrators who are assigned to manage the dedicated workload infrastructure, such as the SDN (NSX-T™). The fine-grained RBAC capability of HTCC limits their scope of action to the workload region. Allow listing of IP addresses permitted network access to the ESXi hosts is required in the integrated host firewall.
 
 **Next topic**: [Active Directory](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-iam-active-directory)
 

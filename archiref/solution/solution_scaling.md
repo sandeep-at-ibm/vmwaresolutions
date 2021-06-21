@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-11"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -63,5 +63,5 @@ You can scale out an existing cluster by ordering hosts from the {{site.data.key
 ## Related links
 {: #solution_scaling-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
 * [Design overview](/docs/vmwaresolutions?topic=vmwaresolutions-design_overview)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-18"
+lastupdated: "2021-06-17"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -29,54 +29,54 @@ After initial instance deployment, you can increase shared storage by ordering m
 
 For dedicated storage, see [NetApp® ONTAP® Select](/docs/vmwaresolutions?topic=vmwaresolutions-netapp).
 
-For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize® Operations™. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
-
-For vCenter Server with NSX-T instances, applying license updates is not supported. Also, not all add-on services are supported for NSX-T instances.
+For vCenter Server with NSX-T™ instances, applying license updates is not supported. Also, not all add-on services are supported for NSX-T instances.
 {:important}
 
-## vCenter Server with NSX-V architecture
-{: #vc_vcenterserveroverview-archi}
-
-The following graphic depicts the high-level architecture and components of a three-node vCenter Server with NSX-V deployment.
-
-![vCenter Server with NSX-V architecture](../images/vc_architecture.svg "vCenter Server with NSX-V architecture"){: caption="Figure 1. vCenter Server with NSX-V high-level architecture for a three-node cluster" caption-side="bottom"}
+For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize® Operations™. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## vCenter Server with NSX-T architecture
 {: #vc_vcenterserveroverview-nsx-t-archi}
 
 The following graphic depicts the high-level architecture and components of a three-node vCenter Server with NSX-T deployment.
 
-![vCenter Server with NSX-T architecture](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T architecture"){: caption="Figure 2. vCenter Server with NSX-T high-level architecture for a three-node cluster" caption-side="bottom"}
+![vCenter Server with NSX-T architecture](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T architecture"){: caption="Figure 1. vCenter Server with NSX-T high-level architecture for a three-node cluster" caption-side="bottom"}
 
-### Physical infrastructure
+## vCenter Server with NSX-V architecture
+{: #vc_vcenterserveroverview-archi}
+
+The following graphic depicts the high-level architecture and components of a three-node vCenter Server with NSX-V deployment.
+
+![vCenter Server with NSX-V architecture](../images/vc_architecture.svg "vCenter Server with NSX-V architecture"){: caption="Figure 2. vCenter Server with NSX-V high-level architecture for a three-node cluster" caption-side="bottom"}
+
+## Physical infrastructure
 {: #vc_vcenterserveroverview-physical-infras}
 
 This layer provides the physical infrastructure (compute, storage, and network resources) to be used by the virtual infrastructure.
 
-### Virtualization infrastructure (Compute and Network)
+## Virtualization infrastructure (Compute and Network)
 {: #vc_vcenterserveroverview-virtualization-infras}
 
 This layer virtualizes the physical infrastructure through different VMware products:
 * VMware vSphere virtualizes the physical compute resources.
 * VMware NSX is the network virtualization platform that provides logical networking components and virtual networks.
 
-### Virtualization management
+## Virtualization management
 {: #vc_vcenterserveroverview-virtualization-mgmt}
 
 This layer consists of the following components:
-* vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
-* For NSX-V - one NSX Manager and three VMware NSX Controller™ nodes (total of four nodes)
-* For NSX-T - three NSX Manager or Controller nodes (total of three nodes)
-* VMware NSX Edge™ Services Gateways (ESGs) - two for NSX-V and four for NSX-T (two in the management cluster and two in the workload cluster)
+* vCenter Server Appliance with embedded Platform Services Controller (PSC).
+* For NSX-T - three NSX Manager or Controller nodes (total of three nodes).
+* For NSX-V - one NSX Manager and three VMware NSX Controller™ nodes (total of four nodes).
+* VMware NSX Edge™ Services Gateways (ESGs) - four for NSX-T (two in the management cluster and two in the workload cluster) and two for NSX-V.
 * IBM CloudDriver virtual server instance (VSI). The CloudDriver VSI is deployed on demand as needed for certain operations such as adding hosts to the environment.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4,000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
 In total, the base offering has the following requirements, which are reserved for the virtualization management layer.
-* For NSX-V, 38 vCPU and 67 GB vRAM
 * For NSX-T, 42 vCPU and 128 GB vRAM
+* For NSX-V, 38 vCPU and 67 GB vRAM
 
-The remaining host capacity for your VMs depends on several factors, such as oversubscription rate, virtual machine (VM) sizing, and workload performance requirements.
+The remaining host capacity for your virtual machines (VMs) depends on several factors, such as oversubscription rate, VM sizing, and workload performance requirements.
 
 For more information about the architecture, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
 
@@ -98,7 +98,7 @@ Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
 {:note}
 
 The following configurations are available:
-* **Skylake** - 2-CPU Intel Skylake generation servers (Intel Xeon 4100/5100/6100 series) with your selected CPU model and RAM size.
+* **Skylake** - 2-CPU Intel® Skylake generation servers (Intel Xeon® 4100/5100/6100 series) with your selected CPU model and RAM size.
 * **Cascade Lake** - 4-CPU Intel Cascade Lake generation server (Quad Intel Xeon Gold 6248 and Quad Intel Xeon Platinum 8260) and 2-CPU Intel Cascade Lake generation servers (Intel Xeon 4200/5200/6200/8200 series) with your selected CPU model and RAM size.
 * **SAP-certified** - Intel Skylake generation servers (Intel Xeon 6140 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
 
@@ -114,7 +114,7 @@ The following networking components are ordered:
 *  (NSX-V only) One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching extra VXLANs to new logical interfaces on the DLR.
 * (NSX-T only) One overlay network with a T1 and T0 router for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. This is deployed as a sample routing topology, which you can modify, build on, or remove.
 *  VMware NSX Edge Services Gateways (two for NSX-V and four for NSX-T):
-  * One secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
+  * One secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 
     This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
@@ -134,7 +134,7 @@ The following virtual server instances (VSIs) are ordered:
 
 During initial deployment, you can choose between vSAN and NFS storage options.
 
-After deployment, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances).
+After deployment, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingnfs).
 {:note}
 
 #### vSAN storage
@@ -146,7 +146,7 @@ The vSAN option offers customized configurations, with various options for disk 
 
   In addition, two cache disks of 960 GB are also ordered per host.
 
-  3.8 TB SSD (Solid State Disk) drives are supported when they are made generally available in a data center.
+  3.8 TB SSD (solid-state disk) drives are supported when they are made generally available in a data center.
   {:note}
 * High Performance with Intel Optane - this option provides two extra capacity disk bays. This option depends on the CPU model.
 
@@ -169,10 +169,10 @@ The local disks option, available to the **SAP-certified** Quad Intel Xeon E7-88
 ### Licenses (IBM-provided or BYOL) and fees
 {: #vc_vcenterserveroverview-license-and-fee}
 
-* VMware vSphere Enterprise Plus 7.0 (NSX-T only) and 6.7  
-* VMware vCenter Server 6.7 or 6.5
-* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4.
-* (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
+* VMware vSphere Enterprise Plus 7.0 (NSX-T only) or 6.7 (NSX-V only)
+* VMware vCenter Server 7.0 or 6.7
+* VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
+* (For vSAN clusters) VMware vSAN Advanced or Enterprise 7.0 or 6.7
 * Support and Services fee (one license per node)
 
 ## Technical specifications for vCenter Server expansion nodes
@@ -188,10 +188,10 @@ One bare metal server with the configuration presented in [Technical specificati
 ### Licenses and fees for expansion nodes
 {: #vc_vcenterserveroverview-expansion-node-license-and-fee}
 
-* One VMware vSphere Enterprise Plus 7.0 (NSX-T only) and 6.7u3
-* One VMware NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
+* One vSphere Enterprise Plus 7.0 (NSX-T only) or 6.7
+* One NSX Service Providers Edition (Base, Advanced, or Enterprise) 6.4
+* (For vSAN clusters) vSAN Advanced or Enterprise 6.6
 * One Support and Services fee
-* (For vSAN clusters) VMware vSAN Advanced or Enterprise 6.6
 
 You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
 Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
@@ -205,7 +205,7 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
 ## Support and Services fee
 {: #vc_vcenterserveroverview-support-services-fee}
 
-VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} DevOps and Level 2 Support teams for any issues that pertain to:
+VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} Support and Level 2 Support teams for any issues that pertain to:
 * Automation in the platform
 * VMware products included in the solution
 

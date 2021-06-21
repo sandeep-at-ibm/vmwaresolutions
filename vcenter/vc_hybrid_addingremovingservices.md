@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-06-07"
 
 keywords: vCenter Server Hybridity add service, view service vCenter Server Hybridity, remove service vCenter Server Hybridity
 
@@ -24,19 +24,18 @@ You can order services for your VMware vCenter Server® with Hybridity Bundle in
 ## Available services for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservices-available-services}
 
-The following services are available to VMware® vCenter Server with Hybridity Bundle instances, together with the installed service versions.
+The following services are available to VMware vCenter Server with Hybridity Bundle instances, together with the installed service versions.
 
 | Service name | Current version |
 |--------------|-----------------|
-| [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 2.4 |
-| [F5 BIG-IP®](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE v15.1.2 |
-| [FortiGate® Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.4.4 |
-| [HyTrust DataControl®](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) | 5.1.1 |
-| [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations) | 5.0.1 |
-| [{{site.data.keyword.IBM}} Spectrum® Protect&trade; Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | 10.1.5 |
-| [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) | 20.1 |
-| [Veeam®](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 11 |
-| [vRealize® Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.2 |
+| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.0 |
+| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE v15.1.2.1 |
+| [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.4.4 |
+| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) | 5.3 |
+| [{{site.data.keyword.IBM}} Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | 10.1.5 |
+| [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) | 3.0 (20.4R1.12) |
+| [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 11 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.2 |
 | [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 7.5 Update 3 |
 {: caption="Table 1. Available services for vCenter Server with Hybridity Bundle instances" caption-side="top"}
 

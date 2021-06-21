@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-05-04"
+lastupdated: "2021-06-03"
 
 keywords: regulated workloads, workloads instance, regulated instance
 
@@ -23,12 +23,12 @@ subcollection: vmwaresolutions
 The VMware® Regulated Workloads offering includes a secure-by-default architecture that follows the IBM unique policy controls framework. It also includes continuous compliance monitoring and the highest level of data encryption FIPS 140-2 Level 4.
 
 Review the following specifications before you begin.
-* The VMware Regulated Workloads offering is available in single-zone region topology and multizone region topology.
-* VMware Regulated Workloads are based on VMware NSX-T™ and VMware vSphere® 7.0.
+* The VMware Regulated Workloads offering is available for both single-zone and multizone region topologies.
+* VMware Regulated Workloads are based on VMware NSX-T™ and VMware vSphere® 7.
 * [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services), [KMIP for VMware](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter), and [Direct Link Dedicated](https://cloud.ibm.com/interconnectivity/direct-link) are required for the VMware Regulated Workloads. Ensure that you order these services before you start your VMware Regulated Workloads order.
 * If you are planning to bring your own licenses (BYOLs) for the VMware components, ensure that you have the complete list of BYOL licenses that are required.
-* The uplink speed is set to 10 Gb.
 * Some of the services require configuration setup. Review each service and ensure that you configure its settings properly, as indicated.
+* The **Private network only** option is available for all clusters. The **Public and private network** option is available only for the edge services cluster.
 
 ## Options not available for VMware Regulated Workloads
 {: #vrw-overview-before-not-avail-options}
@@ -40,7 +40,6 @@ The following options or settings are not available for VMware Regulated Workloa
 * vSAN™ deduplication and compression
 * Selection of existing VLANs. Only the option to order new VLANs is available.
 * Single public Windows® VSI for Active Directory™ DNS configuration. Only the option to order two highly available dedicated Windows server virtual machines (VMs) on the management cluster is available.
-* Public and private network. The **Private network only** option is available to all clusters, but the **Public and private network** option is only available to the edge services cluster.
 
 ## Related links
 {: #vrw-overview-related}

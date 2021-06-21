@@ -31,13 +31,12 @@ This release applies the following upgrades when you order VMware Solutions Shar
 ### Support for Dallas 12 and Dallas 13 IBM Cloud data centers
 {: #relnotes_v39-shared-dc}
 
-The Dallas 12 and Dallas 13 {{site.data.keyword.cloud}} data centers are now available for deployment on VMware Solutions Shared instances. For more information, see [Requirements and planning for VMware Solutions Shared
-](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning).
+The Dallas 12 and Dallas 13 {{site.data.keyword.cloud}} data centers are now available for deployment on VMware Solutions Shared instances.
 
 ### Integration with IBM Cloud Monitoring
 {: #relnotes_v39-shared-monitor}
 
-You can now use {{site.data.keyword.cloud_notm}} Monitoring to view and customize dashboards to visualize performance, volume of usage, and to define alerts to monitor your environment. For more information, see [Visualizing your virtual data center instance environment with IBM Cloud Monitoring](/docs/vmwaresolutions?topic=vmwaresolutions-shared-monitor).
+You can now use {{site.data.keyword.cloud_notm}} Monitoring to view and customize dashboards to visualize performance, volume of usage, and to define alerts to monitor your environment.
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v39-dedicated}
@@ -54,10 +53,10 @@ VMware vSphere 6.5u3 is no longer supported for new VMware vSphere clusters. Ful
 ### VMware NSX updates
 {: #relnotes_v39-dedicated-vmware-nsx-updates}
 
-Review the following information about vCenter Server with NSX-T instances for this release:
+Review the following information about vCenter Server with NSX-T™ instances for this release:
 
 * New instances of vCenter Server with NSX-T are provisioned with NSX-T 3.0.1.1.
-* Day 2 operations continue to be supported for vCenter Server with NSX-T 2.5.1 instances. For restrictions about Red Hat OpenShift for VMware on vCenter Server with NSX-T instances, see [Updates for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-relnotes_v39#relnotes_v39-services).
+* Day 2 operations continue to be supported for vCenter Server with NSX-T 2.5.1 instances.
 * If you want to upgrade your existing vCenter Server with NSX-T instance, you must upgrade to NSX-T 3.0.2.
 
 ### New Cascade Lake server support
@@ -81,7 +80,7 @@ The CPU model for new deployments of vCenter Server instance edge services clust
 ### Increased local disk count
 {: #relnotes_v39-dedicated-local-disks}
 
-For new vCenter Server instances and new clusters added to vCenter Server instances, the local disks option for storage now supports 10 and 12 disks. For more information, see [Local disks for NSX-V SAP-certified HANA only](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-local-disks).
+For new vCenter Server instances and new clusters added to vCenter Server instances, the local disks option for storage now supports 10 and 12 disks.
 
 ## Updates for add-on services
 {: #relnotes_v39-services}
@@ -93,13 +92,9 @@ This release provides the following service versions on newly deployed instances
 
   During the pre-configuration of HyTrust CloudControl v6.2, global PIP is enabled.
 * Juniper® vSRX and Juniper vSRX Gateway Appliance 3.0 (20.1R1.11)
-
-  For information about vSRX 3.0, see [Overview of the available virtual SRX models, vSRX and vSRX 3.0](https://kb.juniper.net/InfoCenter/index?page=content&id=KB33572){:external}.
 * Red Hat® OpenShift® for VMware® v4.4.23
 
   You can now install the Red Hat OpenShift for VMware service on vCenter Server with NSX-T instances. For NSX-T, you must have a new vCenter Server instance with NSX-T that is provisioned with NSX-T 3.0.1.1 or you must upgrade from NSX-T 2.5.1 to NSX-T 3.0.2.
-
-  For information about how the target cluster is selected if you have NSX-V or NSX-T, see [Selection of the target cluster for installation](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview#ocp_overview-select-target-cluster).
 
 ### HyTrust CloudControl for vCenter Server with NSX-V - deprecated
 {: #relnotes_v39-services-htcc-nsx-v-deprecated}

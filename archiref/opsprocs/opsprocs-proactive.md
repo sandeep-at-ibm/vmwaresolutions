@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-05-18"
 
 subcollection: vmwaresolutions
 
@@ -68,7 +68,7 @@ shares, not reservation, to allocate resources fairly across VMs. Shares take ef
 | VM hardware updates | For information about checking for the availability of VM hardware updates, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines#vum-baselines). |
 | VM Tools updates | For more information, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines#vum-baselines). |
 | vSphere vSAN patching | For information about checking for the availability of vSphere vSAN patches and the patch process, see [Updating vSAN clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vsan#vum-updating-vsan). |
-| vCenter patching | For more information about checking for the availability of VCSA patches and applying the update, see [VCSA update and SSO-linked vCenters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vcsa#vum-updating-vcsa). |
+| vCenter Server patching | For more information about checking for the availability of vCenter Server Appliance (VCSA) patches and applying the update, see [VCSA update and SSO-linked vCenters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vcsa#vum-updating-vcsa). |
 | Updating NSX | For more information about checking for the availability of NSX patches and applying the upgrades, see [NSX patching](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-nsx#vum-updating-nsx). |
 | Check for VMs without VM Tools | It is good practice to install VM Tools as this allows greater interaction with the OS, that is, graceful power down of the VM. You can use vCenter to check which VMs do not have VM Tools installed. Go to the cluster, select **Related Objects**, **VMs**, and in the table enable the columns for **VM Tools running** and **VM Tools version**. Review the list and install VM Tools if needed. |
 | VMs with snapshots | For information about best practices when working with snapshots, see [Best practices for using snapshots in the vSphere environment (1025279)](https://kb.vmware.com/s/article/1025279){:external}. It is important to identify the existence of VMs with snapshots as using a single snapshot for more than 72 hours creates a snapshot file that continues to grow in size and can cause the snapshot storage location to run out of space and impact the system performance. To review VMs with snapshots, connect to vCenter by using the Web Client, select the vCenter Server and go to Related Objects tab. Right-click on the column titles and go to Show/Hide Columns list. From the list of columns chose Needs Consolidation option. This column shows a summary of all the VMs that are currently running. |

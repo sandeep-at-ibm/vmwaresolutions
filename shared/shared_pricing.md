@@ -4,7 +4,7 @@ copyright:
 
   years: 2020, 2021
 
-lastupdated: "2021-02-11"
+lastupdated: "2021-06-03"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # VMware Solutions Shared pricing
 {: #shared_pricing}
 
-{{site.data.keyword.vmwaresolutions_full}} Shared offers two pricing plans for creating VMware® virtual data centers. Virtual data centers incur charges for the following virtual data center resource usages:
+{{site.data.keyword.cloud}} for VMware® Solutions Shared offers two pricing plans for creating VMware virtual data centers. Virtual data centers incur charges for the following virtual data center resource usages:
 
 * Storage allocations with tiered pricing based on storage performance
 * Virtual CPU (vCPU) usage
@@ -76,7 +76,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:----------|:------------|
-| MAX_BASE_COST | Monthly | Instance price, which includes the edge gateway with five IP addresses. |
+| MAX_BASE_COST | Monthly | Virtual data center price, which includes the edge gateway with five IP addresses. |
 | TOTAL_VCPU_HOURS | Hourly | The peak vCPU **usage** over the period of an hour. |
 | TOTAL_RAM_GB_HOURS | Hourly | The peak memory **usage** over the period of an hour. |
 | TOTAL_EGRESS_GB | Usage | The **total** outbound public traffic is charged per GB transferred over the period of an hour. This value includes public outbound traffic. |
@@ -154,7 +154,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 ## Private network endpoint billing plan
 {: #shared_pricing-private-network-endpoints}
 
-Private network endpoint usage incurs charges as part of the On-demand or Reserved virtual data center plan. On the **VMware Solutions Shared** order page, select the **About** tab to view the pricing plan details.
+Private network endpoint usage incurs charges as part of the on-demand or reserved virtual data center plan. On the **VMware Solutions Shared** order page, select the **About** tab to view the pricing plan details.
 
 | Metric                                   | Frequency   | Description |
 |:-----------------------------------------|:------------|:------------|
@@ -165,7 +165,7 @@ Private network endpoint usage incurs charges as part of the On-demand or Reserv
 ## Licenses and fees for Veeam Availability Suite and Zerto
 {: #shared_pricing-services}
 
-Veeam® and Zerto usage incurs the following On-demand charges. You can view the charges on the **{{site.data.keyword.cloud_notm}} billing and usage** view along with the usage and charges from all other {{site.data.keyword.cloud_notm}} services.
+Veeam® and Zerto usage incurs the following on-demand charges. You can view the charges on the **{{site.data.keyword.cloud_notm}} billing and usage** view along with the usage and charges from all other {{site.data.keyword.cloud_notm}} services.
 
 In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solutions** service type. Locate the **Organization** plan to find the Veeam and Zerto usage across all virtual data centers in that organization. The virtual data center usage is located in a separate plan for either VMware Solutions Shared On-demand or VMware Solutions Shared Reserved.
 
@@ -182,8 +182,8 @@ In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solu
 
 | Metric                                   | Frequency   | Description |
 |:-----------------------------------------|:------------|:------------|
-| TOTAL_ZERTO_LICENSE_HOURS | Hourly | Zerto license charge for every VM replicated. The hourly charge is for the highest number of VMs replicated to a virtual data center instance at any time period in the given hour. |
-| TOTAL_ZERTO_CLOUD_CONNECTOR_HOURS | Hourly | Charge for every virtual data center instance. One Zerto Cloud Connector per virtual data center instance. |
+| TOTAL_ZERTO_LICENSE_HOURS | Hourly | Zerto license charge for every VM replicated. The hourly charge is for the highest number of VMs replicated to a virtual data center at any time period in the hour. |
+| TOTAL_ZERTO_CLOUD_CONNECTOR_HOURS | Hourly | Charge for every virtual data center. One Zerto Cloud Connector per virtual data center. |
 {: caption="Table 5. Licenses and fees for Zerto" caption-side="top"}
 {: #service-table2}
 {: tab-title="Zerto"}
@@ -202,10 +202,11 @@ You can change how fast inactive backup chains are moved to Cloud Object Storage
 
 * [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
 * [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning)
-* [Ordering Data Center Virtual instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
-* [Viewing and managing VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
-* [Resizing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_resize)
+* [Ordering virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
+* [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Resizing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_resize)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
+* [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto)
 * [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
 * [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-20"
+lastupdated: "2021-05-14"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 
 Review the following requirements before you order your VMware vCenter Server® instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and services requirements.
 
-Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
+Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
 {:important}
 
 ## IBM Cloud account requirements
@@ -108,7 +108,7 @@ You are responsible for maintaining and ensuring the availability of all instanc
 ## Services for vCenter Server instances
 {: #vc_planning-addon-services}
 
-You can order services for your instance based on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+You can order services for your instance based on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
 {:important}
@@ -139,5 +139,5 @@ For more information about capacity considerations, see [Scaling capacity](/docs
 
 * [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)

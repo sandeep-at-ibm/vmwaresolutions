@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-09"
+lastupdated: "2021-05-11"
 
 keywords: vCenter Server migrate instance, add account vCenter Server, migrate cloud account
 
@@ -28,7 +28,7 @@ Ensure that the {{site.data.keyword.cloud_notm}} account that you want to migrat
 
 For more information about how to link your Iaas-only account to your PaaS account, see [Linking your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:external}.
 
-## Procedure to migrate instances
+## Procedure to migrate pre-V2.5 vCenter Server instances to IBM Cloud accounts
 {: #vc_addinstancetousraccount-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
@@ -37,7 +37,7 @@ For more information about how to link your Iaas-only account to your PaaS accou
 4. Click the vertical overflow menu next to the **Status** column, and then click **Migrate instance to account**.
 5. In the **Migrate instance to account** window, confirm the account to migrate the instance to, and then click **Migrate**.
 
-### Results
+## Results
 {: #vc_addinstancetousraccount-results}
 
 1. You get a console notification that your request to migrate the instance to the specified {{site.data.keyword.cloud_notm}} account is accepted.

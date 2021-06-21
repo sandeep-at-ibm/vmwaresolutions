@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-21"
+lastupdated: "2021-06-16"
 
 keywords: openshift for vmware, request openshift for vmware, tech specs openshift vmware
 
@@ -27,14 +27,14 @@ The Red Hat® OpenShift® for VMware® service deploys a Red Hat OpenShift clust
 
 Review the following information before you install the Red Hat OpenShift for VMware service:
 * Red Hat OpenShift for VMware cannot be installed on multiple VMware vCenter Server® instances in a multi-site configuration. Before you install Red Hat OpenShift for VMware on an instance, verify that the service is not installed on any other instances in the multi-site configuration.
-* Red Hat OpenShift for VMware is supported on VMware vCenter Server instances with VMware vSphere® 7.0, only for VMware NSX-T 3.1.
+* Red Hat OpenShift for VMware is supported on VMware vCenter Server instances with VMware vSphere® 7.0, only for VMware NSX-T™ 3.1.
 * Red Hat OpenShift for VMware is not supported for new deployments or for ordering post deployment for the following instances:
    * vCenter Server with NSX-V for vSphere 6.7 or 6.5
    * vCenter Server with NSX-T for vSphere 6.7
 
    Existing installations of Red Hat OpenShift for VMware can be used or deleted.
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
 Currently, Red Hat OpenShift v4.6 is installed.
 {: note}
@@ -44,7 +44,7 @@ The cluster consists of the following components:
 * Three worker nodes, all running Red Hat CoreOS
 * Two VMware NSX® VMs
 * A Red Hat CoreOS template
-* A bastion VM running CentOS
+* A bastion VM running CoreOS
 
 For more information about the architecture, see [Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-redhat-arch).
 
@@ -55,11 +55,11 @@ The following capacity requirements apply only if your VMware vCenter Server ins
 
 The solution topology has the following requirements:
 
-* 79 vCPUs
+* 79 CPUs
 * 155 GB RAM
 * 952 GB storage
 
-For more information about resource requirements and capacity checking, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 To successfully deploy Red Hat OpenShift on vCenter Server, you must have a Red Hat account and the pull secret key from your account. All Red Hat accounts have an associated pull secret, which you can retrieve by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned). You must purchase Red Hat support entitlements through Red Hat. You must also direct all Red Hat OpenShift support issues to Red Hat.
 
@@ -159,7 +159,7 @@ For more information about updating Red Hat OpenShift, see [Updating a cluster b
 {: #ocp_overview-related}
 
 * [VMware vCenter Server and Red Hat OpenShift architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
-* [IBM Cloud for VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
+* [VMware Solutions and Red Hat OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
 * [OpenShift Container Platform 4.6 documentation](https://docs.openshift.com/container-platform/4.6/welcome/index.html){:external}
 * [OpenShift Container Platform 4.6 release notes](https://docs.openshift.com/container-platform/4.6/release_notes/ocp-4-6-release-notes.html){:external}
 * [What's new in Red Hat OpenShift](https://www.openshift.com/learn/whats-new){:external}

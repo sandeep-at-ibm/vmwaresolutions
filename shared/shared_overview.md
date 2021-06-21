@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-05-28"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -21,12 +21,12 @@ subcollection: vmwaresolutions
 # VMware Solutions Shared overview
 {: #shared_overview}
 
-{{site.data.keyword.vmwaresolutions_full}} Shared provides standardized and customizable deployment choices of VMware® virtual data center environments. With VMware Solutions Shared virtual data center instances, you can quickly and seamlessly migrate or deploy VMware workloads to the cloud, on IBM-hosted VMware infrastructure. IBM provides a self-service on-demand VMware cloud computing platform with VMware vCloud Director running on {{site.data.keyword.cloud_notm}}. This Infrastructure as a Service (IaaS) on-demand offering provides the option to use specific virtual CPU (vCPU), storage, vRAM, Network, and IP, as needed.
+{{site.data.keyword.cloud}} for VMware® Solutions Shared provides standardized and customizable deployment choices of VMware virtual data center environments. With VMware Solutions Shared virtual data centers, you can quickly and seamlessly migrate or deploy VMware workloads to the cloud, on IBM-hosted VMware infrastructure. IBM provides a self-service on-demand VMware cloud computing platform with VMware vCloud Director running on {{site.data.keyword.cloud_notm}}. This Infrastructure as a Service (IaaS) on-demand offering provides the option to use specific virtual CPU (vCPU), storage, vRAM, Network, and IP, as needed.
 
 VMware Solutions Shared has the following IaaS subscription service types:
 
-* Multi-tenant on-demand virtual data center instances
-* Multi-tenant reserved virtual data center instances
+* Multi-tenant on-demand virtual data centers
+* Multi-tenant reserved virtual data centers
 
 You can manage the lifecycle of virtual data centers by using the VMware Solutions Shared offering. The following functions are supported when you use the vCloud Director Management console or public API:
 
@@ -82,7 +82,7 @@ An organization virtual data center provides resources to an organization. Virtu
 ## Technical specifications for VMware Solutions Shared
 {: #shared_overview-specs}
 
-The following components are included in your virtual data center instance:
+The following components are included in your virtual data center:
 
 ### Compute
 {: #shared_overview-specs-comp}
@@ -139,8 +139,8 @@ The encryption storage policies do not currently work with VM customizations. IB
 ### Maximum disk size
 {: #shared_overview-specs-disk-size}
 
-* The maximum disk size is 16 TBs per disk for 0.25 IOPS/GB, 2 IOPS/GB, 4 IOPS/GB, and Standard storage policies.
-* The maximum disk size is 4 TBs per disk for the 10 IOPs/GB storage policy.
+* The maximum disk size is 16 TBs per disk for 0.25 IOPS / GB, 2 IOPS/GB, 4 IOPS/GB, and Standard storage policies.
+* The maximum disk size is 4 TBs per disk for the 10 IOPs / GB storage policy.
 
 ### Maximum host capacity
 {: #shared_overview-specs-capacity}
@@ -154,14 +154,14 @@ The maximum host capacity for a single VM has the following specifications:
 ## Managing user access with Identity and Access Management
 {: #shared_overview-manage_user_access}
 
-{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) controls user access
+The {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) offering controls user access
 to {{site.data.keyword.vmwaresolutions_short}} service instances. For more information about IAM, see [Managing user access with Identity and Access Management](/docs/vmwaresolutions?topic=vmwaresolutions-iam).
 
 ## Related links
 {: #shared_overview-related}
 
 * [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning)
-* [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
+* [Ordering virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
 * [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){:external}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-12-04"
+lastupdated: "2021-04-16"
 
 subcollection: vmwaresolutions
 
@@ -14,9 +14,9 @@ subcollection: vmwaresolutions
 # VMware Hybrid Cloud migrations
 {: #hcxclient-migrations}
 
-After the HCX Service Mesh and Network Extensions are provisioned and extended, the next step is the migration of VMs.
+After the VMware® HCX™ Service Mesh and Network Extensions are provisioned and extended, the next step is the migration of VMs.
 
-There are three types of migrations:
+The following migration types exist:
   - vMotion
   - Bulk Migration
   - Cold Migration
@@ -36,17 +36,17 @@ The vMotion capability within HCX extends the vSphere vMotion capability to work
 ### Concepts and best practices for vMotion
 {: #hcxclient-migrations-best-practices-vmotion}
 
-HCX is essentially a vMotion two-way proxy. Each instance of HCX emulates a single ESXi host within the vSphere data center, outside any clusters that is itself a “front” for the cloud gateway fleet component (CGW). A proxy host appears for each HCX site that is linked to the currently viewed site. When a vMotion is initiated to a remote host, the local ESXi host will migrate that VM to the local proxy ESXi host that fronts the CGW that also is maintaining an encrypted tunnel with the CGW on the remote side.
+HCX is essentially a vMotion two-way proxy. Each instance of HCX emulates a single ESXi host within the vSphere data center, outside any clusters. The HCX instance is a “front” for the cloud gateway fleet component (CGW). A proxy host appears for each HCX site that is linked to the currently viewed site. When a vMotion is initiated to a remote host, the local ESXi host migrates that VM to the local proxy ESXi host.
 
-A vMotion migration is initiated from the remote ESXi proxy host to the destination vSphere physical ESXi host, while it receives data from the source CGW across the tunnel. When vMotion is employed, unlike the bulk migration option, only a single VM migration operation runs at a time. Because of this, for many VMs to be migrated, it's recommended to use vMotion only when downtime is not an option or if there is a risk in rebooting the VM. However, like standard vMotion, the VM can be live during the process.
+A vMotion migration is initiated from the remote ESXi proxy host to the destination vSphere physical ESXi host, while it receives data from the source CGW across the tunnel. When vMotion is employed, unlike the bulk migration option, only a single VM migration operation runs at a time. As a result, for many VMs to be migrated, it is recommended to use vMotion only when downtime is not an option or if a risk in rebooting the VM exists. However, like standard vMotion, the VM can be live during the process.
 
-It has been observed that a single vMotion will top out at around 1.7 Gbps on the LAN and 300 - 400 Mbps on the WAN through the WAN Optimizer. This does not mean that 1.7 Gbps on the LAN equals to 400 Mbps on the WAN through the WAN Optimizer, but rather that these maximums were observed on specific environments. Such an environment consisted of 10 GB LAN vMotion Network and 1 GB internet uplink, which is shared with production web traffic.
+A single vMotion will top out at around 1.7 Gbps on the LAN and 300 - 400 Mbps on the WAN through the WAN Optimizer. This does not mean that 1.7 Gbps on the LAN equals to 400 Mbps on the WAN through the WAN Optimizer, but rather that these maximums were observed on specific environments. Such an environment consisted of 10 GB LAN vMotion Network and 1 GB internet uplink, which is shared with production web traffic.
 
-Use vMotion when:
-- The VM is troublesome to shut down, start, or uptime can be long and would introduce risk by shutting it down.
-- For any cluster type application that requires disk UUIDs, such as Oracle RAC clusters. Note that vMotion does not changed the disk UUIDs on the destination.
-- You want to move a single VM as quickly as possible.
-- Scheduled migration is not required.
+Use vMotion in the following cases:
+- If the VM is difficult to shut down, start, or uptime is long and can introduce risk by shutting down the VM.
+- For any cluster type application that requires disk UUIDs, such as Oracle RAC clusters. vMotion does not change the disk UUIDs on the destination.
+- If you want to move a single VM as quickly as possible.
+- If scheduled migration is not required.
 
 ## Bulk migration
 {: #hcxclient-migrations-bulk-mig}
@@ -65,7 +65,7 @@ The bulk migration capability of HCX uses vSphere replication to migrate disk da
 The following are advantages of bulk migration over vMotion:
 - Migration of multiple VMs concurrently.
 - More consistent bandwidth use. vMotion can generate fluctuations in bandwidth use that would be visible as peaks and valleys within network monitoring tools or the WAN Opt UI.
-- Use bulk migration to obtain higher overall use of a network bandwidth capability than a single vMotion is capable of.
+- Use bulk migration to obtain an overall use of a network bandwidth capability higher than if you use a single vMotion.
 - Schedule bulk migration to switch to the newly migrated VMs during a scheduled outage window.
 - Allow migration of VMs that are currently using virtual CPU features, which differ from the cloud side. vMotion migration might fail in these cases.
 
@@ -82,27 +82,26 @@ The following are disadvantages of bulk migration over vMotion:
 
 Oracle RAC, MS Exchange, and MS-SQL clusters are examples of applications where two or more VMs participate in a cluster that requires shared disk across all VMs or cluster nodes. The VMware multi-writer flag needs to be enabled on all of the VM nodes for disks that are part of the application cluster (non-OS virtual disks). VMs with the multi-writer flag enabled for any virtual disk are not supported.
 
-Migrating a multi-writer virtual disk enabled cluster:
-- Uses vMotion as the original VM disk and UUID mappings are maintained.
+Review the following information about migrating a multi-writer virtual disk enabled cluster:
+- vMotion is used, as the original VM disk and UUID mappings are maintained.
 - The cluster remains up in a degraded state (single node) during migration.
 - The cluster incurs downtime before the start of the migration and after the migration is complete to reassemble the multi-writer configuration across cluster VMs.
 
-Complete the following steps to migrate a multi-writer disk enabled cluster:
+To migrate a multi-writer disk enabled cluster, complete the following steps:
 1. Power off the cluster and all nodes per the application best practice.
 2. Take note of the disk order, if the application requires it, in each node VM for the multi-writer configured virtual disks.
-3. For Oracle and any other application that uses the virtual disk UUID feature, login to a particular ESXi host and run the `vmkfstools -J getuuid /vmfs/volumes/datastore/VM/vm.vmdk` command to get the UUID of each virtual disk file that requires the multi-writer flag set for
-the cluster.
-  This is necessary if best practice aligns disk orders with how the path displays in the operating system. vMotion can reorder the disks (disk1, disk2, disk3) but the UUIDs remain the same.
-  When the migration completes, use the noted UUID to map the disk information, to re-create the disk naming order, and the SCSI ID, if necessary. The application should function either way. This is used where an Oracle instance has many virtual disks that are mapped for troubleshooting of the application.
+3. For Oracle and any other application that uses the virtual disk UUID feature, log in to an ESXi host and run the command `vmkfstools -J getuuid /vmfs/volumes/datastore/VM/vm.vmdk`. This command gets the UUID of each virtual disk file that requires the multi-writer flag set for the cluster.
+  This step is necessary if best practice aligns disk orders with how the path is displayed in the operating system. vMotion can reorder the disks (disk1, disk2, disk3) but the UUIDs remain the same.
+  When the migration is complete, use the noted UUID to map the disk information to re-create the disk naming order and the SCSI ID if necessary. This information can be useful for troubleshooting when an Oracle instance has many virtual disks that are mapped.
 4. Remove the virtual disks from all cluster VMs except the one deemed primary.
-5. Remove the multi writer-flag from the primary cluster VM that should be the only one owning the cluster disks currently.
+5. Remove the multi writer-flag from the primary cluster VM (the only one that owns the cluster disks).
 6. Power on the primary cluster, if required for minimal downtime.
 7. Migrate all cluster nodes with vMotion. Migrate the primary cluster first. Migrate all other nodes after they are powered off.
 8. When the primary disk owning node completes migration, power it off.
 9. If required, remap the disk order with the proper disk UUID and scsi ID. Remapping is not required for the application to function.
 10. Re-enable the multi-writer flag on the primary node.
 11. Start the primary node and verify operation.
-12. Map disk / enable multi-writer flag on all other cluster VMs and power them on.
+12. Map disk or enable multi-writer flag on all other cluster VMs and power them on.
 13. Verify other cluster operation.
 
 ### General VMs
@@ -115,14 +114,15 @@ After confidence is built around the function of HCX, bulk migration must be emp
 
 NFS is typically employed for use to share data across many servers, such as web server content. iSCSI can be employed across VM nodes that consist of an application cluster such as email or RDBMS and is typically more latency sensitive than NFS.
 
-In either case, if latency can be kept low to the {{site.data.keyword.cloud_notm}} data center (< ~7 ms for iSCSI and whatever the application tolerates for NFS) and allowing that the application can operate with bandwidth of ~1 Gbps or less, then the NAS network can be stretched with HCX into an {{site.data.keyword.cloud_notm}} location. After this is done, the VMs can be migrated or vMotioned with HCX.
+In either case, if latency can be kept low to the {{site.data.keyword.cloud_notm}} data center (< ~7 ms for iSCSI and whatever the application tolerates for NFS) and allowing that the application can operate with bandwidth of ~1 Gbps or less, then the NAS network can be stretched with HCX into an {{site.data.keyword.cloud_notm}} location. Afterward, the VMs can be migrated or vMotioned with HCX.
 
-Post migration, iSCSI volumes can be mirrored with the OS to another local cloud storage solution and NFS data can be replicated to any cloud solution. The considerations are:
+Post migration, iSCSI volumes can be mirrored with the OS to another local cloud storage solution and NFS data can be replicated to any cloud solution.
+Review the following considerations:
 - Latency (iSCSI or application tolerance for NFS)
 - Bandwidth (~1 Gbps per stretched network)
 - Underlay link bandwidth
 
-After the migration lifecycle, test Development or staging applications before attempting on production. QoS can be employed for the underlay tunnel traffic (UDP 500/4500) between the L2C HCX appliances that support latency sensitive stretched L2 networks.
+After the migration lifecycle, test Development or staging applications before you attempt the migration on production. QoS can be employed for the underlay tunnel traffic (UDP 500/4500) between the L2C HCX appliances that support latency sensitive stretched L2 networks.
 
 ## Network swing
 {: #hcxclient-migrations-network-swing}
@@ -133,21 +133,21 @@ Swinging the network involves the following steps:
 - Verify that the network is evacuated of all workloads and any non-VM networked devices are either moved to another network, functionally migrated to cloud, or deprecated.
 - Verify any NSX topology or {{site.data.keyword.cloud_notm}} supporting network topology is completed to support the network swing. For example, dynamic routing protocols and firewalls.
 - Run an HCX unstretch network workflow in the UI and select the appropriate routing NSX device to take control of the default gateway of the unstretched network.
-- Run any external routing changes, which can include: insert changed routing for networks that were migrated, remove routes to source site from the migrated network, and ensure that routing to the migrated subnet across the WAN still works for applications that were not migrated.
-- Application owner testing of migrated applications from all possible access points: internet, intranet, and VPN.
+- Run any external routing changes, which can include inserting changed routing for networks that were migrated, removing routes to source site from the migrated network, and ensuring that routing to the migrated subnet across the WAN still works for the applications that were not migrated.
+- The application owner tests the migrated applications from all possible access points: the Internet, the intranet, and the VPN.
 
-Let's say you want to network swing a particular application that has all VMs migrated to cloud. For example:
+For example, you want to network swing an application that has all VMs migrated to the cloud:
 - You are using a vyatta on the private network side to insert routes into your MPLS cloud and to tunnel to the edge routing devices on the MPLS so you can avoid the {{site.data.keyword.cloud_notm}} IP space.
 - You have your account set with an {{site.data.keyword.cloud_notm}} VRF.
-- Some applications are behind a network load balanced virtual IP (vIP). Those vIPs are on your owned subnet that resides on a virtual F5 behind the vyatta.
+- Some applications are behind a network load balanced virtual IP (vIP). Those vIPs are on your owned subnet that's located on a virtual F5 behind the vyatta.
 
-While adding more specific routing into the MPLS for networks that are swung over to {{site.data.keyword.cloud_notm}} through HCX works fine for other networks, it does not work for the individual vIPs because a /32 route is being added.
+Adding more specific routing into the MPLS for networks that are swung over to {{site.data.keyword.cloud_notm}} through HCX works fine for other networks. However, it does not work for the individual vIPs because a /32 route is being added.
 
-Solution: It is common for WAN providers to filter out /32 routes that are added. Work with the WAN vendor to allow.
+The common solution for WAN providers is to filter out /32 routes that are added. Work with the WAN vendor to allow.
 
 The following are considerations and implications:
 - Applications that share subnet, vLAN, and VXLAN need to move together.
-- Applications behind a load balancer that uses an internal routable IP can require routing changes if they cannot be moved together or it is not desirable to do so. For example, if there is too much perceived risk by involving too many applications in one swing.
+- Applications behind a load balancer that uses an internal routable IP can require routing changes if they cannot be moved together or it is not desirable to do so. For example, involving too many applications in one swing can be perceived too much of a risk.
 - VMware admins, network admins (including customers and WAN vendors), and application owners need to be involved, even if there's no planned impact on a particular system or network equipment.
 
 **Next topic:** [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-monitoring)

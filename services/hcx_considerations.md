@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-25"
+lastupdated: "2021-06-14"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -22,18 +22,18 @@ subcollection: vmwaresolutions
 # VMware HCX overview
 {: #hcx_considerations}
 
-The VMware® HCX™ service extends the networks of on-premises data centers into {{site.data.keyword.cloud}}, and it helps you migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware® environment from VMware vSphere® 5.1 to the most recent vSphere version without needing to refactor or modify your existing application, as HCX enables this seamless transformation. With HCX, you can bring your IP subnet ranges into {{site.data.keyword.cloud_notm}} ensuring the IP consistency through a hybrid deployment and by providing high-level security with end-to-end Suite B encryptions.
+The VMware HCX™ service extends the networks of on-premises data centers into {{site.data.keyword.cloud}}, and it helps you migrate virtual machines (VMs) to and from the {{site.data.keyword.cloud_notm}} without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware® environment from VMware vSphere® 5.1 to the most recent vSphere version without needing to refactor or modify your existing application, as HCX enables this seamless transformation. With HCX, you can bring your IP subnet ranges into {{site.data.keyword.cloud_notm}} ensuring the IP consistency through a hybrid deployment and by providing high-level security with end-to-end Suite B encryptions.
 {: shortdesc}
 
 VMware HCX requires you to use either VMware NSX® Advanced or Enterprise through {{site.data.keyword.cloud_notm}} or an equivalent version that uses BYOL (Bring Your Own License).
 
-{{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-VMware requires you to be on one of their supported versions in order for you to open a support request for HCX. For more information, see [VMware HCX release notes](https://docs.vmware.com/en/VMware-HCX/services/rn/VMware-HCX-Release-Notes.html){:external}.
+VMware requires you to be on one of their supported versions in order for you to open a support request for HCX. For more information, see the list of [VMware HCX release notes](https://docs.vmware.com/en/search/#/VMware%20HCX%204.0.1%20Release%20Notes){:external} here.
 
 A VMware vCenter Server® instance with HCX is limited to three simultaneous connections from on-premises sites.
 
-For vCenter Server with NSX-T instances, HCX is supported for NSX-T 3.1 and VMware vSphere 7.0.
+For vCenter Server with NSX-T™ instances, HCX is supported for NSX-T 3.1 and VMware vSphere 7.0.
 
 For vCenter Server with NSX-V instances, HCX is supported for the following vSphere versions:
 * vSphere 6.7
@@ -51,14 +51,14 @@ On-premises HCX instances include only licensing and activation.
 {: #hcx_considerations-nsx}
 
 An active-passive pair of VMware NSX Edge Services Gateways for HCX management is ordered for vCenter Server with NSX-V instances only.
-* CPU - 6 vCPU
+* CPU - 6 CPUs
 * RAM - 8 GB
 * Disk - 3 GB VMDK
 
 ### HCX Management Appliance VM
 {: #hcx_considerations-vm}
 
-* CPU - 4 vCPU
+* CPU - 4 CPUs
 * RAM - 12 GB
 * Disk - 60 GB VMDK
 
@@ -71,7 +71,7 @@ More HCX appliances are deployed during configuration as necessary for L2 connec
 * Two private portable subnets with 64 IP addresses
 * Eight IP addresses from private portable vMotion subnet
 
-For more information about resource requirements and capacity checking, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 ### NFS storage
 {: #hcx_considerations-nsf-storage}
@@ -106,7 +106,7 @@ In addition, you must configure firewall rules to allow HCX to function properly
 
 Review the following considerations before you delete the HCX service:
 
-* Before you delete the service, you must remove any personal VMs from storage deployed with this service. HCX only orders personal VMs if it’s not vSAN.
+* Before you delete the service, you must remove any personal VMs from storage that is deployed with this service. HCX only orders personal VMs if it’s not vSAN.
 
 * Ensure that the service mesh and extended networks between the on-premises source site and the {{site.data.keyword.cloud_notm}} target sites are deleted. To remove the service mesh and extended networks, use the HCX user interface in the on-premises VMware vSphere Web Client.
 

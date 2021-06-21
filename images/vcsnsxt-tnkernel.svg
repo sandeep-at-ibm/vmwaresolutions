@@ -42,7 +42,7 @@
   </g>
   <g font-family="Helvetica" font-size="12px" text-anchor="end">
    <rect x="75" y="275" width="242" height="15" fill="#fff" stroke-width="0"/>
-   <text x="314.5" y="278">vmk2 VSAN-VLAN-Logical Switch MTU 9000</text>
+   <text x="314.5" y="278">vmk2 vSAN-VLAN-Logical Switch MTU 9000</text>
   </g>
   <path d="m354 234h361" fill="none" pointer-events="none" stroke="#0070c0" stroke-miterlimit="10" stroke-width="2"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="end">

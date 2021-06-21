@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-19"
+lastupdated: "2021-04-19"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # Preparing the installation environment
 {: #hcxclient-planning-prep-install}
 
-The installation of VMware HCX has the following software requirements:
+The installation of VMware® HCX™ has the following software requirements:
 * vSphere 5.5 U3, or vSphere 6.0u2 or higher.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
 * To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU compatibility FAQ](https://kb.vmware.com/s/article/1005764){:external}.
@@ -28,7 +28,7 @@ The installation of VMware HCX has the following software requirements:
 {: #hcxclient-planning-config-net}
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
-* For information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req).
+* For more information about the ports that must be opened so that HCX virtual appliances can install successfully, see [Port access requirements](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req).
 * Both the on-premises vSphere environment and the vCenter Server HCX Cloud environment must allow Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the vCenter Server HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
@@ -42,9 +42,9 @@ Before you install HCX, verify that your environment can support the tasks that 
 * Sufficient IP addresses for the on-premises VMs provisioned during the installation.
 * Ports and firewalls opened as required as documented in Port Access Requirements.
 * If the single sign-on (SSO) server is remote, the URL of the vCenter, external SSO Server, or Platform Services Controller (PSC) that runs the external lookup service must be identified. When the HCX Manager is registered with the vCenter, this URL must be supplied.
-* If a vCenter does not have its own internal instance of the lookup service, it might be for one of the following reasons:
+* If a vCenter Server does not have its own internal instance of the lookup service, it might be for one of the following reasons:
   * vCenter 6.0u2 is running an external Platform Services Controller.
-  * The vCenter is in linked mode (where the secondary vCenter uses the SSO service from the primary vCenter or an external SSO service).
+  * vCenter Server is in linked mode (where the secondary vCenter uses the SSO service from the primary vCenter or an external SSO service).
 
 ## Verifying Layer 2 installation environment
 {: #hcxclient-planning-verify-layer-2-inst}
@@ -55,22 +55,22 @@ Layer 2 network stretching has the following requirements:
   * vSphere Enterprise Plus license
   * Must have a vSphere Distributed Switch (vDS). The distributed switch is available with vSphere Enterprise Plus Edition.
   * When installed, the on-premises Layer 2 concentrator service appliance must have access to a vNIC port and any VLANs to be stretched.
-  * If the network is to be stretched over the public internet or a VPN (on an alternative path) the L2C VM in vCenter Server requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
+  * If the network is to be stretched over the public internet or a VPN (on an alternative path), the L2C VM in vCenter Server requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
   * If multiple Layer 2 concentrators are wanted, each must have an IP address on-premises and in the cloud.
 
 ## Pre-deployment planning
 {: #hcxclient-planning-predepl}
 
-Much of the time that is spent in deploying HCX is in the pre-deployment stage. While it is typical for information systems migration projects to take months and even years to complete, HCX allows for migration to take a short time and for the network connectivity to the cloud to start immediately after deployment.
+Much of the time that is spent in deploying HCX is in the pre-deployment stage. It's typical for information systems migration projects to take months and even years to complete. However, HCX allows for migration to take a short time and for the network connectivity to the cloud to start immediately after deployment.
 
 Since the deployment of HCX for an enterprise-level customer typically involves security, network, storage, and vSphere infrastructure teams, it makes sense to involve these teams in the POC if possible. Effective project management and early inclusion of stake holders, is critical to ensure the speed of deployment and operation of HCX is realized.
 
 ## Avoiding analysis paralysis
 {: #hcxclient-planning-avoiding}
 
-Many of the hurdles and time that is taken in migration of a virtual machine (VM) or group of VMs are there because of the need to modify parts of the application environment, the design of those changes and the scheduling of the downtime that is needed to make those changes. After these changes are made, the migration becomes difficult to revert, further adding to analysis paralysis. Trying to capture all aspects of the migration, coordinating across teams, and changing key stake holders can delay the project.
+Many of the hurdles and time that migration of a virtual machine (VM) or group of VMs takes are because parts of the application environment need to be modified. Also, the design of those changes and the scheduling of the downtime that is needed to make those changes can be complicated. After these changes are made, the migration becomes difficult to revert, further adding to analysis paralysis. Trying to capture all aspects of the migration, coordinating across teams, and changing key stake holders can delay the project.
 
-HCX allows for cross vSphere instance migration of a VM or group of VMs that represent a partial or complete composite application, without any modifications to the application. Because of this, backing out of a migration means moving the VMs back or restretching the networks. This negates the need for a large part of migration planning and allows for some parallelism in the planning process. After selecting the applications to move and creating a high-level network design, the applications can begin migration with minimal configuration on the cloud instance while the final network connectivity and design is worked out.
+HCX allows for cross vSphere instance migration of a VM or group of VMs that represent a partial or complete composite application, without any modifications to the application. Therefore, backing out of a migration means moving the VMs back or restretching the networks. As a result, there's no need for a large part of migration planning and some parallelism in the planning process might occur. After selecting the applications to move and creating a high-level network design, the applications can begin migration with minimal configuration on the cloud instance while the final network connectivity and design is worked out.
 
 ## Stretched networks
 {: #hcxclient-planning-stretched-net}
@@ -90,7 +90,7 @@ The following sections describe the phases within a typical HCX migration lifecy
 - Coarse-grained assessment of VMs within an application to be migrated. Coarse grained implies understanding the VMs that participate in an application, without delving into the details.
 - If you plan to migrate many VMs and network bandwidth is limited between the source and cloud sites, further group VMs by VLAN or VXLAN if NSX is employed at the source. This allows for a cascading HCX migration plan where groups of VMs by VLAN are migrated and the L2 networks they reside upon are stretched only until the point the VLANs are released.
 
-This means that the initial group of related L2 stretched networks can only be unstretched when the cloud side network design is finalized and deployed. Unstretching implies swinging the particular VXLAN traffic to now route through the cloud instance NSX infrastructure.
+This means that the initial group of related L2 stretched networks can be unstretched only when the cloud side network design is finalized and deployed. Unstretching implies swinging the particular VXLAN traffic to now route through the cloud instance NSX infrastructure.
 
 ## Baseline network configuration
 {: #hcxclient-planning-baseline-net-config}
@@ -135,10 +135,10 @@ To remove HCX at the end of the migration, the subnet cannot exist in the source
 
 VMs with shared multi-writer VMDKs such as Oracle RAC or MS Exchange / SQL clusters or VMs with raw device mappings are examples of VMs that need extra consideration before migration.
 
-## Network Swing
+## Network swing
 {: #hcxclient-planning-net-swing}
 
-Network Swing occurs after the evacuation of the VMs on source side networks is complete and the network design / implementation is completed on the cloud side. Configuring HCX to unstretch the networks related to the completed VMs within migration waves, allows the migrated VMs to route network traffic by using the cloud side NSX infrastructure.
+Network swing occurs after the evacuation of the VMs on source side networks is complete and the network design and implementation is completed on the cloud side. Configuring HCX to unstretch the networks related to the completed VMs within migration waves, allows the migrated VMs to route network traffic by using the cloud side NSX infrastructure.
 
 ## Client platforms supported
 {: #hcxclient-planning-client-platforms}
@@ -169,6 +169,6 @@ As deployed by the {{site.data.keyword.vmwaresolutions_short}} automation, HCX c
 
 * [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-components)
 * [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-mesh-deployment)
-* [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
+* [VMware Hybrid cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
 * [Monitoring parameters and components](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-monitoring)
 * [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting)

@@ -4,43 +4,43 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-06-18"
 
 subcollection: vmwaresolutions
 
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:term: .term}
 
-# IBM Cloud for VMware Mission Critical Workloads architecture overview
+# VMware multizone instances
 {: #mcv-archi-overview}
 
-The Joint Innovation Lab (JIL) project is a collaboration between {{site.data.keyword.IBM}} and VMware to develop and promote new offerings, functionality, and capabilities for the long-term growth of the VMware platform within the IBM ecosystem of products and services.
+VMware® multizone instances are a highly available offering that is built around a VMware vSAN™ stretched cluster deployment, which spans across three data centers. It provides low-latency connections and supports automated failover of workloads if an outage in one of the component data centers (availability zones) occurs.
 
-The {{site.data.keyword.vmwaresolutions_short}} team is chartered with building automated platform deployments for VMware infrastructures on {{site.data.keyword.cloud_notm}}. This JIL project for {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads creates automation around components and functions of the Mission Critical Workloads offering.
-
-At a high level, the Mission Critical Workloads architecture is a fully managed solution relying on numerous VMware and {{site.data.keyword.cloud_notm}} components in a high availability infrastructure deployment. The solution set is capable of offering customers an aggregate SLA of up to 99.99% availability at the virtual machine level.
-As part of the {{site.data.keyword.vmwaresolutions_short}} portfolio, the automation of the Mission Critical Workloads offering is designed to support the Mission Critical Workloads Reference Architecture as described and deployed by IBM Global Technical Services (GTS). This project and document supplement the Mission Critical Workloads reference architecture and does not replace it.
-
-The Mission Critical Workloads offering is based on the fully automated provisioning of a VMware SDDC comprised of:
-
-* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud_notm}} data centers. Because the design relies on vSAN stretched clusters and extremely low latency, deployment is restricted to {{site.data.keyword.cloud_notm}} [multizone regions (MZRs)](#x9774820){: term} data centers.
-* vCenter HA including integrated Platform Services Controllers (PSCs).
-* vSAN stretched cluster support for customer workloads.
-* NSX-T pre-configured on all nodes.
-* High availability of storage and compute resources allowing for complete loss of one of the three {{site.data.keyword.cloud_notm}} data centers without disruption to customer workloads.
-* {{site.data.keyword.vmwaresolutions_short}} automation to add and remove workload capacity.
+The offering has the following key features.
+- Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} multizone region (MZR) data centers.
+- vCenter HA
+- vSAN stretched cluster support for management plane and customer workloads.
+- NSX-T with pre–configured Transport Zones and overlay networks.
+- High availability of storage and compute resources, which allows for complete loss of one of the three {{site.data.keyword.cloud_notm}} data centers without disruption to any of the management or customer workloads.
+- VMware Solutions automation to add and remove workload capacity for both compute and storage.
+  - Add and remove host is supported, with a minimum of six hosts in initial consolidated cluster and a minimum of two hosts in witness cluster.
+  - Add and remove stretched vSAN clusters is supported.
+  - Add and remove of non-stretched clusters is supported.
+  - Add and remove of NFS and iSCSI storage is supported.
 
 ## Automation
 {: #mcv-archi-overview-auto}
 
-The most significant part of the {{site.data.keyword.vmwaresolutions_short}} MCV offering is the automated deployment of the instance.
+The most significant part of the {{site.data.keyword.vmwaresolutions_short}} Multizone offering is the automated deployment of the instance.
 
-The only action you take is selecting the configuration of the Mission Critical Workloads instance, all other operations are provided by the automation.
+The only action that you take is to select the configuration of the multizone instance. All other operations are provided by the automation.
 
 Automation refers to ordering and setup of the instance. Automation does not include ongoing operation.
 {:note}
@@ -52,11 +52,10 @@ After the ordered infrastructure is provisioned in the {{site.data.keyword.cloud
 The following steps outline the process:
 
 1. Go to the {{site.data.keyword.cloud_notm}} portal.
-2. Select the MZR and specify the desired configuration of the Mission Critical Workloads instance.
+2. Select the MZR and specify the configuration of the multizone instance.
 3. Review the price estimate and terms of service, then select to provision the instance.
 
-The {{site.data.keyword.vmwaresolutions_short}} automation then completes the following:
-
+The VMware Solutions automation then completes the following tasks:
 1. Orders {{site.data.keyword.cloud_notm}} bare metal servers, {{site.data.keyword.cloud_notm}} networking components (such as VLANs and subnets), storage, software licenses, and support systems.
 2. Deploys vCenter.
 3. Deploys vSAN and NSX.
@@ -66,19 +65,14 @@ The {{site.data.keyword.vmwaresolutions_short}} automation then completes the fo
 ## Consumability
 {: #mcv-archi-overview-consume}
 
-Mission Critical Workloads are offered in the standard {{site.data.keyword.vmwaresolutions_short}} ordering flow, similar to the standard VCenter Server offering. A new {{site.data.keyword.cloud_notm}} user experience is available to support the Mission Critical Workloads order flow due to the overall complexity of the process.
+Multizone instances are offered in the standard {{site.data.keyword.vmwaresolutions_short}} ordering flow, similar to the standard VCenter Server offering. A new {{site.data.keyword.cloud_notm}} user experience is available to support the Multizone order flow due to the overall complexity of the process.
 
 ## Ordering and management
 {: #mcv-archi-overview-order}
 
-Mission Critical Workloads instances are intended to be primarily ordered and managed by IBM GTS or by specific customer personnel as part of an IBM GTS managed Services Engagement.
+Day 2 operation and management activities are not part of the automation process and are the responsibility of customer personnel.
 
-Support is provided by an IBM GTS and the {{site.data.keyword.vmwaresolutions_short}} Devops team.
-
-Initial provision and configuration are provided by {{site.data.keyword.vmwaresolutions_short}} automation, along with the ability to scale-up and scale-down capacity.
-
-Day 2 operation and management activities are not part of the automation process and are the responsibility of IBM GTS or customer personnel. Day 2 operation and management activities include:
-
+Day 2 operation and management include the following activities:
 * Monitoring
 * Management and operation
 * Disaster recovery
@@ -86,8 +80,6 @@ Day 2 operation and management activities are not part of the automation process
 * Manual recovery
 * Backup and restore
 * Network failure recovery
-
-Although this offering is intended to be ordered and used in conjunction with an IBM GTS support contract, it can be ordered by anyone by using the {{site.data.keyword.vmwaresolutions_short}} console.
 
 **Next topic:** [IBM Cloud for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
 

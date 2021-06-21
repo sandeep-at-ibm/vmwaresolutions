@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-24"
+lastupdated: "2021-04-24"
 
 keywords: IBM Cloud Expert Services, request IBM Cloud Expert, tech specs Cloud Expert
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 
 {{site.data.keyword.cloud}} Expert Services can help you modernize and deploy your business in a flexible and secure platform by adopting VMware® on {{site.data.keyword.cloud_notm}}. By engaging Expert Services, you can accelerate your time to value.
 
-{{site.data.keyword.cloud_notm}} Expert Services are a suite of service offerings that are designed to guide you to deploy, migrate, and maintain your own {{site.data.keyword.cloud_notm}} solution from planning to modernization, or any stage in between. The Expert Services team reviews your infrastructure needs in five phases: Discover, Learn, Plan, Build, and Operate.
+{{site.data.keyword.cloud_notm}} Expert Services are a suite of service offerings. The offerings are designed to guide you to deploy, migrate, and maintain your own {{site.data.keyword.cloud_notm}} solution from planning to modernization, or any stage in between. The Expert Services team reviews your infrastructure needs in five phases: Discover, Learn, Plan, Build, and Operate.
 
 You can choose from a selection of offerings that incorporate this methodology to design your VMware environment and transform your business.
 
@@ -31,7 +31,7 @@ Expert Services OnDemand Consulting (ODC) is for customers with technical staff 
 
 The Hybridity Bundle Jumpstart simplifies moving VMware workloads from on-premises or other cloud providers to {{site.data.keyword.cloud_notm}}. The Expert Services team leads you through an initial assessment, overview of {{site.data.keyword.vmwaresolutions_short}} with HCX™, and design and planning. This engagement includes side-by-side guidance about ordering of the infrastructure, its configuration, and migration of your first 20 VMs.
 
-This offering speeds adoption of VMware on {{site.data.keyword.cloud_notm}} by taking the client through an assessment of their virtualization needs. Then, provides an overview of {{site.data.keyword.vmwaresolutions_short}}, followed by design and planning of their VMWare solution. IBM then provides side-by-side guidance of how to order the infrastructure and the initial configuration. Optionally, it can be followed by OnDemand Consulting to provide on-going assistance to the client.
+This offering speeds adoption of VMware on {{site.data.keyword.cloud_notm}} by taking the client through an assessment of their virtualization needs. The offering then provides an overview of {{site.data.keyword.vmwaresolutions_short}}, followed by design and planning of their VMWare solution. IBM then provides side-by-side guidance of how to order the infrastructure and the initial configuration. Optionally, it can be followed by OnDemand Consulting to provide on-going assistance to the client.
 
 ### Standard features
 {: #managing_ices-standard-feat}

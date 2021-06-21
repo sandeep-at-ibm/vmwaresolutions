@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-04"
+lastupdated: "2021-04-19"
 
 subcollection: vmwaresolutions
 
@@ -29,9 +29,7 @@ Only the HCX CGW Gateway WAN tunnel traffic flows through the WAN Optimizer appl
 ### Configuring the UI
 {: #hcxclient-monitoring-config-ui}
 
-Outside of configuring an IP address for the web UI, do not make configuration
-changes to the WAN Optimizer appliance unless directed by
-{{site.data.keyword.IBM}} or VMware support staff.
+Outside of configuring an IP address for the web UI, do not make configuration changes to the WAN Optimizer appliance unless directed by the {{site.data.keyword.IBM}} or VMware® support staff.
 
 To configure the WAN Opt web UI:
 
@@ -80,26 +78,27 @@ Monitor HCX components such as HCX Manager, Cloud Gateway, WAN opt, and the Laye
 
 - Configure HCX Manager to send logs to a syslog server. Use the HCX Manager appliance management utility to run the `https://<hcxhostname or IP>:9443` command.
 - Set up a ping to a VM that is migrated before network swing for each stretched L2 network.
-- Monitor the HCX component VM health with VMware vRealize Operations Manager or other VMware VM monitoring tools.
+- Monitor the HCX component VM health with VMware vRealize® Operations Manager or other VMware VM monitoring tools.
 
 ## Bandwidth use
 {: #hcxclient-monitoring-band-use}
 
 Use the following methods to monitor bandwidth use and latency.
+- vMotion traffic is best accomplished by using the WAN Opt web UI. The WAN Opt reduces the traffic that is going over the WAN and reduces packet loss by sending redundant packets. IThe typical ratio LAN to WAN bandwidth usage is approximately 3:1 (350 Mbps LAN = 90-120Mbps WAN).
+- Replication-based (bulk) migration of VMs within HCX results in VMs being moved with thick provisioning. While this method is not desirable, the WAN opt UI reveals a high ratio between LAN and WAN use when you move unused disk data. Conversely, it is observed that when non-compressible data is migrated, such as DB data and digital media, WAN use is at its highest and it comes closer to LAN use.
 
-- vMotion Traffic is best accomplished by using the WAN Opt web UI. The WAN Opt dramatically reduces the traffic that is going over the WAN and reduces packet loss by sending redundant packets. It has been observed that the typical ratio LAN to WAN bandwidth usage is approximately 3:1 (350 Mbps LAN = 90-120Mbps WAN).
-- Replication-based (bulk) migration of VMs within HCX results in VMs being moved with thick provisioning. While this is not desirable, the WAN opt UI reveals a high ratio between LAN and WAN use when you move unused disk data. Conversely, it is observed that when non-compressible data is migrated, such as DB data and digital media, WAN use is at its highest and it comes closer to LAN use.
+### Observations
+{: #hcxclient-monitoring-band-use-obs}
 
-Observations:
 - The vMotion migration of a VM within HCX does not generate more throughput than the vMotion networking for a single ESXi host.
-- As bulk migration can have multiple migrations in flight simultaneously, it achieves higher bandwidth use than a vMotion migration. The ratio observed at a customer side with 1 Gbps vMotion links to the ESX hosts was: Eight replications = bandwidth use of 1 vMotion.
-- Moving empty space on disk results in displaying a high LAN use with a high ratio and, subsequently, low WAN use. Note that 1 Gbps seems to be the limit. Indeed, in this particular case the vMotion network is only capable of 1 Gbps, which is the bottleneck.
-- vMotion migration of a multi TB Oracle DB. With a WAN link of 1 Gbps, the limitation is the vMotion network of 1 Gbps.
+- As bulk migration can have multiple migrations in flight simultaneously, it achieves higher bandwidth use than a vMotion migration. The ratio observed at a customer side with 1 Gbps vMotion links to the ESX hosts was of 8 replications = bandwidth use of 1 vMotion.
+- As a result of moving empty space on disk, a high LAN use with a high ratio is displayed, therefore, low WAN use. 1 Gbps seems to be the limit. Indeed, in this particular case the vMotion network is only capable of 1 Gbps, which is the bottleneck.
+- For the vMotion migration of a multi TB Oracle database with a WAN link of 1 Gbps, the limitation is the vMotion network of 1 Gbps.
 
 ## Stretched Layer 2 traffic
 {: #hcxclient-monitoring-stretched-layer-2-traffic}
 
-The HCX fleet component Layer 2 Concentrator has a bandwidth limitation of approximately 4 Gbps for all L2 network traffic that traverses it. Individually stretched networks have a bandwidth limit of approximately 1 Gbps or less depending on the traffic type. It is possible to have many stretched L2 networks across a single L2C pair (theoretical allowable max of 4096 networks per L2C pair). While the L2C is engineered to detect and protect small traffic flows to not be overcame by large flows within the same L2C pair, it can be advantageous to identify if this situation is occurring and bring up more L2Cs to increase overall bandwidth capability.
+The HCX fleet component Layer 2 Concentrator has a bandwidth limitation of approximately 4 Gbps for all L2 network traffic that traverses it. Individually stretched networks have a bandwidth limit of approximately 1 Gbps or less depending on the traffic type. It is possible to have many stretched L2 networks across a single L2C pair (theoretical allowable max of 4096 networks per L2C pair). The L2C is engineered to detect and protect small traffic flows so that they are not overcome by large flows within the same L2C pair. It can be advantageous to identify if this situation is occurring and start more L2Cs to increase overall bandwidth capability.
 
 Deploying multiple L2Cs can also be advantageous where multiple paths exist between the customer site and {{site.data.keyword.cloud}}, such as direct link and internet. A single network cannot be made redundant or given increased bandwidth across multiple L2C pairs.
 
@@ -113,6 +112,6 @@ Monitor the traffic across all interfaces that use the Monitoring tab of the L2C
 * [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-components)
 * [Preparing the installation environment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install)
 * [HCX Client deployment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-client-deployment)
-* [HCX on-premises Service Mesh](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-mesh-deployment)
+* [HCX on-premises service Mesh](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-mesh-deployment)
 * [VMware Hybrid Cloud migrations](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-migrations)
 * [HCX troubleshooting](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-troubleshooting)

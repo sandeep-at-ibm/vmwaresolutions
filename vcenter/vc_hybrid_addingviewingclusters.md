@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-08"
+lastupdated: "2021-04-22"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -30,7 +30,7 @@ You can add clusters to your VMware vCenter Server® with Hybridity Bundle insta
 ### Before you add clusters
 {: #vc_hybrid_addingviewingclusters-before-add}
 
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
@@ -105,7 +105,7 @@ The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or 
 VMware vSAN™ 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
 * **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
-* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
+* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays that are useful for workloads that require less latency and higher IOPS throughput.
 
   The **High performance with Intel Optane** option is available only for Skylake and Cascade Lake CPU models.
   {:note}
@@ -134,7 +134,7 @@ Network interface card (NIC) settings are based on your selection of either **Pu
 
 Based on your selected configuration for the cluster, the estimated price is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
 
-You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. The tool is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ## Procedure to add clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding-procedure}
@@ -235,7 +235,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ### Before you delete
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
-* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or don't plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or don't plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
 * When you delete a cluster, all VMs (virtual machines) from the cluster are also deleted and they can't be recovered. If you want to keep the VMs, migrate them to other clusters.

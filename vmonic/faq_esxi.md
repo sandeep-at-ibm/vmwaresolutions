@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-06-07"
 
 keywords: FAQ, host, ESXi server
 
@@ -44,7 +44,7 @@ For instances deployed in V2.1 or earlier, you must enable the necessary vSAN su
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. Restart each ESXi server. For more information, see [Creating a vSAN 6.x cluster with up to 64 hosts](https://kb.vmware.com/s/article/2110081){:external}.
+2. Restart each ESXi server. For more information, see [Creating vSAN clusters with up to 64 nodes](https://kb.vmware.com/s/article/2110081){:external}.
 3. You might need to increase the size of the vCenter Server to accommodate the added virtual machines and ESXi servers.
 4. Open an IBM Support ticket to indicate that you applied the vSAN changes manually by completing steps 1 - 3. In the ticket, request that your upgraded instance is enabled for ESXi servers beyond 32.
 
@@ -79,6 +79,6 @@ Adding static routes for vMotion is not supported. Changes in vMotion subnet con
 ## Related links
 {: #faq_esxi-related}
 
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingviewingclusters#vc_hybrid_addingviewingclusters)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers)
+* [Adding clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingclusters)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

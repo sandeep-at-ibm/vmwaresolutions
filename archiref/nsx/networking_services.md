@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-21"
+lastupdated: "2021-06-13"
 
 subcollection: vmwaresolutions
 
@@ -32,7 +32,7 @@ Misconfiguration or disabling of the management ESG doesn't keep the vCenter Ser
 ## IBM management services NSX Edge
 {: #nsx-networking_services-mgmt-serv-nsx-edge}
 
-The IBM management ESG is a dedicated NSX Edge cluster for {{site.data.keyword.cloud_notm}} management network traffic only. It isn't intended for traffic traversal of any component that is not deployed and managed by vCenter Server automation.
+The IBM management ESG is a dedicated NSX edge services cluster for {{site.data.keyword.cloud_notm}} management network traffic only. It isn't intended for traffic traversal of any component that is not deployed and managed by vCenter Server automation.
 
 The management ESG provides a communication path between services virtual machines (VMs) residing within vCenter Server instances and the IBM Automation infrastructure in the {{site.data.keyword.cloud_notm}} as shown for vCenter Server in the following graphic.
 

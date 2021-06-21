@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-11-18"
+lastupdated: "2021-05-14"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -26,7 +26,11 @@ subcollection: vmwaresolutions
 Automated deployment of the FortiGate Security Appliance service is no longer supported. For a similar service, consider the [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations), which is deployed automatically.
 {:deprecated}
 
-The FortiGate Security Appliance service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances.
+The FortiGate Security Appliance service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide the following services to protect all the servers and virtual machines on the public VLAN of your instances:
+* Firewall
+* Routing
+* NAT
+* VPN
 {: shortdesc}
 
 You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
@@ -65,11 +69,13 @@ Review the following considerations before you install the FortiGate Security Ap
 * You must manage the FortiGate Security Appliance configuration carefully to allow only necessary communications and deny all other communications.
 * If you order additional clusters, the public VLANs for these newly added clusters do not have the HA-pair of Security Appliances.
 
-**Notes**:
+### Notes for Installation Considerations
+{: #fsa_considerations-install-notes}
 
-* Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+Review the following notes about installation:
+* Before the service is installed in your environment, a check is made  against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster by either adding more hosts or by freeing up RAM, CPU, or disk space, and then add the service again in the console. After that, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster. You can either add more hosts or free up RAM, CPU, or disk space, and then add the service again in the console. After that, delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
 ## Managing FortiGate Security Appliance
 {: #fsa_considerations-managingfsa}
@@ -86,7 +92,7 @@ To manage the FortiGate Security Appliance service, you must access the FortiGat
 * Log in to the FortiOS Web Client by using the credentials that you can find on the FortiGate Security Appliance service details page.
 * Access the console via SSH connection by using the credentials that you can find on the FortiGate Security Appliance service details page.
 
-For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 ## Considerations when you delete FortiGate Security Appliance
 {: #fsa_considerations-remove}

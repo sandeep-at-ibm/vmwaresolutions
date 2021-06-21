@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -30,7 +30,7 @@ HyTrust CloudControl (HTCC) is specified in the design to ensure that all activi
 
 The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture spreads the delivery of necessary services across purpose-built regions.
 
-The management region allows the virtualization administrator to manage the entire compute and storage infrastructure. Through the adoption of NSX-T as the SDN provider for the workloads, it removes the network and security administration duties from the scope of the virtualization administrator role. NSX-T, unlike NSX for vSphere, is not reliant upon a vCenter to manage the SDN network objects, traffic flows, and security configurations. Divorcing the network control plane from the vCenter means it is no longer possible for the virtualization administrator to view or change anything that impacts the network.
+The management region allows the virtualization administrator to manage the entire compute and storage infrastructure. Through the adoption of NSX-T™ as the SDN provider for the workloads, it removes the network and security administration duties from the scope of the virtualization administrator role. NSX-T, unlike NSX for vSphere, is not reliant upon a vCenter to manage the SDN network objects, traffic flows, and security configurations. Divorcing the network control plane from the vCenter means it is no longer possible for the virtualization administrator to view or change anything that impacts the network.
 The network and security administrators use the NSX-T dedicated management portal to configure the network and the required security policies.
 
 The edge services region is strictly limited to the protection of the management region and the vSphere components that deliver compute and storage resources to the workload region. The security administrator, who has the responsibility of managing the SDN security, might also serve as the administrator of the gateway VMs that run on the edge services cluster. Or, to isolate a single administrator's scope of influence, the responsibility might be assigned to an administrator who has access only to the edge gateway and no access to manage SDN security.

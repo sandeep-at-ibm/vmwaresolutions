@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-16"
 
 keywords: FAQ vmware solutions dedicated, vmware solutions dedicated questions, user account, patch management
 
@@ -29,7 +29,7 @@ Find answers to frequently asked questions about the VMware® Solutions Dedicate
 {: faq}
 {: support}
 
-* **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_short}} console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal}}. For more information, see [Getting started](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started).
+* **IBMid account**. This account is required to access the {{site.data.keyword.vmwaresolutions_full}}  console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.slportal}}. For more information, see [Getting started](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started).
 * **{{site.data.keyword.cloud}} account**. This account is required for provisioning. You can sign up for an {{site.data.keyword.cloud_notm}} account by using an existing **IBMid** or by creating a new **IBMid**.
 * **{{site.data.keyword.cloud_notm}} infrastructure account**. This account is used to log in to the {{site.data.keyword.cloud_notm}} infrastructure customer portal that provides some additional function to manage infrastructure products and services. You can get an {{site.data.keyword.cloud_notm}} infrastructure account by upgrading your **{{site.data.keyword.cloud_notm}} account** to a billable account, or by linking your existing {{site.data.keyword.cloud_notm}} infrastructure account with your {{site.data.keyword.cloud_notm}} account. The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must meet certain requirements. For more information, see [Signing up for required accounts](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts) and [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/vmwaresolutions?topic=vmwaresolutions-cloud-infra-acct-req).
 
@@ -97,9 +97,9 @@ For a new vCenter Server instance, you can set the name of the initial cluster t
 {: #faq-patches}
 {: faq}
 
-IBM provides ongoing updates to the IBM code by deploying the IBM CloudDriver virtual server instance (VSI) on demand. Updates and patches for the IBM management components are applied automatically, as needed. IBM does not provide ongoing updates to add-on services such as Zerto or Veeam. Obtaining and installing these updates is your responsibility.
+IBM provides ongoing updates to the IBM code by deploying the IBM CloudDriver virtual server instance (VSI) on demand. Updates and patches for the IBM management components are applied automatically, as needed. IBM does not provide ongoing updates to add-on services such as Zerto or Veeam®. Obtaining and installing these updates is your responsibility.
 
-Newly deployed ESXi servers and clusters are patched with recent, but not necessarily the most recent, VMware ESXi updates.
+Newly deployed VMware ESXi™ servers and clusters are patched with recent, but not necessarily the most recent, VMware ESXi updates.
 
 For all other VMware component updates, you must ensure that newly deployed ESXi servers and clusters have the most recent updates that you require. {{site.data.keyword.vmwaresolutions_short}} does not offer support for applying updates and patches for VMware components. You must monitor and apply these updates yourself.
 {:important}
@@ -110,7 +110,7 @@ To download ESXi updates from VMware, you can configure VMware Update Manager (V
 {: #faq-mgmt-nsx}
 {: faq}
 
-Although the VMware NSX Edge for management services is on a public subnet, the following security measures are in place to ensure that it does not pose a security risk:
+Although the VMware NSX Edge™ for management services is on a public subnet, the following security measures are in place to ensure that it does not pose a security risk:
 *  The NSX Edge firewall is configured to allow only outgoing HTTPS (TCP port 443) traffic that is initiated by the management virtual machines.
 *  SNAT (Source Network Address Translation) is used so that private IP addresses are not visible outside the private network.
 *  Remote access for the management services NSX Edge appliance is disabled.
@@ -159,7 +159,7 @@ The account owner can increase the RAM on ESXi servers by following these steps:
 4. Specify the higher limit, then confirm the change to place your order.
 5. Repeat these steps, as needed, for each additional ESXi server.
 
-An {{site.data.keyword.cloud_notm}} representative confirms the billing change and contact you to schedule a maintenance window for adding the memory.
+An {{site.data.keyword.cloud_notm}} representative confirms the billing change and contacts you to schedule a maintenance window for adding the memory.
 
 You must manage the VMware Solutions components that are created in your {{site.data.keyword.cloud_notm}} account only from the VMware Solutions console, not any other means outside of the console. If you change these components outside of the VMware Solutions console, the changes are not synchronized with the console.
 {:note}
@@ -168,7 +168,7 @@ You must manage the VMware Solutions components that are created in your {{site.
 {: #faq-vss-automation}
 {: faq}
 
-No. VMware vSphere does not use the advanced automation from the vCenter Server platform. Based on what you order, the platform delivers optional VMware licenses, ESXi servers, and, optionally, an HA-pair of FortiGate physical firewalls. If a new cluster is created, three new VLANs are also provisioned: a public VLAN and two private VLANs.
+No. VMware vSphere does not use the advanced automation from the vCenter Server platform. Based on what you order, the platform delivers optional VMware licenses, ESXi servers, and, optionally, an HA-pair of FortiGate® physical firewalls. If a new cluster is created, three new VLANs are also provisioned: a public VLAN and two private VLANs.
 
 VMware ESXi is automatically installed on each {{site.data.keyword.cloud_notm}} bare metal server, but you are responsible for installing any additional VMware components like vCenter Server or NSX. While VMware vSphere ensures that VMware-compatible hardware is ordered based on the VMware components selected, no automation exists to configure and bring up the VMware environment. You are responsible for designing and architecting the IBM-hosted environment.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-06-17"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads
 
@@ -80,7 +80,7 @@ If **No resource group available** is displayed in this field, you currently do 
 ### VMware properties
 {: #mcv_ordering-vmware-properties}
 
-For vCenter Server multizone instances, only VMware vSphere® Enterprise Plus 7.0 and VMware NSX-T are supported.
+For vCenter Server multizone instances, only VMware vSphere® Enterprise Plus 7.0 and VMware NSX-T™ are supported.
 
 ## Location settings
 {: #mcv_ordering-location}
@@ -186,9 +186,6 @@ When you select **NFS storage** for the witness cluster, you can add file-level 
 
 Specify the following NFS options.
 
-The number of file shares must be in the range of 1 to 100.
- {:note}
-
 * **Configure shares individually** - Select to specify different configuration settings for each file share.
 * **Number of shares** - When you use the same configuration setting for each file share, specify the number of file shares for the NFS shared storage that you want to add.
 * **Size (GB)** - Select the capacity that meets your shared storage needs.
@@ -204,6 +201,9 @@ Choose performance level options according to your needs.
 | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include transactional databases. |
 | 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 {: caption="Table 3. NFS performance level options" caption-side="top"}
+
+For the NFS storage that you order initially, the size must be at least 1,000 GB and the performance at least 2 IOPS/GB. This storage, which is used mainly for management, should not be deleted. If you require additional storage, you can add it post-deployment. The size and performance of the NFS storage added post-deployment can have any of the available values.
+{:important}
 
 ## Network interface settings
 {: #mcv_ordering-network-interface-settings}
@@ -257,10 +257,11 @@ When you order a vCenter Server multizone instance, you can also order add-on se
 
 * Caveonix RiskForesight™
 * HyTrust® CloudControl™
+* Juniper® vSRX
 * Veeam®
 * vRealize Operations™ and Log Insight™
 
-Veeam 11 and Caveonix RiskForesight 2.4 are recommended services. HyTrust CloudControl 6.3 and vRealize Operations and Log Insight 8.2 are optional services you can select.
+Veeam and Caveonix RiskForesight are recommended services. HyTrust CloudControl, Juniper vSRX, and vRealize Operations and Log Insight are optional services you can select.
 
 ## Summary
 {: #mcv_ordering-summary}
@@ -308,20 +309,20 @@ Proceed with the following steps to order a multizone instance:
    1. Specify the DNS configuration.
    2. Enter the hostname prefix and the domain name. The price calculation begins after all fields are complete.
 9. Select the services you want to order for the vCenter Server multizone instance.
-   1. Click **Edit** to configure Veeam 11, which is a recommended service.
+   1. Click **Edit** to configure Veeam, which is a recommended service.
    2. Complete the following information and click **Save**:
       * Name
       * Deployment type
       * Storage size
       * Storage performance
       * Number of VMs to license
-  3. Click **Edit** to configure Caveonix RiskForesight 2.5, which is a recommended service.
+  3. Click **Edit** to configure Caveonix RiskForesight, which is a recommended service.
   4. Complete the following information and click **Save**:
      * License name
      * License notes
      * Number of VMs to license
-  5. Optionally, select HyTrust CloudControl 6.3. No service configuration is required.
-  6. Optionally, click **Edit** to configure vRealize Operations and Log Insight 8.2.
+  5. Optionally, select HyTrust CloudControl. No service configuration is required.
+  6. Optionally, click **Edit** to configure vRealize Operations and Log Insight.
   7. Select whether you will provide the license for vRealize Operations and the license for vRealize Log Insight or you want to include the license with your purchase. Click **Save**.
 10. On the **Summary** pane, review the instance settings and the estimated price.
    * To save the settings as a new configuration template without placing an order, click **Save configuration**, enter a name for the configuration, and click **Continue**.

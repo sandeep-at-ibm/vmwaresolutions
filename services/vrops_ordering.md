@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-05-14"
 
 keywords: vRealize, vRealize configuration, order vRealize
 
@@ -48,5 +48,5 @@ If you're planning to use your own vRealize Operations and vRealize Log Insight 
 
 * [vRealize Operations and Log Insight overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 * [Managing vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-managing_vrops)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

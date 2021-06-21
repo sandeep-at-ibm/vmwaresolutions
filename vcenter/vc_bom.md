@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-02"
+lastupdated: "2021-06-17"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -30,8 +30,8 @@ The following table details the BOM information for the vCenter Server VLANs.
 | VLAN       | Type       | Details       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Public, Primary | Assigned to physical VMware ESXi™ servers for public network access. The servers are assigned a public IP address but this IP address is not configured on the servers, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as VMware NSX Edge™ Services Gateways (ESGs). |
-| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere® management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
-| VLAN3     | Private B, Portable | Assigned to VMware vSAN™, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).<br>Note that this only applies to vSphere 6.7. For vSphere 7.0, all NSX VTEPs are put in VLAN2. |
+| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere® management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>For NSX-T™, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN3     | Private B, Portable | Assigned to VMware vSAN™, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).<br>Note that this applies to vSphere 6.7 only. For vSphere 7.0, all NSX VTEPs are put in VLAN2. |
 {: caption="Table 1. BOM for the VLANs in vCenter Server instances" caption-side="top"}
 
 ## Software BOM for vCenter Server instances
@@ -41,21 +41,26 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer | Component                       | Version       |
 |:------------ |:------------------------------- |:------------- |
-| VMware       | vSphere ESXi                    | ESXi 7.0 Update 1c (17325551) or <br>ESXi 6.7 EP18 (17499825) or <br>ESXi 6.5 P06 (17477841) |
-| VMware       | vSphere 7.0 Update 1c           | Distributed vSwitch 7.0.0 |
+| VMware       | vSphere ESXi                    | ESXi 7.0 Update 1d (17551050) or <br>ESXi 6.7 P05  (17700523) or <br>ESXi 6.5 P06 (17477841)[^esxinote] |
+| VMware       | vSphere 7.0 Update 1d           | Distributed vSwitch 7.0.0 |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5[^vcs-vsphere65]     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 7.0 Update 1c (17327517) or<br> 6.7 Update 3l  (17138064) |
-| VMware       | vSAN[^vsan]                     | 7.0 Update 1c or<br> 6.7 EP18 |
-| VMware       | NSX for vSphere[^nsxv]          | 6.4.10 (build 17626462) |
+| VMware       | vCenter Server Appliance        | 7.0 Update 2b (17958471) or<br>6.7 Update 3n  (18010531) |
+| VMware       | vSAN[^vsan]                     | 7.0 Update 1d (17551050) or<br>6.7 P05 |
+| VMware       | vSAN Witness[^vsanwit]          | 7.0 Update 1d (17551050) |
+| VMware       | NSX for vSphere[^nsxv]          | 6.4.10 (17626462) |
 | VMware       | NSX-T for vSphere[^nsxt]        | 3.1.0.0.0 (17107167) |
 | Microsoft®    | Windows® Server Standard edition | 2019 |
 | Microsoft    | Active Directory™ domain functional level | 2016 (WinThreshold)[^domain] |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
 
+[^esxinote]: vSphere ESXi 6.5 P06 (17477841) is applicable to 6.5u3 hosts and not to 6.5u2 hosts. vSphere ESXi 6.7 P05 (17499825) is applicable to 6.7u2 and 6.7u3 hosts. vSphere ESXi 7.0 Update 1d (17551050) is applicable to 7.0u1 hosts.
+
 [^vcs-vsphere65]: Existing vSphere 6.5 clusters only
 
-[^vsan]: VMware vSAN is an optional component. vSphere ESXi 6.5 P06 (17477841) is applicable to 6.5u3 hosts and not to 6.5u2 hosts. vSphere ESXi 6.7 EP18 (17499825) is applicable to 6.7u2 hosts.
+[^vsan]: VMware vSAN is an optional component.
+
+[^vsanwit]: vSAN Witness is only available in vCenter Server multizone instances.
 
 [^nsxv]: vCenter Server with NSX-V only
 
@@ -86,7 +91,7 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 ### Notes
 {: #vc_bom-notes}
 
-* The **MaxVolumes** setting is required for the IBM Spectrum Protect&trade; Plus service because the service might use more than the default number of NFS mounts on the ESXi server.
+* The **MaxVolumes** setting is required for the IBM Spectrum® Protect Plus service because the service might use more than the default number of NFS mounts on the ESXi server.
 * A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
 
   It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
@@ -117,7 +122,7 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 | NSX VXLAN cluster VTEP | 1 | 2 |
 | Segment ID pool for primary instance | 6000 - 8000 | 6000 - 7999 |
 | Segment ID pool for subsequent secondary instance or instances | 6000-8000 | Previous end range in the multi-site configuration + 1 to the previous end range in the multi-site configuration + 2000 |  
-| Port group SDDC-DPortGroup-VSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |
+| Port group SDDC-DPortGroup-vSAN (if applicable) | **Active uplinks** set to **uplink1** and **Standby uplinks** set to **uplink2** | **Active uplinks** set to **uplink2** and **Standby uplinks** set to **uplink1** |
 | Port group SDDC-DPortGroup-Mgmt | **Port binding** set to **Ephemeral - no binding** and **Load balancing** set to **Route based on originating virtual port** | **Port binding** set to **Static binding** and **Load balancing** set to **Route based on physical NIC load** |  
 | Port group SDDC-DPortGroup-External | **Port binding** set to **Ephemeral - no binding** | **Port binding** set to **Static binding** |
 {: caption="Table 5. NSX and port group configuration settings for vCenter Server instances" caption-side="top"}
@@ -163,10 +168,10 @@ To update the MTU setting for the public switch, complete the following steps in
 
 The allocation of distributed switches varies if you have existing instances and clusters. Review the following considerations for switch creation when you create a cluster:
 
-* If there are one or more existing clusters in the same pod that uses distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
+* If one or more existing clusters are in the same pod that uses distributed switches named ``SDDC-DSwitch-Private`` and ``SDDC-DSwitch-Public``, your new cluster uses the same switches as the existing cluster.
 * If one or more existing clusters are in the same pod, and the pod uses distributed switches that are named by using the same name as the pod (rather than named by using the same name as the cluster), your new cluster uses the same switches as the existing cluster.
-* If there are no existing clusters in the same pod, or all clusters in that pod have distributed switches that are named by using the same name as the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
-* In vSphere 7.0 Update 1c, each cluster has its own distributed switch pair named ``<instance_name>-<cluster_name>-public`` and ``<instance_name>-<cluster_name>-private``.
+* If no existing cluster is in the same pod, or all clusters in that pod have distributed switches that are named by using the same name as the cluster rather than the pod, then your new cluster is configured with the new switch whose name is based only on the pod.
+* In vSphere 7.0, each cluster has its own distributed switch pair that is named ``<instance_name>-<cluster_name>-public`` and ``<instance_name>-<cluster_name>-private``.
 
 ## Enhanced VMware vMotion Compatibility (EVC) mode settings
 {: #vc_bom-evc-mode-settings}

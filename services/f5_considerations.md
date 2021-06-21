@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-29"
+lastupdated: "2021-06-17"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -22,18 +22,30 @@ subcollection: vmwaresolutions
 # F5 BIG-IP overview
 {: #f5_considerations}
 
-The F5 BIG-IP® service (F5 BIG-IP Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access. You can install more than one instance of this service as needed.
+The F5 BIG-IP® service (F5 BIG-IP Virtual Edition) provides:
+
+* Intelligent L4-L7 load balancing and traffic management services at a local and global scale.
+* Robust network and web application firewall protection.
+* Secure and federated application access.
+
+You can install more than one instance of this service as needed.
 {: shortdesc}
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+For vCenter Server with NSX-T™ instances, F5 BIG-IP is supported for NSX-T 3.1 and VMware vSphere 7.0.
 
-The F5 BIG-IP service is not supported for vCenter Server® with NSX-T instances. For vCenter Server with NSX-V instances, the installed version is v15.1.2.
+For vCenter Server with NSX-V instances, F5 BIG-IP is supported for the following vSphere versions:
+* vSphere 6.7
+* vSphere 6.5
+
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
+
+The current F5 BIG-IP version that is installed is v15.1.2.1.
 {:note}
 
 ## Technical specifications for F5 BIG-IP
 {: #f5_considerations-specs}
 
-For information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 The following components are included with the F5 BIG-IP service:
 
@@ -41,7 +53,7 @@ The following components are included with the F5 BIG-IP service:
 {: #f5_considerations-specs-vms}
 
 * Two virtual machines (VMs) with all options available.
-* 2, 4, or 8 vCPUs per VM depending on the licensing option.
+* 2, 4, or 8 CPUs per VM depending on the licensing option.
 * 4, 8, or 16 GB RAM per VM depending on the licensing option.
 
 ### Networking
@@ -53,9 +65,9 @@ The following components are included with the F5 BIG-IP service:
 ### Licenses and fees
 {: #f5_considerations-specs-license}
 
-License fees for each VM are applied to each billing cycle depending on the licensing option (Good, Better, or Best) and the selected bandwidth.
+License fees for each VM are applied to each billing cycle, depending on the licensing option (Good, Better, or Best) and the selected bandwidth.
 
-You cannot change the licensing level after service installation. To change the licensing level, you must delete the existing service and reinstall the service using a different licensing option.
+You cannot change the licensing level after service installation. To change the licensing level, you must delete the existing service and then use a different licensing option to reinstall the service.
 {:important}
 
 ## Considerations when you install F5 BIG-IP
@@ -65,27 +77,27 @@ Before you install the F5 BIG-IP service, review the following considerations.
 
 Based on the license model and bandwidth that you select, two BIG-IP VE VMs are deployed with the following configuration:
 
-| Maximum Bandwidth | License Model: Good | License Model: Better | License Model: Best |
+| Maximum Bandwidth | License Model - Good | License Model - Better | License Model - Best |
 |:------------------|:--------------------|:----------------------|:--------------------|
-| 25 Mbps           | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
-| 200 Mbps          | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
-| 1 Gbps            | 2 vCPU, 4 GB RAM    | 4 vCPU, 8 GB RAM      | 8 vCPU, 16 GB RAM   |
-| 3 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
-| 5 Gbps            | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
-| 10 Gbps           | 8 vCPU, 16 GB RAM   | 8 vCPU, 16 GB RAM     | 8 vCPU, 16 GB RAM   |
+| 25 Mbps           | 2 CPUs, 4 GB RAM    | 4 CPUs, 8 GB RAM      | 8 CPUs, 16 GB RAM   |
+| 200 Mbps          | 2 CPUs, 4 GB RAM    | 4 CPUs, 8 GB RAM      | 8 CPUs, 16 GB RAM   |
+| 1 Gbps            | 2 CPUs, 4 GB RAM    | 4 CPUs, 8 GB RAM      | 8 CPUs, 16 GB RAM   |
+| 3 Gbps            | 8 CPUs, 16 GB RAM   | 8 CPUs, 16 GB RAM     | 8 CPUs, 16 GB RAM   |
+| 5 Gbps            | 8 CPUs, 16 GB RAM   | 8 CPUs, 16 GB RAM     | 8 CPUs, 16 GB RAM   |
+| 10 Gbps           | 8 CPUs, 16 GB RAM   | 8 CPUs, 16 GB RAM     | 8 CPUs, 16 GB RAM   |
 {: caption="Table 1. CPU and RAM deployments for different bandwidth and license model selections" caption-side="top"}
 
 ### Additional considerations
 {: #f5_considerations-additional}
 
-* F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies may be able to achieve your chosen maximum bandwidth.
-* The pair of BIG-IP VE VMs suitable for HA configuration will be deployed only into the default cluster.
+* F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies might be able to achieve your chosen maximum bandwidth.
+* The pair of BIG-IP VE VMs suitable for HA configuration is deployed only into the default cluster.
 
-  In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications and it is critical that resources are still available for them.
+  In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications. It is critical that resources are still available for them.
 
   To calculate the CPU and RAM reservation for a single BIG-IP VE VM, use the following formula:
 
-  `CPU reservation = CPU speed of ESXi server * number of vCPUs` (from Table 1)
+  `CPU reservation = CPU speed of ESXi server * number of CPUs` (from Table 1)
 
   `RAM reservation = RAM size` (from Table 1)
 
@@ -104,23 +116,23 @@ Due to these requirements, you must plan for the space that is needed for F5 BIG
 ## F5 BIG-IP order example
 {: #f5_considerations-example}
 
-You order a VMware vCenter Server **Small** instance with 2 ESXI servers with the following configuration: sixteen cores at 2.10 GHz each with 128 GB RAM. For F5 BIG-IP, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
+You order a VMware® vCenter Server **Small** instance with 2 ESXi servers with the following configuration: sixteen cores at 2.10 GHz each with 128 GB RAM. For F5 BIG-IP, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
 
 In this case, a single BIG-IP VM requires, on each server:
-* 2.1 GHz * 8 vCPU = 16.8 GHz of CPU
+* 2.1 GHz * 8 CPUs = 16.8 GHz of CPU
 * 16 GB RAM
 
 In total, that is 33.6 GHz CPU and 32 GB RAM for two BIG-IP VMs.
 
-Each ESXi server has a capacity of 16 cores * 2.1 GHz = 33.6 GHz, so we meet the first two requirements if both servers are active and there is at least 16.8 GHz of CPU and 16 GB RAM available on each server.
+Each ESXi server has a capacity of 16 cores * 2.1 GHz = 33.6 GHz. Therefore, the first two requirements are met if both servers are active and there is at least 16.8 GHz of CPU and 16 GB RAM available on each server.
 
 However, by default, vSphere HA reserves 50 percent of CPU and RAM for failover on vCenter Server instances that were initially deployed with 2 ESXi servers. For this example, the following is available:
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
 
-There will be other workloads present on the ESXi servers, for example, VMware vCenter Server, VMware NSX® Controller™, and VMware NSX Edge™. Because we are using these resources, we cannot satisfy the third requirement because we need 33.6 GHz of CPU and 32 GB RAM for the two BIG-IP VMs.
+Other workloads are also present on the ESXi servers, for example, VMware vCenter Server, VMware NSX® Controller™, and VMware NSX Edge™. Because these resources are used, the third requirement cannot be satisfied because 33.6 GHz of CPU and 32 GB RAM are needed for the two BIG-IP VMs.
 
-In this case, the F5 BIG-IP installation might fail, unless at least one ESXi server is added to the environment and vSphere HA failover reservations are updated appropriately to ensure that there are enough resources for two BIG-IP VE VMs. If additional resources are needed to run the F5 BIG-IP service, you can add more ESXi servers before installing F5 BIG-IP.
+In this case, the F5 BIG-IP installation might fail, unless at least one ESXi server is added to the environment and vSphere HA failover reservations are updated appropriately to ensure that enough resources are available for two BIG-IP VE VMs. If more resources are needed to run the F5 BIG-IP service, you can add more ESXi servers before you install F5 BIG-IP.
 
 ## Considerations when you delete F5 BIG-IP
 {: #f5_considerations-remove}
@@ -129,7 +141,7 @@ Review the following considerations before you delete the service:
 
 * Before you delete the F5 BIG-IP service, ensure that the existing BIG-IP VE configuration is removed correctly. Specifically, network traffic must be routed around BIG-IP VE instead of through BIG-IP VE. Otherwise, the existing data traffic from your environment might be impacted.
 
-* If you installed the F5 BIG-IP service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-remove-DNS-entries).
+* If you installed the F5 BIG-IP service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingservices#vc_deletingservices-DNS-entries).
 
 ## Related links
 {: #f5_considerations-related}

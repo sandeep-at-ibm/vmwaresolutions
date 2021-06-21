@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-04-16"
 
 subcollection: vmwaresolutions
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # VMware HCX source-side architecture
 {: #hcx-archi-source}
 
-Review the source architecture of HCX components that are typically deployed in the customer data center, the tasks that can be accomplished, and the features that support and enhance migration and network extension.
+Review the source architecture for the VMware® HCX components that are typically deployed in the customer data center. The tasks that can be accomplished and the features that support and enhance migration and network extension are also presented.
 
 * HCX owns the source and destination encryption and decryption processes, ensuring consistent security and providing admission for hybrid workflows such as virtual machine (VM) migration and network extension.
 * HCX creates an optimized, software-defined WAN to increase stretched network performance, enabling performance that approaches LAN speed.
@@ -115,7 +115,7 @@ To deploy the HCX, the proper number of IP addresses must be available both on-p
   * One for each HCX Network Extension Virtual Appliance
 
 * {{site.data.keyword.cloud_notm}}
-  * Two IP addresses per HCX Connector appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more {{site.data.keyword.cloud_notm}} Direct Link connections.
+  * Two IP addresses per HCX Connector appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more {{site.data.keyword.cloud_notm}} Direct-Link connections.
   * Add one for a separate vMotion network connection (if applicable).
 
 ### Proximity routing
@@ -125,21 +125,20 @@ Proximity routing is a networking feature that can be enabled when the HCX-IX is
 
 Proximity routing ensures forwarding between VMs that are connected to stretched and routed networks, both on-premises and in the cloud, is symmetrical. This feature requires Dynamic Routing to be configured between the customer premises and the cloud.
 
-When users extend their networks to the cloud, Layer 2 connectivity is stretched onto {{site.data.keyword.cloud_notm}}. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called "tromboning" or "hairpinning."
+When users extend their networks to the cloud, Layer 2 connectivity is stretched onto {{site.data.keyword.cloud_notm}}. However, without route optimization, Layer 3 communication requests must return to the on-premises network origin to be routed. This return trip is called `tromboning` or `hairpinning`.
 
-Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both the source and destination VMs are in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. VM communication (without route optimization) failure occurs when the egress path exiting the cloud can be either the stretched Layer 2 network or through the vCenter Server NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from {{site.data.keyword.cloud_notm}}.
+Tromboning is inefficient because packets must travel back and forth between the network origin and the Cloud, even when both the source and destination VMs are in the Cloud. In addition to inefficiency, if the forwarding path includes stateful firewalls, or other inline equipment that must see both sides of the connection, communication might fail. VM communication (without route optimization) failure occurs when the egress path that exits the cloud can be either the stretched Layer 2 network or through the vCenter Server NSX Edge Gateway. The on-premises network does not know about the stretched network "shortcut." This problem is called asymmetric routing. The solution is to enable proximity routing so the on-premises network can learn the routes from {{site.data.keyword.cloud_notm}}.
 
 To prevent tromboning, HCX uses intelligent route management to choose routes appropriate to the VM state. The Cloud Gateway maintains an inventory of VMs in the cloud and it understands the VM states, which can be one of the following values:
 * Transferred to the cloud with vMotion (zero-downtime migration).
 * Migrated to the cloud by using host-based replication (low-downtime migration).
 * Created in the cloud (on a stretched network).
 
-For information about HCX on-premises deployments, see the VMware HCX documentation.
+For more information about HCX on-premises deployments, see the [VMware HCX documentation](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
 
-**Next topic:** [VMware HCX component-level target architecture with NSX-V](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-v)
+**Next topic:** [VMware HCX component-level target architecture with NSX-V deployments](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-v)
 
 ## Related links
 {: #hcx-archi-source-related}
 
-* [VMware HCX documentation](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}
 * [VMware HCX system requirements](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D64901F4-6AB4-4820-9303-27927648A34D.html){:external}

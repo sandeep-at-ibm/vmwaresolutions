@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-15"
 
 subcollection: vmwaresolutions
 
@@ -65,7 +65,7 @@ The following table shows the relational database parameters.
 | RAM | 16 GB |
 | Disk | 1 TB |
 | OS | CentOS 7 |
-|Installed application components | Relational datastore (Primary / secondary) |
+|Installed application components | Relational datastore (primary or secondary) |
 {: caption="Table 4. Base - relational database" caption-side="top"}
 
 The following table shows the messaging datastore parameters.

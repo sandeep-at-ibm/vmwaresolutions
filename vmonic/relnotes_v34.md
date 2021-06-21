@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2019
 
-lastupdated: "2019-12-16"
+lastupdated: "2019-12-20"
 
 keywords: release notes, what's new, version 3.4
 
@@ -94,7 +94,7 @@ You can deploy a fully managed solution delivered by IBM Services. {{site.data.k
 * The [Upgrading VMware NSX](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vsphere_upgrade#vc_vsphere_upgrade-procedure-nsx) section of **Upgrading vCenter Server vSphere software from VMware vSphere 6.5 to 6.7** has additional information to help you determine whether you must upgrade your current version of NSX. You might have to upgrade NSX so it’s compatible with VMware vCenter Server 6.7.
 * The [Technical specifications for IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations#spp_considerations-specs) are updated.
 * The [vCenter Server and vSRX guide](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-intro) is now available in the *Reference* section of the user documentation.
-* (Updated on Dec 20, 2019) The [HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
+* (Updated on 20 December 2019) The [HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
 ](/docs/vmwaresolutions?topic=vmwaresolutions-htdc-hpcs-encryption-overview) is now available in the *Reference* section of the user documentation.
 * Various [REST API documentation](https://cloud.ibm.com/apidocs/vmware-solutions) updates are made.
 
@@ -109,7 +109,7 @@ The user interface is updated and provides the following enhancements:
    * In the **Services** section:
      * A new **Featured Workload Solutions** category is added.
      * The previous **Partner Services** category is renamed to **Professional Services**, and the previous **App Modernization** category is renamed to **Transformation and Modernization of VMware Applications**.
-* The following enhancements are made to the **Network Interface** section when you order vCenter Server instances or vCenter Server with NSX-T instances and when you add clusters for these instances:
+* The following enhancements are made to the **Network Interface** section when you order vCenter Server instances or vCenter Server with NSX-T™ instances and when you add clusters for these instances:
    * A new **Allocate a new one** option is added to the lists on the **Select Existing VLANs** tab.
    * The **Public VLAN** and **Public Primary Subnet** lists are removed from the **Select Existing VLANs** tab for the **Private Network Only** option.
 * A new **Allocate a new one** option is added to the **Public VLAN**, **Private VLAN**, and **Secondary Private VLAN** lists on the **Select Existing VLANs** tab when you order vSphere clusters.

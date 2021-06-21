@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-05-14"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -25,13 +25,13 @@ Veeam v11 is installed on newly deployed instances. If you have Veeam v9.5u4b, y
 ## Tasks that you can complete with Veeam v11
 {: #managingveeam-fivetasks_v10}
 
-* Order a new vCenter Server instance with Veeam
+* Order a new VMware vCenter Server® instance with Veeam
 
    A Veeam stand-alone license is automatically deployed. The Veeam service installation starts only after the stand-alone license was successfully ordered.
 
    Veeam v11 is installed on a bare metal server, VM, or VSI, depending on what you selected.
 
-* Install Veeam on an existing VMware vCenter Server® instance
+* Install Veeam on an existing VMware® vCenter Server instance
 
    A Veeam stand-alone license is automatically deployed. The Veeam service installation starts only after the stand-alone license was successfully ordered.
 
@@ -53,7 +53,7 @@ Veeam v11 is installed on newly deployed instances. If you have Veeam v9.5u4b, y
 
 * Delete a Veeam stand-alone license
 
-   When you delete a Veeam stand-alone license, the license charge in IMS is canceled. There is no effect on the Veeam installation.
+   When you delete a Veeam stand-alone license, the license charge in IMS is canceled. Deleting the license has no effect on the Veeam installation.
 
    When you want to increase your usage, delete your old stand-alone instance after you order a new instance to avoid unnecessary charges.
 
@@ -70,7 +70,7 @@ After you place an order for Veeam v11, a Veeam stand-alone license is automatic
 
 When you uninstall Veeam v11, the stand-alone license instance is not deleted. You must delete it separately to avoid being charged for the stand-alone license.
 
-You might want to consider this when you plan to upgrade your Veeam usage. You might be charged for licenses for Veeam 9.5, which is deprecated, and for Veeam 11. Therefore, you might decide to order a new license for your Veeam installation toward the end of a month, so you aren’t charged for both licenses for most of the month.
+Consider the following when you plan to upgrade your Veeam usage. You might be charged for licenses for Veeam 9.5, which is deprecated, and for Veeam 11. Therefore, you might decide to order a new license for your Veeam installation toward the end of a month, so you aren’t charged for both licenses for most of the month.
 
 If you have an existing Veeam v9.5u4b installation that comes with a license and you want more coverage, you can keep your license that came with the installation and order a new license to upgrade usage. Later, if you delete Veeam v9.5u4b, you must delete separately any stand-alone licenses that you ordered. Otherwise, you continue to be charged for them.
 
@@ -88,7 +88,7 @@ To manage the Veeam service, access the Veeam console by completing the followin
 
 You can find the Windows IP address and the Administrator credentials on the Veeam service details page.
 
-For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices).
+For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 ## Backing up and restoring management components for instances with Veeam installations
 {: #managing-veeam-backup-and-replication}
@@ -127,7 +127,7 @@ If the Veeam service is installed on an instance with private network only, tak
 ### Known issue about license key message for automatic updating
 {: #managingveeam-known-issue-message}
 
-On the Veeam v11 console, when you’re automatically updating a license before it expires, you might see a `License key is up-to-date` message that looks like an error. There is no error and you can ignore the message.
+On the Veeam v11 console, when you’re automatically updating a license before it expires, you might see a `License key is up-to-date` message that looks like an error. You can ignore the message because it's not an error.
 
 ## Related links
 {: #managingveeam-related}

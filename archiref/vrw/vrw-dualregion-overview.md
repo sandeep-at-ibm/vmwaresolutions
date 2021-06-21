@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-19"
+lastupdated: "2021-06-18"
 
 subcollection: vmwaresolutions
 
@@ -57,6 +57,8 @@ This paring of {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads
 * Protected region - This region contains the protected VMs that require DR.
 * Recovery region - This region provides an environment to host VMs from the protected region if a disaster occurs
 
+![IBM Cloud for VMware Regulated Workloads MZR DR concept](../../images/vrw-mzr-dr.svg "MZR DR topology"){: caption="Figure 1. MZR DR topology" caption-side="bottom"}
+
 **Notes**
 * The recovery region management cluster requires sufficient free capacity to host the protected management applications from the protected region.
 * The recovery region workload cluster requires sufficient free capacity to host the protected workloads from the protected region.
@@ -64,7 +66,7 @@ This paring of {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads
 
 Recovery Point Objective (RPO) and Recovery Time Objective (RTO) depend on many variables. Therefore, the VMware Regulated Workloads dual region design provides no standard Service Level Agreement (SLA) for RPO or RTO. However, review the following information about RPO and RTO:
 * The VMware vSphere clusters in the recovery region are provisioned and are available to run workloads as soon as these workload VMs are started after DR invocation.
-* The core management components in the recovery region (vCenter Server and the NSX-T Manager cluster) are running, so there is no infrastructure deployment wait time.
+* The core management components in the recovery region (vCenter Server and the NSX-T™ Manager cluster) are running, so there is no infrastructure deployment wait time.
 * The recovery infrastructure is being monitored and compliant through the management toolset, that is, vRealize Operations and Caveonix RiskForesight, so that the recovery infrastructure resources are healthy, compliant, and ready to be used.
 * The design describes the availability and recovery of the management components, and the technology that is used to accomplish this design can also be used for the workloads, if required. Alternatively, other products can be used for the workloads as required to meet the client's RTO/RPO application requirements.
 * The design does not limit options for DR approaches for the workloads. For example, the client's requirements can define the use of the same or different IP addressing in DR or the use of replication or backup and restore for the recovery of these workloads. Most technologies include the ability to restore to multiple restore points so that the client can roll back to "known good" configuration when malware attacks occur.
@@ -74,7 +76,7 @@ Recovery Point Objective (RPO) and Recovery Time Objective (RTO) depend on many 
 
 The VMware Regulated Workloads dual region design incorporates a number of design decisions that are justified by design simplicity, maximizing the VMware Regulated Workloads instance deployment automation, and minimizing the restrictions upon DR of the workloads. The recovery of management workloads and customer workloads is considered to be independent and this design focuses on the recovery of these management components. Customer workloads can be recovered by similar methods or by using different tooling.
 
-![IBM Cloud for VMware® Regulated Workloads dual region overview diagram](../../images/vrw-dualregionoverview.svg "IBM Cloud for VMware® Regulated Workloads dual region overview diagram"){: caption="Figure 1. IBM Cloud for VMware® Regulated Workloads dual region overview diagram" caption-side="bottom"}
+![IBM Cloud for VMware® Regulated Workloads dual region overview diagram](../../images/vrw-dualregionoverview.svg "IBM Cloud for VMware® Regulated Workloads dual region overview diagram"){: caption="Figure 2. IBM Cloud for VMware® Regulated Workloads dual region overview diagram" caption-side="bottom"}
 
 The VMware Regulated Workloads dual region design uses the following specifications:
 * An {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance in each region, two regions are required. Available regions are; Dallas, Washington DC, Sydney, London, Frankfurt, and Tokyo.
@@ -84,9 +86,9 @@ The VMware Regulated Workloads dual region design uses the following specificati
 * NSX Manager - One cluster per region.
 * RiskForesight - An "all-in-on" VM hosted in the recovery region that has Asset Repositories and scheduled jobs configured for both the protected and recovery regions.
 * HyTrust CloudControl - One cluster per region.
-* vRealize Log Insights (vRLI) - One cluster per region and the use log forwarding/filtering between regions
+* vRealize Log Insight (vRLI) - One cluster per region and the use log forwarding/filtering between regions
 * vRealize Operations Manager (vROps) - An analytic cluster on a cross-region network in the protected region and remote collectors in both regions. Recovery of the analytics cluster is done through replicas.
-* vRealize Network Insights (vRNI) – An optional manual installation in each region.
+* vRealize Network Insight (vRNI) – An optional manual installation in each region.
 * AD/DNS/NTP - HA VMs in both regions. Each region is a separate forest.
 * Veeam - A single Veeam Backup & Replication instance with a bare metal server in each region. The management components are located in the recovery region. Backup and file copies are used to provide off-site copies. Veeam replication is used to provide replicas of the vROps analytic cluster
 * Key Management Interoperability Protocol for VMware Service (KMIP) - An HA KMIP instance in each region.

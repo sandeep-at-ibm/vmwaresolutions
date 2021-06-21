@@ -9,13 +9,14 @@ VMware Solutions
     [Why VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
-    vmonic/relnotes_v41.md
+    vmonic/relnotes_v42.md
 
     {: .topicgroup}
     Previous release notes
 
         {: .topicgroup}
-        Version 4.0
+        Version 4.0 to 4.1
+            vmonic/relnotes_v41.md
             vmonic/relnotes_v40.md
 
         {: .topicgroup}
@@ -85,6 +86,7 @@ VMware Solutions
         shared/shared_resizeinstance.md
         shared/shared_deletinginstance.md
         shared/shared_pricing.md
+        shared/shared_bnpp.md
 
     {: .topicgroup}
     VMware Solutions Dedicated - vCenter Server
@@ -98,9 +100,26 @@ VMware Solutions
         vcenter/vc_multisite.md
         vcenter/vc_compl_info.md
         vcenter/vc_orderinginstance.md
-        vcenter/vc_addingviewingclusters.md
-        vcenter/vc_addingremovingservers.md
-        vcenter/vc_addingremovingservices.md
+
+        {: .topicgroup}
+        Adding, viewing, and deleting clusters for vCenter Server instances
+            vcenter/vc_addingclusters.md
+            vcenter/vc_viewingclusters.md
+            vcenter/vc_deletingclusters.md
+
+        {: .topicgroup}
+        Expanding and contracting capacity for vCenter Server instances
+            vcenter/vc_addingservers.md
+            vcenter/vc_removingservers.md
+            vcenter/vc_addingnfs.md
+            vcenter/vc_removingnfs.md
+
+        {: .topicgroup}
+        Ordering, viewing, and deleting services for vCenter Server instances
+            vcenter/vc_addingservices.md
+            vcenter/vc_viewingservices.md
+            vcenter/vc_deletingservices.md
+
         vcenter/vc_viewinginstances.md
         vcenter/vc_upgrade-lic.md
         vcenter/vc_addinstancetousraccount.md
@@ -122,9 +141,9 @@ VMware Solutions
         vcenter/vrw-overview.md
         vcenter/vrw-planning.md
         vcenter/vrw-orderinginstance.md
-        vcenter/vrw-view-delete-instance.md
-        vcenter/vrw-addingviewingclusters.md
         vcenter/vrw-addingremovingservers.md
+        vcenter/vrw-addingviewingclusters.md
+        vcenter/vrw-view-delete-instance.md
 
     {: .topicgroup}
     Security and Compliance Readiness Bundle
@@ -192,12 +211,6 @@ VMware Solutions
         services/htdc_considerations.md
         services/htdc_ordering.md
         services/managinghtdc.md
-
-    {: .topicgroup}
-    HyTrust KeyControl
-        services/htkc_considerations.md
-        services/htkc_ordering.md
-        services/managinghtkc.md
 
     {: .topicgroup}
     IBM Cloud for VMware Mission Critical Workloads
@@ -269,11 +282,16 @@ VMware Solutions
     Professional Services
         services/managing_imi.md
         services/managing_zerto_services.md
-        services/managing_ices.md
         services/managing_mcms.md
         services/netapp_overview.md
 
     services/fsa_considerations.md
+
+    {: .topicgroup}
+    (Deprecated) HyTrust KeyControl
+        services/htkc_considerations.md
+        services/managinghtkc.md
+
     services/icp_overview.md
 
     {: .topicgroup}
@@ -324,14 +342,12 @@ VMware Solutions
         vmonic/audit_messages.md
 
     {: .topicgroup}
-    Solution architecture (with NSX-V and NSX-T)
+    VMware Solutions architecture
         archiref/solution/solution_overview.md
         archiref/solution/design_overview.md
         archiref/solution/design_physicalinfrastructure.md
         archiref/solution/design_virtualinfrastructure.md
-        archiref/solution/nsx-v-design.md
         archiref/solution/nsx-t-design.md
-        archiref/solution/nsx-t-idm.md
         archiref/solution/design_commonservice.md
         archiref/solution/design_infrastructuremgmt.md
         archiref/solution/solution_scaling.md
@@ -393,7 +409,7 @@ VMware Solutions
         archiref/caveonix/caveonix-terminology.md
 
     {: .topicgroup}
-    VMware Mission Critical Workloads architecture
+    VMware multizone instances reference architecture
         archiref/mission-critical/mcv-archi-overview.md
         archiref/mission-critical/mcv-archi-design.md
         archiref/mission-critical/mcv-archi-bom.md
@@ -472,7 +488,6 @@ VMware Solutions
     HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
         archiref/htdc-hpcs/htdc-hpcs-encryption-overview.md
         archiref/htdc-hpcs/htdc-hpcs-encryption-options.md
-        archiref/htdc-hpcs/htdc-hpcs-hytrust-overview.md
         archiref/htdc-hpcs/htdc-hpcs-hpcs-overview.md
         archiref/htdc-hpcs/htdc-hpcs-system-context.md
         archiref/htdc-hpcs/htdc-hpcs-reference-architecture.md

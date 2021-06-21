@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-05-05"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Ordering Zerto
 {: #zerto_ordering}
 
-You can include the Zerto service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
+You can include the Zerto service with a new VMware® vCenter Server® instance or add the service to your existing vCenter Server instance.
 
 ## Billing for Zerto replication
 {: #zerto_ordering-billing}
@@ -69,7 +69,7 @@ If you add Zerto to a vCenter Server instance that has a VMware ESXi™ server t
 {: #zerto_ordering-private-only}
 
 If you want to add Zerto to a private-only instance, ensure that the following requirements are met:
-* You are responsible for setting up your own proxy server to connect to the internet. For more information, see [Public network connectivity](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-v-design#nsx-v-design-pub-net-config).
+* You are responsible for setting up your own proxy server to connect to the internet.
 * You must also configure the Call Home feature for Zerto. For more information about Zerto Call Home, see [Zerto Reporting for Enterprise environments (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){:external}.
 
 ## Related links

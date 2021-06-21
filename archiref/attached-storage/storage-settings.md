@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -50,7 +50,7 @@ The following threshold categories are available in the datastore cluster.
 
 In this design, the Storage DRS Runtime Settings are enabled and thresholds are kept to their respective default values. Change these values based on the workload I/O requirements and latency sensitivity.
 
-The following table shows the settings in the VMware vSphere Web Client.
+The following table shows the settings in the VMware vSphere® Web Client.
 
 | Setting       | Value  |
 |:--------------- |:------ |
@@ -59,7 +59,7 @@ The following table shows the settings in the VMware vSphere Web Client.
 | I/O latency threshold | 15 ms |
 {: caption="Table 1. Storage DRS runtime settings" caption-side="top"}
 
-For more information about configuring these settings in the vSphere Web Client, see [Set Storage DRS Runtime Rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html).
+For more information about configuring these settings in the vSphere Web Client, see [Set storage DRS runtime rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html){:external}.
 
 ## Storage I/O Control for NFS v3
 {: #storage-settings-io-control-nfs-v3}
@@ -70,7 +70,7 @@ In order for SIOC to determine when a storage device is congested or constrained
 
 You can limit individual virtual disks for individual VMs or grant them different shares with SIOC. By limiting disks and granting different shares, you can match and align the environment to the workload with the acquired file storage volume IOPS number. The limit is set by IOPS and it is possible to set a different weight or shares.
 
-Virtual disks shares set to **High** (2,000 shares) receive twice as much I/O as a disk set to **Normal** (1,000 shares) and four times as much as one set to **Low** (500 shares). **Normal** is the default value for all the VMs, so you need to adjust the **Normal** settings for the VMs that require it.
+Virtual disks shares set to **High** (2000 shares) receive twice as much I/O as a disk set to **Normal** (1000 shares) and four times as much as one set to **Low** (500 shares). **Normal** is the default value for all the VMs, so you need to adjust the **Normal** settings for the VMs that require it.
 
 ## Additional storage for NFS v3
 {: #storage-settings-additional-storage-nfs-v3}
@@ -98,4 +98,4 @@ This design adds advanced configuration parameters that are recommended by {{sit
 ## Related links
 {: #storage-settings-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

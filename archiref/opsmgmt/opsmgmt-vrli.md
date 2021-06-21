@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-07-06"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 
 {:external: target="_blank" .external}
 
-# vRealize Log Insights
+# vRealize Log Insight
 {: #opsmgmt-vrli}
 
 The vRealize Log Insight (vRLI) environment consists of four virtual machines (VMs) with an integrated Load Balancer.
@@ -141,7 +141,7 @@ This design also installs:
 
 Other content packs can be obtained from [VMware Solution Exchange](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:external}.
 
-The vRealize Log Insights content pack for NSX-T provides additional dashboards for viewing log information. For installation instructions, see the [VMware documentation](https://docs.vmware.com/en/VMware-Validated-Design/4.3/com.vmware.vvd.sddc-nsxt-domain-deploy.doc/GUID-EB5EDB4D-C4A1-4906-A6A9-379F898BA372.html){:external} about installing the content pack for NSX-T.
+The vRealize Log Insight content pack for NSX-T™ provides additional dashboards for viewing log information. For installation instructions, see the [VMware documentation](https://docs.vmware.com/en/VMware-Validated-Design/4.3/com.vmware.vvd.sddc-nsxt-domain-deploy.doc/GUID-EB5EDB4D-C4A1-4906-A6A9-379F898BA372.html){:external} about installing the content pack for NSX-T.
 
 **Next topic**: [vRealize Network Insight](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrni)
 

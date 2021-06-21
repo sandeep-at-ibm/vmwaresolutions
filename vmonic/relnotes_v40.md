@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-24"
 
 keywords: release notes, what's new, version 4.0
 
@@ -38,7 +38,7 @@ This release applies the following updates when you order VMware Solutions Dedic
 ### VMware vSphere 7.0 Update 1a support
 {: #relnotes_v40-dedicated-vsphere-v70}
 
-You can order vSphere 7.0 Update 1a with your VMware vCenter Server® with NSX-T instances and VMware vSphere with NSX-T clusters. vSphere 7.0u1a introduces the following support and enhancements:
+You can order vSphere 7.0 Update 1a with your VMware vCenter Server® with NSX-T™ instances and VMware vSphere with NSX-T clusters. vSphere 7.0u1a introduces the following support and enhancements:
 
 * Smaller instance footprint with support for converged management and workload cluster. vSphere 6.7 and NSX-T require eight hosts when using vSAN™ storage and five hosts when using NFS storage. vSphere 7.0u1a enables a footprint of four hosts when using vSAN storage and three hosts when using NFS storage.
 * Full support for the HTML5 vSphere web client
@@ -172,7 +172,7 @@ Review the following information about the VMware HCX service for this release:
 
 If you install VMware vRealize Operations (vROps) and select vSAN storage, you must have an estimated 750 GB of vSAN storage to successfully install vROps. This storage requirement does not apply to NFS.
 
-For more information, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 ### Updates for Caveonix RiskForesight
 {: #relnotes_v40-services-caveonix}
@@ -187,7 +187,7 @@ When you order RiskForesight, you can now select 10 - 25,000 VMs to license, in 
 ### DNS entries removal
 {: #relnotes_v40-services-remove-dns-entries}
 
-For several add-on services, if you installed the service before the {{site.data.keyword.vmwaresolutions_short}} v4.0 release and you then delete the service, you must remove the DNS entries manually. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-remove-DNS-entries).
+For several add-on services, if you installed the service before the {{site.data.keyword.vmwaresolutions_short}} v4.0 release and you then delete the service, you must remove the DNS entries manually. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingservices#vc_deletingservices-DNS-entries).
 
 ### Updates for KMIP for VMware
 {: #relnotes_v40-services-kmip}

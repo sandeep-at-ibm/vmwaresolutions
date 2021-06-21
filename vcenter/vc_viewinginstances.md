@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-06-07"
 
 keywords: view vCenter Server, view instance, view instance details
 
@@ -156,6 +156,6 @@ Review the following topics for information to help you complete the login instr
 {: #vc_viewinginstances-related}
 
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
+* [Adding clusters for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingclusters)
+* [Adding ESXi servers to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers)
 * [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance)

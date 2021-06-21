@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-31"
+lastupdated: "2021-05-14"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -26,7 +26,7 @@ You can include the VMware HCX™ service with a new VMware vCenter Server® ins
 ## Ordering VMware HCX for a new instance
 {: #hcx_ordering-new}
 
-To order a new VMware vCenter Server instance with VMware HCX from the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the services section and select **HCX** in the **Business continuity and migration** category.
+To order a new VMware® vCenter Server instance with VMware HCX from the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the services section and select **HCX** in the **Business continuity and migration** category.
 
 ## Ordering VMware HCX for an existing instance
 {: #hcx_ordering-existing}
@@ -44,7 +44,7 @@ To install HCX, complete the following settings:
 1. This step does not apply to HCX installations on vCenter Server with Hybridity Bundle instances.
 
    If you want to use your own VMware NSX® license (BYOL), select the checkbox to confirm that your NSX license is either Advanced or Enterprise edition.
-2. If you choose NSX-T, you are asked to select the **HCX Service Mesh target cluster**. Select either the Management cluster or Workload cluster.
+2. If you choose NSX-T™, you are asked to select the **HCX Service Mesh target cluster**. Select either the Management cluster or Workload cluster.
 
    If you choose NSX-V, the HCX manager and Service Mesh appliances are deployed in the management cluster.
 3. Specify the **HCX network connection** by selecting one of the following options. If any of the management or service mesh target clusters are deployed with private network only, the only networking option that you can choose is private.
@@ -100,7 +100,7 @@ The deployment of HCX is automated. Whether you order a vCenter Server instance 
 
 * [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations)
 * [Managing HCX ](/docs/vmwaresolutions?topic=vmwaresolutions-managinghcx)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-30"
 
 keywords: security and compliance readiness bundle introduction, scb introduction, scb technical specifications
 
@@ -26,7 +26,7 @@ The Security and Compliance Readiness Bundle offering is a prescriptive offering
 {: #scb-overview-techspec}
 
 Review the following specifications before you begin.
-* The Security and Compliance Readiness Bundle offering is based on VMware® NSX-T and VMware vSphere® 7.0.
+* The Security and Compliance Readiness Bundle offering is based on VMware® NSX-T™ and VMware vSphere® 7.0.
 * [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services) and [KMIP for VMware](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter) are required for the Security and Compliance Readiness Bundle. Ensure that you order these services before you start your Security and Compliance Readiness Bundle order.
 * If you are planning to use BYOL licenses for the VMware components, ensure that you have the complete list of BYOL licenses that are required.
 * Some of the services require configuration setup. Review each service and ensure that you configure its settings properly, as indicated.

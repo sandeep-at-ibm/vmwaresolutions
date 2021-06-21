@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-08"
+lastupdated: "2021-04-13"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # Veeam on bare metal server introduction
 {: #veeam-bms-archi-intro}
 
-The Veeam on bare metal server for {{site.data.keyword.vmwaresolutions_short}} service can be used as a dedicated and all-in-one backup solution together with VMware Solutions Dedicated instances, such as vCenter Server or VMware Regulated Workloads.
+The Veeam on bare metal server for {{site.data.keyword.vmwaresolutions_short}} service can be used as a dedicated and all-in-one backup solution for VMware Solutions Dedicated instances, such as vCenter Server or VMware Regulated Workloads.
 
 The Veeam on bare metal server solution is built on standard {{site.data.keyword.cloud_notm}} bare metal servers. The servers have both a dedicated compute and a local dedicated storage. This solution provides a backup infrastructure that is physically isolated from other {{site.data.keyword.cloud_notm}} Storage services.
 

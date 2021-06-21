@@ -39,7 +39,7 @@ After May 13 2020, management functions for VMware Cloud Foundation instances wi
 ## Removed support for Broadwell 2-CPU servers
 {: #relnotes_v30-broadwell}
 
-Starting with the V3.0 release, Broadwell 2-CPU servers are no longer available for deployment for new vCenter Server, vCenter Server with Hybridity Bundle, vCenter Server with NSX-T, and vSphere on {{site.data.keyword.cloud_notm}} instances and clusters. You can still add servers to existing clusters.
+Starting with the V3.0 release, Broadwell 2-CPU servers are no longer available for deployment for new vCenter Server, vCenter Server with Hybridity Bundle, vCenter Server with NSX-T™, and vSphere on {{site.data.keyword.cloud_notm}} instances and clusters. You can still add servers to existing clusters.
 
 ## Network File System operation enhancements
 {: #relnotes_v30-nfs}

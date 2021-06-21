@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -161,7 +161,7 @@ Disconnect-NsxServer
 ```
 
 
-**Next topic:** [IBM Cloud for VMware Solutions DNS configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-dns-intro)
+**Next topic:** [VMware Solutions DNS configuration](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-dns-intro)
 
 ## Related links
 {: #vcs-openshift-runbook-nsxdlr-related}

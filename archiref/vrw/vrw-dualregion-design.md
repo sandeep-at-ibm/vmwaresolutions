@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-08"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -20,14 +20,14 @@ subcollection: vmwaresolutions
 # Dual region Disaster Recovery design
 {: #vrw-dualregion-design}
 
-The design is documented by using the following structure:
+The design uses the following structure:
 * Network
 * vCenter
 * NSX Manager
 * Caveonix RiskForesight
 * HyTrust CloudControl
-* vRealize Log Insights
-* vRealize Network Insights
+* vRealize Log Insight
+* vRealize Network Insight
 * vRealize Operations Manager
 * AD/DNS/NTP
 * Veeam
@@ -37,13 +37,13 @@ The design is documented by using the following structure:
 ## Network design
 {: #vrw-dualregion-design-network}
 
-As the design uses two VMware Regulated Workloads instances, the network design is at each region is as documented at [Underlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-underlay-network) and [Overlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overlay-network).
+As the design uses two VMware Regulated Workloads instances, the network design is at each region and is documented at [Underlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-underlay-network) and [Overlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overlay-network).
 
 The key design element at the network level, is the adoption of cross-region network for the use of the vRealize Operations Manager analytic cluster. The cross-region network is a layer 3 construct that allows the use of the same IP subnet space at either the protected region or the recovery region. In normal operations, the cross-region network is tethered to the vSRX or Fortigate in the protected region that is, the default gateway for this network is the vSRX or Fortigate. The protected region vSRX or Fortigate then advertises this network so that it is reachable from other networks. In recovery operations, the cross-region network is tethered to the vSRX or Fortigate in the recovery region. The recovery region vSRX or Fortigate then advertises this network so that it is reachable from other networks. The use of the cross-region network allows the vRealize Operations Manager Analytic cluster to retain the same IP addresses when they are recovered to the recovery region.
 
-The following network design decisions are documented:
+Review the following network design decisions:
 * The {{site.data.keyword.cloud_notm}} classic network environment does not allow the stretching of VLANs across data centers. Therefore, this design does not use stretched VLANs at the physical network infrastructure level.
-* While some NSX-T designs can stretch segments across geographically distant vSphere clusters, these designs require a common NSX-T cluster, which does not meet the design requirements for independence between regions.
+* While some NSX-T™ designs can stretch segments across geographically distant vSphere clusters, these designs require a common NSX-T cluster, which does not meet the design requirements for independence between regions.
 * It's possible to stretch networks between geographically dispersed vSRX appliances. However, this design does not present this use case.
 * Recovered management components use the same IP addressing to minimize recovery effort.
 * To provide isolation of traffic, the design uses tunnels (GRE or IPsec driven by customer requirements) between regions and also between the region and the SaaS consumer and SaaS provider.
@@ -106,19 +106,19 @@ CloudControl supports the following backups:
 
 Veeam is used to provide snapshot-based image backups of the primary and secondary nodes. In addition to the Veeam backup, configure scheduled appliance backups by using SCP on the appliances and the Veeam repository SFTP share as the target directory. This extra level of protection allows a database restore to a new appliance if the image-based restore fails.
 
-## vRealize Log Insights
+## vRealize Log Insight
 {: #vrw-dualregion-design-vrli}
 
-The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads automation deploys a vRealize Log Insight (vRLI) environment that consists of four appliances with an integrated load balancer in each of the two regions. For more information, see [vRealize Log Insights](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrli).
+The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads automation deploys a vRealize Log Insight (vRLI) environment that consists of four appliances with an integrated load balancer in each of the two regions. For more information, see [vRealize Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrli).
 
 In the dual region design, each region is configured to forward log information to the vRealize Log Insight instance in the other region. Due to this forwarding configuration, either of the vRLI clusters can be used to query the available logs from either of the regions. As a result, failover configuration is not required for the vRLI clusters, and each cluster remains associated with the region in which it was deployed. This approach minimizes failover configuration in a DR invocation.
 
 The use of a vRLI cluster plus the use of vSphere HA provides high availability within a region. For business continuity, configure an image level backup of the cluster nodes by using Veeam.
 
-## vRealize Network Insights
+## vRealize Network Insight
 {: #vrw-dualregion-design-vrni}
 
-The vRealize Network Insights (vRNI) service is an optional manual installation for {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads. For more information, see [vRealize Network Insight](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrni).
+The vRealize Network Insight (vRNI) service is an optional manual installation for {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads. For more information, see [vRealize Network Insight](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrni).
 
 In the dual region design, install a vRNI instance manually in each region for the monitoring and management of that region. Recovery of the instance in the protected region to the recovery region is not required. vRNI instances are deployed per region to enable service isolation so that each region is considered to be independent.
 
@@ -140,7 +140,7 @@ The dual region design uses this deployed architecture and requires some post-pr
   * The four-node analytic cluster is deleted and two remote collectors are deployed on the existing private portable subnet.
   * The vSRX is configured so that the same subnet that hosts the analytics cluster is available in the recovery region. In normal operations, no VMs are hosted on this network and this network is isolated. On DR invocation, this network, and the recovered analytics cluster, becomes reachable from the remote collectors. This network is not reachable directly from the {{site.data.keyword.cloud_notm}} underlay network outside of the vSRX, but it is reachable through the VPN connections.
 
-The following design decisions are documented:
+Review the following design decisions:
 * The reuse of the automated deployment of vROps at the protected region reduces post deployment tasks.
 * By using the VMware multi-region design for vROps that has the concept of region specific and cross-region components, allows the recovery of the vROps analytic appliances to an identical network configuration. Re-IPing the appliances is possible but adds complexity. For more information, see [Change the IP address of a vRealize Operations Manager multinode deployment](https://kb.vmware.com/s/article/2127442){:external}.
 * By deploying two remote collector nodes per region, the load is removed from the analytics cluster from collecting metrics from applications that do not fail over between regions.
@@ -189,7 +189,7 @@ The recovery region bare metal Windows server hosts the following components:
 * Repository - A location used to store backup files for the management components in the recovery region and also the target for backup copy jobs from the protected region.
 * SFTP/SMB server - These servers are not Veeam services but native Windows services that are used for file-level backups of some of the management components. A Veeam file copy job copies files to the protected region for extra protection.
 
-The following Veeam design decisions are documented:
+Review the following Veeam design decisions:
 * For optimal performance and availability, placing the Veeam components on separate virtual and physical servers is considered best practice. However, this practice increases complexity in smaller environments. Therefore, the all-in-one deployment scenario for use case 1 is selected.
 * As the total number of protected VMs is low, the embedded database option for the database for use case 1 is selected.
 * The bare metal servers with direct attached storage option is used as this option provides a backup infrastructure that is separated from the virtualized infrastructure compute and storage.

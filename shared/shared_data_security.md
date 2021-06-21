@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-05-28"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
@@ -21,12 +21,12 @@ subcollection: vmwaresolutions
 # Managing your data in VMware Solutions Shared
 {: #shared_data}
 
-Review the following data storage, high availability, and disaster recovery considerations before you order {{site.data.keyword.vmwaresolutions_full}} Shared.
+Review the following data storage, high availability, and disaster recovery considerations before you order {{site.data.keyword.cloud}} for VMware® Solutions Shared.
 
 ## Data security
 {: #shared_data-security}
 
-VMWare® Solutions Shared supports data storage in the form of:
+VMWare Solutions Shared supports data storage in the form of:
 
 * VMware vCloud Director virtual machine (VM) instances
 * VMware vCloud Director customer media uploads
@@ -38,7 +38,7 @@ All VMware vCloud Director data is stored in multi-tenant datastores where the d
 
 VMware vCloud Director data storage uses {{site.data.keyword.cloud_notm}} Infrastructure Endurance File Storage, which is encrypted at rest to Endurance File Storage specifications. When VMware vCloud Director data is deleted, it becomes available for reallocation where it is then zeroed out and instantiated for the next use case.
 
-Veeam service backups are to both {{site.data.keyword.cloud_notm}} Infrastructure Endurance File Storage and Cloud Object Storage for longer term storage. When the first VMWare Shared instance is created, a unique encryption key is generated for each customer organization and used to encrypt all Veeam backups for that specific customer's organization. The encryption key is not stored and is unavailable to IBM. After the VMware vCloud Director Data Center is deleted, all backups are deleted and cannot be recovered.
+Veeam service backups are to both {{site.data.keyword.cloud_notm}} Infrastructure Endurance File Storage and Cloud Object Storage for longer term storage. When the first VMWare Solutions Shared virtual data center is created, a unique encryption key is generated for each customer organization and used to encrypt all Veeam backups for that specific customer's organization. The encryption key is not stored and is unavailable to IBM. After the VMware vCloud Director Data Center is deleted, all backups are deleted and cannot be recovered.
 
 ## High availability and disaster recovery
 {: #shared_data-ha-dr}

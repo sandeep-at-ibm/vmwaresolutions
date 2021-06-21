@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-03-21"
+lastupdated: "2021-04-16"
 
 keywords: user IDs vCenter, PSC user, user ID service
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # IBM user IDs
 {: #audit_user_ids}
 
-{{site.data.keyword.vmwaresolutions_full}} maintains a set of users in your account for use by {{site.data.keyword.cloud_notm}} automation when you run operations such as adding hosts, clusters, or storage to your VMware® instance. Users in your account can also be used for installation and configuration of services by {{site.data.keyword.cloud_notm}} services automation. Review the following sections for {{site.data.keyword.cloud_notm}} automation user IDs.
+{{site.data.keyword.cloud}} for VMware® Solutions maintains a set of users in your account for use by {{site.data.keyword.cloud_notm}} automation when you run operations such as adding hosts, clusters, or storage to your VMware instance. Users in your account can also be used for installation and configuration of services by {{site.data.keyword.cloud_notm}} services automation. Review the following sections for {{site.data.keyword.cloud_notm}} automation user IDs.
 
 VMware instance operations fail if IBM user IDs are deleted, disabled, or if their passwords are changed.
 {:important}
@@ -64,7 +64,7 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
-| IBM      | `automation`  | Used to add a host, add a VM for service, and set up Active Directory and DNS entries. |
+| IBM      | `automation`  | Used to add a host, add a VM for service, and set up Active Directory™ and DNS entries. |
 | Customer | `administrator` | Created for customer use only. |
 {: caption="Table 4. Microsoft® Active Directory user IDs" caption-side="top"}
 

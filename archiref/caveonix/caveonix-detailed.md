@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-21"
+lastupdated: "2021-04-15"
 
 subcollection: vmwaresolutions
 
@@ -25,13 +25,13 @@ The following diagram and descriptions provide information about the RiskForesig
     - Netflows
     - Software
     - Workload metadata
-- Central Router - Manages all integration touch-points with the VMware Orchestration layer. All the RiskForesight plug-ins must communicate with the Central Router to get authorized to communicate with the RiskForesight ecosystem.
+- Central Router - Manages all integration touch points with the VMware® Orchestration layer. All the RiskForesight plug-ins must communicate with the Central Router to get authorized to communicate with the RiskForesight ecosystem.
 - API Server - Is the REST endpoint middleware that connects the GUI and the backend data stores. Also, it validates the user access requests and manages the RBAC.
 - vCenter Data Collector - The plug-in extracts the virtual machine (VM) details from vCenter. The generic plug-in uses the VMware APIs to connect to vCenter and extracts workload relevant information. After the information is available, the plug-in packages the payload and sends it to the Central Collector.
 - vCD Data Collector - The plug-in extracts the VM details from the VMware vCloud Director. The generic plug-in uses the VMware APIs to connect to the VMware vCloud Director and extracts the workload-related information. After the information is available, the plug-in packages the payload and sends it to the Central Collector.
 - vCD Network Data Collector - The plug-in extracts Netflow details from the VMware vCD. The generic plug-in uses the VMware APIs to connect to the VMware NSX and extracts Network, FW, Security Rules, and Security Groups. After the information is available, the plug-in packages the payload and send it to the Central Collector.
 - Network Data Collector - A plug-in that extracts Netflow details from the VMware vCenter. The generic plug-in uses VMware APIs to connect to VMware NSX and extracts network, firewall, security rules, and security groups information. After the information is available, the plug-in packages the payload and sends it to the Central Collector.
--  Remote Collector - Resides in the tenant environment or other location where it has network access to tenant VMs. It handles all compliance and cyber risk scanning.
+-  Remote Collector - Located in the tenant environment or another location where it has network access to the tenant VMs. It handles all compliance and cyberrisk scanning.
 - Relational Datastore - Maintains the following types of metadata:
     - Cloud Service Provider
     - Tenant
@@ -41,11 +41,11 @@ The following diagram and descriptions provide information about the RiskForesig
     - Daily or weekly aggregated data set
 - Messaging Datastore - RiskForesight uses persistent messaging queue to provide zero data loss and offload back pressure to the components.
 - Index Datastore - It indexes and stores the incoming raw data for each tenant for further analysis to support the multi-tenant capability.
-- Plug-ins – Reside in the Application Routing server and include the setup and integration with VMware components to synchronize all VMs along with their tenant information.
+- Plug-ins – Located in the Application Routing server. Plug-ins include the setup and integration with VMware components to synchronize all VMs along with their tenant information.
 
 The following table shows the ports and protocols that are required for each component.
 
-| Component | Protocol / Ports |
+| Component | Port numbers |
 |---|---|
 | UI | 443 |
 | API | 443, 1337 |
@@ -57,7 +57,7 @@ The following table shows the ports and protocols that are required for each com
 | Index datastore primary nodes | 9200, 9300, 5601, 443 |
 {: caption="Table 1. Ports and protocols" caption-side="top"}
 
-The following diagram shows the network topology with the Caveonix portable private subnet that is associated with Private VLAN A. You are responsible for managing the IP address space for this subnet so that you can manually scale out from the “all-in-one” to the fully distributed deployment model, through the partially distributed model as needed.
+The following diagram shows the network topology with the Caveonix portable private subnet that is associated with Private VLAN A. You are responsible for managing the IP address space for this subnet. If needed, you can scale out from the “all-in-one” deployment model, through the partially distributed model, and to the fully distributed model.
 
 ![Network diagram](../../images/caveonix-network.svg "Network diagram"){: caption="Figure 2. Network diagram" caption-side="bottom"}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-18"
+lastupdated: "2021-05-14"
 
 keywords: vCenter Server delete instance, delete vCenter Server, delete multi-site
 
@@ -33,7 +33,7 @@ When you delete a vCenter Server instance, the following components are released
 5. Subnets
 6. VLANs
 
-Any VLANs that have your own resources that are added to them, such as gateways, Veeam servers, and other resources, are not deleted. In addition, any existing VLANs that you own, outside of {{site.data.keyword.vmwaresolutions_full}}, are not deleted.
+Any VLANs that have your own resources that are added to them, such as gateways, Veeam® servers, and other resources, are not deleted. In addition, any existing VLANs that you own, outside of {{site.data.keyword.vmwaresolutions_full}}, are not deleted.
 {:note}
 
 Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by the {{site.data.keyword.cloud_notm}} infrastructure, which happens at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle. At the end of the billing cycle, which is typically 30 days, the subnets and VLANs are deleted and the instance deletion is completed.
@@ -58,5 +58,5 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 {: #vc_deletinginstance_multi-related}
 
 * [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance)
-* [Ordering, viewing, and deleting services from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Managing virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-virtual-servers)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-16"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 
 The trust manifests provide access and control to the following resources:
 - VMware vCenter Server®
-- NSX-T administration interface
+- NSX-T™ administration interface
 - HyTrust CloudControl
 
 ### HyTrust CloudControl trust manifest

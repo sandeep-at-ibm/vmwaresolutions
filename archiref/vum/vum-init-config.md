@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-05-18"
 
 subcollection: vmwaresolutions
 
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # Initial configuration
 {: #vum-init-config}
 
-The {{site.data.keyword.vmwaresolutions_full}} automation configures the VCSA with a default gateway set to the {{site.data.keyword.cloud_notm}} Backend Customer Router (BCR). However, there's no route to the internet via the BCR. The standard route to the internet from the VMware vCenter Server instance is via the Management ESG. As it isn't advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
+The {{site.data.keyword.vmwaresolutions_full}} automation configures the vCenter Server Appliance (VCSA) with a default gateway set to the {{site.data.keyword.cloud_notm}} Backend Customer Router (BCR). However, there's no route to the internet via the BCR. The standard route to the internet from the VMware vCenter Server instance is via the Management ESG. As it isn't advised to change the configuration of the VCSA or the Management ESG, a proxy server implementation on the customer subnet is recommended to enable VUM.
 
 This approach means that you don't have to reconfigure the VCSA or the Management ESG, however, a small virtual machine (VM) or appliance must be installed. A proxy server is a system, which sits between two endpoint devices and acts as an intermediate device. In this case, it sits between VUM and the update servers at VMware.
 
@@ -203,8 +203,8 @@ Configure VUM to use the proxy server to access the repositories on the internet
 4. Check the **Use Proxy** box and enter the _proxy server IP Address_ and _port 3128_, click **OK**. The Connectivity Status changes to _Validating_ and then to _Connected_.
     **Note**: Do not be concerned if you receive the ``Some URLs have been accessed successfully, but others are inaccessible`` message while testing the connection to the proxy server.
 5. Click **Download Now**. In the _Recent Tasks_ pane you should see this activity complete.
-6. If this activity fails, reboot the vCenter Server Appliance (vCSA):
-  1. Log in to the vCSA management interface at `https://vcsaFQDN:5480` as **root**.
+6. If this activity fails, reboot the VCSA:
+  1. Log in to the VCSA management interface at `https://vcsaFQDN:5480` as **root**.
   2. Click **Summary** and click **Reboot**.
   3. In the confirmation box, click **Yes** to confirm the operation.
 

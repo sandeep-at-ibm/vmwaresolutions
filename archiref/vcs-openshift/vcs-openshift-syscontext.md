@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-07-06"
+lastupdated: "2021-06-16"
 
 subcollection: vmwaresolutions
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 The following diagram shows the system context for this reference architecture. A system context diagram is a high-level diagram
 that provides an initial view of the system. It defines the key elements of a system, the boundary of the system, and the entities that interact with it, along with the interaction.
 
-![IBM Cloud for VMware Solutions and OpenShift System Context](../../images/openshift-systemcontext.svg){: caption="Figure 1. {{site.data.keyword.vmwaresolutions_full}} and OpenShift system context" caption-side="bottom"}
+![VMware Solutions and OpenShift System Context](../../images/openshift-systemcontext.svg){: caption="Figure 1. {{site.data.keyword.vmwaresolutions_full}} and OpenShift system context" caption-side="bottom"}
 
 ## Actors
 {: #vcs-openshift-syscontext-actors}
@@ -44,7 +44,7 @@ The system context diagram identifies the following systems:
 * **{{site.data.keyword.vmwaresolutions_short}} DNS** - Used by the VMware and OpenShift environment to provide FQDN registration and resolution. DNS is configured to forward lookups to shared IBM DNS servers, allowing the resolution of public endpoints.
 * **{{site.data.keyword.cloud_notm}} shared NTP** - Used to maintain time synchronization within the environment.
 * Persistent volumes:
-  * **VSAN** - vSphere provider and storage class configured in Red Hat OpenShift environment that allows ReadWriteOnce persistent volumes to be stored as virtual machine disks. The {{site.data.keyword.cloud_notm}} OpenShift environment allows ReadWriteMany persistent volumes.
+  * **vSAN** - vSphere provider and storage class configured in Red Hat OpenShift environment that allows ReadWriteOnce persistent volumes to be stored as virtual machine disks. The {{site.data.keyword.cloud_notm}} OpenShift environment allows ReadWriteMany persistent volumes.
   * **Block** - {{site.data.keyword.cloud_notm}} provider and storage class configured in Red Hat OpenShift environment that allows ReadWriteOnce persistent volumes.
 * **Public internet** - Provide access to the VMware and OpenShift environment to communicate with the public internet.
 * **{{site.data.keyword.cloud_notm}} private network** - Provide access to the VMware and OpenShift environment to communicate with the {{site.data.keyword.cloud_notm}} private network and services.

@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2021
 
-lastupdated: "2021-03-22"
+lastupdated: "2021-05-14"
 
 subcollection: vmwaresolutions
 
@@ -192,7 +192,7 @@ Configuration changes can impact the ability to use the VMware Solutions console
 
 You must manage the VMware Solutions components that are created in your {{site.data.keyword.cloud_notm}} account only from the VMware Solutions console. For more information, see:
 * [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
-* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers)
 
 If you change your credentials, for example passwords, IBM Support might no longer be able to help you recover lost or forgotten credentials, or to troubleshoot any problems in your environment. For more information, see [Client responsibilities](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-client-responsibilities).
 

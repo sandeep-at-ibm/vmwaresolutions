@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-24"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -107,7 +107,7 @@ Ensure to plan for and implement the following solutions for monitoring your ins
 - A logging server that includes log forwarding or collection for all instance components and adequate log retention. The [VMware vRealize LogInsight on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) offering can help you with log management and visibility.
 - An alert infrastructure, including configuration of the SMTP server and short message service (SMS) gateway, as needed.
 - Proactive monitoring of hosts, drives, management software, and network, including vSAN monitoring if applicable. The [VMware vRealize Operations on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) offering can help you operate and monitor the performance, health, and capacity of your VMware environment.
-- Capacity monitoring and planning. You can [add and remove clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters) and [add and remove hosts](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers) to your instance from the {{site.data.keyword.vmwaresolutions_short}} console.
+- Capacity monitoring and planning. You can [add clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingclusters), [remove clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingclusters), [add hosts](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers), and [remove hosts](/docs/vmwaresolutions?topic=vmwaresolutions-vc_removingservers) for your instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 - Monitoring your backup infrastructure and backup jobs.
 - vSphere Distributed Switch Health Check is enabled by default and can generate a significant number of MAC addresses for testing teaming policy, MTU size, and VLAN configuration, which results in extra network traffic. You may want to disable this health check and only re-enable as needed for network troubleshooting. For more information, see [vSphere Distributed Switch Health Check](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.networking.doc/GUID-4A6C1E1C-8577-4AE6-8459-EEB942779A82.html){:external}.
 
@@ -141,6 +141,6 @@ In addition to capacity planning, complete the following to ensure that your sto
 ## Related links
 {: #solution_considerations-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
 * [Design overview](/docs/vmwaresolutions?topic=vmwaresolutions-design_overview)
 * [Scaling capacity](/docs/vmwaresolutions?topic=vmwaresolutions-solution_scaling)

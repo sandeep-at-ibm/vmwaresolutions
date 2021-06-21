@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-15"
+lastupdated: "2021-06-16"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX virtual security appliance, Juniper virtual security appliance, Juniper vSRX console
 
@@ -31,9 +31,9 @@ subcollection: vmwaresolutions
 Juniper® vSRX is a virtual security appliance that provides security and networking services at the perimeter or edge in virtualized private or public cloud environments. Within a VMware® infrastructure, vSRX runs as a pair of virtual machines (VMs) within the VMware vSphere® environment.
 {: shortdesc}
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-The current Juniper vSRX version that is installed is 3.0 (20.1R2).
+The current Juniper vSRX version that is installed is 3.0 (20.4R1.12).
 {:note}
 
 For more information about vSRX and the vSRX 3.0 architecture, see [Understand vSRX with VMware](https://www.juniper.net/documentation/en_US/vsrx/topics/concept/security-vsrx-vmware-overview.html){:external}.
@@ -42,16 +42,20 @@ You can install Juniper vSRX as one of the following components:
 * As a virtual appliance on the management cluster. In this case, Juniper vSRX protects the traffic in the management cluster. That is, the service protects only the traffic that you forward from your devices, for example, setting the default gateway to point to Juniper vSRX.
 * As a security or gateway appliance on the edge services cluster. In this case, Juniper vSRX works like a gateway appliance, which you can set without having to configure any devices. Juniper vSRX protects all clusters in the same pod and data center. With this deployment, you route all traffic in the same pod and data center to protect a broader portion of the system.
 
+   You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
+
 Juniper vSRX is built on the Junos® operating system (Junos OS™) and delivers networking and security features similar to ones on the software releases for SRX Series Services Gateways.
 
 Juniper vSRX provides a complete Next-Generation Firewall (NGFW) solution, including core firewall, VPN, NAT, advanced Layer 4 through Layer 7 security services such as Application Security, intrusion detection and prevention (IPS), and UTM features, which include Enhanced Web Filtering and Anti-Virus.
 
-You can install multiple instances of this service as needed. You can manage this service by using the J-Web interface link that is provided on the service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
+You can install multiple instances of Juniper vSRX on the management cluster. On a single edge services cluster, you can install only one instance of Juniper vSRX.
+
+You can manage this service by using the J-Web interface link that is provided on the service details page on the {{site.data.keyword.vmwaresolutions_short}} console.
 
 ## Technical specifications for Juniper vSRX
 {: #juniper-overview-specs}
 
-For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 The following components are ordered and included in the Juniper vSRX service:
 
@@ -59,7 +63,7 @@ The following components are ordered and included in the Juniper vSRX service:
 {: #juniper-overview-specs-vms}
 
 * vSRX is deployed as a pair of VMs configured for High Availability.
-* Each VM is configured with 6 vCPUs, 16 GB of memory, and 16 GB of storage.
+* Each VM is configured with 6 CPUs, 16 GB of memory, and 16 GB of storage.
 
 ### High availability
 {: #juniper-overview-specs-ha}
@@ -110,7 +114,7 @@ Any network operations that rely on routes that are established through vSRX mig
 {: #juniper-overview-related-links}
 
 * [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}

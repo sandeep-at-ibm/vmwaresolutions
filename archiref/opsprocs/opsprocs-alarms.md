@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-04"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -74,7 +74,7 @@ VMware provides preconfigured vCenter alarms described in the following tables, 
 
 The setting alarms workflow is as follows:
 * Configure the SMTP server details.
-* Configure the alert actions for clusters, hosts, datastores, and critical virtual appliances; VCSA, PSC, NSX Manager, and Controllers:
+* Configure the alert actions for clusters, hosts, datastores, and critical virtual appliances, such as vCenter Server Appliance, PSC, NSX Manager, and Controllers.
   * Cluster - a VMware High Availability error.
   * Hosts - CPU status, memory status, storage status, hardware status that is, voltage, temperature, or power status changes.
   * Datastore  - low on free disk space.
@@ -113,7 +113,7 @@ The following table describes these items:
 | Host memory usage | Configure to send email once when host memory usage > 95% for 5 mins. | [Knowledge - KB0012712 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=30110ee2db49730030c93a1b7c96194f){:external} |
 | Virtual machine CPU usage | Configure to send email once when VM CPU usage > 90% for 5 mins for critical appliances. | [Virtual machine CPU usage alarm (2057830)](https://kb.vmware.com/s/article/2057830){:external} |
 | Virtual machine memory usage | Configure to send email once when VM memory usage > 95% for 5 mins for critical appliances. | [Virtual machine memory usage alarm (2057846)](https://kb.vmware.com/s/article/2057846){:external} |
-| Datastore usage on disk | For vSAN, configure to send email once when datastore usage > 70%. For non-VSAN, configure to send email once when datastore usage > 85%. | [Knowledge - KB0012713 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=ddb3422edb89730030c93a1b7c9619f6){:external} |
+| Datastore usage on disk | For vSAN, configure to send email once when datastore usage > 70%. For non-vSAN, configure to send email once when datastore usage > 85%. | [Knowledge - KB0012713 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=ddb3422edb89730030c93a1b7c9619f6){:external} |
 | Virtual machine CPU ready | Configure to send email once when VM CPU ready > 2000 ms for 5 mins for critical appliances. | [Knowledge - KB0012718 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=7056426adb0d730030c93a1b7c9619e6){:external} |
 | Virtual machine total disk latency | Configure to send email once when VM total disk latency > 30 ms for 5 mins for critical appliances. | [Knowledge - KB0012729 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=15dddea2db857300d5a971198c961995){:external} |
 | Virtual machine disk commands canceled | Do not set initially. Consider for critical appliances at second stage. | No additional information |
@@ -161,7 +161,7 @@ The following table describes these items:
 | Health status changed * | Configure to send email once when critical when a there is status change to critical. | [Troubleshooting hosts](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-6F6CE545-58FA-490B-8C8A-3CB8196CAEA8.html){:external} |
 | Storage DRS recommendation | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [DRS troubleshooting information](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-5E7F6DEC-02A2-4221-AABA-EDFB9AE9EC70.html){:external} |
 | Storage DRS is not supported on a host | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [DRS troubleshooting information](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.resmgmt.doc/GUID-5E7F6DEC-02A2-4221-AABA-EDFB9AE9EC70.html){:external} |
-| Datastore cluster is out of space | Configure to send email once when critical when disk usage is above 85%. | [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers#section-adding-nfs-storage-to-vcenter-server-instances) |
+| Datastore cluster is out of space | Configure to send email once when critical when disk usage is above 85%. | [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingnfs) |
 | Datastore is in multiple datacenters | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Storage DRS cannot operate on a datastore](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.troubleshooting.doc/GUID-976F5B21-8C64-4C85-BE75-0D86655E32DD.html){:external} |
 | vSphere Distributed Switch VLAN trunked status | Configure to send email once when critical when not all the configured VLANs in the vSphere Distributed Switch were trunked by the physical switch. | [Enabling vSphere Distributed Switch health check in the vSphere Web Client (2032878)](https://kb.vmware.com/s/article/2032878){:external} |
 | vSphere Distributed Switch MTU matched status  | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Enabling vSphere Distributed Switch health check in the vSphere Web Client (2032878)](https://kb.vmware.com/s/article/2032878){:external} |
@@ -201,10 +201,10 @@ The following table describes these items:
 | GPU ECC Uncorrected Memory Alarm | Not configured in vCenter Server instances as they do not support GPU. | No additional information |
 | GPU ECC Corrected Memory Alarm | Not configured in vCenter Server instances as they do not support GPU. | No additional information |
 | GPU Thermal Condition Alarm | Not configured in vCenter Server instances as they do not support GPU. | No additional information |
-| Network connectivity lost | Configure to send email once when the following critical events occur: Lost Network Connectivity or Lost Network Connectivity to DVPorts. | [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
-| Network uplink redundancy lost | Configure to send email once when the following critical events occur: Lost Network Redundancy or Lost Network Redundancy on DVPorts| [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
-| Network uplink redundancy degraded * | Configure to send email once when the following critical events occur: Network Redundancy Degraded or Network Redundancy Degraded on DVPorts. | [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
-| VMKernel NIC not configured correctly * | Configure to send email once when the following critical event occurs: Invalid `vmknic` specified in `/Migrate/VMknic`. | [Troubleshooting Networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
+| Network connectivity lost | Configure to send email once when the following critical events occur: Lost Network Connectivity or Lost Network Connectivity to DVPorts. | [Troubleshooting networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
+| Network uplink redundancy lost | Configure to send email once when the following critical events occur: Lost Network Redundancy or Lost Network Redundancy on DVPorts| [Troubleshooting networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
+| Network uplink redundancy degraded * | Configure to send email once when the following critical events occur: Network Redundancy Degraded or Network Redundancy Degraded on DVPorts. | [Troubleshooting networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
+| VMKernel NIC not configured correctly * | Configure to send email once when the following critical event occurs: Invalid `vmknic` specified in `/Migrate/VMknic`. | [Troubleshooting networking](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.networking.doc/GUID-217384C2-B361-471D-90C8-BC2676A0ECA6.html){:external} |
 | Cannot connect to storage * | Configure to send email once when the following critical events occur: Lost Storage Connectivity, Lost Storage Path Redundancy, Degraded Storage Path Redundancy or Lost connection to NFS server.| [Identifying Fibre Channel, iSCSI, and NFS storage issues on ESX/ESXi hosts (1003659)g](https://kb.vmware.com/s/article/1003659){:external} |
 | Migration error * | Configure to send email once when the following critical events occur: Cannot migrate VM, Migration error, Migration host error, Cannot relocate VM or VM orphaned. | [vMotion or Storage vMotion of a VM fails with the error: The migration has exceeded the maximum switchover time of 100 seconds (2141355)](https://kb.vmware.com/s/article/2141355){:external} |
 | Exit standby error | Not configured in vCenter Server instances as the use of DPM is not recommended. | vSphere Distributed Power Management (DPM) provides power savings in on-premises deployments by dynamically consolidating workloads during periods of low resource utilization as VMs are migrated onto fewer hosts and the needed ESX hosts that are not needed are powered off. No power consumption savings can be realized by powering off {{site.data.keyword.cloud_notm}} bare metal servers. |
@@ -317,7 +317,7 @@ If you have a vSAN cluster, the additional preconfigured alarms in the following
 | vSAN health alarm `Witness host within vCenter cluster` | Consider alarm only if vSAN has been stretched. | [vSAN Health Service - Witness host within vCenter cluster (2130587)](https://kb.vmware.com/s/article/2130587){:external} |
 | vSAN health alarm for vMotion `Basic (unicast) connectivity check (normal ping)` | Configure to send email once for a critical event. | No additional information |
 | vSAN health alarm for vMotion `MTU check (ping with large packet size)` | Configure to send email once for a critical event. | [vSAN Health Service - Network Health - Hosts small ping test (connectivity check) and Hosts large ping test (MTU check) (2108285)](https://kb.vmware.com/s/article/2108285){:external} |
-| VSAN Health Service Alarm | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |
+| vSAN Health Service Alarm | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |
 | vSAN health service alarm for Overall Health Summary | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | No additional information |
 {: caption="Table 2. Preconfigured alarms - vSAN" caption-side="top"}
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-10"
+lastupdated: "2021-04-16"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ The {{site.data.keyword.vmwaresolutions_short}} includes fully automated, rapid 
 
 The VMware HCX service takes this hybridity to the next step, blending instances of vCenter Server with existing on-premises virtualized datacenters. It enables the creation of seamless network extensions and bidirectional migration of workloads.
 
-The VMware HCX components, which are deployed as virtual machines (VMs) in the {{site.data.keyword.cloud_notm}} VMware target site, enable the establishment of a connection with the VMware HCX components installed in the peer on-premises source site.
+The VMware HCX components are deployed as virtual machines (VMs) in the {{site.data.keyword.cloud_notm}} VMware target site. They allow a connection with the VMware HCX components that are installed in the peer on-premises source site.
 
 ![VMware vCenter Server – Hybrid Cloud services](../../images/ibmcloud-hcx-overview.svg "VMware vCenter Server – HCX overview"){: caption="Figure 1. VMware vCenter Server - HCX overview" caption-side="bottom"}
 
@@ -30,8 +30,8 @@ This connection creates a loosely coupled interconnectivity between on-premises 
 * Optimized network – selects the best connection and efficiently floods the connection so that network traffic is moved as fast as possible.
 * Data deduplication – as much as 50% reduction in network traffic can be achieved
 * vMotion migration	- a single running system can be moved between HCX enabled sites by using the VMware vMotion protocol with no service interruption.
-* Bulk migration -	multiple systems can be moved in parallel using VMware vSphere® Replication protocol between HCX enabled sites.
-* Scheduled migration – any number of VMs can be replicated to the destination site and then activated on that site at a designated time, which replaces the systems that are running on the originating site.
+* Bulk migration - multiple systems can be moved in parallel using VMware vSphere® Replication protocol between HCX enabled sites.
+* Scheduled migration – any number of VMs can be replicated to the destination site and then activated on that site at a designated time. The replication replaces the systems that are running on the originating site.
 * Migration of security policies – if NSX is used on-premises, any security policies or firewalls are moved along with the workload.
 
 **Next topic:** [VMware HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-overview)

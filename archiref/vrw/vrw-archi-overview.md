@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -31,7 +31,7 @@ The design extends and enhances the basic vCenter Server architecture to deliver
 
 The minimum viable product consists of the following components:
 * At least one workload cluster that includes four or more ESXi hosts
-* vSAN and NSX-T
+* vSAN and NSX-T™
 * A management cluster of four ESXi hosts
 * An edge services cluster of two ESXi hosts or a physical FortiGate appliance
 

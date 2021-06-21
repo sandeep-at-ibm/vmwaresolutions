@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-01"
+lastupdated: "2021-05-18"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -33,12 +33,12 @@ A multi-site deployment consists of the following components.
   * vCenter Server located in domain with instance-specific name
   * SSO (Single Sign-On) domain
   * SSO site name
-  * vCenter Server Appliance (vCSA) with embedded Platform Services Controller (PSC)
+  * vCenter Server Appliance with embedded Platform Services Controller (PSC)
 * **Secondary instance or instances**: One or more secondary vCenter Server instances, linked to the primary instance, with the following configuration:
   * SSO site name
   * Same DNS domain as primary instance
   * DNS and AD replication setup between the AD virtual machines on the primary and secondary instances
-  * VMware vCenter on the secondary instances is set up with Enhanced Linked Mode (ELM) to the vCenter on the primary instance
+  * VMware vCenter Server on the secondary instances is set up with Enhanced Linked Mode (ELM) to the vCenter Server on the primary instance
 
 ## vCenter Server multi-site deployment
 {: #vc_multisite-deployment}

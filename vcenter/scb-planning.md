@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-16"
 
 keywords: planning vcs Security and Compliance Readiness Bundle, data centers for Security and Compliance Readiness Bundle, services for security and compliance bundle, vcs scb
 
@@ -78,20 +78,20 @@ The Security and Compliance Readiness Bundle deployment has strict requirements 
 
 The following services are required for Security and Compliance Readiness Bundle instances.
 * [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
-* [KMIP™ for VMware®](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
+* [KMIP for VMware](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
 
 The following services are included with Security and Compliance Readiness Bundle instances.
-* [Caveonix RiskForesight™](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
-* [HyTrust® CloudControl™](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
-* [vRealize Operations™ and Log Insight™](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
+* [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
+* [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
+* [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 
 The following services are recommended for Security and Compliance Readiness Bundle instances.
-* [Veeam® 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
-* [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
+* [Veeam 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
 
 The following services are optional for Security and Compliance Readiness Bundle instances.
-* [VMware HCX™](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
-* [Red Hat® OpenShift® for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_ordering)
+* [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
+* [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_ordering)
 
 ## Related links
 {: #scb-planning-related}

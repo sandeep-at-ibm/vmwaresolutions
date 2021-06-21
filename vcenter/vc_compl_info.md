@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-05-18"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 
 Review the following information for details about compliance for VMware vCenter Server® instances.
 
-The vCenter Server with NSX-T offering is not supported for HIPAA customers.
+The vCenter Server with NSX-T™ offering is not supported for HIPAA customers.
 {:important}
 
 ## Customer versus IBM responsibility for vCenter Server
@@ -36,14 +36,14 @@ The following diagram provides details about the customer (you) and {{site.data.
 ## Health data restrictions
 {: #vc_compl_info-health-data-restrictions}
 
-The following terms apply to the entire {{site.data.keyword.vmwaresolutions_full}} portfolio.
+The following terms apply only to the VMware Solutions Dedicated offering.
 
 ### HIPAA
 {: #vc_compl_info-hipaa}
 
 Notwithstanding information in the data sheet for this Cloud Service regarding the Health Information Portability and Accountability Act of 1996 ("HIPAA") and the permitted use of Health Information and Health data as Types of Personal Data and/or Special Categories of Personal Data (collectively, "Health Data") with this Cloud Service, use of Health Data with this Cloud Service is subject to the following limitations and conditions:
 
-{{site.data.keyword.vmwaresolutions_short}}
+VMware Solutions Dedicated
 
 Only the offerings that are previously listed can be provisioned to implement the HIPAA Privacy and Security Rule controls for use with Health Data if Client notifies IBM in advance that Client will use Health Data with the Cloud Service and IBM confirms in writing that the Cloud Service will be provisioned for Health Data usage. The Cloud Service cannot be used for the transmission, storage, or other usage of any Health Data protected under HIPAA unless (i) Client provides IBM such notification; (ii) IBM and Client have entered into an applicable Business Associate Agreement; and (iii) IBM provides Client with express written confirmation that the Cloud Service can be used with Health Data. In no event shall the Cloud Service be used for processing PHI as a healthcare clearinghouse within the meaning of HIPAA.
 
@@ -57,9 +57,9 @@ This Cloud Service is not designed to any specific security requirements for reg
 ## Policy configurations
 {: #vc_compl_info-default-policy-config}
 
-The generated password for vCenter Server primary instances is now 15 characters in length. Previously, the generated password was the vCenter default of 8 characters in length.
+The generated password for vCenter Server primary instances is now 15 characters in length. Previously, the generated password was the vCenter Server default value of 8 characters in length.
 
-The following table details vCenter policy configurations for a new primary instance.
+The following table details vCenter Server policy configurations for a new primary instance.
 
 | Policy | V3.1 or later | V3.0 or earlier |
 |:------------- |:------------------------------ |:------------- |
@@ -73,7 +73,7 @@ The generated NSX Manager password for vCenter Server primary instances is now 1
 ## Policy for accessing clients instances
 {: #vc_compl_info-policy-for-access-client-inst}
 
-vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of {{site.data.keyword.vmwaresolutions_short}} products and services, IBM Support might be required to help guarantee their success. For the most part, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the {{site.data.keyword.cloud_notm}} internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by {{site.data.keyword.cloud_notm}} SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
+vCenter Server environments, which are delivered as {{site.data.keyword.vmwaresolutions_short}}, provide a VMware® management platform layer for our clients to manage the virtualization capabilities. Throughout the lifecycle of {{site.data.keyword.vmwaresolutions_short}} products and services, IBM Support might be required to help guarantee their success. For the most part, intervention by IBM Support is the result of a client request (that is, a support ticket). However, on rare occasions, IBM Support might assist proactively and without a client–written support ticket to prevent future issues. This access is through the {{site.data.keyword.cloud_notm}} internal support network and is documented through a support ticket that is opened by IBM Support and continuously monitored by {{site.data.keyword.cloud_notm}} SOC. At no time will IBM Support modify instance configuration without prior consent from the client. Access is to VMware management components and/or {{site.data.keyword.cloud_notm}} management components and never to the client virtual machines or applications.
 
 ## Proactive support
 {: #vc_compl_info-proactive-support}

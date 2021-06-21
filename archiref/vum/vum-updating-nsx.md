@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-05-05"
+lastupdated: "2020-05-18"
 
 subcollection: vmwaresolutions
 
@@ -53,7 +53,7 @@ The workflow is as follows:
   - Click **Upgrade**.
   - When the upload completes, you are redirected to the NSX Manager login page. Login back in and verify that the current software version displays is correct.
 7. **Upgrade the NSX Controller Cluster**:
-  - Open the vSphere Web Client and log in to the VCSA.
+  - Open the vSphere Web Client and log in to the vCenter Server Appliance.
   - Go to **Home** > **Networking & Security** > **Installation**, select the **Management** tab, and click **Upgrade Available** in the Controller Cluster Status column.
   - The controllers in your environment are upgraded and rebooted one at a time. After you initiate the upgrade, the system downloads the upgrade file, upgrades each controller, restarts each controller, and updates the upgrade status of each controller.
 8. **Upgrade NSX Host Clusters**:

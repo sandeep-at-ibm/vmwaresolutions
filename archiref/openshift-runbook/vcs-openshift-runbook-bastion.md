@@ -224,8 +224,8 @@ mkdir -p /opt/ocpinstall
 cd /opt/ocpinstall
 
 # Download the OpenShift installer and client tools
-wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest-4.4/openshift-client-linux.tar.gz
-wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest-4.4/openshift-install-linux.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest-4.6/openshift-client-linux.tar.gz
+wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest-4.6/openshift-install-linux.tar.gz
 
 # Extract the downloaded bundles
 tar -xvf openshift-client-linux.tar.gz
@@ -237,7 +237,7 @@ mv openshift-install /usr/local/bin
 
 # Install git and clone the OpenShift installer
 yum install -y git
-git clone -b release-4.4 https://github.com/openshift/installer
+git clone -b release-4.6 https://github.com/openshift/installer
 
 # Download and extract terraform
 wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip

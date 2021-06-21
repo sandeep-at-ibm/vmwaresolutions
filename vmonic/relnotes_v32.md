@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2019
 
 lastupdated: "2019-11-05"
 
@@ -37,7 +37,7 @@ The 12-month commitment and charging structure do not apply to existing vCenter 
 ## VMware vSphere 6.7 Update 2 support
 {: #relnotes_v32-vsphere-v67}
 
-You can order VMware vSphere version 6.7 Update 2 with your VMware vCenter Server, VMware vCenter Server with NSX-T, and VMware vSphere on IBM Cloud instances. vSphere Enterprise Plus 6.7u2 replaces the option to order vSphere Enterprise Plus 6.7u1 with new instances. Additionally, Single-node Trial for Migration and App Modernization and Single-node Trial for Data Protection and Disaster Recovery instances are now ordered with vSphere Enterprise Plus 6.7u2.
+You can order VMware vSphere version 6.7 Update 2 with your VMware vCenter Server, VMware vCenter Server with NSX-T™, and VMware vSphere on IBM Cloud instances. vSphere Enterprise Plus 6.7u2 replaces the option to order vSphere Enterprise Plus 6.7u1 with new instances. Additionally, Single-node Trial for Migration and App Modernization and Single-node Trial for Data Protection and Disaster Recovery instances are now ordered with vSphere Enterprise Plus 6.7u2.
 
 vSphere Enterprise Plus 6.7u2 is available for Skylake, Cascade Lake, and Broadwell {{site.data.keyword.cloud_notm}} bare metal servers.
 
@@ -70,7 +70,7 @@ This release applies the following upgrades and improvements for newly deployed 
 {: #relnotes_v32-vcs-initial-cluster}
 
 * You can now specify the name of your initial cluster to be created at the same time you place your instance order.
-* (Updated on 05 November 2019) As a VMware recommended best practice, new clusters are now deployed with a public and private pair of distributed virtual switches. Private-only clusters deploy a new private distributed switch. All networking for the cluster is configured to use these switches.
+* (Updated on 5 November 2019) As a VMware recommended best practice, new clusters are now deployed with a public and private pair of distributed virtual switches. Private-only clusters deploy a new private distributed switch. All networking for the cluster is configured to use these switches.
 
 ## Updates for VMware vSphere instances
 {: #relnotes_v32-vss}

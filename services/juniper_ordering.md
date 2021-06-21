@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-05-20"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -28,9 +28,11 @@ subcollection: vmwaresolutions
 # Ordering Juniper vSRX
 {: #juniper-ordering}
 
-You can include the Juniper® vSRX service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
+You can include the Juniper® vSRX service with a new VMware vCenter Server® instance or add the service to your existing VMware® vCenter Server instance.
 
 You can install multiple instances of Juniper vSRX on the management cluster. On a single edge services cluster, you can install only one instance of Juniper vSRX.
+
+You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
 
 ## Ordering Juniper vSRX for a new instance
 {: #juniper-ordering-new-instance}
@@ -42,13 +44,15 @@ The Juniper vSRX service is deployed on the management cluster unless you order 
 ## Ordering Juniper vSRX for an existing instance
 {: #juniper-ordering-exist-instance}
 
-1. On the instance details page, click **Services** on the left navigation pane.
+1. On the instance details page, click **Services** on the left navigation window.
 2. Click **Add** to add the service.
 3. On the **Services** page, locate the **Juniper vSRX** service and toggle its switch on.
 4. Follow the steps to configure and add the service to your instance.
 
 When you add Juniper vSRX to an existing vCenter Server instance, you can select a cluster on which to install Juniper vSRX. You can install Juniper vSRX on a management cluster or on any edge services cluster.
-You must deploy the Juniper vSRX to an edge services cluster for the Juniper vSRX to function as a gateway for your vCenter Server instance.
+You must deploy Juniper vSRX to an edge services cluster for Juniper vSRX to function as a gateway for your vCenter Server instance.
+
+You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
 
 ## Juniper vSRX service configuration
 {: #juniper-ordering-service-config}
@@ -85,7 +89,7 @@ If you deploy Juniper vSRX on an edge services cluster, after deployment, you mu
 
 * [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
 * [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}

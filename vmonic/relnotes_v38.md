@@ -26,7 +26,7 @@ This release includes new features, component updates, usability enhancements, a
 ## Updates for VMware Solutions Shared
 {: #relnotes_v38-shared}
 
-(Updated on August 25, 2020) VMware® Solutions provides an upgrade to the Shared infrastructure to the latest version of VMware vCloud Director (vCD) v10.1.1. The v10.1.1 update is available to Dallas and Frankfurt {{site.data.keyword.cloud}} data centers.
+(Updated on 25 August 2020) VMware® Solutions provides an upgrade to the Shared infrastructure to the latest version of VMware vCloud Director (vCD) v10.1.1. The v10.1.1 update is available to Dallas and Frankfurt {{site.data.keyword.cloud}} data centers.
 
 The Flash portal is no longer available with the v10.1.1 update.
 {:note}
@@ -81,7 +81,7 @@ For NFS storage, vSphere ESXi 6.7u3 will be installed.
 ### VMware NSX updates
 {: #relnotes_v38-dedicated-nsx-t}
 
-* For vCenter Server with NSX-T, new instances are now deployed with NSX-T 3.0.1. Day 2 operations continue to be supported for NSX-T 2.5.1 instances.
+* For vCenter Server with NSX-T™, new instances are now deployed with NSX-T 3.0.1. Day 2 operations continue to be supported for NSX-T 2.5.1 instances.
 * For vCenter Server with NSX-V, new instances are now deployed with NSX-V 6.4.6.
 
 ### Updates for IBM Cloud for VMware Mission Critical Workloads

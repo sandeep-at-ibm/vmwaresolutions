@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-31"
+lastupdated: "2021-05-28"
 
 keywords: VMware Mission Critical, request Mission Critical, tech specs Mission Critical, Mission Critical Workloads, view vCenter Server multizone, view instance, view instance details, delete vCenter Server multizone, delete instance
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Viewing and deleting vCenter Server multizone instances
 {: #mcv_viewinginstance}
 
-View the summary and detailed information of the vCenter Server multizone instance.
+View the summary and detailed information of the VMware® vCenter Server multizone instance.
 
 ## Procedure to view the details of a vCenter Server multizone instance
 {: #mcv_viewinginstance-procedure-view-inst-details}
@@ -67,8 +67,8 @@ Complete the following steps to view the property and access information details
 | ID | The ID of the instance. |
 | Multizone region | The {{site.data.keyword.cloud_notm}} data center region where the instance is hosted. |
 | Witness cluster location | The {{site.data.keyword.cloud_notm}} data center where the witness cluster is hosted. |
-| Consolidated  cluster locations | The {{site.data.keyword.cloud_notm}} data center where the management cluster is hosted. |
-| Resource cluster locations | The {{site.data.keyword.cloud_notm}} data center where the stretched vSAN™ cluster is hosted. |
+| Consolidated cluster locations | The {{site.data.keyword.cloud_notm}} data center where the management cluster is hosted. |
+| Resource cluster locations | The {{site.data.keyword.cloud_notm}} data center where the vSAN™ stretched cluster is hosted. |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter version | The VMware vCenter Server version.<br><br>**Note:** A slight variation between the vCenter Server version that is displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere® Web Client exists. Both are correct. |
 | NSX for vSphere | The VMware NSX® for vSphere product version. |
@@ -85,10 +85,10 @@ Under **Access information**, view the access information for the instance-relat
 | AD/DNS IPs | The IP addresses of the two AD servers. |
 | AD/DNS FQDNs | The AD/DNS server fully qualified domain names.<br><br>**Note:** The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
 | AD/DNS Remote Desktop | The username and password to access the AD server through a remote desktop connection. |
-| vCenter/PSC IP  | The IP address of the vCenter Server.  |
-| vCenter/PSC FQDN  | The vCenter Server fully qualified domain name (FQDN).  |
-| vCenter/PSC ADMIN  | The VMware vCenter Single Sign-On username and password that you can use to log in to the vCenter Server by using the vSphere Web Client.  |
-| vCenter/PSC SSH  | The username and password that you can use to access the vCenter Server VM through SSH connection.  |
+| vCenter PSC IP  | The IP address of the vCenter Server.  |
+| vCenter PSC FQDN  | The vCenter Server fully qualified domain name (FQDN).  |
+| vCenter PSC ADMIN  | The VMware vCenter Server Single Sign-On username and password that you can use to log in to the vCenter Server by using the vSphere Web Client.  |
+| vCenter PSC SSH  | The username and password that you can use to access the vCenter Server VM through SSH connection.  |
 | NSX Manager IP  | The IP address of the NSX Manager.  |
 | NSX Manager FQDN  | The NSX Manager fully qualified domain name (FQDN).  |
 | NSX Manager HTTP  | The username and password that is used to access the NSX Manager web console. |

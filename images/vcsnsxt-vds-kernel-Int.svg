@@ -38,7 +38,7 @@
   </g>
   <g font-family="Helvetica" font-size="12px" text-anchor="end">
    <rect x="105" y="179" width="232" height="15" fill="#fff" stroke-width="0"/>
-   <text x="334.5" y="182">vmk2 SDDC-DPortGroup-VSAN MTU 9000</text>
+   <text x="334.5" y="182">vmk2 SDDC-DPortGroup-vSAN MTU 9000</text>
   </g>
   <path d="m353 139h361" fill="none" pointer-events="none" stroke="#0070c0" stroke-miterlimit="10" stroke-width="2"/>
   <g font-family="Helvetica" font-size="12px" text-anchor="end">

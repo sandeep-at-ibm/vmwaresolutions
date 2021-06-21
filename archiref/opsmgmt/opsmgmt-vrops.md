@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-09"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -168,7 +168,7 @@ vRealize Operations Management Pack for vSAN enables vSAN specific dashboards to
 
 The VMware SDDC Health Management Pack for vROps monitors the SDDC management stack and provides color coded metrics for health and efficiency of different components present as part of the SDDC management stack. With the dashboards in the VMware SDDC Health Management Pack, you can monitor the following components of the vCenter Server instance and management tooling:
 * vRealize Operations Manager
-* NSX for vSphere/VMware NSX-T
+* NSX for vSphere/VMware NSX-T™
 * VMware vSAN
 * vRealize Log Insight
 * vCenter Server
@@ -225,7 +225,7 @@ vRealize Operations Federation Management Pack enables a multi-site vROps deploy
 
 vRealize Operations Management Pack for HCX extends the Operations Management capabilities of vROps to hybrid capabilities presented by HCX. With the management pack, you can collect metrics, change events, and resource topology information from HCX. It enables the monitoring, isolation, and resolution of performance bottlenecks in the HCX Interconnects, Migrations, or Protected workloads.
 
-**Next topic**: [vRealize Log Insights](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrli)
+**Next topic**: [vRealize Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrli)
 
 ## Related links
 {: #opsmgmt-vrops-links}

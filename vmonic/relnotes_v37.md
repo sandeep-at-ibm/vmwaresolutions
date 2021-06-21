@@ -46,7 +46,7 @@ This release applies the following updates when you order VMware Solutions Dedic
 ### IBM Cloud for VMware Regulated Workloads
 {: #relnotes_v37-fss}
 
-(Updated on July 14, 2020) You can now order {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instances through predefined vCenter Server instance configurations as part of your vCenter Server order flow. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is an extension of the vCenter Server offering, which enhances the basic vCenter Server architecture to deliver a secure, high-performance platform.
+(Updated on 14 July 14 2020) You can now order {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instances through predefined vCenter Server instance configurations as part of your vCenter Server order flow. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is an extension of the vCenter Server offering, which enhances the basic vCenter Server architecture to deliver a secure, high-performance platform.
 
 ### New SAP-certified Cascade server support
 {: #relnotes_v37-sapserver}
@@ -67,7 +67,7 @@ Broadwell servers are no longer available for new or existing deployments of vCe
 ### Minimum number of bare metal servers
 {: #relnotes_v37-vcs-2-bms}
 
-For vCenter Server with NSX-T instances, you can now order an instance with only two bare metal servers for the management cluster. The minimum RAM size for the instance to function properly is 192 GB.
+For vCenter Server with NSX-T™ instances, you can now order an instance with only two bare metal servers for the management cluster. The minimum RAM size for the instance to function properly is 192 GB.
 
 Configurations with only two servers in the management cluster are not recommended for production use.
 
@@ -129,7 +129,7 @@ In June 2020, IBM Cloud for VMware Solutions acquired a PCI DSS attestation of c
 ## New and updated documentation
 {: #relnotes_v37-updated-doc}
 
-* (Updated on July 14, 2020) The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture is updated.
+* (Updated on 14 July 14 2020) The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads reference architecture is updated.
 * Documentation about the responsibilities of IBM vs the customer's is available at Understanding your responsibilities when using VMware Solutions.
 * Documentation is available about the access type that {{site.data.keyword.cloud_notm}} Support has to your environment and the steps that you can take to limit the access, if required.
 * Documentation is now available about the various ports that are  used in VMware Solutions. The documentation includes details about:

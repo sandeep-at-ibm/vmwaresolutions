@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-04-19"
 
 subcollection: vmwaresolutions
 
@@ -36,7 +36,7 @@ A service appliance might be uninstalled in preparation for uninstalling Hybrid 
 
 * Cancel or reset the execution time for any migrations that might occur during the uninstallation task.
 * Check the vSphere Web Client task console for any running migrations, and wait until they are complete.
-* Ensure that there are no active Hybrid Cloud Services tasks of any type.
+* Ensure that no active Hybrid Cloud Services tasks exist.
 
 Never delete virtual appliances from the vSphere inventory. Always use the management portal to interact with service virtual appliances.
 {:note}
@@ -55,12 +55,12 @@ The Hybrid Cloud Gateway and any hybrid service virtual appliances that use the 
 ## Uninstalling HCX Manager
 {: #hcxclient-removal-uninstall-unist-hcxm}
 
-The HCX Manager appliance should be uninstalled before you remove the HCX solution from the on-premises data center. Follow these steps to uninstall the Hybrid Cloud Services virtual machine.
+Uninstall the HCX Manager appliance before you remove the HCX solution from the on-premises data center. Follow these steps to uninstall the Hybrid Cloud Services virtual machine (VM).
 
 1. Unstretch all Layer 2 networks.
 2. Remove the hybrid service virtual appliances.
-3. In the on-premises vCenter, power off the Hybrid Cloud Services virtual machine.
-4. Delete the Hybrid Cloud Services virtual machine.
+3. In the on-premises vCenter, power off the Hybrid Cloud Services VM.
+4. Delete the Hybrid Cloud Services VM.
 
 All virtual service appliances are removed. The following elements might remain behind:
 * Logs
@@ -77,8 +77,8 @@ The migrated VMs and logs can be manually backed up or deleted.
 The Hybrid Cloud Services deployment can be administered from the management portal by using a browser-based user interface.
 
 1. In a web browser, enter the IP address that is assigned to the Hybrid Cloud Services, and specify the port number 9443. For example, `https://HCXip:9443`.
-2. The Hybrid Cloud Services user interface opens in a web browser window by using SSL. If necessary, accept the security certificate. The VMware Hybridity and Networking log in screen opens.
-3. Enter the user name and password. By default, the user name is Admin. The password is the value that was supplied when the Hybrid Cloud Services virtual appliance was installed.
+2. The Hybrid Cloud Services user interface opens in a web browser window by using SSL. If necessary, accept the security certificate. The VMware® Hybridity and Networking log in screen opens.
+3. Enter the username and password. By default, the username is Admin. The password is the value that was supplied when the Hybrid Cloud Services virtual appliance was installed.
 
 **Next topic:** [Glossary of HCX components and terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-components)
 

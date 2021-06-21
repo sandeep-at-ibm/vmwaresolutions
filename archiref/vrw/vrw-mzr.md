@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-24"
+lastupdated: "2021-05-28"
 
 subcollection: vmwaresolutions
 
@@ -20,18 +20,18 @@ subcollection: vmwaresolutions
 # Multizone region
 {: #vrw-mzr}
 
-Expanding the single-zone region topology into a multizone region (MZR) topology introduces complexity around high availability of components. It also introduces some new capabilities, including stretched networking between the data centers and stretched VSAN.
+Expanding the single-zone region topology into a multizone region (MZR) topology introduces complexity around high availability of components. It also introduces some new capabilities, including stretched networking between the data centers and vSAN stretched clusters.
 
 ## Multi data center view
 {: #vrw-mzr-view}
 
 ![IBM Cloud for VMware Regulated Workloads MZR](../../images/vrw-mzr.svg "MZR topology"){: caption="Figure 1. MZR topology" caption-side="bottom"}
 
-The MZR topology consists of two management clusters and a witness cluster in a third site. The management clusters must use vSAN based storage and VLAN backed subnets only. The management clusters are a 4-node configuration to support VSAN.
+The MZR topology consists of two management clusters and a witness cluster in a third site. The management clusters must use vSAN based storage and VLAN backed subnets only. The management clusters are a 4-node configuration to support vSAN.
 
 The resource cluster can be two independent clusters and use local vSAN storage or use a vSAN stretched cluster, as shown in the diagram. vSAN stretched cluster supports two active sites, each with an even number of hosts and storage devices, and a witness host at the third site.
 
-According to the NSX-T design, the NSX-T Controllers run an instance in each data center to provide the network failover capabilities. Only the resource cluster is converted to NSX-T transport nodes.
+According to the NSX-T™ design, the NSX-T Controllers run an instance in each data center to provide the network failover capabilities. Only the resource cluster is converted to NSX-T transport nodes.
 
 ## Product considerations
 {: #vrw-mzr-considerations}

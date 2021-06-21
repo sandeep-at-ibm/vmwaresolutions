@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-02-05"
+lastupdated: "2021-04-22"
 
 keywords: primary io hdm, hdm install, download hdm
 
@@ -33,7 +33,7 @@ To access the PrimaryIO Hybrid Cloud Data Management (HDM) software, go to [Prim
 
 To install HDM on the hybrid infrastructure, complete the following steps:
 * Deploy PrimaryIO Appliance (henceforth called PIO Appliance) on-premises
-* Add on-premises vCenter to PIO Appliance
+* Add on-premises vCenter Server to PIO Appliance
 * Install HDM components on premises
 * Configure on-premises HDM components
 * Configure and Add Cloud Endpoint
@@ -73,7 +73,7 @@ To uninstall HDM from the hybrid infrastructure, complete the installation steps
 * Removing the {{site.data.keyword.cloud_notm}} Endpoint
 * Uninstalling on-premises components
 * Uninstalling the HDM IO filter
-* Unregistering the HDM vCenter plug-in
+* Unregistering the HDM vCenter Server plug-in
 * Deleting the PrimaryIO appliance
 
 For more information, see the uninstallation section in the [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){:external}.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -82,7 +82,7 @@ You can have enterprise tools in place that you can use to monitor and manage yo
 
 | Component     | Why | Monitored by |
 | ------------- | --- | ------------ |
-| vCenter | vCenter is the infrastructure management component that manages the vSphere hosts and manages virtualized constructs such as clusters. vSAN is monitored through vCenter. vSphere networking such as distributed switches and port groups are monitored through vCenter. | vRealize Operations Manager (vROps) and the VMware SDDC Health Management Pack. vRealize Log Insights (vRLI) collects the log data from vCenter and the Content Pack for vSphere adds specific understanding to the logs and in turn sends alerts to vROPs. |
+| vCenter | vCenter is the infrastructure management component that manages the vSphere hosts and manages virtualized constructs such as clusters. vSAN is monitored through vCenter. vSphere networking such as distributed switches and port groups are monitored through vCenter. | vRealize Operations Manager (vROps) and the VMware SDDC Health Management Pack. vRealize Log Insight (vRLI) collects the log data from vCenter and the Content Pack for vSphere adds specific understanding to the logs and in turn sends alerts to vROPs. |
 | vSphere Hosts | vSphere hosts provide the virtualized CPU, RAM, and network to the compute VMs. | vROps via vCenter. vRLI collects the log data. |
 | vSAN | vSAN provides a datastore by consolidating storage in the hosts for use by the VMs. Issues that affect capacity and performance have an effect on the applications running on these VMs. | vROps and the Management Pack for vSAN provides additional dashboards to aid with the monitoring of vSAN. vCenter vSAN Health Checks are collected via vROps. vRLI collects the log data from vCenter. |
 | NSX | NSX provides the virtualized network components that are used by the compute VMs, any failures of the network can impact the applications running on these VMs. | vROps and the vROps Management Pack for VMware NSX provides visibility into the network topology. vRLI collects the log data from the NSX components such as Controllers, ESG, and logical switches. vRealize Network Insight (vRNI) provides in-depth troubleshooting of network issues. |

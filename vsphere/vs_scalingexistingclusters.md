@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-26"
+lastupdated: "2021-05-14"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -39,7 +39,7 @@ Ensure that you complete the following tasks:
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **IaaS platforms** section.
 2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card.
 3. Click the **Scale existing** tab and select the cluster that you want to scale from the **Cluster configurations** list.
-4. Review the cluster settings that are automatically completed.
+4. Review the cluster settings that are automatically completed and update the settings according to your needs. For more information about the settings, see [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances).
 5. In the **Bare metal server** section, specify the number of {{site.data.keyword.cloud_notm}} bare metal servers that you want to add to the cluster.
 6. If the cluster does not include the FortiGate 300 Series Security Appliance HA Pair on its public VLAN, you can order the appliance. To do so, select the **Include with purchase** checkbox under **FortiGate Physical Appliance 300 Series HA Pair**.
 7. In the **Summary** pane, verify the instance configuration and the estimated price.

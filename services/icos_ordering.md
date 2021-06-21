@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-19"
+lastupdated: "2021-04-24"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -27,24 +27,24 @@ To order {{site.data.keyword.cloud_notm}} Object Storage, complete the following
 ## Creating an Object Storage instance
 {: #icos_ordering-obj}
 
-For more information about creating an Object Storage instance, see [Creating a new service instance](/docs/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance). Follow the steps and return to this section to continue with the following tasks.
+For more information about creating an Object Storage instance, see [Creating a new service instance](/docs/cloud-object-storage/basics?topic=cloud-object-storage-provision#provision-instance). Follow the steps and return here to continue with the following tasks.
 
 ## Creating a bucket
 {: #icos_ordering-bucket}
 
-For more information about creating a bucket, see [Create some buckets to store your data](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets). Follow the steps and return to this section to continue with the following tasks.
+For more information about creating a bucket, see [Create some buckets to store your data](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets). Follow the steps and return here to continue with the following tasks.
 
 ## Creating service credentials
 {: #icos_ordering-service-cred}
 
-For more information about creating service credentials, see [Service credentials](/docs/cloud-object-storage/hmac?topic=cloud-object-storage-service-credentials). Follow the steps and return to this section to continue with the following tasks.
+For more information about creating service credentials, see [Service credentials](/docs/cloud-object-storage/hmac?topic=cloud-object-storage-service-credentials). Follow the steps and return here to continue with the following tasks.
 
 ## Adding a scale-out repository
 {: #icos_ordering-scale-repo}
 
 * As part of the Veeam service installation and configuration, a scale-out backup repository with the name `IC4V Scale-Out Repository` is created. The `IC4V Default VM Backup Repository` repository is added to the scale-out repository as an extent.
 * When you create the backup job, you must select `IC4V Scale-Out Repository` as the backup repository, and not `IC4V Default Config Backup Repository`. The latter repository is intended for the Veeam configuration backups.
-* You can add more repositories to this default repository, such as a backup repository of type Object Storage. For more information, see [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:external}. Follow the steps and return to this section to continue with the following tasks.
+* You can add more repositories to this default repository, such as a backup repository of type Object Storage. For more information, see [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:external}. Follow the steps and return here to continue with the following tasks.
 
 ## Veeam on an instance deployed with private network only
 {: #icos_ordering-private-network}

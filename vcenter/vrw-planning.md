@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-23"
+lastupdated: "2021-06-13"
 
 keywords: planning regulated workloads, data center for workloads, vmware workloads data centers
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Requirements and planning for VMware Regulated Workloads
 {: #vrw-planning}
 
-Review the following requirements before you order your VMware® Regulated Workloads instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and services requirements.
+Review the following requirements before you order your VMware® Regulated Workloads instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your capacity requirements, and services requirements.
 
 ## IBM Cloud account requirements
 {: #vrw-planning-account-req}
@@ -34,6 +34,7 @@ The {{site.data.keyword.cloud_notm}} account that you are using must meet certai
 The VMware Regulated Workloads deployment has strict requirements on the physical infrastructure. Therefore, you can deploy instances only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements.
 
 ### Data centers available for single-zone deployment
+{: #vrw-planning-dc-single-zone}
 
 The following {{site.data.keyword.cloud_notm}} data centers are available for VMware Regulated Workloads single-zone deployment.
 
@@ -82,11 +83,16 @@ The following {{site.data.keyword.cloud_notm}} data centers are available for VM
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Regulated Workloads single-zone deployment" caption-side="top"}
 
 ### Regions available for multizone deployment
+{: #vrw-planning-reg-multizone}
 
-VMware Regulated Workloads multizone deployment is available in the following regions:
-* Americas - Dallas, Sao Paulo, Toronto, and Washington DC
-* Europe - Frankfurt and London
-* Asia Pacific - Sydney, Tokyo, and Osaka
+The following regions are available for VMware Regulated Workloads multizone deployment.
+
+| {{site.data.keyword.cloud_notm}} data centers | Mutizone region |
+|:----------------------|:-------|
+| Dallas, Sao Paulo, Toronto, and Washington DC | Americas |
+| Frankfurt and London | Europe |
+| Sydney, Tokyo, and Osaka | Asia Pacific |
+{: caption="Table 2. Available regions for VMware Regulated Workloads multizone deployment" caption-side="top"}
 
 ## Services for VMware Regulated Workloads
 {: #vrw-planning-addon-services}
@@ -100,7 +106,7 @@ The following services are included with VMware Regulated Workloads:
 * [Veeam 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
 * [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
 * [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
-* [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) (the service is for **Edge services cluster with Juniper vSRX**, and it is available to single-zone VMware instances only)
+* [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview). This service is included when you choose **Edge services cluster with Juniper vSRX**. It is available for single-zone and multizone instances.
 * [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 
 The VMware HCX™ service is optional for VMware Regulated Workloads, and it is available to single-zone VMware instances only. For more information, see [Planning for VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning#vc_planning-addon-services-hcx).

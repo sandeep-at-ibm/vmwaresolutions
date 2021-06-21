@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-18"
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ VUM allows you to perform orchestrated upgrades of hosts and then virtual machin
 * VM Hardware Upgrade to Match Host
 * VMware Tools Upgrade to Match Host
 
-VUM orchestrated upgrades allow you to upgrade the inventory objects in VCSA in a two-step process. First, the vSphere ESXi hosts are upgraded followed by the virtual machine upgrades. This two-step process can be configured on a cluster level or you can configure this at the individual vSphere ESXi host or virtual machine level for more granular control.
+VUM orchestrated upgrades allow you to upgrade the inventory objects in vCenter Server Appliance (VCSA) in a two-step process. First, the vSphere ESXi hosts are upgraded followed by the virtual machine upgrades. This two-step process can be configured on a cluster level or you can configure this at the individual vSphere ESXi host or virtual machine level for more granular control.
 
 In the orchestrated upgrade, the cluster is remediated first against the host baseline group, which applies patches, extensions and upgrades and after upgraded, the virtual machines in the cluster are remediated against the virtual machine upgrade baseline group that contains the VM Hardware Upgrade to Match Host and VMware Tools Upgrade to Match Host baselines.
 

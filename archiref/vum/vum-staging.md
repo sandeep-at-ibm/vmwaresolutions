@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-22"
+lastupdated: "2021-05-18"
 
 subcollection: vmwaresolutions
 
@@ -38,15 +38,15 @@ Remediation is the process in which VUM applies patches, extensions, and upgrade
 * Powered on, suspended, or powered off VMs and templates for VMware Tools and VM hardware upgrade.
 * Powered on virtual appliances that are created with VMware Studio 2.0 and later, for virtual appliance upgrade.
 
-If the update requires it, hosts are put into maintenance mode before remediation. The VCSA migrates the VMs to other hosts within VMware vCenter Server instance before the host is put in maintenance mode.
+If the update requires it, hosts are put into maintenance mode before remediation. The vCenter Server Appliance (VCSA) migrates the VMs to other hosts within VMware vCenter Server instance before the host is put in maintenance mode.
 
 ## For hosts in a vSAN cluster
 {: #vum-staging-hosts-vsan}
 
 Be aware of the following behavior for hosts that are part of a vSAN cluster:
 * The host remediation process might take an extensive amount of time to complete.
-* By design, only one host from a VSAN cluster can be in a maintenance mode at any time.
-* VUM remediates hosts that are part of a VSAN cluster sequentially even if you set the option to remediate the hosts in parallel.
+* By design, only one host from a vSAN cluster can be in a maintenance mode at any time.
+* VUM remediates hosts that are part of a vSAN cluster sequentially even if you set the option to remediate the hosts in parallel.
 * Any VM on the host that uses a VM storage policy with a setting of 0 for **Number of failures to tolerate**, the host might experience unusual delays when it enters maintenance mode. The delay occurs because vSAN must migrate the VM data from one disk to another in the vSAN datastore cluster and this can take many hours. You can work around this by setting **Number of failures to tolerate** to 1 for the VM storage policy, which results in creating two copies of the VM files in the vSAN datastore.
 * Any VM on the host that uses a VM storage policy with a setting of 1 for **Number of failures to tolerate**, then the VM becomes non-redundant when the host enters maintenance mode. If this is not acceptable, see [Virtual machine vSAN redundancy](/docs/vmwaresolutions?topic=vmwaresolutions-vum-vsan-redundancy).
 

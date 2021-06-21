@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-20"
+lastupdated: "2021-05-14"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -24,19 +24,19 @@ subcollection: vmwaresolutions
 The IBM Spectrum® Protect Plus service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.
 {: shortdesc}
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-For VMware vCenter Server® with NSX-V instances, the installed version is 10.1.5. Currently, automated installation of IBM Spectrum Protect Plus is not available for vCenter Server with NSX-T instances.
+For VMware vCenter Server® with NSX-V instances, the installed version is 10.1.5. Currently, automated installation of IBM Spectrum Protect Plus is not available for vCenter Server with NSX-T™ instances.
 {:note}
 
 ## Technical specifications for IBM Spectrum Protect Plus
 {: #spp_considerations-specs}
 
-For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 The following components are ordered and included in the IBM Spectrum Protect Plus service:
 
-### vCenter resources
+### vCenter Server resources
 {: #spp_considerations-vcenter}
 
 * Server VM running IBM Spectrum Protect Plus server

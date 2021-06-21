@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-04"
+lastupdated: "2021-04-16"
 
 subcollection: vmwaresolutions
 
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # Glossary of HCX components and terms
 {: #hcxclient-components}
 
-HCX consists of a cloud side (target or VCD environment) and one or more clients (source). An instance of HCX must be deployed per vCenter, even if the vCenters where HCX is deployed are linked in the same SSO domain on the client or cloud side. Configurations that are supported by HCX are, one-to-one, one-to-many, many-to-one, and many-to-many.
+VMware® HCX™ consists of a cloud side (target or VCD environment) and one or more clients (source). An instance of HCX must be deployed per vCenter, even if the vCenters where HCX is deployed are linked in the same SSO domain on the client or cloud side. Configurations that are supported by HCX are, one-to-one, one-to-many, many-to-one, and many-to-many.
 
 ## Target side and client side
 {: #hcxclient-components-cloud-client-side}
@@ -28,7 +28,7 @@ HCX has the concept of cloud side (target or VCD environment) and client side (s
 {: #hcxclient-components-hcx-manager}
 
 - The cloud side - HCX Cloud is configured to listen for incoming client-side registration, management, and control traffic.
-- The client-side - HCX Connector is a client-side specific OVA image file that provides the UI functionality for managing and operating HCX. The client-side HCX Manager is responsible for registration with the HCX Cloud and creating a management plane between the client and cloud side. Furthermore, it is responsible for deploying a service mesh on the client side and instructing the cloud side to do the same.
+- The client-side - HCX Connector is a client-side specific OVA image file that provides the UI functions for managing and operating HCX. The client-side HCX Manager is responsible for registration with the HCX Cloud and creating a management plane between the client and cloud side. Furthermore, it is responsible for deploying a service mesh on the client side and instructing the cloud side to do the same.
 
 ## Service Mesh Components
 {: #hcxclient-components-fleet}
@@ -36,11 +36,13 @@ HCX has the concept of cloud side (target or VCD environment) and client side (s
 HCX Service Mesh components are responsible for creating the data and control planes between client and cloud side. Deployed as virtual machines (VMs) in mirrored pairs, the service mesh consists of the following components:
 
 - Interconnect Appliance (HCX-IX) - The interconnect appliance creates encrypted tunnels that support vMotion and replication (bulk migration) traffic.
-- WAN Optimizer Appliance (HCX-WAN) - HCX includes an optionally deployed Silver Peak™ WAN optimization appliance. It is deployed as a VM appliance. When deployed, the CGW tunnel traffic is redirected to traverse the WAN Optimizer. Since the WAN optimizer significantly decreases traffic across the WAN (typically 3:1 to 6:1 observed) while increasing connection reliability, it is recommended to always deploy the WAN optimizer with the CGW. The added benefit of deploying the WAN optimizer is extended to limiting the WAN bandwidth consumed by VM migration traffic. The WAN optimizer management interface is not configured by default.
+- WAN Optimizer Appliance (HCX-WAN) - HCX includes an optionally deployed Silver Peak™ WAN optimization appliance. It is deployed as a VM appliance. When deployed, the CGW tunnel traffic is redirected to traverse the WAN Optimizer. Since the WAN optimizer significantly decreases traffic across the WAN (typically 3:1 to 6:1 observed) while it increases connection reliability, it is recommended to deploy the WAN optimizer with the CGW. The added benefit of deploying the WAN optimizer is extended to limiting the WAN bandwidth used by VM migration traffic. The WAN optimizer management interface is not configured by default.
 - Network Extension (HCX-NE) - Provides the Layer 2 network extension capabilities, enabling migrations between the on-premises location and the vSphere environment with the need to reassign IP addresses to the VMs.
-- Proxy ESXi host - Whenever the HCX-IX is configured to connect to the cloud side HCX site, a proxy ESXi host appears in the vCenter outside of any cluster. This ESXi host has the same management and vMotion IP address as the corresponding HCX-IX appliance. This allows for the vSphere environment at both the client and cloud side to function as if it is performing a local vMotion. Benefits to this method:
+- Proxy ESXi host - Whenever the HCX-IX is configured to connect to the cloud side HCX site, a proxy ESXi host appears in the vCenter Server outside of any cluster. This ESXi host has the same management and vMotion IP address as the corresponding HCX-IX appliance. As a result, the vSphere environment at both the client and the cloud side work as if it performs a local vMotion. 
+
+This method has the following benefits:
   - The management IP ranges on either side might be overlapping with no loss in functionality.
-  - The cloud side has no vSphere visibility into the client side making it more secure.
+  - The cloud side has no vSphere visibility into the client side, which makes it more secure.
 
 ## HCX user portals
 {: #hcxclient-components-hcx-user-portals}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-06-15"
 
 keywords: troubleshooting, secondary vCenter, vSphere inventory issue
 
@@ -26,7 +26,7 @@ subcollection: vmwaresolutions
 In a multi-site configuration, after you add a secondary instance, its VMware vCenter Server® system is not visible when logged in to the VMware vSphere® Web Client of a previously ordered instance.
 {: tsSymptoms}
 
-This is a known VMware 6.5 issue.
+This is a known VMware issue.
 {: tsCauses}
 
 To resolve the problem, you must restart the vSphere Web Client:

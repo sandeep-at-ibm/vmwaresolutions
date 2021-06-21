@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-02-01"
+lastupdated: "2021-06-10"
 
 keywords: vCenter Server networking, networking components, networking vCenter
 
@@ -43,16 +43,27 @@ An VMware NSX Edge™ Services Gateway is also deployed to be used by your workl
 
 ## Considerations when changing passwords for NSX components
 {: #vc_networkingonvcenterserver-change-nsx-component-password-considerations}
+
+Review the following considerations before you attempt to change the passwords for the NSX Manager, NSX Controllers, and NSX Edges.
+
+### Considerations when changing passwords for NSX-T components
+{: #vc_networkingonvcenterserver-change-pwd-nsx-t}
 {: faq}
 
-Review the following considerations before you attempt to change the passwords for the NSX Manager, NSX Controllers, and NSX Edges:
-* For NSX-V, you can change the NSX Manager password. This password is displayed on the **Summary** page of the instance in the {{site.data.keyword.vmwaresolutions_short}} console.
+* Do not change the NSX Manager admin password for NSX-T.
+* You can change the NSX Manager root password. This password is not displayed in the VMware Solutions console, but you can create a support ticket to gather this information.
+* You can change the passwords for the root user for NSX Controllers. The root credentials are displayed in the VMware Solutions console.
+* You can change the passwords for the admin user and the root user for the customer-managed VMware NSX Edge Services Gateway (ESG). The admin credentials are displayed in the VMware Solutions console, but the root credentials are not displayed. The passwords for the root user and the  admin user are the same.
+* You can change the passwords for admin user and root user for management services NSX ESG. The admin credentials are displayed in the VMware Solutions console, but the root credentials are not displayed. The passwords for the root user and the admin user are the same.
 
-   Do not change the NSX Manager's password for NSX-T.
-   {:note}
-* You can change passwords for NSX Controllers. For more information, see [Change Controller Password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
-* You can change the password and SSH settings for the customer-managed VMware NSX Edge Services Gateway (ESG).
-* Do not change the passwords for the Management VMware NSX Edge Services Gateway (ESG) and the related Distributed Logical Router.
+### Considerations when changing passwords for NSX-V components
+{: #vc_networkingonvcenterserver-change-pwd-nsx-v}
+{: faq}
+
+* You can change the NSX Manager password. This password is displayed on the **Summary** page of the instance in the VMware Solutions console.
+* You can change the NSX Controller password. This password is not displayed in the VMware Solutions console, but you can set a new password without the old password. For more information, see [Change Controller password](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-2667DD9E-E2F5-4403-BAC2-C7D1BBC23228.html){:external}.
+* You can change the password and the SSH settings for the customer-managed NSX ESG. This password is not displayed in the VMware Solutions console, but you can set a new password without the old password. For more information, see [Change CLI credentials](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-1DB9DE43-6B54-4FD1-903A-2DFFB87CD7FA.html?hWord=N4IghgNiBcIKYBMDmcAEAHMBnLB3A9gE4IgC+QA){:external}.
+* Do not change the passwords for the management VMware NSX ESG and the related Distributed Logical Router.
 
 ## Related links
 {: #vc_networkingonvcenterserver-related}
@@ -60,3 +71,5 @@ Review the following considerations before you attempt to change the passwords f
 * [Overview of NSX](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:external}
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:external}
 * [Managing NAT Rules](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.2/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}
+* [Resetting the passwords of an appliance](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-8816B842-2EC4-40A8-A618-F68DB29FABD2.html){:external}
+* [Change the CLI user's password](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.0/com.vmware.nsxt.admin.doc/GUID-DB31B304-66A5-4516-9E55-2712D12B4F27.html){:external}

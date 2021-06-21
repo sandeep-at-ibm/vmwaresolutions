@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-27"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -14,7 +14,7 @@ subcollection: vmwaresolutions
 # Cluster settings
 {: #cluster-settings}
 
-Before the addition of attached storage, the vCenter Server solution didn't enable advanced features such as vSphere Distributed Resource Scheduler (DRS) and vSphere High Availability (HA). With the addition of the NFS attached storage device, these features are enabled on the cluster with the settings that are listed in the following sections.
+Before the addition of attached storage, the VMware vCenter Server® solution didn't enable advanced features such as VMware® vSphere Distributed Resource Scheduler (DRS) and VMware vSphere® High Availability (HA). With the addition of the NFS attached storage device, these features are enabled on the cluster with the settings that are listed in the following sections.
 
 ## vSphere Distributed Resource Scheduler
 {: #cluster-settings-vsphere-drs}
@@ -48,7 +48,8 @@ Along with the automation level and migration threshold of the cluster, this des
 {: #cluster-settings-power-mgmt}
 
 When the VMware Distributed Power Management feature is enabled, DRS compares cluster- and host-level capacity to the demands of the cluster’s VMs, including recent historical demand. The power management feature places or recommends placing hosts in standby power mode if sufficient excess capacity is found or powering on hosts if capacity is needed. Depending on the resulting host power state recommendations, VMs might need to be migrated to and from the hosts as well.
-In this design, power management is disabled since there's no operational or financial benefit to powering on and off hosts in the cluster.
+
+In this design, power management is not enabled since there's no operational or financial benefit to powering on and off hosts in the cluster.
 
 ## vSphere High Availability
 {: #cluster-settings-vsphere-ha}
@@ -103,4 +104,4 @@ vSphere HA uses datastore heart beating to identify hosts that failed and hosts 
 ## Related links
 {: #cluster-settings-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

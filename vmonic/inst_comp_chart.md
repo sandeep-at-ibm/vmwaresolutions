@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-05"
+lastupdated: "2021-06-15"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -15,7 +15,7 @@ subcollection: vmwaresolutions
 # Offering comparison chart
 {: #inst_comp_chart}
 
-Review the following information to understand the differences in feature support between the various VMware Solutions offerings.
+Review the following information to understand the differences in feature support between the various {{site.data.keyword.cloud}} for VMware® Solutions offerings.
 
 ## vCenter Server vs VMware vSphere
 {: #inst_comp_chart-vcs-vss}
@@ -25,22 +25,22 @@ Review the following table to understand the differences in feature support for 
 | Feature | vCenter Server | VMware vSphere |
 |:-------- |:-------------- |:-------------- |
 | Powered by {{site.data.keyword.IBM}} advanced automation[^automation] | Yes | No. Self-built and configured. |
-| Storage options | - NFS (Shared File-level Storage) or vSAN™ available with automation </br>- iSCSI available with manual configuration | NFS, vSAN, or iSCSI available with manual configuration |
-| Number of ESXi™ servers in the initial cluster | For vSAN - four servers </br>For NFS </br> - three servers for production use </br> - two servers for non-production use | Because VMware vSphere is self-managed, there is no limitation. A customer can add as many ESXi servers as the portal allows. For example, you can deploy a 3 node vSAN cluster with FTT=1. |
-| Maximum number of ESXi servers[^servers] | 59 per cluster | 64 per cluster |
+| Storage options | NFS or vSAN™ available with automation. </br>iSCSI available with manual configuration | NFS, vSAN, or iSCSI available with manual configuration |
+| Number of ESXi™ servers in the initial cluster | For vSAN, four servers. </br>For NFS, three servers for production use and two servers for non-production use. | No limitation. One or more ESXi servers as allowed on the console. For example, you can deploy a three-node vSAN cluster with FTT=1. |
+| Maximum number of ESXi servers[^servers] | 59 per cluster | 96 per cluster |
 | Cloud automated multi-site deployment | Supported for new instances | Supported. Automated configuration not included. |
 | Add ESXi servers | Supported | Supported. Automated configuration not included. |
 | Remove ESXi servers | Supported | Supported. Automated configuration not included. |
 | Multi-cluster support | Maximum number depends on VMware® sizing guidelines | Supported. Automated configuration not included. |
 | Client-managed updating and patching of VMware stack | Client-managed updates - Native VMware tools (VMware Update Manager™)[^nsxv1] | Client-managed updates - Native VMware tools (VMware Update Manager) |
-| Backup and restore | Manually using IBM Spectrum® Protect Plus or Veeam®[^nsxv2] | Backup and restore solution not included |
+| Backup and restore | Manually, by using IBM Spectrum® Protect Plus or Veeam[^nsxv2]. | Backup and restore solution not included. |
 | Software-defined networking | NSX Advanced or Enterprise | NSX Advanced or Enterprise. Automated configuration not included. |
 | BYOL for vSphere and vSAN | Fully supported per cluster | Supported |
 | BYOL for vCenter Server and NSX | Fully supported per instance | Supported |
-| NSX license upgrade options | Upgrade available from NSX Advanced to Enterprise. | None |
+| NSX license upgrade options<br>(NSX-V only) | Upgrade available from NSX Advanced to Enterprise. | None |
 | vSAN license editions | vSAN Advanced or Enterprise | vSAN Advanced or Enterprise  |
 | Add-on services | Supported[^nsxv3] | Not supported by the automation of this solution. You can bring and install your own software. |
-{: caption="Table 1. Supported functions for vCenter Server instances and for vSphere clusters" caption-side="top"}
+{: caption="Table 1. Supported functions for vCenter Server instances and vSphere clusters" caption-side="top"}
 
 [^automation]: According to a validated design and with verification during deployment
 
@@ -59,15 +59,15 @@ Review the following table to understand the differences in feature support for 
 
 | Feature | vCenter Server | Security and Compliance Readiness Bundle | VMware Regulated Workloads |
 |:-------- |:-------------- |:-------------- |:-------------- |
-| vSphere version | 6.7 Update 3 or 7.0 Update 1c | 7.0 Update 1c | 7.0 Update 1c |
-| NSX edition | Advanced or Enterprise | Advanced or Enterprise | Enterprise |
+| vSphere version | 6.7 Update 3n or 7.0 Update 2b | 7.0 Update 2b | 7.0 Update 2b |
+| NSX edition[^nsxedi] | Advanced or Enterprise | Advanced or Enterprise | Enterprise |
 | NSX networking solution | NSX-V or NSX-T™ | NSX-T | NSX-T |
 | NFS | Optional | Optional | Not allowed |
 | vSAN | Optional | Optional | Required |
 | Consolidated cluster | Optional | Optional | Not allowed |
 | Separate management cluster | Supported | Not supported | Supported |
 | Minimum number of ESXi servers | For vSAN, four servers. </br>For NFS, three servers for production use and two servers for non-production use. | For vSAN, six servers. </br>For NFS, five servers. | 10 |
-| Edge services cluster | Optional | Required. Juniper vSRX or Bring your own gateway. | Required. Juniper vSRX, Bring your own gateway, or FortiGate Security Appliance. |
+| Edge services cluster | Optional | Required. Juniper vSRX, FortiGate® Virtual Appliance, Bring your own gateway. | Required. Juniper vSRX, FortiGate Virtual Appliance, Bring your own gateway, or FortiGate Security Appliance. |
 | Logging and monitoring with VMware vRealize Operations and Log Insight | Optional | Required | Required |
 | Role-based access with HyTrust CloudControl | Optional | Required | Required |
 | Compliance with Caveonix | Optional | Required | Required |
@@ -81,6 +81,8 @@ Review the following table to understand the differences in feature support for 
 | Stretched cluster - High Availability | Optional | Optional | Optional |
 | Financial Services Cloud with policy framework | No | No. Stepping stone to Financial Services, but no in-place upgrade. | Yes |
 {: caption="Table 2. Supported features for vCenter Server instances, Security and Compliance Readiness Bundle instances, and VMware Regulated Workloads" caption-side="top"}
+
+[^nsxedi]:You cannot order new instances of vCenter Server 6.7 with NSX-T.
 
 ## Related links
 {: #inst_comp_chart-related}

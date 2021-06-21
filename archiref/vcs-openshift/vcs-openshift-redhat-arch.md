@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-07-06"
+lastupdated: "2021-04-11"
 
 subcollection: vmwaresolutions
 
@@ -57,7 +57,7 @@ The Red Hat OpenShift deployment uses the following components of the {{site.dat
 
 For more information, see [IBM Cloud for VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch).
 
-**Next topic:** [IBM Cloud for VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch)
+**Next topic:** [VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch)
 
 ## Related links
 {: #vcs-openshift-redhat-arch-related}

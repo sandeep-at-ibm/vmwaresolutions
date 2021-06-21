@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-03-30"
+lastupdated: "2020-05-10"
 
 subcollection: vmwaresolutions
 
@@ -141,13 +141,13 @@ Many basic administrative tasks can be done much more efficiently than clicking 
 7. Type `cd 1`, press **Enter** and then `ls` and press **Enter**. You see your cluster:
   `0 cluster1 (cluster)``
 
-8. Use the VSAN commands against this cluster. To check the disk status type `vsan.disks_stats 0` and press **Enter**.
+8. Use the vSAN commands against this cluster. To check the disk status type `vsan.disks_stats 0` and press **Enter**.
 
 9. Make sure that the Health Status for all disks is OK. And then start the upgrade by typing `vsan.ondisk_upgrade 0` and then pressing **Enter**.
 
 10. Depending on your vSAN size, this task might take a lot of time. When completed, type `vsan.objstatusreport 0` and then press **Enter** to verify that the object versions are upgraded to the new on-disk format.
 
-11. The VSAN cluster upgrade is now completed. Type `exit` and press **Enter** to leave RVC.
+11. The vSAN cluster upgrade is now completed. Type `exit` and press **Enter** to leave RVC.
 
 **Next topic:** [VCSA update and SSO-linked vCenters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vcsa)
 

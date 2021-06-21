@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-04-07"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -20,9 +20,9 @@ subcollection: vmwaresolutions
 # Attached storage infrastructure design
 {: #storage-infra-design}
 
-{{site.data.keyword.vmwaresolutions_full}} provides VMware technology that is deployed in an automated way within {{site.data.keyword.cloud_notm}} data centers across the globe. Within the {{site.data.keyword.cloud_notm}} solutions portfolio, the base VMware vCenter Server offering consists of up to 10 clusters each containing up to 59 vSphere hosts, a single Platform Services Controller (PSC), and a vCenter Server Appliance capable of managing up to 400 hosts and 4,000 virtual machines.
+{{site.data.keyword.vmwaresolutions_full}} provides VMware® technology that is deployed in an automated way within {{site.data.keyword.cloud_notm}} data centers across the globe. Within the WMware Solutions portfolio, the VMware vCenter Server® offering consists of up to 10 clusters. Each cluster contains up to 59 vSphere hosts, a single Platform Services Controller (PSC), and a vCenter Server Appliance capable of managing up to 400 hosts and 4,000 virtual machines.
 
-The architecture that is presented here complements the vCenter Server solution by adding attached storage as a shared storage device for the environment. The attached storage device is located within the same {{site.data.keyword.cloud_notm}} data center as the vCenter Server deployment and consists of a single Network file system (NFS) share or multiple NFS exports from the {{site.data.keyword.cloud_notm}}.
+The architecture that is presented here complements the vCenter Server solution by adding attached storage as a shared storage device for the environment. The attached storage device is located within the same {{site.data.keyword.cloud_notm}} data center as the vCenter Server deployment. The storage device consists of a single Network File System (NFS) share or multiple NFS exports from the {{site.data.keyword.cloud_notm}}.
 
 The following graphic provides the overall architecture of the attached storage on vCenter Server deployment.
 
@@ -41,7 +41,7 @@ Physical networking is handled by {{site.data.keyword.cloud_notm}}. The followin
 ### IBM Cloud network overview
 {: #storage-infra-design-ibm-cloud-net-ovw}
 
-The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
+The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
 
 For more information about the {{site.data.keyword.cloud_notm}} network, see [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:external}.
 
@@ -69,7 +69,7 @@ Performance and Endurance storage are {{site.data.keyword.cloud_notm}} storage s
 
 IOPS ranging from 100 through 96,000 can be ordered with storage sizes of 20 GB - 24 TB. Performance and Endurance storage volumes are available for both block storage and file storage.
 
-In this design, the vCenter Server solution offers Endurance storage for attached storage. As a result, you can select and attach (via automation) Endurance NFS exports ranging in size from 20 GB to a maximum of 24 TB. The {{site.data.keyword.cloud_notm}} allows up to 64 vSphere ESXi hosts to connect to a single Endurance NFS export.
+In this design, the vCenter Server solution offers Endurance storage for attached storage. As a result, you can select and attach (through automation) Endurance NFS exports ranging in size from 20 GB to a maximum of 24 TB. The {{site.data.keyword.cloud_notm}} allows up to 96 vSphere ESXi hosts to connect to a single Endurance NFS export.
 
 Endurance is available in three IOPS performance tiers to support varying application needs.
 
@@ -85,4 +85,4 @@ In addition to the tiers of storage, {{site.data.keyword.cloud_notm}} Endurance 
 ## Related links
 {: #storage-infra-design-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-04"
+lastupdated: "2021-05-27"
 
 keywords: release notes, what's new, version 4.1
 
@@ -76,7 +76,7 @@ The following SAP®-certified bare metal server models are now available for dep
 * Dual Intel Xeon Platinum 8280M (Cascade Lake)
 * Quad Intel Xeon Platinum 8280M (Cascade Lake)
 
-### 25 Gb uplink speed updates
+### Uplink speed updates - 25 Gb
 {: #relnotes_v41-dedicated-uplink-speed}
 
 Enhanced support is now provided for the 25 Gb uplink speed option for vCenter Server instances and clusters, and VMware vSphere clusters:
@@ -136,7 +136,7 @@ This release provides the following service versions on newly deployed instances
 * Veeam® v11
 
 For more information, see:
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Ordering, viewing, and deleting services for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservices)
 * [Ordering, viewing, and deleting services for Security and Compliance Readiness Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-scb_addingremovingservices)
 * The individual overviews for each service

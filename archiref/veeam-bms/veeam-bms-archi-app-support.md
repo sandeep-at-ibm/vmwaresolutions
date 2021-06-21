@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-02-19"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Overview of application support with Veeam
 {: #veeam-bms-archi-app-support}
 
-For applications hosted on the VMs, Veeam requires network access to the VMs to provide application aware backups. In the Veeam Backup & Replication console, to enable the application-aware image-processing or the guest file system indexing options in the backup job, you need network access between customer overlay and the Veeam bare metal server management network (primary subnet on private VLAN 1). If you want to use these capabilities, routing must be designed and implemented between the customer NSX-V/NSX-T overlay networks.
+For applications hosted on the VMs, Veeam requires network access to the VMs to provide application aware backups. In the Veeam Backup & Replication console, to enable the application-aware image-processing or the guest file system indexing options in the backup job, you need network access between customer overlay and the Veeam bare metal server management network (primary subnet on private VLAN 1). If you want to use these capabilities, routing must be designed and implemented between the customer NSX-V or NSX-T™ overlay networks.
 
 The guest interaction proxy is a backup infrastructure component that sits between the backup server and processed VM. This component is needed if the backup or replication jobs perform the following processing of VMs:
 - Application-aware processing

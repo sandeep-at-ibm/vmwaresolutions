@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-21"
+lastupdated: "2021-06-16"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -13,13 +13,13 @@ subcollection: vmwaresolutions
 ---
 {:external: target="_blank" .external}
 
-# VMware Solutions: Take a look under the hood
+# VMware Solutions - Take a look under the hood
 {: #under_the_hood}
 
 ## Deploy and manage VMware virtualized environments
 {: #under_the_hood-deploy}
 
-Take an in-depth look at the architecture of {{site.data.keyword.vmwaresolutions_full}}, an {{site.data.keyword.cloud_notm}} offering that provides deployment and management of VMware® virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
+Take an in-depth look at the architecture of {{site.data.keyword.cloud}} for VMware® Solutions, an {{site.data.keyword.cloud_notm}} offering that provides deployment and management of VMware virtualized environments. In this tutorial, we show you the components of the offering so you can see how they work together to provision and maintain the environment in the public cloud.
 
 ## Two companies, one streamlined solution
 {: #under_the_hood-two-companies}
@@ -30,11 +30,11 @@ In the fall of 2016, IBM and VMware jointly released {{site.data.keyword.vmwares
 
 {{site.data.keyword.vmwaresolutions_short}} builds on VMware technology to significantly streamline the deployment and management of these software-defined data centers in the IBM public cloud. Using {{site.data.keyword.vmwaresolutions_short}}, it is now possible to deploy portions of the standard reference architecture to the {{site.data.keyword.cloud_notm}} automatically rather than manually. Environments that previously took weeks to deploy and configure can now be provisioned in a matter of hours.
 
-This ease of deployment allows you to focus on implementing solutions on top of VMware rather than building your environment. With environments at your quick disposal, you can build both hybrid cloud solutions spanning your private cloud and the IBM public cloud, and cloud-native solutions in the IBM public cloud. By combining multiple deployments, you can easily add disaster recovery or high availability capabilities to your solutions.
+This ease of deployment provides you the opportunity to focus on implementing solutions on top of VMware rather than building your environment. With environments at your quick disposal, you can build both hybrid cloud solutions that span your private cloud and the IBM public cloud, and cloud-native solutions in the IBM public cloud. By combining multiple deployments, you can easily add disaster recovery or high availability capabilities to your solutions.
 
-Now let's take a look under the hood of the {{site.data.keyword.vmwaresolutions_short}} architecture. You'll gain an understanding of the different components that are part of the solution, and how they work together to provision and manage your software-defined data center in the {{site.data.keyword.cloud_notm}}. You'll also learn about the network topology and several options you have for connecting to your environment.
+As we take a look under the hood of the {{site.data.keyword.vmwaresolutions_short}} architecture, you gain an understanding of the different components that are part of the solution. In addition, how the components work together to provision and manage your software-defined data center in the {{site.data.keyword.cloud_notm}}, the network topology, and several options you have for connecting to your environment.
 
-## IBM Cloud for VMware Solutions basics
+## VMware Solutions basics
 
 Your software-defined data centers are provisioned and managed by using the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console). You log in to the console by using your IBMid account.
 
@@ -46,7 +46,7 @@ When you order your vCenter Server instance, you first choose its name and the V
 
 In the next part of the order page, you enter the storage and networking characteristics for your instance. You can choose between vSAN and NFS storage for your cluster. Additionally, you can choose the size and number of vSAN Flash disks and the vSAN license edition, or the size and count and performance of NFS storage volumes. For networking, you choose the hostname prefix for your hosts and the subdomain and domain for the cluster. You have the option of deploying the Active Directory controllers as a single {{site.data.keyword.cloud_notm}} Microsoft® Windows® virtual server instance (VSI). Or, you can deploy the controllers as two Microsoft Windows virtual machines (VMs) within your cluster (for those VMs, you need to provide licensing and activation).
 
-At the bottom of the vCenter Server order page, you can select from various services that you can deploy for your VMware instance and which are billed to your {{site.data.keyword.cloud_notm}} account. Some services require additional configuration, which you specify as part of the order form.
+From the vCenter Server order page, you can select from various services that you can deploy for your VMware instance and which are billed to your {{site.data.keyword.cloud_notm}} account. Some services require configuration, which you specify as part of the order form.
 
 The order form calculates and displays a price estimate based on your selections. You have the opportunity to review this estimate and various terms and conditions before you place your order.
 
@@ -76,7 +76,7 @@ You select the {{site.data.keyword.cloud_notm}} data center where you want to pr
 
 After your instance is provisioned, if you are connected to your {{site.data.keyword.cloud_notm}} account through a VPN, you can connect to your vCenter Server directly from your workstation web browser.
 
-Your instance components are typically accessed by their hostnames rather than their IP addresses. To connect to and authenticate with vCenter, ensure that the vCenter and Platform Services Controller (PSC) hostname can be resolved by your workstation by adding it to your workstation's hosts file as shown in Listing 1. You can find the hostname and IP address in the {{site.data.keyword.vmwaresolutions_short}} console, on the **Summary** tab for your instance. You might also want to add the hostnames and IP addresses for your vSphere hosts to your hosts file.
+Your instance components are typically accessed by their hostnames rather than their IP addresses. To connect to and authenticate with vCenter, ensure that the vCenter and Platform Services Controller (PSC) hostname can be resolved by your workstation. Add it to your workstation's hosts file as shown in Listing 1. You can find the hostname and IP address in the {{site.data.keyword.vmwaresolutions_short}} console, on the **Summary** tab for your instance. You might also want to add the hostnames and IP addresses for your vSphere hosts to your hosts file.
 
 <pre># Dallas site vCenter and Platform Services Controller (PSC)
 10.208.85.196  vcenter-dallas.dallas.example.com
@@ -95,14 +95,14 @@ After your instance is deployed, you can manage it from the console. The managem
 
 The {{site.data.keyword.vmwaresolutions_short}} console provides a detailed view of each of your vCenter Server instances. For each instance, the **Summary** tab includes a link to the vCenter console and other details about the instance and management components. The **Infrastructure** tab shows details about the instance's clusters, hosts, storage, and networking, and steps to add or delete clusters and hosts and storage. On the **Licensing** tab, you can upgrade certain license editions. On the **Services** tab, you can view and manage the services that are deployed for your instance. The **Deployment history** tab shows a history of all actions that are performed on your instance.
 
-## IBM Cloud for VMware Solutions components
+## VMware Solutions components
 {: #under_the_hood-comp}
 
 A number of different components work together to provision and manage your environment. Most of these components are deployed into your {{site.data.keyword.cloud_notm}} account. Because the solution depends on all of these components working together, do not modify or cancel any of these components from your {{site.data.keyword.cloud_notm}} account. The correct way to delete a running instance is by using the console rather than canceling the individual components.
 
 While the environment is an integrated virtualization environment, the price of various virtualization components (such as VMware licenses), infrastructure components (bare metal servers, VLANs, subnets, and storage), and management components is itemized in the bill that you receive from {{site.data.keyword.cloud_notm}}.
 
-### The IBM Cloud for VMware Solutions console
+### The VMware Solutions console
 {: #under_the_hood-console}
 
 You log in to the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console) to create and manage your instances. This portion of the solution is responsible for the initial ordering and provisioning of your environment, and also for the ongoing management of your environment. Your deployed instances communicate with the console by using the {{site.data.keyword.cloud_notm}} Private network.
@@ -134,14 +134,14 @@ Regardless of how you choose to provide business continuity for your own workloa
 
 {{site.data.keyword.cloud_notm}} provides a number of VMware licenses (such as vCenter Server and NSX), which are installed into your instance and billed to your {{site.data.keyword.cloud_notm}} account.
 
-## IBM Cloud for VMware Solutions network architecture
+## VMware Solutions network architecture
 {: #under_the_hood-network}
 
 Your vCenter Server instance connects to a public VLAN for your use with your deployed workloads. The public VLAN is largely reserved for your use at your discretion. However, an NSX Edge Services Gateway pair is connected to the public VLAN allowing certain services to communicate outbound for licensing and billing purposes. It is possible to deploy an instance without use of the public network. In which case not all services are supported, and you might need to provide a web proxy to enable the use of certain services.
 
 Your vCenter Server instance has two private VLANs that are trunked together on the private network interface for your hypervisors. The first private VLAN is used for management connectivity (such as vCenter communications with hypervisors), and by NSX for tunneling all VXLAN traffic for your deployed workloads. The second private VLAN is used for vMotion and for storage traffic. The storage traffic can be either NFS or vSAN protocols.
 
-{{site.data.keyword.cloud_notm}} provides certain additional services on these private VLANs. Your Active Directory servers communicate with {{site.data.keyword.cloud_notm}} DNS servers over the private management VLAN. Your hosts and other components communicate with {{site.data.keyword.cloud_notm}} NTP servers over the private management VLAN. The IBM CloudBuilder and CloudDriver communicate with the {{site.data.keyword.vmwaresolutions_short}} console over this VLAN as well. Your hosts connect to {{site.data.keyword.cloud_notm}} Endurance storage over the private storage VLAN.
+{{site.data.keyword.cloud_notm}} provides services on these private VLANs. Your Active Directory servers communicate with {{site.data.keyword.cloud_notm}} DNS servers over the private management VLAN. Your hosts and other components communicate with {{site.data.keyword.cloud_notm}} NTP servers over the private management VLAN. The IBM CloudBuilder and CloudDriver communicate with the {{site.data.keyword.vmwaresolutions_short}} console over this VLAN as well. Your hosts connect to {{site.data.keyword.cloud_notm}} Endurance storage over the private storage VLAN.
 
 ### Connecting to your instance
 {: #under_the_hood-connect-inst}
@@ -153,9 +153,9 @@ For access to your deployed VMs, you can apply public IP addresses directly to y
 ## Conclusion
 {: #under_the_hood-conclusion}
 
-In this tutorial, you learned about the basic capabilities of {{site.data.keyword.vmwaresolutions_short}} for deploying and managing standardized VMware virtualization environments in the public cloud. Because you can provision these environments faster than ever before, you can focus your efforts on deploying your applications and solutions on top of them, and on connecting clouds together for disaster recovery or high availability.
+In this tutorial, you learned about the basic capabilities of {{site.data.keyword.vmwaresolutions_short}} for deploying and managing standardized VMware virtualization environments in the public cloud. Because you can provision these environments faster than ever before, you can focus your efforts on deploying your applications and solutions on top of them. Then, on connecting clouds together for disaster recovery or high availability.
 
-We explored the various components that are deployed into your {{site.data.keyword.cloud_notm}} account, which appear on your {{site.data.keyword.cloud_notm}} billing statement and work together to keep your environment running. Finally, we considered the network architecture of the solution along with some options for establishing connectivity to the environment, either by using various secure connectivity options to keep communications private, or by using various options for public internet connectivity.
+We explored the various components that are deployed into your {{site.data.keyword.cloud_notm}} account, which appear on your {{site.data.keyword.cloud_notm}} billing statement and work together to keep your environment running. Finally, we considered the network architecture of the solution along with some options for establishing connectivity to the environment. Either by using various secure connectivity options to keep communications private, or by using various options for public internet connectivity.
 
 Now that you're armed with everything you need to know to get started, go ahead and deploy your next VMware virtualization environment on the {{site.data.keyword.cloud_notm}} today!
 

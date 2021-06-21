@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-15"
+lastupdated: "2021-06-17"
 
 keywords: nsx editions, vsan editions, nsx edition comparison, vsan edition comparison
 
@@ -29,7 +29,7 @@ Within this design, there are multiple components that require licenses. This in
 | Component | Purpose | License |
 |:--------- |:------- |:------- |
 | VMware vSphere | Compute virtualization | vSphere 6.7 Enterprise Plus |
-| VMware vCenter Server | Infrastructure Management | vCenter Server 6.7 Standard |
+| VMware vCenter Server | Infrastructure management | vCenter Server 6.7 Standard |
 | VMware NSX | Network virtualization | NSX Base for Service Providers 6.4 |
 | VMware vSAN | Storage virtualization | vSAN 6.6 Advanced |
 {: caption="Table 1. License requirements" caption-side="top"}
@@ -89,6 +89,6 @@ The following table lists the available features for the **Advanced** and **Ente
 ## Related links
 {: #solution-appendix-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
 * [Design overview](/docs/vmwaresolutions?topic=vmwaresolutions-design_overview)
 * [Backing up components](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup)

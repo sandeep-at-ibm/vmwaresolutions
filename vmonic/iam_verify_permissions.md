@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-04-16"
 
 keywords: IAM user, user role, user permission, IAM account administrator
 
@@ -34,7 +34,7 @@ To identify an account owner who has the administrator role, complete the follow
 4. Scroll down through the list until you find a name with an oval icon to the right with the word **Owner**, which indicates that the user is an account administrator.
 5. Write down the name of this user.
 
-If the owner who you identified is not available or has left the company, find one or more other users with the administrator role. Consider who might be assigned the role, for example, a manager, team lead, or someone who works directly with {{site.data.keyword.cloud_notm}} customers.
+If the owner you identified is not available or has left the company, find one or more other users with the administrator role. Consider who might be assigned the role, for example, a manager, team lead, or someone who works directly with {{site.data.keyword.cloud_notm}} customers.
 
 To locate a user with an administrator role, click the name link and review the information on the **Access policies** tab. Look for the following values:
   * Role - Administrator

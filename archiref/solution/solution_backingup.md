@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-02"
+lastupdated: "2021-06-17"
 
 subcollection: vmwaresolutions
 
@@ -106,6 +106,6 @@ With proper planning, you can ensure that your VMware instance can suffer the lo
 ## Related links
 {: #solution_backingup-related}
 
-* [Overview of {{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
+* [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview)
 * [Design overview](/docs/vmwaresolutions?topic=vmwaresolutions-design_overview)
 * [Scaling capacity](/docs/vmwaresolutions?topic=vmwaresolutions-solution_scaling)

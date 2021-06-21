@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2020, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-16"
 
 keywords: security and compliance for VMware Solutions, security for VMware Solutions, compliance for VMware Solutions
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Managing security and compliance with VMware Solutions
 {: #manage-scc}
 
-With VMware® Solutions, you can integrate with the {{site.data.keyword.compliance_short}} to manage security and compliance for your organization.
+With {{site.data.keyword.cloud}} VMware® Solutions, you can integrate with the {{site.data.keyword.compliance_short}} to manage security and compliance for your organization.
 {: shortdesc}
 
 With the {{site.data.keyword.compliance_short}}, you can monitor for controls that pertain to your VMware Solutions infrastructure and workloads.
@@ -26,7 +26,7 @@ With the {{site.data.keyword.compliance_short}}, you can monitor for controls th
 ## Monitoring security and compliance posture with VMware Solutions by using Caveonix
 {: #manage-scc-monitor}
 
-VMware Solutions uses the optional [Caveonix RiskForesight™ service](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) to report security and compliance posture and findings to {{site.data.keyword.compliance_short}}.
+With VMware Solutions, you can optionally use [Caveonix RiskForesight service](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) to report security and compliance posture and findings to {{site.data.keyword.compliance_short}}.
 
 This integration requires you to [establish a public connection](/docs/security-advisor?topic=security-advisor-setup-caveonix#connect-caveonix) from RiskForesight to {{site.data.keyword.compliance_short}} and [schedule a job](/docs/security-advisor?topic=security-advisor-setup-caveonix#caveonix-job) to periodically report findings.
 

@@ -106,7 +106,7 @@ This release installs BIG-IP VE v15.1.0.2 on newly deployed instances.
 
 The following versions of the HyTrust CloudControl service are installed on newly deployed instances, based on the NSX networking solution type of your instance:
   * 5.6 for vCenter Server with NSX-V
-  * 6.1 for vCenter Server with NSX-T
+  * 6.1 for vCenter Server with NSX-T™
 
 ### Enhancements for Juniper vSRX
 {: #relnotes_v36-services-juniper-vsrx}

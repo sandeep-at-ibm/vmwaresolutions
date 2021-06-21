@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-26"
+lastupdated: "2021-06-04"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -82,21 +82,21 @@ If you're a non-Business Partner, you can select the following components for yo
 * VMware vRealize Operation Enterprise
 * VMware vRealize Log Insight
 
-The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6.0. If you plan to use your own license for VMware vSphere Enterprise Plus 6.0, an {{site.data.keyword.cloud_notm}} infrastructure ticket is opened on your behalf. The ticket requests that the vSphere licenses of the ordered {{site.data.keyword.cloud_notm}} bare metal servers are replaced with your provided licenses.
+The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6. If you plan to use your own license for VMware vSphere Enterprise Plus 6, an {{site.data.keyword.cloud_notm}} infrastructure ticket is opened on your behalf. The ticket requests that the vSphere licenses of the ordered {{site.data.keyword.cloud_notm}} bare metal servers are replaced with your provided licenses.
 {:note}
 
 ### Licensing options
 {: #vs_orderinginstances-licensing-options}
 
-Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you will need.
+Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you need.
 {:important}
 
 You have the following options for licensing the selected VMware components:
 * **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
 
-   If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple VMware ESXi™ servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the DevOps team generates.
+   If you choose to purchase any license, except for vSphere Enterprise Plus and vCenter Server, and you order multiple VMware ESXi™ servers, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to combine license keys. You are responsible to follow up with the ticket to ensure that you use only the license keys that the VMware Solutions Support team generates.
 
-* **I will provide the license**: In this case, you use your own license (BYOL) for the VMware component. You will not enter your BYOL licenses when you create your order for the first time, but you will do it later when the vSphere cluster is created.
+* **I will provide the license**: In this case, you use your own license (BYOL) for the VMware component. You do not enter your BYOL licenses when you create your order for the first time, but you do it later when the vSphere cluster is created.
 
 ## Bare metal server settings
 {: #vs_orderinginstances-bare-metal-settings}
@@ -118,9 +118,9 @@ Skylake servers are not supported for vSphere Enterprise Plus 7.0u1 instances.
 
 | CPU model     | RAM sizes     |
 |:------------- |:------------- |
-| Dual Intel® Xeon® Silver 4110 Processor / 16 cores total, 2.10 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 Processor / 36 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel® Xeon® Silver 4110 processor / 16 cores total, 2.10 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake bare metal servers" caption-side="top"}
 
 ### Cascade Lake
@@ -130,12 +130,12 @@ For **Cascade Lake** servers, you can choose the following CPU models and a supp
 
 | CPU model     | RAM sizes     |
 |:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 Processor / 20 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 Processor / 32 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 Processor / 40 cores total, 2.50 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Platinum 8260 Processor / 48 cores total, 2.40 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 Processor / 80 cores total, 2.50 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8260 Processor / 96 cores total, 2.40 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.50 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 processor / 48 cores total, 2.40 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.50 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 processor / 96 cores total, 2.40 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 3. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 ### SAP-certified
@@ -177,25 +177,31 @@ For **SAP-certified** servers, you have the following options:
 {: #vs_orderinginstances-bare-metal-number}
 
 The number of ESXi servers that you want add to the vSphere cluster. All the ESXi servers have the same configuration.
-* If you selected the VMware NSX component, a minimum of three servers is required.
-* If you selected the VMware vSAN component, a minimum of four servers is required.
 
 ## Storage settings
 {: #vs_orderinginstances-storage-settings}
 
 For orders without vSAN, ESXi servers are ordered with a 12-disk chassis, with two disks for the ESXi operating system (OS).
 
-For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and two disks ordered for caching. The ESXi OS is placed on a single M.2 solid state drive that does not consume a disk bay. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting **Disk type and size for vSAN capacity disks** and **Number of vSAN capacity disks**.
+For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and two disks are ordered for caching. The ESXi OS is placed on a single M.2 solid-state drive that does not use a disk bay. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting **Disk type and size for vSAN capacity disks** and **Number of vSAN capacity disks**.
 
 If you select the VMware vSAN component for the cluster, specify the following settings:
-* **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
-* **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
-* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which is useful for workloads that require less latency and higher IOPS throughput.
+* **Disk type and size for vSAN capacity disks** - Select an option for the capacity disks that you need.
+* **Number of vSAN capacity disks** - Specify the number of capacity disks that you want to add.
+* If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High performance with Intel Optane** option is available only for the **Skylake** and **Cascade Lake** CPU models.
+  The **High performance with Intel Optane** option is available only for vSphere 6.7u3 instances with the Skylake and Cascade Lake CPU models.
   {:note}
 
 * Review the **Disk size for vSAN cache disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
+
+### Enable vSAN deduplication and compression
+{: #vs_orderinginstance-storage-enable-comp}
+
+vSAN storage depends on the number of servers and your total disk capacity, and the use of deduplication and compression.
+
+The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){:external}.
+{:note}
 
 ## Network interface settings
 {: #vs_orderinginstances-network-interface-settings}
@@ -246,11 +252,17 @@ Network interface card (NIC) enablement settings are based on your selection of 
 ### Uplink speed
 {: #vs_orderinginstances-uplink}
 
-The following options are provided for the uplink speed:
-* 10 Gb - This option is selected by default.
-* 25 Gb - This option is available only when the vCenter Server instance meets the following requirements:
-   * The bare metal server is **Cascade Lake** or **SAP-certified**.
-   * The data center is one of the following locations: **Dallas 10**, **Dallas 12**, **Dallas 13**, **Frankfurt 02**, **London 04**, **Paris 04**, **Paris 05**, **Paris 06**, **Sydney 04**, **Sydney 05**, **Tokyo 02**, **Tokyo 04**, **Tokyo 05**, **Toronto 04**, **Washington DC 04**, **Washington DC 06**, or **Washington DC 07**.
+The uplink speed provides two options:
+* 10 Gb, which is selected by default.
+* 25 Gb, which is available only for **Cascade Lake** and **SAP-certified** bare metal servers and for specific locations.
+
+| {{site.data.keyword.cloud_notm}} data center | Region |
+|:-------------------------------------------- |:------ |
+| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
+| Frankfurt 02 <br>Frankfurt 05 <br>London 04 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
+| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
+| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+{: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs
 {: #vs_orderinginstances-vlans}
@@ -315,11 +327,14 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
       * For **Skylake**, **Cascade Lake**, or **SAP-certified** - **HANA** servers, specify the CPU model and the RAM size.
       * For **SAP-certified** - **NetWeaver** server, choose one of the preset configurations.
    3. Specify the number of bare metal servers.
-6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration. Specify the disk types for the capacity and cache disks, and the number of disks. If you want more storage, select the **High performance with Intel Optane** checkbox.
+6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration.
+  * If you want more storage, select the **High performance with Intel Optane** checkbox.
+  * Specify the disk types for the capacity and cache disks, and the number of disks.
+  * By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
 7. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label (vSphere 6.7u3 instances only), and domain name.
    2. Select the network setting of either **Public and private network** or **Private network only**.
-   3. Select the uplink speed setting.
+   3. Select the uplink speed. The 25 Gb option is available for Cascade Lake servers and for specific data centers only.
    4. Select the network interface that you want to use.
     * If you want to order new public and private VLANs, click **Order new VLANs**.
     * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and optionally the subnets.

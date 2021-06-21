@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-29"
+lastupdated: "2021-05-14"
 
 keywords: add services for Security and Compliance Readiness Bundle, remove services for Security and Compliance Readiness Bundle, scb add-on services
 
@@ -25,17 +25,17 @@ You can order services for your Security and Compliance Readiness Bundle instanc
 {: #scb_addingremovingservices-available-services}
 
 The following services are available for Security and Compliance Readiness Bundle instances:
-* [Veeam® 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
-* [Juniper® vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
-* [VMware HCX™](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
-* [Red Hat® OpenShift® for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_ordering)
+* [Veeam 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
+* [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
+* [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
+* [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_ordering)
 
 ## Procedures to order, view, or delete services for Security and Compliance Readiness Bundle instances
 
-The procedures to order, view, and delete services for Security and Compliance Readiness Bundle instances are similar to the procedures of VMware vCenter Server® instances. For more information, see the following vCenter Server procedures.
-* [Procedure to add services to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-adding-procedure)
-* [Procedure to view services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-viewing-procedure)
-* [Procedure to delete services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-removing-procedure)
+The procedures to order, view, and delete services for Security and Compliance Readiness Bundle instances are similar to those of VMware vCenter Server® instances. For more information, see the following topics:
+* [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
+* [Viewing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewingservices)
+* [Deleting services from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingservices)
 
 ## Related links
 {: #scb_addingremovingservices-related}

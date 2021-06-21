@@ -104,7 +104,7 @@
   <text x="178" y="400.5">Private B/vMotion</text>
  </g>
  <g font-family="Helvetica" font-size="12px" text-anchor="end">
-  <text x="176" y="421.5">Private B/VSAN</text>
+  <text x="176" y="421.5">Private B/vSAN</text>
  </g>
  <g pointer-events="none">
   <path d="m181 418h212q10 0 20 0h190q10 0 10-10v-62q0-10 0-20v-10q0-10-3.16-19.49l-6.84-20.51" fill="none" stroke="#007fff" stroke-miterlimit="10" stroke-width="2"/>

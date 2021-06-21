@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-13"
+lastupdated: "2021-05-14"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -34,7 +34,7 @@ As part of the ordering process for your vCenter Server instance, the following 
 * An NSX Edge appliance is deployed and configured to perform network address translation (NAT). NAT is done from the range of IP addresses of the workload logical switch to a public IP address on the NAT rules.
 **(NSX-V only)** If you installed the Veeam® service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Veeam overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations).
 
-## Procedure to configure the networking settings for your VMs
+## Configuring the networking settings for your VMs
 {: #vc_esg_config-procedure-config-networking}
 
 To take advantage of NSX for your workload VMs, you must configure a number of settings by completing the following steps when you create your VMs:
@@ -76,7 +76,7 @@ For more information about NSX Edge NAT rules, see [Managing NAT rules](https://
 
 NSX-T enables the SNAT rule by default. For more information about modifying the existing rules, see [Configure Source and Destination NAT on a Tier-0 Logical Router](https://docs.vmware.com/en/VMware-NSX-T-Data-Center/2.4/administration/GUID-45949ACD-9029-4674-B29C-C2EABEB39E1D.html){:external}.
 
-## Procedure to identify customer subnets details for NSX-V
+## Identifying customer subnets details for NSX-V
 {: #vc_esg_config-procedure-identify-customer-subnets-details}
 
 The edge **customer-nsx-edge** is intended for your own usage, so you can modify it to define more NAT rules for inbound or outbound traffic. These rules must use only the IP addresses on the public or private customer subnets that are ordered on your behalf.
@@ -96,7 +96,7 @@ Additionally, you can find more details about the customer subnets by completing
    Do not use the IP addresses that are ordered and used during the initial setup. However, you can use other IP addresses on these subnets according to your requirements. To set up more network address translation rules, see [Managing NAT rules](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-5896D8CF-20E0-4691-A9EB-83AFD9D36AFD.html){:external}.
    {:important}
 
-## Procedure to identify customer subnets details for NSX-T
+## Identifying customer subnets details for NSX-T
 {: #vc_nsx-t_esg_config-procedure-identify-customer-subnets-details}
 
 The logical routers `<instance_name>-<podname>-<cluster_name>-T1-workload` and `<instance_name>-<podname>-<cluster_name>-T0-workload`, and the edges `cust-edge0` and `cust-edge1` are intended for your own usage. You can modify them to define more NAT rules for inbound or outbound traffic. These rules must use only the IP addresses on the public or private customer subnets that are ordered on your behalf.

@@ -52,7 +52,7 @@ Access the [OpenShift Infrastructure Providers page](https://cloud.redhat.com/op
 1. Download the installer.
 2. Download the Pull Secret.
 3. Download the Red Hat Enterprise Linux CoreOS (RHEL CoreOS) OVA image or download the OVA by using `curl`:
-  `curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.4/latest/rhcos-4.4.3-x86_64-vmware.x86_64.ova`.
+  `curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.6/latest/rhcos-4.6.3-x86_64-vmware.x86_64.ova`.
 4. Download the command-line tools if you want to run the commands from a desktop or outside Bastion host.
 
 ## Downloading RHEL 7.6 ISO
@@ -130,13 +130,13 @@ export GOVC_INSECURE=1
 export GOVC_NETWORK='SDDC-DPortGroup-Mgmt'
 export GOVC_DATASTORE='vsanDatastore'
 
-rhcos-4.4.3-x86_64-vmware.x86_64.ova
+rhcos-4.6.3-x86_64-vmware.x86_64.ova
 
-govc import.spec ./rhcos-4.4.3-x86_64-vmware.x86_64.ova | python -m json.tool > rhcos.json
+govc import.spec ./rhcos-4.6.3-x86_64-vmware.x86_64.ova | python -m json.tool > rhcos.json
 vi rhcos.json
   - replace  "Network": "SDDC-DPortGroup-Mgmt"
   - leave name as "VM network"
-govc import.ova -options=./rhcos.json -name=rhcos-4.4.3-x86_64-vmware.x86_64.ova
+govc import.ova -options=./rhcos.json -name=rhcos-4.6.3-x86_64-vmware.x86_64.ova
 govc vm.markastemplate vm/rhcos-latest
 ```
 

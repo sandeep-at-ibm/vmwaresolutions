@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-05-03"
 
 keywords: VLAN ports, vmware solutions ports, ports usage vmware solutions
 
@@ -46,7 +46,7 @@ It is not recommended to put a firewall on a secondary private VLAN that has sto
 
 | Public VLAN | Private VLAN | Secondary private VLAN |
 |:------------|:-------------|:-----------------------|
-| Primary subnet<br><br>Portable subnets:<br>- Management edge gateway public<br>- Customer edge gateway public | Primary subnet<br><br>Portable subnets:<br>- Infrastructure VMs (CD/vCenter/AD)<br>- NSX host TEP traffic (NSX-T)[^hosttep-v7]<br>- VMware NSX® Host TEP (NSX-V)<br>- Customer edge gateway private | Portable subnets:<br>- vSAN™ traffic<br>- Shared storage traffic<br>- vMotion traffic<br>- NSX host TEP traffic (NSX-T)[^hosttep-v67]<br>- NSX edge TEP traffic (NSX-T)<br>- Customer edge TEP traffic (NSX-T) |
+| Primary subnet<br><br>Portable subnets:<br>- Management edge gateway public<br>- Customer edge gateway public | Primary subnet<br><br>Portable subnets:<br>- Infrastructure VMs (CD/vCenter/AD)<br>- NSX host TEP traffic (NSX-T™)[^hosttep-v7]<br>- VMware NSX® Host TEP (NSX-V)<br>- Customer edge gateway private | Portable subnets:<br>- vSAN™ traffic<br>- Shared storage traffic<br>- vMotion traffic<br>- NSX host TEP traffic (NSX-T)[^hosttep-v67]<br>- NSX edge TEP traffic (NSX-T)<br>- Customer edge TEP traffic (NSX-T) |
 {: caption="Table 1. Subnets for public, private, and secondary private VLANs" caption-side="top"}
 
 [^hosttep-v7]: For NSX-T on vSphere 7 only
@@ -91,7 +91,7 @@ For more information about Red Hat® OpenShift® (OCP) networking, see [About th
 | IBM CloudBuilder<br>IBM CloudDriver | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure DNS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 53 | UDP™ | Use {{site.data.keyword.cloud_notm}} infrastructure DNS service | |
 | IBM CloudBuilder<br>IBM CloudDriver | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure NTP service | {{site.data.keyword.cloud_notm}} infrastructure services network | 123 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure NTP service | |
 | IBM CloudBuilder<br>IBM CloudDriver | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure endurance storage | {{site.data.keyword.cloud_notm}} infrastructure services network | Any | ICMP and TCP | Set up endurance storage for ESXi host | |
-| IBM CloudBuilder<br>IBM CloudDriver | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Cloud Object Storage | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} Object Storage service | HTTPS |
+| IBM CloudBuilder<br>IBM CloudDriver | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Cloud Object Storage<br>10.1.129.0/24 | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} Object Storage service | HTTPS |
 | IBM CloudBuilder<br>IBM CloudDriver | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Rabbit MQ<br>166.9.48.91, 166.9.51.14, 166.9.58.39 | {{site.data.keyword.cloud_notm}} endpoint service network | 32378 | TCP | Use {{site.data.keyword.cloud_notm}} Rabbit MQ service | |
 | IBM CloudBuilder<br>IBM CloudDriver | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} Activity Tracker service | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} Activity Tracker service | HTPPS |
 | Windows Active Directory | Private primary subnet<br>Infrastructure VMs | {{site.data.keyword.cloud_notm}} infrastructure DNS service | {{site.data.keyword.cloud_notm}} infrastructure services network | 53 | UDP | Use {{site.data.keyword.cloud_notm}} infrastructure DNS service | |

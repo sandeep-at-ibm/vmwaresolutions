@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-05-20"
 
 subcollection: vmwaresolutions
 
@@ -25,7 +25,7 @@ The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads is built w
 ## Management cluster
 {: #vrw-vsphere-platform-management}
 
-The management software stack consists of vCenter Server, AD/DNS, and vRealize operations tooling. vCenter Server manages all hosts in the vCenter Server instance. AD/DNS provide Domain Name Services (DNS) and management authentication services, a local NTP source, and role-based access control (RBAC) for access to the vCenter, vRealize operations tooling, and NSX-T administration portal. The vRealize operations tooling includes vRealize Operations Manager (vROps), and vRealize LogInsight (vRLI). These components collectively provide a native console for vSphere operations, ability to automate management of the cloud platform, centralized log collection and analysis, and network visibility and optimization up to the hypervisor. SaaS consumer workloads are not monitored by default.
+The management software stack consists of vCenter Server, AD/DNS, and vRealize operations tooling. vCenter Server manages all hosts in the vCenter Server instance. AD/DNS provide Domain Name Services (DNS) and management authentication services, a local NTP source, and role-based access control (RBAC) for access to the vCenter, vRealize operations tooling, and NSX-T™ administration portal. The vRealize operations tooling includes vRealize Operations Manager (vROps), and vRealize LogInsight (vRLI). These components collectively provide a native console for vSphere operations, ability to automate management of the cloud platform, centralized log collection and analysis, and network visibility and optimization up to the hypervisor. SaaS consumer workloads are not monitored by default.
 
 Within the Management cluster, shared storage is used to provide enhanced resiliency to the management stack. The use of shared storage provides rapid restoration of management components if an ESXi host is lost. vSAN based storage is used to keep all management stack data in the account boundary. vSAN requires a minimum cluster size of four ESXi hosts.
 
@@ -53,7 +53,7 @@ One vCenter Server is deployed to manage the management cluster, the edge servic
 ### NSX-T
 {: #vrw-vsphere-platform-management-nsxt}
 
-NSX-T provides a highly secure and flexible software defined network to support the application requirements. NSX-T controllers are hosted in the management cluster.
+NSX-T™ provides a highly secure and flexible software defined network to support the application requirements. NSX-T controllers are hosted in the management cluster.
 
 NSX-T is configured with three controllers, which provide a highly available and redundant configuration. Additionally a virtual IP (VIP) address is used to access the cluster to provide fault tolerance and high availability to NSX Manager nodes. Each controller manager is assigned a VLAN–backed IP address from the private portable address block that is designated for management components.
 
@@ -119,7 +119,7 @@ No vSphere management components are deployed to the edge services cluster. The 
 ## Workload cluster
 {: #vrw-vsphere-platform-workload}
 
-NSX-T edge clusters VMs that house the Tier-0 and Tier-1 routers are on the workload clusters. No vSphere management components are deployed to the workload cluster. The tooling in the management cluster is used to manage the workload cluster ESXi hosts.
+THe NSX-T edge services cluster VMs that house the Tier-0 and Tier-1 routers are on the workload clusters. No vSphere management components are deployed to the workload cluster. The tooling in the management cluster is used to manage the workload cluster ESXi hosts.
 
 **Next topic**: [Encryption](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-encryption)
 

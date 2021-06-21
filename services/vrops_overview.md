@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-24"
+lastupdated: "2021-05-14"
 
 keywords: vRealize, vRealize info, tech specs vRealize
 
@@ -31,7 +31,7 @@ Like the other VMware components in the stack, you can bring your enterprise lic
 
 vRealize Operations and vRealize Log Insight supports vCenter Server multizone instances. For more information, see [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
 
-{{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
 The current versions that are installed are vROps 8.2 and vRLI 8.2.
 {:note}
@@ -39,7 +39,7 @@ The current versions that are installed are vROps 8.2 and vRLI 8.2.
 ## Technical specifications for vRealize Operations and Log Insight
 {: #vrops_overview-specs}
 
-For more information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 The following components are ordered and included in the vRealize Operations and Log Insight service:
 * VMware vRealize Operations (vROps) 8.2
@@ -56,7 +56,7 @@ Review the following considerations before you delete the service:
 * Before you delete the service, you must remove any personal VMs from storage deployed with this service. vRealize Operations and Log Insight only orders personal VMs if it’s not vSAN.
 * The VXLAN, DLR, and the Edge Gateway that were created during the initial deployment of vRealize Operations and Log Insight is deleted. The VMs that you deployed on VXLAN lose connectivity after the deletion of vRealize Operations and Log Insight begins.
 * If you delete vRealize Operations and Log Insight, you need to remove the Syslog Server from the NSX Manager and the NSX Controller manually.
-* If you installed the vRealize Operations and Log Insight service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-remove-DNS-entries).
+* If you installed the vRealize Operations and Log Insight service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingservices#vc_deletingservices-DNS-entries).
 
 ### Removing the Syslog Server from the NSX Manager
 {: #vrops_overview-remove-nsx-manager}

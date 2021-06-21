@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-04-30"
 
 subcollection: vmwaresolutions
 
@@ -47,7 +47,7 @@ Privileged users are granted `cloudadmin` access to vCenter Server through the H
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| IBM automation | `ibm_automation`<br/>(NSX-T principal identity user) | Used post deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added or removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
+| IBM automation | `ibm_automation`<br/>(NSX-T™ principal identity user) | Used post deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added or removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
 | Privileged user | `admin` | Created for customer use only. |
 {: caption="Table 2. NSX Manager user IDs" caption-side="top"}
 

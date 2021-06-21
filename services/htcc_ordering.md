@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-31"
+lastupdated: "2021-05-14"
 
 keywords: Hytrust CloudControl, Hytrust configuration, order Hytrust
 
@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # Ordering HyTrust CloudControl
 {: #htcc_ordering}
 
-You can add the HyTrust® CloudControl™ service (with an HA pair of HyTrust DataControl® appliances included) to a new VMware vCenter Server® with NSX-T instance. You can also add the service to your existing vCenter Server with NSX-T instance.
+You can add the HyTrust® CloudControl™ service (with an HA pair of HyTrust DataControl® appliances included) to a new VMware vCenter Server® with NSX-T™ instance. You can also add the service to your existing VMware® vCenter Server with NSX-T instance.
 
 ## Ordering HyTrust CloudControl for a new instance
 {: #htcc_ordering-new}
@@ -40,7 +40,7 @@ When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_ord
 
 * [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
 * [Managing HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtcc)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices)
+* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [HyTrust website](https://www.hytrust.com/){:external}

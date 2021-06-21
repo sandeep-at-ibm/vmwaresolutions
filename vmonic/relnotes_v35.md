@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020, 2021
+  years:  2020,  2021
 
-lastupdated: "2021-06-02"
+lastupdated: "2021-06-16"
 
 keywords: release notes, what's new, version 3.5
 
@@ -27,12 +27,12 @@ This release includes new features, component updates, usability enhancements, a
 ## VMware Solutions Shared
 {: #relnotes_v35-shared}
 
-(Updated on 26 Feb 2020) {{site.data.keyword.vmwaresolutions_short}} Shared, a managed public Infrastructure as a Service (IaaS) solution, offers either a standardized or customizable deployment option of VMware vCloud Director Virtual Data Center environments. Use Virtual Data Center instances to quickly and seamlessly migrate or deploy VMware workloads to the cloud on top of IBM hosted VMware infrastructure. The Veeam Availability Suite and Veeam Cloud Connect Replication services are available and ready-to-use in all Virtual Data Center instances. Charges are incurred only if you choose to use the service.
+(Updated on 26 February 2020) {{site.data.keyword.vmwaresolutions_short}} Shared, a managed public Infrastructure as a Service (IaaS) solution, offers either a standardized or customizable deployment option of VMware vCloud Director Virtual Data Center environments. Use Virtual Data Center instances to quickly and seamlessly migrate or deploy VMware workloads to the cloud on top of IBM hosted VMware infrastructure. The Veeam Availability Suite and Veeam Cloud Connect Replication services are available and ready-to-use in all Virtual Data Center instances. Charges are incurred only if you choose to use the service.
 
 ## VMware Solutions Dedicated
 {: #relnotes_v35-dedicated}
 
-To consolidate the {{site.data.keyword.vmwaresolutions_short}} offerings for a better customer experience, the VMware vCenter Server (both NSX-V and NSX-T) instances and VMware vSphere clusters are now grouped under a new card on the console, called {{site.data.keyword.vmwaresolutions_short}} Dedicated.
+To consolidate the {{site.data.keyword.vmwaresolutions_short}} offerings for a better customer experience, the VMware vCenter Server (both NSX-V and NSX-T™) instances and VMware vSphere clusters are now grouped under a new card on the console, called {{site.data.keyword.vmwaresolutions_short}} Dedicated.
 
 On the {{site.data.keyword.vmwaresolutions_short}} console, in the **Start Provisioning** section, you can click the **VMware Solutions Dedicated** to start your instance order.
 
@@ -122,7 +122,7 @@ A direct link to order Gateway appliances is now available on the **Security and
 ## New and updated documentation
 {: #relnotes_v35-updated-doc}
 
-* (Updated on March 6, 2020) The _Financial Services Sector Cloud reference architecture_ is now available in the *Reference* section of the user documentation.
+* (Updated on 6 March 2020) The _Financial Services Sector Cloud reference architecture_ is now available in the *Reference* section of the user documentation.
 * Various updates are made for the [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [{{site.data.keyword.vmwaresolutions_short}} Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
 
 ## User interface updates and enhancements

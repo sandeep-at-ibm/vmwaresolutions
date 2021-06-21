@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-05-10"
 
 keywords: history message, audit history, error messages
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Instance history messages
 {: #audit_messages}
 
-All operations that {{site.data.keyword.cloud}} performs for your VMware instance are logged in the instance history. You can use the instance history as a reference to review these operations. For more information about reviewing your instance history, see [Procedure to view the deployment history for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
+All operations that {{site.data.keyword.cloud}} performs for your VMware® instance are logged in the instance history. You can use the instance history as a reference to review these operations. For more information about reviewing your instance history, see [Procedure to view the deployment history for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances#vc_viewinginstances-procedure-view-deploy-history).
 
 The following sections provide all of the possible messages that can be issued to your instance history.
 
@@ -71,7 +71,7 @@ The following sections provide all of the possible messages that can be issued t
 ## Cluster history messages
 {: #audit_messages-cluster}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for vCenter Server clusters.
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for VMware vCenter Server® clusters.
 
 * ``Starting the cluster configuration...``
 * ``Starting the cluster configuration for <cluster_name>...``
@@ -87,7 +87,7 @@ The following sections provide all of the possible messages that can be issued t
 ## ESXi server history messages
 {: #audit_messages-esxi}
 
-{{site.data.keyword.vmwaresolutions_short}} issues the following messages for ESXi servers.
+{{site.data.keyword.vmwaresolutions_short}} issues the following messages for VMware ESXi™ servers.
 
 * ``Starting the order for <quantity> ESXi servers...``
 * ``Verifying the ESXi server order...``
@@ -214,7 +214,7 @@ The following sections provide all of the possible messages that can be issued t
 
 * ``Ordering the vSAN license...``
 * ``Cancelling the vSAN license...``
-* ``The VSAN license cancellation is complete.``
+* ``The vSAN license cancellation is complete.``
 * ``Ordering <quantity> NFS storage(s) for the <cluster_name> cluster.``
 * ``The new NFS storage is added and ready to use.``
 * ``Cancelling Management NFS share storage...``

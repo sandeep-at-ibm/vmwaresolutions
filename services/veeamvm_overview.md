@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-29"
+lastupdated: "2021-06-14"
 
 keywords: Veeam, Veeam 11, Veeam install, tech specs Veeam, Veeam overview
 
@@ -28,7 +28,7 @@ The Veeam® service seamlessly integrates directly with your VMware® hypervisor
 
 Veeam supports vCenter Server multizone instances. The Veeam VM is only deployed in one of the zones. For more information, see [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-service-promotions).
+{{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
 The current Veeam service that is installed is the new Veeam Availability Suite™ v11 known as Veeam v11.
 {:note}
@@ -36,7 +36,7 @@ The current Veeam service that is installed is the new Veeam Availability Suite�
 ## Veeam on bare metal server
 {: #veeamvm_overview-baremetal-server}
 
-You can install Veeam v11 on a bare metal server. This installation is only supported on vSphere 7.0 with NSX-T.
+You can install Veeam v11 on a bare metal server. This installation is only supported on vSphere 7.0 with NSX-T™.
 
 For VMware Regulated Workloads, Veeam bare metal server is the only option. For Security and Compliance Readiness Bundle, Veeam bare metal server is the default option with a choice of switching to Veeam VM.
 
@@ -54,7 +54,7 @@ For more information about Veeam on bare metal server, see the following topics.
 ## Technical specifications for Veeam v11
 {: #veeamvm_overview-specs}
 
-For more information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservices#vc_addingremovingservices-resource-requirements).
+For more information about resource requirements and capacity checking for some services, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
 You can choose one of the following deployment types with Veeam v11:
 * Windows® Server virtual machine (VM) on the management cluster or consolidated cluster
@@ -70,7 +70,7 @@ The following are included if you deploy Veeam v11 as a Windows Server VM on the
 
 * Virtual machine (VM) with Veeam Backup and Replication 11 OS Add-on and Veeam Availability Suite 11
 * Windows Server 2019 Standard Edition (64-bit)
-* 8 vCPU, 32 GB RAM
+* 8 CPUs, 32 GB RAM
 * 100 GB disk (SAN)
 
 ### VSIs for Veeam v11
@@ -81,7 +81,7 @@ The following components are included if you deploy Veeam v11 as a single public
 * Single VSI with Veeam Backup and Replication 11 OS Add-on and Veeam Availability Suite 11
 * Windows Server 2019 Standard Edition (64-bit)
 * 4 x 2.0 GHz Cores
-* 8 vCPU, 32 GB RAM
+* 8 CPUs, 32 GB RAM
 * 1 Gbps private network uplink
 * 100 GB disk (SAN)
 
@@ -162,7 +162,7 @@ Deleting the Veeam service stops all backups and deletes all the previous backup
 Review the following considerations before you delete the service:
 * Deleting the Veeam v11 service does not cancel the Veeam license. You must delete the Veeam license from the Veeam licenses table on the Resources page in the {{site.data.keyword.vmwaresolutions_short}} console.
 * When you delete the Veeam v11 service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single Veeam VM, VSI, or bare metal server that was deployed and the dedicated private subnet that was ordered for it. Therefore, if you scaled out the Veeam VM or VSI into multiple ones, those additional VMs or VSIs are not deleted.
-* If iSCSI storage is ordered, it is deleted. Therefore, any data within that storage is lost.
+* If you order iSCSI storage, that storage is deleted when you delete the Veeam v11 service. Therefore, any data within that storage is lost.
 
 ## Related links
 {: #veeamvm_overview-related}

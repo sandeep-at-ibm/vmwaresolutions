@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-30"
+lastupdated: "2020-04-15"
 
 subcollection: vmwaresolutions
 
@@ -13,9 +13,9 @@ subcollection: vmwaresolutions
 # Partially distributed
 {: #caveonix-partially}
 
-After the automated deployment is completed, you can manually scale out by increasing RAM and disk in the initial virtual machine (VM) and add three scale-out VMs. The Riskforesight configuration script can be run to enable and configure the application components on all four VMs.
+After the automated deployment is completed, you can manually scale out by increasing RAM and disk in the initial virtual machine (VM) and add three scale-out VMs. The RiskForesight configuration script can be run to enable and configure the application components on all four VMs.
 
-This deployment model is expected to service up to 500 Assets with up to 30 days of data indexing.
+This deployment model is expected to service up to 500 assets with up to 30 days of data indexing.
 
 Select the next available IP addresses from the {{site.data.keyword.cloud}} private portable subnet. Configure FQDN names in ADDNS.
 
