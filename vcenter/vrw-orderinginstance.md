@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-11"
+lastupdated: "2021-06-21"
 
 keywords: regulated workloads order instance, order regulated workloads, regulated workloads instances
 
@@ -153,7 +153,7 @@ The uplink speed provides two options:
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
 | Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 04 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
+| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
 | Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
 | Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
 {: caption="Table 3. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
@@ -215,7 +215,7 @@ The uplink speed provides two options:
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
 | Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 04 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
+| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
 | Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
 | Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
 {: caption="Table 4. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
@@ -273,7 +273,7 @@ The uplink speed provides two options:
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
 | Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 04 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
+| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
 | Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
 | Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
 {: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
@@ -329,7 +329,7 @@ The uplink speed provides two options:
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
 | Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 04 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
+| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
 | Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
 | Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
 {: caption="Table 6. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
