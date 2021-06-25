@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-21"
+lastupdated: "2021-06-25"
 
 keywords: release notes, what's new, version 4.2
 
@@ -23,6 +23,18 @@ subcollection: vmwaresolutions
 {: #relnotes_v42}
 
 This release includes new features, component updates, usability enhancements, and bug fixes.
+
+## Updates for VMware Solutions Shared
+{: #relnotes_v42-shared}
+
+This release applies the following updates when you order {{site.data.keyword.cloud}} for VMware® Solutions Shared instances.
+
+### Veeam Backup and Replication V11
+{: #relnotes_v42-shared-veeam}
+
+Starting with the 4.2 release, VMware Solutions Shared instances provide Veeam Backup and Replication V11 for the Veeam Cloud Connect Replication ready-to-use service.
+
+For more information about the compatibility requirements between Veeam service providers and tenants, see [Product versions in Veeam Cloud Connect infrastructure](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_versions.html?ver=110){:external}.
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v42-dedicated}
@@ -48,7 +60,7 @@ This release applies the following upgrades and improvements for newly deployed 
 * VMware vSAN™ 7.0 Update 1d (build 17551050) or 6.7 P05
 * VMware vSAN Witness 7.0 Update 1d (build 17551050)[^vsanwitness]
 
-[^vsanwitness]: vSAN Witness is only available in vCenter Server multizone instances.
+[^vsanwitness]: vCenter Server multizone instances only
 
 ### NSX-T for vCenter Server instances with vSphere 6.7 - deprecated
 {: #relnotes_v42-nsx-t-vsphere67}
@@ -86,11 +98,13 @@ Enhanced support is now provided for 25 Gb uplink speed for VMware Regulated Wor
 
 This release provides the following service versions on newly deployed instances.
 
-* Caveonix RiskForesight™ v3.0
-* F5® BIG-IP® v15.1.2.1
-* HyTrust® CloudControl™ v6.3.1
-* HyTrust DataControl® v5.3
-* Juniper® vSRX v3.0 (20.4R1.12)
+* Caveonix RiskForesight™ 3.0
+* F5® BIG-IP® 15.1.2.1
+* HyTrust® CloudControl™ 6.3.1
+* HyTrust DataControl® 5.3[^htdc]
+* Juniper® vSRX 3.0 (20.4R1.12)
+
+[^htdc]: VMware vSphere 6.7 only
 
 ### HyTrust KeyControl - deprecated
 {: #relnotes_v42-services-htkc-deprecated}
@@ -101,7 +115,7 @@ New installations of HyTrust KeyControl™ are no longer supported for new or ex
 ### Veeam on vSphere 6.5 - deprecated
 {: #relnotes_v42-services-veeam-vsphere65-deprecated}
 
-New installations of Veeam® are no longer supported for new or existing deployments of vCenter Server instances with vSphere 6.5. You can still use or delete existing Veeam installations on your existing vSphere 6.5 instances.
+New installations of Veeam® are no longer supported for new or existing deployments of vCenter Server instances with VMware vSphere 6.5. You can still use or delete existing Veeam installations on your existing vSphere 6.5 instances.
 {:deprecated}
 
 ### F5 BIG-IP
