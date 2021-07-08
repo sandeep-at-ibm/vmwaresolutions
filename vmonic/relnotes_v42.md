@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-25"
+lastupdated: "2021-07-08"
 
 keywords: release notes, what's new, version 4.2
 
@@ -35,6 +35,11 @@ This release applies the following updates when you order {{site.data.keyword.cl
 Starting with the 4.2 release, VMware Solutions Shared instances provide Veeam Backup and Replication V11 for the Veeam Cloud Connect Replication ready-to-use service.
 
 For more information about the compatibility requirements between Veeam service providers and tenants, see [Product versions in Veeam Cloud Connect infrastructure](https://helpcenter.veeam.com/docs/backup/cloud/cloud_connect_versions.html?ver=110){:external}.
+
+### Network High Availability through data center groups
+{: #relnotes_v42-shared-net-ha}
+
+VMware Solutions Shared now provides Network High Availability, a VMware vCloud Director feature that allows a vCloud Director network to be anchored in two data centers. This feature enables the network to be resilient and to withstand an outage in any of the two data centers. For more information, see [Using Network High Availability](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-network-ha).
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v42-dedicated}
