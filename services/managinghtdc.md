@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-08-05"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -36,7 +36,7 @@ To access the HTDC console from the vSphere Web Client, use the following proced
 2. Right-click **KC1** or **KC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust DataControl service details page.
 
-For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
+For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 ## Enabling internet access for the HyTrust DataControl virtual machines
 {: #managinghtdc-internet-access}

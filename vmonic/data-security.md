@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-16"
+lastupdated: "2021-07-28"
 
 keywords: data encryption in VMware Solutions, data storage for VMware Solutions, bring your own keys for VMware Solutions, BYOK for VMware Solutions, key management for VMware Solutions, key encryption for VMware Solutions, personal data in VMware Solutions, data deletion for VMware Solutions, data in VMware Solutions, data security in VMware Solutions
 
@@ -26,7 +26,7 @@ subcollection: vmwaresolutions
 To ensure that you can securely manage your personal data when you use {{site.data.keyword.cloud}} for VMware® Solutions, it's important to know what data is stored and encrypted and how you can delete any stored data. 
 {: shortdesc}
 
-## How your data stored and encrypted in VMware Solutions
+## How is your data stored and encrypted in VMware Solutions
 {: #data-security-data-storage}
 
 When a user onboards to VMware Solutions and orders instances, we store and manage user data of configuration and metadata that is associated with the user and ordered instances. That user data includes the following items.
@@ -50,7 +50,7 @@ These solutions include the following options:
 
 If you use VMware Solutions Shared, your workload data exists in an IBM–managed cloud infrastructure account. You are provided with the default vSphere encryption option for your VMs, which uses IBM–managed keys that are backed by the {{site.data.keyword.cloud_notm}} KMIP for VMware and Hyper Protect Crypto Services. You can optionally implement your own encryption solutions within your VMware workloads.
 
-## How your data stored and encrypted in the VMware Solutions Shared Veeam Availability Suite service
+## How is your data stored and encrypted in the VMware Solutions Shared Veeam Availability Suite service
 {: #data-security-data-veeamshared}
 
 When you onboard to VMware Solutions Shared and order instances, you can get extra services, such as Veeam Availability Suite™, which is relevant to data storage and encryption.
@@ -70,7 +70,7 @@ You can manage (restore or delete) backups in the Veeam self-service portal. All
 {{site.data.keyword.cloud_notm}} Support has access to your VMware virtualization environment.
 * For VMware Solutions Shared, {{site.data.keyword.cloud_notm}} manages the virtualization environment and this access cannot be revoked.
 * For VMware Solutions Dedicated, IBM maintains this access to enable automated day 2 operations such as capacity expansion, and to enable support for problem resolution. For more information, see the following topics.
-   * [Policy for accessing clients instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-policy-for-access-client-inst)
+   * [Policy for accessing clients' instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-policy-for-access-client-inst)
    * [Consent to accessing client environments](/docs/vmwaresolutions?topic=vmwaresolutions-vc_compl_info#vc_compl_info-consent-to-access-client-environment)
 
 In VMware Solutions Dedicated, you can take steps to limit {{site.data.keyword.cloud_notm}} access to your instance. These steps can include the following actions:

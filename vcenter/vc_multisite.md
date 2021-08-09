@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-18"
+lastupdated: "2021-07-07"
 
 keywords: vCenter Server multi-site, multi-site configuration, multi-site deployment vCenter Server
 
@@ -31,7 +31,7 @@ A multi-site deployment consists of the following components.
 * **Primary instance**: The primary VMware vCenter Server® instance has the following configuration:
   * Microsoft® Active Directory™ (AD) and DNS (Domain Name System) root domain
   * vCenter Server located in domain with instance-specific name
-  * SSO (Single Sign-On) domain
+  * SSO (single sign-on) domain
   * SSO site name
   * vCenter Server Appliance with embedded Platform Services Controller (PSC)
 * **Secondary instance or instances**: One or more secondary vCenter Server instances, linked to the primary instance, with the following configuration:

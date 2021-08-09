@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-08-05"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -17,12 +17,12 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:term: .term}
 
-# Requirements and planning for vCenter Server
+# Requirements and planning for vCenter Server instances
 {: #vc_planning}
 
-Review the following requirements before you order your VMware vCenter Server® instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and services requirements.
+Review the following requirements before you order your VMware vCenter Server® instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and add-on services requirements.
 
-Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
+Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
 {:important}
 
 ## IBM Cloud account requirements
@@ -94,12 +94,6 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 
 [^sap-par01]: Existing vSphere 6.5 clusters only
 
-### Cascade Lake notes
-{: #vc_planning-dc-notes}
-
-Cascade Lake bare metal servers are also available on [multizone region](#x9774820){: term}
-{{site.data.keyword.cloud_notm}} data centers. For more information, see [Multizone region (MZR) overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
-
 ## Backup of management components
 {: #vc_planning-backup-mgmt-components}
 
@@ -108,7 +102,7 @@ You are responsible for maintaining and ensuring the availability of all instanc
 ## Services for vCenter Server instances
 {: #vc_planning-addon-services}
 
-You can order services for your instance based on your needs, for example, disaster recovery. For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
+You can order services for your instance based on your needs, for example, disaster recovery. For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
 {:important}
@@ -140,4 +134,4 @@ For more information about capacity considerations, see [Scaling capacity](/docs
 * [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
 * [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
+* [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)

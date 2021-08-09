@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-16"
+lastupdated: "2021-07-21"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -176,7 +176,7 @@ If you have instances that are linked, you must upgrade all PSC instances in the
     2. Use the shell `passwd` command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter 6.7u1b ISO within your jump box.
-3. Follow the VMware instructions for upgrading all PSCs first. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}.
+3. Follow the VMware instructions for upgrading all PSCs first. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-on or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}.
 
 The **You must run the GUI upgrade from a Windows, Linux®, or Mac machine that is in the same network as the appliance that you want to upgrade** stated requirement applies to any subnet within your {{site.data.keyword.cloud_notm}} in your account.
 {:note}
@@ -202,7 +202,7 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
     2. Use the shell `passwd` command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter Server 6.7u1b ISO within your jump box.
-3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an External vCenter Single Sign-On or Platform Services Controller Instance by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.
+3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-On or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.
 
 **Notes**:
 * The stated requirement **You must run the GUI upgrade from a Windows, Linux, or Mac machine that is in the same network as the appliance that you want to upgrade** applies to any subnet within your {{site.data.keyword.cloud_notm}} in your account.
@@ -263,7 +263,7 @@ The VMware Update Manager function within vCenter is used to upgrade and patch t
 6. After the pre-remediation check is successful, click **Remediate**. Monitor the upgrade process with the remediate entity task.
 7. After the upgrade completes, review the summary section of the host to confirm that ``VMware ESXi, 6.7.0`` displays.
 
-If the upgrade process fails immediately and displays the **host cannot enter maintenance mode** error message, shut down the Zerto ZVAs and try again. The ZVRA VMs automatically start as each server comes out of remediation. For more information about continuing Zerto replication during the upgrade process, see [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/how-to-place-a-host-with-an-associated-vra-into-maintenance-mode/){:external}.
+If the upgrade process fails immediately and displays the **host cannot enter maintenance mode** error message, shut down the Zerto ZVAs and try again. The ZVRA VMs automatically start as each server comes out of remediation. For more information about continuing Zerto replication during the upgrade process, see [How to place a host with an associated VRA into maintenance mode](https://www.zerto.com/myzerto/knowledge-base/how-to-place-a-host-with-an-associated-vra-into-maintenance-mode/){:external}.
 {:note}
 
 #### Adding the Intel NVME driver patch to the VUM repository

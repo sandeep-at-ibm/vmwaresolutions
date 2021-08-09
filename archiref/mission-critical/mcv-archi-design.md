@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-09"
+lastupdated: "2021-07-14"
 
 subcollection: vmwaresolutions
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 {:deprecated: .deprecated}
 {:term: .term}
 
-# VMware multizone instances architecture
+# VMware multizone architecture design
 {: #mcv-archi-design}
 
 ## Topology
@@ -80,9 +80,9 @@ For the consolidated cluster, the two sites are intended to serve as identical r
 
 Day 2 scale-up and scale-down operations for adding and removing hosts to the management clusters and the stretch cluster are automatically selected to take place simultaneously in each of the two resource sites. This automatic maintenance of consistency across the management and stretch clusters is enforced and cannot be overridden.
 
-The following configuration with separate management and edge services clusters is an IBM Global Technology Services (GTS) Large style Mission Critical Workloads configuration. The edge services clusters must be deployed separately as day 2 operations.
+The following configuration with separate management and edge services clusters is an IBM Global Technology Services (GTS) Large style VMware multizone configuration. The edge services clusters must be deployed separately as day 2 operations.
 
-![A typical large VMware multizone instance deployment](../../images/mcv-lg-config.svg "A typical large Mission Critical Workloads deployment"){: caption="Figure 1. A typical large VMware multizone instance deployment" caption-side="bottom"}
+![A typical large VMware multizone instance deployment](../../images/mcv-lg-config.svg "A typical large VMware multizone instance deployment"){: caption="Figure 1. A typical large VMware multizone instance deployment" caption-side="bottom"}
 
 ### Differences between management and resource usage of the two sites
 {: #mcv-archi-design-distibution-mgmt-diff}
@@ -94,28 +94,27 @@ vCenter functions in an active-passive availability model with a witness applian
 Your workloads are deployed onto active–active storage that is mirrored between the workload sites. You must plan for sufficient host capacity to run the entire workload in one site. VMware admission control should be used to ensure that neither side is over-committed and that complete loss of a site can be accommodated by moving all workloads to the remaining site. More planning is also required to design a workload network topology, such as that used by the IBM GTS Mission Critical Workloads architecture that is highly available.
 
 #### Site A
+{: #mcv-archi-design-site-a}
 
 The consolidated cluster Site A has the following components:
-
   * vCenter Server active appliance
   * NSX Manager
   * Active Directory server
   * Customer workload
 
 #### Site B
+{: #mcv-archi-design-site-b}
 
 The consolidated cluster Site B has the following components:
-
   * vCenter Server passive appliance
   * NSX Manager
   * Active Directory server
   * Customer workload
 
-**Next topic:** [Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
+**Next topic:** [VMware multizone BOM](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
 
 ## Related links
 {: #mcv-archi-design-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)
-* [Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
-* [Component and feature details](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)
+* [VMware multizone introduction](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)
+* [VMware multizone components](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)

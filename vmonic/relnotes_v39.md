@@ -105,7 +105,7 @@ New installations of HyTrust CloudControl are no longer supported for new or exi
 ## Updates to REST APIs
 {: #relnotes_v39-api}
 
-Various updates are made to the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared) documentation.
+Various updates are made to the VMware Solutions API and the VMware Solutions Shared API documentation.
 
 ## User interface updates and enhancements
 {: #relnotes_v39-ui}

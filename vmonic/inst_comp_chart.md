@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-15"
+lastupdated: "2021-08-07"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -20,7 +20,7 @@ Review the following information to understand the differences in feature suppor
 ## vCenter Server vs VMware vSphere
 {: #inst_comp_chart-vcs-vss}
 
-Review the following table to understand the differences in feature support for VMware® vCenter Server® instances and VMware vSphere® clusters.
+Review the following table to understand the differences in feature support for VMware vCenter Server® instances and VMware vSphere® clusters.
 
 | Feature | vCenter Server | VMware vSphere |
 |:-------- |:-------------- |:-------------- |
@@ -33,7 +33,7 @@ Review the following table to understand the differences in feature support for 
 | Remove ESXi servers | Supported | Supported. Automated configuration not included. |
 | Multi-cluster support | Maximum number depends on VMware® sizing guidelines | Supported. Automated configuration not included. |
 | Client-managed updating and patching of VMware stack | Client-managed updates - Native VMware tools (VMware Update Manager™)[^nsxv1] | Client-managed updates - Native VMware tools (VMware Update Manager) |
-| Backup and restore | Manually, by using IBM Spectrum® Protect Plus or Veeam[^nsxv2]. | Backup and restore solution not included. |
+| Backup and restore | Manually, by using IBM Spectrum® Protect Plus or Veeam®[^nsxv2]. | Backup and restore solution not included. |
 | Software-defined networking | NSX Advanced or Enterprise | NSX Advanced or Enterprise. Automated configuration not included. |
 | BYOL for vSphere and vSAN | Fully supported per cluster | Supported |
 | BYOL for vCenter Server and NSX | Fully supported per instance | Supported |
@@ -64,17 +64,17 @@ Review the following table to understand the differences in feature support for 
 | NSX networking solution | NSX-V or NSX-T™ | NSX-T | NSX-T |
 | NFS | Optional | Optional | Not allowed |
 | vSAN | Optional | Optional | Required |
-| Consolidated cluster | Optional | Optional | Not allowed |
-| Separate management cluster | Supported | Not supported | Supported |
-| Minimum number of ESXi servers | For vSAN, four servers. </br>For NFS, three servers for production use and two servers for non-production use. | For vSAN, six servers. </br>For NFS, five servers. | 10 |
+| Consolidated cluster | Optional | Optional | Optional |
+| Separate management cluster | Supported | Supported | Supported |
+| Minimum number of ESXi servers | For vSAN, 4 servers. </br>For NFS, 3 servers for production use and 2 servers for non-production use. | For vSAN, 6 servers. </br>For NFS, 5 servers. | 6 servers - 4 for the consolidated cluster and 2 for the edge services cluster. |
 | Edge services cluster | Optional | Required. Juniper vSRX, FortiGate® Virtual Appliance, Bring your own gateway. | Required. Juniper vSRX, FortiGate Virtual Appliance, Bring your own gateway, or FortiGate Security Appliance. |
-| Logging and monitoring with VMware vRealize Operations and Log Insight | Optional | Required | Required |
-| Role-based access with HyTrust CloudControl | Optional | Required | Required |
+| Logging and monitoring with VMware vRealize® Operations and Log Insight | Optional | Required | Required |
+| Role-based access with HyTrust® CloudControl™ | Optional | Required | Required |
 | Compliance with Caveonix | Optional | Required | Required |
 | Caveonix pricing | Per VM | Per host | Per host |
 | Key encryption | Key Protect or Hyper Protect Crypto Services | Hyper Protect Crypto Services required | Hyper Protect Crypto Services required |
 | Direct Link | Optional | Optional | Required for private only instances |
-| Backup | Veeam (opt out) or VMware Software Purchasing Program | Veeam 11 (opt out) | Veeam 11 required with option to remove on day 2 |
+| Backup | Veeam (opt out) or IBM Spectrum Protect Plus | Veeam 11 (opt out) | Veeam 11 required with option to remove on day 2 |
 | Veeam backup server | Optional (opt out) | Optional (opt out) | Required with option to remove on day 2 |
 | Disaster recovery | Veeam or Zerto | Veeam 11 | Veeam 11|
 | Migration | HCX, Zerto, or PrimaryIO | HCX (optional) | HCX (optional) |

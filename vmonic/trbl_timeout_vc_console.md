@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-08-06"
 
 keywords: troubleshooting, vSphere timeout, timeout console
 
@@ -34,15 +34,15 @@ Use the following steps to investigate and fix the problem.
 1. Ensure that you completed the steps from the tooltip that gets displayed when you hover over the **vCenter console**. For
    your convenience, these steps are also listed as follows:
    1. [Create a VPN password](/docs/iaas-vpn?topic=iaas-vpn-getting-started#set-vpn-password).
-   2. [Log in to the data center VPN](/docs/iaas-vpn?topic=iaas-vpn-getting-started#login-to-the-vpn) by using the {{site.data.keyword.cloud_notm}} infrastructure VPN credentials.
-   3. Add the IP address and the hostname mapping of the vCenter Server into the `hosts` file on your local computer. Use the following format:
+   2. [Log in to the data center VPN](/docs/iaas-vpn?topic=iaas-vpn-getting-started#login-to-the-vpn) by using the {{site.data.keyword.cloud}} infrastructure VPN credentials.
+   3. Add the IP address and the hostname mapping of the VMware vCenter Server® into the `hosts` file on your local computer. Use the following format:
 
       ```javascript
       IP_Address              Host_Name
       ```
 
 2. Take note of the IP address that is displayed because you need it in one of the next steps.
-3. Ensure that you have access to the {{site.data.keyword.cloud}} infrastructure VPN. Complete the following steps on the {{site.data.keyword.slportal}}:
+3. Ensure that you have access to the {{site.data.keyword.cloud_notm}} infrastructure VPN. Complete the following steps on the {{site.data.keyword.slportal}}:
    1. Click **Account > VPN Access**.
    2. Click the **SSL link** in the **VPN Access** column.
    3. On the **VPN Access for username** page, set the **Subnet Access** option to **Manual**.

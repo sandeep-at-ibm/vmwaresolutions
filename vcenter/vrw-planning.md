@@ -4,9 +4,9 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-13"
+lastupdated: "2021-07-09"
 
-keywords: planning regulated workloads, data center for workloads, vmware workloads data centers
+keywords: planning vmware regulated workloads, data center vmware regulated workloads, vmware regulated workloads data centers
 
 subcollection: vmwaresolutions
 
@@ -109,7 +109,9 @@ The following services are included with VMware Regulated Workloads:
 * [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview). This service is included when you choose **Edge services cluster with Juniper vSRX**. It is available for single-zone and multizone instances.
 * [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)
 
-The VMware HCX™ service is optional for VMware Regulated Workloads, and it is available to single-zone VMware instances only. For more information, see [Planning for VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning#vc_planning-addon-services-hcx).
+The following services are optional for VMware Regulated Workloads and are available to single-zone VMware instances only:
+* [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
+* [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations)
 
 ## Related links
 {: #vrw-planning-related}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-08-07"
 
 keywords: FAQ, license, BYOL
 
@@ -27,7 +27,7 @@ Find answers to frequently asked questions about licensing, including the Bring 
 {: #faq_byol-license-mgmt}
 {: faq}
 
-After an order to create a new cluster for VMware vSphere® is placed, the VMware licenses, VMware ESXi™ servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
+After an order to create a new cluster for VMware vSphere® is placed, the VMware® licenses, VMware ESXi™ servers, and other networking components, are delivered and can be managed from the {{site.data.keyword.slportal}}.
 
 After deployment, go to the {{site.data.keyword.vmwaresolutions_short}} console to scale the new cluster by using the saved configuration. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
 
@@ -51,9 +51,11 @@ Yes. For each VMware component, one license per CPU is required. Currently, all 
 {: #faq_byol-service-charges}
 {: faq}
 
-* For HyTrust CloudControl™ and HyTrust DataControl®, service licenses are charged per two CPUs. Dual servers require a single license each. Quad servers require two licenses each.
+* For Caveonix RiskForesight on VMware Regulated Workloads or Security and Compliance Readiness Bundle, each server requires a service license.
 * For VMware HCX™, service licenses are charged per two CPUs. Dual servers require a single license each. Quad servers require two licenses each. For servers with more than 16 cores per CPU, an increase in the license charge occurs.
+* For HyTrust CloudControl™ and HyTrust DataControl®, service licenses are charged per two CPUs. Dual servers require a single license each. Quad servers require two licenses each.
 * For vRealize Operations™ (vROps), license charges depend on the CPU type. Dual servers have different charges than Quad servers. For servers with more than 16 cores per CPU, an increase in the license charge occurs.
+* All other services have static service license charges that do not change based on the number of servers in the instance.
 
 ## Why is there a discrepancy in the supported number of VMs for vROPs licenses?
 {: #faq_byol-vrops}
@@ -70,7 +72,7 @@ The discrepancy does not indicate any service or licensing problem for vRealize 
 {: faq}
 {: support}
 
-BYOL is a feature available to VMware vCenter Server and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components.
+BYOL is a feature available to vCenter Server and VMware vSphere clusters in V2.0 and later. With BYOL, you can use your own VMware licenses for one or more of the following VMware software components.
 * VMware vCenter Server
 * VMware vSphere
 * VMware NSX®

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-18"
+lastupdated: "2021-07-14"
 
 subcollection: vmwaresolutions
 
@@ -17,13 +17,13 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# Component and feature details for VMware multizone instances
+# VMware multizone components
 {: #mcv-archi-comp}
 
 ## VMware vSphere configuration
 {: #mcv-archi-comp-vsphere}
 
-The following information describes the configuration design for enabling {{site.data.keyword.cloud}} for VMware® multizone instances.
+The following information describes the configuration design for enabling VMware® multizone instances.
 
 1. High Availability and host monitoring is enabled.
   * Host failure response - Restart VMs
@@ -56,7 +56,7 @@ The following information describes the configuration design for enabling {{site
 ## vCenter High Availability
 {: #mcv-archi-comp-HA}
 
-The Mission Critical Workloads instance is configured with vCenter High Availability (HA) enabled during provisioning. Automated failover is managed and performed by vCenter.
+The VMware multizone instance is configured with vCenter High Availability (HA) enabled during provisioning. Automated failover is managed and performed by vCenter.
 
 Investigation is underway for automation of the reassignment of the vCenter IP address in DNS. Otherwise, you must manually reassign the IP address upon vCenter failover or contact IBM Global Technology Services (GTS) for assistance.
 
@@ -141,6 +141,6 @@ It is your responsibility to perform patching and ongoing maintenance of the str
 ## Related links
 {: #mcv-archi-comps-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
-* [Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
+* [VMware multizone introduction](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)
+* [VMware multizone architecture design](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
+* [VMware multizone BOM](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)

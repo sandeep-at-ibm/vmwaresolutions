@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-07-14"
 
-keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server
+keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server, vmware multizone, vcenter server multizone, delete vCenter Server multizone
 
 subcollection: vmwaresolutions
 
@@ -41,7 +41,10 @@ After the ESXi server reclaim process completes, the subnets and VLANs are delet
 
 You can review the next account invoice to confirm that you are no longer billed for this instance. From the {{site.data.keyword.cloud_notm}} console, click **Manage > Billing and usage**, then click **Invoices**.
 
-## Procedure to delete instances from the Resources page
+New deployments of vCenter Server multizone instances are not supported.
+{:deprecated}
+
+## Procedure to delete vCenter Server instances from the Resources page
 {: #vc_deletinginstance-procedure1}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
@@ -52,7 +55,7 @@ You can review the next account invoice to confirm that you are no longer billed
    1. Click the vertical overflow menu next to the **Status** column, and then click **Delete from the console**.
    2. In the **Delete instance** window, click **Delete**.
 
-## Procedure to delete instances from the instance details page
+## Procedure to delete vCenter Server instances from the instance details page
 {: #vc_deletinginstance-procedure2}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
@@ -66,7 +69,6 @@ You can review the next account invoice to confirm that you are no longer billed
 ## Related links
 {: #vc_deletinginstance-related}
 
-* [Deleting vCenter Server instances in a multi-site configuration](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance_multi)
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
 * [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances)
 * [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers)

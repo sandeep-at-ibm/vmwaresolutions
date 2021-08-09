@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-14"
+lastupdated: "2021-07-07"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -27,8 +27,6 @@ The HyTrust® CloudControl™ service enforces and controls compliance against s
 
 New installations of HyTrust CloudControl are supported only for VMware vCenter Server® with NSX-T™ instances. The HyTrust CloudControl version that is installed is 6.3.1. Previous installations of HyTrust CloudControl 5.6 are still supported for existing VMware® vCenter Server with NSX-V instances.
 {:note}
-
-HyTrust CloudControl supports vCenter Server multizone instances. For more information, see [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
 
 {{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 

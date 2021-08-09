@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-07-28"
 
 keywords: vCenter Server add host, add server vCenter Server
 
@@ -19,10 +19,10 @@ subcollection: vmwaresolutions
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Adding ESXi servers to vCenter Server instances
+# Adding ESXi servers to vCenter Server single-zone instances
 {: #vc_addingservers}
 
-You can expand the capacity of your VMware&reg; vCenter Server® instance according to your business needs by adding VMware ESXi™ servers.
+You can expand the capacity of your VMware® vCenter Server® instance according to your business needs by adding VMware ESXi™ servers.
 
 * For existing instances with VMware vSphere® 6.7u1, you can add new ESXi servers with either vSphere 6.7u1 or vSphere 6.7u3.
 * For existing instances with vSphere 6.5, when you add ESXi servers, the vSphere version matches the vSphere version of the existing ESXi servers in the instance. If you updated the vSphere version for the vCenter Server instance or for the existing ESXi servers, you might want to use the newer vSphere version for future additions of ESXi servers. To do so, open a VMware Solutions Support ticket to request that the VMware Solutions database is updated to reflect the correct (newer) version to be applied.
@@ -32,7 +32,7 @@ You can expand the capacity of your VMware&reg; vCenter Server® instance accord
 For the edge services cluster, you cannot add or remove ESXi servers.
 {:note}
 
-## Before you add ESXi servers
+## Before you add ESXi servers to vCenter Server single-zone instances
 {: #vc_addingservers-prereq}
 
 * Whenever possible, add ESXi servers by using the {{site.data.keyword.vmwaresolutions_full}} console, because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add ESXi servers to vCenter Server only for on-premises ESXi servers or ESXi servers that you won't manage in the {{site.data.keyword.vmwaresolutions_short}} console.
@@ -40,7 +40,7 @@ For the edge services cluster, you cannot add or remove ESXi servers.
 * A vCenter Server instance with vSAN storage must have at least four ESXi servers.
 * You can add 1 - 20 ESXi servers at a time. For more information about the minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
-## Procedure to add ESXi servers to vCenter Server instances
+## Procedure to add ESXi servers to vCenter Server single-zone instances
 {: #vc_addingservers-procedure}
 {: help}
 {: support}
@@ -51,7 +51,8 @@ For the edge services cluster, you cannot add or remove ESXi servers.
 4. In the **Clusters** table, click the cluster to which you want to add ESXi servers.
 5. In the **ESXi servers** section, click **Add**.
 6. On the **ESXi server** page, select the number of bare metal servers that you want to add.
-7. Optionally, select the **Maintenance mode** checkbox to add servers during maintenance mode. The checkbox is selected by default.
+7. For vSphere 7.0, optionally select to change the bare metal server configuration. Then, select the VMware vSphere version. 
+8. Optionally, select the **Maintenance mode** checkbox to add servers during maintenance mode. The checkbox is selected by default.
 
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance mode** checkbox. You do not receive a confirmation message before the migration begins.
    {:important}
@@ -72,7 +73,7 @@ For the edge services cluster, you cannot add or remove ESXi servers.
 
   You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
-## Results after you add ESXi servers
+## Results after you add ESXi servers to vCenter Server single-zone instances
 {: #vc_addingservers-results}
 
 1. You might experience a slight delay on the console while the instance status changes from **Ready to use** to **Modifying**. Allow the operation to complete before you make more changes to the instance.

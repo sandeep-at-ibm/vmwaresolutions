@@ -4,9 +4,9 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-07-05"
 
-keywords: add clusters for VMware regulated workloads, view details of clusters in regulated workloads, delete clusters for regulated workloads, add and delete clusters for regulated workloads
+keywords: vmware regulated workloads, add clusters vmware regulated workloads, view clusters vmware regulated workloads, delete clusters vmware regulated workloads
 
 subcollection: vmwaresolutions
 

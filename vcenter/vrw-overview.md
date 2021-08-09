@@ -4,9 +4,9 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-03"
+lastupdated: "2021-08-05"
 
-keywords: regulated workloads, workloads instance, regulated instance
+keywords: vmware regulated workloads, regulated workloads, workloads instance, regulated instance
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # VMware Regulated Workloads overview
 {: #vrw-overview}
 
-The VMware® Regulated Workloads offering includes a secure-by-default architecture that follows the IBM unique policy controls framework. It also includes continuous compliance monitoring and the highest level of data encryption FIPS 140-2 Level 4.
+The VMware® Regulated Workloads offering includes a secure-by-default architecture that follows the {{site.data.keyword.IBM}} unique policy controls framework. It also includes continuous compliance monitoring and the highest level of data encryption FIPS 140-2 Level 4.
 
 Review the following specifications before you begin.
 * The VMware Regulated Workloads offering is available for both single-zone and multizone region topologies.

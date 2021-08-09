@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-14"
+lastupdated: "2021-08-06"
 
 keywords: Veeam, Veeam 11, Veeam install, tech specs Veeam, Veeam overview
 
@@ -26,23 +26,19 @@ subcollection: vmwaresolutions
 The Veeam® service seamlessly integrates directly with your VMware® hypervisors to help your enterprise achieve high availability. This service provides recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you control both the backup and restore of all virtual machines (VMs) for your infrastructure directly from the Veeam console.
 {: shortdesc}
 
-Veeam supports vCenter Server multizone instances. The Veeam VM is only deployed in one of the zones. For more information, see [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
-
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
 The current Veeam service that is installed is the new Veeam Availability Suite™ v11 known as Veeam v11.
 {:note}
 
-## Veeam on bare metal server
+## Veeam on a bare metal server
 {: #veeamvm_overview-baremetal-server}
 
-You can install Veeam v11 on a bare metal server. This installation is only supported on vSphere 7.0 with NSX-T™.
+You can install Veeam v11 on a bare metal server. This installation is only supported on VMware vSphere 7.0 with NSX-T™.
 
-For VMware Regulated Workloads, Veeam bare metal server is the only option. For Security and Compliance Readiness Bundle, Veeam bare metal server is the default option with a choice of switching to Veeam VM.
-
-Veeam is always deployed to the management cluster.
-
-There is no migration path for existing Veeam users.
+* For VMware Regulated Workloads, the Veeam bare metal server is the only option. For Security and Compliance Readiness Bundle, the Veeam bare metal server is the default option with a choice of switching to Veeam VM.
+* Veeam is always deployed to the management cluster.
+* There is no migration path for existing Veeam users.
 
 For more information about the technical specifications, see [Technical specifications for Veeam v11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview#veeamvm_overview-specs).
 

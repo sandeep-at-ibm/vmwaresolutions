@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-03"
+lastupdated: "2021-08-05"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# (Deprecated) Managing HyTrust KeyControl
+# Managing HyTrust KeyControl
 {: #managinghtkc}
 
 New installations of HyTrust KeyControl™ are no longer supported for new or existing deployments of vCenter Server instances. You can still use or delete existing HyTrust KeyControl installations on your existing instances.
@@ -40,7 +40,7 @@ To access the HTKC console from the vSphere Web Client, use the following proced
 2. Right-click **KC1** or **KC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust KeyControl service details page.
 
-For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
+For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 ## Enabling internet access for the HyTrust KeyControl virtual machines
 {: #managinghtkc-internet-access}

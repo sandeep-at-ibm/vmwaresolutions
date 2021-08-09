@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-21"
+lastupdated: "2021-07-27"
 
 keywords: vCenter Server add clusters, add cluster, vCenter Server cluster
 
@@ -19,15 +19,15 @@ subcollection: vmwaresolutions
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Adding clusters to vCenter Server instances
+# Adding clusters to vCenter Server single-zone instances
 {: #vc_addingclusters}
 
-You can add your own clusters to VMware vCenter Server® instances to expand the compute and storage capacity. Within a cluster, you can manage VMware ESXi™ servers for better resource allocation and high availability.
+You can add clusters to VMware vCenter Server® instances to expand the compute and storage capacity. Within a cluster, you can manage VMware ESXi™ servers for better resource allocation and high availability.
 
 For vCenter Server instances V3.4 and later, you can add or delete a cluster while another cluster is being created or deleted.
 {:note}
 
-## Before you add clusters
+## Before you add clusters to vCenter Server single-zone instances
 {: #vc_addingclusters-before}
 
 * Whenever possible, add clusters by using the VMware Solutions console. Changes that you make on the VMware vSphere® Web Client are not synchronized with the VMware Solutions console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the VMware Solutions console.
@@ -160,7 +160,7 @@ You can add NFS storage shares to an existing vSAN or NFS cluster. For more info
 
 Specify the following vSAN options.
 
-#### Disk type and size for vSAN capacity disks
+#### Size for vSAN capacity disks
 {: #vc_addingclusters-vsan-storage-typesize-capdisks}
 
 Select an option for the capacity disks that you need.
@@ -170,15 +170,15 @@ Select an option for the capacity disks that you need.
 
 Specify the number of capacity disks that you want to add.
 
-If you want to add more capacity disks, check the **High performance with Intel Optane** box. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
+If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
 
-The **High performance with Intel Optane** option is available only for the Skylake and Cascade Lake CPU models.
+The **High performance with Intel Optane** option is available only for vSphere 6 instances.
 {:note}
 
-#### Disk size for vSAN cache disks
+#### Size for vSAN cache disks
 {: #vc_addingclusters-vsan-storage-size-cachedisks}
 
-Review the **Disk size for vSAN cache disks** value. The value depends on whether you checked the **High performance with Intel Optane** box.
+Review the **Size for vSAN cache disks** value. The value depends on whether you checked the **High performance with Intel Optane** box.
 
 #### Number of vSAN cache disks
 {: #vc_addingclusters-vsan-storage-number-cachedisks}
@@ -263,7 +263,7 @@ The **Uplink speed** option is not available to edge services clusters.
 
 The uplink speed provides two options:
 * 10 Gb, which is selected by default.
-* 25 Gb, which is available only for **Cascade Lake** and **SAP-certified** bare metal servers and for specific locations.
+* 25 Gb, which is available only for **Cascade Lake** and **SAP-certified** bare metal servers and for specific locations. The following table shows the available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed.
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
@@ -319,7 +319,7 @@ Based on your selected configuration for the cluster, the estimated price is ins
 
 You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
-## Procedure to add clusters to vCenter Server instances
+## Procedure to add clusters to vCenter Server single-zone instances
 {: #vc_addingclusters-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
@@ -335,9 +335,9 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
    * If you selected **SAP-certified** NetWeaver, select one of the preset configurations. If you selected **SAP-certified** HANA, specify the **CPU model** and **RAM**.
 7. Complete the storage configuration.
   * If you select **vSAN storage**, specify the following values:
-    * Disk type and size for the vSAN capacity disks
+    * Size for the vSAN capacity disks
     * Number of vSAN capacity disks
-    * Disk size for vSAN cache disks
+    * Size for vSAN cache disks
     * Number of vSAN cache disks
     * vSAN license edition
 
@@ -361,7 +361,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
    4. Click **Create**.
 
-## Results after you add clusters to vCenter Server instances
+## Results after you add clusters to vCenter Server single-zone instances
 {: #vc_addingclusters-results}
 
 1. The deployment of the cluster starts automatically and the status of the cluster is changed to **Initializing**. You can check the status of the deployment by viewing the deployment history from the **Summary** page of the instance.

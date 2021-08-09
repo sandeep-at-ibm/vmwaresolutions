@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-05-28"
+lastupdated: "2021-08-05"
 
 keywords: personal data, data deletion, PHI, data, data security, high availability, ha, disaster recovery, vmware solutions shared, compliance
 
@@ -32,9 +32,9 @@ VMWare Solutions Shared supports data storage in the form of:
 * VMware vCloud Director customer media uploads
 * VMware vCloud Director customer templates
 * VMware vCloud Director independent disks
-* Veeam backups
+* Veeam® backups
 
-All VMware vCloud Director data is stored in multi-tenant datastores where the datastores are secured by vCloud Director. A significant portion of vCloud Director security, especially in protecting cloud tenants from internal threats, comes from the security of the underlying virtualization layer. This includes vSphere, the additional security of vCloud Director, and the security of the ESXi hosts themselves. The vCloud Director abstraction separates different organizations from each other. Different organizations cannot modify or see each other's organizations data at rest or data in motion.
+All VMware vCloud Director data is stored in multi-tenant datastores where the datastores are secured by vCloud Director. A significant portion of vCloud Director security, especially in protecting cloud tenants from internal threats, comes from the security of the underlying virtualization layer. This includes VMware vSphere®, the additional security of vCloud Director, and the security of the ESXi™ hosts themselves. The vCloud Director abstraction separates different organizations from each other. Different organizations cannot modify or see each other's organizations data at rest or data in motion.
 
 VMware vCloud Director data storage uses {{site.data.keyword.cloud_notm}} Infrastructure Endurance File Storage, which is encrypted at rest to Endurance File Storage specifications. When VMware vCloud Director data is deleted, it becomes available for reallocation where it is then zeroed out and instantiated for the next use case.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-05-20"
+lastupdated: "2021-08-06"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -31,6 +31,10 @@ subcollection: vmwaresolutions
 You can include the Juniper® vSRX service with a new VMware vCenter Server® instance or add the service to your existing VMware® vCenter Server instance.
 
 You can install multiple instances of Juniper vSRX on the management cluster. On a single edge services cluster, you can install only one instance of Juniper vSRX.
+
+You can now install Juniper vSRX on 25 Gb uplink speed management and edge services clusters on VMware vSphere® 7 with NSX-T. On 25 Gb uplink speed clusters, only the Content Security Bundle license is available.
+
+The license used depends on the target cluster you choose. For vCenter Server instances with vSphere 7 and NSX-T, management and edge services clusters with 25 Gb uplink speed use the 25 Gb uplink speed version of the license selected. For Regulated Workload (including Regulated Workload stretched) and Security & Compliance Readiness Bundle instances, the same license selection process occurs for edge services clusters with 25 Gb uplink speeds.
 
 You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
 
@@ -74,8 +78,6 @@ You can't change the license model after service installation. To change the lic
 
 After the service is ordered, the vSRX nodes are automatically ordered with the selected license models.
 
-The Juniper vSRX nodes are deployed to the edge services cluster if you selected this option. If you do not have an edge services cluster in your vCenter Server instance, the Juniper vSRX service is deployed on the management cluster.
-
 ### Juniper vSRX deployment on an edge services cluster
 {: #juniper-ordering-service-config-edge-deployment}
 
@@ -89,8 +91,8 @@ If you deploy Juniper vSRX on an edge services cluster, after deployment, you mu
 
 * [Juniper vSRX overview](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview)
 * [Managing Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
-* [General FAQ about VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
+* [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
+* [General FAQ about VMware Solutions Dedicated](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
 * [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}

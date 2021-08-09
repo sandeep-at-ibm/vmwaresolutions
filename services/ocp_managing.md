@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-28"
+lastupdated: "2021-08-05"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
@@ -31,7 +31,7 @@ Red Hat OpenShift for VMware uses kubelet client certificates that must be rotat
 
 The initial certificates that are created during installation expire 24 hours after they are created. IBM's automation process, which installs OpenShift, handles the approval of the CSRs for this initial rotation, which is done by running a script on the bastion for the first 30 hours. The script is named `/root/approve-csr.sh` and its log file is named `/root/approve-csr.log`. 
 
-For the script to run successfully, the initial `kubeadmin` credentials must be the same until the initial certificate rotation is complete. Do not change the kubeadmin credentials for the first 24 hours. If the credentials are changed, you must monitor and approve the CSRs for the initial certificate rotation. For more information, see [Approving the CSRs for your machines](https://docs.openshift.com/container-platform/4.6/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external}.
+For the script to run successfully, the initial `kubeadmin` credentials must be the same until the initial certificate rotation is complete. Do not change the kubeadmin credentials for the first 24 hours. If the credentials are changed, you must monitor and approve the CSRs for the initial certificate rotation. For more information, see [Approving the CSRs for your machines](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html#installation-approve-csrs_installing-vsphere){:external}.
 
 Do not restart any of the OpenShift cluster virtual machines (VMs) or the bastion VM until the first certificate rotation is done.
 {:important}
@@ -39,7 +39,7 @@ Do not restart any of the OpenShift cluster virtual machines (VMs) or the bastio
 After the initial certificate rotation, certificates are renewed every 30 days. You must establish a process to approve the CSRs for every certificate rotation. According to Red Hat, you can approve CSRs when they reach 80% of their expiration period, which is approximately 25 days into the lifespan of the CSRs.
 
 If you do not approve CSRs in time and the certificates expire, you can recover from expired control plane certificates and get the OpenShift cluster operational again. For more information, see [Recovering from expired control
-plane certificates](https://docs.openshift.com/container-platform/4.6/backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){:external}.
+plane certificates](https://docs.openshift.com/container-platform/4.7/backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){:external}.
 
 ## Resizing your OpenShift VMs post-deployment
 {: #ocp_managing-resize}
@@ -121,6 +121,6 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
 ## Related links
 {: #ocp_managing-related}
 
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
+* [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-03"
+lastupdated: "2021-08-05"
 
 keywords: zerto, zerto install, tech specs zerto
 
@@ -29,7 +29,7 @@ Service charges are incurred only if you choose to use the services.
 ## Zerto
 {: #shared_zerto-portal}
 
-Use Zerto as a service to replicate your VMs between your {{site.data.keyword.cloud_notm}} data centers to {{site.data.keyword.cloud_notm}}. The Zerto service is enabled by default.
+Use Zerto as a service to replicate your VMs between your {{site.data.keyword.cloud}} data centers to {{site.data.keyword.cloud_notm}}. The Zerto service is enabled by default.
 
 You can access the Zerto portal on the virtual data center details page when the virtual data center is in the **Ready to use** state. For more information, see [Procedure to view virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing#shared_managing-viewing).
 

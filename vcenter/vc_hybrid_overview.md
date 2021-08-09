@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-10"
+lastupdated: "2021-07-15"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -12,15 +12,18 @@ subcollection: vmwaresolutions
 
 ---
 
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
+{:term: .term}
 
 # vCenter Server with Hybridity Bundle overview
 {: #vc_hybrid_overview}
 
 The VMware vCenter Server® with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the Hybrid Cloud Extension (HCX™) service.
-{:note}
+{:deprecated}
 
 The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere® stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud}} bare metal servers, includes VMware vSAN™ as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX®, and includes the HCX service.
 

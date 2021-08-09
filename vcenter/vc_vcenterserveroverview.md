@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-07-27"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -12,10 +12,13 @@ subcollection: vmwaresolutions
 
 ---
 
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
+{:term: .term}
 
 # vCenter Server overview
 {: #vc_vcenterserveroverview}
@@ -29,11 +32,6 @@ After initial instance deployment, you can increase shared storage by ordering m
 
 For dedicated storage, see [NetApp® ONTAP® Select](/docs/vmwaresolutions?topic=vmwaresolutions-netapp).
 
-For vCenter Server with NSX-T™ instances, applying license updates is not supported. Also, not all add-on services are supported for NSX-T instances.
-{:important}
-
-For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize® Operations™. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
-
 ## vCenter Server with NSX-T architecture
 {: #vc_vcenterserveroverview-nsx-t-archi}
 
@@ -41,12 +39,17 @@ The following graphic depicts the high-level architecture and components of a th
 
 ![vCenter Server with NSX-T architecture](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T architecture"){: caption="Figure 1. vCenter Server with NSX-T high-level architecture for a three-node cluster" caption-side="bottom"}
 
+For vCenter Server with NSX-T™ instances, applying license updates is not supported. Also, not all add-on services are supported for NSX-T instances.
+{:important}
+
 ## vCenter Server with NSX-V architecture
 {: #vc_vcenterserveroverview-archi}
 
 The following graphic depicts the high-level architecture and components of a three-node vCenter Server with NSX-V deployment.
 
 ![vCenter Server with NSX-V architecture](../images/vc_architecture.svg "vCenter Server with NSX-V architecture"){: caption="Figure 2. vCenter Server with NSX-V high-level architecture for a three-node cluster" caption-side="bottom"}
+
+For vCenter Server with NSX-V instances, if you purchased IBM-provided VMware licensing, you can upgrade the VMware NSX Base edition to Advanced or to Enterprise edition, and you can purchase more VMware components, such as VMware vRealize® Operations™. You can also add IBM-Managed Services if you want to offload the day-to-day operations and maintenance of the virtualization, guest OS, or application layers. The {{site.data.keyword.cloud_notm}} Professional Services team is available to help you accelerate your journey to the cloud with migration, implementation, planning, and onboarding services.
 
 ## Physical infrastructure
 {: #vc_vcenterserveroverview-physical-infras}
@@ -91,8 +94,8 @@ The following components are included in your vCenter Server instance.
 ### Bare metal server
 {: #vc_vcenterserveroverview-bare-metal}
 
-* For NSX-V, you can order two or more bare metal servers.
 * For NSX-T, you can order two or more bare metal servers in the consolidated or management cluster and in the workload cluster.
+* For NSX-V, you can order two or more bare metal servers.
 
 Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
 {:note}
@@ -111,9 +114,9 @@ If you plan to use vSAN storage, the configuration requires a minimum of four ba
 The following networking components are ordered:
 *  10 Gbps dual public and private network uplinks.
 *  Three VLANs (Virtual LANs) - one public and two private.
+* (NSX-T only) One overlay network with a T1 and T0 router for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. This network is deployed as a sample routing topology, which you can modify, build on, or remove.
 *  (NSX-V only) One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching extra VXLANs to new logical interfaces on the DLR.
-* (NSX-T only) One overlay network with a T1 and T0 router for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. This is deployed as a sample routing topology, which you can modify, build on, or remove.
-*  VMware NSX Edge Services Gateways (two for NSX-V and four for NSX-T):
+*  VMware NSX Edge Services Gateways (four for NSX-T and two for NSX-V):
   * One secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 
     This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
@@ -142,13 +145,13 @@ After deployment, you can add NFS storage shares to an existing NFS or vSAN clus
 
 The vSAN option offers customized configurations, with various options for disk type, size, and quantity:
 * Disk quantity - 2, 4, 6, 8, or 10
-* Storage disk - 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
+* Storage disk - 960 GB SSD SED, 1.9 TB SSD SED, 3.8 TB SSD SED, or 7.68 TB SSD SED
 
   In addition, two cache disks of 960 GB are also ordered per host.
 
   3.8 TB SSD (solid-state disk) drives are supported when they are made generally available in a data center.
   {:note}
-* High Performance with Intel Optane - this option provides two extra capacity disk bays. This option depends on the CPU model.
+* High Performance with Intel Optane - this option provides two extra capacity disk bays for a total of ten capacity disks. It's available only for vSphere 6 instances.
 
 #### NFS storage
 {: #vc_vcenterserveroverview-nfs-storage}
@@ -205,9 +208,69 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
 ## Support and Services fee
 {: #vc_vcenterserveroverview-support-services-fee}
 
-VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} Support and Level 2 Support teams for any issues that pertain to:
-* Automation in the platform
-* VMware products included in the solution
+VMware vCenter Server instances include a Support and Services fee that is charged per {{site.data.keyword.cloud_notm}} bare metal server. This fee covers support from the {{site.data.keyword.vmwaresolutions_short}} Support and Level 2 Support teams for any issues that pertain to automation in the platform and VMware products included in the solution.
+
+## Technical specifications for vCenter Server multizone instances
+{: #vc_vcenterserveroverview-mcv-specs}
+
+This information is provided as reference for existing vCenter Server multizone instances. New deployments of vCenter Server multizone instances are not supported.
+{:deprecated}
+
+The vCenter Server multizone architecture is an end to end reference architecture that provides automated failover for customer workloads. It uses an {{site.data.keyword.cloud_notm}} [multizone region](#x9774820){: term} with an IBM-managed service that covers the following components:
+* Compute architecture (VMware vSphere®)
+* Network architecture (NSX-T™)
+* Storage architecture (VMware vSAN or NFS)
+* Integration with IBM Services Platform with Watson to enable the consumption of services
+* Tools for monitoring, troubleshooting, performance, and capacity management.
+  * vRealize Suite pattern (vRealize Operations™, vRealize Log Insight™, and vRealize Network Insight™)
+  * Active Directory pattern
+  * Integration with IBM Netcool and IBM Bluecare for auto-ticketing, alerting, and event enrichment
+  * Resiliency patterns (backup and recovery)
+
+vCenter Server multizone instances are available in the following regions:
+* America - Washington DC, Dallas, Sao Paulo, and Toronto
+* Europe - London and Frankfurt
+* Asia-Pacific - Sydney, Tokyo, and Osaka
+
+### Base infrastructure architecture specifications
+{: #vc_vcenterserveroverview-mcv-base-specs}
+
+The base infrastructure has the following specifications:
+* Each site has its own dedicated edge and management cluster.
+* The resource cluster is a vSphere + vSAN stretched cluster.
+* The witness site contains two VMware ESXi™ hosts that provide quorum for both vSAN and vCenter.
+* Single vCenter Server and NSX Manager architecture.
+* vCenter Server Appliance with embedded Platform Services Controller (PSC) that uses vCenter Server High Availability (HA) over an L3 network architecture.
+* NSX Manager recovery is using a Hot Standby method that syncs up backup files.
+
+### Tools and technology architecture specifications
+{: #vc_vcenterserveroverview-mcv-tooling-specs}
+
+The tools and technology architecture has the following specifications:
+* vRealize Operations, vRealize Log Insight, and vRealize Network Insight to provide operations and management capabilities specific to the VMware products that are used, for example NSX, vSAN, and vSphere.
+* IBM Software Defined Environment (SDE) automation tool health check for validating deployments against best practices and security policies.
+* Optional Disaster Recovery (DR) to an out of Region {{site.data.keyword.cloud_notm}} site.
+* FortiGate Security Appliance or similar to secure any internet access and to facilitate active-active network integration with the on-premises network.
+
+### vSphere + vSAN stretched cluster architecture specifications
+{: #vc_vcenterserveroverview-mcv-stretched-cluster-specs}
+
+The vSphere + vSAN stretched cluster architecture has the following specifications:
+* Provides storage and compute capabilities, which span two sites for enhanced availability.
+* Write requests from VMs are synchronously written to both sites, which incur site to site network latency.
+* Read requests from VMs are fulfilled locally to the physical location of where the VM is located, thus avoiding extra latency.
+* The witness site and witness host act as the split brain or quorum.
+* vSAN native encryption (for at rest encryption) can be used in combination with this architecture.
+
+### Network architecture specifications
+{: #vc_vcenterserveroverview-mcv-network-specs}
+
+The network architecture has the following specifications:
+* Edge/DLR/VXLANs in combination with BGP metric-based routing to facilitate an active-active site design with automated failover.
+* Each site has the concept of their own set of Edges, DLRs, and VXLANs.
+* Under normal circumstances, any VMs connected to DLR-A, for example VM-A, are in {{site.data.keyword.cloud_notm}} availability zone #1 and traffic is both ingress and egress locally.
+* During a vMotion activity for VM-A, traffic still ingresses and egresses through the {{site.data.keyword.cloud_notm}} availability zone #1.
+* During a site or edge failure, traffic routes out of the remaining available site.
 
 ## Related links
 {: #vc_vcenterserveroverview-related}

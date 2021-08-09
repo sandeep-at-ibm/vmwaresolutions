@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-07-08"
+lastupdated: "2021-08-03"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -181,9 +181,11 @@ You can change the name, description, storage policy, and other general properti
 ##### Switching between storage properties
 {: #shared_vcd-ops-guide-change-properties-storage}
 
-1. Power off the VM. For more information, see [Power off a virtual machine](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-2323B049-4E36-4510-999E-F2D4A77AC0F9.html){:external}.
-2. Change the storage policy. For more information, see [Change the general properties of a virtual machine](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-8301D672-8333-4FD2-B132-2D4A42E11216.html){:external}.
-3. After the VM is moved to the new storage policy, power on the VM. For more information, see [Power on a virtual machine](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-33C22124-A610-4C3E-8F40-26CAC570F958.html){:external}.
+Some disk settings cannot be changed while the VM is powered on. For example, you can increase the disk size while the VM is powered on, but you cannot decrease the disk size unless the VM is powered off. A message displays if you must power off the VM before you modify a disk setting. For more information, see [Power off a virtual machine](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-2323B049-4E36-4510-999E-F2D4A77AC0F9.html){:external}.
+
+For more information about changing a storage policy, see [Change the general properties of a virtual machine](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-8301D672-8333-4FD2-B132-2D4A42E11216.html){:external}.
+
+If you must power off the VM before you change a storage policy, power the VM back on after the VM is moved to the new storage policy. For more information, see [Power on a virtual machine](https://docs.vmware.com/en/VMware-Cloud-Director/10.0/com.vmware.vcloud.tenantportal.doc/GUID-33C22124-A610-4C3E-8F40-26CAC570F958.html){:external}.
 
 #### Changing the hardware properties of a virtual machine
 {: #shared_vcd-ops-guide-hardware}
@@ -580,7 +582,7 @@ The data center group is created and an NSX Distributed Logical Router (DLR) is 
 ### Procedure to add an EGress point
 {: #shared_vcd-ops-guide-network-ha-egress}
 
-The NSX Edge Service Gateways (ESG) must have a free interface (vNIC) that is used to attach to the DLR. If no free interfaces exist on the ESG, the **Add EGress Point** or **Add StandBy Egress Point** task fails.
+The NSX Edge Service Gateways (ESG) must have a free interface (vNIC) that is used to attach to the DLR. If the ESG does not have any available interfaces, the **Add EGress Point** or **Add StandBy Egress Point** task fails.
 {:important}
 
 1. From the main navigation bar of the {{site.data.keyword.vmwaresolutions_short}} console, select **Data Centers > Data Center Groups**, then click **Details** for the data center group.

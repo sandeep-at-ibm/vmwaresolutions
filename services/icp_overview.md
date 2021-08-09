@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-24"
+lastupdated: "2021-07-15"
 
 keywords: IBM Cloud Private
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# (Deprecated) IBM Cloud Private Hosted
+# IBM Cloud Private Hosted
 {: #icp_overview}
 
 The {{site.data.keyword.cloud}} Private Hosted service is no longer supported. Use the [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) service instead.

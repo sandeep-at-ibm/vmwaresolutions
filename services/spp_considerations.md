@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-07-22"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -102,5 +102,5 @@ Review the following considerations before you delete the IBM Spectrum Protect P
 * [IBM Spectrum Protect Plus Preventive Service Planning](https://www-01.ibm.com/support/docview.wss?uid=swg22012650)
 * [Managing IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-managingspp)
 * [Ordering IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_ordering)
-* [IBM Spectrum Protect Plus documentation](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ/landing/welcome_ssnqfq.html)
+* [IBM Spectrum Protect Plus documentation](https://www.ibm.com/docs/en/spp/10.1.5)
 * [Opening a case for IBM Spectrum Protect Plus](https://www.ibm.com/mysupport/s/article/How-to-Open-a-Case)

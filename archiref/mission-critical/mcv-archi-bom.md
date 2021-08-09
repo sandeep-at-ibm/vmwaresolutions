@@ -18,10 +18,10 @@ subcollection: vmwaresolutions
 {:deprecated: .deprecated}
 {:term: .term}
 
-# VMware multizone instances BOM
+# VMware multizone BOM
 {: #mcv-archi-bom}
 
-Review the Bill of Materials for VMware multizone instances.
+Review the Bill of Materials (BOM) for VMware multizone instances.
 
 ## Components
 {: #mcv-archi-bom-components}
@@ -109,11 +109,10 @@ The management clusters can be scaled up and down with a maximum of 51 hosts. Th
 
 For example, you can add capacity by adding pairs of hosts, one in Site A and one in Site B to maintain uniformity in the configuration across the two sites. The status reflects that capacity is being added or removed to both sites simultaneously.
 
-**Next topic:** [Component and feature details](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)
+**Next topic:** [VMware multizone components](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)
 
 ## Related links
 {: #mcv-archi-bom-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
-* [Component and feature details](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)
+* [VMware multizone introduction](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-overview)
+* [VMware multizone architecture design](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)

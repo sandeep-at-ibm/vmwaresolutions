@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-08-06"
 
 keywords: troubleshooting, bypassing signing and acceptance, bypassing verification issue
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 {: #trbl_add_host_bypass}
 {: troubleshoot}
 
-When you add a host, you see the following event in vCenter Server:
+When you add a host, you see the following event in VMware vCenter Server®:
 {: tsSymptoms}
 
 `Attempting to install an image profile bypassing signing and acceptance level verification.`

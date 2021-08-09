@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-21"
+lastupdated: "2021-08-03"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -16,6 +16,7 @@ subcollection: vmwaresolutions
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:deprecated: .deprecated}
 {:term: .term}
 
 # Ordering vCenter Server instances
@@ -23,10 +24,10 @@ subcollection: vmwaresolutions
 
 To deploy a flexible and customizable VMware® virtualized platform that best fits your workload needs, order a VMware vCenter Server® instance.
 
-You can also add services, such as [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) for disaster recovery. For more information about the available services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-available-services).
+You can also add services, such as [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) for disaster recovery. For more information about the available services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-available-services). Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
 
-Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
-{:important}
+New deployments of vCenter Server multizone instances are not supported.
+{:deprecated}
 
 ## Requirements for vCenter Server instances
 {: #vc_orderinginstance-req}
@@ -36,7 +37,7 @@ Ensure that you complete the following tasks:
 * Review the information in [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning).
 * Review the instance and domain name format. The domain name is used to generate the username and server names of the instance.
 
-The subdomain label is not used for VMware vSphere 7.0 instances.
+The subdomain label is not used for VMware vSphere® 7.0 instances.
 {:note}
 
 | Name        | Value format |
@@ -44,7 +45,7 @@ The subdomain label is not used for VMware vSphere 7.0 instances.
 | Domain name | `<root_domain>` |  
 | vCenter Server login username | `<user_id>@<root_domain>` (Microsoft® Active Directory™ user) or `administrator@vsphere.local` |
 | vCenter Server (with embedded PSC) FQDN | `<instance_name>-vc.<root_domain>`. The maximum length is 50 characters. |
-| Single Sign-On (SSO) site name | `<root_domain>` |
+| Single sign-on (SSO) site name | `<root_domain>` |
 | Fully qualified VMware ESXi™ server name | `<host_prefix><n>.<root_domain>`, where `n` is the sequence of the ESXi server. The maximum length is 50 characters. |
 {: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
@@ -97,7 +98,7 @@ You can also specify a new initial cluster name that meets the following require
 ### VMware vSphere version
 {: #vc_orderinginstance-vsphere-license}
 
-* For vCenter Server with NSX-T instances, only vSphere® Enterprise Plus 7.0u1 is supported.
+* For vCenter Server with NSX-T instances, only vSphere Enterprise Plus 7.0u1 is supported.
 * For vCenter Server with NSX-V instances, only vSphere Enterprise Plus 6.7u3 is supported.
 
 #### Notes on upgrading to vSphere 7
@@ -134,7 +135,7 @@ The **Use VMware Subscription Purchasing Program** option is available only to u
 
 By using the VMware Subscription Purchasing Program (SPP), you can use VMware Subscription Services in the form of Subscription Credits (SPP Credits). Using SPP Credits requires consumption of VMware vCenter Server, VMware vSphere, and VMware NSX®.
 
-Charges for the licensing of these VMware software components will not be billed to your {{site.data.keyword.cloud_notm}} account and SPP Credits are taken from your SPP Fund Balance. If you select SPP, an {{site.data.keyword.vmwaresolutions_short}} representative will contact you to confirm the SPP Credits usage after you place the instance order.
+Charges for the licensing of these VMware software components are not billed to your {{site.data.keyword.cloud_notm}} account and SPP Credits are taken from your SPP Fund Balance. If you select SPP, an {{site.data.keyword.vmwaresolutions_short}} representative will contact you to confirm the SPP Credits usage after you place the instance order.
 
 When you select SPP, the option **Include with purchase** for all licenses is set automatically and the **I will provide** option is not available.
 
@@ -273,7 +274,7 @@ For deployed instances, you can add NFS storage shares to an existing NFS or vSA
 
 vSAN is available for the **Skylake** and **Cascade Lake** bare metal configurations only.
 
-#### Disk type and size for vSAN capacity disks
+#### Size for vSAN capacity disks
 {: #vc_orderinginstance-vsan-storage-typesize-capdisks}
 
 Select an option for the capacity disks that you need.
@@ -283,15 +284,18 @@ Select an option for the capacity disks that you need.
 
 Specify the number of capacity disks that you want to add.
 
+* For vSphere 7.0, order up to 10 disks for Dual CPU models and order up to 8 disks for Quad CPU models.
+* For vSphere 6.3, order up to 12 disks with Intel Optane for Dual CPU models and order up to 8 disks for Quad CPU models.
+
 If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
 
-The **High performance with Intel Optane** option is available only for vSphere 6.7u3 instances with the Skylake and Cascade Lake CPU models.
+The **High performance with Intel Optane** option is available only for vSphere 6 instances.
 {:note}
 
-#### Disk size for vSAN cache disks
+#### Size for vSAN cache disks
 {: #vc_orderinginstance-vsan-storage-size-cachedisks}
 
-Review the **Disk size for vSAN cache disks** value. The value depends on whether you selected the **High performance with Intel Optane** checkbox.
+Review the **Size for vSAN cache disks** value. The value depends on whether you selected the **High performance with Intel Optane** checkbox.
 
 #### Number of vSAN cache disks
 {: #vc_orderinginstance-vsan-storage-number-cachedisks}
@@ -444,7 +448,7 @@ For NSX-V, if you select the **Private network only** option:
 
 The uplink speed provides two options:
 * 10 Gb, which is selected by default.
-* 25 Gb, which is available only for **Cascade Lake** and **SAP-certified** bare metal servers and for specific locations.
+* 25 Gb, which is available only for **Cascade Lake** and **SAP-certified** bare metal servers and for specific locations. The following table shows the available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed.
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
@@ -498,7 +502,7 @@ Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to
 
 Select the Domain Name System (DNS) configuration for your instance:
 
-* **Single public Windows VSI for Active Directory/DNS** - A single Microsoft® Windows® Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up.
+* **Single public Windows VSI for Active Directory/DNS** - A single Microsoft Windows® Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up.
 * **Two highly available dedicated Windows server VMs on the management cluster** - Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
 You must provide two Microsoft Windows Server 2019 Standard edition licenses if you configure your instance to use the two Microsoft Windows VMs.
@@ -525,11 +529,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## Procedure to order vCenter Server instances
 {: #vc_orderinginstance-procedure}
 
-For information about deploying a vCenter Server instance across a [multizone region](#x9774820){: term}, see [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering).
-{:note}
-
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Dedicated** card in the **IaaS platforms** section.
-2. On the **VMware Solutions Dedicated** page, click the **vCenter Server** card. Ensure that the **Single-zone VMware instance** card is selected.
+2. On the **VMware Solutions Dedicated** page, click the **vCenter Server** card.
 3. Specify the instance configuration:
     * If you want to create a new configuration, select **New configuration**.
     * If you want to update a saved configuration or create a new configuration based on a saved one, select a saved configuration.
@@ -555,7 +556,7 @@ For information about deploying a vCenter Server instance across a [multizone re
       * To add and configure file shares individually, select **Configure shares individually**. Then, click **Add shared storage** and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
       * To add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
     4. If you want to use vSAN storage, select the corresponding option.
-      * If you want more storage, select the **High performance with Intel Optane** checkbox (vSphere 6.7u3 instances only).
+      * If you want more storage, select the **High performance with Intel Optane** checkbox (vSphere 6 instances only).
       * Specify the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, the disk size for vSAN cache disks, and the number of vSAN cache disks.
       * By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
       * Specify the vSAN license edition.
@@ -567,7 +568,7 @@ For information about deploying a vCenter Server instance across a [multizone re
        * Optionally click **Portable subnets settings**. Then, select the portable subnet for each purpose and click **Save**.
     8. Optionally select the **Include a separate, additional workload cluster** checkbox, then specify the settings if you want to include an additional workload cluster with your instance.
 
-       If the consolidated or management cluster and the workload clusters are in the same location, you cannot use existing VLANs. Instead, the workload clusters will reuse the VLANs from the management cluster.
+       If the consolidated or management cluster and the workload clusters are in the same location, you cannot use existing VLANs. Instead, the workload clusters reuse the VLANs from the management cluster.
        {:note}
 
 11. (NSX-V only) Complete the bare metal server and storage settings.

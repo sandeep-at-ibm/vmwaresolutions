@@ -9,13 +9,14 @@ VMware Solutions
     [Why VMware Solutions](https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions)
     vmonic/under_the_hood.md
     vmonic/inst_comp_chart.md
-    vmonic/relnotes_v42.md
+    vmonic/relnotes_v43.md
 
     {: .topicgroup}
     Previous release notes
 
         {: .topicgroup}
-        Version 4.0 to 4.1
+        Version 4.0 to 4.2
+            vmonic/relnotes_v42.md
             vmonic/relnotes_v41.md
             vmonic/relnotes_v40.md
 
@@ -90,41 +91,57 @@ VMware Solutions
 
     {: .topicgroup}
     VMware Solutions Dedicated - vCenter Server
-        vcenter/vc_vcenterserveroverview.md
-        vcenter/vc_bom.md
-        vcenter/vc_vsphere_70_upgrade.md
-        vcenter/vc_vsphere_upgrade.md
-        vcenter/vc_planning.md
-        vcenter/vc_networkingonvcenterserver.md
-        vcenter/vc_esg_config.md
-        vcenter/vc_multisite.md
-        vcenter/vc_compl_info.md
+
+        {: .topicgroup}
+        vCenter Server overview
+            vcenter/vc_vcenterserveroverview.md
+            vcenter/vc_bom.md
+            archiref/mission-critical/mcv-archi-bom.md
+
+        {: .topicgroup}
+        Planning new deployments
+            vcenter/vc_planning.md
+            vcenter/vc_networkingonvcenterserver.md
+            vcenter/vc_esg_config.md
+            vcenter/vc_multisite.md
+            vcenter/vc_compl_info.md
+
+        {: .topicgroup}
+        Upgrading and migrating
+            vcenter/vc_vsphere_70_upgrade.md
+            vcenter/vc_vsphere_upgrade.md
+            vcenter/vc_upgrade-lic.md
+            vcenter/vc_addinstancetousraccount.md
+
         vcenter/vc_orderinginstance.md
 
         {: .topicgroup}
-        Adding, viewing, and deleting clusters for vCenter Server instances
+        Adding, viewing, and deleting clusters
             vcenter/vc_addingclusters.md
+            services/mcv_addviewdeleteclusters.md
             vcenter/vc_viewingclusters.md
             vcenter/vc_deletingclusters.md
 
         {: .topicgroup}
-        Expanding and contracting capacity for vCenter Server instances
+        Expanding and contracting capacity
             vcenter/vc_addingservers.md
-            vcenter/vc_removingservers.md
+            services/mcv_addingremovingservers.md
             vcenter/vc_addingnfs.md
+            services/mcv_addingnfs.md
             vcenter/vc_removingnfs.md
+            vcenter/vc_removingservers.md
 
         {: .topicgroup}
-        Ordering, viewing, and deleting services for vCenter Server instances
+        Ordering, viewing, and deleting services
             vcenter/vc_addingservices.md
             vcenter/vc_viewingservices.md
             vcenter/vc_deletingservices.md
 
-        vcenter/vc_viewinginstances.md
-        vcenter/vc_upgrade-lic.md
-        vcenter/vc_addinstancetousraccount.md
-        vcenter/vc_deletinginstance.md
-        vcenter/vc_deletinginstance_multi.md
+        {: .topicgroup}
+        Viewing and deleting instances
+            vcenter/vc_viewinginstances.md
+            vcenter/vc_deletinginstance.md
+            vcenter/vc_deletinginstance_multi.md
 
     {: .topicgroup}
     VMware Solutions Dedicated - VMware vSphere
@@ -156,143 +173,113 @@ VMware Solutions
         vcenter/scb_addingremovingservices.md
 
     {: .topicgroup}
-    vCenter Server with Hybridity Bundle
-        vcenter/vc_hybrid_overview.md
-        vcenter/vc_hybrid_compl_info.md
-        vcenter/vc_hybrid_addingviewingclusters.md
-        vcenter/vc_hybrid_addingremovingservers.md
-        vcenter/vc_hybrid_upgrade-lic.md
-        vcenter/vc_hybrid_addingremovingservices.md
-        vcenter/vc_hybrid_viewinginstances.md
-        vcenter/vc_hybrid_addinstancetousraccount.md
-        vcenter/vc_hybrid_deletingbundle.md
-        vcenter/vc_hybrid_deletinginstance.md
-        vcenter/vc_hybrid_deletinginstance_multi.md
+    Add-on services
 
-    {: .topicgroup}
-    Caveonix RiskForesight
-        services/caveonix_considerations.md
-        services/caveonix_ordering.md
-        services/managingcaveonix.md
-        services/caveonix_license_ordering.md
-        services/caveonix_license_managing.md
+        {: .topicgroup}
+        Caveonix RiskForesight
+            services/caveonix_considerations.md
+            services/caveonix_ordering.md
+            services/managingcaveonix.md
+            services/caveonix_license_ordering.md
+            services/caveonix_license_managing.md
 
-    {: .topicgroup}
-    F5 BIG-IP
-        services/f5_considerations.md
-        services/f5_ordering.md
-        services/managing_f5.md
+        {: .topicgroup}
+        F5 BIG-IP
+            services/f5_considerations.md
+            services/f5_ordering.md
+            services/managing_f5.md
 
-    {: .topicgroup}
-    FortiGate Virtual Appliance
-        services/fortinetvm_considerations.md
-        services/fortinetvm_ordering.md
-        services/managingfortinetvm.md
+        {: .topicgroup}
+        FortiGate Virtual Appliance
+            services/fortinetvm_considerations.md
+            services/fortinetvm_ordering.md
+            services/managingfortinetvm.md
 
-    {: .topicgroup}
-    VMware HCX
-        services/hcx_considerations.md
-        services/hcx_ordering.md
-        services/managinghcx.md
-        services/standalone_considerations.md
-        services/standalone_orderingserviceinstances.md
-        services/standalone_viewingserviceinstances.md
-        services/standalone_deletingserviceinstances.md
-        services/hcx_glossary.md
+        {: .topicgroup}
+        VMware HCX
+            services/hcx_considerations.md
+            services/hcx_ordering.md
+            services/managinghcx.md
+            services/standalone_considerations.md
+            services/standalone_orderingserviceinstances.md
+            services/standalone_viewingserviceinstances.md
+            services/standalone_deletingserviceinstances.md
+            services/hcx_glossary.md
 
-    {: .topicgroup}
-    HyTrust CloudControl
-        services/htcc_considerations.md
-        services/htcc_ordering.md
-        services/managinghtcc.md
+        {: .topicgroup}
+        HyTrust CloudControl
+            services/htcc_considerations.md
+            services/htcc_ordering.md
+            services/managinghtcc.md
 
-    {: .topicgroup}
-    HyTrust DataControl
-        services/htdc_considerations.md
-        services/htdc_ordering.md
-        services/managinghtdc.md
+        {: .topicgroup}
+        HyTrust DataControl
+            services/htdc_considerations.md
+            services/htdc_ordering.md
+            services/managinghtdc.md
 
-    {: .topicgroup}
-    IBM Cloud for VMware Mission Critical Workloads
-        services/mcv_overview.md
-        services/mcv_ordering-multi-zone.md
-        services/mcv_ordering-managed.md
-        services/mcv_addviewdeleteclusters.md
-        services/mcv_addingremovingservers.md
-        services/mcv_addingremovingservices.md
-        services/mcv_viewinginstance.md
+        services/managing-ss-sap.md
 
-    services/managing-ss-sap.md
+        {: .topicgroup}
+        IBM Spectrum Protect Plus
+            services/spp_considerations.md
+            services/spp_ordering.md
+            services/managingspp.md
 
-    {: .topicgroup}
-    IBM Spectrum Protect Plus
-        services/spp_considerations.md
-        services/spp_ordering.md
-        services/managingspp.md
+        {: .topicgroup}
+        Juniper vSRX
+            services/juniper_overview.md
+            services/juniper_ordering.md
+            services/juniper_managing.md
 
-    {: .topicgroup}
-    Juniper vSRX
-        services/juniper_overview.md
-        services/juniper_ordering.md
-        services/juniper_managing.md
+        {: .topicgroup}
+        KMIP for VMware
+            services/kmip_standalone_considerations.md
+            services/kmip_standalone_ordering.md
+            services/kmip_standalone_viewing.md
+            services/kmip_standalone_addingdeletingcert.md
+            services/kmip_standalone_deleting.md
 
-    {: .topicgroup}
-    KMIP for VMware
-        services/kmip_standalone_considerations.md
-        services/kmip_standalone_ordering.md
-        services/kmip_standalone_viewing.md
-        services/kmip_standalone_addingdeletingcert.md
-        services/kmip_standalone_deleting.md
+        {: .topicgroup}
+        PrimaryIO HDM
+            services/managing_pio.md
+            services/pio_ordering.md
+            services/pio_installing.md
 
-    {: .topicgroup}
-    PrimaryIO HDM
-        services/managing_pio.md
-        services/pio_ordering.md
-        services/pio_installing.md
+        {: .topicgroup}
+        Red Hat OpenShift for VMware
+            services/ocp_overview.md
+            services/ocp_ordering.md
+            services/ocp_managing.md
 
-    {: .topicgroup}
-    Red Hat OpenShift for VMware
-        services/ocp_overview.md
-        services/ocp_ordering.md
-        services/ocp_managing.md
+        {: .topicgroup}
+        Veeam
+            services/veeamvm_overview.md
+            services/veeam_ordering.md
+            services/managingveeam.md
+            services/veeam_ordering_licenses.md
+            services/veeam_managing_licenses.md
+            services/icos_ordering.md
+            services/veeam_considerations.md
 
-    {: .topicgroup}
-    Veeam
-        services/veeamvm_overview.md
-        services/veeam_ordering.md
-        services/managingveeam.md
-        services/veeam_ordering_licenses.md
-        services/veeam_managing_licenses.md
-        services/icos_ordering.md
-        services/veeam_considerations.md
+        {: .topicgroup}
+        vRealize Operations and Log Insight
+            services/vrops_overview.md
+            services/vrops_ordering.md
+            services/managing_vrops.md
 
-    {: .topicgroup}
-    vRealize Operations and Log Insight
-        services/vrops_overview.md
-        services/vrops_ordering.md
-        services/managing_vrops.md
+        {: .topicgroup}
+        Zerto
+            services/addingzertodr.md
+            services/zerto_ordering.md
+            services/managingzertodr.md
 
-    {: .topicgroup}
-    Zerto
-        services/addingzertodr.md
-        services/zerto_ordering.md
-        services/managingzertodr.md
-
-    {: .topicgroup}
-    Professional Services
-        services/managing_imi.md
-        services/managing_zerto_services.md
-        services/managing_mcms.md
-        services/netapp_overview.md
-
-    services/fsa_considerations.md
-
-    {: .topicgroup}
-    (Deprecated) HyTrust KeyControl
-        services/htkc_considerations.md
-        services/managinghtkc.md
-
-    services/icp_overview.md
+        {: .topicgroup}
+        Professional services
+            services/managing_imi.md
+            services/managing_zerto_services.md
+            services/managing_mcms.md
+            services/netapp_overview.md
 
     {: .topicgroup}
     Enhancing security
@@ -301,7 +288,33 @@ VMware Solutions
         vmonic/at-events.md
         vmonic/manage-scc.md
 
-    vmonic/ha-dr.md
+        vmonic/ha-dr.md
+
+    {: .topicgroup}
+    Deprecated offerings
+
+        {: .topicgroup}
+        vCenter Server with Hybridity Bundle
+            vcenter/vc_hybrid_overview.md
+            vcenter/vc_hybrid_compl_info.md
+            vcenter/vc_hybrid_addingviewingclusters.md
+            vcenter/vc_hybrid_addingremovingservers.md
+            vcenter/vc_hybrid_upgrade-lic.md
+            vcenter/vc_hybrid_addingremovingservices.md
+            vcenter/vc_hybrid_viewinginstances.md
+            vcenter/vc_hybrid_addinstancetousraccount.md
+            vcenter/vc_hybrid_deletingbundle.md
+            vcenter/vc_hybrid_deletinginstance.md
+            vcenter/vc_hybrid_deletinginstance_multi.md
+
+        services/fsa_considerations.md
+
+        {: .topicgroup}
+        HyTrust KeyControl
+            services/htkc_considerations.md
+            services/managinghtkc.md
+
+        services/icp_overview.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -393,7 +406,7 @@ VMware Solutions
         archiref/attached-storage/cluster-settings.md
 
     {: .topicgroup}
-    Caveonix RiskForesight reference architecture
+    Caveonix RiskForesight architecture
         archiref/caveonix/caveonix-intro.md
         archiref/caveonix/caveonix-on-vcs.md
         archiref/caveonix/caveonix-arch.md
@@ -409,14 +422,13 @@ VMware Solutions
         archiref/caveonix/caveonix-terminology.md
 
     {: .topicgroup}
-    VMware multizone instances reference architecture
+    VMware multizone architecture
         archiref/mission-critical/mcv-archi-overview.md
         archiref/mission-critical/mcv-archi-design.md
-        archiref/mission-critical/mcv-archi-bom.md
         archiref/mission-critical/mcv-archi-comps.md
 
     {: .topicgroup}
-    VMware Regulated Workloads reference architecture
+    VMware Regulated Workloads architecture
         archiref/vrw/vrw-archi-overview.md
         archiref/vrw/vrw-context.md
         archiref/vrw/vrw-separation-of-duties.md
@@ -443,7 +455,7 @@ VMware Solutions
         archiref/vrw/vrw-dualregion-design.md
 
     {: .topicgroup}
-    Veeam on bare metal server
+    Veeam on bare metal server architecture
         archiref/veeam-bms/veeam-bms-archi-intro.md
         archiref/veeam-bms/veeam-bms-archi-overview.md
         archiref/veeam-bms/veeam-bms-archi-components.md
@@ -479,7 +491,7 @@ VMware Solutions
         archiref/vum/vum-host-profiles.md
 
     {: .topicgroup}
-    KMIP for VMware solution architecture
+    KMIP for VMware Solutions architecture
         archiref/kmip/overview.md
         archiref/kmip/design.md
         archiref/kmip/implementation.md

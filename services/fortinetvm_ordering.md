@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-14"
+lastupdated: "2021-08-06"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -21,14 +21,14 @@ subcollection: vmwaresolutions
 # Ordering FortiGate Virtual Appliance
 {: #fortinetvm_ordering}
 
-You can include the FortiGate® Virtual Appliance service with a new vCenter Server® instance or add the service to your existing vCenter Server instance.
+You can include the FortiGate® Virtual Appliance service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
 
 ## Ordering FortiGate Virtual Appliance for a new instance
 {: #fortinetvm_ordering-new}
 
 When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-procedure), scroll down to the services section and click **FortiGate Virtual Appliance** in the **Security and compliance** category. Follow the steps to add the service to your instance.
 
-You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
+You cannot install Juniper® vSRX and Fortigate Virtual Appliance on the same edge services cluster.
 
 ## Ordering FortiGate Virtual Appliance for an existing instance
 {: #fortinetvm_ordering-existing}
@@ -50,6 +50,11 @@ To ensure continued operation, FortiGate Virtual Appliance must have persistent 
 
 When you order the service, provide the following settings.
 
+### Name
+{: #fortinetvm_ordering-config-name}
+
+Enter the service name.
+
 ### FortiGuard network connection
 {: #fortinetvm_ordering-config-network-connect}
 
@@ -61,35 +66,40 @@ If you select **Private network**, specify the following settings:
 * **Proxy User Name** - If you require proxy authentication, enter the username of the proxy server.
 * **Proxy Password** - If you require proxy authentication, enter the password of the proxy server.
 
-### Name
-{: #fortinetvm_ordering-config-name}
-
-Enter the service name.
-
 ### Deployment size
 {: #fortinetvm_ordering-config-size}
 
 {{site.data.keyword.cloud}} provides the following deployment size options:
-* 2 CPUs / 4 GB RAM
-* 4 CPUs / 6 GB RAM
-* 8 CPU / 12 GB RAM
-* 16 CPU / 12 GB RAM
+* FortiGate-VM02 (2 vCPUs)
+* FortiGate-VM04 (4 vCPUs)
+* FortiGate-VM08 (8 vCPUs)
+* FortiGate-VM16 (16 vCPUs)
+* FortiGate-VM32 (32 vCPUs)
 
-### License model
+### Monthly subscription license model
 {: #fortinetvm_ordering-config-license}
 
-The license model for FortiGate Virtual Appliance offers the following options:
-* **Standard FW** This bundle includes Stateful Packet Inspection, VLAN Protection and Advanced Logging, Ingress and Egress Firewall Rules, SSL/IPSec VPN Termination, and continuous support.
-* **Standard FW + UTM** This bundle includes all standard firewall services in addition to the Advanced Malware Protection (AMP) service. It includes Antivirus, Botnet IP/Domain Service, Mobile Malware Security, FortiSandbox Cloud, Virus Outbreak Protection Service, and Content Disarm & Reconstruct. It also includes the Web Filtering, IPS, Antispam, Application Control, and FortiCare services.
+The monthly subscription license model for FortiGate Virtual Appliance offers the following options:
+* **Standard FW** - This bundle includes:
+   * Stateful packet inspection
+   * VLAN protection and advanced logging
+   * Ingress/egress FW rules
+   * SSL/IPSec VPN termination
+   * Continuous support
+* **Standard FW + UTM** - This bundle includes all standard firewall services in addition to the Advanced Malware Protection (AMP) service. It includes:
+   * Advanced malware protection
+   * NGFW IPS and web filtering
+   * Antispam
+   * Application control
 * **Standard FW + Enterprise** This bundle includes all standard firewall and UTM services in addition to the following services:
-    * Cloud Access Security Broker (CASB) - This service provides visibility, compliance, data security, and threat protection for cloud-based services.
-    * Industrial Security - This service provides signatures for common ICS/SCADA protocols.
-    * Security Rating - This service provides audit capabilities to identify critical vulnerabilities and configuration weaknesses and implement best practice recommendations.
+    * CASB (Cloud Access Security Broker) - This service provides visibility, compliance, data security, and threat protection for cloud-based services.
+    * Industrial security - This service provides signatures for common ICS/SCADA protocols.
+    * Security rating - This service provides audit capabilities to identify critical vulnerabilities and configuration weaknesses and implement best practice recommendations.
 
 In 3Q 2018, Fortinet added three new services (CASB, Industrial Security, and Security Rating) to their Enterprise bundle. These services are available for FortiGate V6.0 and later only.
 {:note}
 
-You can't change the license model after service installation. To change the license model, you must delete the existing service and reinstall the service by selecting a different license option.
+You can't change the monthly subscription license model after service installation. To change the monthly subscription license model, you must delete the existing service and reinstall the service by selecting a different license option.
 {:important}
 
 ## Related links
@@ -97,7 +107,7 @@ You can't change the license model after service installation. To change the lic
 
 * [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations)
 * [Managing FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-managingfortinetvm)
-* [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
+* [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Fortinet website](https://www.fortinet.com/){:external}

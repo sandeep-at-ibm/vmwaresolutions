@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-01"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -17,7 +17,7 @@ subcollection: vmwaresolutions
 {:note: .note}
 {:important: .important}
 
-# vCenter Server Bill of Materials
+# vCenter Server BOM
 {: #vc_bom}
 
 Review the Bill of Materials (BOM) information for VMware vCenter Server® instances.
@@ -41,13 +41,12 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer | Component                       | Version       |
 |:------------ |:------------------------------- |:------------- |
-| VMware       | vSphere ESXi                    | ESXi 7.0 Update 1d (17551050) or <br>ESXi 6.7 P05  (17700523) or <br>ESXi 6.5 P06 (17477841)[^esxinote] |
-| VMware       | vSphere 7.0 Update 1d           | Distributed vSwitch 7.0.0 |
+| VMware       | vSphere ESXi[^esxinote]         | ESXi 7.0 Update 2a (17867351) or <br>ESXi 6.7 P05  (17700523) or <br>ESXi 6.5 P06 (17477841) |
+| VMware       | vSphere 7.0 Update 2a           | Distributed vSwitch 7.0.0 |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5[^vcs-vsphere65]     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 7.0 Update 2b (17958471) or<br>6.7 Update 3n  (18010531) |
-| VMware       | vSAN[^vsan]                     | 7.0 Update 1d (17551050) or<br>6.7 P05 |
-| VMware       | vSAN Witness[^vsanwit]          | 7.0 Update 1d (17551050) |
+| VMware       | vCenter Server Appliance        | 7.0 Update 2b (17958471/17958471) or<br>6.7 Update 3n (18010531/18010599) |
+| VMware       | vSAN[^vsan]                     | 7.0 Update 2 (17630552) or<br>6.7 P05 |
 | VMware       | NSX for vSphere[^nsxv]          | 6.4.10 (17626462) |
 | VMware       | NSX-T for vSphere[^nsxt]        | 3.1.0.0.0 (17107167) |
 | Microsoft®    | Windows® Server Standard edition | 2019 |
@@ -58,9 +57,7 @@ The following table details the BOM information for vCenter Server software comp
 
 [^vcs-vsphere65]: Existing vSphere 6.5 clusters only
 
-[^vsan]: VMware vSAN is an optional component.
-
-[^vsanwit]: vSAN Witness is only available in vCenter Server multizone instances.
+[^vsan]: VMware vSAN is an optional component
 
 [^nsxv]: vCenter Server with NSX-V only
 

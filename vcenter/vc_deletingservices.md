@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-11"
+lastupdated: "2021-07-15"
 
 keywords: remove services vCenter Server
 
@@ -30,7 +30,7 @@ You can delete the services that were provisioned for your VMware vCenter Server
 4. On the **Services** page, locate the service instance that you want to delete, click the vertical overflow menu next to the **Status** column, and then click **Delete service**.
 5. In the **Remove service** window, review the considerations or warnings if there are any and select **I Understand**. Click **Delete**.
 
-## Results after you delete a service
+## Results after you delete services from vCenter Server instances
 {: #vc_deletingservices-results}
 
 After your request to delete a service is accepted, the service status is changed to **Removing**.
@@ -40,10 +40,10 @@ When the service deletion is completed successfully, you are notified by email, 
 You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the deleted services.
 {:note}
 
-## Manually removing the DNS entries
+## Manually removing the DNS entries for specific services
 {: #vc_deletingservices-DNS-entries}
 
-For specific services, if you installed the service before VMware Solutions v4.0 and you then delete that service, you must manually remove the DNS entries.
+For specific services, if you installed the service in a VMware Solutions release earlier than V4.0 and you delete that service, you must manually remove the DNS entries.
 
 After you delete the service, unused DNS entries remain in Active Directory™. These entries do not cause any problems. However, in the future, they might create conflicts with reverse lookups. It is recommended that you remove the entries as soon as possible.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-08-07"
 
 subcollection: vmwaresolutions
 
@@ -46,12 +46,12 @@ The management software stack includes the following components:
 * vCenter Server, which manages all hosts in the entire {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads instance.
 * Microsoft® AD/DNS servers, which provide DNS and authentication services.
 * NSX-T management components to fully isolate the SDN control plane from the workload cluster.
-* HTCC (HyTrust CloudControl) is used to unify security policies for access to the management stack. In addition, HTCC is used for unified visibility into security configuration and context and continuous compliance by using templates to enforce segregation of duties. HTCC also provides a robust audit trail that includes a full record of all actions that are taken by security, network, and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS, and other regulations.
+* HTCC (HyTrust CloudControl) is used to unify security policies for access to the management stack. In addition, HTCC is used for unified visibility into security configuration and context and continuous compliance by using templates to enforce separation of duties. HTCC also provides a robust audit trail that includes a full record of all actions that are taken by security, network, and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS, and other regulations.
 
 ![IBM Cloud for VMware Regulated Workloads HyTrust overview](../../images/vrw-htcc.svg "IBM Cloud for VMware Regulated Workloads HyTrust overview"){: caption="Figure 2. IBM Cloud for VMware Regulated Workloads HyTrust overview" caption-side="bottom"}
 
 * Security is further enhanced by IBM Hyper Protect Crypto Services (HPCS). HPCS uses a FIPS 140-2 Level 4 hardware security module (HSM) that gives access to the highest level of security for regulated data and digital assets. HPCS helps meet regulatory compliance requirements by providing complete control of data encryption keys, including the HSM primary key.
-* Caveonix RiskForesight provides a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads. It provides a comprehensive cloud workload protection platform for {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is designed to enable compliance to NIST and other necessary certifications, as required for the SaaS provider and SaaS consumer.
+* Caveonix RiskForesight provides a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads. It provides a comprehensive cloud workload protection platform for {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is designed to enable compliance with NIST and other necessary certifications, as required for the SaaS provider and SaaS consumer.
 * VMware vRealize Operations Manager (vROps), vRealize LogInsight (vRLI), and the optional vRealize Network Insight (vRNI). These components collectively provide a native console for vSphere operations, the ability to automate management of the cloud platform, centralized log collection, and network visibility, analysis, and optimization.  
 * Veeam provides continuous backup of the management stack for protection against disasters and rapid restoration to known good states if corruption of any management stack component were to occur. Veeam can also provide backup services for the workload cluster. The single site deployment can use the Veeam bare metal option to provide a suitable backup repository.
 
@@ -71,17 +71,28 @@ NSX-T provides a highly secure and flexible software defined network to support 
 
 Add more workload clusters to deliver dedicated resources for more applications or to satisfy business or compliance requirements.
 
+## Option for consolidated workload and management cluster
+{: #vrw-archi-overview-workloads-opt}
+
+Smaller deployments, such as those for Development, Test, or a minimal footprint DR site, might not require the deployment of both dedicated management and workload clusters. You can order the VMware Regulated Workloads environment with a consolidated management and workload cluster. When you use a consolidated cluster, additional operation and security risks exist. No option is offered to deploy without a Perimeter Gateway.
+
+Resource exhaustion is an operational risk that might require reserving sufficient compute, storage, and network resources for management functions to guarantee the necessary resources are available to manage the environment. Another option to prevent resource exhaustion is through the assignment of quotas to workloads.
+
+Before you deploy a consolidated cluster, consider the following possible security risks :
+* An attacker who gets access to a workload VM might be able to use future microarchitectural vulnerabilities to steal secrets from or manipulate memory on an ESXi host.
+* An attacker who gets access to a workload VM might be able to use future hypervisor vulnerabilities to escape from the VM and manipulate the management VMs on the same ESXi host.
+
 ## Optional management by IBM
 {: #vrw-archi-overview-ibm-services}
 
 The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads is available as a self-managed or SaaS provider-managed solution. However, a SaaS provider might choose to deploy the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads as an IBM-managed offering by bundling in IBM GTS services.
 
-## How to order IBM Cloud for VMware Regulated Workloads instances
+## How to order VMware Regulated Workloads instances
 {: #vrw-archi-overview-order-inst}
 
 For more information, see:
-* [IBM Cloud for VMware Regulated Workloads instance configurations](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview)
-* [Ordering IBM Cloud for VMware Regulated Workloads instances](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance)
+* [VMware Regulated Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview)
+* [Ordering VMware Regulated Workloads](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance)
 
 **Next topic**: [System context](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-context)
 

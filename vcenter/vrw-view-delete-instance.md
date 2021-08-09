@@ -4,9 +4,9 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-13"
+lastupdated: "2021-07-20"
 
-keywords: view regulated workloads, view workload, view regulated workload details, regulated workload delete, delete regulated workload, remove regulated workload
+keywords: view vmware regulated workloads, vmware regulated workloads details, vmware regulated workloads delete, delete vmware regulated workloads, remove vmware regulated workloads
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Viewing and deleting VMware Regulated Workloads
 {: #vrw-view-delete-instance}
 
-You can view the summary and detailed information of the VMware® Regulated Workloads instances that you provisioned in the **Regulated workloads server instances** table on the **Resources** page. The available information is similar to that of VMware vCenter Server® instances. For more information, see [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances) or [Procedure to view the details of a vCenter Server multizone instance](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_viewinginstance#mcv_viewinginstance-procedure-view-inst-details).
+You can view the summary and detailed information of the VMware® Regulated Workloads instances that you provisioned in the **Regulated workloads server instances** table on the **Resources** page. The available information is similar to that of VMware vCenter Server® instances. For more information, see [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances).
 
 If you want to release the components that you ordered in a VMware Regulated Workloads instance, you can delete it. The process to delete VMware Regulated Workloads instances is similar to that of vCenter Server instances. For more information, see [Deleting vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletinginstance).
 

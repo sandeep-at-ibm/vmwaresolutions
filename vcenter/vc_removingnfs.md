@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-07-20"
 
 keywords: vCenter Server remove NFS storage
 
@@ -27,7 +27,7 @@ You can contract the capacity of your VMware vCenter Server® instance according
 * If your initial cluster has vSAN® storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
 * You can add or remove NFS storage shares to or from an existing NFS or vSAN cluster.
 
-## Before you remove NFS storage
+## Before you remove NFS storage from vCenter Server instances
 {: #vc_removingnfs-prereq}
 
 * Do not remove NFS storage from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
@@ -41,11 +41,11 @@ You can contract the capacity of your VMware vCenter Server® instance according
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server instances** table, click the instance for which you want to contract capacity.
 3. Click **Infrastructure** on the left navigation pane.
-4. In the **Clusters** table, click the cluster from which you want to remove NFS storage.
+4. In the applicable cluster table, click the cluster from which you want to remove NFS storage.
 5. In the **Storage** section, select the storage share that you want to remove and click **Delete**.
 6. Click **Remove** in the **Remove storage** window.
 
-## Results after you remove NFS storage
+## Results after you remove NFS storage from vCenter Server instances
 {: #vc_removingnfs-results}
 
 1. You might experience a slight delay on the console, while the instance status changes from **Ready to use** to **Modifying**. Allow the operation to complete before you make more changes to the instance.

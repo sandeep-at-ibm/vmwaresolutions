@@ -4,9 +4,9 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-07-05"
 
-keywords: add hosts for VMware Regulated Workloads, add servers for VMware Regulated Workloads, remove hosts from VMware Regulated Workloads
+keywords: vmware regulated workloads, add hosts vmware regulated workloads, add servers vmware regulated workloads, remove hosts vmware regulated workloads
 
 subcollection: vmwaresolutions
 

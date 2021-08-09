@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-14"
+lastupdated: "2021-07-15"
 
 keywords: HyTrust KeyControl, HTKC, tech specs HTKC
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# (Deprecated) HyTrust KeyControl overview
+# HyTrust KeyControl overview
 {: #htkc_considerations}
 
 New installations of HyTrust KeyControl™ are no longer supported for new or existing deployments of vCenter Server instances. You can still use or delete existing HyTrust KeyControl installations on your existing instances.

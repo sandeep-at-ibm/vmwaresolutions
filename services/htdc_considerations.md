@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-14"
+lastupdated: "2021-06-28"
 
 keywords: HyTrust DataControl, HTDC, tech specs HTDC
 
@@ -27,7 +27,7 @@ The HyTrust® DataControl® service offers strong encryption with integrated key
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service's licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-The current HyTrust DataControl version that is installed is 5.3.
+The current HyTrust DataControl version that is installed is 5.3. This version is supported for VMware vCenter Server with NSX-T instances for VMware vSphere 6.7 and for vCenter Server with NSX-V instances for vSphere 6.7 and 6.5.
 {:note}
 
 ## Technical specifications for HyTrust DataControl
@@ -53,7 +53,7 @@ Two DataControl appliances are deployed in an active-active configuration.
 ### Licenses and fees
 {: #htdc_considerations-licenses}
 
-Per-host license: A HyTrust DataControl license is ordered for each host in the environment.
+Per host license: A HyTrust DataControl license is ordered for each host in the environment.
 
 ## Considerations when you delete HyTrust DataControl
 {: #htdc_considerations-remove}

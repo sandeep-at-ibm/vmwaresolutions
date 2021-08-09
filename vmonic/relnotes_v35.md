@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020,  2021
+  years:  2020, 2021
 
-lastupdated: "2021-06-16"
+lastupdated: "2020-07-14"
 
 keywords: release notes, what's new, version 3.5
 
@@ -122,8 +122,7 @@ A direct link to order Gateway appliances is now available on the **Security and
 ## New and updated documentation
 {: #relnotes_v35-updated-doc}
 
-* (Updated on 6 March 2020) The _Financial Services Sector Cloud reference architecture_ is now available in the *Reference* section of the user documentation.
-* Various updates are made for the [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [{{site.data.keyword.vmwaresolutions_short}} Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
+Various updates are made for the [{{site.data.keyword.vmwaresolutions_short}} API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [{{site.data.keyword.vmwaresolutions_short}} Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared).
 
 ## User interface updates and enhancements
 {: #relnotes_v35-ui}

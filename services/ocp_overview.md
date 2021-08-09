@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-30"
+lastupdated: "2021-08-06"
 
 keywords: openshift for vmware, request openshift for vmware, tech specs openshift vmware
 
@@ -25,7 +25,7 @@ subcollection: vmwaresolutions
 
 The Red Hat® OpenShift® for VMware® service deploys an OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The OpenShift components are deployed as virtual machines (VMs) or appliances by using VMware NSX® software-defined networking.
 
-The current Red Hat OpenShift version that is installed is 4.6.
+The current Red Hat OpenShift version that is installed is 4.7.
 {: note}
 
 Review the following information before you install the OpenShift for VMware service:
@@ -35,7 +35,7 @@ Review the following information before you install the OpenShift for VMware ser
    * vCenter Server with NSX-V for vSphere 6.7 or 6.5
    * vCenter Server with NSX-T for vSphere 6.7
 
-   Existing installations of OpenShift for VMware can be used or deleted.
+Existing installations of OpenShift for VMware can be used or deleted.
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
@@ -60,7 +60,7 @@ The solution topology has the following requirements:
 
 For more information about resource requirements and capacity checking, see [Resource requirements for services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
 
-To successfully deploy OpenShift for VMware on vCenter Server, you must have a Red Hat account and the pull secret key from your account. All Red Hat accounts have an associated pull secret, which you can retrieve by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}. You must purchase Red Hat support entitlements through Red Hat and, if required, direct all OpenShift support issues to Red Hat.
+To successfully deploy OpenShift for VMware on vCenter Server, you must have a Red Hat account and the pull secret key from your account. All Red Hat accounts have an associated pull secret, which you can retrieve by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}. You must purchase Red Hat support entitlements through Red Hat and, if required, send information for all OpenShift support issues to Red Hat.
 
 ### Selection of the target cluster for installation
 {: #ocp_overview-select-target-cluster}
@@ -129,12 +129,12 @@ For more information, see [OpenShift subscriptions information and known issues]
 
 By default, the OpenShift installer creates a `kubeadmin` user that you can use to log in to the cluster. It is recommended that you create authentication backends or more users, as needed, for security purposes.
 
-For more information about how to configure OpenShift authentication, see [Understanding authentication](https://docs.openshift.com/container-platform/4.6/authentication/understanding-authentication.html){:external}.
+For more information about how to configure OpenShift authentication, see [Understanding authentication](https://docs.openshift.com/container-platform/4.7/authentication/understanding-authentication.html){:external}.
 
 ## Updating your OpenShift cluster
 {: #ocp_overview-update-clus}
 
-For more information about updating OpenShift, see [Updating a cluster between minor versions](https://docs.openshift.com/container-platform/4.6/updating/updating-cluster-between-minor.html){:external}.
+For more information about updating OpenShift, see [Updating a cluster between minor versions](https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-between-minor.html){:external}.
 
 ## Considerations when you install OpenShift for VMware
 {: #ocp_overview-consid-install}
@@ -157,7 +157,7 @@ For more information about updating OpenShift, see [Updating a cluster between m
 
 * [vCenter Server and OpenShift architecture overview](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
 * [VMware Solutions and OpenShift overview](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
-* [OpenShift Container Platform 4.6 documentation](https://docs.openshift.com/container-platform/4.6/welcome/index.html){:external}
-* [OpenShift Container Platform 4.6 release notes](https://docs.openshift.com/container-platform/4.6/release_notes/ocp-4-6-release-notes.html){:external}
+* [OpenShift Container Platform 4.7 documentation](https://docs.openshift.com/container-platform/4.7/welcome/index.html){:external}
+* [OpenShift Container Platform 4.7 release notes](https://docs.openshift.com/container-platform/4.7/release_notes/ocp-4-7-release-notes.html){:external}
 * [What's new in Red Hat OpenShift](https://www.openshift.com/learn/whats-new){:external}
 * [Succeeding with Red Hat OpenShift and VMware’s Software-Defined Datacenter (SDDC)](https://blog.openshift.com/red-hat-openshift-and-vmware-better-together/){:external}

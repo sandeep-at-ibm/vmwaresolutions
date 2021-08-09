@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-10"
+lastupdated: "2021-07-15"
 
 keywords: view services vCenter Server
 

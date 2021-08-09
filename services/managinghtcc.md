@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-08-05"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -36,7 +36,7 @@ To access the HyTrust CloudControl console from the vSphere Web Client, use the 
 2. Right-click **CC1** or **CC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust CloudControl service details page.
 
-For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
+For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 ## Known issue about Network Time (HyTrust CloudControl 5.x only)
 {: #managinghtcc-known-issue-ntp}

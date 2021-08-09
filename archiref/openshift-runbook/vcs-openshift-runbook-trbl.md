@@ -182,9 +182,9 @@ After the initial 24 hours certificate renewal, cluster snapshot is enabled to r
 {: #vcs-openshift-runbook-trbl-related}
 
 * [Install on vSphere: User-Provisioned Infrastructure](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}
-* [Install a cluster on vSphere](https://docs.openshift.com/container-platform/4.6/installing/installing_vsphere/installing-vsphere.html){:external}
+* [Install a cluster on vSphere](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){:external}
 * [Index of public OpenShift v4 clients](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/?extIdCarryOver=true&sc_cid=701f2000001Css5AAC){:external}
-* [Understanding persistent storage](https://docs.openshift.com/container-platform/4.6/storage/understanding-persistent-storage.html#understanding-persistent-storage){:external}
+* [Understanding persistent storage](https://docs.openshift.com/container-platform/4.7/storage/understanding-persistent-storage.html#understanding-persistent-storage){:external}
 * [ssh-keygen - Generate a New SSH Key](https://www.ssh.com/ssh/keygen/){:external}
 * [Configure PowerCLI and PowerNSX on macOS](https://readysetvirtual.wordpress.com/2018/04/06/configure-powercli-and-powernsx-on-macos/){:external}
 * [Visual Studio Code](https://code.visualstudio.com/){:external}

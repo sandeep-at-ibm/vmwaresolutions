@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-27"
+lastupdated: "2021-07-07"
 
 keywords: release notes, what's new, version 4.1
 
@@ -101,7 +101,6 @@ Starting with the 4.1 release, the following updates are available for vCenter S
 * You can add or remove services to new or existing vCenter Server multizone instances.
 
 For more information, see the following topics.
-* [Ordering vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_ordering)
 * [Adding, viewing, and deleting clusters for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addviewdeleteclusters)
 * [Expanding and contracting capacity for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservers)
 * [Services support for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-relnotes_v41#relnotes_v41-services-multizone-vcs-instances)
@@ -137,7 +136,6 @@ This release provides the following service versions on newly deployed instances
 
 For more information, see:
 * [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
-* [Ordering, viewing, and deleting services for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservices)
 * [Ordering, viewing, and deleting services for Security and Compliance Readiness Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-scb_addingremovingservices)
 * The individual overviews for each service
 
@@ -159,8 +157,6 @@ Starting with the 4.1 release, the following add-on services are supported on vC
 * HyTrust CloudControl
 * Veeam
 * vRealize Operations™ and Log Insight™
-
-For more information, see [Ordering, viewing, and deleting services for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservices).
 
 ### Veeam on bare metal server
 {: #relnotes_v41-services-veeam-baremetal}

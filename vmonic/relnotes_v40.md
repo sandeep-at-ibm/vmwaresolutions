@@ -28,8 +28,6 @@ This release includes new features, component updates, usability enhancements, a
 
 You can now order VMware® Regulated Workloads directly from the VMware Solutions main page. The VMware Regulated Workloads include a secure-by-default architecture that follows IBM's unique policy controls framework, provides continuous compliance monitoring, and offers the highest level of data encryption (FIPS 140-2 Level 4). For VMware Regulated Workloads, only VMware vSphere® 7.0 Update 1a is supported.
 
-For more information, see [VMware Regulated Workloads overview](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overview).
-
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v40-dedicated}
 
@@ -67,7 +65,7 @@ Carefully review the VMware product lifecycle matrix for ESXi and NSX as part of
 
 {{site.data.keyword.cloud_notm}} plans to publish guidance for upgrading your existing instance to vSphere 7.0 in a future VMware Solutions release. However, an upgrade cannot be supported for all hardware combinations, will not accomplish a migration from NSX-V to NSX-T, and will enable only limited VMware Solutions capabilities at the vSphere 7.0 level.
 
-Instead, {{site.data.keyword.cloud_notm}} recommends that you deploy a new vSphere 7.0 instance and migrate your current network topology and workload to the new instance. For more information about assistance with your network and workload migration, see [VMware HCX updates](#relnotes_v40-services-HCX).
+Instead, {{site.data.keyword.cloud_notm}} recommends that you deploy a new vSphere 7.0 instance and migrate your current network topology and workload to the new instance.
 
 Migrating your workload to a new instance is especially recommended if you want to perform a hardware refresh, if you want to migrate from NSX–V to NSX–T, or if you want to migrate your existing NSX–T topology with separate management and workload clusters to a converged topology.
 
@@ -87,7 +85,7 @@ Extra features for stretched clusters are planned for future releases, including
 Review the following information about vCenter Server with NSX-T instances for this release:
 
 * New instances of vCenter Server with NSX-T are provisioned with NSX-T 3.1.
-* Day 2 operations continue to be supported for vCenter Server with NSX-T 2.5.1 instances with restrictions. For more information, see [Updates for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-relnotes_v40#relnotes_v40-services).
+* Day 2 operations continue to be supported for vCenter Server with NSX-T 2.5.1 instances with restrictions.
 * If you want to upgrade your existing vCenter Server with NSX-T instance, {{site.data.keyword.cloud_notm}} recommends that you upgrade directly to NSX-T 3.1 bypassing NSX-T 3.0.x.
 
 ### Updates to data centers
@@ -111,8 +109,6 @@ This release provides the following service versions on newly deployed instances
 * Caveonix RiskForesight™ v2.4
 * HyTrust® CloudControl™ v6.2.1 for vCenter Server with NSX-T
 * Juniper® vSRX and Juniper vSRX Gateway Appliance 3.0 (20.1R2)
-
-  For more information about vSRX Gateway Appliance 3.0, see [Overview of the available virtual SRX models, vSRX, and vSRX 3.0](https://kb.juniper.net/InfoCenter/index?page=content&id=KB33572){:external}.
 * Red Hat OpenShift v4.6
   * New installations of Red Hat OpenShift on vCenter Server require VMware vSphere 7.0 Update 1a with NSX-T 3.1. For NSX-T 2.5.1 deployments, you must upgrade to vSphere 7.0 Update 1a with NSX-T 3.1.
   * During deployment and day 2 operations, you are prompted for the cluster. You can install the service to the management cluster or any workload cluster.
@@ -150,8 +146,6 @@ For vCenter Server instances, Juniper vSRX management and edge services cluster 
 * Security enhancements based on CIS guidelines
 * vSRX logging to vRealize Log Insight™ if the vRealize Operations add-on service is already installed
 
-For more information, see [Juniper vSRX security and ease of use features](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-managing#juniper-managing-security-enhance).
-
 ### VMware HCX updates
 {: #relnotes_v40-services-HCX}
 
@@ -172,8 +166,6 @@ Review the following information about the VMware HCX service for this release:
 
 If you install VMware vRealize Operations (vROps) and select vSAN storage, you must have an estimated 750 GB of vSAN storage to successfully install vROps. This storage requirement does not apply to NFS.
 
-For more information, see [Resource requirements for add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-resource-requirements).
-
 ### Updates for Caveonix RiskForesight
 {: #relnotes_v40-services-caveonix}
 
@@ -187,7 +179,7 @@ When you order RiskForesight, you can now select 10 - 25,000 VMs to license, in 
 ### DNS entries removal
 {: #relnotes_v40-services-remove-dns-entries}
 
-For several add-on services, if you installed the service before the {{site.data.keyword.vmwaresolutions_short}} v4.0 release and you then delete the service, you must remove the DNS entries manually. For more information, see [Manually removing the DNS entries](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingservices#vc_deletingservices-DNS-entries).
+For several add-on services, if you installed the service before the {{site.data.keyword.vmwaresolutions_short}} v4.0 release and you then delete the service, you must remove the DNS entries manually.
 
 ### Updates for KMIP for VMware
 {: #relnotes_v40-services-kmip}
@@ -196,7 +188,7 @@ Previously, KMIP™ for VMware provided a multi-tenant service that enables VMwa
 
 Starting with the V4.0 release, newly created KMIP for VMware instances that are connected to HPCS now operate as single-tenant services. These services run within the HPCS service and benefit from the features of IBM Secure Service Containers on IBM LinuxONE servers. You can connect only a single KMIP for VMware instance to each HPCS instance.
 
-KMIP for VMware continues to provide a multi-tenant service when you connect to Key Protect. For more information, see [KMIP for VMware design](/docs/vmwaresolutions?topic=vmwaresolutions-kmip-design).
+KMIP for VMware continues to provide a multi-tenant service when you connect to Key Protect.
 
 In addition, two new endpoints are now available in the **Osaka** location for KMIP for VMware.
 
@@ -204,13 +196,13 @@ In addition, two new endpoints are now available in the **Osaka** location for K
 {: #relnotes_v40-api}
 
 * REST API support for the VMware HCX service is now available.
-* Various other updates are made to the [VMware Solutions API](https://cloud.ibm.com/apidocs/vmware-solutions) and the [VMware Solutions Shared API](https://cloud.ibm.com/apidocs/vmware-solutions-shared) documentation.
+* Various other updates are made to the VMware Solutions API and the VMware Solutions Shared API documentation.
 
 ## New and updated documentation
 {: #relnotes_v40-updated-doc}
 
-* (Updated on 24 February 2021) The [Veeam on bare metal reference architecture](/docs/vmwaresolutions?topic=vmwaresolutions-veeam-bms-archi-intro) document is now available in the **Reference** section of the user documentation.
-* A new topic, [Managing security and compliance](/docs/vmwaresolutions?topic=vmwaresolutions-manage-scc), is now available. The topic provides information about monitoring security and compliance posture with VMware Solutions by using Caveonix RiskForesight.
+* (Updated on 24 February 2021) The Veeam on bare metal reference architecture document is now available in the **Reference** section of the user documentation.
+* A new topic, Managing security and compliance, is now available. The topic provides information about monitoring security and compliance posture with VMware Solutions by using Caveonix RiskForesight.
 
 ## User interface updates and enhancements
 {: #relnotes_v40-ui}

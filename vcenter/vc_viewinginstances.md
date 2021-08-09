@@ -4,9 +4,9 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-07"
+lastupdated: "2021-07-14"
 
-keywords: view vCenter Server, view instance, view instance details
+keywords: view vCenter Server, view instance, view instance details, vmware multizone, vcenter server multizone, view vCenter Server multizone, view multizone, view multizone instance details
 
 subcollection: vmwaresolutions
 
@@ -22,7 +22,10 @@ subcollection: vmwaresolutions
 
 View the summary and detailed information of the VMware vCenter Server® instances that are provisioned for different user accounts.
 
-## Procedure to view the vCenter Server instances summary
+New deployments of vCenter Server multizone instances are not supported.
+{:deprecated}
+
+## Procedure to view summary for vCenter Server instances
 {: #vc_viewinginstances-procedure-view-inst-summary}
 
 To view a summary of all the vCenter Server instances that are provisioned for a user account, complete the following steps:
@@ -34,7 +37,7 @@ To view a summary of all the vCenter Server instances that are provisioned for a
 | Item        | Description |
 |:----------- |:----------- |
 | Name | The name of the instance. |
-| Type | The type of vCenter Server instance. |
+| Type | The type of vCenter Server instance. Instance type is **Multizone** or **Single-zone**. |
 | Version | The release version that the instance was deployed in, or upgraded to. |  
 | Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |  
 | Creation time | The date and time when the instance was created. |
@@ -55,7 +58,7 @@ The instance can have different statuses.
 | Deleted | The instance is deleted. |
 {: caption="Table 2. vCenter Server instances status descriptions" caption-side="top"}
 
-## Procedure to view the vCenter Server instance property details
+## Procedure to view the property details for vCenter Server instances
 {: #vc_viewinginstances-procedure-view-inst-property}
 
 To view the property details of an instance:
@@ -67,20 +70,29 @@ To view the property details of an instance:
 |:------------- |:------------- |
 | Name | The name of the instance. |
 | ID | The ID of the instance. |
-| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted.<br><br>**Note:** {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads list locations for each cluster type. |
+| Multizone region[^multizone] | The {{site.data.keyword.cloud_notm}} data center region where the instance is hosted. |
+| Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted.<br><br>**Note:** For multizone instances, locations are listed for each cluster type. Types include witness, consolidated, workload, and edge services. |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
 | vCenter version | The VMware vCenter Server version.<br><br>**Note:** There is a slight variation between the vCenter Server version that is displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere® Web Client. Both are correct. |
-| VMware NSX® networking solution | Either NSX-V or NSX-T. |
-| VMware vSphere version | The version of VMware vSphere. |
+| VMware NSX® networking solution[^NSX] | Either NSX-V or NSX-T. |
+| VMware vSphere version[^vsphere] | The version of VMware vSphere. |
 | NSX for vSphere | The VMware NSX for vSphere product version. |
 | _VMware component_ license | If you selected to use your own VMware license for any of the VMware components on the **Licensing** page when you ordered the instance, the VMware component name and the license key that you entered for the component are displayed.<br><br>Examples of VMware component licenses can include: **NSX license**, **vCenter Server license**, and **vSAN license**. |
 | NSX license edition | The version and edition of the VMware NSX license. |
 | Root domain | The root domain name is the DNS domain name and the Microsoft® Active Directory™ (AD) forest root name. |
-| SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
-| Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance hostnames reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
+| SSO domain | The SSO domain is the vSphere single sign-on domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
+| Subdomain[^subdomain] | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance hostnames reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
 {: caption="Table 3. vCenter Server instance properties" caption-side="top"}
 
-## Procedure to view the access information for vCenter Server instances
+[^multizone]: Multizone instances only.
+
+[^NSX]: Single-zone instances only.
+
+[^vsphere]: Single-zone instances only.
+
+[^subdomain]: The subdomain label is not used for VMware vSphere 7.0 instances.
+
+## Procedure to view access information for vCenter Server instances
 {: #vc_viewinginstances-procedure-view-access-info}
 
 Under **Access information**, view the access information for the instance-related components. The passwords that are displayed are initial passwords that are generated by the system. If you change them outside of the {{site.data.keyword.vmwaresolutions_short}} console, they are not updated on the instance summary page.
@@ -92,7 +104,7 @@ Under **Access information**, view the access information for the instance-relat
 | AD/DNS Remote Desktop[^nsxv] | For primary instances, it displays the username and password to access the AD server through a remote desktop connection.<br><br>For secondary instances, click the **View on primary instance** link to be directed to the username and password information on the primary instance.<br><br>**Note:** After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you receive access to the correct administrator password. |
 | vCenter/PSC IP | The IP address of the vCenter Server. |
 | vCenter/PSC FQDN | The vCenter Server fully qualified domain name (FQDN). |
-| vCenter/PSC ADMIN | The VMware vCenter Single Sign-On username and password that you can use to log in to the vCenter Server by using the vSphere Web Client. |
+| vCenter/PSC ADMIN | The VMware vCenter SSO username and password that you can use to log in to the vCenter Server by using the vSphere Web Client. |
 | vCenter/PSC SSH | The username and password that you can use to access the vCenter Server VM through SSH connection. |
 | NSX Manager IP | The IP address of the NSX Manager. |
 | NSX Manager FQDN | The NSX Manager fully qualified domain name (FQDN). |
@@ -101,29 +113,29 @@ Under **Access information**, view the access information for the instance-relat
 | NSX Controllers SSH[^nsxt4] | The username and password that you can use to access the NSX node VM through KVM or SSH connection. |
 | Customer Edge VM IPs[^nsxt1] | The IP address or addresses for the Customer Edge VM. |
 | Customer Edge VM SSH[^nsxt2] | The username and password that you can use to access the Customer Edge VM through KVM or SSH connection. |
-| Service Edge VM IPs[^nsxt5] | The IP address or addresses for the Service Edge VM. |
-| Service Edge VM SSH[^nsxt6] | The username and password that you can use to access the Service Edge VM through KVM or SSH connection. |
+| NSX Service Edge VM IPs[^nsxt5] | The IP address or addresses for the Service Edge VM. |
+| NSX Service Edge VM SSH[^nsxt6] | The username and password that you can use to access the Service Edge VM through KVM or SSH connection. |
 {: caption="Table 4. vCenter Server access information for instance-related components" caption-side="top"}
 
-[^nsxt1]: NSX-T only
+[^nsxt1]: Single-zone instance, NSX-T only.
 
-[^nsxt2]: NSX-T only
+[^nsxt2]: Single-zone instance, NSX-T only.
 
-[^nsxt3]: NSX-T only
+[^nsxt3]: NSX-T only.
 
-[^nsxt4]: NSX-T only
+[^nsxt4]: NSX-T only.
 
-[^nsxt5]: NSX-T only
+[^nsxt5]: NSX-T only.
 
-[^nsxt6]: NSX-T only
+[^nsxt6]: NSX-T only.
 
 [^ips]: For NSX-V, one IP address for one server. For NSX-T, two IP addresses for the two AD servers.
 
 [^fqdn]: For NSX-V, one FQDN for one server. For NSX-T, two FQDNs for the two AD servers.
 
-[^nsxv]: NSX-V only
+[^nsxv]: NSX-V only.
 
-## Procedure to view the deployment history for vCenter Server instances
+## Procedure to view deployment history for vCenter Server instances
 {: #vc_viewinginstances-procedure-view-deploy-history}
 
 Click **Deployment history** from the left navigation pane to view the deployment history for the instance.

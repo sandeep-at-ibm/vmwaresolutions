@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-08"
+lastupdated: "2021-08-05"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -128,7 +128,7 @@ The vCPU maximum number is limited to the 40 cores with hyperthreading on each h
 
 The following services are preinstalled and ready-to-use in all virtual data centers. Service charges are incurred only if you choose to use the service.
 
-* Veeam Availability Suite and Veeam Cloud Connect Replication
+* Veeam® Availability Suite and Veeam Cloud Connect Replication
 * Zerto
 
 For more information, see [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam) and [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto).

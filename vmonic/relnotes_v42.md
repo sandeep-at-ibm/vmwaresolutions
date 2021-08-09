@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-08"
+lastupdated: "2021-08-04"
 
 keywords: release notes, what's new, version 4.2
 
@@ -83,8 +83,13 @@ Enhanced support is now provided for 25 Gb uplink speed for vCenter Server multi
 ### NFS storage limitation for VMware multizone instances
 {: #relnotes_v42-nfs-limitation}
 
-For the NFS storage that you order initially, the size must be at least 1,000 GB and the performance at least 2 IOPS/GB. This storage, which is used mainly for management, should not be deleted. If you require additional storage, you can add it post-deployment. The size and performance of the NFS storage added post-deployment can have any of the available values.
+The initial NFS storage that you order is used mainly for management. Its size must be at least 1,000 GB and the performance at least 2 IOPS/GB. Do not delete this storage. If you require extra storage, you can add it post-deployment. The size and performance of the NFS storage added post-deployment can have any of the available values.
 {:important}
+
+### Updates to NFS host orders
+{: #relnotes_v42-nfs-host-orders}
+
+For locations where appropriate 1U servers are available, when you order hosts for clusters that use NFS storage, 1U servers are ordered silently rather than 2U servers. Clusters that use vSAN storage will continue to order 2U servers.
 
 ## Updates for VMware Regulated Workloads
 {: #relnotes_v42-vrw}
@@ -109,7 +114,7 @@ This release provides the following service versions on newly deployed instances
 * HyTrust DataControl® 5.3[^htdc]
 * Juniper® vSRX 3.0 (20.4R1.12)
 
-[^htdc]: VMware vSphere 6.7 only
+[^htdc]: vSphere 6.7 for NSX-T and vSphere 6.7 and 6.5 for NSX-V
 
 ### HyTrust KeyControl - deprecated
 {: #relnotes_v42-services-htkc-deprecated}
@@ -120,7 +125,7 @@ New installations of HyTrust KeyControl™ are no longer supported for new or ex
 ### Veeam on vSphere 6.5 - deprecated
 {: #relnotes_v42-services-veeam-vsphere65-deprecated}
 
-New installations of Veeam® are no longer supported for new or existing deployments of vCenter Server instances with VMware vSphere 6.5. You can still use or delete existing Veeam installations on your existing vSphere 6.5 instances.
+New installations of Veeam® are no longer supported for new or existing deployments of vCenter Server instances with VMware vSphere® 6.5. You can still use or delete existing Veeam installations on your existing vSphere 6.5 instances.
 {:deprecated}
 
 ### F5 BIG-IP
@@ -133,7 +138,7 @@ Starting with the 4.2 release, F5 BIG-IP is supported on vSphere 7 and NSX-T. Th
 
 Review the following information about FortiGate® Virtual Appliance for this release:
 
-* FortiGate Virtual Appliance is supported on VMware vSphere 7 and VMware NSX-T. This support is available on a management cluster and edge services cluster for single-zone instances only. Multizone support is not available.
+* FortiGate Virtual Appliance is supported on VMware vSphere® 7 and VMware NSX-T. This support is available on a management cluster and edge services cluster for single-zone instances only. Multizone support is not available.
 * For VMware Regulated Workloads instances and Security and Compliance Readiness Bundle instances, you can install FortiGate Virtual Appliance only on the edge services cluster.
 * The VM16 edition of FortiGate Virtual Appliance is available for all types of clusters. However, it is recommended that the 16 CPU license is used for high-bandwidth edge deployments only. For more information about any VM16 restrictions and Fortinet® sizing, see [FortiGate-VM on VMware ESXi data sheet](https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_VM_ESXi.pdf){:external}.
 * You can order multiple FortiGate Virtual Appliances on the management cluster. However, you can have only one pair on each edge services cluster.
@@ -147,7 +152,7 @@ For more information, see [FortiGate Virtual Appliance overview](/docs/vmwaresol
 
 Review the following information about Juniper vSRX for this release:
 
-* Juniper vSRX is supported on vCenter Server multizone instances. For more information, see [Ordering, viewing, and deleting services for vCenter Server multizone instances](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addingremovingservices).
+* Juniper vSRX is supported on vCenter Server multizone instances. For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 * You cannot install Juniper vSRX and FortiGate Virtual Appliance on the same edge services cluster.
 
 ### KMIP for VMware on IBM Cloud

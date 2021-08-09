@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-08-05"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:deprecated: .deprecated}
 
-# (Deprecated) FortiGate Security Appliance
+# FortiGate Security Appliance
 {: #fsa_considerations}
 
 Automated deployment of the FortiGate Security Appliance service is no longer supported. For a similar service, consider the [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations), which is deployed automatically.
@@ -92,7 +92,7 @@ To manage the FortiGate Security Appliance service, you must access the FortiGat
 * Log in to the FortiOS Web Client by using the credentials that you can find on the FortiGate Security Appliance service details page.
 * Access the console via SSH connection by using the credentials that you can find on the FortiGate Security Appliance service details page.
 
-For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
+For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 ## Considerations when you delete FortiGate Security Appliance
 {: #fsa_considerations-remove}

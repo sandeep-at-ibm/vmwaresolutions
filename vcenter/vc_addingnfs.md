@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-18"
+lastupdated: "2021-07-12"
 
 keywords: vCenter Server add NFS storage
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Adding NFS storage to vCenter Server instances
+# Adding NFS storage to vCenter Server single-zone instances
 {: #vc_addingnfs}
 
 You can expand the capacity of your VMware vCenter Server® instance according to your business needs by adding Network File System (NFS) storage.
@@ -27,12 +27,12 @@ You can expand the capacity of your VMware vCenter Server® instance according t
 * If your initial cluster has vSAN® storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
 * You can add or remove NFS storage shares to or from an existing NFS or vSAN cluster.
 
-## Before you add NFS storage
+## Before you add NFS storage to vCenter Server single-zone instances
 {: #vc_addingnfs-prereq}
 
 Do not add NFS storage from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. IBM will not manage NFS file shares that you manually add to an instance.
 
-## Procedure to add NFS storage to vCenter Server instances
+## Procedure to add NFS storage to vCenter Server single-zone instances
 {: #vc_addingnfs-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
@@ -47,7 +47,7 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 
   You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
-## Results after you add NFS storage
+## Results after you add NFS storage to vCenter Server single-zone instances
 {: #vc_addingnfs-results}
 
 1. You might experience a slight delay on the console while the instance status changes from **Ready to use** to **Modifying**. Allow the operation to complete before you make more changes to the instance.

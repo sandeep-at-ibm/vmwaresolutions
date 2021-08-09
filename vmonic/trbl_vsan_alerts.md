@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-08-06"
 
 keywords: troubleshooting, SAN health, virtual SAN issue
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 {: troubleshoot}
 {: support}
 
-You might see alerts and warnings that relate to Virtual SAN Health issues on the VMware® vSphere® Web Client Monitor page.
+You might see alerts and warnings that relate to Virtual SAN Health (vSAN™) issues on the VMware vSphere® Web Client Monitor page.
 {: tsSymptoms}
 
 These warnings are non-issues and do not indicate functional problems.

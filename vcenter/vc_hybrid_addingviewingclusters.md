@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-22"
+lastupdated: "2021-07-26"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -103,7 +103,7 @@ The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or 
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 VMware vSAN™ 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
-* **Disk type and size for vSAN capacity disks**: Select an option for the capacity disks that you need.
+* **Size for vSAN capacity disks**: Select an option for the capacity disks that you need.
 * **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
 * If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays that are useful for workloads that require less latency and higher IOPS throughput.
 

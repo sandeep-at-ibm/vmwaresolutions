@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-05"
+lastupdated: "2021-08-05"
 
 keywords: set credentials, update credentials, set notifications, IAM user, invite user
 
@@ -26,7 +26,7 @@ Use the following procedures to invite users, to update user account credentials
 ## Inviting users to access services and resources
 {: #useraccount-iamuserinv}
 
-{{site.data.keyword.vmwaresolutions_full}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for collaboration among multiple users. After you sign up for an {{site.data.keyword.cloud_notm}} account and log in to the {{site.data.keyword.vmwaresolutions_short}} console, you can add users to the {{site.data.keyword.cloud_notm}} account. These added users can share the services and resources that are provisioned for the account.
+{{site.data.keyword.cloud}} for VMware® Solutions is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for collaboration among multiple users. After you sign up for an {{site.data.keyword.cloud_notm}} account and log in to the {{site.data.keyword.vmwaresolutions_short}} console, you can add users to the {{site.data.keyword.cloud_notm}} account. These added users can share the services and resources that are provisioned for the account.
 
 For more information, see the following topics.
 - [Inviting users to an account](/docs/account?topic=account-iamuserinv)

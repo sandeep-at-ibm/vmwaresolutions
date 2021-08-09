@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-07-26"
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,7 @@ Before you can start the build process to install the Red Hat OpenShift cluster 
 * Ordering new subnets for the OpenShift environment:
   * A private portable subnet for the Red Hat OpenShift cluster NSX ESG.
   * A public portable subnet for the Red Hat OpenShift cluster NSX ESG.
-* Downloading Red Hat OpenShift 4.6 - Access to a Red Hat subscription to download the installer, pull secret and Red Hat Enterprise CoreOS OVA.
+* Downloading Red Hat OpenShift 4.7 - Access to a Red Hat subscription to download the installer, pull secret and Red Hat Enterprise CoreOS OVA.
 * Downloading RHEL 7.6 ISO - Access to a Red Hat subscription to download the Red Hat Enterprise Linux 7.x ISO for the bastion host.
 * {{site.data.keyword.cloud}} environment details - Collect the following details for {{site.data.keyword.cloud_notm}} for VMware Solutions environment:
   * vCenter Server instance details and passwords
@@ -44,15 +44,15 @@ Requirements:
 * 8 Public portable addresses assigned to the Public VLAN collected in the previous step.
 * 64 Private portable addresses assigned to the Private VLAN collected in the previous step.
 
-## Downloading Red Hat OpenShift 4.6
+## Downloading Red Hat OpenShift 4.7
 {: #openshift-runbook-runbook-prereq-download41}
 
 Access the [OpenShift Infrastructure Providers page](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}.
 
 1. Download the installer.
 2. Download the Pull Secret.
-3. Download the Red Hat Enterprise Linux CoreOS (RHEL CoreOS) OVA image or download the OVA by using `curl`:
-  `curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.6/latest/rhcos-4.6.3-x86_64-vmware.x86_64.ova`.
+3. Download the Red Hat Enterprise Linux CoreOS (RHEL CoreOS) OVA image or download the OVA by using the following. Replace the x in 4.x and in 4.x.3 with the current Red Hat OpenShift version, for example, 4.7. `curl`:
+  `curl -O https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.x/latest/rhcos-4.x.3-x86_64-vmware.x86_64.ova`.
 4. Download the command-line tools if you want to run the commands from a desktop or outside Bastion host.
 
 ## Downloading RHEL 7.6 ISO
@@ -120,7 +120,7 @@ Pick your deployment-specific values and use them throughout the runbook.
 
 You must upload and import the RHEL ISO and RHEL CoreOS OVA downloads from the previous steps into the vCenter Server instance datastore. You must rename the OVA image to *rhcos-latest* in order for the image to work with the terraform templates used later in the build process.
 
-On the jump-server or remote device, by using an editor of your choice, such as Visual Studio Code, copy the following and change for your values:
+On the jump-server or remote device, by using an editor of your choice, such as Visual Studio Code, copy the following and change for your values. Replace the x in 4.x.3 with the current Red Hat OpenShift version, for example, 4.7.
 
 ```bash
 export GOVC_URL='10.208.17.2'
@@ -130,13 +130,13 @@ export GOVC_INSECURE=1
 export GOVC_NETWORK='SDDC-DPortGroup-Mgmt'
 export GOVC_DATASTORE='vsanDatastore'
 
-rhcos-4.6.3-x86_64-vmware.x86_64.ova
+rhcos-4.x-x86_64-vmware.x86_64.ova
 
-govc import.spec ./rhcos-4.6.3-x86_64-vmware.x86_64.ova | python -m json.tool > rhcos.json
+govc import.spec ./rhcos-4.x-x86_64-vmware.x86_64.ova | python -m json.tool > rhcos.json
 vi rhcos.json
   - replace  "Network": "SDDC-DPortGroup-Mgmt"
   - leave name as "VM network"
-govc import.ova -options=./rhcos.json -name=rhcos-4.6.3-x86_64-vmware.x86_64.ova
+govc import.ova -options=./rhcos.json -name=rhcos-4.x-x86_64-vmware.x86_64.ova
 govc vm.markastemplate vm/rhcos-latest
 ```
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-21"
+lastupdated: "2021-08-04"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -73,7 +73,7 @@ For IBM Business Partner users, the Bring Your Own License (BYOL) option is not 
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
 
 If you're a non-Business Partner, you can select the following components for your vSphere cluster:
-* VMware vSphere Enterprise Plus 7.0u1 or 6.7u3
+* VMware vSphere Enterprise Plus 7.0u2 or 6.7u3
 * VMware vCenter Server
 * VMware NSX
 * VMware vSAN
@@ -113,7 +113,7 @@ Select the {{site.data.keyword.cloud_notm}} data center where the cluster is to 
 
 For **Skylake** servers, you can choose the following CPU models and a supported RAM size. Options available depend on whether you selected the VMware vSAN component.
 
-Skylake servers are not supported for vSphere Enterprise Plus 7.0u1 instances.
+Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
 {:note}
 
 | CPU model     | RAM sizes     |
@@ -183,17 +183,17 @@ The number of ESXi servers that you want add to the vSphere cluster. All the ESX
 
 For orders without vSAN, ESXi servers are ordered with a 12-disk chassis, with two disks for the ESXi operating system (OS).
 
-For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and two disks are ordered for caching. The ESXi OS is placed on a single M.2 solid-state drive that does not use a disk bay. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting **Disk type and size for vSAN capacity disks** and **Number of vSAN capacity disks**.
+For orders with vSAN, ESXi servers are ordered with a 12-disk chassis and two disks are ordered for caching. The ESXi OS is placed on a single M.2 solid-state drive that does not use a disk bay. These settings are configured by default and cannot be changed. You can order more capacity disks by selecting **Size for vSAN capacity disks** and **Number of vSAN capacity disks**.
 
 If you select the VMware vSAN component for the cluster, specify the following settings:
-* **Disk type and size for vSAN capacity disks** - Select an option for the capacity disks that you need.
+* **Size for vSAN capacity disks** - Select an option for the capacity disks that you need.
 * **Number of vSAN capacity disks** - Specify the number of capacity disks that you want to add.
 * If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High performance with Intel Optane** option is available only for vSphere 6.7u3 instances with the Skylake and Cascade Lake CPU models.
+  The **High performance with Intel Optane** option is available only for vSphere 6 instances, and for Skylake and dual-processor Cascade Lake CPU models.
   {:note}
 
-* Review the **Disk size for vSAN cache disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
+* Review the **Size for vSAN cache disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
 
 ### Enable vSAN deduplication and compression
 {: #vs_orderinginstance-storage-enable-comp}
@@ -254,7 +254,7 @@ Network interface card (NIC) enablement settings are based on your selection of 
 
 The uplink speed provides two options:
 * 10 Gb, which is selected by default.
-* 25 Gb, which is available only for **Cascade Lake** and **SAP-certified** bare metal servers and for specific locations.
+* 25 Gb, which is available only for **Cascade Lake** and **SAP-certified** bare metal servers and for specific locations. The following table shows the available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed.
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |

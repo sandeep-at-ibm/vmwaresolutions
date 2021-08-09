@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-18"
+lastupdated: "2021-07-14"
 
 subcollection: vmwaresolutions
 
@@ -18,10 +18,10 @@ subcollection: vmwaresolutions
 {:deprecated: .deprecated}
 {:term: .term}
 
-# VMware multizone instances
+# VMware multizone introduction
 {: #mcv-archi-overview}
 
-VMware® multizone instances are a highly available offering that is built around a VMware vSAN™ stretched cluster deployment, which spans across three data centers. It provides low-latency connections and supports automated failover of workloads if an outage in one of the component data centers (availability zones) occurs.
+VMware® multizone is a highly available offering that is built around a VMware vSAN™ stretched cluster deployment, which spans across three data centers. It provides low-latency connections and supports automated failover of workloads if an outage in one of the component data centers (availability zones) occurs.
 
 The offering has the following key features.
 - Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} multizone region (MZR) data centers.
@@ -60,7 +60,7 @@ The VMware Solutions automation then completes the following tasks:
 2. Deploys vCenter.
 3. Deploys vSAN and NSX.
 4. Configures vSAN stretched clusters and vCenter HA according to the chosen configuration.
-5. Registers the Mission Critical Workloads instance in your {{site.data.keyword.vmwaresolutions_short}} console for ongoing day 2 operations.
+5. Registers the VMware multizone instance in your {{site.data.keyword.vmwaresolutions_short}} console for ongoing day 2 operations.
 
 ## Consumability
 {: #mcv-archi-overview-consume}
@@ -81,11 +81,10 @@ Day 2 operation and management include the following activities:
 * Backup and restore
 * Network failure recovery
 
-**Next topic:** [IBM Cloud for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
+**Next topic:** [VMware multizone architecture design](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
 
 ## Related links
 {: #mcv-archi-overview-related}
 
-* [{{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads architecture](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)
-* [Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
-* [Component and feature details](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)
+* [VMware multizone BOM](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
+* [VMware multizone components](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)

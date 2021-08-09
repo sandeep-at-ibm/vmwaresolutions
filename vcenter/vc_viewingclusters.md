@@ -4,9 +4,9 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-07-16"
 
-keywords: vCenter Server view clusters
+keywords: vCenter Server view clusters, vmware multizone, vCenter Server multizone view clusters, view vCenter Server cluster
 
 subcollection: vmwaresolutions
 
@@ -19,18 +19,18 @@ subcollection: vmwaresolutions
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Viewing clusters in vCenter Server instances
+# Viewing clusters for vCenter Server instances
 {: #vc_viewingclusters}
 
 You can view the summary and detailed information of the clusters that are provisioned in VMware vCenter Server® instances.
 
-## Procedure to view clusters in vCenter Server instances
+## Procedure to view clusters for vCenter Server instances
 {: #vc_viewingclusters-procedure}
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server instances** table, click an instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **Clusters** table, view the summary about the clusters:
-  * **Cluster name/type**: The name and type of the cluster.
+  * **Cluster name/type**: The name and type of the cluster. Types include witness, consolidated, workload, and edge services.
   * **ESXi servers**: The number of ESXi servers in the cluster.
   * **Storage**: The type of storage that the cluster uses.
   * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.

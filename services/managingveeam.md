@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-08-05"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -88,7 +88,7 @@ To manage the Veeam service, access the Veeam console by completing the followin
 
 You can find the Windows IP address and the Administrator credentials on the Veeam service details page.
 
-For more information, see [Ordering, viewing, and deleting services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
+For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 ## Backing up and restoring management components for instances with Veeam installations
 {: #managing-veeam-backup-and-replication}
