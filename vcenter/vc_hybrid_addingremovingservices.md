@@ -29,7 +29,7 @@ The following services are available to VMware vCenter Server with Hybridity Bun
 | Service name | Current version |
 |--------------|-----------------|
 | [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.0.1 |
-| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 15.1.3.1 |
+| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 15.1.3 |
 | [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.4.6 |
 | [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations) | 5.3 |
 | [{{site.data.keyword.IBM}} Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | 10.1.5 |
