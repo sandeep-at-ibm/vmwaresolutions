@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-09-21"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -39,7 +39,7 @@ For vCenter Server with NSX-V instances, F5 BIG-IP is supported for the followin
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-The current F5 BIG-IP version that is installed is v15.1.2.1.
+The current F5 BIG-IP version that is installed is v15.1.3.1.
 {:note}
 
 ## Technical specifications for F5 BIG-IP

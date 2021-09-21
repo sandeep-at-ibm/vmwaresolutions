@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-08-04"
+lastupdated: "2021-09-21"
 
 keywords: release notes, what's new, version 4.2
 
@@ -109,7 +109,7 @@ Enhanced support is now provided for 25 Gb uplink speed for VMware Regulated Wor
 This release provides the following service versions on newly deployed instances.
 
 * Caveonix RiskForesight™ 3.0
-* F5® BIG-IP® 15.1.2.1
+* F5® BIG-IP® 15.1.3.1
 * HyTrust® CloudControl™ 6.3.1
 * HyTrust DataControl® 5.3[^htdc]
 * Juniper® vSRX 3.0 (20.4R1.12)
