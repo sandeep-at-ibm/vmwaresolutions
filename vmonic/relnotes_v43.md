@@ -39,7 +39,7 @@ This release applies the following updates when you order VMware Solutions Share
 ### Windows pricing metrics
 {: #relnotes_v43-shared-windows}
 
-(Updated on 1 October 2021) The Microsoft® Windows® pricing metric is now hourly. For more information, see [VMware Solutions Shared pricing](https://test.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
+(Updated on 1 October 2021) The Microsoft® Windows® pricing metric is now hourly. For more information, see [VMware Solutions Shared pricing](/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
 
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v43-dedicated}
