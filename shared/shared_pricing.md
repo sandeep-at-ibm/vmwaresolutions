@@ -4,12 +4,11 @@ copyright:
 
   years: 2020, 2021
 
-lastupdated: "2021-06-03"
+lastupdated: "2021-09-23"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -72,7 +71,7 @@ The maximum value of the metric used over an hour. For example, if 100 vCPU is u
 VMware Solutions Shared On-demand virtual data center resources are allocated as needed. Pricing is hourly based on the resource usage in the virtual data center. The following metrics are part of this plan.
 
 The standard storage policy pricing is the same as the 4 IOPS/GB storage policy. The number of IOPS/GB for the standard storage policy is not guaranteed.
-{:note}
+{: note}
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:----------|:------------|
@@ -96,11 +95,11 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 {: #table2}
 {: tab-title="Storage metrics"}
 {: tab-group="on-demand-metrics"}
-{:class="simple-tab-table"}
+{: class="simple-tab-table"}
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
-| MAX_WINDOWS_LICENSES | Monthly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
+| MAX_WINDOWS_LICENSES | Hourly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
 | TOTAL_RHEL_SMALL_LICENSES | Hourly | The peak (High Watermark) number of small RHEL licenses usage in 1-hour intervals. Small RHEL VMs are four cores or smaller. |
 | TOTAL_RHEL_LARGE_LICENSES | Hourly | The peak (High Watermark) number of large RHEL licenses usage in 1-hour intervals. Large RHEL VMs are larger than four cores. |
 {: caption="Table 2. VMware Shared Solutions On-demand billing plan - Operating system metrics" caption-side="top"}
@@ -115,7 +114,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 VMware Shared Solutions Reserved virtual data center resources are preallocated and guaranteed. Pricing is monthly based on the allocation size of the virtual data center.
 
 The standard storage policy pricing is the same as the 4 IOPS/GB storage policy. The number of IOPS/GB for the standard storage policy is not guaranteed.
-{:note}
+{: note}
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:----------|:------------|
@@ -138,11 +137,11 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 {: #reservedbilling-table2}
 {: tab-title="Storage metrics"}
 {: tab-group="res-billing-metrics"}
-{:class="simple-tab-table"}
+{: class="simple-tab-table"}
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
-| MAX_WINDOWS_LICENSES | Monthly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
+| MAX_WINDOWS_LICENSES | Hourly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
 | TOTAL_RHEL_SMALL_LICENSES | Hourly | The peak (High Watermark) number of small RHEL licenses usage in 1-hour intervals. Small RHEL VMs are four cores or smaller. |
 | TOTAL_RHEL_LARGE_LICENSES | Hourly | The peak (High Watermark) number of large RHEL licenses usage in 1-hour intervals. Large RHEL VMs are larger than four cores. |
 {: caption="Table 3. VMware Shared Solutions Reserved billing plan - Operating system metrics" caption-side="top"}
@@ -191,7 +190,7 @@ In the **{{site.data.keyword.cloud_notm}} Usage** view, locate the **VMware Solu
 {: class="simple-tab-table"}
 
 No additional Veeam or Zerto usage charges for VMware Solutions Shared are incurred.
-{:note}
+{: note}
 
 For the Veeam service, initially, all backups go to the block storage that is closest to their VM workloads. Backups that are a part of an inactive backup chain are immediately moved to Cloud Object Storage. The restore speed for these inactive backups might be impacted.
 
@@ -208,5 +207,5 @@ You can change how fast inactive backup chains are moved to Cloud Object Storage
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
 * [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto)
-* [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
-* [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){:external}
+* [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){: external}
+* [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){: external}

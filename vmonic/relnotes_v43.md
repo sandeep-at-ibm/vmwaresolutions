@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-08-09"
+lastupdated: "2021-10-01"
 
 keywords: release notes, what's new, version 4.3
 
@@ -12,12 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V4.3
 {: #relnotes_v43}
@@ -36,6 +31,16 @@ For the VMware vSAN™ component, the 7.68 TB SSD SED capacity disk is now avail
 
 For more information, see [vSAN storage](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-vsan-storage).
 
+## Updates for VMware Solutions Shared
+{: #relnotes_v43-shared}
+
+This release applies the following updates when you order VMware Solutions Shared instances.
+
+### Windows pricing metrics
+{: #relnotes_v43-shared-windows}
+
+(Updated on 1 October 2021) The Microsoft® Windows® pricing metric is now hourly. For more information, see [VMware Solutions Shared pricing](https://test.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-shared_pricing).
+
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v43-dedicated}
 
@@ -47,14 +52,12 @@ This release applies the following updates when you order VMware Solutions Dedic
 This release applies the following upgrades and improvements for newly deployed instances, clusters, and hosts. For more information, see [Software BOM for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom#vc_bom-software).
 
 * VMware vSphere ESXi™
-  * 7.0 Update 2a (17867351)
-  * 6.7 P05 (build 17700523)
-  * 6.5 P06 (build 17477841)
-
+   * 7.0 Update 2a (build 17867351)
+   * 6.7 P05 (build 17700523)
+   * 6.5 P06 (build 17477841)
 * VMware vCenter Server® Appliance
-  * 7.0 Update 2b (17958471/17958471)
-  * 6.7 Update 3n (18010531/18010599)
-
+   * 7.0 Update 2b (build 17958471/17958471)
+   * 6.7 Update 3n (build 18010531/18010599)
 * VMware NSX-T™ 3.1.0.0.0 (build 17107167)
 * VMware NSX-V 6.4.10 (build 17626462)
 * VMware vSAN 7.0 Update 2 (build 17630552) or 6.7 P05
@@ -63,7 +66,7 @@ This release applies the following upgrades and improvements for newly deployed 
 {: #relnotes_v43-vcs-multizone-deprecated}
 
 New deployments of vCenter Server multizone instances are no longer supported.
-{:deprecated}
+{: deprecated}
 
 You can still complete the following operations for existing multizone instances:
 * [Adding clusters](/docs/vmwaresolutions?topic=vmwaresolutions-mcv_addviewdeleteclusters) and [Deleting clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingclusters)
@@ -111,15 +114,13 @@ This release provides the following service versions on newly deployed instances
 ### FortiGate Virtual Appliance
 {: #relnotes_v43-services-fortigate}
 
-For this release, FortiGate Virtual Appliance supports:
-
-* 25 Gb uplink speed on vSphere 7 and NSX-T.
-* High-performance deployment size of Fortigate-VM32.
+For this release, FortiGate Virtual Appliance add the following features:
+* 25 Gb uplink speed on vSphere 7 and NSX-T
+* High-performance deployment size of Fortigate-VM32
 
 The uplink speed and deployment size require Cascade Lake 5218 or higher.
 
 For more information, see:
-
 * [Uplink speeds, deployment sizes, and CPU models](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations#fortinetvm_considerations-installvalues)
 * [Considerations when you install FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations#fortinetvm_considerations-install)
 
