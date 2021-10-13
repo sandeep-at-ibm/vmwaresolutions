@@ -48,18 +48,6 @@ vSphere 7.0 introduces full support for the HTML5 client, support for Intel Casc
 
 For more information about end of life procedures for {{site.data.keyword.cloud_notm}} infrastructure services and Third–Party software products, see [Lifecycle policy for IBM Cloud products](https://www.ibm.com/cloud/cloud-prod-life). If you have any questions or need assistance, email clouddigitalsales@us.ibm.com or open a support ticket in the VMware Solutions console.
 
-## Removed support for Broadwell servers
-{: #relnotes_v44-broadwell-eos}
-
-The following Broadwell servers are no longer available when you add ESXi servers for vCenter Server instances and VMware Regulated Workloads:
-* Dual Intel Xeon® E5-2620 v4
-* Dual Intel Xeon E5-2650 v4
-* Dual Intel Xeon E5-2690 v4
-* Dual Intel Xeon E5-2690 v4 (Broadwell, BI.S2.NW512)
-* Quad Intel Xeon E7-8890 v4 (Broadwell, BI.S2.H4400)
-* Quad Intel Xeon E7-8890 v4 (Broadwell, BI.S2.H4200)
-* Quad Intel Xeon E7-8890 v4 (Broadwell, BI.S2.H4100)
-
 ## Updates for VMware Solutions Dedicated
 {: #relnotes_v44-dedicated}
 
