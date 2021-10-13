@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-09-10"
 
 keywords: IAM user, invite user, service access
 
 subcollection: vmwaresolutions
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Inviting users to access services and resources
 {: #iamuserinvite}

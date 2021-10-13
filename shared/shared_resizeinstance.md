@@ -4,12 +4,11 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-03"
+lastupdated: "2021-09-23"
 
 keywords: manage shared resources, shared resources, shared resource tasks
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -31,7 +30,7 @@ You can change the amount of resources that are assigned to a virtual data cente
 3. Click the **Optional consumption-based charges** section to expand it. Verify the configuration and estimated price and place the order by clicking the **Modify** button.
 
 The configuration change might fail if the vCPU and RAM resources are in use while they are reduced. This happens because the virtual data center resources cannot be reduced to a level lower than the currently active resource usage.
-{:note}
+{: note}
 
 The virtual data center enters in the **Modifying** state while the change is being made. When the resources are ready to use, the status is changed to **Ready to use**.
 
@@ -39,5 +38,5 @@ The virtual data center enters in the **Modifying** state while the change is be
 {: #shared_resize-related}
 
 * [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
-* [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_viewing-vdc-summary)
 * [Deleting VMware Solutions Shared virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_deletinginstance)

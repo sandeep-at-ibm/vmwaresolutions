@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-17"
 
 subcollection: vmwaresolutions
 
@@ -16,23 +16,23 @@ subcollection: vmwaresolutions
 # vRealize Log Insight
 {: #opsmgmt-vrli}
 
-The vRealize Log Insight (vRLI) environment consists of four virtual machines (VMs) with an integrated Load Balancer.
+The vRealize® Log Insight™ (vRLI) environment consists of four virtual machines (VMs) with an integrated Load Balancer.
 
 This pattern supports:
 * 30,000 VMs
 * 75 Gbs log ingestion per day
 * 5,000 events per second
 
-vRealize Log Insight (vRLI) enables real-time logging for components in the {{site.data.keyword.vmwaresolutions_full}} environment. The design deploys a vRLI cluster that consists of four nodes in each instance. This configuration provides continued availability and increased log ingestion rates.
+vRLI enables real-time logging for components in the {{site.data.keyword.vmwaresolutions_full}} environment. The design deploys a vRLI cluster that consists of four nodes in each instance. This configuration provides continued availability and increased log ingestion rates.
 
 ![Log Insights networking diagram](../../images/opsmgmt-vrlinw.svg "Log Insights networking diagram"){: caption="Figure 1. Log Insights networking" caption-side="bottom"}
 
-In this design, each location has an independent vRLI cluster that is deployed on the management cluster. The vRLI cluster is deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses. This facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include: vSphere hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a Primary Node and at least two Worker Nodes with an Integrated Load Balancer.
+In this design, each location has an independent vRLI cluster that is deployed on the management cluster. The vRLI cluster is deployed on the tooling subnet by using {{site.data.keyword.cloud_notm}} Portable IP addresses. The deployment facilitates communication to all components that are addressed out of the {{site.data.keyword.cloud_notm}} RFC1918 address space. The components include vSphere® hosts, vCenter, Platform Services Controller, NSX Manager, and NSX Controllers. A vRLI cluster contains a primary node and at least two worker nodes with an Integrated Load Balancer.
 
-* Primary Node - Required initial node in the Cluster. The Primary Node is responsible for queries and log ingestion. The Primary Node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the primary, which in turn distributes the workload to the Workers.
-* Worker Node - three nodes minimum are required to form a cluster with the ability to add more Workers for scale-out. A Worker Node ingests logs and stores logs locally.
-* Integrated Load Balancer - This provides high availability by using proprietary load-balancing configuration (no external load balancer required).
-* Log Insight Forwarder – This is deployed to receive logs from the NSX overlay components. Additionally, it can be leveraged by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight Primary Node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are outside of the BYOIP address space, NAT rules must be implemented on the NSX ESG.
+* Primary Node - required initial node in the Cluster. The primary node is responsible for queries and log ingestion. The primary node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the primary, which in turn distributes the workload to the workers.
+* Worker Node - three nodes minimum are required to form a cluster with the ability to add more workers for scale-out. A worker node ingests logs and stores logs locally.
+* Integrated Load Balancer - provides high availability by using proprietary load-balancing configuration (no external load balancer required).
+* Log Insight Forwarder – deployed to receive logs from the NSX overlay components. Additionally, it can be used by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight primary node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are outside of the BYOIP address space, NAT rules must be implemented on the NSX ESG.
 
 The following sizes are available and the appropriate one is selected:
 * Small – 2,000 events per second
@@ -80,13 +80,13 @@ To accommodate all log data from the log sources in the environment, the vRLI no
 Each vRLI virtual appliance has three default virtual disks and can use more virtual disks for storage.
 * Hard disk 1 - 20 GB for the root file system
 * Hard disk 2 - 510 GB for medium-size deployment and contains two partitions:
-  * /storage/var - for system logs
-  * /storage/core storage - for collected logs (approximately 475 GB disk space available)
+   * `/storage/var` - for system logs
+   * `/storage/core` storage - for collected log files (approximately 475 GB disk space available)
 
 ## Networking
 {: #opsmgmt-vrli-network}
 
-Deployment of the vRLI appliance requires three IP addresses from the tooling private portable subnet. vRLI requires access to:
+Deployment of the vRLI appliance requires three IP addresses from the tooling private portable subnet. vRLI requires access to the following items.
 * vCenter Appliance
 * vRealize Log Insight Appliance
 * NSX-V/T Appliances
@@ -94,7 +94,7 @@ Deployment of the vRLI appliance requires three IP addresses from the tooling pr
 * Customer Networks
 * NTP server (`time.services.softlayer.com`)
 * {{site.data.keyword.vmwaresolutions_short}} Active Directory/DNS
-* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the Primary Node, Primary Node Replica, and Data Nodes
+* The Remote Collectors require NAT rules on the NSX ESG to enable connectivity to the primary node, primary node replica, and data nodes
 
 ## Ports
 {: #opsmgmt-vrli-ports}
@@ -119,7 +119,7 @@ Deployment of the vRLI appliance requires three IP addresses from the tooling pr
 ## Authentication
 {: #opsmgmt-vrli-auth}
 
-User Management for vRLI requires VMware Identity Manager (vIDM), which integrates with Active Directory. Service accounts are used for application-to-application communication from vRealize Operations Manager to the following adapters with the minimum set of permissions that are required for metric collection and topology mapping.
+User Management for vRLI requires VMware® Identity Manager (vIDM), which integrates with Active Directory. Service accounts are used for application-to-application communication from vRealize Operations Manager to the following adapters with the minimum set of permissions that are required for metric collection and topology mapping.
 * NSX Manager
 * vCenter
 * vSAN
@@ -139,14 +139,14 @@ This design also installs:
 * VMware NSX for vSphere
 * vRealize Network Insight
 
-Other content packs can be obtained from [VMware Solution Exchange](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){:external}.
+Other content packs can be obtained from [VMware Solution Exchange](https://marketplace.vmware.com/vsx/?contentType=2&listingStyle=table){: external}.
 
-The vRealize Log Insight content pack for NSX-T™ provides additional dashboards for viewing log information. For installation instructions, see the [VMware documentation](https://docs.vmware.com/en/VMware-Validated-Design/4.3/com.vmware.vvd.sddc-nsxt-domain-deploy.doc/GUID-EB5EDB4D-C4A1-4906-A6A9-379F898BA372.html){:external} about installing the content pack for NSX-T.
+The vRealize Log Insight content pack for NSX-T™ provides more dashboards for viewing log information. For installation instructions, see the [VMware documentation](https://docs.vmware.com/en/VMware-Validated-Design/4.3/com.vmware.vvd.sddc-nsxt-domain-deploy.doc/GUID-EB5EDB4D-C4A1-4906-A6A9-379F898BA372.html){: external} about installing the content pack for NSX-T.
 
 **Next topic**: [vRealize Network Insight](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-vrni)
 
 ## Related links
 {: #opsmgmt-vrli-related}
 
-* [Sizing the vRealize Log Insight Virtual Appliance](https://docs.vmware.com/en/vRealize-Log-Insight/4.6/com.vmware.log-insight.getting-started.doc/GUID-284FC5F4-B832-47A7-912E-D407A760CAE4.html){:external}
-* [vRealize Log Insight Documentation](https://docs.vmware.com/en/vRealize-Log-Insight/index.html){:external}
+* [Sizing the vRealize Log Insight Virtual Appliance](https://docs.vmware.com/en/vRealize-Log-Insight/4.6/com.vmware.log-insight.getting-started.doc/GUID-284FC5F4-B832-47A7-912E-D407A760CAE4.html){: external}
+* [vRealize Log Insight Documentation](https://docs.vmware.com/en/vRealize-Log-Insight/index.html){: external}

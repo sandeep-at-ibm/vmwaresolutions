@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-19"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
@@ -24,8 +24,8 @@ The recommendation for a production environment is to use a minimum of four host
 To deploy VMware Horizon 7, complete the following steps:
 1. Create a vCenter Server® instance with three hosts and two NFS datastores for the Horizon management components. For more information, see [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
 2. Configure supporting infrastructure for Horizon in {{site.data.keyword.cloud_notm}}, that is, an Active Directory Domain and Microsoft® SQL Server.
-3. Deploy Horizon 7.8 or later in the management cluster. For more information, see the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external}.
-4. Deploy App Volumes 2.17 or later in the management cluster. For more information, see the [VMware App Volumes documentation](https://docs.vmware.com/en/VMware-App-Volumes/index.html){:external}.
+3. Deploy Horizon 7.8 or later in the management cluster. For more information, see the [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){: external}.
+4. Deploy App Volumes 2.17 or later in the management cluster. For more information, see the [VMware App Volumes documentation](https://docs.vmware.com/en/VMware-App-Volumes/index.html){: external}.
 5. Deploy VDI workload cluster with the required number of hosts to support the desktop workloads and with VMware vSAN for storage.
 6. Create Desktop Template and deploy desktops.
 
@@ -38,8 +38,8 @@ When you set up the Horizon 7 environment, you must install and configure the fo
 * Optionally, install RDS license servers.
 * Install Horizon Connection Server and replica server version 7.8 or later.
 * Install App Volumes Managers version 2.17 or later.
-* Configure SSL Certificates for all components
-* Configure Load Balancing for Connection Servers and App Volumes Managers
+* Configure SSL Certificates for all components.
+* Configure Load Balancing for Connection Servers and App Volumes Managers.
 
 Deploy a Unified Access Gateway appliance and connect it to the Connection Server if your deployment supports remote users.
 * Use Unified Access Gateway version 3.5 or newer.
@@ -60,7 +60,7 @@ For hybrid cloud deployment, follow these steps:
 3. Ensure that your on-premises Horizon 7 version is 7.0 or later.
 
    The Horizon 7 version that is deployed on-premises does not have to match the Horizon 7 version deployed on {{site.data.keyword.cloud_notm}}. However, you cannot mix a Horizon 6 or earlier pod with a Horizon 7 pod within the same CPA.
-   {:note}
+   {: note}
 
 4. Use Cloud pod architecture to connect the Horizon 7 on-premises pod with the Horizon 7 pod on {{site.data.keyword.cloud_notm}}.
 5. To share images and ISO images, you can use the vCenter Server Content Library on each vCenter Server.
@@ -89,7 +89,7 @@ VMware Horizon 7 has a number of different server components and desktop agents 
 
 Properly scoped and configured firewall rules ensure a successful deployment. These firewalls are the NSX Distributed Firewall and any firewalls between the {{site.data.keyword.cloud_notm}} and on-premises environment.
 
-For more information about the ports used by Horizon 7, see [Network ports in VMware Horizon 7](https://techzone.vmware.com/resource/network-ports-vmware-horizon-7){:external}.
+For more information about the ports used by Horizon 7, see [Network ports in VMware Horizon 7](https://techzone.vmware.com/resource/network-ports-vmware-horizon-7){: external}.
 
 ## Preparing Active Directory for Hybrid Cloud deployment
 {: #horizon-deploy-config-prep-ad}
@@ -105,9 +105,9 @@ You can use the Cloud Pod Architecture feature to connect Horizon 7 pods regardl
 * After initialization, you can create a global entitlement across your Horizon 7 pods on-premises and on {{site.data.keyword.cloud_notm}}.
 * Optionally, when you use Cloud Pod Architecture, you can deploy a global load balancer (such as F5, {{site.data.keyword.cloud_notm}} Global Load Balancing Service, or others) between the pods. The global load balancer provides a single-namespace capability that allows the use of a common global namespace when referring to Horizon CPA. Using CPA with a global load balancer provides your users with a single connection method and desktop icon in their Horizon Client or workspace ONE console.
 
-Without the global load balancer and the ability to have a single namespace for multiple environments, users might see a confusing array of desktop icons, corresponding to the number of pods on which desktops are provisioned for them. For more information about how to set up Cloud Pod Architecture, see [Administering cloud pod architecture in Horizon 7](https://docs.vmware.com/en/VMware-Horizon-7/7.6/horizon-cloud-pod-architecture/GUID-07C1B313-5907-4EDB-AB2F-75F7F58BD1AF.html){:external}.
+Without the global load balancer and the ability to have a single namespace for multiple environments, users might see a confusing array of desktop icons, corresponding to the number of pods on which desktops are provisioned for them. For more information about how to set up Cloud Pod Architecture, see [Administering cloud pod architecture in Horizon 7](https://docs.vmware.com/en/VMware-Horizon-7/7.6/horizon-cloud-pod-architecture/GUID-07C1B313-5907-4EDB-AB2F-75F7F58BD1AF.html){: external}.
 
-Use Cloud Pod Architecture to link any number of Horizon 7 pods on {{site.data.keyword.cloud_notm}}. The maximum number of pods must conform to the limits set for pods in Cloud Pod Architecture. For more information, see [VMware Horizon 7 sizing limits and recommendations](https://kb.vmware.com/s/article/2150348){:external}.
+Use Cloud Pod Architecture to link any number of Horizon 7 pods on {{site.data.keyword.cloud_notm}}. The maximum number of pods must conform to the limits set for pods in Cloud Pod Architecture. For more information, see [VMware Horizon 7 sizing limits and recommendations](https://kb.vmware.com/s/article/2150348){: external}.
 
 When you connect multiple Horizon 7 pods together with Cloud Pod Architecture, the Horizon 7 versions for each of the pods can be different from one another. The only limitation is that they all be Horizon 7 v7.0 or higher (that is, no mixing of Horizon 6 pods).
 
@@ -116,7 +116,7 @@ When you connect multiple Horizon 7 pods together with Cloud Pod Architecture, t
 
 Content Libraries are container objects for VM, vApp, and OVF templates and other types of files, such as templates, ISO images, and text files. vSphere administrators can use the templates in the library to deploy virtual machines (VMs) and vApps in the vSphere inventory. Sharing golden images across multiple vCenter Server instances and between multiple {{site.data.keyword.cloud_notm}} or on-premises SDDCs provides consistency, compliance, efficiency, and automation in deploying workloads at scale.
 
-For more information, see [Using Content Libraries](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-254B2CE8-20A8-43F0-90E8-3F6776C2C896.html){:external} in the vSphere VM administration guide in the [VMware vSphere documentation](https://docs.vmware.com/en/VMware-vSphere/index.html){:external}.
+For more information, see [Using Content Libraries](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-254B2CE8-20A8-43F0-90E8-3F6776C2C896.html){: external} in the vSphere VM administration guide in the [VMware vSphere documentation](https://docs.vmware.com/en/VMware-vSphere/index.html){: external}.
 
 ## Licensing
 {: #horizon-deploy-config-licensing}
@@ -154,7 +154,7 @@ After the Cloud Connector is deployed, it is paired with the Connection Server i
 
 Currently, Horizon Cloud Service is only used to enforce subscription licenses for Horizon 7. License keys for supporting components, such as license keys for vSphere, App Volumes and others, are delivered separately and are not managed by the Cloud Connector. These licenses are either managed by {{site.data.keyword.cloud_notm}} or they must be entered into the components manually. Over time, more features beyond license management will be available on Horizon Cloud Service for Horizon 7 deployments.
 
-Review the [VMware Horizon 7 Cloud Connector](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-4B40CE42-70A8-43B0-A99B-D53A12FC698C.html){:external} for more details on how to deploy the Horizon 7 Cloud Connector Virtual Appliance. You need a separate Cloud Connector for each pod.
+Review the [VMware Horizon 7 Cloud Connector](https://docs.vmware.com/en/VMware-Horizon-7/7.8/horizon-installation/GUID-4B40CE42-70A8-43B0-A99B-D53A12FC698C.html){: external} for more details on how to deploy the Horizon 7 Cloud Connector Virtual Appliance. You need a separate Cloud Connector for each pod.
 
 ## Deploying desktops on IBM Cloud with instant clone, App Volumes, and User Environment Manager
 {: #horizon-deploy-config-deploy-desktop}
@@ -197,7 +197,7 @@ On the vSphere Web Client in {{site.data.keyword.cloud_notm}}, complete the foll
 
 After the VM is created, browse to the datastore where the OVF was exported and move the VMDK file with its metadata to the cloud volumes directory.
 
-Ensure that you change the template location in the metadata file to point to the new datastore. For more information about how to update the App Volumes VMDKs, see step 7 in [Creating a new App Volumes AppStack template VMDK smaller than 20 GB](https://kb.vmware.com/s/article/2116022){:external}.
+Ensure that you change the template location in the metadata file to point to the new datastore. For more information about how to update the App Volumes VMDKs, see step 7 in [Creating a new App Volumes AppStack template VMDK smaller than 20 GB](https://kb.vmware.com/s/article/2116022){: external}.
 
 ### User Environment Manager
 {: #horizon-deploy-config-uem}

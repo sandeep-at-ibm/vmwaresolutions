@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-09-10"
 
 keywords: user account, user permissions, VRF account
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Requirements for the IBM Cloud infrastructure account
 {: #cloud-infra-acct-req}

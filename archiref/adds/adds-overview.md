@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Active Directory overview
 {: #adds-overview}
@@ -45,7 +42,7 @@ AD uses the following terminology:
 ## Domain models
 {: #adds-overview-models}
 
-Review the typical domain models available to a customer when they designate their domains either on-premises or in the {{site.data.keyword.cloud}}:
+Review the typical domain models available to a customer when they designate their domains either on-premises or in the {{site.data.keyword.cloud}}.
 
 * Single forest, single domain model.
 * Single forest, multiple domains model.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-20"
+lastupdated: "2021-09-10"
 
 keywords: view vmware regulated workloads, vmware regulated workloads details, vmware regulated workloads delete, delete vmware regulated workloads, remove vmware regulated workloads
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing and deleting VMware Regulated Workloads
 {: #vrw-view-delete-instance}

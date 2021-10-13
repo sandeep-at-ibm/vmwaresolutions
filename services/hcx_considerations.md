@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-14"
+lastupdated: "2021-09-27"
 
 keywords: VMware HCX, HCX, tech specs HCX
 
@@ -29,15 +29,13 @@ VMware HCX requires you to use either VMware NSX® Advanced or Enterprise throug
 
 {{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-VMware requires you to be on one of their supported versions in order for you to open a support request for HCX. For more information, see the list of [VMware HCX release notes](https://docs.vmware.com/en/search/#/VMware%20HCX%204.0.1%20Release%20Notes){:external} here.
+VMware requires you to be on one of their supported versions in order for you to open a support request for HCX. For more information, see the list of [VMware HCX release notes](https://docs.vmware.com/en/search/#/VMware%20HCX%204.0.1%20Release%20Notes){: external} here.
 
 A VMware vCenter Server® instance with HCX is limited to three simultaneous connections from on-premises sites.
 
 For vCenter Server with NSX-T™ instances, HCX is supported for NSX-T 3.1 and VMware vSphere 7.0.
 
-For vCenter Server with NSX-V instances, HCX is supported for the following vSphere versions:
-* vSphere 6.7
-* vSphere 6.5 (vDS must be at a 6.0 level)
+For vCenter Server with NSX-V instances, HCX is supported for vSphere 6.7.
 
 ## Technical specifications for HCX
 {: #hcx_considerations-specs}
@@ -45,7 +43,7 @@ For vCenter Server with NSX-V instances, HCX is supported for the following vSph
 The following components are ordered and included in the HCX service.
 
 On-premises HCX instances include only licensing and activation.
-{:note}
+{: note}
 
 ### VMware NSX Edge Services Gateways for HCX management (NSX-V only)
 {: #hcx_considerations-nsx}
@@ -121,7 +119,7 @@ Review the following considerations before you delete the HCX service:
    * The HCX management edge appliances are deleted.
 
 Only the VMs that were deployed during the initial installation of the HCX instances are deleted. Any node that is deployed after the installation is not cleaned up.
-{:note}
+{: note}
 
 ## Related links
 {: #hcx_considerations-related}
@@ -130,5 +128,5 @@ Only the VMs that were deployed during the initial installation of the HCX insta
 * [Managing HCX](/docs/vmwaresolutions?topic=vmwaresolutions-managinghcx)
 * [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
-* [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}
-* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}
+* [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){: external}
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){: external}

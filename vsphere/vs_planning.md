@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-20"
+lastupdated: "2021-09-10"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Requirements and planning for VMware vSphere
 {: #vs_planning}
@@ -23,7 +20,7 @@ subcollection: vmwaresolutions
 Review the following requirements before you order a VMware vSphere® cluster. Plan your VMware vSphere clusters based on the {{site.data.keyword.cloud}} data center location and your workload capacity requirements.
 
 You are responsible for setting up the environment, installing, and configuring various VMware components after the VMware ESXi™ servers are deployed. The following examples are VMware components: VMware vCenter Server®, VMware NSX®, and VMware vSAN™.
-{:note}
+{: note}
 
 ## IBM Cloud account requirements
 {: #vs_planning-account-req}
@@ -39,7 +36,7 @@ Cascade Lake bare metal servers are available in [multizone region](#x9774820){:
 {{site.data.keyword.cloud_notm}} data centers. For more information, see [Multizone region (MZR) overview](/docs/loadbalancer-service?topic=loadbalancer-service-multi-zone-region-mzr-overview).
 
 If you select a vSAN component, the location list is filtered by SSD (Solid-State Disk) availability.
-{:note}
+{: note}
 
 | {{site.data.keyword.cloud_notm}} data center | Region | Server options[^vsphere-7] |
 |:---------------------|:---------------|:--------------|
@@ -64,9 +61,9 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified |
 | Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified |
 | Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
-| Paris 04 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
-| Paris 05 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
-| Paris 06 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
+| Paris 04 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par04] |
+| Paris 05 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par05] |
+| Paris 06 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par06] |
 | Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified |
 | Sao Paulo 04 | South America | Cascade Lake, SAP-certified |
 | Sao Paulo 05 | South America | Cascade Lake, SAP-certified |
@@ -99,6 +96,12 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 [^sap-mon01]: Existing vSphere 6.5 clusters only
 
 [^sap-par01]: Existing vSphere 6.5 clusters only
+
+[^sap-par04]: Existing vSphere 6.5 clusters only
+
+[^sap-par05]: Existing vSphere 6.5 clusters only
+
+[^sap-par06]: Existing vSphere 6.5 clusters only
 
 ## Related links
 {: #vs_planning-related}

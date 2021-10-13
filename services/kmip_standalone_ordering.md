@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-28"
+lastupdated: "2021-08-30"
 
 keywords: KMIP for VMware, order KMIP, Key Protect, Hyper Protect Crypto Services, HPCS
 
@@ -114,7 +114,7 @@ When you enable the inactive KMIP for VMware instance, provide the following set
     2. In the **Add client SSL certificate** window, enter the name and contents of the certificate, and then click **Add**.
 
        The certificate name cannot be reused within your selected instance. The certificate content must be valid and contain the BEGIN CERTIFICATE and END CERTIFICATE tags. When you use Key Protect, the certificate cannot be reused in the region where the instance is deployed.
-       {:note}
+       {: note}
 
 5. Click **Configure**.
 
@@ -138,7 +138,7 @@ If you did not add client SSL certificates in Step 2, you must add it after the 
 4. In the **Add client SSL certificate** window, enter the certificate name and content, and then click **Add**.
 
    The certificate name cannot be reused within your selected instance. The certificate content must be valid and contain the BEGIN CERTIFICATE and END CERTIFICATE tags, and the certificate cannot be reused in the selected region where the instance is deployed.
-   {:note}
+   {: note}
 
 ### Results of Step 3
 {: #kmip_standalone_ordering-step3-results}
@@ -155,16 +155,15 @@ If your KMIP instance is connected to HPCS, you can find details for the single 
 
 If your KMIP instance is connected to Key Protect, you must use the two regional endpoints for your KMIP for VMware instance to configure a key provider cluster in vCenter Server. You can find the endpoints for each region in the following table:
 
-{: #tb3}
 | Location       | Endpoints     |
 |:------------- |:------------- |
-| Dallas | <code>kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696</code> |
-| Frankfurt | <code>kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696</code> |
-| London | <code>kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696</code> |
-| Sydney | <code>kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696</code> |
-| Tokyo | <code>kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696</code> |
-| Toronto | <code>kmip-1.private.ca-tor.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.ca-tor.vmware-solutions.cloud.ibm.com:5696</code> |
-| Washington DC | <code>kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696</code><br><code>kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696</code> |
+| Dallas | <code>`kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696`</code><br><code>`kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696`</code> |
+| Frankfurt | <code>`kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696`</code><br><code>`kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696`</code> |
+| London | <code>`kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696`</code><br><code>`kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696`</code> |
+| Sydney | <code>`kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696`</code><br><code>`kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696`</code> |
+| Tokyo | <code>`kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696`</code><br><code>`kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696`</code> |
+| Toronto | <code>`kmip-1.private.ca-tor.vmware-solutions.cloud.ibm.com:5696`</code><br><code>`kmip-2.private.ca-tor.vmware-solutions.cloud.ibm.com:5696`</code> |
+| Washington DC | <code>`kmip-1.private.us-east.vmware-solutions.cloud.ibm.com:5696`</code><br><code>`kmip-2.private.us-east.vmware-solutions.cloud.ibm.com:5696`</code> |
 {: caption="Table 3. KMIP for VMware network service endpoint locations" caption-side="top"}
 
 ## Related links

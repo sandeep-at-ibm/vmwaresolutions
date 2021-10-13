@@ -43,4 +43,4 @@ When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_ord
 * [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [HyTrust website](https://www.hytrust.com/){:external}
+* [HyTrust website](https://www.hytrust.com/){: external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-20"
 
 keywords: Veeam console, Veeam backup restore, update Veeam license
 
@@ -83,7 +83,7 @@ When licenses are ordered, the system does not generate a key, but applies a pri
 
 To manage the Veeam service, access the Veeam console by completing the following steps:
 1. Use Remote Desktop Protocol to connect to the Windows® IP address.
-2. Log in to the Windows console by using the Administrator credentials.
+2. Log in to the Windows® console by using the Administrator credentials.
 3. Access the Veeam console from the Windows console by using the Administrator credentials.
 
 You can find the Windows IP address and the Administrator credentials on the Veeam service details page.
@@ -95,9 +95,9 @@ For more information, see [Ordering services for vCenter Server instances](/docs
 
 The Veeam service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup).
 
-For instances deployed in (or upgraded to) V1.8 or later releases, the configuration changes to your environment are not automatically backed up. Therefore, before you change the configuration of your environment, it is recommended that you back up the management components manually by running the management backup job in the Veeam console. For more information about backing up manually, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:external}.
+For instances deployed in (or upgraded to) V1.8 or later releases, the configuration changes to your environment are not automatically backed up. Therefore, before you change the configuration of your environment, it is recommended that you back up the management components manually by running the management backup job in the Veeam console. For more information about backing up manually, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){: external}.
 
-When failures occur on the management components, you can restore the management components to a previous backup by using the Veeam console. For more information about restoring manually, see the [Veeam technical instructions]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){:external}.
+When failures occur on the management components, you can restore the management components to a previous backup by using the Veeam console. For more information about restoring manually, see the [Veeam technical instructions]( https://helpcenter.veeam.com/backup/vsphere/performing_full_recovery.html){: external}.
 
 ## Applying updates to Veeam
 {: #managingveeam-updates}
@@ -117,7 +117,7 @@ If the Veeam service is installed on an instance with private network only, you
 ### Updating Veeam licenses for instances that are deployed with public and private network
 {: #managingveeam-update-license-public-private}
 
-If the Veeam service is installed on an instance with public and private network, you can update your Veeam v9.5u4b license either automatically or manually. For Veeam v11, you must update your Veeam license automatically. You cannot update it manually. Follow the Veeam instructions at [Updating license](https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){:external}.
+If the Veeam service is installed on an instance with public and private network, you can update your Veeam v9.5u4b license either automatically or manually. For Veeam v11, you must update your Veeam license automatically. You cannot update it manually. Follow the Veeam instructions at [Updating license](https://helpcenter.veeam.com/docs/backup/vsphere/license_update.html){: external}.
 
 ### Updating Veeam licenses for instances that are deployed with private network only
 {: #managingveeam-update-license-private}
@@ -139,6 +139,6 @@ On the Veeam v11 console, when you’re automatically updating a license before 
 * [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)
 * [Ordering and configuring IBM Cloud Object Storage with Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering)
 * [VMware Solutions FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [Veeam backup and replication](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){:external}
-* [Veeam backup and replication FAQ](https://www.veeam.com/availability-suite-faq.html){:external}
-* [Veeam technical documentation](https://www.veeam.com/documentation-guides-datasheets.html){:external}
+* [Veeam backup and replication](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){: external}
+* [Veeam backup and replication FAQ](https://www.veeam.com/availability-suite-faq.html){: external}
+* [Veeam technical documentation](https://www.veeam.com/documentation-guides-datasheets.html){: external}

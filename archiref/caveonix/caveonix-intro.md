@@ -68,4 +68,4 @@ The three key services available through the RiskForesight GUI are Risk Manageme
 ## Related links
 {: #caveonix-intro-related}
 
-* [Caveonix website](https://www.caveonix.com){:external}
+* [Caveonix website](https://www.caveonix.com){: external}

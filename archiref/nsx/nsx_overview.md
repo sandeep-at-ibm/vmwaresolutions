@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2020-06-17"
+lastupdated: "2021-08-24"
 
 subcollection: vmwaresolutions
 
@@ -14,14 +14,22 @@ subcollection: vmwaresolutions
 # About NSX Edge Services Gateway
 {: #nsx_overview}
 
-The VMware NSX Edge Services Gateway (ESG) solution is an extension of the VMware vCenter Server offering that is currently available on the {{site.data.keyword.cloud}}. The solution architecture for vCenter Server details the components of the solution and the high-level configuration of each component in the design.
+The VMware® NSX Edge Services Gateway (ESG) solution is an extension of the VMware vCenter Server® offering that is currently available on the {{site.data.keyword.cloud}}. The solution architecture for vCenter Server details the components of the solution and the high-level configuration of each component in the design.
 
 For more information about the vCenter Server design, see [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
 
 ## Overview of NSX Edge Services Gateway
 {: #nsx_overview-nsx-esg}
 
-The NSX Edge Services Gateway connects isolated, stub networks to shared (uplink) networks by providing common gateway services such as Dynamic Host Configuration Protocol (DHCP), Virtual Private Network (VPN), Network Address Translation (NAT), dynamic routing, and load balancing. Common deployments of NSX Edge include demilitarized zone (DMZ), VPN Extranets, and multi-tenant Cloud environments where the NSX Edge creates virtual boundaries for each tenant, workload, or management component. The following features are available within the NSX Edge Service Gateway.
+The VMware NSX® Edge Services Gateway connects isolated, stub networks to shared (uplink) networks by providing common gateway services.
+
+* Dynamic Host Configuration Protocol (DHCP)
+* Virtual Private Network (VPN)
+* Network Address Translation (NAT)
+* Dynamic routing
+* Load balancing
+
+Common deployments of NSX Edge include demilitarized zone (DMZ), VPN Extranets, and multi-tenant Cloud environments where the NSX Edge creates virtual boundaries for each tenant, workload, or management component. The following features are available within the NSX Edge Service Gateway.
 
 | Feature | Description |
 |:------- |:----------- |

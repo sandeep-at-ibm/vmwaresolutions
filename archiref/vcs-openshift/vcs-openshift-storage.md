@@ -2,12 +2,11 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-03-30"
+lastupdated: "2021-08-12"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -21,8 +20,7 @@ subcollection: vmwaresolutions
 
 ## vSphere Storage for Kubernetes
 
-You can use the vSphere datastores as a location for storing persistent
-volumes for Kubernetes by using the VMware Cloud Provider.
+You can use the vSphere® datastores as a location for storing persistent volumes for Kubernetes by using the VMware® Cloud Provider.
 
 Complete the following steps to create a new volume:
 

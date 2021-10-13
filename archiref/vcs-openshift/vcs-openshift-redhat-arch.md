@@ -4,10 +4,9 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-11"
+lastupdated: "2021-08-12"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -19,7 +18,7 @@ subcollection: vmwaresolutions
 # Red Hat OpenShift architecture
 {: #vcs-openshift-redhat-arch}
 
-The {{site.data.keyword.vmwaresolutions_full}} offerings provide automation to deploy VMware technology components in
+The {{site.data.keyword.vmwaresolutions_full}} offerings provide automation to deploy VMware® technology components in
 {{site.data.keyword.cloud_notm}} data centers across the globe. The architecture consists of a single cloud region. It supports the ability to extend into more cloud regions that are located in another geography or into another {{site.data.keyword.cloud_notm}} pod within the same data center.
 
 ![OpenShift architecture](../../images/openshift-components.svg){: caption="Figure 1. OpenShift architecture" caption-side="bottom"}
@@ -27,7 +26,7 @@ The {{site.data.keyword.vmwaresolutions_full}} offerings provide automation to d
 ## Bastion hosts
 {: #vcs-openshift-redhat-arch-bastion-host}
 
-The Management host is a Red Hat Enterprise Linux 7.6 virtual machine (VM). This VM hosts services to install and configure the OpenShift instance and provides utilities to manage the Red Hat OpenShift environment. This host is normally deployed in the VXLAN Subnet.
+The Management host is a Red Hat® Enterprise Linux® 7.6 virtual machine (VM). This VM hosts services to install and configure the OpenShift® instance and provides utilities to manage the Red Hat OpenShift environment. This host is normally deployed in the VXLAN Subnet.
 
 ## Bootstrap hosts
 {: #vcs-openshift-redhat-arch-bootstrap-host}
@@ -37,7 +36,7 @@ The bootstrap node is a Red Hat Enterprise Linux CoreOS (RHCOS), a new container
 ## Control Plane hosts
 {: #vcs-openshift-redhat-arch-control-plane-host}
 
-The control plane hosts are Red Hat Enterprise Linux CoreOS (RHCOS), a new container-oriented operating system designed for running containers. The control plane nodes are known as the control plane, where Kubernetes services such as API server, etcd, and controller manager are defined. An NSX load balancer is configured to spread load across these VMs for ports 6443 and 22623, exposing the `api` and `api-int` functions.
+The control plane hosts are Red Hat Enterprise Linux CoreOS (RHCOS), a new container-oriented operating system designed for running containers. The control plane nodes are known as the control plane, where Kubernetes services such as API server, etcd, and controller manager are defined. An NSX® load balancer is configured to spread load across these VMs for ports 6443 and 22623, exposing the `api` and `api-int` functions.
 
 ## Worker hosts
 {: #vcs-openshift-redhat-arch-worker-host}
@@ -55,7 +54,7 @@ The Red Hat OpenShift deployment uses the following components of the {{site.dat
 - NSX DHCP services
 - NSX software defined networking
 
-For more information, see [IBM Cloud for VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch).
+For more information, see [{{site.data.keyword.vmwaresolutions_short}} SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch).
 
 **Next topic:** [VMware Solutions SDDC architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-arch)
 

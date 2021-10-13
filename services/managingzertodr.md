@@ -46,7 +46,7 @@ When you're replicating between different {{site.data.keyword.cloud}} Zerto inst
 Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the {{site.data.keyword.cloud_notm}} Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side. Establishing connectivity might also require secure tunneling between the sites. When you're configuring or reconfiguring routes on Zerto Virtual Manager appliances, you must ensure that all Zerto Virtual Manager appliances can connect successfully to `zerto.com` for usage reporting. You can verify this connection by opening a browser session to `https://www.zerto.com` from the Zerto Virtual Manager appliance.
 
 The Management VMware NSX Edge™ Services Gateway (ESG) is preconfigured to allow outbound HTTPS (TCP port 443) communications that originate from Zerto Virtual Manager.
-{:note}
+{: note}
 
 ## Updating Zerto Virtual Replication
 {: #managingzertodr-update}
@@ -63,7 +63,7 @@ When you add or remove ESXi servers for the primary cluster of your instance, VR
 
 * [Zerto overview](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr)
 * [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
-* [Zerto](https://www.zerto.com){:external}
-* [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:external}
-* [Zerto disaster recovery](https://www.ibm.com/downloads/cas/KDBKXLLW){:external}
-* [Zerto's alarms, alerts, and events](http://s3.amazonaws.com/zertodownload_docs/Latest/Guide%20to%20Alarms%2C%20Alerts%20and%20Events.pdf){:external}
+* [Zerto](https://www.zerto.com){: external}
+* [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}
+* [Zerto disaster recovery](https://www.ibm.com/downloads/cas/KDBKXLLW){: external}
+* [Zerto's alarms, alerts, and events](http://s3.amazonaws.com/zertodownload_docs/Latest/Guide%20to%20Alarms%2C%20Alerts%20and%20Events.pdf){: external}

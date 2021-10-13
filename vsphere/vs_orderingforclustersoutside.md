@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-22"
+lastupdated: "2021-10-04"
 
 keywords: vSphere scale cluster, scale vSphere, external vSphere cluster
 
@@ -12,9 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Scaling clusters created outside of the console
 {: #vs_orderingforclustersoutside}
@@ -35,11 +33,12 @@ Ensure that you complete the following tasks:
 2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create new** tab and that **New cluster** is displayed in the **Cluster configurations** list.
 3. Create a cluster with the same settings as the existing cluster that is created outside of the {{site.data.keyword.vmwaresolutions_short}} console. For more information, see [Ordering new vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_orderinginstances).  
    Under **Network interface**, you must choose the option to select existing VLANs.
-   {:note}
+   {: note}
+
 4. In the **Summary** pane, verify the cluster configuration, and then click **Save configuration**.   
 5. On the **Overview** page, click the **VMware vSphere** card.
 6. On the **VMware vSphere** page, click **Continue**.
-7. Click the **Scale existing** tab. From the **Cluster Configurations** list, select the cluster that you recently created.
+7. Click the **Scale existing** tab. From the **Cluster configurations** list, select the cluster that you recently created.
 8. In the **Bare metal server** section, specify the number of {{site.data.keyword.cloud_notm}} bare metal servers that you want to add to the cluster.
 9. If the cluster does not include the FortiGate® 300 Series Security Appliance HA Pair on its public VLAN, you can order one by selecting **Include with purchase** under **FortiGate Physical Appliance 300 Series HA Pair**.
 10. In the **Summary** pane, verify the instance configuration and the estimated price, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
@@ -50,7 +49,7 @@ Ensure that you complete the following tasks:
 The deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
 The vSphere clusters are not displayed on the **Resources** page, together with the VMware vCenter Server® instances.
-{:note}
+{: note}
 
 ## Related links
 {: #vs_orderingforclustersoutside-related}

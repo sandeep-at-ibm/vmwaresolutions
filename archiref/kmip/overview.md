@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-24"
 
 subcollection: vmwaresolutions
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # KMIP for VMware overview
 {: #kmip-overview}
 
-This solution architecture describes the KMIP on VMware architecture for protecting your VMware instances. Many storage encryption options are available to protect your VMware workload. KMIP for VMware works together with VMware native vSphere encryption and vSAN encryption to provide simplified storage encryption management together with the security and flexibility of {{site.data.keyword.cloud_notm}} Key Protect or {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services customer-managed keys.
+This solution architecture describes the KMIP™ on VMware architecture for protecting your VMware® instances. Many storage encryption options are available to protect your VMware workload. KMIP for VMware works together with VMware native vSphere encryption and vSAN encryption to provide simplified storage encryption management together with the security and flexibility of {{site.data.keyword.cloud_notm}} Key Protect or {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services customer-managed keys.
 
 This solution is considered to be an extra component and extension of the vCenter Server offering on {{site.data.keyword.cloud_notm}}. As a result, this document doesn't cover the existing configuration of these foundation solutions on {{site.data.keyword.cloud_notm}}. To understand more about the foundation solution architecture, see [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
 

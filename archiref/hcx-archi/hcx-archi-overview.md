@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-08-12"
 
 subcollection: vmwaresolutions
 
@@ -63,9 +63,8 @@ The VMware HCX service deploys four virtual appliance types that are installed a
 {: #hcxclient-components-cloud-client-side}
 
 HCX has the concept of cloud side (target - destination) and client side (source).
-
-- Cloud / Destination side - HCX Cloud is pre-deployed in {{site.data.keyword.cloud_notm}} vCenter Server Deployment on customer portal request and configured with the network and compute profiles ready for service mesh creation.  
-- Client / Source side - Any vSphere instances that meet the prerequisites for installation and operation. The client side of HCX is the primary that controls the cloud side secondary instance through its vCenter web client user interface (UI) snap-in.
+* Cloud / Destination side - HCX Cloud is pre-deployed in {{site.data.keyword.cloud_notm}} vCenter Server Deployment on customer portal request and configured with the network and compute profiles ready for service mesh creation.  
+* Client / Source side - Any vSphere instances that meet the prerequisites for installation and operation. The client side of HCX is the primary that controls the cloud side secondary instance through its vCenter web client user interface (UI) snap-in.
 
 The source and destination sites are paired together for HCX operations. An HCX Connector cannot be paired with another HCX Connector.
 

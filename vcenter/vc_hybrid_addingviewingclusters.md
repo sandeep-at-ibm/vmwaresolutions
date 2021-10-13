@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-26"
+lastupdated: "2021-09-30"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters}
@@ -30,8 +27,9 @@ You can add clusters to your VMware vCenter Server® with Hybridity Bundle insta
 ### Before you add clusters
 {: #vc_hybrid_addingviewingclusters-before-add}
 
+* Adding clusters to instances with VMware vSphere® 6.5 is not supported.
 * Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){:external}.
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){: external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
 ### System settings
@@ -51,7 +49,7 @@ The cluster name must meet the following requirements:
 #### Data center location
 {: #vc_hybrid_addingviewingclusters-adding-dc-location}
 
-The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, use a tool such as [Looking Glass](http://lg.softlayer.com/){:external}.
+The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, use a tool such as [Looking Glass](http://lg.softlayer.com/){: external}.
 
 If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center or {{site.data.keyword.cloud_notm}} infrastructure pod, three more VLANs are ordered for use with the ordered {{site.data.keyword.cloud_notm}} bare metal servers.
 
@@ -78,7 +76,7 @@ When you select **Skylake**, you have options for the **CPU model** and **RAM**.
 For the **Cascade Lake** setting, you have options for the **CPU model** and **RAM**.
 
 Cascade Lake bare metal servers are available only for VMware vSphere Enterprise Plus 6.7u3 instances.
-{:note}
+{: note}
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
@@ -91,7 +89,7 @@ Cascade Lake bare metal servers are available only for VMware vSphere Enterprise
 {: caption="Table 2. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or new ESXi servers for existing hybridity instances.
-{:note}
+{: note}
 
 #### Number of bare metal servers
 {: #vc_hybrid_addingviewingclusters-adding-bare-metal-number}
@@ -107,8 +105,8 @@ VMware vSAN™ 6.6 is included with your vCenter Server with Hybridity Bundle in
 * **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
 * If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays that are useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High performance with Intel Optane** option is available only for Skylake and Cascade Lake CPU models.
-  {:note}
+   The **High performance with Intel Optane** option is available only for Skylake and Cascade Lake CPU models.
+   {: note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
 * **vSAN license**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
@@ -117,15 +115,13 @@ VMware vSAN™ 6.6 is included with your vCenter Server with Hybridity Bundle in
 {: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
 
 IBM-provided licenses for the following VMware components:
-  * vSphere Enterprise Plus 6.5u3 or 6.7u3, depending on the cluster that is ordered, which is 6.5 or 6.7
-  * vCenter Server 6.5
-  * VMware NSX® Service Providers 6.4 (Advanced or Enterprise edition)
+* vSphere Enterprise Plus 6.7u3
+* VMware NSX® Service Providers 6.4 (Advanced or Enterprise edition)
 
 ### Network interface settings
 {: #vc_hybrid_addingviewingclusters-adding-network-interface-settings}
 
 Network interface card (NIC) settings are based on your selection of either **Public and private network** or **Private network only**. The following add-on services require public NICs and aren't available with the private option:
-
 * F5® BIG-IP®
 * FortiGate® Virtual Appliance
 
@@ -143,7 +139,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 2. In the **vCenter Server instances** table, click the instance to view the clusters in it.
 
    Ensure that the instance status is **Ready to use**. Otherwise, you can't add clusters to the instance.
-   {:note}
+   {: note}
 
 3. Click **Infrastructure** on the left navigation pane and click **Add** at the upper right of the **CLUSTERS** table.
 4. On the **Add cluster** page, enter the cluster name.
@@ -165,7 +161,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 2. When the cluster is ready to use, its status changes to **Ready to use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
 You can't change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
-{:important}
+{: important}
 
 ## Procedure to view clusters in vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-viewing-procedure}
@@ -173,23 +169,22 @@ You can't change the cluster name. Changing the cluster name might cause the add
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server instances** table, click the instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
-  * **Name**: The name of the cluster.
-  * **ESXi servers**: The number of ESXi servers in the cluster.
-  * **CPU**: The CPU specification of the ESXi servers in the cluster.
-  * **Customized vSAN disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
-  * **Memory**: The total memory size of the ESXi servers in the cluster.
-  * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
-  * **Pod**: The pod where the cluster is deployed.
-  * **Status**: The status of the cluster. The status can have one of the following values:
-    * Initializing: The cluster is being created and configured.
-    * Modifying: The cluster is being modified.
-    * Ready to use: The cluster is ready to use.
-    * Deleting: The cluster is being deleted.
-    * Deleted: The cluster is deleted.
+   * **Name**: The name of the cluster.
+   * **ESXi servers**: The number of ESXi servers in the cluster.
+   * **CPU**: The CPU specification of the ESXi servers in the cluster.
+   * **Customized vSAN disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
+   * **Memory**: The total memory size of the ESXi servers in the cluster.
+   * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
+   * **Pod**: The pod where the cluster is deployed.
+   * **Status**: The status of the cluster. The status can have one of the following values:
+      * Initializing: The cluster is being created and configured.
+     * Modifying: The cluster is being modified.
+     * Ready to use: The cluster is ready to use.
+     * Deleting: The cluster is being deleted.
+     * Deleted: The cluster is deleted.
 4. Click a cluster name to view the ESXi servers, storage, and network interface details:
-
-  * ESXi servers details:
-     * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
+   * ESXi servers details:
+      * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
        `host_prefix` is the hostname prefix,
 
@@ -199,33 +194,33 @@ You can't change the cluster name. Changing the cluster name might cause the add
 
        `root_domain` is the root domain name.
 
-     * **Version**: The version of the ESXi server.
-     * **Credentials**: The username and password to access the ESXi server.
-     * **Private IP**: The private IP address of the ESXi server.
-     * **Status**: The status of the ESXi server, which can be one of the following values:
-       * Added: The ESXi server is added and is ready for use.
-       * Adding: The ESXi server is being added.
-       * Deleting: The ESXi server is being deleted.
+      * **Version**: The version of the ESXi server.
+      * **Credentials**: The username and password to access the ESXi server.
+      * **Private IP**: The private IP address of the ESXi server.
+      * **Status**: The status of the ESXi server, which can be one of the following values:
+         * Added: The ESXi server is added and is ready for use.
+         * Adding: The ESXi server is being added.
+         * Deleting: The ESXi server is being deleted.
 
-  * Storage details:
-    * **Name**: The data store name.
-    * **Size**: The capacity of the storage.
-    * **IOPS/GB**: The performance level of the storage.
-    * **NFS protocol**: The NFS version of the storage.
-  * Network Interface - VLAN details:
-    * **VLAN number**: The unique VLAN number.
-    * **Description**: The description of the VLAN.
-    * **Location**: The data center location.
-    * **Primary route**: The primary route of the VLAN.
+   * Storage details:
+      * **Name**: The data store name.
+      * **Size**: The capacity of the storage.
+      * **IOPS/GB**: The performance level of the storage.
+      * **NFS protocol**: The NFS version of the storage.
+   * Network Interface - VLAN details:
+      * **VLAN number**: The unique VLAN number.
+      * **Description**: The description of the VLAN.
+      * **Location**: The data center location.
+      * **Primary route**: The primary route of the VLAN.
     Click **View resource** to access the VLAN details.
-  * Network Interface - Subnet details:
-    * **Name**: The subnet name. Click the name to access the subnet details.
-    * **Type**: The type of subnet: primary or portable.
-    * **Description**: The description of the subnet.
-  * Network Interface - IP details:
-    * **IP**: The IP address.
-    * **Status**: The status of the IP address.
-    * **Description**: The description of the IP address.
+   * Network Interface - Subnet details:
+      * **Name**: The subnet name. Click the name to access the subnet details.
+      * **Type**: The type of subnet: primary or portable.
+      * **Description**: The description of the subnet.
+   * Network Interface - IP details:
+      * **IP**: The IP address.
+      * **Status**: The status of the IP address.
+      * **Description**: The description of the IP address.
 
 ## Deleting clusters from vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-deleting}
@@ -235,6 +230,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 ### Before you delete
 {: #vc_hybrid_addingviewingclusters-deleting-prereq}
 
+* Deleting clusters from instances with vSphere 6.5 is not supported.
 * Whenever possible, delete clusters by using the {{site.data.keyword.vmwaresolutions_short}} console because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, delete clusters from vCenter Server only for on-premises clusters or clusters that you can't or don't plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
 * You can delete a single cluster at a time. To delete multiple clusters, you must do it in sequence; waiting for the previous cluster to be deleted before you delete the next cluster.
 * Ensure that all nodes in a cluster are powered on and operational before you delete the cluster.
@@ -248,7 +244,7 @@ You might want to delete a cluster from an instance when it's no longer needed.
 2. In the **vCenter Server instances** table, click the instance that you want to delete clusters from.
 
    Ensure that the instance is in the **Ready to use** status. Otherwise, you cannot delete clusters from the instance.
-   {:note}
+   {: note}
 
 3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, locate the cluster that you want to delete and click the **Delete** icon in the **Actions** column.
 

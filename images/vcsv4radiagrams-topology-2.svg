@@ -32,13 +32,13 @@
  </g>
  <g transform="matrix(2 0 0 1.9997 -.5 -1.1999)" font-family="Helvetica" font-size="7px" text-anchor="middle">
   <text x="227.5" y="184.5">NSX-T</text>
-  <text x="227.5" y="192.5">VM Based Edge Cluster</text>
+  <text x="227.5" y="192.5">VM-based edge services cluster</text>
  </g>
  <path d="m370.5 367.75 1 52.993" fill="none" pointer-events="none" stroke="#0ff" stroke-miterlimit="10" stroke-width="3.9997"/>
  <g transform="matrix(2 0 0 1.9997 -.5 -1.1999)" font-family="Helvetica" font-size="7px" text-anchor="middle">
-  <text x="84" y="192.5">T0 Gateway</text>
+  <text x="84" y="192.5">T0 gateway</text>
   <text x="84" y="200.5">Instances</text>
-  <text x="84" y="208.5">Inside Edge Cluster</text>
+  <text x="84" y="208.5">Inside edge services cluster</text>
  </g>
  <path d="m371.5 268.77v-59.992h-262" fill="none" pointer-events="none" stroke="#999" stroke-miterlimit="10" stroke-width="3.9997"/>
  <g transform="matrix(2 0 0 1.9997 -.5 -1.1999)" font-family="Helvetica" font-size="7px" text-anchor="middle">
@@ -105,9 +105,9 @@
   </switch>
  </g>
  <g transform="matrix(2 0 0 1.9997 -.5 -1.1999)" font-family="Helvetica" font-size="7px" text-anchor="middle">
-  <text x="245.5" y="205">RedHat</text>
+  <text x="245.5" y="205">Red Hat</text>
   <text x="245.5" y="213">Bare metal</text>
-  <text x="245.5" y="221">T0 Edge Cluster</text>
+  <text x="245.5" y="221">T0 Edge services cluster</text>
  </g>
  <path d="m379.5 604.72 18.38-87.529" fill="none" pointer-events="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.9999"/>
  <g transform="matrix(2 0 0 1.9997 -.5 -1.1999)">

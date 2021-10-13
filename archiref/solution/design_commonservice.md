@@ -36,7 +36,7 @@ By default, a single Active Directory VSI is deployed onto the {{site.data.keywo
 The design also provides the option to deploy two highly available MSAD servers as dedicated Microsoft Windows® Server VMs in the management cluster.
 
 If you choose the option with two highly available MSAD servers, you're responsible to provide Microsoft licensing and activation.
-{:note}
+{: note}
 
 Active Directory serves to authenticate accesses to manage the VMware® instance only and not to house users of the workloads in the deployed instances. The forest root domain name of the Active Directory server equals to the Domain Name Services (DNS) domain name that you specify. This domain name is specified only for the primary vCenter Server instance if multiple instances are linked. For linked instances, each instance contains an Active Directory server that sits in the forest root replica ring. The DNS zone files are also replicated on the Active Directory servers.
 

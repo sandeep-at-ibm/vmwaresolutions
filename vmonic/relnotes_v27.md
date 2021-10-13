@@ -2,20 +2,16 @@
 
 copyright:
 
-  years:  2018
+  years:  2018, 2021
 
-lastupdated: "2018-12-14"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V2.7
 {: #relnotes_v27}
@@ -73,7 +69,7 @@ In addition to VMware instance events, events for KMIP for VMware on {{site.data
 {: #relnotes_v27-kmip-deprecated}
 
 (Updated on 14 December 2018) The current version of KMIP for VMware on {{site.data.keyword.cloud_notm}} is being deprecated.
-{:deprecated}
+{: deprecated}
 
 ## New and updated documentation
 {: #relnotes_v27-new-docs}

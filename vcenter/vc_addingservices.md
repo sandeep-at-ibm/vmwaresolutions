@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-21"
+lastupdated: "2021-09-29"
 
 keywords: vCenter Server add service
 
@@ -12,20 +12,18 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering services for vCenter Server instances
 {: #vc_addingservices}
 
 You can order services for your VMware® vCenter Server® instances, such as a disaster recovery solution. Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
 
-Adding services to vCenter Server multizone instances is not supported. You can view or delete existing add-on services. If a service is deleted, it cannot be reinstalled.
-{:deprecated}
+## Before you add services to vCenter Server instances
+{: #vc_addingservices-prereq}
+
+* Adding services to vCenter Server instances with VMware vSphere® 6.5 is not supported.
+* Adding services to vCenter Server multizone instances is not supported. You can view or delete existing add-on services. If a service is deleted, it cannot be reinstalled.
 
 ## Available services for vCenter Server instances
 {: #vc_addingservices-available-services}
@@ -40,19 +38,19 @@ The following table shows the services available for vCenter Server with NSX-T i
 | Service name | Current version |
 |--------------|-----------------|
 | [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.0.1 |
-| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 15.1.3 |
+| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 16.1 |
 | [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations) | Periodically updated to the most recent version |
-| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 6.3.1 |
+| [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 6.4.1 |
 | [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.3[^htdc] |
 | [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) | 3.0 (20.4R2) |
-| [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.7[^nsxtver] |
+| [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.7.24[^nsxtver] |
 | [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 11 |
-| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.2 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.4 |
 {: caption="Table 1. Available services for vCenter Server with NSX-T instances" caption-side="top"}
 
 [^htdc]: VMware vSphere 6.7 only
 
-[^nsxtver]: If you add the service to an existing instance with a NSX-T version lower than v3.1, you must upgrade NSX-T to v3.1 or higher.
+[^nsxtver]: If you add the service to an existing instance with an NSX-T version earlier than 3.1, you must first upgrade NSX-T to 3.1 or later.
 
 ### Available services for vCenter Server with NSX-V instances
 {: #vc_addingservices-available-services-nsx-v}
@@ -62,8 +60,8 @@ The following table shows the services available for vCenter Server with NSX-V i
 | Service name | Current version |
 |--------------|-----------------|
 | [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.0.1 |
-| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 15.1.3 |
-| [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 6.4.6 |
+| [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 16.1 |
+| [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 7.0.1 |
 | [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations) | Periodically updated to the most recent version |
 | [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.3 |
 | [{{site.data.keyword.IBM}} Security Services for SAP](/docs/vmwaresolutions?topic=vmwaresolutions-managing-ss-sap) | N/A |
@@ -72,14 +70,14 @@ The following table shows the services available for vCenter Server with NSX-V i
 | [KMIP for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) | 2.0 |
 | [PrimaryIO HDM](/docs/vmwaresolutions?topic=vmwaresolutions-managing_pio) | N/A |
 | [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 11 |
-| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.2 |
-| [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 7.5 Update 3 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.4 |
+| [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 9.0u1 |
 {: caption="Table 2. Available services for vCenter Server with NSX-V instances" caption-side="top"}
 
 ## Promotions for services
 {: #vc_addingservices-service-promotions}
 
-{{site.data.keyword.vmwaresolutions_full}} offers promotion pricing for some services. The promotions offer a number of months free of charge for service licenses, if the service has license charges. For more information about the promotions that are available, see the [pricing options](https://www.ibm.com/cloud/vmware/pricing){:external}.
+{{site.data.keyword.vmwaresolutions_full}} offers promotion pricing for some services. The promotions offer a number of months free of charge for service licenses, if the service has license charges. For more information about the promotions that are available, see the [pricing options](https://www.ibm.com/cloud/vmware/pricing){: external}.
 
 You can use one promotion (promo) code for one or more services for:
 * Ordering a new VMware vCenter Server instance
@@ -113,13 +111,13 @@ The following table provides the resource requirements for the services for whic
 |:------------ |:--------------------- |
 | Caveonix RiskForesight | CPU - 8 CPUs<br>RAM - 32 GB<br>Storage - 100 GB |
 | F5 BIG-IP[^f5bigip] | CPU - 4, 8, or 16 CPUs, depending on license and bandwidth chosen<br>RAM - 8, 16, or 32 GB, depending on license and bandwidth chosen |
-| FortiGate Virtual Appliance | CPU - 2, 4, 8, or 16 CPUs, depending on license chosen<br>RAM - 4, 6, or 12 GB, depending on license chosen |
+| FortiGate Virtual Appliance | CPU - 2, 4, 8, 16, or 32 CPUs, depending on deployment size chosen<br>RAM - 4, 6, or 12 GB, depending on license chosen |
 | HyTrust CloudControl | CPU - 4 CPUs<br>RAM - 16 GB<br>Storage - 186 GB VMDK resident on vSAN™ |
 | IBM Spectrum Protect Plus | CPU - 16 CPUs<br>RAM - 48 GB |
 | Juniper vSRX | You must have enough available capacity to accommodate two VMs with the following requirements, on different hosts:<br>CPU - 6 CPUs<br>RAM - 16 GB<br>Storage - 18 GB<br>When Juniper vSRX is installed on clusters with the 25 Gb uplink speed, it requires:<br>CPU - 10 CPUs<br>RAM - 16 GB<br>Storage - 18 GB |
-| Red Hat OpenShift | CPU - 27 CPUs<br>RAM - 155 GB <br>If you install Red Hat OpenShift with vSAN™ storage, you must have an estimated 952 GB of vSAN storage. <br>If you install Red Hat OpenShift with NFS storage, there's no storage requirement because NFS storage is ordered as part of the instance order. |
+| Red Hat OpenShift | If you install Red Hat OpenShift with vSAN™ storage, the following capacity requirements apply.<br>CPU - 9 CPUs<br>RAM - 120 GB<br>Storage - 1,170 GB<br>If you install Red Hat OpenShift with NFS storage, a new 2-TB NFS datastore, which is dedicated to Red Hat OpenShift, is ordered. |
 | Veeam | If you select Veeam as a VSI option, there is no capacity requirement. <br>If you select Veeam as a VM option, the following capacity is required: <br>CPU - 8 CPUs <br>RAM - 32 GB <br>Storage - 100 GB <br> If you select Veeam as a bare metal server option, there is no capacity requirement. |
-| VMware HCX | For each gateway in the active-passive pair of VMware NSX® edge services gateways: <br>CPU - 6 CPUs <br>RAM - 8 GB <br>Storage - 3 GB VMDK <br>For the HCX Management Appliance VM: <br>CPU - 4 CPUs <br>RAM - 12 GB <br>Storage - 60 GB VMDK |
+| VMware HCX | For each gateway in the active-passive pair of VMware NSX-V edge services gateways: <br>CPU - 6 CPUs <br>RAM - 8 GB <br>Storage - 3 GB VMDK <br>For the HCX Management Appliance VM: <br>CPU - 4 CPUs <br>RAM - 12 GB <br>Storage - 60 GB VMDK |
 | vRealize Operations and Log Insight | CPU - 18 CPUs <br>RAM - 208 GB <br>If you install vRealize Operations with vSAN storage, you must have an estimated 750 GB of vSAN storage. <br> If you install vRealize Operations with NFS storage, there's no storage requirement, because NFS storage is ordered as part of the instance order. |
 | Zerto | CPU - 2 CPUs <br>RAM - 4 GB |
 {: caption="Table 3. Resources required for the services that the system checks for capacity requirements" caption-side="top"}

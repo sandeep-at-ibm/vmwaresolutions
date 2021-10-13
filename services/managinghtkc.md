@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-20"
 
 keywords: HTKC WebGUI, HTKC console, enable internet HTKC
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 {: #managinghtkc}
 
 New installations of HyTrust KeyControl™ are no longer supported for new or existing deployments of vCenter Server instances. You can still use or delete existing HyTrust KeyControl installations on your existing instances.
-{:deprecated}
+{: deprecated}
 
 To manage the HyTrust® KeyControl™ service (HTKC), access the HTKC web GUI from the {{site.data.keyword.vmwaresolutions_full}} console, or access the HTKC console from the vSphere® Web Client.
 
@@ -36,7 +36,7 @@ To log in to the web GUI of the primary or secondary HTKC appliance, use the Web
 {: #managinghtkc-accessing-console}
 
 To access the HTKC console from the vSphere Web Client, use the following procedure:
-1. In the vSphere Web Client, find the virtual machines that start with the names **KC1** and **KC2** that have the matching IP address found on the HyTrust KeyControl service details page.
+1. In the vSphere Web Client, find the virtual machines that start with the names **KC1** and **KC2** that have the matching IP address that is found on the HyTrust KeyControl service details page.
 2. Right-click **KC1** or **KC2**, and then click **Open Console**.
 3. Log in to the console by using the console credentials that you can find on the HyTrust KeyControl service details page.
 
@@ -49,8 +49,8 @@ For HTKC 4.3.2 and later, {{site.data.keyword.vmwaresolutions_short}} provides a
 
 These rules allow you to enable internet access for the HyTrust virtual machines (VMs). If internet access is not enabled, the license that is applied to your HTKC installation will expire after a year.
 
-For private-only vCenter Server environments, the VMware® NSX Edge Services Gateway (ESG) **mgmt-nsx-edge** is not added. Therefore the firewall and SNAT rules are not defined. As a result, internet connectivity cannot be enabled for private-only instances and HyTrust licenses expire annually.
-{:note}
+For private-only vCenter Server environments, the VMware® NSX Edge Services Gateway (ESG) **mgmt-nsx-edge** is not added. Therefore, the firewall and SNAT rules are not defined. As a result, internet connectivity cannot be enabled for private-only instances and HyTrust licenses expire annually.
+{: note}
 
 ### Procedure to find the firewall and SNAT rules defined
 {: #managinghtkc-proc-find-firewall}
@@ -80,4 +80,4 @@ For private-only vCenter Server environments, the VMware® NSX Edge Services Gat
 
 * [HyTrust KeyControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [HyTrust website](https://www.hytrust.com/){:external}
+* [HyTrust website](https://www.hytrust.com/){: external}

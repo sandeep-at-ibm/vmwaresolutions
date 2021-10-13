@@ -39,7 +39,7 @@ A service appliance might be uninstalled in preparation for uninstalling Hybrid 
 * Ensure that no active Hybrid Cloud Services tasks exist.
 
 Never delete virtual appliances from the vSphere inventory. Always use the management portal to interact with service virtual appliances.
-{:note}
+{: note}
 
 ### Procedure to uninstall HCX virtual appliances
 {: #hcxclient-removal-uninstall-proc-uninst-hva}

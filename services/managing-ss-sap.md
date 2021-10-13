@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-08-17"
 
 keywords: security services, request security sap, tech specs sap
 
@@ -53,7 +53,7 @@ You can expect the following benefits when you request IBM Security Services for
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the services section and click **IBM Security Services for SAP** in the **Featured workload solutions** category.
 2. On the **IBM Security Services for SAP** page, in the **Engage IBM Security Services** box, provide the requested details, and click **Request a consultation**.
 
-  An {{site.data.keyword.vmwaresolutions_short}} representative contacts you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
+   An {{site.data.keyword.vmwaresolutions_short}} representative contacts you by using your {{site.data.keyword.cloud_notm}} contact information to help you with the solution that you need.
 
 ## Related links
 {: #managing-ss-sap-related}

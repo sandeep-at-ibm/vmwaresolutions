@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-16"
 
 subcollection: vmwaresolutions
 
@@ -25,24 +25,24 @@ subcollection: vmwaresolutions
 
 The operational tooling consists of the following components:
 
-- vRealize Operations Manager - Using data collected from objects in the VMware® platform, vRealize Operations Manager (vROps) uses detailed dashboards to show system health, capacity, and performance.
-- vRealize Log Insight - Objects in the VMware® platform have been configured to send their logging events to vRealize Log Insight (vRLI) to enable a centralized log management function.
+* vRealize Operations Manager - Using data collected from objects in the VMware® platform, vRealize Operations Manager (vROps) uses detailed dashboards to show system health, capacity, and performance.
+* vRealize Log Insight - Objects in the VMware platform have been configured to send their logging events to vRealize Log Insight (vRLI) to enable a centralized log management function.
 
 The following main principles or requirements for identity and access management to the operational tooling apply:
-- The principle of least privilege to be used so that a user account has assigned only the privileges that are essential to perform the intended function.
-- SaaS provider operations have full access to the operational tooling.
-- Auditor has read-only access to the operational tooling.
-- IC4V Active Directory (AD) is used to host accounts and define roles.
+* The principle of least privilege to be used so that a user account has assigned only the privileges that are essential to perform the intended function.
+* SaaS provider operations have full access to the operational tooling.
+* Auditor has read-only access to the operational tooling.
+* IC4V Active Directory (AD) is used to host accounts and define roles.
 
 ## Accounts
 {: #vrw-iam-vrealize-accounts}
 
 The following terminology is used to define the account types:
 
-- User IDs - These IDs are assigned to people who require access to the system.
-- Service IDs - These IDs are used by the IC4V automation or used by software components.
-- Local IDs - These IDs are local to the application.
-- SSH IDs - These IDs are used to access the Linux® VMs that host the applications
+* User IDs - These IDs are assigned to people who require access to the system.
+* Service IDs - These IDs are used by the IC4V automation or used by software components.
+* Local IDs - These IDs are local to the application.
+* SSH IDs - These IDs are used to access the Linux® VMs that host the applications
 
 ## VMware Solutions infrastructure AD domain
 {: #vrw-iam-vrealize-ad}
@@ -65,8 +65,8 @@ By default, the following local users are configured during service instantiatio
 
 The following groups are configured during service instantiation:
 
-- Cloud Admin - The `cloudadmin` user ID is a member of this group.
-- Everyone - All users are a member of this group.
+* Cloud Admin - The `cloudadmin` user ID is a member of this group.
+* Everyone - All users are a member of this group.
 
 ![vRealize Operations Manager logical](../../images/vrw-vrops.svg){: caption="Figure 1. vRealize Operations Manager logical" caption-side="bottom"}
 
@@ -74,17 +74,16 @@ The following groups are configured during service instantiation:
 {: #vrw-iam-vrealize-vrops-roles}
 
 The following roles are defined in vROps:
-
-- `Administrator` - System administrator
-- `AgentManager` - Deploy and configure EP Ops management agents
-- `ContentAdmin` - Manage all the contents in the product
-- `GeneralUser-1` - Configurable out of the box role
-- `GeneralUser-2` - Configurable out of the box role
-- `GeneralUser-3` - Configurable out of the box role
-- `GeneralUser-4` - Configurable out of the box role
-- `PowerUser` - All the privileges except the ones that are related to user management and cluster management. Typically, vCenter administrators map to it.
-- `PowerUserMinusRemediation` - All the Privileges except the ones that are related to User Management. Cluster Management and Remediation Actions.
-- `Readonly` - Read-only access for the product.
+* `Administrator` - System administrator
+* `AgentManager` - Deploy and configure EP Ops management agents
+* `ContentAdmin` - Manage all the contents in the product
+* `GeneralUser-1` - Configurable out of the box role
+* `GeneralUser-2` - Configurable out of the box role
+* `GeneralUser-3` - Configurable out of the box role
+* `GeneralUser-4` - Configurable out of the box role
+* `PowerUser` - All the privileges except the ones that are related to user management and cluster management. Typically, vCenter administrators map to it.
+* `PowerUserMinusRemediation` - All the Privileges except the ones that are related to User Management. Cluster Management and Remediation Actions.
+* `Readonly` - Read-only access for the product.
 
 vROps authentication sources are configured to use active directory to connect to the infrastructure AD. Within the infrastructure AD, the following groups are assigned roles:
 
@@ -113,10 +112,10 @@ This account is not used on a day-to-day basis or for configuration tasks.
 {: #vrw-iam-vrealize-vrli-roles}
 
 The following roles are defined in vRLI:
-- Super Admin - Full Admin and User capabilities, including editing shared content
-- View Only Admin - Can view Admin information and has full User access, including editing shared content
-- User - Can use interactive analytics and dashboards
-- Dashboard User - Can use only dashboards
+* Super Admin - Full Admin and User capabilities, including editing shared content
+* View Only Admin - Can view Admin information and has full User access, including editing shared content
+* User - Can use interactive analytics and dashboards
+* Dashboard User - Can use only dashboards
 
 vRLI authentication configuration is configured to use Active Directory to connect to the infrastructure AD. Within the infrastructure AD, the following groups are assigned roles:
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-20"
 
 keywords: HTDC WebGUI, HTDC console, enable internet HTDC
 
@@ -46,7 +46,7 @@ For HTDC 4.3.2 and later, {{site.data.keyword.vmwaresolutions_short}} provides a
 These rules allow you to enable internet access for the HyTrust virtual machines (VMs). If internet access is not enabled, the license that is applied to your HTDC installation will expire after a year.
 
 For private-only vCenter Server environments, the VMware® NSX Edge Services Gateway (ESG) **mgmt-nsx-edge** is not added. Therefore, the firewall and SNAT rules are not defined. As a result, internet connectivity cannot be enabled for private-only instances and HyTrust licenses expire annually.
-{:note}
+{: note}
 
 ### Procedure to find the firewall and SNAT rules defined
 {: #managinghtdc-proc-find-firewall}
@@ -67,7 +67,7 @@ For private-only vCenter Server environments, the VMware® NSX Edge Services Gat
 5. To get the current default gateway IP address from the VM, click **Manage Network Settings > Show Current Network Configuration**. Note the IP address that is listed for **Gateway**. This address becomes the gateway that is used for the static route.
 6. To set a static route for the VM, click **Manage Network Settings > Manage Static Routes > Add Static Route**. Set **Network address** to `10.0.0.0/8` and **Gateway** to the IP address noted in the previous step.
 7. To set the default gateway IP for the VM, click **Manage Network Settings > Change Current Network Configuration**. If you get a warning message, click **OK**, then click **Custom Configuration**. Set the **Gateway** field to the private uplink IP address noted in step 2 and click **OK**. Wait until the new network configuration is installed and the network services are restarted.
-8. If you see a message requesting HyTrust SecureOS reauthentication, click **OK** and enter the IP address of the other HyTrust VM for this installation. If you are asked for a 16-character passphrase, press Enter to return to the main menu. Verify the current network configuration to ensure that your changes are applied.
+8. If you see a message that requests HyTrust SecureOS reauthentication, click **OK** and enter the IP address of the other HyTrust VM for this installation. If you are asked for a 16-character passphrase, press Enter to return to the main menu. Verify the current network configuration to ensure that your changes are applied.
 9. To confirm that the VM has access to the internet, ping a public IP address or website. Click **Manage Network Settings > Network Diagnostic Tools > Test Inbound Ports of Another Server**. Type a public website address. For example, `www.ibm.com`, click **OK**, type `80 443` for the ports (or any other ports you want to test). You should get an immediate response that shows the inbound ports with a message similar to `80 (OK) 443 (OK)`.
 10. Repeat steps 3 - 9 for the other HyTrust VM.
 
@@ -78,4 +78,4 @@ For private-only vCenter Server environments, the VMware® NSX Edge Services Gat
 * [HyTrust DataControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [HyTrust website](https://www.hytrust.com/){:external}
+* [HyTrust website](https://www.hytrust.com/){: external}

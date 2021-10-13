@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-20"
 
 keywords: Red Hat OpenShift for VMware, OpenShift configuration, order OpenShift
 
@@ -33,7 +33,7 @@ You can include the Red Hat® OpenShift® for VMware® service with a new VMware
 ## Red Hat OpenShift for VMware configuration
 {: #ocp_ordering-config}
 
-When you order the service, you must provide a Red Hat pull secret. This pull secret is used to associate the new OpenShift cluster with your existing Red Hat account. You can obtain a copy of your pull secret by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external} and clicking **Copy Pull Secret**.
+When you order the service, you must provide a Red Hat pull secret. This pull secret is used to associate the new OpenShift cluster with your existing Red Hat account. You can obtain a copy of your pull secret by [logging in to your Red Hat account](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){: external} and clicking **Copy Pull Secret**.
 
 ## Setting up DNS to access your OpenShift console
 {: #ocp_ordering-dns-setup}
@@ -44,7 +44,7 @@ Because the Red Hat OpenShift web console runs as an application within Red Hat 
 
 1. Ensure you are connected to your environment by using the {{site.data.keyword.cloud_notm}} infrastructure VPN.
 
-2. Ensure the system that you use to connect to the Red Hat OpenShift web console can properly resolve hostnames in the DNS zone for your VMware environment. For anexisting DNS infrastructure, configure the DNS delegation so that queries for hostnames within the VMware instance's root zone are handled by the AD DNS server that is running within your VMware environment.
+2. Ensure the system that you use to connect to the Red Hat OpenShift web console can properly resolve hostnames in the DNS zone for your VMware environment. For an existing DNS infrastructure, configure the DNS delegation so that queries for hostnames within the VMware instance's root zone are handled by the AD DNS server that is running within your VMware environment.
 
 Alternately, you can configure your local `hosts` file with the following entries so you can access the OpenShift web console. Use the following details for the example.
 * Replace APPLICATION_IP with the OpenShift application IP address shown in the Red Hat OpenShift service details page.

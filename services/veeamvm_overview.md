@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-08-06"
+lastupdated: "2021-08-20"
 
 keywords: Veeam, Veeam 11, Veeam install, tech specs Veeam, Veeam overview
 
@@ -29,12 +29,12 @@ The Veeam® service seamlessly integrates directly with your VMware® hypervisor
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
 The current Veeam service that is installed is the new Veeam Availability Suite™ v11 known as Veeam v11.
-{:note}
+{: note}
 
 ## Veeam on a bare metal server
 {: #veeamvm_overview-baremetal-server}
 
-You can install Veeam v11 on a bare metal server. This installation is only supported on VMware vSphere 7.0 with NSX-T™.
+You can install Veeam v11 on a bare metal server. This installation is only supported on VMware vSphere® 7.0 with NSX-T™.
 
 * For VMware Regulated Workloads, the Veeam bare metal server is the only option. For Security and Compliance Readiness Bundle, the Veeam bare metal server is the default option with a choice of switching to Veeam VM.
 * Veeam is always deployed to the management cluster.
@@ -101,21 +101,21 @@ The following components are included if you deploy Veeam v11 on a bare metal se
 #### Endurance iSCSI storage (VM or VSI options)
 {: #veeamvm_overview-specs-storage-vm-or-vsi}
 
-* Storage size:
-  * 2,000 GB
-  * 4,000 GB
-  * 8,000 GB
-  * 12,000 GB
+* Storage size
+   * 2,000 GB
+   * 4,000 GB
+   * 8,000 GB
+   * 12,000 GB
 
 * Storage performance (IOPS/GB)
-  * 0.25
-  * 2
-  * 4
+   * 0.25
+   * 2
+   * 4
 
 #### Local HDD storage (Bare metal server option)
 {: #veeamvm_overview-specs-storage-bm-server}
 
-Storage size:
+Storage size
 
 * 8x2 TB, RAID 6, 12 TB total estimated usable storage
 * 8x6 TB, RAID 6, 36 TB total estimated usable storage
@@ -125,9 +125,9 @@ Storage size:
 {: #veeamvm_overview-specs-storage-repositories-created}
 
 As part of the Veeam service installation and configuration, the following repositories are created:
-* For the Veeam configuration backup files: a repository named `IC4V Default Config Backup Repository`. The path to the folder where the Veeam backups are stored is `<Drive>:\ConfigBackup\`.
+* For the Veeam configuration backup files - a repository named `IC4V Default Config Backup Repository`. The path to the folder where the Veeam backups are stored is `<Drive>:\ConfigBackup\`.
 * For scale-out, a repository named `IC4V Scale-Out Repository`. For more information, see [Adding a scale-out repository](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering#icos_ordering-scale-repo).
-* For the virtual machine (VM) backups: a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository.
+* For the virtual machine (VM) backups - a repository named `IC4V Default VM Backup Repository`. The path to the folder where the VM backups are stored is `<Drive>:\VMBackup\`. This repository is added as an extent to `IC4V Scale-Out repository.
 
 ### Networking for Veeam v11
 {: #veeamvm_overview-specs-networking}
@@ -140,12 +140,12 @@ One primary private IP address.
 For Veeam Availability Suite 11, you can order 10 - 500 VM licenses in increments of 10.
 
 You must provide a Microsoft® Windows Server 2019 Standard edition license if you choose the option of installing Veeam as a VM.
-{:important}
+{: important}
 
 ## Considerations when you install Veeam v11
 {: #veeamvm_overview-install}
 
-There are various tasks that you might complete with Veeam v11, such as ordering a new vCenter Server instance with Veeam and ordering or deleting a Veeam stand-alone license. For more information, see [Tasks you can complete with Veeam v11](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-fivetasks_v10).
+You can complete various tasks with Veeam v11, such as ordering a new vCenter Server instance with Veeam and ordering or deleting a Veeam stand-alone license. For more information, see [Tasks you can complete with Veeam v11](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-fivetasks_v10).
 
 Veeam license installation and deletion are different starting with Veeam v11. For more information, see [Considerations for installing and deleting Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-managingveeam#managingveeam-install-delete-consid).
 
@@ -153,7 +153,7 @@ Veeam license installation and deletion are different starting with Veeam v11. F
 {: #veeamvm_overview-remove}
 
 Deleting the Veeam service stops all backups and deletes all the previous backups. The backup of the management VMs or VSIs stops and the deletion of previous backups is irreversible. If the management VMs or VSIs are corrupted, they can’t be restored.
-{:important}
+{: important}
 
 Review the following considerations before you delete the service:
 * Deleting the Veeam v11 service does not cancel the Veeam license. You must delete the Veeam license from the Veeam licenses table on the Resources page in the {{site.data.keyword.vmwaresolutions_short}} console.
@@ -169,6 +169,6 @@ Review the following considerations before you delete the service:
 * [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)
 * [Ordering and configuring IBM Cloud Object Storage with Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-icos_ordering)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [Veeam backup and replication](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){:external}
-* [Veeam website](https://www.veeam.com/){:external}
-* [Veeam Help Center (Technical Documentation)](https://www.veeam.com/documentation-guides-datasheets.html){:external}
+* [Veeam backup and replication](https://www.ibm.com/cloud/architecture/architectures/virtualization_backup_veeam){: external}
+* [Veeam website](https://www.veeam.com/){: external}
+* [Veeam Help Center (Technical Documentation)](https://www.veeam.com/documentation-guides-datasheets.html){: external}

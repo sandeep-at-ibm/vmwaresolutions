@@ -2,20 +2,16 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2021
 
-lastupdated: "2017-11-20"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V2.0
 {: #relnotes_v20}
@@ -69,7 +65,7 @@ The current release applies the following component updates and improvements for
 * VMware ESXi 6.5, Patch Release ESXi650-201710401-BG. Updates esx-base, esx-tboot, vSAN, and vsanhealth VIBs (2151061).
 
 Existing instances (from releases V1.9 and earlier) cannot be upgraded to the component versions in this list.
-{:note}
+{: note}
 
 ### Cluster support for Cloud Foundation instances
 {: #relnotes_v20-vcf-cluster}
@@ -96,7 +92,7 @@ The following bare metal server configuration settings are now available:
 * Large (Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz / 512 GB RAM / 12 disks)
 
 The chassis has space for 12 disks. Not all slots are completed. The **Small** configuration provides two 1.9 TB Micron 5100 MAX drives and the **Large** configuration provides four 3.8 TB Micron 5100 PRO drives.
-{:note}
+{: note}
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v20-vcs}
@@ -109,7 +105,7 @@ The current release applies the following component updates for new deployments:
 * VMware NSX for vSphere 6.3.4
 
 vCenter Server customized orders with or without the VMware vSAN component always include a 12-disk chassis server. This server results in a slightly higher cost for the bare metal server for the non-vSAN order case in the price estimate PDF.
-{:note}
+{: note}
 
 ### Multi-site configuration support for vCenter Server instances
 {: #relnotes_v20-vcs-multisite}
@@ -137,7 +133,7 @@ For the VMware vSAN component, the following disk types are now available for {{
 * 1.9 TB SSD SED
 * 3.8 TB SSD SED
 
-**Notes**:
+**Notes**
 * 3.8 TB SSD SED drives are supported when they are made generally available in an {{site.data.keyword.cloud_notm}} data center.
 * Orders with or without the VMware vSAN component always include a 12-disk chassis server. This server results in a slightly higher cost for the {{site.data.keyword.cloud_notm}} bare metal servers for the non-vSAN order case in the price estimate PDF.
 
@@ -153,7 +149,7 @@ The following bare metal server configuration options are now available:
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
 
 3.8 TB SSD drives are supported when they are made generally available in an {{site.data.keyword.cloud_notm}} data center.
-{:note}
+{: note}
 
 ## New and updated documentation
 {: #relnotes_v20-new-docs}

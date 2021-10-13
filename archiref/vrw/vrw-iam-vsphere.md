@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-10-11"
 
 subcollection: vmwaresolutions
 
@@ -31,8 +31,8 @@ The following user IDs are used to add an identity source, which is embedded by 
 |:---------|:-------------|:-------|:------------|
 | Privileged user | `root` | SSH | Used for VMware configuration such as setting up VMware High Availability and creating distributed switches. Used post deployment to pair primary and secondary vCenter Server instances. |
 | Privileged user | `customerroot` | SSH | Created for customer use only. |
-| IBM automation | `automation`@``root_domain``<br/>(Active Directory user) | HTTPS | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines (VMs) for add-on services. |
-| Privileged user | `cloudadmin`@`root_domain`<br/>(Active Directory user) | HTTPS | Created for customer use only. |
+| IBM automation | `automation`@``root_domain``  \n (Active Directory user) | HTTPS | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines (VMs) for add-on services. |
+| Privileged user | `cloudadmin`@`root_domain`  \n (Active Directory user) | HTTPS | Created for customer use only. |
 {: caption="Table 1. vCenter and Platform Services Controller user IDs" caption-side="top"}
 
 HTTPS is used for vCenter setup and configuration, and for VMware operations such as adding hosts, clusters, or storage for vCenter management of resources.
@@ -47,7 +47,7 @@ Privileged users are granted `cloudadmin` access to vCenter Server through the H
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| IBM automation | `ibm_automation`<br/>(NSX-T™ principal identity user) | Used post deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added or removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
+| IBM automation | `ibm_automation`  \n (NSX-T™ principal identity user) | Used post deployment to manage NSX VTEP IP addresses and to manage host and cluster configuration when hosts and clusters are added or removed. Also used to manage ESG configuration for add-on services that require public network access for licensing, activation, or usage reporting. |
 | Privileged user | `admin` | Created for customer use only. |
 {: caption="Table 2. NSX Manager user IDs" caption-side="top"}
 
@@ -96,10 +96,9 @@ Privileged users are granted `cloudadmin` access to vCenter Server through the H
 {: caption="Table 6. Service user IDs" caption-side="top"}
 
 where:
-
-- `dynamicID` is the 8 - 10 characters that are generated dynamically during the service installation.
-- `shortID` is the 5 characters that are generated dynamically during the service installation.
-- `domainName` is the domain name of your instance.
+* `dynamicID` is the 8 - 10 characters that are generated dynamically during the service installation.
+* `shortID` is the 5 characters that are generated dynamically during the service installation.
+* `domainName` is the domain name of your instance.
 
 **Next topic**: [NSX-T administration interface identity and access management](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-iam-nsxt)
 

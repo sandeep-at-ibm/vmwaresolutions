@@ -39,12 +39,12 @@ To manage the Caveonix RiskForesight™ service, you must access the Caveonix Ri
 ## Applying updates to Caveonix RiskForesight
 {: #managingcaveonix-update}
 
-You are responsible for maintaining Caveonix RiskForesight to keep it updated to the most recent version. You can download the required updates from the [Caveonix Service Provider Portal](https://support.caveonix.com/login){:external}.
+You are responsible for maintaining Caveonix RiskForesight to keep it updated to the most recent version. You can download the required updates from the [Caveonix Service Provider Portal](https://support.caveonix.com/login){: external}.
 
 ## Updating Caveonix RiskForesight licenses
 
 This information does not apply to Caveonix Foresight that is installed on VMware® Regulated Workloads or Security and Compliance Readiness Bundle instances.
-{:note}
+{: note}
 
 The Caveonix RiskForesight license is valid for five years. You can update the Caveonix RiskForesight license when it expires by using the following procedure:
 1. Order a new Caveonix RiskForesight license and copy it to the Caveonix RiskForesight console. For more information, see [Procedure to order Caveonix RiskForesight licenses](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_license_ordering#caveonix_license_ordering-procedure).

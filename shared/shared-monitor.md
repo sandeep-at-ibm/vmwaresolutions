@@ -67,7 +67,7 @@ VMware Solutions Shared provides the following metrics for the default dashboard
 * Storage usage
 
 Metrics updates can be delayed by up to 60 minutes.
-{:note}
+{: note}
 
 ## Customizing your VMware Solutions Shared dashboard
 {: #shared-monitor-view-customize}

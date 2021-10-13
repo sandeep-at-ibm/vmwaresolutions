@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-05-10"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
@@ -40,7 +40,7 @@ When you deploy Horizon 7, a two-cluster approach is recommended. This approach 
 {: #horizon-deploy-arch-sizing}
 
 Planning a deployment of Horizon 7 is like planning an on-premises deployment. To determine the number of hosts that you need, size your Horizon 7 deployment based on your requirements. Hosts are needed for the following purposes:
-* Your Virtual Desktop or RDS workloads
+* Your Virtual Desktop or RDS workloads.
 * Your Horizon 7 infrastructure components such as connection servers, Unified Access Gateways, and App Volumes managers.
 * SDDC infrastructure components on {{site.data.keyword.cloud_notm}}. These components are deployed and managed automatically for you by {{site.data.keyword.cloud_notm}}, but you need capacity in your SDDC for running them.
 
@@ -82,7 +82,7 @@ The amount of RAM required for the workload cluster is the number of desktops mu
 
 The vCenter Server offering has two storage types – one based on an All-Flash vSAN and one based on NFS storage. VMware vSAN is preferred for all VDI workloads to provide the best performance. vSAN provides several options during configuration, including the number and size of the capacity tier drives and the ability to use Intel Optane for the vSAN cache tier. The management cluster must use NFS storage for the management VMs. Each datastore must be configured by using the NFS storage option and have 1 TB of capacity with at least 2 IOPS per GB. Environments that are planning to place large file servers might require more IOPS to provide a good user experience in the environment.
 
-For assistance with sizing the cluster environment, use the [vSAN ReadyNode™ Sizer](https://vsansizer.vmware.com/){:external}.
+For assistance with sizing the cluster environment, use the [vSAN ReadyNode™ Sizer](https://vsansizer.vmware.com/){: external}.
 
 ## Network configuration for Horizon 7 deployment on IBM Cloud
 {: #horizon-deploy-arch-net-config}
@@ -118,11 +118,11 @@ When you deploy Horizon 7, the highly available option is recommended over the s
 Cloud Pod Architecture (CPA) is a standard Horizon 7 feature that you can use to connect your Horizon 7 deployment across multiple pods and sites for federated management. It can be used to scale up your deployment to build hybrid cloud and to provide redundancy for Business Continuity and Disaster Recovery. CPA introduces the concept of a global entitlement (GE) that spans the federation of multiple Horizon pods and sites. Any users or user groups that belong to the global entitlement are entitled to access virtual desktops and RDS published apps on multiple Horizon 7 pods that are part of the CPA.
 
 CPA is not a stretched deployment. Each Horizon 7 pod is distinct and all connection servers that belong to each of the individual pods must be in a single location and run on the same broadcast domain from a network perspective.
-{:important}
+{: important}
 
 ![Basic two sites - two pods CPA implementation](../../images/horizon-inter-pod.svg){: caption="Figure 3. Overview of a two sites - two pods CPA implementation" caption-side="bottom"}
 
-For more information about how to set up and configure CPA, see [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external} and [VMware workspace ONE and VMware Horizon reference architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){:external}.
+For more information about how to set up and configure CPA, see [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){: external} and [VMware workspace ONE and VMware Horizon reference architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){: external}.
 
 ### Using CPA to build Hybrid Cloud and scale for Horizon 7
 {: #horizon-deploy-arch-cpa-hybrid}

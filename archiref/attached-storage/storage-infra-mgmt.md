@@ -35,7 +35,7 @@ Another VLAN is created within the vCenter Server instance and used to attach th
 The following table describes the default settings of the new port group.
 
 Don't change these default settings.
-{:important}
+{: important}
 
 | Port Group Name | SDDC-DPG-NFS |
 |:--------------- |:------------ |

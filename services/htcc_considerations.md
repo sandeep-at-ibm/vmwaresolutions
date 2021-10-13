@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-07"
+lastupdated: "2021-09-27"
 
 keywords: HyTrust CloudControl, HTCC, tech specs HTCC
 
@@ -25,8 +25,8 @@ subcollection: vmwaresolutions
 The HyTrust® CloudControl™ service enforces and controls compliance against security standards, which includes role-based access control (RBAC), approval, and auditing. When the service is combined with HyTrust DataControl®, the service ensures that virtual machines and workload data don't leave a particular region, cluster, or VMware ESXi™ server within the {{site.data.keyword.cloud}} data center.
 {: shortdesc}
 
-New installations of HyTrust CloudControl are supported only for VMware vCenter Server® with NSX-T™ instances. The HyTrust CloudControl version that is installed is 6.3.1. Previous installations of HyTrust CloudControl 5.6 are still supported for existing VMware® vCenter Server with NSX-V instances.
-{:note}
+New installations of HyTrust CloudControl are supported only for VMware vCenter Server® with NSX-T™ instances. The HyTrust CloudControl version that is installed is 6.4.1. Previous installations of HyTrust CloudControl 5.6 are still supported for existing VMware® vCenter Server with NSX-V instances.
+{: note}
 
 {{site.data.keyword.vmwaresolutions_short}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
@@ -62,7 +62,7 @@ Two CloudControl appliances are deployed in an active-passive configuration.
 ### Licenses and fees
 {: #htcc_considerations-licenses}
 
-Per host license: A HyTrust CloudControl license is ordered for each host in the environment.
+Per host license - A HyTrust CloudControl license is ordered for each host in the environment.
 
 ## Considerations when you delete HyTrust CloudControl
 {: #htcc_considerations-remove}
@@ -80,4 +80,4 @@ Review the following considerations before you delete the service:
 * [Managing HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtcc)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [HyTrust website](https://www.hytrust.com/){:external}
+* [HyTrust website](https://www.hytrust.com/){: external}

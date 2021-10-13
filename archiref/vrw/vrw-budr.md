@@ -94,4 +94,4 @@ Veeam backup server is the recommended solution.
 
 * [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance)
 * [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)
-* [vSRX archival configuration](https://www.juniper.net/documentation/en_US/junos/topics/task/configuration/junos-software-system-management-router-configuration-archiving.html#id-10944516){:external}
+* [vSRX archival configuration](https://www.juniper.net/documentation/en_US/junos/topics/task/configuration/junos-software-system-management-router-configuration-archiving.html#id-10944516){: external}

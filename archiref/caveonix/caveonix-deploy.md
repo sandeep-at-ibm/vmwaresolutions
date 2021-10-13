@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-15"
+lastupdated: "2021-08-19"
 
 subcollection: vmwaresolutions
 
@@ -30,7 +30,7 @@ The RiskForesight installation consists of the following high-level steps:
 4. [Application setup](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix-step4) – Setting up the Service Provider and a Tenant or Organization so that the application becomes accessible for the users.
 
 The automated installation provisions one VM and configures all the application components on that VM.
-{:note}
+{: note}
 
 ## Deployment sizing
 {: #caveonix-deploy-sizing}
@@ -50,7 +50,7 @@ The sizing of the deployment is calculated by using the following volumes.
 {: caption="Table 1. Volumes" caption-side="top"}
 
 The Data Replication Multiplier is set to 2 as the Index store (Elastic Search) uses by default n+1 replication of the indexes.
-{:note}
+{: note}
 
 The number of scaling VMs is calculated from the number of assets and the number of days of data to index.
 
@@ -98,7 +98,7 @@ The following table provides a summary of the deployments.
 | Total VMs | 1 | 4 | 48 |
 {: caption="Table 4. Summary" caption-side="top"}
 
-**Notes:**
+**Notes**
 When you delete the Caveonix RiskForesight service, the {{site.data.keyword.vmwaresolutions_short}} automation deletes only the single all-in-one Caveonix VM that was deployed and the dedicated private subnet that was ordered for it. Therefore,
 * If you scaled out the Caveonix VM into multiple VMs, those additional VMs are not removed.
 * If you used the IP addresses of the dedicated private subnet on additional VMs, those VMs must be assigned new IP addresses to continue to function.

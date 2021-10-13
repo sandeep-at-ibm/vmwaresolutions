@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-18"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -51,7 +51,7 @@ On the HyTrust CloudControl 5.x web console, if you go to **General > Health**, 
 These rules allow you to enable internet access for the HyTrust VMs. If internet access is not enabled, the license that is applied to your HyTrust CloudControl installation will expire after a year.
 
 For private-only vCenter Server environments, the VMware NSX® Edge Services Gateway (ESG) **mgmt-nsx-edge** is not added. Therefore, the firewall and SNAT rules are not defined. As a result, internet connectivity cannot be enabled for private-only instances and HyTrust licenses expire annually.
-{:note}
+{: note}
 
 ### Procedure to find the firewall and SNAT rules defined (HyTrust CloudControl 5.x only)
 {: #managinghtcc-proc-find-firewall}
@@ -66,7 +66,7 @@ For private-only vCenter Server environments, the VMware NSX® Edge Services Gat
 {: #managinghtcc-enable-internet}
 
 The following steps apply for updating the HyTrust CloudControl network settings on the primary VM, which is used for the license upgrades. You don't need to update the settings for the secondary VM.
-{:note}
+{: note}
 
 1. Complete steps 1-3 in the previous procedure.
 2. Click **Settings** and then click **Interfaces**. Note the IP address for the private uplink, which becomes the new default gateway. 
@@ -74,19 +74,19 @@ The following steps apply for updating the HyTrust CloudControl network settings
 4. Note the existing default gateway. Click **Configuration > Network**. Note the gateway IP address that is listed, which becomes the gateway for the static route.
 5. Add a static route. Click **Configuration > Static Routes**. Click **Add**, enter the following information, and click **OK**.
 
-  ```
-  Network Address: 10.0.0.0
-  Mask: 255.0.0.0
-  Gateway: IP noted in step 4
-  Device: Network 1
-  ```
+   ```
+   Network Address: 10.0.0.0
+   Mask: 255.0.0.0
+   Gateway: IP noted in step 4
+   Device: Network 1
+   ```
 
 6. Change the default gateway. Click **Configuration > Network** and replace the IP address in the **Gateway** field with the one you noted in Step 3 and click **Save**. 
 
-  Ensure that you set the static route before you change the default gateway, otherwise the web console might become unreachable.
-  {:important}
+   Ensure that you set the static route before you change the default gateway, otherwise the web console might become unreachable.
+   {: important}
 
-  The primary VM now has access to the internet.
+   The primary VM now has access to the internet.
 
 7. To confirm that the primary VM has internet access, run a `wget` command to a public IP address or website. To do so, go back to vCenter Server and right-click **CC1 > Open Console**. Log in to the console by using the console credentials from the HyTrust CloudControl service details page. Run a `wget` command such as `wget www.ibm.com` to receive an immediate response. Confirm that the request was sent and a `200` response was received.
 
@@ -96,4 +96,4 @@ The following steps apply for updating the HyTrust CloudControl network settings
 * [HyTrust CloudControl overview](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [HyTrust website](https://www.hytrust.com/){:external}
+* [HyTrust website](https://www.hytrust.com/){: external}

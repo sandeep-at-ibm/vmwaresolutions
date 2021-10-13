@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-15"
+lastupdated: "2021-09-30"
 
 keywords: vCenter Server Hybridity, hybridity, tech specs vCenter Server Hybridity
 
@@ -12,18 +12,13 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # vCenter Server with Hybridity Bundle overview
 {: #vc_hybrid_overview}
 
 The VMware vCenter Server® with Hybridity Bundle is not supported for new installations. Instead, deploy the standard vCenter Server instance with the Hybrid Cloud Extension (HCX™) service.
-{:deprecated}
+{: deprecated}
 
 The vCenter Server with Hybridity Bundle is a hosted private cloud that delivers the VMware vSphere® stack as a service. The VMware environment is built on top of a minimum of four {{site.data.keyword.cloud}} bare metal servers, includes VMware vSAN™ as dedicated storage, provides automatic deployment and configuration of an easy-to-manage logical edge firewall that is powered by VMware NSX®, and includes the HCX service.
 
@@ -77,7 +72,7 @@ Based on VMware HCX, you can create loosely coupled interconnects among on-premi
 The following components are included in your vCenter Server with Hybridity Bundle instance:
 
 The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
-{:note}
+{: note}
 
 ### Bare metal server
 {: #vc_hybrid_overview-bare-metal}
@@ -92,11 +87,12 @@ Your instance contains the following networking components:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs.
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching more VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways (ESGs):
-  * A secure management services ESG for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
+   * A secure management services ESG for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 
-    This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, when you use a firewall or disable the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
-    {:important}
-  * A secure customer-managed ESG for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#faq-customer-nsx)
+   This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server with Hybridity Bundle instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, when you use a firewall or disable the ESG communications to the external IBM management components cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
+    {: important}
+
+   * A secure customer-managed ESG for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#faq-customer-nsx)
 
 For more information about networking components that are ordered when you deploy the HCX service, see [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations).
 
@@ -114,7 +110,7 @@ vSAN storage offers customized configurations, with various options for disk typ
 * Disk quantity: 2, 4, 6, 8, or 10
 * Storage disk: 960 GB SSD SED, 1.9 TB SSD SED, or 3.8 TB SSD SED
 
-  In addition, two cache disks of 960 GB are included per host.
+   In addition, two cache disks of 960 GB are included per host.
 * High Performance with Intel® Optane: this option provides two extra capacity disk bays. This option depends on the CPU model.
 
 ### IBM-provided licenses and fees
@@ -123,7 +119,6 @@ vSAN storage offers customized configurations, with various options for disk typ
 The following licenses are included in your instance.
 
 * VMware vSphere Enterprise Plus 6.7u3
-* VMware vCenter Server 6.5
 * VMware NSX Service Providers Edition (Advanced or Enterprise) 6.4
 * VMware vSAN (Advanced or Enterprise) 6.6
 
@@ -148,7 +143,7 @@ One bare metal server with the configuration presented in [Technical specificati
 * VMware vSAN (Advanced or Enterprise) 6.6
 
 You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console. If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
-{:important}
+{: important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance, from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components

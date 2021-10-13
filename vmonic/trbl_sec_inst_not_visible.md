@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-15"
+lastupdated: "2021-09-10"
 
 keywords: troubleshooting, secondary vCenter, vSphere inventory issue
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Why doesn't the secondary vCenter Server display in the vSphere Web Client inventory?
 {: #trbl_sec_inst_not_visible}

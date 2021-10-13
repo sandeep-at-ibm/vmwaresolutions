@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-09-09"
 
 keywords: vRealize, vRealize configuration, order vRealize
 
@@ -38,10 +38,10 @@ When you [order the instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_ord
 ## vRealize Operations and Log Insight configuration
 {: #vrops_ordering-config}
 
-When you order the vRealize Operations and Log Insight service, you must specify whether you want to rent (include with purchase) the vRealize Operations and the vRealize LogInsight licenses from {{site.data.keyword.cloud}} or bring your own licenses (BYOL).
+When you order the vRealize Operations and Log Insight service, you must specify whether you want to rent (include with purchase) the vRealize Operations and the vRealize Log Insight licenses from {{site.data.keyword.cloud}} or bring your own licenses (BYOL).
 
 If you're planning to use your own vRealize Operations and vRealize Log Insight licenses (BYOL), ensure that the license keys are correct and that the license capacity is sufficient. The license keys and capacity are not verified during the service order.
-{:note}
+{: note}
 
 ## Related links
 {: #vrops_ordering-related}

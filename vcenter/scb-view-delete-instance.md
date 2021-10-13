@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-03-29"
+lastupdated: "2021-09-10"
 
 keywords: view Security and Compliance Readiness Bundle, view Security and Compliance Readiness Bundle details, delete Security and Compliance Readiness Bundle, view scb, delete scb
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing and deleting Security and Compliance Readiness Bundle instances
 {: #scb-view-delete-instance}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-21"
+lastupdated: "2021-09-27"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -31,16 +31,14 @@ The F5 BIG-IP® service (F5 BIG-IP Virtual Edition) provides:
 You can install more than one instance of this service as needed.
 {: shortdesc}
 
-For vCenter Server with NSX-T™ instances, F5 BIG-IP is supported for NSX-T 3.1 and VMware vSphere 7.0.
+For vCenter Server with NSX-T™ instances, F5 BIG-IP is supported for NSX-T 3.1 and VMware vSphere® 7.0.
 
-For vCenter Server with NSX-V instances, F5 BIG-IP is supported for the following vSphere versions:
-* vSphere 6.7
-* vSphere 6.5
+For vCenter Server with NSX-V instances, F5 BIG-IP is supported for vSphere 6.7.
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-The current F5 BIG-IP version that is installed is v15.1.3.
-{:note}
+The current F5 BIG-IP version that is installed is v16.1.
+{: note}
 
 ## Technical specifications for F5 BIG-IP
 {: #f5_considerations-specs}
@@ -68,7 +66,7 @@ The following components are included with the F5 BIG-IP service:
 License fees for each VM are applied to each billing cycle, depending on the licensing option (Good, Better, or Best) and the selected bandwidth.
 
 You cannot change the licensing level after service installation. To change the licensing level, you must delete the existing service and then use a different licensing option to reinstall the service.
-{:important}
+{: important}
 
 ## Considerations when you install F5 BIG-IP
 {: #f5_considerations-install}
@@ -93,15 +91,15 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs are 
 * F5 BIG–IP limits the appliance throughput based on your chosen maximum bandwidth. Because network performance is affected by many factors, not all configurations and topologies might be able to achieve your chosen maximum bandwidth.
 * The pair of BIG-IP VE VMs suitable for HA configuration is deployed only into the default cluster.
 
-  In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications. It is critical that resources are still available for them.
+   In addition, 100% of CPU and RAM for the two BIG-IP VE VMs are also reserved because these VMs are in the data plane of the network communications. It is critical that resources are still available for them.
 
-  To calculate the CPU and RAM reservation for a single BIG-IP VE VM, use the following formula:
+   To calculate the CPU and RAM reservation for a single BIG-IP VE VM, use the following formula:
 
-  `CPU reservation = CPU speed of ESXi server * number of CPUs` (from Table 1)
+   `CPU reservation = CPU speed of ESXi server * number of CPUs` (from Table 1)
 
-  `RAM reservation = RAM size` (from Table 1)
+   `RAM reservation = RAM size` (from Table 1)
 
-* {{site.data.keyword.vmwaresolutions_short}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/en-us/bigip-14-1-0/big-ip-device-service-clustering-administration-14-1-0/creating-an-active-standby-configuration-using-the-setup-utility.html){:external}.
+* {{site.data.keyword.vmwaresolutions_short}} does not preconfigure HA. For more information, see the AskF5 article [Creating an Active-Standby Configuration Using the Setup Utility](https://techdocs.f5.com/en-us/bigip-14-1-0/big-ip-device-service-clustering-administration-14-1-0/creating-an-active-standby-configuration-using-the-setup-utility.html){: external}.
 
 ### Planning considerations
 {: #f5_considerations-planning}
@@ -109,14 +107,14 @@ Based on the license model and bandwidth that you select, two BIG-IP VE VMs are 
 You must meet the following requirements to avoid failures with F5 BIG-IP:
 * At least two active ESXi™ servers are available for the two BIG-IP VE VMs to be deployed with the anti-affinity rule of keeping the VMs on separate servers.
 * The two active ESXi servers have enough resources available so that one BIG-IP VE VM can be hosted on each ESXi server with 100% CPU and RAM reservation.
-* VMware vSphere® HA has enough resources to host two BIG-IP VMs with 100% CPU and RAM.
+* VMware vSphere HA has enough resources to host two BIG-IP VMs with 100% CPU and RAM.
 
 Due to these requirements, you must plan for the space that is needed for F5 BIG-IP. If needed, before you order F5 BIG-IP, add 1-2 ESXi servers to your instance, or reduce vSphere HA CPU reservation for failover, or both.
 
 ## F5 BIG-IP order example
 {: #f5_considerations-example}
 
-You order a VMware® vCenter Server **Small** instance with 2 ESXi servers with the following configuration: sixteen cores at 2.10 GHz each with 128 GB RAM. For F5 BIG-IP, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
+You order a VMware® vCenter Server **Small** instance with two ESXi servers with the following configuration: 16 cores at 2.10 GHz each with 128 GB RAM. For F5 BIG-IP, you select the **Best** license model and a value of 5 Gbps for **Maximum Bandwidth**.
 
 In this case, a single BIG-IP VM requires, on each server:
 * 2.1 GHz * 8 CPUs = 16.8 GHz of CPU
@@ -126,7 +124,7 @@ In total, that is 33.6 GHz CPU and 32 GB RAM for two BIG-IP VMs.
 
 Each ESXi server has a capacity of 16 cores * 2.1 GHz = 33.6 GHz. Therefore, the first two requirements are met if both servers are active and there is at least 16.8 GHz of CPU and 16 GB RAM available on each server.
 
-However, by default, vSphere HA reserves 50 percent of CPU and RAM for failover on vCenter Server instances that were initially deployed with 2 ESXi servers. For this example, the following is available:
+However, by default, vSphere HA reserves 50% of CPU and RAM for failover on vCenter Server instances that were initially deployed with two ESXi servers. For this example, the following is available:
 
 `50% of 2 * 16 cores * 2.1 GHz = 33.6 GHz available`
 
@@ -150,4 +148,4 @@ Review the following considerations before you delete the service:
 * [Managing F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-managing_f5)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [F5 website](https://www.f5.com/){:external}
+* [F5 website](https://www.f5.com/){: external}

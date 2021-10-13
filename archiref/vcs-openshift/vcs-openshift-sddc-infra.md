@@ -4,10 +4,9 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-03-22"
+lastupdated: "2021-08-12"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -22,10 +21,7 @@ subcollection: vmwaresolutions
 ## Physical structure
 {: #vcs-openshift-sddc-infra-phys-struct}
 
-The physical infrastructure required to deploy an
-Red Hat OpenShift production instance onto a VMware
-vCenter Server cluster requires the
-following minimum specification.
+The physical infrastructure required to deploy a Red Hat® OpenShift® production instance onto a VMware® vCenter Server® cluster requires the following minimum specification.
 
 | Item | NFS deployment | vSAN deployment |
 |:---- |:-------------- |:--------------- |
@@ -42,7 +38,7 @@ In addition to the Red Hat OpenShift hardware requirements, you must create pers
 
 ![Physical structure](../../images/openshift-networking41.svg){: caption="Figure 1. Physical structure" caption-side="bottom"}
 
-Within the vCenter Server instance, the Red Hat OpenShift instance is deployed with a dedicated NSX Edge Services Gateway (ESG) and Distributed Logical Router (DLR). The Red Hat OpenShift installation is loaded into the VXLAN subnet that is defined in the previous components.
+Within the vCenter Server instance, the Red Hat OpenShift instance is deployed with a dedicated NSX® Edge Services Gateway (ESG) and Distributed Logical Router (DLR). The Red Hat OpenShift installation is loaded into the VXLAN subnet that is defined in the previous components.
 
 The ESG is configured with a source NAT rule (SNAT) to allow outbound traffic, which enables internet connectivity to download the Red Hat OpenShift prerequisites and to connect to GitHub and Red Hat. Alternatively, you can use a web-proxy for internet connectivity. The ESG is also configured to provide access to DNS and NTP services within the {{site.data.keyword.cloud}} environment.
 
@@ -53,8 +49,7 @@ OpenShift 4.1 installation on the VMware platform requires a capability to downl
 ## NSX Edge specifications
 {: #vcs-openshift-sddc-infra-nsx-edge-spec}
 
-The first component that is configured within the vCenter Server with OpenShift is a pair of NSX Edge virtual machines. The NSX Edge virtual machines are
-configured as an active-passive pair of X-Large NSX Edge devices.
+The first component that is configured within the vCenter Server with OpenShift is a pair of NSX Edge virtual machines. The NSX Edge virtual machines are configured as an active-passive pair of X-Large NSX Edge devices.
 
 The Quad-Large NSX Edge was chosen and as part of the configuration process, the NSX Edge is connected to the {{site.data.keyword.cloud_notm}} public and private VLAN.
 
@@ -65,7 +60,7 @@ The Quad-Large NSX Edge was chosen and as part of the configuration process, the
 | Disk      | 4.5 GB VMDK resident on shared storage with 4 GB swap |
 {: caption="Table 2. NSX Edge specifications" caption-side="top"}
 
-Since the NSX Edges are configured as active/passive in either the internal or dedicated deployment, vSphere Distributed Resource Scheduler (DRS) anti-affinity rules must be created by the user to ensure that NSX Edges do not run on the same host as their respective peer appliance.
+Because the NSX Edges are configured as active/passive in either the internal or dedicated deployment, vSphere® Distributed Resource Scheduler (DRS) anti-affinity rules must be created by the user to ensure that NSX Edges do not run on the same host as their respective peer appliance.
 
 | Field   | Value         |
 |:------- |:------------- |
@@ -81,11 +76,11 @@ Within the OpenShift environment, two load balancers for accessing the control p
 
 | Description | Port number | Algorithm  | Monitor | Members | Protocol | IP subnet |
 |:----------- |:----------- |:---------- |:------- |:------- |:-------- |:--------- |
-| Application Load Balancer | 80 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
-| Application Load Balancer | 443 | ROUND-ROBIN | default_tcp_monitor | Worker Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
-| API and API-INT Load Balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
-| API and API-INT Load Balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and Primary Nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
-{: caption="Table 4. NSX Load Balancer specifications" caption-side="top"}
+| Application load balancer | 80 | ROUND-ROBIN | default_tcp_monitor | Worker nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
+| Application load balancer | 443 | ROUND-ROBIN | default_tcp_monitor | Worker nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
+| API and API-INT load balancer | 6443 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and primary nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
+| API and API-INT load balancer | 22623 | ROUND-ROBIN | default_tcp_monitor | Bootstrap and primary nodes | TCP | {{site.data.keyword.cloud_notm}} 10.x |
+{: caption="Table 4. NSX load balancer specifications" caption-side="top"}
 
 ## Red Hat OpenShift specifications
 {: #vcs-openshift-sddc-infra-redhat-spec}
@@ -94,7 +89,7 @@ The following tables show the specifications of the management node, control pla
 
 | Host description | vCPU  | Memory (GB) | Disk (GB) | OS |
 |:---------------- |:----- |:----------- |:--------- |:-- |
-| Management0 | 2 | 8 | 50 | Red Hat Enterprise Linux 7.6 |
+| Management0 | 2 | 8 | 50 | Red Hat Enterprise Linux® 7.6 |
 {: class="simple-tab-table"}
 {: caption="Table 5. Management node specifications" caption-side="top"}
 {: #table1}
@@ -123,7 +118,7 @@ The following tables show the specifications of the management node, control pla
 {: tab-group="rhos-specs"}
 {: class="simple-tab-table"}
 
-**Next topic:** [Storage options on IBM Cloud and Red Hat OpenShift](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-storage)
+**Next topic:** [Storage options on {{site.data.keyword.cloud_notm}} and Red Hat OpenShift](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-storage)
 
 ## Related links
 {: #vcs-openshift-sddc-infra-related}

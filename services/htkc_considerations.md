@@ -23,14 +23,14 @@ subcollection: vmwaresolutions
 # HyTrust KeyControl overview
 {: #htkc_considerations}
 
-New installations of HyTrust KeyControl™ are no longer supported for new or existing deployments of vCenter Server instances. You can still use or delete existing HyTrust KeyControl installations on your existing instances.
-{:deprecated}
+New installations of HyTrust® KeyControl are no longer supported for new or existing deployments of vCenter Server® instances. You can still use or delete existing HyTrust KeyControl™ installations on your existing instances.
+{: deprecated}
 
-The HyTrust® KeyControl™ service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, including key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
+The HyTrust KeyControl service simplifies the management of encrypted workloads. This service automates and simplifies the lifecycle of encryption keys, including key storage, key distribution, key rotation, and key revocation. Using FIPS 140-2 compliant encryption, enterprises can easily manage encryption keys at scale.
 {: shortdesc}
 
 The HyTrust KeyControl service is not supported for VMware vCenter Server® with NSX-T™ instances. For vCenter Server with NSX-V instances, the installed version is 5.0.1.
-{:note}
+{: note}
 
 ## Technical specifications for HyTrust KeyControl
 {: #htkc_considerations-specs}
@@ -73,4 +73,4 @@ Review the following considerations before you delete the service:
 
 * [Managing HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-managinghtkc)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [HyTrust website](https://www.hytrust.com/){:external}
+* [HyTrust website](https://www.hytrust.com/){: external}

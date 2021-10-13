@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-09-27"
 
 keywords: Zerto, Zerto components, tech specs Zerto
 
@@ -27,8 +27,8 @@ The Zerto service integrates replication and disaster recovery capabilities into
 
 {{site.data.keyword.vmwaresolutions_short}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-The Zerto service is not supported for VMware vCenter Server® with NSX-T™ instances. For vCenter Server with NSX-V instances, the installed version is 7.5 Update 3.
-{:note}
+The Zerto service is not supported for VMware vCenter Server® with NSX-T™ instances. For vCenter Server with NSX-V instances, the installed version is 9.0u1.
+{: note}
 
 ## Before you begin
 {: #addingzertodr-req}
@@ -44,7 +44,7 @@ For more information about resource requirements and capacity checking for some 
 The following components are ordered and included in the Zerto service.
 
 Zerto Virtual Replication Appliance (VRA) components are deployed only into the default cluster.
-{:note}
+{: note}
 
 ### Virtual Service Instances
 {: #addingzertodr-specs-vsi}
@@ -63,15 +63,15 @@ Zerto Virtual Replication Appliance (VRA) components are deployed only into the 
 {: #addingzertodr-specs-network}
 
 * VSI
-  * One primary private IP address
-  * 1 Gbps private network uplink
+   * One primary private IP address
+   * 1 Gbps private network uplink
 * Virtual replication appliances (VRAs)
-  * One private portable subnet for VRA deployment
+   * One private portable subnet for VRA deployment
 
 ### Licenses and fees
 {: #addingzertodr-specs-licenses}
 
-Zerto Replication 7.5 Update 3 license
+Zerto Replication version 9.0u1 license
 
 ## Related links
 {: #addingzertodr-related}

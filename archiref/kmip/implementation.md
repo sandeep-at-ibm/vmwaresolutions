@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2020
 
-lastupdated: "2020-12-04"
+lastupdated: "2021-08-24"
 
 subcollection: vmwaresolutions
 
@@ -23,13 +23,13 @@ subcollection: vmwaresolutions
 ## Planning
 {: #kmip-implementation-planning}
 
-There is no charge for the KMIP for VMware service. To review the Key Protect and Hyper Protect Crypto Services pricing plans, see the [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) and [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services) catalog pages.
+You are not charged for the KMIP™ for VMware service. To review the Key Protect and Hyper Protect Crypto Services pricing plans, see the [Key Protect](https://cloud.ibm.com/catalog/services/key-protect) and [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services) catalog pages.
 
-If you are using vSAN encryption, plan to use one root key in Key Protect or Hyper Protect Crypto Services, and two standard keys for each vSAN cluster that you encrypt.
+If you are using vSAN™ encryption, plan to use one root key in Key Protect or Hyper Protect Crypto Services, and two standard keys for each vSAN cluster that you encrypt.
 
 If you are using vSphere encryption, plan to use one root key, one standard key per vSphere cluster, and one standard key per encrypted virtual machine (VM).
 
-Key Protect and Hyper Protect Crypto Services are available in multizone regions (MZRs) only. Hyper Protect Crypto Services (HPCS) is currently available in selected MZRs only. KMIP for VMware is automatically deployed in the same region as your Key Protect or HPCS instance. vCenter Server can tolerate high latency to the KMIP service, so distance should not be a cause for concern.
+Key Protect and Hyper Protect Crypto Services are available in multizone regions (MZRs) only. Hyper Protect Crypto Services (HPCS) is available in selected MZRs only. KMIP for VMware® is automatically deployed in the same region as your Key Protect or HPCS instance. vCenter Server can tolerate high latency to the KMIP service, so distance is usually not be a cause for concern.
 
 ## Connecting the key management server
 {: #kmip-implementation-connecting-kms}
@@ -45,7 +45,7 @@ To enable vSphere encryption or vSAN encryption by using KMIP for VMware, you ne
 7. Configure your KMIP for VMware instance to connect to your Key Protect or HPCS instance and select which CRK to use with KMIP.
 8. Within VMware vCenter, create a key provider cluster.
    1. If you are using Key Protect, configure this cluster with two servers, one for each KMIP for VMware endpoint in your chosen region.
-   2. If you are using HPCS, configure this cluster to connect to the hostname and port uniquely assigned to your KMIP for VMware instance.
+   2. If you are using HPCS, configure this cluster to connect to the hostname and port that is uniquely assigned to your KMIP for VMware instance.
 9. Select one of VMware&rsquo;s methods to generate or install a KMS client certificate in vCenter.
 10. Export the public version of the certificate and configure it as an allowed client certificate in your KMIP for VMware instance.
 
@@ -54,8 +54,8 @@ To enable vSphere encryption or vSAN encryption by using KMIP for VMware, you ne
 
 To use vSAN encryption, edit the vSAN general settings in your vCenter cluster and select the encryption checkbox.
 
-The vSAN health check might send periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL handshake timeout error](https://kb.vmware.com/s/article/67115){:external}.
-{:note}
+The vSAN health check might send periodic warnings that it is unable to connect to the KMS cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS Health Check intermittently fails with SSL handshake timeout error](https://kb.vmware.com/s/article/67115){: external}.
+{: note}
 
 To use vSphere encryption, edit your VM storage policies to require disk encryption.
 
@@ -74,12 +74,12 @@ For VMware vSphere encryption, rotate your VMware KEKs and DEKs (optionally) by 
 You can revoke all keys in use by KMIP for VMware by deleting your chosen CRK from your key manager.
 
 When keys are revoked, all data that is protected by these keys and by your KMIP for VMware instance is cryptographically shredded by this method. VMware preserves some keys while an ESXi host is powered on, so you need to restart your vSphere cluster to ensure that all encrypted data is no longer in use.
-{:important}
+{: important}
 
 KMIP for VMware stores individual wrapped KEKs in your Key Protect or Hyper Protect Crypto Services instance by using names that are associated with the key IDs that are known to VMware. You can delete individual keys to revoke the encryption of individual disks or drives.
 
-VMware does not delete keys from the KMS when a VM having encrypted disks is removed from inventory. This is to allow recovery of that VM from backup or if it is restored to inventory. If you want to reclaim these keys and cryptographically invalidate all backups, you need to delete the keys from your key manager instance after you delete your VMs.
-{:note}
+VMware does not delete keys from the KMS when a VM having encrypted disks is removed from inventory. This process is to allow recovery of that VM from backup or if it is restored to inventory. If you want to reclaim these keys and cryptographically invalidate all backups, you need to delete the keys from your key manager instance after you delete your VMs.
+{: note}
 
 ## Related links
 {: #kmip-implementation-related}

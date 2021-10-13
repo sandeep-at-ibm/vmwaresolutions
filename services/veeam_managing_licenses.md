@@ -1,11 +1,10 @@
-
 ---
 
 copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-09-23"
 
 keywords: Veeam, Veeam license, manage Veeam license, Veeam 10
 
@@ -39,14 +38,14 @@ You can view, edit notes, or delete the Veeam® licenses that you ordered for st
 3. To view the details of a specific license, click the license.
 
 A license key is not displayed. When licenses are ordered, the system does not generate a key, but it applies a primary key.
-{:note}
+{: note}
 
 The following information is displayed for the Veeam license:
 * License name
 * License notes
 * Number of virtual machines (VMs) licensed
 * Creation date
-* Status - the status can be:
+* Status - the status can be one of the following items.
    * Modifying - license is being created
    * Installed - license is ready to use
    * Removing - license is being deleted
@@ -64,7 +63,7 @@ The following information is displayed for the Veeam license:
 
 If you are using Mozilla® Firefox® as your browser, the license start and end dates might be displayed with no values on the Veeam console. To resolve the issue, view the license information in another browser, such as Google Chrome™.
 
-If you are experiencing this problem and the only browser you can use is Firefox, contact [Veeam support](https://www.veeam.com/support.html){:external} for assistance.
+If you are experiencing this problem and the only browser you can use is Firefox, contact [Veeam support](https://www.veeam.com/support.html){: external} for assistance.
 
 ## Procedure to delete Veeam licenses
 {: #veeam_managing_licenses-procedure-delete}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-09-10"
 
 keywords: add hosts for Security and Compliance Readiness Bundle, add servers for Security and Compliance Readiness Bundle, remove hosts from  Security and Compliance Readiness Bundle
 
@@ -12,12 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Expanding and contracting capacity for Security and Compliance Readiness Bundle instances
 {: #scb_addingremovingservers}

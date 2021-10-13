@@ -31,4 +31,4 @@ This glossary provides definitions for the terms that are associated with the VM
 ## Related links
 {: #hcx_glossary-related}
 
-* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){: external}

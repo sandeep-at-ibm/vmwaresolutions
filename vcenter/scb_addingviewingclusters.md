@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-09-10"
 
 keywords: add clusters for Security and Compliance Readiness Bundle, view details of clusters in Security and Compliance Readiness Bundle, delete clusters for Security and Compliance Readiness Bundle, add and delete clusters for scb
 
@@ -12,12 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding, viewing, and deleting clusters for Security and Compliance Readiness Bundle instances
 {: #scb_addingviewingclusters}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-12"
+lastupdated: "2021-09-10"
 
 keywords: change vCenter Server artifacts, automation ID, VMware resource
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:faq: data-hd-content-type='faq'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Considerations about changing vCenter Server artifacts
 {: #vcenter_chg_impact}
@@ -25,7 +22,7 @@ Changing users, resources, or subnets that are reserved for {{site.data.keyword.
 
 Do not edit the global permissions of the **ic4v-vCenter** group in the **Users and Groups** page on the VMware vSphere® Web Client. Such changes include changing the username, deleting the user, or changing its password.
 Use the **root** host user ID. The **ic4vroot** host user ID is created for IBM use only.
-{:important}
+{: important}
 
 ## automation ID
 {: #vcenter_chg_impact-automation-id}
@@ -42,12 +39,12 @@ Users and passwords for the automated operations in the console must not be chan
 Each service creates an internal user account in VMware vCenter Server®. This account is necessary so that management operations that are associated to a service can connect to vCenter Server to perform the operations on the service.
 
 To prevent outages and connection problems, if you change the user ID, password, or password expiration settings for this user account, ensure that you also update the information in the associated service.
-{:important}
+{: important}
 
 The user ID for this account is in the format `<service_name>-<truncated service_uuid>@test.local` or `<service_name>-<truncated service_uuid>@example-domain.local`. For example, the user ID that the Veeam® service uses to connect to vCenter Server to perform scheduled backups is `Veeam-<Veeam_uuid>@test.local`.
 
 The `<service_name>` together with the `<service_uuid>` truncates to 20 characters.
-{:note}
+{: note}
 
 ## VMware resources for vCenter Server instances (V1.9 and later)
 {: #vcenter_chg_impact-vmware-resources-for-inst-v1.9-and-later}
@@ -105,7 +102,7 @@ In addition, the following management subnets are also reserved for {{site.data.
 *  A public portable subnet of 16 IP addresses on the public VLAN
 
    Do not use these components for other purposes, do not change their names, and do not delete them, or the stability of your environment is severely compromised.
-   {:important}
+   {: important}
 
 If you need more subnets to use, you can obtain IP addresses to use in one of the following ways.
 *  **Option 1 (recommended)** - Use VMware NSX® virtual network overlays. A sample VXLAN template is provided upon order. This VXLAN can be used as a starting point for building software-defined networking (SDN). For more information, see [Configuring your network to use the customer-managed NSX Edge](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).

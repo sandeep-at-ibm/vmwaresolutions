@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-05-05"
+lastupdated: "2021-09-10"
 
 keywords: ordering prerequisites, before you order, pre-order checklist, before first order
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Setting up your environment for your first order
 {: #completing_checklist}

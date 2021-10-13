@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-09-23"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -23,7 +23,7 @@ subcollection: vmwaresolutions
 # Ordering virtual data centers
 {: #shared_ordering}
 
-{{site.data.keyword.cloud}} for VMware® Solutions Shared offers either a standardized or customizable deployment option of VMware® virtual data center environments. Choose the **On-demand** or **Reserved** option.
+{{site.data.keyword.cloud}} for VMware® Solutions Shared offers either a standardized or customizable deployment option of VMware virtual data center environments. Choose the **On-demand** or **Reserved** option.
 
 ## Requirements for virtual data centers
 {: #shared_ordering-reqs}
@@ -83,7 +83,7 @@ If **No resource group available** is displayed in this field, you currently do 
 ## Deployment topology
 {: #shared_ordering-deploytop}
 
-Select **Single-zone VMware virtual data center** to deploy your virtual data center in a single-zone data center. The multizone deployment is not supported at this time for users who are not Business Partners.
+Select **Single-zone VMware virtual data center** to deploy your virtual data center in a single-zone data center.
 
 ## Data center location
 {: #shared_ordering-dc}
@@ -98,7 +98,7 @@ You must specify the following network settings for your virtual data center.
 ### Networking type
 {: #shared_ordering-networking-type}
 
-Select either **Private only** or **Secure public and private**. Public networking is delivered through a generic routing encapsulation enablement tunnel system.
+Select either **Private only** or **Public and private**. Public networking is delivered through a generic routing encapsulation enablement tunnel system.
 
 ## Virtual data center capacity
 {: #shared_ordering-cpu}
@@ -121,7 +121,7 @@ If you selected **Preconfigured**, you have the following options for allocated 
 If you selected **Customizable**, you can customize your reserved vCPU and RAM limits.
 
 The vCPU maximum number is limited to the 40 cores with hyperthreading on each host. This limit allows for a maximum of 80 vCPU virtual machines.
-{:important}
+{: important}
 
 ## Recommended services
 {: #shared_ordering-services}
@@ -131,7 +131,7 @@ The following services are preinstalled and ready-to-use in all virtual data cen
 * Veeam® Availability Suite and Veeam Cloud Connect Replication
 * Zerto
 
-For more information, see [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam) and [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto).
+For more information, see [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam) and [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto-portal).
 
 ## Summary
 {: #shared_ordering-summary}
@@ -165,8 +165,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 5. Select the data center location to host the virtual data center.
 4. Select the network type.
 5. Complete the resource reservation.
-  * If you select **Preconfigured**, select the preconfigured vCPU model and RAM size.
-  * If you select **Customizable**, specify the reserved vCPU and RAM limits according to your requirements.
+   * If you select **Preconfigured**, select the preconfigured vCPU model and RAM size.
+   * If you select **Customizable**, specify the reserved vCPU and RAM limits according to your requirements.
 6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
 7. Click **Create**.
 
@@ -180,10 +180,10 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 ## What to do next
 {: #shared_ordering-next}
 
-View the virtual data center that you ordered and then set the **admin** password for the vCloud Director Management console. For more information, see [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing).
+View the virtual data center that you ordered and then set the **admin** password for the vCloud Director Management console. For more information, see [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_viewing-vdc-summary).
 
 ## Related links
 {: #shared_ordering-related}
 
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
-* [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}
+* [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){: external}

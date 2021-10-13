@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-05-20"
+lastupdated: "2021-09-09"
 
 subcollection: vmwaresolutions
 
@@ -25,7 +25,7 @@ The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads is built w
 ## Management cluster
 {: #vrw-vsphere-platform-management}
 
-The management software stack consists of vCenter Server, AD/DNS, and vRealize operations tooling. vCenter Server manages all hosts in the vCenter Server instance. AD/DNS provide Domain Name Services (DNS) and management authentication services, a local NTP source, and role-based access control (RBAC) for access to the vCenter, vRealize operations tooling, and NSX-T™ administration portal. The vRealize operations tooling includes vRealize Operations Manager (vROps), and vRealize LogInsight (vRLI). These components collectively provide a native console for vSphere operations, ability to automate management of the cloud platform, centralized log collection and analysis, and network visibility and optimization up to the hypervisor. SaaS consumer workloads are not monitored by default.
+The management software stack consists of vCenter Server, AD/DNS, and vRealize operations tooling. vCenter Server manages all hosts in the vCenter Server instance. AD/DNS provide Domain Name Services (DNS) and management authentication services, a local NTP source, and role-based access control (RBAC) for access to the vCenter, vRealize operations tooling, and NSX-T™ administration portal. The vRealize operations tooling includes vRealize Operations Manager (vROps), and vRealize Log Insight (vRLI). These components collectively provide a native console for vSphere operations, ability to automate management of the cloud platform, centralized log collection and analysis, and network visibility and optimization up to the hypervisor. SaaS consumer workloads are not monitored by default.
 
 Within the Management cluster, shared storage is used to provide enhanced resiliency to the management stack. The use of shared storage provides rapid restoration of management components if an ESXi host is lost. vSAN based storage is used to keep all management stack data in the account boundary. vSAN requires a minimum cluster size of four ESXi hosts.
 

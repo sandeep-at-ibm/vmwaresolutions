@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-23"
+lastupdated: "2021-08-16"
 
 subcollection: vmwaresolutions
 
@@ -45,7 +45,7 @@ The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads Active Direc
 
 | User     | User ID       | Description |
 |:---------|:------------- |:------------|
-| IBM automation / privileged users     | `IC4v-vCenter`    | vCenter Administration Group |
+| IBM automation or privileged users | `IC4v-vCenter` | vCenter Administration Group |
 {: caption="Table 2. Active Directory groups" caption-side="top"}
 
 **Next topic**: [vCenter identity and access management](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-iam-vsphere)

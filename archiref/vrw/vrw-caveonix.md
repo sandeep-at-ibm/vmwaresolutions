@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-22"
+lastupdated: "2021-08-16"
 
 subcollection: vmwaresolutions
 
@@ -20,14 +20,14 @@ subcollection: vmwaresolutions
 # Caveonix integration
 {: #vrw-caveonix}
 
-{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads requires Caveonix RiskForesight for continuous compliance monitoring. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is designed to enable ease of compliance to NIST and other necessary compliance certifications as required of the SaaS provider or the SaaS consumer that uses the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads offering.
+{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads requires Caveonix RiskForesight for continuous compliance monitoring. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is designed to allow compliance with NIST and other compliance certifications as required of the SaaS provider or the SaaS consumer that uses the VMware Regulated Workloads offering.
 
-![IBM Cloud for VMware Regulated Workloads Caveonix](../../images/vrw-caveonix-data-flows.svg "Caveonix data flows"){: caption="Figure 1. Caveonix data flows" caption-side="bottom"}
+![Caveonix data flows](../../images/vrw-caveonix-data-flows.svg "Caveonix data flows"){: caption="Figure 1. Caveonix data flows" caption-side="bottom"}
 
 ## Management cluster
 {: #vrw-caveonix-management}
 
-[Caveonix RiskForesight](https://www.caveonix.com/){:external} provides a comprehensive cloud workload protection platform for {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads. This platform delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
+[Caveonix RiskForesight](https://www.caveonix.com/){: external} provides a comprehensive cloud workload protection platform for {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads. This platform delivers a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads.
 
 The RMCP enables the SaaS provider to maintain continuous and real-time visibility into workload deployments at scale, incorporating the latest cyberthreats and regulatory compliance needs. RiskForesight also evaluates workload-specific cyberrisks and compliance risks and provides proactive defense by using agentless enforcement at network, security, and compute control planes of deployment.
 

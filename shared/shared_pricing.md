@@ -4,7 +4,7 @@ copyright:
 
   years: 2020, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-01"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -99,7 +99,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
-| MAX_WINDOWS_LICENSES | Hourly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
+| MAX_WINDOWS_LICENSES | Hourly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8 vCPU, the usage is 24 vCPU of Windows license usage. |
 | TOTAL_RHEL_SMALL_LICENSES | Hourly | The peak (High Watermark) number of small RHEL licenses usage in 1-hour intervals. Small RHEL VMs are four cores or smaller. |
 | TOTAL_RHEL_LARGE_LICENSES | Hourly | The peak (High Watermark) number of large RHEL licenses usage in 1-hour intervals. Large RHEL VMs are larger than four cores. |
 {: caption="Table 2. VMware Shared Solutions On-demand billing plan - Operating system metrics" caption-side="top"}
@@ -141,7 +141,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 
 | Metric                                   | Frequency | Description |
 |:-----------------------------------------|:------------|:------------|
-| MAX_WINDOWS_LICENSES | Hourly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8vCPU, the usage is 24 vCPU of Windows license usage. |
+| MAX_WINDOWS_LICENSES | Hourly | The peak number of Windows® license **usage** based on Windows VM vCPU size. For example, if you have two Windows VMs, one VM with 16 vCPU and one VM with 8 vCPU, the usage is 24 vCPU of Windows license usage. |
 | TOTAL_RHEL_SMALL_LICENSES | Hourly | The peak (High Watermark) number of small RHEL licenses usage in 1-hour intervals. Small RHEL VMs are four cores or smaller. |
 | TOTAL_RHEL_LARGE_LICENSES | Hourly | The peak (High Watermark) number of large RHEL licenses usage in 1-hour intervals. Large RHEL VMs are larger than four cores. |
 {: caption="Table 3. VMware Shared Solutions Reserved billing plan - Operating system metrics" caption-side="top"}
@@ -202,10 +202,10 @@ You can change how fast inactive backup chains are moved to Cloud Object Storage
 * [VMware Solutions Shared overview](/docs/vmwaresolutions?topic=vmwaresolutions-shared_overview)
 * [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning)
 * [Ordering virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
-* [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_viewing-vdc-summary)
 * [Resizing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_resize)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
 * [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
-* [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto)
+* [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto-portal)
 * [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){: external}
 * [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){: external}

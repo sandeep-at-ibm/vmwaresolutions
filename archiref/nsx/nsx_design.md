@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-24"
 
 subcollection: vmwaresolutions
 
@@ -18,22 +18,22 @@ subcollection: vmwaresolutions
 # NSX Edge Services Gateway design
 {: #nsx_design}
 
-The NSX Edge Services Gateway on {{site.data.keyword.cloud}} solution provides VMware technology that is deployed within {{site.data.keyword.cloud_notm}} data centers across the globe. {{site.data.keyword.vmwaresolutions_short}} provides two solution architectures that are related to the NSX Edge Services Gateway.
+The NSX Edge Services Gateway on {{site.data.keyword.cloud}} solution provides VMware® technology that is deployed within {{site.data.keyword.cloud_notm}} data centers across the globe. {{site.data.keyword.vmwaresolutions_short}} provides two solution architectures that are related to the NSX Edge Services Gateway.
 
 ## Internal architecture design
 {: #nsx_design-internal-archi}
 
-The internal architecture specifies the deployment of the necessary NSX Edge components in a resource pool in a VMware vCenter Server cluster.
+The internal architecture specifies the deployment of the necessary NSX Edge components in a resource pool in a VMware vCenter Server® cluster.
 
-VMware vSAN is optional in the following figure.
-{:note}
+VMware vSAN™ is optional in the following figure.
+{: note}
 
 ![Cloud Networking Services architecture](../../images/architecture.svg "Cloud Networking Services architecture"){: caption="Figure 1. Cloud Networking Services on {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 ## Dedicated architecture design
 {: #nsx_design-dedicated-archi}
 
-The dedicated architecture deploys the necessary NSX Edge components in a separate two-node vSphere cluster that is dedicated for the use of the NSX Edge and provides critical interaction with the physical network infrastructure. The dedicated architecture has the following characteristics and functions:
+The dedicated architecture deploys the necessary NSX Edge components in a separate two-node vSphere cluster. This cluster is dedicated for the use of the NSX Edge and provides critical interaction with the physical network infrastructure. The dedicated architecture has the following characteristics and functions:
 
 * Provides on-ramp and off-ramp connectivity to physical networks. For example, North-South L3 routing on NSX Edge virtual appliances.
 * Allows for communication with physical devices that are connected to VLANs in the physical networks through NSX L2 bridging and hosts the control virtual machine (VM) for Distributed Logical Router (DLR) routing.

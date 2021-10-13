@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-05-14"
+lastupdated: "2021-09-10"
 
 keywords: add services for Security and Compliance Readiness Bundle, remove services for Security and Compliance Readiness Bundle, scb add-on services
 
@@ -12,9 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering, viewing, and deleting services for Security and Compliance Readiness Bundle instances
 {: #scb_addingremovingservices}

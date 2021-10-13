@@ -1,11 +1,10 @@
-
 ---
 
 copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-09-23"
 
 keywords: Veeam, Veeam license, order Veeam license, Veeam 10
 
@@ -29,7 +28,7 @@ subcollection: vmwaresolutions
 # Ordering Veeam licenses
 {: #veeam_ordering_licenses}
 
-You can order a Veeam® license without associating it to any VMware vCenter Server® instance for licensing and activation of your on-premises workloads.
+You can order a Veeam® license without associating it to any VMware® vCenter Server® instance for licensing and activation of your on-premises workloads.
 
 ## Before you begin
 {: #veeam_ordering_licenses-before-begin}
@@ -44,7 +43,7 @@ Ensure that you configured the {{site.data.keyword.cloud}} infrastructure creden
 3. Specify the resource group.
 
    If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
-   {:note}
+   {: note}
 
 4. Specify a new license name or use the default name **veeam-_xx_** where _xx_ represents two randomly generated alphabetic characters.
 5. In the **License note** field, enter a note. For example, you can enter a note to help you identify associated instances.

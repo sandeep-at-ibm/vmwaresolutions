@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-05-10"
+lastupdated: "2021-09-10"
 
 keywords: history message, audit history, error messages
 
@@ -13,9 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Instance history messages
 {: #audit_messages}

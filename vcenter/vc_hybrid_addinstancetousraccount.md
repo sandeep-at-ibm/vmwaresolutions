@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-29"
+lastupdated: "2021-09-10"
 
 keywords: vCenter Server Hybridity migrate instance, add account vCenter Server Hybridity, migrate cloud account Hybridity
 
@@ -12,7 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts
 {: #vc_hybrid_addinstancetousraccount}

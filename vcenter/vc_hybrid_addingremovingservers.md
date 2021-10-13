@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-29"
+lastupdated: "2021-09-10"
 
 keywords: vCenter Server Hybridity add host, add server vCenter Server Hybridity, remove host vCenter Server Hybridity
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservers}
@@ -54,7 +51,7 @@ Because your initial cluster has vSAN™ storage, adding one or more ESXi server
 7. Optionally, select the checkbox to add servers during maintenance mode. The checkbox is selected by default.
 
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance mode** checkbox. You do not receive a confirmation message before the migration begins.
-   {:important}
+   {: important}
 
 8. Complete the bare metal configuration.
    * Select a configuration from the existing hosts in the cluster.
@@ -62,7 +59,7 @@ Because your initial cluster has vSAN™ storage, adding one or more ESXi server
 9. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, check the **High performance with Intel Optane** box.
 10. Review the estimated price and click **Add**.
 
-  You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
+   You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
 ### Results after you add ESXi servers
 {: #vc_hybrid_addingremovingservers-adding-results}
@@ -72,7 +69,7 @@ Because your initial cluster has vSAN™ storage, adding one or more ESXi server
 3. If you don't see the new ESXi servers added to the list in the cluster, check the email or console notifications to find more details about the failure.
 
 If you are adding ESXi servers during maintenance mode, virtual machines (VMs) are not migrated to the new servers until you remove the cluster from maintenance mode.   
-{:important}
+{: important}
 
 ## Removing ESXi servers from vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingremovingservers-removing}
@@ -103,12 +100,12 @@ If you are adding ESXi servers during maintenance mode, virtual machines (VMs) a
 3. The ESXi servers are fully reclaimed by {{site.data.keyword.cloud_notm}} infrastructure at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days.
 
    You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed ESXi servers.
-   {:note}
+   {: note}
 
 ## Related links
 {: #vc_hybrid_addingremovingservers-related}
 
 * [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom)
 * [Adding, viewing, and deleting clusters for vCenter Server with Hybridity Bundle instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_hybrid_addingviewingclusters)
-* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}
+* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){: external}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){: external}

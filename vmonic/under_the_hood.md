@@ -4,14 +4,15 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-16"
+lastupdated: "2021-09-10"
 
 keywords: about vmware solutions, product overview, benefits
 
 subcollection: vmwaresolutions
 
 ---
-{:external: target="_blank" .external}
+
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware Solutions - Take a look under the hood
 {: #under_the_hood}
@@ -24,7 +25,7 @@ Take an in-depth look at the architecture of {{site.data.keyword.cloud}} for VMw
 ## Two companies, one streamlined solution
 {: #under_the_hood-two-companies}
 
-For some time now, users deployed VMware virtualized environments to the IBM public cloud, either by themselves or with the help of professional services. In February 2016, IBM and VMware announced a partnership to automate the process of deploying VMware software and VMware environments in the {{site.data.keyword.cloud_notm}}. One of the early fruits of this partnership was the ability to order various VMware product deployments and licenses from the {{site.data.keyword.vmwaresolutions_short}} console, and later offering VMware Horizon Air in {{site.data.keyword.cloud_notm}}. In addition, IBM and VMware worked together to jointly produce a [standard reference architecture and deployment prescription for VMware](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture){:external} in the IBM public cloud.
+For some time now, users deployed VMware virtualized environments to the IBM public cloud, either by themselves or with the help of professional services. In February 2016, IBM and VMware announced a partnership to automate the process of deploying VMware software and VMware environments in the {{site.data.keyword.cloud_notm}}. One of the early fruits of this partnership was the ability to order various VMware product deployments and licenses from the {{site.data.keyword.vmwaresolutions_short}} console, and later offering VMware Horizon Air in {{site.data.keyword.cloud_notm}}. In addition, IBM and VMware worked together to jointly produce a [standard reference architecture and deployment prescription for VMware](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture){: external} in the IBM public cloud.
 
 In the fall of 2016, IBM and VMware jointly released {{site.data.keyword.vmwaresolutions_short}}. This set of offerings is based on VMware's virtualization technologies, including virtualized compute (VMware vSphere®), networking (VMware NSX®), and optionally including virtualized storage (VMware vSAN®). These environments are aptly called software-defined data centers.
 
@@ -146,7 +147,7 @@ Your vCenter Server instance has two private VLANs that are trunked together on 
 ### Connecting to your instance
 {: #under_the_hood-connect-inst}
 
-You have a number of options for connecting to your instances. You can connect directly to private IP addresses in your instance (for example, vCenter) by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.ibm.com/cloud/vpn-access){:external}. You can also order [{{site.data.keyword.cloud_notm}} network appliances](https://www.ibm.com/cloud/network-appliances){:external} and [{{site.data.keyword.cloud_notm}} hardware or virtual firewalls](https://www.ibm.com/cloud/network-security) such as FortiGate and vSRX for your account. {{site.data.keyword.cloud_notm}} also offers [direct links](https://www.ibm.com/cloud/direct-link){:external} between your network and the VLANs in your {{site.data.keyword.cloud_notm}} account.
+You have a number of options for connecting to your instances. You can connect directly to private IP addresses in your instance (for example, vCenter) by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.ibm.com/cloud/vpn-access){: external}. You can also order [{{site.data.keyword.cloud_notm}} network appliances](https://www.ibm.com/cloud/network-appliances){: external} and [{{site.data.keyword.cloud_notm}} hardware or virtual firewalls](https://www.ibm.com/cloud/network-security) such as FortiGate and vSRX for your account. {{site.data.keyword.cloud_notm}} also offers [direct links](https://www.ibm.com/cloud/direct-link){: external} between your network and the VLANs in your {{site.data.keyword.cloud_notm}} account.
 
 For access to your deployed VMs, you can apply public IP addresses directly to your VMs. However, you can also use the {{site.data.keyword.cloud_notm}} network appliance and firewall capabilities to set up more secure public access to your VMs by using NAT and firewall. You can also deploy NSX Edge servers, and use these servers to set up VPN or NAT connectivity for your VMs.
 

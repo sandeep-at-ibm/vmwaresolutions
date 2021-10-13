@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-02-05"
+lastupdated: "2021-09-22"
 
 keywords: primary io hdm, hdm order, order trial hdm
 
@@ -34,14 +34,14 @@ You can include the PrimaryIO Hybrid Cloud Data Management (HDM) service with a 
 Review the following information:
 
 * Ensure that the on-premises data center is connected to the {{site.data.keyword.cloud}} infrastructure.
-* The VMware vSphere versions that are supported on-premises are 6.5 and later.
+* The VMware vSphere® versions that are supported on-premises are 6.7 and later.
 * The PrimaryIO HDM software is installed from the on-premises data center vCenter Server.
 * The HDM OVF can be downloaded to the on-premises data center for installation.
 
 ## PrimaryIO HDM software packaging
 {: #pio_ordering-soft-pack}
 
-PrimaryIO HDM is delivered as a virtual software solution. When the PrimaryIO HDM software is initially installed, it consists of a single virtual appliance. The deployment wizard installs a plug-in that integrates seamlessly with the on-premises vCenter Server. The administration and user interface for managing HDM is done through VMware vCenter Server, but the control operations for HDM are orchestrated through the HDM Manager.
+PrimaryIO HDM is delivered as a virtual software solution. When the PrimaryIO HDM software is initially installed, it consists of a single virtual appliance. The deployment wizard installs a plug-in that integrates seamlessly with the on-premises vCenter Server. The administration and user interface for managing HDM is done through VMware® vCenter Server, but the control operations for HDM are orchestrated through the HDM Manager.
 
 The PrimaryIO HDM package contains the following components:
 * PrimaryIO HDM product `.zip` file, which contains the HDM appliance OVF
@@ -61,4 +61,4 @@ The following license types are available:
 ## Related links
 {: #pio_ordering-related}
 
-* [Hybrid Cloud Data Management](https://www.primaryio.com/hybrid-cloud-data-mgmt/){:external}
+* [Hybrid Cloud Data Management](https://www.primaryio.com/hybrid-cloud-data-mgmt/){: external}

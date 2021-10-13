@@ -2,12 +2,11 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-08-12"
+lastupdated: "2021-08-12"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -19,9 +18,9 @@ subcollection: vmwaresolutions
 # VMware vCenter Server and Red Hat OpenShift architecture overview
 {: #vcs-openshift-intro}
 
-The {{site.data.keyword.vmwaresolutions_full}} offering includes fully automated, rapid deployments of VMware vCenter Server. This offering complements the on-premises infrastructure and allows existing and future workloads to run on {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes that are used on-premises. For more information, see [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture){:external}.
+The {{site.data.keyword.vmwaresolutions_full}} offering includes fully automated, rapid deployments of VMware® vCenter Server®. This offering complements the on-premises infrastructure and allows existing and future workloads to run on {{site.data.keyword.cloud_notm}} without conversion by using the same tools, skills, and processes that are used on-premises. For more information, see [Virtualization for extending virtualized private cloud](https://www.ibm.com/cloud/architecture/architectures/virtualizationArchitecture){: external}.
 
-Red Hat OpenShift on {{site.data.keyword.vmwaresolutions_short}} provides the capability to deploy a Red Hat OpenShift cluster by using an automated deployment of the VMware Software Defined Data Center (SDDC) architecture. The Red Hat OpenShift Cluster on {{site.data.keyword.cloud_notm}} components are deployed as virtual machines (VM) or appliances by using VMware NSX software-defined networking.
+Red Hat® OpenShift® on {{site.data.keyword.vmwaresolutions_short}} provides the capability to deploy a Red Hat OpenShift Cluster by using an automated deployment of the VMware Software Defined Data Center (SDDC) architecture. The Red Hat OpenShift Cluster on {{site.data.keyword.cloud_notm}} components are deployed as virtual machines (VM) or appliances by using VMware NSX® software-defined networking.
 
 This reference architecture is for Red Hat OpenShift Clusters deployed on a vCenter Server instance. It provides the foundation for customers who are starting their application modernization journey to the {{site.data.keyword.cloud_notm}}.
 - **vCenter Server** - an offering from {{site.data.keyword.vmwaresolutions_short}} and is a VMware-based platform that is automatically provisioned on {{site.data.keyword.cloud_notm}}.
@@ -37,17 +36,17 @@ Application modernization is a term that describes the process of transitioning 
 Business pressures demand faster time to market. Your existing estate includes not only applications, but data, processes, business logic, and user interfaces, all of which need to adapt to keep up with new business demands.
 
 Application modernization has the following benefits:
-- Improved developer productivity
-- Increased operational efficiency
-- Reduced cost to build new capabilities
-- Expanded capacity delivered in a short time
+* Improved developer productivity
+* Increased operational efficiency
+* Reduced cost to build new capabilities
+* Expanded capacity delivered in a short time
 
 IBM understands that 70% of private cloud adoption is driven by the need to modernize application environments. However, most organizations are approaching application modernization in a staged approach, which requires a hybrid and multi cloud landscape, where:
-- Complex and monolithic legacy applications that typically run on mainframes or UNIX systems remain on-premises.
-- x86 environments used for Systems of Record (SoR), applications that are security sensitive, and regulated workloads are placed on a virtualized infrastructure or a private cloud.
-- Applications such as SAP or high-performance computing use bare metal resources.
-- Security sensitive and some regulated workloads, which can move to the public cloud are moving to dedicated environments.
-- Systems of engagement (SoE) such as web, mobile, IoT, AI, or Video are moving to public clouds.
+* Complex and monolithic legacy applications that typically run on mainframes or UNIX systems remain on-premises.
+* x86 environments used for Systems of Record (SoR), applications that are security sensitive, and regulated workloads are placed on a virtualized infrastructure or a private cloud.
+* Applications such as SAP® or high-performance computing use bare metal resources.
+* Security sensitive and some regulated workloads, which can move to the public cloud are moving to dedicated environments.
+* Systems of engagement (SoE) such as web, mobile, IoT, AI, or Video are moving to public clouds.
 
 For example, a common pattern is to have front-end SOE applications that are deployed as containers with databases and legacy middleware that are deployed on VMs on a private cloud.
 

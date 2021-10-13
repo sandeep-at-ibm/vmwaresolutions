@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2021
 
-lastupdated: "2019-12-20"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.4
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.4
 {: #relnotes_v34}
@@ -45,7 +41,7 @@ PrimaryIO Hybrid Cloud Data Management (HDM) is now available for your VMware in
 {: #relnotes_v34-icpdeprecated}
 
 The {{site.data.keyword.cloud_notm}} Private Hosted service has been deprecated and replaced by Red Hat OpenShift for VMware.
-{:deprecated}
+{: deprecated}
 
 ## Updates for VMware vCenter Server instances
 {: #relnotes_v34-vcs}

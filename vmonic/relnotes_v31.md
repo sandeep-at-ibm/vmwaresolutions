@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2021
 
-lastupdated: "2019-07-16"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.1
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.1
 {: #relnotes_v31}
@@ -83,7 +79,7 @@ The current release installs Caveonix RiskForesight 2.2.1 on all newly deployed 
 * HyTrust KeyControl 4.3.2 and later
 
 You must complete the procedure to enable internet access for your HyTrust virtual machines (VMs) to ensure the automatic renewal of your license. If you don't complete this procedure, your license continues to expire annually.
-{:important}
+{: important}
 
 ### Veeam on IBM Cloud
 {: #relnotes_v31-services-veeam}
@@ -104,8 +100,8 @@ To order Zerto on {{site.data.keyword.cloud_notm}}, your {{site.data.keyword.clo
 * User ID reference documentation is updated with user IDs used for installation and configuration of services by {{site.data.keyword.cloud_notm}} services automation.
 * Reference documentation is available for the new ``Retrieve the detailed network interface of a cluster`` API.
 * The following technical documents are new in the *Reference* section of the user documentation:
-  * Operations management
-  * Day 2 operational procedures
+   * Operations management
+   * Day 2 operational procedures
 
 ## User interface updates and enhancements
 {: #relnotes_v31-ui}

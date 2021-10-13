@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-28"
+lastupdated: "2021-09-10"
 
 keywords: vSphere scale cluster, scale vSphere, scale vSphere cluster
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Scaling existing vSphere clusters
 {: #vs_scalingexistingclusters}
@@ -51,7 +47,7 @@ Ensure that you complete the following tasks:
 The cluster scaling starts automatically. You receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email. If the cluster that you are scaling is not ready to use, you might receive an error message.
 
 The vSphere clusters, unlike the VMware vCenter Server® instances, are not displayed on the **Resources** page.
-{:note}
+{: note}
 
 ## Related links
 {: #vs_scalingexistingclusters-related}

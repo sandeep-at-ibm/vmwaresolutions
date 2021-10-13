@@ -2,12 +2,11 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-03-30"
+lastupdated: "2021-08-12"
 
 subcollection: vmwaresolutions
-
 
 ---
 
@@ -29,12 +28,12 @@ Common services provide the services that are used by other services in the clou
 ### Identity and access services
 {: #vcs-openshift-arch-identity}
 
-As part of the VMware vCenter Server automation, a Microsoft Active Directory (AD) is employed for Identity Management. A single AD virtual server instance (VSI) is deployed. The vCenter is configured to use AD authentication and you can configure Red Hat OpenShift for LDAP authentication.
+As part of the VMware® vCenter Server® automation, a Microsoft® Active Directory™ (AD) is employed for Identity Management. A single AD virtual server instance (VSI) is deployed. The vCenter is configured to use AD authentication and you can configure Red Hat® OpenShift® for LDAP authentication.
 
 ### Domain Name Services
 {: #vcs-openshift-arch-dns}
 
-The vCenter Server deployment uses the deployed AD VSIs as DNS servers for the instance. All deployed components, such as, vCenter, PSC, NSX, and ESXi hosts, are configured to point to AD as their default DNS.
+The vCenter Server deployment uses the deployed AD VSIs as DNS servers for the instance. All deployed components, such as, vCenter, PSC, NSX®, and ESXi™ hosts, are configured to point to AD as their default DNS.
 
 ### NTP services
 {: #vcs-openshift-arch-ntp}
@@ -49,13 +48,13 @@ The vCenter Server deployment uses the {{site.data.keyword.cloud}} infrastructur
 
 NSX-V is designed so that a single NSX-V manager platform is tied to a single vCenter Server instance. It provides networking services to applications that run within a vSphere environment.
 
-The NSX-V networking included in the vCenter Server deployment is used to deploy Red Hat OpenShift into a VXLAN overlay network. The deployment uses NSX functions to provide load balancing, Network Address Translation, and DHCP services.
+The NSX-V networking that is included in the vCenter Server deployment is used to deploy Red Hat OpenShift into a VXLAN overlay network. The deployment uses NSX functions to provide load balancing, Network Address Translation, and DHCP services.
 
 Red Hat OpenShift is deployed with the default Calico networking stack for Kubernetes, which provides network isolation within your cluster.
 
 ![OpenShift with NSX networking](../../images/openshift-nsxv-networking.svg){: caption="Figure 2. OpenShift with NSX networking" caption-side="bottom"}
 
-**Next topic:** [IBM Cloud networking and infrastructure](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-sddc-infra)
+**Next topic:** [{{site.data.keyword.cloud_notm}} networking and infrastructure](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-sddc-infra)
 
 ## Related links
 {: #vcs-openshift-arch-related}

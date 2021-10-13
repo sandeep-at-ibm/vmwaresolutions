@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-09-10"
 
 keywords: troubleshooting, vSphere configuration issue, HA cluster issue
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Why do I see a vSphere console configuration issue when I add a high-availability cluster?
 {: #trbl_add_ha_cluster_config}
@@ -31,5 +27,5 @@ When you add a High Availability (HA) cluster configuration with only one file s
 This issue occurs if redundancy is not in shared storage to allow for data store heart beating.
 {: tsCauses}
 
-For more information about how to fix the problem, see [How to add the number of vSphere HA heartbeat datastores for the ESXi host](https://communities.vmware.com/t5/VMware-vSphere-Discussions/How-to-add-the-number-of-vSphere-HA-heartbeat-datastores-for-the/td-p/1415119){:external}.
+For more information about how to fix the problem, see [How to add the number of vSphere HA heartbeat datastores for the ESXi host](https://communities.vmware.com/t5/VMware-vSphere-Discussions/How-to-add-the-number-of-vSphere-HA-heartbeat-datastores-for-the/td-p/1415119){: external}.
 {: tsResolve}

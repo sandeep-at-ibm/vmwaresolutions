@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-01"
+lastupdated: "2021-10-06"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # vCenter Server BOM
 {: #vc_bom}
@@ -41,21 +38,25 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer | Component                       | Version       |
 |:------------ |:------------------------------- |:------------- |
-| VMware       | vSphere ESXi[^esxinote]         | ESXi 7.0 Update 2a (17867351) or <br>ESXi 6.7 P05  (17700523) or <br>ESXi 6.5 P06 (17477841) |
+| VMware       | vSphere ESXi                    | ESXi 7.0 Update 2a (17867351)[^esxi7] or<br>ESXi 6.7 P05 (17700523)[^esxi67] or<br>ESXi 6.5 P06 (17477841)[^esxi65] |
 | VMware       | vSphere 7.0 Update 2a           | Distributed vSwitch 7.0.0 |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5[^vcs-vsphere65]     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 7.0 Update 2b (17958471/17958471) or<br>6.7 Update 3n (18010531/18010599) |
+| VMware       | vCenter Server Appliance        | 7.0 Update 2d (18455184) or<br>6.7 Update 3o (18485166) |
 | VMware       | vSAN[^vsan]                     | 7.0 Update 2 (17630552) or<br>6.7 P05 |
 | VMware       | NSX for vSphere[^nsxv]          | 6.4.10 (17626462) |
-| VMware       | NSX-T for vSphere[^nsxt]        | 3.1.0.0.0 (17107167) |
+| VMware       | NSX-T for vSphere[^nsxt]        | 3.1.1.0.0 (17483185) |
 | Microsoft®    | Windows® Server Standard edition | 2019 |
 | Microsoft    | Active Directory™ domain functional level | 2016 (WinThreshold)[^domain] |
 {: caption="Table 2. BOM for the software components in vCenter Server instances" caption-side="top"}
 
-[^esxinote]: vSphere ESXi 6.5 P06 (17477841) is applicable to 6.5u3 hosts and not to 6.5u2 hosts. vSphere ESXi 6.7 P05 (17499825) is applicable to 6.7u2 and 6.7u3 hosts. vSphere ESXi 7.0 Update 1d (17551050) is applicable to 7.0u1 hosts.
+[^esxi7]: Applicable to 7.0u1 hosts
 
-[^vcs-vsphere65]: Existing vSphere 6.5 clusters only
+[^esxi67]: Applicable to 6.7u2 and 6.7u3 hosts
+
+[^esxi65]: Applicable to existing 6.5u3 hosts
+
+[^vcs-vsphere65]: Applicable to existing vSphere 6.5 clusters only
 
 [^vsan]: VMware vSAN is an optional component
 
@@ -91,9 +92,9 @@ The settings apply to new instances and new clusters in new instances V2.2 or la
 * The **MaxVolumes** setting is required for the IBM Spectrum® Protect Plus service because the service might use more than the default number of NFS mounts on the ESXi server.
 * A value of **Not set** for a configuration setting indicates that the new setting is not automatically applied because it requires rebooting the ESXi servers, which might be disruptive.
 
-  It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
+   It is recommended that you change the **Not set** configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.vmwaresolutions_short}} V2.2 and later releases.
 
-  For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239){:external}.
+   For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi host](https://kb.vmware.com/s/article/2239){: external}.
 
 Review the following table for an overview of the advanced configuration settings that are applied to ESXi servers. For V3.6 or later releases, new instances are ordered with a new set of advanced configuration settings for ESXi servers.
 
@@ -158,7 +159,7 @@ To update the MTU setting for the public switch, complete the following steps in
 3. Ensure that the **Maximum MTU** value is set to 1500.
 
    When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
-   {:note}
+   {: note}
 
 ## Distributed switch allocation
 {: #vc_bom-network-dswitch-allocation}
@@ -183,14 +184,14 @@ Review the following table for an overview of the EVC mode settings for vCenter 
 
 [^evc-vsphere65]: Existing vSphere 6.5 clusters only
 
-[^vsphere]: For vSphere 6.5 instances, Cascade Lake is supported for 6.5u3 only.
+[^vsphere]: For existing vSphere 6.5 instances, Cascade Lake is supported for 6.5u3 only.
 
 ## Related links
 {: #vc_bom-related}
 
-* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832){:external}
-* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){:external}
-* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){:external}
-* [{{site.data.keyword.vmwaresolutions_short}} Protection data sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:external}
+* [Build numbers and versions of VMware ESXi and ESX (2143832)](https://kb.vmware.com/s/article/2143832){: external}
+* [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838){: external}
+* [Enabling Jumbo Frames on virtual distributed switches](https://kb.vmware.com/s/article/1038827){: external}
+* [{{site.data.keyword.vmwaresolutions_short}} Protection data sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){: external}
 * [vCenter Server overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vcenterserveroverview)
 * [Planning vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning)

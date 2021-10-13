@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-22"
+lastupdated: "2021-09-23"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, remove vCenter Server Hybridity
 
@@ -13,9 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Removing the Hybridity Bundle from a vCenter Server instance
 {: #vc_hybrid_deletingbundle}
@@ -23,7 +21,7 @@ subcollection: vmwaresolutions
 To remove the Hybridity Bundle license from your VMware vCenter Server® instance, you must replace the VMware NSX® and VMware vSAN™ rental license keys with Bring Your Own License (BYOL) keys in the VMware vSphere® Web Client. Additionally, you must open a support ticket to cancel charges for the rental licenses.
 
 Reverting your license to an earlier version might cause your vCenter Server instance to fail. You can choose to revert a license to an earlier version at your own risk, but first consider the functions that are not available when you are reverting. For more information, see [Comparison chart for VMware component editions](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix).
-{:important}
+{: important}
 
 ## Important considerations before you remove the Hybridity Bundle from a multi-site environment
 {: #vc_hybrid_deletingbundle-considerations}
@@ -35,7 +33,7 @@ Review the following considerations before you remove the Hybridity Bundle from 
 * You must create a single support ticket to remove the Hybridity Bundle from all multi-site deployments.
 
 When you remove the Hybridity Bundle from a multi-site environment, BYOL licenses are applied. It is your responsibility to ensure that the license editions are consistent across all sites in the multi-site configuration.
-{:note}
+{: note}
 
 ## Before you remove the Hybridity Bundle
 {: #vc_hybrid_deletingbundle-prereq}
@@ -63,7 +61,8 @@ Verify the following requirements before you remove the Hybridity Bundle:
    6. Write down the full license keys for both the license that is applied and the license that is replaced.
 
    You must have the license details available to use later in this procedure.
-   {:important}
+   {: important}
+
    7. Click **OK** to assign the license.
 5. Complete the following steps to install a VMware vSAN BYOL:
    1. Click the **Clusters** tab.
@@ -75,7 +74,8 @@ Verify the following requirements before you remove the Hybridity Bundle:
     5. Write down the cluster name and full license keys of both the license that is applied and the license that is replaced.
 
     You must have the license details available to use later in this procedure.
-    {:important}
+    {: important}
+
     6. Click **OK** to assign the license.
 6. Optionally complete the following steps to install a VMware vCenter Server BYOL:
    1. Click the **vCenter Server systems** tab.
@@ -86,34 +86,34 @@ Verify the following requirements before you remove the Hybridity Bundle:
    6. Write down the full license keys of both the license that is applied and the license that is replaced.
 
    You must have the license details available to use later in this procedure.
-   {:important}
+   {: important}
 
    7. Click **OK** to assign the license.
 7. Optionally complete the following steps to install a VMware vSphere Enterprise Plus BYOL:
-  1. Click the **Hosts** tab.
-  2. Complete the following steps for each cluster that is associated with your vCenter Server instance or complete for all clusters at the same time if the same license is being applied to all clusters associated to your vCenter Server:
-    1. Select all hosts that are associated to the cluster and click **All Actions > Assign license**.
-    2. Click the **Add** icon and type the license key. Click **Next**.
-    3. Type the name for the license and click **Next**. Click **Finish** to add the license.
-    4. Select the new license key.
-    5. Write down the cluster name and full license keys of both the license that is applied and the license that is replaced.
+   1. Click the **Hosts** tab.
+   2. Complete the following steps for each cluster that is associated with your vCenter Server instance or complete for all clusters at the same time if the same license is being applied to all clusters associated to your vCenter Server:
+      1. Select all hosts that are associated to the cluster and click **All Actions > Assign license**.
+      2. Click the **Add** icon and type the license key. Click **Next**.
+      3. Type the name for the license and click **Next**. Click **Finish** to add the license.
+      4. Select the new license key.
+      5. Write down the cluster name and full license keys of both the license that is applied and the license that is replaced.
 
-    You must have the license details available to use later in this procedure. If license keys are not same across all clusters, ensure to write down the cluster name associated to each license key.
-    {:important}
+      You must have the license details available to use later in this procedure. If license keys are not same across all clusters, ensure to write down the cluster name associated to each license key.
+      {: important}
 
-    6. Click **OK** to assign the license.
+   6. Click **OK** to assign the license.
 8. Remove the rental licenses.
    1. Click the **Licenses** tab.
    2. Select the licenses that you replaced in steps 4 - 7.
    3. Click the **Remove Licenses** icon.
 9. Open a support ticket and provide the following information to cancel charges for the rental licenses:
-  * The name of your vCenter Server instance or instances.
-  * The ID associated with your vCenter Server instance or instances.
-  * A list of the BYOL license keys that you installed in this procedure. Where applicable, provide the instance and cluster name with license keys for vSphere and the vSAN clusters.
-  * A list of the rental license keys that you removed in this procedure. Where applicable, provide the instance and cluster name with license keys for vSphere and vSAN clusters.
+   * The name of your vCenter Server instance or instances.
+   * The ID associated with your vCenter Server instance or instances.
+   * A list of the BYOL license keys that you installed in this procedure. Where applicable, provide the instance and cluster name with license keys for vSphere and the vSAN clusters.
+   * A list of the rental license keys that you removed in this procedure. Where applicable, provide the instance and cluster name with license keys for vSphere and vSAN clusters.
 
-  The IBM Support and Operations teams access the vCenter management layer of your {{site.data.keyword.cloud_notm}} infrastructure account to verify that the rental licenses are removed before canceling the Hybridity Bundle rental license charges.
-  {:note}
+   The IBM Support and Operations teams access the vCenter management layer of your {{site.data.keyword.cloud_notm}} infrastructure account to verify that the rental licenses are removed before canceling the Hybridity Bundle rental license charges.
+   {: note}
 
 ## Related links
 {: #vc_hybrid_deletingbundle-related}

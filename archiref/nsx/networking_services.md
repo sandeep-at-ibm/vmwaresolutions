@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-13"
+lastupdated: "2021-08-26"
 
 subcollection: vmwaresolutions
 
@@ -18,23 +18,23 @@ subcollection: vmwaresolutions
 # Networking services on IBM Cloud
 {: #nsx-networking_services}
 
-Networking services on {{site.data.keyword.cloud}} consists of two pairs of VMware NSX Edge Services Gateways (ESGs) for communication between the {{site.data.keyword.cloud_notm}} and either the public internet or customer on-premises network through a Virtual Private Network (VPN). These ESGs are segregated to support internal {{site.data.keyword.cloud_notm}} management function and egress traffic, ingress of customer-related network traffic.
+Networking services on {{site.data.keyword.cloud}} consists of two pairs of VMware NSX® Edge Services Gateways (ESGs) for communication between the {{site.data.keyword.cloud_notm}} and either the public internet or customer on-premises network through a Virtual Private Network (VPN). These ESGs are segregated to support internal {{site.data.keyword.cloud_notm}} management function and egress traffic, ingress of customer-related network traffic.
 
-The following graphic is a simplified network diagram, which depicts the pair of management and the pair of workload ESGs. It also shows an NSX Distributed Logical Router (DLR) and workload VXLAN. These components are intended to be an initial landing point for customer workloads without requiring the specific knowledge to set them up within NSX. A DLR is typically employed to route traffic between VMware vCenter Server and East-West traffic, between separate layer 2 networks within the instance. This behavior is in contrast to an ESG, which functions to facilitate North-South network traffic that traverses in and out of the vCenter Server instance.
+The following graphic is a simplified network diagram, which depicts the pair of management and the pair of workload ESGs. It also shows an NSX Distributed Logical Router (DLR) and workload VXLAN. These components are intended to be an initial landing point for customer workloads without requiring the specific knowledge to set them up within NSX. A DLR is typically employed to route traffic between VMware vCenter Server® and East-West traffic, between separate layer 2 networks within the instance. This behavior is in contrast to an ESG, which functions to facilitate North-South network traffic that traverses in and out of the vCenter Server instance.
 
 ![Cloud networking services on vCenter Server](../../images/cloudnetworkingservicesdiagram.svg "Cloud networking services on vCenter Server"){: caption="Figure 1. Cloud networking services on vCenter Server" caption-side="bottom"}
 
 While a single ESG might suffice for both management and customer workload traffic, the separation of management and customer traffic is a design decision made to prevent accidental misconfiguration of the management ESG.
 
 Misconfiguration or disabling of the management ESG doesn't keep the vCenter Server instance from functioning, but disables all portal management functions.
-{:note}
+{: note}
 
 ## IBM management services NSX Edge
 {: #nsx-networking_services-mgmt-serv-nsx-edge}
 
 The IBM management ESG is a dedicated NSX edge services cluster for {{site.data.keyword.cloud_notm}} management network traffic only. It isn't intended for traffic traversal of any component that is not deployed and managed by vCenter Server automation.
 
-The management ESG provides a communication path between services virtual machines (VMs) residing within vCenter Server instances and the IBM Automation infrastructure in the {{site.data.keyword.cloud_notm}} as shown for vCenter Server in the following graphic.
+The management ESG provides a communication path between services virtual machines (VMs) residing within vCenter Server instances and the IBM Automation infrastructure in the {{site.data.keyword.cloud_notm}}. The graphic illustrates this for vCenter Server.
 
 ![Management edge communications on vCenter Server](../../images/mgmtvmcommunication.svg "Management edge communications on vCenter Server"){: caption="Figure 2. Management edge communications on vCenter Server" caption-side="bottom"}
 
@@ -101,7 +101,7 @@ The following configurations are recommended for any service that is using the m
 * The default gateway is a management ESG.
 * A static route is required for internal {{site.data.keyword.cloud_notm}} destinations.
 
-If there's a need for the service or VM to access the customer ESG, then static routes must be maintained within the individual service or VM and pointed to the customer ESG.
+If there's a need for the service or VM to access the customer ESG, static routes must be maintained within the individual service or VM and pointed to the customer ESG.
 
 No automatic routing protocols are configured for the Management ESG currently.
 
@@ -138,7 +138,7 @@ The following firewall rules are set, in addition to the automatically generated
 
 The IBM workload ESG is part of a simple topology that is intended for workload network communication. The following section describes the design intent of where to attach workloads to a network within a vCenter Server instance. This is a starting point for attaching on-premises networks and IP spaces to a particular vCenter Center instance and is the basis for a true Hybrid Cloud architecture.
 
-A customer network that is attached to both the public and private {{site.data.keyword.cloud_notm}} networks allows for workload access to and from internet facing traffic, but also allows for a site-to-site VPN to be created from either public or private {{site.data.keyword.cloud_notm}} networks. This allows for drastically decreased time to value with regards to connecting to on-premises networks since it can take months to bring up a dedicated wide area network (WAN) due to customer security requirements. However, after a dedicated link is in place, the VPN can be flipped over to traverse that link without affecting the overlay network inside the VPN tunnel or within the vCenter Server instance. After this is done, the public interface for the workload ESG can be removed if needed from a security perspective.
+A customer network that is attached to both the public and private {{site.data.keyword.cloud_notm}} networks allows for workload access to and from internet facing traffic. The network also allows for a site-to-site VPN to be created from either public or private {{site.data.keyword.cloud_notm}} networks. This allows for drastically decreased time to value regarding connecting to on-premises networks since it can take months to bring up a dedicated wide area network (WAN) due to customer security requirements. However, after a dedicated link is in place, you can flip the VPN over to traverse that link. This action doesn't affect the overlay network inside the VPN tunnel or within the vCenter Server instance. After this is done, the public interface for the workload ESG can be removed if needed from a security perspective.
 
 The topology in the following figure consists of the following NSX components:
 * NSX Edge appliance (ESG)
@@ -150,7 +150,7 @@ The topology in the following figure consists of the following NSX components:
 ### Edge interfaces for the IBM workload NSX edge
 {: #nsx-networking_services-edge-interfaces-workload}
 
-As with the management ESG, the configuration of ESG interfaces defines what L2 networks the ESG has access to. Part of the design intent of the workload topology is to achieve a software-defined networking (SDN) overlay to isolate workloads from the underlying {{site.data.keyword.cloud_notm}} address space. This design is the basis for achieving BYOIP design. Therefore, the following interfaces are defined on deployment:
+As with the management ESG, the configuration of ESG interfaces defines what L2 networks the ESG has access to. Part of the design intent of the workload topology is to achieve a software-defined networking (SDN) overlay to isolate workloads from the underlying {{site.data.keyword.cloud_notm}} address space. This design is the basis for achieving BYOIP design. Therefore, the following interfaces are defined on deployment.
 
 | Interface | Interface type | Connected to | Description |
 |:--------- |:-------------- |:------------ |:----------- |

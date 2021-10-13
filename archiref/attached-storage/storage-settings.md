@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 This design supports the attachment of shared storage with NFS v3 only. NFS v4 and v4.1 aren't supported.
 
 The attached storage for this design is limited to the {{site.data.keyword.cloud}} storage available in the same {{site.data.keyword.cloud_notm}} data center as the vCenter Server solution. Additionally, all virtual disks that are stored to the datastore are thin-provisioned by default.
-{:note}
+{: note}
 
 The architecture specifies that NFS v3 datastores are attached by using the DNS name from {{site.data.keyword.cloud_notm}} storage to connect to the share. The NFS share is attached to all hosts in the vCenter Server cluster and placed into a datastore cluster with storage DRS enabled.
 
@@ -59,7 +59,7 @@ The following table shows the settings in the VMware vSphere® Web Client.
 | I/O latency threshold | 15 ms |
 {: caption="Table 1. Storage DRS runtime settings" caption-side="top"}
 
-For more information about configuring these settings in the vSphere Web Client, see [Set storage DRS runtime rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html){:external}.
+For more information about configuring these settings in the vSphere Web Client, see [Set storage DRS runtime rules in the vSphere Web Client](https://docs.vmware.com/en/VMware-vSphere/5.5/com.vmware.vsphere.resmgmt.doc/GUID-AD2D13CE-539B-48C3-BBC9-E55A834874F0.html){: external}.
 
 ## Storage I/O Control for NFS v3
 {: #storage-settings-io-control-nfs-v3}

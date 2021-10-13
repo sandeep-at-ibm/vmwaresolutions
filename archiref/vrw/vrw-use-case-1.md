@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-08-16"
 
 subcollection: vmwaresolutions
 
@@ -20,7 +20,7 @@ subcollection: vmwaresolutions
 # Use case 1
 {: #vrw-use-case-1}
 
-{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads delivers a virtualized platform for users in a highly regulated industry who require a platform that is designed to support compliance to industry security standards or governmental regulations.
+{{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads delivers a virtualized platform for users in a highly regulated industry who require a platform that is designed to support compliance with industry security standards or governmental regulations.
 
 Typical hyper-converged virtual infrastructure designs include management, edge services, and compute all on the same cluster. This approach might blur the lines between the virtualization administrator, typically responsible for the compute and storage infrastructure, the network administrator, and the security administrator.
 
@@ -37,7 +37,7 @@ The edge services region is strictly limited to the protection of the management
 
 The workload region is managed by one or more administrators that are only responsible for the management of the application VMs deployed upon the workload clusters. One approach where multiple administrators are useful is the case where a user wants to isolate administrative tasks on a per business unit basis or other compliance requirements.
 
-Three distinct regions: the management region, the edge services region, and the workload region, design the zero-trust security model into the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads. Taking advantage of this design through audited and enforced separation of duties at every possible opportunity, assists users to comply with industry standards or government regulations, making the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads uniquely suited to host applications for clients in highly regulated industries.
+Three distinct regions: the management region, the edge services region, and the workload region, design the zero-trust security model into the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads. Taking advantage of this design through audited and enforced separation of duties at every possible opportunity, assists users to comply with industry standards or government regulations, making the {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads that are uniquely suited to host applications for clients in highly regulated industries.
 
 **Next topic**: [Use case 2](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-use-case-2)
 

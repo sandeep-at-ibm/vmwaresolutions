@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-22"
+lastupdated: "2021-08-20"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -27,7 +27,7 @@ The IBM Spectrum® Protect Plus service provides an efficient and scalable solut
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
 For VMware vCenter Server® with NSX-V instances, the installed version is 10.1.5. Currently, automated installation of IBM Spectrum Protect Plus is not available for vCenter Server with NSX-T™ instances.
-{:note}
+{: note}
 
 ## Technical specifications for IBM Spectrum Protect Plus
 {: #spp_considerations-specs}
@@ -40,13 +40,13 @@ The following components are ordered and included in the IBM Spectrum Protect Pl
 {: #spp_considerations-vcenter}
 
 * Server VM running IBM Spectrum Protect Plus server
-   * Linux 4.19.65-1c.el7.x86_64 operating system
+   * Linux® 4.19.65-1c.el7.x86_64 operating system
    * 8 x 2.0 GHz cores
    * 48 GB RAM
    * 528 GB disk
 * Secondary VM running IBM Spectrum Protect Plus vSnap server and VADP proxy
    * Linux 4.19.65-1c.el7.x86_64 operating system
-   * CPU and RAM configured based on the selected storage size and the sizing guidance in [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/support/pages/node/1119489){:external}
+   * CPU and RAM configured based on the selected storage size and the sizing guidance in [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/support/pages/node/1119489){: external}
    * 278 GB disk
 
 ### Storage for backups
@@ -57,7 +57,7 @@ Customizable storage for backups with the following options.
 * Each endurance file storage: 500, 1000, 2000, 4000, 8000, or 12000 GB
 * Storage performance: 0.25, 2, or 4 IOPS/GB
 
-For planning and sizing information, see [IBM Spectrum Protect Plus Blueprints and Sizing Spreadsheet](https://www.ibm.com/support/pages/node/1119489){:external}.
+For planning and sizing information, see [IBM Spectrum Protect Plus Blueprints and Sizing Spreadsheet](https://www.ibm.com/support/pages/node/1119489){: external}.
 
 ### Storage for management
 {: #spp_considerations-mgmt-storage}
@@ -83,15 +83,15 @@ Review the following considerations before you install the IBM Spectrum Protect 
 * Ensure that the CPU and memory in the default cluster of your instance is sufficient for the IBM Spectrum Protect Plus virtual machine.
 * Ensure that the NFS mounts available on the VMware ESXi™ servers are sufficient based on the version of the ESXi servers.
 
-  Instances that are deployed in (or upgraded) to V2.2 or later releases have an `NFS.MaxVolumes` parameter setting in VMware. This parameter defines the maximum number of NFS mounts on an ESXi server and can be set to a maximum of 256 that is specific to the version of the ESXi server. For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239){:external}.
+   Instances that are deployed in (or upgraded) to V2.2 or later releases have an `NFS.MaxVolumes` parameter setting in VMware®. This parameter defines the maximum number of NFS mounts on an ESXi server and can be set to a maximum of 256 that is specific to the version of the ESXi server. For more information, see [Increasing the default value that defines the maximum number of NFS mounts on an ESXi/ESX host](https://kb.vmware.com/s/article/2239){: external}.
 
-  The IBM Spectrum Protect Plus service can use up to 11 of the NFS volumes on each ESXi server in the default cluster of your instance. In addition, the service creates transient NFS mounts for backup and restore purposes. Therefore, you must set the number of NFS mounts to a minimum of 64 to ensure that the service can be installed and function successfully.
+   The IBM Spectrum Protect Plus service can use up to 11 of the NFS volumes on each ESXi server in the default cluster of your instance. In addition, the service creates transient NFS mounts for backup and restore purposes. Therefore, you must set the number of NFS mounts to a minimum of 64 to ensure that the service can be installed and function successfully.
 
 ## Considerations when you delete IBM Spectrum Protect Plus
 {: #spp_considerations-remove}
 
 Review the following considerations before you delete the IBM Spectrum Protect Plus service:
-* Before you delete the service, you must remove any personal VMs from storage deployed with this service.
+* Before you delete the service, you must remove any personal VMs from storage that are deployed with this service.
 * Ensure that all the backup job configurations are removed along with active backup or restore operations.
 * When you delete the service, the storage for the backup repository is deleted from the IBM Spectrum Protect Plus VM and the storage order is canceled, which deletes the backup repository data permanently.
 * When you delete the service, the backup storage that is ordered for the service is deleted too. All the backups become inaccessible during service deletion.

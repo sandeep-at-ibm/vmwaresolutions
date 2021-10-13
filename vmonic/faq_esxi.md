@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-22"
+lastupdated: "2021-09-10"
 
 keywords: FAQ, host, ESXi server
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:faq: data-hd-content-type='faq'}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQ about ESXi servers
 {: #faq_esxi}
@@ -44,7 +40,7 @@ For instances deployed in V2.1 or earlier, you must enable the necessary vSAN su
 
    `esxcli system settings advanced set -o /Net/TcpipHeapMax -i 1576`
 
-2. Restart each ESXi server. For more information, see [Creating vSAN clusters with up to 64 nodes](https://kb.vmware.com/s/article/2110081){:external}.
+2. Restart each ESXi server. For more information, see [Creating vSAN clusters with up to 64 nodes](https://kb.vmware.com/s/article/2110081){: external}.
 3. You might need to increase the size of the vCenter Server to accommodate the added virtual machines and ESXi servers.
 4. Open an IBM Support ticket to indicate that you applied the vSAN changes manually by completing steps 1 - 3. In the ticket, request that your upgraded instance is enabled for ESXi servers beyond 32.
 
@@ -55,7 +51,7 @@ For instances deployed in V2.1 or earlier, you must enable the necessary vSAN su
 The ESXi server names and IP addresses cannot be changed because they are registered for Windows® DNS resolution. Changes might result in failure during deployment or failure of vCenter Server functions.
 
 Don't use the **Rename Device** feature on the {{site.data.keyword.cloud_notm}} user interface to change ESXi server names. This function changes the FQDN of the ESXi server, but the configured vCenter Server and the Windows VSI host registrations are incorrect and might cause failures.
-{:note}
+{: note}
 
 ## Can I disable root access on my ESXi servers?
 {: #faq_esxi-disable-root}
@@ -74,7 +70,7 @@ You must re-enable root access for subsequent automation operations, for example
 To place a host from a VMware vSAN cluster in maintenance mode, complete the following steps:
 1. Review the three options provided in the VMware vSphere Web Client: **Ensure accessibility**, **Full data migration**, and **No data migration**.
 2. Select the **Ensure accessibility** option.
-3. If failures occur, complete the process using the **Full data migration** option. For more information, see [Place a member of vSAN cluster in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.virtualsan.doc/GUID-521EA4BC-E411-47D4-899A-5E0264469866.html){:external}.
+3. If failures occur, complete the process using the **Full data migration** option. For more information, see [Place a member of vSAN cluster in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.virtualsan.doc/GUID-521EA4BC-E411-47D4-899A-5E0264469866.html){: external}.
 4. If you experience problems, [contact IBM support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support) for assistance.
 
 ## Can I add static routes on my ESXi servers to mount storage from other locations?
@@ -84,7 +80,7 @@ To place a host from a VMware vSAN cluster in maintenance mode, complete the fol
 You can add static routes for storage but you must do it with extreme care. Otherwise, the existing shares might become unmounted.
 
 Adding static routes for vMotion is not supported. Changes in vMotion subnet configuration might result in failure in the {{site.data.keyword.vmwaresolutions_short}} functions.
-{:note}
+{: note}
 
 ## Related links
 {: #faq_esxi-related}

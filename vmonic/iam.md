@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-10"
+lastupdated: "2021-09-10"
 
 keywords: IAM user, user role, user permission
 
@@ -12,6 +12,8 @@ subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing access for VMware Solutions
 {: #iam}
@@ -86,7 +88,7 @@ All resources access would grant users access to all service resource created in
 {: caption="Table 3. Platform management roles with all resources scope and allowed actions for VMware Solutions Shared" caption-side="top"}
 
 To grant user permission to create new instances, you must also assign Resource Group access policies. For more information, see [Giving access to resources in resource groups](/docs/account?topic=account-rgs_manage_access) and [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering).
-{:note}
+{: note}
 
 ### Assigning Resource Group access
 {: #iam-roles-shared-resource-group}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-27"
+lastupdated: "2021-09-23"
 
 keywords: vCenter Server add clusters, add cluster, vCenter Server cluster
 
@@ -12,27 +12,21 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding clusters to vCenter Server single-zone instances
 {: #vc_addingclusters}
 
 You can add clusters to VMware vCenter Server® instances to expand the compute and storage capacity. Within a cluster, you can manage VMware ESXi™ servers for better resource allocation and high availability.
 
-For vCenter Server instances V3.4 and later, you can add or delete a cluster while another cluster is being created or deleted.
-{:note}
-
 ## Before you add clusters to vCenter Server single-zone instances
 {: #vc_addingclusters-before}
 
-* Whenever possible, add clusters by using the VMware Solutions console. Changes that you make on the VMware vSphere® Web Client are not synchronized with the VMware Solutions console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the VMware Solutions console.
-* The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware® sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware configuration maximums](https://configmax.vmware.com/home){:external}.
-* Ensure that you reviewed the [Edge services cluster](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster) section. You cannot add multiple edge services clusters in the same data center pod. If you add more than one edge services clusters in the same pod, the clusters share a transit VLAN, which might cause subsequent issues with the Juniper® vSRX installation.
+* Adding clusters to vCenter Server instances with VMware vSphere® 6.5 is not supported.
+* Whenever possible, add clusters by using the VMware Solutions console. Changes that you make on the VMware vSphere Web Client are not synchronized with the VMware Solutions console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the VMware Solutions console.
+* The number of clusters, hosts, and virtual machines (VMs) determines the maximum limit for the number of clusters you can add. You must remain within the VMware® sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware configuration maximums](https://configmax.vmware.com/home){: external}.
+* You cannot add multiple edge services clusters in the same data center pod. If you add more than one edge services clusters in the same pod, the clusters share a transit VLAN, which might cause subsequent issues with the Juniper® vSRX installation. For more information, see [Edge services cluster](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-edge-services-cluster).
+* You can add or delete a cluster while another cluster is being created or deleted.
 
 ## System settings
 {: #vc_addingclusters-sys-settings}
@@ -62,7 +56,7 @@ Review the following information and specify the licensing setting for the VMwar
 {: #vc_addingclusters-lic-spp}
 
 The **Use VMware Subscription Purchasing Program** option is available only to users who are billed in the US.
-{:note}
+{: note}
 
 If you select the **Use VMware Subscription Purchasing Program** option when you order your cluster, the option **Include with purchase** for all licenses will be set automatically and the **I will provide** (BYOL) option is not available.
 
@@ -74,7 +68,7 @@ Options might differ depending on the version that your instance was initially d
 ### Data center location
 {: #vc_addingclusters-dc-location}
 
-The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](http://lg.softlayer.com/){:external}.
+The {{site.data.keyword.cloud_notm}} data center location of the cluster is set to the {{site.data.keyword.cloud_notm}} data center of the vCenter Server instance by default. You can deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center than the deployed instance, but you must ensure that the network latency between the two {{site.data.keyword.cloud_notm}} data centers is less than 150 ms. To check the network latency, you can use a tool such as [Looking Glass](http://lg.softlayer.com/){: external}.
 
 If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data center or {{site.data.keyword.cloud_notm}} infrastructure pod, three extra VLANs are ordered for use with the ordered {{site.data.keyword.cloud_notm}} bare metal servers.
 
@@ -84,7 +78,7 @@ If you deploy the cluster to a different {{site.data.keyword.cloud_notm}} data c
 For **Skylake** servers, you can choose the following CPU models and a supported RAM size, which depends on the NSX networking solution. Available options might differ depending on the version that your instance was initially deployed in.
 
 Skylake servers are not supported for vSphere Enterprise Plus 7.0u1 instances.
-{:note}
+{: note}
 
 | CPU model | RAM options for NSX-V | RAM options for NSX-T |
 |:--------- |:--------------------- |:--------------------- |
@@ -145,7 +139,7 @@ For **SAP-certified** servers, you have the following options:
 
 * All servers that you order have the same configuration.
 * For vSAN™ storage, you can order in the range 4 - 59 servers.
-* For NFS storage, you can order between 1 (for NSX-V) or 2 (for NSX-T™) and 59 servers. However, for production workloads, a minimum of two (for NSX-V) and three (for NSX-T) servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
+* For NFS storage, you can order between 1 (for NSX-V) or 2 (for NSX-T™) and 59 servers. However, for production workloads, a minimum of two servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
 ## Storage settings
 {: #vc_addingclusters-storage-settings}
@@ -153,7 +147,7 @@ For **SAP-certified** servers, you have the following options:
 Storage settings are based on your selection of {{site.data.keyword.cloud_notm}} bare metal server configuration and the storage type.
 
 You can add NFS storage shares to an existing vSAN or NFS cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingnfs).
-{:note}
+{: note}
 
 ### vSAN storage
 {: #vc_addingclusters-vsan-storage}
@@ -173,7 +167,7 @@ Specify the number of capacity disks that you want to add.
 If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
 
 The **High performance with Intel Optane** option is available only for vSphere 6 instances.
-{:note}
+{: note}
 
 #### Size for vSAN cache disks
 {: #vc_addingclusters-vsan-storage-size-cachedisks}
@@ -190,8 +184,8 @@ Review **Number of vSAN cache disks**. The value depends on whether you checked 
 
 vSAN storage depends on the number of servers and your total disk capacity, and the use of deduplication and compression.
 
-The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){:external}.
-{:note}
+The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){: external}.
+{: note}
 
 #### vSAN license
 {: #vc_addingclusters-vsan-storage-lic}
@@ -226,7 +220,7 @@ Performance level details:
 {: #vc_addingclusters-local-disks}
 
 The **Local disks** option is enabled for the **SAP-certified** - **HANA** CPU generation only. If you selected the **Use VMware Subscription Purchasing Program** option, the **Local disks** option is disabled.
-{:note}
+{: note}
 
 Specify the following settings:
 * **Local disk count**: Select the number of disks that you want to add. The first two disks are reserved, so a minimum of four disks is required.
@@ -259,7 +253,7 @@ For NSX-V, the following add-on services require public NICs and are not availab
 {: #vc_addingclusters-uplink}
 
 The **Uplink speed** option is not available to edge services clusters.
-{:note}
+{: note}
 
 The uplink speed provides two options:
 * 10 Gb, which is selected by default.
@@ -298,19 +292,19 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 * **Secondary private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
-{:important}
+{: important}
 
 Optionally, use **Advanced settings** to configure portable subnets for VLANs.
 
 Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to specify the **Portable subnet** for each applicable purpose. If you select the **Allocate a new one** option for this field, a new portable subnet is allocated automatically.
 
-**Notes**:
+**Notes**
 * You must complete the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** settings before you can configure portable subnets.
 * The number of portable subnets is displayed on the **Advanced settings** button after you save the portable subnet settings. Click **Portable subnets settings** to edit the settings.
 * The saved portable subnet settings are cleared if you change the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** settings.
 
 {{site.data.keyword.vmwaresolutions_short}} takes control of the entire subnet and you can't use any IP addresses in the subnet.
-{:important}
+{: important}
 
 ## Summary
 {: #vc_addingclusters-order-summary}
@@ -326,7 +320,8 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 2. In the **vCenter Server instances** table, click the instance that you want to add clusters to.
 
    Ensure that the instance is in the **Ready to use** status. Otherwise, you cannot add clusters to the instance.
-   {:note}
+   {: note}
+
 3. Click **Infrastructure** on the left navigation pane and click **Add** on the upper right of the **Clusters** table.
 4. On the **Cluster** page, select the cluster type and billing option, and then enter the cluster name.
 5. If you want to host the cluster in a different {{site.data.keyword.cloud_notm}} data center than the one that the instance is hosted in, under **Bare metal server**, select the **Select a different location** checkbox and choose the {{site.data.keyword.cloud_notm}} data center to host the instance.
@@ -334,24 +329,24 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
    * If you selected **Skylake** or **Cascade Lake**, specify the **CPU model**, the amount of **RAM**, and the **Number of bare metal servers**.
    * If you selected **SAP-certified** NetWeaver, select one of the preset configurations. If you selected **SAP-certified** HANA, specify the **CPU model** and **RAM**.
 7. Complete the storage configuration.
-  * If you select **vSAN storage**, specify the following values:
-    * Size for the vSAN capacity disks
-    * Number of vSAN capacity disks
-    * Size for vSAN cache disks
-    * Number of vSAN cache disks
-    * vSAN license edition
+   * If you select **vSAN storage**, specify the following values:
+      * Size for the vSAN capacity disks
+      * Number of vSAN capacity disks
+      * Size for vSAN cache disks
+      * Number of vSAN cache disks
+      * vSAN license edition
 
-    If you want more storage, check the **High performance with Intel Optane** box.
+      If you want more storage, check the **High performance with Intel Optane** box.
 
-    By default, the **Enable vSAN deduplication and compression** box is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
+      By default, the **Enable vSAN deduplication and compression** box is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
 
-  * If you select **NFS storage** and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
-  * If you select **NFS storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
-  * (NSX-V only) If you select **Local disks**, specify the local disk count and local disk type.
+   * If you select **NFS storage** and want to add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
+   * If you select **NFS storage** and want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
+   * (NSX-V only) If you select **Local disks**, specify the local disk count and local disk type.
 8. Complete the network interface settings.
 9. Specify how the vSphere license key is provided:
-  * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
-  * For users who are not Business Partners, you can select one of the following options:
+   * For Business Partner users, the vSphere license (Enterprise Plus edition) is included and purchased on your behalf.
+   * For users who are not Business Partners, you can select one of the following options:
       * If you want new licenses to be purchased on your behalf, select **Include with purchase** for the component.
       * If you want to use your own VMware license for the component, select **I will provide** and enter your license key.
 10. Select the network setting of either **Public and private network** or **Private network only**.
@@ -368,7 +363,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 2. When the cluster is ready to use, its status changes to **Ready to use**. The newly added cluster is enabled with vSphere High Availability (HA) and vSphere Distributed Resource Scheduler (DRS).
 
 You cannot change the cluster name. Changing the cluster name might cause the add or remove ESXi servers operations in the cluster to fail.
-{:important}
+{: important}
 
 ## Related links
 {: #vc_addingclusters-related}

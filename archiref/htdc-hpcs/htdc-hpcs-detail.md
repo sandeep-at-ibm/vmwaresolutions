@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-20"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # HyTrust DataControl on IBM Cloud with IBM Hyper Protect Crypto Services
 {: #htdc-hpcs-detail}
 
-The DataControl® virtual machine (VM) is a HyTrust®-hardened version of FreeBSD, a light-weight, locked-down operating system that has no runtime login or SSH access to the system. This system prevents tampering or attempts to access clear-text data and encryption keys. Two VMs are deployed onto the internal management subnet. 
+The DataControl® virtual machine (VM) is a HyTrust®-hardened version of FreeBSD, a light-weight, locked-down operating system that has no runtime login or SSH access to the system. This system prevents tampering or attempts to access clear-text data and encryption keys. Two VMs are deployed onto the internal management subnet.
 
 The following examples are for the hostnames:
 * Primary Host Name - `htdc01-A68ED99E.ibmcloud.local`
@@ -55,27 +55,27 @@ The following figure shows the following communication flows that are required b
 
 ![Ports](../../images/htdc-hpcs-ports.svg){: caption="Figure 2. Network ports" caption-side="bottom"}
 
-In the vCenter Server instance deployment these flows are allowed, but would need to be explicitly allowed if the default firewalls were changed
+In the vCenter Server instance deployment these flows are allowed, but would need to be explicitly allowed if the default firewalls were changed.
 
 * The HTKC servers need to communicate to the following infrastructure services:
-  * DNS - Outbound UDP/53.
-  * SMTP - Outbound mail server, typically TCP/25 (optional).
-  * SYSLOG - An outbound UDP in the range 25 - 65535 if you want to use a remote syslog server (optional). KeyControl™ does not currently support TCP for syslog.
-  * Backup and Restore through NFS (optional) - Inbound TCP and UDP/111 (`portmapper`), 2046 (`lockd`), 2047 (`rpc statd`), 2048 (`rcpmountd`), and 2049 (default NFS port).
-  * NTP - Outbound NTP servers, typically UDP/123 or TCP/123.
-  * {{site.data.keyword.cloud_notm}} IAM - Outbound TCP/443. Required for HPCS.
+   * DNS - Outbound UDP/53.
+   * SMTP - Outbound mail server, typically TCP/25 (optional).
+   * SYSLOG - An outbound UDP in the range 25 - 65535 if you want to use a remote syslog server (optional). KeyControl™ does not currently support TCP for syslog.
+   * Backup and Restore through NFS (optional) - Inbound TCP and UDP/111 (`portmapper`), 2046 (`lockd`), 2047 (`rpc statd`), 2048 (`rcpmountd`), and 2049 (default NFS port).
+   * NTP - Outbound NTP servers, typically UDP/123 or TCP/123.
+   * {{site.data.keyword.cloud_notm}} IAM - Outbound TCP/443. Required for HPCS.
 
 * The HTKC servers need to communicate to each other:
-  * TCP/443 (HTTPS).
-  * TCP/8443 and 2525.
+   * TCP/443 (HTTPS).
+   * TCP/8443 and 2525.
 
-Note, HTKC uses the IP address 169.254.119.1 for internal communication. This IP address must be reserved for HTKC.
+   HTKC uses the IP address 169.254.119.1 for internal communication. This IP address must be reserved for HTKC.{ :note}
 
 * The following traffic flows are required for external access:
- * KeyControl webGUI – Inbound TCP/443 and TCP/80 to the HTKC VMs. All requests made to TCP/80 are redirected to TCP/443 so that they use HTTPS.
-* For HyTrust support-level access - Inbound TCP/22 (for full support) and TCP/6666 (for restricted support) to the HTKC VMs.
+   * KeyControl webGUI – Inbound TCP/443 and TCP/80 to the HTKC VMs. All requests made to TCP/80 are redirected to TCP/443 so that they use HTTPS.
+   * For HyTrust support-level access - Inbound TCP/22 (for full support) and TCP/6666 (for restricted support) to the HTKC VMs.
 
-The HTDC PAs are installed in the VMs hosted on the NSX VXLAN network segments in the overlay. These VMs have Bring Your Own IP (BYOIP) addressing. Therefore, NAT or routing changes need to be implemented on the customer-ESG so that the following communication flow is allowed
+   The HTDC PAs are installed in the VMs hosted on the NSX VXLAN network segments in the overlay. These VMs have Bring Your Own IP (BYOIP) addressing. Therefore, NAT or routing changes need to be implemented on the customer-ESG so that the communication flow is allowed.
 
 * Policy Agent to KeyControl - Inbound TCP/443 from the Policy Agent to each of the KeyControl VMs.
 

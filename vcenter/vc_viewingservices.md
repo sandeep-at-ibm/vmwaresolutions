@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-15"
+lastupdated: "2021-09-10"
 
 keywords: view services vCenter Server
 
@@ -12,9 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing services for vCenter Server instances
 {: #vc_viewingservices}

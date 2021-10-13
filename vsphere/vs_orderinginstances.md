@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-04"
+lastupdated: "2021-10-08"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering new vSphere clusters
 {: #vs_orderinginstances}
@@ -67,7 +64,7 @@ You can also include the following VMware components in your order:
 * VMware vRealize Automation Enterprise
 
 For IBM Business Partner users, the Bring Your Own License (BYOL) option is not available.
-{:note}
+{: note}
 
 ### Individual components for non-Business Partner users
 {: #vs_orderinginstances-individual-components-for-non-bp-users}
@@ -83,13 +80,13 @@ If you're a non-Business Partner, you can select the following components for yo
 * VMware vRealize Log Insight
 
 The VMware vSAN component is not available when you order VMware vSphere Enterprise Plus 6. If you plan to use your own license for VMware vSphere Enterprise Plus 6, an {{site.data.keyword.cloud_notm}} infrastructure ticket is opened on your behalf. The ticket requests that the vSphere licenses of the ordered {{site.data.keyword.cloud_notm}} bare metal servers are replaced with your provided licenses.
-{:note}
+{: note}
 
 ### Licensing options
 {: #vs_orderinginstances-licensing-options}
 
 Using individual license keys together with the combined license keys does not meet the payment requirements for the licenses you need.
-{:important}
+{: important}
 
 You have the following options for licensing the selected VMware components:
 * **Include license with purchase**: In this case, a new license for the VMware component is purchased on your behalf. A combined VMware license is generated to match the cluster size of the order.
@@ -114,7 +111,7 @@ Select the {{site.data.keyword.cloud_notm}} data center where the cluster is to 
 For **Skylake** servers, you can choose the following CPU models and a supported RAM size. Options available depend on whether you selected the VMware vSAN component.
 
 Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
-{:note}
+{: note}
 
 | CPU model     | RAM sizes     |
 |:------------- |:------------- |
@@ -142,7 +139,7 @@ For **Cascade Lake** servers, you can choose the following CPU models and a supp
 {: #vs_orderinginstances-sap}
 
 The **SAP-certified** servers are not available if you selected VMware vSAN previously.
-{:note}
+{: note}
 
 For **SAP-certified** servers, you have the following options:
 * **NetWeaver**, for which the CPU and RAM size are preset.
@@ -190,8 +187,8 @@ If you select the VMware vSAN component for the cluster, specify the following s
 * **Number of vSAN capacity disks** - Specify the number of capacity disks that you want to add.
 * If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays, which are useful for workloads that require less latency and higher IOPS throughput.
 
-  The **High performance with Intel Optane** option is available only for vSphere 6 instances, and for Skylake and dual-processor Cascade Lake CPU models.
-  {:note}
+   The **High performance with Intel Optane** option is available only for vSphere 6 instances, and for Skylake and dual-processor Cascade Lake CPU models.
+   {: note}
 
 * Review the **Size for vSAN cache disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
 
@@ -200,8 +197,8 @@ If you select the VMware vSAN component for the cluster, specify the following s
 
 vSAN storage depends on the number of servers and your total disk capacity, and the use of deduplication and compression.
 
-The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){:external}.
-{:note}
+The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){: external}.
+{: note}
 
 ## Network interface settings
 {: #vs_orderinginstances-network-interface-settings}
@@ -229,7 +226,7 @@ The subdomain label must meet the following requirements:
 * The maximum length of the subdomain label is 10 characters.
 
 The subdomain label is not used for vSphere 7.0 instances.
-{:note}
+{: note}
 
 ### Domain name
 {: #vs_orderinginstances-domain-name}
@@ -258,10 +255,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10  \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02  \n Frankfurt 05  \n London 06  \n Paris 04  \n Paris 05  \n Paris 06 | Europe |
+| Sydney 04  \n Sydney 05  \n Tokyo 02  \n Tokyo 04  \n Tokyo 05 | Asia-Pacific |
+| Toronto 04  \n Washington DC 04  \n Washington DC 06  \n Washington DC 07 | NA East |
 {: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs
@@ -300,7 +297,7 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 You can also select whether to include the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment. For more information, see [FortiGate Virtual Appliance overview](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations).
 
 This option is only available for an order with both a public and private network.
-{:note}
+{: note}
 
 ## Summary
 {: #vs_orderinginstances-order-summary}
@@ -316,11 +313,13 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 2. On the **VMware Solutions Dedicated** page, click the **VMware vSphere** card. Ensure that you are on the **Create new** tab and that **New cluster** is displayed in the **Cluster configurations** list.
 3. Enter the cluster name.
 4. Select the VMware components:
-  * If you are an IBM Business Partner, select a license bundle and any additional available VMware components.
-  * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
-  When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered bare metal servers to be replaced with your provided licenses.   
+   * If you are an IBM Business Partner, select a license bundle and any additional available VMware components.
+   * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
+   When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered bare metal servers to be replaced with your provided licenses.   
 
-    **Important:** You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure license settings for an ESXi host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:external}.
+       You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure license settings for an ESXi host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){: external}.
+       {: important}
+       
 5. Complete the bare metal server settings:
    1. Select the {{site.data.keyword.cloud_notm}} data center to host the cluster.
    2. Select the bare metal server CPU generation.
@@ -328,22 +327,22 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
       * For **SAP-certified** - **NetWeaver** server, choose one of the preset configurations.
    3. Specify the number of bare metal servers.
 6. If you selected the **VMware vSAN** component, complete the vSAN storage configuration.
-  * If you want more storage, select the **High performance with Intel Optane** checkbox.
-  * Specify the disk types for the capacity and cache disks, and the number of disks.
-  * By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
+   * If you want more storage, select the **High performance with Intel Optane** checkbox.
+   * Specify the disk types for the capacity and cache disks, and the number of disks.
+   * By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
 7. Complete the network interface settings:
    1. Enter the host name prefix, subdomain label (vSphere 6.7u3 instances only), and domain name.
    2. Select the network setting of either **Public and private network** or **Private network only**.
    3. Select the uplink speed. The 25 Gb option is available for Cascade Lake servers and for specific data centers only.
    4. Select the network interface that you want to use.
-    * If you want to order new public and private VLANs, click **Order new VLANs**.
-    * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and optionally the subnets.
+      * If you want to order new public and private VLANs, click **Order new VLANs**.
+      * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and optionally the subnets.
    5. If you are ordering public VLANs, specify whether to apply the FortiGate Physical Appliance 300 Series HA Pair to secure your cloud environment.
 8. In the **Summary** pane, verify the cluster configuration and the estimated price.
    * To save the configuration as a template without placing an order, click **Save configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
    Only the {{site.data.keyword.cloud_notm}} bare metal servers are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
-   {:note}
+   {: note}
 
 ### Results after you order vSphere clusters
 {: #vs_orderinginstances-results}
@@ -353,7 +352,7 @@ If you saved the cluster configuration as a template, you get a console notifica
 If you placed an order, the deployment of the cluster starts automatically, and you receive an email confirmation that the order is being processed. When the cluster is ready to use, you are notified by email.
 
 The vSphere clusters, unlike the vCenter Server instances, are not displayed on the **Resources** page.
-{:note}
+{: note}
 
 ## Related links
 {: #vs_orderinginstances-related}

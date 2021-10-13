@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-18"
 
 keywords: nsx editions, vsan editions, nsx edition comparison, vsan edition comparison
 
@@ -24,18 +24,18 @@ subcollection: vmwaresolutions
 ## NSX edition comparison
 {: #solution-appendix-nsx-editions}
 
-Within this design, there are multiple components that require licenses. This information captures the minimum licenses that are required for the environment to operate correctly.
+The design has multiple components that require licenses. This information captures the minimum licenses that are required for the environment to operate correctly.
 
 | Component | Purpose | License |
 |:--------- |:------- |:------- |
-| VMware vSphere | Compute virtualization | vSphere 6.7 Enterprise Plus |
-| VMware vCenter Server | Infrastructure management | vCenter Server 6.7 Standard |
-| VMware NSX | Network virtualization | NSX Base for Service Providers 6.4 |
-| VMware vSAN | Storage virtualization | vSAN 6.6 Advanced |
+| VMware vSphere® | Compute virtualization | vSphere 6.7 Enterprise Plus |
+| VMware vCenter Server® | Infrastructure management | vCenter Server 6.7 Standard |
+| VMware NSX® | Network virtualization | NSX Base for Service Providers 6.4 |
+| VMware vSAN™ | Storage virtualization | vSAN 6.6 Advanced |
 {: caption="Table 1. License requirements" caption-side="top"}
 
 NSX Base for Service Providers edition is only available for service providers through the VMware vCloud Air Network (vCAN). The features in this edition can be found in the following table.
-{:note}
+{: note}
 
 | NSX feature                                   | Base | Advanced | Enterprise |
 |:--------------------------------------------- |:---- |:-------- |:---------- |
@@ -53,7 +53,7 @@ NSX Base for Service Providers edition is only available for service providers t
 | Distributed firewalling                       |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | Integration with Active Directory             |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | Server activity monitoring                    |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
-| Service insertion (3rd party integration)     |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
+| Service insertion (third-party integration)     |      | ![Available](../../../icons/checkmark-icon.svg) | ![Available](../../../icons/checkmark-icon.svg) |
 | Distributed load balancing                    |      |          | ![Available](../../../icons/checkmark-icon.svg) |
 | Cross vCenter NSX                             |      |          | ![Available](../../../icons/checkmark-icon.svg) |
 | Multi-site NSX optimizations                  |      |          | ![Available](../../../icons/checkmark-icon.svg) |

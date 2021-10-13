@@ -4,33 +4,30 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # vCenter Single Sign On
 {: #adds-sso}
 
-vCenter Single Sign-On (SSO) is an authentication broker and security token exchange infrastructure, which allows vSphere components to communicate with each other through a secure token mechanism and uses the following services:
+vCenter Single Sign-On (SSO) is an authentication broker and security token exchange infrastructure, which allows vSphere components to communicate with each other through a secure token mechanism and uses the following services.
 
-* Security Token Service (STS).
-* SSL for secure traffic.
-* Authentication of users by using an identity source such as Active Directory or OpenLDAP.
+* Security Token Service (STS)
+* SSL for secure traffic
+* Authentication of users by using an identity source such as Active Directory or OpenLDAP
 
 Review the following vSphere SSO flow.
 
 1. A user logs in to the vSphere Client with a username and password to access vCenter or a vCenter service.
-2. The vSphere Client passes the login information to the SSO service, which checks the SAML token of the vSphere Client. If the vSphere Client has a valid token, SSO then checks whether the user ID
-    * If the user ID is @vsphere.local, then it checks the user against the local SSO domain
-    * If the user ID is @DOMAIN, then SSO uses the identity source to check that domain.
+2. The vSphere Client passes the login information to the SSO service, which checks the SAML token of the vSphere Client. If the vSphere Client has a valid token, SSO checks:
+   * If the user ID is @vsphere.local, then it checks the user against the local SSO domain.
+   * If the user ID is @DOMAIN, then SSO uses the identity source to check that domain.
 3. If authentication is successful SSO returns a token that represents the user to the vSphere Client.
 4. The vSphere Client passes the token to vCenter.
 5. vCenter checks with SSO that the token is valid and is not expired.
@@ -43,17 +40,17 @@ The vSphere SSO domain is used as the initial authentication mechanism it is als
 * An identity source, the {{site.data.keyword.vmwaresolutions_short}} infrastructure domain, <root_domain>, is configured.
 * The VSPHERE.LOCAL\Administrator user is configured as an Administrator role.
 * The following groups are configured with Administrator roles:
-  * <root_domain>\ic4v-vCenter.
-  * vsphere.local\Administrators.
+   * <root_domain>\ic4v-vCenter.
+   * vsphere.local\Administrators.
 
 After deployment, the `administrator@vsphere.local` user has administrator access to both SSO and vCenter Server. This user can manage identity sources and default domains, specify password policies, and perform other administrative tasks in the `vsphere.local` domain. However, this user is integral to the VMware vSphere® and NSX infrastructure authentication they are not part of AD but created automatically when vSphere is deployed. As this account is not part of AD, they can be used in situations when AD is not working correctly.
 
-As the customer, you have full access to manage the vSphere SSO users and groups as needed. For more information about changing these policies, see [Managing vCenter Single Sign-On users and groups](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-31F302A6-D622-4FEC-9007-EE3BA1205AEA.html){:external}.
+As the customer, you have full access to manage the vSphere SSO users and groups as needed. For more information about changing these policies, see [Managing vCenter Single Sign-On users and groups](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-31F302A6-D622-4FEC-9007-EE3BA1205AEA.html){: external}.
 
 ## Identity sources
 {: #adds-sso-identity}
 
-Identity sources are used to attach one or more domains to vCenter SSO. A domain is a repository for users and groups that the vCenter SSO can use for user authentication. vCenter SSO has the following domains that are configured after the vCenter Server instance deployment:
+Identity sources are used to attach one or more domains to vCenter SSO. A domain is a repository for users and groups that the vCenter SSO can use for user authentication. vCenter SSO has the following domains that are configured after the vCenter Server instance deployment.
 
 * Local OS - Local operating system users are local to the operating system where the vCenter Single Sign-On server is running. The local operating system identity source exists only in basic vCenter SSO deployments and is not available in deployments with multiple vCenter SSO instances. Only one local operating system identity source is allowed. Shown as locals in the vSphere Client.
 * vsphere.local – Enables administrator@vsphere.local to be authenticated.
@@ -92,10 +89,10 @@ For more information about the lockout policy, see [Policy configurations](/docs
 | Restrict reuse | Users cannot reuse any previous five passwords |
 | Maximum length | 20 characters |
 | Minimum length | 15 characters |
-| Character requirements | At least two alphabetic characters<br>At least one special character<br>At least one uppercase character<br>At least one lowercase character<br>At least one numeric character<br>Identical adjacent characters - 3 |
+| Character requirements | * At least two alphabetic characters \n * At least one special character \n * At least one uppercase character \n * At least one lowercase character \n * At least one numeric character \n * Identical adjacent characters - 3 |
 {: caption="Table 2. Password policy" caption-side="top"}
 
-As the customer, you have full access to tailor these settings as needed to apply your enterprise security policies. For changing these policies, see [Managing vCenter single sign-on policies](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-43527B09-63BB-44A6-91D3-E3A470904698.html){:external}.
+As the customer, you have full access to tailor these settings as needed to apply your enterprise security policies. For changing these policies, see [Managing vCenter single sign-on policies](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.psc.doc/GUID-43527B09-63BB-44A6-91D3-E3A470904698.html){: external}.
 
 ## vSphere ESXi hosts
 {: #adds-sso-esxi}

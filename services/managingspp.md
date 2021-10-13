@@ -32,7 +32,7 @@ To manage the IBM Spectrum® Protect Plus service, you must access the IBM Spect
 ## Applying updates to IBM Spectrum Protect Plus
 {: #managingspp-updates}
 
-You are responsible for maintaining IBM Spectrum Protect Plus to keep it updated to the most recent version. Download the required updates from [IBM Spectrum Protect Plus Support](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus){:external}.
+You are responsible for maintaining IBM Spectrum Protect Plus to keep it updated to the most recent version. Download the required updates from [IBM Spectrum Protect Plus Support](https://www.ibm.com/mysupport/s/topic/0TO50000000IQWtGAO/spectrum-protect-plus){: external}.
 
 For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-09"
+lastupdated: "2021-09-10"
 
 keywords: planning vmware regulated workloads, data center vmware regulated workloads, vmware regulated workloads data centers
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Requirements and planning for VMware Regulated Workloads
 {: #vrw-planning}
@@ -99,8 +95,8 @@ The following regions are available for VMware Regulated Workloads multizone dep
 
 The following services are required for the VMware Regulated Workloads:
 * [Hyper Protect Crypto Services](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services)
-* [Direct Link Dedicated](https://cloud.ibm.com/interconnectivity/direct-link)
 * [KMIP for VMware](https://cloud.ibm.com/infrastructure/vmware-solutions/console/servicestandalonenew/KMIPAdapter)
+* [Direct Link Dedicated](https://cloud.ibm.com/interconnectivity/direct-link)
 
 The following services are included with VMware Regulated Workloads:
 * [Veeam 11](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)

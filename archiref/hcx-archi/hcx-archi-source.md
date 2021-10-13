@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
@@ -33,7 +33,7 @@ HCX supports a many-to-many relationship between on-premises vCenters and {{site
 During the installation, the HCX Manager virtual appliance is imported and configured as a plug-in for the on-premises vCenter. This plug-in is then used to configure the software-defined WAN service deployment. The automated configuration provisions each hybrid service appliance as a VM in the on-premises vCenter, and deploys a corresponding VM in {{site.data.keyword.cloud_notm}}.
 
 A successful deployment requires the following items:
-* Sufficient resources for the virtual appliances
+* Sufficient resources for the virtual appliances.
 * The network must allow the appliances to communicate with both local and remote virtual appliances, and other VMs.
 
 ## Deployment overview
@@ -107,16 +107,16 @@ The HCX Network Extension Virtual Appliance has two interfaces:
 To deploy the HCX, the proper number of IP addresses must be available both on-premises and in the target {{site.data.keyword.cloud_notm}}.
 
 * vMotion address
-  Maintaining a separate network for vMotion is a common practice in the on-premises data center. The Cloud Gateway must have access to the vMotion network. If it does not, an extra IP address is needed to communicate with the vMotion network.
+   Maintaining a separate network for vMotion is a common practice in the on-premises data center. The Cloud Gateway must have access to the vMotion network. If it does not, an extra IP address is needed to communicate with the vMotion network.
 
 * On-premises
-  * One IP address for the HCX Connector appliance.
-  * One for each HCX-IX Interconnect Appliance, add one for a separate vMotion network (if applicable).
-  * One for each HCX Network Extension Virtual Appliance
+   * One IP address for the HCX Connector appliance.
+   * One for each HCX-IX Interconnect Appliance, add one for a separate vMotion network (if applicable).
+   * One for each HCX Network Extension Virtual Appliance.
 
 * {{site.data.keyword.cloud_notm}}
-  * Two IP addresses per HCX Connector appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more {{site.data.keyword.cloud_notm}} Direct-Link connections.
-  * Add one for a separate vMotion network connection (if applicable).
+   * Two IP addresses per HCX Connector appliance connected to {{site.data.keyword.cloud_notm}}. The addresses can be used to connect to the internet or one or more {{site.data.keyword.cloud_notm}} Direct-Link connections.
+   * Add one for a separate vMotion network connection (if applicable).
 
 ### Proximity routing
 {: #hcx-archi-source-prox-routing-feat}
@@ -134,11 +134,11 @@ To prevent tromboning, HCX uses intelligent route management to choose routes ap
 * Migrated to the cloud by using host-based replication (low-downtime migration).
 * Created in the cloud (on a stretched network).
 
-For more information about HCX on-premises deployments, see the [VMware HCX documentation](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){:external}.
+For more information about HCX on-premises deployments, see the [VMware HCX documentation](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-BFD7E194-CFE5-4259-B74B-991B26A51758.html){: external}.
 
 **Next topic:** [VMware HCX component-level target architecture with NSX-V deployments](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-v)
 
 ## Related links
 {: #hcx-archi-source-related}
 
-* [VMware HCX system requirements](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D64901F4-6AB4-4820-9303-27927648A34D.html){:external}
+* [VMware HCX system requirements](https://docs.vmware.com/en/VMware-HCX/services/user-guide/GUID-D64901F4-6AB4-4820-9303-27927648A34D.html){: external}

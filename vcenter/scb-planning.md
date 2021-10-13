@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-14"
+lastupdated: "2021-09-10"
 
 keywords: planning vcs Security and Compliance Readiness Bundle, data centers for Security and Compliance Readiness Bundle, services for security and compliance bundle, vcs scb
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Requirements and planning for Security and Compliance Readiness Bundle
 {: #scb-planning}

@@ -1,0 +1,614 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+
+toc:
+  properties:
+    subcollection: vmwaresolutions
+    category: compute_baremetal
+    audience: service
+    href: /docs/vmwaresolutions?topic=vmwaresolutions-getting-started
+    console-page: /infrastructure/vmware-solutions/console
+    product-page: https://www.ibm.com/cloud/vmware
+    path: vmwaresolutions
+    label: VMware Solutions
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - topic: index.md
+        navtitle: Getting started
+      - link:
+          label: Why VMware Solutions
+          href: https://www.ibm.com/cloud/blog/top-10-reasons-to-choose-ibm-cloud-for-vmware-solutions
+      - topic: vmonic/under_the_hood.md
+        navtitle: Under the hood
+      - vmonic/inst_comp_chart.md
+      - vmonic/relnotes_v44.md
+      - vmonic/additional_resources.md
+
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: First steps
+          topics:
+          - vmonic/signing_required_accounts.md
+          - vmonic/cloud-infra-acct-req.md
+          - vmonic/loginmethod.md
+          - vmonic/completing_checklist.md
+          - vmonic/notifications.md
+          - vmonic/useraccount.md
+          - vmonic/vmwaresol_ports.md
+      - topicgroup:
+          label: VMware Solutions Shared
+          topics:
+          - shared/shared_overview.md
+          - shared/shared_planning.md
+          - shared/shared_data_security.md
+          - shared/shared_ordering.md
+          - topicgroup:
+              label: Using and managing the private network endpoint service
+              topics:
+              - shared/shared_creating-endpoints.md
+              - shared/shared_viewing-endpoints.md
+              - shared/shared_modifying-endpoints.md
+              - shared/shared_deleting-endpoints.md
+          - shared/shared_veeam.md
+          - topicgroup:
+              label: Managing Zerto for VMware Solutions Shared
+              topics:
+              - shared/shared_zerto-portal.md
+              - shared/shared_zerto-cloud-connector-order.md
+              - shared/shared_zerto-cloud-connector-view.md
+              - shared/shared_zerto-cloud-connector-delete.md
+          - topicgroup:
+              label: Viewing and managing virtual data centers
+              topics:
+              - shared/shared_viewing-vdc-summary.md
+              - shared/shared_viewing-vdc-details.md
+              - shared/shared_accessing-vcd-console.md
+          - shared/shared_vcd-ops-guide.md
+          - shared/shared-monitor.md
+          - shared/shared_resizeinstance.md
+          - shared/shared_deletinginstance.md
+          - shared/shared_pricing.md
+          - shared/shared_bnpp.md
+      - topicgroup:
+          label: VMware Solutions Dedicated - vCenter Server
+          topics:
+          - topicgroup:
+              label: vCenter Server overview
+              topics:
+              - vcenter/vc_vcenterserveroverview.md
+              - vcenter/vc_bom.md
+              - archiref/mission-critical/mcv-archi-bom.md
+          - topicgroup:
+              label: Planning new deployments
+              topics:
+              - vcenter/vc_planning.md
+              - vcenter/vc_networkingonvcenterserver.md
+              - vcenter/vc_esg_config.md
+              - vcenter/vc_multisite.md
+              - vcenter/vc_compl_info.md
+          - topicgroup:
+              label: Upgrading and migrating
+              topics:
+              - vcenter/vc_vsphere_70_upgrade.md
+              - vcenter/vc_vsphere_upgrade.md
+              - vcenter/vc_upgrade-lic.md
+              - vcenter/vc_addinstancetousraccount.md
+          - vcenter/vc_orderinginstance.md
+          - topicgroup:
+              label: Adding, viewing, and deleting clusters
+              topics:
+              - vcenter/vc_addingclusters.md
+              - services/mcv_addviewdeleteclusters.md
+              - vcenter/vc_viewingclusters.md
+              - vcenter/vc_deletingclusters.md
+          - topicgroup:
+              label: Expanding and contracting capacity
+              topics:
+              - vcenter/vc_addingservers.md
+              - services/mcv_addingremovingservers.md
+              - vcenter/vc_removingservers.md
+              - vcenter/vc_addingnfs.md
+              - services/mcv_addingnfs.md
+              - vcenter/vc_removingnfs.md
+          - topicgroup:
+              label: Ordering, viewing, and deleting services
+              topics:
+              - vcenter/vc_addingservices.md
+              - vcenter/vc_viewingservices.md
+              - vcenter/vc_deletingservices.md
+          - topicgroup:
+              label: Viewing and deleting instances
+              topics:
+              - vcenter/vc_viewinginstances.md
+              - vcenter/vc_deletinginstance.md
+              - vcenter/vc_deletinginstance_multi.md
+      - topicgroup:
+          label: VMware Solutions Dedicated - VMware vSphere
+          topics:
+          - vsphere/vs_vsphereclusteroverview.md
+          - vsphere/vs_bom.md
+          - vsphere/vs_planning.md
+          - vsphere/vs_orderinginstances.md
+          - vsphere/vs_orderingbasedonexistingconfig.md
+          - vsphere/vs_scalingexistingclusters.md
+          - vsphere/vs_orderingforclustersoutside.md
+      - topicgroup:
+          label: VMware Regulated Workloads
+          topics:
+          - vcenter/vrw-overview.md
+          - vcenter/vrw-planning.md
+          - vcenter/vrw-orderinginstance.md
+          - vcenter/vrw-addingremovingservers.md
+          - vcenter/vrw-addingviewingclusters.md
+          - vcenter/vrw-view-delete-instance.md
+      - topicgroup:
+          label: Security and Compliance Readiness Bundle
+          topics:
+          - vcenter/scb-overview.md
+          - vcenter/scb-planning.md
+          - vcenter/scb-orderinginstance.md
+          - vcenter/scb-view-delete-instance.md
+          - vcenter/scb_addingviewingclusters.md
+          - vcenter/scb_addingremovingservers.md
+          - vcenter/scb_addingremovingservices.md
+      - topicgroup:
+          label: Add-on services
+          topics:
+          - topicgroup:
+              label: Caveonix RiskForesight
+              topics:
+              - services/caveonix_considerations.md
+              - services/caveonix_ordering.md
+              - services/managingcaveonix.md
+              - services/caveonix_license_ordering.md
+              - services/caveonix_license_managing.md
+          - topicgroup:
+              label: F5 BIG-IP
+              topics:
+              - services/f5_considerations.md
+              - services/f5_ordering.md
+              - services/managing_f5.md
+          - topicgroup:
+              label: FortiGate Virtual Appliance
+              topics:
+              - services/fortinetvm_considerations.md
+              - services/fortinetvm_ordering.md
+              - services/managingfortinetvm.md
+          - topicgroup:
+              label: VMware HCX
+              topics:
+              - services/hcx_considerations.md
+              - services/hcx_ordering.md
+              - services/managinghcx.md
+              - services/standalone_considerations.md
+              - services/standalone_orderingserviceinstances.md
+              - services/standalone_viewingserviceinstances.md
+              - services/standalone_deletingserviceinstances.md
+              - services/hcx_glossary.md
+          - topicgroup:
+              label: HyTrust CloudControl
+              topics:
+              - services/htcc_considerations.md
+              - services/htcc_ordering.md
+              - services/managinghtcc.md
+          - topicgroup:
+              label: HyTrust DataControl
+              topics:
+              - services/htdc_considerations.md
+              - services/htdc_ordering.md
+              - services/managinghtdc.md
+          - services/managing-ss-sap.md
+          - topicgroup:
+              label: IBM Spectrum Protect Plus
+              topics:
+              - services/spp_considerations.md
+              - services/spp_ordering.md
+              - services/managingspp.md
+          - topicgroup:
+              label: Juniper vSRX
+              topics:
+              - services/juniper_overview.md
+              - services/juniper_ordering.md
+              - services/juniper_managing.md
+          - topicgroup:
+              label: KMIP for VMware
+              topics:
+              - services/kmip_standalone_considerations.md
+              - services/kmip_standalone_ordering.md
+              - services/kmip_standalone_viewing.md
+              - services/kmip_standalone_addingdeletingcert.md
+              - services/kmip_standalone_deleting.md
+          - topicgroup:
+              label: PrimaryIO HDM
+              topics:
+              - services/managing_pio.md
+              - services/pio_ordering.md
+              - services/pio_installing.md
+          - topicgroup:
+              label: Red Hat OpenShift for VMware
+              topics:
+              - services/ocp_overview.md
+              - services/ocp_ordering.md
+              - services/ocp_managing.md
+          - topicgroup:
+              label: Veeam
+              topics:
+              - services/veeamvm_overview.md
+              - services/veeam_ordering.md
+              - services/managingveeam.md
+              - services/veeam_ordering_licenses.md
+              - services/veeam_managing_licenses.md
+              - services/icos_ordering.md
+              - services/veeam_considerations.md
+          - topicgroup:
+              label: vRealize Operations and Log Insight
+              topics:
+              - services/vrops_overview.md
+              - services/vrops_ordering.md
+              - services/managing_vrops.md
+          - topicgroup:
+              label: Zerto
+              topics:
+              - services/addingzertodr.md
+              - services/zerto_ordering.md
+              - services/managingzertodr.md
+              - services/zerto_ordering_licenses.md
+              - services/zerto_managing_licenses.md
+          - topicgroup:
+              label: Professional services
+              topics:
+              - services/managing_imi.md
+              - services/managing_zerto_services.md
+              - services/managing_mcms.md
+              - services/netapp_overview.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+          - vmonic/iam.md
+          - vmonic/data-security.md
+          - vmonic/at-events.md
+          - vmonic/manage-scc.md
+          - vmonic/ha-dr.md
+      - topicgroup:
+          label: Deprecated offerings
+          topics:
+          - topicgroup:
+              label: vCenter Server with Hybridity Bundle
+              topics:
+              - vcenter/vc_hybrid_overview.md
+              - vcenter/vc_hybrid_compl_info.md
+              - vcenter/vc_hybrid_addingviewingclusters.md
+              - vcenter/vc_hybrid_addingremovingservers.md
+              - vcenter/vc_hybrid_upgrade-lic.md
+              - vcenter/vc_hybrid_addingremovingservices.md
+              - vcenter/vc_hybrid_viewinginstances.md
+              - vcenter/vc_hybrid_addinstancetousraccount.md
+              - vcenter/vc_hybrid_deletingbundle.md
+              - vcenter/vc_hybrid_deletinginstance.md
+              - vcenter/vc_hybrid_deletinginstance_multi.md
+          - services/fsa_considerations.md
+          - topicgroup:
+              label: HyTrust KeyControl
+              topics:
+              - services/htkc_considerations.md
+              - services/managinghtkc.md
+          - services/icp_overview.md
+
+# links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+# links to your command line reference docs should be included in the Reference navigation group.
+  - navgroup:
+      id: reference
+      topics:
+      - topicgroup:
+          label: API reference
+          topics:
+          - link:
+              label: VMware Solutions API
+              href: https://cloud.ibm.com/apidocs/vmware-solutions
+          - link:
+              label: VMware Solutions Shared API
+              href: https://cloud.ibm.com/apidocs/vmware-solutions-shared
+      - vmonic/understand-responsib.md
+      - topicgroup:
+          label: Auditing
+          topics:
+          - vmonic/audit_user_ids.md
+          - vmonic/audit_messages.md
+      - topicgroup:
+          label: Reference architecture guides
+          topics:
+          - topicgroup:
+              label: VMware Solutions architecture
+              topics:
+              - archiref/solution/solution_overview.md
+              - archiref/solution/design_overview.md
+              - archiref/solution/design_physicalinfrastructure.md
+              - archiref/solution/design_virtualinfrastructure.md
+              - archiref/solution/nsx-t-design.md
+              - archiref/solution/design_commonservice.md
+              - archiref/solution/design_infrastructuremgmt.md
+              - archiref/solution/solution_scaling.md
+              - archiref/solution/solution_backingup.md
+              - archiref/solution/solution_considerations.md
+              - archiref/solution/appendix.md
+          - topicgroup:
+              label: Operations management guide
+              topics:
+              - archiref/opsmgmt/opsmgmt-intro.md
+              - archiref/opsmgmt/opsmgmt-arch.md
+              - archiref/opsmgmt/opsmgmt-vrops.md
+              - archiref/opsmgmt/opsmgmt-vrli.md
+              - archiref/opsmgmt/opsmgmt-vrni.md
+              - archiref/opsmgmt/opsmgmt-vum.md
+              - archiref/opsmgmt/opsmgmt-integration.md
+          - topicgroup:
+              label: Day 2 operational procedures guide
+              topics:
+              - archiref/opsprocs/opsprocs-intro.md
+              - archiref/opsprocs/opsprocs-responsibilities.md
+              - archiref/opsprocs/opsprocs-configure.md
+              - archiref/opsprocs/opsprocs-alarms.md
+              - archiref/opsprocs/opsprocs-proactive.md
+              - archiref/opsprocs/opsprocs-trouble.md
+              - archiref/opsprocs/opsprocs-compliance.md
+          - topicgroup:
+              label: Active Directory Domain Services guide
+              topics:
+              - archiref/adds/adds-intro.md
+              - archiref/adds/adds-overview.md
+              - archiref/adds/adds-infra-domain.md
+              - archiref/adds/adds-sso.md
+              - archiref/adds/adds-wkld-domain.md
+              - archiref/adds/adds-integration.md
+          - topicgroup:
+              label: Attached storage for vCenter Server architecture
+              topics:
+              - archiref/attached-storage/storage-benefits.md
+              - archiref/attached-storage/storage-infra-design.md
+              - archiref/attached-storage/storage-infra-mgmt.md
+              - archiref/attached-storage/storage-settings.md
+              - archiref/attached-storage/cluster-settings.md
+          - topicgroup:
+              label: Caveonix RiskForesight architecture
+              topics:
+              - archiref/caveonix/caveonix-intro.md
+              - archiref/caveonix/caveonix-on-vcs.md
+              - archiref/caveonix/caveonix-arch.md
+              - archiref/caveonix/caveonix-detailed.md
+              - archiref/caveonix/caveonix-deploy.md
+              - archiref/caveonix/caveonix-allinone.md
+              - archiref/caveonix/caveonix-partially.md
+              - archiref/caveonix/caveonix-fully.md
+              - archiref/caveonix/caveonix-step1.md
+              - archiref/caveonix/caveonix-step2.md
+              - archiref/caveonix/caveonix-step3.md
+              - archiref/caveonix/caveonix-step4.md
+              - archiref/caveonix/caveonix-terminology.md
+          - topicgroup:
+              label: VMware multizone architecture
+              topics:
+              - archiref/mission-critical/mcv-archi-overview.md
+              - archiref/mission-critical/mcv-archi-design.md
+              - archiref/mission-critical/mcv-archi-comps.md
+          - topicgroup:
+              label: VMware Regulated Workloads architecture
+              topics:
+              - archiref/vrw/vrw-archi-overview.md
+              - archiref/vrw/vrw-context.md
+              - archiref/vrw/vrw-separation-of-duties.md
+              - archiref/vrw/vrw-baremetal.md
+              - archiref/vrw/vrw-storage.md
+              - archiref/vrw/vrw-underlay-network.md
+              - archiref/vrw/vrw-overlay-network.md
+              - archiref/vrw/vrw-mzr.md
+              - archiref/vrw/vrw-nsxt-topologies.md
+              - archiref/vrw/vrw-vsphere-platform.md
+              - archiref/vrw/vrw-encryption.md
+              - archiref/vrw/vrw-operations.md
+              - archiref/vrw/vrw-caveonix.md
+              - archiref/vrw/vrw-budr.md
+              - archiref/vrw/vrw-hytrust.md
+              - archiref/vrw/vrw-iam-active-directory.md
+              - archiref/vrw/vrw-iam-vsphere.md
+              - archiref/vrw/vrw-iam-nsxt.md
+              - archiref/vrw/vrw-iam-hytrust.md
+              - archiref/vrw/vrw-iam-vrealize.md
+              - archiref/vrw/vrw-use-case-1.md
+              - archiref/vrw/vrw-use-case-2.md
+              - archiref/vrw/vrw-dualregion-overview.md
+              - archiref/vrw/vrw-dualregion-design.md
+          - topicgroup:
+              label: Veeam on bare metal server architecture
+              topics:
+              - archiref/veeam-bms/veeam-bms-archi-intro.md
+              - archiref/veeam-bms/veeam-bms-archi-overview.md
+              - archiref/veeam-bms/veeam-bms-archi-components.md
+              - archiref/veeam-bms/veeam-bms-archi-physical.md
+              - archiref/veeam-bms/veeam-bms-archi-post-deployment.md
+              - archiref/veeam-bms/veeam-bms-archi-app-support.md
+          - topicgroup:
+              label: NSX Edge Services Gateway solution architecture
+              topics:
+              - archiref/nsx/nsx_overview.md
+              - archiref/nsx/nsx_design.md
+              - archiref/nsx/networking_services.md
+              - archiref/nsx/multi_site.md
+          - topicgroup:
+              label: VMware Update Manager guide
+              topics:
+              - archiref/vcs/vcs-hybridity-intro.md
+              - archiref/vum/vum-intro.md
+              - archiref/vum/vum-overview.md
+              - archiref/vum/vum-init-config.md
+              - archiref/vum/vum-metadata.md
+              - archiref/vum/vum-baselines.md
+              - archiref/vum/vum-scanning.md
+              - archiref/vum/vum-staging.md
+              - archiref/vum/vum-updating-nsx.md
+              - archiref/vum/vum-updating-vsan.md
+              - archiref/vum/vum-updating-vcsa.md
+              - archiref/vum/vum-applying-nic.md
+              - archiref/vum/vum-type-updates.md
+              - archiref/vum/vum-vsan-redundancy.md
+              - archiref/vum/vum-orchestr-updates.md
+              - archiref/vum/vum-zerto.md
+              - archiref/vum/vum-host-profiles.md
+          - topicgroup:
+              label: KMIP for VMware Solutions architecture
+              topics:
+              - archiref/kmip/overview.md
+              - archiref/kmip/design.md
+              - archiref/kmip/implementation.md
+          - topicgroup:
+              label: HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
+              topics:
+              - archiref/htdc-hpcs/htdc-hpcs-encryption-overview.md
+              - archiref/htdc-hpcs/htdc-hpcs-encryption-options.md
+              - archiref/htdc-hpcs/htdc-hpcs-hpcs-overview.md
+              - archiref/htdc-hpcs/htdc-hpcs-system-context.md
+              - archiref/htdc-hpcs/htdc-hpcs-reference-architecture.md
+              - archiref/htdc-hpcs/htdc-hpcs-detail.md
+              - archiref/htdc-hpcs/htdc-hpcs-deployment.md
+          - topicgroup:
+              label: vCenter Server and Red Hat OpenShift architecture
+              topics:
+              - archiref/vcs-openshift/vcs-openshift-intro.md
+              - archiref/vcs-openshift/vcs-openshift-syscontext.md
+              - archiref/vcs-openshift/vcs-openshift-redhat-arch.md
+              - archiref/vcs-openshift/vcs-openshift-arch.md
+              - archiref/vcs-openshift/vcs-openshift-sddc-infra.md
+              - archiref/vcs-openshift/vcs-openshift-storage.md
+          - topicgroup:
+              label: vCenter Server and Red Hat OpenShift guide
+              topics:
+              - archiref/openshift-runbook/vcs-openshift-runbook-intro.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-prerequisites.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-nsxls.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-nsxedge.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-nsxdlr.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-dns.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-bastion.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-install.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-config.md
+              - archiref/openshift-runbook/vcs-openshift-runbook-trbl.md
+          - topicgroup:
+              label: vCenter Server and VMware Horizon 7 architecture
+              topics:
+              - archiref/horizon/horizon-arch-ovw.md
+              - archiref/horizon/horizon-deploy-arch.md
+              - archiref/horizon/horizon-deploy-config.md
+              - archiref/horizon/horizon-use-cases.md
+          - topicgroup:
+              label: vCenter Server and vSRX guide
+              topics:
+              - archiref/vcsvsrx/vcsvsrx-intro.md
+              - archiref/vcsvsrx/vcsvsrx-planning.md
+              - archiref/vcsvsrx/vcsvsrx-default-config.md
+              - archiref/vcsvsrx/vcsvsrx-iaas-def-config.md
+              - archiref/vcsvsrx/vcsvsrx-deployment.md
+              - archiref/vcsvsrx/vcsvsrx-licensing.md
+              - archiref/vcsvsrx/vcsvsrx-components.md
+          - topicgroup:
+              label: VMware HCX solution architecture
+              topics:
+              - archiref/hcx-archi/hcx-archi-intro.md
+              - archiref/hcx-archi/hcx-archi-overview.md
+              - archiref/hcx-archi/hcx-archi-source.md
+              - archiref/hcx-archi/hcx-archi-target-nsx-v.md
+              - archiref/hcx-archi/hcx-archi-target-nsx-t.md
+              - archiref/hcx-archi/hcx-archi-port-req.md
+          - topicgroup:
+              label: HCX for VMware Solutions guide
+              topics:
+              - archiref/hcxclient/hcxclient-planning.md
+              - archiref/hcxclient/hcxclient-vcs-client-deployment.md
+              - archiref/hcxclient/hcxclient-vcs-mesh-deployment.md
+              - archiref/hcxclient/hcxclient-migrations.md
+              - archiref/hcxclient/hcxclient-monitoring.md
+              - archiref/hcxclient/hcxclient-vcs-upgrade.md
+              - archiref/hcxclient/hcxclient-troubleshooting.md
+              - archiref/hcxclient/hcxclient-removal.md
+              - archiref/hcxclient/hcxclient-components.md
+
+  - navgroup:
+      id: help
+      topics:
+      - vmonic/trbl_support.md
+      - vmonic/iam_verify_permissions.md
+      - topicgroup:
+          label: FAQs
+          topics:
+          - vmonic/faq_shared.md
+          - vmonic/faq.md
+          - vmonic/faq_esxi.md
+          - vmonic/faq_byol.md
+          - vcenter/vcenter_chg_impact.md
+          - vmonic/trbl_limitations.md
+          - archiref/vcs/vmware-inventory-export.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - vmonic/trbl_timeout_vc_console.md
+          - vmonic/trbl_sec_inst_not_visible.md
+          - vmonic/trbl_add_ha_cluster_config.md
+          - vmonic/trbl_no_zerto_vra.md
+          - vmonic/trbl_zerto_vra.md
+          - vmonic/trbl_host_displays_warning_msg.md
+          - vmonic/trbl_add_host_bypass.md
+          - vmonic/trbl_deploy_ovf.md
+          - vmonic/trbl_vsan_alerts.md
+      - topicgroup:
+          label: Previous release notes
+          topics:
+          - topicgroup:
+              label: Version 4.0 to 4.3
+              topics:
+              - vmonic/relnotes_v43.md
+              - vmonic/relnotes_v42.md
+              - vmonic/relnotes_v41.md
+              - vmonic/relnotes_v40.md
+          - topicgroup:
+              label: Version 3.0 to 3.9
+              topics:
+              - vmonic/relnotes_v39.md
+              - vmonic/relnotes_v38.md
+              - vmonic/relnotes_v37.md
+              - vmonic/relnotes_v36.md
+              - vmonic/relnotes_v35.md
+              - vmonic/relnotes_v34.md
+              - vmonic/relnotes_v33.md
+              - vmonic/relnotes_v32.md
+              - vmonic/relnotes_v31.md
+              - vmonic/relnotes_v30.md
+          - topicgroup:
+              label: Version 2.0 to 2.9
+              topics:
+              - vmonic/relnotes_v29.md
+              - vmonic/relnotes_v28.md
+              - vmonic/relnotes_v27.md
+              - vmonic/relnotes_v26.md
+              - vmonic/relnotes_v25.md
+              - vmonic/relnotes_v24.md
+              - vmonic/relnotes_v23.md
+              - vmonic/relnotes_v22.md
+              - vmonic/relnotes_v21.md
+              - vmonic/relnotes_v20.md
+          - topicgroup:
+              label: Version 1.0 to 1.9
+              topics:
+              - vmonic/relnotes_v19.md
+              - vmonic/relnotes_v18.md
+              - vmonic/relnotes_v17.md
+              - vmonic/relnotes_v16.md
+              - vmonic/relnotes_v15.md
+              - vmonic/relnotes_v14.md
+              - vmonic/relnotes_v13.md
+              - vmonic/relnotes_v12.md
+              - vmonic/relnotes_v11.md

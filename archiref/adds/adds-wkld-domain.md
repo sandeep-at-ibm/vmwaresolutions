@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware Solutions workload domain
 {: #adds-wkld-domain}
@@ -23,7 +20,7 @@ Your customer workload virtual machines (VMs) are using the network overlay virt
 
 The infrastructure appliances and VMs such as; vCenter and NSX Manager, are deployed on the underlay network with an IP address space that is assigned by {{site.data.keyword.cloud_notm}}. Unless configured, the customer workload VMs on the overlay networks are not able to reach the AD domain controllers on the underlay network. Also, the infrastructure appliances on the underlay network are not able to reach the customer workload AD domain controllers on the overlay networks.
 
-VMware Solutions customers typically use one of the following models for their VMware Solutions workload domain:
+VMware Solutions customers typically use one of the following models for their VMware Solutions workload domain.
 * New stand-alone AD forest-domain.
 * New AD forest with trusts to existing forest.
 * Extend forest and create a new domain.
@@ -60,7 +57,7 @@ In this model, the customer would provision a minimum of two domain controllers 
 ## Extend domain with AD sites model
 {: #adds-wkld-domain-ext-sites}
 
-In this model, the customer would provision a minimum of two domain controllers as VMs hosted in each vCenter Server instance. These VMs would be connected to an overlay network and this network would have connectivity to existing customer domain controllers in the enterprise. A new AD site would be configured in the existing forest-domain along with a new site link. The new domain controllers would be connected to the existing domain and moved into the new AD site. The AD site contains the overlay subnet. The new domain controllers would have the Additional Domain controller role while the existing domain controllers would have the primary domain controller role. For more information, see [Understanding AD site topology](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/understanding-active-directory-site-topology){:external}. The following diagram shows the Active Directory Domain Services topology for this extended domain with AD sites model.
+In this model, the customer would provision a minimum of two domain controllers as VMs hosted in each vCenter Server instance. These VMs would be connected to an overlay network and this network would have connectivity to existing customer domain controllers in the enterprise. A new AD site would be configured in the existing forest-domain along with a new site link. The new domain controllers would be connected to the existing domain and moved into the new AD site. The AD site contains the overlay subnet. The new domain controllers would have the Additional Domain controller role while the existing domain controllers would have the primary domain controller role. For more information, see [Understanding AD site topology](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/plan/understanding-active-directory-site-topology){: external}. The following diagram shows the Active Directory Domain Services topology for this extended domain with AD sites model.
 
 ![Extend domain with AD sites diagram](../../images/adds-extenddomainwithsites.svg "Extend domain with AD sites diagram"){: caption="Figure 4. Extend domain with AD sites diagram" caption-side="bottom"}
 
@@ -83,13 +80,13 @@ However, it is possible to restructure AD domains the details are out of scope o
 * Inter-forest restructure - When you migrate objects between forests, both the source domain and the target domain environments exist, which lets you roll back to the source environment during the migration, if necessary.
 * Intra-forest restructure - When you restructure domains within a forest, the migrated accounts no longer exist in the source domain.
 
-For more information, see [ADMT guide - Migrating and restructuring Active Directory domains](https://www.microsoft.com/en-us/download/confirmation.aspx?id=19188){:external} (Document download).
+For more information, see [ADMT guide - Migrating and restructuring Active Directory domains](https://www.microsoft.com/en-us/download/confirmation.aspx?id=19188){: external} (Document download).
 
 ## Best practice guidance for AD in a vCenter Server instance
 {: #adds-wkld-domain-bestpractice}
 
 Review the following guidance for AD in a vCenter Server instance.
-* For more information about supported AD trusts, see [Microsoft Active Directory trusts supported by VMware vCenter Single Sign-on](https://kb.vmware.com/s/article/2064250){:external}.
+* For more information about supported AD trusts, see [Microsoft Active Directory trusts supported by VMware vCenter Single Sign-on](https://kb.vmware.com/s/article/2064250){: external}.
 * Enable vCenter with an identity source for authentication of all vCenter services and system administrators. This configuration is made by the VMware Solutions automation ready for the customer to add their system administrator users. All systems administrators who are managing the VMware Server instance have user accounts that are members of this domain.
 * Create a domain to serve as a single point of access control for systems administrators who support the VMware vSphere® and NSX infrastructure components. This configuration is made by the VMware Solutions automation.
 * Deploy two domain controllers for resiliency. If you select the single VSI AD/DNS option, provision a second Microsoft® Windows® VSI and configure as a domain controller.

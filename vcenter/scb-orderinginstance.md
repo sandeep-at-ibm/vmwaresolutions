@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-26"
+lastupdated: "2021-09-21"
 
 keywords: order Security and Compliance Readiness Bundle, order scb instances, order vcs scb
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering Security and Compliance Readiness Bundle instances
 {: #scb-orderinginstance}
@@ -41,7 +38,7 @@ Ensure that you complete the following tasks:
 {: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
 Do not modify any values that are set during instance order or deployment. Doing so can make your instance unusable. For example, if public networking shuts down, if servers and Virtual Server Instances (VSIs) move behind a Vyatta mid-provision, or if the IBM CloudBuilder VSI stops or is deleted.
-{:important}
+{: important}
 
 ## Service prerequisites
 {: #scb-orderinginstance-serv-prereq}
@@ -77,7 +74,7 @@ You can also specify an instance name that meets the following requirements:
 Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
 
 If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
-{:note}
+{: note}
 
 ### VMware properties
 {: #scb-orderinginstance-vm-prpt}
@@ -144,7 +141,7 @@ You can choose the RAM size from 128 GB, 192 GB, 384 GB, 768 GB, and 1.5 TB.
 
 * All servers that you order have the same configuration.
 * If you are planning to use vSAN™ storage, you can order 4 - 20 servers.
-* If you are planning to use NFS storage, you can order 2 - 20 servers.
+* If you are planning to use NFS storage, you can order 2 - 20 servers. A lower limit of 3 servers applies for NSX-T consolidated clusters.
 * If you select two bare metal servers for the management cluster, the minimum RAM size for the instance to function properly is 192 GB.
 * For production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
@@ -185,8 +182,8 @@ Review **Number of vSAN cache disks**.
 
 vSAN storage depends on the number of servers and your total disk capacity, and the use of deduplication and compression.
 
-The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){:external}.
-{:note}
+The amount of storage reduction from deduplication and compression depends on many factors, including the type of data stored and the number of duplicate blocks. Larger disk groups tend to provide a higher deduplication ratio. For more information, see [Using deduplication and compression](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vsan.doc/GUID-3D2D80CC-444E-454E-9B8B-25C3F620EFED.html){: external}.
+{: note}
 
 ##### vSAN Enterprise license
 {: #scb-orderinginstance-consoli-vsan-license}
@@ -262,19 +259,19 @@ When you select to reuse existing public and private VLANs, specify the VLANs an
 * **Secondary private VLAN** is for VMware features such as vSAN. You can select an existing secondary private VLAN or select to allocate a new one.
 
 Ensure that the firewall configuration on the selected VLANs does not block the management data traffic. Also, ensure that all the VLANs that you select are in the same pod. ESXi servers cannot be provisioned on mixed-pod VLANs.
-{:important}  
+{: important}  
 
 Optionally, use **Advanced settings** to configure portable subnets for VLANs.
 
 Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to specify the **Portable subnet** for each applicable purpose. If you select the **Allocate a new one** option for this field, a new portable subnet is allocated automatically.
 
-**Notes**:
+**Notes**
 * You must complete the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** settings before you can configure portable subnets.
 * The number of portable subnets is displayed under **Advanced settings** after you save the portable subnet settings. Click **Portable subnets settings** to edit the settings.
 * The saved portable subnet settings are cleared if you change the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** settings.
 
 {{site.data.keyword.vmwaresolutions_short}} takes control of the entire subnet and you can't use any IP addresses in the subnet.
-{:important}
+{: important}
 
 ## Workload cluster
 {: #scb-orderinginstance-workload}
@@ -350,7 +347,7 @@ The root domain name must meet the following requirements:
 * The length of the last string must be in the range 2 - 24 characters.
 
 The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
-{:note}
+{: note}
 
 ### Deployment type
 {: #scb-orderinginstance-network-interface-deploy-type}
@@ -419,7 +416,7 @@ The following services are optional for your Security and Compliance Readiness B
       * Optionally click **Portable subnets settings**. Then, select the portable subnet for each purpose and click **Save**.
 
        If the consolidated or management cluster and the workload clusters are in the same location, you cannot use existing VLANs. Instead, the workload clusters reuse the VLANs from the management cluster.
-       {:note}
+       {: note}
 
 7. (Optional) Under **Workload cluster**, select the **Include a separate, additional workload cluster** checkbox, and then specify the workload cluster settings. The configuration options are the same as the options for the consolidated cluster.
 
@@ -458,7 +455,7 @@ Next, you can view and manage the Security and Compliance Readiness Bundle insta
 
 You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.vmwaresolutions_short}} console, not the {{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the {{site.data.keyword.vmwaresolutions_short}} console, the changes are not synchronized with the console.
-{:important}
+{: important}
 
 **CAUTION:** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the {{site.data.keyword.vmwaresolutions_short}} console can make your environment unstable. These management activities include:
 *  Adding, modifying, returning, or removing components

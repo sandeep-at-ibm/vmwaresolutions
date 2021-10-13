@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-22"
+lastupdated: "2021-09-10"
 
 keywords: NSX license upgrade, upgrade license hybridity, hybridity license
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Upgrading licenses for vCenter Server with NSX-V instances
 {: #vc_upgrade-lic}
@@ -41,7 +37,7 @@ You can upgrade the NSX license for your instance to a later edition. Reverting 
 4. Click **Licensing** on the left navigation pane and click **Upgrade** in the **License upgrades** table. In the **Upgrade NSX license edition** window, select the edition that you want to upgrade to and click **Upgrade**.
 
    The license upgrade replaces all existing NSX licenses on the instance. Additional charges can be incurred from an overlap of old and new licenses if you upgrade in the middle of a billing cycle. To avoid additional charges, it is recommended to upgrade the license at the end of the billing cycle.
-   {:note}
+   {: note}
 
 ## Related links
 {: #vc_upgrade-lic-related}

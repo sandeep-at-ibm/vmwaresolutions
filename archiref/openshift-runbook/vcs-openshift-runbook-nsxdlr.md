@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-07-01"
+lastupdated: "2021-10-11"
 
 subcollection: vmwaresolutions
 
@@ -19,16 +19,16 @@ subcollection: vmwaresolutions
 # OpenShift NSX DLR configuration
 {: #openshift-runbook-runbook-nsxdlr-intro}
 
-This section details the NSX distributed logical router that is used to support the OpenShift 4.7 environment. To use this information, you must understand how to create these components and add the configuration.
+The NSX distributed logical router is used to support the OpenShift 4.7 environment. To use this information, you must understand how to create these components and add the configuration.
 
-Review [Add a Distributed Logical Router](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-A20103B0-ABA1-4884-8EC3-287874E23181.html){:external}. PowerNSX commands are provided if you would want to use this method.
+Review [Add a Distributed Logical Router](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.admin.doc/GUID-A20103B0-ABA1-4884-8EC3-287874E23181.html){: external}. PowerNSX commands are provided if you would want to use this method.
 
 ## NSX DLR
 {: #openshift-runbook-runbook-nsxdlr-config}
 
-The NSX distributed logical router runs as a kernel module in the hypervisor of each host and is optimized for East-West routing. Optionally, a DLR Control VM can be installed. The DLR Control VM is needed to peer with NSX Edges and NSX Controllers for dynamic routing (OSPF or BGP) updates. In this deployment, static routing is used. However, DLR Control VMs are deployed, in case you require to use a routing protocol.
+The NSX distributed logical router runs as a kernel module in the hypervisor of each host and is optimized for East-West routing. Optionally, a DLR Control VM can be installed. The DLR Control VM is needed to peer with NSX Edges and NSX controllers for dynamic routing (OSPF or BGP) updates. In this deployment, static routing is used. However, DLR Control VMs are deployed, in case you require to use a routing protocol.
 
-The NSX DLR Control VMs are configured as an active/passive pair of appliances. During the configuration process, the DLR control VM is deployed in the compact size and the NSX DLR is connected to the OpenShift Edge.
+The NSX DLR Control VMs are configured as an active and passive pair of appliances. During the configuration process, the DLR control VM is deployed in the compact size and the NSX DLR is connected to the OpenShift Edge.
 
 | Component | Configuration |
 |-----------|---------------|
@@ -43,7 +43,7 @@ Since the NSX DLR Control VMs are configured as active/passive, you must create 
 |-----------|---------------|
 | Name      | OpenShift-DLR |
 | Type      | Separate virtual machines |
-| Members   | OpenShift-DLR-0 <br> OpenShift-DLR-1 |
+| Members   | OpenShift-DLR-0   \n  OpenShift-DLR-1 |
 {: caption="Table 2. NSX DLR anti-affinity rules" caption-side="top"}
 
 ## NSX DLR interfaces
@@ -51,7 +51,7 @@ Since the NSX DLR Control VMs are configured as active/passive, you must create 
 
 The NSX DLR is deployed with a transit network between the OpenShift NSX Edge and the OpenShift Logical switch. The Edge is defined as an uplink interface and the Logical switch is defined as an internal interface.
 
-| Interface name| Interface type | IP addresses | Port group / Logical switch |
+| Interface name| Interface type | IP addresses | Port group/Logical switch |
 | --- | ---| --- | --- |
 | OpenShift-LS | Internal | 192.168.133.1 | OpenShift-LS |
 | OpenShift-Transit | Uplink | 192.168.100.2/24 | OpenShift-Transit  |
@@ -64,7 +64,7 @@ The DLR firewall is configured open.
 
 | Firewall rule | Source | Destination | Service | Action |
 | --- | --- | --- | --- | --- |
-| Default | any | any | any | Accept |
+| Default | Any | Any | Any | Accept |
 {: caption="Table 4. Configuration for NSX DLR - NSX firewalls" caption-side="top"}
 
 ## NSX DLR routes
@@ -99,7 +99,7 @@ For the OpenShift 4.7 environment, the connection to the DHCP Service runs on th
 ## PowerNSX commands
 {: #openshift-runbook-runbook-nsxdlr-powernsx}
 
-This section provides example PowerNSX commands that you can use to automate the provisioning and configuration of the NSX DLR.
+Review the following example PowerNSX commands that you can use to automate the provisioning and configuration of the NSX DLR.
 
 Use the following table to document the parameters that you need for your deployment. Examples are shown that match the deployment described previously.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-22"
+lastupdated: "2021-09-10"
 
 keywords: vSphere order cluster, vSphere configuration, order vSphere cluster
 
@@ -12,9 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering vSphere clusters based on existing configurations
 {: #vs_orderingbasedonexistingconfig}
@@ -42,7 +40,7 @@ Ensure that you complete the following tasks:
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 
    Only the {{site.data.keyword.cloud_notm}} bare metal servers are installed. You're responsible for installing and configuring various components after cluster deployment, such as VMware® vCenter Server, VMware NSX®, and VMware vSAN™.
-   {:note}
+   {: note}
 
 ## Results
 {: #vs_orderingbasedonexistingconfig-results}
@@ -52,7 +50,7 @@ If you saved the cluster configuration as a template, you get a console notifica
 If you placed an order, the deployment of the cluster starts automatically. You receive an email confirmation that the order is being processed. When the cluster is ready to use, you're also notified by email.
 
 The vSphere clusters, unlike the VMware vCenter Server® instances, are not displayed on the **Resources** page.
-{:note}
+{: note}
 
 ## Related links
 {: #vs_orderingbasedonexistingconfig-related}

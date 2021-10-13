@@ -43,7 +43,7 @@ Physical networking is handled by {{site.data.keyword.cloud_notm}}. The followin
 
 The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Overview of VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-solution_overview).
 
-For more information about the {{site.data.keyword.cloud_notm}} network, see [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){:external}.
+For more information about the {{site.data.keyword.cloud_notm}} network, see [{{site.data.keyword.cloud_notm}} global data centers](https://www.ibm.com/cloud/data-centers/){: external}.
 
 Review the following information for a description of the services network that is part of the private network.
 
@@ -74,7 +74,7 @@ In this design, the vCenter Server solution offers Endurance storage for attache
 Endurance is available in three IOPS performance tiers to support varying application needs.
 
 After an NFS share is ordered, it can be resized or reconfigured to allow for more or less IOPS.
-{:note}
+{: note}
 
 For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance).
 

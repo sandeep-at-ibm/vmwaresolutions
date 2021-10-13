@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-27"
+lastupdated: "2021-10-07"
 
 subcollection: vmwaresolutions
 
@@ -19,9 +19,9 @@ subcollection: vmwaresolutions
 {: #design_physicalinfrastructure}
 
 The physical infrastructure consists of the following components:
-* **Physical compute**: The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.cloud}} bare metal servers and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).
-* **Physical storage**: The physical storage provides the raw storage capacity that is used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.cloud_notm}} bare metal servers or by shared Network Attached Storage (NAS) array that uses NFS v3.
-* **Physical network**: The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.
+* **Physical compute** - The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.cloud}} bare metal servers and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).
+* **Physical storage** - The physical storage provides the raw storage capacity that is used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.cloud_notm}} bare metal servers or by shared Network Attached Storage (NAS) array that uses NFS v3.
+* **Physical network** - The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.
 
 For more information about the physical components, see [vCenter Server Bill of Materials](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom).
 
@@ -35,18 +35,18 @@ For more information about storage, see [Shared storage architecture](/docs/vmwa
 The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi™. Various configurations are available to satisfy different requirements. For the detailed listing of specifications used for the VMware® on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [vCenter Server instance](/docs/vmwaresolutions?topic=vmwaresolutions-vc_bom).
 
 The {{site.data.keyword.cloud_notm}} bare metal servers reside in the {{site.data.keyword.cloud_notm}}.
-{:note}
+{: note}
 
 Each vCenter Server instance begins with a 3- or 4-host deployment, depending on the choice of storage solution.
 
-The physical host employs two locally attached disks that are allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN™ as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP® Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf){:external}. Each physical host has redundant 10 Gbps or 25 Gbps network connections for private network access and optionally, for public network access.
+The physical host employs two locally attached disks that are allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN™ as described in the _Physical storage design_ section or by using NetApp ONTAP as described in [NetApp ONTAP® Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf){: external}. Each physical host has redundant 10 Gbps or 25 Gbps network connections for private network access and optionally, for public network access.
 
 The {{site.data.keyword.cloud_notm}} bare metal server has the following specifications:
-* CPU: Dual or Quad Intel® Xeon, varying core and speed configuration
-* Memory: Varying configuration, 64 GB or larger
-* Private network: 2 x 10 Gbps or 2 x 25 Gbps
-* Public network (optional): 2 x 10 Gbps or 2 x 25 Gbps
-* Number of drives: two or more
+* CPU - Dual or Quad Intel® Xeon, varying core and speed configuration
+* Memory - Varying configuration, 64 GB or larger
+* Private network - 2 x 10 Gbps or 2 x 25 Gbps
+* Public network (optional) - 2 x 10 Gbps or 2 x 25 Gbps
+* Number of drives - two or more
 
 ## Physical network design
 {: #design_physicalinfrastructure-net-design}
@@ -138,7 +138,7 @@ In addition to Private VLAN A, a second private VLAN (here designated Private VL
    * If you use vSAN, a subnet is assigned to kernel port groups that are used for vSAN traffic.
    * If you use NFS attached NAS, a subnet is assigned to a port group that is dedicated to NFS traffic.
 
-All subnets that are configured as part of a vCenter Server automated deployment use {{site.data.keyword.cloud_notm}} managed ranges, which ensures that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account when you need the connection.
+All subnets that are configured as part of a vCenter Server automated deployment use {{site.data.keyword.cloud_notm}} managed ranges, which ensure that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account when you need the connection.
 
 Review the following table for a summary.
 
@@ -156,7 +156,7 @@ Review the following table for a summary.
 
 In this design, all VLAN-backed hosts and VMs are configured to point to the {{site.data.keyword.cloud_notm}} back-end “private network” customer router (BCR) as the default route. While the vCenter Server instances enable the use of Software-Defined Networking (SDN), network overlays created within a VMware instance that include routing to internal subnets are not known by the {{site.data.keyword.cloud_notm}} managed routers.
 
-If you want routing between the overlay and underlay, you must deploy an IBM firewall device for the particular default private VLAN when the vCenter Server instance is deployed. This device allows the insertion of static routes and dynamic routing protocol peering with the overlay networking devices to allow routing between the underlay and overlay.
+If you want to route between the overlay and underlay, you must deploy an IBM firewall device for the particular default private VLAN when the vCenter Server instance is deployed. This device allows the insertion of static routes and dynamic routing protocol peering with the overlay networking devices to allow routing between the underlay and overlay.
 
 The private network connections are configured to use a jumbo frame MTU size of 9000 to improve performance for large data transfers, such as storage and vMotion. This value is the maximum MTU that is allowed within VMware and by {{site.data.keyword.cloud_notm}}. The public network connections use a standard Ethernet MTU of 1500. This value must be maintained as any changes might cause packet fragmentation over the internet.
 

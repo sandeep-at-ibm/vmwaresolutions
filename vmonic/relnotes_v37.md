@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-18"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.7
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.7
 {: #relnotes_v37}
@@ -62,7 +58,7 @@ The new servers are not supported for **Chennai 01**.
 ### Removed support for Broadwell servers
 {: #relnotes_v37-broadwell-eos}
 
-Broadwell servers are no longer available for new or existing deployments of vCenter Server and vSphere instances and clusters.
+Broadwell servers are no longer available for new or existing deployments of vCenter Server and VMware vSphere instances and clusters.
 
 ### Minimum number of bare metal servers
 {: #relnotes_v37-vcs-2-bms}
@@ -96,14 +92,14 @@ Starting with the v3.7 release, additional configuration is done for HyTrust Clo
 {: #relnotes_v37-services-redhat-openshift}
 
 You might encounter the following problems, which cause false alarms about unhealthy etcd members. Review the following problem reports and update the cluster, as needed, when the problems have been fixed:
-* [Red Hat Bugzilla – Bug 1832986 - EtcdMembersDegraded false alarms](https://bugzilla.redhat.com/show_bug.cgi?id=1832986){:external}
-* [Red Hat Bugzilla – Bug 1838781 - EtcdMembersDegraded false alarms](https://bugzilla.redhat.com/show_bug.cgi?id=1838781){:external}
+* [Red Hat Bugzilla – Bug 1832986 - EtcdMembersDegraded false alarms](https://bugzilla.redhat.com/show_bug.cgi?id=1832986){: external}
+* [Red Hat Bugzilla – Bug 1838781 - EtcdMembersDegraded false alarms](https://bugzilla.redhat.com/show_bug.cgi?id=1838781){: external}
 
 ### Updates for Veeam
 {: #relnotes_v37-services-veeam}
 
 Veeam v9.5u4b has known vulnerabilities and it is no longer installed with new VMware Solutions deployments. However, if you installed the service in a previous release, you can continue to use Veeam v9.5u4b.
-{:note}
+{: note}
 
 The new Veeam Availability Suite v10 known as Veeam v10 is now installed.
 
@@ -133,10 +129,10 @@ In June 2020, IBM Cloud for VMware Solutions acquired a PCI DSS attestation of c
 * Documentation about the responsibilities of IBM vs the customer's is available at Understanding your responsibilities when using VMware Solutions.
 * Documentation is available about the access type that {{site.data.keyword.cloud_notm}} Support has to your environment and the steps that you can take to limit the access, if required.
 * Documentation is now available about the various ports that are  used in VMware Solutions. The documentation includes details about:
-  * VLANs and subnets that are used
-  * Ports for deployment and day 2 operations
-  * Ports that VMware uses
-  * Ports that the optional services use, such as Caveonix RiskForesight, Juniper vSRX, and Veeam.
+   * VLANs and subnets that are used
+   * Ports for deployment and day 2 operations
+   * Ports that VMware uses
+   * Ports that the optional services use, such as Caveonix RiskForesight, Juniper vSRX, and Veeam.
 * New FAQ about VMware Solutions Shared is now provided at General FAQ about VMware Solutions Shared. Various updates to the existing FAQs have also been made.
 
 ## User interface updates and enhancements

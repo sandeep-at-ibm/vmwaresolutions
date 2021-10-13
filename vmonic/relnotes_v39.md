@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-01-15"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.9
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.9
 {: #relnotes_v39}
@@ -86,21 +82,18 @@ For new vCenter Server instances and new clusters added to vCenter Server instan
 {: #relnotes_v39-services}
 
 This release provides the following service versions on newly deployed instances:
-
 * BIG-IP® VE v15.1.0.5
 * HyTrust® CloudControl™ v6.2 for vCenter Server with NSX-T
-
-  During the pre-configuration of HyTrust CloudControl v6.2, global PIP is enabled.
+   During the pre-configuration of HyTrust CloudControl v6.2, global PIP is enabled.
 * Juniper® vSRX and Juniper vSRX Gateway Appliance 3.0 (20.1R1.11)
 * Red Hat® OpenShift® for VMware® v4.4.23
-
-  You can now install the Red Hat OpenShift for VMware service on vCenter Server with NSX-T instances. For NSX-T, you must have a new vCenter Server instance with NSX-T that is provisioned with NSX-T 3.0.1.1 or you must upgrade from NSX-T 2.5.1 to NSX-T 3.0.2.
+   You can now install the Red Hat OpenShift for VMware service on vCenter Server with NSX-T instances. For NSX-T, you must have a new vCenter Server instance with NSX-T that is provisioned with NSX-T 3.0.1.1 or you must upgrade from NSX-T 2.5.1 to NSX-T 3.0.2.
 
 ### HyTrust CloudControl for vCenter Server with NSX-V - deprecated
 {: #relnotes_v39-services-htcc-nsx-v-deprecated}
 
 New installations of HyTrust CloudControl are no longer supported for new or existing deployments of vCenter Server with NSX-V instances. You can still view or delete existing HyTrust CloudControl installations on your existing instances.
-{:deprecated}
+{: deprecated}
 
 ## Updates to REST APIs
 {: #relnotes_v39-api}

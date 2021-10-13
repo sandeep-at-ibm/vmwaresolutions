@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-20"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
@@ -36,9 +36,9 @@ Unlike on-premises, deploying Horizon 7 incurs data egress cost based on the amo
 {: #horizon-use-cases-understand-egress-traffic}
 
 Depending on your deployment use case, you might be incurring cost for some or all of the following types of data egress traffic:
-* User traffic through the Internet - You configured your environment where your users connect to their virtual desktops on {{site.data.keyword.cloud_notm}} remotely through the Internet. Any data that leaves the {{site.data.keyword.cloud_notm}} data center incurs egress charge. Egress data consists of the following components: outbound data from Horizon 7 protocols and outbound data from remote experience features (for example, remote printing). While the former is typically predicable, the latter has more variance and depends on the exact activity of the user
-* User traffic through on-premises - You configured your environment where your users connect to their virtual desktops on {{site.data.keyword.cloud_notm}} through your on-premises data center. In this case, you must link your data center with the {{site.data.keyword.cloud_notm}} data center by using VPN. Any data traffic that leaves the {{site.data.keyword.cloud_notm}} data center back to your data center incurs egress charge. If you configured Cloud Pod Architecture (CPA) between the on-premises environment and {{site.data.keyword.cloud_notm}}, you incur egress charge for any CPA traffic between the two pods (although CPA traffic is typically fairly light)
-* External application traffic - You configured your environment where your virtual desktops on {{site.data.keyword.cloud_notm}} must access applications that are hosted either in your on-premises environment or in another cloud. Any data traffic that leaves the {{site.data.keyword.cloud_notm}} data center to these other data centers incurs egress charge
+* User traffic through the Internet - You configured your environment where your users connect to their virtual desktops on {{site.data.keyword.cloud_notm}} remotely through the Internet. Any data that leaves the {{site.data.keyword.cloud_notm}} data center incurs egress charge. Egress data consists of the following components: outbound data from Horizon 7 protocols and outbound data from remote experience features (for example, remote printing). While the former is typically predicable, the latter has more variance and depends on the exact activity of the user.
+* User traffic through on-premises - You configured your environment where your users connect to their virtual desktops on {{site.data.keyword.cloud_notm}} through your on-premises data center. In this case, you must link your data center with the {{site.data.keyword.cloud_notm}} data center by using VPN. Any data traffic that leaves the {{site.data.keyword.cloud_notm}} data center back to your data center incurs egress charge. If you configured Cloud Pod Architecture (CPA) between the on-premises environment and {{site.data.keyword.cloud_notm}}, you incur egress charge for any CPA traffic between the two pods (although CPA traffic is typically fairly light).
+* External application traffic - You configured your environment where your virtual desktops on {{site.data.keyword.cloud_notm}} must access applications that are hosted either in your on-premises environment or in another cloud. Any data traffic that leaves the {{site.data.keyword.cloud_notm}} data center to these other data centers incurs egress charge.
 
 Data ingress is data that flows into the {{site.data.keyword.cloud_notm}} data center and data between {{site.data.keyword.cloud_notm}} data centers. This data is free of charge.
 
@@ -47,9 +47,9 @@ Data ingress is data that flows into the {{site.data.keyword.cloud_notm}} data c
 
 The data egress cost is priced per GB. You can estimate data egress cost by estimating your likely data egress traffic. Whether your environment is virtualized or not, you can use a monitoring tool in your existing on-premises environment. Ensure that you estimate the different types of data egress traffic separately, if applicable. You can use a monitoring tool such as SysTrack from Lakeside Software.
 
-[Lakeside SysTrack](https://www.lakesidesoftware.com/product){:external} workplace analytics solution contains an extensive set of tools to provide relevant planning information for [desktop transformation](https://www.lakesidesoftware.com/solutions/desktop-transformation){:external}. For more information about the SysTrack Desktop Assessment (SDA), see the [SysTrack Desktop Assessment (SDA) - solution brief](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutionbrief/microsites/latitude/docs/solution-brief.pdf){:external}. Through the SDA, customers can collect detailed environmental information, including recommendations for deployment options and resource requirements, with only the need to deploy the SysTrack agent to systems that are considered for transformation. For advanced cases, the on-premises version of SysTrack can be used as well. This information assumes that such a deployment is already in place.
+[Lakeside SysTrack](https://www.lakesidesoftware.com/product){: external} workplace analytics solution contains an extensive set of tools to provide relevant planning information for [desktop transformation](https://www.lakesidesoftware.com/solutions/desktop-transformation){: external}. For more information about the SysTrack Desktop Assessment (SDA), see the [SysTrack Desktop Assessment (SDA) - solution brief](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutionbrief/microsites/latitude/docs/solution-brief.pdf){: external}. Through the SDA, customers can collect detailed environmental information, including recommendations for deployment options and resource requirements, with only the need to deploy the SysTrack agent to systems that are considered for transformation. For advanced cases, the on-premises version of SysTrack can be used as well. This information assumes that such a deployment is already in place.
 
-After SysTrack is deployed in the environment, it starts to collect relevant information from devices on which it is installed. 
+After SysTrack is deployed in the environment, it starts to collect relevant information from devices on which it is installed.
 
 The following information is the most interesting data that is collected for the network:
 * Per Device Network Usage
@@ -61,14 +61,14 @@ The key is thinking about how best to combine these pieces of information into s
 With SysTrack, you can use two different styles of calculation based on the level of detail you’d like to see. Several dashboards are available to view this information in SysTrack.
 
 All numbers in the dashboards are measured in bits, not bytes.
-{:note}
+{: note}
 
 ### Basic network egress bandwidth calculation
 {: #horizon-use-cases-basic-egress}
 
 The Horizon Sizing Tool dashboard provides some basic numbers to help you plan your migration to the VMware® cloud. The following table breaks users down into categories based on egress bandwidth consumption. Resource consumption metrics are supplied for each category. Egress bandwidth consumption for applications and the ICA, Blast, and PCoIP remote display protocols are available.
 
-The resource consumption metrics can be fed into some of VMware’s sizing tools such as the [Horizon sizing tool](https://code.vmware.com/article-detail/-/asset_publisher/8n011DnrSCHt/content/horizon-sizing-tool-intro){:external} (Requires VMware Partner Central account). These tools provide guidance on how to plan for the number and size of systems you are deploying.
+The resource consumption metrics can be fed into some of VMware’s sizing tools such as the [Horizon sizing tool](https://code.vmware.com/article-detail/-/asset_publisher/8n011DnrSCHt/content/horizon-sizing-tool-intro){: external} (Requires VMware Partner Central account). These tools provide guidance on how to plan for the number and size of systems you are deploying.
 
 ### Advanced network egress bandwidth calculation
 {: #horizon-use-cases-advanced-egress}

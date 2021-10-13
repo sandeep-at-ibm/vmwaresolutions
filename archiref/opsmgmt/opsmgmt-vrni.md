@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-09-30"
+lastupdated: "2021-10-11"
 
 subcollection: vmwaresolutions
 
@@ -16,11 +16,11 @@ subcollection: vmwaresolutions
 # vRealize Network Insight
 {: #opsmgmt-vrni}
 
-The vRealize Network Insight (vRNI) environment consists of two virtual machines (VMs), a Platform (UI) and a Controller Node.
+The vRealize® Network Insight (vRNI) environment consists of two virtual machines (VMs), a Platform (UI) and a controller node.
 
 ![Network Insights diagram](../../images/opsmgmt-vrninw.svg "Network Insights diagram"){: caption="Figure 1. Network Insights networking" caption-side="bottom"}
 
-The vRNI Platform appliance provides the analytics, user interface, and data management and connects to the Controller Appliance, which collects from the various data sources such as NSX Edges, vCenter. All vRNI components use {{site.data.keyword.cloud}} Private portable IP addresses. vRLI is configured as the syslog server for vRNI.
+The vRNI Platform appliance provides the analytics, user interface, and data management and connects to the controller appliance, which collects from the various data sources such as NSX Edges, vCenter. All vRNI components use {{site.data.keyword.cloud}} Private portable IP addresses. vRLI is configured as the syslog server for vRNI.
 
 ![Network Insights components](../../images/opsmgmt-vrnicomponents.svg "Network Insights components"){: caption="Figure 2. Network Insights components" caption-side="bottom"}
 
@@ -54,7 +54,7 @@ This architecture supports 3000 VMs by using a Medium brick size.
 ## Networking
 {: #opsmgmt-vrni-network}
 
-Deployment of the vRNI appliance requires two IP addresses from the Tooling private portable subnet. Network connectivity vRNI requires access to:
+Deployment of the vRNI appliance requires two IP addresses from the Tooling private portable subnet. Network connectivity vRNI requires access to the following items:
 * vCenter Appliance
 * vRealize Log Insight Appliance
 * NSX-V/T Appliances
@@ -69,7 +69,7 @@ Deployment of the vRNI appliance requires two IP addresses from the Tooling priv
 | Description | Port | Protocol |
 |-------------|------|----------|
 | Communication between the VMs of vRealize Network Insight | 443 | HTTPS |
-| Services that require internet access<br>`svc.ni.vmware.com`<br>`support2.ni.vmware.com`<br>`reg.ni.vmware.com` | 443 | HTTPS |
+| Services that require internet access  \n `svc.ni.vmware.com`  \n `support2.ni.vmware.com`  \n `reg.ni.vmware.com` | 443 | HTTPS |
 | Log Insight Ingestion API | 9000 | TCP |
 | Log Insight Ingestion API over SSL | 9543 | TCP |
 | User Interface | 80,443 | TCP |
@@ -78,7 +78,7 @@ Deployment of the vRNI appliance requires two IP addresses from the Tooling priv
 | DNS| 53 | UDP |
 | LDAP/LDAPS | 389, 636 | TCP |
 | ESXi | 2055 | TCP |
-| VMware vSphere and NSX | 443 | TCP |
+| VMware vSphere® and NSX | 443 | TCP |
 {: caption="Table 2. Network Insight ports" caption-side="bottom"}
 
 ## Authentication

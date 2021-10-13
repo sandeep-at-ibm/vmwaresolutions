@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-07-21"
+lastupdated: "2021-09-23"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -45,14 +45,14 @@ The VMware Solutions Shared deployment has strict requirements on the physical i
 
 The following {{site.data.keyword.cloud_notm}} data centers are available for VMware Solutions Shared deployment.
 
-| {{site.data.keyword.cloud_notm}} data centers | Region |
-|:----------------------|:-------|
-| Dallas 10 | NA South |
-| Dallas 12 | NA South |
-| Dallas 13 | NA South |
-| Frankfurt 02 | Europe |
-| Frankfurt 04 | Europe |
-| Frankfurt 05 | Europe |
+| {{site.data.keyword.cloud_notm}} data centers | Region | vSAN support |
+|:----------------------|:-------|:------------|
+| Dallas 10 | NA South | None |
+| Dallas 12 | NA South | None |
+| Dallas 13 | NA South | vSAN |
+| Frankfurt 02 | Europe | None |
+| Frankfurt 04 | Europe | None |
+| Frankfurt 05 | Europe | None |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Solutions Shared" caption-side="top"}
 
 ## Services for VMware Solutions Shared
@@ -60,15 +60,15 @@ The following {{site.data.keyword.cloud_notm}} data centers are available for VM
 
 The following preinstalled services are available for your virtual data center based on your needs.
 * [Managing Veeam for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_veeam)
-* [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto)
+* [Managing Zerto for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_zerto-portal)
 
 Service charges are incurred only if you choose to use the service.
-{:note}
+{: note}
 
 ## Related links
 {: #shared_planning-related}
 
 * [Ordering virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
-* [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Viewing and managing virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_viewing-vdc-summary)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
-* [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}
+* [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){: external}

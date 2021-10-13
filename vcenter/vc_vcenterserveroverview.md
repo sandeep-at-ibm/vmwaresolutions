@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-27"
+lastupdated: "2021-09-23"
 
 keywords: vCenter Server, vCenter Server architecture, tech specs vCenter Server
 
@@ -12,13 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # vCenter Server overview
 {: #vc_vcenterserveroverview}
@@ -40,7 +34,7 @@ The following graphic depicts the high-level architecture and components of a th
 ![vCenter Server with NSX-T architecture](../images/vc_nsx-t_architecture.svg "vCenter Server with NSX-T architecture"){: caption="Figure 1. vCenter Server with NSX-T high-level architecture for a three-node cluster" caption-side="bottom"}
 
 For vCenter Server with NSX-T™ instances, applying license updates is not supported. Also, not all add-on services are supported for NSX-T instances.
-{:important}
+{: important}
 
 ## vCenter Server with NSX-V architecture
 {: #vc_vcenterserveroverview-archi}
@@ -87,7 +81,7 @@ For more information about the architecture, see [Overview of {{site.data.keywor
 {: #vc_vcenterserveroverview-specs}
 
 The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
-{:note}
+{: note}
 
 The following components are included in your vCenter Server instance.
 
@@ -98,7 +92,7 @@ The following components are included in your vCenter Server instance.
 * For NSX-V, you can order two or more bare metal servers.
 
 Skylake servers are not supported for vSphere Enterprise Plus 7.0 instances.
-{:note}
+{: note}
 
 The following configurations are available:
 * **Skylake** - 2-CPU Intel® Skylake generation servers (Intel Xeon® 4100/5100/6100 series) with your selected CPU model and RAM size.
@@ -106,7 +100,7 @@ The following configurations are available:
 * **SAP-certified** - Intel Skylake generation servers (Intel Xeon 6140 series) and Intel Cascade Lake generation servers (Intel Xeon 5218, 6248, and 8280M series) with your selected CPU model.
 
 If you plan to use vSAN storage, the configuration requires a minimum of four bare metal servers.
-{:note}
+{: note}
 
 ### Networking
 {: #vc_vcenterserveroverview-networking}
@@ -117,13 +111,14 @@ The following networking components are ordered:
 * (NSX-T only) One overlay network with a T1 and T0 router for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. This network is deployed as a sample routing topology, which you can modify, build on, or remove.
 *  (NSX-V only) One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching extra VXLANs to new logical interfaces on the DLR.
 *  VMware NSX Edge Services Gateways (four for NSX-T and two for NSX-V):
-  * One secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
+   * One secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management VMs to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/vmwaresolutions?topic=vmwaresolutions-vc_esg_config).
 
-    This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
-    {:important}
-  * Secure customer-managed ESG for outbound and inbound HTTPS workload traffic. The ESG is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For NSX-V, one ESG is deployed. For NSX-T, two ESGs are deployed on the datastore with the highest IOPS.
+      This ESG is named **mgmt-nsx-edge**, it's not accessible to you and you can't use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, by using a firewall or disabling the ESG communications to the external IBM management components might cause VMware Solutions to become unusable.
+      {: important}
 
-  For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#faq-customer-nsx)
+   * Secure customer-managed ESG for outbound and inbound HTTPS workload traffic. The ESG is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For NSX-V, one ESG is deployed. For NSX-T, two ESGs are deployed on the datastore with the highest IOPS.
+
+   For more information, see [Does the customer-managed NSX Edge pose a security risk?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#faq-customer-nsx)
 
 ### Virtual Server Instances
 {: #vc_vcenterserveroverview-vsi}
@@ -138,7 +133,7 @@ The following virtual server instances (VSIs) are ordered:
 During initial deployment, you can choose between vSAN and NFS storage options.
 
 After deployment, you can add NFS storage shares to an existing NFS or vSAN cluster. For more information, see [Adding NFS storage to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingnfs).
-{:note}
+{: note}
 
 #### vSAN storage
 {: #vc_vcenterserveroverview-vsan-storage}
@@ -147,10 +142,11 @@ The vSAN option offers customized configurations, with various options for disk 
 * Disk quantity - 2, 4, 6, 8, or 10
 * Storage disk - 960 GB SSD SED, 1.9 TB SSD SED, 3.8 TB SSD SED, or 7.68 TB SSD SED
 
-  In addition, two cache disks of 960 GB are also ordered per host.
+   In addition, two cache disks of 960 GB are also ordered per host.
 
-  3.8 TB SSD (solid-state disk) drives are supported when they are made generally available in a data center.
-  {:note}
+   3.8 TB SSD (solid-state disk) drives are supported when they are made generally available in a data center.
+   {: note}
+
 * High Performance with Intel Optane - this option provides two extra capacity disk bays for a total of ten capacity disks. It's available only for vSphere 6 instances.
 
 #### NFS storage
@@ -161,8 +157,8 @@ The NFS option offers customized shared file-level storage for workloads with va
 * Performance - 0.25, 2, 4, or 10 IOPS/GB. The 10 IOPS/GB performance level is limited to a maximum capacity of 4 TB per file share.
 * Individual configuration of file shares
 
-(NSX-V only) If you choose the NFS option, one 2 TB and 4 IOPS/GB file share for management components are ordered.
-{:note}
+   (NSX-V only) If you choose the NFS option, one 2 TB and 4 IOPS/GB file share for management components are ordered.
+   {: note}
 
 #### Local disk storage (NSX-V only)
 {: #vc_vcenterserveroverview-local-disk-storage}
@@ -203,7 +199,7 @@ Managing any {{site.data.keyword.vmwaresolutions_short}} components, which were 
 *  Powering off components
 *  Restarting services
    Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include - ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
-   {:important}
+   {: important}
 
 ## Support and Services fee
 {: #vc_vcenterserveroverview-support-services-fee}
@@ -214,7 +210,7 @@ VMware vCenter Server instances include a Support and Services fee that is charg
 {: #vc_vcenterserveroverview-mcv-specs}
 
 This information is provided as reference for existing vCenter Server multizone instances. New deployments of vCenter Server multizone instances are not supported.
-{:deprecated}
+{: deprecated}
 
 The vCenter Server multizone architecture is an end to end reference architecture that provides automated failover for customer workloads. It uses an {{site.data.keyword.cloud_notm}} [multizone region](#x9774820){: term} with an IBM-managed service that covers the following components:
 * Compute architecture (VMware vSphere®)
@@ -222,10 +218,10 @@ The vCenter Server multizone architecture is an end to end reference architectur
 * Storage architecture (VMware vSAN or NFS)
 * Integration with IBM Services Platform with Watson to enable the consumption of services
 * Tools for monitoring, troubleshooting, performance, and capacity management.
-  * vRealize Suite pattern (vRealize Operations™, vRealize Log Insight™, and vRealize Network Insight™)
-  * Active Directory pattern
-  * Integration with IBM Netcool and IBM Bluecare for auto-ticketing, alerting, and event enrichment
-  * Resiliency patterns (backup and recovery)
+   * vRealize Suite pattern (vRealize Operations™, vRealize Log Insight™, and vRealize Network Insight™)
+   * Active Directory pattern
+   * Integration with IBM Netcool and IBM Bluecare for auto-ticketing, alerting, and event enrichment
+   * Resiliency patterns (backup and recovery)
 
 vCenter Server multizone instances are available in the following regions:
 * America - Washington DC, Dallas, Sao Paulo, and Toronto

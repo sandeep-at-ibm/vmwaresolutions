@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-07-01"
+lastupdated: "2021-10-11"
 
 subcollection: vmwaresolutions
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 # Red Hat OpenShift NSX Edge configuration
 {: #openshift-runbook-runbook-nsxedge-intro}
 
-This section details the NSX components that are used to support the OpenShift 4.7 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){:external}. PowerNSX commands are provided if you would want to use this method.
+Review the NSX components that are used to support the OpenShift 4.7 environment. To use this information, you must understand how to create these components and add the configuration. Review [Add an Edge Services Gateway](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.install.doc/GUID-B9A97F20-4996-4E16-822C-0B98DDE70571.html){: external}. PowerNSX commands are provided if you would want to use this method.
 
 ![OpenShift 4.7 networking](../../images/openshift-networking41.svg "OpenShift 4.7 networking"){: caption="Figure 1. OpenShift 4.7 networking" caption-side="bottom"}
 
@@ -37,23 +37,23 @@ As part of the configuration process, the NSX Edge is connected to the {{site.da
 | Disk      | 4.5 GB VMDK resident on shared storage with 4 GB swap |
 {: caption="Table 1. NSX Edge deployment" caption-side="top"}
 
-Since the NSX Edges are configured as active/passive in either the internal or dedicated deployment, vSphere Distributed Resource Scheduler (DRS) anti-affinity rules must be created by the user to ensure that NSX Edges do not run on the same host as their respective peer appliance.
+The NSX Edges are configured as active/passive in either the internal or dedicated deployment. Therefore, the user must create the vSphere Distributed Resource Scheduler (DRS) anti-affinity rules to ensure that NSX Edges do not run on the same host as their respective peer appliance.
 
 | Field     | Value         |
 |-----------|---------------|
 | Name      | OpenShift-ESG |
 | Type      | Separate virtual machines |
-| Members   | OpenShift-ESG-0 <br> OpenShift-ESG-1 |
+| Members   | OpenShift-ESG-0   \n  OpenShift-ESG-1 |
 {: caption="Table 2. NSX Edge anti-affinity rules" caption-side="top"}
 
 ## NSX ESG interfaces
 {: #openshift-runbook-runbook-nsxedge-interfaces}
 
-The edge is deployed with an interface uplink to the {{site.data.keyword.cloud_notm}} Public network and an interface uplink to the {{site.data.keyword.cloud_notm}} Private network. Additionally, there is an interface for the Transit network connection to the Distributed Logical Router (DLR).
+The edge is deployed with an interface uplink to the {{site.data.keyword.cloud_notm}} Public network and an interface uplink to the {{site.data.keyword.cloud_notm}} Private network. Additionally, an interface for the Transit network connection to the Distributed Logical Router (DLR) is available.
 
 | Interface name| Interface type | IP address | Port group / Logical switch |
 | --- | ---| --- | --- |
-| Private Uplink | Uplink | 10.208.242.130/26 <p> 10.208.242.131/26 </p>| SDDC-DPortGroup-Mgmt |
+| Private Uplink | Uplink | 10.208.242.130/26 </p> 10.208.242.131/26 </p>| SDDC-DPortGroup-Mgmt |
 | Public Uplink | Uplink | 169.48.73.42/29 169.48.73.43/29</p> | SDDC-DPortGroup-External |
 | Transit | Internal | 192.168.100.1/24 | OpenShift-Transit  |
 {: caption="Table 3. Configuration for NSX Edge - interfaces" caption-side="top"}
@@ -65,28 +65,28 @@ Configure rules to allow communication to the internet, to the {{site.data.keywo
 
 | Firewall rule | Source | Destination | Service | Action |
 | --- | --- | --- | --- | --- |
-| Private Outbound | 10.208.242.128/26 | any | any | Accept |
-| Public Outbound | 169.48.73.40/29 | any | any | Accept |
-| OpenShift Network | 192.168.133.0/24 | any | any | Accept |
-| Transit Network | 192.168.100.0/24 | any | any | Accept |
+| Private Outbound | 10.208.242.128/26 | Any | Any | Accept |
+| Public Outbound | 169.48.73.40/29 | Any | Any | Accept |
+| OpenShift Network | 192.168.133.0/24 | Any | Any | Accept |
+| Transit Network | 192.168.100.0/24 | Any | Any | Accept |
 {: caption="Table 4. Configuration for NSX Edge - NSX firewalls" caption-side="top"}
 
 ## NSX ESG DHCP
 {: #openshift-runbook-runbook-nsxedge-dhcp}
 
-For the OpenShift 4.7 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network, which provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using terraform.
+For the OpenShift 4.7 environment, the bootstrap, control-plane, and compute nodes require access to a DHCP server to obtain an initial address on the network. The network provides access to download the bootstrap ignition file. After the initial setup, static IP addresses will be configured on the nodes by using Terraform.
 
 | DCHP pool | Value |
 | --- | --- |
 | Start IP | 192.168.133.50 |
 | End IP | 192.168.133.100 |
 | Domain Name | ocp.dallas.ibm.local |
-| Auto Configure DNS  | false |
+| Auto Configure DNS  | False |
 | Primary Name Server  | 10.187.214.66 |
 | Secondary Name Server |  |
 | Default Gateway  | 192.168.133.1 |
 | Subnet Mask  | 255.255.255.0 |
-| Lease  | off |
+| Lease  | Off |
 | Lease Time  | 86400 |
 {: caption="Table 5. Configuration for NSX Edge - DHCP pools" caption-side="top"}
 
@@ -100,9 +100,9 @@ Define NAT to provide a mechanism to allow the OpenShift network access to the p
 | Description| OpenShift network public outbound| OpenShift network private outbound | SSH to bastion node |
 | NAT Type | SNAT | SNAT | DNAT |
 | Interface | Public | Private | Private |
-| Protocol | any | any |  any |
+| Protocol | Any | Any |  Any |
 | Original Source IP/Range | 192.168.133.0/24 | 192.168.133.0/24 | 10.208.242.133 |
-| Destination IP/Range | any | any | 192.168.133.8 |
+| Destination IP/Range | Any | Any | 192.168.133.8 |
 | Translated Source IP/Range | 169.48.73.43 | 10.208.242.140 | 10.208.242.133 |
 | Status | Enabled | Enabled | Enabled |
 | Logging | Disable | Disabled | Disabled |
@@ -154,7 +154,7 @@ Within the OpenShift environment, two load balancers are required, one for acces
 | Name | api-pool-6443 | api-pool-22623 | app-pool-80 | app-pool-443 |
 | Algorithm | ROUND-ROBIN | ROUND-ROBIN | ROUND-ROBIN | ROUND-ROBIN |
 | Monitor | default_tcp_monitor | default_tcp_monitor | default_tcp_monitor | default_tcp_monitor |
-|Members | control-plane-0 <br> control-plane-1 <br> control-plane-2 <br>bootstrap-0 | control-plane-0 <br> control-plane-1 <br> control-plane-2 <br>bootstrap-0 |compute-0 <br> compute-1 <br> compute-2 | compute-0 <br> compute-1 <br> compute-2 |
+|Members | control-plane-0   \n  control-plane-1   \n  control-plane-2   \n bootstrap-0 | control-plane-0   \n  control-plane-1   \n  control-plane-2   \n bootstrap-0 |compute-0   \n  compute-1   \n  compute-2 | compute-0   \n  compute-1   \n  compute-2 |
 {: caption="Table 10. Configuration for NSX Edge - pools" caption-side="top"}
 
 ### Virtual servers
@@ -166,16 +166,16 @@ Within the OpenShift environment, two load balancers are required, one for acces
 | Description | API / API-INT | API / API-INT | Application HTTP | Application HTTPs |
 | Default pool | pool-1 | pool-2 | pool-3 | pool-4 |
 | IP address | 10.208.242.132 | 10.208.242.132| 10.208.242.131 | 10.208.242.131 |
-| Protocol | tcp | tcp | tcp | tcp |
+| Protocol | TCP | TCP | TCP | TCP |
 | Port | 6443 | 22623 | 80 | 443 |
 {: caption="Table 11. VIP configuration for NSX Edge - virtual servers" caption-side="top"}
 
 ## PowerNSX commands
 {: #openshift-runbook-runbook-nsxedge-powernsx}
 
-This section provides example PowerNSX commands that you can use to automate the provisioning and configuration of the NSX ESG.
+Review the following example of PowerNSX commands that you can use to automate the provisioning and configuration of the NSX ESG.
 
-Use the following table to document the parameters you will need for your deployment, examples are shown that match the deployment described previously.
+Use the following table to document the parameters you need for your deployment. Examples are shown that match the deployment described previously.
 
 | Parameters | Example | Your deployment |
 | --- | --- | --- |
@@ -202,7 +202,7 @@ Use the following table to document the parameters you will need for your deploy
 | ESG public primary | 169.48.73.42 |  |
 | ESG public secondary 1 | 169.48.73.43 |  |
 | ESG public secondary 2 | 169.48.73.44 |  |
-| ESG user name | admin | |
+| ESG username | admin | |
 | ESG password | VMware12345! | |
 {: caption="Table 12. PowerNSX DLR parameters" caption-side="top"}
 

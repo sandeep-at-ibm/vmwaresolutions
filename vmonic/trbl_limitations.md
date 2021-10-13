@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-09-10"
 
 keywords: troubleshooting, Windows automatic installation, Windows updates
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:faq: data-hd-content-type='faq'}
+{{site.data.keyword.attribute-definition-list}}
 
 # More limitations and considerations
 {: #trbl_limitations}

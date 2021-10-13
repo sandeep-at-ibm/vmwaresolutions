@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-17"
 
 subcollection: vmwaresolutions
 
@@ -23,10 +23,10 @@ Enterprises that require encrypted data at rest on their vCenter Server instance
 
 * {{site.data.keyword.cloud}} Endurance native encryption - this option uses IBM-managed keys, so is not suitable for clients that require either Bring Your Own Key (BYOK) or Keep Your Own Key (KYOK). The encryption scope is the complete NFS volume.
 * vSAN encryption - This option requires the use of a key management server such as the following, the encryption scope are the vSAN™ disks:
-  * IBM KeyProtect™ (IBM KP) service for customers who require BYOK, along with the KMIP™ for VMware® service.
-  * IBM Hyper Protect Crypto Services (IBM HPCS), for customers who require KYOK, with the KMIP for VMware service.
-  * HyTrust® KeyControl™ (HTKC) on {{site.data.keyword.cloud_notm}}.
-  * A manually installed solution such as IBM Security Key Lifecycle Manager (SKLM). This solution can also use {{site.data.keyword.cloud_notm}} HSMs.
+   * IBM KeyProtect™ (IBM KP) service for customers who require BYOK, along with the KMIP™ for VMware® service.
+   * IBM Hyper Protect Crypto Services (IBM HPCS), for customers who require KYOK, with the KMIP for VMware service.
+   * HyTrust® KeyControl™ (HTKC) on {{site.data.keyword.cloud_notm}}.
+   * A manually installed solution such as IBM Security Key Lifecycle Manager (SKLM). This solution can also use {{site.data.keyword.cloud_notm}} HSMs.
 * vSphere encryption - This option requires the use of a key management server. However, the encryption scope is the virtual machine (VM) disks.
 * HyTrust DataControl® encryption - This option uses the HTKC key management server and Policy Agent, both components of HyTrust DataControl (HTDC). This option can now also use IBM HPCS to deliver KYOK. The encryption scope includes Microsoft® Windows® or Linux® VM disks, files, or file systems.
 
@@ -57,5 +57,5 @@ This reference architecture is based on the HTDC and IBM HPCS option, and the fo
 ## Related links
 {: #htdc-hpcs-encryption-options-related}
 
-* [HyTrust DataControl](https://www.hytrust.com/products/datacontrol-workload-encryption/){:external}
-* [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://www.ibm.com/cloud/hyper-protect-crypto){:external}
+* [HyTrust DataControl](https://www.hytrust.com/products/datacontrol-workload-encryption/){: external}
+* [{{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services](https://www.ibm.com/cloud/hyper-protect-crypto){: external}

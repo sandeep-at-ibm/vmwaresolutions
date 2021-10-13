@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-22"
+lastupdated: "2021-08-20"
 
 keywords: primary io hdm, hdm install, download hdm
 
@@ -26,7 +26,7 @@ subcollection: vmwaresolutions
 ## Downloading HDM
 {: #pio_installing-hdm-download}
 
-To access the PrimaryIO Hybrid Cloud Data Management (HDM) software, go to [PrimaryIO](https://www.primaryio.com/hybrid-cloud-data-mgmt/){:external}.
+To access the PrimaryIO Hybrid Cloud Data Management (HDM) software, go to [PrimaryIO](https://www.primaryio.com/hybrid-cloud-data-mgmt/){: external}.
 
 ## Installing PrimaryIO HDM
 {: #pio_installing-hdm-install}
@@ -48,23 +48,23 @@ The first HDM component to be deployed is the PIO Appliance. This appliance prov
 ### Configuring PrimaryIO HDM on-premises
 {: #pio_installing-config}
 
-Only the on-premises components are deployed (the cloud components are not needed yet). The components are in place for HDM to monitor and analyze virtual machines, make recommendations, and gain insights into the workload that runs in the data center. For more information, see [PrimaryIO HDM - Administration Guide](https://www.primaryio.com/free-downloads-2/){:external}.
+Only the on-premises components are deployed (the cloud components are not needed yet). The components are in place for HDM to monitor and analyze virtual machines, make recommendations, and gain insights into the workload that runs in the data center. For more information, see [PrimaryIO HDM - Administration Guide](https://www.primaryio.com/free-downloads-2/){: external}.
 
 ### Adding an IBM Cloud endpoint
 {: #pio_installing-add}
 
 After successful completion of the previous steps, you can add an {{site.data.keyword.cloud}} endpoint to HDM. The following components are installed in the selected cluster in the cloud data center.
 * PrimaryIO On-cloud Manager
-* PrimaryIO Cloud Cache (one per each VMware ESXi™ node in cloud cluster)
+* PrimaryIO Cloud Cache (one per each VMware® ESXi™ node in cloud cluster)
 
 After the cloud endpoint is successfully configured, a network connection between {{site.data.keyword.cloud_notm}} and the on-premises cluster is established.
 
-For detailed installation instructions, see [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){:external}.
+For detailed installation instructions, see [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){: external}.
 
 ## Troubleshooting PrimaryIO HDM
 {: #pio_installing-troubleshooting}
 
-For more information about troubleshooting installation-related issues, see the troubleshooting section in the [PrimaryIO HDM - installation guide](https://www.primaryio.com/free-downloads-2/){:external}.
+For more information about troubleshooting installation-related issues, see the troubleshooting section in the [PrimaryIO HDM - installation guide](https://www.primaryio.com/free-downloads-2/){: external}.
 
 ## Uninstalling PrimaryIO HDM
 {: #pio_installing-uninstallation}
@@ -76,11 +76,11 @@ To uninstall HDM from the hybrid infrastructure, complete the installation steps
 * Unregistering the HDM vCenter Server plug-in
 * Deleting the PrimaryIO appliance
 
-For more information, see the uninstallation section in the [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){:external}.
+For more information, see the uninstallation section in the [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){: external}.
 
 ## Related links
 {: #pio_installing-related}
 
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
-* [PrimaryIO Hybrid Cloud Data Management](https://www.primaryio.com/){:external}
-* [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){:external}
+* [PrimaryIO Hybrid Cloud Data Management](https://www.primaryio.com/){: external}
+* [PrimaryIO HDM - Installation Guide](https://www.primaryio.com/free-downloads-2/){: external}

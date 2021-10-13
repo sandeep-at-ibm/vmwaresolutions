@@ -31,4 +31,4 @@ For more information about viewing the service details, see [Ordering services f
 * [F5 BIG-IP overview](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations)
 * [Contacting {{site.data.keyword.IBM}} Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
 * [FAQ](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
-* [F5 website](https://www.f5.com/){:external}
+* [F5 website](https://www.f5.com/){: external}

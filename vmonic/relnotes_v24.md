@@ -2,21 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2021
 
-lastupdated: "2018-06-22"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V2.4
 {: #relnotes_v24}

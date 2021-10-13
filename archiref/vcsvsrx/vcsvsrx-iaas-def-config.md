@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2020
 
-lastupdated: "2020-04-17"
+lastupdated: "2020-10-08"
 
 subcollection: vmwaresolutions
 
@@ -136,8 +136,5 @@ set interfaces reth1 unit 0 family inet address 169.50.51.92/29
 set interfaces reth1 unit 0 family inet6 address 2a03:8180:1201:0129:0000:0000:0000:0005/64
 set routing-options static route 0.0.0.0/0 next-hop 10.135.70.1
 ```
-
-EOF
-
 
 **Next topic:** [vSRX deployment](/docs/vmwaresolutions?topic=vmwaresolutions-vcsvsrx-deployment)

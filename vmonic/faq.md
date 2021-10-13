@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-09-10"
 
 keywords: FAQ vmware solutions dedicated, vmware solutions dedicated questions, user account, patch management
 
@@ -12,12 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # General FAQ about VMware Solutions Dedicated
 {: #faq-vmwaresolutions}
@@ -102,9 +97,9 @@ IBM provides ongoing updates to the IBM code by deploying the IBM CloudDriver vi
 Newly deployed VMware ESXi™ servers and clusters are patched with recent, but not necessarily the most recent, VMware ESXi updates.
 
 For all other VMware component updates, you must ensure that newly deployed ESXi servers and clusters have the most recent updates that you require. {{site.data.keyword.vmwaresolutions_short}} does not offer support for applying updates and patches for VMware components. You must monitor and apply these updates yourself.
-{:important}
+{: important}
 
-To download ESXi updates from VMware, you can configure VMware Update Manager (VUM), which is integrated into your vCenter Server. For more information, see [VMware Support](https://www.vmware.com/support.html){:external}.
+To download ESXi updates from VMware, you can configure VMware Update Manager (VUM), which is integrated into your vCenter Server. For more information, see [VMware Support](https://www.vmware.com/support.html){: external}.
 
 ## Does the management services NSX Edge pose a security risk?
 {: #faq-mgmt-nsx}
@@ -162,7 +157,7 @@ The account owner can increase the RAM on ESXi servers by following these steps:
 An {{site.data.keyword.cloud_notm}} representative confirms the billing change and contacts you to schedule a maintenance window for adding the memory.
 
 You must manage the VMware Solutions components that are created in your {{site.data.keyword.cloud_notm}} account only from the VMware Solutions console, not any other means outside of the console. If you change these components outside of the VMware Solutions console, the changes are not synchronized with the console.
-{:note}
+{: note}
 
 ## Does VMware vSphere use automation to install, configure, and bring up the VMware stack?
 {: #faq-vss-automation}

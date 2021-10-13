@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-07"
+lastupdated: "2021-09-10"
 
 keywords: FAQ, license, BYOL
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQ about licensing and Bring Your Own License
 {: #faq_byol}
@@ -81,7 +77,7 @@ BYOL is a feature available to vCenter Server and VMware vSphere clusters in V2.
 If you choose to use your own license for a VMware component and provide a valid license key for it, no license is ordered from IBM for this component. In addition, no monthly license charges are incurred to your {{site.data.keyword.cloud_notm}} infrastructure account for this component.
 
 The BYOL feature is not available to Business Partner users.
-{:note}
+{: note}
 
 ## What license editions and CPUs are required for BYOL for vCenter Server instances?
 {: #faq_byol-license-cpu-reqs}
@@ -107,7 +103,7 @@ Yes. If you selected BYOL for a specific VMware component when you create a clus
 Currently, only VMware vSphere Enterprise and VMware vSAN can be licensed per cluster.
 
 You cannot mix and match BYOL and IBM-provided licensing for any VMware component within a cluster.
-{:note}
+{: note}
 
 ## Can you use BYOL when you create a cluster?
 {: #faq_byol-cluster}
@@ -121,7 +117,7 @@ Currently, only VMware vSphere Enterprise and VMware vSAN can be licensed per cl
 {: #faq_byol-mgmt}
 {: faq}
 
-You can manage your BYOL licenses by using the VMware vSphere web client after the instance deployment is completed.
+You can manage your BYOL licenses by using the VMware vSphere Web Client after the instance deployment is completed.
 
 ## When you add more ESXi servers to an instance later, does the instance validate if the BYOL licenses have enough capacity?
 {: #faq_byol-add-esxi}

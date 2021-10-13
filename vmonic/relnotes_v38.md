@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-09-09"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.8
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.8
 {: #relnotes_v38}
@@ -29,7 +25,7 @@ This release includes new features, component updates, usability enhancements, a
 (Updated on 25 August 2020) VMware® Solutions provides an upgrade to the Shared infrastructure to the latest version of VMware vCloud Director (vCD) v10.1.1. The v10.1.1 update is available to Dallas and Frankfurt {{site.data.keyword.cloud}} data centers.
 
 The Flash portal is no longer available with the v10.1.1 update.
-{:note}
+{: note}
 
 ### Storage policy updates
 {: #relnotes_v38-shared-storage}
@@ -66,7 +62,7 @@ You can order VMware vSphere® 6.7u3 with your VMware vCenter Server® instances
 vSphere Enterprise Plus 6.7u3 is available for Skylake, Cascade Lake, and Cascade Lake SAP {{site.data.keyword.cloud_notm}} bare metal servers.
 
 If you have an existing instance with vSphere Enterprise Plus 6.7u2, you can add new ESXi servers with either vSphere Enterprise Plus 6.7u2 or vSphere Enterprise Plus 6.7u3.
-{:note}
+{: note}
 
 ### vSphere ESXi 6.7u2 for vSAN storage
 {: #relnotes_v38-dedicated-esxi-vsan}

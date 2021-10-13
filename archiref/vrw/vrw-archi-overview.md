@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-08-07"
+lastupdated: "2021-09-09"
 
 subcollection: vmwaresolutions
 
@@ -52,7 +52,7 @@ The management software stack includes the following components:
 
 * Security is further enhanced by IBM Hyper Protect Crypto Services (HPCS). HPCS uses a FIPS 140-2 Level 4 hardware security module (HSM) that gives access to the highest level of security for regulated data and digital assets. HPCS helps meet regulatory compliance requirements by providing complete control of data encryption keys, including the HSM primary key.
 * Caveonix RiskForesight provides a common Risk Management Control Plane (RMCP) for continuous and proactive protection of management and edge workloads. It provides a comprehensive cloud workload protection platform for {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads. The {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads architecture is designed to enable compliance with NIST and other necessary certifications, as required for the SaaS provider and SaaS consumer.
-* VMware vRealize Operations Manager (vROps), vRealize LogInsight (vRLI), and the optional vRealize Network Insight (vRNI). These components collectively provide a native console for vSphere operations, the ability to automate management of the cloud platform, centralized log collection, and network visibility, analysis, and optimization.  
+* VMware vRealize Operations Manager (vROps), vRealize Log Insight (vRLI), and the optional vRealize Network Insight (vRNI). These components collectively provide a native console for vSphere operations, the ability to automate management of the cloud platform, centralized log collection, and network visibility, analysis, and optimization.  
 * Veeam provides continuous backup of the management stack for protection against disasters and rapid restoration to known good states if corruption of any management stack component were to occur. Veeam can also provide backup services for the workload cluster. The single site deployment can use the Veeam bare metal option to provide a suitable backup repository.
 
 ## Edge services cluster
@@ -78,7 +78,7 @@ Smaller deployments, such as those for Development, Test, or a minimal footprint
 
 Resource exhaustion is an operational risk that might require reserving sufficient compute, storage, and network resources for management functions to guarantee the necessary resources are available to manage the environment. Another option to prevent resource exhaustion is through the assignment of quotas to workloads.
 
-Before you deploy a consolidated cluster, consider the following possible security risks :
+Before you deploy a consolidated cluster, consider the following possible security risks:
 * An attacker who gets access to a workload VM might be able to use future microarchitectural vulnerabilities to steal secrets from or manipulate memory on an ESXi host.
 * An attacker who gets access to a workload VM might be able to use future hypervisor vulnerabilities to escape from the VM and manipulate the management VMs on the same ESXi host.
 
@@ -99,7 +99,7 @@ For more information, see:
 ## Related links
 {: #vrw-archi-overview-related}
 
-* [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance){:external}
+* [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance){: external}
 * [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
 * [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations)
 * [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-18"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
@@ -28,12 +28,12 @@ DR is defined as a plan to recover critical business systems and normal operatio
 
 * Multizone regions - Three or more zones that are independent from each other to ensure that single failure events affect only a single zone. Regions in the Americas include `us-south` hosted in Dallas and `us-east` hosted in Washington DC. For more information about all regions in Americas, Europe, and Asia Pacific, see [Multizone regions](/docs/overview?topic=overview-locations#mzr-table).
 * Single-zone regions - Single-zone regions are `kr-seo` hosted in Seoul and `in-che-1` that is hosted in Chennai and consist of a single availability zone. For more information, see [Single-zone regions](/docs/overview?topic=overview-locations#szr-table).
-* Data centers - More than 50 data centers exist around the world, including MON01 in Montreal, AMS02 in Amsterdam, and MEL01 Melbourne. For more information about all data centers, see [Data centers](/docs/overview?topic=overview-locations#data-centers). For more information about the data centers in which VMware Solutions can be deployed, see [IBM Cloud data center availability](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning#vc_planning-dc-availability).
+* Data centers - More than 50 data centers exist around the world, including MON01 in Montreal, AMS02 in Amsterdam, and MEL01 Melbourne. For more information about all data centers, see [Data centers](/docs/overview?topic=overview-locations#data-centers). For more information about the data centers in which VMware Solutions can be deployed, see [IBM Cloud data center availability](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning#vc_planning-dc-availability).
 
-The focus of the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads DR design has the following specifications:
+The focus of the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads DR design has the following specifications.
 * A design to deliver against the two key requirements:
-  * Establish an alternative site in a different multizone region for failover of workloads if a failure occurs in the primary site.
-  * Failover of the workloads that meets customer’s Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) application requirements.
+   * Establish an alternative site in a different multizone region for failover of workloads if a failure occurs in the primary site.
+   * Failover of the workloads that meets customer’s Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) application requirements.
 * A design that defines the recovery of the infrastructure and management components in the alternative site.
 * A design that allows flexibility in the recovery of the workloads, but does not define how the workloads are recovered. This approach allows maximum flexibility to meet customer’s RTO/RPO application requirements.
 
@@ -80,11 +80,11 @@ The VMware Regulated Workloads dual region design incorporates a number of desig
 
 The VMware Regulated Workloads dual region design uses the following specifications:
 * An {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance in each region, two regions are required. Available regions are; Dallas, Washington DC, Sydney, London, Frankfurt, and Tokyo.
-  * In the protected region, deploy a single or multizone {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance as required to support the normal operations of the workload.
-  * In the recovery region, deploy a single {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance as required to support the restoration of the workload when DR is invoked or tested.
+   * In the protected region, deploy a single or multizone {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance as required to support the normal operations of the workload.
+   * In the recovery region, deploy a single {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance as required to support the restoration of the workload when DR is invoked or tested.
 * vCenter - One appliance per region.
 * NSX Manager - One cluster per region.
-* RiskForesight - An "all-in-on" VM hosted in the recovery region that has Asset Repositories and scheduled jobs configured for both the protected and recovery regions.
+* RiskForesight - An "all-in-on" VM hosted in the recovery region that has Asset Repositories and scheduled jobs that are configured for both the protected and recovery regions.
 * HyTrust CloudControl - One cluster per region.
 * vRealize Log Insight (vRLI) - One cluster per region and the use log forwarding/filtering between regions
 * vRealize Operations Manager (vROps) - An analytic cluster on a cross-region network in the protected region and remote collectors in both regions. Recovery of the analytics cluster is done through replicas.

@@ -83,7 +83,7 @@ Complete the following steps to create a new volume.
 6. Create a Persistent Volume Claim in Kubernetes.
 
     Replace *volumePath* with your Persistent Volume name. The following example uses *vsphere-volume-pvc.yaml*.
-    {:note}
+    {: note}
 
     ```yaml
     apiVersion: "v1"

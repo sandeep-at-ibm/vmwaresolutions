@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-08-06"
+lastupdated: "2021-08-20"
 
 keywords: Juniper vSRX, manage Juniper vSRX, Juniper vSRX console
 
@@ -34,9 +34,9 @@ You can install multiple instances of Juniper vSRX on the management cluster. On
 
 You can now install Juniper vSRX on 25 Gb uplink speed management and edge services clusters on VMware vSphere® 7 with NSX-T. On 25 Gb uplink speed clusters, only the Content Security Bundle license is available.
 
-The license used depends on the target cluster you choose. For vCenter Server instances with vSphere 7 and NSX-T, management and edge services clusters with 25 Gb uplink speed use the 25 Gb uplink speed version of the license selected. For Regulated Workload (including Regulated Workload stretched) and Security & Compliance Readiness Bundle instances, the same license selection process occurs for edge services clusters with 25 Gb uplink speeds.
+The license that is used depends on the target cluster you choose. For vCenter Server instances with vSphere 7 and NSX-T, management and edge services clusters with 25 Gb uplink speed use the 25 Gb uplink speed version of the license selected. For Regulated Workload (including Regulated Workload stretched) and Security & Compliance Readiness Bundle instances, the same license selection process occurs for edge services clusters with 25 Gb uplink speeds.
 
-You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
+You cannot install Juniper vSRX and FortiGate Virtual Appliance on the same edge services cluster.
 
 ## Ordering Juniper vSRX for a new instance
 {: #juniper-ordering-new-instance}
@@ -56,7 +56,7 @@ The Juniper vSRX service is deployed on the management cluster unless you order 
 When you add Juniper vSRX to an existing vCenter Server instance, you can select a cluster on which to install Juniper vSRX. You can install Juniper vSRX on a management cluster or on any edge services cluster.
 You must deploy Juniper vSRX to an edge services cluster for Juniper vSRX to function as a gateway for your vCenter Server instance.
 
-You cannot install Juniper vSRX and Fortigate Virtual Appliance on the same edge services cluster.
+You cannot install Juniper vSRX and FortiGate Virtual Appliance on the same edge services cluster.
 
 ## Juniper vSRX service configuration
 {: #juniper-ordering-service-config}
@@ -74,7 +74,7 @@ Specify the nickname for the installed instance in the **Enter a name for the HA
 Review the features of the two licenses and select either **Standard Edition** or **Content Security Bundle**.
 
 You can't change the license model after service installation. To change the license model, you must delete the existing service and reinstall the service by selecting a different license option.
-{:important}
+{: important}
 
 After the service is ordered, the vSRX nodes are automatically ordered with the selected license models.
 
@@ -94,5 +94,5 @@ If you deploy Juniper vSRX on an edge services cluster, after deployment, you mu
 * [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [General FAQ about VMware Solutions Dedicated](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
-* [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){:external}
-* [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){:external}
+* [Juniper vSRX Virtual Firewall](https://www.juniper.net/us/en/products-services/security/srx-series/vsrx/){: external}
+* [Juniper vSRX Documentation](https://www.juniper.net/documentation/product/en_US/vsrx){: external}

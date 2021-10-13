@@ -42,4 +42,4 @@ For example, ``PAR04- windows`` and ``PAR04- linux`` are in a group with the sam
 {: #shared_bnpp-related}
 
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
-* [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){:external}
+* [VMware vCloud Director](https://www.vmware.com/ca/products/vcloud-director.html){: external}

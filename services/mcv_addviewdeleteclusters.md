@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-16"
+lastupdated: "2021-09-20"
 
 keywords: vmware multizone, vcenter server multizone instances, add clusters for multizone
 
@@ -18,10 +18,10 @@ subcollection: vmwaresolutions
 {:important: .important}
 {:term: .term}
 
-# Adding clusters for vCenter Server multizone instances
+# Adding clusters to vCenter Server multizone instances
 {: #mcv_addviewdeleteclusters}
 
-You can add workload and edge services clusters to VMware vCenter Server® multizone instances. When no longer needed, delete the clusters from your instance.
+You can add workload and edge services clusters to VMware® vCenter Server® multizone instances. When no longer needed, delete the clusters from your instance.
 
 ## Procedure to add workload clusters to vCenter Server multizone instances
 {: #mcv_addviewdeleteclusters-workload-procedure}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-01"
+lastupdated: "2021-08-10"
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,7 @@ Use the troubleshooting information to diagnose and fix problems with OpenShift.
 ## RHEL subscription
 {: #openshift-runbook-runbook-trbl-intro-sub}
 
-If you encounter a problem with your subscription, you can query by using the following command:
+If you encounter a problem with your subscription, use the following command to run a query.
 
 ```bash
 subscription-manager list --available --all
@@ -33,7 +33,7 @@ subscription-manager list --available --all
 ## Load-balancer
 {: #openshift-runbook-runbook-trbl-intro-lb}
 
-To check that load balancing is working, use the following command from the bastion node and it should return a full set of headers:
+To check that load balancing is working, use the following command from the bastion node. Load balancing is successful if the result is a full set of headers.
 
 ```bash
 wget --no-check-certificate https://api.ocp.dallas.ibm.local:6443
@@ -42,7 +42,7 @@ wget --no-check-certificate https://api.ocp.dallas.ibm.local:6443
 ## Red Hat CoreOS
 {: #openshift-runbook-runbook-trbl-intro-coreos}
 
-There should be no need to connect by using SSH to node, but if you need to, you can do so through the bastion node. The following example connects to the bootstrap server by using the following command:
+You do not need to connect by using SSH to node, but if you need to, you can do so through the bastion node. The following example connects to the bootstrap server by using the following command:
 
 ```bash
 ssh core@192.168.133.9
@@ -77,11 +77,11 @@ Gets a list of nodes and their status:
 oc get nodes
 ```
 
-When you use kubectl, there is a preference that takes effect while determining which kubeconfig file is used:
+When you use kubectl, a preference takes effect while it determines which kubeconfig file is used.
 
-* use --kubeconfig flag, if specified.
-* use KUBECONFIG environment variable, if specified.
-* use $HOME/.kube/config file.
+* use the `--kubeconfig` flag, if specified.
+* use the KUBECONFIG environment variable, if specified.
+* use the `$HOME/.kube/config` file.
 
 To export the kubeconfig that is created by the OpenShift Installer to an environment variable, use the following command:
 
@@ -92,17 +92,17 @@ export KUBECONFIG=/opt/ocpinstall/auth/kubeconfig
 ## Deleting deployment
 {: #openshift-runbook-runbook-trbl-intro-del}
 
-If you encounter a problem with your Terraform deployment, you can delete your deployment with the following command:
+If you encounter a problem with your Terraform deployment, you can delete your deployment with the following command.
 
 ```bash
 terraform destroy
 ```
 
-In some cases, you might have issues with terraform to finish the automation. In these cases, you might need to delete your deployment manually by using vCenter and by deleting the Terraform state files.
+In some cases, you might have issues with Terraform to finish the automation. In these cases, you might need to delete your deployment manually by using vCenter and by deleting the Terraform state files.
 
-1. Remove folder "ocp" and its contents in vCenter.
-2. Remove resource group "ocp".
-3. Remove Terraform state file `rm /opt/ocpinstall/installer/upi/vsphere/terraform.tfstate`.
+1. Remove the `ocp` folder and its contents in vCenter.
+2. Remove the `ocp` resource group.
+3. Remove the `rm /opt/ocpinstall/installer/upi/vsphere/terraform.tfstate` Terraform state file.
 
 After these steps, you can fix your deployment issue and redeploy the OpenShift platform.
 
@@ -128,7 +128,7 @@ Your ignition files are valid for 24 hours. You can generate the `.ign` files by
     cp bootstrap.ign /usr/share/nginx/html
     ```
 
-4. Replace the master section (cat master.ign) and the worker section (cat worker.ign) in terraform.tfvars.
+4. Replace the primary section (cat master.ign) and the worker section (cat worker.ign) in terraform.tfvars.
     nano /opt/ocpinstall/installer/upi/vsphere/terraform.tfvars.
 
     ```bash
@@ -146,11 +146,11 @@ Your ignition files are valid for 24 hours. You can generate the `.ign` files by
 ## Taking a snapshot of OpenShift
 {: #openshift-runbook-runbook-trbl-snapshot}
 
-There are many reasons to stop and resume OpenShift Cluster VMs, such as development or testing. A few things need to be considered before taking a snapshot.
+You might want to stop and resume OpenShift Cluster VMs during development or testing. You must consider the following before you take a snapshot.
 
 During the installation of OpenShift 4.x clusters, a bootstrap certificate is created that is used on the control-plane nodes to create certificate signing requests (CSRs) for kubelet client certificates (one for each node or kubelet). This certificate is used to identify each kubelet on any node. Because these certificates cannot be revoked, they are made with a short expiration time of 24 hours after cluster installation. All nodes other than the control-plane nodes have a service account token that is revocable. The bootstrap certificate is valid only for 24 hours after cluster installation. After the initial 24 hours, the certificate expires every 30 days.
 
-If you are taking a snapshot immediately after deployment, the control-plane kubelets do not yet have a 30-day client certificate, as the first one lasts 24 hours and it's not recreated yet. Then, the missing kubelet client certificate refresh window renders the cluster unusable, because the bootstrap credential cannot be used when the cluster is back up. Practically, this process requires an OpenShift 4 cluster to be running for at least 25 hours after installation before it can be shut down.
+The first control-plane kubelet lasts for 24 hours before it is re-created. If you are taking a snapshot immediately after deployment, the control-plane kubelet does not yet have a 30-day client certificate. Then, the missing kubelet client certificate refresh window renders the cluster unusable, because the bootstrap credential cannot be used when the cluster is back up. Practically, this process requires an OpenShift 4 cluster to be running for at least 25 hours after installation before it can be shut down.
 
 You can check the validity of the certificate by running the following command in the bastion host after deployment:
 
@@ -158,7 +158,7 @@ You can check the validity of the certificate by running the following command i
 ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no core@192.168.133.10 -- sudo openssl x509 -text -noout -in /var/lib/kubelet/pki/kubelet-client-current.pem
 ```
 
-To check the lifetime of the certificate of the output:
+Run the following command to check the lifetime of the certificate of the output.
 
 ```bash
 Warning: Identity file id_rsa_crc not accessible: No such file or directory.
@@ -174,21 +174,21 @@ Certificate:
             Not After : Dec  6 04:57:43 2019 GMT
 ```
 
-For more information about shutting down the cluster after installation, see [Enabling OpenShift 4 Clusters to Stop and Resume Cluster VMs](https://blog.openshift.com/enabling-openshift-4-clusters-to-stop-and-resume-cluster-vms/){:external}.
+For more information about shutting down the cluster after installation, see [Enabling OpenShift 4 Clusters to Stop and Resume Cluster VMs](https://blog.openshift.com/enabling-openshift-4-clusters-to-stop-and-resume-cluster-vms/){: external}.
 
 After the initial 24 hours certificate renewal, cluster snapshot is enabled to resume at any time in the next 30 days. After the 30 days, the certificate validity will make the cluster snapshot unusable.
 
 ## Related links
 {: #vcs-openshift-runbook-trbl-related}
 
-* [Install on vSphere: User-Provisioned Infrastructure](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){:external}
-* [Install a cluster on vSphere](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){:external}
-* [Index of public OpenShift v4 clients](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/?extIdCarryOver=true&sc_cid=701f2000001Css5AAC){:external}
-* [Understanding persistent storage](https://docs.openshift.com/container-platform/4.7/storage/understanding-persistent-storage.html#understanding-persistent-storage){:external}
-* [ssh-keygen - Generate a New SSH Key](https://www.ssh.com/ssh/keygen/){:external}
-* [Configure PowerCLI and PowerNSX on macOS](https://readysetvirtual.wordpress.com/2018/04/06/configure-powercli-and-powernsx-on-macos/){:external}
-* [Visual Studio Code](https://code.visualstudio.com/){:external}
-* [Terraform Getting Started](https://learn.hashicorp.com/terraform#getting-started){:external}
-* [Windows 2016 PowerShell DNS](https://docs.microsoft.com/en-us/powershell/module/dnsserver/?view=win10-ps){:external}
-* [OpenShift cheat sheet](https://cheatsheet.dennyzhang.com/cheatsheet-openshift-a4){:external}
-* [PowerCLI core documentation](https://powercli-core.readthedocs.io/en/latest/index.html){:external}
+* [Install on vSphere: User-Provisioned Infrastructure](https://cloud.redhat.com/openshift/install/vsphere/user-provisioned){: external}
+* [Install a cluster on vSphere](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){: external}
+* [Index of public OpenShift v4 clients](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/?extIdCarryOver=true&sc_cid=701f2000001Css5AAC){: external}
+* [Understanding persistent storage](https://docs.openshift.com/container-platform/4.7/storage/understanding-persistent-storage.html#understanding-persistent-storage){: external}
+* [ssh-keygen - Generate a New SSH Key](https://www.ssh.com/ssh/keygen/){: external}
+* [Configure PowerCLI and PowerNSX on macOS](https://readysetvirtual.wordpress.com/2018/04/06/configure-powercli-and-powernsx-on-macos/){: external}
+* [Visual Studio Code](https://code.visualstudio.com/){: external}
+* [Terraform Getting Started](https://learn.hashicorp.com/terraform#getting-started){: external}
+* [Windows 2016 PowerShell DNS](https://docs.microsoft.com/en-us/powershell/module/dnsserver/?view=win10-ps){: external}
+* [OpenShift cheat sheet](https://cheatsheet.dennyzhang.com/cheatsheet-openshift-a4){: external}
+* [PowerCLI core documentation](https://powercli-core.readthedocs.io/en/latest/index.html){: external}

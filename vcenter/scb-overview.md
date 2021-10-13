@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-09-10"
 
 keywords: security and compliance readiness bundle introduction, scb introduction, scb technical specifications
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Security and Compliance Readiness Bundle overview
 {: #scb-overview}

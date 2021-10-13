@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-08-06"
+lastupdated: "2021-09-10"
 
 keywords: vmware regulated workloads, vmware regulated workloads order instance, order vmware regulated workloads, vmware regulated workloads instances
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering VMware Regulated Workloads
 {: #vrw-orderinginstance}
@@ -41,7 +38,7 @@ Ensure that you complete the following tasks:
 {: caption="Table 1. Value format for instance and domain names" caption-side="top"}
 
 After the instance is provisioned, do not modify any value that is set during instance order. Otherwise, the instance might become unusable.
-{:important}
+{: important}
 
 ## Deployment topology
 {: #vrw-orderinginstance-topology}
@@ -101,8 +98,8 @@ By default, the primary cluster name is set to **vrw-_xx_-management**. You can 
 ### Primary cluster capacity
 {: #vrw-orderinginstance-consldt-capacity}
 
-* For the **Management optimized cluster** capacity, you get a Cascade Lake server with 20 cores, 2.2 GHz, and 192 GB RAM.
-* For the **Customize a consolidated cluster** capacity, you can choose the Cascade Lake server and RAM size according to your needs.
+* For the **Management-optimized cluster** capacity, you get a Cascade Lake server with 20 cores, 2.2 GHz, and 192 GB RAM.
+* For the **Customizable consolidated cluster** capacity, you can choose the Cascade Lake server and RAM size according to your needs.
 
 ### Number of bare metal servers
 {: #vrw-orderinginstance-consldt-bare-metal}
@@ -272,7 +269,7 @@ Review the estimated resources available per cluster.
 
 Specify the networking type and uplink speed.
 
-#### Netwroking type
+#### Networking type
 {: #vrw-orderinginstance-mgmt-net-type}
 
 The networking type is set to **Private network only** by default.
@@ -421,7 +418,7 @@ The hostname prefix must meet the following requirements:
 * The maximum length of the hostname prefix is 10 characters.
 
 The hostname prefix applies to all hosts in the instance.
-{:note}
+{: note}
 
 The domain name must meet the following requirements:
 * The domain name must consist of three or more strings that are separated by a period (.) with a maximum of 50 characters.
@@ -432,7 +429,7 @@ The domain name must meet the following requirements:
 * The length of the last string must be in the range 2 - 24 characters.
 
 The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs is 50 characters. Domain names must accommodate for this maximum length.
-{:note}
+{: note}
 
 ### DNS configuration
 {: #vrw-orderinginstance-dns-config}
@@ -440,13 +437,13 @@ The maximum length of the Fully Qualified Domain Name (FQDN) for hosts and VMs i
 The only deployment type that is supported is **Two highly available dedicated Windows server VMs on the management cluster**, which helps enhance security and robustness.
 
 You must provide two Microsoft® Windows® Server 2019 Standard edition licenses to use the two Microsoft Windows VMs.
-{:important}
+{: important}
 
 Each license can be assigned only to one single physical server and covers up to two physical processors. One Standard edition license can run two virtualized Microsoft Windows VMs per two-processor server. Therefore, two licenses are required since two Microsoft Windows VMs are deployed in two different hosts.
 
 You have 30 days to activate the VMs.
 
-For more information about ordering Windows Server 2019 licenses, see [Get started with Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19){:external}.
+For more information about ordering Windows Server 2019 licenses, see [Get started with Windows Server 2019](https://docs.microsoft.com/en-us/windows-server/get-started-19/get-started-19){: external}.
 
 ## Resource details
 {: #vrw-orderinginstance-resource-details}
@@ -471,7 +468,7 @@ You can also specify an instance name that meets the following requirements:
 Use resource groups to organize the resources in your account for access control and billing purposes. The default resource group in your account is selected by default. You can also select another resource group according to your needs. The resource group that you select cannot be changed after the instance is created.
 
 If **No resource group available** is displayed in this field, you currently do not have the permission to add the instance to any resource group in this account. Contact the account owner to be assigned an Editor or Administrator role on a resource group in the account. For more information, see [IAM access](/docs/account?topic=account-userroles).
-{:note}
+{: note}
 
 ## Included services
 {: #vrw-orderinginstance-included-services}
@@ -509,7 +506,7 @@ You can choose to install the following services:
 
 7. (Single-zone VMware instance only) Specify the settings for the primary cluster.
    1. Specify the cluster name.
-   2. Select the primary cluster capacity. For the **Customize a consolidated cluster** capacity, select the CPU model and RAM size.
+   2. Select the primary cluster capacity. For the **Customizable consolidated cluster** capacity, select the CPU model and RAM size.
    3. Select the number of bare metal servers.
    4. Under **vSAN configuration**, select the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, and the vSAN licensing option.
    5. Review the estimated resources available per cluster.
@@ -569,7 +566,7 @@ You get a console notification that the configuration is saved successfully, and
 
 You must manage the {{site.data.keyword.vmwaresolutions_short}} components that are created in your {{site.data.keyword.cloud_notm}} account only from the VMware Solutions console, not the {{site.data.keyword.slportal}}, or any other means outside of the console.
 If you change these components outside of the VMware Solutions console, the changes are not synchronized with the console.
-{:important}
+{: important}
 
 **CAUTION** Managing any {{site.data.keyword.vmwaresolutions_short}} components (which were installed into your {{site.data.keyword.cloud_notm}} account when you ordered the instance) from outside the VMware Solutions console can make your environment unstable. The following activities are considered management activities:
 *  Adding, modifying, returning, or removing components

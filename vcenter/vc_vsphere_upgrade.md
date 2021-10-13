@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-21"
+lastupdated: "2021-09-29"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Upgrading vCenter Server vSphere software from vSphere 6.5 to 6.7
 {: #vc_vsphere_upgrade}
@@ -25,14 +22,14 @@ The VMware vCenter Server® offering is a fully automated deployment solution fo
 
 vCenter Server has a policy of supporting the automation of VMware SDDC software versions within the range of N-1. If you want to continue to benefit from the {{site.data.keyword.vmwaresolutions_full}} automation, you must upgrade existing instances of vCenter Server.
 
-If your vCenter Server instance is at a version lower than the version level that is needed for automation support, it continues to be supported as required by the VMware support policy. However, your instance might not function with the current {{site.data.keyword.vmwaresolutions_short}} automation.
+If your vCenter Server instance is at a version that's earlier than the version level that is needed for automation support, it continues to be supported as required by the VMware support policy. However, your instance might not function with the current {{site.data.keyword.vmwaresolutions_short}} automation.
 
 You must apply patches and upgrade the VMware software periodically, over the lifecycle of a vCenter Server instance. This maintenance includes upgrading the VMware SDDC software to a version that is supported by the {{site.data.keyword.vmwaresolutions_short}} automation.
 
 The following procedure provides the steps that are required to convert a VMware vSphere 6.5-based instance to a VMware vSphere 6.7-based instance. These steps provide the initial upgrade to vSphere, NSX, and vSAN 6.7. After this upgrade, you might need to use the normal vSphere functions to upgrade virtual machine (VM) hardware levels and tools.
 
 vCenter Server is designed to allow for a “rolling” upgrade. That is, VM workloads that are currently functioning continue to function without an outage if you complete the following procedure. Enterprises must engage their change management policies to enable a structured and communicated upgrade and plan for contingencies. However, during the upgrade process of certain management functions, such as vCenter Server and NSX Manager, temporary outages of management functions, configuration changes, powering off and on VMs, might be impacted.
-{:note}
+{: note}
 
 ## Before you begin
 {: #vc_vsphere_upgrade-prereq}
@@ -41,17 +38,17 @@ The time to complete the upgrade is unknown. It is possible that it might take s
 
 Complete the following requirements before you begin the upgrade:  
 * Upgrade any extensions or snap-ins within the vCenter Server environment. Review the following documentation before you plan your upgrade:
-  * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){:external}
-  * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
+   * [VMware vCenter Server 6.7 Update 1b Release Notes](https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u1b-release-notes.html){: external}
+   * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){: external}
 * Set up vSphere Update Manager (VUM) within your vCenter Server instance to download updates from VMware vSphere. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 * Open a support ticket with the {{site.data.keyword.vmwaresolutions_short}} team to notify them that an upgrade is being planned. The ticket remains open until the instance is registered at the upgraded level in the {{site.data.keyword.vmwaresolutions_short}} console.
 * Confirm whether the vCenter Server instance that you are upgrading is linked to another vCenter Server instance as primary or secondary in the {{site.data.keyword.vmwaresolutions_short}} console. All linked instances must have their Platform Services Controllers (PSCs) upgraded first as part of a particular site upgrade.
 * Confirm the following requirements for vSAN based instances:
-  * Ensure that the vSAN Health tool is enabled and reports no critical errors. If critical errors are present, contact the IBM Support team with the upgrade support ticket ID.
-  * Ensure that each node has the space to handle rebuilding redundancy of vSAN objects in case a VMware ESXi™ host fails to come back up during the upgrade. You might need to either reduce disk usage or add an ESXi host before the upgrade.  
-  * Verify whether the overall vSAN volume usage is above 70%. You might need to either reduce disk usage or add an ESXi host before the upgrade.
+   * Ensure that the vSAN Health tool is enabled and reports no critical errors. If critical errors are present, contact the IBM Support team with the upgrade support ticket ID.
+   * Ensure that each node has the space to handle rebuilding redundancy of vSAN objects in case a VMware ESXi™ host fails to come back up during the upgrade. You might need to either reduce disk usage or add an ESXi host before the upgrade.  
+   * Verify whether the overall vSAN volume usage is above 70%. You might need to either reduce disk usage or add an ESXi host before the upgrade.
 * Verify that the PSC and vCenter `root` user ID with its credentials are visible on the console. If your vCenter Server instance was initially ordered in V2.5 or later, only the account with `customerroot` access is visible on the console. In this case, contact IBM Support for the **root** user ID password for PSC and vCenter Server.
-* Confirm that you have a [My VMware](https://my.vmware.com){:external} user ID for which to download the required binary files to upgrade. If you don't, contact IBM Support with the upgrade support ticket ID.
+* Confirm that you have a [My VMware](https://my.vmware.com){: external} user ID for which to download the required binary files to upgrade. If you don't, contact IBM Support with the upgrade support ticket ID.
 * Confirm that VUM is configured to reach https://www.vmware.com to download patches. If it can't be configured because of security policies, then you must manually download the most recent patch sets and upload them into VUM. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 
 ### Preparing your jump box
@@ -65,14 +62,14 @@ This VM is used as a jump box into the vCenter Server instance for the upgrade a
 Complete the following steps to order a VSI jump box.
 
 Skip the first step if you have a VSI jump box in your environment.
-{:note}
+{: note}
 
-1. Order an hourly or monthly VSI from the [{{site.data.keyword.cloud_notm}} infrastructure customer portal](https://control.softlayer.com/){:external}. Order the following attributes:
-  * Windows 2012 or 2016 Server Standard
-  * 2 CPUs
-  * 16 GB of memory
-  * 100 GB of disk
-  * 1 Gbps public and private uplinks
+1. Order an hourly or monthly VSI from the [{{site.data.keyword.cloud_notm}} infrastructure customer portal](https://control.softlayer.com/){: external}. Order the following attributes:
+   * Windows 2012 or 2016 Server Standard
+   * 2 CPUs
+   * 16 GB of memory
+   * 100 GB of disk
+   * 1 Gbps public and private uplinks
 2. When the VSI is provisioned, configure the {{site.data.keyword.cloud_notm}} Access Control Lists (ACLs) to allow all ingress and egress from the private links and egress only from public. You must use the {{site.data.keyword.cloud_notm}} client access VPN for Remote Desktop Protocol (RDP) sessions into the Windows VSI.
 3. RDP into the Windows VSI. Modify its Domain Name System (DNS) settings on the private network adapter to point to only the windows AD server within the vCenter Server instance to upgrade.
 4. Download and install the Google Chrome™ browser. Mozilla® Firefox® has a cache issue when it uses the VUM screens on the vCenter Server user interface.
@@ -86,25 +83,24 @@ Skip the first step if you have a VSI jump box in your environment.
 {: #vc_vsphere_upgrade-prereq-jumpbox-binary}
 
 Use your Windows VSI jump box and log in to your https://my.vmware.com account to download the following binary files:
-
 * VMware vSphere 6.7u1 Hypervisor (ESXi ISO) image (Includes VMware Tools)
 * vCenter 6.7u1b appliance ISO. Not the update bundle
 * NSX for vSphere 6.4.4 Upgrade Bundle
 
 For Intel Optane drives, download the following file to use as part of the post-upgrade process that uses VMware Update Manager to apply patches.
 
-Locate the ``VMW-ESX-6.7.0-intel-nvme-vmd-1.4.0.1016-8733247.zip`` file for Intel® NVMe driver for Intel Optane™ SSD DC P4800X Series SSDPED1K750GA (750 GB, HHHL) on https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NVME-VMD-1401016&productId=742.
+Locate the ``VMW-ESX-6.7.0-intel-nvme-vmd-1.4.0.1016-8733247.zip`` file for Intel® NVMe driver for Intel Optane™ SSD DC P4800X Series SSDPED1K750GA (750 GB, HHHL) on `https://my.vmware.com/group/vmware/details?downloadGroup=DT-ESX67-INTEL-INTEL-NVME-VMD-1401016&productId=742`.
 
 #### Backing up components
 {: #vc_vsphere_upgrade-backup}
 
 Before you begin the upgrade, back up each component.
 
-* For more information about backing up vCenter Server and PSCs, see [Overview of backup and restore options in vCenter Server 6.x (2149237)](https://kb.vmware.com/s/article/2149237?lang=en_US){:external} and [vCenter file-based backup](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup#solution_backingup-vcenter).
-* For more information about backing up NSX, see [Backing Up NSX Manager Data](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.upgrade.doc/GUID-2A75A102-518D-4D6C-B23D-877C421B1536.html){:external}.
+* For more information about backing up vCenter Server and PSCs, see [vCenter file-based backup](/docs/vmwaresolutions?topic=vmwaresolutions-solution_backingup#solution_backingup-vcenter) and [Overview of backup and restore options in vCenter Server 6.x](https://kb.vmware.com/s/article/2149237?lang=en_US){: external}.
+* For more information about backing up NSX, see [Backing Up NSX Manager Data](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.upgrade.doc/GUID-2A75A102-518D-4D6C-B23D-877C421B1536.html){: external}.
 
 It is recommended that you use file-based backup. Image-based backup that uses vSphere Data Protection is not supported in VMware vSphere 6.7.
-{:note}
+{: note}
 
 ## Procedure to upgrade vCenter Server vSphere software from 6.5 to 6.7
 {: #vc_vsphere_upgrade-procedure}
@@ -122,14 +118,12 @@ It is recommended that you use file-based backup. Image-based backup that uses v
 
 You might need to upgrade your current version of NSX so it’s compatible with VMware vCenter Server 6.7. To determine whether you must upgrade NSX:
 
-1. Go to [VMware Product Interoperability Matrices](https://www.vmware.com/resources/compatibility/sim/interop_matrix.php){:external}. Ensure that you’re on the **Interoperability** tab.
+1. Go to [VMware Product Interoperability Matrices](https://www.vmware.com/resources/compatibility/sim/interop_matrix.php){: external}. Ensure that you’re on the **Interoperability** tab.
 2. Under **Select a Solution**, complete the following tasks:
-
    1. From the **Select a Solution** list, select VMware vCenter Server.
    2. Click the **All versions** box and select the appropriate 6.7 version. For example, 6.7 U2.
 
 3. Under **Add Platform/Solution**, complete the following tasks:
-
    1. From the **Select a Solution** list, select VMware NSX for vSphere.
    2. Click the **All versions** box and review the list of VMware NSX for vSphere versions that are compatible with your selected VMware vCenter Server version. If your current VMware NSX for vSphere version is not listed, you must upgrade to one of the versions in the list.
 
@@ -139,19 +133,18 @@ Upgrading VMware NSX can take some time as the upgrade process updates the vSphe
 {: #vc_vsphere_upgrade-procedure-nsx-before}
 
 * If you have Zerto on {{site.data.keyword.cloud_notm}} installed on your environment:
+   * Ensure that the Zerto version that you have is compatible with the 6.7 version that you are selecting for your upgrade. For more information, see the _Interoperability matrix for Zerto environments_ document at [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}.
 
-  * Ensure that the Zerto version that you have is compatible with the 6.7 version that you are selecting for your upgrade. For more information, see the _Interoperability matrix for Zerto environments_ document at [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:external}.
-
-  * Use the Zerto user interface to shut down the zVRA VMs on each host. Select **Allow Zerto to always enter hosts into maintenance mode during remediation** within the Zerto site settings, policies section in the Zerto user interface. Otherwise, Zerto starts the zVRA and keeps the upgrade from proceeding by not allowing the ESXi host that is being upgraded to go into maintenance mode.
+   * Use the Zerto user interface to shut down the zVRA VMs on each host. Select **Allow Zerto to always enter hosts into maintenance mode during remediation** within the Zerto site settings, policies section in the Zerto user interface. Otherwise, Zerto starts the zVRA and keeps the upgrade from proceeding by not allowing the ESXi host that is being upgraded to go into maintenance mode.
 
 * For VMs on which VMware Tools are not installed, manually shut down or forcefully power off before the NSX ESXi host module installation. These VMs keep the target ESXi host from going into maintenance mode.
 
 #### Procedure to upgrade VMware NSX
 {: #vc_vsphere_upgrade-procedure-nsx-procedure}
 
-For more information, see the [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}.
+For more information, see the [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){: external}.
 
-1. Read the release notes for NSX 6.4.4 to ensure compatibility with your specific environment configuration. For more information, see [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}.
+1. Read the release notes for NSX 6.4.4 to ensure compatibility with your specific environment configuration. For more information, see [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){: external}.
 2. Upgrade NSX Manager first. If you have multiple NSX environments that use cross vCenter linked mode, upgrade all NSX managers before you upgrade components in the NSX user interface **Upgrade Coordinator**.
 3. Use the **Upgrade Coordinator** in the NSX user interface within the vCenter Server user interface to upgrade NSX components.
 4. To ensure that the upgrade is progressing until all components are upgraded, continue to review and monitor the NSX upgrade user interface within the vCenter user interface.
@@ -176,10 +169,10 @@ If you have instances that are linked, you must upgrade all PSC instances in the
     2. Use the shell `passwd` command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter 6.7u1b ISO within your jump box.
-3. Follow the VMware instructions for upgrading all PSCs first. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-on or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}.
+3. Follow the VMware instructions for upgrading all PSCs first. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-on or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){: external}.
 
 The **You must run the GUI upgrade from a Windows, Linux®, or Mac machine that is in the same network as the appliance that you want to upgrade** stated requirement applies to any subnet within your {{site.data.keyword.cloud_notm}} in your account.
-{:note}
+{: note}
 
 It is recommended that you use vCenterServer as your source and target for the upgrade.
 
@@ -202,20 +195,20 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
     2. Use the shell `passwd` command to set a new root password for both the PSC and vCenter.
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter Server 6.7u1b ISO within your jump box.
-3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-On or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){:external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.
+3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-On or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){: external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.
 
-**Notes**:
+**Notes**
 * The stated requirement **You must run the GUI upgrade from a Windows, Linux, or Mac machine that is in the same network as the appliance that you want to upgrade** applies to any subnet within your {{site.data.keyword.cloud_notm}} in your account.
 * It is recommended that you use vCenter Server as your source and target for the upgrade.
 
 #### Consolidating the PSC function into vCenter Server
 
 1. After successfully completing the PSC and vCenter Server upgrade, log in to the vCenter FLEX-based user interface. Then check the health of all services that are related to vCenter Server and the PSC in the **System Configuration** section.  
-2. Back up your PSC. It is recommended that you use file-based backup. For more information, see [File-based backup in vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){:external}.
+2. Back up your PSC. It is recommended that you use file-based backup. For more information, see [File-based backup in vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){: external}.
 3. Go to the ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\converge`` directory.
 4. Copy the ``converge.json`` file to a local drive on your jump VM.
-  * If this is the first PSC you are consolidating, you must remove the **replication** section from the ``json`` file.
-  * If this is a subsequent linked PSC, you must complete the attributes that are requested in the **replication** section of the ``json`` file.
+   * If this is the first PSC you are consolidating, you must remove the **replication** section from the ``json`` file.
+   * If this is a subsequent linked PSC, you must complete the attributes that are requested in the **replication** section of the ``json`` file.
 5. Go to the ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\templates\decommission`` directory.
 6. Copy the ``decommission_psc.json`` file to a local drive on your jump VM.
 7. Edit the ``converge.json`` and ``decommission_psc.json`` files. Instructions for the fields to edit are within the ``json`` files. It is recommended that the ESXi host that contains the PSC is used rather than vCenter in the **managing_esxi_or_vc** section.
@@ -224,8 +217,8 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
    1. Type **Y** to confirm that the PSC has been backed up to proceed.
    2. When the process completes, type **Y** to confirm the restart of vCenter.
 
-   For steps to resolve the converge process fails ``ERROR converge Failed to get vecs users and permissions`` error message, see [vCenter 6.7 Update 1 – Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){:external}.
-   {:note}
+   For steps to resolve the converge process fails ``ERROR converge Failed to get vecs users and permissions`` error message, see [vCenter 6.7 Update 1 – Converge to embedded failed!](https://virtualtassie.com/2018/vcenter-6-7-update-1-converge-to-embedded-failed/#comment-3713){: external}.
+   {: note}
 
 10. After vCenter Server is rebooted, verify normal operation by logging in to the vCenter Server user interface.
 11. Go to the ``<VCSA 6.7 iso mount>:\vcsa-converge-cli\win32`` directory in a command window.
@@ -238,7 +231,7 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
 {: #vc_vsphere_upgrade-procedure-esxi}
 
 The VMware Update Manager function within vCenter is used to upgrade and patch the ESXi hosts to the 6.7u1 level. Similar to the NSX upgrade, any VM that cannot vMotion to another host must be shut down without issue, otherwise it might cause the upgrade process to stop.
-{:note}
+{: note}
 
 #### Uploading the ESXi ISO into VUM
 {: #vc_vsphere_upgrade-procedure-esxi-iso}
@@ -258,13 +251,13 @@ The VMware Update Manager function within vCenter is used to upgrade and patch t
 5. Review the hosts to be remediated and confirm the pre-remediation check results.
 
    You must detach any CDs or DVDs attached to the VMs or the host containing that VM is not allowed to enter maintenance mode.
-   {:note}
+   {: note}
 
 6. After the pre-remediation check is successful, click **Remediate**. Monitor the upgrade process with the remediate entity task.
 7. After the upgrade completes, review the summary section of the host to confirm that ``VMware ESXi, 6.7.0`` displays.
 
-If the upgrade process fails immediately and displays the **host cannot enter maintenance mode** error message, shut down the Zerto ZVAs and try again. The ZVRA VMs automatically start as each server comes out of remediation. For more information about continuing Zerto replication during the upgrade process, see [How to place a host with an associated VRA into maintenance mode](https://www.zerto.com/myzerto/knowledge-base/how-to-place-a-host-with-an-associated-vra-into-maintenance-mode/){:external}.
-{:note}
+If the upgrade process fails immediately and displays the **host cannot enter maintenance mode** error message, shut down the Zerto ZVAs and try again. The ZVRA VMs automatically start as each server comes out of remediation. For more information about continuing Zerto replication during the upgrade process, see [How to place a host with an associated VRA into maintenance mode](https://www.zerto.com/myzerto/knowledge-base/how-to-place-a-host-with-an-associated-vra-into-maintenance-mode/){: external}.
+{: note}
 
 #### Adding the Intel NVME driver patch to the VUM repository
 {: #vc_vsphere_upgrade-procedure-esxi-nvme}
@@ -289,7 +282,7 @@ After the upgrade, it is recommended that you apply your custom baseline for the
 4. Click the **updates** tab in the navigation pane and select the **Host Updates** tab. Select your custom baseline and repeat the procedure to upgrade the ESXi hosts.
 
 You might need to shut down the Zerto zVRA VMs again as part of this process.
-{:note}
+{: note}
 
 ### Upgrading more items
 {: #vc_vsphere_upgrade-procedure-addtl}
@@ -343,7 +336,7 @@ You can set hosts with the Intel Skylake generation for a cluster into Skylake E
 1. From the cluster that contains the hosts, click **configure**.
 2. From **VMware EVC**, click **Edit** and change EVC mode to **Intel "Skylake" Generation**.
 
-For more information, see [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}.
+For more information, see [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){: external}.
 
 #### Reconfiguring NSX Manager and HCX Manager to point to the PSC
 
@@ -368,6 +361,6 @@ When your upgrade is complete, update your support ticket with IBM Support. Prov
 ## Related links
 {: #vc_vsphere_upgrade-related}
 
-* [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){:external}
-* [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){:external}
+* [VMware NSX Data Center for vSphere 6.4.4 Release Notes](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/rn/releasenotes_nsx_vsphere_644.html){: external}
+* [NSX Upgrade Guide](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.upgrade.doc/GUID-4613AC10-BC73-4404-AF80-26E924EF5FE0.html){: external}
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

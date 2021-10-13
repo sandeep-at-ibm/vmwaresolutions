@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2021
 
-lastupdated: "2019-05-03"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.0
 
@@ -13,12 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.0
 {: #relnotes_v30}
@@ -110,9 +105,9 @@ You are now able to add Zerto on {{site.data.keyword.cloud_notm}} on instances t
 * Reference documentation is now available to provide you with user IDs that {{site.data.keyword.vmwaresolutions_short}} maintains for use by {{site.data.keyword.cloud_notm}} automation. Possible messages that display in your instance history logs are also available for your review.
 * The **Reboot/Control** permission is added to the table that describes required permissions for the IBM Cloud infrastructure account.
 * New reference documentation is available for the following APIs.
-  * List all history messages for a specified VMware vCenter Server instance
-  * Add shared storages to a specified cluster
-  * Delete NFS storages from a specified cluster
+   * List all history messages for a specified VMware vCenter Server instance
+   * Add shared storages to a specified cluster
+   * Delete NFS storages from a specified cluster
 
 ## User interface updates and enhancements
 {: #relnotes_v30-ui}

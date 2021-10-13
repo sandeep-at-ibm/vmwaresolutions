@@ -2,20 +2,16 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2021
 
-lastupdated: "2019-04-09"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V2.9
 {: #relnotes_v29}
@@ -92,7 +88,7 @@ The following new data centers are available for deployment: **FRA-05 - Frankfur
 For vCenter Server instance orders, you can now add up to 24 TB of Network File System (NFS) shared storage for the performance levels of 0.25, 2, and 4 IOPS/GB.
 
 The 10 IOPS/GB performance level is still limited to a maximum capacity of 4 TB per file share.
-{:note}
+{: note}
 
 ## Updates for add-on services
 {: #relnotes_v29-services}

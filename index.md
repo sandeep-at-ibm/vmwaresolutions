@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-09-23"
 
 keywords: IBM Cloud for VMware Solutions, getting started, vmware solutions offerings, services for vmwaresolutions, vmwaresolutions use cases
 
@@ -17,16 +17,7 @@ completion-time: 2h
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
-{:pre: .pre}
-{:tip: .tip}
-{:table: .aria-labeledby="caption"}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting started with VMware Solutions
 {: #getting-started}
@@ -34,8 +25,8 @@ completion-time: 2h
 {: toc-services="vmwaresolutions"}
 {: toc-completion-time="2h"}
 
-In this {{site.data.keyword.cloud}} for VMware® Solutions  getting started tutorial, we take you through the process of ordering an instance and some services for it.
-{:shortdesc}
+In this {{site.data.keyword.cloud}} for VMware® Solutions getting started tutorial, we take you through the process of ordering an instance and some services for it.
+{: shortdesc}
 
 ## Before you begin
 {: #getting-started-prereqs}
@@ -46,12 +37,12 @@ Before you start to work with {{site.data.keyword.vmwaresolutions_short}}, revie
 {: #getting-started-browser-req}
 
 The following browsers are supported:
-  *  Mozilla® Firefox®
-  *  Google Chrome™
-  *  Apple® Safari®
+* Mozilla® Firefox®
+* Google Chrome™
+* Apple® Safari®
 
 Microsoft® Internet Explorer® is not supported.
-{:note}
+{: note}
 
 For optimal viewing and working on the {{site.data.keyword.vmwaresolutions_short}} console, set the screen resolution to at least 1024 px width by 500 px height.
 
@@ -201,7 +192,7 @@ For more information about how to order an instance, see the following topics ba
 After you place an instance order in **Step 3**, the deployment of the instance starts automatically. You can track the status of the deployment by viewing the instance details. When the instance deployment is completed, you can view the summary and detailed information of the instance and its services on the instance details page too.
 
 For more information about how to view the instance you ordered, see the following topics based on your selected deployment:
-* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_managing)
+* [Viewing and managing virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_viewing-vdc-summary)
 * [Viewing vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances)
 * [Viewing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_viewinginstances)
 * [Viewing VMware Regulated Workloads instances](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-view-delete-instance)

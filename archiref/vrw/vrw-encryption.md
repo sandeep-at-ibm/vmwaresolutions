@@ -35,9 +35,9 @@ HPCS is used as the key management service that supports Keep Your Own Key (KYOK
 
 IBM HPCS is backed by a FIPS 140-2 level 4 certified hardware security module (HSM). With IBM HPCS, SaaS providers and SaaS consumers can move their most mission critical workloads to the {{site.data.keyword.cloud_notm}} with the assurance of using the highest level of security to prevent unauthorized access to their regulated data.
 
-At a high level, the IBM HPCS consists of the following components:
-- Crypto unit - a singular unit that represents a piece of hardware, the HSM, and the corresponding software stack, both are dedicated to a single tenant.
-- Service instance - a cluster of crypto units, which operates as a single logical entity to provide redundancy and scalability. It is recommended to have at least two instances to provide high availability.
+At a high level, the IBM HPCS consists of the following components.
+* Crypto unit - a singular unit that represents a piece of hardware, the HSM, and the corresponding software stack, both are dedicated to a single tenant.
+* Service instance - a cluster of crypto units, which operates as a single logical entity to provide redundancy and scalability. It is recommended to have at least two instances to provide high availability.
 
 SaaS providers and SaaS consumers both maintain complete control over their respective keys and regulated data in the cloud and no one, including IBM, has access to the regulated data. Additionally, no single person has access to the full key and if required multiple crypto unit administrators can be deployed.
 

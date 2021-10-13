@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-07-08"
+lastupdated: "2021-08-10"
 
 subcollection: vmwaresolutions
 
@@ -77,7 +77,7 @@ Start-VM -VM $vm
 Disconnect-NsxServer
 ```
 
-After the VM starts, connect to the VM by using the web console or remote console and complete the following installation steps, by using the [Graphical install](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/chap-getting-started#sect-graphical-installation){:external} if needed.
+After the VM starts, connect to the VM by using the web console or remote console and complete the following installation steps, by using the [Graphical install](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/chap-getting-started#sect-graphical-installation){: external} if needed.
 * Select the required language.
 * Set the date and time.
 * Configure the network and hostname.
@@ -93,7 +93,7 @@ For this step, you require your Red Hat subscription details:
 * Password
 * Subscription Pool
 
-After the bastion node is deployed, you are required to register and subscribe it with the Red Hat public repositories. This is achieved by connecting to the bastion node by using SSH, from the jump-host or remote device, and getting root privileges with `su` and running the following commands after you replace the username, password, and pool with your variables.
+After the bastion node is deployed, you are required to register and subscribe it with the Red Hat public repositories. From the jump-host or remote device, SSH to connect to the bastion node. Use the `su`  command to get root privileges and run the following commands after you replace the username, password, and pool with your variables.
 
 ```bash
 export rhel_subscription_username=<email address>
@@ -199,9 +199,9 @@ The private key is: /root/.ssh/id_rsa. The public key is: /root/.ssh/id_rsa.pub.
 ## Downloading the installation tools
 {: #openshift-runbook-runbook-bastion-install-red-hat}
 
-For more information about installing Red Hat OpenShift 4.7, see [Installing a cluster on vSphere with user-provisioned infrastructure](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){:external}.
+For more information about installing Red Hat OpenShift 4.7, see [Installing a cluster on vSphere with user-provisioned infrastructure](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){: external}.
 
-For more information about how to access the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){:external}.
+For more information about how to access the OpenShift user provider infrastructure, see [Internet and Telemetry access for OpenShift Container Platform](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html#cluster-entitlements_installing-vsphere){: external}.
 
 Before you install the OpenShift Container Platform, you need to download a number of files onto the bastion node and then extract them. The following actions are completed:
 * Download `unzip` to extract the downloaded files.
@@ -252,5 +252,5 @@ The Bastion node is now ready for the steps to install OpenShift 4.7, which are 
 ## Related links
 {: #vcs-openshift-runbook-bastion-related}
 
-* [Installing a cluster on vSphere with user-provisioned infrastructure](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){:external}
-* [Using the vi text editor](http://etutorials.org/Linux+systems/red+hat+linux+bible+fedora+enterprise+edition/Part+II+Using+Red+Hat+Linux/Chapter+4+Using+Linux+Commands/Using+the+vi+Text+Editor/){:external}
+* [Installing a cluster on vSphere with user-provisioned infrastructure](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){: external}
+* [Using the vi text editor](http://etutorials.org/Linux+systems/red+hat+linux+bible+fedora+enterprise+edition/Part+II+Using+Red+Hat+Linux/Chapter+4+Using+Linux+Commands/Using+the+vi+Text+Editor/){: external}

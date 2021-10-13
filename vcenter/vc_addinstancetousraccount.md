@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-11"
+lastupdated: "2021-09-10"
 
 keywords: vCenter Server migrate instance, add account vCenter Server, migrate cloud account
 
@@ -12,7 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts
 {: #vc_addinstancetousraccount}
@@ -26,7 +26,7 @@ For instances that were deployed in V2.4 and earlier releases, you can migrate t
 
 Ensure that the {{site.data.keyword.cloud_notm}} account that you want to migrate the instance to is not an IaaS-only account. An IaaS-only account is an {{site.data.keyword.cloud_notm}} infrastructure account that is not linked to an {{site.data.keyword.cloud_notm}} account.
 
-For more information about how to link your Iaas-only account to your PaaS account, see [Linking your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){:external}.
+For more information about how to link your Iaas-only account to your PaaS account, see [Linking your IaaS and PaaS accounts](https://www.ibm.com/cloud/blog/follow-steps-link-iaas-paas-accounts){: external}.
 
 ## Procedure to migrate pre-V2.5 vCenter Server instances to IBM Cloud accounts
 {: #vc_addinstancetousraccount-procedure}

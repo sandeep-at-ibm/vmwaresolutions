@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-09-10"
 
 keywords: set credentials, update credentials, set notifications, IAM user, invite user
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing user accounts and settings
 {: #useraccount}
@@ -29,8 +25,8 @@ Use the following procedures to invite users, to update user account credentials
 {{site.data.keyword.cloud}} for VMware® Solutions is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) for collaboration among multiple users. After you sign up for an {{site.data.keyword.cloud_notm}} account and log in to the {{site.data.keyword.vmwaresolutions_short}} console, you can add users to the {{site.data.keyword.cloud_notm}} account. These added users can share the services and resources that are provisioned for the account.
 
 For more information, see the following topics.
-- [Inviting users to an account](/docs/account?topic=account-iamuserinv)
-- [Managing access for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-iam)
+* [Inviting users to an account](/docs/account?topic=account-iamuserinv)
+* [Managing access for VMware Solutions](/docs/vmwaresolutions?topic=vmwaresolutions-iam)
 
 ## Updating user account credentials
 {: #useraccount-set-cred}
@@ -45,7 +41,7 @@ For more information, see the following topics.
 * If the API key for your {{site.data.keyword.cloud_notm}} infrastructure account changes, you must update the key on the **Settings** page in the {{site.data.keyword.vmwaresolutions_short}} console.
 
    It is your responsibility to ensure that the API key that is saved on the **Settings** page is correct and up-to-date. Otherwise, operations that require API key validation might fail.
-   {:important}
+   {: important}
 
 ### Procedure to update user account credentials
 {: #useraccount-set-cred-procedure}

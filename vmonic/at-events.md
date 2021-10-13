@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-09-10"
 
 keywords: activity tracker, event, security, vmware solutions events, vmware solutions shared events, instance events, view events
 
@@ -12,6 +12,8 @@ subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Auditing events for VMware Solutions
 {: #at-events}

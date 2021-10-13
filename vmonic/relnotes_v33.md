@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2016, 2019
+  years:  2016, 2021
 
-lastupdated: "2019-10-17"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.3
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.3
 {: #relnotes_v33}
@@ -76,10 +72,10 @@ This release installs the Zerto 7.0 Update 2 service version on newly deployed i
     * A new parameter `disk_groups` is added to the **Add a cluster for a specified VMware vCenter Server instance or verify the order** API and the **Add new hosts to a specified cluster** API.
 
 * The following architecture reference documentation is available in the *Reference* section of the user documentation:
-  * [Active Directory Domain Services guide](/docs/vmwaresolutions?topic=vmwaresolutions-adds-intro)
-  * [vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
-  * [vCenter Server and Red Hat OpenShift guide](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
-  * [vCenter Server and VMware Horizon 7 architecture](/docs/vmwaresolutions?topic=vmwaresolutions-horizon-arch-ovw)
+   * [Active Directory Domain Services guide](/docs/vmwaresolutions?topic=vmwaresolutions-adds-intro)
+   * [vCenter Server and Red Hat OpenShift architecture](/docs/vmwaresolutions?topic=vmwaresolutions-vcs-openshift-intro)
+   * [vCenter Server and Red Hat OpenShift guide](/docs/vmwaresolutions?topic=vmwaresolutions-openshift-runbook-runbook-intro)
+   * [vCenter Server and VMware Horizon 7 architecture](/docs/vmwaresolutions?topic=vmwaresolutions-horizon-arch-ovw)
 
 * A new topic is available in the *Troubleshooting* section to help you find someone who is an IAM account administrator if you do not have an administrator role and you want to complete an IAM task that requires one.
 

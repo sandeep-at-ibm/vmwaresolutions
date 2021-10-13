@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-08-17"
 
 subcollection: vmwaresolutions
 
@@ -125,14 +125,14 @@ In addition to Private VLAN A, a second private VLAN (here designated Private VL
 
 * The first subnet is assigned to a kernel port group for vMotion traffic.
 * The remaining subnet or subnets are used for storage traffic:
-  * When using vSAN, a subnet is assigned to kernel port groups that are used for vSAN traffic.
+   * When using vSAN, a subnet is assigned to kernel port groups that are used for vSAN traffic.
 
 The public network consists of one VLAN within this design. The following subnets are allocated to the VLAN:
 
 * The first subnet is a Primary Public IP subnet range that {{site.data.keyword.cloud_notm}} assigns to the physical hosts
-  * The hosts are assigned a public IP address but this IP address is not configured on the hosts, so they are not directly accessible on the public network.
+* The hosts are assigned a public IP address but this IP address is not configured on the hosts, so they are not directly accessible on the public network.
 * The second subnet is used for public access of components like a virtual gateway appliance.
-  * The public VLAN is intended to provide public internet access.
+* The public VLAN is intended to provide public internet access.
 
 All subnets that are configured as part of an {{site.data.keyword.cloud_notm}} for VMware Regulated Workloads automated deployment use {{site.data.keyword.cloud_notm}}-managed ranges to ensure that any IP address can be routed to any data center within {{site.data.keyword.cloud_notm}}.
 

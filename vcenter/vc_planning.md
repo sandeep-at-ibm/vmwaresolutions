@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-09-22"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -12,18 +12,16 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Requirements and planning for vCenter Server instances
 {: #vc_planning}
 
-Review the following requirements before you order your VMware vCenter Server® instance. Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and add-on services requirements.
+Plan your instance based on the {{site.data.keyword.cloud}} data center location, your workload capacity requirements, and add-on services requirements. Review the following requirements before you order your VMware vCenter Server® instance.
 
-Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
-{:important}
+* New deployments of vCenter Server instances with VMware vSphere® 6.5 are not supported.
+* New deployments of vCenter Server multizone instances are not supported.
+* Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
 
 ## IBM Cloud account requirements
 {: #vc_planning-account-req}
@@ -105,7 +103,7 @@ You are responsible for maintaining and ensuring the availability of all instanc
 You can order services for your instance based on your needs, for example, disaster recovery. For more information, see [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices).
 
 Services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T instances.
-{:important}
+{: important}
 
 ### Planning for VMware HCX
 {: #vc_planning-addon-services-hcx}
@@ -114,14 +112,14 @@ The VMware HCX™ service can seamlessly extend the networks of on-premises data
 
 When you deploy this service, complete the following settings:
 * Specify the **HCX Interconnect type** by selecting one of the following options:
-  * **Public network**: HCX creates an encrypted connection between sites over the public network.
-  * **Private network**: HCX creates an encrypted connection between sites over the private network.
+   * **Public network**: HCX creates an encrypted connection between sites over the public network.
+   * **Private network**: HCX creates an encrypted connection between sites over the private network.
 * Specify the **Public endpoint certificate type**. If you select **CA Certificate**, configure the following settings:
-  * **Certificate Contents**: Enter the contents of the CA certificate.
-  * **Private Key**: Enter the private key of the CA certificate.
-  * (Optional) **Password**: Enter the password for the private key if it is encrypted.
-  * (Optional) **Reenter Password**: Enter the password for the private key again.
-  * (Optional) **Hostname**: Enter the hostname to be mapped to the common name (CN) of the CA certificate. HCX requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){:external}.
+   * **Certificate Contents**: Enter the contents of the CA certificate.
+   * **Private Key**: Enter the private key of the CA certificate.
+   * (Optional) **Password**: Enter the password for the private key if it is encrypted.
+   * (Optional) **Reenter Password**: Enter the password for the private key again.
+   * (Optional) **Hostname**: Enter the hostname to be mapped to the common name (CN) of the CA certificate. HCX requires the CA certificate to be in a format that is accepted by NSX Edge. For more information about NSX Edge certificate formats, see [Importing SSL Certificates](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.3/com.vmware.nsx.admin.doc/GUID-19D3A4FD-DF17-43A3-9343-25EE28273BC6.html){: external}.
 
 ## Capacity considerations
 {: #vc_planning-capacity-considerations}

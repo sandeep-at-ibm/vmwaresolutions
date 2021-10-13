@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-07-14"
+lastupdated: "2021-08-24"
 
 subcollection: vmwaresolutions
 
@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 ## Topology
 {: #mcv-archi-design-topology}
 
-The VMware® multizone instance architecture relies on a highly available storage, compute, and networking solution in {{site.data.keyword.cloud_notm}}. In addition, a number of VMware and IBM components are required to provide management and tooling capabilities.
+The VMware® multizone instance architecture relies on a highly available storage, compute, and networking solution in {{site.data.keyword.cloud_notm}}. In addition, a number of VMware and IBM® components are required to provide management and tooling capabilities.
 
 ## IBM Cloud multizone regions
 {: #mcv-archi-design-mzr}
@@ -60,7 +60,7 @@ The witness site that is selected for the first cluster contains the witness com
 You select the witness site during the deployment process. The witness site can be either vSAN or NFS Endurance based. This choice cannot be modified after deployment. If the witness is vSAN based, it remains separate from and does not participate in the stretched cluster configuration that is deployed onto the management and resource sites.
 
 It is not recommended for you to deploy your customer workloads in the witness site.
-{:note}
+{: note}
 
 ### Consolidated Cluster sites
 {: #mcv-archi-design-distibution-mgmt}
@@ -78,7 +78,7 @@ For the consolidated cluster, the two sites are intended to serve as identical r
 * Network configuration
 * VMware software stack
 
-Day 2 scale-up and scale-down operations for adding and removing hosts to the management clusters and the stretch cluster are automatically selected to take place simultaneously in each of the two resource sites. This automatic maintenance of consistency across the management and stretch clusters is enforced and cannot be overridden.
+Day 2 scale-up and scale-down operations to add and remove hosts to the management and stretch clusters are automatically selected to take place simultaneously in each of the two resource sites. This automatic maintenance of consistency across the management and stretch clusters is enforced and cannot be overridden.
 
 The following configuration with separate management and edge services clusters is an IBM Global Technology Services (GTS) Large style VMware multizone configuration. The edge services clusters must be deployed separately as day 2 operations.
 
@@ -97,19 +97,19 @@ Your workloads are deployed onto active–active storage that is mirrored betwee
 {: #mcv-archi-design-site-a}
 
 The consolidated cluster Site A has the following components:
-  * vCenter Server active appliance
-  * NSX Manager
-  * Active Directory server
-  * Customer workload
+* vCenter Server active appliance
+* NSX Manager
+* Active Directory server
+* Customer workload
 
 #### Site B
 {: #mcv-archi-design-site-b}
 
 The consolidated cluster Site B has the following components:
-  * vCenter Server passive appliance
-  * NSX Manager
-  * Active Directory server
-  * Customer workload
+* vCenter Server passive appliance
+* NSX Manager
+* Active Directory server
+* Customer workload
 
 **Next topic:** [VMware multizone BOM](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-bom)
 

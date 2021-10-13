@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-05"
+lastupdated: "2021-09-10"
 
 keywords: vmware solutions console, vmware portal, vmware solutions catalog
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Accessing the VMware Solutions console
 {: #loginmethod}

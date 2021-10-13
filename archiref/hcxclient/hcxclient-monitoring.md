@@ -24,7 +24,7 @@ subcollection: vmwaresolutions
 The Silver Peak WAN optimization appliance that is deployed as part of HCX does not get its management interface configured. The web user interface (UI) is a valuable tool to use when you base line traffic throughput and throttling network migration bandwidth use.
 
 Only the HCX CGW Gateway WAN tunnel traffic flows through the WAN Optimizer appliance. Therefore, it cannot monitor stretched L2 traffic.
-{:note}
+{: note}
 
 ### Configuring the UI
 {: #hcxclient-monitoring-config-ui}
@@ -61,7 +61,7 @@ Do so when you deploy the fleet components in the HCX Client UI, but post deploy
 
 Changes are lost if you redeploy the HCX CGW from the HCX web UI. This sets bandwidth limits for the migration traffic only. Stretched L2
 traffic is not affected by this setting.
-{:note}
+{: note}
 
 1. Log in to the WAN Opt Web UI.
 2. From the **Configuration** tab, select **Shaper** from the menu.

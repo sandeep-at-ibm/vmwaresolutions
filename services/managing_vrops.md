@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-09-24"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -47,6 +47,15 @@ To access the vRealize Log Insight console, complete the following steps:
 
 1. On the service details page for vRealize Operations and Log Insight, click **vRealize Log Insight console**.
 2. Log in by using the credentials listed on the same service details page.
+
+## Redeploying vRealize Operations and Log Insight
+{: #managing_vrops-redeploy-vrops}
+
+You might encounter a situation where the file systems become filled to approximately 98% capacity. This scenario can result in inconsistencies with a Cassandra database or with the vRealize suite of products that are deployed with IBM automation.
+
+If vRealize Operations and Log Insight was deployed with IBM automation, you can remove the service or product. Use the VMware Solutions console to remove the service or product. Then, use the VMware Solutions console to redeploy it.
+
+If you deployed the service or product in another way, you must redeploy it using the process you originally used for deployment.
 
 ## Known issues
 {: #managing_vrops-issues}

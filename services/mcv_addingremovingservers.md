@@ -36,7 +36,7 @@ You can add ESXi servers to your witness, consolidated, additional workload, and
 7. Optionally, select the checkbox to add servers during maintenance mode. The checkbox is selected by default.
 
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance Mode** checkbox. You do not receive a confirmation message before the migration begins.
-   {:important}
+   {: important}
 
 8. Review the estimated price and click **Create**.
 
@@ -48,7 +48,7 @@ You can add ESXi servers to your witness, consolidated, additional workload, and
 3. If you do not see the new ESXi servers added to the list in the cluster, check the email or console notifications to find more details about the failure.
 
    If you are adding ESXi servers during maintenance mode, VMs are not migrated to the new servers until you remove maintenance mode.
-   {:important}
+   {: important}
 
 ## Related links
 {: #mcv_addingremovingservers-related}

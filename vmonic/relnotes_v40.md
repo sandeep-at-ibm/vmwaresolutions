@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-02-24"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 4.0
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V4.0
 {: #relnotes_v40}
@@ -39,7 +35,7 @@ This release applies the following updates when you order VMware Solutions Dedic
 You can order vSphere 7.0 Update 1a with your VMware vCenter Server® with NSX-T™ instances and VMware vSphere with NSX-T clusters. vSphere 7.0u1a introduces the following support and enhancements:
 
 * Smaller instance footprint with support for converged management and workload cluster. vSphere 6.7 and NSX-T require eight hosts when using vSAN™ storage and five hosts when using NFS storage. vSphere 7.0u1a enables a footprint of four hosts when using vSAN storage and three hosts when using NFS storage.
-* Full support for the HTML5 vSphere web client
+* Full support for the HTML5 vSphere Web Client
 * Support for Intel® Cascade Lake EVC level
 * The enhanced VMware vSphere Lifecycle Manager (LCM)
 * Enhancements to VMware vSphere Distributed Resource Scheduler (DRS) and VMware vSphere vMotion
@@ -48,20 +44,20 @@ You can order vSphere 7.0 Update 1a with your VMware vCenter Server® with NSX-T
 vSphere 7.0u1a is the exclusive basis for {{site.data.keyword.cloud}} for VMware Regulated Workloads and is available for Cascade Lake and SAP-certified bare metal servers only.
 
 vSphere 7.0u1a currently does not support 25 Gb uplink speed or High performance with Intel Optane for vSAN storage. Support for these features is planned for a future release. Additionally, vSphere 7.0u1a does not support single-node instances.
-{:note}
+{: note}
 
 ### vSAN storage for vSphere 7.0 Update 1a
 {: #relnotes_v40-vsan-tech-preview}
 
-A warning message might be displayed when you log in to vCenter Server through the vSphere Web Client. To remove the warning, download the latest version of the vSAN HCL DB file and update vCenter Server. For more information, see [Updating the vSAN HCL database manually (2145116)](https://kb.vmware.com/s/article/2145116){:external}.
+A warning message might be displayed when you log in to vCenter Server through the vSphere Web Client. To remove the warning, download the latest version of the vSAN HCL DB file and update vCenter Server. For more information, see [Updating the vSAN HCL database manually (2145116)](https://kb.vmware.com/s/article/2145116){: external}.
 
 ### Your existing instances and vSphere 7.0 Update 1a
 {: #relnotes_v40-dedicated-vsphere-v70-no-support}
 
 For vCenter Server instances with vSphere 6.5 or vSphere 6.7, in-place upgrade to vSphere 7.0 is not currently supported due to changes in VMware license keys and changes in the vCenter Server architecture and topology.
-{:note}
+{: note}
 
-Carefully review the VMware product lifecycle matrix for ESXi and NSX as part of your planning. For more information, see [Product LifeCycle Matrix](https://lifecycle.vmware.com/){:external}.
+Carefully review the VMware product lifecycle matrix for ESXi and NSX as part of your planning. For more information, see [Product LifeCycle Matrix](https://lifecycle.vmware.com/){: external}.
 
 {{site.data.keyword.cloud_notm}} plans to publish guidance for upgrading your existing instance to vSphere 7.0 in a future VMware Solutions release. However, an upgrade cannot be supported for all hardware combinations, will not accomplish a migration from NSX-V to NSX-T, and will enable only limited VMware Solutions capabilities at the vSphere 7.0 level.
 
@@ -77,7 +73,7 @@ VMware vSphere Enterprise Plus 7.0 Update 1a and VMware NSX-T 3.1 are included w
 With the combination of consolidated cluster and support for a 3-host RAID 1 configuration, you can deploy an instance with a minimum of eight hosts when you use NFS storage for your witness cluster, or nine hosts when you use vSAN storage for your witness cluster.
 
 Extra features for stretched clusters are planned for future releases, including support for VMware Regulated Workloads, edge services clusters, more workload clusters, and optional add-on services.
-{:note}
+{: note}
 
 ### Updates for VMware NSX
 {: #relnotes_v40-dedicated-vmware-nsx-updates}
@@ -99,7 +95,7 @@ Review the following information about vCenter Server with NSX-T instances for t
 {: #relnotes_v40-single-node-deprecated}
 
 The Single-node for Migration and App Modernization and Single-node for Data Protection and Disaster Recovery offerings are no longer provided for new deployments. Full support remains for existing single-node instances.
-{:deprecated}
+{: deprecated}
 
 ## Updates for add-on services
 {: #relnotes_v40-services}
@@ -110,8 +106,8 @@ This release provides the following service versions on newly deployed instances
 * HyTrust® CloudControl™ v6.2.1 for vCenter Server with NSX-T
 * Juniper® vSRX and Juniper vSRX Gateway Appliance 3.0 (20.1R2)
 * Red Hat OpenShift v4.6
-  * New installations of Red Hat OpenShift on vCenter Server require VMware vSphere 7.0 Update 1a with NSX-T 3.1. For NSX-T 2.5.1 deployments, you must upgrade to vSphere 7.0 Update 1a with NSX-T 3.1.
-  * During deployment and day 2 operations, you are prompted for the cluster. You can install the service to the management cluster or any workload cluster.
+   * New installations of Red Hat OpenShift on vCenter Server require VMware vSphere 7.0 Update 1a with NSX-T 3.1. For NSX-T 2.5.1 deployments, you must upgrade to vSphere 7.0 Update 1a with NSX-T 3.1.
+   * During deployment and day 2 operations, you are prompted for the cluster. You can install the service to the management cluster or any workload cluster.
 * Veeam® v10a
 * vRealize Operations™ v8.2 and Log Insight™ v8.2
 
@@ -150,7 +146,7 @@ For vCenter Server instances, Juniper vSRX management and edge services cluster 
 {: #relnotes_v40-services-HCX}
 
 HCX is no longer supported for new deployments on vSphere 6.7 with NSX-T or for ordering post deployment on existing vSphere 6.7 instances with NSX-T.
-{:note}
+{: note}
 
 Review the following information about the VMware HCX service for this release:
 

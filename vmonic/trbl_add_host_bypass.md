@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-08-06"
+lastupdated: "2021-09-10"
 
 keywords: troubleshooting, bypassing signing and acceptance, bypassing verification issue
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Why do I see a bypassing verification message when I add a host?
 {: #trbl_add_host_bypass}

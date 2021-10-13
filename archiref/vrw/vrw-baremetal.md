@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-02-16"
+lastupdated: "2021-08-16"
 
 subcollection: vmwaresolutions
 
@@ -46,7 +46,7 @@ The deployment of additional workload clusters is supported to supply dedicated 
 
 Each physical host in this design has two redundant pairs of 10 Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} top of rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This design allows networking interface card (NIC) connections to work independently from each other.
 
-Removing physical network connectivity to the public or private network for the bare metal servers that are used within the vCenter Server offering is not possible. When the{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads is deployed with the private only network option, the physical ports on the internal NIC of the bare metal hosts are disabled and the top of rack switch ports are administratively down. There is no support for unplugging the cables.
+Removing physical network connectivity to the public or private network for the bare metal servers that are used within the vCenter Server offering is not possible. When the{{site.data.keyword.cloud_notm}} for VMware Regulated Workloads is deployed with the private only network option, the physical ports on the internal NIC of the bare metal hosts are disabled and the ToR switch ports are administratively down. There is no support for unplugging the cables.
 
 ![Physical host connections](../../images/vrw-nics-physical.svg "Physical host connections"){: caption="Figure 2. Physical host connections" caption-side="bottom"}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-10"
+lastupdated: "2021-09-10"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Upgrading vCenter Server vSphere software from vSphere 6.5 or 6.7 to 7.0
 {: #vc_vsphere_70_upgrade}
@@ -36,7 +33,8 @@ The following procedure provides the steps that are required to convert a VMware
 
 * You are responsible to ensure that all VMware ESXi™ servers have proper firmware and drivers to support vSphere 7.0. Broadwell servers are not supported. Research and plan carefully for Skylake and Cascade Lake servers.
 * {{site.data.keyword.cloud_notm}} supports only Cascade Lake bare metal servers for newly deployed vSphere 7.0 instances.
-* If you are using NSX-V, familiarize yourself with VMware’s product lifecycle for NSX-V and make appropriate plans to migrate your workload to NSX-T™.
+* If you add clusters or hosts to a vSphere 7.0 instance from the VMware Solutions console, only Cascade Lake bare metal servers are provisioned.
+* If you are using VMware NSX-V, familiarize yourself with VMware’s product lifecycle for NSX-V and make appropriate plans to migrate your workload to NSX-T™.
 * Adding and removing services is not supported for instances that are upgraded to vSphere 7.0. Due to this limitation and the changes and improvements in the architecture and topology, {{site.data.keyword.cloud_notm}} recommends that you deploy a new vSphere 7.0 instance and migrate your current network topology and workload to the new instance.
 * vCenter Server is designed to allow for a “rolling” upgrade. That is, virtual machine (VM) workloads that are currently functioning continue to function without an outage if you complete the following procedure. Enterprises must engage their change management policies to enable a structured and communicated upgrade and plan for contingencies. However, during the upgrade process of certain management functions, such as vCenter Server and NSX Manager, temporary outages of management functions, configuration changes, powering off and on VMs, might be impacted.
 
@@ -47,17 +45,17 @@ The time to complete the upgrade is unknown. It is possible that it might take s
 
 Complete the following requirements before you begin the upgrade:  
 * Upgrade any extensions or snap-ins within the vCenter Server environment. Review the following documentation before you plan your upgrade:
-  * [VMware vCenter Server 7.0 Release Notes](https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-vcenter-server-70-release-notes.html){:external}
-  * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
+   * [VMware vCenter Server 7.0 Release Notes](https://docs.vmware.com/en/VMware-vSphere/7.0/rn/vsphere-esxi-vcenter-server-70-release-notes.html){: external}
+   * [About VMware ESXi Upgrade](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){: external}
 * Set up vSphere Update Manager (VUM) within your vCenter Server instance to download updates from VMware vSphere. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 * Open a support ticket with the {{site.data.keyword.vmwaresolutions_short}} team to notify them that an upgrade is being planned. The ticket remains open until the instance is registered at the upgraded level in the {{site.data.keyword.vmwaresolutions_short}} console.
 * Confirm whether the vCenter Server instance that you are upgrading is linked to another vCenter Server instance as primary or secondary in the {{site.data.keyword.vmwaresolutions_short}} console. All linked instances must have their Platform Services Controllers (PSCs) upgraded first as part of a particular site upgrade.
 * Confirm the following requirements for vSAN based instances:
-  * Ensure that the vSAN Health tool is enabled and reports no critical errors. If critical errors are present, contact the IBM Support team with the upgrade support ticket ID.
-  * Ensure that each node has space to handle rebuilding redundancy of vSAN objects in case an ESXi host fails to come back up during the upgrade. You might need to either reduce disk usage or add an ESXi host before the upgrade.  
-  * Verify whether the overall vSAN volume usage is higher than 70%. You might need to either reduce disk usage or add an ESXi host before the upgrade.
+   * Ensure that the vSAN Health tool is enabled and reports no critical errors. If critical errors are present, contact the IBM Support team with the upgrade support ticket ID.
+   * Ensure that each node has space to handle rebuilding redundancy of vSAN objects in case an ESXi host fails to come back up during the upgrade. You might need to either reduce disk usage or add an ESXi host before the upgrade.  
+   * Verify whether the overall vSAN volume usage is higher than 70%. You might need to either reduce disk usage or add an ESXi host before the upgrade.
 * Verify that the PSC and vCenter Server `root` user ID with its credentials are visible on the console. If your vCenter Server instance was initially ordered in V2.5 or later, only the account with `customerroot` access is visible on the console. In this case, contact IBM Support for the **root** user ID password for PSC and vCenter Server.
-* Confirm that you have a [My VMware](https://my.vmware.com){:external} user ID for which to download the required binary files to upgrade. If you don't, contact IBM Support with the upgrade support ticket ID.
+* Confirm that you have a [My VMware](https://my.vmware.com){: external} user ID for which to download the required binary files to upgrade. If you don't, contact IBM Support with the upgrade support ticket ID.
 * Confirm that VUM is configured to reach https://www.vmware.com to download patches. If it can't be configured because of security policies, then you must manually download the most recent patch sets and upload them into VUM. For more information, see [VMware Update Manager introduction](/docs/vmwaresolutions?topic=vmwaresolutions-vum-intro#vum-intro).
 
 ### Preparing your jump server
@@ -66,13 +64,13 @@ Complete the following requirements before you begin the upgrade:
 Because the {{site.data.keyword.cloud_notm}} client access VPN is limited to 512 Kbps, take one of the following actions.
 * Provision an {{site.data.keyword.cloud_notm}} Windows® 2012-2016 server Virtual Server Instance (VSI).
 * Set up a similar Windows VM on a separate vCenter Server environment within the same {{site.data.keyword.cloud_notm}} data center.
-  The Windows VM is used as a jump server into the vCenter Server instance for the upgrade that downloads the binary files from https://my.vmware.com. Do not place this VM on the vCenter Server instance that is being upgraded.
+   The Windows VM is used as a jump server into the vCenter Server instance for the upgrade that downloads the binary files from https://my.vmware.com. Do not place this VM on the vCenter Server instance that is being upgraded.
 
 Complete the following steps to download files to your jump server:
 1. From the VMware Portal, download the following product files onto your jump server:
-  * For VMware vCenter Server Appliance, ``VMware-VCSA-all-7.0.1-17327517.iso``.
-  * For ESXi 7, ``VMware-ESXi-7.0U1c-17325551-depot.zip``.
-  * For Hypervisor, ``VMware-VMvisor-Installer-7.0U1c-17325551.x86_64.iso``.
+   * For VMware vCenter Server Appliance, ``VMware-VCSA-all-7.0.1-17327517.iso``.
+   * For ESXi 7, ``VMware-ESXi-7.0U1c-17325551-depot.zip``.
+   * For Hypervisor, ``VMware-VMvisor-Installer-7.0U1c-17325551.x86_64.iso``.
 2. Download the ``007.1316.0000.0000_Unified_StorCLI_PUL.zip`` file from https://docs.broadcom.com/docs/007.1316.0000.0000_Unified_StorCLI_PUL.zip.
 
 ## Procedure to upgrade vCenter Server vSphere software from 6.5 or 6.7 to 7.0
@@ -108,18 +106,18 @@ Complete the following steps from the vCenter Server user interface.
 2. For the private network switch, select **Managed Physical Adaptors**. The private network switch name ends with ``-private``.
 3. Select **uplink1/vmnic2**, then click the **X** icon to delete the adapter. Click **OK**.
 4. Return to the **Virtual Switches** panel and click **Add Networking**.
-  1. Select **Virtual Machine Port Group** for a standard switch and click **Next**.
-  2. For **New Standard Switch**, set the MTU to 9000 and click **Next**.
-  3. Click the green **+** icon to add an adapter. Click **OK**, then **Next** to accept ``vmnic2``.
-  4. For **Connection Settings**, keep the **VM Network** and **VLAN ID None** defaults. Click **Next**, then **Finish**. *Standard Switch: vSwitch0* is displayed in the list of switches.
+   1. Select **Virtual Machine Port Group** for a standard switch and click **Next**.
+   2. For **New Standard Switch**, set the MTU to 9000 and click **Next**.
+   3. Click the green **+** icon to add an adapter. Click **OK**, then **Next** to accept ``vmnic2``.
+   4. For **Connection Settings**, keep the **VM Network** and **VLAN ID None** defaults. Click **Next**, then **Finish**. *Standard Switch: vSwitch0* is displayed in the list of switches.
 5.  Make a note of the Network Setting for the vCenter Server Appliance VM. You must update the new vCenter appliance to match.
-  * From the vCenter Server user interface, click the VM for the vCenter appliance. Note the name, ending with ``vc``.
-  * From the middle pane, click the **Networks** tab. Note the name of the distributed port group, ending with ``-dpg-mgmt``. 
+   * From the vCenter Server user interface, click the VM for the vCenter appliance. Note the name, ending with ``vc``.
+   * From the middle pane, click the **Networks** tab. Note the name of the distributed port group, ending with ``-dpg-mgmt``. 
 
 ### Procedure to upgrade vCenter Server
 {: #vc_vsphere_70_upgrade-procedure-vcenter}
 
-Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.5 or 6.7 with an Embedded Platform Services Controller by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.upgrade.doc/GUID-6A5C596D-103E-4024-9353-5569263EB427.html){:external}.
+Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.5 or 6.7 with an Embedded Platform Services Controller by Using the GUI](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.upgrade.doc/GUID-6A5C596D-103E-4024-9353-5569263EB427.html){: external}.
 
 Ensure to complete the following requirements during the upgrade:
 
@@ -137,16 +135,16 @@ You must upgrade the Broadcom driver before you upgrade the ESXi host.
 2. Locate the ``vmware-storcli.vib`` file in the extracted file contents.
 3. Copy the ``.vib`` file to either a vSAN or NFS data store that is mounted on the ESXi hosts for the instance. Use vCenter Server to reference the extracted file on your jump server.
 4. SSH into each ESXi host and run the following VIB Upgrade command:  
-  ``esxcli software vib update -v /<path to vsan or nfs datastore from step 3>/vmware-storcli.vib --no-sig-check``  
-  The following installation results are displayed.
+   ``esxcli software vib update -v /<path to vsan or nfs datastore from step 3>/vmware-storcli.vib --no-sig-check``  
+   The following installation results are displayed.
     ``Message: Operation finished successfully.
     Reboot Required: false
     VIBs Installed: Broadcom_bootbank_vmware-storcli_007.1316.0000.0000-01
     VIBs Removed: LSI_bootbank_vmware-storcli_007.0916.0000.0000-01
     VIBs Skipped:``
 5. Run the following command to validate the installation:  
-  ``> esxcli software vib list |grep vmware-storcli
-  vmware-storcli    007.1316.0000.0000-01    Broadcom  PartnerSupported  2020-04-16``
+   ``> esxcli software vib list |grep vmware-storcli
+   vmware-storcli    007.1316.0000.0000-01    Broadcom  PartnerSupported  2020-04-16``
 6. Repeat for each host.
 
 ### Procedure to upgrade the ESXi hosts
@@ -158,12 +156,12 @@ You must upgrade the Broadcom driver before you upgrade the ESXi host.
 4. For each host, select the host in the vCenter browser tree, then select **update** (located in the far left in the main window).
 5. If the Zerto VRA is present on the host, put the host into maintenance mode first. Recent releases of Zerto stop the VRA, which otherwise would prevent the update.
 6. Complete the update.  
-  1. [ATTACH] Baseline, select the previously created baseline.
-  2. Select Baseline and [REMEDIATE].
+   1. [ATTACH] Baseline, select the previously created baseline.
+   2. Select Baseline and [REMEDIATE].
 7. Remediate each host in turn. After remediation, ensure to pull the host out of maintenance mode.
 
-If the upgrade process fails immediately and the ``host cannot enter maintenance mode`` error message is displayed, shut down the Zerto ZVAs and try again. The ZVRA VMs automatically start as each server comes out of remediation. For more information about continuing Zerto replication during the upgrade process, see [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/how-to-place-a-host-with-an-associated-vra-into-maintenance-mode/){:external}.
-{:note}
+If the upgrade process fails immediately and the ``host cannot enter maintenance mode`` error message is displayed, shut down the Zerto ZVAs and try again. The ZVRA VMs automatically start as each server comes out of remediation. For more information about continuing Zerto replication during the upgrade process, see [How to Place a Host with an Associated VRA into Maintenance Mode](https://www.zerto.com/myzerto/knowledge-base/how-to-place-a-host-with-an-associated-vra-into-maintenance-mode/){: external}.
+{: note}
 
 ### Updating vCenter Server and ESXi host licenses
 {: #vc_vsphere_70_upgrade-license-update}
@@ -187,10 +185,10 @@ Complete the following steps from the vCenter Server user interface.
 1. From the **Licenses** page, click **+ Add New Licenses**.
 2. Enter the new vSphere 7.0 license keys in the **New Licenses** field. If you have multiple vSphere 7.0 license keys, input the all of the licenses in the **New Licenses** filed, enter a name for each license, and click **OK**.
 3. Complete the following steps from the **Assets** page.
-  1. Select **HOSTS**.
-  2. Select the host and click **Assign License**.
-  3. Select one of the new vSphere 7 license keys and click **OK**.
-  4. Repeat this step for each upgraded host.
+   1. Select **HOSTS**.
+   2. Select the host and click **Assign License**.
+   3. Select one of the new vSphere 7 license keys and click **OK**.
+   4. Repeat this step for each upgraded host.
 4. From the **Licenses** page, select all of the old vSphere 6 licenses and click **Remove Licenses**.
 
 #### Procedure to update the vSAN cluster license
@@ -199,10 +197,10 @@ Complete the following steps from the vCenter Server user interface.
 1. From the **Licenses** page, click **+ Add New Licenses**.
 2. Enter the new vSAN license keys in the **New Licenses** field. If you have multiple vSAN license keys, enter all the licenses in the **New Licenses** field, specify a name for each license, and then click **OK**.
 3. Complete the following steps from the **Assets** page.
-  1. Select **VSAN CLUSTERS**.
-  2. Select the vSAN cluster and click **Assign License**.
-  3. Select one of the new vSAN license keys and click **OK**.
-  4. Repeat this step for each vSAN cluster.
+   1. Select **VSAN CLUSTERS**.
+   2. Select the vSAN cluster and click **Assign License**.
+   3. Select one of the new vSAN license keys and click **OK**.
+   4. Repeat this step for each vSAN cluster.
 4. From the **Licenses** page, select all the old vSAN cluster licenses and click **Remove Licenses**.
 
 ### Procedure to remove the temporary standard switch
@@ -225,6 +223,6 @@ Complete the following steps from the vCenter Server user interface.
 ## Related links
 {: #vc_vsphere_70_upgrade-related}
 
-* [About vCenter Server upgrade](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.upgrade.doc/GUID-9ED7B32A-019F-4A97-BC58-1A9BF7D16C57.html){:external}
-* [About VMware ESXi upgrade](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){:external}
+* [About vCenter Server upgrade](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vcenter.upgrade.doc/GUID-9ED7B32A-019F-4A97-BC58-1A9BF7D16C57.html){: external}
+* [About VMware ESXi upgrade](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.upgrade.doc/GUID-65B5B313-3DBB-4490-82D2-A225446F4C99.html){: external}
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

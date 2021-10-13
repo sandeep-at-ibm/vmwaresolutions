@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2020-07-14"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.5
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.5
 {: #relnotes_v35}
@@ -52,7 +48,7 @@ Currently, no support is provided for:
 {: #relnotes_v35-vss-65u1dep}
 
 vSphere 6.5u1 has been deprecated.
-{:deprecated}
+{: deprecated}
 
 When you order new instances or add new clusters, you can choose either vSphere 6.7u2 or vSphere 6.5u3. Support for existing customers who are using vSphere 6.5u1 is still provided.
 
@@ -112,7 +108,7 @@ This release installs the following service versions on newly deployed instances
 {: #relnotes_v35-fortigate-security}
 
 Automated deployment of the FortiGate Security Appliance service by using the {{site.data.keyword.vmwaresolutions_short}} console has been deprecated. For a similar service, consider the FortiGate Virtual Appliance, which is also deployed automatically.
-{:deprecated}
+{: deprecated}
 
 ### Gateway Appliances
 {: #relnotes_v35-gateway-appliance}

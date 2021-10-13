@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-08-16"
 
 subcollection: vmwaresolutions
 
@@ -30,7 +30,7 @@ Identity and access management for administrators of the {{site.data.keyword.clo
 ### HyTrust CloudControl
 {: #vrw-hytrust-management-cloudcontrol}
 
-HyTrust CloudControl (HTCC) enables unified security policies for access to the management stack, unified visibility to security configuration and context, and continuous compliance by using templates to enforce segregation of duties. It also provides a robust audit trail that includes a full record of all actions that are attempted by security, network, and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS, and other regulations.
+HyTrust CloudControl (HTCC) enables unified security policies for access to the management stack, unified visibility to security configuration and context, and continuous compliance by using templates to enforce separation of duties. It also provides a robust audit trail that includes a full record of all actions that are attempted by security, network, and compute platform administrators. HTCC also simplifies compliance with administrative controls requirements in HIPAA, PCI, FedRAMP, CJIS, and other regulations.
 
 ![HyTrust CloudControl transparent proxy](../../images/vrw-transparent-proxy.svg "HyTrust CloudControl transparent proxy"){: caption="Figure 1. HyTrust CloudControl transparent proxy" caption-side="bottom"}
 
@@ -38,13 +38,12 @@ HyTrust CloudControl (HTCC) enables unified security policies for access to the 
 {: #vrw-hytrust-management-cloudcontrol-architecture}
 
 HTCC is composed of many internal functional components:
-
-- Transparent proxy – provides the proxy functions for requests to vCenter and ESXi. This same mechanism is used for vSphere Client, vSphere Web Client, and even SSH to ESXi hosts.
-- Policy engine – enforces security policies that are created by the security administrators.
-- Authentication engine – uniform authentication policy, which integrates with Active Directory or LDAP, and it applies multi-factor authentication policy.
-- Inventory engine – keeps a synchronized inventory of vCenter objects and determines the trust level for ESXi hosts.
-- Compliance engine – performs configuration assessments and remediation.
-- Logging – Logs every action, regardless of whether it was performed or denied by policy, and, if configured, forwards to syslog server or SIEM tool. Forwarding of logging to vRealize Log Insight is required.
+* Transparent proxy – provides the proxy functions for requests to vCenter and ESXi. This same mechanism is used for vSphere Client, vSphere Web Client, and even SSH to ESXi hosts.
+* Policy engine – enforces security policies that are created by the security administrators.
+* Authentication engine – uniform authentication policy, which integrates with Active Directory or LDAP, and it applies multi-factor authentication policy.
+* Inventory engine – keeps a synchronized inventory of vCenter objects and determines the trust level for ESXi hosts.
+* Compliance engine – performs configuration assessments and remediation.
+* Logging – Logs every action, regardless of whether it was performed or denied by policy, and, if configured, forwards to syslog server or SIEM tool. Forwarding of logging to vRealize Log Insight is required.
 
 ![IBM Cloud for VMware Regulated Workloads HyTrust integration](../../images/vrw-htcc.svg "IBM Cloud for VMware Regulated Workloads HyTrust integration"){: caption="Figure 2. IBM Cloud for VMware Regulated Workloads HyTrust integration" caption-side="bottom"}
 

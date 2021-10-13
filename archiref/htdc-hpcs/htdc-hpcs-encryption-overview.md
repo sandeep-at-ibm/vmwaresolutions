@@ -74,4 +74,4 @@ The following are considered to be best practices in key management:
 ## Related links
 {: #htdc-hpcs-encryption-overview-related}
 
-* [HyTrust® DataControl®](https://www.hytrust.com/products/datacontrol-workload-encryption/){:external}
+* [HyTrust® DataControl®](https://www.hytrust.com/products/datacontrol-workload-encryption/){: external}

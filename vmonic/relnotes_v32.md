@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019
+  years:  2019, 2021
 
-lastupdated: "2019-11-05"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.2
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.2
 {: #relnotes_v32}
@@ -32,7 +28,7 @@ Starting with the 3.2 release, you can order the VMware HCX on {{site.data.keywo
 A 12-month commitment is required when you order the HCX on {{site.data.keyword.cloud_notm}} service. After the 12-month commitment expires, you can install and uninstall the HCX on {{site.data.keyword.cloud_notm}} service and you can add and remove hosts and clusters without restrictions. Your account is then charged monthly and you can cancel at any time.
 
 The 12-month commitment and charging structure do not apply to existing vCenter Server with Hybridity Bundle instances.
-{:note}
+{: note}
 
 ## VMware vSphere 6.7 Update 2 support
 {: #relnotes_v32-vsphere-v67}
@@ -42,7 +38,7 @@ You can order VMware vSphere version 6.7 Update 2 with your VMware vCenter Serve
 vSphere Enterprise Plus 6.7u2 is available for Skylake, Cascade Lake, and Broadwell {{site.data.keyword.cloud_notm}} bare metal servers.
 
 If you have an existing instance with vSphere Enterprise Plus 6.7u1, you can add new hosts with either vSphere Enterprise Plus 6.7u1 or vSphere Enterprise Plus 6.7u2. However, adding a 6.7u1 host is unsecure. It is recommended that you update your hosts to the latest ESXi server version as soon as possible.
-{:note}
+{: note}
 
 ## Cascade Lake support
 {: #relnotes_v32-cascade}

@@ -2,21 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2021
 
-lastupdated: "2018-04-16"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V2.1
 {: #relnotes_v21}
@@ -80,7 +75,7 @@ You can now see a price estimate before you submit an order to upgrade to the VM
 For the default cluster in an instance, you can deploy or expand up to 51 servers. For all subsequent clusters in an instance, you can deploy or expand up to 59 servers.
 
 This capability is available only to instances that are deployed in V2.1 and later. Instances that are upgraded to V2.1 from pre-V2.1 releases do not have this option.
-{:note}
+{: note}
 
 ### User customized IBM Cloud bare metal server configuration options
 {: #relnotes_v21-bare-metal}

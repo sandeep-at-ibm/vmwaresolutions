@@ -46,5 +46,5 @@ Open a support ticket by following the steps in [Contacting IBM Support](/docs/v
 
 * [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations)
 * [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
-* [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){:external}
-* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){:external}
+* [VMware Hybrid Cloud Extension overview](https://cloud.vmware.com/vmware-hcx){: external}
+* [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources){: external}

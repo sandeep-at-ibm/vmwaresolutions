@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-07-14"
+lastupdated: "2021-08-25"
 
 subcollection: vmwaresolutions
 
@@ -24,16 +24,16 @@ subcollection: vmwaresolutions
 VMware® multizone is a highly available offering that is built around a VMware vSAN™ stretched cluster deployment, which spans across three data centers. It provides low-latency connections and supports automated failover of workloads if an outage in one of the component data centers (availability zones) occurs.
 
 The offering has the following key features.
-- Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} multizone region (MZR) data centers.
-- vCenter HA
-- vSAN stretched cluster support for management plane and customer workloads.
-- NSX-T with pre–configured Transport Zones and overlay networks.
-- High availability of storage and compute resources, which allows for complete loss of one of the three {{site.data.keyword.cloud_notm}} data centers without disruption to any of the management or customer workloads.
-- VMware Solutions automation to add and remove workload capacity for both compute and storage.
-  - Add and remove host is supported, with a minimum of six hosts in initial consolidated cluster and a minimum of two hosts in witness cluster.
-  - Add and remove stretched vSAN clusters is supported.
-  - Add and remove of non-stretched clusters is supported.
-  - Add and remove of NFS and iSCSI storage is supported.
+* Multiple clusters with redundant vSphere infrastructure spread across three {{site.data.keyword.cloud}} data centers. Because the design relies on vSAN stretched clusters and extremely low-latency, deployment is restricted to {{site.data.keyword.cloud_notm}} multizone region (MZR) data centers.
+* vCenter HA
+* vSAN stretched cluster support for management plane and customer workloads.
+* NSX-T with pre–configured Transport Zones and overlay networks.
+* High availability of storage and compute resources, which allows for complete loss of one of the three {{site.data.keyword.cloud_notm}} data centers without disruption to any of the management or customer workloads.
+* VMware Solutions automation to add and remove workload capacity for both compute and storage.
+   * Add and remove host is supported, with a minimum of six hosts in the initial consolidated cluster and a minimum of two hosts in the witness cluster.
+   * Add and remove stretched vSAN clusters is supported.
+   * Add and remove of non-stretched clusters is supported.
+   * Add and remove of NFS and iSCSI storage is supported.
 
 ## Automation
 {: #mcv-archi-overview-auto}
@@ -43,7 +43,7 @@ The most significant part of the {{site.data.keyword.vmwaresolutions_short}} Mul
 The only action that you take is to select the configuration of the multizone instance. All other operations are provided by the automation.
 
 Automation refers to ordering and setup of the instance. Automation does not include ongoing operation.
-{:note}
+{: note}
 
 The automation begins with fully ordering of infrastructure, networking components, software licenses supplied by IBM (not including Bring Your Own License), and add-on services.
 
@@ -57,7 +57,7 @@ The following steps outline the process:
 
 The VMware Solutions automation then completes the following tasks:
 1. Orders {{site.data.keyword.cloud_notm}} bare metal servers, {{site.data.keyword.cloud_notm}} networking components (such as VLANs and subnets), storage, software licenses, and support systems.
-2. Deploys vCenter.
+2. Deploys vCenter Server.
 3. Deploys vSAN and NSX.
 4. Configures vSAN stretched clusters and vCenter HA according to the chosen configuration.
 5. Registers the VMware multizone instance in your {{site.data.keyword.vmwaresolutions_short}} console for ongoing day 2 operations.
@@ -78,7 +78,7 @@ Day 2 operation and management include the following activities:
 * Disaster recovery
 * Failure operations
 * Manual recovery
-* Backup and restore
+* Back up and restore
 * Network failure recovery
 
 **Next topic:** [VMware multizone architecture design](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-design)

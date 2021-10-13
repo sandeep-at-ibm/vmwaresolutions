@@ -4,7 +4,7 @@ copyright:
 
   years: 2020, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-09-10"
 
 subcollection: vmwaresolutions
 
@@ -12,24 +12,13 @@ keywords: HA for vmware solutions, DR for vmware solutions, high availability fo
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # High availability and disaster recovery for VMware Solutions
 {: #ha-dr}
 
 Learn about high availability and disaster recovery for {{site.data.keyword.cloud}} for VMware® Solutions.
-{:shortdesc}
+{: shortdesc}
 
 Review the following sections for more information:
 * [Disaster recovery](/docs/vmwaresolutions?topic=vmwaresolutions-understand-responsib#understand-responsib-disaster-recovery)

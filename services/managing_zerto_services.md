@@ -33,14 +33,14 @@ In this model, the {{site.data.keyword.cloud_notm}} Resiliency Orchestration ser
 
 All functions are managed from the {{site.data.keyword.cloud_notm}} Resiliency Orchestration dashboard by IBM Resiliency Services Global Command Center.
 
-For more information, see [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration){:external}.
+For more information, see [IBM Resiliency Orchestration](https://www.ibm.com/us-en/marketplace/disaster-recovery-orchestration){: external}.
 
 ## IBM-Managed Disaster Recovery Services (without Orchestration)
 {: #managing_zerto_services-without-orchestrated}
 
 In this model, a fully managed DR solution is provisioned for Zerto. This model is suitable if you want a managed service for Zerto Virtual Replication only, without the {{site.data.keyword.cloud_notm}} Resiliency Orchestration service on the {{site.data.keyword.cloud_notm}}.
 
-For more information, see [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top){:external}.
+For more information, see [IBM Resiliency Disaster Recovery as a Service](https://www.ibm.com/us-en/marketplace/disaster-recovery-as-a-service#product-header-top){: external}.
 
 ## Procedure to request Managed Disaster Recovery Services
 {: #managing_zerto_services-procedure}

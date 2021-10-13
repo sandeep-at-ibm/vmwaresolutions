@@ -2,21 +2,16 @@
 
 copyright:
 
-  years:  2018
+  years:  2018, 2021
 
-lastupdated: "2018-08-30"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V2.5
 {: #relnotes_v25}
@@ -47,7 +42,7 @@ Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.key
 You are responsible for the configuration, management, and monitoring of all software components, including the backup and availability of the management infrastructure and workloads.
 
 This change does not affect instances that are deployed before V2.5 that have the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} service installed.
-{:note}
+{: note}
 
 ## IBM CloudDriver resiliency
 {: #relnotes_v25-cloud-driver}
@@ -92,7 +87,7 @@ You can request this service after you ordered your vCenter Server instance.
 
 Starting with the V2.5 release, the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service is deployed as two separate VMs based on best practices, with one VM running the IBM Spectrum Protect Plus server and the other VM running the vSnap server and VADP proxy.
 
-You can now order up to 10 backup data stores, allowing up to 120 TB of backup storage. The vSnap and VADP VM are sized depending on your selected backup storage size and according to the information in the [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/support/pages/node/1119489){:external}.
+You can now order up to 10 backup data stores, allowing up to 120 TB of backup storage. The vSnap and VADP VM are sized depending on your selected backup storage size and according to the information in the [IBM Spectrum Protect Plus Blueprints](https://www.ibm.com/support/pages/node/1119489){: external}.
 
 ### KMIP for VMware on IBM Cloud
 {: #relnotes_v25-kmip}

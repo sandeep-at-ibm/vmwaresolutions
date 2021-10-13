@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-23"
+lastupdated: "2021-08-17"
 
 subcollection: vmwaresolutions
 
@@ -19,8 +19,7 @@ subcollection: vmwaresolutions
 # System context
 {: #htdc-hpcs-system-context}
 
-The following diagram shows the system context for vCenter Server instance with HyTrust®
- DataControl® and IBM Hyper Protect Crypto Services. A system context diagram is a high-level diagram that provides an initial view of the system. It defines the key elements of a system, the boundary of the system, and the entities that interact with it, along with the interaction.
+The following diagram shows the system context for vCenter Server instance with HyTrust® DataControl® and IBM Hyper Protect Crypto Services. A system context diagram is a high-level diagram that provides an initial view of the system. It defines the key elements of a system, the boundary of the system, and the entities that interact with it, along with the interaction.
 
 ![System Context](../../images/htdc-hpcs-system-context.svg){: caption="Figure 1. System context" caption-side="bottom"}
 
@@ -32,29 +31,28 @@ The system context diagram identifies the following actors:
 * {{site.data.keyword.cloud}} administrator - The {{site.data.keyword.cloud_notm}} administrator is responsible for assign access to the {{site.data.keyword.cloud_notm}} account, and is required to configure the Service ID to enable access to Hyper Protect Crypto Services from HyTrust DataControl.
 * VMware administrator - The VMware administrator is responsible for the ongoing configuration and maintenance of the VMware environment.
 * IBM HPCS administrators - The following are the roles that Hyper Protect Crypto Services supports.
-    * Crypto unit administrator - Issue commands to the crypto units. Multiple administrators can be added to one crypto unit to increase security. Each administrator owns one private signature key for identity authentication.
-    * Key owner - Provides primary key parts for initializing a service instance.
-    * Service user - Stores, retrieves, and generates root keys and standard keys through user interface and APIs. Note, the HTDC Cloud administrator is an HPCS service user
+   * Crypto unit administrator - Issue commands to the crypto units. Multiple administrators can be added to one crypto unit to increase security. Each administrator owns one private signature key for identity authentication.
+   * Key owner - Provides primary key parts for initializing a service instance.
+   * Service user - Stores, retrieves, and generates root keys and standard keys through user interface and APIs. Note, the HTDC Cloud administrator is an HPCS service user
 * HyTrust DataControl administrators - There are three distinct administrative roles in HTDC. These roles can be combined and there are no limits to the number of administrators. Administrators can be placed in administrative groups to provide peer oversight. All objects in the system are owned by one or more administrative groups, not by individual administrators.
-  * Security administrator:
-    * Manage users and groups.
-    * Primary Key management.
-    * Views all audit records.
-  * Domain administrator:
-    * Manages KeyControl™ nodes.
-    * KeyControl backup / restore.
-    * Limited audit view.
-  * Cloud administrator:
-    * Manages Cloud VM Sets.
-    * Encryption of disks, files, and file systems.
-    * Control VM key access.
-    * Limited audit view.
+   * Security administrator:
+      * Manage users and groups.
+      * Primary Key management.
+      * Views all audit records.
+   * Domain administrator:
+      * Manages KeyControl™ nodes.
+      * KeyControl backup / restore.
+      * Limited audit view.
+   * Cloud administrator:
+      * Manages Cloud VM Sets.
+      * Encryption of disks, files, and file systems.
+      * Control VM key access.
+      * Limited audit view.
 
 ## Systems
 {: #htdc-hpcs-system-context-systems}
 
 The system context diagram identifies the following systems:
-
 * vCenter Server instance - The vCenter Server instance hosts the workloads that require encryption and the HyTrust virtual machines.
 * HyTrust DataControl - The virtual machines that host the HyTrust DataControl software.
 * IBM Hyper Protect Crypto Service - {{site.data.keyword.cloud_notm}} Hyper Protect Crypto Services is a key management and cloud hardware security module.

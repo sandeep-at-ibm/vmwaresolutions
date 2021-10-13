@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-07-08"
+lastupdated: "2021-08-10"
 
 subcollection: vmwaresolutions
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 ## Collecting Active Directory credentials
 {: #openshift-runbook-runbook-dns-creds}
 
-1. Log in to [{{site.data.keyword.cloud}}](https://cloud.ibm.com/login){:external}.
+1. Log in to [{{site.data.keyword.cloud}}](https://cloud.ibm.com/login){: external}.
 2. From left menu, select **VMware**, then **Resources**.
 3. Select your deployed instance.
 4. Collect the AD/DNS IP and remote desktop credentials.
@@ -68,7 +68,7 @@ The following table is for an example deployment. Use your own values.
 | compute-0 Host | compute-0.ocp.dallas.ibm.local | 192.168.133.13 |
 | compute-1 Host | compute-1.ocp.dallas.ibm.local | 192.168.133.14 |
 | compute-2 Host | compute-2.ocp.dallas.ibm.local | 192.168.133.15 |
-| Application Wildcard DNS (Load Balancer) | *.apps.ocp.dallas.ibm.local | 10.208.242.131 |
+| Application wildcard DNS (Load Balancer) | *.apps.ocp.dallas.ibm.local | 10.208.242.131 |
 | Kubernetes API URL (Load Balancer) | api.ocp.dallas.ibm.local | 10.208.242.132 |
 | Kubernetes API-INT (Internal) URL (Load Balancer) | api-int.ocp.dallas.ibm.local | 10.208.242.132 |
 | etcd Node0 | etcd-0.ocp.dallas.ibm.local | 192.168.133.10 |

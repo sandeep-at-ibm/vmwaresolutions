@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-20"
+lastupdated: "2021-09-21"
 
 keywords: vCenter Server remove NFS storage
 
@@ -12,28 +12,22 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Removing NFS storage from vCenter Server instances
 {: #vc_removingnfs}
 
 You can contract the capacity of your VMware vCenter Server® instance according to your business needs by removing Network File System (NFS) storage.
 
-* If your initial cluster has vSAN® storage, adding one or more ESXi servers after deployment can increase the cluster storage capacity.
-* You can add or remove NFS storage shares to or from an existing NFS or vSAN cluster.
-
 ## Before you remove NFS storage from vCenter Server instances
 {: #vc_removingnfs-prereq}
 
+* Removing NFS storage from vCenter Server instances with VMware vSphere® 6.5 is not supported.
 * Do not remove NFS storage from the VMware vSphere Web Client. The changes that you make on the vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
 * Before you remove the NFS storage, ensure that you removed all the VMs that reside on the storage.
-* Ensure that the shares you plan to remove are associated with the correct vCenter Server instance.
+* Ensure that the shares that you plan to remove are associated with the correct vCenter Server instance.
 * The cluster must be in **Ready to use** status.
+* You can remove NFS storage shares from an existing NFS or vSAN cluster.
 
 ## Procedure to remove NFS storage from vCenter Server instances
 {: #vc_removingnfs-procedure}
@@ -53,7 +47,7 @@ You can contract the capacity of your VMware vCenter Server® instance according
 3. The NFS storage is fully reclaimed by {{site.data.keyword.cloud_notm}} infrastructure at the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle, which is typically 30 days.
 
    You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the removed NFS storage.
-   {:note}
+   {: note}
 
 ## Related links
 {: #vc_removingnfs-related}
@@ -62,5 +56,5 @@ You can contract the capacity of your VMware vCenter Server® instance according
 * [Requirements and planning for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_planning)
 * [Ordering vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance)
 * [Deleting clusters from vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_deletingclusters)
-* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:external}
-* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){:external}
+* [Place a host in maintenance mode](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.resmgmt.doc/GUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){: external}
+* [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){: external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-17"
+lastupdated: "2021-09-10"
 
 keywords: FAQ vmware solutions shared, vmware solutions shared questions
 
@@ -12,12 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'}
+{{site.data.keyword.attribute-definition-list}}
 
 # General FAQ about VMware Solutions Shared
 {: #faq-vmwaresolutions-shared}
@@ -43,7 +38,7 @@ You are provided with the following two consumption models:
 {: #faq-shared-subscribe}
 {: faq}
 
-With {{site.data.keyword.vmwaresolutions_short}} Shared, you can extend your VMs to the cloud with ultimate capacity flexibility and scalability. Whether you are looking to begin your cloud journey with a Development or Test environment, a disaster recovery site, or a full enterprise-grade hybrid cloud transformation, {{site.data.keyword.vmwaresolutions_short}} Shared provides a cost-effective and self-service way to start moving your VMs to the cloud within minutes. 
+With {{site.data.keyword.vmwaresolutions_short}} Shared, you can extend your VMs to the cloud with ultimate capacity flexibility and scalability. Whether you are looking to begin your cloud journey with a Development or Test environment, a disaster recovery site, or a full enterprise-grade hybrid cloud transformation, {{site.data.keyword.vmwaresolutions_short}} Shared provides a cost-effective and self-service way to start moving your VMs to the cloud within minutes.
 
 With IBM managing the infrastructure up to the hypervisor, you do not need to worry about managing patches, upgrades, and monitoring, which gives you more time and resources to focus on innovation. In addition, with a native like VMware experience, you can use your existing VMware resources and skill sets.
 
@@ -114,15 +109,29 @@ If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, contact
 
 Yes. Each customer virtual data center comes with an edge firewall in the ESG and a distributed firewall that protects the internal virtual data center environment. If you want to bring your own firewall such as Fortinet or Cisco CSR, you can do so and run it between the ESG and your internal virtual machines.
 
-## Can I bring my own IPs? If yes, how?
+## Can I bring my own IPs?
 {: #faq-byip}
 {: faq}
 
 You can bring your own IP addresses within your virtual data centers with a few restrictions:
 * The IP addresses `166.9.0.0/16` is reserved for {{site.data.keyword.cloud_notm}} service endpoints.
-* The IP addresses `52.117.132.0/24` is reserved for other {{site.data.keyword.cloud_notm}} services. 
+* The IP addresses `52.117.132.0/24` is reserved for other {{site.data.keyword.cloud_notm}} services.
 
 Other than the IP addresses used for internet access on each customer ESG, you can use any IP address that you want. Typically, you use an IPsec tunnel from the on-premises environment to your virtual data centers, which provides transparent networking with full BYIP capabilities.
+
+## Can I bring a custom image?
+{: #faq-customimage}
+{: faq}
+
+Yes. vCloud Director supports the same set of guest operating systems as VMware vSphere® 6.7. For more information, see [VMware Guest OS Compatibility Guide](https://www.vmware.com/resources/compatibility/pdf/VMware_GOS_Compatibility_Guide.pdf){: external}.
+
+VMware Solutions Shared provides Microsoft® Windows® server 2016/2019 templates. You can provide your own image to run other versions.
+
+## What are the Service Level Agreement options with VMware Solutions Shared?
+{: #faq-sla}
+{: faq}
+
+VMware Solutions Shared uses the {{site.data.keyword.cloud_notm}} standard Service Level Agreement (SLA). SLAs are not offered for virtual machines and vApps. For more information, see [IBM Cloud (Public Cloud) Service Description (10-2020)](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm-6605-20){: external}.
 
 ## Do I get vCenter access?
 {: #faq-vcenter-access}

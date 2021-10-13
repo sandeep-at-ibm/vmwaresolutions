@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-04"
+lastupdated: "2021-09-23"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware vSphere overview
 {: #vs_vsphereclusteroverview}
@@ -24,7 +20,7 @@ subcollection: vmwaresolutions
 VMware vSphere® is a streamlined and optimized ordering platform for VMware®. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components.
 {: shortdesc}
 
-The {{site.data.keyword.vmwaresolutions_full}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN™ cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented.
+The {{site.data.keyword.vmwaresolutions_full}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN™ cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){: external} is presented.
 
 VMware vSphere does not automate the installation, configuration, and bring-up of the optional VMware components. The platform allows maximum of flexibility to design and build your hosted VMware environment while you incorporate VMware-compatible hardware.
 
@@ -36,7 +32,7 @@ Use this offering to create a new cluster of VMware ESXi™ servers or scale out
 Review the components of VMware vSphere.
 
 The availability and pricing of standardized hardware configurations might vary based on the {{site.data.keyword.cloud_notm}} data center that is selected for deployment.
-{:note}
+{: note}
 
 ### VMware components
 {: #vs_vsphereclusteroverview-specs-vmware-components}
@@ -83,10 +79,11 @@ User-customized storage for vSAN configuration when the VMware vSAN component is
 * Storage disk options - 960 GB SSD SED, 1.9 TB SSD SED, 3.8 TB SSD SED, or 7.68 TB SSD SED.
 * Disk quantity options - 2, 4, 6, 8, or 10.
 
-  Additionally, two cache disks of 960 GB are also ordered per host.
+   Additionally, two cache disks of 960 GB are also ordered per host.
 
-  3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in a data center.
-  {:note}
+   3.8 TB SSD (Solid-State Disk) drives are supported when they are made generally available in a data center.
+   {: note}
+
 * High Performance with Intel Optane - this option provides two extra capacity disk bays for a total of ten capacity disks. It's available only for vSphere 6 instances, and for Skylake and dual-processor Cascade Lake CPU models.
 
 ## Technical specifications for vSphere cluster expansion nodes
@@ -111,7 +108,7 @@ One {{site.data.keyword.cloud_notm}} bare metal server with the networking confi
 * Optional VMware components presented in [Technical specifications for VMware vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_vsphereclusteroverview#vs_vsphereclusteroverview-specs).
 
 You must manage the ESXi servers, optional VMware components, and extra hardware that is ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After you create a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vs_scalingexistingclusters).
-{:important}
+{: important}
 
 ## Related links
 {: #vs_vsphereclusteroverview-related}

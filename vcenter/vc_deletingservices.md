@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-07-15"
+lastupdated: "2021-09-22"
 
 keywords: remove services vCenter Server
 
@@ -12,14 +12,18 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Deleting services from vCenter Server instances
 {: #vc_deletingservices}
 
 You can delete the services that were provisioned for your VMware vCenter Server® instances when you no longer need these services.
+
+## Before you delete services from vCenter Server instances
+{: #vc_deletingservices-prereq}
+
+* Deleting services from vCenter Server instances with VMware vSphere® 6.5 is not supported.
+* You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the deleted services.
 
 ## Procedure to delete services from vCenter Server instances
 {: #vc_deletingservices-procedure}
@@ -38,7 +42,7 @@ After your request to delete a service is accepted, the service status is change
 When the service deletion is completed successfully, you are notified by email, and the service is deleted from the **Services** page of the instance.
 
 You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the deleted services.
-{:note}
+{: note}
 
 ## Manually removing the DNS entries for specific services
 {: #vc_deletingservices-DNS-entries}

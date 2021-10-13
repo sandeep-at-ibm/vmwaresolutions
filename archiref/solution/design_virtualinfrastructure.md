@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-05-05"
+lastupdated: "2021-09-27"
 
 subcollection: vmwaresolutions
 
@@ -18,7 +18,7 @@ subcollection: vmwaresolutions
 # Virtual infrastructure design
 {: #design_virtualinfrastructure}
 
-The virtual infrastructure layer includes the VMware software components that virtualize the compute, storage, and network resources provided in the physical infrastructure layer: VMware vSphere ESXi, VMware NSX-T™, and optionally VMware vSAN.
+The virtual infrastructure layer includes the VMware® software components that virtualize the compute, storage, and network resources provided in the physical infrastructure layer: VMware vSphere ESXi®, VMware NSX-T™, and optionally VMware vSAN™.
 
 ![Virtual infrastructure](../../images/nsx-t-3-ra-diagrams-virtual-infrastructure.svg "Virtual infrastructure"){: caption="Figure 1. Virtual infrastructure" caption-side="bottom"}
 
@@ -26,18 +26,17 @@ The virtual infrastructure layer includes the VMware software components that vi
 {: #design_virtualinfrastructure-vsphere-design}
 
 The vSphere ESXi configuration consists of the following aspects:
-
 * Boot configuration
 * Time synchronization
 * Host access
 * User access
 * DNS configuration
 
-The following table outlines the specifications for each aspect. After the configuration and installation of ESXi, the host is added to a VMware vCenter Server and is managed from there.
+The following table outlines the specifications for each aspect. After the configuration and installation of ESXi, the host is added to a VMware vCenter Server® and is managed from there.
 
 With this design, you can access the virtual hosts through Direct Console User Interface (DCUI) and vSphere Web Client. Secure Shell (SSH) and ESXi Shell are disabled after provisioning as a best practice.
 
-By default, the only users who can log in directly are the _root_ and _ibmvmadmin_ users for the physical machine of the host. The administrator can add users from the Microsoft Active Directory (MSAD) domain to enable user access to the host. All hosts in the vCenter Server solution design are configured to synchronize with a central NTP server.
+By default, the only users who can log in directly are the _root_ and _ibmvmadmin_ users for the physical machine of the host. The administrator can add users from the Microsoft® Active Directory™ (MSAD) domain to enable user access to the host. All hosts in the vCenter Server solution design are configured to synchronize with a central NTP server.
 
 | Attribute              | Configuration parameter |
 |:---------------------- |:----------------------- |
@@ -54,27 +53,25 @@ The vSphere cluster houses the virtual machines (VMs) that manage the vCenter Se
 * When a vCenter Server instance uses vSAN, the minimum number of ESXi hosts at initial deployment is four.
 * When a vCenter Server instance uses shared file–level or block-level storage, the minimum number of ESXi hosts at initial deployment is three.
 
-You can deploy up to 20 ESXi hosts in this cluster during initial deployment. After initial deployment you can scale the cluster up to a maximum of 50 hosts in increments of up to 20 hosts at a time.
+You can deploy up to 20 ESXi hosts in this cluster during initial deployment. After initial deployment, you can scale the cluster up to a maximum of 50 hosts in increments of up to 20 hosts at a time.
 
-To support more user workloads, you can scale the environment by:  
-
-* Deploying more compute hosts in existing clusters
-* Deploying more clusters that are managed by the same vCenter Server appliance
-* Deploying new vCenter Server instances with their own vCenter Server appliance
+To support more user workloads, you can scale the environment by taking the following actions:
+* Deploying more compute hosts in existing clusters.
+* Deploying more clusters that are managed by the same vCenter Server appliance.
+* Deploying new vCenter Server instances with their own vCenter Server appliance.
 
 ## VMware vSAN design
 {: #design_virtualinfrastructure-vsan-design}
 
 In this design, VMware vSAN storage is employed in vCenter Server instances to provide shared storage for the vSphere hosts.
 
-As shown in the following figure, vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore. Within this design, the compute nodes contain local disk drives for the ESXi operating system (OS) and the vSAN datastore. Regardless of which cluster a node belongs to, two OS drives are included in each node to house the ESXi installation.
+As shown in the following figure, vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore. Within this design, the compute nodes contain local disk drives for the ESXi operating system (OS) and the vSAN datastore. An M.2 SSD drive is included in each node to house the ESXi installation, regardless of which cluster a node belongs to.
 
 ![vSAN concept](../../images/vcsv4radiagrams-ra-vsan.svg "vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore"){: caption="Figure 2. vSAN concept" caption-side="bottom"}
 
 vSAN employs the following components:
-
 * Two-disk group vSAN design; each disk group with two or more disks. One SSD or NVMe drive of the smallest size in the group serves as the cache tier and the remaining SSDs serve as the capacity tier.
-* The onboard RAID controller is configured in a RAID 0 array for each individual drive except for the two OS drives.
+* The onboard RAID controller is configured in a RAID 0 array for each individual drive that is used for vSAN cache or capacity.
 * A single vSAN datastore is created from all storage.
 
 The available vSAN features depend on the license edition that you select when you order the instance. For more information, see [VMware vSAN edition comparison](/docs/vmwaresolutions?topic=vmwaresolutions-solution-appendix#solution-appendix-vsan-editions).
@@ -97,7 +94,7 @@ The default storage policy in this design tolerates a single failure. The defaul
 
 Alternatively, you can choose the RAID 6 configuration with **Failure tolerance method** set to **RAID-5/6 (Erasure Coding) - Capacity** and **Primary level of failures** set to 2. The RAID 6 configuration requires a minimum of six hosts. **Deduplication** and **compression** are normally enabled in the default storage policy but can be disabled if needed.
 
-An instance uses the default policy unless otherwise specified from the vSphere console. When a custom policy is configured, vSAN will guarantee it when possible. However, if the policy can't be guaranteed, it's not possible to provision a VM that uses the policy unless it is enabled to force provisioning.
+An instance uses the default policy unless otherwise specified from the vSphere console. When a custom policy is configured, vSAN guarantees it when possible. However, if the policy can't be guaranteed, it's not possible to provision a VM that uses the policy unless it is enabled to force provisioning.
 
 Storage policies must be reapplied after addition of new ESXi hosts or patching of the ESXi hosts.
 
@@ -106,24 +103,24 @@ Storage policies must be reapplied after addition of new ESXi hosts or patching 
 
 vSAN settings are configured based on best practices for deploying VMware solutions within {{site.data.keyword.cloud_notm}}. The vSAN settings include SIOC settings, explicit failover settings port group, and disk cache settings.
 
-* SSD cache policy settings: No **Read Ahead**, **Write Through**, **Direct** (NRWTD)
+* SSD cache policy settings - No **Read Ahead**, **Write Through**, **Direct** (NRWTD)
 * Network I/O control settings
-  * Management - 20 shares
-  * Virtual machine - 30 shares
-  * vMotion - 50 shares
-  * vSAN - 100 shares
-* vSAN kernel ports: **Explicit Failover**
+   * Management - 20 shares
+   * Virtual machine - 30 shares
+   * vMotion - 50 shares
+   * vSAN - 100 shares
+* vSAN kernel ports - **Explicit Failover**
 
 ## NFS attached storage
 {: #design_virtualinfrastructure-nfs-storage}
 
-When using NFS network-attached storage, this architecture prescribes the use of NFS v3 rather than NFS v4.1, because NFS server LIF migrations might cause excessive latency when using NFS v4.1. Each vSphere host is connected to the NFS storage by using its hostname.
+NFS server LIF migrations might cause excessive latency when they use NFS v4.1. When you use NFS network-attached storage, this architecture prescribes the use of NFS v3 rather than NFS v4.1. Each vSphere host is connected to the NFS storage by using its hostname.
 
 One 2-TB NFS data store is attached to a cluster for use by management components with a performance tier of 4 IOPS/GB. More data stores can be attached to a cluster for workload use, at various sizes and performance tiers.
 
 Additionally, this architecture requires that all hosts have a subnet route that is created for the subnet where the NFS storage resides. The purpose of this subnet route is to direct all NFS traffic to use the port group, subnet, and VLAN designated for NFS traffic by this design. If multiple NFS data stores are attached, multiple routes might be required to be configured since those data stores might be located in different remote subnets.
 
-Management virtual machines can be located on an NFS data store. This creates a bootstrapping problem since some of the management machines might be responsible for DNS services, which are used to resolve the NFS hostname. Therefore, this architecture specifies that at least one of the IP addresses for the management data store to be hardcoded in `/etc/hosts` on each of the hosts.
+Management virtual machines can be located on an NFS data store. This approach creates a bootstrapping problem since some of the management machines might be responsible for DNS services, which are used to resolve the NFS hostname. Therefore, this architecture specifies that at least one of the IP addresses for the management data store to be hardcoded in `/etc/hosts` on each of the hosts.
 
 **Next topic:** [VMware NSX-T design](/docs/vmwaresolutions?topic=vmwaresolutions-nsx-t-design)
 

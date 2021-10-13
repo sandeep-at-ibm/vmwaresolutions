@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-16"
+lastupdated: "2021-08-24"
 
 subcollection: vmwaresolutions
 
@@ -39,7 +39,7 @@ Because vSAN encryption operates at the datastore level, its primary goal is to 
 * For vSphere versions older than 7.0u1a, vSAN encryption cannot encrypt the host to host vSAN replication communications within your cluster. Beginning with vSphere 7.0u1a, you can optionally enable data-in-transit encryption for each vSAN cluster.
 * vSAN encryption is not applicable to other storage solutions such as {{site.data.keyword.cloud_notm}} Endurance file and block storage.
 * vSAN encryption requires the vSAN Enterprise license.
-* The vSAN health check might send periodic warnings that it is unable to connect to the Key Management Service (KMS) cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS health check intermittently fails with SSL handshake timeout error](https://kb.vmware.com/s/article/67115){:external}.
+* The vSAN health check might send periodic warnings that it is unable to connect to the Key Management Service (KMS) cluster from one or more of your vSphere hosts. These warnings occur because the vSAN health check connection times out too quickly. You can ignore these warnings. For more information, see [vSAN KMS health check intermittently fails with SSL handshake timeout error](https://kb.vmware.com/s/article/67115){: external}.
 
 ### vSphere encryption
 {: #kmip-design-vsphere-encrypt}
@@ -55,18 +55,18 @@ vSphere encryption is not compatible with VMware HCX or Zerto. vSphere encryptio
 ### More considerations
 {: #kmip-design-considerations}
 
-When either type of encryption is enabled in your vSphere cluster, VMware creates an extra key to encrypt your ESXi core dumps. These core dumps might contain sensitive data such as key management credentials, encryption keys, or decrypted data. For more information, see [vSphere VM encryption and core dumps](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-63728E8B-810D-418B-B1AA-6A0A2F92AABE.html){:external}.
+When either type of encryption is enabled in your vSphere cluster, VMware creates an extra key to encrypt your ESXi core dumps. These core dumps might contain sensitive data such as key management credentials, encryption keys, or decrypted data. For more information, see [vSphere VM encryption and core dumps](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-63728E8B-810D-418B-B1AA-6A0A2F92AABE.html){: external}.
 
 When KMIP for VMware is used together with vSAN encryption or vSphere encryption, several layers of key protection exist.
 
 If you plan to rotate keys, review the following information about the levels at which the keys can be rotated:
-* Level 1: Your customer root key (CRK) protects all VMware keys. These keys can be rotated in the IBM Key Protect or Hyper Protect Crypto Services instance that is associated with your KMIP for VMware instance. When these keys are rotated in the IBM Key Protect instance, KMIP for VMware handles the new CRK automatically and no operation is needed in VMware or vCenter Server.
-* Level 2: KMIP for VMware uses your CRK to protect the keys that it generates and distributes to VMware. VMware considers these keys to be key encrypting keys (KEKs). KEK rotation is relatively fast. VMware reaches out to KMIP for a new key, takes the DEKs encrypted by the original key and wraps them in this new key, and then stores the updated encrypted DEKs.
-  * If you are using vSphere encryption, you can rotate the KEKs by using the **Set-VMEncryptionKey** PowerShell command.
-  * If you are using vSAN encryption, you can rotate the KEKs by using the vSAN user interface.
-* Level 3: VMware uses these KEKs to protect the actual keys that it uses to encrypt disk drives and VM disks. You can rotate these keys by using what VMware calls a "deep" rekey. This operation reencrypts all your encrypted data so it might take a long time.
-  * If you are using vSphere encryption, you can perform a deep rekey by using the **Set-VMEncryptionKey** PowerShell command.
-  * If you are using vSAN encryption, you can perform a deep rekey by using the vSAN user interface.
+* Level 1 - Your customer root key (CRK) protects all VMware keys. These keys can be rotated in the IBM Key Protect or Hyper Protect Crypto Services instance that is associated with your KMIP for VMware instance. When these keys are rotated in the IBM Key Protect instance, KMIP for VMware handles the new CRK automatically and no operation is needed in VMware or vCenter Server.
+* Level 2 - KMIP for VMware uses your CRK to protect the keys that it generates and distributes to VMware. VMware considers these keys to be key encrypting keys (KEKs). KEK rotation is relatively fast. VMware reaches out to KMIP for a new key, takes the DEKs encrypted by the original key and wraps them in this new key, and then stores the updated encrypted DEKs.
+   * If you are using vSphere encryption, you can rotate the KEKs by using the **Set-VMEncryptionKey** PowerShell command.
+   * If you are using vSAN encryption, you can rotate the KEKs by using the vSAN user interface.
+* Level 3 - VMware uses these KEKs to protect the actual keys that it uses to encrypt disk drives and VM disks. You can rotate these keys by using what VMware calls a "deep" rekey. This operation reencrypts all your encrypted data so it might take a long time.
+   * If you are using vSphere encryption, you can perform a deep rekey by using the **Set-VMEncryptionKey** PowerShell command.
+   * If you are using vSAN encryption, you can perform a deep rekey by using the vSAN user interface.
 
 ## KMIP for VMware
 {: #kmip-design-kmip-for-vmware}
@@ -82,7 +82,7 @@ Key management systems commonly use a technique that is known as *envelope encry
 
 VMware implements this same concept for its keys. KMIP for VMware provides a key to VMware upon request. In turn, VMware uses this key as a KEK to wrap or encrypt the final keys that are used to encrypt your vSAN disk drives or VM disks. These final keys are called data encryption keys (DEKs).
 
-So we end up with the following chain of encryption:
+So you end up with the following chain of encryption:
 * Customer root key (CRK) stored permanently in IBM Key Protect or Hyper Protect Crypto Services.
 * Key encrypting key (KEK) generated by KMIP for VMware and provided to vCenter Server and to the ESXi hosts in your instance.
 * Data encrypting key (DEK) generated by VMware and stored alongside the vSAN disk or VM disk.

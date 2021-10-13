@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-04-19"
+lastupdated: "2021-08-16"
 
 keywords: horizon, horizon 7, horizon 7 architecture
 
@@ -25,7 +25,7 @@ VMware Horizon® 7 for {{site.data.keyword.cloud}} delivers a seamlessly integra
 
 For customers who are already familiar with Horizon 7 or have Horizon 7 deployed on-premises, Horizon 7 helps you use a unified architecture and familiar tools. You use the same expertise that you know from VMware vSphere® and Horizon 7 for operational consistency and you use the same rich feature set and flexibility you expect. By outsourcing the management of the vSphere platform to IBM, you can simplify management of Horizon 7 deployments.
 
-IT administrators can use this information to deploy Horizon 7. Use this information together with [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){:external} and the [VMware workspace ONE and VMware Horizon reference architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){:external}.
+IT administrators can use this information to deploy Horizon 7. Use this information together with [VMware Horizon 7 documentation](https://docs.vmware.com/en/VMware-Horizon-7/index.html){: external} and the [VMware workspace ONE and VMware Horizon reference architecture](https://techzone.vmware.com/resource/workspace-one-and-horizon-reference-architecture){: external}.
 
 ## Overview of Horizon 7
 {: #horizon-arch-ovw-horizon7}
@@ -39,7 +39,7 @@ After you deployed an SDDC on {{site.data.keyword.cloud_notm}}, you can deploy H
 By using the Cloud Pod Architecture (CPA) Horizon 7 feature, you can scale your Horizon 7 deployment across multiple pods and sites for federated management. You can deploy Horizon 7 in a hybrid cloud environment when you use CPA to interconnect on-premises data centers and {{site.data.keyword.cloud_notm}} data centers.
 
 A single pod and the Connection Servers in it must be located within a single data center and cannot span locations. Multiple locations must have their own separate pods. These pods can be managed individually or interconnected by using Cloud Pod Architecture (CPA).
-{:important}
+{: important}
 
 Since the Horizon 7 architecture is the same on-premises and in {{site.data.keyword.cloud_notm}}, the deployment and management experience remain the same across on-premises sites and in the cloud. When you use multiple data centers, you must use a storage replication mechanism, such as DFS-R in a hub-spoke topology, for replicating user data.
 
@@ -48,7 +48,7 @@ You can also stretch CPA across two or more {{site.data.keyword.cloud_notm}} dat
 ## Differences between Horizon 7 and Horizon Cloud
 {: #horizon-arch-ovw-diffs}
 
-{{site.data.keyword.cloud_notm}} offers two solutions based on VMware Horizon – Horizon Cloud and Horizon 7. These two solutions share many features but are intended for different use cases. 
+{{site.data.keyword.cloud_notm}} offers two solutions based on VMware Horizon – Horizon Cloud and Horizon 7. These two solutions share many features but are intended for different use cases.
 
 Horizon 7 provides the following key advantages over Horizon Cloud:
 * Connectivity to other services that are running in {{site.data.keyword.cloud_notm}}.
@@ -94,7 +94,7 @@ To set up a successful deployment, you must configure the logical network that c
 Include the following components in the logical network configuration.
 
 This document describes NSX-V components.
-{:note}
+{: note}
 
 ### Management component​
 {: #horizon-arch-ovw-mgmt-comp}

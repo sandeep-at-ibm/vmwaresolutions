@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-06"
+lastupdated: "2021-09-10"
 
 keywords: vCenter Server compliance, compliance info, vCenter Server policy
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Compliance information for vCenter Server instances
 {: #vc_compl_info}
@@ -24,7 +21,7 @@ subcollection: vmwaresolutions
 Review the following information for details about compliance for VMware® vCenter Server® instances.
 
 The vCenter Server with NSX-T™ offering is not supported for HIPAA customers.
-{:important}
+{: important}
 
 ## Customer versus IBM responsibility for vCenter Server
 {: #vc_compl_info-responsibility}
@@ -100,7 +97,7 @@ vCenter Server environments, which are delivered as {{site.data.keyword.vmwareso
 * Due to the level of specialization that is required to maintain superior technical expertise at the team level, it is sometimes necessary to involve more than one support team in resolving a particular software problem. This is easily handled, as our support teams are all networked together and work as one to resolve whatever problems or issues arise.
 * In order to investigate the issue, IBM might need to access information on your system relative to the failure or might need to re-create the failure to get additional information.
 * A client–generated support ticket serves as acknowledgment that IBM Support can access the VMware management layer for investigation, debugging, and triage. If maintenance outage or changes to the environment are required, IBM Support will request additional documented confirmation from the client through tickets as part of our change management process.
-* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external} and [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
+* For more information about support tickets, see [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){: external} and [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support).
 
 ## Client responsibilities
 {: #vc_compl_info-client-responsibilities}
@@ -140,7 +137,7 @@ vCenter Server environments, which are delivered as {{site.data.keyword.vmwareso
 * These non–IBM programs are licensed directly by their providers. Client agrees to use the non–IBM programs under the provider’s terms and conditions. These terms are provided in the IBM licensing agreement that accompanies the IBM offering at time of purchase.
 * IBM does testing to ensure that the third-party products work with IBM programs and that they function correctly.
 * IBM Support will diagnose client problems by using the knowledge of how our IBM offerings work with the Third-Party software. After it has been concluded that the IBM program is working correctly, but the issue still exists, IBM must refer the client to the Third-Party vendor for further diagnosis.
-* Further information on client responsibilities regarding Third-Party software or code can be found in the [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){:external}.
+* Further information on client responsibilities regarding Third-Party software or code can be found in the [IBM Support Guide](https://www-01.ibm.com/support/docview.wss?uid=ibm10733923){: external}.
 
 ## Consent to accessing client environments
 {: #vc_compl_info-consent-to-access-client-environment}

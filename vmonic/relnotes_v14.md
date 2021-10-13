@@ -2,20 +2,16 @@
 
 copyright:
 
-  years:  2016, 2017
+  years:  2016, 2021
 
-lastupdated: "2017-03-08"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V1.4
 {: #relnotes_v14}
@@ -46,7 +42,7 @@ VMware NSX for vSphere 6.2.4 is now installed by default on all vCenter Server i
 As part of the NSX installation, the NSX Manager is installed and licensed on all new instances that are deployed. In addition, an NSX Edge is created for instance management, but you can create your own NSX Edge components if required.
 
 The NSX Controller is not installed on vCenter Server instances (the way it is installed on Cloud Foundation instances). If you are using VXLAN or distributed logical routers for your vCenter Server instances, then you must install the NSX Controller yourself.
-{:note}
+{: note}
 
 ### VMware NSX Edge
 {: #relnotes_v14-nsx-edge}
@@ -86,7 +82,7 @@ This release includes the following topology enhancements for your instances:
 * For Cloud Foundation instances only: Windows AD SSO (Active Directory Single Sign-On) and Domain Name System (DNS) server
 
 Because of these changes, you cannot use your existing pre-V1.4 instances in the current release. To reuse the configuration of your existing instances, you must upgrade them to the current version.
-{:note}
+{: note}
 
 ## Multi-site configuration support for Cloud Foundation instances
 {: #relnotes_v14-vcf-multisite}

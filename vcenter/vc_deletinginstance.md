@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-14"
+lastupdated: "2021-09-10"
 
 keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server, vmware multizone, vcenter server multizone, delete vCenter Server multizone
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Deleting vCenter Server instances
 {: #vc_deletinginstance}
@@ -31,7 +28,7 @@ When you delete a vCenter Server instance, the following components are released
 6. VLANs
 
 Any VLANs that have your own resources added to them, such as gateways, Veeam® servers, and so on, will not be deleted. In addition, any existing VLANs that you own, outside of {{site.data.keyword.vmwaresolutions_full}}, will not be deleted.
-{:note}
+{: note}
 
 Because of resource dependencies, the components in your instance are not released immediately when you delete the instance. For example, the subnets and VLANs cannot be deleted until the ESXi servers are fully reclaimed by the {{site.data.keyword.cloud_notm}} infrastructure at the end of the billing cycle. You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastructure billing cycle for the deleted instance.
 
@@ -42,7 +39,7 @@ After the ESXi server reclaim process completes, the subnets and VLANs are delet
 You can review the next account invoice to confirm that you are no longer billed for this instance. From the {{site.data.keyword.cloud_notm}} console, click **Manage > Billing and usage**, then click **Invoices**.
 
 New deployments of vCenter Server multizone instances are not supported.
-{:deprecated}
+{: deprecated}
 
 ## Procedure to delete vCenter Server instances from the Resources page
 {: #vc_deletinginstance-procedure1}

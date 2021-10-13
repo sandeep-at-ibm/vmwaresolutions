@@ -46,4 +46,4 @@ Connections between the on-premises environment, CSP (Cloud Service Provider), C
 ## Related links
 {: #vrw-context-related}
 
-* [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance){:external}
+* [IBM Cloud compliance programs](https://www.ibm.com/cloud/compliance){: external}

@@ -2,21 +2,16 @@
 
 copyright:
 
-  years:  2016, 2018
+  years:  2016, 2021
 
-lastupdated: "2018-10-19"
+lastupdated: "2021-09-20"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V2.2
 {: #relnotes_v22}
@@ -56,7 +51,7 @@ It is recommended that you change the remaining configuration settings to the ne
 For V2.2 and later releases, you can now increase the number of ESXi servers to a maximum of 51 for an initial cluster and up to 59 for extra clusters.
 
 For instances deployed in V2.1 or earlier releases, you must enable necessary vSAN support to increase the cluster size beyond 32.
-{:important}
+{: important}
 
 ## More network configuration options for vCenter Server and Cloud Foundation instances
 {: #relnotes_v22-network-config}
@@ -81,7 +76,7 @@ For VMware vCenter Server instances that are deployed in V2.2 or later releases,
 You can now select the deployment of a single Microsoft Windows Server Virtual Server Instance (VSI) for Microsoft Active Directory (AD) or two high availability Microsoft Windows virtual machines in the management cluster. For releases before V2.2, the single Microsoft Windows VSI for Microsoft AD was automatically deployed by default. The new option to select two Microsoft Windows virtual machines provides more privacy and the option to back up and restore the virtual machines that use the Veeam service.
 
 You must provide two Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
-{:note}
+{: note}
 
 ### Increased number of clusters per instance
 {: #relnotes_v22-clusters-per-inst}

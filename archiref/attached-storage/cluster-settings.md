@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-10-07"
 
 subcollection: vmwaresolutions
 
@@ -89,7 +89,7 @@ The following table shows the settings for the vSphere HA cluster in the VMware 
 | Maximum resets time window | Within 1 hr |
 {: caption="Table 2. Failure Conditions and VM Response settings for the vSphere HA cluster" caption-side="top"}
 
-For more information about configuring these settings in the vSphere Web Client, see [Configure virtual machine responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html){:external}.
+For more information about configuring these settings in the vSphere Web Client, see [Configure virtual machine responses](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.avail.doc/GUID-3DAED2B1-55B8-4877-BD0F-BC57C10A516C.html){: external}.
 
 #### Admission control
 {: #cluster-settings-admin-control}

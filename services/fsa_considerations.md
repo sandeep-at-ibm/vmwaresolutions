@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-20"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -24,9 +24,9 @@ subcollection: vmwaresolutions
 {: #fsa_considerations}
 
 Automated deployment of the FortiGate Security Appliance service is no longer supported. For a similar service, consider the [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations), which is deployed automatically.
-{:deprecated}
+{: deprecated}
 
-The FortiGate Security Appliance service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide the following services to protect all the servers and virtual machines on the public VLAN of your instances:
+The FortiGate Security Appliance service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode. This deployment provides the following services to protect all the servers and virtual machines on the public VLAN of your instances:
 * Firewall
 * Routing
 * NAT
@@ -65,7 +65,7 @@ Review the following considerations before you install the FortiGate Security Ap
 * If you want to add the FortiGate Security Appliance service to a deployed instance, ensure that no other firewall from {{site.data.keyword.cloud_notm}} infrastructure is already in place on the public VLAN of the instance.
 * Installing the FortiGate Security Appliance service adds a new public VLAN.
 * During the service deployment, your instance might not be able to access the internet temporarily.
-* After the FortiGate Security Appliance service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console. You must ensure that the FSA firewall rules are defined to allow outbound HTTPS (TCP port 443) communications that are started by management components such as the Zerto Virtual Manager to communicate with the external management database on {{site.data.keyword.cloud_notm}} over the internet. The outbound HTTPS (TCP port 443) communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
+* After the FortiGate Security Appliance service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console. Ensure the FSA firewall rules are defined to allow outbound HTTPS (TCP port 443) communications that are started by management components such as the Zerto Virtual Manager to communicate with the external management database on {{site.data.keyword.cloud_notm}} over the internet. The outbound HTTPS (TCP port 443) communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
 * You must manage the FortiGate Security Appliance configuration carefully to allow only necessary communications and deny all other communications.
 * If you order additional clusters, the public VLANs for these newly added clusters do not have the HA-pair of Security Appliances.
 
@@ -73,7 +73,7 @@ Review the following considerations before you install the FortiGate Security Ap
 {: #fsa_considerations-install-notes}
 
 Review the following notes about installation:
-* Before the service is installed in your environment, a check is made  against the available capacity of the default cluster in the environment to ensure that the service components can fit.
+* Before the service is installed in your environment, a check is made against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
 * To install the service, you must increase the capacity in your default cluster. You can either add more hosts or free up RAM, CPU, or disk space, and then add the service again in the console. After that, delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
 
@@ -82,8 +82,8 @@ Review the following notes about installation:
 
 After the FortiGate Security Appliance service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console.
 
-You must ensure that the FSA firewall rules are defined to allow outbound HTTPS (TCP port 443) communications that are initiated by management components such as the Zerto Virtual Manager to communicate with the external management database on the {{site.data.keyword.cloud}} infrastructure over the internet. The outbound HTTPS (TCP port 443) communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
-{:important}
+Ensure the FSA firewall rules are defined to allow outbound HTTPS (TCP port 443) communications that are initiated by management components such as the Zerto Virtual Manager to communicate with the external management database on the {{site.data.keyword.cloud}} infrastructure over the internet. The outbound HTTPS (TCP port 443) communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
+{: important}
 
 ### Accessing the FortiGate 300 series console
 {: #managingfsa-access-console}

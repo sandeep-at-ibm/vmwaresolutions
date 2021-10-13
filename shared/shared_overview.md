@@ -118,7 +118,7 @@ When you create or deploy vApps or VMs, you can select either an unencrypted or 
 * 0.25 IOPS/GB - Storage tier with a maximum throughput of 0.25 IOPS/GB.
 
 Standard is the default policy for virtual data centers.
-{:note}  
+{: note}  
 
 #### Encrypted storage policy options
 {: #shared_overview-specs-storage-encrypted}
@@ -131,10 +131,10 @@ Encryption enabled storage policies are available to all organization virtual da
 * 2 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 2 IOPS/GB.
 * 0.25 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 0.25 IOPS/GB.
 
-For more information about the VM encryption limitations for VMware Cloud Director 10.1, see [Enabling VM encryption on storage policies of an organization virtual data center](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-80F58C1D-A97E-43FE-8E41-E9242A1D2332.html){:external}.
+For more information about the VM encryption limitations for VMware Cloud Director 10.1, see [Enabling VM encryption on storage policies of an organization virtual data center](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-80F58C1D-A97E-43FE-8E41-E9242A1D2332.html){: external}.
 
 The encryption storage policies do not currently work with VM customizations. IBM is working closely with VMware to resolve this issue in a future release. In the meantime, you can use encryption storage policies after a VM is deployed and customized by using the unencrypted storage policies. For more information, see [Changing the general properties of a virtual machine](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-change-properties).
-{:note}
+{: note}
 
 ### Maximum disk size
 {: #shared_overview-specs-disk-size}
@@ -163,5 +163,5 @@ to {{site.data.keyword.vmwaresolutions_short}} service instances. For more infor
 * [Requirements and planning for VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_planning)
 * [Ordering virtual data centers](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering)
 * [Operating VMware Solutions Shared](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide)
-* [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){:external}
-* [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){:external}
+* [VMware vCloud Director](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html){: external}
+* [Troubleshooting NSX Edge](https://docs.vmware.com/en/VMware-NSX-Data-Center-for-vSphere/6.4/com.vmware.nsx.troubleshooting.doc/GUID-E6CD6FAA-3DA7-4AD7-9577-EE121AA7E1E6.html){: external}

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years:  2020
+  years:  2020, 2021
 
-lastupdated: "2020-04-20"
+lastupdated: "2021-09-20"
 
 keywords: release notes, what's new, version 3.6
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for V3.6
 {: #relnotes_v36}
@@ -27,7 +23,6 @@ This release includes new features, component updates, usability enhancements, a
 {: #relnotes_v36-shared}
 
 You can open an {{site.data.keyword.cloud_notm}} Support ticket to request five additional public IP addresses or an entire subnet for your virtual data center. Include the following details in your support ticket:
-
 * Instance region and location
 * Organization ID
 * Virtual data center name
@@ -66,16 +61,16 @@ This release applies the following upgrades and improvements for newly deployed 
 {: #relnotes_v36-vcs-resource-group}
 
 When you order the following instances, services, or licenses, you can now select a **Resource group** to organize resources management for access control and billing purposes:
-   * vCenter Server instances
-   * Caveonix RiskForesight licenses
-   * On-premises VMware HCX instances
-   * KMIP for VMware instances
+* vCenter Server instances
+* Caveonix RiskForesight licenses
+* On-premises VMware HCX instances
+* KMIP for VMware instances
 
 ### Support for VMware Subscription Purchasing Program
 {: #relnotes_v36-vcs-spp}
 
 The support for VMware Subscription Purchasing Program (SPP) is available only to users who are billed in the US.
-{:note}
+{: note}
 
 VMware Subscription Purchasing Program offers a flexible way to consume VMware Subscription Services in the form of Subscription Credits (SPP Credits). When you order vCenter Server instances, you can redeem SPP Credits towards licensing costs.
 
@@ -105,8 +100,8 @@ This release installs BIG-IP VE v15.1.0.2 on newly deployed instances.
 {: #relnotes_v36-services-htcc}
 
 The following versions of the HyTrust CloudControl service are installed on newly deployed instances, based on the NSX networking solution type of your instance:
-  * 5.6 for vCenter Server with NSX-V
-  * 6.1 for vCenter Server with NSX-T™
+* 5.6 for vCenter Server with NSX-V
+* 6.1 for vCenter Server with NSX-T™
 
 ### Enhancements for Juniper vSRX
 {: #relnotes_v36-services-juniper-vsrx}
@@ -148,9 +143,8 @@ The user interface is updated and provides the following enhancements:
    * Caveonix RiskForesight licenses: cav-_xx_
    * On-premises VMware HCX instances: hcx-_xx_
    * KMIP for VMware instances: kmip-_xx_
-
-    where _xx_ represents two randomly generated alphabetic characters. You can use the default names or specify new names for them.
+   where _xx_ represents two randomly generated alphabetic characters. You can use the default names or specify new names for them.
 * The following enhancements are made to the **Network Interface** section when you order vCenter Server or vCenter Server with NSX-T instances and when you add clusters for these instances:
-  * When you reuse an existing primary subnet, the **Public Primary Subnet** and **Private Primary Subnet** lists display the number of available slots for each IP address.
-  * A new **Advanced Settings** option is available for configuring portable subnet settings.
+   * When you reuse an existing primary subnet, the **Public Primary Subnet** and **Private Primary Subnet** lists display the number of available slots for each IP address.
+   * A new **Advanced Settings** option is available for configuring portable subnet settings.
 * Various error messages and tooltip enhancements are available to assist you in selecting the appropriate setting on the user interface.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-19"
+lastupdated: "2021-10-08"
 
 subcollection: vmwaresolutions
 
@@ -22,7 +22,7 @@ subcollection: vmwaresolutions
 The installation of VMware® HCX™ has the following software requirements:
 * vSphere 5.5 U3, or vSphere 6.0u2 or higher.
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
-* To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU compatibility FAQ](https://kb.vmware.com/s/article/1005764){:external}.
+* To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU compatibility FAQ](https://kb.vmware.com/s/article/1005764){: external}.
 
 ## Configuring network connectivity
 {: #hcxclient-planning-config-net}
@@ -43,8 +43,8 @@ Before you install HCX, verify that your environment can support the tasks that 
 * Ports and firewalls opened as required as documented in Port Access Requirements.
 * If the single sign-on (SSO) server is remote, the URL of the vCenter, external SSO Server, or Platform Services Controller (PSC) that runs the external lookup service must be identified. When the HCX Manager is registered with the vCenter, this URL must be supplied.
 * If a vCenter Server does not have its own internal instance of the lookup service, it might be for one of the following reasons:
-  * vCenter 6.0u2 is running an external Platform Services Controller.
-  * vCenter Server is in linked mode (where the secondary vCenter uses the SSO service from the primary vCenter or an external SSO service).
+   * vCenter 6.0u2 is running an external Platform Services Controller.
+   * vCenter Server is in linked mode (where the secondary vCenter uses the SSO service from the primary vCenter or an external SSO service).
 
 ## Verifying Layer 2 installation environment
 {: #hcxclient-planning-verify-layer-2-inst}
@@ -52,11 +52,11 @@ Before you install HCX, verify that your environment can support the tasks that 
 Layer 2 network stretching has the following requirements:
 * A vSphere Enterprise Plus edition.
 * The vSphere vCenter must meet the following requirements to support Layer 2 extension:
-  * vSphere Enterprise Plus license
-  * Must have a vSphere Distributed Switch (vDS). The distributed switch is available with vSphere Enterprise Plus Edition.
-  * When installed, the on-premises Layer 2 concentrator service appliance must have access to a vNIC port and any VLANs to be stretched.
-  * If the network is to be stretched over the public internet or a VPN (on an alternative path), the L2C VM in vCenter Server requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
-  * If multiple Layer 2 concentrators are wanted, each must have an IP address on-premises and in the cloud.
+   * vSphere Enterprise Plus license.
+   * Must have a vSphere Distributed Switch (vDS). The distributed switch is available with vSphere Enterprise Plus Edition.
+   * When installed, the on-premises Layer 2 concentrator service appliance must have access to a vNIC port and any VLANs to be stretched.
+   * If the network is to be stretched over the public internet or a VPN (on an alternative path), the L2C VM in vCenter Server requires an IP address. The remote IP address is required to configure the Layer 2 concentrator.
+   * If multiple Layer 2 concentrators are wanted, each must have an IP address on-premises and in the cloud.
 
 ## Pre-deployment planning
 {: #hcxclient-planning-predepl}
@@ -87,8 +87,8 @@ The following sections describe the phases within a typical HCX migration lifecy
 ## vSphere inventory
 {: #hcxclient-planning-vsphere-planning}
 
-- Coarse-grained assessment of VMs within an application to be migrated. Coarse grained implies understanding the VMs that participate in an application, without delving into the details.
-- If you plan to migrate many VMs and network bandwidth is limited between the source and cloud sites, further group VMs by VLAN or VXLAN if NSX is employed at the source. This allows for a cascading HCX migration plan where groups of VMs by VLAN are migrated and the L2 networks they reside upon are stretched only until the point the VLANs are released.
+* Coarse-grained assessment of VMs within an application to be migrated. Coarse grained implies understanding the VMs that participate in an application, without delving into the details.
+* If you plan to migrate many VMs and network bandwidth is limited between the source and cloud sites, further group VMs by VLAN or VXLAN if NSX is employed at the source. This allows for a cascading HCX migration plan where groups of VMs by VLAN are migrated and the L2 networks they reside upon are stretched only until the point the VLANs are released.
 
 This means that the initial group of related L2 stretched networks can be unstretched only when the cloud side network design is finalized and deployed. Unstretching implies swinging the particular VXLAN traffic to now route through the cloud instance NSX infrastructure.
 
@@ -144,10 +144,10 @@ Network swing occurs after the evacuation of the VMs on source side networks is 
 {: #hcxclient-planning-client-platforms}
 
 For network extension, only port groups with a vSphere virtual distributed switch (vDS) are supported. This also implies that stand-alone ESXi hosts are not supported as you can have only a vDS when ESXi hosts are managed by vCenter.
-- vSphere 5.1 (command line only for vCenter 5.1 through API)
-- vSphere 5.5 (web client UI supported on vCenter 5.5u3 and above)
-- vSphere 6.0
-- vSphere 6.5 (vDS must be at a 6.0 level)
+* vSphere 5.1 (command line only for vCenter 5.1 through API)
+* vSphere 5.5 (VMware vSphere Web Client supported on vCenter Server 5.5u3 and earlier)
+* vSphere 6.0
+* vSphere 6.5 (vDS must be at a 6.0 level)
 
 ## Cloud platforms supported
 {: #hcxclient-planning-cloud-platforms}
@@ -160,7 +160,7 @@ HCX Cloud side is provisioned by {{site.data.keyword.cloud_notm}} automation.
 ### Standard HCX connectivity
 {: #hcxclient-planning-standard-connect}
 
-As deployed by the {{site.data.keyword.vmwaresolutions_short}} automation, HCX cloud side installation is configured to connect to across the public internet by default.
+As deployed by the {{site.data.keyword.vmwaresolutions_short}} automation, HCX cloud side installation is configured to connect to across the Internet by default.
 
 **Next topic:** [HCX Client deployment](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-vcs-client-deployment)
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-06"
+lastupdated: "2021-08-26"
 
 keywords: IBM Cloud Object Storage, ICOS configuration, order Cloud Object Storage
 
@@ -44,19 +44,19 @@ For more information about creating service credentials, see [Service credential
 
 * As part of the Veeam service installation and configuration, a scale-out backup repository with the name `IC4V Scale-Out Repository` is created. The `IC4V Default VM Backup Repository` repository is added to the scale-out repository as an extent.
 * When you create the backup job, you must select `IC4V Scale-Out Repository` as the backup repository, and not `IC4V Default Config Backup Repository`. The latter repository is intended for the Veeam configuration backups.
-* You can add more repositories to this default repository, such as a backup repository of type Object Storage. For more information, see [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){:external}. Follow the steps and return here to continue with the following tasks.
+* You can add more repositories to this default repository, such as a backup repository of type Object Storage. For more information, see [Adding scale-Out repositories](https://helpcenter.veeam.com/docs/backup/vsphere/sobr_add.html?ver=95u4){: external}. Follow the steps and return here to continue with the following tasks.
 
 ## Veeam on an instance deployed with private network only
 {: #icos_ordering-private-network}
 
 If you want to access {{site.data.keyword.cloud_notm}} Object Storage by using Veeam on a private-only vCenter Server instance, you must configure Veeam to access the internet through a proxy server. This way, Veeam can verify the TLS certificate that is used by {{site.data.keyword.cloud_notm}} Object Storage.
 
-For more information, see [How to set an HTTP proxy for Veeam components](https://www.veeam.com/kb3090){:external}.
+For more information, see [How to set an HTTP proxy for Veeam components](https://www.veeam.com/kb3090){: external}.
 
 ## Maintaining and managing your cloud tier
 {: #icos_ordering-manage-cloud}
 
-For more information about maintaining and managing your cloud tier, see [Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){:external}.
+For more information about maintaining and managing your cloud tier, see [Managing capacity tier data](https://helpcenter.veeam.com/docs/backup/vsphere/capacity_tier_managing_data.html?ver=95u4){: external}.
 
 ## Related links
 {: #icos_ordering-related}
@@ -68,4 +68,4 @@ For more information about maintaining and managing your cloud tier, see [Managi
 * [Ordering Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_ordering_licenses)
 * [Managing Veeam licenses](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_managing_licenses)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)
-* [Veeam on {{site.data.keyword.cloud_notm}} - Demos](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud/){:external}
+* [Veeam on {{site.data.keyword.cloud_notm}} - Demos](https://www.ibm.com/demos/collection/Veeam-on-IBM-Cloud/){: external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-08-17"
 
 subcollection: vmwaresolutions
 
@@ -31,7 +31,7 @@ The design uses the following structure:
 * vRealize Operations Manager
 * AD/DNS/NTP
 * Veeam
-* KMIP for VMware
+* KMIP for VMware®
 * Hyper Protect Crypto Service
 
 ## Network design
@@ -39,7 +39,7 @@ The design uses the following structure:
 
 As the design uses two VMware Regulated Workloads instances, the network design is at each region and is documented at [Underlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-underlay-network) and [Overlay networking](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-overlay-network).
 
-The key design element at the network level, is the adoption of cross-region network for the use of the vRealize Operations Manager analytic cluster. The cross-region network is a layer 3 construct that allows the use of the same IP subnet space at either the protected region or the recovery region. In normal operations, the cross-region network is tethered to the vSRX or Fortigate in the protected region that is, the default gateway for this network is the vSRX or Fortigate. The protected region vSRX or Fortigate then advertises this network so that it is reachable from other networks. In recovery operations, the cross-region network is tethered to the vSRX or Fortigate in the recovery region. The recovery region vSRX or Fortigate then advertises this network so that it is reachable from other networks. The use of the cross-region network allows the vRealize Operations Manager Analytic cluster to retain the same IP addresses when they are recovered to the recovery region.
+The key design element at the network level, is the adoption of cross-region network for the use of the vRealize Operations Manager analytic cluster. The cross-region network is a layer 3 construct that allows the use of the same IP subnet space at either the protected region or the recovery region. In normal operations, the cross-region network is tethered to the vSRX or FortiGate in the protected region that is, the default gateway for this network is the vSRX or FortiGate. The protected region vSRX or FortiGate then advertises this network so that it is reachable from other networks. In recovery operations, the cross-region network is tethered to the vSRX or FortiGate in the recovery region. The recovery region vSRX or FortiGate then advertises this network so that it is reachable from other networks. The use of the cross-region network allows the vRealize Operations Manager Analytic cluster to retain the same IP addresses when they are recovered to the recovery region.
 
 Review the following network design decisions:
 * The {{site.data.keyword.cloud_notm}} classic network environment does not allow the stretching of VLANs across data centers. Therefore, this design does not use stretched VLANs at the physical network infrastructure level.
@@ -76,7 +76,7 @@ NSX-T Manager provides the user interface and the API for creating, configuring,
 
 The use of the cluster virtual IP address provides high availability of the user interface and API of the NSX-T Manager cluster. The use of vSphere HA enables business continuity of a failed appliance.
 
-Image-based backups of NSX-T manager are not supported. Therefore, it is recommended to configure a scheduled NSX-T appliance backup by using an SFTP server, as the only option with NSX-T. In the design, the SFTP server destination is a directory on the local Veeam Repository server. This Windows server is configured as an SFTP server and used for the recovery of the backup files when needed. To limit the number of components needed, a separate stand-alone SFTP server is not used and instead the SFTP service within the Windows OS of the Veeam Repository server is used.
+Image-based backups of NSX-T manager are not supported. Therefore, it is recommended to configure a scheduled NSX-T appliance backup by using an SFTP server, as the only option with NSX-T. In the design, the SFTP server destination is a directory on the local Veeam Repository server. This Windows® server is configured as an SFTP server and used for the recovery of the backup files when needed. To limit the number of components needed, a separate stand-alone SFTP server is not used and instead the SFTP service within the Windows OS of the Veeam Repository server is used.
 
 If the Veeam Repository server fails, then VCSA and NSX-T Manager backups are lost. Therefore, Veeam file copy jobs are used to copy the files from the local region to the remote region, which provides an off-site copy of the backup.
 
@@ -101,7 +101,7 @@ If you are using Caveonix RiskForesight to manage compliance and cyberrisk of th
 The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads automation deploys a HyTrust CloudControl cluster in both the protected region and the recovery region. HyTrust CloudControl clusters enable service isolation per regions so that each region is considered to be independent. This behavior does not impact licensing, as licenses are supplied on a per-host basis.
 
 CloudControl supports the following backups:
-* Appliance configuration backups by using the asc backup CLI command, to local storage or SCP or NFS targets
+* Appliance configuration backups by using the `asc backup` CLI command, to local storage or SCP or NFS targets
 * Full snapshot-based backups or clones by using VMware or third-party tools.
 
 Veeam is used to provide snapshot-based image backups of the primary and secondary nodes. In addition to the Veeam backup, configure scheduled appliance backups by using SCP on the appliances and the Veeam repository SFTP share as the target directory. This extra level of protection allows a database restore to a new appliance if the image-based restore fails.
@@ -132,17 +132,17 @@ The {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads automation
 The dual region design uses this deployed architecture and requires some post-provisioning tasks to create the required design:
 
 * Protected region
-  * The four-node analytics cluster is reused and two extra remote collectors are deployed on an extra private portable subnet.
-  * The analytics cluster is protected with Veeam Replication and fails over to the recovery region. IP addresses are not changed.
-  * The remote collectors do not fail over and are region-specific.
+   * The four-node analytics cluster is reused and two extra remote collectors are deployed on an extra private portable subnet.
+   * The analytics cluster is protected with Veeam Replication and fails over to the recovery region. IP addresses are not changed.
+   * The remote collectors do not fail over and are region-specific.
 
 * Recovery region
-  * The four-node analytic cluster is deleted and two remote collectors are deployed on the existing private portable subnet.
-  * The vSRX is configured so that the same subnet that hosts the analytics cluster is available in the recovery region. In normal operations, no VMs are hosted on this network and this network is isolated. On DR invocation, this network, and the recovered analytics cluster, becomes reachable from the remote collectors. This network is not reachable directly from the {{site.data.keyword.cloud_notm}} underlay network outside of the vSRX, but it is reachable through the VPN connections.
+   * The four-node analytic cluster is deleted and two remote collectors are deployed on the existing private portable subnet.
+   * The vSRX is configured so that the same subnet that hosts the analytics cluster is available in the recovery region. In normal operations, no VMs are hosted on this network and this network is isolated. On DR invocation, this network, and the recovered analytics cluster, becomes reachable from the remote collectors. This network is not reachable directly from the {{site.data.keyword.cloud_notm}} underlay network outside of the vSRX, but it is reachable through the VPN connections.
 
 Review the following design decisions:
 * The reuse of the automated deployment of vROps at the protected region reduces post deployment tasks.
-* By using the VMware multi-region design for vROps that has the concept of region specific and cross-region components, allows the recovery of the vROps analytic appliances to an identical network configuration. Re-IPing the appliances is possible but adds complexity. For more information, see [Change the IP address of a vRealize Operations Manager multinode deployment](https://kb.vmware.com/s/article/2127442){:external}.
+* By using the VMware multi-region design for vROps that has the concept of region specific and cross-region components, allows the recovery of the vROps analytic appliances to an identical network configuration. Re-IPing the appliances is possible but adds complexity. For more information, see [Change the IP address of a vRealize Operations Manager multinode deployment](https://kb.vmware.com/s/article/2127442){: external}.
 * By deploying two remote collector nodes per region, the load is removed from the analytics cluster from collecting metrics from applications that do not fail over between regions.
 * The use of Veeam Replication provides a replica of the vROps analytics cluster to allow recovery at the recovery region.
 * Only the Analytics cluster needs to be backed up with Veeam, as remote collectors do not store data, however, for ease of redeployment a backup is taken.
@@ -150,7 +150,7 @@ Review the following design decisions:
 ## AD, DNS, and NTP
 {: #vrw-dualregion-design-ad}
 
-The VMware Regulated Workloads automation deploys a pair of Microsoft Windows VMs in each instance. These VMs are configured as AD, DNS, and NTP servers. These services are independent in each region, a separate AD forest for each region, and recovery of the protected region services to the recovery region is not required.
+The VMware Regulated Workloads automation deploys a pair of Microsoft® Windows VMs in each instance. These VMs are configured as AD, DNS, and NTP servers. These services are independent in each region, a separate AD forest for each region, and recovery of the protected region services to the recovery region is not required.
 
 vSphere HA provides availability of the VMs themselves and the Microsoft domain concept provides the availability of the Microsoft Windows services that runs on them. For business resiliency, configure image-level backups of the VMs and store them in the region's Veeam repository server. Configure a Veeam backup copy job to copy the backup to the other site so you can provide an off-site copy of the backup.
 
@@ -174,7 +174,7 @@ The following post deployment activities are required to create the deployment s
 * Remove the Veeam VMs at each region.
 * Order a Windows bare metal server in each region. The specification of this server is documented in [Veeam on bare metal server introduction](/docs/vmwaresolutions?topic=vmwaresolutions-veeam-bms-archi-intro). The small server is adequate for use case 1.
 
-For use cases 2 and 3, the number and sizing of the bare metal servers needs to be calculated. For more information, see [Repository storage](https://bp.veeam.com/vbr/VBP/2_Design_Structures/D_Veeam_Components/D_backup_repositories/repositories%20storage.html){:external}.
+For use cases 2 and 3, the number and sizing of the bare metal servers needs to be calculated. For more information, see [Repository storage](https://bp.veeam.com/vbr/VBP/2_Design_Structures/D_Veeam_Components/D_backup_repositories/repositories%20storage.html){: external}.
 
 The protected region bare metal Windows server hosts the following components:
 * Proxy - A proxy is a “data mover” component that is used to retrieve VM data from the source datastore, process it and deliver to the target. As a rule, have the proxy as close as possible to the source data. This proxy is used for management components that are located in the protected region.
@@ -192,7 +192,7 @@ The recovery region bare metal Windows server hosts the following components:
 Review the following Veeam design decisions:
 * For optimal performance and availability, placing the Veeam components on separate virtual and physical servers is considered best practice. However, this practice increases complexity in smaller environments. Therefore, the all-in-one deployment scenario for use case 1 is selected.
 * As the total number of protected VMs is low, the embedded database option for the database for use case 1 is selected.
-* The bare metal servers with direct attached storage option is used as this option provides a backup infrastructure that is separated from the virtualized infrastructure compute and storage.
+* The bare metal servers with direct attached storage option is used as it provides a backup infrastructure that is separated from the virtualized infrastructure compute and storage.
 * In a two-site environment, it is best practice to install the Veeam Backup server component in the DR site. In a disaster situation, Veeam Backup server is available to start the recovery.
 * Deploy Enterprise Manager to use password loss protection. Enterprise Manager administrators can unlock backup files by using a challenge-response mechanism.
 * It is recommended that the proxy is as close as possible to the source data with a high-bandwidth connection. The traffic from the source to the proxy is not yet optimized, meaning that 100% of the backup data is transferred over this link. A good connection is required between proxy and repository as optimized data (normally ~50% of the source data size) is transferred across this link. Therefore, place proxies in both the protected and recovery regions.
@@ -245,7 +245,7 @@ In the VMware Regulated Workloads dual zone design, the following steps describe
 6. VM backup files are encrypted on disk in the recovery region Veeam Repository with Veeam encryption.
 7. If a restore is needed in the recovery region, the Veeam datastore encryption storage policy is used to reencrypt the VM by using an encryption key from the recovery region HPCS instance through the KMIP for VMware service.
 
-For more information about Veeam encryption, see [Encryption standards](https://helpcenter.veeam.com/docs/backup/vsphere/encryption_standards.html?ver=100){:external}.
+For more information about Veeam encryption, see [Encryption standards](https://helpcenter.veeam.com/docs/backup/vsphere/encryption_standards.html?ver=100){: external}.
 
 In the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads dual region design for SaaS Consumer key management, then the same encryption keys are required in the recovery region as used in the protected region. Currently, HPCS does not support the same encryption keys in two regions. If a failure of the first HPCS instance occurs, keys can be restored to another HPCS instance in another region.
 
@@ -258,4 +258,4 @@ For more information, see:
 
 * [Caveonix integration](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-caveonix)
 * [Veeam v10a overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview)
-* [Veeam Backup & Replication best practices](https://bp.veeam.com/vbr/){:external}
+* [Veeam Backup & Replication best practices](https://bp.veeam.com/vbr/){: external}
