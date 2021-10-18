@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-24"
+lastupdated: "2021-10-14"
 
 subcollection: vmwaresolutions
 
@@ -18,11 +18,10 @@ VMware vCenter Server® with Hybridity Bundle is a hosted private cloud that hel
 The vCenter Server Hybridity Bundle is deployed on a minimum of four {{site.data.keyword.cloud_notm}} bare metal servers, offers dedicated storage via a virtual storage area network (vSAN™), and includes the automatic deployment and configuration of an easy-to-manage software-defined networking infrastructure (NSX-V). The vCenter Server Hybridity Bundle is a reference architecture that is deployed via automation, which ensures consistency, performance, and compliance. In many cases, the entire environment can be provisioned in less than a day and the bare metal infrastructure can rapidly and elastically scale the compute and storage capacity up and down as needed.
 
 Many options are available to enhance and extend the vCenter Server Hybridity Bundle. {{site.data.keyword.cloud_notm}} service offerings include add-on storage options and various public and private WAN connectivity options. Other service offerings cover the following areas.
-
- * Platform security
- * Network security
- * Traffic load balancing to back up
- * Disaster recovery
+* Platform security
+* Network security
+* Traffic load balancing to back up
+* Disaster recovery
 
 Platform security services include HyTrust® CloudControl, which provides automated security and compliance support, enabling better visibility and control over your cloud environment and administrators. HyTrust DataControl® delivers data protection with powerful encryption and scalable key management to secure your workloads throughout their lifecycles. {{site.data.keyword.cloud_notm}} Secure Virtualization simplifies compliance and protects your data with encryption, geo-fencing policies, and role-based access controls. KMIP™ for VMware is an encryption key lifecycle management offering that manages the encryption keys that IBM Cloud® services or customer built-in applications use.
 

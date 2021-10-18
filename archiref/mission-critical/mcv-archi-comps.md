@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-24"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -97,7 +97,7 @@ All of the hosts in the resource layer contribute all of their disks to the vSAN
    * FTT and RAID settings are set based on number of hosts ordered. You can change this setting.
 * When you configure a vSAN stretched cluster, specify the following settings to create two failure domains:
     * Hosts that are in Site A are part of the primary site
-   * Hosts that are in Site B are part of the secondary site
+    * Hosts that are in Site B are part of the secondary site
 
 ### Known issue with the default storage policy
 {: #mcv-archi-comp-storage}

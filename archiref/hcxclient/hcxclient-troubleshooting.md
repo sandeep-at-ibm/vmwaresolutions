@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-19"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -53,9 +53,9 @@ If any fixes and updates were applied to the HCX managers (Client and Cloud) and
 5. Specify the fleet ID for the `ccli` by typing the ID listed for the fleet component. For example, `go 8`.
 6. Run the `debug remoteaccess enable` command to connect by using SSH to the wanted fleet component.
 7. Exit `ccli` and connect by using SSH to the IP address of the SSH-enabled fleet component.
-9. Continue to troubleshoot.
-10. Return to the `ccli` and disable the `ssh` service for the component.
-11. If necessary, use the `hc` ccli command to run a health check on the components.
+8. Continue to troubleshoot.
+9. Return to the `ccli` and disable the `ssh` service for the component.
+10. If necessary, use the `hc` ccli command to run a health check on the components.
 
 ## Destination hardware compatibility issues
 {: #hcxclient-troubleshooting-hw-compatibility}

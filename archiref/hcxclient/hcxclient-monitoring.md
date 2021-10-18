@@ -43,7 +43,7 @@ range and default gateway.
 7. Click edit settings for the WAN Opt VM within the vCenter console.
 8. Select **Connected at Power On** and **Connected for Network Adapter 1**.
 9. Click **OK** to save.
-10. Find the CGW-<xxx>-WANOPT in vCenter.
+10. Find the CGW-`<xxx>`-WANOPT in vCenter.
 11. Edit settings on the VM.
 12. Select the checkbox to connect Network adapter 1.
 13. Click **OK**.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -41,17 +41,16 @@ Many IT organizations document their operational procedures in a runbook. A runb
 
 1. General documentation used to capture procedures, guides, and tasks. They tend to be general in nature, and refer to existing documentation provided by vendors.
 2. Specialized documentation written for the enterprise. This documentation is specific to a system, an application, or suite of applications and is not covered by vendors documentation. When you document your specialized documentation, the following structure is recommended:
-
- * Overview - An overview of the service with sections that describes:
-   * What is the service and why is the service needed by the enterprise?
-   * Who are the primary contacts for the service?
-   * How to report issues with the service.
- * Build - Focused on the development teams and the main software components of the service and how the service is constructed. Information on software products, locations of OVAs, distribution media, or the location of the source code. The required steps for packaging or distributing the release. It includes any required instructions for how a new developer gets started.
- * Deployment - Focused on the operations team and how to deploy the software. It includes details of the hardware and virtualized infrastructure and how to build the virtual machines (VMs) including vCPU, RAM and disk requirements, OS version and configuration, what middleware or packages to install.
- * Procedures - Step-by-step instructions for common tasks like add, change and delete, common issues and their solutions, troubleshooting advice.
- * Troubleshooting - A list of common alerts from the monitoring system that include step-by-step tasks for these alerts, and generic guidance on troubleshooting the service.
- * Disaster recovery plans and procedures - Details on how to recover the service at another location due to a disaster at the primary location.
- * Service level agreement - The agreed service parameters such as operational level agreements, key point indicators, availability goals, recovery point objectives, recovery time objective.
+   * Overview - An overview of the service with sections that describes:
+      * What is the service and why is the service needed by the enterprise?
+      * Who are the primary contacts for the service?
+      * How to report issues with the service.
+   * Build - Focused on the development teams and the main software components of the service and how the service is constructed. Information on software products, locations of OVAs, distribution media, or the location of the source code. The required steps for packaging or distributing the release. It includes any required instructions for how a new developer gets started.
+   * Deployment - Focused on the operations team and how to deploy the software. It includes details of the hardware and virtualized infrastructure and how to build the virtual machines (VMs) including vCPU, RAM and disk requirements, OS version and configuration, what middleware or packages to install.
+   * Procedures - Step-by-step instructions for common tasks like add, change and delete, common issues and their solutions, troubleshooting advice.
+   * Troubleshooting - A list of common alerts from the monitoring system that include step-by-step tasks for these alerts, and generic guidance on troubleshooting the service.
+   * Disaster recovery plans and procedures - Details on how to recover the service at another location due to a disaster at the primary location.
+   * Service level agreement - The agreed service parameters such as operational level agreements, key point indicators, availability goals, recovery point objectives, recovery time objective.
 
 Most IT organizations have multiple runbooks that act as their reference manuals. This series of documentation is designed for use as a general runbook for your organization using vCenter Server instances. While every runbook's content is specific to the organization's needs, the methodology of runbook creation is fairly standard and uses the following two stages.
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -92,10 +92,10 @@ The setting alarms workflow is as follows.
 After set-up, review the following example of an alarm workflow, typically adopted by system administrators, when an alarm is triggered.
 
 1. A host has an alarm set to monitor CPU usage and the alarm has an alarm action to send an email to the administrators when the alarm is triggered, as described in the previous section.
-3. The host CPU usage spikes, triggering the alarm, which sends an email to the administrators.
-4. One of the administrators logs in to vCenter and acknowledges the triggered alarm to allow the other administrators know the problem is being addressed, and to prevent the alarm from sending more email messages. However, the alarm is still visible in the system.
-5. The administrator finds the cause of the CPU spike and rectifies.
-6. The alarm is reset automatically.
+2. The host CPU usage spikes, triggering the alarm, which sends an email to the administrators.
+3. One of the administrators logs in to vCenter and acknowledges the triggered alarm to allow the other administrators know the problem is being addressed, and to prevent the alarm from sending more email messages. However, the alarm is still visible in the system.
+4. The administrator finds the cause of the CPU spike and rectifies.
+5. The alarm is reset automatically.
 
 ## Preconfigured alarms - standard
 {: #opsprocs-alarms-preconfigured-std}
@@ -118,7 +118,7 @@ The following table describes the standard preconfigured alarms.
 | Virtual machine total disk latency | Configure to send email one time when VM total disk latency > 30 ms for 5 mins for critical appliances. | [Knowledge - KB0012729 v0.01](https://watson.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=15dddea2db857300d5a971198c961995){: external} |
 | Virtual machine disk commands canceled | Do not set initially. Consider for critical appliances at second stage. | No additional information |
 | Virtual machine disk reset | Do not set initially. Consider for critical appliances at second stage. | No additional information |
-| License inventory monitoring | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Troubleshooting licensing ](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-3C4E8BF7-B0A9-46F0-BA50-D69F950AB958.html){: external} and [Licensing ESXi 6.x and vCenter Server 6.x](https://kb.vmware.com/s/article/2107538){: external} |
+| License inventory monitoring | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Troubleshooting licensing](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-3C4E8BF7-B0A9-46F0-BA50-D69F950AB958.html){: external} and [Licensing ESXi 6.x and vCenter Server 6.x](https://kb.vmware.com/s/article/2107538){: external} |
 | License user threshold monitoring | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Troubleshooting licensing](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-3C4E8BF7-B0A9-46F0-BA50-D69F950AB958.html){: external} |
 | License capacity monitoring | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Troubleshooting licensing](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-3C4E8BF7-B0A9-46F0-BA50-D69F950AB958.html){: external} |
 | The host license edition is not compatible with the vCenter Server license edition | Not considered essential for notification. Alarm reviewed as part of proactive daily checks. | [Troubleshooting host licensing](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vcenterhost.doc/GUID-B9DAAF47-94EC-47F5-8523-9C8C019412E1.html){: external} |

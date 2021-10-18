@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -210,7 +210,7 @@ Configure VUM to use the proxy server to access the repositories on the internet
    2. Click **Summary** and click **Reboot**.
    3. In the confirmation box, click **Yes** to confirm the operation.
 
-**Next topic:** [Collecting the metadata ](/docs/vmwaresolutions?topic=vmwaresolutions-vum-metadata)
+**Next topic:** [Collecting the metadata](/docs/vmwaresolutions?topic=vmwaresolutions-vum-metadata)
 
 ## Related links
 {: #vum-init-config-related}

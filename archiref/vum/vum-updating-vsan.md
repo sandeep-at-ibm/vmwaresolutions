@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-07"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -124,10 +124,10 @@ Many basic administrative tasks can be done much more efficiently than clicking 
    `0 /
    1 localhost/``
 
-5. Type `cd 1`, enter and then `ls` and press **Enter**. You see:
+4. Type `cd 1`, enter and then `ls` and press **Enter**. You see:
    `0 / datacenter1 (datacenter)`
 
-6. Type `cd 0`, enter and then `ls` and press **Enter**. You see:
+5. Type `cd 0`, enter and then `ls` and press **Enter**. You see:
 
    `0 storage/
    1 computers [host]/
@@ -135,16 +135,16 @@ Many basic administrative tasks can be done much more efficiently than clicking 
    3 datastores [datastore]/
    4 vms [vm]/`
 
-7. Type `cd 1`, press **Enter** and then `ls` and press **Enter**. You see your cluster:
+6. Type `cd 1`, press **Enter** and then `ls` and press **Enter**. You see your cluster:
    `0 cluster1 (cluster)``
 
-8. Use the vSAN commands against this cluster. To check the disk status type `vsan.disks_stats 0` and press **Enter**.
+7. Use the vSAN commands against this cluster. To check the disk status type `vsan.disks_stats 0` and press **Enter**.
 
-9. Make sure that the Health Status for all disks is OK. And then start the upgrade by typing `vsan.ondisk_upgrade 0` and then pressing **Enter**.
+8. Make sure that the Health Status for all disks is OK. And then start the upgrade by typing `vsan.ondisk_upgrade 0` and then pressing **Enter**.
 
-10. Depending on your vSAN size, this task might take a lot of time. When completed, type `vsan.objstatusreport 0` and then press **Enter** to verify that the object versions are upgraded to the new on-disk format.
+9. Depending on your vSAN size, this task might take a lot of time. When completed, type `vsan.objstatusreport 0` and then press **Enter** to verify that the object versions are upgraded to the new on-disk format.
 
-11. The vSAN cluster upgrade is now completed. Type `exit` and press **Enter** to leave RVC.
+10. The vSAN cluster upgrade is now completed. Type `exit` and press **Enter** to leave RVC.
 
 **Next topic:** [VCSA update and SSO-linked vCenters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vcsa)
 

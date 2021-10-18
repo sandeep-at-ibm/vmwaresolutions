@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -33,9 +33,9 @@ More tools such as those incorporated into the Operations Management on {{site.d
 The following guidelines are considered best practices for troubleshooting your {{site.data.keyword.vmwaresolutions_short}} issue.
 * Approach troubleshooting and problem-solving systematically.
 * Are the symptoms related to; availability, usage, or configuration:
- *  Availability - These symptoms relate to the availability of hardware and software components and are typified by a no response. Often high availability design masks these issues so that they do not impact your workloads and users directly.
- * Usage - These symptoms relate to capacity and performance and are typified by slow-running or in-ability to load. Proactively managing capacity drastically reduces these issues.
- * Configuration - These issues are typically discovered in the provision of new services or a result to applying a change. Incorrect settings can surface as either availability or usage symptoms. For example, an incorrect IP address is displayed as an availability issue, whereas low virtual machine (VM) RAM settings cause usage symptoms.
+   *  Availability - These symptoms relate to the availability of hardware and software components and are typified by a no response. Often high availability design masks these issues so that they do not impact your workloads and users directly.
+   * Usage - These symptoms relate to capacity and performance and are typified by slow-running or in-ability to load. Proactively managing capacity drastically reduces these issues.
+   * Configuration - These issues are typically discovered in the provision of new services or a result to applying a change. Incorrect settings can surface as either availability or usage symptoms. For example, an incorrect IP address is displayed as an availability issue, whereas low virtual machine (VM) RAM settings cause usage symptoms.
 * Try to isolate the issue to a component in the environment.
 * Take notes so you can trace your steps.
 * Understand and document you software versions.

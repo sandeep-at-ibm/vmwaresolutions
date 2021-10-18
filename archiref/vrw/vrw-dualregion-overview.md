@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -36,7 +36,6 @@ The focus of the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloa
    * Failover of the workloads that meets customer’s Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) application requirements.
 * A design that defines the recovery of the infrastructure and management components in the alternative site.
 * A design that allows flexibility in the recovery of the workloads, but does not define how the workloads are recovered. This approach allows maximum flexibility to meet customer’s RTO/RPO application requirements.
-
 **Notes**
 * While this design focuses on the use of two multizone regions, a customer is able to select single-zone regions or data centers in the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance order form.
 * If you select single-zone regions or data centers, note that the placement of the KMIP for VMware and Hyper Protect Crypto Services is not local to the VMware® Regulated Workloads instance. Latency between the services and the instance is not an issue in practice due to when the keys are requested that is, on initial encryption, rekey requests, and ESXi server restarts.
@@ -58,7 +57,6 @@ This paring of {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads
 * Recovery region - This region provides an environment to host VMs from the protected region if a disaster occurs
 
 ![IBM Cloud for VMware Regulated Workloads MZR DR concept](../../images/vrw-mzr-dr.svg "MZR DR topology"){: caption="Figure 1. MZR DR topology" caption-side="bottom"}
-
 **Notes**
 * The recovery region management cluster requires sufficient free capacity to host the protected management applications from the protected region.
 * The recovery region workload cluster requires sufficient free capacity to host the protected workloads from the protected region.

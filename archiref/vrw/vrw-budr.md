@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -55,7 +55,7 @@ Veeam is deployed to the management regions in both availability zones (AZ) for 
 
 The edge services cluster does not use any vSphere resiliency features and backup of the gateway VMs is not performed. The gateway appliances deliver resilience at the application layer through formation of a high-availability cluster at the time of deployment. When you are using the vSRX, it is recommended that the rescue configuration is set anytime a change is made to the running configuration. To update it, in operational mode, run `request system configuration rescue save`. The use of an SCP server to automatically back up the configuration anytime changes are made is optional and left to the client to implement.
 
-```
+```sh
 vSRX config archive on commit
 
 system {

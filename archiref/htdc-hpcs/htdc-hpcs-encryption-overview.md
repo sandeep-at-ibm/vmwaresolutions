@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2020-04-21"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -25,8 +25,8 @@ subcollection: vmwaresolutions
 The following terms are used in this documentation:
 * Symmetric key cryptography - This method of encryption uses the same encryption key is used to both encrypt and decrypt the data and is used primarily to protect data at rest.
 * Asymmetric key cryptography - This method of encryption uses a pair of keys, public and private, for the encryption and decryption of the data. Asymmetric keys are primarily used to secure data-in-motion. Both keys are related to each other and created at the same time.
- * Public Key - this key is used to encrypt the data and can be freely given as it is used to encrypt data, not to decrypt it.
- * Private Key - this key is used to decrypt the data that the public key encrypted. This key must be safeguarded as it is the only key that can decrypt the encrypted data.
+   * Public Key - this key is used to encrypt the data and can be freely given as it is used to encrypt data, not to decrypt it.
+   * Private Key - this key is used to decrypt the data that the public key encrypted. This key must be safeguarded as it is the only key that can decrypt the encrypted data.
 * Data encryption key (DEK) - An encryption key whose function is to encrypt and decrypt data.
 * Key encryption key (KEK) - An encryption key, which is used to encrypt and decrypt the DEK.
 * Key management application programming interface (KM API) - An application interface that is designed to securely retrieve and communicate encryption keys from a key management server to the client that requests the keys.

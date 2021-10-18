@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-10"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -115,54 +115,54 @@ The deployment of the OpenShift nodes uses Ignition, and this process requires a
 1. Use a text editor such as vi to create the following file vi /etc/yum.repos.d/nginx.repo`.
 2. Type `i` to insert and paste the following information into the file:
 
-  ```bash
-  [nginx]
-  name=nginx repo
-  baseurl=http://nginx.org/packages/mainline/rhel/7/$basearch/
-  gpgcheck=0
-  enabled=1
-  ```
+   ```bash
+   [nginx]
+   name=nginx repo
+   baseurl=http://nginx.org/packages/mainline/rhel/7/$basearch/
+   gpgcheck=0
+   enabled=1
+   ```
 
 3. Press Esc to get back to command mode and then type `:wq` to save the file and exit vi.
 4. Use the `yum` command to install the NGINX package.
 
-  ```bash
-  yum update
-  yum install -y nginx
-  ```
+   ```bash
+   yum update
+   yum install -y nginx
+   ```
 
 5. Create the default configuration file `vi /etc/nginx/conf.d/default.conf`.
 6. Type `i` to insert and paste the following information into the file:
 
-  ```json
-  server {
-      listen       80;
-      server_name  localhost;
-
-      #charset koi8-r;
-      #access_log  /var/log/nginx/host.access.log  main;
-
-      location / {
-          root   /usr/share/nginx/html;
-          index  index.html index.htm;
-      }
-  }
-  ```
+   ```json
+   server {
+       listen       80;
+       server_name  localhost;
+ 
+       #charset koi8-r;
+       #access_log  /var/log/nginx/host.access.log  main;
+ 
+       location / {
+           root   /usr/share/nginx/html;
+           index  index.html index.htm;
+       }
+   }
+   ```
 
 7. Press Esc to get back to command mode and then type `:wq` to save the file and exit vi.
 8. Run the following commands to start NGINX.
 
-  ```bash
-  systemctl enable nginx
-  systemctl start nginx
-  ```
+   ```bash
+   systemctl enable nginx
+   systemctl start nginx
+   ```
 
 9. The Linux firewall needs to configured to enable HTTP by using the following firewall-cmd commands:
 
-  ```bash
-  firewall-cmd --permanent --zone=public --add-service=http
-  firewall-cmd --reload
-  ```
+   ```bash
+   firewall-cmd --permanent --zone=public --add-service=http
+   firewall-cmd --reload
+   ```
 
 ## Generating an SSH private key and add it to the agent
 {: #openshift-runbook-runbook-bastion-sshkey}
@@ -178,23 +178,24 @@ You must use a local key.
 
 1. In the SSH session on the bastion node, run the following command, which generates a public/private rsa key pair in the directory '/root/.ssh'.
 
-  ```bash
-  ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 4096 -N ''
-  ```
+   ```bash
+   ssh-keygen -f ~/.ssh/id_rsa -t rsa -b 4096 -N ''
+   ```
 
-The private key is: /root/.ssh/id_rsa. The public key is: /root/.ssh/id_rsa.pub.
+   The private key is: /root/.ssh/id_rsa. The public key is: /root/.ssh/id_rsa.pub.
 
 2. Start the ssh-agent process as a background task:
 
-  ```bash
-  eval "$(ssh-agent -s)"
-  ```
+   ```bash
+   eval "$(ssh-agent -s)"
+   ```
 
 3. Add your SSH private key to the ssh-agent:
 
-  ```bash
-  $ ssh-add /root/.ssh/id_rsa
-  ```
+   ```bash
+   ssh-add /root/.ssh/id_rsa
+   ```
+   {: .pre}
 
 ## Downloading the installation tools
 {: #openshift-runbook-runbook-bastion-install-red-hat}

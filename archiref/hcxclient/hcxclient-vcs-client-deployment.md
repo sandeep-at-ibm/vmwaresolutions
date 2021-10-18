@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -103,15 +103,15 @@ Install the HCX Manager appliance in the on-premises vCenter.
    * Enter and reenter the **root** user password. In the future, if help is needed from VMware Global Support Services (GSS), this password might have to be shared so they can troubleshoot the system.
    * For the network properties, enter the hostname for the HCX Manager VM. Enter the network IPv4 address, the IPv4 prefix (the CIDR), and the default gateway. The following table shows sample values:
 
-| Field                    | Value           |
-|--------------------------|-----------------|
-| Hostname                 | HCM_1           |
-| Network 1 IPv4 address   | 192.168.200.101 |
-| Network 1 IPv4 prefix    | 24              |
-| Default IPv4 gateway     | 192.168.200.1   |
-| Network 1 IPv6 address   |                 |
-| Network 1 IPv6 prefix    |                 |
-{: caption="Table 2. Sample values for network properties" caption-side="top"}
+   | Field                    | Value           |
+   |--------------------------|-----------------|
+   | Hostname                 | HCM_1           |
+   | Network 1 IPv4 address   | 192.168.200.101 |
+   | Network 1 IPv4 prefix    | 24              |
+   | Default IPv4 gateway     | 192.168.200.1   |
+   | Network 1 IPv6 address   |                 |
+   | Network 1 IPv6 prefix    |                 |
+   {: caption="Table 2. Sample values for network properties" caption-side="top"}
 
 8. Review the vService bindings page. Click **Next** to continue.
 9. On the **Ready to complete** page, follow these steps:

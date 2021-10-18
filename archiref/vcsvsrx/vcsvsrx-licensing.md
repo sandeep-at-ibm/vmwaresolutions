@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -30,7 +30,7 @@ You can add a license key from a local file, from a remote URL, or from the term
 
 To install a license from the CLI, use the `request system license add` operational mode command. You can add the license from a local file or from a remote URL that contains the license key, or you can paste the license key in the terminal.
 
-```
+```text
 user@vsrx> `request system license add terminal`
 
   [Type ^D at a new line to end input,
@@ -50,8 +50,9 @@ You can save the license key to a file and upload the file to the vSRX file syst
 {: note}
 
 Optionally, use the `show system license` command to view details of the licenses.
-
+```sh
     root@host> `show system license`
+```
 
 The license key is installed and activated on the vSRX instance.
 
