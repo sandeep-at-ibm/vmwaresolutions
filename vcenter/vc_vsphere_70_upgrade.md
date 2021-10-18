@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-14"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -110,7 +110,7 @@ Complete the following steps from the vCenter Server user interface.
    2. For **New Standard Switch**, set the MTU to 9000 and click **Next**.
    3. Click the green **+** icon to add an adapter. Click **OK**, then **Next** to accept ``vmnic2``.
    4. For **Connection Settings**, keep the **VM Network** and **VLAN ID None** defaults. Click **Next**, then **Finish**. *Standard Switch: vSwitch0* is displayed in the list of switches.
-5.  Make a note of the Network Setting for the vCenter Server Appliance VM. You must update the new vCenter appliance to match.
+5. Make a note of the Network Setting for the vCenter Server Appliance VM. You must update the new vCenter appliance to match.
    * From the vCenter Server user interface, click the VM for the vCenter appliance. Note the name, ending with ``vc``.
    * From the middle pane, click the **Networks** tab. Note the name of the distributed port group, ending with ``-dpg-mgmt``. 
 
@@ -136,12 +136,8 @@ You must upgrade the Broadcom driver before you upgrade the ESXi host.
 3. Copy the ``.vib`` file to either a vSAN or NFS data store that is mounted on the ESXi hosts for the instance. Use vCenter Server to reference the extracted file on your jump server.
 4. SSH into each ESXi host and run the following VIB Upgrade command:  
    ``esxcli software vib update -v /<path to vsan or nfs datastore from step 3>/vmware-storcli.vib --no-sig-check``  
-   The following installation results are displayed.
-    ``Message: Operation finished successfully.
-    Reboot Required: false
-    VIBs Installed: Broadcom_bootbank_vmware-storcli_007.1316.0000.0000-01
-    VIBs Removed: LSI_bootbank_vmware-storcli_007.0916.0000.0000-01
-    VIBs Skipped:``
+   The following installation results are displayed.  \n 
+    ``Message: Operation finished successfully.    Reboot Required: false    VIBs Installed: Broadcom_bootbank_vmware-storcli_007.1316.0000.0000-01    VIBs Removed: LSI_bootbank_vmware-storcli_007.0916.0000.0000-01    VIBs Skipped:``
 5. Run the following command to validate the installation:  
    ``> esxcli software vib list |grep vmware-storcli
    vmware-storcli    007.1316.0000.0000-01    Broadcom  PartnerSupported  2020-04-16``
@@ -214,11 +210,11 @@ Complete the following steps from the vCenter Server user interface.
 2. Under **Actions** click **Edit Settings**.
 3. For network adapter 1, browse to the name of the distributed port group that ends with ``-dpg-mgmt`` that you previously noted. Save the changes.
 4. Go to the host where you deployed the new appliance. Select **Hosts and Clusters > HOST > Configure > Virtual Switches**. Then, click **MANAGE PHYSICAL ADAPTERS** for *vSwitch0*.
-6. Select **vmnic2** and click the red **X** to delete the adapter. Click **OK**. The ``There are no active physical network adapters for the switch.`` warning is displayed. Click **OK**.
-7. Click the **...** in the *vSwitch0* display and then select **Remove**. Click **OK** to confirm you want to remove the switch.
-8. In the same display, select the private switch and click **MANAGE PHYSICAL ADAPTERS**.
-9. Select **uplink1** and click **+**. `vmnic2` is displayed.
-10. Click **OK**, and then **OK** again to exit the dialog.
+5. Select **vmnic2** and click the red **X** to delete the adapter. Click **OK**. The ``There are no active physical network adapters for the switch.`` warning is displayed. Click **OK**.
+6. Click the **...** in the *vSwitch0* display and then select **Remove**. Click **OK** to confirm you want to remove the switch.
+7. In the same display, select the private switch and click **MANAGE PHYSICAL ADAPTERS**.
+8. Select **uplink1** and click **+**. `vmnic2` is displayed.
+9. Click **OK**, and then **OK** again to exit the dialog.
 
 ## Related links
 {: #vc_vsphere_70_upgrade-related}

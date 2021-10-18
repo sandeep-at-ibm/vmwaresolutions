@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-29"
+lastupdated: "2021-10-13"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -196,7 +196,6 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter Server 6.7u1b ISO within your jump box.
 3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-On or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){: external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.
-
 **Notes**
 * The stated requirement **You must run the GUI upgrade from a Windows, Linux, or Mac machine that is in the same network as the appliance that you want to upgrade** applies to any subnet within your {{site.data.keyword.cloud_notm}} in your account.
 * It is recommended that you use vCenter Server as your source and target for the upgrade.
@@ -225,7 +224,7 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
 12. Run the ``vcsa-util.exe`` with the **decommission** switch and the path to the previously edited ``decommission_psc.json`` file. For example, ``vcsa-util decommission --no-ssl-certificate-verification c:\temp\decommission_psc.json -v``.
 13.	When the command completes successfully, log in to the vCenter flex user interface. Verify that the vCenter appliance is the only one listed in non-linked environments and that all services are healthy.
 14. Delete the old PSC, vCenter, and the unused consolidated PSC VMs.
-15. Rename the vCenter Server within the vCenter Server user interface to **<instancename>_vc_separate**. For example, if your vCenter Server instance name is **production** then the vCenter Server user interface name is **production_vc_separate**. The renaming is necessary so the automation can resume its function for this vCenter Server instance.  
+15. Rename the vCenter Server within the vCenter Server user interface to ``<instancename>_vc_separate``. For example, if your vCenter Server instance name is **production** then the vCenter Server user interface name is **production_vc_separate**. The renaming is necessary so the automation can resume its function for this vCenter Server instance.  
 
 ### Upgrading the ESXi hosts
 {: #vc_vsphere_upgrade-procedure-esxi}

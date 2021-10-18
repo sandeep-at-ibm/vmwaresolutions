@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-13"
 
 keywords: activity tracker, event, security, vmware solutions events, vmware solutions shared events, instance events, view events
 
@@ -31,9 +31,9 @@ The following table lists the actions that generate and send an event to {{site.
 
 | Action                        | Description | Outcome |
 |:----------------------------- |:----------- |:------- |
-| `vmware-solutions.vdc.create` | An event is generated when a virtual data center instance is created. |`pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vdc.delete` | An event is generated when a virtual data center instance is deleted. | `pending`<br>`success`<br>`failure` |
-| `vmware-solutions.vdc.update` | An event is generated when capacity is added to a virtual data center instance.<br>An event is generated when capacity is removed from a virtual data center instance.  | `pending`<br>`success`<br>`failure` |
+| `vmware-solutions.vdc.create` | An event is generated when a virtual data center instance is created. |`pending`  \n `success`  \n `failure` |
+| `vmware-solutions.vdc.delete` | An event is generated when a virtual data center instance is deleted. | `pending`  \n `success`  \n `failure` |
+| `vmware-solutions.vdc.update` | An event is generated when capacity is added to a virtual data center instance.  \n An event is generated when capacity is removed from a virtual data center instance.  | `pending`  \n `success`  \n `failure` |
 {: caption="Table 1. Description of actions that generate VMware Solutions Shared events" caption-side="top"}
 
 ## Events for vCenter Server instance management

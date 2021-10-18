@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-13"
 
 keywords: view vCenter Server Hybridity, view instance, view instance details
 
@@ -65,14 +65,14 @@ To view the property details of a vCenter Server with Hybridity Bundle instance:
 | ID | The ID of the instance. |
 | Location | The {{site.data.keyword.cloud_notm}} data center where the instance is hosted. |
 | Current version | The current version of {{site.data.keyword.vmwaresolutions_short}}. |
-| vCenter version | The VMware vCenter Server with Hybridity Bundle version.<br><br>**Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere® Web Client. Both are correct. |
+| vCenter version | The VMware vCenter Server with Hybridity Bundle version.  \n   \n **Note:** There is a slight variation between the vCenter Server version displayed on the {{site.data.keyword.vmwaresolutions_short}} console and the VMware vSphere® Web Client. Both are correct. |
 | NSX for vSphere | The VMware NSX® for vSphere product version. |
 | NSX license edition | The version and edition of the VMware NSX license. |
 | DNS, Root domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft® Active Directory™ (AD) forest root name. |
-| DNS, SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server with Hybridity Bundle instances with a value of <samp class="ph codeph">vsphere.local</samp>. |
-| DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server with Hybridity Bundle instance host names reside. The subdomain name is in the format <samp class="ph codeph"><var class="keyword varname">vcenter_server_instance_name</var>.<var class="keyword varname">root.domain_name</var></samp>. |
+| DNS, SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server with Hybridity Bundle instances with a value of <!--<samp class="ph codeph">-->**`vsphere.local`**<!--</samp>-->. |
+| DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server with Hybridity Bundle instance host names reside. The subdomain name is in the format <!--<samp class="ph codeph"><var class="keyword varname">-->**`vcenter_server_instance_name`**<!--</var>-->.<!--<var class="keyword varname">-->**`root.domain_name`**<!--</var></samp>-->. |
 | Hybridity Bundle | Indicates if the vCenter Server with Hybridity Bundle is installed. |
-| Status  | The status of the instance.<br><br>The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
+| Status  | The status of the instance.  \n   \n The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
 {: caption="Table 3. vCenter Server with Hybridity Bundle instances properties" caption-side="top"}
 
 ## Procedure to view access information for vCenter Server with Hybridity Bundle instances
@@ -83,8 +83,8 @@ Under **Access information**, view the access information for the instance-relat
 | Component        | Description       |
 |:------------- |:------------- |
 | AD/DNS IPs | The IP addresses of the two AD servers. |
-| AD/DNS FQDNs | The AD/DNS server fully qualified domain names.<br><br>**Note:** The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
-| AD/DNS ADMIN (Remote Desktop)  | For primary instances, it displays the user name and password to access the AD server via a remote desktop connection.<br><br>For secondary instances, click the **View on primary instance** link to be directed to the user name and password information on the primary instance.<br><br>**Note:** After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you will get access to the correct administrator password.  
+| AD/DNS FQDNs | The AD/DNS server fully qualified domain names.  \n   \n **Note:** The same administrator password can be used to connect to all the AD/DNS servers by using a remote desktop connection. |
+| AD/DNS ADMIN (Remote Desktop)  | For primary instances, it displays the user name and password to access the AD server via a remote desktop connection.  \n   \n For secondary instances, click the **View on primary instance** link to be directed to the user name and password information on the primary instance.  \n   \n **Note:** After the secondary instance is added to the primary DNS domain and replication occurs, the local administrator password on the primary instance might overwrite the local administrator password on the secondary instance. By clicking the **View on primary instance** link, you will get access to the correct administrator password.  
 | NSX Manager IP  | The IP address of the NSX Manager.  |
 | NSX Manager FQDN  | The NSX Manager fully qualified domain name (FQDN).  |
 | NSX Manager HTTP  | The user name and password used to access the NSX Manager web console. |

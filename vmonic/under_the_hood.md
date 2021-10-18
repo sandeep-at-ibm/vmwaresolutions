@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-13"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -79,12 +79,15 @@ After your instance is provisioned, if you are connected to your {{site.data.key
 
 Your instance components are typically accessed by their hostnames rather than their IP addresses. To connect to and authenticate with vCenter, ensure that the vCenter and Platform Services Controller (PSC) hostname can be resolved by your workstation. Add it to your workstation's hosts file as shown in Listing 1. You can find the hostname and IP address in the {{site.data.keyword.vmwaresolutions_short}} console, on the **Summary** tab for your instance. You might also want to add the hostnames and IP addresses for your vSphere hosts to your hosts file.
 
-<pre># Dallas site vCenter and Platform Services Controller (PSC)
+```sh
+# Dallas site vCenter and Platform Services Controller (PSC)
 10.208.85.196  vcenter-dallas.dallas.example.com
 # Dallas site hosts
 10.208.85.171  host0.dallas.example.com
 10.208.85.153  host1.dallas.example.com
-10.208.85.137  host2.dallas.example.com</pre>
+10.208.85.137  host2.dallas.example.com
+```
+{: pre}
 {: caption="Figure 1. hosts file" caption-side="bottom"}
 
 After your instance is deployed, you can manage it from the console. The management capabilities include the ability to do each of the following tasks.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-13"
 
 keywords: vCenter Server Hybridity delete instance, delete vCenter Server Hybridity, remove vCenter Server Hybridity
 
@@ -59,7 +59,6 @@ Verify the following requirements before you remove the Hybridity Bundle:
    4. Type the name for the license and click **Next**. Click **Finish** to add the license.
    5. Select the new license key.
    6. Write down the full license keys for both the license that is applied and the license that is replaced.
-
    You must have the license details available to use later in this procedure.
    {: important}
 
@@ -67,16 +66,15 @@ Verify the following requirements before you remove the Hybridity Bundle:
 5. Complete the following steps to install a VMware vSAN BYOL:
    1. Click the **Clusters** tab.
    2. Complete the following steps for each vSAN cluster that is associated with your vCenter Server instance:
-    1. Select a vSAN cluster and click **All Actions > Assign license**.
-    2. Click the **Add** icon and type the license key. Click **Next**.
-    3. Type the name for the license and click **Next**. Click **Finish** to add the license.
-    4. Select the new license key.
-    5. Write down the cluster name and full license keys of both the license that is applied and the license that is replaced.
+      1. Select a vSAN cluster and click **All Actions > Assign license**.
+      2. Click the **Add** icon and type the license key. Click **Next**.
+      3. Type the name for the license and click **Next**. Click **Finish** to add the license.
+      4. Select the new license key.
+      5. Write down the cluster name and full license keys of both the license that is applied and the license that is replaced.      
+      You must have the license details available to use later in this procedure.
+      {: important}
 
-    You must have the license details available to use later in this procedure.
-    {: important}
-
-    6. Click **OK** to assign the license.
+      6. Click **OK** to assign the license.
 6. Optionally complete the following steps to install a VMware vCenter Server BYOL:
    1. Click the **vCenter Server systems** tab.
    2. Select vCenter Server and click **All Actions > Assign license**.
@@ -84,7 +82,6 @@ Verify the following requirements before you remove the Hybridity Bundle:
    4. Type the name for the license and click **Next**. Click **Finish** to add the license.
    5. Select the new license key.
    6. Write down the full license keys of both the license that is applied and the license that is replaced.
-
    You must have the license details available to use later in this procedure.
    {: important}
 
@@ -97,11 +94,10 @@ Verify the following requirements before you remove the Hybridity Bundle:
       3. Type the name for the license and click **Next**. Click **Finish** to add the license.
       4. Select the new license key.
       5. Write down the cluster name and full license keys of both the license that is applied and the license that is replaced.
-
       You must have the license details available to use later in this procedure. If license keys are not same across all clusters, ensure to write down the cluster name associated to each license key.
       {: important}
 
-   6. Click **OK** to assign the license.
+      6. Click **OK** to assign the license.
 8. Remove the rental licenses.
    1. Click the **Licenses** tab.
    2. Select the licenses that you replaced in steps 4 - 7.

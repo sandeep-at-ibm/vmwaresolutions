@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-20"
+lastupdated: "2021-10-13"
 
 subcollection: vmwaresolutions
 
@@ -132,7 +132,6 @@ For the VMware vSAN component, the following disk types are now available for {{
 * 960 GB SSD SED
 * 1.9 TB SSD SED
 * 3.8 TB SSD SED
-
 **Notes**
 * 3.8 TB SSD SED drives are supported when they are made generally available in an {{site.data.keyword.cloud_notm}} data center.
 * Orders with or without the VMware vSAN component always include a 12-disk chassis server. This server results in a slightly higher cost for the {{site.data.keyword.cloud_notm}} bare metal servers for the non-vSAN order case in the price estimate PDF.

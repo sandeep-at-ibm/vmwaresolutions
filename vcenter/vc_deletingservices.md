@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-13"
 
 keywords: remove services vCenter Server
 
@@ -55,13 +55,13 @@ The following table shows the services that are affected. The table also shows t
 
 | Service | Hostname Pattern | Example |
 |:-------- |:--------------------- | :----------- |
-| Caveonix RiskForesight | `riskforesight` | `riskforesight` <br>`inst01-riskforesight` |
-| F5 BIG-IP | `nickname-bigip1` <br>`nickname-bigip2` | `edgefw-bigip1` |
+| Caveonix RiskForesight | `riskforesight` | `riskforesight`   \n `inst01-riskforesight` |
+| F5 BIG-IP | `nickname-bigip1`   \n `nickname-bigip2` | `edgefw-bigip1` |
 | FortigateVM | `nickname-fortigate` | `edgefw-fortigate01` |
 | HyTrust CloudControl | `htccnn-id` | `htcc02-GY67239` |
 | HyTrust DataControl | `htdcnn-id` | `htcc02-GY67239` |
 | HyTrust KeyControl | `htkcnn-id` | `htcc02-GY67239` |
-| vRealize Operations | `vrli` <br>`vrops` <br>`vrlog` | `vrli-master` <br>`vrops-data1` <br>`vrlog-master` |
+| vRealize Operations | `vrli`   \n `vrops`   \n `vrlog` | `vrli-master`   \n `vrops-data1`   \n `vrlog-master` |
 {: caption="Table 6. Hostname patterns and examples for affected services" caption-side="top"}
 
 To remove the DNS entires, complete the following steps:

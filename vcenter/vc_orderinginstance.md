@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-13"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -444,10 +444,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 6. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs
@@ -480,7 +480,6 @@ Ensure that the firewall configuration on the selected VLANs does not block the 
 Optionally, use **Advanced settings** to configure portable subnets for VLANs.
 
 Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to specify the **Portable subnet** for each applicable purpose. If you select the **Allocate a new one** option for this field, a new portable subnet is allocated automatically.
-
 **Notes**
 * You must complete the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** settings before you can configure portable subnets.
 * The number of portable subnets is displayed under **Advanced settings** after you save the portable subnet settings. Click **Portable subnets settings** to edit the settings.
@@ -545,13 +544,13 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
           * For **SAP-certified** - **NetWeaver** server, choose one of the preset configurations.
        3. Specify the number of bare metal servers. For more information about selecting bare metal servers, see [Number of bare metal servers](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-bare-metal-number).
     3. If you want to use NFS storage, select the corresponding option.
-      * To add and configure file shares individually, select **Configure shares individually**. Then, click **Add shared storage** and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
-      * To add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
+       * To add and configure file shares individually, select **Configure shares individually**. Then, click **Add shared storage** and select the **Size (GB)** and **Performance** for each file share. You must select at least one file share.
+       * To add and configure the same settings to all file shares, specify the **Number of shares**, **Size (GB)**, and **Performance**.
     4. If you want to use vSAN storage, select the corresponding option.
-      * If you want more storage, select the **High performance with Intel Optane** checkbox (vSphere 6 instances only).
-      * Specify the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, the disk size for vSAN cache disks, and the number of vSAN cache disks.
-      * By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
-      * Specify the vSAN license edition.
+       * If you want more storage, select the **High performance with Intel Optane** checkbox (vSphere 6 instances only).
+       * Specify the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, the disk size for vSAN cache disks, and the number of vSAN cache disks.
+       * By default, the **Enable vSAN deduplication and compression** checkbox is selected. If you do not want to enable vSAN deduplication and compression, clear the checkbox.
+       * Specify the vSAN license edition.
     5. Select the private NICs enablement.
     6. Select the uplink speed. The 25 Gb option is available for Cascade Lake servers and for specific data centers only.
     7. Select the VLAN settings:
@@ -584,9 +583,9 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
     2. (NSX-V only) Select the private NICs enablement.
     3. (NSX-V only) Select the uplink speed. The 25 Gb option is available for Cascade Lake servers and for specific data centers only.
     4. (NSX-V only) Select the VLAN settings:
-      * If you want to order new public and private VLANs, click **Order new VLANs**.
-      * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and the subnets.
-      * Optionally click **Portable subnets settings**. Then, select the portable subnet for each purpose and click **Save**.
+       * If you want to order new public and private VLANs, click **Order new VLANs**.
+       * If you want to reuse the existing public and private VLANs when they are available, click **Select existing VLANs** and specify the VLANs and the subnets.
+       * Optionally click **Portable subnets settings**. Then, select the portable subnet for each purpose and click **Save**.
     5. Specify the DNS configuration.
 13. Under **Recommended services** and **Optional services**, review the service options. If you want to deploy an add-on service, toggle the switch on and review the service settings. If configuration is required, click **Edit**, then complete the edits and click **Save**. For more information about specific settings for a service, see the corresponding topic for ordering the service.
 14. On the **Summary** pane, review the instance settings and the estimated price.

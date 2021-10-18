@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-30"
+lastupdated: "2021-10-13"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -149,10 +149,10 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 8. Select the license edition for VMware vSAN for the license configuration.
 9. Select the network setting of either **Public and private network** or **Private network only**.
 10. On the **Summary** pane, verify the cluster configuration before you add the cluster.
-   1. Review the settings for the cluster.
-   2. Review the estimated price of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
-   4. Click **Create**.
+    1. Review the settings for the cluster.
+    2. Review the estimated price of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
+    4. Click **Create**.
 
 ### Results after you add clusters to vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-adding-results}
@@ -178,10 +178,10 @@ You can't change the cluster name. Changing the cluster name might cause the add
    * **Pod**: The pod where the cluster is deployed.
    * **Status**: The status of the cluster. The status can have one of the following values:
       * Initializing: The cluster is being created and configured.
-     * Modifying: The cluster is being modified.
-     * Ready to use: The cluster is ready to use.
-     * Deleting: The cluster is being deleted.
-     * Deleted: The cluster is deleted.
+      * Modifying: The cluster is being modified.
+      * Ready to use: The cluster is ready to use.
+      * Deleting: The cluster is being deleted.
+      * Deleted: The cluster is deleted.
 4. Click a cluster name to view the ESXi servers, storage, and network interface details:
    * ESXi servers details:
       * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:

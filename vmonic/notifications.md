@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-13"
 
 keywords: notifications console, filter notifications, system notification
 
@@ -26,7 +26,7 @@ From the {{site.data.keyword.cloud}} for VMware® Solutions console, click **Not
 
 | Column | Description |
 |:------ |:----------- |
-| Severity | The severity of the event that is reported by the notification.<br>**Critical** - A critical event might impact the entire system or service.<br>**Error** - An error event occurs during an operation that might need intervention from the administrator or the user.<br>**Warning** - A component fails or is not working properly. However, the failure does not disrupt the ongoing process of the component.<br>**Informational** - A system or user operation is completed. Typically, the following events report informational notifications:<br>A service is installed.<br>A service is upgraded.<br>A service is removed.<br>All services are reconfigured for the added VMware ESXi™ servers.<br>All services are reconfigured for the removed ESXi servers. |
+| Severity | The severity of the event that is reported by the notification.  \n **Critical** - A critical event might impact the entire system or service.  \n **Error** - An error event occurs during an operation that might need intervention from the administrator or the user.  \n **Warning** - A component fails or is not working properly. However, the failure does not disrupt the ongoing process of the component.  \n **Informational** - A system or user operation is completed. Typically, the following events report informational notifications:  \n A service is installed.  \n A service is upgraded.  \n A service is removed.  \n All services are reconfigured for the added VMware ESXi™ servers.  \n All services are reconfigured for the removed ESXi servers. |
 | Type | The type of component that the reported event is related to - VMware vCenter Server® instances, services, or system. |
 | Resource | The name of the instance or service that sends the notification. |
 | Title | The subject of the notification. |

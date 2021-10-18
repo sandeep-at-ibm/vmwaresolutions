@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-13"
 
 keywords: IAM user, user role, user permission
 
@@ -42,10 +42,10 @@ The following table provides information about the actions that are mapped to pl
 
 | Platform management role | Actions | Example actions |
 |:----------------- |:----------------- |:----------------- |
-| Viewer | Read-only actions | View the summary of instances<br>View the details of an instance |
-| Editor | Update a specific instance | Add or remove VMware ESXi™ servers<br>Add or remove clusters<br>Add or remove services<br>Upgrade an instance to a higher version |
-| Operator | Read-only actions | List instances<br>View the details of an instance |
-| Administrator | Full management access | Create new instances<br>Delete instances<br>Grant platform access to other users|
+| Viewer | Read-only actions | View the summary of instances  \n View the details of an instance |
+| Editor | Update a specific instance | Add or remove VMware ESXi™ servers  \n Add or remove clusters  \n Add or remove services  \n Upgrade an instance to a higher version |
+| Operator | Read-only actions | List instances  \n View the details of an instance |
+| Administrator | Full management access | Create new instances  \n Delete instances  \n Grant platform access to other users|
 {: caption="Table 1. Platform management roles and allowed actions for {{site.data.keyword.vmwaresolutions_short}}" caption-side="top"}
 
 For {{site.data.keyword.vmwaresolutions_short}}, the following actions exist:
@@ -54,8 +54,8 @@ For {{site.data.keyword.vmwaresolutions_short}}, the following actions exist:
 |:------ |:-------------------- |:---- |
 | `vmware-solutions.instances.create` | Create new instances | Administrator |
 | `vmware-solutions.instances.delete` | Delete instances | Administrator |
-| `vmware-solutions.instances.view` | List instances<br>View the detail of an instance | Viewer, Operator, Editor, and Administrator |
-| `vmware-solutions.instances.update` | Add or remove ESXi servers<br>Add or remove clusters<br>Add or remove services<br>Upgrade an instance to a higher version | Editor and Administrator |
+| `vmware-solutions.instances.view` | List instances  \n View the detail of an instance | Viewer, Operator, Editor, and Administrator |
+| `vmware-solutions.instances.update` | Add or remove ESXi servers  \n Add or remove clusters  \n Add or remove services  \n Upgrade an instance to a higher version | Editor and Administrator |
 | `vmware-solutions.account.update` | Update account settings | Administrator |
 {: caption="Table 2. Action descriptions and required roles" caption-side="top"}
 
@@ -81,10 +81,10 @@ All resources access would grant users access to all service resource created in
 
 | Platform management role | Actions | Example actions |
 |:----------------- |:----------------- |:----------------- |
-| Viewer | Read-only actions | View instances<br>View instance services |
-| Operator | Read-only actions | View instances<br>View instance services |
-| Editor | Update a specific instance | View instances<br>Update an instance<br>View instance services<br>Update instance services |
-| Administrator | Full management access | View instances<br>Update an instance<br>Delete an instance<br>Create new instances<br>Update VDC organization password<br>Create instance services<br>Update instance services<br>Delete instance services<br>View instance services |
+| Viewer | Read-only actions | View instances  \n View instance services |
+| Operator | Read-only actions | View instances  \n View instance services |
+| Editor | Update a specific instance | View instances  \n Update an instance  \n View instance services  \n Update instance services |
+| Administrator | Full management access | View instances  \n Update an instance  \n Delete an instance  \n Create new instances  \n Update VDC organization password  \n Create instance services  \n Update instance services  \n Delete instance services  \n View instance services |
 {: caption="Table 3. Platform management roles with all resources scope and allowed actions for VMware Solutions Shared" caption-side="top"}
 
 To grant user permission to create new instances, you must also assign Resource Group access policies. For more information, see [Giving access to resources in resource groups](/docs/account?topic=account-rgs_manage_access) and [Ordering virtual data center instances](/docs/vmwaresolutions?topic=vmwaresolutions-shared_ordering).
@@ -109,10 +109,10 @@ You can organize your account resources in customizable groupings so that you ca
 
 | Platform management role | Actions | Example actions |
 |:----------------- |:----------------- |:----------------- |
-| Viewer | Read-only actions | View instances in resource group<br>View instance services in resource group |
-| Operator | Read-only actions | View instances in resource group<br>View instance services in resource group |
-| Editor | Update a specific instance | View instances in resource group<br>Update an instance in resource group<br>View instance's services in resource group<br>Update instance's services in resource group |
-| Administrator | Partial management access | View instances in resource group<br>Update an instance in resource group<br>Delete an instance in resource group<br>Create instance services in resource group<br>Update instance services in resource group<br>Delete instance services in resource group<br>View instance services in resource group |
+| Viewer | Read-only actions | View instances in resource group  \n View instance services in resource group |
+| Operator | Read-only actions | View instances in resource group  \n View instance services in resource group |
+| Editor | Update a specific instance | View instances in resource group  \n Update an instance in resource group  \n View instance's services in resource group  \n Update instance's services in resource group |
+| Administrator | Partial management access | View instances in resource group  \n Update an instance in resource group  \n Delete an instance in resource group  \n Create instance services in resource group  \n Update instance services in resource group  \n Delete instance services in resource group  \n View instance services in resource group |
 {: caption="Table 4. Platform management roles with resource group scope and allowed actions for VMware Solutions Shared" caption-side="top"}
 
 ### Assigning Resource Instance access
@@ -133,10 +133,10 @@ Each {{site.data.keyword.cloud_notm}} service in your account is a resource that
 
 | Platform management role | Actions | Example actions |
 |:----------------- |:----------------- |:----------------- |
-| Viewer | Read-only actions | View instances<br>View instance services |
-| Operator | Read-only actions | View instance<br>View instance services |
-| Editor | Update a specific instance | View instances<br>Update an instance<br>View instance services<br>Update instance services |
-| Administrator | Partial management access | View instances<br>Update an instance<br>Delete an instance<br>Create instance services<br>Update instance services<br>Delete instance services<br>View instance services |
+| Viewer | Read-only actions | View instances  \n View instance services |
+| Operator | Read-only actions | View instance  \n View instance services |
+| Editor | Update a specific instance | View instances  \n Update an instance  \n View instance services  \n Update instance services |
+| Administrator | Partial management access | View instances  \n Update an instance  \n Delete an instance  \n Create instance services  \n Update instance services  \n Delete instance services  \n View instance services |
 {: caption="Table 5. Platform management roles with instance scope and allowed actions for VMware Solutions Shared" caption-side="top"}
 
 ## Managing access for users

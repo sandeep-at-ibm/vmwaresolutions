@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-13"
 
 keywords: vmware regulated workloads, vmware regulated workloads order instance, order vmware regulated workloads, vmware regulated workloads instances
 
@@ -137,10 +137,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 2. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ## Witness cluster (Multizone VMware instance only)
@@ -219,10 +219,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 4. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ## Management cluster (Multizone VMware instance only)
@@ -283,10 +283,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ## Additional cluster for workloads
@@ -346,10 +346,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 6. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ## Firewall appliance
@@ -397,10 +397,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 7. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### Networking type
@@ -531,17 +531,17 @@ You can choose to install the following services:
    5. Review the networking type and select the uplink speed.
 
 10. Specify the settings for the additional cluster for workloads. For single-zone VMware instances, if you did not select to include a separate secondary cluster for workloads, skip to **Step11**.
-   1. Specify the cluster name.
-   2. Select the workload capacity. For the **Customizable** capacity, select the CPU model and RAM size.
-   3. Select the number of bare metal servers.
-   4. Select the disk type and size for the vSAN capacity disks, and the number of vSAN capacity disks. For single-zone VMware instances, also select the vSAN licensing option.
-   5. Review the estimated resources available per cluster.
-   6. Review the networking type and select the uplink speed.
+    1. Specify the cluster name.
+    2. Select the workload capacity. For the **Customizable** capacity, select the CPU model and RAM size.
+    3. Select the number of bare metal servers.
+    4. Select the disk type and size for the vSAN capacity disks, and the number of vSAN capacity disks. For single-zone VMware instances, also select the vSAN licensing option.
+    5. Review the estimated resources available per cluster.
+    6. Review the networking type and select the uplink speed.
 
 11. Choose the firewall appliance for your instance and follow the steps, depending on your selection:
-   1. For **Edge services cluster with Juniper vSRX**, **Edge services cluster with FortiGate Virtual Appliance**, and **Bring your own gateway appliance**, specify the edge services [cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req), the CPU model, the RAM size, the uplink speed, and the networking type.
-   2. For **Edge services cluster with Juniper vSRX** and **Edge services cluster with FortiGate Virtual Appliance**, you must also specify the corresponding service settings in a later step.
-   3. For **FortiGate Security Appliance**, you must order the **FortiGate Security Appliance 10 Gbps** service from the [IBM Cloud catalog](https://cloud.ibm.com/catalog/infrastructure/fortigate-security-appliance-10gb). Confirm that you ordered the service and continue with the following steps.
+    1. For **Edge services cluster with Juniper vSRX**, **Edge services cluster with FortiGate Virtual Appliance**, and **Bring your own gateway appliance**, specify the edge services [cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req), the CPU model, the RAM size, the uplink speed, and the networking type.
+    2. For **Edge services cluster with Juniper vSRX** and **Edge services cluster with FortiGate Virtual Appliance**, you must also specify the corresponding service settings in a later step.
+    3. For **FortiGate Security Appliance**, you must order the **FortiGate Security Appliance 10 Gbps** service from the [IBM Cloud catalog](https://cloud.ibm.com/catalog/infrastructure/fortigate-security-appliance-10gb). Confirm that you ordered the service and continue with the following steps.
 
 12. Under **Network interface**, enter the hostname prefix for the regulated workload and the root domain name.
 13. Under **Resource details**, enter the instance name and select a resource group.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-29"
+lastupdated: "2021-10-13"
 
 keywords: vCenter Server add service
 
@@ -109,17 +109,17 @@ The following table provides the resource requirements for the services for whic
 
 | Service name | Resource requirements |
 |:------------ |:--------------------- |
-| Caveonix RiskForesight | CPU - 8 CPUs<br>RAM - 32 GB<br>Storage - 100 GB |
-| F5 BIG-IP[^f5bigip] | CPU - 4, 8, or 16 CPUs, depending on license and bandwidth chosen<br>RAM - 8, 16, or 32 GB, depending on license and bandwidth chosen |
-| FortiGate Virtual Appliance | CPU - 2, 4, 8, 16, or 32 CPUs, depending on deployment size chosen<br>RAM - 4, 6, or 12 GB, depending on license chosen |
-| HyTrust CloudControl | CPU - 4 CPUs<br>RAM - 16 GB<br>Storage - 186 GB VMDK resident on vSAN™ |
-| IBM Spectrum Protect Plus | CPU - 16 CPUs<br>RAM - 48 GB |
-| Juniper vSRX | You must have enough available capacity to accommodate two VMs with the following requirements, on different hosts:<br>CPU - 6 CPUs<br>RAM - 16 GB<br>Storage - 18 GB<br>When Juniper vSRX is installed on clusters with the 25 Gb uplink speed, it requires:<br>CPU - 10 CPUs<br>RAM - 16 GB<br>Storage - 18 GB |
-| Red Hat OpenShift | If you install Red Hat OpenShift with vSAN™ storage, the following capacity requirements apply.<br>CPU - 9 CPUs<br>RAM - 120 GB<br>Storage - 1,170 GB<br>If you install Red Hat OpenShift with NFS storage, a new 2-TB NFS datastore, which is dedicated to Red Hat OpenShift, is ordered. |
-| Veeam | If you select Veeam as a VSI option, there is no capacity requirement. <br>If you select Veeam as a VM option, the following capacity is required: <br>CPU - 8 CPUs <br>RAM - 32 GB <br>Storage - 100 GB <br> If you select Veeam as a bare metal server option, there is no capacity requirement. |
-| VMware HCX | For each gateway in the active-passive pair of VMware NSX-V edge services gateways: <br>CPU - 6 CPUs <br>RAM - 8 GB <br>Storage - 3 GB VMDK <br>For the HCX Management Appliance VM: <br>CPU - 4 CPUs <br>RAM - 12 GB <br>Storage - 60 GB VMDK |
-| vRealize Operations and Log Insight | CPU - 18 CPUs <br>RAM - 208 GB <br>If you install vRealize Operations with vSAN storage, you must have an estimated 750 GB of vSAN storage. <br> If you install vRealize Operations with NFS storage, there's no storage requirement, because NFS storage is ordered as part of the instance order. |
-| Zerto | CPU - 2 CPUs <br>RAM - 4 GB |
+| Caveonix RiskForesight | CPU - 8 CPUs  \n RAM - 32 GB  \n Storage - 100 GB |
+| F5 BIG-IP[^f5bigip] | CPU - 4, 8, or 16 CPUs, depending on license and bandwidth chosen  \n RAM - 8, 16, or 32 GB, depending on license and bandwidth chosen |
+| FortiGate Virtual Appliance | CPU - 2, 4, 8, 16, or 32 CPUs, depending on deployment size chosen  \n RAM - 4, 6, or 12 GB, depending on license chosen |
+| HyTrust CloudControl | CPU - 4 CPUs  \n RAM - 16 GB  \n Storage - 186 GB VMDK resident on vSAN™ |
+| IBM Spectrum Protect Plus | CPU - 16 CPUs  \n RAM - 48 GB |
+| Juniper vSRX | You must have enough available capacity to accommodate two VMs with the following requirements, on different hosts:  \n CPU - 6 CPUs  \n RAM - 16 GB  \n Storage - 18 GB  \n When Juniper vSRX is installed on clusters with the 25 Gb uplink speed, it requires:  \n CPU - 10 CPUs  \n RAM - 16 GB  \n Storage - 18 GB |
+| Red Hat OpenShift | If you install Red Hat OpenShift with vSAN™ storage, the following capacity requirements apply.  \n CPU - 9 CPUs  \n RAM - 120 GB  \n Storage - 1,170 GB  \n If you install Red Hat OpenShift with NFS storage, a new 2-TB NFS datastore, which is dedicated to Red Hat OpenShift, is ordered. |
+| Veeam | If you select Veeam as a VSI option, there is no capacity requirement.   \n If you select Veeam as a VM option, the following capacity is required:   \n CPU - 8 CPUs   \n RAM - 32 GB   \n Storage - 100 GB   \n  If you select Veeam as a bare metal server option, there is no capacity requirement. |
+| VMware HCX | For each gateway in the active-passive pair of VMware NSX-V edge services gateways:   \n CPU - 6 CPUs   \n RAM - 8 GB   \n Storage - 3 GB VMDK   \n For the HCX Management Appliance VM:   \n CPU - 4 CPUs   \n RAM - 12 GB   \n Storage - 60 GB VMDK |
+| vRealize Operations and Log Insight | CPU - 18 CPUs   \n RAM - 208 GB   \n If you install vRealize Operations with vSAN storage, you must have an estimated 750 GB of vSAN storage.   \n  If you install vRealize Operations with NFS storage, there's no storage requirement, because NFS storage is ordered as part of the instance order. |
+| Zerto | CPU - 2 CPUs   \n RAM - 4 GB |
 {: caption="Table 3. Resources required for the services that the system checks for capacity requirements" caption-side="top"}
 
 [^f5bigip]: See the table in [Considerations when you install F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations#f5_considerations-install).

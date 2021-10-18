@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-13"
 
 keywords: vCenter Server BOM, bill of materials vCenter Server, BOM
 
@@ -27,8 +27,8 @@ The following table details the BOM information for the vCenter Server VLANs.
 | VLAN       | Type       | Details       |
 |:---------- |:---------- |:------------- |
 | VLAN1     | Public, Primary | Assigned to physical VMware ESXi™ servers for public network access. The servers are assigned a public IP address but this IP address is not configured on the servers, so they are not directly accessible on the public network. Instead, the public VLAN is intended to provide public internet access for other components, such as VMware NSX Edge™ Services Gateways (ESGs). |
-| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere® management traffic.<br><br>Assigned to VMs (virtual machines) that function as management components.<br><br>For NSX-T™, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
-| VLAN3     | Private B, Portable | Assigned to VMware vSAN™, if used.<br><br>Assigned to VMware NFS, if used.<br><br>Assigned to VMware vSphere vMotion.<br><br>For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).<br>Note that this applies to vSphere 6.7 only. For vSphere 7.0, all NSX VTEPs are put in VLAN2. |
+| VLAN2     | Private A, Primary | Assigned by {{site.data.keyword.cloud}} to physical ESXi servers. Used by the management interface for VMware vSphere® management traffic.  \n   \n Assigned to VMs (virtual machines) that function as management components.  \n   \n For NSX-T™, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint) |
+| VLAN3     | Private B, Portable | Assigned to VMware vSAN™, if used.  \n   \n Assigned to VMware NFS, if used.  \n   \n Assigned to VMware vSphere vMotion.  \n   \n For NSX-T, assigned to VMware NSX VTEP (VXLAN Tunnel Endpoint).  \n Note that this applies to vSphere 6.7 only. For vSphere 7.0, all NSX VTEPs are put in VLAN2. |
 {: caption="Table 1. BOM for the VLANs in vCenter Server instances" caption-side="top"}
 
 ## Software BOM for vCenter Server instances
@@ -38,12 +38,12 @@ The following table details the BOM information for vCenter Server software comp
 
 | Manufacturer | Component                       | Version       |
 |:------------ |:------------------------------- |:------------- |
-| VMware       | vSphere ESXi                    | ESXi 7.0 Update 2a (17867351)[^esxi7] or<br>ESXi 6.7 P05 (17700523)[^esxi67] or<br>ESXi 6.5 P06 (17477841)[^esxi65] |
+| VMware       | vSphere ESXi                    | ESXi 7.0 Update 2a (17867351)[^esxi7] or  \n ESXi 6.7 P05 (17700523)[^esxi67] or  \n ESXi 6.5 P06 (17477841)[^esxi65] |
 | VMware       | vSphere 7.0 Update 2a           | Distributed vSwitch 7.0.0 |
 | VMware       | vSphere 6.7                     | Distributed vSwitch 6.6.0 |
 | VMware       | vSphere 6.5[^vcs-vsphere65]     | Distributed vSwitch 6.5.0 |
-| VMware       | vCenter Server Appliance        | 7.0 Update 2d (18455184) or<br>6.7 Update 3o (18485166) |
-| VMware       | vSAN[^vsan]                     | 7.0 Update 2 (17630552) or<br>6.7 P05 |
+| VMware       | vCenter Server Appliance        | 7.0 Update 2d (18455184) or  \n 6.7 Update 3o (18485166) |
+| VMware       | vSAN[^vsan]                     | 7.0 Update 2 (17630552) or  \n 6.7 P05 |
 | VMware       | NSX for vSphere[^nsxv]          | 6.4.10 (17626462) |
 | VMware       | NSX-T for vSphere[^nsxt]        | 3.1.1.0.0 (17483185) |
 | Microsoft®    | Windows® Server Standard edition | 2019 |

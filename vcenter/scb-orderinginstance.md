@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-21"
+lastupdated: "2021-10-13"
 
 keywords: order Security and Compliance Readiness Bundle, order scb instances, order vcs scb
 
@@ -228,10 +228,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 3. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs
@@ -264,7 +264,6 @@ Ensure that the firewall configuration on the selected VLANs does not block the 
 Optionally, use **Advanced settings** to configure portable subnets for VLANs.
 
 Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to specify the **Portable subnet** for each applicable purpose. If you select the **Allocate a new one** option for this field, a new portable subnet is allocated automatically.
-
 **Notes**
 * You must complete the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** settings before you can configure portable subnets.
 * The number of portable subnets is displayed under **Advanced settings** after you save the portable subnet settings. Click **Portable subnets settings** to edit the settings.
@@ -433,9 +432,9 @@ The following services are optional for your Security and Compliance Readiness B
 11. Under **Recommended services** and **Optional services**, review the service options. If you want to deploy an add-on service, toggle the switch on and review the service settings. If configuration is required, click **Edit**, then complete the edits and click **Save**. For more information about specific settings for a service, see the corresponding topic for ordering the service.
 
 12. On the **Summary** pane, review the instance settings and the estimated price.
-   * To save the settings as a new configuration template without placing an order, click **Save configuration**, enter a name for the configuration, and click **Continue**.
-   * To save the updates to a saved configuration, click **Save configuration**, select **Modify current configuration**, and click **Continue**.
-   * To save the updates to a new saved configuration, click **Save configuration**, select **Create new configuration**, enter a new name for the configuration, and click **Continue**.
+    * To save the settings as a new configuration template without placing an order, click **Save configuration**, enter a name for the configuration, and click **Continue**.
+    * To save the updates to a saved configuration, click **Save configuration**, select **Modify current configuration**, and click **Continue**.
+    * To save the updates to a new saved configuration, click **Save configuration**, select **Create new configuration**, enter a new name for the configuration, and click **Continue**.
 
 13. To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
 

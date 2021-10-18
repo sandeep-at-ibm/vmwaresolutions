@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-13"
 
 keywords: vCenter Server add clusters, add cluster, vCenter Server cluster
 
@@ -261,10 +261,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10 <br>Dallas 12<br>Dallas 13 | NA South |
-| Frankfurt 02 <br>Frankfurt 05 <br>London 06 <br>Paris 04 <br>Paris 05 <br>Paris 06 | Europe |
-| Sydney 04 <br>Sydney 05 <br>Tokyo 02 <br>Tokyo 04 <br>Tokyo 05 | Asia-Pacific |
-| Toronto 04 <br>Washington DC 04 <br>Washington DC 06 <br>Washington DC 07 | NA East |
+| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
+| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
+| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
+| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
 {: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs
@@ -297,7 +297,6 @@ Ensure that the firewall configuration on the selected VLANs does not block the 
 Optionally, use **Advanced settings** to configure portable subnets for VLANs.
 
 Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to specify the **Portable subnet** for each applicable purpose. If you select the **Allocate a new one** option for this field, a new portable subnet is allocated automatically.
-
 **Notes**
 * You must complete the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** settings before you can configure portable subnets.
 * The number of portable subnets is displayed on the **Advanced settings** button after you save the portable subnet settings. Click **Portable subnets settings** to edit the settings.
@@ -351,10 +350,10 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
       * If you want to use your own VMware license for the component, select **I will provide** and enter your license key.
 10. Select the network setting of either **Public and private network** or **Private network only**.
 11. On the **Summary** pane, verify the cluster configuration before you add the cluster.
-   1. Review the settings for the cluster.
-   2. Review the estimated price of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
-   3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
-   4. Click **Create**.
+    1. Review the settings for the cluster.
+    2. Review the estimated price of the cluster. Click **Pricing details** to generate a PDF summary. To save or print your order summary, click the **Print** or **Download** icon on the upper right of the PDF window.
+    3. Click the link or links of the terms that apply to your order, and confirm that you agree with these terms before you add the cluster.
+    4. Click **Create**.
 
 ## Results after you add clusters to vCenter Server single-zone instances
 {: #vc_addingclusters-results}

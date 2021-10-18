@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-13"
 
 keywords: vCenter Server add host, add server vCenter Server
 
@@ -48,7 +48,7 @@ You can expand the capacity of your VMware® vCenter Server® instance according
    When you provision the new ESXi server, virtual machines (VMs) are immediately migrated to the new servers if you do not select the **Maintenance mode** checkbox. You do not receive a confirmation message before the migration begins.
    {: important}
 
-8. Complete the bare metal server configuration.
+9. Complete the bare metal server configuration.
    * Select an existing bare metal server configuration that is being used by the existing ESXi servers in the cluster. This option is not available under the following conditions:
       * The bare metal configuration used by the existing ESXi servers in the cluster is **Broadwell**.
       * The storage type of the cluster is **Local disks**.
@@ -56,11 +56,11 @@ You can expand the capacity of your VMware® vCenter Server® instance according
       * (NSX-V only) For instances with vSphere Enterprise Plus 6.7u1, specify the VMware vSphere version for the new ESXi server.
       * For **Skylake** and **Cascade Lake**, specify the **CPU model**, the amount of **RAM**, and the **Number of bare metal servers**.
       * For **SAP-certified**, specify the **CPU model and RAM** and the **Number of bare metal servers**.
-9. Complete the subnet settings.
-   * Select to continue to use the previously selected primary subnets.
-   * Select to specify primary subnets. Then, use the lists to select the **Public primary subnet** and **Private primary subnet**.
-10. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, select the **High performance Intel Optane** checkbox.
-11. On the **Summary** pane, review the estimated pricing and click **Create**.
+10. Complete the subnet settings.
+    * Select to continue to use the previously selected primary subnets.
+    * Select to specify primary subnets. Then, use the lists to select the **Public primary subnet** and **Private primary subnet**.
+11. Complete the storage configuration. Specify the disk types for the capacity and cache disks, the number of disks, and the vSAN license edition. If you want more storage, select the **High performance Intel Optane** checkbox.
+12. On the **Summary** pane, review the estimated pricing and click **Create**.
 
    You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 

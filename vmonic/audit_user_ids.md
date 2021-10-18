@@ -4,7 +4,7 @@ copyright:
 
   years: 2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-13"
 
 keywords: user IDs vCenter, PSC user, user ID service
 
@@ -32,7 +32,7 @@ Starting with V2.5, {{site.data.keyword.vmwaresolutions_short}} uses the followi
 |:---------|:-------------|:-------|:------------|
 | IBM      | `root`       | SSH    | Used for VMware configuration such as setting up VMware High Availability and creating distributed switches. Used post deployment to pair primary and secondary VMware vCenter Server® instances. |
 | Customer | `customerroot` | SSH    | Created for customer use only. |
-| IBM      | `automation@root_domain`<br/>(Active Directory™ user) | HTTP | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines (VMs) for services. |
+| IBM      | `automation@root_domain`  \n (Active Directory™ user) | HTTP | Used post deployment to add and remove hosts and clusters and to deploy and configure virtual machines (VMs) for services. |
 | Customer | `administrator@vsphere.local` | HTTP | Created for customer use only. |
 {: caption="Table 1. vCenter and Platform Services Controller user IDs" caption-side="top"}
 
@@ -44,7 +44,7 @@ HTTP is used for vCenter setup, configuration, and VMware operations such as add
 
 | User     | User ID      | Description |
 |:---------|:-------------|:------------|
-| IBM      | `automation@root_domain`<br/>(Active Directory user) | Used post deployment to manage NSX VTEP IP addresses, manage host and cluster configuration when you add and remove hosts and clusters. Also used to manage ESG configuration for services that require public network access for licensing, activation, or usage reporting. |
+| IBM      | `automation@root_domain`  \n (Active Directory user) | Used post deployment to manage NSX VTEP IP addresses, manage host and cluster configuration when you add and remove hosts and clusters. Also used to manage ESG configuration for services that require public network access for licensing, activation, or usage reporting. |
 | Customer | `admin` | Created for customer use only. |
 {: caption="Table 2. NSX Manager user IDs" caption-side="top"}
 
