@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-13"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -100,7 +100,7 @@ The deployment of HCX is automated. Whether you order a vCenter Server instance 
 {: #hcx_ordering-related}
 
 * [HCX overview](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations)
-* [Managing HCX ](/docs/vmwaresolutions?topic=vmwaresolutions-managinghcx)
+* [Managing HCX](/docs/vmwaresolutions?topic=vmwaresolutions-managinghcx)
 * [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)
 * [Glossary of HCX terms](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_glossary)
 * [Contacting IBM Support](/docs/vmwaresolutions?topic=vmwaresolutions-trbl_support)

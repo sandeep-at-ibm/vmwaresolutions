@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-13"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -150,10 +150,10 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 3. Enter the virtual data center name and select a resource group.
 4. Ensure that the **Single-zone VMware virtual data center** card is selected for the deployment topology.
 5. Select the data center location to host the virtual data center.
-4. Select the network type.
-5. Select the vCPU and RAM limits according to your requirements.
-6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
-7. Click **Create**.
+6. Select the network type.
+7. Select the vCPU and RAM limits according to your requirements.
+8. On the **Summary** pane, verify the configuration and estimated price before you place the order.
+9. Click **Create**.
 
 ## Procedure to order VMware Solutions Shared Reserved
 {: #shared_ordering-procedure-reserved}
@@ -163,12 +163,12 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 3. Enter the virtual data center name and select a resource group.
 4. Ensure that the **Single-zone VMware virtual data center** card is selected for the deployment topology.
 5. Select the data center location to host the virtual data center.
-4. Select the network type.
-5. Complete the resource reservation.
+6. Select the network type.
+7. Complete the resource reservation.
    * If you select **Preconfigured**, select the preconfigured vCPU model and RAM size.
    * If you select **Customizable**, specify the reserved vCPU and RAM limits according to your requirements.
-6. On the **Summary** pane, verify the configuration and estimated price before you place the order.
-7. Click **Create**.
+8. On the **Summary** pane, verify the configuration and estimated price before you place the order.
+9. Click **Create**.
 
 ## Results after you order VMware Solutions Shared
 {: #shared_ordering-results}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-06-18"
+lastupdated: "2021-10-13"
 
 keywords: troubleshooting VMware Solutions Shared, data center, VMware Solutions Shared data centers, Business Partners
 
@@ -36,7 +36,7 @@ Business Partner users cannot use one virtual data center to reset the vCloud Di
 
 For Business Partner users, all virtual data centers in the same data center number group have the same password. Groups with the same data center number can reset the vCloud Director account password from any virtual data center in the number group.
 
-For example, ``PAR04- windows`` and ``PAR04- linux`` are in a group with the same data center number. When you reset the vCloud Director password in either, the password is reset for any virtual data center in ``PAR04``. The password is not reset for the `` PAR05`` or ``PAR06`` data center number groups.
+For example, ``PAR04- windows`` and ``PAR04- linux`` are in a group with the same data center number. When you reset the vCloud Director password in either, the password is reset for any virtual data center in ``PAR04``. The password is not reset for the ``PAR05`` or ``PAR06`` data center number groups.
 
 ## Related links
 {: #shared_bnpp-related}

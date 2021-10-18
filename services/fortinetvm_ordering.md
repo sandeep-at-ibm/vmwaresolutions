@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-01"
+lastupdated: "2021-10-13"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -77,7 +77,7 @@ If you select **Private network**, specify the following settings:
 * FortiGate-VM08 (8 vCPUs)
 * FortiGate-VM16 (16 vCPUs)
 * FortiGate-VM32 (32 vCPUs)
-  The FortiGate-VM32 deployment size requires Cascade Lake 5218 or higher.
+The FortiGate-VM32 deployment size requires Cascade Lake 5218 or higher.
 
 ### Monthly subscription license model
 {: #fortinetvm_ordering-config-license}

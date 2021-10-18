@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-10-01"
+lastupdated: "2021-10-13"
 
 keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
@@ -40,8 +40,8 @@ Ensure that you configured the {{site.data.keyword.cloud}} infrastructure creden
 4. Specify a new license name, or use the default one **cav-_xx_** where _xx_ represents two randomly generated alphabetic characters. The name must be unique across all Caveonix service instances and all instances in the {{site.data.keyword.cloud_notm}} account.
 5. In the **License notes** field, optionally enter a note. For example, you can enter a note to help you identify associated instances.
 6. Specify the number of virtual machines (VMs) you want to license.
-5. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms before you order the license.
-6. Click **Add to estimate** or **Create**.
+7. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms before you order the license.
+8. Click **Add to estimate** or **Create**.
 
 ## Results
 {: #caveonix_license_ordering-results}

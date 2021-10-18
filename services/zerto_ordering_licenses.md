@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-27"
+lastupdated: "2021-10-13"
 
 keywords: Zerto, Zerto license, order Zerto license
 
@@ -50,10 +50,10 @@ You must have a billable {{site.data.keyword.cloud_notm}} account to order Zerto
 
 4. Specify the name of the organization or company that the license is created for.
 5. Specify a new license name or use the default name **zerto-_xx_** where _xx_ represents two randomly generated alphabetic characters.
-5. In the **License notes** field, optionally enter a note. For example, you can enter a note to help you identify associated instances.
-6. Specify the number of virtual machines (VMs) you want to license. The range is 1 - 1000.
-7. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms before you order the license.
-8. Click **Add to estimate**, **Upgrade**, or **Create**.
+6. In the **License notes** field, optionally enter a note. For example, you can enter a note to help you identify associated instances.
+7. Specify the number of virtual machines (VMs) you want to license. The range is 1 - 1000.
+8. Click the link or links of the terms that apply to your order. Ensure that you agree with these terms before you order the license.
+9. Click **Add to estimate**, **Upgrade**, or **Create**.
 
 **Upgrade** displays only if you must make your {{site.data.keyword.cloud_notm}} account a billable account.
 {: note}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-18"
+lastupdated: "2021-10-13"
 
 keywords: HTCC WebGUI, HTCC console, enable internet HTCC
 
@@ -74,7 +74,7 @@ The following steps apply for updating the HyTrust CloudControl network settings
 4. Note the existing default gateway. Click **Configuration > Network**. Note the gateway IP address that is listed, which becomes the gateway for the static route.
 5. Add a static route. Click **Configuration > Static Routes**. Click **Add**, enter the following information, and click **OK**.
 
-   ```
+   ```text
    Network Address: 10.0.0.0
    Mask: 255.0.0.0
    Gateway: IP noted in step 4

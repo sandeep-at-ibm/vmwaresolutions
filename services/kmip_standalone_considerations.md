@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-06"
+lastupdated: "2021-10-13"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -52,7 +52,7 @@ Review the following considerations before you install a KMIP for VMware instanc
       * You granted the following access levels for the service ID:
         * At the platform access level - Viewer authority to your Key Protect or HPCS service instance.
         * At the service access level - Manager authority to your Key Protect or HPCS service instance.
-     * You have an API key for the created service ID. The key is required when you order the service.
+      * You have an API key for the created service ID. The key is required when you order the service.
    * You imported or created at least one customer root key (CRK) by using the GUI or API of Key Protect or HPCS.
       * For more information about importing root keys with the Key Protect GUI or API, see [Importing root keys](/docs/key-protect?topic=key-protect-import-root-keys) and [Creating import tokens](/docs/key-protect?topic=key-protect-create-import-tokens), or [IBM Key Protect API](https://cloud.ibm.com/apidocs/key-protect){: external}.
       * For more information about importing root keys with the HPCS GUI or API, see [Importing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys) and [Creating import tokens](/docs/hs-crypto?topic=hs-crypto-create-import-tokens), or [IBM Cloud Hyper Protect Crypto Services API](https://cloud.ibm.com/apidocs/hs-crypto){: external}.
