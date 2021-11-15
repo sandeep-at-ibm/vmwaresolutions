@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-01"
+lastupdated: "2021-11-15"
 
 keywords: IBM Spectrum Protect Plus, SPP configuration, order SPP
 
@@ -19,7 +19,7 @@ subcollection: vmwaresolutions
 {: #spp_ordering}
 
 You can include the IBM Spectrum® Protect Plus service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
-®
+
 ## Ordering IBM Spectrum Protect Plus for a new instance
 {: #spp_ordering-new}
 
