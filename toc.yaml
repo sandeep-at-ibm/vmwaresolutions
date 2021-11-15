@@ -26,7 +26,7 @@ toc:
       - topic: vmonic/under_the_hood.md
         navtitle: Under the hood
       - vmonic/inst_comp_chart.md
-      - vmonic/relnotes_v44.md
+      - vmonic/release-notes.md
       - vmonic/additional_resources.md
 
   - navgroup:
@@ -322,7 +322,7 @@ toc:
           - vmonic/audit_user_ids.md
           - vmonic/audit_messages.md
       - topicgroup:
-          label: Reference architecture guides
+          label: Solution architectures
           topics:
           - topicgroup:
               label: VMware Solutions architecture
@@ -338,6 +338,137 @@ toc:
               - archiref/solution/solution_backingup.md
               - archiref/solution/solution_considerations.md
               - archiref/solution/appendix.md
+          - topicgroup:
+              label: VMware Regulated Workloads architecture
+              topics:
+              - archiref/vrw/vrw-archi-overview.md
+              - archiref/vrw/vrw-context.md
+              - archiref/vrw/vrw-separation-of-duties.md
+              - archiref/vrw/vrw-baremetal.md
+              - archiref/vrw/vrw-storage.md
+              - archiref/vrw/vrw-underlay-network.md
+              - archiref/vrw/vrw-overlay-network.md
+              - archiref/vrw/vrw-mzr.md
+              - archiref/vrw/vrw-nsxt-topologies.md
+              - archiref/vrw/vrw-vsphere-platform.md
+              - archiref/vrw/vrw-encryption.md
+              - archiref/vrw/vrw-operations.md
+              - archiref/vrw/vrw-caveonix.md
+              - archiref/vrw/vrw-budr.md
+              - archiref/vrw/vrw-hytrust.md
+              - archiref/vrw/vrw-iam-active-directory.md
+              - archiref/vrw/vrw-iam-vsphere.md
+              - archiref/vrw/vrw-iam-nsxt.md
+              - archiref/vrw/vrw-iam-hytrust.md
+              - archiref/vrw/vrw-iam-vrealize.md
+              - archiref/vrw/vrw-use-case-1.md
+              - archiref/vrw/vrw-use-case-2.md
+              - archiref/vrw/vrw-dualregion-overview.md
+              - archiref/vrw/vrw-dualregion-design.md
+          - topicgroup:
+              label: NSX Edge Services Gateway solution architecture
+              topics:
+              - archiref/nsx/nsx_overview.md
+              - archiref/nsx/nsx_design.md
+              - archiref/nsx/networking_services.md
+              - archiref/nsx/multi_site.md
+          - topicgroup:
+              label: VMware multizone architecture
+              topics:
+              - archiref/mission-critical/mcv-archi-overview.md
+              - archiref/mission-critical/mcv-archi-design.md
+              - archiref/mission-critical/mcv-archi-comps.md
+          - topicgroup:
+              label: Attached storage for vCenter Server architecture
+              topics:
+              - archiref/attached-storage/storage-benefits.md
+              - archiref/attached-storage/storage-infra-design.md
+              - archiref/attached-storage/storage-infra-mgmt.md
+              - archiref/attached-storage/storage-settings.md
+              - archiref/attached-storage/cluster-settings.md
+          - topicgroup:
+              label: Veeam on bare metal server architecture
+              topics:
+              - archiref/veeam-bms/veeam-bms-archi-intro.md
+              - archiref/veeam-bms/veeam-bms-archi-overview.md
+              - archiref/veeam-bms/veeam-bms-archi-components.md
+              - archiref/veeam-bms/veeam-bms-archi-physical.md
+              - archiref/veeam-bms/veeam-bms-archi-post-deployment.md
+              - archiref/veeam-bms/veeam-bms-archi-app-support.md
+          - topicgroup:
+              label: Caveonix RiskForesight architecture
+              topics:
+              - archiref/caveonix/caveonix-intro.md
+              - archiref/caveonix/caveonix-on-vcs.md
+              - archiref/caveonix/caveonix-arch.md
+              - archiref/caveonix/caveonix-detailed.md
+              - archiref/caveonix/caveonix-deploy.md
+              - archiref/caveonix/caveonix-allinone.md
+              - archiref/caveonix/caveonix-partially.md
+              - archiref/caveonix/caveonix-fully.md
+              - archiref/caveonix/caveonix-step1.md
+              - archiref/caveonix/caveonix-step2.md
+              - archiref/caveonix/caveonix-step3.md
+              - archiref/caveonix/caveonix-step4.md
+              - archiref/caveonix/caveonix-terminology.md
+          - topicgroup:
+              label: VMware HCX solution architecture
+              topics:
+              - archiref/hcx-archi/hcx-archi-intro.md
+              - archiref/hcx-archi/hcx-archi-overview.md
+              - archiref/hcx-archi/hcx-archi-source.md
+              - archiref/hcx-archi/hcx-archi-target-nsx-v.md
+              - archiref/hcx-archi/hcx-archi-target-nsx-t.md
+              - archiref/hcx-archi/hcx-archi-port-req.md
+          - topicgroup:
+              label: vCenter Server and Red Hat OpenShift architecture
+              topics:
+              - archiref/vcs-openshift/vcs-openshift-intro.md
+              - archiref/vcs-openshift/vcs-openshift-syscontext.md
+              - archiref/vcs-openshift/vcs-openshift-redhat-arch.md
+              - archiref/vcs-openshift/vcs-openshift-arch.md
+              - archiref/vcs-openshift/vcs-openshift-sddc-infra.md
+              - archiref/vcs-openshift/vcs-openshift-storage.md
+          - topicgroup:
+              label: KMIP for VMware Solutions architecture
+              topics:
+              - archiref/kmip/overview.md
+              - archiref/kmip/design.md
+              - archiref/kmip/implementation.md
+          - topicgroup:
+              label: HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
+              topics:
+              - archiref/htdc-hpcs/htdc-hpcs-encryption-overview.md
+              - archiref/htdc-hpcs/htdc-hpcs-encryption-options.md
+              - archiref/htdc-hpcs/htdc-hpcs-hpcs-overview.md
+              - archiref/htdc-hpcs/htdc-hpcs-system-context.md
+              - archiref/htdc-hpcs/htdc-hpcs-reference-architecture.md
+              - archiref/htdc-hpcs/htdc-hpcs-detail.md
+              - archiref/htdc-hpcs/htdc-hpcs-deployment.md
+
+      - topicgroup:
+          label: Solution guides
+          topics:
+          - topicgroup:
+              label: VMware Update Manager guide
+              topics:
+              - archiref/vcs/vcs-hybridity-intro.md
+              - archiref/vum/vum-intro.md
+              - archiref/vum/vum-overview.md
+              - archiref/vum/vum-init-config.md
+              - archiref/vum/vum-metadata.md
+              - archiref/vum/vum-baselines.md
+              - archiref/vum/vum-scanning.md
+              - archiref/vum/vum-staging.md
+              - archiref/vum/vum-updating-nsx.md
+              - archiref/vum/vum-updating-vsan.md
+              - archiref/vum/vum-updating-vcsa.md
+              - archiref/vum/vum-applying-nic.md
+              - archiref/vum/vum-type-updates.md
+              - archiref/vum/vum-vsan-redundancy.md
+              - archiref/vum/vum-orchestr-updates.md
+              - archiref/vum/vum-zerto.md
+              - archiref/vum/vum-host-profiles.md
           - topicgroup:
               label: Operations management guide
               topics:
@@ -368,124 +499,6 @@ toc:
               - archiref/adds/adds-wkld-domain.md
               - archiref/adds/adds-integration.md
           - topicgroup:
-              label: Attached storage for vCenter Server architecture
-              topics:
-              - archiref/attached-storage/storage-benefits.md
-              - archiref/attached-storage/storage-infra-design.md
-              - archiref/attached-storage/storage-infra-mgmt.md
-              - archiref/attached-storage/storage-settings.md
-              - archiref/attached-storage/cluster-settings.md
-          - topicgroup:
-              label: Caveonix RiskForesight architecture
-              topics:
-              - archiref/caveonix/caveonix-intro.md
-              - archiref/caveonix/caveonix-on-vcs.md
-              - archiref/caveonix/caveonix-arch.md
-              - archiref/caveonix/caveonix-detailed.md
-              - archiref/caveonix/caveonix-deploy.md
-              - archiref/caveonix/caveonix-allinone.md
-              - archiref/caveonix/caveonix-partially.md
-              - archiref/caveonix/caveonix-fully.md
-              - archiref/caveonix/caveonix-step1.md
-              - archiref/caveonix/caveonix-step2.md
-              - archiref/caveonix/caveonix-step3.md
-              - archiref/caveonix/caveonix-step4.md
-              - archiref/caveonix/caveonix-terminology.md
-          - topicgroup:
-              label: VMware multizone architecture
-              topics:
-              - archiref/mission-critical/mcv-archi-overview.md
-              - archiref/mission-critical/mcv-archi-design.md
-              - archiref/mission-critical/mcv-archi-comps.md
-          - topicgroup:
-              label: VMware Regulated Workloads architecture
-              topics:
-              - archiref/vrw/vrw-archi-overview.md
-              - archiref/vrw/vrw-context.md
-              - archiref/vrw/vrw-separation-of-duties.md
-              - archiref/vrw/vrw-baremetal.md
-              - archiref/vrw/vrw-storage.md
-              - archiref/vrw/vrw-underlay-network.md
-              - archiref/vrw/vrw-overlay-network.md
-              - archiref/vrw/vrw-mzr.md
-              - archiref/vrw/vrw-nsxt-topologies.md
-              - archiref/vrw/vrw-vsphere-platform.md
-              - archiref/vrw/vrw-encryption.md
-              - archiref/vrw/vrw-operations.md
-              - archiref/vrw/vrw-caveonix.md
-              - archiref/vrw/vrw-budr.md
-              - archiref/vrw/vrw-hytrust.md
-              - archiref/vrw/vrw-iam-active-directory.md
-              - archiref/vrw/vrw-iam-vsphere.md
-              - archiref/vrw/vrw-iam-nsxt.md
-              - archiref/vrw/vrw-iam-hytrust.md
-              - archiref/vrw/vrw-iam-vrealize.md
-              - archiref/vrw/vrw-use-case-1.md
-              - archiref/vrw/vrw-use-case-2.md
-              - archiref/vrw/vrw-dualregion-overview.md
-              - archiref/vrw/vrw-dualregion-design.md
-          - topicgroup:
-              label: Veeam on bare metal server architecture
-              topics:
-              - archiref/veeam-bms/veeam-bms-archi-intro.md
-              - archiref/veeam-bms/veeam-bms-archi-overview.md
-              - archiref/veeam-bms/veeam-bms-archi-components.md
-              - archiref/veeam-bms/veeam-bms-archi-physical.md
-              - archiref/veeam-bms/veeam-bms-archi-post-deployment.md
-              - archiref/veeam-bms/veeam-bms-archi-app-support.md
-          - topicgroup:
-              label: NSX Edge Services Gateway solution architecture
-              topics:
-              - archiref/nsx/nsx_overview.md
-              - archiref/nsx/nsx_design.md
-              - archiref/nsx/networking_services.md
-              - archiref/nsx/multi_site.md
-          - topicgroup:
-              label: VMware Update Manager guide
-              topics:
-              - archiref/vcs/vcs-hybridity-intro.md
-              - archiref/vum/vum-intro.md
-              - archiref/vum/vum-overview.md
-              - archiref/vum/vum-init-config.md
-              - archiref/vum/vum-metadata.md
-              - archiref/vum/vum-baselines.md
-              - archiref/vum/vum-scanning.md
-              - archiref/vum/vum-staging.md
-              - archiref/vum/vum-updating-nsx.md
-              - archiref/vum/vum-updating-vsan.md
-              - archiref/vum/vum-updating-vcsa.md
-              - archiref/vum/vum-applying-nic.md
-              - archiref/vum/vum-type-updates.md
-              - archiref/vum/vum-vsan-redundancy.md
-              - archiref/vum/vum-orchestr-updates.md
-              - archiref/vum/vum-zerto.md
-              - archiref/vum/vum-host-profiles.md
-          - topicgroup:
-              label: KMIP for VMware Solutions architecture
-              topics:
-              - archiref/kmip/overview.md
-              - archiref/kmip/design.md
-              - archiref/kmip/implementation.md
-          - topicgroup:
-              label: HyTrust DataControl with IBM Cloud Hyper Protect Crypto Services architecture
-              topics:
-              - archiref/htdc-hpcs/htdc-hpcs-encryption-overview.md
-              - archiref/htdc-hpcs/htdc-hpcs-encryption-options.md
-              - archiref/htdc-hpcs/htdc-hpcs-hpcs-overview.md
-              - archiref/htdc-hpcs/htdc-hpcs-system-context.md
-              - archiref/htdc-hpcs/htdc-hpcs-reference-architecture.md
-              - archiref/htdc-hpcs/htdc-hpcs-detail.md
-              - archiref/htdc-hpcs/htdc-hpcs-deployment.md
-          - topicgroup:
-              label: vCenter Server and Red Hat OpenShift architecture
-              topics:
-              - archiref/vcs-openshift/vcs-openshift-intro.md
-              - archiref/vcs-openshift/vcs-openshift-syscontext.md
-              - archiref/vcs-openshift/vcs-openshift-redhat-arch.md
-              - archiref/vcs-openshift/vcs-openshift-arch.md
-              - archiref/vcs-openshift/vcs-openshift-sddc-infra.md
-              - archiref/vcs-openshift/vcs-openshift-storage.md
-          - topicgroup:
               label: vCenter Server and Red Hat OpenShift guide
               topics:
               - archiref/openshift-runbook/vcs-openshift-runbook-intro.md
@@ -515,15 +528,7 @@ toc:
               - archiref/vcsvsrx/vcsvsrx-deployment.md
               - archiref/vcsvsrx/vcsvsrx-licensing.md
               - archiref/vcsvsrx/vcsvsrx-components.md
-          - topicgroup:
-              label: VMware HCX solution architecture
-              topics:
-              - archiref/hcx-archi/hcx-archi-intro.md
-              - archiref/hcx-archi/hcx-archi-overview.md
-              - archiref/hcx-archi/hcx-archi-source.md
-              - archiref/hcx-archi/hcx-archi-target-nsx-v.md
-              - archiref/hcx-archi/hcx-archi-target-nsx-t.md
-              - archiref/hcx-archi/hcx-archi-port-req.md
+
           - topicgroup:
               label: HCX for VMware Solutions guide
               topics:
@@ -564,51 +569,3 @@ toc:
           - vmonic/trbl_add_host_bypass.md
           - vmonic/trbl_deploy_ovf.md
           - vmonic/trbl_vsan_alerts.md
-      - topicgroup:
-          label: Previous release notes
-          topics:
-          - topicgroup:
-              label: Version 4.0 to 4.3
-              topics:
-              - vmonic/relnotes_v43.md
-              - vmonic/relnotes_v42.md
-              - vmonic/relnotes_v41.md
-              - vmonic/relnotes_v40.md
-          - topicgroup:
-              label: Version 3.0 to 3.9
-              topics:
-              - vmonic/relnotes_v39.md
-              - vmonic/relnotes_v38.md
-              - vmonic/relnotes_v37.md
-              - vmonic/relnotes_v36.md
-              - vmonic/relnotes_v35.md
-              - vmonic/relnotes_v34.md
-              - vmonic/relnotes_v33.md
-              - vmonic/relnotes_v32.md
-              - vmonic/relnotes_v31.md
-              - vmonic/relnotes_v30.md
-          - topicgroup:
-              label: Version 2.0 to 2.9
-              topics:
-              - vmonic/relnotes_v29.md
-              - vmonic/relnotes_v28.md
-              - vmonic/relnotes_v27.md
-              - vmonic/relnotes_v26.md
-              - vmonic/relnotes_v25.md
-              - vmonic/relnotes_v24.md
-              - vmonic/relnotes_v23.md
-              - vmonic/relnotes_v22.md
-              - vmonic/relnotes_v21.md
-              - vmonic/relnotes_v20.md
-          - topicgroup:
-              label: Version 1.0 to 1.9
-              topics:
-              - vmonic/relnotes_v19.md
-              - vmonic/relnotes_v18.md
-              - vmonic/relnotes_v17.md
-              - vmonic/relnotes_v16.md
-              - vmonic/relnotes_v15.md
-              - vmonic/relnotes_v14.md
-              - vmonic/relnotes_v13.md
-              - vmonic/relnotes_v12.md
-              - vmonic/relnotes_v11.md
