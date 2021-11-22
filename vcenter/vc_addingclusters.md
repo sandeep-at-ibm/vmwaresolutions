@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-11-22"
 
 keywords: vCenter Server add clusters, add cluster, vCenter Server cluster
 
@@ -261,10 +261,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10   \n Dallas 12  \n Dallas 13 | NA South |
-| Frankfurt 02   \n Frankfurt 05   \n London 06   \n Paris 04   \n Paris 05   \n Paris 06 | Europe |
-| Sydney 04   \n Sydney 05   \n Tokyo 02   \n Tokyo 04   \n Tokyo 05 | Asia-Pacific |
-| Toronto 04   \n Washington DC 04   \n Washington DC 06   \n Washington DC 07 | NA East |
+| Dallas 10 \n Dallas 12 \n Dallas 13 | NA South |
+| Frankfurt 02 \n Frankfurt 05 \n London 06 | Europe |
+| Sydney 04 \n Sydney 05 \n Tokyo 02 \n Tokyo 04 \n Tokyo 05 | Asia-Pacific |
+| Toronto 04 \n Washington DC 04 \n Washington DC 06 \n Washington DC 07 | NA East |
 {: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs

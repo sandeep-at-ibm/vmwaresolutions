@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-22"
+lastupdated: "2021-11-22"
 
 keywords: planning vCenter Server, data center, vCenter Server data centers
 
@@ -56,9 +56,6 @@ The vCenter Server deployment has strict requirements on the physical infrastruc
 | Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake, SAP-certified |
 | Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified | Cascade Lake, SAP-certified |
 | Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] | Skylake, Cascade Lake, SAP-certified |
-| Paris 04 | Europe | Cascade Lake | Cascade Lake |
-| Paris 05 | Europe | Cascade Lake | Cascade Lake |
-| Paris 06 | Europe | Cascade Lake | Cascade Lake |
 | Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified | Skylake, Cascade Lake, SAP-certified |
 | Sao Paulo 04 | South America | Cascade Lake, SAP-certified | Cascade Lake, SAP-certified |
 | Sao Paulo 05 | South America | Cascade Lake, SAP-certified | Cascade Lake, SAP-certified |

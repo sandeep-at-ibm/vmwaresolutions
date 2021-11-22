@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-11-22"
 
 keywords: planning vSphere, data center, vSphere data centers
 
@@ -61,9 +61,6 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 | Osaka 22 | Asia-Pacific | Cascade Lake, SAP-certified |
 | Osaka 23 | Asia-Pacific | Cascade Lake, SAP-certified |
 | Paris 01 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par01] |
-| Paris 04 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par04] |
-| Paris 05 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par05] |
-| Paris 06 | Europe | Skylake, Cascade Lake, SAP-certified[^sap-par06] |
 | Sao Paulo 01 | South America | Skylake, Cascade Lake, SAP-certified |
 | Sao Paulo 04 | South America | Cascade Lake, SAP-certified |
 | Sao Paulo 05 | South America | Cascade Lake, SAP-certified |
@@ -96,12 +93,6 @@ If you select a vSAN component, the location list is filtered by SSD (Solid-Stat
 [^sap-mon01]: Existing vSphere 6.5 clusters only
 
 [^sap-par01]: Existing vSphere 6.5 clusters only
-
-[^sap-par04]: Existing vSphere 6.5 clusters only
-
-[^sap-par05]: Existing vSphere 6.5 clusters only
-
-[^sap-par06]: Existing vSphere 6.5 clusters only
 
 ## Related links
 {: #vs_planning-related}

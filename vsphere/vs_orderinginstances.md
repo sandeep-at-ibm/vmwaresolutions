@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-11-22"
 
 keywords: vSphere order cluster, order vSphere, order vSphere cluster
 
@@ -255,10 +255,10 @@ The uplink speed provides two options:
 
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
-| Dallas 10  \n Dallas 12  \n Dallas 13 | NA South |
-| Frankfurt 02  \n Frankfurt 05  \n London 06  \n Paris 04  \n Paris 05  \n Paris 06 | Europe |
-| Sydney 04  \n Sydney 05  \n Tokyo 02  \n Tokyo 04  \n Tokyo 05 | Asia-Pacific |
-| Toronto 04  \n Washington DC 04  \n Washington DC 06  \n Washington DC 07 | NA East |
+| Dallas 10 \n Dallas 12 \n Dallas 13 | NA South |
+| Frankfurt 02 \n Frankfurt 05 \n London 06 | Europe |
+| Sydney 04 \n Sydney 05 \n Tokyo 02 \n Tokyo 04 \n Tokyo 05 | Asia-Pacific |
+| Toronto 04 \n Washington DC 04 \n Washington DC 06 \n Washington DC 07 | NA East |
 {: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
 ### VLANs
@@ -315,6 +315,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 4. Select the VMware components:
    * If you are an IBM Business Partner, select a license bundle and any additional available VMware components.
    * If you are a non-Business Partner, select the component, edition if any, and specify the licensing option.
+
    When you choose to Bring Your Own License (BYOL) for VMware vSphere Enterprise Plus, an {{site.data.keyword.cloud_notm}} ticket is opened automatically on your behalf to request the default vSphere licenses on your ordered bare metal servers to be replaced with your provided licenses.   
 
        You are responsible to track the ticket so that you replace the vSphere license on the newly ordered ESXi servers. This way the {{site.data.keyword.cloud_notm}} infrastructure grants the cancellation of the initially provided {{site.data.keyword.cloud_notm}} infrastructure vSphere license charge. To replace your ESXi vSphere license, see [Configure license settings for an ESXi host](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){: external}.
@@ -341,6 +342,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 8. In the **Summary** pane, verify the cluster configuration and the estimated price.
    * To save the configuration as a template without placing an order, click **Save configuration**.
    * To place the order, ensure that the account to be charged is correct, review and accept the terms, and then click **Create**.
+
    Only the {{site.data.keyword.cloud_notm}} bare metal servers are installed. You are responsible for installing and configuring various components after cluster deployment, such as VMware vCenter, VMware NSX, VMware vSAN.
    {: note}
 
