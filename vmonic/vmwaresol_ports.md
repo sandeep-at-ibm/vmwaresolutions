@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-10-11"
+lastupdated: "2021-11-17"
 
 keywords: VLAN ports, vmware solutions ports, ports usage vmware solutions
 
@@ -35,7 +35,7 @@ It is not recommended to put a firewall on a secondary private VLAN that has sto
 
 | Public VLAN | Private VLAN | Secondary private VLAN |
 |:------------|:-------------|:-----------------------|
-| Primary subnet  \n   \n Portable subnets:  \n - Management edge gateway public  \n - Customer edge gateway public | Primary subnet  \n   \n Portable subnets:  \n - Infrastructure VMs (CD/vCenter/AD)  \n - NSX host tunnel endpoint (TEP) traffic (NSX-T™)[^hosttep-v7]  \n - VMware NSX® Host TEP (NSX-V)  \n - Customer edge gateway private | Portable subnets:  \n - vSAN™ traffic  \n - Shared storage traffic  \n - vMotion traffic  \n - NSX host TEP traffic (NSX-T)[^hosttep-v67]  \n - NSX edge TEP traffic (NSX-T)  \n - Customer edge TEP traffic (NSX-T) |
+| Primary subnet \n   \n Portable subnets:  \n - Management edge gateway public  \n - Customer edge gateway public | Primary subnet  \n   \n Portable subnets:  \n - Infrastructure VMs (CD/vCenter/AD)  \n - NSX host tunnel endpoint (TEP) traffic (NSX-T™)[^hosttep-v7]  \n - VMware NSX® Host TEP (NSX-V)  \n - Customer edge gateway private | Portable subnets:  \n - vSAN™ traffic  \n - Shared storage traffic  \n - vMotion traffic  \n - NSX host TEP traffic (NSX-T)[^hosttep-v67]  \n - NSX edge TEP traffic (NSX-T)  \n - Customer edge TEP traffic (NSX-T) |
 {: caption="Table 1. Subnets for public, private, and secondary private VLANs" caption-side="top"}
 
 [^hosttep-v7]: For NSX-T on vSphere 7 only
@@ -64,8 +64,8 @@ For more information about IBM CloudBuilder and IBM CloudDriver, see [IBM CloudD
 
 | Source | Subnet/IP range | Target | Subnet/IP range | Port | Protocol | Purpose | Service |
 |:-------|:----------------|:-------|:----------------|:-----|:---------|:--------|:--------|
-| IBM CloudBuilder  \n IBM CloudDriver | Private primary subnet  \n Infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Cloud Object Storage  \n 10.1.129.0/24 | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} Object Storage service | HTTPS |
-| IBM CloudBuilder  \n IBM CloudDriver | Private primary subnet  \n Infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Rabbit MQ  \n 166.9.48.91, 166.9.51.14, 166.9.58.39 | {{site.data.keyword.cloud_notm}} endpoint service network | 32378 | TCP | Use {{site.data.keyword.cloud_notm}} Rabbit MQ service | |
+| IBM CloudBuilder  \n IBM CloudDriver | Private primary subnet  \n Infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - Cloud Object Storage  \n 10.1.129.0/24[^vssreqa] | {{site.data.keyword.cloud_notm}} endpoint service network | 443 | TCP | Use {{site.data.keyword.cloud_notm}} Object Storage service | HTTPS |
+| IBM CloudBuilder  \n IBM CloudDriver | Private primary subnet  \n Infrastructure VMs | {{site.data.keyword.cloud_notm}} Service - RabbitMQ  \n 166.9.48.91, 166.9.51.14, 166.9.58.39[^vssreqb] | {{site.data.keyword.cloud_notm}} endpoint service network | 32378 | TCP | Use {{site.data.keyword.cloud_notm}} RabbitMQ service | |
 | IBM CloudBuilder | Private primary subnet | vCenter Server | Infrastructure VMs | | ICMP | Install and set up vCenter Server | |
 | IBM CloudBuilder  \n IBM CloudDriver | Private primary subnet  \n Infrastructure VMs | vCenter Server | Infrastructure VMs | 22 | TCP | Set up and configure vCenter Server | SSH |
 | IBM CloudBuilder  \n IBM CloudDriver | Private primary subnet  \n Infrastructure VMs | vCenter Server | Infrastructure VMs | 443 | TCP | Install and configure vCenter Server and cluster | SSH |
@@ -99,6 +99,9 @@ For more information about IBM CloudBuilder and IBM CloudDriver, see [IBM CloudD
 | {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | IBM CloudBuilder  \n IBM CloudDriver  \n Windows Active Directory (VSI) | Private primary subnet | Any | TCP and UDP | Provision IBM CloudBuilder, IBM CloudDriver, and Windows Active Directory (VSI) |   |
 | {{site.data.keyword.cloud_notm}} infrastructure engine | {{site.data.keyword.cloud_notm}} infrastructure services network | ESXi host management0 | Private primary subnet | 623 | TCP and UDP | {{site.data.keyword.cloud_notm}} infrastructure IPMI |   |
 {: caption="Table 2. Ports for deployment and day 2 operations" caption-side="top"}
+
+[^vssreqa]: VMware vSphere clusters require access to both Cloud Object Storage and RabbitMQ.
+[^vssreqb]: VMware vSphere clusters require access to both Cloud Object Storage and RabbitMQ.
 
 ## Ports that are used by VMware
 {: #vmwaresol_ports-vmwareuses}

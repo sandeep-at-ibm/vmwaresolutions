@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Initial configuration
 {: #vum-init-config}
@@ -133,7 +135,7 @@ Create a local vCenter content library. The library is accessible only in the vC
 #### Creating a new VM
 {: #vum-init-config-create-new-vm}
 
-This task creates a new VM ready for use as the proxy server. Use the settings from Table 1 Deployment Values to populate the configuration.
+This task creates a new VM ready for use as the proxy server. Use the settings from _Table 1 – Deployment Values_ to populate the configuration.
 
 1.	In the vSphere Web Client, go to **Home** > **VMs and Templates**.
 2.	In the Navigator pane, right-click **datacenter1**, and then click **New Virtual Machine** > **New Virtual Machine**.
@@ -162,8 +164,8 @@ This task installs and configures the newly created VM ready for the Squid insta
 8.	At the **LOCALIZATION** screen, click **NETWORK & HOSTNAME**, change the host name to your chosen hostname for example, Proxy01.
 9.	Click **Configure**, then **IPv4 Settings**. In the **Method** box, select **Manual**.
 10.	Click **Add** to insert _Address Netmask_ and _Gateway_ from _Table 1 – Deployment Values_.
-11.	Enter the _DNS server IP address_ from Table 1 – Deployment Values.
-12.	Click **Routes** and add the following static routes; _10.0.0.0/8 and 161.26.0.0/16_ with a gateway IP address of the _BCR IP address_ from Table 1 Deployment Values, as the gateway. This static route allows the proxy server to reach the DNS server.
+11.	Enter the _DNS server IP address_ from _Table 1 – Deployment Values_.
+12.	Click **Routes** and add the following static routes; _10.0.0.0/8 and 161.26.0.0/16_ with a gateway IP address of the _BCR IP address_ from _Table 1 – Deployment Values_, as the gateway. This static route allows the proxy server to reach the DNS server.
 13.	Click **Save** and then ensure that the Ethernet interface is On and showing as connected. Click **Done** and **Begin Installation**.
 14.	As the installation continues, set a root password and set up a user.
 15.	When the installation is complete, log in as the user and then enter the command _ping vmware.com_. The name is resolved to an IP address and you receive a response. If you do not get responses check; IP addresses, firewall rules and NAT settings.

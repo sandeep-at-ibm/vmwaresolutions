@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-25"
+lastupdated: "2021-10-26"
 
 keywords: Caveonix console, Caveonix RiskForesight license, login Caveonix console
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing Caveonix RiskForesight
 {: #managingcaveonix}
@@ -42,6 +39,7 @@ To manage the Caveonix RiskForesight™ service, you must access the Caveonix Ri
 You are responsible for maintaining Caveonix RiskForesight to keep it updated to the most recent version. You can download the required updates from the [Caveonix Service Provider Portal](https://support.caveonix.com/login){: external}.
 
 ## Updating Caveonix RiskForesight licenses
+{: #managingcaveonix-updating-lic}
 
 This information does not apply to Caveonix Foresight that is installed on VMware® Regulated Workloads or Security and Compliance Readiness Bundle instances.
 {: note}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-27"
+lastupdated: "2021-12-11"
 
 keywords: openshift for vmware, request openshift for vmware, tech specs openshift vmware
 
@@ -13,27 +13,20 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Red Hat OpenShift for VMware overview
 {: #ocp_overview}
 
 The Red Hat® OpenShift® for VMware® service deploys an OpenShift cluster by using an automated deployment of the VMware SDDC (Software Defined Data Center) architecture. The OpenShift components are deployed as virtual machines (VMs) or appliances by using VMware NSX® software-defined networking.
 
-The current Red Hat OpenShift version that is installed is 4.7.24.
+The current Red Hat OpenShift version that is installed is 4.7.34.
 {: note}
 
 Review the following information before you install the OpenShift for VMware service:
 * OpenShift for VMware cannot be installed on multiple VMware vCenter Server® instances in a multi-site configuration. Before you install OpenShift for VMware on an instance, verify that the service is not installed on any other instances in the multi-site configuration.
-* OpenShift for VMware is supported for vCenter Server instances with VMware vSphere® 7.0 and VMware NSX-T™ 3.1.
-* OpenShift for VMware is not supported for new deployments or for ordering post-deployment for the following instances:
-   * vCenter Server with NSX-V for vSphere 6.7
-   * vCenter Server with NSX-T for vSphere 6.7
+* OpenShift for VMware is supported for vCenter Server instances with VMware vSphere® 7.0 and VMware NSX-T™ 3.1 or later.
+* OpenShift for VMware is not supported for new deployments or for ordering post-deployment for vCenter Server with NSX-V instances with vSphere 6.7.
 
 Existing installations of OpenShift for VMware can be used or deleted for vSphere 6.7 instances.
 
@@ -134,7 +127,10 @@ For more information about how to configure OpenShift authentication, see [Under
 ## Updating your OpenShift cluster
 {: #ocp_overview-update-clus}
 
-For more information about updating OpenShift, see [Updating a cluster between minor versions](https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-between-minor.html){: external}.
+For more information about updating OpenShift, see:
+
+* [Updating a cluster within a minor version using the web console](https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-within-minor.html){: external}.
+* [Updating a cluster within a minor version using the CLI](https://docs.openshift.com/container-platform/4.7/updating/updating-cluster-cli.html){: external}.
 
 ## Considerations when you install OpenShift for VMware
 {: #ocp_overview-consid-install}

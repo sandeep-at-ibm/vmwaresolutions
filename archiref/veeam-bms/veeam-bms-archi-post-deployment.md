@@ -4,16 +4,13 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-08-12"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Post deployment customization options with self-managed vCenter Server
 {: #veeam-bms-archi-post-deployment}

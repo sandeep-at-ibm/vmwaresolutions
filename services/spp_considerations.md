@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-20"
+lastupdated: "2021-11-22"
 
 keywords: IBM Spectrum Protect Plus, SPP, tech specs SPP
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # IBM Spectrum Protect Plus overview
 {: #spp_considerations}
@@ -26,7 +22,7 @@ The IBM Spectrum® Protect Plus service provides an efficient and scalable solut
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-For VMware vCenter Server® with NSX-V instances, the installed version is 10.1.5. Currently, automated installation of IBM Spectrum Protect Plus is not available for vCenter Server with NSX-T™ instances.
+For VMware vCenter Server® with NSX-V instances, the installed version is 10.1.8. Currently, automated installation of IBM Spectrum Protect Plus is not available for vCenter Server with NSX-T™ instances.
 {: note}
 
 ## Technical specifications for IBM Spectrum Protect Plus

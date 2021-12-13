@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
@@ -26,8 +26,8 @@ Review the following vSphere SSO flow.
 
 1. A user logs in to the vSphere Client with a username and password to access vCenter or a vCenter service.
 2. The vSphere Client passes the login information to the SSO service, which checks the SAML token of the vSphere Client. If the vSphere Client has a valid token, SSO checks:
-   * If the user ID is @vsphere.local, then it checks the user against the local SSO domain.
-   * If the user ID is @DOMAIN, then SSO uses the identity source to check that domain.
+   * If the user ID is `@vsphere.local`, then it checks the user against the local SSO domain.
+   * If the user ID is `@DOMAIN`, then SSO uses the identity source to check that domain.
 3. If authentication is successful SSO returns a token that represents the user to the vSphere Client.
 4. The vSphere Client passes the token to vCenter.
 5. vCenter checks with SSO that the token is valid and is not expired.
@@ -35,13 +35,13 @@ Review the following vSphere SSO flow.
 
 The vSphere SSO domain is used as the initial authentication mechanism it is also serves to connect an instance or multiple linked instances to the AD servers in the {{site.data.keyword.vmwaresolutions_full}} infrastructure domain. In the {{site.data.keyword.vmwaresolutions_short}} vCenter Server design, the following SSO configuration is applied:
 
-* The SSO domain of vsphere.local is always used.
+* The SSO domain of `vsphere.local` is always used.
 * The SSO site name equals the <root_domain> captured during the ordering process.
 * An identity source, the {{site.data.keyword.vmwaresolutions_short}} infrastructure domain, <root_domain>, is configured.
-* The VSPHERE.LOCAL\Administrator user is configured as an Administrator role.
+* The `VSPHERE.LOCAL\Administrator` user is configured as an Administrator role.
 * The following groups are configured with Administrator roles:
-   * <root_domain>\ic4v-vCenter.
-   * vsphere.local\Administrators.
+   * `<root_domain>\ic4v-vCenter`
+   * `vsphere.local\Administrators`
 
 After deployment, the `administrator@vsphere.local` user has administrator access to both SSO and vCenter Server. This user can manage identity sources and default domains, specify password policies, and perform other administrative tasks in the `vsphere.local` domain. However, this user is integral to the VMware vSphere® and NSX infrastructure authentication they are not part of AD but created automatically when vSphere is deployed. As this account is not part of AD, they can be used in situations when AD is not working correctly.
 
@@ -53,7 +53,7 @@ As the customer, you have full access to manage the vSphere SSO users and groups
 Identity sources are used to attach one or more domains to vCenter SSO. A domain is a repository for users and groups that the vCenter SSO can use for user authentication. vCenter SSO has the following domains that are configured after the vCenter Server instance deployment.
 
 * Local OS - Local operating system users are local to the operating system where the vCenter Single Sign-On server is running. The local operating system identity source exists only in basic vCenter SSO deployments and is not available in deployments with multiple vCenter SSO instances. Only one local operating system identity source is allowed. Shown as locals in the vSphere Client.
-* vsphere.local – Enables administrator@vsphere.local to be authenticated.
+* vsphere.local – Enables `administrator@vsphere.local` to be authenticated.
 * {{site.data.keyword.vmwaresolutions_short}} infrastructure domain – This domain is the <root_domain> configured on the AD DNS server based on the parameters that are collected during the ordering process. This process allows the user `automation@<root_domain>` to be authenticated.
 
 Users can log in to vCenter Server only if they are in a domain that is added as a vCenter SSO identity source. You add more identity sources to give your AD or LDAP users access if required.

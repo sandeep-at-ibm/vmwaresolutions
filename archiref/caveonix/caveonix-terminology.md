@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-25"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Glossary of Caveonix terms
 {: #caveonix-terminology}
@@ -61,10 +63,12 @@ Review the following SCAP components:
    * **VMware Vulnerability Scan** - This scan carries out a Vulnerability scan of the VMware Assets.
 * **Compliance Regime** - Available through license; NIST, NESA, PCI, ISO, HIPAA, GDPR, Custom, FFIEC, FedRAMP Low, FedRAMP Moderate, FedRAMP High
 * **Policy Manager** - The Policy Manager serves policy creation function for an Organization based on the machine learning output. Caveonix provides three types of machine learning jobs per organization, which are non-editable. Additional jobs are not supported yet.
-The following jobs are currently supported:
+
+   The following jobs are currently supported:
    * Caveo Logs
    * Caveo Networks
    * Caveo Scan
+
 * **Anomaly** - Based on the anomalies that are found in the data, you can configure the policies act based on the user-defined conditions. You can select the job type and configure Boolean conditions for the anomaly score and define action when condition is true.
 
 See the following example:

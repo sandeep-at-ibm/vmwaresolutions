@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Proactive tasks
 {: #opsprocs-proactive}
@@ -40,8 +40,7 @@ The following guidelines assist you in being proactive and maintaining a stable 
 * In general, 80% host CPU usage is a reasonable ceiling and 90% is a warning that the CPUs are approaching an overloaded condition. If your hosts are approaching 80% CPU usage, provision additional hosts.
 * In general, 80% host RAM usage is a reasonable ceiling and 90% is a warning that the hosts are fully used. If your hosts are approaching 80% RAM usage, provision additional hosts.
 * It is important not to under-allocate memory, so allocate enough memory to hold the working set of the applications you plan to run in the VMs, to minimize thrashing. Thrashing can dramatically impact application performance. However, avoid substantially over-allocating memory as well.
-* Use resource settings, reservation, shares, and limits, only if needed in your environment. If you expect frequent changes to the total available resources, use
-shares, not reservation, to allocate resources fairly across VMs. Shares take effect only when resource contention exists.
+* Use resource settings, reservation, shares, and limits, only if needed in your environment. If you expect frequent changes to the total available resources, use shares, not reservation, to allocate resources fairly across VMs. Shares take effect only when resource contention exists.
 * If you do need to use reservations, configure them to specify the minimum acceptable amount of CPU or memory, not the amount you would like to have available.
 * Use resource pools for delegated resource management and to fully isolate a resource pool, make the resource pool type Fixed, and use Reservation and Limit.
 * Group VMs for a multitier service into a resource pool. Allows resources to be assigned for the service as a whole. Carefully select the resource settings (that is, reservations, shares, and limits) for your VMs. Setting reservations too high can leave few unreserved resources in the cluster, thus limiting the options that DRS must balance load.

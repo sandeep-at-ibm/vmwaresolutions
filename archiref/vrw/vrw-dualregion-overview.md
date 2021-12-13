@@ -4,18 +4,14 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Dual region Disaster Recovery overview
 {: #vrw-dualregion-overview}
@@ -36,10 +32,11 @@ The focus of the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloa
    * Failover of the workloads that meets customer’s Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) application requirements.
 * A design that defines the recovery of the infrastructure and management components in the alternative site.
 * A design that allows flexibility in the recovery of the workloads, but does not define how the workloads are recovered. This approach allows maximum flexibility to meet customer’s RTO/RPO application requirements.
-**Notes**
-* While this design focuses on the use of two multizone regions, a customer is able to select single-zone regions or data centers in the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance order form.
-* If you select single-zone regions or data centers, note that the placement of the KMIP for VMware and Hyper Protect Crypto Services is not local to the VMware® Regulated Workloads instance. Latency between the services and the instance is not an issue in practice due to when the keys are requested that is, on initial encryption, rekey requests, and ESXi server restarts.
-* Ensure that you know the location of all service components and ensure that their required regulatory compliance can be achieved.
+
+   **Notes**
+    * While this design focuses on the use of two multizone regions, a customer is able to select single-zone regions or data centers in the {{site.data.keyword.cloud_notm}} for VMware® Regulated Workloads instance order form.
+    * If you select single-zone regions or data centers, note that the placement of the KMIP for VMware and Hyper Protect Crypto Services is not local to the VMware® Regulated Workloads instance. Latency between the services and the instance is not an issue in practice due to when the keys are requested that is, on initial encryption, rekey requests, and ESXi server restarts.
+    * Ensure that you know the location of all service components and ensure that their required regulatory compliance can be achieved.
 
 ## Concept
 {: #vrw-dualregion-overview-concept}

@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Configuring IBM Cloud for Horizon 7 deployment
 {: #horizon-deploy-config}
@@ -34,7 +31,7 @@ To deploy VMware Horizon 7, complete the following steps:
 
 When you set up the Horizon 7 environment, you must install and configure the following components:
 * Configure Active Directory services, DNS, and DHCP. If necessary, install and configure KMS servers.
-* Install SQL Server for App Volumes Manager and the Horizon Events database
+* Install SQL Server for App Volumes Manager and the Horizon Events database.
 * Optionally, install RDS license servers.
 * Install Horizon Connection Server and replica server version 7.8 or later.
 * Install App Volumes Managers version 2.17 or later.

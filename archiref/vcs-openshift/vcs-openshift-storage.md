@@ -4,21 +4,19 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Storage options on IBM Cloud and Red Hat OpenShift
 {: #vcs-openshift-storage}
 
 ## vSphere Storage for Kubernetes
+{: #vcs-openshift-storage-kubernetes}
 
 You can use the vSphere® datastores as a location for storing persistent volumes for Kubernetes by using the VMware® Cloud Provider.
 
@@ -53,8 +51,7 @@ Complete the following steps to create a new volume:
    oc login
    ```
 
-5. Create a persistent volume in Kubernetes, for the recently created vdmk. Replace volumePath with your vmdk, in the example file called
- vsphere-volume-pv.yaml
+5. Create a persistent volume in Kubernetes, for the recently created vdmk. Replace volumePath with your vmdk, in the example file called vsphere-volume-pv.yaml.
 
    ```yaml
    apiVersion: v1

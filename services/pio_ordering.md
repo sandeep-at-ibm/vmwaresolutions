@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-21"
 
 keywords: primary io hdm, hdm order, order trial hdm
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Ordering PrimaryIO HDM

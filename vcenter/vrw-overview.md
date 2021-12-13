@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-12-06"
 
 keywords: vmware regulated workloads, regulated workloads, workloads instance, regulated instance
 
@@ -31,7 +31,6 @@ Review the following specifications before you begin.
 {: #vrw-overview-before-not-avail-options}
 
 The following options or settings are not available for VMware Regulated Workloads:
-* VMware Subscription Purchasing Program
 * Local disks
 * High performance with Intel® Optane
 * vSAN™ deduplication and compression

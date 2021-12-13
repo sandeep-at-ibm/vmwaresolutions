@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-21"
 
 keywords: Caveonix license, Caveonix order license, Caveonix BYOL license
 
@@ -12,7 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering Caveonix RiskForesight licenses
 {: #caveonix_license_ordering}

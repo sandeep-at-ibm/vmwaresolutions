@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-26"
 
 keywords: veeam, veeam install, tech specs veeam
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing Veeam for VMware Solutions Shared
 {: #shared_veeam}

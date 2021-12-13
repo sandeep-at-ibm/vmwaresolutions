@@ -1,10 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1"
-	 id="Layer_1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 725 387.4"
-	 style="enable-background:new 0 0 725 387.4;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 725 387.4"
+   style="enable-background:new 0 0 725 387.4;"
+   xml:space="preserve"
+   sodipodi:docname="customer_ibm_responsibility_matrix.svg"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs299" /><sodipodi:namedview
+   id="namedview297"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="1.4610222"
+   inkscape:cx="358.31078"
+   inkscape:cy="193.7"
+   inkscape:window-width="1440"
+   inkscape:window-height="900"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style171">
 	.st0{fill:#4B84C4;}
 	.st1{fill:#959595;}
 	.st2{fill:#CBA8CC;}
@@ -18,91 +49,320 @@
 	.st10{font-size:16px;}
 	.st11{fill:#EFEC97;}
 </style>
-<rect x="17.5" y="43.1" class="st0" width="149.8" height="95.8"/>
-<rect x="17.8" y="142.5" class="st0" width="149.8" height="97.1"/>
-<rect x="18.2" y="243.1" class="st0" width="149.8" height="101.8"/>
-<rect x="172.2" y="142.2" class="st1" width="133" height="99.3"/>
-<rect x="309.4" y="141.8" class="st2" width="135.9" height="99.3"/>
-<rect x="449.2" y="141.5" class="st1" width="135.9" height="99.3"/>
-<rect x="171.9" y="245.1" class="st1" width="273.5" height="99.3"/>
-<rect x="171.4" y="42.9" class="st2" width="413.2" height="94.3"/>
-<rect x="589.2" y="42.6" class="st2" width="135.9" height="93.9"/>
-<rect x="17.3" y="0.6" class="st3" width="150.7" height="39.2"/>
-<rect x="170.9" y="0.6" class="st3" width="136.1" height="39.2"/>
-<rect x="310.1" y="0.2" class="st3" width="136.1" height="39.2"/>
-<rect x="449" y="0.2" class="st3" width="136.1" height="39.2"/>
-<rect x="588.9" y="0.9" class="st3" width="136.1" height="39.2"/>
-<text transform="matrix(1 0 0 1 343 197.62)" class="st4 st5">Customer</text>
-<text transform="matrix(1 0 0 1 220.17 197.62)" class="st4 st5">IBM</text>
-<text transform="matrix(1 0 0 1 291.5 302.96)" class="st4 st5">IBM</text>
-<text transform="matrix(1 0 0 1 626.5 93.957)" class="st4 st5">Customer</text>
-<text transform="matrix(1 0 0 1 343 93.957)" class="st4 st5">Customer</text>
-<g id="Bare_Metal">
-	<text transform="matrix(1 0 0 1 52.834 330.29)" class="st6 st4 st5">Bare metal</text>
+<rect
+   x="17.5"
+   y="43.1"
+   class="st0"
+   width="149.8"
+   height="95.8"
+   id="rect173" />
+<rect
+   x="17.8"
+   y="142.5"
+   class="st0"
+   width="149.8"
+   height="97.1"
+   id="rect175" />
+<rect
+   x="18.2"
+   y="243.1"
+   class="st0"
+   width="149.8"
+   height="101.8"
+   id="rect177" />
+<rect
+   x="172.2"
+   y="142.2"
+   class="st1"
+   width="133"
+   height="99.3"
+   id="rect179" />
+<rect
+   x="309.4"
+   y="141.8"
+   class="st2"
+   width="135.9"
+   height="99.3"
+   id="rect181" />
+<rect
+   x="449.2"
+   y="141.5"
+   class="st1"
+   width="135.9"
+   height="99.3"
+   id="rect183" />
+<rect
+   x="171.9"
+   y="245.1"
+   class="st1"
+   width="273.5"
+   height="99.3"
+   id="rect185" />
+<rect
+   x="171.4"
+   y="42.9"
+   class="st2"
+   width="413.2"
+   height="94.3"
+   id="rect187" />
+<rect
+   x="589.2"
+   y="42.6"
+   class="st2"
+   width="135.9"
+   height="93.9"
+   id="rect189" />
+<rect
+   x="17.3"
+   y="0.6"
+   class="st3"
+   width="150.7"
+   height="39.2"
+   id="rect191" />
+<rect
+   x="170.9"
+   y="0.6"
+   class="st3"
+   width="136.1"
+   height="39.2"
+   id="rect193" />
+<rect
+   x="310.1"
+   y="0.2"
+   class="st3"
+   width="136.1"
+   height="39.2"
+   id="rect195" />
+<rect
+   x="449"
+   y="0.2"
+   class="st3"
+   width="136.1"
+   height="39.2"
+   id="rect197" />
+<rect
+   x="588.9"
+   y="0.9"
+   class="st3"
+   width="136.1"
+   height="39.2"
+   id="rect199" />
+<text
+   transform="matrix(1 0 0 1 343 197.62)"
+   class="st4 st5"
+   id="text201">Customer</text>
+<text
+   transform="matrix(1 0 0 1 220.17 197.62)"
+   class="st4 st5"
+   id="text203">IBM</text>
+<text
+   transform="matrix(1 0 0 1 291.5 302.96)"
+   class="st4 st5"
+   id="text205">IBM</text>
+<text
+   transform="matrix(1 0 0 1 626.5 93.957)"
+   class="st4 st5"
+   id="text207">Customer</text>
+<text
+   transform="matrix(1 0 0 1 343 93.957)"
+   class="st4 st5"
+   id="text209">Customer</text>
+<g
+   id="Bare_Metal">
+	<text
+   transform="matrix(1 0 0 1 52.834 330.29)"
+   class="st6 st4 st5"
+   id="text211">Bare metal</text>
 </g>
-<g id="Storage">
-	<text transform="matrix(1 0 0 1 61.834 307.96)" class="st6 st4 st5">Storage</text>
+<g
+   id="Storage">
+	<text
+   transform="matrix(1 0 0 1 61.834 307.96)"
+   class="st6 st4 st5"
+   id="text214">Storage</text>
 </g>
-<g id="Network">
-	<text transform="matrix(1 0 0 1 60.166 285.62)" class="st6 st4 st5">Network</text>
+<g
+   id="Network">
+	<text
+   transform="matrix(1 0 0 1 60.166 285.62)"
+   class="st6 st4 st5"
+   id="text217">Network</text>
 </g>
-<g id="data_center">
-	<text transform="matrix(1 0 0 1 51.5 263.96)" class="st6 st4 st5">Data Center</text>
+<g
+   id="data_center">
+	<text
+   transform="matrix(1 0 0 1 51.5 263.96)"
+   class="st6 st4 st5"
+   id="text220">Data Center</text>
 </g>
-<g id="PSC">
-	<text transform="matrix(1 0 0 1 73.5 221.96)" class="st6 st4 st5">PSC</text>
+<g
+   id="PSC"
+   transform="translate(-0.6844523,2.0533569)">
+	<text
+   class="st6 st4 st5"
+   id="text223"
+   x="42.699646"
+   y="219.90665">AD/DNS Servers</text>
 </g>
-<g id="NSX">
-	<text transform="matrix(1 0 0 1 73.5 196.29)" class="st6 st4 st5">NSX</text>
+<g
+   id="NSX">
+	<text
+   transform="matrix(1 0 0 1 73.5 196.29)"
+   class="st6 st4 st5"
+   id="text226">NSX</text>
 </g>
-<g id="vCenter">
-	<text transform="matrix(1 0 0 1 64.834 169.62)" class="st6 st4 st5">vCenter</text>
+<g
+   id="vCenter">
+	<text
+   transform="matrix(1 0 0 1 64.834 169.62)"
+   class="st6 st4 st5"
+   id="text229">vCenter</text>
 </g>
-<g id="Guest_OS">
-	<text transform="matrix(1 0 0 1 62.101 124.58)" class="st6 st4 st5">Guest OS</text>
+<g
+   id="Guest_OS">
+	<text
+   transform="matrix(1 0 0 1 62.101 124.58)"
+   class="st6 st4 st5"
+   id="text232">Guest OS</text>
 </g>
-<g id="IBM_middleware">
-	<text transform="matrix(1 0 0 1 42.219 99.212)" class="st6 st4 st5">IBM Middleware</text>
+<g
+   id="IBM_middleware">
+	<text
+   transform="matrix(1 0 0 1 42.219 99.212)"
+   class="st6 st4 st5"
+   id="text235">IBM Middleware</text>
 </g>
-<g id="Application_software">
-	<text transform="matrix(1 0 0 1 28.722 70.951)" class="st6 st4 st5">Application Software</text>
+<g
+   id="Application_software">
+	<text
+   transform="matrix(1 0 0 1 28.722 70.951)"
+   class="st6 st4 st5"
+   id="text238">Application Software</text>
 </g>
-<text transform="matrix(-3.440000e-03 -1 1 -3.440000e-03 15.294 334.12)" class="st4 st7">IBM Cloud IaaS</text>
-<g id="vmware_vcs">
-	<text transform="matrix(-2.045000e-02 -0.9998 0.9998 -2.045000e-02 14.726 223.4599)" class="st4 st7">VMware VCS</text>
+<text
+   transform="matrix(-3.440000e-03 -1 1 -3.440000e-03 15.294 334.12)"
+   class="st4 st7"
+   id="text241">IBM Cloud IaaS</text>
+<g
+   id="vmware_vcs">
+	<text
+   transform="matrix(-2.045000e-02 -0.9998 0.9998 -2.045000e-02 14.726 223.4599)"
+   class="st4 st7"
+   id="text243">VMware VCS</text>
 </g>
-<g id="OS_x2F_APP">
-	<text transform="matrix(1.087045e-02 -0.9999 0.9999 1.087045e-02 12.3739 114.1705)" class="st4 st8">OS/App</text>
+<g
+   id="OS_x2F_APP">
+	<text
+   transform="matrix(1.087045e-02 -0.9999 0.9999 1.087045e-02 12.3739 114.1705)"
+   class="st4 st8"
+   id="text246">OS/App</text>
 </g>
-<g id="Admin_access">
-	<text transform="matrix(1 0 0 1 611.3 24.16)" class="st6 st9 st10">Admin Access</text>
+<g
+   id="Admin_access">
+	<text
+   transform="matrix(1 0 0 1 611.3 24.16)"
+   class="st6 st9 st10"
+   id="text249">Admin Access</text>
 </g>
-<g id="Configure">
-	<text transform="matrix(1 0 0 1 476.12 24.16)" class="st6 st9 st10">Configure</text>
+<g
+   id="Configure">
+	<text
+   transform="matrix(1 0 0 1 476.12 24.16)"
+   class="st6 st9 st10"
+   id="text252">Configure</text>
 </g>
-<g id="Maintain">
-	<text transform="matrix(1 0 0 1 345.36 24.16)" class="st6 st9 st10">Maintain</text>
+<g
+   id="Maintain">
+	<text
+   transform="matrix(1 0 0 1 345.36 24.16)"
+   class="st6 st9 st10"
+   id="text255">Maintain</text>
 </g>
-<g id="Install">
-	<text transform="matrix(1 0 0 1 214.08 24.16)" class="st6 st9 st10">Install</text>
+<g
+   id="Install">
+	<text
+   transform="matrix(1 0 0 1 214.08 24.16)"
+   class="st6 st9 st10"
+   id="text258">Install</text>
 </g>
-<g id="Activity">
-	<text transform="matrix(1 0 0 1 63.559 24.16)" class="st6 st9 st10">Activity</text>
+<g
+   id="Activity">
+	<text
+   transform="matrix(1 0 0 1 63.559 24.16)"
+   class="st6 st9 st10"
+   id="text261">Activity</text>
 </g>
-<polygon class="st11" points="449.2,141.5 585.2,240.8 449.2,240.8 "/>
-<rect x="448.9" y="244.4" class="st1" width="135.9" height="99.3"/>
-<polygon class="st11" points="448.9,244.4 584.8,343.7 448.9,343.7 "/>
-<rect x="589.1" y="244.4" class="st1" width="135.9" height="99.3"/>
-<polygon class="st11" points="589.1,244.4 725.1,343.7 589.1,343.7 "/>
-<rect x="589.5" y="141.5" class="st1" width="135.9" height="99.3"/>
-<polygon class="st11" points="589.5,141.5 725.4,240.8 589.5,240.8 "/>
-<text transform="matrix(1 0 0 1 467.17 219.96)" class="st4 st5">Customer</text>
-<text transform="matrix(1 0 0 1 467.17 325.62)" class="st4 st5">Customer</text>
-<text transform="matrix(1 0 0 1 603.17 219.96)" class="st4 st5">Customer</text>
-<text transform="matrix(1 0 0 1 603.17 325.62)" class="st4 st5">Customer</text>
-<text transform="matrix(1 0 0 1 520.17 170.62)" class="st4 st5">IBM*</text>
-<text transform="matrix(1 0 0 1 520.17 270.96)" class="st4 st5">IBM*</text>
-<text transform="matrix(1 0 0 1 675.5 170.29)" class="st4 st5">IBM*</text>
-<text transform="matrix(1 0 0 1 676.83 269.96)" class="st4 st5">IBM*</text>
-<text transform="matrix(1 0 0 1 17.6356 372.5659)" class="st4 st5">* With explicit or implicit customer permission</text>
+<polygon
+   class="st11"
+   points="449.2,141.5 585.2,240.8 449.2,240.8 "
+   id="polygon264" />
+<rect
+   x="448.9"
+   y="244.4"
+   class="st1"
+   width="135.9"
+   height="99.3"
+   id="rect266" />
+<polygon
+   class="st11"
+   points="448.9,244.4 584.8,343.7 448.9,343.7 "
+   id="polygon268" />
+<rect
+   x="589.1"
+   y="244.4"
+   class="st1"
+   width="135.9"
+   height="99.3"
+   id="rect270" />
+<polygon
+   class="st11"
+   points="589.1,244.4 725.1,343.7 589.1,343.7 "
+   id="polygon272" />
+<rect
+   x="589.5"
+   y="141.5"
+   class="st1"
+   width="135.9"
+   height="99.3"
+   id="rect274" />
+<polygon
+   class="st11"
+   points="589.5,141.5 725.4,240.8 589.5,240.8 "
+   id="polygon276" />
+<text
+   transform="matrix(1 0 0 1 467.17 219.96)"
+   class="st4 st5"
+   id="text278">Customer</text>
+<text
+   transform="matrix(1 0 0 1 467.17 325.62)"
+   class="st4 st5"
+   id="text280">Customer</text>
+<text
+   transform="matrix(1 0 0 1 603.17 219.96)"
+   class="st4 st5"
+   id="text282">Customer</text>
+<text
+   transform="matrix(1 0 0 1 603.17 325.62)"
+   class="st4 st5"
+   id="text284">Customer</text>
+<text
+   transform="matrix(1 0 0 1 520.17 170.62)"
+   class="st4 st5"
+   id="text286">IBM*</text>
+<text
+   transform="matrix(1 0 0 1 520.17 270.96)"
+   class="st4 st5"
+   id="text288">IBM*</text>
+<text
+   transform="matrix(1 0 0 1 675.5 170.29)"
+   class="st4 st5"
+   id="text290">IBM*</text>
+<text
+   transform="matrix(1 0 0 1 676.83 269.96)"
+   class="st4 st5"
+   id="text292">IBM*</text>
+<text
+   transform="matrix(1 0 0 1 17.6356 372.5659)"
+   class="st4 st5"
+   id="text294">* With explicit or implicit customer permission</text>
 </svg>

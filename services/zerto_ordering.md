@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-20"
+lastupdated: "2021-10-21"
 
 keywords: Zerto, Zerto replication billing, order Zerto
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering Zerto
 {: #zerto_ordering}
@@ -47,7 +44,7 @@ On the {{site.data.keyword.vmwaresolutions_short}} console, you are prompted to 
 
 * For more information about free and billable accounts, see [Account types](/docs/account?topic=account-accounts).
 * For more information about upgrading to a billable account, see [Upgrading your account](/docs/account?topic=account-upgrading-account).
-* For more information about linking your {{site.data.keyword.cloud_notm}} and your {{site.data.keyword.cloud_notm}} infrastructure accounts, see [Requiring MFA for users in your account](/docs/account?topic=account-enablemfa).
+* For more information about linking your {{site.data.keyword.cloud_notm}} and your {{site.data.keyword.cloud_notm}} infrastructure accounts, see [Enabling MFA for your account](/docs/account?topic=account-enablemfa).
 
 ## Ordering Zerto for a new instance
 {: #zerto_ordering-new}
@@ -68,15 +65,17 @@ If you add Zerto to a vCenter Server instance that has a VMware® ESXi™ server
 ## Ordering Zerto for private-only instances
 {: #zerto_ordering-private-only}
 
-If you want to add Zerto to a private-only instance, ensure that the following requirements are met:
+If you want to add Zerto to a private-only instance, certain requirements must be met.
 * You are responsible for setting up your own proxy server to connect to the internet.
-* You must also configure the Call Home feature for Zerto. For more information about Zerto Call Home, see [Zerto Reporting for Enterprise environments (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){: external}.
+* You must also configure the Call Home feature for Zerto. For more information about Zerto Call Home, see [How to configure Zerto Reporting for Enterprise environments (Call Home)](https://www.zerto.com/myzerto/knowledge-base/zerto-reporting-for-enterprise-environments-call-home/){: external}.
 
 ## Related links
 {: #zerto_ordering-related}
 
 * [Zerto overview](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr)
 * [Managing Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-managingzertodr)
+* [Ordering Zerto licenses](/docs/vmwaresolutions?topic=vmwaresolutions-zerto_ordering_licenses)
+* [Managing Zerto licenses](/docs/vmwaresolutions?topic=vmwaresolutions-zerto_managing_licenses)
 * [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
 * [Zerto](https://www.zerto.com){: external}
-* [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}
+* [Zerto product documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}

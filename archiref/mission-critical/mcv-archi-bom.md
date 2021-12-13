@@ -4,28 +4,23 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-11"
+lastupdated: "2021-11-29"
 
 subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
-# VMware multizone BOM
+# vCenter Server multizone BOM
 {: #mcv-archi-bom}
 
-Review the Bill of Materials (BOM) for VMware® multizone instances.
+Review the Bill of Materials (BOM) for VMware vCenter Server® multizone instances.
 
 ## Components
 {: #mcv-archi-bom-components}
 
-The following components are available for VMware multizone instances:
+The following components are available for vCenter Server multizone instances:
 * VMware vSphere® 7.0 Update 1c
 * VMware vRealize® components
    * vROps 8.2
@@ -48,7 +43,7 @@ The following components are available for VMware multizone instances:
 |:--------- |:------ |:------- |
 | Hostname| `<host_prefix><host_number>` | host01.subdomain.domain |
 | Stretched cluster name | `<instance>-mgmt-<datacenter-region>` | mcv1-dal |
-| Cluster and management component | `<instance>-<cluster>-<datacenter>-<component>` | mcv1-mgmt-dal10-private  \n DAL10-DVS |
+| Cluster and management component | `<instance>-<cluster>-<datacenter>-<component>` | mcv1-mgmt-dal10-private \n DAL10-DVS |
 {: caption="Table 1. Component naming conventions" caption-side="top"}
 
 ## Instance sizing considerations
@@ -64,24 +59,14 @@ Your choice of effective RAID level determines the minimum number of hosts that 
 
  The following table provides the Redundant Array of Independent Disks (RAID) and Failures to Tolerate (FTT) levels.
 
-| RAID level    | FTT     | Erasure Coding | Minimum host count |
-|:------------- |:------- |:-------------- |:------------------ |
+| RAID level | FTT | Erasure Coding | Minimum host count |
+|:---------- |:--- |:-------------- |:------------------ |
 | RAID 1 | PFTT=1 SFTT=1 | No | 3+3+2+2+2 |
 | RAID 5 | PFTT=1 SFTT=1 | Yes | 4+4+2+2+2 |
 | RAID 6 | PFTT=1  SFTT=2 | Yes | 6+6+2+2+2 |
 {: caption="Table 2. RAID and FTM levels" caption-side="top"}
 
 If you choose to use an IBM Global Technology Services (GTS) large style design with separate edge services clusters, you must deploy those clusters after their instance was provisioned, which is not an automated operation.
-
-## Ordering multizone instances
-{: #mcv-archi-bom-ordering-order}
-
-The multizone stretched cluster option is available on the vCenter Server page. The order flow is similar to a vCenter Server order with the following exceptions.
-* Ordering is restricted to the [multizone region](#x9774820){: term} {{site.data.keyword.cloud_notm}} data centers.
-* Only Skylake and Cascade Lake processors are supported.
-* Hosts are ordered and configured across three sites automatically.
-* After you choose the witness site, the management and resource sites are automatically determined.
-* Resource–workload sites are vSAN only, with Optane drives as the only supported option for cache disks.
 
 ## Day 2 operations
 {: #mcv-archi-bom-ordering-daytwo}
@@ -101,8 +86,6 @@ Scale-up and scale-down are done in tandem across the two sites with a single us
 The management clusters can be scaled up and down with a maximum of 51 hosts. The stretch cluster can be scaled up and down with a maximum of 32 hosts.
 
 For example, you can add capacity by adding pairs of hosts, one in Site A and one in Site B to maintain uniformity in the configuration across the two sites. The status reflects that capacity is being added or removed to both sites simultaneously.
-
-**Next topic:** [VMware multizone components](/docs/vmwaresolutions?topic=vmwaresolutions-mcv-archi-comp)
 
 ## Related links
 {: #mcv-archi-bom-related}

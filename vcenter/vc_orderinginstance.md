@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-11-22"
+lastupdated: "2021-12-09"
 
 keywords: vCenter Server order instance, order vCenter Server, order vCenter Server instance
 
@@ -20,6 +20,9 @@ subcollection: vmwaresolutions
 To deploy a flexible and customizable VMware® virtualized platform that best fits your workload needs, order a VMware vCenter Server® instance.
 
 You can also add services, such as [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) for disaster recovery. For more information about the available services, see [Available services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-available-services). Add-on services support varies between vCenter Server with NSX-V and vCenter Server with NSX-T™ instances.
+
+New deployments of vCenter Server multizone instances are not supported.
+{: deprecated}
 
 ## Requirements for vCenter Server instances
 {: #vc_orderinginstance-req}
@@ -119,18 +122,6 @@ Select whether to order a new primary instance or a secondary instance for an ex
 ## Licensing settings
 {: #vc_orderinginstance-licensing-settings}
 
-### Use VMware Subscription Purchasing Program
-{: #vc_orderinginstance-licensing-spp}
-
-The **Use VMware Subscription Purchasing Program** option is available only to users who are billed in the US.
-{: note}
-
-By using the VMware Subscription Purchasing Program (SPP), you can use VMware Subscription Services in the form of Subscription Credits (SPP Credits). Using SPP Credits requires consumption of VMware vCenter Server, VMware vSphere, and VMware NSX®.
-
-Charges for the licensing of these VMware software components are not billed to your {{site.data.keyword.cloud_notm}} account and SPP Credits are taken from your SPP Fund Balance. If you select SPP, an {{site.data.keyword.vmwaresolutions_short}} representative will contact you to confirm the SPP Credits usage after you place the instance order.
-
-When you select SPP, the option **Include with purchase** for all licenses is set automatically and the **I will provide** option is not available.
-
 ### License options
 {: #vc_orderinginstance-licensing-opt}
 
@@ -138,7 +129,12 @@ Specify the licensing options for the VMware components in the instance.
 
 For vCenter Server with NSX-T instances:
 * VMware vSphere Enterprise Plus 7.0
-* NSX-T 3.1 Advanced or Enterprise edition
+* NSX-T 3.1.1 (Data Center SP Base, Data Center SP Professional, Data Center SP Advanced, or Data Center SP Enterprise Plus)
+
+The VMware HCX service is not available for Data Center SP Enterprise Plus.
+
+Small differences exist between NSX-T Data Center and Data Center SP editions. For more information, see [Product offerings for VMware NSX-T Data Center 3.1.x (80866)](https://kb.vmware.com/s/article/80866){: external}.
+{: note}
 
 For vCenter Server with NSX-V instances:
 * vSphere 6.7
@@ -157,10 +153,12 @@ For users who are not Business Partners, you can use the IBM-provided VMware lic
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
 
-## Cluster types - consolidated, management, workload, and edge services
+## Cluster name
 {: #vc_orderinginstance-mngt-workload-cluster-settings}
 
-vCenter Server instances are deployed with a consolidated cluster (for vSphere 7) or a management cluster (for vSphere 6.7), in which all the VMware management components and user workloads run. Optionally, for vSphere 6.7, you can order an additional workload cluster.
+vCenter Server instances are deployed with a consolidated cluster (for vSphere 7) or a management cluster (for vSphere 6.7), in which all the VMware management components and user workloads run.
+
+Optionally, for vSphere 7, you can order an additional workload cluster.
 
 For both vSphere 7 and vSphere 6.7, you can order an edge services cluster.
 
@@ -178,10 +176,25 @@ You can also specify a new name for your clusters. The names must meet the requi
 Bare metal settings are based on your data center selection and bare metal server configuration. When you size the capacity of your servers, consider your current requirements and include extra capacity to accommodate anticipated growth. For more information about sizing, see [Exporting VMware inventory](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-inventory-export).
 
 ### Data center location
+{: #vc_orderinginstance-dc}
+
+Select the {{site.data.keyword.cloud_notm}} data center settings. For more information, see [Region and data center locations for resource deployment](/docs/overview?topic=overview-locations).
+
+#### Geography
+{: #vc_orderinginstance-dc-region}
+
+Select the region where your consolidated cluster or instance is hosted.
+
+#### Data center
 {: #vc_orderinginstance-dc-location}
 
 * For NSX-T, select the {{site.data.keyword.cloud_notm}} data center where the consolidated cluster is hosted.
 * For NSX-V, select the {{site.data.keyword.cloud_notm}} data center where the instance is hosted.
+
+#### Pod
+{: #vc_orderinginstance-dc-pod}
+
+Select the {{site.data.keyword.cloud_notm}} data center pod where you want to deploy your resources. Keep the default pod selection if you do not have reasons to prefer a different pod.
 
 ### Skylake
 {: #vc_orderinginstance-skylake}
@@ -191,27 +204,62 @@ For **Skylake** servers, you can choose the following CPU models and a supported
 Skylake servers are not supported for vSphere Enterprise Plus 7.0u1 instances.
 {: note}
 
-| CPU model | RAM sizes for NSX-V | RAM sizes for NSX-T |
-|:--------- |:------------------- |:------------------- |
-| Dual Intel® Xeon® Silver 4110 processor / 16 cores total, 2.10 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| CPU model     | RAM sizes   |
+|:------------- |:----------- |
+| Dual Intel® Xeon® Silver 4110 processor / 16 cores, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 processor / 28 cores, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 processor / 36 cores, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 2. Options for Skylake bare metal servers" caption-side="top"}
+{: class="simple-tab-table"}
+{: #simpletabtable5}
+{: tab-title="NSX-V"}
+{: tab-group="SkyLake Intel servers"}
+
+| CPU model     | RAM sizes   |
+|:------------- |:----------- |
+| Dual Intel® Xeon® Silver 4110 processor / 16 cores, 2.1 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 processor / 28 cores, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 processor / 36 cores, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+{: caption="Table 2. Options for Skylake bare metal servers" caption-side="top"}
+{: class="simple-tab-table"}
+{: #simpletabtable6}
+{: tab-title="NSX-T"}
+{: tab-group="SkyLake Intel servers"}
 
 ### Cascade Lake
 {: #vc_orderinginstance-cascade}
 
 For **Cascade Lake** servers, you can choose the following CPU models and a supported RAM size, which depends on the NSX networking solution.
 
-| CPU model | RAM sizes for NSX-V | RAM sizes for NSX-T |
-|:--------- |:------------------- |:------------------- |
-| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.20 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.30 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.50 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Platinum 8260 processor / 48 cores total, 2.40 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.50 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB | 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8260 processor / 96 cores total, 2.40 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| CPU model     | RAM sizes   |
+|:------------- |:----------- |
+| Dual Intel Xeon Silver 4210 processor / 20 cores, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6250 processor / 16 cores, 3.9 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 processor / 48 cores, 2.4 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor / 80 cores, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 processor / 96 cores, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 3. Options for Cascade Lake bare metal servers" caption-side="top"}
+{: class="simple-tab-table"}
+{: #simpletabtable3}
+{: tab-title="NSX-V"}
+{: tab-group="Cascade Lake Intel servers"}
+
+| CPU model     | RAM sizes   |
+|:------------- |:----------- |
+| Dual Intel Xeon Silver 4210 processor / 20 cores, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores, 2.5 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6250 processor / 16 cores, 3.9 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 processor / 48 cores, 2.4 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor / 80 cores, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 processor / 96 cores, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+{: caption="Table 3. Options for Cascade Lake bare metal servers" caption-side="top"}
+{: class="simple-tab-table"}
+{: #simpletabtable4}
+{: tab-title="NSX-T"}
+{: tab-group="Cascade Lake Intel servers"}
 
 ### SAP-certified
 {: #vc_orderinginstance-sap}
@@ -222,11 +270,11 @@ For **SAP-certified** servers, you have the following options:
 
 | CPU model     | RAM sizes   |
 |:------------- |:----------- |
-| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW192) / 32 cores total, 2.30 GHz | 192 GB |
-| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW384) / 32 cores total, 2.30 GHz | 384 GB |
-| Dual Intel Xeon Gold 6248 processor (Cascade Lake, BI.S4.NW768) / 40 cores total, 2.50 GHz | 768 GB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW1500) / 56 cores total, 2.70 GHz | 1.5 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW3000) / 56 cores total, 2.70 GHz | 3 TB |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW192) / 32 cores, 2.3 GHz | 192 GB |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake, BI.S4.NW384) / 32 cores, 2.3 GHz | 384 GB |
+| Dual Intel Xeon Gold 6248 processor (Cascade Lake, BI.S4.NW768) / 40 cores, 2.5 GHz | 768 GB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW1500) / 56 cores, 2.7 GHz | 1.5 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake, BI.S4.NW3000) / 56 cores, 2.7 GHz | 3 TB |
 {: caption="Table 4. Options for SAP-certified bare metal servers - NetWeaver" caption-side="top"}
 {: class="simple-tab-table"}
 {: #simpletabtable1}
@@ -235,10 +283,10 @@ For **SAP-certified** servers, you have the following options:
 
 | CPU model     | RAM sizes |
 |:------------- |:--------- |
-| Dual Intel Xeon Gold 5218 processor (Cascade Lake) / 32 cores total, 2.30 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Dual Intel Xeon Gold 6248 processor (Cascade Lake) / 40 cores total, 2.50 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Dual Intel Xeon Platinum 8280M processor (Cascade Lake) / 56 cores total, 2.70 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8280M processor (Cascade Lake) / 112 cores total, 2.70 GHz | 3 TB, 6 TB |
+| Dual Intel Xeon Gold 5218 processor (Cascade Lake) / 32 cores, 2.3 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Gold 6248 processor (Cascade Lake) / 40 cores, 2.5 GHz| 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel Xeon Platinum 8280M processor (Cascade Lake) / 56 cores, 2.7 GHz | 192 GB, 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8280M processor (Cascade Lake) / 112 cores, 2.7 GHz | 3 TB, 6 TB |
 {: caption="Table 4. Options for SAP-certified bare metal servers - HANA" caption-side="top"}
 {: #simpletabtable2}
 {: tab-title="HANA"}
@@ -250,7 +298,7 @@ For **SAP-certified** servers, you have the following options:
 
 * All servers that you order have the same configuration.
 * If you are planning to use vSAN™ storage, you can order 4 - 20 servers.
-* If you are planning to use NFS storage, you can order 2 - 20 servers. A lower limit of 3 servers applies for NSX-T consolidated clusters.
+* If you are planning to use NFS storage, you can order 2 - 20 servers. A lower limit of three servers applies for NSX-T consolidated clusters.
 * If you select two bare metal servers for the consolidated cluster, the minimum RAM size for the instance to function properly is 192 GB.
 * For production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
@@ -334,7 +382,7 @@ Choose performance level options according to your needs.
 ### Local disks (NSX-V SAP-certified HANA only)
 {: #vc_orderinginstance-local-disks}
 
-The **Local disks** option is enabled for the **SAP-certified** - **HANA** CPU generation only. If you selected the **Use VMware Subscription Purchasing Program** option, the **Local disks** option is disabled.
+The **Local disks** option is enabled for the **SAP-certified** - **HANA** CPU generation only.
 {: note}
 
 Specify the following settings:
@@ -361,8 +409,8 @@ The cluster name must meet the requirements that are listed in [Cluster name](/d
 {: #vc_orderinginstance-edge-cluster-cpu}
 
 You can choose the following CPU models:
-* Dual Intel Xeon Silver 4210 Processor (Cascade Lake)
-* Dual Intel Xeon Gold 5218 Processor (Cascade Lake)
+* Dual Intel Xeon Silver 4210 processor (Cascade Lake)
+* Dual Intel Xeon Gold 5218 processor (Cascade Lake)
 
 ### RAM
 {: #vc_orderinginstance-edge-cluster-ram}
@@ -493,7 +541,7 @@ Use the **Public VLAN**, **Private VLAN**, or **Secondary private VLAN** tabs to
 
 Select the Domain Name System (DNS) configuration for your instance:
 
-* **Single public Windows VSI for Active Directory/DNS** - A single Microsoft Windows® Server VSI for Microsoft Active Directory (AD), which functions as the DNS for the instance where the hosts and VMs are registered, is deployed and can be looked up.
+* **Single public Windows VSI for Active Directory/DNS** - A single Microsoft Windows® Server VSI for Microsoft Active Directory (AD) is deployed and can be looked up. The VSI functions as the DNS for the instance where the hosts and VMs are registered.
 * **Two highly available dedicated Windows server VMs on the management cluster** - Two Microsoft Windows VMs are deployed, helping enhance security and robustness.
 
 You must provide two Microsoft Windows Server 2019 Standard edition licenses if you configure your instance to use the two Microsoft Windows VMs.
@@ -513,7 +561,7 @@ When you order a vCenter Server instance, you can also order add-on services. Fo
 ## Summary
 {: #vc_orderinginstance-order-summary}
 
-Based on your selected configuration for the instance and add-on services, the estimated price is instantly generated and displayed on the **Summary** right pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+Based on your selected configuration for the instance and add-on services, the estimated price is instantly generated and displayed on the **Summary** pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
 
 You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool by clicking **Add to estimate**. The estimator is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
@@ -532,13 +580,12 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
    * Click **Primary instance** to deploy a single instance in the environment or to deploy the first instance in a multi-site topology.
    * Click **Secondary instance** to connect the instance with an existing (primary) instance in the environment for high availability. Select the primary instance that you want the secondary instance to be connected with, then enter the vCenter Server Administrator password for the primary instance.
 8. Complete the license settings for the instance components.
-    * To use VMware SPP, select the **Use VMware Subscription Purchasing Program** checkbox, and then specify **VMware account number** and **SPP credit fund number**.
     * To use IBM-provided licenses, ensure that **Include with purchase** is selected. For NSX, specify the license edition.
-    * To use your own licenses, ensure that the **Use VMware Subscription Purchasing Program** option is not selected. For each license, click **I will provide** and enter the license key.
+    * To use your own licenses, for each license, click **I will provide** and enter the license key.
 9. (NSX-T only) Specify the settings for the consolidated cluster and the optional workload cluster.
     1. Specify the cluster name.
     2. Complete the bare metal server settings.
-       1. Select the {{site.data.keyword.cloud_notm}} data center to host the instance or cluster.
+       1. For data center location, click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg "Edit") and select the geography, data center, and pod to host the instance or cluster.
        2. Select the bare metal server CPU generation.
           * For **Cascade Lake** or **SAP-certified** - **HANA** servers, specify the CPU model and the RAM size.
           * For **SAP-certified** - **NetWeaver** server, choose one of the preset configurations.
@@ -620,7 +667,7 @@ If you change these components outside of the VMware Solutions console, the chan
 *  Powering off components
 *  Restarting services
 
-   Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include: ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
+   Exceptions to these activities include managing the shared storage file shares from the {{site.data.keyword.slportal}}. Such activities include ordering, deleting (which might impact data stores if mounted), authorizing, and mounting shared storage file shares.
 
 ## Related links
 {: #vc_orderinginstance-related}
@@ -628,5 +675,3 @@ If you change these components outside of the VMware Solutions console, the chan
 * [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud)
 * [Adding clusters to vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingclusters)
 * [Expanding and contracting capacity for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservers)
-* [VMware Subscription Purchasing Program (SPP) guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-spp-program-guide.pdf){: external}
-* [SPP operations guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-spp-operations-guide.pdf){: external}

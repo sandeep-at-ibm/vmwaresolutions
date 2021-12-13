@@ -4,17 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-11"
+lastupdated: "2021-10-28"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware NSX-T design
 {: #nsx-t-design}
@@ -35,7 +32,7 @@ The following table shows the typically corresponding functions between NSX-T an
 | NSX-V or vSphere native | NSX-T |
 |:----------------------- |:----- |
 | **NSX Transport zone** | Transport zone (overlay or VLAN-backed) |
-| **Port groups (vDS) ** | Segments or Logical Switch |
+| **Port groups (vDS)** | Segments or Logical Switch |
 | **VXLAN (L2 encapsulation)** | GENEVE (L2 encapsulation) |
 | **Edge Gateway** | Tier-0 (T0) Gateway[^gateway1] |
 | **Distributed Logical Router** | Tier-1 (T1) Gateway[^gateway2] |
@@ -64,7 +61,6 @@ Some key NSX-T concepts do not correspond to NSX-V functions. You need to review
 * The manager VM and the controller VM function are combined, which results in three NSX-T manager VMs being deployed. If on the same subnet, they use an internal network load balancer. If across different subnets, an external load balancer is required.
 
 ## Resource requirements
-
 {: #nsx-t-design-resource-req}
 
 In this design, the NSX-T controller Manager VMs are deployed on the management cluster. Additionally, each controller manager is assigned a VLAN–backed IP address from the private portable address block. The address block is designated for management components and configured with the DNS and NTP servers that are discussed in section 0. A summary of the NSX Manager installation is shown in following table.

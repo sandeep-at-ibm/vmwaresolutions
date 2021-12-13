@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-09"
 
 keywords: VMware HCX deployment, HCX configuration, order HCX
 
@@ -13,20 +13,18 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering VMware HCX
 {: #hcx_ordering}
 
-You can include the VMware HCX™ service with a new VMware vCenter Server® instance or add the service to your existing vCenter Server instance.
+Automated deployment of the VMware HCX™ service is not supported for VMware® vCenter Server instances with the VMware NSX-T™ Data Center SP Enterprise Plus license edition. However, you can manually deploy HCX outside of the VMware® Solutions console. For more information, see [HCX Connector and HCX Cloud installations](https://docs.vmware.com/en/VMware-HCX/4.2/hcx-getting-started/GUID-B1023D31-0458-433B-9ABB-62E8BDD3FEC2.html){: external}.
+{: note}
 
 ## Ordering VMware HCX for a new instance
 {: #hcx_ordering-new}
 
-To order a new VMware® vCenter Server instance with VMware HCX from the {{site.data.keyword.vmwaresolutions_full}} console, scroll down to the services section and select **HCX** in the **Business continuity and migration** category.
+To order a new vCenter Server instance with VMware HCX from the {{site.data.keyword.vmwaresolutions_short}} console, scroll down to the services section and select **HCX** in the **Business continuity and migration** category.
 
 ## Ordering VMware HCX for an existing instance
 {: #hcx_ordering-existing}

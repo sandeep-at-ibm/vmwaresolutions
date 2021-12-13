@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-17"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # About attached storage for vCenter Server
 {: #storage-benefits}

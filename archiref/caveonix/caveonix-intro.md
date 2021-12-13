@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-15"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Caveonix RiskForesight introduction
 {: #caveonix-intro}

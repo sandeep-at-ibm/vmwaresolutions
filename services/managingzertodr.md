@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-26"
+lastupdated: "2021-10-21"
 
 keywords: Zerto certificate, Zerto config, update Zerto replication
 
@@ -13,26 +13,23 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing Zerto
 {: #managingzertodr}
 
-After the Zerto service is deployed into your instance, you can configure or update Zerto Virtual Replication, and deploy more Virtual Replication Appliances to newly added VMware® ESXi™ servers.
+After the Zerto service is deployed into your instance, you can configure or update Zerto Virtual Replication. You can also deploy more Virtual Replication Appliances to newly added VMware® ESXi™ servers.
 
 ## Using your own certificate for Zerto
 {: #managingzertodr-ssl-cert}
 
-As a best practice, use your own SSL certificate for Zerto Virtual Manager (ZVM). After you deployed Zerto, replace the SSL certificate for ZVM with your own certificate. To change the default security certificate for your ZVM, follow these steps:
+As a best practice, use your own SSL certificate for Zerto Virtual Manager (ZVM). After you deploy Zerto, replace the SSL certificate for ZVM with your own certificate. To change the default security certificate for your ZVM, follow these steps:
 
 1. Open the Zerto Diagnostics utility on the Windows® virtual machine that is running the ZVM.
 2. Choose **Reconfigure Zerto Virtual Manager**.
 3. Ensure that the VMware vCenter Server® configuration is correct, and click **Next**.
 4. In the **HTTP Certificate** section, check the **Replace SSL Certificate** box.
-5. Click browse (...), then locate and select the new SSL certificate.
+5. Click browse (...) and then locate and select the new SSL certificate.
 6. Enter the new SSL certificates associated password and click **Next**.
 7. The utility verifies the necessary vCenter Server connectivity. After verified, click **Next** and the ZVM is reconfigured.
 
@@ -62,8 +59,11 @@ When you add or remove ESXi servers for the primary cluster of your instance, VR
 {: #managingzertodr-related}
 
 * [Zerto overview](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr)
+* [Ordering Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-zerto_ordering)
+* [Ordering Zerto licenses](/docs/vmwaresolutions?topic=vmwaresolutions-zerto_ordering_licenses)
+* [Managing Zerto licenses](/docs/vmwaresolutions?topic=vmwaresolutions-zerto_managing_licenses)
 * [Managed Disaster Recovery Services](/docs/vmwaresolutions?topic=vmwaresolutions-managing_zerto_services)
 * [Zerto](https://www.zerto.com){: external}
-* [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}
-* [Zerto disaster recovery](https://www.ibm.com/downloads/cas/KDBKXLLW){: external}
+* [Zerto product documentation](https://www.zerto.com/myzerto/technical-documentation/){: external}
+* [Zerto disaster recovery](https://www.zerto.com/solutions/use-cases/disaster-recovery/){: external}
 * [Zerto's alarms, alerts, and events](http://s3.amazonaws.com/zertodownload_docs/Latest/Guide%20to%20Alarms%2C%20Alerts%20and%20Events.pdf){: external}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-27"
 
 keywords: view vCenter Server Hybridity, view instance, view instance details
 
@@ -69,8 +69,8 @@ To view the property details of a vCenter Server with Hybridity Bundle instance:
 | NSX for vSphere | The VMware NSX® for vSphere product version. |
 | NSX license edition | The version and edition of the VMware NSX license. |
 | DNS, Root domain | The root domain name is the DNS (Domain Name System) domain name and the Microsoft® Active Directory™ (AD) forest root name. |
-| DNS, SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server with Hybridity Bundle instances with a value of <!--<samp class="ph codeph">-->**`vsphere.local`**<!--</samp>-->. |
-| DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server with Hybridity Bundle instance host names reside. The subdomain name is in the format <!--<samp class="ph codeph"><var class="keyword varname">-->**`vcenter_server_instance_name`**<!--</var>-->.<!--<var class="keyword varname">-->**`root.domain_name`**<!--</var></samp>-->. |
+| DNS, SSO domain | The SSO domain is the vSphere Single Sign-On domain. The SSO domain name is fixed for all deployed vCenter Server with Hybridity Bundle instances with a value of **`vsphere.local`**. |
+| DNS, Subdomain | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server with Hybridity Bundle instance host names reside. The subdomain name is in the format **`vcenter_server_instance_name`**.**`root.domain_name`**. |
 | Hybridity Bundle | Indicates if the vCenter Server with Hybridity Bundle is installed. |
 | Status  | The status of the instance.  \n   \n The information that is displayed provides an update on the progress of the deployment or the action that is taken on the instance. If there are issues, a message might be displayed to help you investigate and resolve the problem. |
 {: caption="Table 3. vCenter Server with Hybridity Bundle instances properties" caption-side="top"}

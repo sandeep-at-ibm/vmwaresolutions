@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-07-20"
+lastupdated: "2021-11-30"
 
 keywords: add servers vmware multizone
 
@@ -13,16 +13,12 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding ESXi servers to vCenter Server multizone instances
 {: #mcv_addingremovingservers}
 
-You can add ESXi servers to your witness, consolidated, additional workload, and edge services clusters.
+You can expand the capacity of your VMware vCenter Server® multizone instances by adding VMware® ESXi servers to your witness, consolidated, additional workload, and edge services clusters.
 
 ## Procedure to add ESXi servers to vCenter Server multizone instances
 {: #mcv_addingremovingservers-adding-procedure}

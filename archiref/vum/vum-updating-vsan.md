@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Updating vSAN clusters
 {: #vum-updating-vsan}
@@ -23,9 +25,9 @@ These recommended updates provide the best available release to keep your hardwa
 The vSAN cluster upgrade proceeds in the following sequence of tasks:
 * **Enable the vSAN Online Health Workflow** – This workflow enables the vSAN baselines in VUM so that updates can be reviewed and remediated. It needs to be carried out initially only to enable vSAN with VUM
 * **Pre-requisites** – Understand the prerequisites, the process, and restrictions
-* **Upgrade the vCenter Server Appliance**. For more information, see [VCSA update and SSO-linked vCenters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vcsa).
+* **Upgrade the vCenter Server Appliance** – For more information, see [VCSA update and SSO-linked vCenters](/docs/vmwaresolutions?topic=vmwaresolutions-vum-updating-vcsa).
 * **Upgrade the vSphere ESXi hosts** – For more information, see [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines).
-* **Upgrade the vSAN disk format** - Refer to Upgrade the vSAN Disk Format. Upgrading the disk format is optional, but for best results, upgrade the objects to use the latest version. The on-disk format exposes your environment to the complete feature set of vSAN.
+* **Upgrade the vSAN disk format** – Refer to Upgrade the vSAN Disk Format. Upgrading the disk format is optional, but for best results, upgrade the objects to use the latest version. The on-disk format exposes your environment to the complete feature set of vSAN.
 
 ## Enable the vSAN online health workflow
 {: #vum-updating-vsan-enable-vsan-workflow}
@@ -82,10 +84,10 @@ This is an optional step. By using the vSphere Web Client, go to **Home > Admini
 {: #vum-updating-vsan-prereq}
 
 Before you start the vSAN upgrade process, ensure that the following requirements are met:
-* Review the VMware Knowledge base articles and review any known compatibility issues between your current vSAN version and the wanted target vSAN version
+* Review the VMware Knowledge base articles and review any known compatibility issues between your current vSAN version and the wanted target vSAN version.
 * **The vSphere environment is up to date**:
-   * The VCSA must be at an equal or higher patch level than the vSphere ESXi hosts. Update the VCSA if required
-   * All hosts must be running the same build of ESXi. If the vSphere ESXi host versions are not matched, then update
+   * The VCSA must be at an equal or higher patch level than the vSphere ESXi hosts. Update the VCSA if required.
+   * All hosts must be running the same build of ESXi. If the vSphere ESXi host versions are not matched, then update.
 * **All vSAN disks should be healthy**:
    * No disk is failed or absent. This can be determined via the **vSAN Disk Management** view in the vSphere Web Client. **Home** > **Hosts and Clusters**, then select the **vSAN Cluster** and click the **vSAN** tab and then **Physical Disks**. Scroll through all the disks and review the vSAN Health Status.
    * No inaccessible vSAN objects. This can be verified with the **vSAN Health Service** by clicking **Home** > **Hosts and Clusters**, then select the **vSAN Cluster**. Click the **Monitor** tab, **vSAN** and then click **Health**. Review the Test Results.
@@ -136,7 +138,7 @@ Many basic administrative tasks can be done much more efficiently than clicking 
    4 vms [vm]/`
 
 6. Type `cd 1`, press **Enter** and then `ls` and press **Enter**. You see your cluster:
-   `0 cluster1 (cluster)``
+   `0 cluster1 (cluster)`
 
 7. Use the vSAN commands against this cluster. To check the disk status type `vsan.disks_stats 0` and press **Enter**.
 

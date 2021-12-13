@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-10-21"
 
 keywords: Hytrust DataControl, Hytrust configuration, order Hytrust
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering HyTrust DataControl
 {: #htdc_ordering}

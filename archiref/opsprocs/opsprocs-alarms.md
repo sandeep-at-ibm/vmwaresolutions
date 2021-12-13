@@ -4,17 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Alarms
 {: #opsprocs-alarms}
@@ -350,7 +347,7 @@ The following table describes a number of procedures for events and alarms.
 
 **Next topic**: [Proactive tasks](/docs/vmwaresolutions?topic=vmwaresolutions-opsprocs-proactive)
 
-<!-- ## Related links
+## Related links
 {: #opsprocs-alarms-links}
 
-* [vSphere Monitoring and Performance](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-monitoring-performance-guide.pdf){: external} -->
+* [vSphere monitoring and performance](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-monitoring-performance-guide.pdf){: external}

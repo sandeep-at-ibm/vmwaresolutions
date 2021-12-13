@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-16"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Collecting the metadata
 {: #vum-metadata}
@@ -24,22 +26,22 @@ For most enterprises, the VMware default settings for VUM are considered to be s
 ## Download schedule
 {: #vum-metadata-download-schedule}
 
-Updates are virtual appliance upgrades, host patches, and extensions and by default VUM downloads updates daily. Change the download schedule by accessing the vSphere® Web Client, going to **Home** > **Update Manager** > **Manage** > **Settings** and selecting **Download Schedule** and then clicking **Edit**.
+Updates are virtual appliance upgrades, host patches, and extensions and by default VUM downloads updates daily. To change the download schedule, access the vSphere® Web Client. Go to **Home** > **Update Manager** > **Manage** > **Settings**, and select **Download Schedule**, and then click **Edit**.
 
 ## Notification check schedule
 {: #vum-metadata-notif-check-schedule}
 
-Notifications are information about patch recalls, new fixes, and alerts and by default VUM downloads notifications on an hourly basis. This can be changed by accessing the vSphere Web Client, going to **Home** > **Update Manager** > **Manage** > **Settings** and selecting **Notification Check Schedule** and then clicking **Edit**.
+Notifications are information about patch recalls, new fixes, and alerts and by default VUM downloads notifications on an hourly basis. To change the notification check schedule, access the vSphere Web Client. Go to **Home** > **Update Manager** > **Manage** > **Settings**, and select **Notification Check Schedule**, and then click **Edit**.
 
 ## Virtual machine settings
 {: #vum-metadata-vm-settings}
 
-To change the virtual machine (VM) Settings, access the vSphere Web Client, go to **Home** > **Update Manager** > **Manage** > **Settings** and **VM Settings** and then clicking **Edit**.
+To change the virtual machine (VM) Settings, access the vSphere Web Client. Go to **Home** > **Update Manager** > **Manage** > **Settings**, and **VM Settings**, and then click **Edit**.
 
 ## Host/cluster settings
 {: #vum-metadata-host-settings}
 
-To change the Host/cluster Settings, access the vSphere Web Client, go to **Home** > **Update Manager** > **Manage** > **Settings** and **Host/Cluster Settings** and then clicking **Edit**.
+To change the Host/cluster Settings, access the vSphere Web Client. Go to **Home** > **Update Manager** > **Manage** > **Settings**, and **Host/Cluster Settings**, and then click **Edit**.
 
 **Next topic:** [Creating baselines and attaching to inventory objects](/docs/vmwaresolutions?topic=vmwaresolutions-vum-baselines)
 

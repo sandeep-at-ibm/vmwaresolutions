@@ -4,16 +4,13 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-07"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Physical infrastructure design
 {: #design_physicalinfrastructure}
@@ -132,7 +129,7 @@ The private network consists of two VLANs within this design. Four subnets are a
 * The third subnet is used for the encapsulated overlay network Tunnel Endpoints (VTEPs) assigned to each host and edge through the NSX Manager.
 * The fourth subnet is used for egress from the encapsulated overlay network.
 
-In addition to Private VLAN A, a second private VLAN (here designated Private VLAN B) exists to support VMware features such as vSAN, vMotion, and NFS<!--, and iSCSI-->. As such, the VLAN is divided into two or more portable subnets:
+In addition to Private VLAN A, a second private VLAN (here designated Private VLAN B) exists to support VMware features such as vSAN, vMotion, and NFS. As such, the VLAN is divided into two or more portable subnets:
 * The first subnet is assigned to a kernel port group for vMotion traffic.
 * The remaining subnet or subnets are used for storage traffic:
    * If you use vSAN, a subnet is assigned to kernel port groups that are used for vSAN traffic.

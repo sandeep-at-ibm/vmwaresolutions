@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-11-15"
 
 keywords: FortiGate VA, FortiGate configuration, order FortiGate
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering FortiGate Virtual Appliance
 {: #fortinetvm_ordering}
@@ -45,7 +42,12 @@ You cannot install Juniper® vSRX and FortiGate Virtual Appliance on the same ed
 
 When you order FortiGate Virtual Appliance for instances that are not configured with public interfaces, you must provide a proxy server to complete the installation. The HTTP proxy server must be configured and available through Virtual Routing and Forwarding (VRF) before the FortiGate Virtual Appliance installation can start.
 
-To ensure continued operation, FortiGate Virtual Appliance must have persistent access to the FortiGate license server through the internet.
+To ensure continued operation, FortiGate Virtual Appliance must have persistent access to the FortiGate license server through the internet. The virtual appliance can access any of the following hostnames:
+
+* update.fortiguard.net
+* service.fortiguard.net
+* support.fortinet.com
+* guard.fortinet.com
 
 ## FortiGate Virtual Appliance service configuration
 {: #fortinetvm_ordering-config}
@@ -77,7 +79,7 @@ If you select **Private network**, specify the following settings:
 * FortiGate-VM08 (8 vCPUs)
 * FortiGate-VM16 (16 vCPUs)
 * FortiGate-VM32 (32 vCPUs)
-The FortiGate-VM32 deployment size requires Cascade Lake 5218 or higher.
+   The FortiGate-VM32 deployment size requires Cascade Lake 5218 or higher.
 
 ### Monthly subscription license model
 {: #fortinetvm_ordering-config-license}

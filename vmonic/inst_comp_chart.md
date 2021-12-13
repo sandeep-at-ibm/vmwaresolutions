@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-27"
+lastupdated: "2021-12-10"
 
 keywords: vmware offering, vmware solutions functions, function support
 
@@ -36,7 +36,7 @@ Review the following table to understand the differences in feature support for 
 | Multi-cluster support | Maximum number depends on VMware® sizing guidelines | Supported. Automated configuration not included. |
 | Client-managed updating and patching of VMware stack | Client-managed updates - Native VMware tools (VMware Update Manager™)[^nsxv1] | Client-managed updates - Native VMware tools (VMware Update Manager) |
 | Backup and restore | Manually, by using IBM Spectrum® Protect Plus or Veeam®[^nsxv2] | Backup and restore solution not included |
-| Software-defined networking | NSX Advanced or Enterprise | NSX Advanced or Enterprise. Automated configuration not included. |
+| Software-defined networking[^nsxvexist] | NSX DC SP Base, Professional, Advanced, or Enterprise Plus | NSX DC SP Base, Professional, Advanced, or Enterprise Plus. Automated configuration not included. |
 | BYOL for vSphere and vSAN | Fully supported per cluster | Supported |
 | BYOL for vCenter Server and NSX | Fully supported per instance | Supported |
 | NSX license upgrade options[^nsxv3] | Upgrade available from NSX Advanced to Enterprise. | None |
@@ -49,6 +49,8 @@ Review the following table to understand the differences in feature support for 
 [^servers]: For V2.1 or earlier instances, to increase beyond 32 ESXi servers in a vSAN cluster, see [How many ESXi servers can I add to a cluster?](/docs/vmwaresolutions?topic=vmwaresolutions-faq_esxi#faq_esxi-cluster)
 
 [^nsxv1]: NSX-V only
+
+[^nsxvexist]: NSX-V and existing instances use legacy NSX licensing.
 
 [^nsxv2]: NSX-V only
 
@@ -64,8 +66,8 @@ Review the following table to understand the differences in feature support for 
 | Feature | vCenter Server | Security and Compliance Readiness Bundle | VMware Regulated Workloads |
 |:-------- |:-------------- |:-------------- |:-------------- |
 | vSphere version | 6.7 Update 3n or 7.0 Update 2d | 7.0 Update 2d | 7.0 Update 2d |
-| NSX edition[^nsxedi] | Advanced or Enterprise | Advanced or Enterprise | Enterprise |
-| NSX networking solution | NSX-V or NSX-T™ | NSX-T | NSX-T |
+| NSX edition | NSX DC SP Base, Professional, Advanced, or Enterprise Plus | NSX DC SP Professional, Advanced, or Enterprise Plus | NSX DC SP Advanced or Enterprise Plus |
+| NSX networking solution [^nsxedi] | NSX-V or NSX-T™ | NSX-T | NSX-T |
 | NFS | Optional | Optional | Not allowed |
 | vSAN | Optional | Optional | Required |
 | Consolidated cluster | Optional | Optional | Optional |
@@ -82,7 +84,7 @@ Review the following table to understand the differences in feature support for 
 | Veeam backup server | Optional (opt out) | Optional (opt out) | Required with option to remove on day 2 |
 | Disaster recovery | Veeam or Zerto | Veeam 11 | Veeam 11|
 | Migration | HCX, Zerto, or PrimaryIO | HCX (optional) | HCX (optional) |
-| Stretched cluster - High Availability | Optional | Optional | Optional |
+| Stretched cluster - High Availability | Not supported | Not supported | Optional |
 | Financial Services Cloud with policy framework | No | No. Stepping stone to Financial Services, but no in-place upgrade. | Yes |
 {: caption="Table 2. Supported features for vCenter Server instances, Security and Compliance Readiness Bundle instances, and VMware Regulated Workloads" caption-side="top"}
 

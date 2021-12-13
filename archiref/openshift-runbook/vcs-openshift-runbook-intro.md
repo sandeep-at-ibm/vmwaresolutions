@@ -4,17 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware Solutions and Red Hat OpenShift overview
 {: #openshift-runbook-runbook-intro}
@@ -107,4 +104,3 @@ The deployment approach is described in the following phases:
 * [OpenShift 4 Release Update](https://www.youtube.com/watch?v=YJvTu8jC6CU){: external}
 * [Installing a cluster on vSphere with user-provisioned infrastructure](https://docs.openshift.com/container-platform/4.7/installing/installing_vsphere/installing-vsphere.html){: external}
 * [Getting started with IBM Cloud Virtual Private Networking](/docs/iaas-vpn?topic=iaas-vpn-getting-started)
-* [OpenShift cheat sheet](https://cheatsheet.dennyzhang.com/cheatsheet-openshift-a4){: external}

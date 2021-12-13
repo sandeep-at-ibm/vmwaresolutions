@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-11-18"
 
 keywords: vCenter Server view clusters, vmware multizone, vCenter Server multizone view clusters, view vCenter Server cluster
 
@@ -25,7 +25,8 @@ You can view the summary and detailed information of the clusters that are provi
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server instances** table, click an instance to view the clusters in it.
 3. Click **Infrastructure** on the left navigation pane. In the **Clusters** table, view the summary about the clusters:
-   * **Cluster name/type**: The name and type of the cluster. Types include witness, consolidated, workload, and edge services.
+   * **Cluster name**: The name and type of the cluster.
+   * **Cluster type**: The type of cluster. Types include witness, consolidated, workload, and edge services.
    * **ESXi servers**: The number of ESXi servers in the cluster.
    * **Storage**: The type of storage that the cluster uses.
    * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
@@ -38,7 +39,7 @@ You can view the summary and detailed information of the clusters that are provi
       * Ready to use: The cluster is ready to use.
       * Deleting: The cluster is being deleted.
       * Deleted: The cluster is deleted.
-   * **Actions**: Click the **Delete** icon to delete the cluster.
+   * **Actions**: Click the **Delete** icon ![Delete icon](../../icons/delete.svg "Delete") to delete the cluster.
 4. Click a cluster name to view the ESXi server, storage, and network interface details.
 
 | Item | Description |

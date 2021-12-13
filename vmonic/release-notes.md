@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-11"
+lastupdated: "2021-12-13"
 
 keywords: release notes, what's new in VMware Solutions, what is new, new features, VMware Solutions release notes, VMware Solutions
 
@@ -25,6 +25,57 @@ Various other updates are made to the [VMware Solutions API](https://cloud.ibm.c
 
 ## 2021
 {: #year-2021}
+
+### 13 December 2021
+{: #december-2021}
+{: release-note}
+
+NSX-T Data Center SP license availability
+:   Starting with the 4.5 release, VMware NSX-T™ Data Center SP license editions are available for new instances for the following VMware® Solutions offerings. Existing instances continue to use the previous NSX licenses for all new clusters and hosts.
+   * VMware Solutions Dedicated instances offer Data Center SP Base, Data Center SP Professional, Data Center SP Advanced, or Data Center SP Enterprise Plus.
+   * Security and Compliance Readiness Bundle instances offer Data Center SP Professional, Data Center SP Advanced, or Data Center SP Enterprise Plus.
+   * VMware Regulated Workloads offer Data Center SP Advanced or Data Center SP Enterprise Plus.
+
+:   NSX-T Data Center SP license restrictions
+   * License upgrade is not available for NSX-T Data Center SP license edition.
+   * Automated deployment of the VMware HCX™ service is not supported for VMware vCenter Server instances with the NSX-T Data Center SP Enterprise Plus license edition. However, you can manually deploy HCX outside of the VMware Solutions console. For more information, see [HCX Connector and HCX Cloud installations](https://docs.vmware.com/en/VMware-HCX/4.2/hcx-getting-started/GUID-B1023D31-0458-433B-9ABB-62E8BDD3FEC2.html){: external}.
+
+{{site.data.keyword.cloud_notm}} data center pod availability
+:   You can now select the data center pod for your resource deployment. By using this feature, you can deploy new resources to the same pod where you have existing resources.
+
+Support for Dual Intel Xeon Gold 6250 Cascade Lake servers
+:   Dual Intel® Xeon® Gold 6250 / 16 cores, 3.9 GHz bare metal servers are available for deployment for vCenter Server instances and VMware vSphere clusters with VMware vSphere 7, and for VMware Regulated Workloads and Security and Compliance Bundle instances.
+
+Multizone support for VMware Solutions Shared
+:   VMware Solutions Shared now offers multizone VMware virtual data centers. Multizone is offered for new on-demand and reserved virtual data centers and includes support for Dallas 10 and Dallas 12 {{site.data.keyword.cloud_notm}} data centers.
+
+Add-on services upgrades
+:   The following service versions are installed on newly deployed instances.
+   * Caveonix RiskForesight™ v3.1.0
+   * HyTrust® DataControl® v5.4
+   * IBM Spectrum® Protect Plus v10.1.8
+   * Red Hat® OpenShift® v4.7.34
+   * vRealize Operations™ v8.6
+
+About pages for add-on services
+:   You can now access overview information about a service from the first page of the VMware Solutions console. From each overview, you can install the service on a new or existing instance. For more information, see [The About service overview and installing a service from the overview](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-about-page-install).
+
+New endpoints for KMIP for VMware
+:   Two new endpoints are now available in the Sao Paulo location for the KMIP for VMware service. For more information, see [Connecting vCenter Server to the KMIP instance](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_ordering#kmip_standalone_ordering-next).
+
+Zerto support for NSX-T
+:   Zerto is now supported on vCenter Server instances with vSphere 7 and NSX-T 3.1. Zerto is still supported on vCenter Server instances with NSX-V.
+
+:   Zerto is not supported for instances that are upgraded from vSphere 6.7 to vSphere 7. For more information, see [Important considerations](/docs/vmwaresolutions?topic=vmwaresolutions-vc_vsphere_70_upgrade#vc_vsphere_70_upgrade-considerations).
+
+New REST API support
+:   Added support for the following features:
+   * Zerto for vSphere 7.0 with NSX-T instances and for NSX-V instances
+   * Ordering new NSX-T instances with NSX-T Data Center SP licenses
+   * Selecting the data center pod location for resource deployment
+
+New release notes format
+:   The release notes have been consolidated to one location for you to review the latest and previous offering updates.
 
 ### 13 October 2021
 {: #october-2021}
@@ -54,13 +105,14 @@ End of Support for instance deployments with vSphere 6.5
 
    vSphere 6.7 introduces support for embedded Platform Services Controller (PSC), improved support for the HTML5 client including vSAN management, support for Intel Skylake EVC level, support for virtual TPM, improved support for VMware Update Manager (VUM), and vSAN support for Windows Failover Clustering.
 
-   vSphere 7.0 introduces full support for the HTML5 client, support for Intel Cascade Lake EVC level, the enhanced vSphere Lifecycle Manager (LCM), enhancements to DRS and vMotion, security enhancements including multi–factor authentication (MFA), vSphere Trust Authority (vTA), and in–flight encryption for vSAN. vSphere 7.0 is also the exclusive basis for VMware Regulated Workloads.
+   vSphere 7.0 introduces full support for the HTML5 client, support for Intel Cascade Lake EVC level, the enhanced vSphere Lifecycle Manager (LCM), enhancements to DRS and vMotion, security enhancements such as multi–factor authentication (MFA), vSphere Trust Authority (vTA), and in–flight encryption for vSAN. vSphere 7.0 is also the exclusive basis for VMware Regulated Workloads.
 
    For more information about end of life procedures for {{site.data.keyword.cloud_notm}} infrastructure services and Third–Party software products, see [Lifecycle policy for IBM Cloud products](https://www.ibm.com/cloud/cloud-prod-life). If you have any questions or need assistance, email clouddigitalsales@us.ibm.com or open a support ticket in the VMware Solutions console.
 
  VMware vCenter Server instances
 :   The 4.4 release applies the following upgrades and improvements for newly deployed instances, clusters, and hosts.
 
+   * VMware vSphere ESXi™ 7.0 Update 2d (build 18538813)
    * VMware vCenter Server Appliance
       * 7.0 Update 2d (build 18455184)
       * 6.7 Update 3o (build 18485166)
@@ -76,7 +128,7 @@ Add-on services
    * Zerto v9.0u1
 
 FortiGate Virtual Appliance for multizone instances on VMware Regulated Workloads
-:   For VMware Regulated Workloads, you can deploy FortiGate Virtual Appliance on edge services clusters for multizone instances. You can deploy FortiGate Virtual Appliance when you first order the instance or as part of day 2 operations.
+:   For VMware Regulated Workloads, you can deploy FortiGate Virtual Appliance on edge services clusters for multizone instances. You can deploy FortiGate Virtual Appliance when you first order the instance or as part of Day 2 operations.
 
 Veeam deployment type displayed on services detail page
 :   The deployment type for Veeam is displayed on the service details page. The possible deployment types are VM, VSI, or Bare metal.
@@ -128,14 +180,7 @@ vCenter Server multizone instances - deprecated
    You can still add and delete clusters, add and remove ESXi servers, and add and delete storage for existing multizone instances.
 
 VMware Regulated Workloads - support for consolidated cluster
-:   Rather than requiring that the VMware Regulated Workloads solution deploys a separate management cluster and separate clusters for workloads, now you can start with a smaller footprint by selecting the **Customize a consolidated cluster** option, which deploys a consolidated management and workload cluster.
-
-   The **Customize a consolidated cluster** option is available in single-zone deployments (non-stretched) and brings down the entry price point by enabling workloads to run alongside VMware management components in the same cluster. The minimum number of hosts required to start is reduced from 10 to 6. This option is helpful for proof of concepts (POCs) and for clients who want to start small and grow over time.
-
-   If you do not want workloads to run on the primary cluster, you can select **Management optimized cluster** and order a 2-CPU Intel Cascade Lake chipset with 20 cores total and 192 GB of RAM per bare metal server. Under **Additional cluster for workloads**, you must select the checkbox to include a separate secondary cluster for workloads and then customize the bare metal hardware based on your workload capacity requirements.
-
-   The VMware HCX service is available only if you also include a workload cluster in your instance.
-   {: note}
+:   Rather than requiring that the VMware Regulated Workloads solution deploys a separate management cluster and separate clusters for workloads, now you can start with a smaller footprint by deploying a consolidated management and workload cluster. For more information, see [Primary cluster capacity](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-consldt-capacity).
 
 VMware Regulated Workloads - support for save configuration
 :   A new **Save configuration** button is added to the **Summary** pane of the ordering page for VMware Regulated Workloads. Use this option to save your instance settings as a configuration template without placing an order. You can manage the configuration templates by further editing or deleting them as well.
@@ -545,8 +590,8 @@ VMware Solutions Dedicated - VMware NSX updates
 VMware Solutions Dedicated - new Cascade Lake server support
 :   The following {{site.data.keyword.cloud_notm}} bare metal servers are available for deployment for vCenter Server instances and vSphere clusters with vSphere 6.7.
 
-   * Dual Intel Xeon Platinum 8260 (Cascade) / 48 Cores, 2.40 GHz / 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB
-   * Quad Intel Xeon Platinum 8260 (Cascade) / 96 Cores, 2.40 GHz / 384 GB, 768 GB, 1.5 TB, 3 TB
+   * Dual Intel Xeon Platinum 8260 / 48 Cores, 2.4 GHz
+   * Quad Intel Xeon Platinum 8260 / 96 Cores, 2.4 GHz
 
 VMware Solutions Dedicated - support for Osaka {{site.data.keyword.cloud_notm}} data centers
 :   The following {{site.data.keyword.cloud_notm}} data centers are available for deployment on vCenter Server, VMware vSphere, and {{site.data.keyword.cloud_notm}} for VMware Mission Critical Workloads instances: **Osaka 21**, **Osaka 22**, and **Osaka 23**.
@@ -562,9 +607,11 @@ Add-on services
 
    * BIG-IP VE v15.1.0.5
    * HyTrust CloudControl v6.2 for vCenter Server with NSX-T
+
    During the pre-configuration of HyTrust CloudControl v6.2, global PIP is enabled.
    * Juniper vSRX and Juniper vSRX Gateway Appliance 3.0 (20.1R1.11)
    * Red Hat OpenShift for VMware v4.4.23
+
    You can now install the Red Hat OpenShift for VMware service on vCenter Server with NSX-T instances. For NSX-T, you must have a new vCenter Server instance with NSX-T that is provisioned with NSX-T 3.0.1.1 or you must upgrade from NSX-T 2.5.1 to NSX-T 3.0.2.
 
 HyTrust CloudControl for vCenter Server with NSX-V - deprecated
@@ -797,12 +844,6 @@ VMware vCenter Server - new resource group option
    * On-premises VMware HCX instances
    * KMIP for VMware instances
 
-VMware vCenter Server - support for VMware Subscription Purchasing Program
-:   The support for VMware Subscription Purchasing Program (SPP) is available only to users who are billed in the US.
-{: note}
-
-   VMware Subscription Purchasing Program offers a flexible way to consume VMware Subscription Services in the form of Subscription Credits (SPP Credits). When you order vCenter Server instances, you can redeem SPP Credits towards licensing costs.
-
 VMware vCenter Server - support for edge services cluster
 :   You can now order an edge services cluster when you are ordering a new vCenter Server instance, with or without the Juniper vSRX service installed on it. You can also install the Juniper vSRX service as a gateway appliance.
 
@@ -852,6 +893,7 @@ User interface updates and enhancements
       * Caveonix RiskForesight licenses: cav-_xx_
       * On-premises VMware HCX instances: hcx-_xx_
       * KMIP for VMware instances: kmip-_xx_
+
       where _xx_ represents two randomly generated alphabetic characters. You can use the default names or specify new names for them.
    * The following enhancements are made to the **Network Interface** section when you order vCenter Server or vCenter Server with NSX-T instances and when you add clusters for these instances.
       * When you reuse an existing primary subnet, the **Public Primary Subnet** and **Private Primary Subnet** lists display the number of available slots for each IP address.
@@ -1412,7 +1454,7 @@ KMIP for VMware on IBM Cloud
 Reference architecture documentation
 :   (Updated on 8 February 2019) The following technical documents are new or updated in the *Reference* section of the user documentation.
 
-   * {{site.data.keyword.vmwaresolutions_short}} architecture (with NSX-V and NSX-T™)
+   * {{site.data.keyword.vmwaresolutions_short}} architecture (with NSX-V and NSX-T)
    * Caveonix RiskForesight reference architecture
    * VMware HCX on {{site.data.keyword.cloud_notm}} for VMware Solutions
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-12-10"
 
 keywords: Multi-cloud Management Services, request Multi-cloud Management Services, tech specs Multi-cloud Management Services
 
@@ -12,6 +12,8 @@ subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Managed Services for VMware Workload Transformation
 {: #managing_mcms}
@@ -21,10 +23,10 @@ Managing the VMware® virtual infrastructure that consists of compute, network, 
 ## Key benefits of Managed Services for VMware Workload Transformation
 {: #managing_mcms-benefits}
 
-* Well-defined architecture and automated deployment, jointly developed by VMware and {{site.data.keyword.IBM}} experts
-* Reliable performance that is backed by industry-leading SLAs and best practices to monitor and manage your deployed virtual infrastructure
-* Using tools such as vRealize Operations™ Manager, vRealize Log Insight™, vRealize Network Insight™, and custom scripts to capture, analyze, and report the entire virtual infrastructure
-* Virtual data center transformation, enhanced enterprise mobility, and improved application delivery through seamless adoption of compute, network, and storage virtualization
+* Well-defined architecture and automated deployment, jointly developed by VMware and {{site.data.keyword.IBM}} experts.
+* Reliable performance that is backed by industry-leading SLAs and best practices to monitor and manage your deployed virtual infrastructure.
+* Using tools such as vRealize Operations™ Manager, vRealize Log Insight™, vRealize Network Insight™, and custom scripts to capture, analyze, and report the entire virtual infrastructure.
+* Virtual data center transformation, enhanced enterprise mobility, and improved application delivery through seamless adoption of compute, network, and storage virtualization.
 
 ## Procedure to request Managed Services for VMware Workload Transformation
 {: #managing_mcms-procedure}

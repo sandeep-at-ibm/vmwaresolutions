@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # HCX client deployment
 {: #hcxclient-vcs-client-deployment}
@@ -124,7 +126,7 @@ Install the HCX Manager appliance in the on-premises vCenter.
 ## Initial configuration of the HCX Manager Appliance
 {: #hcxclient-vcs-client-deployment-inital-config}
 
-1. Ensure that the Hybrid Cloud Service virtual appliance has outbound access to `https://connect.hcx.vmware.com` and `https://hybridity-depot.vmware.com`
+1. Ensure that the Hybrid Cloud Service virtual appliance has outbound access to `https://connect.hcx.vmware.com` and `https://hybridity-depot.vmware.com`.
 2. Log in to Hybrid Cloud Services virtual appliance admin interface `https://<IP>:9443` with **admin**.
 3. Provide the license key collected in Client-Side Prerequisites.
 4. For HCX Cloud Datacenter Location, enter the city nearest to the data center where the HCX Cloud Instance resides. If the city is not present, select the nearest major city.
@@ -133,7 +135,7 @@ Install the HCX Manager appliance in the on-premises vCenter.
 ## Import vSphere Server certificate
 {: #hcxclient-vcs-client-deployment-import-cert}
 
-1. Log in to HCX Manager Admin Interface `https://<IP>:9443`
+1. Log in to HCX Manager Admin Interface `https://<IP>:9443`.
 2. Select the **Administration** tab, under **Certificate** -> **Trusted CA Certificate**.
 3. Import vSphere Server website.
 
@@ -144,14 +146,14 @@ Install the HCX Manager appliance in the on-premises vCenter.
 2. On the **Dashboard** pane, complete the following steps:
    1. In the left pane, under **Configure Systems**, select vCenter.
    2. Click **Add vCenter** on the upper right.
-   3. Enter the IP address of the vCenter Server in the form `https://vCenter-host-name` or `https://vCenter-IP-address`. For example, `https://My-vCenter` or `https://1.1.1.1`
+   3. Enter the IP address of the vCenter Server in the form `https://vCenter-host-name` or `https://vCenter-IP-address`. For example, `https://My-vCenter` or `https://1.1.1.1`.
    4. Enter the vCenter Server username and password. The account that is used must have the vCenter Administrator role.
    5. Click **OK**. Do not restart when the _You need to restart the app_ message is displayed.
 3. Configure the SSO lookup service.
    1. Click the **Manage** tab.
    2. Click **Edit** next to the **Lookup Service URL** text box.
-   3. Enter the lookup network service endpoint in the following form, for vCenter Server 6.5: `https://psc/`
-   4.  Provide NSX details if required.
+   3. Enter the lookup network service endpoint in the following form, for vCenter Server 6.5: `https://psc/`.
+   4. Provide NSX details if required.
    5. Click **OK**. Do not restart when a message to restart the web engine is displayed.
 4. Click the **Summary** tab and find the **Hybridity Management Components** section. Stop and start both the application engine and the web engine.
 5. To finalize the registration, log out of the vSphere Web Client. Log back in to vSphere Web Client verify that HCX Tab is present.

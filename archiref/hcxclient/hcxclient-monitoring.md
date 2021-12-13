@@ -4,16 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-19"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Monitoring parameters and components
 {: #hcxclient-monitoring}
@@ -37,8 +35,7 @@ To configure the WAN Opt web UI:
 2. Open up a console to the VM that uses the vCenter client.
 3. Within the console, click **F4** to configure the management interface.
 4. Select to configure a static IP.
-5. Use an IP address on the management {{site.data.keyword.cloud}} assigned portable IP
-range and default gateway.
+5. Use an IP address on the management {{site.data.keyword.cloud}} assigned portable IP range and default gateway.
 6. Click **Apply** on the next screen to save.
 7. Click edit settings for the WAN Opt VM within the vCenter console.
 8. Select **Connected at Power On** and **Connected for Network Adapter 1**.

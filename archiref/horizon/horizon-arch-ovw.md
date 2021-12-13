@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-16"
+lastupdated: "2021-10-21"
 
 keywords: horizon, horizon 7, horizon 7 architecture
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # vCenter Server and Horizon 7 architecture overview
 {: #horizon-arch-ovw}

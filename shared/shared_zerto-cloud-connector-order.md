@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-11-09"
 
 keywords: zerto, order zerto cloud connector
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering a Zerto Cloud Connector
 {: #shared_zerto-cc-order}
@@ -39,7 +36,7 @@ Optionally order Zerto Cloud Connector (ZCC) as an enhanced Zerto option to link
 4. You must pair the on-premises workloads to {{site.data.keyword.cloud_notm}} before you can use ZCC. Generate a pairing token when the ZCC status changes to **Ready to use**.
    1. In the **Zerto Cloud Connector (ZCC)** table, expand **Pairing token**.
    2. Click **Generate token**. The generated token link expires in 48 hours and a new token is generated.
-   3. Click the **Copy** icon to copy the pairing token key.
+   3. Click the **Copy** icon ![Copy icon](../../icons/copy.svg "Copy") to copy the pairing token key.
    4. From the on-premises site, use the pairing token key to link the on-premises virtual data centers to {{site.data.keyword.cloud_notm}}. For more information, see [Pairing Sites to Enable Replicating From One Site to Another Site](https://s3.amazonaws.com/zertodownload_docs/Latest/Zerto%20Virtual%20Replication%20Zerto%20Cloud%20Manager%20%28ZCM%29%20Online%20Help/content/zvr_quick_start_vc/pairing_sites_to_enable_replicating_from.htm){: external}.
 
 ## Related links

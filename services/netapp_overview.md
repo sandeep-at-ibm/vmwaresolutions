@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2020-08-20"
+lastupdated: "2021-10-21"
 
 keywords: NetApp ONTAP Select, request NetApp ONTAP Select, tech specs NetApp ONTAP Select
 
@@ -12,6 +12,8 @@ subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # NetApp ONTAP Select
 {: #netapp}

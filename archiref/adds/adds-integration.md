@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
@@ -37,7 +37,7 @@ This model creates a single forest by using the existing {{site.data.keyword.vmw
 ## {{site.data.keyword.vmwaresolutions_short}} forest with tree-root trust
 {: #adds-integration-treeroot}
 
-This model creates a single forest by using the existing {site.data.keyword.vmwaresolutions_short}} infrastructure domain as the parent and configuring a new {{site.data.keyword.vmwaresolutions_short}} workload parent domain. The tree-root trust is a two-way transitive trust between the two parent domains. The vSphere SSO connected to the {{site.data.keyword.vmwaresolutions_short}} infrastructure domain can access the users from the other parent domain.
+This model creates a single forest by using the existing {{site.data.keyword.vmwaresolutions_short}} infrastructure domain as the parent and configuring a new {{site.data.keyword.vmwaresolutions_short}} workload parent domain. The tree-root trust is a two-way transitive trust between the two parent domains. The vSphere SSO connected to the {{site.data.keyword.vmwaresolutions_short}} infrastructure domain can access the users from the other parent domain.
 
 If the other parent domain has a child domain, due to the two-way trust, those users are also accessible. The following diagram shows the Active Directory Domain Services topology for this {{site.data.keyword.vmwaresolutions_short}} forest with tree-root trust model.
 

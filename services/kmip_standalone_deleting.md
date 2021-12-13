@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-03-16"
+lastupdated: "2021-11-09"
 
 keywords: KMIP for VMware, remove KMIP stand-alone, delete KMIP for VMware
 
@@ -12,7 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Deleting KMIP for VMware instances
 {: #kmip_standalone_deleting}
@@ -36,7 +36,7 @@ You must remove encryption and configuration in the following sequence:
 
 1. Click **Resources** from the left navigation pane.
 2. Scroll down to the **KMIP for VMware instances** table and find the instance to delete.
-3. In the **Actions** column, click the delete icon.
+3. In the **Actions** column, click the **Delete** icon ![Delete icon](../../icons/delete.svg "Delete").
 4. In the **Delete instance** window, click **OK**.
 
    The status of the instance is changed to **Removing**. When the instance deletion is completed, the instance is no longer available in the **KMIP for VMware instances** table.

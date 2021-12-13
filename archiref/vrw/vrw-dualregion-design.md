@@ -4,18 +4,14 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-11-30"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Dual region Disaster Recovery design
 {: #vrw-dualregion-design}
@@ -63,7 +59,7 @@ Veeam is used to take an image level backup of the appliance. However, this type
 
 To restore the VCSA image, configure the Veeam Backup & Replication Manager to attach to an ESXi host in the management cluster first, as the connection through the VCSA is not available. Within the Veeam UI restore wizard, select Entire VM, select the VCSA, then select Restore to a new location and then select the ESXi server.
 
-It is good practice to back up the vDS switch configuration as part of the backup, which can be achieved through a script that is triggered by the backup job. For more information, review the example script at [Back up your vDS configuration with PowerCLI](http://thelowercasew.com/you-should-backup-your-vds-configs-with-powercli){: external}.
+It is good practice to back up the vDS switch configuration as part of the backup, which can be achieved through a script that is triggered by the backup job. For more information, see [PowerCLI Gather complete Virtual Distributed Switch (VDS) information from VMware vCenter](http://vcloud-lab.com/entries/powercli/powercli-gather-complete-virtual-distributed-switch-vds--information-from-vmware-vcenter){: external}.
 
 The VCSA supports a file-based backup and restore mechanism that helps with the recovery of the appliance after a failure. It is only possible to do a file-based backup by using the VCSA management user interface (UI). In the design, an SFTP/SMB share on the Repository server is used as the target directory. This directory, through a Veeam file copy job, is copied to the other region for extra resiliency.
 

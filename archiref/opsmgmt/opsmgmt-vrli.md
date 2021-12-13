@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # vRealize Log Insight
 {: #opsmgmt-vrli}
@@ -32,7 +32,7 @@ In this design, each location has an independent vRLI cluster that is deployed o
 * Primary Node - required initial node in the Cluster. The primary node is responsible for queries and log ingestion. The primary node web UI is the single pane of glass for that vRealize Log Insight Cluster. All queries against data are directed against the primary, which in turn distributes the workload to the workers.
 * Worker Node - three nodes minimum are required to form a cluster with the ability to add more workers for scale-out. A worker node ingests logs and stores logs locally.
 * Integrated Load Balancer - provides high availability by using proprietary load-balancing configuration (no external load balancer required).
-* Log Insight Forwarder – deployed to receive logs from the NSX overlay components. Additionally, it can be used by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight primary node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are outside of the BYOIP address space, NAT rules must be implemented on the NSX ESG.
+* Log Insight Forwarder - deployed to receive logs from the NSX overlay components. Additionally, it can be used by a client if they want to send logs from compute VMs. The Log Insight Forwarder is a single vRealize Log Insight primary node that is used as a remote syslog aggregator to forward alerts to the vRLI cluster. As the VXLAN-backed addresses are outside of the BYOIP address space, NAT rules must be implemented on the NSX ESG.
 
 The following sizes are available and the appropriate one is selected:
 * Small – 2,000 events per second

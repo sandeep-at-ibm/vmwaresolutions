@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-20"
+lastupdated: "2021-11-28"
 
 keywords: Red Hat OpenShift for VMware, manage OpenShift, OpenShift operations
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing Red Hat OpenShift for VMware
 {: #ocp_managing}
@@ -38,8 +34,7 @@ Do not restart any of the OpenShift cluster virtual machines (VMs) or the bastio
 
 After the initial certificate rotation, certificates are renewed every 30 days. You must establish a process to approve the CSRs for every certificate rotation. According to Red Hat, you can approve CSRs when they reach 80% of their expiration period, which is approximately 25 days into the lifespan of the CSRs.
 
-If you do not approve CSRs in time and the certificates expire, you can recover from expired control plane certificates and get the OpenShift cluster operational again. For more information, see [Recovering from expired control
-plane certificates](https://docs.openshift.com/container-platform/4.7/backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){: external}.
+If you do not approve CSRs in time and the certificates expire, you can recover from expired control plane certificates and get the OpenShift cluster operational again. For more information, see [Recovering from expired control plane certificates](https://docs.openshift.com/container-platform/4.7//backup_and_restore/control_plane_backup_and_restore/disaster_recovery/scenario-3-expired-certs.html){: external}.
 
 ## Resizing your OpenShift VMs post-deployment
 {: #ocp_managing-resize}
@@ -119,7 +114,8 @@ To expand your OpenShift cluster by adding more worker VMs, complete the followi
    * If the login prompt does not display, one of these items occurred.
       * The VM is not getting an IP address. Check the network that the VM is connected to. Check the DHCP binding settings also.
       * The base64 value from `worker.ign.64` is not correct. It might be missing some characters or it has extra characters. Check the value to confirm.
-    If you must change any settings because the VM didn't display a login prompt, power off the VM, change the necessary settings, and power it back on.
+      
+      If you must change any settings because the VM didn't display a login prompt, power off the VM, change the necessary settings, and power it back on.
 
 ## Related links
 {: #ocp_managing-related}

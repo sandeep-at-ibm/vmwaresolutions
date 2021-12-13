@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-05"
+lastupdated: "2021-10-21"
 
 keywords: disaster recovery, request DR services, DR managed service
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managed Disaster Recovery Services
 {: #managing_zerto_services}

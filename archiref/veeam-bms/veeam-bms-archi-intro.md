@@ -4,16 +4,13 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-08-12"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Veeam on bare metal server introduction
 {: #veeam-bms-archi-intro}

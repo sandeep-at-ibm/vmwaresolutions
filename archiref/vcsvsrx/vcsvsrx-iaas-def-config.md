@@ -2,14 +2,16 @@
 
 copyright:
 
-  years:  2019, 2020
+  years:  2019, 2021
 
-lastupdated: "2020-10-08"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 #  The IBM Cloud IaaS vSRX default configuration
 {: #vcsvsrx-iaas-def-config}

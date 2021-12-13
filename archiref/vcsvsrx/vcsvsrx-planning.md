@@ -4,12 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # vSRX single data center edge
 {: #vcsvsrx-planning}

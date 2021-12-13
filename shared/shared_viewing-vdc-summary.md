@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-11-09"
 
 keywords: manage shared resources, view shared virtual data centers summary
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing the virtual data center summary
 {: #shared_viewing-vdc-summary}
@@ -26,7 +23,7 @@ You can view a summary of all the {{site.data.keyword.cloud}} for VMware® Solut
 {: #shared_viewing-vdc-summary-procedure}
 
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
-2. From the console banner, click your user account icon, and then click the **Account** field to select the user account where you want to view virtual data centers.  
+2. From the console banner, click the **Avatar** icon ![Avatar icon](../../icons/i-avatar-icon.svg "Avatar"), and then click the **Account** field to select the user account where you want to view virtual data centers.  
 3. In the **VMware Solutions Shared** table, view the list of virtual data centers that are provisioned in the selected user account.
 
 | Item | Description |

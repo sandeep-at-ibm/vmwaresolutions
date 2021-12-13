@@ -4,12 +4,15 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-12"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
+
 # VMware HCX overview
 {: #hcx-archi-overview}
 

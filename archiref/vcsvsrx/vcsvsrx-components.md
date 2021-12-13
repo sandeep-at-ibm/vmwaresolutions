@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-16"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Glossary of vSRX terminology
 {: #vcsvsrx-components}
@@ -38,7 +35,7 @@ Review the following interface names.
 
 `gr` - Generic routing encapsulation (GRE) tunnel interface.
 
-`gre` - Internally generated interface that is configurable only as the control channel for Generalized MPLS (GMPLS). For more information about GMPLS, see the MPLS Applications Feature Guide.
+`gre` - Internally generated interface that is configurable only as the control channel for Generalized MPLS (GMPLS). For more information, see the [MPLS applications user guide](https://www.juniper.net/documentation/us/en/software/junos/mpls/index.html){: external}.
 
 You can configure `gre` interfaces (gre-x/y/z) only for GMPLS control channels. `gre` interfaces are not supported or configurable for other applications.
 {: note}

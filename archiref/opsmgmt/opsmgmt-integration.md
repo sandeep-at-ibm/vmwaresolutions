@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Integration
 {: #opsmgmt-integration}
@@ -29,12 +29,12 @@ Review the following categories of integration.
 
 vROps provides the following outbound alert plug-ins:
 * Automated Action – enabled by default.
-* Standard email - uses Simple Mail Transfer Protocol (SMTP) to email vRealize Operations Manager alert notifications to your interested individuals.
+* Standard email – uses Simple Mail Transfer Protocol (SMTP) to email vRealize Operations Manager alert notifications to your interested individuals.
 * SNMP Trap– logs alerts on your SNMP Trap server.
-* REST Notification - sends vROps alerts to another REST-enabled application where you built a REST web service to accept these messages.
+* REST Notification – sends vROps alerts to another REST-enabled application where you built a REST web service to accept these messages.
 * Log file – enables vROps to log alerts to a file on each of your vRealize Operations Manager nodes. If you installed vRealize Operations Manager as a multiple node cluster, each node processes and logs the alerts for the objects that it monitors. Each node logs the alerts for the objects it processes.
-* Smarts SAM Notification - sends alert notifications to EMC Smarts Server Assurance Manager.
-* Network Share - sends reports to a shared location, supports SMB version 2.0.
+* Smarts SAM Notification – sends alert notifications to EMC Smarts Server Assurance Manager.
+* Network Share – sends reports to a shared location, supports SMB version 2.0.
 
 Notifications are alert notifications that meet the filter criteria in the notification rules before they are sent northbound to external systems. Notification rules are configured for the required outbound alerts so that they can be filtered before they are sent to the selected external system. The notifications list is used to manage these rules.
 
@@ -67,7 +67,7 @@ The client wants to use their existing OS, middleware, and application monitorin
 ## Related links
 {: #opsmgmt-integration-related}
 
-<!-- * [vRealize Operations RESTful API](https://docs.vmware.com/en/vRealize-Operations-Manager/7.0/vrealize-operations-manager-70-api-guide.pdf){: external} -->
+* [vRealize Operations RESTful API](https://docs.vmware.com/en/vRealize-Operations-Manager/7.0/vrealize-operations-manager-70-api-guide.pdf){: external}
 * [VMware API Explorer](https://code.vmware.com/apis){: external}
 * [Postman Client Collection for vRealize Operations REST APIs](https://code.vmware.com/samples/4663/postman-client-collection-for-vrealize-operations-rest-apis){: external}
 * [VMware PowerCLI blog](https://blogs.vmware.com/PowerCLI/2016/05/getting-started-with-powercli-for-vrealize-operations-vr-ops.html){: external}

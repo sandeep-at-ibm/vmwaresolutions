@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-21"
 
 keywords: KMIP for VMware, KMIP stand-alone, tech specs KMIP
 
@@ -12,11 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # KMIP for VMware overview
 {: #kmip_standalone_considerations}

@@ -7,7 +7,6 @@ copyright:
 lastupdated: "2021-11-22"
 
 keywords: order Security and Compliance Readiness Bundle, order scb instances, order vcs scb
-
 subcollection: vmwaresolutions
 
 ---
@@ -86,10 +85,15 @@ If **No resource group available** is displayed in this field, you currently do 
 ## Licensing
 {: #scb-orderinginstance-licensing}
 
-Specify the licensing options for the following VMware components in the instance:
-* VMware vCenter Server Standard 7.0
+Specify the licensing options for the following VMware® components in the instance:
+* VMware vCenter Server® Standard 7.0
 * VMware vSphere Enterprise Plus 7.0
-* NSX-T 3.1
+* VMware NSX-T 3.1.1 (Data Center SP Professional, Data Center SP Advanced, or Data Center SP Enterprise Plus)
+
+The VMware HCX service is not available for Data Center SP Enterprise Plus.
+
+Small differences exist between NSX-T Data Center and Data Center SP editions. For more information, see [Product offerings for VMware NSX-T Data Center 3.1.x (80866)](https://kb.vmware.com/s/article/80866){: external}.
+{: note}
 
 For Business Partner users, all licenses are included and purchased on your behalf. For users who are not Business Partners, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**, or you can Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
@@ -102,10 +106,25 @@ For Business Partner users, all licenses are included and purchased on your beha
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
 
-## Location
+## Data center location
 {: #scb-orderinginstance-location}
 
-Select the {{site.data.keyword.cloud_notm}} data center where the consolidated cluster (that is the management cluster) and the workload cluster are to be hosted.
+Select the {{site.data.keyword.cloud_notm}} data center settings. For more information, see [Region and data center locations for resource deployment](/docs/overview?topic=overview-locations).
+
+### Geography
+{: #scb_orderinginstance-dc-region}
+
+Select the region where the consolidated cluster (that is the management cluster) and the workload cluster are to be hosted.
+
+### Data center
+{: #scb_orderinginstance-dc-location}
+
+Select the {{site.data.keyword.cloud_notm}} data center where the clusters are to be hosted.
+
+### Pod
+{: #scb_orderinginstance-dc-pod}
+
+Select the {{site.data.keyword.cloud_notm}} data center pod where you want to deploy your resources. Keep the default pod selection if you do not have reasons to prefer a different pod.
 
 ## Consolidated cluster
 {: #scb-orderinginstance-consoli}
@@ -124,12 +143,13 @@ By default, the consolidated cluster name is set to **vcs-_xx_-management**. You
 {: #scb-orderinginstance-consoli-cpu}
 
 You can choose the following CPU models:
-* Dual Intel® Xeon® Silver 4210 processor, 20 cores total, 2.20 GHz
-* Dual Intel Xeon Gold 5218 processor, 32 cores total, 2.30 GHz
-* Dual Intel Xeon Gold 6248 processor, 40 cores total, 2.50 GHz
-* Dual Intel Xeon Platinum 8260 processor, 48 cores total, 2.40 GHz
-* Quad Intel Xeon Gold 6248 processor, 80 cores total, 2.50 GHz
-* Quad Intel Xeon Platinum 8260 processor, 96 cores total, 2.40 GHz
+* Dual Intel® Xeon® Silver 4210 processor, 20 cores, 2.2 GHz
+* Dual Intel Xeon Gold 5218 processor, 32 cores, 2.3 GHz
+* Dual Intel Xeon Gold 6248 processor, 40 cores, 2.5 GHz
+* Dual Intel Xeon Gold 6250 processor, 16 cores, 3.9 GHz
+* Dual Intel Xeon Platinum 8260 processor, 48 cores, 2.4 GHz
+* Quad Intel Xeon Gold 6248 processor, 80 cores, 2.5 GHz
+* Quad Intel Xeon Platinum 8260 processor, 96 cores, 2.4 GHz
 
 ### RAM
 {: #scb-orderinginstance-consoli-ram}
@@ -141,7 +161,7 @@ You can choose the RAM size from 128 GB, 192 GB, 384 GB, 768 GB, and 1.5 TB.
 
 * All servers that you order have the same configuration.
 * If you are planning to use vSAN™ storage, you can order 4 - 20 servers.
-* If you are planning to use NFS storage, you can order 2 - 20 servers. A lower limit of 3 servers applies for NSX-T consolidated clusters.
+* If you are planning to use NFS storage, you can order 2 - 20 servers. A lower limit of three servers applies for NSX-T consolidated clusters.
 * If you select two bare metal servers for the management cluster, the minimum RAM size for the instance to function properly is 192 GB.
 * For production workloads, a minimum of three servers is recommended. For more information, see [Is a two-node vCenter Server instance highly available?](/docs/vmwaresolutions?topic=vmwaresolutions-faq-vmwaresolutions#is-a-two-node-vcenter-server-instance-highly-available)
 
@@ -208,10 +228,10 @@ Choose performance level options according to your needs.
 
 | Option        | Details       |
 |:------------- |:------------- |
-| 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include: vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
-| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include: hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
+| 0.25 IOPS/GB | This option is designed for workloads that are not used often. Example applications include vaulted data, hosting large databases with legacy data, or virtual disk images of virtual memory system as backup. |
+| 2 IOPS/GB | This option is designed for most general-purpose workloads. Example applications include hosting small databases, backing up web applications, or virtual machine disk images for a hypervisor. |
 | 4 IOPS/GB | This option is designed for higher-intensity workloads that have a high percentage of active data at a time. Example applications include transactional databases. |
-| 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include: high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
+| 10 IOPS/GB | This option is designed for the most demanding workload types, such as analytics. Example applications include high-transaction databases and other performance-sensitive databases. This performance level is limited to a maximum capacity of 4 TB per file share. |
 {: caption="Table 2. NFS performance level options" caption-side="top"}
 
 ### Networking type
@@ -395,7 +415,7 @@ The following services are optional for your Security and Compliance Readiness B
 4. Under **Licensing**, complete the license settings for the listed components.
     * To use IBM-provided licenses, ensure that the option **Include with purchase** is selected.
     * To use your own licenses, click **I will provide** and enter the license key.
-5. Under **Location**, select the {{site.data.keyword.cloud_notm}} data center where the consolidated cluster (or management cluster) and the workload cluster are to be hosted.
+5. For data center location, click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg "Edit") and select the geography, data center, and pod where the consolidated cluster (or management cluster) and the workload cluster are to be hosted.
 6. Under **Consolidated cluster**, complete the following settings:
    1. Specify the consolidated cluster name.
    2. Select the CPU model, RAM size, and the number of bare metal servers.

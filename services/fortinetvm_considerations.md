@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-29"
+lastupdated: "2021-11-15"
 
 keywords: FortiGate VA, FortiGate Virtual Appliance, tech specs FortiGate VA
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # FortiGate Virtual Appliance overview
 {: #fortinetvm_considerations}
@@ -26,7 +22,7 @@ The FortiGate® Virtual Appliance service deploys a pair of FortiGate Virtual Ap
 {: shortdesc}
 
 * You can install multiple instances of this service as needed. You can manage this service by using the FortiOS web Client or the CLI through SSH.
-* For VMware vCenter Server® with NSX-T™ instances, FortiGate Virtual Appliance is supported for NSX-T 3.1 and VMware vSphere® 7.0.
+* For VMware vCenter Server® with NSX-T™ instances, FortiGate Virtual Appliance is supported for NSX-T 3.1 or later and for VMware vSphere® 7.0.
 * For vCenter Server with NSX-V instances, FortiGate Virtual Appliance is supported for vSphere 6.7.
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some add-on services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions add-on services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
@@ -56,7 +52,7 @@ Two VMs are deployed and ready for HA or Virtual Router Redundancy Protocol (VRR
 ### Networking
 {: #fortinetvm_considerations-specs-network}
 
-Access to the FortiGate console is provided through a private management network.
+Access to the FortiGate console is provided through a private management network. When deployed to a management or consolidated cluster, FortiGate Virtual Appliance management addresses are drawn from the instance management private portable subnet. When deployed to an edge services cluster, a new private portable subnet is ordered for these addresses.
 
 ### License and fees
 {: #fortinetvm_considerations-specs-license}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-11-29"
 
 keywords: vCenter Server delete instance, delete vCenter Server, remove vCenter Server, vmware multizone, vcenter server multizone, delete vCenter Server multizone
 
@@ -37,9 +37,6 @@ The instance remains in **Deleting** status and the monthly ESXi servers are ava
 After the ESXi server reclaim process completes, the subnets and VLANs are deleted and the instance deletion is completed.
 
 You can review the next account invoice to confirm that you are no longer billed for this instance. From the {{site.data.keyword.cloud_notm}} console, click **Manage > Billing and usage**, then click **Invoices**.
-
-New deployments of vCenter Server multizone instances are not supported.
-{: deprecated}
 
 ## Procedure to delete vCenter Server instances from the Resources page
 {: #vc_deletinginstance-procedure1}

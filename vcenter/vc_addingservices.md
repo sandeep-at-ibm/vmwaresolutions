@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-09"
 
 keywords: vCenter Server add service
 
@@ -25,6 +25,23 @@ You can order services for your VMware® vCenter Server® instances, such as a d
 * Adding services to vCenter Server instances with VMware vSphere® 6.5 is not supported.
 * Adding services to vCenter Server multizone instances is not supported. You can view or delete existing add-on services. If a service is deleted, it cannot be reinstalled.
 
+## The About service overview and installing a service from the overview
+{: #vc_addingservices-about-page-install}
+
+The “About page” for a service is an overview that provides information about the service. You can also install the service from its overview.
+
+You can access overview information from the first page of the user interface (UI). Scroll down to the services section, which follows the VMware Solutions selections. You can select one or more services that you want information about.
+
+The overview provides a high level description of the service and its features. There are also related links for technical specifications and terms, such as system requirements.
+
+Following the description, you can install the service on a new instance or add the service to an existing instance. A new instance is installed on VMware Solutions Dedicated. 
+
+After you select one of the installation choices, the order page is displayed. The service is automatically selected for your order. You can remove it from your order if you want.
+
+By default, the service assumes NSX-T is installed. However, if the service does not support NSX-T, it then uses NSX-V.
+
+For more information about the service itself and ordering it, see the individual topics for the service in the documentation.
+
 ## Available services for vCenter Server instances
 {: #vc_addingservices-available-services}
 
@@ -37,15 +54,16 @@ The following table shows the services available for vCenter Server with NSX-T i
 
 | Service name | Current version |
 |--------------|-----------------|
-| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.0.1 |
+| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.1.0 |
 | [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 16.1 |
 | [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations) | Periodically updated to the most recent version |
 | [HyTrust CloudControl](/docs/vmwaresolutions?topic=vmwaresolutions-htcc_considerations) | 6.4.1 |
-| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.3[^htdc] |
+| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.4[^htdc] |
 | [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) | 3.0 (20.4R2) |
-| [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.7.24[^nsxtver] |
+| [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_overview) | 4.7.34[^nsxtver] |
 | [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 11 |
-| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.4 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.6 and vRLI 8.6 |
+| [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 9.0u1 |
 {: caption="Table 1. Available services for vCenter Server with NSX-T instances" caption-side="top"}
 
 [^htdc]: VMware vSphere 6.7 only
@@ -59,18 +77,18 @@ The following table shows the services available for vCenter Server with NSX-V i
 
 | Service name | Current version |
 |--------------|-----------------|
-| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.0.1 |
+| [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations) | 3.1.0 |
 | [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations) | BIG-IP VE 16.1 |
 | [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations) | 7.0.1 |
 | [VMware HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations) | Periodically updated to the most recent version |
-| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.3 |
+| [HyTrust DataControl](/docs/vmwaresolutions?topic=vmwaresolutions-htdc_considerations)  | 5.4 |
 | [{{site.data.keyword.IBM}} Security Services for SAP](/docs/vmwaresolutions?topic=vmwaresolutions-managing-ss-sap) | N/A |
-| [IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | V10.1.5 |
+| [IBM Spectrum Protect Plus](/docs/vmwaresolutions?topic=vmwaresolutions-spp_considerations) | V10.1.8 |
 | [Juniper vSRX](/docs/vmwaresolutions?topic=vmwaresolutions-juniper-overview) | 3.0 (20.4R2) |
 | [KMIP for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-kmip_standalone_considerations) | 2.0 |
 | [PrimaryIO HDM](/docs/vmwaresolutions?topic=vmwaresolutions-managing_pio) | N/A |
 | [Veeam](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations) | 11 |
-| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.2 and vRLI 8.4 |
+| [vRealize Operations and Log Insight](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) | vROps 8.6 and vRLI 8.6 |
 | [Zerto](/docs/vmwaresolutions?topic=vmwaresolutions-addingzertodr) | 9.0u1 |
 {: caption="Table 2. Available services for vCenter Server with NSX-V instances" caption-side="top"}
 
@@ -103,7 +121,7 @@ For certain services, the system completes a capacity check on the targeted clus
 
 During deployment, if the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email. The message displays the expected capacity for all services that do not meet the requirements.
 
-To install the service, you must increase the capacity in your cluster either by adding more VMware ESXi™ servers or by freeing up RAM, CPU, or disk space. After that, you can add the service or services again. To remove the existing service in the **Capacity Validation Failed** state, click the delete icon next to it.
+To install the service, you must increase the capacity in your cluster either by adding more VMware ESXi™ servers or by freeing up RAM, CPU, or disk space. After that, you can add the service or services again. To remove the existing service in the **Capacity Validation Failed** state, click the **Delete** icon ![Delete icon](../../icons/delete.svg "Delete") next to it.
 
 The following table provides the resource requirements for the services for which a capacity check is completed.
 

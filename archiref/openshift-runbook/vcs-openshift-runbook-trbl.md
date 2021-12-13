@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-10"
+lastupdated: "2021-12-09"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Troubleshooting OpenShift problems
 {: #openshift-runbook-runbook-trbl-intro}
@@ -190,5 +187,4 @@ After the initial 24 hours certificate renewal, cluster snapshot is enabled to r
 * [Visual Studio Code](https://code.visualstudio.com/){: external}
 * [Terraform Getting Started](https://learn.hashicorp.com/terraform#getting-started){: external}
 * [Windows 2016 PowerShell DNS](https://docs.microsoft.com/en-us/powershell/module/dnsserver/?view=win10-ps){: external}
-* [OpenShift cheat sheet](https://cheatsheet.dennyzhang.com/cheatsheet-openshift-a4){: external}
 * [PowerCLI core documentation](https://powercli-core.readthedocs.io/en/latest/index.html){: external}

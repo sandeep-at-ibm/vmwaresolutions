@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # vSRX deployment
 {: #vcsvsrx-deployment}
@@ -26,7 +23,7 @@ Deploy the vCenter Server instance before the vSRX edge gateway appliance order 
 
 The following procedure assumes that you are deploying the IaaS KVM-based Juniper vSRX HA cluster. If you want to build your own gateway by using ESXi, then order the No-OS gateway option instead. For more information, see [Ordering a Bring Your Own Gateway Appliance](/docs/gateway-appliance?topic=gateway-appliance-order-byoa).
 
-Open the [IBM Cloud infrastructure customer portal](https://control.softlayer.com), then select Infrastructure > Network > Gateway Appliances > Create Gateway.
+Open the [IBM Cloud infrastructure customer portal](https://control.softlayer.com), then select **Infrastructure > Network > Gateway Appliances > Create Gateway**.
 * Gateway vendor - Juniper
 * Gateway Appliance
    * Hostname - Provide hostname for node 1 in the gateway cluster. For example, `gateway01`. Select a hostname consistent with the existing vCenter Server naming convention since the vSRX nodes are manually added to the vCenter Server AD/DNS server for hostname resolution.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-14"
+lastupdated: "2021-11-09"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -104,11 +104,11 @@ Complete the following steps from the vCenter Server user interface.
 
 1. Select **Hosts and Clusters > HOST > Configure > Virtual Switches**. Select a host for the new vCenter Server Appliance.
 2. For the private network switch, select **Managed Physical Adaptors**. The private network switch name ends with ``-private``.
-3. Select **uplink1/vmnic2**, then click the **X** icon to delete the adapter. Click **OK**.
+3. Select **uplink1/vmnic2**, then click the **Close** icon ![Close icon](../../icons/close-icon.svg "Close") to delete the adapter. Click **OK**.
 4. Return to the **Virtual Switches** panel and click **Add Networking**.
    1. Select **Virtual Machine Port Group** for a standard switch and click **Next**.
    2. For **New Standard Switch**, set the MTU to 9000 and click **Next**.
-   3. Click the green **+** icon to add an adapter. Click **OK**, then **Next** to accept ``vmnic2``.
+   3. Click the green **Add** icon ![Add icon](../../icons/add.svg "Add") to add an adapter. Click **OK**, then **Next** to accept ``vmnic2``.
    4. For **Connection Settings**, keep the **VM Network** and **VLAN ID None** defaults. Click **Next**, then **Finish**. *Standard Switch: vSwitch0* is displayed in the list of switches.
 5. Make a note of the Network Setting for the vCenter Server Appliance VM. You must update the new vCenter appliance to match.
    * From the vCenter Server user interface, click the VM for the vCenter appliance. Note the name, ending with ``vc``.

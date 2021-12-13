@@ -4,7 +4,7 @@ copyright:
 
   years: 2020, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-02"
 
 keywords: vmware solutions shared, price for shared, pricing plan
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware Solutions Shared pricing
 {: #shared_pricing}
@@ -43,21 +40,21 @@ subcollection: vmwaresolutions
 
 Metering is for the full potential size of the resource for the time period the resource is used.
 
-For example, an on-demand virtual data center is created with a resource limit of 100 vCPU and 800 GB RAM. The data center has no VMs running on it, so there's no charge for the vCPU and RAM. If an 8 vCPU with 8 GB virtual machine (VM) is started, metering is calculated for the size of that VM. If the VM uses fewer resources than the ones assigned to it, metering is applicable to the full size of the VM.
+For example, a single-zone on-demand virtual data center is created with a resource limit of 100 vCPU and 800 GB RAM. The data center has no VMs running on it, so there's no charge for the vCPU and RAM. If an 8 vCPU with 8 GB virtual machine (VM) is started, metering is calculated for the size of that VM. If the VM uses fewer resources than the ones assigned to it, metering is applicable to the full size of the VM.
 
 ### Allocation
 {: #shared_pricing-term-alloc}
 
 Metering is applicable to the full potential size of the resource for the life of the resource.
 
-For example, a reserved virtual data center is created with a resource allocation of 100 vCPU and 800 GB RAM and no VMs are created or running on it. Metering is applicable to 100 vCPU and 800 GB RAM.
+For example, a single-zone reserved virtual data center is created with a resource allocation of 100 vCPU and 800 GB RAM and no VMs are created or running on it. Metering is applicable to 100 vCPU and 800 GB RAM.
 
 ### Monthly peak metric usage
 {: #shared_pricing-term-mon-peak}
 
 The maximum value of the metric used over a full month.
 
-For example, a reserved virtual data center is created with 100 vCPU and 800 GB RAM. Later in the month, the data center is reduced to 50 vCPU and 400 GB RAM. The monthly peak usage is 100 vCPU and 800 GB RAM.
+For example, a single-zone reserved virtual data center is created with 100 vCPU and 800 GB RAM. Later in the month, the data center is reduced to 50 vCPU and 400 GB RAM. The monthly peak usage is 100 vCPU and 800 GB RAM.
 
 ### Hourly peak metric usage
 {: #shared_pricing-term-hour-peak}
@@ -71,6 +68,8 @@ The maximum value of the metric used over an hour. For example, if 100 vCPU is u
 VMware Solutions Shared On-demand virtual data center resources are allocated as needed. Pricing is hourly based on the resource usage in the virtual data center. The following metrics are part of this plan.
 
 The standard storage policy pricing is the same as the 4 IOPS/GB storage policy. The number of IOPS/GB for the standard storage policy is not guaranteed.
+
+Storage policy availability may vary by region and deployment topology. On the VMware Solutions Shared order page, select the **About** tab to view available storage policy offerings.
 {: note}
 
 | Metric                                   | Frequency | Description |
@@ -91,6 +90,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 | TOTAL_STORAGE_TWO_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 2 IOPS/GB tier over the period of an hour. |
 | TOTAL_STORAGE_FOUR_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 4 IOPS/GB tier over the period of an hour. |
 | TOTAL_STORAGE_TEN_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 10 IOPS/GB tier over the period of an hour. |
+| TOTAL_STORAGE_VSAN_GB_HOURS | Hourly | The peak storage **allocation** over the period of an hour. |
 {: caption="Table 2. VMware Shared Solutions On-demand billing plan - Storage metrics" caption-side="top"}
 {: #table2}
 {: tab-title="Storage metrics"}
@@ -114,6 +114,8 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 VMware Shared Solutions Reserved virtual data center resources are preallocated and guaranteed. Pricing is monthly based on the allocation size of the virtual data center.
 
 The standard storage policy pricing is the same as the 4 IOPS/GB storage policy. The number of IOPS/GB for the standard storage policy is not guaranteed.
+
+Storage policy availability may vary by region and deployment topology. On the VMware Solutions Shared order page, select the **About** tab to view available storage policy offerings.
 {: note}
 
 | Metric                                   | Frequency | Description |
@@ -133,6 +135,7 @@ The standard storage policy pricing is the same as the 4 IOPS/GB storage policy.
 | TOTAL_STORAGE_TWO_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 2 IOPS/GB tier over the period of an hour. |
 | TOTAL_STORAGE_FOUR_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 4 IOPS/GB tier over the period of an hour. |
 | TOTAL_STORAGE_TEN_IOPS_GB_HOURS | Hourly | The peak storage **allocation** at the 10 IOPS/GB tier over the period of an hour. |
+| TOTAL_STORAGE_VSAN_GB_HOURS | Hourly | The peak storage **allocation** over the period of an hour. |
 {: caption="Table 3. VMware Shared Solutions Reserved billing plan - Storage metrics" caption-side="top"}
 {: #reservedbilling-table2}
 {: tab-title="Storage metrics"}

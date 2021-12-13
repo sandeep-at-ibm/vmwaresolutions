@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-11-05"
 
 keywords: vSphere, vSphere component, tech specs vSphere
 
@@ -41,7 +41,7 @@ Select licenses (IBM-provided or BYOL) for the following VMware components:
 * VMware vSphere Enterprise Plus 7.0u2 or 6.7u3
 * The following VMware components are optional:
    * VMware vCenter Server® Standard
-   * VMware NSX® (Base, Advanced, or Enterprise)
+   * VMware NSX® ((Data Center SP Base, Data Center SP Professional, Data Center SP Advanced, or Data Center SP Enterprise Plus))
    * VMware vSAN (Advanced or Enterprise)
    * VMware Site Recovery Manager
    * VMware vRealize® Automation Enterprise

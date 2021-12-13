@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-27"
+lastupdated: "2021-11-11"
 
 keywords: F5 BIG-IP, F5 install, tech specs F5
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # F5 BIG-IP overview
 {: #f5_considerations}
@@ -31,9 +27,8 @@ The F5 BIG-IP® service (F5 BIG-IP Virtual Edition) provides:
 You can install more than one instance of this service as needed.
 {: shortdesc}
 
-For vCenter Server with NSX-T™ instances, F5 BIG-IP is supported for NSX-T 3.1 and VMware vSphere® 7.0.
-
-For vCenter Server with NSX-V instances, F5 BIG-IP is supported for vSphere 6.7.
+* For vCenter Server with NSX-T™ instances, F5 BIG-IP is supported for NSX-T 3.1 or later and for VMware vSphere® 7.0.
+* For vCenter Server with NSX-V instances, F5 BIG-IP is supported for vSphere 6.7.
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 

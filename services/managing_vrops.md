@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-24"
+lastupdated: "2021-10-21"
 
 keywords: vRealize console, vRealize license, login vRealize console
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing vRealize Operations and Log Insight
 {: #managing_vrops}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-26"
 
 keywords: vCenter Server network config, network configuration, manage NSX ESG
 
@@ -29,6 +29,7 @@ As part of the ordering process for your vCenter Server instance, the following 
 * A sample NSX Logical Switch is deployed to be used by the customer workload VMs.
 * A sample router is deployed for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. This router is a NSX-T™ Tier 1 Router for NSX-T and an NSX Distributed Logical Router for NSX-V.
 * An NSX Edge appliance is deployed and configured to perform network address translation (NAT). NAT is done from the range of IP addresses of the workload logical switch to a public IP address on the NAT rules.
+
 **(NSX-V only)** If you installed the Veeam® service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Veeam overview](/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations).
 
 ## Configuring the networking settings for your VMs
@@ -48,8 +49,7 @@ To take advantage of NSX for your workload VMs, you must configure a number of s
 
 2. Identify an available IP address for the VM:
    *  The IP address must be in the range of `192.168.10.0/24`. The IP address `192.168.10.1` is reserved (see **Step 3**).
-   *  When you configure the networking of the operating system that runs on the VM, use the selected IP address and the netmask
-   `255.255.255.0`.
+   *  When you configure the networking of the operating system that runs on the VM, use the selected IP address and the netmask `255.255.255.0`.
 
    You are responsible for managing the range of IP addresses to which you assigned your VMs.
    {: note}

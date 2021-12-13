@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-07-07"
+lastupdated: "2021-11-22"
 
 keywords: Caveonix, Caveonix RiskForesight, tech specs Caveonix
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Caveonix RiskForesight overview
 {: #caveonix_considerations}
@@ -26,7 +23,7 @@ The Caveonix RiskForesight™ service can help to manage cyberrisk and complianc
 
 {{site.data.keyword.vmwaresolutions_full}} offers promotions for some services. Promotional pricing offers a number of months free of charge for a service’s licenses, if the service has license charges. For more information, see [Promotions for VMware Solutions services](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices#vc_addingservices-service-promotions).
 
-The current Caveonix RiskForesight version that is installed is 3.0.1.
+The current Caveonix RiskForesight version that is installed is 3.1.0.
 {: note}
 
 A Caveonix RiskForesight license is valid for five years. Ordering Caveonix RiskForesight for VMware® vCenter Server instances, VMware Regulated Workloads, and Security and Compliance Readiness Bundle instances differs. For more information, see [Licenses and fees](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations#caveonix_considerations-tech-specs-license-fee).

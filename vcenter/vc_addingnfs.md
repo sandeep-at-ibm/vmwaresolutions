@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-22"
+lastupdated: "2021-11-09"
 
 keywords: vCenter Server add NFS storage
 
@@ -37,7 +37,7 @@ You can expand the capacity of your VMware vCenter Server® instance according t
 5. In the **Storage** section, click **Add**.
 6. In the **Storage** window, complete the storage configuration.
    * If you want to add and configure the same settings to all file shares, specify the **Number of shares**, **Performance**, and **Size (GB)**.
-   * If you want to add and configure file shares individually, select **Configure shares individually**, then click the **+** icon next to the **Add shared storage** label and select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share. For information about the available options, see [NFS storage](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-nfs-storage).
+   * If you want to add and configure file shares individually, select **Configure shares individually**, then click the **Add** icon ![Add icon](../../icons/add.svg "Add") next to the **Add shared storage** label and select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share. For information about the available options, see [NFS storage](/docs/vmwaresolutions?topic=vmwaresolutions-vc_orderinginstance#vc_orderinginstance-nfs-storage).
 7. Review the estimated price and click **Add NFS storage**.
 
    You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. This is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.

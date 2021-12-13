@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-11-16"
 
 keywords: planning vmware regulated workloads, data center vmware regulated workloads, vmware regulated workloads data centers
 
@@ -34,48 +34,48 @@ The VMware Regulated Workloads deployment has strict requirements on the physica
 
 The following {{site.data.keyword.cloud_notm}} data centers are available for VMware Regulated Workloads single-zone deployment.
 
-| {{site.data.keyword.cloud_notm}} data center | Region |
-|:----------------------|:-------|
-| Amsterdam 03 | Europe |
-| Chennai 01 | Asia-Pacific |
-| Dallas 09 | NA South |
-| Dallas 10 | NA South |
-| Dallas 12 | NA South |
-| Dallas 13 | NA South |
-| Frankfurt 02 | Europe |
-| Frankfurt 04 | Europe |
-| Frankfurt 05 | Europe |
-| Hong Kong 02 | Asia-Pacific |
-| London 02 | Europe |
-| London 04 | Europe |
-| London 05 | Europe |
-| London 06 | Europe |
-| Mexico 01 | NA South |
-| Milan 01 | Europe |
-| Montreal 01 | NA East |
-| Osaka 21 | Asia-Pacific |
-| Osaka 22 | Asia-Pacific |
-| Osaka 23 | Asia-Pacific |
-| Paris 01 | Europe |
-| Sao Paulo 01 | South America |
-| Sao Paulo 04 | South America |
-| Sao Paulo 05 | South America |
-| Seoul 01 | Asia-Pacific |
-| San Jose 03 | NA West |
-| San Jose 04 | NA West |
-| Singapore 01| Asia-Pacific |
-| Sydney 01 | Asia-Pacific |
-| Sydney 04 | Asia-Pacific |
-| Sydney 05 | Asia-Pacific |
-| Tokyo 02 | Asia-Pacific |
-| Tokyo 04 | Asia-Pacific |
-| Tokyo 05 | Asia-Pacific |
-| Toronto 01 | NA East |
-| Toronto 04 | NA East |
-| Toronto 05 | NA East |
-| Washington DC 04 | NA East |
-| Washington DC 06 | NA East |
-| Washington DC 07 | NA East |
+| Region | {{site.data.keyword.cloud_notm}} data center | Pod |
+|:----------|:------------|:-------|
+| South America | Sao Paulo 01 | 01 |
+| South America | Sao Paulo 04 | 01 |
+| South America | Sao Paulo 05 | 01 |
+| NA South | Dallas 09 | 01-06 |
+| NA South | Dallas 10 | 01-04 |
+| NA South | Dallas 12 | 01-02 |
+| NA South | Dallas 13 | 01-03 |
+| NA South | Mexico 01 | 01 |
+| Asia-Pacific |Chennai 01 | 01 |
+| Asia-Pacific | Hong Kong 02 | 02 |
+| Asia-Pacific | Osaka 21 | 01 |
+| Asia-Pacific | Osaka 22 | 01 |
+| Asia-Pacific | Osaka 23 | 01 |
+| Asia-Pacific | Seoul 01 | 01 |
+| Asia-Pacific | Singapore 01| 02 |
+| Asia-Pacific | Sydney 01 | 01-02 |
+| Asia-Pacific | Sydney 04 | 01 |
+| Asia-Pacific | Sydney 05 | 01 |
+| Asia-Pacific | Tokyo 02 | 01-02 |
+| Asia-Pacific | Tokyo 04 | 01 |
+| Asia-Pacific | Tokyo 05 | 01 |
+| Europe | Amsterdam 03 | 01-02 |
+| Europe | Frankfurt 02 | 01-03 |
+| Europe | Frankfurt 04 | 01 |
+| Europe | Frankfurt 05 | 01 |
+| Europe | London 02 | 01-02 |
+| Europe | London 04 | 01 |
+| Europe | London 05 | 01 |
+| Europe | London 06 | 01 |
+| Europe | Milan 01 | 01 |
+| Europe | Paris 01 | 01 |
+| NA East | Montreal 01 | 01-02 |
+| NA East | Toronto 01 | 01-02 |
+| NA East | Toronto 04 | 01 |
+| NA East | Toronto 05 | 01 |
+| NA East | Washington DC 04 | 01-05 |
+| NA East | Washington DC 06 | 01 |
+| NA East | Washington DC 07 | 01 |
+| NA West | San Jose 03 | 01-02 |
+| NA West | San Jose 04 | 01 |
 {: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Regulated Workloads single-zone deployment" caption-side="top"}
 
 ### Regions available for multizone deployment

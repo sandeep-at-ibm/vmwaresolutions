@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-01"
+lastupdated: "2021-10-21"
 
 keywords: VMware HCX standalone, HCX on-premises, order HCX
 
@@ -12,8 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:note: .note}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering on-premises VMware HCX instances
 {: #standalone_orderingserviceinstances}

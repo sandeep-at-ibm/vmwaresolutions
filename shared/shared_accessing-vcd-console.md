@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-10-26"
 
 keywords: manage shared resources, access the vCloud Director Management console
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Accessing the vCloud Director Management console
 {: #shared_accessing-vcd-console}

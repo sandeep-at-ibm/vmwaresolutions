@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-10-21"
 
 keywords: security services, request security sap, tech specs sap
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # IBM Security Services for SAP
 {: #managing-ss-sap}

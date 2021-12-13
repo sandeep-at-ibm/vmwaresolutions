@@ -4,16 +4,13 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # System context for vCenter Server and Red Hat OpenShift architecture
 {: #vcs-openshift-syscontext}

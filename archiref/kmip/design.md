@@ -4,17 +4,13 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-24"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # KMIP for VMware design
 {: #kmip-design}

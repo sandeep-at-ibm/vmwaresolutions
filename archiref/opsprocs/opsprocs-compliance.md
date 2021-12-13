@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-10-28"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Compliance
 {: #opsprocs-compliance}
@@ -31,8 +31,6 @@ vRealize Operations Manager provides monitoring of VMware objects for violations
 ## Related links
 {: #opsprocs-compliance-links}
 
-* [VMware security hardening guides](https://www.vmware.com/security/hardening-guides.html){: external}
-<!-- * [vSphere security](https://docs.vmware.com/en/VMware-vSphere/6.7/vsphere-esxi-vcenter-server-67-security-guide.pdf){: external} -->
 * [FortiGate Security Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fsa_considerations)
 * [FortiGate Virtual Appliance](/docs/vmwaresolutions?topic=vmwaresolutions-fortinetvm_considerations)
 * [F5 BIG-IP](/docs/vmwaresolutions?topic=vmwaresolutions-f5_considerations)
@@ -41,3 +39,4 @@ vRealize Operations Manager provides monitoring of VMware objects for violations
 * [HyTrust KeyControl](/docs/vmwaresolutions?topic=vmwaresolutions-htkc_considerations)
 * [Caveonix RiskForesight](/docs/vmwaresolutions?topic=vmwaresolutions-caveonix_considerations)
 * [Operations Management on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-opsmgmt-intro)
+* [VMware security hardening guides](https://www.vmware.com/security/hardening-guides.html){: external}

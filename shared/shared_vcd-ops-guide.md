@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-10-14"
+lastupdated: "2021-11-11"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Operating VMware Solutions Shared
 {: #shared_vcd-ops-guide}
@@ -126,14 +123,14 @@ Complete the following steps to register the Red Hat VM with your RHEL activatio
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click the virtual data center name in the **VMware Solutions Shared** virtual data center table.
 2. On the virtual data center details page, locate and make note of the **Red Hat activation key**.
 3. Run the following commands from the Red Hat VM.  
-   1. ``rpm -ivh http://52.117.132.7/pub/katello-ca-consumer-latest.noarch.rpm``
-   2. ``uuid= `uuidgen` ``  
-   Where the character `` ` `` used around uuidgen is the grave accent or backtick.
-   3. ``echo '{"dmi.system.uuid": "'$uuid'"}' > /etc/rhsm/facts/uuid_override.facts``
-   4. ``cat /etc/rhsm/facts/uuid_override.facts``  
-   Ensure the contents of the uuid_override.facts contains a generated UUID.
-   5. ``subscription-manager register --org="customer" --activationkey="ACTIVATION_KEY" --force``  
-   Where ``ACTIVATION_KEY`` is the Red Hat activation key that is on the virtual data center details page.  
+     1. ``rpm -ivh http://52.117.132.7/pub/katello-ca-consumer-latest.noarch.rpm``
+     2. ``uuid= `uuidgen` ``  
+       Where the character `` ` `` used around uuidgen is the grave accent or backtick.
+     3. ``echo '{"dmi.system.uuid": "'$uuid'"}' > /etc/rhsm/facts/uuid_override.facts``
+     4. ``cat /etc/rhsm/facts/uuid_override.facts``  
+       Ensure the contents of the uuid_override.facts contains a generated UUID.
+     5. ``subscription-manager register --org="customer" --activationkey="ACTIVATION_KEY" --force``  
+       Where ``ACTIVATION_KEY`` is the Red Hat activation key that is on the virtual data center details page.  
 
 You can still use another RHEL Capsule Server or a satellite server if you already have an RHEL subscription outside of IBM. Charges for the RHEL license are incurred against RHEL VMs that are running in a virtual data center.
 {: note}
@@ -346,7 +343,7 @@ Under the **NAT44 Rules**, click **SNAT Rule** and create the configuration by u
 * Optionally, enter a destination port.
 * Optionally, enter a description. A description can be useful to identify the SNAT rule later.
 * Set to **Enabled**.
-* Optionally, enable logging.
+* Optionally, enable logging. Logs are not preserved. If you want to have historical data, you must set up a syslog server.
 
 ##### Create the Organization virtual data center network firewall rule to allow access to the IBM Cloud Services Network
 {: #shared_vcd-ops-guide-create-vdc-network-rule-ibm-services-network}
@@ -375,7 +372,7 @@ Under the **NAT44 Rules**, click **SNAT Rule** and create the configuration by u
 * Optionally, enter the destination port.
 * Optionally, enter the description. A description can be useful to identify the SNAT rule later.
 * Set to **Enabled**.
-* Optionally, enable logging.
+* Optionally, enable logging. Logs are not preserved. If you want to have historical data, you must set up a syslog server.
 
 If the DHCP services are enabled on the edge, you can test for internet connectivity by logging in to one of the VMs that are attached to the network for which the firewall and DNAT rules are defined.
 
@@ -465,7 +462,7 @@ If your vApp or VM is deployed from the IBM templates that are provided in the p
 
 If not done already, create a vApp containing at least two VMs. For more information, see [Working with vApps](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Tenant-Portal-Guide/GUID-AC48FB5E-4ADC-4835-AACE-B949B297A147.html){: external}.
 
-1. From the tenant portal, click the menu icon at the upper left of the page and select **Data Centers**.
+1. From the tenant portal, click the **Menu** icon at the upper left of the page and select **Data Centers**.
 2. From the main page under **Virtual Data Center**, click the virtual data center where you would like to create the vApp network.
 3. In the right pane under **Compute**, click **vApps**.
 4. Click **Details** on the vApp you would like to add a vApp network to.
@@ -487,8 +484,7 @@ Every private network endpoint comes configured with one private network IP addr
 ### Prerequisites for configuring a private network endpoint
 {: #shared_vcd-ops-guide-pne-prereqs}
 
-* Review [Getting Started with IBM Cloud for VMware Solutions Shared
-](/docs/solution-tutorials?topic=solution-tutorials-vmware-solutions-shared-getting-started).
+* Review [Getting Started with IBM Cloud for VMware Solutions Shared](/docs/solution-tutorials?topic=solution-tutorials-vmware-solutions-shared-getting-started).
 * You must have a running VM.
 * The VM must be connected to a routed organization virtual data center network. For more information, see [Creating a routed organization virtual data center network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-routed-organization) and [Connect the VMs to the network](/docs/vmwaresolutions?topic=vmwaresolutions-shared_vcd-ops-guide#shared_vcd-ops-guide-connect-vm).
 * You must have virtual routing and forwarding and service endpoints that are enabled on the account that the allow listed IP or subnet belong to. For more information, see [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint).

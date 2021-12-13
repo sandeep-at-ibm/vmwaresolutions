@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-06-29"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Detailed design
 {: #caveonix-detailed}

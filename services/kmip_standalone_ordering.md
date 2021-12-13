@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-12"
+lastupdated: "2021-12-10"
 
 keywords: KMIP for VMware, order KMIP, Key Protect, Hyper Protect Crypto Services, HPCS
 
@@ -12,12 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering KMIP for VMware instances
 {: #kmip_standalone_ordering}
@@ -160,6 +155,8 @@ If your KMIP instance is connected to Key Protect, you must use the two regional
 | Dallas | `kmip-1.private.us-south.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.us-south.vmware-solutions.cloud.ibm.com:5696` |
 | Frankfurt | `kmip-1.private.eu-central.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.eu-central.vmware-solutions.cloud.ibm.com:5696` |
 | London | `kmip-1.private.uk-south.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.uk-south.vmware-solutions.cloud.ibm.com:5696` |
+| Osaka | `kmip-1.private.jp-osa.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.jp-osa.vmware-solutions.cloud.ibm.com:5696` |
+| Sao Paulo | `kmip-1.private.br-sao.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.br-sao.vmware-solutions.cloud.ibm.com:5696` | 
 | Sydney | `kmip-1.private.ap-south.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.ap-south.vmware-solutions.cloud.ibm.com:5696` |
 | Tokyo | `kmip-1.private.ap-north.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.ap-north.vmware-solutions.cloud.ibm.com:5696` |
 | Toronto | `kmip-1.private.ca-tor.vmware-solutions.cloud.ibm.com:5696`  \n `kmip-2.private.ca-tor.vmware-solutions.cloud.ibm.com:5696` |

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-26"
 
 keywords: vSphere upgrade, NSX upgrade, PSC upgrade
 
@@ -57,6 +57,7 @@ Complete the following requirements before you begin the upgrade:
 As the {{site.data.keyword.cloud_notm}} client access VPN is limited to 512 Kbps, it is recommended that you take one of the following actions:
 * Provision an {{site.data.keyword.cloud_notm}} Windows® 2012-2016 server Virtual Server Instance (VSI).
 * Set up a similar Windows VM on a separate vCenter Server environment within the same {{site.data.keyword.cloud_notm}} data center.
+
 This VM is used as a jump box into the vCenter Server instance for the upgrade and you can use it to download the binary files from https://my.vmware.com. While it is possible to place this VM on the vCenter Server instance that is being upgraded, it is not recommended.
 
 Complete the following steps to order a VSI jump box.
@@ -196,11 +197,13 @@ For vCenter Server linked instances, it is recommended to upgrade all vCenter Se
     3. Save the passwords that were displayed on the {{site.data.keyword.vmwaresolutions_short}} console or given to you by IBM Support. These passwords are reused later when you upgrade the appliances.
 2. Use the built-in Windows ISO mount function to mount the vCenter Server 6.7u1b ISO within your jump box.
 3. Follow the VMware instructions for upgrading vCenter. For more information, see [Upgrade a vCenter Server Appliance 6.0 or 6.5 with an external vCenter single sign-On or Platform Services Controller instance by using the GUI](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-37BB88CC-7A44-4EC9-8D7B-5D182E471654.html){: external}. The VMware instructions are similar to the upgrade process of PSC. However, instead of pointing to the PSC, you point to the vCenter FQDN/IP for the upgrade process.
-**Notes**
-* The stated requirement **You must run the GUI upgrade from a Windows, Linux, or Mac machine that is in the same network as the appliance that you want to upgrade** applies to any subnet within your {{site.data.keyword.cloud_notm}} in your account.
-* It is recommended that you use vCenter Server as your source and target for the upgrade.
+
+   **Notes**
+      * The stated requirement **You must run the GUI upgrade from a Windows, Linux, or Mac machine that is in the same network as the appliance that you want to upgrade** applies to any subnet within your {{site.data.keyword.cloud_notm}} in your account.
+      * It is recommended that you use vCenter Server as your source and target for the upgrade.
 
 #### Consolidating the PSC function into vCenter Server
+{: #vc_vsphere_upgrade-procedure-vcenter-consolidate}
 
 1. After successfully completing the PSC and vCenter Server upgrade, log in to the vCenter FLEX-based user interface. Then check the health of all services that are related to vCenter Server and the PSC in the **System Configuration** section.  
 2. Back up your PSC. It is recommended that you use file-based backup. For more information, see [File-based backup in vSphere 6.7](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.install.doc/GUID-8A16C037-F1E0-40C9-B106-05C30625B9CB.html){: external}.
@@ -338,6 +341,7 @@ You can set hosts with the Intel Skylake generation for a cluster into Skylake E
 For more information, see [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/s/article/1003212){: external}.
 
 #### Reconfiguring NSX Manager and HCX Manager to point to the PSC
+{: #vc_vsphere_upgrade-procedure-addtl-psc}
 
 1. From a web browser, go to the NSX Manager appliance user interface at ``https://<nsx-manager-ip>`` or ``https://<nsx-manager-hostname>``. Log in with the credentials.
 2. From the home page, click **Manage vCenter Registration**.

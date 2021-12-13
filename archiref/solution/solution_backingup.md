@@ -4,18 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-19"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # Backing up components
 {: #solution_backingup}

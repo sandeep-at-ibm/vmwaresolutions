@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-12-06"
 
 keywords: security and compliance readiness bundle introduction, scb introduction, scb technical specifications
 
@@ -32,7 +32,6 @@ Review the following specifications before you begin.
 {: #scb-overview-not-avail-options}
 
 The following options or settings are not available for Security and Compliance Readiness Bundle:
-* VMware Subscription Purchasing Program
 * Local disks
 * High performance with Intel® Optane
 * Single public Windows® VSI for Active Directory™ DNS configuration. Only the option to order two highly available dedicated Windows server virtual machines (VMs) on the management cluster is available.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-21"
+lastupdated: "2021-10-21"
 
 keywords: VMware HCX, HCX site, HCX definition
 
@@ -13,7 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Glossary of HCX terms
 {: #hcx_glossary}

@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-10"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware Solutions DNS configuration
 {: #openshift-runbook-runbook-dns-intro}
@@ -45,12 +42,12 @@ subcollection: vmwaresolutions
 
 * The `Add-DnsServerPrimaryZone-networkid` cmdlet creates only classful reverse lookup zones. Therefore, if you specify a prefix longer than `/24`, then the cmdlet creates a `/32` reverse lookup zone. Therefore, as a workaround in the script use `/24` instead of a `/26`. You also need to modify the private portable subnet to match classful `/24` network in the commands.
 * Do not create CNAME entries because the OpenShift certificates are keyed to the DNS returning the IP address only and not a referral to the base hostname.
-Use the following format for DNS naming standards:
-`HostName.ClusterName.SubDomain.DomainName`
-- **HostName** - Name of the virtual machine or host, for example, `control-plane-0`
-- **ClusterName** - OpenShift cluster name, for example, `ocp`
-- **SubDomain** - Subdomain of the {{site.data.keyword.vmwaresolutions_short}} deployment, for example, `dallas`
-- **DomainName** - Domain name of the {{site.data.keyword.vmwaresolutions_short}} Deployment, for example, `ibm.local`
+   Use the following format for DNS naming standards:
+   `HostName.ClusterName.SubDomain.DomainName`
+   - **HostName** - Name of the virtual machine or host, for example, `control-plane-0`
+   - **ClusterName** - OpenShift cluster name, for example, `ocp`
+   - **SubDomain** - Subdomain of the {{site.data.keyword.vmwaresolutions_short}} deployment, for example, `dallas`
+   - **DomainName** - Domain name of the {{site.data.keyword.vmwaresolutions_short}} Deployment, for example, `ibm.local`
 
 For example, the FQDN would be, *control-plane-0.ocp.dallas.ibm.local*.
 

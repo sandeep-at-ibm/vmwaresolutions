@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-11-09"
 
 keywords: IAM user, invite user, service access
 
@@ -40,7 +40,7 @@ subcollection: vmwaresolutions
 ## Results
 {: #iamuserinvite-results}
 
-After the added users accept your invitation, they can log in to the {{site.data.keyword.vmwaresolutions_short}} console and switch to your account. To do so, in their profile settings, users click their user account icon from the {{site.data.keyword.vmwaresolutions_short}} console banner. Then, the added users can collaborate and share the services and resources available in your specified account.
+After the added users accept your invitation, they can log in to the {{site.data.keyword.vmwaresolutions_short}} console and switch to your account. To do so, in their profile settings, users click their **Avatar** icon ![Avatar icon](../../icons/i-avatar-icon.svg "Avatar") from the {{site.data.keyword.vmwaresolutions_short}} console banner. Then, the added users can collaborate and share the services and resources available in your specified account.
 
 ## Related links
 {: #iamuserinvite-related}

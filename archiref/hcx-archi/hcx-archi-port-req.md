@@ -2,14 +2,17 @@
 
 copyright:
 
-  years:  2016, 2020
+  years:  2016, 2021
 
-lastupdated: "2020-12-10"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
+
 # Port access requirements for VMware HCX
 {: #hcx-archi-port-req}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-08"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
@@ -37,7 +37,7 @@ AD uses the following terminology:
 * Directory - AD uses a structured data store as the basis for a logical, hierarchical organization of directory information. This data store, also known as the directory, contains information about AD objects. These objects typically include shared resources such as servers, volumes, printers, and the network user and computer accounts.
 * Replication - A service that distributes directory data across a network. All domain controllers in a domain participate in replication and contain a complete copy of all directory information for their domain. Any change to directory data is replicated to all domain controllers in the domain.
 * Organizational units - OUs can be used to form a hierarchy of containers within a domain. OUs are used to group objects for administrative purposes such as the application of Group Policy or delegation of authority. Control (over an OU and the objects within it) is determined by the access control lists (ACLs) on the OU and on the objects in the OU. To facilitate the management of large numbers of objects, Active Directory Domain Services support the concept of delegation of authority. By using delegation, owners can transfer full or limited administrative control over objects to other users or groups. Delegation is important because it helps to distribute the management of large numbers of objects across a number of people who are trusted to perform management tasks.
-* Functional levels – Functional levels determine the available Active Directory Domain Services domain or forest capabilities and the Windows® Server operating systems you can run on domain controllers in the domain or forest. However, functional levels do not affect which operating systems you can run on workstations and member servers that are joined to the domain or forest.
+* Functional levels - Functional levels determine the available Active Directory Domain Services domain or forest capabilities and the Windows® Server operating systems you can run on domain controllers in the domain or forest. However, functional levels do not affect which operating systems you can run on workstations and member servers that are joined to the domain or forest.
 
 ## Domain models
 {: #adds-overview-models}

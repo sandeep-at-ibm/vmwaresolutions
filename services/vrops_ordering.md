@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-09"
+lastupdated: "2021-10-21"
 
 keywords: vRealize, vRealize configuration, order vRealize
 
@@ -13,9 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering vRealize Operations and Log Insight
 {: #vrops_ordering}

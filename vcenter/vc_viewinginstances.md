@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-11-29"
 
 keywords: view vCenter Server, view instance, view instance details, vmware multizone, vcenter server multizone, view vCenter Server multizone, view multizone, view multizone instance details
 
@@ -19,16 +19,13 @@ subcollection: vmwaresolutions
 
 View the summary and detailed information of the VMware vCenter Server® instances that are provisioned for different user accounts.
 
-New deployments of vCenter Server multizone instances are not supported.
-{: deprecated}
-
 ## Procedure to view summary for vCenter Server instances
 {: #vc_viewinginstances-procedure-view-inst-summary}
 
 To view a summary of all the vCenter Server instances that are provisioned for a user account, complete the following steps:
 
 1. In the {{site.data.keyword.vmwaresolutions_full}} console, click **Resources** from the left navigation pane.
-2. From the console banner, click your user account icon, and then click the **Account** field. Select the user account that you want to check instances for.
+2. From the console banner, click the **Avatar** icon ![Avatar icon](../../icons/i-avatar-icon.svg "Avatar"), and then click the **Account** field. Select the user account that you want to check instances for.
 3. In the **vCenter Server instances** table, view the list of instances that are provisioned in the selected user account.
 
 | Item        | Description |
@@ -77,8 +74,8 @@ To view the property details of an instance:
 | _VMware component_ license | If you selected to use your own VMware license for any of the VMware components on the **Licensing** page when you ordered the instance, the VMware component name and the license key that you entered for the component are displayed.  \n   \n Examples of VMware component licenses can include: **NSX license**, **vCenter Server license**, and **vSAN license**. |
 | NSX license edition | The version and edition of the VMware NSX license. |
 | Root domain | The root domain name is the DNS domain name and the Microsoft® Active Directory™ (AD) forest root name. |
-| SSO domain | The SSO domain is the vSphere single sign-on domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of <!--<samp class="ph codeph">-->**`vsphere.local`**<!--</samp>-->. |
-| Subdomain[^subdomain] | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance hostnames reside. The subdomain name is in the format <!--<samp class="ph codeph"><var class="keyword varname">-->**`vcenter_server_instance_name`**<!--</var>-->.<!--<var class="keyword varname">-->**`root.domain_name`**<!--</var></samp>-->. |
+| SSO domain | The SSO domain is the vSphere single sign-on domain. The SSO domain name is fixed for all deployed vCenter Server instances with a value of **`vsphere.local`**. |
+| Subdomain[^subdomain] | The subdomain is the DNS subdomain name of the root domain name where the local vCenter Server instance hostnames reside. The subdomain name is in the format **`vcenter_server_instance_name.root.domain_name`**. |
 {: caption="Table 3. vCenter Server instance properties" caption-side="top"}
 
 [^multizone]: Multizone instances only.

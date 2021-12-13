@@ -4,17 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-19"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Juniper Networks vSRX deployment and operation with vCenter Server on IBM Cloud
 {: #vcsvsrx-intro}

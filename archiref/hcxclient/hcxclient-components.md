@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-16"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Glossary of HCX components and terms
 {: #hcxclient-components}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-11-22"
+lastupdated: "2021-12-10"
 
 keywords: vmware regulated workloads, vmware regulated workloads order instance, order vmware regulated workloads, vmware regulated workloads instances
 
@@ -31,7 +31,7 @@ Ensure that you complete the following tasks:
 | Name        | Value format |
 |:------------|:------------ |
 | Domain name | `<root_domain>` (Microsoft® Active Directory™ domain name) |  
-| vCenter Server login username | `<user_id>@<root_domain>` (Microsoft Active Directory user) or `administrator@vsphere.local` |
+| vCenter Server login username | `<user_id>@<root_domain>` (Microsoft® Active Directory user) or `administrator@vsphere.local` |
 | vCenter Server (with embedded PSC) FQDN | `<instance_name>-vc.<root_domain>`. The maximum length is 50 characters. |
 | Single Sign-On (SSO) site name | `<root_domain>` |
 | Fully qualified ESXi server name | `<host_prefix><n>.<root_domain>`, where `n` is the sequence of the VMware vSphere® ESXi™ server. The maximum length is 50 characters. |
@@ -44,8 +44,8 @@ After the instance is provisioned, do not modify any value that is set during in
 {: #vrw-orderinginstance-topology}
 
 The following topology options are provided:
-* **Single-zone VMware instance** - this option deploys your vCenter Server in a single-zone data center.
-* **Multizone VMware instance** - this option deploys your vCenter Server across three availability zones in an {{site.data.keyword.cloud}} multizone region if a single-zone data center failure occurs.
+* **Single-zone VMware virtual data center** - this option deploys your vCenter Server in a single-zone data center.
+* **Multizone VMware virtual data center** - this option deploys your vCenter Server across three availability zones in an {{site.data.keyword.cloud}} multizone region if a single-zone data center failure occurs.
 
 ## Service prerequisites
 {: #vrw-orderinginstance-serv-prereq}
@@ -67,8 +67,13 @@ The following services are required for VMware Regulated Workloads:
 Specify the licensing options for the following VMware components in the instance:
 * VMware vCenter Server® Standard 7.0
 * VMware vSphere® Enterprise Plus 7.0
-* VMware NSX-T™ 3.1 Enterprise edition
+* VMware NSX-T™ 3.1.1 Enterprise edition (Data Center SP Advanced or Data Center SP Enterprise Plus)
 * (Multizone VMware instance only) VMware vSAN™ Enterprise license
+
+The VMware HCX service is not available for Data Center SP Enterprise Plus.
+
+Small differences exist between NSX-T Data Center and Data Center SP editions. For more information, see [Product offerings for VMware NSX-T Data Center 3.1.x (80866)](https://kb.vmware.com/s/article/80866){: external}.
+{: note}
 
 For Business Partner users, all licenses are included and purchased on your behalf. For users who are not Business Partners, you can use the IBM-provided VMware licenses for these components by selecting **Include with purchase**. You can also Bring Your Own License (BYOL) by selecting **I will provide** and entering your own license keys.
 
@@ -81,11 +86,26 @@ For Business Partner users, all licenses are included and purchased on your beha
 * You can change any licenses that you provided by using the VMware vSphere Web Client after the instance deployment is completed.
 * Support for the VMware components that you provide licenses is provided by VMware, not by IBM Support.
 
-## Location
+## Data center location
 {: #vrw-orderinginstance-mgmt-dc-location}
 
-* For single-zone VMware instances, select the {{site.data.keyword.cloud_notm}} data center where the clusters are hosted.
-* For multizone VMware instances, select the multizone region and the stretched clusters and witness cluster locations.
+Select the {{site.data.keyword.cloud_notm}} data center settings. For more information, see [Region and data center locations for resource deployment](/docs/overview?topic=overview-locations).
+
+### Geography
+{: #vrw_orderinginstance-mgmt-dc-region}
+
+Select the region where the clusters are to be hosted.
+
+### Data center
+{: #vrw_orderinginstance-mgmt-dc-location}
+
+* For single-zone VMware virtual data centers, select the {{site.data.keyword.cloud_notm}} data center where the clusters are hosted.
+* For multizone VMware virtual data centers, select the multizone region, the stretched clusters, and witness cluster locations.
+
+### Pod
+{: #vrw_orderinginstance-mgmt-dc-pod}
+
+Select the {{site.data.keyword.cloud_notm}} data center pod where you want to deploy your resources. Keep the default pod selection if you do not have reasons to prefer a different pod.
 
 ## Primary cluster (Single-zone VMware instance only)
 {: #vrw-orderinginstance-consldt-cluster}
@@ -98,8 +118,15 @@ By default, the primary cluster name is set to **vrw-_xx_-management**. You can 
 ### Primary cluster capacity
 {: #vrw-orderinginstance-consldt-capacity}
 
-* For the **Management-optimized cluster** capacity, you get a Cascade Lake server with 20 cores, 2.2 GHz, and 192 GB RAM.
-* For the **Customizable consolidated cluster** capacity, you can choose the Cascade Lake server and RAM size according to your needs.
+You can start with a smaller footprint by deploying a consolidated management and workload cluster, or you can deploy a management cluster and a separate cluster for workloads.
+
+* **Management-optimized cluster** supports separate management and workload clusters.
+
+   If you don't want workloads to run on the primary cluster, select this option to order a 2-CPU Intel Cascade Lake processor with 20 cores, 2.2 GHz, and 192 GB RAM per bare metal server. You must include a separate cluster for workloads. Under **Additional cluster for workloads**, complete the settings to customize the bare metal hardware based on your workload capacity requirements.
+
+* **Customizable consolidated cluster** supports a range of CPU and RAM options to optimize capacity for both management and workload clusters.
+
+   You can choose the Cascade Lake server and RAM size according to your needs. This option is available in single-zone deployments (nonstretched) and brings down the entry price point by enabling workloads to run alongside VMware management components in the same cluster. You can start with only 6 hosts instead of 10. This option is helpful for proof of concepts (POCs) or if you want to start small and grow over time.
 
 ### Number of bare metal servers
 {: #vrw-orderinginstance-consldt-bare-metal}
@@ -147,7 +174,7 @@ The uplink speed provides two options:
 {: #vrw-orderinginstance-witness-cluster}
 
 ### Cluster name
-{: #vrw-orderinginstance-witness-cluster-na,e}
+{: #vrw-orderinginstance-witness-cluster-name}
 
 The witness cluster name is set to **mcv-_xx_-witness** by default, where _xx_ represents two randomly generated alphabetic characters. You can also specify a new witness cluster name, which must meet the following requirements.
 
@@ -167,12 +194,13 @@ You can choose the following CPU models and a supported RAM size:
 
 | CPU model | RAM |
 |:--------- |:--- |
-| Dual Intel® Xeon® Silver 4210 (Cascade Lake) / 20 cores total, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 (Cascade Lake) / 32 cores total, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 (Cascade Lake) / 40 cores total, 2.5 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Platinum 8260 (Cascade Lake) / 48 cores total, 2.4 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 (Cascade Lake) / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8260 (Cascade Lake) / 96 cores total, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Dual Intel® Xeon® Silver 4210 (Cascade Lake) / 20 cores, 2.2 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 (Cascade Lake) / 32 cores, 2.3 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 (Cascade Lake) / 40 cores, 2.5 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6250 (Cascade Lake) / 16 cores, 3.9 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 (Cascade Lake) / 48 cores, 2.4 GHz | 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 (Cascade Lake) / 80 cores, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 (Cascade Lake) / 96 cores, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 3. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 ### Number of bare metal servers
@@ -231,9 +259,9 @@ The uplink speed provides two options:
 ### Cluster name
 {: #vrw-orderinginstance-mgmt-cluster-name}
 
-The management cluster name is set to **mcv-_xx_-management** by default. You can also specify a new management cluster name, which must meet the following requirements.
+The primary (management) cluster name is set to **mcv-_xx_-management** by default. You can also specify a new management cluster name, which must meet the following requirements.
 
-### Management cluster name requirements
+#### Management cluster name requirements
 {: #vrw-orderinginstance-cluster-name-req}
 
 * Only lowercase alphabetic, numeric, and dash (-) characters are allowed.
@@ -284,20 +312,20 @@ The uplink speed provides two options:
 | {{site.data.keyword.cloud_notm}} data center | Region |
 |:-------------------------------------------- |:------ |
 | Dallas 10 \n Dallas 12 \n Dallas 13 | NA South |
-| Frankfurt 02\n Frankfurt 05\n London 06 | Europe |
+| Frankfurt 02 \n Frankfurt 05 \n London 06 | Europe |
 | Sydney 04 \n Sydney 05 \n Tokyo 02 \n Tokyo 04 \n Tokyo 05 | Asia-Pacific |
 | Toronto 04 \n Washington DC 04 \n Washington DC 06 \n Washington DC 07 | NA East |
 {: caption="Table 5. Available {{site.data.keyword.cloud_notm}} data centers for 25 Gb uplink speed" caption-side="top"}
 
-## Additional cluster for workloads
+## Workload cluster
 {: #vrw-orderinginstance-wkld-cluster}
 
-For single-zone VMware instances, you can optionally select the **Include a separate secondary cluster for workloads** checkbox to deploy a workload cluster.
+For single-zone VMware instances with a customizable consolidated cluster, you can optionally select the **Include a separate cluster for workloads** checkbox to deploy a workload cluster. An additional cluster for workloads is required for a management-optimized cluster.
 
 ### Cluster name
 {: #vrw-orderinginstance-wkld-cluster-name}
 
-By default, the workload cluster name is set to **vrw-_xx_-workload** for single-zone VMware instances and is set to **mcv-_xx_-workload** for multizone VMware instances. You can also specify a new name for the workload cluster. The cluster name must meet the requirements that are listed in [Cluster name requirements](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req).
+By default, the workload cluster name is set to **vrw-_xx_-workload** for single-zone VMware virtual data centers and is set to **mcv-_xx_-workload** for multizone VMware virtual data centers. You can also specify a new name for the workload cluster. The cluster name must meet the requirements that are listed in [Cluster name requirements](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req).
 
 ### Workload capacity
 {: #vrw-orderinginstance-wkld-capacity}
@@ -500,11 +528,8 @@ You can choose to install the following services:
 5. Under **Licensing**, complete the license settings for the listed components.
    * To use IBM-provided licenses, ensure that the option **Include with purchase** is selected.
    * To use your own licenses, click **I will provide** and enter the license key.
-6. Under **Location**, complete the settings as follows:
-   * For single-zone VMware instances, select the {{site.data.keyword.cloud_notm}} data center to host the clusters.
-   * For multizone VMware instances, select the multizone region, and then select the stretched clusters and witness cluster locations.
-
-7. (Single-zone VMware instance only) Specify the settings for the primary cluster.
+6. For data center location, click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg "Edit") and select the geography, data center, and pod to host the clusters.
+7. (Single-zone VMware instance only) Specify the primary cluster settings.
    1. Specify the cluster name.
    2. Select the primary cluster capacity. For the **Customizable consolidated cluster** capacity, select the CPU model and RAM size.
    3. Select the number of bare metal servers.
@@ -521,22 +546,21 @@ You can choose to install the following services:
    6. Select the uplink speed. The 25 Gb option is available for specific data centers only.
 
 9. (Multizone VMware instance only) Specify the management cluster settings.
-   1. Specify the management cluster name.
-   2. Select the management capacity.
-      * For the **Small** capacity and for single-zone instances, specify the number of bare metal servers.
-      * For the **Customizable** capacity and for single-zone instances, select the Cascade Lake server, specify the RAM size, and the number of bare metal servers.
-      * For both the **Small** or **Customizable** capacity and for multizone VMware instances, select the hosts per site.
-   3. Select the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, and complete the vSAN license configuration. The available options depend on your deployment topology and capacity configurations. For small capacity instances, disk type and size for the vSAN capacity disks and the number of vSAN capacity disks are predefined.
-   4. Review the estimated resources available per cluster.
-   5. Review the networking type and select the uplink speed.
+   1. Specify the cluster name.
+   2. Select the management cluster capacity. For the **Customizable** capacity, select the CPU model and RAM size.
+   3. Select the hosts per site.
+   4. Select the disk type and size for the vSAN capacity disks, the number of vSAN capacity disks, and complete the vSAN license configuration. The available options depend on your deployment topology and capacity configurations. For small capacity instances, disk type and size for the vSAN capacity disks and the number of vSAN capacity disks are predefined.
+   5. Review the estimated resources available per cluster.
+   6. Review the networking type and select the uplink speed.
 
-10. Specify the settings for the additional cluster for workloads. For single-zone VMware instances, if you did not select to include a separate secondary cluster for workloads, skip to **Step11**.
+10. Specify the settings for the workload cluster. For single-zone VMware instances with a customizable consolidated cluster, optionally select the **Include a separate cluster for workloads** checkbox and complete the settings.
     1. Specify the cluster name.
     2. Select the workload capacity. For the **Customizable** capacity, select the CPU model and RAM size.
-    3. Select the number of bare metal servers.
-    4. Select the disk type and size for the vSAN capacity disks, and the number of vSAN capacity disks. For single-zone VMware instances, also select the vSAN licensing option.
-    5. Review the estimated resources available per cluster.
-    6. Review the networking type and select the uplink speed.
+    3. (Single-zone VMware instance only) Select the number of bare metal servers.
+    4. (Multizone VMware instance only) Select the hosts per site.
+    5. Select the disk type and size for the vSAN capacity disks, and the number of vSAN capacity disks. For single-zone VMware virtual data centers, also select the vSAN licensing option.
+    6. Review the estimated resources available per cluster.
+    7. Review the networking type and select the uplink speed.
 
 11. Choose the firewall appliance for your instance and follow the steps, depending on your selection:
     1. For **Edge services cluster with Juniper vSRX**, **Edge services cluster with FortiGate Virtual Appliance**, and **Bring your own gateway appliance**, specify the edge services [cluster name](/docs/vmwaresolutions?topic=vmwaresolutions-vrw-orderinginstance#vrw-orderinginstance-cluster-name-req), the CPU model, the RAM size, the uplink speed, and the networking type.

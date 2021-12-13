@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-13"
+lastupdated: "2021-10-26"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # vRealize Operations Manager design
 {: #opsmgmt-vrops}
@@ -90,7 +90,7 @@ When the compute VM monitoring is required, the client installs two remote colle
 | Pool | Four nodes of vROPs | Four nodes of vROPs |
 {: caption="Table 2. Operations Manager Load Balancer settings" caption-side="top"}
 
-<!-- For more information, see [vRealize Automation Load Balancing](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){: external}. -->
+For more information, see [vRealize Automation Load Balancing](https://docs.vmware.com/en/vRealize-Automation/7.5/vrealize-automation-load-balancing.pdf){: external}.
 
 ## Networking
 {: #opsmgmt-vrops-network}

@@ -4,13 +4,15 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-01-28"
+lastupdated: "2021-10-21"
 
 keywords: KMIP for VMware, view KMIP stand-alone, KMIP for VMware status
 
 subcollection: vmwaresolutions
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Viewing KMIP for VMware instances
 {: #kmip_standalone_viewing}

@@ -4,12 +4,15 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-16"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
+
 # VMware HCX component-level target architecture with NSX-V deployments
 {: #hcx-archi-target-v}
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-09-22"
+lastupdated: "2021-11-30"
 
 keywords: multizone add storage
 
@@ -13,16 +13,12 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Adding NFS storage to vCenter Server multizone instances
 {: #mcv_addingnfs-storage}
 
-You can add NFS storage to the witness and management clusters.
+You can expand the capacity of your VMware vCenter Server® multizone instances by adding NFS storage to the witness and management clusters.
 
 ## Before you add NFS storage to vCenter Server multizone instances
 {: #mcv_addingnfs-storage-prereq}
@@ -40,7 +36,7 @@ You can add NFS storage to the witness and management clusters.
 5. In the **Storage** section, click **Add**.
 6. In the **Storage** window, complete the storage configuration.
    * If you want to add and configure the same settings to all file shares, specify the **Number of Shares**, **Performance**, and **Size (GB)**.
-   * If you want to add and configure file shares individually, select **Configure shares individually**. Then, click the **+** icon next to the **Add shared storage** label. Select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share.
+   * If you want to add and configure file shares individually, select **Configure shares individually**. Then, click the **Add** icon ![Add icon](../../icons/add.svg "Add") next to the **Add shared storage** label. Select the **Performance** and **Size (GB)** for each individual file share. You must select at least one file share.
 7. Review the estimated price and click **Provision**.
 
 ## Results after you add NFS storage to vCenter Server multizone instances

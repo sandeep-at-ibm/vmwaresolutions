@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-20"
+lastupdated: "2021-11-09"
 
 keywords: FortiGate security, FortiGate Security Appliance, tech specs FortiGate
 
@@ -13,12 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{{site.data.keyword.attribute-definition-list}}
 
 # FortiGate Security Appliance
 {: #fsa_considerations}
@@ -75,7 +70,7 @@ Review the following considerations before you install the FortiGate Security Ap
 Review the following notes about installation:
 * Before the service is installed in your environment, a check is made against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster. You can either add more hosts or free up RAM, CPU, or disk space, and then add the service again in the console. After that, delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster. You can either add more hosts or free up RAM, CPU, or disk space, and then add the service again in the console. After that, delete the existing service in the **Capacity Validation Failed** state by clicking the **Delete** icon ![Delete icon](../../icons/delete.svg "Delete") next to it.
 
 ## Managing FortiGate Security Appliance
 {: #fsa_considerations-managingfsa}

@@ -4,16 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-26"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Networking services on IBM Cloud
 {: #nsx-networking_services}

@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-12-02"
 
 keywords: planning VMware Solutions Shared, data center, VMware Solutions Shared data centers
 
@@ -13,11 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Requirements and planning for VMware Solutions Shared
 {: #shared_planning}
@@ -43,17 +39,20 @@ The virtual data center name must meet the following requirements:
 
 The VMware Solutions Shared deployment has strict requirements on the physical infrastructure. Therefore, you can deploy your virtual data centers only in {{site.data.keyword.cloud_notm}} data centers that meet the requirements.
 
+### Regions available for deployment
+{: #shared-planning-dc-singlezone}
+
 The following {{site.data.keyword.cloud_notm}} data centers are available for VMware Solutions Shared deployment.
 
-| {{site.data.keyword.cloud_notm}} data centers | Region | vSAN support |
-|:----------------------|:-------|:------------|
-| Dallas 10 | NA South | None |
-| Dallas 12 | NA South | None |
-| Dallas 13 | NA South | vSAN |
-| Frankfurt 02 | Europe | None |
-| Frankfurt 04 | Europe | None |
-| Frankfurt 05 | Europe | None |
-{: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for VMware Solutions Shared" caption-side="top"}
+| {{site.data.keyword.cloud_notm}} data centers | Region | vSAN support | Multizone support |
+|:----------|----------|:-------|:-------|
+| Dallas 10 | NA South | None | Yes |
+| Dallas 12 | NA South | None | Yes |
+| Dallas 13 | NA South | vSAN | No |
+| Frankfurt 02 | Europe | None | No |
+| Frankfurt 04 | Europe | None | No |
+| Frankfurt 05 | Europe | None | No |
+{: caption="Table 1. Available {{site.data.keyword.cloud_notm}} data centers for deployment" caption-side="top"}
 
 ## Services for VMware Solutions Shared
 {: #shared_planning-addon-services}

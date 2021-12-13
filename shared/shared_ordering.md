@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-12-02"
 
 keywords: shared order resource, order on demand shared, order on demand resources
 
@@ -12,13 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ordering virtual data centers
 {: #shared_ordering}
@@ -83,7 +77,8 @@ If **No resource group available** is displayed in this field, you currently do 
 ## Deployment topology
 {: #shared_ordering-deploytop}
 
-Select **Single-zone VMware virtual data center** to deploy your virtual data center in a single-zone data center.
+* **Single-zone VMware virtual data center** deploys your virtual data center in a single-zone data center.
+* **Multizone VMware virtual data center** deploys your virtual data center across two availability zones in an {{site.data.keyword.cloud}} multizone region if a single-zone data center failure occurs.
 
 ## Data center location
 {: #shared_ordering-dc}
@@ -136,7 +131,7 @@ For more information, see [Managing Veeam for VMware Solutions Shared](/docs/vmw
 ## Summary
 {: #shared_ordering-summary}
 
-Based on your selected configuration for the virtual data center, the estimated price is instantly generated and displayed in the **Summary** right pane.
+Based on your selected configuration for the virtual data center, the estimated price is instantly generated and displayed in the **Summary** pane.
 
 You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. The tool is useful if you want to estimate the price of the selected VMware Solutions Shared resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider purchasing.
 
@@ -148,7 +143,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **IaaS platforms** section.
 2. On the **Create** tab of the **VMware Solutions Shared** page, select **On-demand**.
 3. Enter the virtual data center name and select a resource group.
-4. Ensure that the **Single-zone VMware virtual data center** card is selected for the deployment topology.
+4. Select a deployment topology according to your needs.
 5. Select the data center location to host the virtual data center.
 6. Select the network type.
 7. Select the vCPU and RAM limits according to your requirements.
@@ -161,7 +156,7 @@ You can also add the provisioned resources to the {{site.data.keyword.cloud_notm
 1. In the {{site.data.keyword.vmwaresolutions_short}} console, click the **VMware Solutions Shared** card in the **IaaS platforms** section.
 2. On the **Create** tab of the **VMware Solutions Shared** page, select **Reserved**.
 3. Enter the virtual data center name and select a resource group.
-4. Ensure that the **Single-zone VMware virtual data center** card is selected for the deployment topology.
+4. Select a deployment topology according to your needs.
 5. Select the data center location to host the virtual data center.
 6. Select the network type.
 7. Complete the resource reservation.

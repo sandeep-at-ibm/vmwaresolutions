@@ -4,7 +4,7 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-10-28"
 
 keywords: about vmware solutions, product overview, benefits
 
@@ -36,6 +36,7 @@ This ease of deployment provides you the opportunity to focus on implementing so
 As we take a look under the hood of the {{site.data.keyword.vmwaresolutions_short}} architecture, you gain an understanding of the different components that are part of the solution. In addition, how the components work together to provision and manage your software-defined data center in the {{site.data.keyword.cloud_notm}}, the network topology, and several options you have for connecting to your environment.
 
 ## VMware Solutions basics
+{: #under_the_hood-solution-basics}
 
 Your software-defined data centers are provisioned and managed by using the [{{site.data.keyword.vmwaresolutions_short}} console](https://cloud.ibm.com/infrastructure/vmware-solutions/console). You log in to the console by using your IBMid account.
 

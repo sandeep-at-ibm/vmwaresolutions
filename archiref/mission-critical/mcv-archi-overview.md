@@ -4,19 +4,14 @@ copyright:
 
   years:  2019, 2021
 
-lastupdated: "2021-08-25"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:term: .term}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware multizone introduction
 {: #mcv-archi-overview}

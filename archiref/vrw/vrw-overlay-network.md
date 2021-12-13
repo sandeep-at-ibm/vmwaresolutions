@@ -4,18 +4,14 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-04-30"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Overlay networking
 {: #vrw-overlay-network}

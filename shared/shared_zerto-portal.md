@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-23"
+lastupdated: "2021-11-08"
 
 keywords: zerto, zerto self-service portal, zerto portal access procedure
 
@@ -12,10 +12,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Accessing the Zerto Self-Service Portal
 {: #shared_zerto-portal}
@@ -31,7 +28,7 @@ Service charges are incurred only if you choose to use the services.
 {: #shared_zerto-portal-prereq}
 
 - Review the following limitations for Zerto:
-   - The current version of Zerto is v8.5 u2 and is only compatible with the N-1 and N+1 level of Zerto on your on-premises site.
+   - The current version of Zerto is 9.0u1 and is only compatible with the N-1 and N+1 level of Zerto on your on-premises site.
    - Currently, Zerto does not support the replication of stand-alone VMs but only vApps with VMs inside them. IBM is working with Zerto to resolve this limitation.
 - You must reset the zOrg administrator password before you can log in to the Zerto portal.
 

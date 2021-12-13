@@ -4,12 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-04-19"
+lastupdated: "2021-10-29"
 
 subcollection: vmwaresolutions
 
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Modifying or uninstalling HCX
 {: #hcxclient-removal-uninstall}

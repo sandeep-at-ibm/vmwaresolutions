@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-11-09"
 
 keywords: VMware HCX standalone, HCX on-premises, tech specs HCX
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Considerations for on-premises VMware HCX instances
 {: #standalone_considerations}
@@ -32,10 +29,13 @@ A VMware vCenter Server® instance with HCX is limited to three simultaneous con
 The HCX components must be installed both on {{site.data.keyword.cloud}} and in your on-premises VMware vSphere® environment. It is recommended that you install the HCX service into your vCenter Server instance before you install the on-premises HCX instance.
 
 For more information, see [Considerations when you install HCX](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations#hcx_considerations-install).
-**Notes for HCX installations**
+
+### Notes for HCX installations
+{: #standalone_considerations-install-notes}
+
 * Before the service is installed in your environment, a check is performed against the available capacity of the default cluster in the environment to ensure that the service components can fit.
 * If the capacity check fails, the service is not installed and the service state is set to **Capacity Validation Failed** on the console. In addition, a console message with more details is displayed and you are notified by email.
-* To install the service, you must increase the capacity in your default cluster. Either add more hosts or by free up RAM, CPU, or disk space, and then add the service again in the console. Then, you can delete the existing service in the **Capacity Validation Failed** state by clicking the delete icon next to it.
+* To install the service, you must increase the capacity in your default cluster. Either add more hosts or by free up RAM, CPU, or disk space, and then add the service again in the console. Then, you can delete the existing service in the **Capacity Validation Failed** state by clicking the **Delete** icon ![Delete icon](../../icons/delete.svg "Delete") next to it.
 
 ### IP address requirements
 {: #standalone_considerations-ip}

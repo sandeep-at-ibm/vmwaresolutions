@@ -4,7 +4,7 @@ copyright:
 
   years:  2021
 
-lastupdated: "2021-09-10"
+lastupdated: "2021-10-26"
 
 keywords: add services for Security and Compliance Readiness Bundle, remove services for Security and Compliance Readiness Bundle, scb add-on services
 
@@ -29,6 +29,7 @@ The following services are available for Security and Compliance Readiness Bundl
 * [Red Hat OpenShift for VMware](/docs/vmwaresolutions?topic=vmwaresolutions-ocp_ordering)
 
 ## Procedures to order, view, or delete services for Security and Compliance Readiness Bundle instances
+{: #scb_addingremovingservices-procedure}
 
 The procedures to order, view, and delete services for Security and Compliance Readiness Bundle instances are similar to those of VMware vCenter Server® instances. For more information, see the following topics:
 * [Ordering services for vCenter Server instances](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingservices)

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-10-13"
+lastupdated: "2021-11-12"
 
 keywords: vCenter Server Hybridity add cluster, view cluster vCenter Server Hybridity, delete cluster vCenter Server Hybridity
 
@@ -28,8 +28,8 @@ You can add clusters to your VMware vCenter Server® with Hybridity Bundle insta
 {: #vc_hybrid_addingviewingclusters-before-add}
 
 * Adding clusters to instances with VMware vSphere® 6.5 is not supported.
-* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console because changes that you make on the VMware vSphere® Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
-* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){: external}.
+* Whenever possible, add clusters by using the {{site.data.keyword.vmwaresolutions_full}} console because changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console. Therefore, add clusters to vCenter Server only for on-premises clusters or clusters that you cannot or do not plan to manage in the {{site.data.keyword.vmwaresolutions_short}} console.
+* For instances that were deployed in (or upgraded to) V2.5 and later, the number of clusters, hosts, and VMs determines the maximum limit for the number of clusters you can add. You must remain within the VMware® sizing guidelines and limits for your deployment. For more information about maximum limits, see [VMware Configuration Maximums](https://configmax.vmware.com/home){: external}.
 * For instances that were deployed in (or upgraded to) V2.3 and V2.4, you can add up to 10 clusters.
 
 ### System settings
@@ -65,9 +65,9 @@ When you select **Skylake**, you have options for the **CPU model** and **RAM**.
 
 | CPU model options        | RAM options       |
 |:------------- |:------------- |
-| Dual Intel® Xeon® Silver 4110 processor / 16 cores total, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5120 processor / 28 cores total, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6140 processor / 36 cores total, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel® Xeon® Silver 4110 processor / 16 cores, 2.1 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5120 processor / 28 cores, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6140 processor / 36 cores, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
 {: caption="Table 1. Options for Skylake bare metal servers" caption-side="top"}
 
 #### Cascade Lake
@@ -78,14 +78,15 @@ For the **Cascade Lake** setting, you have options for the **CPU model** and **R
 Cascade Lake bare metal servers are available only for VMware vSphere Enterprise Plus 6.7u3 instances.
 {: note}
 
-| CPU model options        | RAM options       |
-|:------------- |:------------- |
-| Dual Intel Xeon Silver 4210 processor / 20 cores total, 2.2 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 5218 processor / 32 cores total, 2.3 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Gold 6248 processor / 40 cores total, 2.5 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Dual Intel Xeon Platinum 8260 processor / 48 cores total, 2.4 GHz |64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
-| Quad Intel Xeon Gold 6248 processor / 80 cores total, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
-| Quad Intel Xeon Platinum 8260 processor / 96 cores total, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| CPU model options | RAM options |
+|:----------------- |:----------- |
+| Dual Intel Xeon Silver 4210 processor / 20 cores, 2.2 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 5218 processor / 32 cores, 2.3 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6248 processor / 40 cores, 2.5 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Gold 6250 processor / 16 cores, 3.9 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Dual Intel Xeon Platinum 8260 processor / 48 cores, 2.4 GHz | 64 GB, 96 GB, 128 GB, 192 GB, 384 GB, 768 GB, 1.5 TB |
+| Quad Intel Xeon Gold 6248 processor / 80 cores, 2.5 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
+| Quad Intel Xeon Platinum 8260 processor / 96 cores, 2.4 GHz | 384 GB, 768 GB, 1.5 TB, 3 TB |
 {: caption="Table 2. Options for Cascade Lake bare metal servers" caption-side="top"}
 
 The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or new ESXi servers for existing hybridity instances.
@@ -101,15 +102,15 @@ The Quad Intel Xeon Gold 6248 processor is available if you add new clusters or 
 {: #vc_hybrid_addingviewingclusters-adding-vsan-storage-settings}
 
 VMware vSAN™ 6.6 is included with your vCenter Server with Hybridity Bundle instance order. Specify the following vSAN options:
-* **Size for vSAN capacity disks**: Select an option for the capacity disks that you need.
-* **Number of vSAN capacity disks**: Specify the number of capacity disks that you want to add.
+* **Size for vSAN capacity disks** - Select an option for the capacity disks that you need.
+* **Number of vSAN capacity disks** - Specify the number of capacity disks that you want to add.
 * If you want to add more capacity disks, select the **High performance with Intel Optane** checkbox. This option provides two extra capacity disk bays that are useful for workloads that require less latency and higher IOPS throughput.
 
    The **High performance with Intel Optane** option is available only for Skylake and Cascade Lake CPU models.
    {: note}
 
 * Review the **Disk Type for vSAN Cache Disks** and **Number of vSAN cache disks** values. These values depend on whether you selected the **High performance with Intel Optane** checkbox.
-* **vSAN license**: Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
+* **vSAN license** - Select the VMware vSAN 6.6 license edition (Advanced or Enterprise).
 
 ### Licensing settings
 {: #vc_hybrid_addingviewingclusters-adding-licensing-settings}
@@ -128,7 +129,7 @@ Network interface card (NIC) settings are based on your selection of either **Pu
 ### Summary
 {: #vc_hybrid_addingviewingclusters-adding-order-summary}
 
-Based on your selected configuration for the cluster, the estimated price is instantly generated and displayed in the **Summary** right pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
+Based on your selected configuration for the cluster, the estimated price is instantly generated and displayed in the **Summary** pane. Click **Pricing details** to generate a PDF document with the price summary for the {{site.data.keyword.vmwaresolutions_short}} resources.
 
 You can also add the provisioned resources to the {{site.data.keyword.cloud_notm}} estimate tool, by clicking **Add to estimate**. The tool is useful if you want to estimate the price of the selected {{site.data.keyword.vmwaresolutions_short}} resources together with other {{site.data.keyword.cloud_notm}} resources that you might consider to purchase.
 
@@ -168,59 +169,59 @@ You can't change the cluster name. Changing the cluster name might cause the add
 
 1. From the {{site.data.keyword.vmwaresolutions_short}} console, click **Resources** from the left navigation pane.
 2. In the **vCenter Server instances** table, click the instance to view the clusters in it.
-3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters:
-   * **Name**: The name of the cluster.
-   * **ESXi servers**: The number of ESXi servers in the cluster.
-   * **CPU**: The CPU specification of the ESXi servers in the cluster.
-   * **Customized vSAN disks**: The number of vSAN disks in the cluster, including the disk type and capacity.
-   * **Memory**: The total memory size of the ESXi servers in the cluster.
-   * **Data center location**: The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
-   * **Pod**: The pod where the cluster is deployed.
-   * **Status**: The status of the cluster. The status can have one of the following values:
-      * Initializing: The cluster is being created and configured.
-      * Modifying: The cluster is being modified.
-      * Ready to use: The cluster is ready to use.
-      * Deleting: The cluster is being deleted.
-      * Deleted: The cluster is deleted.
+3. Click **Infrastructure** on the left navigation pane. In the **CLUSTERS** table, view the summary about the clusters.
+   * **Name** - The name of the cluster.
+   * **ESXi servers** - The number of ESXi servers in the cluster.
+   * **CPU** - The CPU specification of the ESXi servers in the cluster.
+   * **Customized vSAN disks** - The number of vSAN disks in the cluster, including the disk type and capacity.
+   * **Memory** - The total memory size of the ESXi servers in the cluster.
+   * **Data center location** - The {{site.data.keyword.cloud_notm}} data center where the cluster is hosted.
+   * **Pod** - The pod where the cluster is deployed.
+   * **Status** - The status of the cluster. The status can have one of the following values:
+      * Initializing - The cluster is being created and configured.
+      * Modifying - The cluster is being modified.
+      * Ready to use - The cluster is ready to use.
+      * Deleting - The cluster is being deleted.
+      * Deleted - The cluster is deleted.
 4. Click a cluster name to view the ESXi servers, storage, and network interface details:
-   * ESXi servers details:
-      * **Name**: The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
+   * ESXi servers details
+      * **Name** - The name of the ESXi server is in the format `<host_prefix><n>.<subdomain_label>.<root_domain>`, where:
 
-       `host_prefix` is the hostname prefix,
+           `host_prefix` is the hostname prefix,
 
-       `n` is the sequence of the server,
+           `n` is the sequence of the server,
 
-       `subdomain_label` is the subdomain label, and
+           `subdomain_label` is the subdomain label, and
 
-       `root_domain` is the root domain name.
+           `root_domain` is the root domain name.
 
-      * **Version**: The version of the ESXi server.
-      * **Credentials**: The username and password to access the ESXi server.
-      * **Private IP**: The private IP address of the ESXi server.
-      * **Status**: The status of the ESXi server, which can be one of the following values:
-         * Added: The ESXi server is added and is ready for use.
-         * Adding: The ESXi server is being added.
-         * Deleting: The ESXi server is being deleted.
+      * **Version** - The version of the ESXi server.
+      * **Credentials** - The username and password to access the ESXi server.
+      * **Private IP** - The private IP address of the ESXi server.
+      * **Status** - The status of the ESXi server, which can be one of the following values:
+         * Added - The ESXi server is added and is ready for use.
+         * Adding - The ESXi server is being added.
+         * Deleting - The ESXi server is being deleted.
 
-   * Storage details:
-      * **Name**: The data store name.
-      * **Size**: The capacity of the storage.
-      * **IOPS/GB**: The performance level of the storage.
-      * **NFS protocol**: The NFS version of the storage.
-   * Network Interface - VLAN details:
-      * **VLAN number**: The unique VLAN number.
-      * **Description**: The description of the VLAN.
-      * **Location**: The data center location.
-      * **Primary route**: The primary route of the VLAN.
-    Click **View resource** to access the VLAN details.
-   * Network Interface - Subnet details:
-      * **Name**: The subnet name. Click the name to access the subnet details.
-      * **Type**: The type of subnet: primary or portable.
-      * **Description**: The description of the subnet.
-   * Network Interface - IP details:
-      * **IP**: The IP address.
-      * **Status**: The status of the IP address.
-      * **Description**: The description of the IP address.
+   * Storage details
+      * **Name** - The data store name.
+      * **Size** - The capacity of the storage.
+      * **IOPS/GB** - The performance level of the storage.
+      * **NFS protocol** - The NFS version of the storage.
+   * Network Interface - VLAN details
+      * **VLAN number** - The unique VLAN number.
+      * **Description** - The description of the VLAN.
+      * **Location** - The data center location.
+      * **Primary route** - The primary route of the VLAN.
+       Click **View resource** to access the VLAN details.
+   * Network Interface - Subnet details
+      * **Name** - The subnet name. Click the name to access the subnet details.
+      * **Type** - The type of subnet, primary or portable.
+      * **Description** - The description of the subnet.
+   * Network Interface - IP details
+      * **IP** - The IP address.
+      * **Status** - The status of the IP address.
+      * **Description** - The description of the IP address.
 
 ## Deleting clusters from vCenter Server with Hybridity Bundle instances
 {: #vc_hybrid_addingviewingclusters-deleting}

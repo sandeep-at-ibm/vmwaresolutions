@@ -4,7 +4,7 @@ copyright:
 
   years:  2020, 2021
 
-lastupdated: "2021-05-28"
+lastupdated: "2021-12-02"
 
 keywords: vmware solutions shared, get started shared, tech specs shared
 
@@ -13,10 +13,7 @@ subcollection: vmwaresolutions
 
 ---
 
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # VMware Solutions Shared overview
 {: #shared_overview}
@@ -106,7 +103,10 @@ The service address can be used for access to {{site.data.keyword.cloud_notm}} i
 ### Storage
 {: #shared_overview-specs-storage}
 
-When you create or deploy vApps or VMs, you can select either an unencrypted or encrypted storage policy. Each option has five different tiers of storage available, depending on the storage performance required.
+When you create or deploy vApps or VMs, you can select either an unencrypted or encrypted storage policy. Each option has six different tiers of storage available, depending on the storage performance required.
+
+Storage policy availability may vary by region and deployment topology. On the VMware Solutions Shared order page, select the **About** tab to view available storage policy offerings.
+{: note}
 
 #### Unencrypted storage policy options
 {: #shared_overview-specs-storage-unencrypted}
@@ -116,6 +116,7 @@ When you create or deploy vApps or VMs, you can select either an unencrypted or 
 * 4 IOPS/GB - Storage tier with a maximum throughput of 4 IOPS/GB.
 * 2 IOPS/GB - Storage tier with a maximum throughput of 2 IOPS/GB.
 * 0.25 IOPS/GB - Storage tier with a maximum throughput of 0.25 IOPS/GB.
+* VSAN - No IOPS limitation.
 
 Standard is the default policy for virtual data centers.
 {: note}  
@@ -130,6 +131,7 @@ Encryption enabled storage policies are available to all organization virtual da
 * 4 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 4 IOPS/GB.
 * 2 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 2 IOPS/GB.
 * 0.25 IOPS/GB - Encrypted. Storage tier with a maximum throughput of 0.25 IOPS/GB.
+* VSAN - Encrypted. No IOPS limitation.
 
 For more information about the VM encryption limitations for VMware Cloud Director 10.1, see [Enabling VM encryption on storage policies of an organization virtual data center](https://docs.vmware.com/en/VMware-Cloud-Director/10.1/VMware-Cloud-Director-Service-Provider-Admin-Portal-Guide/GUID-80F58C1D-A97E-43FE-8E41-E9242A1D2332.html){: external}.
 
@@ -139,7 +141,7 @@ The encryption storage policies do not currently work with VM customizations. IB
 ### Maximum disk size
 {: #shared_overview-specs-disk-size}
 
-* The maximum disk size is 16 TBs per disk for 0.25 IOPS / GB, 2 IOPS/GB, 4 IOPS/GB, and Standard storage policies.
+* The maximum disk size is 16 TBs per disk for 0.25 IOPS / GB, 2 IOPS/GB, 4 IOPS/GB, Standard, and VSAN storage policies.
 * The maximum disk size is 4 TBs per disk for the 10 IOPs / GB storage policy.
 
 ### Maximum host capacity

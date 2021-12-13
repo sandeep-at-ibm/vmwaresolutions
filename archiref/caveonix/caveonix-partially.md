@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2020-04-15"
+lastupdated: "2021-10-21"
 
 subcollection: vmwaresolutions
 
 ---
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Partially distributed
 {: #caveonix-partially}

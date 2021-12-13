@@ -4,14 +4,14 @@ copyright:
 
   years:  2016, 2021
 
-lastupdated: "2021-08-17"
+lastupdated: "2021-12-10"
 
 subcollection: vmwaresolutions
 
 
 ---
 
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Operations management architecture overview
 {: #opsmgmt-arch}
@@ -37,7 +37,7 @@ The {{site.data.keyword.vmwaresolutions_short}} operations management consists o
     When an issue occurs in the environment vROps generates alerts of three impact types:
     * Health alerts - indicate issues that affect the health of the environment and require immediate attention.
     * Risk alerts - indicate issues that are not immediate threats but need to be addressed soon.
-    * Efficiency alerts – information to improve performance or reclaim resources.
+    * Efficiency alerts - information to improve performance or reclaim resources.
 
     vROps Alerts are events that occur on the monitored objects when data analysis indicates deviations from normal metric values, or when an issue occurs with one of the monitored components. vROps alerts are assigned one of these categories:
     * Critical - must be acted upon immediately.
