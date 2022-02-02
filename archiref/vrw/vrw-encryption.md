@@ -38,7 +38,7 @@ To access KMIP for VMware over the private network, cloud service endpoints are 
 ## Hyper Protect Crypto Services for vSphere encryption - no third parties
 
 A typical vSphere encryption setup with HPCS/KMIP integration looks like this:
-![vSphere encryption with Hyper Protect Crypto Services](../../images/vrw-hpcs-mgmt-no-3rd-party.png){: caption="Figure 1. vSphere encryption with Hyper Protect Crypto Services - no third parties" caption-side="bottom"}
+![vSphere encryption with Hyper Protect Crypto Services](../../images/vmware-vsphere-encryption.drawio.svg){: caption="Figure 1. vSphere encryption with Hyper Protect Crypto Services - no third parties" caption-side="bottom"}
 
 ## Hyper Protect Crypto Services for vSphere encryption - SaaS provider use case 
 
